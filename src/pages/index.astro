@@ -1,17 +1,20 @@
 ---
+import WikiPage from '@/layouts/WikiPage.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
 
+const { sphereMap, talentMap } = await resolveEntries();
+const sphereCount = sphereMap.size;
+const talentCount = talentMap.size;
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<WikiPage title="Home — Spheres of Power Wiki">
+  <p style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--clr-brand);margin-bottom:6px;">
+    Home Page
+  </p>
+  <hr style="border:none;border-top:1px solid var(--clr-border);margin-bottom:14px;width:360px;" />
+  <p style="font-size:13px;color:var(--clr-muted);font-style:italic;">
+    Content engine loaded: {sphereCount} sphere(s), {talentCount} talent(s) resolved from source books.
+  </p>
+  <p style="font-size:11px;color:var(--clr-muted);margin-top:8px;">
+    Full home page implemented in Plan 2.
+  </p>
+</WikiPage>
