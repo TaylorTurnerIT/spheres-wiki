@@ -70,6 +70,7 @@ describe('buildResolvedMaps', () => {
   it('adds class entries under "class:id" key', () => {
     const maps = buildResolvedMaps([baseBook]);
     expect(maps.classMap.has('class:shifter')).toBe(true);
+    expect(maps.classMap.get('class:shifter')!.name).toBe('Shifter');
   });
 
   it('records the source book for each entry', () => {
@@ -90,6 +91,37 @@ describe('buildResolvedMaps', () => {
   it('errata applied in publishedDate order regardless of array order', () => {
     const maps = buildResolvedMaps([errataBook, baseBook]);
     expect(maps.talentMap.get('talent:alter-shape')!.description).toBe('Corrected talent text.');
+  });
+
+  it('errata patch does not leak modifies field onto resolved entry', () => {
+    const maps = buildResolvedMaps([baseBook, errataBook]);
+    const resolved = maps.talentMap.get('talent:alter-shape')!;
+    expect((resolved as Record<string, unknown>)['modifies']).toBeUndefined();
+    expect(resolved.id).toBe('alter-shape');
+  });
+
+  it('silently skips errata patch when base entry does not exist', () => {
+    const orphanErrata: BookData = {
+      title: 'Orphan Errata',
+      publisher: 'Drop Dead Studios',
+      slug: 'orphan-errata',
+      publishedDate: '2024-06-01',
+      entries: [
+        {
+          type: 'talent',
+          id: 'nonexistent',
+          sphere: 'alteration',
+          namespace: 'power',
+          tier: 'basic',
+          name: 'Ghost Talent',
+          description: 'Should not appear.',
+          modifies: 'nonexistent',
+        },
+      ],
+    };
+    expect(() => buildResolvedMaps([orphanErrata])).not.toThrow();
+    const maps = buildResolvedMaps([orphanErrata]);
+    expect(maps.talentMap.size).toBe(0);
   });
 
   it('does not cross-contaminate types: talent:alter-shape != sphere:alter-shape', () => {
