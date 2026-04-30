@@ -1,0 +1,39 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Active namespace slug for sidebar/tab highlighting, e.g. "power" */
+  activeNamespace?: string;
+}
+
+const { title, description, activeNamespace } = Astro.props;
+---
+<Base title={title} description={description}>
+  <div class="site-header-wrap">
+    <header class="site-header">
+      <span style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--clr-brand);">
+        Spheres of Power Wiki
+      </span>
+    </header>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <p style="font-size:11px;color:var(--clr-muted);font-style:italic;">Sidebar (Plan 2)</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <nav class="tab-nav" aria-label="System navigation">
+        <span class="tab active">Home</span>
+      </nav>
+
+      <div class="content-area">
+        <slot />
+      </div>
+    </main>
+  </div>
+</Base>
