@@ -1,0 +1,33 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import SVGSprite from '@/components/SVGSprite.astro';
+import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Spheres of Power Wiki',
+  description = 'A quick reference site for the Spheres system.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <ViewTransitions />
+  </head>
+  <body>
+    <SVGSprite />
+    <slot />
+  </body>
+</html>
