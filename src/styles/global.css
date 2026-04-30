@@ -1,0 +1,211 @@
+/* ── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img, svg { display: block; }
+
+/* ── Design tokens ──────────────────────────────────────── */
+:root {
+  /* Surface */
+  --clr-bg:      #E3DDD6;
+  --clr-surface: #EDE8DF;
+  --clr-border:  #C0B9B0;
+
+  /* Text */
+  --clr-text:    #3E3830;
+  --clr-muted:   #857870;
+
+  /* Brand */
+  --clr-brand:   #990000;
+
+  /* Namespace accents */
+  --clr-power:   #174B93;
+  --clr-might:   #8f2d00;
+  --clr-guile:   #5A2D96;
+  --clr-champ:   #165A1C;
+
+  /* Typography */
+  --font-display: 'Cinzel', serif;
+  --font-body:    'Crimson Text', serif;
+
+  /* Layout */
+  --radius:      4px;
+  --sidebar-w:   210px;
+  --rail-w:      180px;
+  --max-w:       1440px;
+
+  /* Spacing scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+}
+
+/* ── Base typography ────────────────────────────────────── */
+body {
+  background: var(--clr-bg);
+  font-family: var(--font-body);
+  color: var(--clr-text);
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Layout shells ──────────────────────────────────────── */
+.site-header-wrap {
+  background: var(--clr-bg);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--sp-6);
+  height: 72px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  position: relative;
+}
+
+.layout {
+  display: flex;
+  padding: 0 var(--sp-6) var(--sp-6);
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* ── Sidebar ────────────────────────────────────────────── */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  padding: var(--sp-3) var(--sp-2) var(--sp-3) 0;
+}
+
+.sidebar-inner {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: var(--sp-3);
+  font-size: 13px;
+}
+
+/* ── Main ───────────────────────────────────────────────── */
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Tab nav ────────────────────────────────────────────── */
+.tab-nav {
+  display: flex;
+  gap: 3px;
+  padding: 10px 0 0;
+  flex-wrap: wrap;
+}
+
+.tab {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  border: .5px solid var(--clr-border);
+  border-bottom: none;
+  cursor: pointer;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  transition: background 0.13s ease;
+  text-decoration: none;
+}
+.tab:hover:not(.active) { background: rgba(0,0,0,.04); text-decoration: none; }
+.tab.active { background: var(--clr-surface); z-index: 2; margin-bottom: -.5px; }
+.tab.power  { color: var(--clr-power); }
+.tab.might  { color: var(--clr-might); }
+.tab.guile  { color: var(--clr-guile); }
+.tab.champ  { color: var(--clr-champ); }
+
+/* ── Content area ───────────────────────────────────────── */
+.content-area {
+  background: var(--clr-surface);
+  border: .5px solid var(--clr-border);
+  border-radius: 0 var(--radius) var(--radius) var(--radius);
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
+  flex: 1;
+}
+
+/* ── Three-column inner layout ──────────────────────────── */
+.inner-layout {
+  display: flex;
+  gap: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.inner-content {
+  flex: 1;
+  min-width: 0;
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
+}
+
+.inner-rail {
+  width: var(--rail-w);
+  flex-shrink: 0;
+  border-left: .5px solid var(--clr-border);
+  padding: var(--sp-4) var(--sp-3) var(--sp-5);
+  background: var(--clr-surface);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .sidebar { display: none; }
+  .sidebar.open { display: block; position: fixed; inset: 0; z-index: 100; width: 100%; background: var(--clr-bg); overflow-y: auto; }
+  .inner-rail { width: 140px; }
+}
+
+@media (max-width: 768px) {
+  .layout { flex-direction: column; padding: 0 var(--sp-3) var(--sp-3); }
+  .inner-rail { display: none; }
+  .inner-content { padding: var(--sp-3); }
+  .tab-nav { gap: 2px; }
+  .tab { font-size: 11px; padding: 4px 8px; }
+}
+
+/* ── Sphere icon ────────────────────────────────────────── */
+.si {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  opacity: .8;
+}
+
+/* ── Utility: section heading with rule ─────────────────── */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.section-heading-text {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  white-space: nowrap;
+}
+.section-heading-rule {
+  flex: 1;
+  height: .5px;
+  background: var(--clr-border);
+}
