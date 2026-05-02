@@ -1,0 +1,100 @@
+---
+interface Props {
+  activeNamespace?: string;
+}
+const { activeNamespace } = Astro.props;
+---
+<aside class="sidebar" id="site-sidebar">
+  <div class="sidebar-inner">
+    <button class="sidebar-close" id="sidebar-close" aria-label="Close navigation">✕</button>
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading nav">Navigation</div>
+      <div class="sidebar-links">
+        <a href="/about/" data-astro-prefetch="hover" class="nav">About</a>
+        <a href="/legal/" data-astro-prefetch="hover" class="nav">Legal &amp; OGL</a>
+        <a href="/recent-changes/" data-astro-prefetch="hover" class="nav">Recent Changes</a>
+        <a href="/contact/" data-astro-prefetch="hover" class="nav">Contact</a>
+      </div>
+    </div>
+
+    <hr class="sidebar-divider" />
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading power">Spheres of Power</div>
+      <div class="sidebar-links">
+        <a href="/spheres-of-power/" data-astro-prefetch="hover" class="power">Using Spheres of Power</a>
+        <a href="/spheres-of-power/" data-astro-prefetch="hover" class="power">Magic Spheres</a>
+        <a href="/spheres-of-power/" data-astro-prefetch="hover" class="power">Spherecasters</a>
+        <a href="/spheres-of-power/" data-astro-prefetch="hover" class="power">Advanced Magic</a>
+        <a href="/spheres-of-power/" data-astro-prefetch="hover" class="power">Magic Options</a>
+        <a href="/spheres-of-power/" data-astro-prefetch="hover" class="power">Magical Items</a>
+      </div>
+    </div>
+
+    <hr class="sidebar-divider" />
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading might">Spheres of Might</div>
+      <div class="sidebar-links">
+        <a href="/spheres-of-might/" data-astro-prefetch="hover" class="might">Using Spheres of Might</a>
+        <a href="/spheres-of-might/" data-astro-prefetch="hover" class="might">Combat Spheres</a>
+        <a href="/spheres-of-might/" data-astro-prefetch="hover" class="might">Practitioners</a>
+        <a href="/spheres-of-might/" data-astro-prefetch="hover" class="might">Martial Options</a>
+      </div>
+    </div>
+
+    <hr class="sidebar-divider" />
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading guile">Spheres of Guile</div>
+      <div class="sidebar-links">
+        <a href="/spheres-of-guile/" data-astro-prefetch="hover" class="guile">Using Spheres of Guile</a>
+        <a href="/spheres-of-guile/" data-astro-prefetch="hover" class="guile">Skill Spheres</a>
+        <a href="/spheres-of-guile/" data-astro-prefetch="hover" class="guile">Operatives</a>
+        <a href="/spheres-of-guile/" data-astro-prefetch="hover" class="guile">Skill Options</a>
+      </div>
+    </div>
+
+    <hr class="sidebar-divider" />
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading champ">Champions</div>
+      <div class="sidebar-links">
+        <a href="/champions/" data-astro-prefetch="hover" class="champ">Using Champions</a>
+        <a href="/champions/" data-astro-prefetch="hover" class="champ">Champion Classes</a>
+        <a href="/champions/" data-astro-prefetch="hover" class="champ">Techniques</a>
+        <a href="/champions/" data-astro-prefetch="hover" class="champ">Champion Feats</a>
+      </div>
+    </div>
+
+    <hr class="sidebar-divider" />
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading nav">Other Systems</div>
+      <div class="sidebar-links">
+        <a href="/akashic-mysteries/" data-astro-prefetch="hover">Akashic Mysteries</a>
+        <a href="/arcforge/" data-astro-prefetch="hover">Arcforge</a>
+        <a href="/city-of-7-seraphs/" data-astro-prefetch="hover">City of 7 Seraphs</a>
+        <a href="/cthulhu-mythos/" data-astro-prefetch="hover">Cthulhu Mythos</a>
+        <a href="/gonzo/" data-astro-prefetch="hover">Gonzo</a>
+        <a href="/mythic-rules/" data-astro-prefetch="hover">Mythic Rules</a>
+        <a href="/pact-magic/" data-astro-prefetch="hover">Pact Magic</a>
+        <a href="/strange-magic/" data-astro-prefetch="hover">Strange Magic</a>
+      </div>
+    </div>
+
+    <hr class="sidebar-divider" />
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading nav">Quick Links</div>
+      <div class="sidebar-links">
+        <a href="/bb-code-template/" data-astro-prefetch="hover">BB Code Profile Template</a>
+        <a href="/how-to-build-champion/" data-astro-prefetch="hover">How to Build a Champion</a>
+        <a href="/how-to-build-practitioner/" data-astro-prefetch="hover">How to Build a Practitioner</a>
+        <a href="/how-to-build-spherecaster/" data-astro-prefetch="hover">How to Build a Spherecaster</a>
+        <a href="/community-resources/" data-astro-prefetch="hover">Community Resources</a>
+      </div>
+    </div>
+  </div>
+</aside>
