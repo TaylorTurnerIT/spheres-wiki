@@ -10,13 +10,13 @@ interface Props {
   activeNamespace?: string;
 }
 
-const { title, description, activeNamespace } = Astro.props;
+const { title, description } = Astro.props;
 ---
 <Base title={title} description={description}>
   <SiteHeader />
 
   <div class="layout">
-    <Sidebar activeNamespace={activeNamespace} />
+    <Sidebar />
 
     <main class="main">
       <TabNav />

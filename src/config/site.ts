@@ -44,4 +44,4 @@ export const TAB_ORDER = [
  * Format: plain text; use · as separator between items.
  */
 export const ANNOUNCEMENT: string | null =
-  'Latest Update: Baron\'s Uncanny Gateway added (2/11) · Coming Soon: Diamond Spheres: Expanded Tinker &amp; Silverminds · Arcforge Players\' Compendium';
+  'Baron\'s Uncanny Gateway added (2/11) · Coming Soon: Diamond Spheres: Expanded Tinker & Silverminds · Arcforge Players\' Compendium';
