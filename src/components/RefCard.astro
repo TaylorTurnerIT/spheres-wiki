@@ -1,0 +1,87 @@
+---
+import type { SphereEntry, ClassEntry } from '@/lib/types';
+
+interface Props {
+  namespace: string;
+  spheres: SphereEntry[];
+  classes: ClassEntry[];
+}
+
+const { namespace, spheres, classes } = Astro.props;
+
+const nsClass = namespace === 'champions' ? 'champ' : namespace;
+
+type NsConfig = {
+  title: string;
+  subtitle: string;
+  classLabel: string;
+  buildText: string;
+  buildHref: string;
+  nsRoute: string;
+};
+
+const nsConfigs: Record<string, NsConfig> = {
+  power:     { title: 'Spheres of Power',  subtitle: 'Magic Spheres',   classLabel: 'Spherecaster Classes', buildText: 'How to Build a Spherecaster →', buildHref: '/spheres-of-power/', nsRoute: 'spheres-of-power' },
+  might:     { title: 'Spheres of Might',  subtitle: 'Combat Spheres',  classLabel: 'Practitioner Classes', buildText: 'How to Build a Practitioner →', buildHref: '/spheres-of-might/', nsRoute: 'spheres-of-might' },
+  guile:     { title: 'Spheres of Guile',  subtitle: 'Skill Spheres',   classLabel: 'Operative Classes',    buildText: 'How to Build an Operative →',   buildHref: '/spheres-of-guile/', nsRoute: 'spheres-of-guile' },
+  champions: { title: 'Champions',         subtitle: 'Multi-system',    classLabel: 'Champion Classes',     buildText: 'How to Build a Champion →',     buildHref: '/champions/',        nsRoute: 'champions'        },
+};
+
+const cfg: NsConfig = nsConfigs[namespace] ?? {
+  title: namespace, subtitle: '', classLabel: 'Classes',
+  buildText: 'Browse →', buildHref: `/${namespace}/`, nsRoute: namespace,
+};
+
+// For champions: show classes in the main list (no spheres). For others: spheres first, classes in subsection.
+const isChampions = namespace === 'champions';
+---
+<div class:list={['ref-card', nsClass]}>
+  <div class="ref-card-header">
+    <span class="ref-card-title">{cfg.title}</span>
+    <span class="ref-card-subtitle">{cfg.subtitle}</span>
+  </div>
+  <div class="ref-card-body">
+    <div class="ref-card-lists">
+
+      {isChampions ? (
+        <div class:list={['sphere-list', 'single', `${nsClass}-list`]}>
+          {classes.map(cls => (
+            <a href={`/${cfg.nsRoute}/${cls.id}/`} class={nsClass} data-astro-prefetch="hover">
+              <svg class="si"><use href="#si-champ-star"/></svg>{cls.name}
+            </a>
+          ))}
+        </div>
+      ) : (
+        <>
+          <div class:list={['sphere-list', `${nsClass}-list`]}>
+            {spheres.map(s => (
+              <a href={`/${cfg.nsRoute}/${s.id}/`} class={nsClass} data-astro-prefetch="hover">
+                <svg class="si"><use href={`#si-${s.icon}`}/></svg>{s.name}
+              </a>
+            ))}
+          </div>
+          {classes.length > 0 && (
+            <div class="ref-subsection">
+              <div class="ref-subsection-label">{cfg.classLabel}</div>
+              <div class="sphere-list">
+                {classes.map(cls => (
+                  <a href={`/${cfg.nsRoute}/`} class={nsClass} data-astro-prefetch="hover">{cls.name}</a>
+                ))}
+              </div>
+              <a href={cfg.buildHref} class:list={['build-link', nsClass]} data-astro-prefetch="hover">
+                {cfg.buildText}
+              </a>
+            </div>
+          )}
+        </>
+      )}
+
+    </div>
+
+    <div class="ref-card-cta">
+      <a href={`/${cfg.nsRoute}/`} class:list={['ref-card-btn', nsClass]} data-astro-prefetch="hover">
+        Browse All →
+      </a>
+    </div>
+  </div>
+</div>
