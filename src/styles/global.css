@@ -367,3 +367,65 @@ a:hover {
 .resource-text { min-width: 0; flex: 1; }
 .resource-name { font-family: var(--font-display); font-size: 10.5px; font-weight: 700; letter-spacing: .03em; color: var(--clr-brand); line-height: 1.25; margin-bottom: 2px; }
 .resource-desc { font-size: 11px; color: var(--clr-muted); line-height: 1.3; font-style: italic; }
+
+/* ── Breadcrumb ─────────────────────────────────────────── */
+.breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; font-size: 12px; color: var(--clr-muted); margin-bottom: 12px; }
+.breadcrumb a { color: var(--clr-brand); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb-sep { opacity: .4; }
+
+/* ── Entry description ──────────────────────────────────── */
+.entry-description { font-size: 14px; line-height: 1.6; margin-bottom: 18px; }
+
+/* ── Entry grid (namespace index pages) ────────────────── */
+.entry-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 10px; }
+.entry-card { background: var(--clr-bg); border: .5px solid var(--clr-border); border-left: 3px solid; border-radius: var(--radius); padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: var(--clr-text); transition: background 0.15s ease, transform 0.12s ease; }
+.entry-card:hover { background: var(--clr-surface); transform: translateX(2px); text-decoration: none; }
+.entry-card.power { border-left-color: var(--clr-power); }
+.entry-card.might { border-left-color: var(--clr-might); }
+.entry-card.guile { border-left-color: var(--clr-guile); }
+.entry-card.champ { border-left-color: var(--clr-champ); }
+.entry-card-header { display: flex; align-items: center; gap: 8px; }
+.entry-card-icon { width: 16px; height: 16px; flex-shrink: 0; }
+.entry-card-name { font-family: var(--font-display); font-size: 13px; font-weight: 700; }
+.entry-card.power .entry-card-name { color: var(--clr-power); }
+.entry-card.might .entry-card-name { color: var(--clr-might); }
+.entry-card.guile .entry-card-name { color: var(--clr-guile); }
+.entry-card.champ .entry-card-name { color: var(--clr-champ); }
+.entry-card-desc { font-size: 12px; color: var(--clr-muted); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ── Page title namespace color variants ────────────────── */
+.page-title.power { color: var(--clr-power); }
+.page-title.might { color: var(--clr-might); }
+.page-title.guile { color: var(--clr-guile); }
+.page-title.champ { color: var(--clr-champ); }
+.page-title-icon { width: 22px; height: 22px; vertical-align: middle; margin-right: 8px; }
+
+/* ── Talent list (sphere detail pages) ──────────────────── */
+.talent-list { display: flex; flex-direction: column; }
+.talent-entry { padding: 10px 0; border-bottom: .5px solid var(--clr-border); }
+.talent-entry:last-child { border-bottom: none; }
+.talent-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 5px; }
+.talent-name { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--clr-text); }
+.talent-tier { font-family: var(--font-display); font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 1px 5px; border-radius: 2px; white-space: nowrap; }
+.talent-tier.basic     { background: var(--clr-surface); color: var(--clr-muted); border: .5px solid var(--clr-border); }
+.talent-tier.advanced  { background: rgba(23,75,147,.1);  color: var(--clr-power); border: .5px solid rgba(23,75,147,.3); }
+.talent-tier.legendary { background: rgba(143,45,0,.1);   color: var(--clr-might); border: .5px solid rgba(143,45,0,.3); }
+.talent-body { font-size: 13.5px; line-height: 1.55; color: var(--clr-text); }
+
+/* ── Store page ─────────────────────────────────────────── */
+.store-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.store-card { background: var(--clr-bg); border: .5px solid var(--clr-border); border-radius: var(--radius); padding: 12px; display: flex; flex-direction: column; gap: 5px; }
+.store-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--clr-brand); line-height: 1.3; }
+.store-publisher { font-size: 11.5px; color: var(--clr-muted); }
+.store-buy { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 10px; border-top: .5px solid var(--clr-border); }
+.store-price { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--clr-text); }
+
+/* ── Inner page responsive additions ────────────────────── */
+@media (max-width: 1024px) {
+  .store-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .entry-grid { grid-template-columns: 1fr; }
+  .store-grid { grid-template-columns: 1fr; }
+}
