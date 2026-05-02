@@ -4,7 +4,7 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
 <div class="site-header-wrap">
   <header class="site-header" style="position:relative;">
     <button class="hamburger" id="sidebar-toggle" aria-label="Open navigation" aria-expanded="false">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <path d="M3 5h14M3 10h14M3 15h14"/>
       </svg>
     </button>
@@ -14,8 +14,8 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
     </div>
     <div class="header-search-anchor">
       <div class="search-bar">
-        <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>
-        <input type="text" placeholder="Search spheres, classes, talents…" aria-label="Search" />
+        <svg aria-hidden="true" width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>
+        <input type="search" placeholder="Search spheres, classes, talents…" aria-label="Search" />
       </div>
     </div>
     <nav class="header-nav" aria-label="Site navigation">
