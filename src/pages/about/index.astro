@@ -1,0 +1,27 @@
+---
+import WikiPage from '@/layouts/WikiPage.astro';
+---
+<WikiPage title="About — Spheres Wiki">
+
+  <div class="page-title">About</div>
+  <hr class="page-title-rule" />
+
+  <div class="entry-description">
+    The Spheres of Power Wiki is a quick-reference site for the Spheres system by Drop Dead Studios,
+    covering Spheres of Power, Spheres of Might, Spheres of Guile, and Champions of the Spheres.
+    It replaces the existing Wikidot site with a fast, searchable static site.
+  </div>
+
+  <div class="section-heading" style="margin-top: 20px;">
+    <span class="section-heading-text">Systems Covered</span>
+    <div class="section-heading-rule"></div>
+  </div>
+
+  <div class="sphere-list single" style="max-width: 400px;">
+    <a href="/spheres-of-power/" class="power" data-astro-prefetch="hover">Spheres of Power</a>
+    <a href="/spheres-of-might/" class="might" data-astro-prefetch="hover">Spheres of Might</a>
+    <a href="/spheres-of-guile/" class="guile" data-astro-prefetch="hover">Spheres of Guile</a>
+    <a href="/champions/" class="champ" data-astro-prefetch="hover">Champions of the Spheres</a>
+  </div>
+
+</WikiPage>

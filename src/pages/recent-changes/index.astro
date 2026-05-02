@@ -1,0 +1,21 @@
+---
+import WikiPage from '@/layouts/WikiPage.astro';
+import { ANNOUNCEMENT } from '@/config/site';
+---
+<WikiPage title="Recent Changes — Spheres Wiki">
+
+  <div class="page-title">Recent Changes</div>
+  <hr class="page-title-rule" />
+
+  {ANNOUNCEMENT && (
+    <div class="update-banner">
+      <strong>Latest Update:</strong> <Fragment set:html={ANNOUNCEMENT} />
+    </div>
+  )}
+
+  <div class="entry-description">
+    A detailed changelog will appear here once the site launches.
+    The announcement banner above reflects the most recent content additions.
+  </div>
+
+</WikiPage>
