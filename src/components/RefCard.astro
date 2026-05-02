@@ -65,7 +65,7 @@ const isChampions = namespace === 'champions';
               <div class="ref-subsection-label">{cfg.classLabel}</div>
               <div class="sphere-list">
                 {classes.map(cls => (
-                  <a href={`/${cfg.nsRoute}/`} class={nsClass} data-astro-prefetch="hover">{cls.name}</a>
+                  <a href={`/${cfg.nsRoute}/${cls.id}/`} class={nsClass} data-astro-prefetch="hover">{cls.name}</a>
                 ))}
               </div>
               <a href={cfg.buildHref} class:list={['build-link', nsClass]} data-astro-prefetch="hover">
