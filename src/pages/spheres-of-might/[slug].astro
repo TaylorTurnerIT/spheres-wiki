@@ -39,9 +39,9 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 <WikiPage title={`${entryName} — Spheres of Might Wiki`} activeNamespace="might">
 
   <nav class="breadcrumb">
-    <a href="/">Home</a>
+    <a href="/" data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="/spheres-of-might/">Spheres of Might</a>
+    <a href="/spheres-of-might/" data-astro-prefetch="hover">Spheres of Might</a>
     <span class="breadcrumb-sep">›</span>
     <span>{entryName}</span>
   </nav>

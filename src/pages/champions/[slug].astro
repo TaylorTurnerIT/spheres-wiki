@@ -24,9 +24,9 @@ const { cls } = Astro.props;
 <WikiPage title={`${cls.name} — Champions of the Spheres Wiki`} activeNamespace="champions">
 
   <nav class="breadcrumb">
-    <a href="/">Home</a>
+    <a href="/" data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="/champions/">Champions of the Spheres</a>
+    <a href="/champions/" data-astro-prefetch="hover">Champions of the Spheres</a>
     <span class="breadcrumb-sep">›</span>
     <span>{cls.name}</span>
   </nav>
