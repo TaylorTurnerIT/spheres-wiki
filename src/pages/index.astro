@@ -1,20 +1,79 @@
 ---
 import WikiPage from '@/layouts/WikiPage.astro';
+import IntroCard from '@/components/IntroCard.astro';
+import FeaturedRelease from '@/components/FeaturedRelease.astro';
+import RefCard from '@/components/RefCard.astro';
+import ResourceCard from '@/components/ResourceCard.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import { ANNOUNCEMENT } from '@/config/site';
 
-const { sphereMap, talentMap } = await resolveEntries();
-const sphereCount = sphereMap.size;
-const talentCount = talentMap.size;
+const { sphereMap, classMap } = await resolveEntries();
+
+const powerSpheres  = [...sphereMap.values()].filter(s => s.namespace === 'power');
+const mightSpheres  = [...sphereMap.values()].filter(s => s.namespace === 'might');
+const guileSpheres  = [...sphereMap.values()].filter(s => s.namespace === 'guile');
+
+const powerClasses  = [...classMap.values()].filter(c => c.namespace === 'power');
+const mightClasses  = [...classMap.values()].filter(c => c.namespace === 'might');
+const guileClasses  = [...classMap.values()].filter(c => c.namespace === 'guile');
+const champClasses  = [...classMap.values()].filter(c => c.namespace === 'champions');
 ---
 <WikiPage title="Home — Spheres of Power Wiki">
-  <p style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--clr-brand);margin-bottom:6px;">
-    Home Page
-  </p>
-  <hr style="border:none;border-top:1px solid var(--clr-border);margin-bottom:14px;width:360px;" />
-  <p style="font-size:13px;color:var(--clr-muted);font-style:italic;">
-    Content engine loaded: {sphereCount} sphere(s), {talentCount} talent(s) resolved from source books.
-  </p>
-  <p style="font-size:11px;color:var(--clr-muted);margin-top:8px;">
-    Full home page implemented in Plan 2.
-  </p>
+
+  <div class="page-title">Home Page</div>
+  <hr class="page-title-rule" />
+
+  {ANNOUNCEMENT && (
+    <div class="update-banner">
+      <strong>Latest Update:</strong> <Fragment set:html={ANNOUNCEMENT} />
+    </div>
+  )}
+
+  <div class="intro-section-label">New to Spheres? Choose a system to start</div>
+  <div class="intro-row">
+    <div class="intro-cards">
+      <IntroCard namespace="power" />
+      <IntroCard namespace="might" />
+      <IntroCard namespace="guile" />
+      <IntroCard namespace="champions" />
+    </div>
+    <FeaturedRelease />
+  </div>
+
+  <div class="section-heading">
+    <span class="section-heading-text">Quick Reference — All Spheres</span>
+    <div class="section-heading-rule"></div>
+  </div>
+
+  <div class="ref-grid">
+    <RefCard namespace="power"     spheres={powerSpheres}  classes={powerClasses} />
+    <RefCard namespace="might"     spheres={mightSpheres}  classes={mightClasses} />
+    <RefCard namespace="guile"     spheres={guileSpheres}  classes={guileClasses} />
+    <RefCard namespace="champions" spheres={[]}            classes={champClasses} />
+  </div>
+
+  <div class="resources-row">
+    <ResourceCard name="Archetypes Index" description="PF1e crossover archetypes" href="/archetypes/">
+      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 2h7l3 3v9H3z"/><path d="M10 2v3h3"/><path d="M5 8h6M5 10.5h6M5 6h3"/>
+      </svg>
+    </ResourceCard>
+    <ResourceCard name="BB Code Template" description="Forum profile markup" href="/bb-code-template/">
+      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 3L1 8l3 5M12 3l3 5-3 5"/><path d="M9.5 3l-3 10"/>
+      </svg>
+    </ResourceCard>
+    <ResourceCard name="Community Resources" description="Discords, forums &amp; tools" href="/community-resources/">
+      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="5.5" cy="5.5" r="2.5"/><path d="M1.5 13c0-2.5 2-4 4-4s4 1.5 4 4"/>
+        <circle cx="11" cy="4.5" r="2"/><path d="M8.5 13c0-2 1.5-3.5 3-3.5s3 1.5 3 3.5"/>
+      </svg>
+    </ResourceCard>
+    <ResourceCard name="Citations Guide" description="Source &amp; reference rules" href="/citations-guide/">
+      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 2.5v11l4-1.5 4 1.5v-11z"/><path d="M4 5h8"/>
+      </svg>
+    </ResourceCard>
+  </div>
+
 </WikiPage>
