@@ -122,6 +122,6 @@ tests/
 | Plan | Status | Scope |
 |------|--------|-------|
 | Plan 1 — Foundation | ✅ Complete | Astro setup, content engine, layouts, design tokens |
-| Plan 2 — Home page | Pending | IntroCards, RefCards, FeaturedRelease, full home page |
-| Plan 3 — Inner pages | Pending | Sphere/talent/system/champion/store/side pages |
+| Plan 2 — Home page | ✅ Complete | IntroCards, RefCards, FeaturedRelease, full home page |
+| Plan 3 — Inner pages | ✅ Complete | Namespace index, entry detail, store, side pages |
 | Plan 4 — Search & polish | Pending | Pagefind, real sidebar/header components, accessibility pass |
