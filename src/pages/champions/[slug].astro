@@ -1,0 +1,42 @@
+---
+import WikiPage from '@/layouts/WikiPage.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+import type { ClassEntry } from '@/lib/types';
+
+interface Props {
+  cls: ClassEntry;
+}
+
+export async function getStaticPaths() {
+  const { classMap } = await resolveEntries();
+  const paths = [];
+
+  for (const [, cls] of classMap) {
+    if (cls.namespace !== 'champions') continue;
+    paths.push({ params: { slug: cls.id }, props: { cls } });
+  }
+
+  return paths;
+}
+
+const { cls } = Astro.props;
+---
+<WikiPage title={`${cls.name} — Champions of the Spheres Wiki`} activeNamespace="champions">
+
+  <nav class="breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/champions/">Champions of the Spheres</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>{cls.name}</span>
+  </nav>
+
+  <div class="page-title champ">
+    <svg class="si page-title-icon" aria-hidden="true"><use href="#si-champ-star" /></svg>
+    {cls.name}
+  </div>
+  <hr class="page-title-rule" />
+
+  <div class="entry-description">{cls.description}</div>
+
+</WikiPage>
