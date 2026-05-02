@@ -1,0 +1,37 @@
+---
+import { NAMESPACE_LABELS } from '@/config/site';
+
+const pathname = Astro.url.pathname;
+
+function currentTab(): string {
+  if (pathname.startsWith('/spheres-of-power')) return 'power';
+  if (pathname.startsWith('/spheres-of-might')) return 'might';
+  if (pathname.startsWith('/spheres-of-guile')) return 'guile';
+  if (pathname.startsWith('/champions'))        return 'champions';
+  if (pathname.startsWith('/store'))            return 'store';
+  return 'home';
+}
+
+const active = currentTab();
+
+const tabs = [
+  { slug: 'home',      label: 'Home',                       href: '/',                  cls: ''      },
+  { slug: 'power',     label: NAMESPACE_LABELS.power,        href: '/spheres-of-power/', cls: 'power' },
+  { slug: 'might',     label: NAMESPACE_LABELS.might,        href: '/spheres-of-might/', cls: 'might' },
+  { slug: 'guile',     label: NAMESPACE_LABELS.guile,        href: '/spheres-of-guile/', cls: 'guile' },
+  { slug: 'champions', label: NAMESPACE_LABELS.champions,    href: '/champions/',        cls: 'champ' },
+  { slug: 'store',     label: 'Store',                      href: '/store/',            cls: ''      },
+];
+---
+<nav class="tab-nav" aria-label="System navigation">
+  {tabs.map(tab => (
+    <a
+      href={tab.href}
+      class:list={['tab', tab.cls, { active: active === tab.slug }]}
+      data-astro-prefetch="hover"
+      aria-current={active === tab.slug ? 'page' : undefined}
+    >
+      {tab.label}
+    </a>
+  ))}
+</nav>
