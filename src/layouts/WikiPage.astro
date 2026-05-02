@@ -1,39 +1,53 @@
 ---
 import Base from './Base.astro';
+import SiteHeader from '@/components/SiteHeader.astro';
+import Sidebar from '@/components/Sidebar.astro';
+import TabNav from '@/components/TabNav.astro';
 
 interface Props {
   title?: string;
   description?: string;
-  /** Active namespace slug for sidebar/tab highlighting, e.g. "power" */
   activeNamespace?: string;
 }
 
 const { title, description, activeNamespace } = Astro.props;
 ---
 <Base title={title} description={description}>
-  <div class="site-header-wrap">
-    <header class="site-header">
-      <span style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--clr-brand);">
-        Spheres of Power Wiki
-      </span>
-    </header>
-  </div>
+  <SiteHeader />
 
   <div class="layout">
-    <aside class="sidebar">
-      <div class="sidebar-inner">
-        <p style="font-size:11px;color:var(--clr-muted);font-style:italic;">Sidebar (Plan 2)</p>
-      </div>
-    </aside>
+    <Sidebar activeNamespace={activeNamespace} />
 
     <main class="main">
-      <nav class="tab-nav" aria-label="System navigation">
-        <span class="tab active">Home</span>
-      </nav>
-
+      <TabNav />
       <div class="content-area">
         <slot />
       </div>
     </main>
   </div>
 </Base>
+
+<script>
+  const toggle = document.getElementById('sidebar-toggle');
+  const sidebar = document.getElementById('site-sidebar');
+  const close   = document.getElementById('sidebar-close');
+
+  function openSidebar() {
+    sidebar?.classList.add('open');
+    toggle?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSidebar() {
+    sidebar?.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  toggle?.addEventListener('click', openSidebar);
+  close?.addEventListener('click', closeSidebar);
+  sidebar?.addEventListener('click', e => {
+    if (e.target === sidebar) closeSidebar();
+  });
+
+  document.addEventListener('astro:page-load', closeSidebar);
+</script>
