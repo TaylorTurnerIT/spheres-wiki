@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  href: string;
+}
+const { name, description, href } = Astro.props;
+---
+<a href={href} class="resource-card" data-astro-prefetch="hover">
+  <div class="resource-icon">
+    <slot name="icon" />
+  </div>
+  <div class="resource-text">
+    <div class="resource-name">{name}</div>
+    <div class="resource-desc">{description}</div>
+  </div>
+</a>
