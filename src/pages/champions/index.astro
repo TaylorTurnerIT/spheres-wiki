@@ -1,0 +1,33 @@
+---
+import WikiPage from '@/layouts/WikiPage.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+
+const { classMap } = await resolveEntries();
+
+const classes = [...classMap.values()]
+  .filter(c => c.namespace === 'champions')
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+<WikiPage title="Champions of the Spheres — Spheres Wiki" activeNamespace="champions">
+
+  <div class="page-title champ">Champions of the Spheres</div>
+  <hr class="page-title-rule" />
+
+  <div class="section-heading">
+    <span class="section-heading-text">Champion Classes</span>
+    <div class="section-heading-rule"></div>
+  </div>
+
+  <div class="entry-grid">
+    {classes.map(c => (
+      <a href={`/champions/${c.id}/`} class="entry-card champ" data-astro-prefetch="hover">
+        <div class="entry-card-header">
+          <svg class="si entry-card-icon" aria-hidden="true"><use href="#si-champ-star" /></svg>
+          <span class="entry-card-name">{c.name}</span>
+        </div>
+        <div class="entry-card-desc">{c.description}</div>
+      </a>
+    ))}
+  </div>
+
+</WikiPage>
