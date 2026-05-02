@@ -38,3 +38,10 @@ export const TAB_ORDER = [
   'champions',
   'store',
 ] as const;
+
+/**
+ * Shown as a banner at the top of the home page. Set to null to hide.
+ * Format: plain text; use · as separator between items.
+ */
+export const ANNOUNCEMENT: string | null =
+  'Latest Update: Baron\'s Uncanny Gateway added (2/11) · Coming Soon: Diamond Spheres: Expanded Tinker &amp; Silverminds · Arcforge Players\' Compendium';
