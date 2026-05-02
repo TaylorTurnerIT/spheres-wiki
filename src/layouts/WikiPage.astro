@@ -10,7 +10,7 @@ interface Props {
   activeNamespace?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description } = Astro.props; // activeNamespace wired in Plan 4 (sidebar + tab highlighting)
 ---
 <Base title={title} description={description}>
   <SiteHeader />
