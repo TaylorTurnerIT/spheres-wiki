@@ -1,13 +1,12 @@
 ---
 import WikiPage from '@/layouts/WikiPage.astro';
-import { getCollection } from 'astro:content';
-import type { BookMeta } from '@/lib/types';
+import BookCard from '@/components/BookCard.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
 
-const rawBooks = await getCollection('books');
-const books = rawBooks
-  .map(b => b.data as BookMeta)
-  .filter(b => b.price && b.buyUrl)
-  .sort((a, b) => new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime());
+const { bookMetaMap } = await resolveEntries();
+const books = [...bookMetaMap.values()].sort(
+  (a, b) => new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime()
+);
 ---
 <WikiPage title="Store — Spheres Wiki">
 
@@ -23,23 +22,7 @@ const books = rawBooks
     <p style="font-size: 14px; color: var(--clr-muted);">No books available yet.</p>
   ) : (
     <div class="store-grid">
-      {books.map(book => (
-        <div class="store-card">
-          <div class="store-title">{book.title}</div>
-          <div class="store-publisher">{book.publisher}</div>
-          <div class="store-buy">
-            <span class="store-price">{book.price}</span>
-            <a href={book.buyUrl!} class="shop-btn" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M2 2h2l2.5 8h6l1.5-5H6.5"/>
-                <circle cx="8.5" cy="12.5" r="1.2" fill="currentColor" stroke="none"/>
-                <circle cx="12" cy="12.5" r="1.2" fill="currentColor" stroke="none"/>
-              </svg>
-              Buy
-            </a>
-          </div>
-        </div>
-      ))}
+      {books.map(book => <BookCard book={book} />)}
     </div>
   )}
 
