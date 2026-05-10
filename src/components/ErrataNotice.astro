@@ -1,0 +1,10 @@
+---
+interface Props {
+  bookTitle: string;
+}
+
+const { bookTitle } = Astro.props;
+---
+<div class="errata-notice" role="note">
+  Modified by errata: {bookTitle}
+</div>

@@ -1,0 +1,32 @@
+---
+export interface TocItem {
+  id: string;
+  label: string;
+  sub?: Array<{ id: string; label: string }>;
+}
+
+interface Props {
+  items: TocItem[];
+}
+
+const { items } = Astro.props;
+---
+{items.length > 0 && (
+  <nav class="toc" aria-label="On this page">
+    <p class="toc-title">On This Page</p>
+    <ul class="toc-list">
+      {items.map(item => (
+        <li>
+          <a href={`#${item.id}`}>{item.label}</a>
+          {item.sub && item.sub.length > 0 && (
+            <ul class="toc-sub-list">
+              {item.sub.map(s => (
+                <li><a href={`#${s.id}`}>{s.label}</a></li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}

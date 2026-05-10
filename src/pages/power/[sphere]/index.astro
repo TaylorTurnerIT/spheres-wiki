@@ -1,6 +1,10 @@
 ---
 import WikiPage from '@/layouts/WikiPage.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import SourceBookCallout from '@/components/SourceBookCallout.astro';
+import type { TocItem } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import { BOOK_COLLECTIONS } from '@/content/config';
 import type { SphereEntry, ClassEntry, TalentEntry } from '@/lib/types';
 
 interface Props {
@@ -10,31 +14,97 @@ interface Props {
   basic: TalentEntry[];
   advanced: TalentEntry[];
   legendary: TalentEntry[];
+  mainCollEntry: any;
+  talentCollEntries: Map<string, any>;
 }
 
 export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
   const { sphereMap, classMap, talentMap } = await resolveEntries();
+
+  // Load all collection entries once
+  const allCollEntries = new Map<string, any>();
+  for (const slug of BOOK_COLLECTIONS) {
+    try {
+      const entries = await getCollection(slug);
+      for (const e of entries) {
+        const bareId = e.id.replace(/\.md$/, '');
+        allCollEntries.set(bareId, e);
+      }
+    } catch { /* empty collection */ }
+  }
+
   const paths = [];
 
   for (const [, sphere] of sphereMap) {
     if (sphere.namespace !== 'power') continue;
-    const all = [...talentMap.values()].filter(t => t.sphere === sphere.id);
+    const all = [...talentMap.values()].filter(t => t.sphere === sphere.id && t.namespace === 'power');
     const basic     = all.filter(t => t.tier === 'basic').sort((a, b) => a.name.localeCompare(b.name));
     const advanced  = all.filter(t => t.tier === 'advanced').sort((a, b) => a.name.localeCompare(b.name));
     const legendary = all.filter(t => t.tier === 'legendary').sort((a, b) => a.name.localeCompare(b.name));
-    paths.push({ params: { sphere: sphere.id }, props: { kind: 'sphere' as const, sphere, cls: undefined, basic, advanced, legendary } });
+
+    const talentCollEntries = new Map<string, any>();
+    for (const t of [...basic, ...advanced, ...legendary]) {
+      const entry = allCollEntries.get(t.id);
+      if (entry) talentCollEntries.set(t.id, entry);
+    }
+
+    paths.push({
+      params: { sphere: sphere.id },
+      props: {
+        kind: 'sphere' as const,
+        sphere,
+        cls: undefined,
+        basic,
+        advanced,
+        legendary,
+        mainCollEntry: allCollEntries.get(sphere.id),
+        talentCollEntries,
+      },
+    });
   }
 
   for (const [, cls] of classMap) {
     if (cls.namespace !== 'power') continue;
-    paths.push({ params: { sphere: cls.id }, props: { kind: 'class' as const, sphere: undefined, cls, basic: [], advanced: [], legendary: [] } });
+    paths.push({
+      params: { sphere: cls.id },
+      props: {
+        kind: 'class' as const,
+        sphere: undefined,
+        cls,
+        basic: [],
+        advanced: [],
+        legendary: [],
+        mainCollEntry: allCollEntries.get(cls.id),
+        talentCollEntries: new Map(),
+      },
+    });
   }
 
   return paths;
 }
 
-const { kind, sphere, cls, basic, advanced, legendary } = Astro.props;
+const { kind, sphere, cls, basic, advanced, legendary, mainCollEntry, talentCollEntries } = Astro.props;
 const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
+
+// Render GFM bodies
+const MainContent = mainCollEntry ? (await mainCollEntry.render()).Content : null;
+
+const talentRendered: Array<{ id: string; Content: any }> = [];
+for (const [id, entry] of talentCollEntries) {
+  const { Content } = await entry.render();
+  talentRendered.push({ id, Content });
+}
+
+// Get book metadata for right rail
+const { bookMetaMap } = await resolveEntries();
+const sourceBook = bookMetaMap.get(kind === 'sphere' ? sphere!.sourceBook : cls!.sourceBook);
+
+// Build ToC
+const tocItems: TocItem[] = [{ id: 'overview', label: 'Overview' }];
+if (basic.length > 0) tocItems.push({ id: 'basic-talents', label: 'Basic Talents', sub: basic.map(t => ({ id: t.id, label: t.name })) });
+if (advanced.length > 0) tocItems.push({ id: 'advanced-talents', label: 'Advanced Talents', sub: advanced.map(t => ({ id: t.id, label: t.name })) });
+if (legendary.length > 0) tocItems.push({ id: 'legendary-talents', label: 'Legendary Talents', sub: legendary.map(t => ({ id: t.id, label: t.name })) });
 ---
 <WikiPage title={`${entryName} — Spheres of Power Wiki`} activeNamespace="power">
 
@@ -46,84 +116,104 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
     <span>{entryName}</span>
   </nav>
 
-  {kind === 'sphere' && sphere && (
-    <>
-      <div class="page-title power">
-        <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
-        {sphere.name}
-      </div>
-      <hr class="page-title-rule" />
+  <div class="content-columns">
+    <div class="content-main">
 
-      {/* entry description rendered from GFM body — wired in R1-6 */}
-
-      {basic.length > 0 && (
-        <div style="margin-top: 18px;">
-          <div class="section-heading">
-            <span class="section-heading-text">Basic Talents</span>
-            <div class="section-heading-rule"></div>
+      {kind === 'sphere' && sphere && (
+        <>
+          <div class="page-title power" id="overview">
+            <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
+            {sphere.name}
           </div>
-          <div class="talent-list">
-            {basic.map(t => (
-              <div class="talent-entry">
-                <div class="talent-header">
-                  <a href={`/power/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
-                  <span class="talent-tier basic">Basic</span>
-                </div>
-                {/* talent body rendered from GFM body — wired in R1-6 */}
+          <hr class="page-title-rule" />
+
+          {MainContent && <div class="entry-description"><MainContent /></div>}
+
+          {basic.length > 0 && (
+            <div style="margin-top: 18px;">
+              <div class="section-heading">
+                <span class="section-heading-text" id="basic-talents">Basic Talents</span>
+                <div class="section-heading-rule"></div>
               </div>
-            ))}
-          </div>
-        </div>
+              <div class="talent-list">
+                {basic.map(t => {
+                  const tContent = talentRendered.find(r => r.id === t.id);
+                  return (
+                    <div class="talent-entry" id={t.id}>
+                      <div class="talent-header">
+                        <a href={`/power/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
+                        <span class="talent-tier basic">Basic</span>
+                      </div>
+                      {tContent && <div class="talent-body"><tContent.Content /></div>}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {advanced.length > 0 && (
+            <div style="margin-top: 18px;">
+              <div class="section-heading">
+                <span class="section-heading-text" id="advanced-talents">Advanced Talents</span>
+                <div class="section-heading-rule"></div>
+              </div>
+              <div class="talent-list">
+                {advanced.map(t => {
+                  const tContent = talentRendered.find(r => r.id === t.id);
+                  return (
+                    <div class="talent-entry" id={t.id}>
+                      <div class="talent-header">
+                        <a href={`/power/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
+                        <span class="talent-tier advanced">Advanced</span>
+                      </div>
+                      {tContent && <div class="talent-body"><tContent.Content /></div>}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {legendary.length > 0 && (
+            <div style="margin-top: 18px;">
+              <div class="section-heading">
+                <span class="section-heading-text" id="legendary-talents">Legendary Talents</span>
+                <div class="section-heading-rule"></div>
+              </div>
+              <div class="talent-list">
+                {legendary.map(t => {
+                  const tContent = talentRendered.find(r => r.id === t.id);
+                  return (
+                    <div class="talent-entry" id={t.id}>
+                      <div class="talent-header">
+                        <a href={`/power/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
+                        <span class="talent-tier legendary">Legendary</span>
+                      </div>
+                      {tContent && <div class="talent-body"><tContent.Content /></div>}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </>
       )}
 
-      {advanced.length > 0 && (
-        <div style="margin-top: 18px;">
-          <div class="section-heading">
-            <span class="section-heading-text">Advanced Talents</span>
-            <div class="section-heading-rule"></div>
-          </div>
-          <div class="talent-list">
-            {advanced.map(t => (
-              <div class="talent-entry">
-                <div class="talent-header">
-                  <a href={`/power/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
-                  <span class="talent-tier advanced">Advanced</span>
-                </div>
-                {/* talent body rendered from GFM body — wired in R1-6 */}
-              </div>
-            ))}
-          </div>
-        </div>
+      {kind === 'class' && cls && (
+        <>
+          <div class="page-title power" id="overview">{cls.name}</div>
+          <hr class="page-title-rule" />
+          {MainContent && <div class="entry-description"><MainContent /></div>}
+        </>
       )}
 
-      {legendary.length > 0 && (
-        <div style="margin-top: 18px;">
-          <div class="section-heading">
-            <span class="section-heading-text">Legendary Talents</span>
-            <div class="section-heading-rule"></div>
-          </div>
-          <div class="talent-list">
-            {legendary.map(t => (
-              <div class="talent-entry">
-                <div class="talent-header">
-                  <a href={`/power/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
-                  <span class="talent-tier legendary">Legendary</span>
-                </div>
-                {/* talent body rendered from GFM body — wired in R1-6 */}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-    </>
-  )}
+    </div>
 
-  {kind === 'class' && cls && (
-    <>
-      <div class="page-title power">{cls.name}</div>
-      <hr class="page-title-rule" />
-      {/* entry description rendered from GFM body — wired in R1-6 */}
-    </>
-  )}
+    <aside class="right-rail">
+      <TableOfContents items={tocItems} />
+      <SourceBookCallout book={sourceBook} />
+    </aside>
+  </div>
 
 </WikiPage>

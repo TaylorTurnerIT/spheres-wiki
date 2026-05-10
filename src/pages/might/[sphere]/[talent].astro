@@ -1,31 +1,49 @@
 ---
 import WikiPage from '@/layouts/WikiPage.astro';
+import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import { BOOK_COLLECTIONS } from '@/content/config';
 import type { TalentEntry, SphereEntry } from '@/lib/types';
 
 interface Props {
   talent: TalentEntry;
   sphere: SphereEntry;
+  collEntry: any;
 }
 
 export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
   const { talentMap, sphereMap } = await resolveEntries();
-  const paths = [];
 
+  const allCollEntries = new Map<string, any>();
+  for (const slug of BOOK_COLLECTIONS) {
+    try {
+      const entries = await getCollection(slug);
+      for (const e of entries) {
+        allCollEntries.set(e.id.replace(/\.md$/, ''), e);
+      }
+    } catch {}
+  }
+
+  const paths = [];
   for (const [, talent] of talentMap) {
     if (talent.namespace !== 'might') continue;
     const sphere = [...sphereMap.values()].find(s => s.id === talent.sphere && s.namespace === 'might');
     if (!sphere) continue;
     paths.push({
       params: { sphere: sphere.id, talent: talent.id },
-      props: { talent, sphere },
+      props: { talent, sphere, collEntry: allCollEntries.get(talent.id) },
     });
   }
 
   return paths;
 }
 
-const { talent, sphere } = Astro.props;
+const { talent, sphere, collEntry } = Astro.props;
+
+const { bookMetaMap } = await resolveEntries();
+const sourceBook = bookMetaMap.get(talent.sourceBook);
+const TalentContent = collEntry ? (await collEntry.render()).Content : null;
 ---
 <WikiPage title={`${talent.name} — ${sphere.name} — Spheres of Might Wiki`} activeNamespace="might">
 
@@ -39,11 +57,21 @@ const { talent, sphere } = Astro.props;
     <span>{talent.name}</span>
   </nav>
 
-  <div class="page-title might">{talent.name}</div>
-  <span class={`talent-tier ${talent.tier}`}>{talent.tier}</span>
-  <hr class="page-title-rule" />
+  <div class="content-columns">
+    <div class="content-main">
+      <div class="page-title might" id="overview">{talent.name}</div>
+      <span class={`talent-tier ${talent.tier}`}>{talent.tier}</span>
+      <hr class="page-title-rule" />
 
-  {/* GFM body rendered here in R1-7 */}
-  <p class="entry-description"><em>Full talent description coming soon.</em></p>
+      {TalentContent
+        ? <div class="entry-description"><TalentContent /></div>
+        : <p class="entry-description"><em>Description coming soon.</em></p>
+      }
+    </div>
+
+    <aside class="right-rail">
+      <SourceBookCallout book={sourceBook} />
+    </aside>
+  </div>
 
 </WikiPage>

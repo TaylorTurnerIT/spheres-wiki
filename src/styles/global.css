@@ -429,3 +429,28 @@ a:hover {
   .entry-grid { grid-template-columns: 1fr; }
   .store-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Three-column layout ────────────────────────────────── */
+.content-columns { display: grid; grid-template-columns: 1fr var(--rail-w); gap: 24px; align-items: start; }
+.content-main { min-width: 0; }
+.right-rail { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 16px; }
+@media (max-width: 1024px) { .content-columns { grid-template-columns: 1fr; } .right-rail { position: static; } }
+
+/* ── TableOfContents ────────────────────────────────────── */
+.toc { background: var(--clr-surface); border: .5px solid var(--clr-border); border-radius: var(--radius); padding: 10px 12px; font-size: 12px; }
+.toc-title { font-family: var(--font-display); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--clr-muted); margin-bottom: 6px; }
+.toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 3px; }
+.toc-list a { color: var(--clr-text); text-decoration: none; line-height: 1.3; display: block; }
+.toc-list a:hover { color: var(--clr-brand); }
+.toc-sub-list { list-style: none; padding: 0 0 0 10px; margin: 2px 0 0; display: flex; flex-direction: column; gap: 2px; }
+.toc-sub-list a { font-size: 11px; color: var(--clr-muted); }
+.toc-sub-list a:hover { color: var(--clr-brand); }
+
+/* ── SourceBookCallout ──────────────────────────────────── */
+.source-callout { background: var(--clr-surface); border: .5px solid var(--clr-border); border-radius: var(--radius); padding: 10px 12px; font-size: 12px; display: flex; flex-direction: column; gap: 4px; }
+.source-callout-label { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--clr-muted); font-family: var(--font-display); }
+.source-callout-title { font-family: var(--font-display); font-size: 12px; font-weight: 700; color: var(--clr-text); line-height: 1.3; }
+.source-callout-price { color: var(--clr-muted); font-size: 12px; }
+
+/* ── ErrataNotice ───────────────────────────────────────── */
+.errata-notice { background: rgba(143,45,0,.08); border-left: 3px solid var(--clr-might); border-radius: var(--radius); padding: 8px 12px; font-size: 12px; color: var(--clr-might); margin-bottom: 8px; }

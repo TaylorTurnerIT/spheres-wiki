@@ -1,0 +1,21 @@
+---
+import type { BookMeta } from '@/lib/types';
+
+interface Props {
+  book: BookMeta | undefined;
+}
+
+const { book } = Astro.props;
+---
+{book && (
+  <div class="source-callout">
+    <span class="source-callout-label">Source</span>
+    <span class="source-callout-title">{book.title}</span>
+    {book.price && <span class="source-callout-price">{book.price}</span>}
+    {book.buyUrl && (
+      <a href={book.buyUrl} class="shop-btn" target="_blank" rel="noopener noreferrer">
+        Buy on DriveThruRPG
+      </a>
+    )}
+  </div>
+)}
