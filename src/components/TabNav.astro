@@ -4,9 +4,9 @@ import { NAMESPACE_LABELS } from '@/config/site';
 const pathname = Astro.url.pathname;
 
 function currentTab(): string {
-  if (pathname.startsWith('/power'))      return 'power';
-  if (pathname.startsWith('/might'))      return 'might';
-  if (pathname.startsWith('/guile'))      return 'guile';
+  if (pathname.startsWith('/power/'))      return 'power';
+  if (pathname.startsWith('/might/'))      return 'might';
+  if (pathname.startsWith('/guile/'))      return 'guile';
   if (pathname.startsWith('/champions')) return 'champions';
   if (pathname.startsWith('/store'))     return 'store';
   return 'home';
