@@ -21,6 +21,7 @@ export function buildResolvedMaps(
   const classMap = new Map<EntryKey, ClassEntry>();
   const articleMap = new Map<EntryKey, ArticleEntry>();
   const entrySourceBook = new Map<EntryKey, string>();
+  // bookMetaMap is always empty here — populated only by resolveEntries() which has Astro runtime access.
   const bookMetaMap = new Map<string, BookMeta>();
 
   for (const book of sorted) {
@@ -76,9 +77,10 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
     }
 
     const entries: AnyEntry[] = rawEntries.map((e) => {
-      // Astro collection entry id is "collection-slug/filename" for content collections.
-      // Strip the collection prefix and .md extension to get the bare slug.
-      const bareId = e.id.replace(/^[^/]+\//, '').replace(/\.md$/, '');
+      // In Astro v4, entry.id is relative to the collection directory (no prefix).
+      // For a flat file like "alteration.md", this yields "alteration".
+      // For nested paths like "combat/trip.md" this yields "trip" — nested content not currently used.
+      const bareId = e.id.replace(/\.md$/, '');
       return { ...(e.data as AnyEntry), id: bareId };
     });
 
