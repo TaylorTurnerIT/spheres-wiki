@@ -5,7 +5,7 @@ import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import type { TocItem } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content/config';
-import type { SphereEntry, ClassEntry, TalentEntry } from '@/lib/types';
+import type { SphereEntry, ClassEntry, TalentEntry, BookMeta } from '@/lib/types';
 
 interface Props {
   kind: 'sphere' | 'class';
@@ -16,11 +16,12 @@ interface Props {
   legendary: TalentEntry[];
   mainCollEntry: any;
   talentCollEntries: Map<string, any>;
+  sourceBook: BookMeta | undefined;
 }
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const { sphereMap, classMap, talentMap } = await resolveEntries();
+  const { sphereMap, classMap, talentMap, bookMetaMap } = await resolveEntries();
 
   // Load all collection entries once
   const allCollEntries = new Map<string, any>();
@@ -60,6 +61,7 @@ export async function getStaticPaths() {
         legendary,
         mainCollEntry: allCollEntries.get(sphere.id),
         talentCollEntries,
+        sourceBook: bookMetaMap.get(sphere.sourceBook),
       },
     });
   }
@@ -77,6 +79,7 @@ export async function getStaticPaths() {
         legendary: [],
         mainCollEntry: allCollEntries.get(cls.id),
         talentCollEntries: new Map(),
+        sourceBook: bookMetaMap.get(cls.sourceBook),
       },
     });
   }
@@ -84,7 +87,7 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { kind, sphere, cls, basic, advanced, legendary, mainCollEntry, talentCollEntries } = Astro.props;
+const { kind, sphere, cls, basic, advanced, legendary, mainCollEntry, talentCollEntries, sourceBook } = Astro.props;
 const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 
 // Render GFM bodies
@@ -95,10 +98,6 @@ for (const [id, entry] of talentCollEntries) {
   const { Content } = await entry.render();
   talentRendered.push({ id, Content });
 }
-
-// Get book metadata for right rail
-const { bookMetaMap } = await resolveEntries();
-const sourceBook = bookMetaMap.get(kind === 'sphere' ? sphere!.sourceBook : cls!.sourceBook);
 
 // Build ToC
 const tocItems: TocItem[] = [{ id: 'overview', label: 'Overview' }];

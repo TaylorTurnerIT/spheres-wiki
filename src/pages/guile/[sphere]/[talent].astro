@@ -3,17 +3,18 @@ import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content/config';
-import type { TalentEntry, SphereEntry } from '@/lib/types';
+import type { TalentEntry, SphereEntry, BookMeta } from '@/lib/types';
 
 interface Props {
   talent: TalentEntry;
   sphere: SphereEntry;
   collEntry: any;
+  sourceBook: BookMeta | undefined;
 }
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const { talentMap, sphereMap } = await resolveEntries();
+  const { talentMap, sphereMap, bookMetaMap } = await resolveEntries();
 
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
@@ -32,17 +33,15 @@ export async function getStaticPaths() {
     if (!sphere) continue;
     paths.push({
       params: { sphere: sphere.id, talent: talent.id },
-      props: { talent, sphere, collEntry: allCollEntries.get(talent.id) },
+      props: { talent, sphere, collEntry: allCollEntries.get(talent.id), sourceBook: bookMetaMap.get(talent.sourceBook) },
     });
   }
 
   return paths;
 }
 
-const { talent, sphere, collEntry } = Astro.props;
+const { talent, sphere, collEntry, sourceBook } = Astro.props;
 
-const { bookMetaMap } = await resolveEntries();
-const sourceBook = bookMetaMap.get(talent.sourceBook);
 const TalentContent = collEntry ? (await collEntry.render()).Content : null;
 ---
 <WikiPage title={`${talent.name} — ${sphere.name} — Spheres of Guile Wiki`} activeNamespace="guile">
