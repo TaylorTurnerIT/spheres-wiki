@@ -17,17 +17,17 @@ export async function getStaticPaths() {
   const paths = [];
 
   for (const [, sphere] of sphereMap) {
-    if (sphere.namespace !== 'power') continue;
+    if (sphere.namespace !== 'guile') continue;
     const all = [...talentMap.values()].filter(t => t.sphere === sphere.id);
     const basic     = all.filter(t => t.tier === 'basic').sort((a, b) => a.name.localeCompare(b.name));
     const advanced  = all.filter(t => t.tier === 'advanced').sort((a, b) => a.name.localeCompare(b.name));
     const legendary = all.filter(t => t.tier === 'legendary').sort((a, b) => a.name.localeCompare(b.name));
-    paths.push({ params: { slug: sphere.id }, props: { kind: 'sphere' as const, sphere, cls: undefined, basic, advanced, legendary } });
+    paths.push({ params: { sphere: sphere.id }, props: { kind: 'sphere' as const, sphere, cls: undefined, basic, advanced, legendary } });
   }
 
   for (const [, cls] of classMap) {
-    if (cls.namespace !== 'power') continue;
-    paths.push({ params: { slug: cls.id }, props: { kind: 'class' as const, sphere: undefined, cls, basic: [], advanced: [], legendary: [] } });
+    if (cls.namespace !== 'guile') continue;
+    paths.push({ params: { sphere: cls.id }, props: { kind: 'class' as const, sphere: undefined, cls, basic: [], advanced: [], legendary: [] } });
   }
 
   return paths;
@@ -36,19 +36,19 @@ export async function getStaticPaths() {
 const { kind, sphere, cls, basic, advanced, legendary } = Astro.props;
 const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 ---
-<WikiPage title={`${entryName} — Spheres of Power Wiki`} activeNamespace="power">
+<WikiPage title={`${entryName} — Spheres of Guile Wiki`} activeNamespace="guile">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/" data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="/spheres-of-power/" data-astro-prefetch="hover">Spheres of Power</a>
+    <a href="/guile/" data-astro-prefetch="hover">Spheres of Guile</a>
     <span class="breadcrumb-sep">›</span>
     <span>{entryName}</span>
   </nav>
 
   {kind === 'sphere' && sphere && (
     <>
-      <div class="page-title power">
+      <div class="page-title guile">
         <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
         {sphere.name}
       </div>
@@ -120,7 +120,7 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 
   {kind === 'class' && cls && (
     <>
-      <div class="page-title power">{cls.name}</div>
+      <div class="page-title guile">{cls.name}</div>
       <hr class="page-title-rule" />
       {/* entry description rendered from GFM body — wired in R1-6 */}
     </>

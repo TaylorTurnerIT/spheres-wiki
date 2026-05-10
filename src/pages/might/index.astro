@@ -24,7 +24,7 @@ const classes = [...classMap.values()]
 
   <div class="entry-grid">
     {spheres.map(s => (
-      <a href={`/spheres-of-might/${s.id}/`} class="entry-card might" data-astro-prefetch="hover">
+      <a href={`/might/${s.id}/`} class="entry-card might" data-astro-prefetch="hover">
         <div class="entry-card-header">
           <svg class="si entry-card-icon" aria-hidden="true"><use href={`#si-${s.icon}`} /></svg>
           <span class="entry-card-name">{s.name}</span>
@@ -42,7 +42,7 @@ const classes = [...classMap.values()]
       </div>
       <div class="entry-grid">
         {classes.map(c => (
-          <a href={`/spheres-of-might/${c.id}/`} class="entry-card might" data-astro-prefetch="hover">
+          <a href={`/might/${c.id}/`} class="entry-card might" data-astro-prefetch="hover">
             <div class="entry-card-header">
               <span class="entry-card-name">{c.name}</span>
             </div>
