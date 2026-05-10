@@ -54,7 +54,7 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
       </div>
       <hr class="page-title-rule" />
 
-      <div class="entry-description">{sphere.description}</div>
+      {/* entry description rendered from GFM body — wired in R1-6 */}
 
       {basic.length > 0 && (
         <div style="margin-top: 18px;">
@@ -69,7 +69,7 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
                   <span class="talent-name">{t.name}</span>
                   <span class="talent-tier basic">Basic</span>
                 </div>
-                <div class="talent-body">{t.description}</div>
+                {/* talent body rendered from GFM body — wired in R1-6 */}
               </div>
             ))}
           </div>
@@ -89,7 +89,7 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
                   <span class="talent-name">{t.name}</span>
                   <span class="talent-tier advanced">Advanced</span>
                 </div>
-                <div class="talent-body">{t.description}</div>
+                {/* talent body rendered from GFM body — wired in R1-6 */}
               </div>
             ))}
           </div>
@@ -109,7 +109,7 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
                   <span class="talent-name">{t.name}</span>
                   <span class="talent-tier legendary">Legendary</span>
                 </div>
-                <div class="talent-body">{t.description}</div>
+                {/* talent body rendered from GFM body — wired in R1-6 */}
               </div>
             ))}
           </div>
@@ -122,7 +122,7 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
     <>
       <div class="page-title power">{cls.name}</div>
       <hr class="page-title-rule" />
-      <div class="entry-description">{cls.description}</div>
+      {/* entry description rendered from GFM body — wired in R1-6 */}
     </>
   )}
 

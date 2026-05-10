@@ -29,7 +29,7 @@ const classes = [...classMap.values()]
           <svg class="si entry-card-icon" aria-hidden="true"><use href={`#si-${s.icon}`} /></svg>
           <span class="entry-card-name">{s.name}</span>
         </div>
-        <div class="entry-card-desc">{s.description}</div>
+        {/* description from GFM body — wired in R1-6 */}
       </a>
     ))}
   </div>
@@ -46,7 +46,7 @@ const classes = [...classMap.values()]
             <div class="entry-card-header">
               <span class="entry-card-name">{c.name}</span>
             </div>
-            <div class="entry-card-desc">{c.description}</div>
+            {/* description from GFM body — wired in R1-6 */}
           </a>
         ))}
       </div>

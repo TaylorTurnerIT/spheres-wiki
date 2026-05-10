@@ -1,11 +1,11 @@
 ---
 import WikiPage from '@/layouts/WikiPage.astro';
 import { getCollection } from 'astro:content';
-import type { BookData } from '@/lib/types';
+import type { BookMeta } from '@/lib/types';
 
 const rawBooks = await getCollection('books');
 const books = rawBooks
-  .map(b => b.data as BookData)
+  .map(b => b.data as BookMeta)
   .filter(b => b.price && b.buyUrl)
   .sort((a, b) => new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime());
 ---

@@ -1,10 +1,10 @@
 import { describe, it, expect } from 'vitest';
 import { buildResolvedMaps } from '../../src/lib/resolveEntries';
-import type { BookData } from '../../src/lib/types';
+import type { AnyEntry } from '../../src/lib/types';
 
-const baseBook: BookData = {
-  title: 'Spheres of Power',
-  publisher: 'Drop Dead Studios',
+type BookInput = { slug: string; publishedDate: string; entries: AnyEntry[] };
+
+const baseBook: BookInput = {
   slug: 'spheres-of-power-core',
   publishedDate: '2017-01-01',
   entries: [
@@ -14,7 +14,8 @@ const baseBook: BookData = {
       namespace: 'power',
       name: 'Alteration',
       icon: 'alteration',
-      description: 'Original description.',
+      sourceBook: 'spheres-of-power-core',
+      tags: [],
     },
     {
       type: 'talent',
@@ -23,21 +24,21 @@ const baseBook: BookData = {
       namespace: 'power',
       tier: 'basic',
       name: 'Alter Shape',
-      description: 'Original talent text.',
+      sourceBook: 'spheres-of-power-core',
+      tags: [],
     },
     {
       type: 'class',
       id: 'shifter',
       namespace: 'power',
       name: 'Shifter',
-      description: 'Original class text.',
+      sourceBook: 'spheres-of-power-core',
+      tags: [],
     },
   ],
 };
 
-const errataBook: BookData = {
-  title: 'Errata 2024-01',
-  publisher: 'Drop Dead Studios',
+const errataBook: BookInput = {
   slug: 'errata-2024-01',
   publishedDate: '2024-01-15',
   entries: [
@@ -47,8 +48,9 @@ const errataBook: BookData = {
       sphere: 'alteration',
       namespace: 'power',
       tier: 'basic',
-      name: 'Alter Shape',
-      description: 'Corrected talent text.',
+      name: 'Alter Shape (Corrected)',
+      sourceBook: 'errata-2024-01',
+      tags: [],
       modifies: 'alter-shape',
     },
   ],
@@ -64,7 +66,7 @@ describe('buildResolvedMaps', () => {
   it('adds talent entries under "talent:id" key', () => {
     const maps = buildResolvedMaps([baseBook]);
     expect(maps.talentMap.has('talent:alter-shape')).toBe(true);
-    expect(maps.talentMap.get('talent:alter-shape')!.description).toBe('Original talent text.');
+    expect(maps.talentMap.get('talent:alter-shape')!.name).toBe('Alter Shape');
   });
 
   it('adds class entries under "class:id" key', () => {
@@ -78,9 +80,9 @@ describe('buildResolvedMaps', () => {
     expect(maps.entrySourceBook.get('talent:alter-shape')).toBe('spheres-of-power-core');
   });
 
-  it('applies errata patch: later book replaces description', () => {
+  it('applies errata patch: later book replaces name', () => {
     const maps = buildResolvedMaps([baseBook, errataBook]);
-    expect(maps.talentMap.get('talent:alter-shape')!.description).toBe('Corrected talent text.');
+    expect(maps.talentMap.get('talent:alter-shape')!.name).toBe('Alter Shape (Corrected)');
   });
 
   it('errata does not change the source book attribution', () => {
@@ -90,7 +92,7 @@ describe('buildResolvedMaps', () => {
 
   it('errata applied in publishedDate order regardless of array order', () => {
     const maps = buildResolvedMaps([errataBook, baseBook]);
-    expect(maps.talentMap.get('talent:alter-shape')!.description).toBe('Corrected talent text.');
+    expect(maps.talentMap.get('talent:alter-shape')!.name).toBe('Alter Shape (Corrected)');
   });
 
   it('errata patch does not leak modifies field onto resolved entry', () => {
@@ -101,9 +103,7 @@ describe('buildResolvedMaps', () => {
   });
 
   it('silently skips errata patch when base entry does not exist', () => {
-    const orphanErrata: BookData = {
-      title: 'Orphan Errata',
-      publisher: 'Drop Dead Studios',
+    const orphanErrata: BookInput = {
       slug: 'orphan-errata',
       publishedDate: '2024-06-01',
       entries: [
@@ -114,7 +114,8 @@ describe('buildResolvedMaps', () => {
           namespace: 'power',
           tier: 'basic',
           name: 'Ghost Talent',
-          description: 'Should not appear.',
+          sourceBook: 'orphan-errata',
+          tags: [],
           modifies: 'nonexistent',
         },
       ],
@@ -125,7 +126,7 @@ describe('buildResolvedMaps', () => {
   });
 
   it('does not cross-contaminate types: talent:alter-shape != sphere:alter-shape', () => {
-    const bookWithCollision: BookData = {
+    const bookWithCollision: BookInput = {
       ...baseBook,
       entries: [
         ...baseBook.entries,
@@ -135,12 +136,13 @@ describe('buildResolvedMaps', () => {
           namespace: 'power',
           name: 'Should Not Patch',
           icon: 'alteration',
-          description: 'Sphere with same id as a talent.',
+          sourceBook: 'spheres-of-power-core',
+          tags: [],
         },
       ],
     };
     const maps = buildResolvedMaps([bookWithCollision]);
-    expect(maps.talentMap.get('talent:alter-shape')!.description).toBe('Original talent text.');
+    expect(maps.talentMap.get('talent:alter-shape')!.name).toBe('Alter Shape');
     expect(maps.sphereMap.get('sphere:alter-shape')!.name).toBe('Should Not Patch');
   });
 });

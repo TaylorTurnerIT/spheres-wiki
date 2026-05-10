@@ -1,25 +1,17 @@
 // src/lib/resolveEntries.ts
-import type {
-  BookData,
-  AnyEntry,
-  SphereEntry,
-  TalentEntry,
-  ClassEntry,
-  ArticleEntry,
-  EntryKey,
-  ResolvedMaps,
-} from './types';
+import type { AnyEntry, SphereEntry, TalentEntry, ClassEntry, ArticleEntry, EntryKey, ResolvedMaps, BookMeta } from './types';
 
 function entryKey(type: string, id: string): EntryKey {
   return `${type}:${id}`;
 }
 
 /**
- * Pure function — takes sorted or unsorted book array, returns resolved maps.
- * Books are sorted by publishedDate ascending before processing, so older
- * entries are always established before newer patches are applied.
+ * Pure function for unit tests — no Astro runtime required.
+ * Books sorted by publishedDate ascending before processing.
  */
-export function buildResolvedMaps(books: BookData[]): ResolvedMaps {
+export function buildResolvedMaps(
+  books: Array<{ slug: string; publishedDate: string; entries: AnyEntry[] }>
+): ResolvedMaps {
   const sorted = [...books].sort(
     (a, b) => new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime()
   );
@@ -29,14 +21,13 @@ export function buildResolvedMaps(books: BookData[]): ResolvedMaps {
   const classMap = new Map<EntryKey, ClassEntry>();
   const articleMap = new Map<EntryKey, ArticleEntry>();
   const entrySourceBook = new Map<EntryKey, string>();
+  const bookMetaMap = new Map<string, BookMeta>();
 
   for (const book of sorted) {
     for (const entry of book.entries) {
       const key = entryKey(entry.type, entry.id);
-
       if (entry.modifies) {
-        const patchKey = entryKey(entry.type, entry.modifies);
-        applyPatch(entry, patchKey, { sphereMap, talentMap, classMap, articleMap });
+        applyPatch(entry, entryKey(entry.type, entry.modifies), { sphereMap, talentMap, classMap, articleMap });
       } else {
         storeEntry(entry, key, { sphereMap, talentMap, classMap, articleMap });
         entrySourceBook.set(key, book.slug);
@@ -44,8 +35,61 @@ export function buildResolvedMaps(books: BookData[]): ResolvedMaps {
     }
   }
 
-  return { sphereMap, talentMap, classMap, articleMap, entrySourceBook };
+  return { sphereMap, talentMap, classMap, articleMap, entrySourceBook, bookMetaMap };
 }
+
+/**
+ * Astro-aware wrapper. Import this in pages/layouts.
+ * Cannot be called in vitest tests (depends on Astro runtime).
+ */
+export async function resolveEntries(): Promise<ResolvedMaps> {
+  const { getCollection } = await import('astro:content');
+  const { BOOK_COLLECTIONS } = await import('@/content/config');
+
+  // Load _book.yaml metadata via import.meta.glob
+  const bookYamlModules = import.meta.glob<{ default: Omit<BookMeta, 'slug'> }>(
+    '/src/content/**/_book.yaml',
+    { eager: true }
+  );
+
+  const bookMetaMap = new Map<string, BookMeta>();
+  for (const [path, mod] of Object.entries(bookYamlModules)) {
+    // path: "/src/content/spheres-of-power-core/_book.yaml"
+    const slug = path.split('/').at(-2)!;
+    bookMetaMap.set(slug, { slug, ...mod.default });
+  }
+
+  // Sort by publishedDate so older entries establish canonical records
+  // before errata patches from newer books are applied.
+  const allBooks: Array<{ slug: string; publishedDate: string; entries: AnyEntry[] }> = [];
+
+  for (const collectionSlug of BOOK_COLLECTIONS) {
+    const meta = bookMetaMap.get(collectionSlug);
+    const publishedDate = meta?.publishedDate ?? '1970-01-01';
+
+    let rawEntries: Awaited<ReturnType<typeof getCollection>>;
+    try {
+      rawEntries = await getCollection(collectionSlug);
+    } catch {
+      // Collection directory may not exist yet for a listed-but-empty book
+      rawEntries = [];
+    }
+
+    const entries: AnyEntry[] = rawEntries.map((e) => {
+      // Astro collection entry id is "collection-slug/filename" for content collections.
+      // Strip the collection prefix and .md extension to get the bare slug.
+      const bareId = e.id.replace(/^[^/]+\//, '').replace(/\.md$/, '');
+      return { ...(e.data as AnyEntry), id: bareId };
+    });
+
+    allBooks.push({ slug: collectionSlug, publishedDate, entries });
+  }
+
+  const maps = buildResolvedMaps(allBooks);
+  return { ...maps, bookMetaMap };
+}
+
+// ──── internal helpers ────────────────────────────────────────────────────
 
 function storeEntry(
   entry: AnyEntry,
@@ -63,8 +107,6 @@ function applyPatch(
   targetKey: EntryKey,
   maps: Pick<ResolvedMaps, 'sphereMap' | 'talentMap' | 'classMap' | 'articleMap'>
 ): void {
-  // Strip modifies and id so the resolved entry retains its canonical id and
-  // doesn't expose the errata book's internal fields.
   const { modifies: _m, id: _i, ...fieldsToMerge } = patch as AnyEntry & { modifies?: string };
   if (patch.type === 'sphere' && maps.sphereMap.has(targetKey)) {
     maps.sphereMap.set(targetKey, { ...maps.sphereMap.get(targetKey)!, ...(fieldsToMerge as Partial<SphereEntry>) });
@@ -75,16 +117,4 @@ function applyPatch(
   } else if (patch.type === 'article' && maps.articleMap.has(targetKey)) {
     maps.articleMap.set(targetKey, { ...maps.articleMap.get(targetKey)!, ...(fieldsToMerge as Partial<ArticleEntry>) });
   }
-  // If target not found, silently skip.
-}
-
-/**
- * Astro-aware wrapper. Import this in pages/layouts.
- * Cannot be called in vitest tests (depends on Astro runtime).
- */
-export async function resolveEntries(): Promise<ResolvedMaps> {
-  const { getCollection } = await import('astro:content');
-  const rawBooks = await getCollection('books');
-  const books: BookData[] = rawBooks.map((b) => b.data as BookData);
-  return buildResolvedMaps(books);
 }
