@@ -66,7 +66,7 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
             {basic.map(t => (
               <div class="talent-entry">
                 <div class="talent-header">
-                  <span class="talent-name">{t.name}</span>
+                  <a href={`/might/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
                   <span class="talent-tier basic">Basic</span>
                 </div>
                 {/* talent body rendered from GFM body — wired in R1-6 */}
@@ -86,7 +86,7 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
             {advanced.map(t => (
               <div class="talent-entry">
                 <div class="talent-header">
-                  <span class="talent-name">{t.name}</span>
+                  <a href={`/might/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
                   <span class="talent-tier advanced">Advanced</span>
                 </div>
                 {/* talent body rendered from GFM body — wired in R1-6 */}
@@ -106,7 +106,7 @@ const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
             {legendary.map(t => (
               <div class="talent-entry">
                 <div class="talent-header">
-                  <span class="talent-name">{t.name}</span>
+                  <a href={`/might/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
                   <span class="talent-tier legendary">Legendary</span>
                 </div>
                 {/* talent body rendered from GFM body — wired in R1-6 */}
