@@ -10,7 +10,7 @@ interface Props {
   activeNamespace?: string;
 }
 
-const { title, description } = Astro.props; // activeNamespace wired in Plan 4 (sidebar + tab highlighting)
+const { title, description, activeNamespace } = Astro.props;
 ---
 <Base title={title} description={description}>
   <SiteHeader />
@@ -20,7 +20,7 @@ const { title, description } = Astro.props; // activeNamespace wired in Plan 4 (
 
     <main class="main">
       <TabNav />
-      <div class="content-area">
+      <div class="content-area" data-system={activeNamespace}>
         <slot />
       </div>
     </main>
