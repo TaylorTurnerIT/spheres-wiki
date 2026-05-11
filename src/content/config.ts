@@ -2,8 +2,9 @@
 import { defineCollection, z } from 'astro:content';
 
 const baseFields = {
+  id: z.string().regex(/^[a-z0-9-]+$/, 'id must be lowercase kebab-case'),
   name: z.string(),
-  namespace: z.string(),
+  system: z.string(),
   sourceBook: z.string(),
   tags: z.array(z.string()).default([]),
   modifies: z.string().optional(),

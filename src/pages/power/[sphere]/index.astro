@@ -29,8 +29,7 @@ export async function getStaticPaths() {
     try {
       const entries = await getCollection(slug);
       for (const e of entries) {
-        const bareId = e.id.replace(/\.md$/, '');
-        allCollEntries.set(bareId, e);
+        allCollEntries.set((e.data as any).id, e);
       }
     } catch { /* empty collection */ }
   }
@@ -38,8 +37,8 @@ export async function getStaticPaths() {
   const paths = [];
 
   for (const [, sphere] of sphereMap) {
-    if (sphere.namespace !== 'power') continue;
-    const all = [...talentMap.values()].filter(t => t.sphere === sphere.id && t.namespace === 'power');
+    if (sphere.system !== 'power') continue;
+    const all = [...talentMap.values()].filter(t => t.sphere === sphere.id && t.system === 'power');
     const basic     = all.filter(t => t.tier === 'basic').sort((a, b) => a.name.localeCompare(b.name));
     const advanced  = all.filter(t => t.tier === 'advanced').sort((a, b) => a.name.localeCompare(b.name));
     const legendary = all.filter(t => t.tier === 'legendary').sort((a, b) => a.name.localeCompare(b.name));
@@ -67,7 +66,7 @@ export async function getStaticPaths() {
   }
 
   for (const [, cls] of classMap) {
-    if (cls.namespace !== 'power') continue;
+    if (cls.system !== 'power') continue;
     paths.push({
       params: { sphere: cls.id },
       props: {

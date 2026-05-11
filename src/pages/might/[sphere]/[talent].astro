@@ -21,15 +21,15 @@ export async function getStaticPaths() {
     try {
       const entries = await getCollection(slug);
       for (const e of entries) {
-        allCollEntries.set(e.id.replace(/\.md$/, ''), e);
+        allCollEntries.set((e.data as any).id, e);
       }
     } catch {}
   }
 
   const paths = [];
   for (const [, talent] of talentMap) {
-    if (talent.namespace !== 'might') continue;
-    const sphere = [...sphereMap.values()].find(s => s.id === talent.sphere && s.namespace === 'might');
+    if (talent.system !== 'might') continue;
+    const sphere = [...sphereMap.values()].find(s => s.id === talent.sphere && s.system === 'might');
     if (!sphere) continue;
     paths.push({
       params: { sphere: sphere.id, talent: talent.id },

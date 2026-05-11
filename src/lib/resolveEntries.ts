@@ -77,11 +77,14 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
     }
 
     const entries: AnyEntry[] = rawEntries.map((e) => {
-      // In Astro v4, entry.id is relative to the collection directory (no prefix).
-      // For a flat file like "alteration.md", this yields "alteration".
-      // For nested paths like "combat/trip.md" this yields "trip" — nested content not currently used.
-      const bareId = e.id.replace(/\.md$/, '');
-      return { ...(e.data as AnyEntry), id: bareId };
+      const entry = e.data as AnyEntry;
+      if (entry.sourceBook !== collectionSlug) {
+        throw new Error(
+          `Content error: "${e.id}" in collection "${collectionSlug}" has sourceBook "${entry.sourceBook}". ` +
+            `Move the file or fix the sourceBook field.`
+        );
+      }
+      return entry;
     });
 
     allBooks.push({ slug: collectionSlug, publishedDate, entries });
