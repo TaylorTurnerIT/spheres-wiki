@@ -13,7 +13,7 @@ export type BookMeta = {
 export type SphereEntry = {
   type: 'sphere';
   id: string;
-  namespace: string;
+  system: string;
   name: string;
   icon: string;
   sourceBook: string;
@@ -25,7 +25,7 @@ export type TalentEntry = {
   type: 'talent';
   id: string;
   sphere: string;
-  namespace: string;
+  system: string;
   tier: 'basic' | 'advanced' | 'legendary';
   name: string;
   sourceBook: string;
@@ -36,7 +36,7 @@ export type TalentEntry = {
 export type ClassEntry = {
   type: 'class';
   id: string;
-  namespace: string;
+  system: string;
   name: string;
   sourceBook: string;
   tags: string[];
@@ -46,7 +46,7 @@ export type ClassEntry = {
 export type ArticleEntry = {
   type: 'article';
   id: string;
-  namespace: string;
+  system: string;
   name: string;
   sourceBook: string;
   tags: string[];

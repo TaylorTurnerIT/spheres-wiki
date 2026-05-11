@@ -5,7 +5,7 @@ import { resolveEntries } from '@/lib/resolveEntries';
 const { classMap } = await resolveEntries();
 
 const classes = [...classMap.values()]
-  .filter(c => c.namespace === 'champions')
+  .filter(c => c.system === 'champions')
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 <WikiPage title="Champions of the Spheres — Spheres Wiki" activeNamespace="champions">

@@ -5,11 +5,11 @@ import { resolveEntries } from '@/lib/resolveEntries';
 const { sphereMap, classMap } = await resolveEntries();
 
 const spheres = [...sphereMap.values()]
-  .filter(s => s.namespace === 'power')
+  .filter(s => s.system === 'power')
   .sort((a, b) => a.name.localeCompare(b.name));
 
 const classes = [...classMap.values()]
-  .filter(c => c.namespace === 'power')
+  .filter(c => c.system === 'power')
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 <WikiPage title="Spheres of Power — Spheres Wiki" activeNamespace="power">

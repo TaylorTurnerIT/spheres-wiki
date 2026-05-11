@@ -5,11 +5,11 @@ import { resolveEntries } from '@/lib/resolveEntries';
 const { sphereMap, classMap } = await resolveEntries();
 
 const spheres = [...sphereMap.values()]
-  .filter(s => s.namespace === 'guile')
+  .filter(s => s.system === 'guile')
   .sort((a, b) => a.name.localeCompare(b.name));
 
 const classes = [...classMap.values()]
-  .filter(c => c.namespace === 'guile')
+  .filter(c => c.system === 'guile')
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 <WikiPage title="Spheres of Guile — Spheres Wiki" activeNamespace="guile">

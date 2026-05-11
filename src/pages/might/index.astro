@@ -5,11 +5,11 @@ import { resolveEntries } from '@/lib/resolveEntries';
 const { sphereMap, classMap } = await resolveEntries();
 
 const spheres = [...sphereMap.values()]
-  .filter(s => s.namespace === 'might')
+  .filter(s => s.system === 'might')
   .sort((a, b) => a.name.localeCompare(b.name));
 
 const classes = [...classMap.values()]
-  .filter(c => c.namespace === 'might')
+  .filter(c => c.system === 'might')
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 <WikiPage title="Spheres of Might — Spheres Wiki" activeNamespace="might">

@@ -2,12 +2,12 @@
 type Namespace = 'power' | 'might' | 'guile' | 'champions';
 
 interface Props {
-  namespace: Namespace;
+  system: Namespace;
 }
 
-const { namespace } = Astro.props;
+const { system } = Astro.props;
 
-const cssClass = namespace === 'champions' ? 'champ' : namespace;
+const cssClass = system === 'champions' ? 'champ' : system;
 
 const meta: Record<Namespace, { name: string; description: string; linkText: string; href: string }> = {
   power: {
@@ -36,11 +36,11 @@ const meta: Record<Namespace, { name: string; description: string; linkText: str
   },
 };
 
-const { name, description, linkText, href } = meta[namespace];
+const { name, description, linkText, href } = meta[system];
 ---
 <a href={href} class:list={['intro-card', cssClass]} data-astro-prefetch="hover">
   <div class="intro-card-art">
-    {namespace === 'power' && (
+    {system === 'power' && (
       <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
         <rect width="200" height="80" fill="#0D2850"/>
         <circle cx="100" cy="40" r="55" fill="#174B93" opacity=".35"/>
@@ -62,7 +62,7 @@ const { name, description, linkText, href } = meta[namespace];
         <circle cx="154" cy="63" r="1"  fill="#7AABFF" opacity=".55"/>
       </svg>
     )}
-    {namespace === 'might' && (
+    {system === 'might' && (
       <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
         <rect width="200" height="80" fill="#3D1200"/>
         <line x1="0"   y1="20"  x2="20"  y2="0"  stroke="#6B2200" stroke-width="1.5" opacity=".4"/>
@@ -86,7 +86,7 @@ const { name, description, linkText, href } = meta[namespace];
         <circle cx="100" cy="40" r="3.5" fill="#FF8050"/>
       </svg>
     )}
-    {namespace === 'guile' && (
+    {system === 'guile' && (
       <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
         <rect width="200" height="80" fill="#180B2E"/>
         <line x1="100" y1="40" x2="38"  y2="8"  stroke="#7A4EC0" stroke-width=".8" opacity=".5"/>
@@ -108,7 +108,7 @@ const { name, description, linkText, href } = meta[namespace];
         <circle cx="148" cy="17"   r="1"   fill="#A06AE8" opacity=".55"/>
       </svg>
     )}
-    {namespace === 'champions' && (
+    {system === 'champions' && (
       <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
         <rect width="200" height="80" fill="#091E0C"/>
         <line x1="100" y1="0"  x2="55"  y2="80" stroke="#1E5E24" stroke-width="10" opacity=".3"/>

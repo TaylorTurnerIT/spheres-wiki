@@ -2,14 +2,14 @@
 import type { SphereEntry, ClassEntry } from '@/lib/types';
 
 interface Props {
-  namespace: string;
+  system: string;
   spheres: SphereEntry[];
   classes: ClassEntry[];
 }
 
-const { namespace, spheres, classes } = Astro.props;
+const { system, spheres, classes } = Astro.props;
 
-const nsClass = namespace === 'champions' ? 'champ' : namespace;
+const nsClass = system === 'champions' ? 'champ' : system;
 
 type NsConfig = {
   title: string;
@@ -27,13 +27,13 @@ const nsConfigs: Record<string, NsConfig> = {
   champions: { title: 'Champions',         subtitle: 'Multi-system',    classLabel: 'Champion Classes',     buildText: 'How to Build a Champion →',     buildHref: '/champions/',        nsRoute: 'champions'        },
 };
 
-const cfg: NsConfig = nsConfigs[namespace] ?? {
-  title: namespace, subtitle: '', classLabel: 'Classes',
-  buildText: 'Browse →', buildHref: `/${namespace}/`, nsRoute: namespace,
+const cfg: NsConfig = nsConfigs[system] ?? {
+  title: system, subtitle: '', classLabel: 'Classes',
+  buildText: 'Browse →', buildHref: `/${system}/`, nsRoute: system,
 };
 
 // For champions: show classes in the main list (no spheres). For others: spheres first, classes in subsection.
-const isChampions = namespace === 'champions';
+const isChampions = system === 'champions';
 ---
 <div class:list={['ref-card', nsClass]}>
   <div class="ref-card-header">

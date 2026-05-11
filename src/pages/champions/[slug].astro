@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   const paths = [];
 
   for (const [, cls] of classMap) {
-    if (cls.namespace !== 'champions') continue;
+    if (cls.system !== 'champions') continue;
     paths.push({ params: { slug: cls.id }, props: { cls } });
   }
 
