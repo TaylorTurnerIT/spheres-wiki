@@ -1,127 +1,105 @@
-# Spheres Wiki (in development)
+# Spheres Wiki (BETA)
 
-Static reference wiki for the Spheres of Power tabletop RPG system by Drop Dead Studios.
-Built with Astro 4.x + TypeScript. Replaces the existing Wikidot site.
+Static reference wiki for the Spheres tabletop RPG system by Drop Dead Studios.
+Built with Astro 4.x + TypeScript. Replaces the existing Wikidot site with a fast, searchable static experience.
+
+## Status: Beta
+The website is currently in **Beta**. Some content and functionality may be incomplete.
+- **Reporting Issues**: Visit our [GitHub repository](https://github.com/TaylorTurnerIT/spheres-wiki) to report bugs or discuss changes.
+
+## Features
+- **Fast Search**: Powered by [Pagefind](https://pagefind.app/), providing instant client-side results across all content and metadata.
+- **Hierarchical Indexing**: Primary entries (Spheres, Classes) are prioritized in search results.
+- **Mobile First**: Responsive design with a sidebar-driven navigation.
+- **View Transitions**: Seamless page navigation using Astro's View Transitions.
 
 ## Prerequisites
-
 - Node.js ≥ 22.12.0
 - npm
 
 ## Setup
-
 ```bash
 npm install
 ```
 
-## Dev server
-
+## Development
 ```bash
+# Start dev server
 npm run dev
 # → http://localhost:4321
-```
 
-## Tests
-
-Unit tests cover the content resolution engine (`buildResolvedMaps`).
-
-```bash
+# Run unit tests
 npm test
-```
 
-## Type check
-
-```bash
+# Type check
 npx astro check
 ```
 
-## Production build
-
+## Production Build
+The build process automatically generates a search index using Pagefind.
 ```bash
 npm run build
 # output in dist/
-```
 
-Preview the build locally:
-
-```bash
+# Preview the build locally
 npm run preview
 ```
 
-## Adding content
+## Adding Content
+All game content lives in `src/content/`. The system uses a dynamic discovery mechanism for books.
 
-All game content lives in `src/content/books/`. Each file is a source book YAML.
+### Creating a New Book
+1. Create a directory in `src/content/` (e.g., `src/content/my-book/`).
+2. Add a `_book.yaml` in that directory:
+   ```yaml
+   title: "My Book"
+   publisher: "Drop Dead Studios"
+   slug: my-book
+   publishedDate: "2024-01-01"
+   price: "$19.99"
+   buyUrl: "https://..."
+   ```
+3. Add entries as Markdown files with frontmatter in subdirectories (spheres, talents, feats, classes).
 
+### Frontmatter Example
 ```yaml
-# src/content/books/my-book.yaml
-title: "My Book"
-publisher: "Drop Dead Studios"
-slug: my-book
-publishedDate: "2024-01-01"
-price: "$19.99"
-buyUrl: "https://..."
-entries:
-  - type: sphere
-    id: my-sphere
-    namespace: power     # power | might | guile | champions | or any custom slug
-    name: My Sphere
-    icon: my-sphere      # matches SVG symbol id "si-<icon>"
-    description: "..."
-
-  - type: talent
-    id: my-talent
-    sphere: my-sphere
-    namespace: power
-    tier: basic          # basic | advanced | legendary
-    name: My Talent
-    description: "..."
+---
+id: my-talent
+name: My Talent
+system: power
+sourceBook: my-book
+type: talent
+sphere: alteration
+tier: basic
+tags: ["transformation", "utility"]
+---
+Talent description goes here...
 ```
 
-To publish errata, create a new book file and use `modifies` on any entry:
-
-```yaml
-entries:
-  - type: talent
-    id: corrected-talent      # any id
-    modifies: original-talent # id of the entry being patched
-    sphere: alteration
-    namespace: power
-    tier: basic
-    name: Original Talent
-    description: "Corrected text."
-```
-
-The build engine applies patches in `publishedDate` order. Source book attribution always stays with the original book.
-
-## Project structure
-
+## Project Structure
 ```
 src/
   config/site.ts          site title, nav links, featured release, namespace color tokens
   content/
-    config.ts             Zod schema for book YAML files
-    books/                source book YAML files (one per book/errata)
+    config.ts             Zod schema and collection discovery
+    */_book.yaml          book-level metadata
+    */{type}/*.md         individual content entries
   components/
     SVGSprite.astro        all sphere icon symbols (60+)
+    BetaToast.astro        dismissible beta notification
   layouts/
-    Base.astro             <html> shell with fonts and View Transitions
-    WikiPage.astro         header + sidebar + tab nav + content slot
+    WikiPage.astro         header + sidebar + tab nav + content slot (marks indexing scope)
   lib/
-    types.ts               TypeScript types for all entry/book shapes
-    resolveEntries.ts      buildResolvedMaps() + resolveEntries() Astro wrapper
-  pages/
-    index.astro            home page
+    resolveEntries.ts      content resolution and linking logic
+    url.ts                 base path aware link helper
   styles/
-    global.css             design tokens, reset, layout shells
-tests/
-  lib/resolveEntries.test.ts   Vitest unit tests for the resolution engine
+    global.css             design tokens, search results, and layout styles
 ```
 
-## Build plans
-
-| Plan | Status | Scope |
+## Progress
+| Phase | Status | Scope |
 |------|--------|-------|
-| Plan 1 — Foundation | ✅ Complete | Astro setup, content engine, layouts, design tokens |
-| Plan 2 — Home page | ✅ Complete | IntroCards, RefCards, FeaturedRelease, full home page |
-| Plan 3 — Inner pages | ✅ Complete | Namespace index, entry detail, store, side pages |
-| Plan 4 — Search & polish | Pending | Pagefind, real sidebar/header components, accessibility pass |
+| 1 — Foundation | ✅ Complete | Astro setup, content engine, layouts, design tokens |
+| 2 — Home page | ✅ Complete | IntroCards, RefCards, FeaturedRelease, full home page |
+| 3 — Inner pages | ✅ Complete | Namespace index, entry detail, store, side pages |
+| 4 — Search & Beta | ✅ Complete | Pagefind integration, beta toast, ranking optimization |
