@@ -5,6 +5,8 @@ import TableOfContents from '@/components/TableOfContents.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import type { TocItem } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import { buildCategories } from '@/lib/categorize';
+import type { CategoryResult } from '@/lib/categorize';
 import { BOOK_COLLECTIONS } from '@/content/config';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
 import type { SphereEntry, ClassEntry, TalentEntry, FeatEntry, BookMeta } from '@/lib/types';
@@ -14,9 +16,9 @@ interface Props {
   sphere: SphereEntry | undefined;
   cls: ClassEntry | undefined;
   base: TalentEntry[];
-  basic: TalentEntry[];
-  advanced: TalentEntry[];
+  allTalents: TalentEntry[];
   feats: FeatEntry[];
+  categories: CategoryResult[];
   mainCollEntry: any;
   talentCollEntries: Map<string, any>;
   featCollEntries: Map<string, any>;
@@ -42,14 +44,14 @@ export async function getStaticPaths() {
 
   for (const [, sphere] of sphereMap) {
     if (sphere.system !== 'might') continue;
-    const all = [...talentMap.values()].filter(t => t.sphere === sphere.id && t.system === 'might');
-    const base     = all.filter(t => t.tier === 'base').sort((a, b) => a.name.localeCompare(b.name));
-    const basic    = all.filter(t => t.tier === 'basic').sort((a, b) => a.name.localeCompare(b.name));
-    const advanced = all.filter(t => t.tier === 'advanced').sort((a, b) => a.name.localeCompare(b.name));
-    const feats    = [...featMap.values()].filter(f => f.sphere === sphere.id && f.system === 'might').sort((a, b) => a.name.localeCompare(b.name));
+    const allTalents = [...talentMap.values()].filter(t => t.sphere === sphere.id && t.system === 'might');
+    const base       = allTalents.filter(t => t.tier === 'base').sort((a, b) => a.name.localeCompare(b.name));
+    const feats      = [...featMap.values()].filter(f => f.sphere === sphere.id && f.system === 'might').sort((a, b) => a.name.localeCompare(b.name));
+
+    const categories = buildCategories(sphere, allTalents.filter(t => t.tier !== 'base'), feats);
 
     const talentCollEntries = new Map<string, any>();
-    for (const t of [...base, ...basic, ...advanced]) {
+    for (const t of allTalents) {
       const entry = allCollEntries.get(t.id);
       if (entry) talentCollEntries.set(t.id, entry);
     }
@@ -67,9 +69,9 @@ export async function getStaticPaths() {
         sphere,
         cls: undefined,
         base,
-        basic,
-        advanced,
+        allTalents,
         feats,
+        categories,
         mainCollEntry: allCollEntries.get(sphere.id),
         talentCollEntries,
         featCollEntries,
@@ -88,9 +90,9 @@ export async function getStaticPaths() {
         sphere: undefined,
         cls,
         base: [],
-        basic: [],
-        advanced: [],
+        allTalents: [],
         feats: [],
+        categories: [],
         mainCollEntry: allCollEntries.get(cls.id),
         talentCollEntries: new Map(),
         featCollEntries: new Map(),
@@ -103,7 +105,8 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { kind, sphere, cls, base, basic, advanced, feats, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap } = Astro.props;
+const { kind, sphere, cls, base, allTalents, feats, categories, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap } = Astro.props;
+const { talentMap, featMap } = await resolveEntries();
 const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 
 const FIRST_PARTY = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
@@ -112,6 +115,7 @@ const is3pp = (sbSlug: string) => {
   return !!pub && !FIRST_PARTY.has(pub);
 };
 
+// For sphere pages: split body on [TalentName] markers and render each segment
 type RenderedSegment = { type: 'markdown'; html: string } | { type: 'base-ability'; id: string };
 const bodySegments: RenderedSegment[] = [];
 if (kind === 'sphere' && mainCollEntry) {
@@ -124,6 +128,7 @@ if (kind === 'sphere' && mainCollEntry) {
   }
 }
 
+// For class pages: render full body as-is
 const MainContent = (kind === 'class' && mainCollEntry)
   ? (await mainCollEntry.render()).Content
   : null;
@@ -140,16 +145,23 @@ for (const [id, entry] of featCollEntries) {
   featRendered.push({ id, Content });
 }
 
+// Build ToC
 const tocItems: TocItem[] = [
   {
     id: 'overview',
     label: 'Overview',
     sub: base.length > 0 ? base.map(t => ({ id: t.id, label: t.name })) : undefined,
   },
+  ...categories.map(cat => ({
+    id: cat.id,
+    label: cat.label,
+    sub: cat.entries.map(e => {
+      const talent = [...talentMap.values()].find(t => t.id === e.id);
+      const feat = [...featMap.values()].find(f => f.id === e.id);
+      return { id: e.id, label: talent?.name || feat?.name || 'Unknown' };
+    })
+  }))
 ];
-if (basic.length > 0) tocItems.push({ id: 'basic-talents', label: 'Basic Talents', sub: basic.map(t => ({ id: t.id, label: t.name })) });
-if (advanced.length > 0) tocItems.push({ id: 'advanced-talents', label: 'Advanced Talents', sub: advanced.map(t => ({ id: t.id, label: t.name })) });
-if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.map(f => ({ id: f.id, label: f.name })) });
 ---
 <WikiPage title={`${entryName} — Spheres of Might Wiki`} activeNamespace="might">
 
@@ -177,7 +189,6 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
             <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
             {sphere.name}
           </div>
-
           <hr class="page-title-rule" />
 
           {bodySegments.map(seg => {
@@ -187,7 +198,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
             const t = base.find(b => b.id === seg.id);
             const tContent = talentRendered.find(r => r.id === seg.id);
             return t ? (
-              <div class="base-ability-block" id={t.id}>
+              <div class="base-ability-block" id={t.id} data-pagefind-weight="0.5">
                 <div class="base-ability-header">
                   <a href={url(`/might/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
                   <span class="base-ability-badge">Base Ability</span>
@@ -197,104 +208,64 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
             ) : null;
           })}
 
-          {basic.length > 0 && (
+          {categories.map(cat => (
             <div style="margin-top: 18px;">
               <div class="section-heading">
-                <span class="section-heading-text" id="basic-talents">Basic Talents</span>
+                <span class="section-heading-text" id={cat.id}>{cat.label}</span>
                 <div class="section-heading-rule"></div>
               </div>
               <div class="talent-list">
-                {basic.map(t => {
-                  const tContent = talentRendered.find(r => r.id === t.id);
-                  const extBook = t.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(t.sourceBook) : undefined;
-                  return (
-                    <div class="talent-entry" id={t.id}>
-                      <div class="talent-header">
-                        <div class="talent-header-top">
-                          <a href={url(`/might/${sphere!.id}/${t.id}/`)} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
-                          {extBook && <span class="talent-source">{extBook.title}</span>}
-                        </div>
-                        <div class="talent-header-bottom">
-                          <span class="talent-tier basic">Basic</span>
-                          {is3pp(t.sourceBook) && <span class="talent-tag" data-tag="3pp">3PP</span>}
-                          {t.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
-                        </div>
-                      </div>
-                      {tContent && <div class="talent-body"><tContent.Content /></div>}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
+                {cat.entries.map(e => {
+                  const talent = [...talentMap.values()].find(t => t.id === e.id);
+                  const feat = [...featMap.values()].find(f => f.id === e.id);
+                  const entry = talent || feat;
+                  if (!entry) return null;
 
-          {advanced.length > 0 && (
-            <div style="margin-top: 18px;">
-              <div class="section-heading">
-                <span class="section-heading-text" id="advanced-talents">Advanced Talents</span>
-                <div class="section-heading-rule"></div>
-              </div>
-              <div class="talent-list">
-                {advanced.map(t => {
-                  const tContent = talentRendered.find(r => r.id === t.id);
-                  const extBook = t.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(t.sourceBook) : undefined;
-                  return (
-                    <div class="talent-entry" id={t.id}>
-                      <div class="talent-header">
-                        <div class="talent-header-top">
-                          <a href={url(`/might/${sphere!.id}/${t.id}/`)} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
-                          {extBook && <span class="talent-source">{extBook.title}</span>}
-                        </div>
-                        <div class="talent-header-bottom">
-                          <span class="talent-tier advanced">Advanced</span>
-                          {is3pp(t.sourceBook) && <span class="talent-tag" data-tag="3pp">3PP</span>}
-                          {t.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
-                        </div>
-                      </div>
-                      {tContent && <div class="talent-body"><tContent.Content /></div>}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
+                  const content = talent ? talentRendered.find(r => r.id === e.id) : featRendered.find(r => r.id === e.id);
+                  const extBook = entry.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(entry.sourceBook) : undefined;
+                  const tierLabel = talent ? (talent.tier.charAt(0).toUpperCase() + talent.tier.slice(1)) : 'Feat';
 
-          {feats.length > 0 && (
-            <div style="margin-top: 18px;">
-              <div class="section-heading">
-                <span class="section-heading-text" id="feats">Feats</span>
-                <div class="section-heading-rule"></div>
-              </div>
-              <div class="talent-list">
-                {feats.map(f => {
-                  const fContent = featRendered.find(r => r.id === f.id);
-                  const extBook = f.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(f.sourceBook) : undefined;
                   return (
-                    <div class="talent-entry" id={f.id}>
+                    <div class="talent-entry" id={entry.id} data-pagefind-weight="0.5">
                       <div class="talent-header">
                         <div class="talent-header-top">
-                          <a href={url(`/might/${sphere!.id}/feats/${f.id}/`)} class="talent-name" data-astro-prefetch="hover">{f.name}</a>
+                          <a
+                            href={url(`/might/${sphere!.id}/${talent ? '' : 'feats/'}${entry.id}/`)}
+                            class="talent-name"
+                            data-astro-prefetch="hover"
+                          >
+                            {entry.name}
+                          </a>
                           {extBook && <span class="talent-source">{extBook.title}</span>}
                         </div>
                         <div class="talent-header-bottom">
-                          <span class="talent-tier feat">Feat</span>
-                          {is3pp(f.sourceBook) && <span class="talent-tag" data-tag="3pp">3PP</span>}
-                          {f.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
+                          <span class={`talent-tier ${talent ? talent.tier : 'feat'}`}>{tierLabel}</span>
+                          {is3pp(entry.sourceBook) && <span class="talent-tag" data-tag="3pp">3PP</span>}
+                          {entry.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
                         </div>
                       </div>
-                      {fContent && <div class="talent-body"><fContent.Content /></div>}
+                      {content && <div class="talent-body"><content.Content /></div>}
                     </div>
                   );
                 })}
               </div>
             </div>
-          )}
+          ))}
         </>
       )}
 
       {kind === 'class' && cls && (
         <>
-          <div class="page-title might" id="overview">{cls.name}</div>
+          <div
+            class="page-title might"
+            id="overview"
+            data-pagefind-weight="10"
+            data-pagefind-meta={`title:${cls.name}`}
+            data-pagefind-meta="type:class"
+            data-pagefind-meta="system:Spheres of Might"
+          >
+            {cls.name}
+          </div>
           <hr class="page-title-rule" />
           {MainContent && <div class="entry-description"><MainContent /></div>}
         </>

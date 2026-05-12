@@ -16,6 +16,12 @@ categoryDefinitions:
   - label: "Alteration Talents"
     tiers: ["basic"]
     excludeTags: ["body", "transformation"]
+  - label: "Combat Feats"
+    tiers: ["feat"]
+    tags: ["combat"]
+  - label: "Dual Sphere Feats"
+    tiers: ["feat"]
+    tags: ["dual-sphere"]
 ---
 
 You have the ability to change the physical makeup of creatures.
