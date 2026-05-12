@@ -76,6 +76,7 @@ const TalentContent = collEntry ? (await collEntry.render()).Content : null;
         {talent.name}
       </div>
       <div class="talent-page-meta">
+        <span class="talent-tier talent">Talent</span>
         <span class={`talent-tier ${talent.tier}`}>{talent.tier === 'base' ? 'Base Ability' : talent.tier}</span>
         {is3pp && <span class="talent-tag" data-tag="3pp">3PP</span>}
         {talent.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}

@@ -239,6 +239,7 @@ const tocItems: TocItem[] = [
                           {extBook && <span class="talent-source">{extBook.title}</span>}
                         </div>
                         <div class="talent-header-bottom">
+                          <span class="talent-tier talent">Talent</span>
                           <span class={`talent-tier ${talent ? talent.tier : 'feat'}`}>{tierLabel}</span>
                           {is3pp(entry.sourceBook) && <span class="talent-tag" data-tag="3pp">3PP</span>}
                           {entry.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}

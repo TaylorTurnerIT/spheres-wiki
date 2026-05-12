@@ -1366,6 +1366,11 @@ a:hover {
   color: #7a4800;
   border: 0.5px solid rgba(130, 80, 0, 0.45);
 }
+.talent-tier.talent {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--clr-muted);
+  border: 0.5px solid var(--clr-border);
+}
 .talent-tier.basic {
   background: rgba(22, 90, 28, 0.11);
   color: #1a6622;
