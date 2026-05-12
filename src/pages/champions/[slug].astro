@@ -32,7 +32,13 @@ const { cls } = Astro.props;
     <span>{cls.name}</span>
   </nav>
 
-  <div class="page-title champ">
+  <div
+    class="page-title champ"
+    data-pagefind-weight="10"
+    data-pagefind-meta={`title:${cls.name}`}
+    data-pagefind-meta="type:class"
+    data-pagefind-meta="system:Champions of the Spheres"
+  >
     <svg class="si page-title-icon" aria-hidden="true"><use href="#si-champ-star" /></svg>
     {cls.name}
   </div>

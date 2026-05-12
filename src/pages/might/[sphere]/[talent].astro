@@ -62,7 +62,19 @@ const TalentContent = collEntry ? (await collEntry.render()).Content : null;
 
   <div class="content-columns">
     <div class="content-main">
-      <div class="page-title might" id="overview">{talent.name}</div>
+      <div
+        class="page-title might"
+        id="overview"
+        data-pagefind-weight="10"
+        data-pagefind-meta={`title:${talent.name}`}
+        data-pagefind-meta={`sphere:${sphere.name}`}
+        data-pagefind-meta="system:Spheres of Might"
+        data-pagefind-meta="type:talent"
+        data-pagefind-meta={`tier:${talent.tier}`}
+        data-pagefind-meta={`tags:${talent.tags.join(', ')}`}
+      >
+        {talent.name}
+      </div>
       <div class="talent-page-meta">
         <span class={`talent-tier ${talent.tier}`}>{talent.tier === 'base' ? 'Base Ability' : talent.tier}</span>
         {is3pp && <span class="talent-tag" data-tag="3pp">3PP</span>}

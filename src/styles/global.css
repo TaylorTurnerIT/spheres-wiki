@@ -452,6 +452,52 @@ a:hover {
   margin-bottom: 2px;
 }
 
+.search-result-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.search-badge {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--clr-muted);
+}
+
+.search-result-item[data-system="Spheres of Power"] {
+  border-left: 3px solid var(--clr-power);
+}
+.search-result-item[data-system="Spheres of Might"] {
+  border-left: 3px solid var(--clr-might);
+}
+.search-result-item[data-system="Spheres of Guile"] {
+  border-left: 3px solid var(--clr-guile);
+}
+.search-result-item[data-system="Champions of the Spheres"] {
+  border-left: 3px solid var(--clr-champ);
+}
+
+.search-result-item[data-system="Spheres of Power"] .search-result-title {
+  color: var(--clr-power);
+}
+.search-result-item[data-system="Spheres of Might"] .search-result-title {
+  color: var(--clr-might);
+}
+.search-result-item[data-system="Spheres of Guile"] .search-result-title {
+  color: var(--clr-guile);
+}
+.search-result-item[data-system="Champions of the Spheres"]
+  .search-result-title {
+  color: var(--clr-champ);
+}
+
 .search-result-excerpt {
   font-size: var(--fs-xs);
   color: var(--clr-muted);

@@ -62,7 +62,18 @@ const FeatContent = collEntry ? (await collEntry.render()).Content : null;
 
   <div class="content-columns">
     <div class="content-main">
-      <div class="page-title guile" id="overview">{feat.name}</div>
+      <div
+        class="page-title guile"
+        id="overview"
+        data-pagefind-weight="10"
+        data-pagefind-meta={`title:${feat.name}`}
+        data-pagefind-meta={`sphere:${sphere.name}`}
+        data-pagefind-meta="system:Spheres of Guile"
+        data-pagefind-meta="type:feat"
+        data-pagefind-meta={`tags:${feat.tags.join(', ')}`}
+      >
+        {feat.name}
+      </div>
       <div class="talent-page-meta">
         <span class="talent-tier feat">Feat</span>
         {is3pp && <span class="talent-tag" data-tag="3pp">3PP</span>}

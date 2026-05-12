@@ -169,7 +169,14 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
 
       {kind === 'sphere' && sphere && (
         <>
-          <div class="page-title power" id="overview" data-pagefind-weight="10">
+          <div
+            class="page-title power"
+            id="overview"
+            data-pagefind-weight="10"
+            data-pagefind-meta={`title:${sphere.name}`}
+            data-pagefind-meta="type:sphere"
+            data-pagefind-meta="system:Spheres of Power"
+          >
             <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
             {sphere.name}
           </div>
@@ -289,7 +296,16 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
 
       {kind === 'class' && cls && (
         <>
-          <div class="page-title power" id="overview">{cls.name}</div>
+          <div
+            class="page-title power"
+            id="overview"
+            data-pagefind-weight="10"
+            data-pagefind-meta={`title:${cls.name}`}
+            data-pagefind-meta="type:class"
+            data-pagefind-meta="system:Spheres of Power"
+          >
+            {cls.name}
+          </div>
           <hr class="page-title-rule" />
           {MainContent && <div class="entry-description"><MainContent /></div>}
         </>

@@ -71,14 +71,33 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
       // Show top 8 results
       const results = await Promise.all(search.results.slice(0, 8).map((r: any) => r.data()));
 
-      resultsDiv.innerHTML = results.map(r => `
-        <a href="${r.url}" class="search-result-item">
-          <div class="search-result-title">${r.meta.title}</div>
-          <div class="search-result-excerpt">${r.excerpt}</div>
-        </a>
-      `).join('');
+      resultsDiv.innerHTML = results.map(r => {
+        const title = r.meta.title || "Untitled";
+        const sphere = r.meta.sphere;
+        const system = r.meta.system;
+        const type = r.meta.type;
+        const tier = r.meta.tier;
+        const tags = r.meta.tags ? r.meta.tags.split(',').map((t: string) => t.trim()) : [];
+
+        // Build the rich title line
+        let displayTitle = title;
+        if (sphere && type !== 'sphere') displayTitle += ` — ${sphere}`;
+        if (system) displayTitle += ` — ${system}`;
+
+        return `
+          <a href="${r.url}" class="search-result-item" data-system="${system || ''}">
+            <div class="search-result-title">${displayTitle}</div>
+            <div class="search-result-meta">
+              ${tier ? `<span class="search-badge">${tier}</span>` : ''}
+              ${tags.map((t: string) => `<span class="search-badge">${t}</span>`).join('')}
+            </div>
+            <div class="search-result-excerpt">${r.excerpt}</div>
+          </a>
+        `;
+      }).join('');
 
       resultsDiv.hidden = false;
+
     });
 
     // Close when clicking outside

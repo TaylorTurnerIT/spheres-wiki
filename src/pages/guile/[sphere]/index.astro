@@ -166,10 +166,18 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
 
       {kind === 'sphere' && sphere && (
         <>
-          <div class="page-title guile" id="overview">
+          <div
+            class="page-title guile"
+            id="overview"
+            data-pagefind-weight="10"
+            data-pagefind-meta={`title:${sphere.name}`}
+            data-pagefind-meta="type:sphere"
+            data-pagefind-meta="system:Spheres of Guile"
+          >
             <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
             {sphere.name}
           </div>
+
           <hr class="page-title-rule" />
 
           {bodySegments.map(seg => {
