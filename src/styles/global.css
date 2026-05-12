@@ -1490,6 +1490,15 @@ a:hover {
   flex-direction: column;
   gap: 4px;
   transition: transform 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.store-card.is-link {
+  cursor: pointer;
+}
+.store-card.is-link:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
 }
 .store-card:hover {
   transform: translateY(-2px);
