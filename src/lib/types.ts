@@ -10,8 +10,15 @@ export type BookMeta = {
   coverImage?: string;
 };
 
+export type TalentCategory = {
+  label: string;
+  tiers?: Array<"base" | "basic" | "advanced" | "feat">;
+  tags?: string[];
+  excludeTags?: string[];
+};
+
 export type SphereEntry = {
-  type: 'sphere';
+  type: "sphere";
   id: string;
   system: string;
   name: string;
@@ -19,14 +26,15 @@ export type SphereEntry = {
   sourceBook: string;
   tags: string[];
   modifies?: string;
+  categoryDefinitions?: TalentCategory[];
 };
 
 export type TalentEntry = {
-  type: 'talent';
+  type: "talent";
   id: string;
   sphere: string;
   system: string;
-  tier: 'base' | 'basic' | 'advanced';
+  tier: "base" | "basic" | "advanced";
   name: string;
   sourceBook: string;
   tags: string[];
@@ -34,7 +42,7 @@ export type TalentEntry = {
 };
 
 export type ClassEntry = {
-  type: 'class';
+  type: "class";
   id: string;
   system: string;
   name: string;
@@ -44,7 +52,7 @@ export type ClassEntry = {
 };
 
 export type ArticleEntry = {
-  type: 'article';
+  type: "article";
   id: string;
   system: string;
   name: string;
@@ -54,7 +62,7 @@ export type ArticleEntry = {
 };
 
 export type FeatEntry = {
-  type: 'feat';
+  type: "feat";
   id: string;
   system: string;
   name: string;
@@ -64,7 +72,12 @@ export type FeatEntry = {
   modifies?: string;
 };
 
-export type AnyEntry = SphereEntry | TalentEntry | FeatEntry | ClassEntry | ArticleEntry;
+export type AnyEntry =
+  | SphereEntry
+  | TalentEntry
+  | FeatEntry
+  | ClassEntry
+  | ArticleEntry;
 
 export type EntryKey = string; // "type:id"
 

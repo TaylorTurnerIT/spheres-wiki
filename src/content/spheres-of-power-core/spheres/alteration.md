@@ -6,6 +6,16 @@ sourceBook: spheres-of-power-core
 type: sphere
 icon: alteration
 tags: []
+categoryDefinitions:
+  - label: "Body Talents"
+    tiers: ["basic"]
+    tags: ["body"]
+  - label: "Transformation Talents"
+    tiers: ["basic"]
+    tags: ["transformation"]
+  - label: "Alteration Talents"
+    tiers: ["basic"]
+    excludeTags: ["body", "transformation"]
 ---
 
 You have the ability to change the physical makeup of creatures.
