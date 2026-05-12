@@ -169,7 +169,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
 
       {kind === 'sphere' && sphere && (
         <>
-          <div class="page-title power" id="overview">
+          <div class="page-title power" id="overview" data-pagefind-weight="10">
             <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
             {sphere.name}
           </div>
@@ -182,7 +182,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
             const t = base.find(b => b.id === seg.id);
             const tContent = talentRendered.find(r => r.id === seg.id);
             return t ? (
-              <div class="base-ability-block" id={t.id}>
+              <div class="base-ability-block" id={t.id} data-pagefind-weight="0.5">
                 <div class="base-ability-header">
                   <a href={url(`/power/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
                   <span class="base-ability-badge">Base Ability</span>
@@ -203,7 +203,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
                   const tContent = talentRendered.find(r => r.id === t.id);
                   const extBook = t.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(t.sourceBook) : undefined;
                   return (
-                    <div class="talent-entry" id={t.id}>
+                    <div class="talent-entry" id={t.id} data-pagefind-weight="0.5">
                       <div class="talent-header">
                         <div class="talent-header-top">
                           <a href={url(`/power/${sphere!.id}/${t.id}/`)} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
@@ -234,7 +234,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
                   const tContent = talentRendered.find(r => r.id === t.id);
                   const extBook = t.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(t.sourceBook) : undefined;
                   return (
-                    <div class="talent-entry" id={t.id}>
+                    <div class="talent-entry" id={t.id} data-pagefind-weight="0.5">
                       <div class="talent-header">
                         <div class="talent-header-top">
                           <a href={url(`/power/${sphere!.id}/${t.id}/`)} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
@@ -265,7 +265,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
                   const fContent = featRendered.find(r => r.id === f.id);
                   const extBook = f.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(f.sourceBook) : undefined;
                   return (
-                    <div class="talent-entry" id={f.id}>
+                    <div class="talent-entry" id={f.id} data-pagefind-weight="0.5">
                       <div class="talent-header">
                         <div class="talent-header-top">
                           <a href={url(`/power/${sphere!.id}/feats/${f.id}/`)} class="talent-name" data-astro-prefetch="hover">{f.name}</a>
