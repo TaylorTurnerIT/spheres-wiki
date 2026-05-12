@@ -1,4 +1,4 @@
----
+import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 ---
 <WikiPage title="About — Spheres Wiki">
@@ -18,10 +18,10 @@ import WikiPage from '@/layouts/WikiPage.astro';
   </div>
 
   <div class="sphere-list single" style="max-width: 400px;">
-    <a href="/power/" class="power" data-astro-prefetch="hover">Spheres of Power</a>
-    <a href="/might/" class="might" data-astro-prefetch="hover">Spheres of Might</a>
-    <a href="/guile/" class="guile" data-astro-prefetch="hover">Spheres of Guile</a>
-    <a href="/champions/" class="champ" data-astro-prefetch="hover">Champions of the Spheres</a>
+    <a href={url("/power/")} class="power" data-astro-prefetch="hover">Spheres of Power</a>
+    <a href={url("/might/")} class="might" data-astro-prefetch="hover">Spheres of Might</a>
+    <a href={url("/guile/")} class="guile" data-astro-prefetch="hover">Spheres of Guile</a>
+    <a href={url("/champions/")} class="champ" data-astro-prefetch="hover">Champions of the Spheres</a>
   </div>
 
 </WikiPage>

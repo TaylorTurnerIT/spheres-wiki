@@ -1,4 +1,4 @@
----
+import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
@@ -50,11 +50,11 @@ const FeatContent = collEntry ? (await collEntry.render()).Content : null;
 <WikiPage title={`${feat.name} — ${sphere.name} — Spheres of Might Wiki`} activeNamespace="might">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/" data-astro-prefetch="hover">Home</a>
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="/might/" data-astro-prefetch="hover">Spheres of Might</a>
+    <a href={url("/might/")} data-astro-prefetch="hover">Spheres of Might</a>
     <span class="breadcrumb-sep">›</span>
-    <a href={`/might/${sphere.id}/`} data-astro-prefetch="hover">{sphere.name}</a>
+    <a href={url(`/might/${sphere.id}/`)} data-astro-prefetch="hover">{sphere.name}</a>
     <span class="breadcrumb-sep">›</span>
     <span>{feat.name}</span>
   </nav>

@@ -1,4 +1,4 @@
----
+import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
@@ -153,9 +153,9 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
 <WikiPage title={`${entryName} — Spheres of Guile Wiki`} activeNamespace="guile">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/" data-astro-prefetch="hover">Home</a>
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="/guile/" data-astro-prefetch="hover">Spheres of Guile</a>
+    <a href={url("/guile/")} data-astro-prefetch="hover">Spheres of Guile</a>
     <span class="breadcrumb-sep">›</span>
     <span>{entryName}</span>
   </nav>
@@ -180,7 +180,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
             return t ? (
               <div class="base-ability-block" id={t.id}>
                 <div class="base-ability-header">
-                  <a href={`/guile/${sphere!.id}/${t.id}/`} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
+                  <a href={url(`/guile/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
                   <span class="base-ability-badge">Base Ability</span>
                 </div>
                 {tContent && <div class="talent-body"><tContent.Content /></div>}
@@ -202,7 +202,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
                     <div class="talent-entry" id={t.id}>
                       <div class="talent-header">
                         <div class="talent-header-top">
-                          <a href={`/guile/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
+                          <a href={url(`/guile/${sphere!.id}/${t.id}/`)} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
                           {extBook && <span class="talent-source">{extBook.title}</span>}
                         </div>
                         <div class="talent-header-bottom">
@@ -233,7 +233,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
                     <div class="talent-entry" id={t.id}>
                       <div class="talent-header">
                         <div class="talent-header-top">
-                          <a href={`/guile/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
+                          <a href={url(`/guile/${sphere!.id}/${t.id}/`)} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
                           {extBook && <span class="talent-source">{extBook.title}</span>}
                         </div>
                         <div class="talent-header-bottom">
@@ -264,7 +264,7 @@ if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.ma
                     <div class="talent-entry" id={f.id}>
                       <div class="talent-header">
                         <div class="talent-header-top">
-                          <a href={`/guile/${sphere!.id}/feats/${f.id}/`} class="talent-name" data-astro-prefetch="hover">{f.name}</a>
+                          <a href={url(`/guile/${sphere!.id}/feats/${f.id}/`)} class="talent-name" data-astro-prefetch="hover">{f.name}</a>
                           {extBook && <span class="talent-source">{extBook.title}</span>}
                         </div>
                         <div class="talent-header-bottom">

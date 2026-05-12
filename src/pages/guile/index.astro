@@ -1,4 +1,4 @@
----
+import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 
@@ -15,7 +15,7 @@ const classes = [...classMap.values()]
 <WikiPage title="Spheres of Guile — Spheres Wiki" activeNamespace="guile">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/" data-astro-prefetch="hover">Home</a>
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
     <span>Spheres of Guile</span>
   </nav>
@@ -30,7 +30,7 @@ const classes = [...classMap.values()]
 
   <div class="entry-grid">
     {spheres.map(s => (
-      <a href={`/guile/${s.id}/`} class="entry-card guile" data-astro-prefetch="hover">
+      <a href={url(`/guile/${s.id}/`)} class="entry-card guile" data-astro-prefetch="hover">
         <div class="entry-card-header">
           <svg class="si entry-card-icon" aria-hidden="true"><use href={`#si-${s.icon}`} /></svg>
           <span class="entry-card-name">{s.name}</span>
@@ -48,7 +48,7 @@ const classes = [...classMap.values()]
       </div>
       <div class="entry-grid">
         {classes.map(c => (
-          <a href={`/guile/${c.id}/`} class="entry-card guile" data-astro-prefetch="hover">
+          <a href={url(`/guile/${c.id}/`)} class="entry-card guile" data-astro-prefetch="hover">
             <div class="entry-card-header">
               <span class="entry-card-name">{c.name}</span>
             </div>

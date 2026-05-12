@@ -1,4 +1,4 @@
----
+import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import IntroCard from '@/components/IntroCard.astro';
 import FeaturedRelease from '@/components/FeaturedRelease.astro';
@@ -53,23 +53,23 @@ const champClasses  = [...classMap.values()].filter(c => c.system === 'champions
   </div>
 
   <div class="resources-row">
-    <ResourceCard name="Archetypes Index" description="PF1e crossover archetypes" href="/archetypes/">
+    <ResourceCard name="Archetypes Index" description="PF1e crossover archetypes" href={url("/archetypes/")}>
       <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M3 2h7l3 3v9H3z"/><path d="M10 2v3h3"/><path d="M5 8h6M5 10.5h6M5 6h3"/>
       </svg>
     </ResourceCard>
-    <ResourceCard name="BB Code Template" description="Forum profile markup" href="/bb-code-template/">
+    <ResourceCard name="BB Code Template" description="Forum profile markup" href={url("/bb-code-template/")}>
       <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M4 3L1 8l3 5M12 3l3 5-3 5"/><path d="M9.5 3l-3 10"/>
       </svg>
     </ResourceCard>
-    <ResourceCard name="Community Resources" description="Discords, forums &amp; tools" href="/community-resources/">
+    <ResourceCard name="Community Resources" description="Discords, forums &amp; tools" href={url("/community-resources/")}>
       <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="5.5" cy="5.5" r="2.5"/><path d="M1.5 13c0-2.5 2-4 4-4s4 1.5 4 4"/>
         <circle cx="11" cy="4.5" r="2"/><path d="M8.5 13c0-2 1.5-3.5 3-3.5s3 1.5 3 3.5"/>
       </svg>
     </ResourceCard>
-    <ResourceCard name="Citations Guide" description="Source &amp; reference rules" href="/citations-guide/">
+    <ResourceCard name="Citations Guide" description="Source &amp; reference rules" href={url("/citations-guide/")}>
       <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M4 2.5v11l4-1.5 4 1.5v-11z"/><path d="M4 5h8"/>
       </svg>

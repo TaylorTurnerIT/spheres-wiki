@@ -1,4 +1,4 @@
----
+import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import type { ClassEntry } from '@/lib/types';
@@ -24,9 +24,9 @@ const { cls } = Astro.props;
 <WikiPage title={`${cls.name} — Champions of the Spheres Wiki`} activeNamespace="champions">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/" data-astro-prefetch="hover">Home</a>
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="/champions/" data-astro-prefetch="hover">Champions of the Spheres</a>
+    <a href={url("/champions/")} data-astro-prefetch="hover">Champions of the Spheres</a>
     <span class="breadcrumb-sep">›</span>
     <span>{cls.name}</span>
   </nav>

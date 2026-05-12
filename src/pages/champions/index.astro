@@ -1,4 +1,4 @@
----
+import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 
@@ -11,7 +11,7 @@ const classes = [...classMap.values()]
 <WikiPage title="Champions of the Spheres — Spheres Wiki" activeNamespace="champions">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/" data-astro-prefetch="hover">Home</a>
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
     <span>Champions of the Spheres</span>
   </nav>
@@ -26,7 +26,7 @@ const classes = [...classMap.values()]
 
   <div class="entry-grid">
     {classes.map(c => (
-      <a href={`/champions/${c.id}/`} class="entry-card champ" data-astro-prefetch="hover">
+      <a href={url(`/champions/${c.id}/`)} class="entry-card champ" data-astro-prefetch="hover">
         <div class="entry-card-header">
           <svg class="si entry-card-icon" aria-hidden="true"><use href="#si-champ-star" /></svg>
           <span class="entry-card-name">{c.name}</span>

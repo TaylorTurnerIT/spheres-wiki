@@ -1,4 +1,6 @@
 ---
+import { url } from "@/lib/url";
+
 type Namespace = 'power' | 'might' | 'guile' | 'champions';
 
 interface Props {
@@ -38,7 +40,7 @@ const meta: Record<Namespace, { name: string; description: string; linkText: str
 
 const { name, description, linkText, href } = meta[system];
 ---
-<a href={href} class:list={['intro-card', cssClass]} data-astro-prefetch="hover">
+<a href={url(href)} class:list={['intro-card', cssClass]} data-astro-prefetch="hover">
   <div class="intro-card-art">
     {system === 'power' && (
       <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">

@@ -1,4 +1,4 @@
----
+import { url } from "@/lib/url";
 import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
 ---
 <div class="site-header-wrap">
@@ -20,7 +20,7 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
     </div>
     <nav class="header-nav" aria-label="Site navigation">
       {HEADER_NAV.map(({ label, href }) => (
-        <a href={href} data-astro-prefetch="hover">{label}</a>
+        <a href={url(href)} data-astro-prefetch="hover">{label}</a>
       ))}
     </nav>
   </header>

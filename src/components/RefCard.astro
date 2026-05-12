@@ -1,4 +1,4 @@
----
+import { url } from "@/lib/url";
 import type { SphereEntry, ClassEntry } from '@/lib/types';
 
 interface Props {
@@ -46,7 +46,7 @@ const isChampions = system === 'champions';
       {isChampions ? (
         <div class:list={['sphere-list', 'single', `${nsClass}-list`]}>
           {classes.map(cls => (
-            <a href={`/${cfg.nsRoute}/${cls.id}/`} class={nsClass} data-astro-prefetch="hover">
+            <a href={url(`/${cfg.nsRoute}/${cls.id}/`)} class={nsClass} data-astro-prefetch="hover">
               <svg class="si"><use href="#si-champ-star"/></svg>{cls.name}
             </a>
           ))}
@@ -55,7 +55,7 @@ const isChampions = system === 'champions';
         <>
           <div class:list={['sphere-list', `${nsClass}-list`]}>
             {spheres.map(s => (
-              <a href={`/${cfg.nsRoute}/${s.id}/`} class={nsClass} data-astro-prefetch="hover">
+              <a href={url(`/${cfg.nsRoute}/${s.id}/`)} class={nsClass} data-astro-prefetch="hover">
                 <svg class="si"><use href={`#si-${s.icon}`}/></svg>{s.name}
               </a>
             ))}
@@ -65,10 +65,10 @@ const isChampions = system === 'champions';
               <div class="ref-subsection-label">{cfg.classLabel}</div>
               <div class="sphere-list">
                 {classes.map(cls => (
-                  <a href={`/${cfg.nsRoute}/${cls.id}/`} class={nsClass} data-astro-prefetch="hover">{cls.name}</a>
+                  <a href={url(`/${cfg.nsRoute}/${cls.id}/`)} class={nsClass} data-astro-prefetch="hover">{cls.name}</a>
                 ))}
               </div>
-              <a href={cfg.buildHref} class:list={['build-link', nsClass]} data-astro-prefetch="hover">
+              <a href={url(cfg.buildHref)} class:list={['build-link', nsClass]} data-astro-prefetch="hover">
                 {cfg.buildText}
               </a>
             </div>
@@ -79,7 +79,7 @@ const isChampions = system === 'champions';
     </div>
 
     <div class="ref-card-cta">
-      <a href={`/${cfg.nsRoute}/`} class:list={['ref-card-btn', nsClass]} data-astro-prefetch="hover">
+      <a href={url(`/${cfg.nsRoute}/`)} class:list={['ref-card-btn', nsClass]} data-astro-prefetch="hover">
         Browse All →
       </a>
     </div>

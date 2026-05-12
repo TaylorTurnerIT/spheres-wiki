@@ -1,26 +1,27 @@
 ---
+import { url } from "@/lib/url";
 import { NAMESPACE_LABELS } from '@/config/site';
 
 const pathname = Astro.url.pathname;
 
 function currentTab(): string {
-  if (pathname.startsWith('/power/'))      return 'power';
-  if (pathname.startsWith('/might/'))      return 'might';
-  if (pathname.startsWith('/guile/'))      return 'guile';
-  if (pathname.startsWith('/champions')) return 'champions';
-  if (pathname.startsWith('/store'))     return 'store';
+  if (pathname.startsWith(url('/power/')))      return 'power';
+  if (pathname.startsWith(url('/might/')))      return 'might';
+  if (pathname.startsWith(url('/guile/')))      return 'guile';
+  if (pathname.startsWith(url('/champions')))   return 'champions';
+  if (pathname.startsWith(url('/store')))       return 'store';
   return 'home';
 }
 
 const active = currentTab();
 
 const tabs = [
-  { slug: 'home',      label: 'Home',                       href: '/',                  cls: ''      },
-  { slug: 'power',     label: NAMESPACE_LABELS.power,        href: '/power/', cls: 'power' },
-  { slug: 'might',     label: NAMESPACE_LABELS.might,        href: '/might/', cls: 'might' },
-  { slug: 'guile',     label: NAMESPACE_LABELS.guile,        href: '/guile/', cls: 'guile' },
-  { slug: 'champions', label: NAMESPACE_LABELS.champions,    href: '/champions/',        cls: 'champ' },
-  { slug: 'store',     label: 'Store',                      href: '/store/',            cls: ''      },
+  { slug: 'home',      label: 'Home',                       href: url('/'),                  cls: ''      },
+  { slug: 'power',     label: NAMESPACE_LABELS.power,        href: url('/power/'), cls: 'power' },
+  { slug: 'might',     label: NAMESPACE_LABELS.might,        href: url('/might/'), cls: 'might' },
+  { slug: 'guile',     label: NAMESPACE_LABELS.guile,        href: url('/guile/'), cls: 'guile' },
+  { slug: 'champions', label: NAMESPACE_LABELS.champions,    href: url('/champions/'),        cls: 'champ' },
+  { slug: 'store',     label: 'Store',                      href: url('/store/'),            cls: ''      },
 ];
 ---
 <nav class="tab-nav" aria-label="System navigation">
