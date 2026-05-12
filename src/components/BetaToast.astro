@@ -27,6 +27,9 @@
     display: flex;
     gap: 12px;
     z-index: 2000;
+  }
+
+  .beta-toast.animate {
     animation: slide-in 0.3s ease-out;
   }
 
@@ -94,11 +97,20 @@
 
     if (!toast || !closeBtn) return;
 
-    // Check if user has dismissed it
+    // Check if user has dismissed it permanently
     if (localStorage.getItem('beta-toast-dismissed') === 'true') {
       toast.hidden = true;
+      return;
+    }
+
+    toast.hidden = false;
+
+    // Only play animation once per session
+    if (!sessionStorage.getItem('beta-toast-animated')) {
+      toast.classList.add('animate');
+      sessionStorage.setItem('beta-toast-animated', 'true');
     } else {
-      toast.hidden = false;
+      toast.classList.remove('animate');
     }
 
     closeBtn.onclick = () => {
