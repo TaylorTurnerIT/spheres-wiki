@@ -9,7 +9,7 @@ const { book } = Astro.props;
 ---
 <div class="store-card">
   {book.coverImage
-    ? <img src={`/images/covers/${book.coverImage}`} alt={book.title} class="store-card-cover" loading="lazy" />
+    ? <img src={book.coverImage} alt={book.title} class="store-card-cover" loading="lazy" />
     : <div class="store-card-cover-placeholder" aria-hidden="true"></div>
   }
   <div class="store-title">{book.title}</div>

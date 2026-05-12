@@ -19,7 +19,7 @@ svg {
   --clr-border: #c0b9b0;
 
   /* Text */
-  --clr-text: #3e3830;
+  --clr-text: #1c1c1c;
   --clr-muted: #857870;
 
   /* Brand */
@@ -1207,6 +1207,19 @@ a:hover {
   flex-direction: column;
   gap: 5px;
 }
+.store-card-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 1px);
+  border: 0.5px solid var(--clr-border);
+}
+.store-card-cover-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--clr-border);
+  border-radius: calc(var(--radius) - 1px);
+}
 .store-title {
   font-family: var(--font-display);
   font-size: var(--fs-base);
@@ -1353,6 +1366,13 @@ a:hover {
   color: var(--clr-muted);
   font-size: var(--fs-xs);
 }
+.source-callout-cover {
+  width: 100%;
+  border-radius: calc(var(--radius) - 1px);
+  margin-bottom: 4px;
+  object-fit: cover;
+  border: 1px solid var(--clr-border);
+}
 
 /* ── Markdown prose tables ──────────────────────────────── */
 .entry-description table,
@@ -1388,10 +1408,18 @@ a:hover {
 }
 
 /* ── Active system color overrides ─────────────────────── */
-[data-system="power"]    { --clr-active: var(--clr-power); }
-[data-system="might"]    { --clr-active: var(--clr-might); }
-[data-system="guile"]    { --clr-active: var(--clr-guile); }
-[data-system="champions"] { --clr-active: var(--clr-champ); }
+[data-system="power"] {
+  --clr-active: var(--clr-power);
+}
+[data-system="might"] {
+  --clr-active: var(--clr-might);
+}
+[data-system="guile"] {
+  --clr-active: var(--clr-guile);
+}
+[data-system="champions"] {
+  --clr-active: var(--clr-champ);
+}
 
 /* ── Prose headings (rendered markdown) ─────────────────── */
 .entry-description h1,
@@ -1410,10 +1438,22 @@ a:hover {
   margin-bottom: 0.4em;
   line-height: 1.2;
 }
-.entry-description h1, .talent-body h1 { font-size: var(--fs-xl); }
-.entry-description h2, .talent-body h2 { font-size: var(--fs-lg); }
-.entry-description h3, .talent-body h3 { font-size: var(--fs-md); }
-.entry-description h4, .talent-body h4 { font-size: var(--fs-base); }
+.entry-description h1,
+.talent-body h1 {
+  font-size: var(--fs-xl);
+}
+.entry-description h2,
+.talent-body h2 {
+  font-size: var(--fs-lg);
+}
+.entry-description h3,
+.talent-body h3 {
+  font-size: var(--fs-md);
+}
+.entry-description h4,
+.talent-body h4 {
+  font-size: var(--fs-base);
+}
 
 /* ── ErrataNotice ───────────────────────────────────────── */
 .errata-notice {
