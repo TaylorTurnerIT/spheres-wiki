@@ -1,0 +1,113 @@
+---
+---
+<div id="beta-toast" class="beta-toast" hidden>
+  <div class="beta-toast-content">
+    <div class="beta-toast-title">BETA VERSION</div>
+    <div class="beta-toast-body">
+      Some content and functionality may be incomplete.
+      Report issues or discuss changes on
+      <a href="https://github.com/TaylorTurnerIT/spheres-wiki" target="_blank" rel="noopener noreferrer">GitHub</a>.
+    </div>
+  </div>
+  <button id="close-beta-toast" class="beta-toast-close" aria-label="Close notification">&times;</button>
+</div>
+
+<style>
+  .beta-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-left: 4px solid var(--clr-brand);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 12px 16px;
+    display: flex;
+    gap: 12px;
+    z-index: 2000;
+    animation: slide-in 0.3s ease-out;
+  }
+
+  @keyframes slide-in {
+    from { transform: translateX(120%); }
+    to { transform: translateX(0); }
+  }
+
+  .beta-toast-content {
+    flex: 1;
+  }
+
+  .beta-toast-title {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--clr-brand);
+    margin-bottom: 4px;
+  }
+
+  .beta-toast-body {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    line-height: 1.4;
+    color: var(--clr-text);
+  }
+
+  .beta-toast-body a {
+    color: var(--clr-power);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .beta-toast-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--clr-muted);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    align-self: flex-start;
+  }
+
+  .beta-toast-close:hover {
+    color: var(--clr-text);
+  }
+
+  @media (max-width: 768px) {
+    .beta-toast {
+      top: auto;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      width: auto;
+    }
+  }
+</style>
+
+<script>
+  function initToast() {
+    const toast = document.getElementById('beta-toast');
+    const closeBtn = document.getElementById('close-beta-toast');
+
+    if (!toast || !closeBtn) return;
+
+    // Check if user has dismissed it
+    const isDismissed = localStorage.getItem('beta-toast-dismissed');
+    if (!isDismissed) {
+      toast.hidden = false;
+    }
+
+    closeBtn.addEventListener('click', () => {
+      toast.hidden = true;
+      localStorage.setItem('beta-toast-dismissed', 'true');
+    });
+  }
+
+  // Run on initial load
+  initToast();
+  // Run on view transition navigation
+  document.addEventListener('astro:after-swap', initToast);
+</script>
