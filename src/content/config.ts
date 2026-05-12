@@ -34,18 +34,17 @@ const entrySchema = z.discriminatedUnion('type', [
 
 // description is the GFM markdown body — not a frontmatter field
 
-export const BOOK_COLLECTIONS = [
-  'spheres-of-power-core',
-  'spheres-of-might-core',
-  'spheres-of-guile-core',
-  'champions-of-the-spheres',
-  'ultimate-spheres-of-power',
-] as const;
+// Auto-discover every book that has a _book.yaml — no manual registration needed.
+const bookYamls = import.meta.glob('./*/_book.yaml');
+const discoveredSlugs = Object.keys(bookYamls).map(p =>
+  p.replace('./', '').replace('/_book.yaml', '')
+);
 
-export type BookCollectionSlug = (typeof BOOK_COLLECTIONS)[number];
+export const BOOK_COLLECTIONS: string[] = discoveredSlugs;
+export type BookCollectionSlug = string;
 
 const bookCollection = defineCollection({ type: 'content', schema: entrySchema });
 
 export const collections = Object.fromEntries(
-  BOOK_COLLECTIONS.map((slug) => [slug, bookCollection])
-) as Record<BookCollectionSlug, typeof bookCollection>;
+  discoveredSlugs.map(slug => [slug, bookCollection])
+) as Record<string, typeof bookCollection>;

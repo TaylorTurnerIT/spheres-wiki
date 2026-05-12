@@ -308,6 +308,8 @@ a:hover {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid var(--clr-border);
 }
 .section-heading-text {
   font-family: var(--font-display);
@@ -500,8 +502,16 @@ a:hover {
 .page-title-rule {
   border: none;
   border-top: 1px solid var(--clr-border);
+  margin-top: 10px;
   margin-bottom: 14px;
   width: 360px;
+}
+.talent-page-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 8px;
 }
 
 /* ── Update banner ──────────────────────────────────────── */
@@ -1195,25 +1205,46 @@ a:hover {
 .talent-list {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 .talent-entry {
-  padding: 10px 0;
-  border-bottom: 0.5px solid var(--clr-border);
-}
-.talent-entry:last-child {
-  border-bottom: none;
+  border: 1px solid var(--clr-border);
+  border-left: 3px solid var(--clr-active);
+  border-radius: var(--radius);
+  background: var(--clr-bg);
+  padding: 12px 14px;
 }
 .talent-header {
   display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.talent-header-top {
+  display: flex;
   align-items: baseline;
+  justify-content: space-between;
   gap: 8px;
-  margin-bottom: 5px;
+}
+.talent-header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 .talent-name {
   font-family: var(--font-display);
   font-size: var(--fs-md);
   font-weight: 700;
   color: var(--clr-active);
+}
+.talent-source {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xs);
+  font-weight: 600;
+  color: var(--clr-muted);
+  font-style: italic;
+  white-space: nowrap;
 }
 .talent-tier {
   font-family: var(--font-display);
@@ -1225,15 +1256,75 @@ a:hover {
   border-radius: 2px;
   white-space: nowrap;
 }
+.talent-tier.base {
+  background: rgba(130, 80, 0, 0.13);
+  color: #7a4800;
+  border: 0.5px solid rgba(130, 80, 0, 0.45);
+}
 .talent-tier.basic {
-  background: var(--clr-surface);
-  color: var(--clr-muted);
-  border: 0.5px solid var(--clr-border);
+  background: rgba(22, 90, 28, 0.11);
+  color: #1a6622;
+  border: 0.5px solid rgba(22, 90, 28, 0.4);
 }
 .talent-tier.advanced {
   background: rgba(23, 75, 147, 0.1);
   color: var(--clr-power);
   border: 0.5px solid rgba(23, 75, 147, 0.3);
+}
+.talent-tag {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: rgba(100, 80, 40, 0.12);
+  color: #5a4a38;
+  border: 1px solid rgba(100, 80, 40, 0.35);
+  white-space: nowrap;
+}
+.talent-tag[data-tag="transformation"] {
+  background: rgba(23, 75, 147, 0.12);
+  color: #174b93;
+  border-color: rgba(23, 75, 147, 0.4);
+}
+.talent-tag[data-tag="body"] {
+  background: rgba(22, 90, 28, 0.12);
+  color: #1a6622;
+  border-color: rgba(22, 90, 28, 0.4);
+}
+.talent-tag[data-tag="utility"] {
+  background: rgba(90, 45, 150, 0.12);
+  color: #5a2d96;
+  border-color: rgba(90, 45, 150, 0.4);
+}
+.talent-tag[data-tag="instill"] {
+  background: rgba(160, 100, 0, 0.12);
+  color: #8a5500;
+  border-color: rgba(160, 100, 0, 0.4);
+}
+.talent-tag[data-tag="mass"] {
+  background: rgba(0, 100, 120, 0.12);
+  color: #006478;
+  border-color: rgba(0, 100, 120, 0.4);
+}
+.talent-tag[data-tag="range"] {
+  background: rgba(143, 45, 0, 0.12);
+  color: #8f2d00;
+  border-color: rgba(143, 45, 0, 0.4);
+}
+.talent-tag[data-tag="strike"] {
+  background: rgba(153, 0, 0, 0.12);
+  color: #990000;
+  border-color: rgba(153, 0, 0, 0.4);
+}
+.talent-tag[data-tag="3pp"] {
+  background: rgba(130, 70, 0, 0.15);
+  color: #7a4200;
+  border-color: rgba(130, 70, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 .talent-body {
   font-size: var(--fs-md);
@@ -1324,15 +1415,11 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  position: sticky;
-  top: 16px;
+  align-self: start;
 }
 @media (max-width: 1024px) {
   .content-columns {
     grid-template-columns: 1fr;
-  }
-  .right-rail {
-    position: static;
   }
 }
 

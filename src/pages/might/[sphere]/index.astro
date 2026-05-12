@@ -18,6 +18,7 @@ interface Props {
   mainCollEntry: any;
   talentCollEntries: Map<string, any>;
   sourceBook: BookMeta | undefined;
+  bookMetaMap: Map<string, BookMeta>;
 }
 
 export async function getStaticPaths() {
@@ -27,7 +28,7 @@ export async function getStaticPaths() {
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
     try {
-      const entries = await getCollection(slug);
+      const entries = await getCollection(slug as any);
       for (const e of entries) {
         allCollEntries.set((e.data as any).id, e);
       }
@@ -61,6 +62,7 @@ export async function getStaticPaths() {
         mainCollEntry: allCollEntries.get(sphere.id),
         talentCollEntries,
         sourceBook: bookMetaMap.get(sphere.sourceBook),
+        bookMetaMap,
       },
     });
   }
@@ -79,6 +81,7 @@ export async function getStaticPaths() {
         mainCollEntry: allCollEntries.get(cls.id),
         talentCollEntries: new Map(),
         sourceBook: bookMetaMap.get(cls.sourceBook),
+        bookMetaMap,
       },
     });
   }
@@ -86,8 +89,14 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { kind, sphere, cls, base, basic, advanced, mainCollEntry, talentCollEntries, sourceBook } = Astro.props;
+const { kind, sphere, cls, base, basic, advanced, mainCollEntry, talentCollEntries, sourceBook, bookMetaMap } = Astro.props;
 const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
+
+const FIRST_PARTY = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
+const is3pp = (sbSlug: string) => {
+  const pub = bookMetaMap.get(sbSlug)?.publisher;
+  return !!pub && !FIRST_PARTY.has(pub);
+};
 
 type RenderedSegment = { type: 'markdown'; html: string } | { type: 'base-ability'; id: string };
 const bodySegments: RenderedSegment[] = [];
@@ -168,11 +177,19 @@ if (advanced.length > 0) tocItems.push({ id: 'advanced-talents', label: 'Advance
               <div class="talent-list">
                 {basic.map(t => {
                   const tContent = talentRendered.find(r => r.id === t.id);
+                  const extBook = t.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(t.sourceBook) : undefined;
                   return (
                     <div class="talent-entry" id={t.id}>
                       <div class="talent-header">
-                        <a href={`/might/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
-                        <span class="talent-tier basic">Basic</span>
+                        <div class="talent-header-top">
+                          <a href={`/might/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
+                          {extBook && <span class="talent-source">{extBook.title}</span>}
+                        </div>
+                        <div class="talent-header-bottom">
+                          <span class="talent-tier basic">Basic</span>
+                          {is3pp(t.sourceBook) && <span class="talent-tag" data-tag="3pp">3PP</span>}
+                          {t.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
+                        </div>
                       </div>
                       {tContent && <div class="talent-body"><tContent.Content /></div>}
                     </div>
@@ -191,11 +208,19 @@ if (advanced.length > 0) tocItems.push({ id: 'advanced-talents', label: 'Advance
               <div class="talent-list">
                 {advanced.map(t => {
                   const tContent = talentRendered.find(r => r.id === t.id);
+                  const extBook = t.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(t.sourceBook) : undefined;
                   return (
                     <div class="talent-entry" id={t.id}>
                       <div class="talent-header">
-                        <a href={`/might/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
-                        <span class="talent-tier advanced">Advanced</span>
+                        <div class="talent-header-top">
+                          <a href={`/might/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
+                          {extBook && <span class="talent-source">{extBook.title}</span>}
+                        </div>
+                        <div class="talent-header-bottom">
+                          <span class="talent-tier advanced">Advanced</span>
+                          {is3pp(t.sourceBook) && <span class="talent-tag" data-tag="3pp">3PP</span>}
+                          {t.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
+                        </div>
                       </div>
                       {tContent && <div class="talent-body"><tContent.Content /></div>}
                     </div>

@@ -1,0 +1,24 @@
+---
+id: orb-transformation
+name: "Orb Transformation"
+system: power
+sourceBook: spheres-of-power-core
+type: talent
+sphere: alteration
+tier: basic
+tags: ["transformation"]
+---
+
+You may grant the form of a floating sphere, helmet, or similar shape with your shapeshift.
+**Limbs:** none
+**Speech:** Yes; **Hands:** No
+**Speed:** 5 ft. land speed, 30 ft. + 5 ft. per 5 caster levels float as the Float trait. At caster level 7, this speed becomes a fly speed with maneuverability (perfect). This levitation and flight is a supernatural ability.
+**Natural weapons:** slam (primary, 1d6 Medium, 1d4 Small)
+**AC:** +2 dodge bonus, +1 per 5 caster levels
+**Special:** May benefit from traits requiring a head as if it had one and may not be tripped or beheaded (such as by a vorpal weapon) unless gaining legs or a head, respectively, from another source. A creature in the form of an orb counts as one size smaller for the purposes of stealth and squeezing into small places.
+
+Orb Transformation offers the following traits, which you may apply to any form:
+
+- **Aura of Fascination:** The target projects a 30-foot aura that fascinates creatures which are near it. Such creatures must succeed at a Will save or be fascinated for as long as they remain in the aura. A creature that makes its save is immune to this effect for 24 hours. The target may choose to suppress or resume this ability as a free action. This ability ceases to function if the target is stunned, paralyzed, unconscious, dead, or otherwise incapacitated. This is a mind-affecting effect.
+- **Beam:** The target can fire a ray as a standard action. This ray is a ranged touch attack with a maximum range of 30 feet and deals 1d6 damage + 1d6 per 3 caster levels. The ray's damage is untyped and overcomes damage reduction of any type, though hardness still applies. At 10th caster level, and every 10 caster levels thereafter, the ray's maximum range increases by 30 feet. If you spend an additional spell point when granting this trait, the target can charge the ray as a full-round action. At any time after the ray is charged, the target can fire it as a standard action as a 100 feet line, dealing 1d6 per 2 caster levels (minimum 1d6) plus an additional amount of fire damage equal to twice your caster level (Reflex half; DC equal to the caster's Alteration sphere DC). Firing the charged ray discharges it, and it must be charged to be fired in this manner again.
+- **Float:** The target may float up to 5 feet + 5 feet per 5 caster levels above the ground, moving at 30 feet + 5 feet per 5 caster levels. When falling the target may choose to descend at a slower rate to control its fall and to negate all falling damage it would take. Each round it descends 30 feet, and may move in another direction for 30 feet. It may even choose to drift upwards to reduce its rate of descent, even allowing it to negate it entirely and hover midair.

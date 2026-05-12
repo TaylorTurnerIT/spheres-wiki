@@ -45,9 +45,8 @@ export function buildResolvedMaps(
  */
 export async function resolveEntries(): Promise<ResolvedMaps> {
   const { getCollection } = await import('astro:content');
-  const { BOOK_COLLECTIONS } = await import('@/content/config');
 
-  // Load _book.yaml metadata via import.meta.glob
+  // Auto-discover books via _book.yaml files — no hardcoded list needed.
   const bookYamlModules = import.meta.glob<{ default: Omit<BookMeta, 'slug'> }>(
     '/src/content/**/_book.yaml',
     { eager: true }
@@ -64,13 +63,13 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
   // before errata patches from newer books are applied.
   const allBooks: Array<{ slug: string; publishedDate: string; entries: AnyEntry[] }> = [];
 
-  for (const collectionSlug of BOOK_COLLECTIONS) {
+  for (const collectionSlug of bookMetaMap.keys()) {
     const meta = bookMetaMap.get(collectionSlug);
     const publishedDate = meta?.publishedDate ?? '1970-01-01';
 
     let rawEntries: Awaited<ReturnType<typeof getCollection>>;
     try {
-      rawEntries = await getCollection(collectionSlug);
+      rawEntries = await getCollection(collectionSlug as any);
     } catch {
       // Collection directory may not exist yet for a listed-but-empty book
       rawEntries = [];

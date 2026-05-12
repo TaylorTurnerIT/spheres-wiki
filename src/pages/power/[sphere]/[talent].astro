@@ -19,7 +19,7 @@ export async function getStaticPaths() {
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
     try {
-      const entries = await getCollection(slug);
+      const entries = await getCollection(slug as any);
       for (const e of entries) {
         allCollEntries.set((e.data as any).id, e);
       }
@@ -42,6 +42,9 @@ export async function getStaticPaths() {
 
 const { talent, sphere, collEntry, sourceBook } = Astro.props;
 
+const FIRST_PARTY = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
+const is3pp = !!sourceBook?.publisher && !FIRST_PARTY.has(sourceBook.publisher);
+
 const TalentContent = collEntry ? (await collEntry.render()).Content : null;
 ---
 <WikiPage title={`${talent.name} — ${sphere.name} — Spheres of Power Wiki`} activeNamespace="power">
@@ -59,7 +62,11 @@ const TalentContent = collEntry ? (await collEntry.render()).Content : null;
   <div class="content-columns">
     <div class="content-main">
       <div class="page-title power" id="overview">{talent.name}</div>
-      <span class={`talent-tier ${talent.tier}`}>{talent.tier}</span>
+      <div class="talent-page-meta">
+        <span class={`talent-tier ${talent.tier}`}>{talent.tier === 'base' ? 'Base Ability' : talent.tier}</span>
+        {is3pp && <span class="talent-tag" data-tag="3pp">3PP</span>}
+        {talent.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
+      </div>
       <hr class="page-title-rule" />
 
       {TalentContent
