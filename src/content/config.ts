@@ -27,6 +27,11 @@ const entrySchema = z.discriminatedUnion('type', [
     ...baseFields,
   }),
   z.object({
+    type: z.literal('feat'),
+    ...baseFields,
+    sphere: z.string(),
+  }),
+  z.object({
     type: z.literal('article'),
     ...baseFields,
   }),

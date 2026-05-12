@@ -53,13 +53,25 @@ export type ArticleEntry = {
   modifies?: string;
 };
 
-export type AnyEntry = SphereEntry | TalentEntry | ClassEntry | ArticleEntry;
+export type FeatEntry = {
+  type: 'feat';
+  id: string;
+  system: string;
+  name: string;
+  sourceBook: string;
+  sphere: string;
+  tags: string[];
+  modifies?: string;
+};
+
+export type AnyEntry = SphereEntry | TalentEntry | FeatEntry | ClassEntry | ArticleEntry;
 
 export type EntryKey = string; // "type:id"
 
 export type ResolvedMaps = {
   sphereMap: Map<EntryKey, SphereEntry>;
   talentMap: Map<EntryKey, TalentEntry>;
+  featMap: Map<EntryKey, FeatEntry>;
   classMap: Map<EntryKey, ClassEntry>;
   articleMap: Map<EntryKey, ArticleEntry>;
   entrySourceBook: Map<EntryKey, string>;

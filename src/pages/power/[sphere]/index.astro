@@ -6,7 +6,7 @@ import type { TocItem } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content/config';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
-import type { SphereEntry, ClassEntry, TalentEntry, BookMeta } from '@/lib/types';
+import type { SphereEntry, ClassEntry, TalentEntry, FeatEntry, BookMeta } from '@/lib/types';
 
 interface Props {
   kind: 'sphere' | 'class';
@@ -15,15 +15,17 @@ interface Props {
   base: TalentEntry[];
   basic: TalentEntry[];
   advanced: TalentEntry[];
+  feats: FeatEntry[];
   mainCollEntry: any;
   talentCollEntries: Map<string, any>;
+  featCollEntries: Map<string, any>;
   sourceBook: BookMeta | undefined;
   bookMetaMap: Map<string, BookMeta>;
 }
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const { sphereMap, classMap, talentMap, bookMetaMap } = await resolveEntries();
+  const { sphereMap, classMap, talentMap, featMap, bookMetaMap } = await resolveEntries();
 
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
@@ -43,11 +45,18 @@ export async function getStaticPaths() {
     const base     = all.filter(t => t.tier === 'base').sort((a, b) => a.name.localeCompare(b.name));
     const basic    = all.filter(t => t.tier === 'basic').sort((a, b) => a.name.localeCompare(b.name));
     const advanced = all.filter(t => t.tier === 'advanced').sort((a, b) => a.name.localeCompare(b.name));
+    const feats    = [...featMap.values()].filter(f => f.sphere === sphere.id && f.system === 'power').sort((a, b) => a.name.localeCompare(b.name));
 
     const talentCollEntries = new Map<string, any>();
     for (const t of [...base, ...basic, ...advanced]) {
       const entry = allCollEntries.get(t.id);
       if (entry) talentCollEntries.set(t.id, entry);
+    }
+
+    const featCollEntries = new Map<string, any>();
+    for (const f of feats) {
+      const entry = allCollEntries.get(f.id);
+      if (entry) featCollEntries.set(f.id, entry);
     }
 
     paths.push({
@@ -59,8 +68,10 @@ export async function getStaticPaths() {
         base,
         basic,
         advanced,
+        feats,
         mainCollEntry: allCollEntries.get(sphere.id),
         talentCollEntries,
+        featCollEntries,
         sourceBook: bookMetaMap.get(sphere.sourceBook),
         bookMetaMap,
       },
@@ -78,8 +89,10 @@ export async function getStaticPaths() {
         base: [],
         basic: [],
         advanced: [],
+        feats: [],
         mainCollEntry: allCollEntries.get(cls.id),
         talentCollEntries: new Map(),
+        featCollEntries: new Map(),
         sourceBook: bookMetaMap.get(cls.sourceBook),
         bookMetaMap,
       },
@@ -89,7 +102,7 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { kind, sphere, cls, base, basic, advanced, mainCollEntry, talentCollEntries, sourceBook, bookMetaMap } = Astro.props;
+const { kind, sphere, cls, base, basic, advanced, feats, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap } = Astro.props;
 const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 
 const FIRST_PARTY = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
@@ -122,6 +135,12 @@ for (const [id, entry] of talentCollEntries) {
   talentRendered.push({ id, Content });
 }
 
+const featRendered: Array<{ id: string; Content: any }> = [];
+for (const [id, entry] of featCollEntries) {
+  const { Content } = await entry.render();
+  featRendered.push({ id, Content });
+}
+
 // Build ToC
 const tocItems: TocItem[] = [
   {
@@ -132,6 +151,7 @@ const tocItems: TocItem[] = [
 ];
 if (basic.length > 0) tocItems.push({ id: 'basic-talents', label: 'Basic Talents', sub: basic.map(t => ({ id: t.id, label: t.name })) });
 if (advanced.length > 0) tocItems.push({ id: 'advanced-talents', label: 'Advanced Talents', sub: advanced.map(t => ({ id: t.id, label: t.name })) });
+if (feats.length > 0) tocItems.push({ id: 'feats', label: 'Feats', sub: feats.map(f => ({ id: f.id, label: f.name })) });
 ---
 <WikiPage title={`${entryName} — Spheres of Power Wiki`} activeNamespace="power">
 
@@ -226,6 +246,37 @@ if (advanced.length > 0) tocItems.push({ id: 'advanced-talents', label: 'Advance
                         </div>
                       </div>
                       {tContent && <div class="talent-body"><tContent.Content /></div>}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {feats.length > 0 && (
+            <div style="margin-top: 18px;">
+              <div class="section-heading">
+                <span class="section-heading-text" id="feats">Feats</span>
+                <div class="section-heading-rule"></div>
+              </div>
+              <div class="talent-list">
+                {feats.map(f => {
+                  const fContent = featRendered.find(r => r.id === f.id);
+                  const extBook = f.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(f.sourceBook) : undefined;
+                  return (
+                    <div class="talent-entry" id={f.id}>
+                      <div class="talent-header">
+                        <div class="talent-header-top">
+                          <a href={`/power/${sphere!.id}/feats/${f.id}/`} class="talent-name" data-astro-prefetch="hover">{f.name}</a>
+                          {extBook && <span class="talent-source">{extBook.title}</span>}
+                        </div>
+                        <div class="talent-header-bottom">
+                          <span class="talent-tier feat">Feat</span>
+                          {is3pp(f.sourceBook) && <span class="talent-tag" data-tag="3pp">3PP</span>}
+                          {f.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
+                        </div>
+                      </div>
+                      {fContent && <div class="talent-body"><fContent.Content /></div>}
                     </div>
                   );
                 })}

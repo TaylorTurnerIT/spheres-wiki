@@ -1,5 +1,5 @@
 // src/lib/resolveEntries.ts
-import type { AnyEntry, SphereEntry, TalentEntry, ClassEntry, ArticleEntry, EntryKey, ResolvedMaps, BookMeta } from './types';
+import type { AnyEntry, SphereEntry, TalentEntry, FeatEntry, ClassEntry, ArticleEntry, EntryKey, ResolvedMaps, BookMeta } from './types';
 
 function entryKey(type: string, id: string): EntryKey {
   return `${type}:${id}`;
@@ -18,6 +18,7 @@ export function buildResolvedMaps(
 
   const sphereMap = new Map<EntryKey, SphereEntry>();
   const talentMap = new Map<EntryKey, TalentEntry>();
+  const featMap = new Map<EntryKey, FeatEntry>();
   const classMap = new Map<EntryKey, ClassEntry>();
   const articleMap = new Map<EntryKey, ArticleEntry>();
   const entrySourceBook = new Map<EntryKey, string>();
@@ -28,15 +29,15 @@ export function buildResolvedMaps(
     for (const entry of book.entries) {
       const key = entryKey(entry.type, entry.id);
       if (entry.modifies) {
-        applyPatch(entry, entryKey(entry.type, entry.modifies), { sphereMap, talentMap, classMap, articleMap });
+        applyPatch(entry, entryKey(entry.type, entry.modifies), { sphereMap, talentMap, featMap, classMap, articleMap });
       } else {
-        storeEntry(entry, key, { sphereMap, talentMap, classMap, articleMap });
+        storeEntry(entry, key, { sphereMap, talentMap, featMap, classMap, articleMap });
         entrySourceBook.set(key, book.slug);
       }
     }
   }
 
-  return { sphereMap, talentMap, classMap, articleMap, entrySourceBook, bookMetaMap };
+  return { sphereMap, talentMap, featMap, classMap, articleMap, entrySourceBook, bookMetaMap };
 }
 
 /**
@@ -98,10 +99,11 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
 function storeEntry(
   entry: AnyEntry,
   key: EntryKey,
-  maps: Pick<ResolvedMaps, 'sphereMap' | 'talentMap' | 'classMap' | 'articleMap'>
+  maps: Pick<ResolvedMaps, 'sphereMap' | 'talentMap' | 'featMap' | 'classMap' | 'articleMap'>
 ): void {
   if (entry.type === 'sphere') maps.sphereMap.set(key, entry);
   else if (entry.type === 'talent') maps.talentMap.set(key, entry);
+  else if (entry.type === 'feat') maps.featMap.set(key, entry);
   else if (entry.type === 'class') maps.classMap.set(key, entry);
   else if (entry.type === 'article') maps.articleMap.set(key, entry);
 }
@@ -109,13 +111,15 @@ function storeEntry(
 function applyPatch(
   patch: AnyEntry,
   targetKey: EntryKey,
-  maps: Pick<ResolvedMaps, 'sphereMap' | 'talentMap' | 'classMap' | 'articleMap'>
+  maps: Pick<ResolvedMaps, 'sphereMap' | 'talentMap' | 'featMap' | 'classMap' | 'articleMap'>
 ): void {
   const { modifies: _m, id: _i, ...fieldsToMerge } = patch as AnyEntry & { modifies?: string };
   if (patch.type === 'sphere' && maps.sphereMap.has(targetKey)) {
     maps.sphereMap.set(targetKey, { ...maps.sphereMap.get(targetKey)!, ...(fieldsToMerge as Partial<SphereEntry>) });
   } else if (patch.type === 'talent' && maps.talentMap.has(targetKey)) {
     maps.talentMap.set(targetKey, { ...maps.talentMap.get(targetKey)!, ...(fieldsToMerge as Partial<TalentEntry>) });
+  } else if (patch.type === 'feat' && maps.featMap.has(targetKey)) {
+    maps.featMap.set(targetKey, { ...maps.featMap.get(targetKey)!, ...(fieldsToMerge as Partial<FeatEntry>) });
   } else if (patch.type === 'class' && maps.classMap.has(targetKey)) {
     maps.classMap.set(targetKey, { ...maps.classMap.get(targetKey)!, ...(fieldsToMerge as Partial<ClassEntry>) });
   } else if (patch.type === 'article' && maps.articleMap.has(targetKey)) {

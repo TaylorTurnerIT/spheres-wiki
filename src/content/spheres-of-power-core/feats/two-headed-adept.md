@@ -1,0 +1,13 @@
+---
+id: two-headed-adept
+name: "Two-Headed Adept"
+type: feat
+system: power
+sourceBook: spheres-of-power-core
+sphere: alteration
+tags: ["combat"]
+---
+
+**Prerequisites:** Alteration sphere (Additional Limbs) or multiple heads.
+
+**Benefit:** When you have more than one head you do not take two-weapon fighting penalties.

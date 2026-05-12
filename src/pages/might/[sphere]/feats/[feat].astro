@@ -1,0 +1,83 @@
+---
+import WikiPage from '@/layouts/WikiPage.astro';
+import SourceBookCallout from '@/components/SourceBookCallout.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+import { BOOK_COLLECTIONS } from '@/content/config';
+import type { FeatEntry, SphereEntry, BookMeta } from '@/lib/types';
+
+interface Props {
+  feat: FeatEntry;
+  sphere: SphereEntry;
+  collEntry: any;
+  sourceBook: BookMeta | undefined;
+}
+
+export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
+  const { featMap, sphereMap, bookMetaMap } = await resolveEntries();
+
+  const allCollEntries = new Map<string, any>();
+  for (const slug of BOOK_COLLECTIONS) {
+    try {
+      const entries = await getCollection(slug as any);
+      for (const e of entries) {
+        allCollEntries.set((e.data as any).id, e);
+      }
+    } catch {}
+  }
+
+  const paths = [];
+  for (const [, feat] of featMap) {
+    if (feat.system !== 'might') continue;
+    const sphere = [...sphereMap.values()].find(s => s.id === feat.sphere && s.system === 'might');
+    if (!sphere) continue;
+    paths.push({
+      params: { sphere: sphere.id, feat: feat.id },
+      props: { feat, sphere, collEntry: allCollEntries.get(feat.id), sourceBook: bookMetaMap.get(feat.sourceBook) },
+    });
+  }
+
+  return paths;
+}
+
+const { feat, sphere, collEntry, sourceBook } = Astro.props;
+
+const FIRST_PARTY = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
+const is3pp = !!sourceBook?.publisher && !FIRST_PARTY.has(sourceBook.publisher);
+
+const FeatContent = collEntry ? (await collEntry.render()).Content : null;
+---
+<WikiPage title={`${feat.name} — ${sphere.name} — Spheres of Might Wiki`} activeNamespace="might">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/" data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/might/" data-astro-prefetch="hover">Spheres of Might</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={`/might/${sphere.id}/`} data-astro-prefetch="hover">{sphere.name}</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>{feat.name}</span>
+  </nav>
+
+  <div class="content-columns">
+    <div class="content-main">
+      <div class="page-title might" id="overview">{feat.name}</div>
+      <div class="talent-page-meta">
+        <span class="talent-tier feat">Feat</span>
+        {is3pp && <span class="talent-tag" data-tag="3pp">3PP</span>}
+        {feat.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
+      </div>
+      <hr class="page-title-rule" />
+
+      {FeatContent
+        ? <div class="entry-description"><FeatContent /></div>
+        : <p class="entry-description"><em>Description coming soon.</em></p>
+      }
+    </div>
+
+    <aside class="right-rail">
+      <SourceBookCallout book={sourceBook} />
+    </aside>
+  </div>
+
+</WikiPage>

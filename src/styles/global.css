@@ -1271,6 +1271,11 @@ a:hover {
   color: var(--clr-power);
   border: 0.5px solid rgba(23, 75, 147, 0.3);
 }
+.talent-tier.feat {
+  background: rgba(90, 45, 0, 0.12);
+  color: #5a3000;
+  border: 0.5px solid rgba(90, 45, 0, 0.4);
+}
 .talent-tag {
   font-family: var(--font-display);
   font-size: var(--fs-3xs);
@@ -1325,6 +1330,16 @@ a:hover {
   border-color: rgba(130, 70, 0, 0.5);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+.talent-tag[data-tag="combat"] {
+  background: rgba(143, 45, 0, 0.12);
+  color: #8f2d00;
+  border-color: rgba(143, 45, 0, 0.4);
+}
+.talent-tag[data-tag="dual-sphere"] {
+  background: rgba(60, 0, 120, 0.1);
+  color: #3c0078;
+  border-color: rgba(60, 0, 120, 0.35);
 }
 .talent-body {
   font-size: var(--fs-md);
