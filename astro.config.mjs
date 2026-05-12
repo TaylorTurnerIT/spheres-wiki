@@ -16,6 +16,8 @@ const yamlPlugin = {
 };
 
 export default defineConfig({
+  site: 'https://taylorturnerit.github.io',
+  base: '/spheres-wiki',
   prefetch: {
     prefetchAll: false,
     defaultStrategy: 'hover',
