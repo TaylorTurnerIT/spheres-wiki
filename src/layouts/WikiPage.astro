@@ -9,9 +9,10 @@ interface Props {
   title?: string;
   description?: string;
   activeNamespace?: string;
+  pagefindIgnore?: boolean;
 }
 
-const { title, description, activeNamespace } = Astro.props;
+const { title, description, activeNamespace, pagefindIgnore = false } = Astro.props;
 ---
 <Base title={title} description={description}>
   <SiteHeader />
@@ -22,7 +23,12 @@ const { title, description, activeNamespace } = Astro.props;
 
     <main class="main">
       <TabNav />
-      <div class="content-area" data-system={activeNamespace} data-pagefind-body>
+      <div
+        class="content-area"
+        data-system={activeNamespace}
+        data-pagefind-body={pagefindIgnore ? undefined : true}
+        data-pagefind-ignore={pagefindIgnore ? true : undefined}
+      >
         <slot />
       </div>
     </main>
