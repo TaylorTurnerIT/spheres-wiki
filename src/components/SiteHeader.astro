@@ -9,10 +9,10 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
         <path d="M3 5h14M3 10h14M3 15h14"/>
       </svg>
     </button>
-    <div class="site-title">
+    <a href={url("/")} class="site-title" data-astro-prefetch="hover">
       <span class="name">{SITE_TITLE}</span>
       <span class="tagline">{SITE_TAGLINE}</span>
-    </div>
+    </a>
     <div class="header-search-anchor">
       <div class="search-bar">
         <svg aria-hidden="true" width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>

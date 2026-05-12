@@ -331,6 +331,9 @@ a:hover {
   flex: 1;
   min-width: 0;
 }
+.site-title:hover {
+  text-decoration: none;
+}
 .site-title .name {
   font-family: var(--font-display);
   font-size: var(--fs-xl);
