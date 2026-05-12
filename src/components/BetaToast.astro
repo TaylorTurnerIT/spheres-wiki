@@ -15,8 +15,8 @@
 <style>
   .beta-toast {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 5px;
     width: 320px;
     background: var(--clr-surface);
     border: 1px solid var(--clr-border);
@@ -95,19 +95,18 @@
     if (!toast || !closeBtn) return;
 
     // Check if user has dismissed it
-    const isDismissed = localStorage.getItem('beta-toast-dismissed');
-    if (!isDismissed) {
+    if (localStorage.getItem('beta-toast-dismissed') === 'true') {
+      toast.hidden = true;
+    } else {
       toast.hidden = false;
     }
 
-    closeBtn.addEventListener('click', () => {
+    closeBtn.onclick = () => {
       toast.hidden = true;
       localStorage.setItem('beta-toast-dismissed', 'true');
-    });
+    };
   }
 
-  // Run on initial load
-  initToast();
-  // Run on view transition navigation
-  document.addEventListener('astro:after-swap', initToast);
+  // Run on initial load and view transition navigation
+  document.addEventListener('astro:page-load', initToast);
 </script>
