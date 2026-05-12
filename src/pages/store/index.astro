@@ -4,26 +4,104 @@ import BookCard from '@/components/BookCard.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 
 const { bookMetaMap } = await resolveEntries();
-const books = [...bookMetaMap.values()].sort(
-  (a, b) => new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime()
-);
+const allBooks = [...bookMetaMap.values()];
+
+// Core Slugs (as requested)
+const CORE_SLUGS = new Set([
+  'ultimate-spheres-of-power',
+  'spheres-of-might',
+  'spheres-of-guile',
+  'champions-of-the-spheres'
+]);
+
+const OFFICIAL_PUBLISHERS = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
+
+// Helper to sort by date descending
+const sortByDate = (a: any, b: any) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
+
+// Groupings
+const coreBooks = allBooks.filter(b => CORE_SLUGS.has(b.slug)).sort(sortByDate);
+const diamondBooks = allBooks.filter(b => b.publisher === 'Diamond Recreational Studios').sort(sortByDate);
+const ddsBooks = allBooks.filter(b => b.publisher === 'Drop Dead Studios' && !CORE_SLUGS.has(b.slug)).sort(sortByDate);
+
+const thirdPartyGroups = allBooks
+  .filter(b => !OFFICIAL_PUBLISHERS.has(b.publisher) && b.publisher !== 'Unknown')
+  .reduce((acc, book) => {
+    if (!acc[book.publisher]) acc[book.publisher] = [];
+    acc[book.publisher].push(book);
+    return acc;
+  }, {} as Record<string, typeof allBooks>);
+
+// Sort each TP group by date and sort groups themselves by latest book in group
+const sortedTPGroups = Object.entries(thirdPartyGroups)
+  .map(([name, group]) => ({ name, books: group.sort(sortByDate) }))
+  .sort((a, b) => new Date(b.books[0].publishedDate).getTime() - new Date(a.books[0].publishedDate).getTime());
 ---
 <WikiPage title="Store — Spheres Wiki">
 
   <div class="page-title">Store</div>
   <hr class="page-title-rule" />
 
+  {/* Official Section */}
   <div class="section-heading">
-    <span class="section-heading-text">Official Books</span>
+    <span class="section-heading-text">Official: Core</span>
     <div class="section-heading-rule"></div>
   </div>
-
-  {books.length === 0 ? (
-    <p style="font-size: 14px; color: var(--clr-muted);">No books available yet.</p>
-  ) : (
-    <div class="store-grid">
-      {books.map(book => <BookCard book={book} />)}
+  {coreBooks.length > 0 ? (
+    <div class="store-grid" style="margin-bottom: 30px;">
+      {coreBooks.map(book => <BookCard book={book} />)}
     </div>
+  ) : <p class="store-empty">Core books coming soon.</p>}
+
+  <div class="section-heading">
+    <span class="section-heading-text">Official: Diamond Recreational Studios</span>
+    <div class="section-heading-rule"></div>
+  </div>
+  {diamondBooks.length > 0 ? (
+    <div class="store-grid" style="margin-bottom: 30px;">
+      {diamondBooks.map(book => <BookCard book={book} />)}
+    </div>
+  ) : <p class="store-empty">No DRS books available yet.</p>}
+
+  <div class="section-heading">
+    <span class="section-heading-text">Official: Drop Dead Studios</span>
+    <div class="section-heading-rule"></div>
+  </div>
+  {ddsBooks.length > 0 ? (
+    <div class="store-grid" style="margin-bottom: 40px;">
+      {ddsBooks.map(book => <BookCard book={book} />)}
+    </div>
+  ) : <p class="store-empty">No DDS books available yet.</p>}
+
+  {/* Third Party Section */}
+  {sortedTPGroups.length > 0 && (
+    <>
+      <div class="section-heading" style="margin-top: 50px; border-bottom-width: 2px;">
+        <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Third Party Content</span>
+        <div class="section-heading-rule"></div>
+      </div>
+
+      {sortedTPGroups.map(group => (
+        <div style="margin-top: 25px;">
+          <div class="section-heading">
+            <span class="section-heading-text">{group.name}</span>
+            <div class="section-heading-rule"></div>
+          </div>
+          <div class="store-grid">
+            {group.books.map(book => <BookCard book={book} />)}
+          </div>
+        </div>
+      ))}
+    </>
   )}
 
 </WikiPage>
+
+<style>
+  .store-empty {
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    font-style: italic;
+    margin: 10px 0 30px;
+  }
+</style>
