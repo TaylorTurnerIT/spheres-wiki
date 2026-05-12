@@ -5,11 +5,9 @@ system: power
 sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
-tier: basic
+tier: base
 tags: []
 ---
-
-## Shapeshift
 
 As a standard action you may shapeshift yourself or a touched creature, changing their form for as long as you concentrate. If the target is unwilling, this costs a spell point, and they are allowed a Fortitude save to negate. Shapeshifts are subject to spell resistance. You may spend a spell point to allow a shapeshift to remain for 1 minute per caster level without concentration. You may dismiss your shapeshift as a standard action.
 

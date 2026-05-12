@@ -26,7 +26,7 @@ export type TalentEntry = {
   id: string;
   sphere: string;
   system: string;
-  tier: 'basic' | 'advanced' | 'legendary';
+  tier: 'base' | 'basic' | 'advanced';
   name: string;
   sourceBook: string;
   tags: string[];

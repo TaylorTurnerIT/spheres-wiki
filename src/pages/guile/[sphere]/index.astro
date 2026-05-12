@@ -5,15 +5,16 @@ import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import type { TocItem } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content/config';
+import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
 import type { SphereEntry, ClassEntry, TalentEntry, BookMeta } from '@/lib/types';
 
 interface Props {
   kind: 'sphere' | 'class';
   sphere: SphereEntry | undefined;
   cls: ClassEntry | undefined;
+  base: TalentEntry[];
   basic: TalentEntry[];
   advanced: TalentEntry[];
-  legendary: TalentEntry[];
   mainCollEntry: any;
   talentCollEntries: Map<string, any>;
   sourceBook: BookMeta | undefined;
@@ -23,7 +24,6 @@ export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
   const { sphereMap, classMap, talentMap, bookMetaMap } = await resolveEntries();
 
-  // Load all collection entries once
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
     try {
@@ -39,12 +39,12 @@ export async function getStaticPaths() {
   for (const [, sphere] of sphereMap) {
     if (sphere.system !== 'guile') continue;
     const all = [...talentMap.values()].filter(t => t.sphere === sphere.id && t.system === 'guile');
-    const basic     = all.filter(t => t.tier === 'basic').sort((a, b) => a.name.localeCompare(b.name));
-    const advanced  = all.filter(t => t.tier === 'advanced').sort((a, b) => a.name.localeCompare(b.name));
-    const legendary = all.filter(t => t.tier === 'legendary').sort((a, b) => a.name.localeCompare(b.name));
+    const base     = all.filter(t => t.tier === 'base').sort((a, b) => a.name.localeCompare(b.name));
+    const basic    = all.filter(t => t.tier === 'basic').sort((a, b) => a.name.localeCompare(b.name));
+    const advanced = all.filter(t => t.tier === 'advanced').sort((a, b) => a.name.localeCompare(b.name));
 
     const talentCollEntries = new Map<string, any>();
-    for (const t of [...basic, ...advanced, ...legendary]) {
+    for (const t of [...base, ...basic, ...advanced]) {
       const entry = allCollEntries.get(t.id);
       if (entry) talentCollEntries.set(t.id, entry);
     }
@@ -55,9 +55,9 @@ export async function getStaticPaths() {
         kind: 'sphere' as const,
         sphere,
         cls: undefined,
+        base,
         basic,
         advanced,
-        legendary,
         mainCollEntry: allCollEntries.get(sphere.id),
         talentCollEntries,
         sourceBook: bookMetaMap.get(sphere.sourceBook),
@@ -73,9 +73,9 @@ export async function getStaticPaths() {
         kind: 'class' as const,
         sphere: undefined,
         cls,
+        base: [],
         basic: [],
         advanced: [],
-        legendary: [],
         mainCollEntry: allCollEntries.get(cls.id),
         talentCollEntries: new Map(),
         sourceBook: bookMetaMap.get(cls.sourceBook),
@@ -86,11 +86,24 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { kind, sphere, cls, basic, advanced, legendary, mainCollEntry, talentCollEntries, sourceBook } = Astro.props;
+const { kind, sphere, cls, base, basic, advanced, mainCollEntry, talentCollEntries, sourceBook } = Astro.props;
 const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 
-// Render GFM bodies
-const MainContent = mainCollEntry ? (await mainCollEntry.render()).Content : null;
+type RenderedSegment = { type: 'markdown'; html: string } | { type: 'base-ability'; id: string };
+const bodySegments: RenderedSegment[] = [];
+if (kind === 'sphere' && mainCollEntry) {
+  for (const seg of splitBodyOnMarkers(mainCollEntry.body)) {
+    if (seg.type === 'markdown') {
+      bodySegments.push({ type: 'markdown', html: await renderMarkdownFragment(seg.text) });
+    } else {
+      bodySegments.push(seg);
+    }
+  }
+}
+
+const MainContent = (kind === 'class' && mainCollEntry)
+  ? (await mainCollEntry.render()).Content
+  : null;
 
 const talentRendered: Array<{ id: string; Content: any }> = [];
 for (const [id, entry] of talentCollEntries) {
@@ -98,11 +111,15 @@ for (const [id, entry] of talentCollEntries) {
   talentRendered.push({ id, Content });
 }
 
-// Build ToC
-const tocItems: TocItem[] = [{ id: 'overview', label: 'Overview' }];
+const tocItems: TocItem[] = [
+  {
+    id: 'overview',
+    label: 'Overview',
+    sub: base.length > 0 ? base.map(t => ({ id: t.id, label: t.name })) : undefined,
+  },
+];
 if (basic.length > 0) tocItems.push({ id: 'basic-talents', label: 'Basic Talents', sub: basic.map(t => ({ id: t.id, label: t.name })) });
 if (advanced.length > 0) tocItems.push({ id: 'advanced-talents', label: 'Advanced Talents', sub: advanced.map(t => ({ id: t.id, label: t.name })) });
-if (legendary.length > 0) tocItems.push({ id: 'legendary-talents', label: 'Legendary Talents', sub: legendary.map(t => ({ id: t.id, label: t.name })) });
 ---
 <WikiPage title={`${entryName} — Spheres of Guile Wiki`} activeNamespace="guile">
 
@@ -125,7 +142,22 @@ if (legendary.length > 0) tocItems.push({ id: 'legendary-talents', label: 'Legen
           </div>
           <hr class="page-title-rule" />
 
-          {MainContent && <div class="entry-description"><MainContent /></div>}
+          {bodySegments.map(seg => {
+            if (seg.type === 'markdown') {
+              return <div class="entry-description" set:html={seg.html} />;
+            }
+            const t = base.find(b => b.id === seg.id);
+            const tContent = talentRendered.find(r => r.id === seg.id);
+            return t ? (
+              <div class="base-ability-block" id={t.id}>
+                <div class="base-ability-header">
+                  <a href={`/guile/${sphere!.id}/${t.id}/`} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
+                  <span class="base-ability-badge">Base Ability</span>
+                </div>
+                {tContent && <div class="talent-body"><tContent.Content /></div>}
+              </div>
+            ) : null;
+          })}
 
           {basic.length > 0 && (
             <div style="margin-top: 18px;">
@@ -164,29 +196,6 @@ if (legendary.length > 0) tocItems.push({ id: 'legendary-talents', label: 'Legen
                       <div class="talent-header">
                         <a href={`/guile/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
                         <span class="talent-tier advanced">Advanced</span>
-                      </div>
-                      {tContent && <div class="talent-body"><tContent.Content /></div>}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {legendary.length > 0 && (
-            <div style="margin-top: 18px;">
-              <div class="section-heading">
-                <span class="section-heading-text" id="legendary-talents">Legendary Talents</span>
-                <div class="section-heading-rule"></div>
-              </div>
-              <div class="talent-list">
-                {legendary.map(t => {
-                  const tContent = talentRendered.find(r => r.id === t.id);
-                  return (
-                    <div class="talent-entry" id={t.id}>
-                      <div class="talent-header">
-                        <a href={`/guile/${sphere!.id}/${t.id}/`} class="talent-name" data-astro-prefetch="hover">{t.name}</a>
-                        <span class="talent-tier legendary">Legendary</span>
                       </div>
                       {tContent && <div class="talent-body"><tContent.Content /></div>}
                     </div>

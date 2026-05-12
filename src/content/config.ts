@@ -20,7 +20,7 @@ const entrySchema = z.discriminatedUnion('type', [
     type: z.literal('talent'),
     ...baseFields,
     sphere: z.string(),
-    tier: z.enum(['basic', 'advanced', 'legendary']),
+    tier: z.enum(['base', 'basic', 'advanced']),
   }),
   z.object({
     type: z.literal('class'),
