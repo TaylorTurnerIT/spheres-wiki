@@ -25,9 +25,29 @@ const {
       rel="stylesheet"
     />
     <ViewTransitions />
+    <style is:inline>
+      .scroll-restoring { opacity: 0; }
+    </style>
+    <script is:inline>
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      if (sessionStorage.getItem('scroll-y')) {
+        document.documentElement.classList.add('scroll-restoring');
+      }
+    </script>
   </head>
   <body>
     <SVGSprite />
     <slot />
   </body>
+  <script>
+    const saved = sessionStorage.getItem('scroll-y');
+    if (saved) {
+      window.scrollTo(0, +saved);
+      document.documentElement.classList.remove('scroll-restoring');
+    }
+
+    window.addEventListener('scroll', () => {
+      sessionStorage.setItem('scroll-y', String(window.scrollY));
+    }, { passive: true });
+  </script>
 </html>

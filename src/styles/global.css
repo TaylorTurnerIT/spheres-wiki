@@ -494,6 +494,8 @@ a:hover {
   color: var(--clr-active);
   letter-spacing: 0.02em;
   margin-bottom: 6px;
+  display: flex;
+  align-items: center;
 }
 .page-title-rule {
   border: none;
@@ -1053,6 +1055,25 @@ a:hover {
   line-height: 1.6;
   margin-bottom: 18px;
 }
+.entry-description p,
+.talent-body p {
+  margin-bottom: 0.75em;
+}
+.entry-description p:last-child,
+.talent-body p:last-child {
+  margin-bottom: 0;
+}
+.entry-description ul,
+.entry-description ol,
+.talent-body ul,
+.talent-body ol {
+  padding-left: 1.4em;
+  margin-bottom: 0.75em;
+}
+.entry-description li,
+.talent-body li {
+  margin-bottom: 0.25em;
+}
 
 /* ── Entry grid (namespace index pages) ────────────────── */
 .entry-grid {
@@ -1131,10 +1152,43 @@ a:hover {
 }
 
 .page-title-icon {
-  width: 22px;
-  height: 22px;
-  vertical-align: middle;
-  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* ── Base ability block ─────────────────────────────────── */
+.base-ability-block {
+  border: 1px solid var(--clr-border);
+  border-left: 3px solid var(--clr-active);
+  border-radius: var(--radius);
+  background: var(--clr-bg);
+  padding: 12px 14px;
+  margin: 14px 0;
+}
+.base-ability-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.base-ability-name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--clr-active);
+}
+.base-ability-badge {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  border: 0.5px solid var(--clr-border);
+  border-radius: 2px;
+  padding: 1px 5px;
 }
 
 /* ── Talent list (sphere detail pages) ──────────────────── */
@@ -1180,11 +1234,6 @@ a:hover {
   background: rgba(23, 75, 147, 0.1);
   color: var(--clr-power);
   border: 0.5px solid rgba(23, 75, 147, 0.3);
-}
-.talent-tier.legendary {
-  background: rgba(143, 45, 0, 0.1);
-  color: var(--clr-might);
-  border: 0.5px solid rgba(143, 45, 0, 0.3);
 }
 .talent-body {
   font-size: var(--fs-md);
@@ -1379,7 +1428,7 @@ a:hover {
 .talent-body table {
   width: 100%;
   border-collapse: collapse;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-base);
   margin: 12px 0;
 }
 .entry-description th,
