@@ -2,7 +2,6 @@
 id: swarm-shape
 name: "Swarm Shape"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

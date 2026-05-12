@@ -3,7 +3,6 @@ id: fleshwarp-adept
 name: "Fleshwarp Adept"
 type: feat
 system: power
-sourceBook: unknown-source
 sphere: alteration
 tags: []
 ---

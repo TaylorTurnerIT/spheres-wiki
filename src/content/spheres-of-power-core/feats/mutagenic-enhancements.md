@@ -3,7 +3,6 @@ id: mutagenic-enhancements
 name: "Mutagenic Enhancements"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["dual-sphere"]
 ---

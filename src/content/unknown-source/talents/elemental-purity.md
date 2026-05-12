@@ -2,7 +2,6 @@
 id: elemental-purity
 name: "Elemental Purity"
 system: power
-sourceBook: unknown-source
 type: talent
 sphere: alteration
 tier: advanced

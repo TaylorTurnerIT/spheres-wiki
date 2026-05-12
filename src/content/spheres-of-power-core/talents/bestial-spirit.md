@@ -2,7 +2,6 @@
 id: bestial-spirit
 name: "Bestial Spirit"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

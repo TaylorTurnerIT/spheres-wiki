@@ -2,7 +2,6 @@
 id: aberrant-body
 name: "Aberrant Body"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

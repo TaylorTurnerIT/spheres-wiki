@@ -3,7 +3,6 @@ id: web-mastery
 name: "Web Mastery"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["combat"]
 ---

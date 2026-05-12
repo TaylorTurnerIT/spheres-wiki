@@ -3,7 +3,6 @@ id: devourer
 name: "Devourer"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["combat"]
 ---

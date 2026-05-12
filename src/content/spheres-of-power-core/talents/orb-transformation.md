@@ -2,7 +2,6 @@
 id: orb-transformation
 name: "Orb Transformation"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

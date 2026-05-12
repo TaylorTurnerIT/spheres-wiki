@@ -2,7 +2,6 @@
 id: steal-shape
 name: "Steal Shape"
 system: power
-sourceBook: expanded-spheres-barons-lost-apocrypha
 type: talent
 sphere: alteration
 tier: basic

@@ -3,7 +3,6 @@ id: venomous-ichor
 name: "Venomous Ichor"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["combat"]
 ---

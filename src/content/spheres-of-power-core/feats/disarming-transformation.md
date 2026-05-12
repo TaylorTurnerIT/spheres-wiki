@@ -3,7 +3,6 @@ id: disarming-transformation
 name: "Disarming Transformation"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["combat"]
 ---

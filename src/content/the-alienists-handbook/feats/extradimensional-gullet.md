@@ -3,7 +3,6 @@ id: extradimensional-gullet
 name: "Extradimensional Gullet"
 type: feat
 system: power
-sourceBook: the-alienists-handbook
 sphere: alteration
 tags: ["combat"]
 ---

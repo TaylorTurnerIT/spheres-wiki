@@ -2,7 +2,6 @@
 id: signature-trait
 name: "Signature Trait"
 system: power
-sourceBook: the-alienists-handbook
 type: talent
 sphere: alteration
 tier: advanced

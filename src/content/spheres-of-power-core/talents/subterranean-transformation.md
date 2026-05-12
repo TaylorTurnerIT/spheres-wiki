@@ -2,7 +2,6 @@
 id: subterranean-transformation
 name: "Subterranean Transformation"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

@@ -3,7 +3,6 @@ id: adaptive-resistance
 name: "Adaptive Resistance"
 type: feat
 system: power
-sourceBook: the-alienists-handbook
 sphere: alteration
 tags: []
 ---

@@ -2,7 +2,6 @@
 id: cosmic-body
 name: "Cosmic Body"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

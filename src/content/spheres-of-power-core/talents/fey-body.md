@@ -2,7 +2,6 @@
 id: fey-body
 name: "Fey Body"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

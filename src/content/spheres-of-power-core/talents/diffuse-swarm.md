@@ -2,7 +2,6 @@
 id: diffuse-swarm
 name: "Diffuse Swarm"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: advanced

@@ -2,7 +2,6 @@
 id: twist-essence
 name: "Twist Essence"
 system: power
-sourceBook: barons-glorious-arena
 type: talent
 sphere: alteration
 tier: advanced

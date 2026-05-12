@@ -2,7 +2,6 @@
 id: retain-ability
 name: "Retain Ability"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

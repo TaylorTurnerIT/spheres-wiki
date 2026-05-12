@@ -3,7 +3,6 @@ id: purrging-transformation
 name: "Purrging Transformation"
 type: feat
 system: power
-sourceBook: unknown-source
 sphere: alteration
 tags: ["dual-sphere"]
 ---

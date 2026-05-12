@@ -2,7 +2,6 @@
 id: alteration
 name: Alteration
 system: power
-sourceBook: spheres-of-power-core
 type: sphere
 icon: alteration
 tags: []

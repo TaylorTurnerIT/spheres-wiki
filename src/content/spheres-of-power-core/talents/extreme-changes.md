@@ -2,7 +2,6 @@
 id: extreme-changes
 name: "Extreme Changes"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: advanced

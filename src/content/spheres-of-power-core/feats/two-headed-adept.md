@@ -3,7 +3,6 @@ id: two-headed-adept
 name: "Two-Headed Adept"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["combat"]
 ---

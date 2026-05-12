@@ -3,7 +3,6 @@ id: toxic-webs
 name: "Toxic Webs"
 type: feat
 system: power
-sourceBook: barons-glorious-arena
 sphere: alteration
 tags: ["combat"]
 ---

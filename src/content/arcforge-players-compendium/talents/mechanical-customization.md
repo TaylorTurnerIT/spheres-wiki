@@ -2,7 +2,6 @@
 id: mechanical-customization
 name: "Mechanical Customization"
 system: power
-sourceBook: arcforge-players-compendium
 type: talent
 sphere: alteration
 tier: advanced

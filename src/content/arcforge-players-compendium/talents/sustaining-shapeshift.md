@@ -2,7 +2,6 @@
 id: sustaining-shapeshift
 name: "Sustaining Shapeshift"
 system: power
-sourceBook: arcforge-players-compendium
 type: talent
 sphere: alteration
 tier: advanced

@@ -2,7 +2,6 @@
 id: fusion
 name: "Fusion"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: advanced

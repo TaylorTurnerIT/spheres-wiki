@@ -2,7 +2,6 @@
 id: transform-object
 name: "Transform Object"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: advanced

@@ -2,7 +2,6 @@
 id: size-mastery
 name: "Size Mastery"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: advanced

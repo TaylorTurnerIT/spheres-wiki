@@ -2,7 +2,6 @@
 id: animalistic-transformation
 name: "Animalistic Transformation"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

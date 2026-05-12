@@ -2,7 +2,6 @@
 id: bestial-reflexes
 name: "Bestial Reflexes"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

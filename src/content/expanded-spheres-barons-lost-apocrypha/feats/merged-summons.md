@@ -3,7 +3,6 @@ id: merged-summons
 name: "Merged Summons"
 type: feat
 system: power
-sourceBook: expanded-spheres-barons-lost-apocrypha
 sphere: alteration
 tags: ["dual-sphere"]
 ---

@@ -2,7 +2,6 @@
 id: object-transformation
 name: "Object Transformation"
 system: power
-sourceBook: spheres-of-origin
 type: talent
 sphere: alteration
 tier: basic

@@ -2,7 +2,6 @@
 id: adaptive-physicality
 name: "Adaptive Physicality"
 system: power
-sourceBook: diamond-spheres-thaumic-potential
 type: talent
 sphere: alteration
 tier: basic

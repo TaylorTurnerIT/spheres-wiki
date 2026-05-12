@@ -2,7 +2,6 @@
 id: vermin-transformation
 name: "Vermin Transformation"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

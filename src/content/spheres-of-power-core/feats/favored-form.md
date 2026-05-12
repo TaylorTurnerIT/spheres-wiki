@@ -3,7 +3,6 @@ id: favored-form
 name: "Favored Form"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: []
 ---

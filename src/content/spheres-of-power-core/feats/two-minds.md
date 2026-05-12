@@ -3,7 +3,6 @@ id: two-minds
 name: "Two Minds"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: []
 ---

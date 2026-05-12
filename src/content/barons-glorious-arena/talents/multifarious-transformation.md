@@ -2,7 +2,6 @@
 id: multifarious-transformation
 name: "Multifarious Transformation"
 system: power
-sourceBook: barons-glorious-arena
 type: talent
 sphere: alteration
 tier: basic

@@ -2,7 +2,6 @@
 id: avian-transformation
 name: "Avian Transformation"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

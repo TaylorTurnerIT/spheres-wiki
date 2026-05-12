@@ -3,7 +3,6 @@ id: swarm-coordination
 name: "Swarm Coordination"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["combat"]
 ---

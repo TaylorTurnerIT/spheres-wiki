@@ -3,7 +3,6 @@ id: twisted-reanimation
 name: "Twisted Reanimation"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["dual-sphere"]
 ---

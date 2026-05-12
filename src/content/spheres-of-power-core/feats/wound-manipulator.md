@@ -3,7 +3,6 @@ id: wound-manipulator
 name: "Wound Manipulator"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["dual-sphere"]
 ---

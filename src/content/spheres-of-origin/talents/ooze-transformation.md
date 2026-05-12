@@ -2,7 +2,6 @@
 id: ooze-transformation
 name: "Ooze Transformation"
 system: power
-sourceBook: spheres-of-origin
 type: talent
 sphere: alteration
 tier: basic

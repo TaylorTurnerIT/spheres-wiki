@@ -3,7 +3,6 @@ id: exemplary-transformation
 name: "Exemplary Transformation"
 type: feat
 system: power
-sourceBook: barons-uncanny-gateway
 sphere: alteration
 tags: ["dual-sphere"]
 ---

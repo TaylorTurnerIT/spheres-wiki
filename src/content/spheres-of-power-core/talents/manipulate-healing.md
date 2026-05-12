@@ -2,7 +2,6 @@
 id: manipulate-healing
 name: "Manipulate Healing"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: advanced

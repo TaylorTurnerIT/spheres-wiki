@@ -2,7 +2,6 @@
 id: muensterous-traits
 name: "Muensterous Traits"
 system: power
-sourceBook: jesters-handbook
 type: talent
 sphere: alteration
 tier: basic

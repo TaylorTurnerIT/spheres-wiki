@@ -2,7 +2,6 @@
 id: energy-manipulation
 name: "Energy Manipulation"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: advanced

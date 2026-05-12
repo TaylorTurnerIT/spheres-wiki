@@ -3,7 +3,6 @@ id: spirit-form
 name: "Spirit Form"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["dual-sphere"]
 ---

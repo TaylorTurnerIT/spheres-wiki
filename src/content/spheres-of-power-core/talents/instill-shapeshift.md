@@ -2,7 +2,6 @@
 id: instill-shapeshift
 name: "Instill Shapeshift"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: basic

@@ -2,7 +2,6 @@
 id: puppets-curse
 name: "Puppet's Curse"
 system: power
-sourceBook: barons-glorious-arena
 type: talent
 sphere: alteration
 tier: advanced

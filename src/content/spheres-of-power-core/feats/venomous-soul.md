@@ -3,7 +3,6 @@ id: venomous-soul
 name: "Venomous Soul"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["combat"]
 ---

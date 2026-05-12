@@ -3,7 +3,6 @@ id: bioluminescent-transformation
 name: "Bioluminescent Transformation"
 type: feat
 system: power
-sourceBook: spheres-of-power-core
 sphere: alteration
 tags: ["dual-sphere"]
 ---

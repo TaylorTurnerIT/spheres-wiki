@@ -2,7 +2,6 @@
 id: permanent-transformation
 name: "Permanent Transformation"
 system: power
-sourceBook: spheres-of-power-core
 type: talent
 sphere: alteration
 tier: advanced

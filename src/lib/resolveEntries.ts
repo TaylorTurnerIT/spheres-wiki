@@ -1,5 +1,15 @@
 // src/lib/resolveEntries.ts
-import type { AnyEntry, SphereEntry, TalentEntry, FeatEntry, ClassEntry, ArticleEntry, EntryKey, ResolvedMaps, BookMeta } from './types';
+import type {
+  AnyEntry,
+  SphereEntry,
+  TalentEntry,
+  FeatEntry,
+  ClassEntry,
+  ArticleEntry,
+  EntryKey,
+  ResolvedMaps,
+  BookMeta,
+} from "./types";
 
 function entryKey(type: string, id: string): EntryKey {
   return `${type}:${id}`;
@@ -10,10 +20,11 @@ function entryKey(type: string, id: string): EntryKey {
  * Books sorted by publishedDate ascending before processing.
  */
 export function buildResolvedMaps(
-  books: Array<{ slug: string; publishedDate: string; entries: AnyEntry[] }>
+  books: Array<{ slug: string; publishedDate: string; entries: AnyEntry[] }>,
 ): ResolvedMaps {
   const sorted = [...books].sort(
-    (a, b) => new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime()
+    (a, b) =>
+      new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime(),
   );
 
   const sphereMap = new Map<EntryKey, SphereEntry>();
@@ -29,15 +40,35 @@ export function buildResolvedMaps(
     for (const entry of book.entries) {
       const key = entryKey(entry.type, entry.id);
       if (entry.modifies) {
-        applyPatch(entry, entryKey(entry.type, entry.modifies), { sphereMap, talentMap, featMap, classMap, articleMap });
+        applyPatch(entry, entryKey(entry.type, entry.modifies), {
+          sphereMap,
+          talentMap,
+          featMap,
+          classMap,
+          articleMap,
+        });
       } else {
-        storeEntry(entry, key, { sphereMap, talentMap, featMap, classMap, articleMap });
+        storeEntry(entry, key, {
+          sphereMap,
+          talentMap,
+          featMap,
+          classMap,
+          articleMap,
+        });
         entrySourceBook.set(key, book.slug);
       }
     }
   }
 
-  return { sphereMap, talentMap, featMap, classMap, articleMap, entrySourceBook, bookMetaMap };
+  return {
+    sphereMap,
+    talentMap,
+    featMap,
+    classMap,
+    articleMap,
+    entrySourceBook,
+    bookMetaMap,
+  };
 }
 
 /**
@@ -45,28 +76,32 @@ export function buildResolvedMaps(
  * Cannot be called in vitest tests (depends on Astro runtime).
  */
 export async function resolveEntries(): Promise<ResolvedMaps> {
-  const { getCollection } = await import('astro:content');
+  const { getCollection } = await import("astro:content");
 
   // Auto-discover books via _book.yaml files — no hardcoded list needed.
-  const bookYamlModules = import.meta.glob<{ default: Omit<BookMeta, 'slug'> }>(
-    '/src/content/**/_book.yaml',
-    { eager: true }
+  const bookYamlModules = import.meta.glob<{ default: Omit<BookMeta, "slug"> }>(
+    "/src/content/**/_book.yaml",
+    { eager: true },
   );
 
   const bookMetaMap = new Map<string, BookMeta>();
   for (const [path, mod] of Object.entries(bookYamlModules)) {
     // path: "/src/content/spheres-of-power-core/_book.yaml"
-    const slug = path.split('/').at(-2)!;
+    const slug = path.split("/").at(-2)!;
     bookMetaMap.set(slug, { slug, ...mod.default });
   }
 
   // Sort by publishedDate so older entries establish canonical records
   // before errata patches from newer books are applied.
-  const allBooks: Array<{ slug: string; publishedDate: string; entries: AnyEntry[] }> = [];
+  const allBooks: Array<{
+    slug: string;
+    publishedDate: string;
+    entries: AnyEntry[];
+  }> = [];
 
   for (const collectionSlug of bookMetaMap.keys()) {
     const meta = bookMetaMap.get(collectionSlug);
-    const publishedDate = meta?.publishedDate ?? '1970-01-01';
+    const publishedDate = meta?.publishedDate ?? "1970-01-01";
 
     let rawEntries: Awaited<ReturnType<typeof getCollection>>;
     try {
@@ -78,12 +113,7 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
 
     const entries: AnyEntry[] = rawEntries.map((e) => {
       const entry = e.data as AnyEntry;
-      if (entry.sourceBook !== collectionSlug) {
-        throw new Error(
-          `Content error: "${e.id}" in collection "${collectionSlug}" has sourceBook "${entry.sourceBook}". ` +
-            `Move the file or fix the sourceBook field.`
-        );
-      }
+      entry.sourceBook = collectionSlug;
       return entry;
     });
 
@@ -99,30 +129,55 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
 function storeEntry(
   entry: AnyEntry,
   key: EntryKey,
-  maps: Pick<ResolvedMaps, 'sphereMap' | 'talentMap' | 'featMap' | 'classMap' | 'articleMap'>
+  maps: Pick<
+    ResolvedMaps,
+    "sphereMap" | "talentMap" | "featMap" | "classMap" | "articleMap"
+  >,
 ): void {
-  if (entry.type === 'sphere') maps.sphereMap.set(key, entry);
-  else if (entry.type === 'talent') maps.talentMap.set(key, entry);
-  else if (entry.type === 'feat') maps.featMap.set(key, entry);
-  else if (entry.type === 'class') maps.classMap.set(key, entry);
-  else if (entry.type === 'article') maps.articleMap.set(key, entry);
+  if (entry.type === "sphere") maps.sphereMap.set(key, entry);
+  else if (entry.type === "talent") maps.talentMap.set(key, entry);
+  else if (entry.type === "feat") maps.featMap.set(key, entry);
+  else if (entry.type === "class") maps.classMap.set(key, entry);
+  else if (entry.type === "article") maps.articleMap.set(key, entry);
 }
 
 function applyPatch(
   patch: AnyEntry,
   targetKey: EntryKey,
-  maps: Pick<ResolvedMaps, 'sphereMap' | 'talentMap' | 'featMap' | 'classMap' | 'articleMap'>
+  maps: Pick<
+    ResolvedMaps,
+    "sphereMap" | "talentMap" | "featMap" | "classMap" | "articleMap"
+  >,
 ): void {
-  const { modifies: _m, id: _i, ...fieldsToMerge } = patch as AnyEntry & { modifies?: string };
-  if (patch.type === 'sphere' && maps.sphereMap.has(targetKey)) {
-    maps.sphereMap.set(targetKey, { ...maps.sphereMap.get(targetKey)!, ...(fieldsToMerge as Partial<SphereEntry>) });
-  } else if (patch.type === 'talent' && maps.talentMap.has(targetKey)) {
-    maps.talentMap.set(targetKey, { ...maps.talentMap.get(targetKey)!, ...(fieldsToMerge as Partial<TalentEntry>) });
-  } else if (patch.type === 'feat' && maps.featMap.has(targetKey)) {
-    maps.featMap.set(targetKey, { ...maps.featMap.get(targetKey)!, ...(fieldsToMerge as Partial<FeatEntry>) });
-  } else if (patch.type === 'class' && maps.classMap.has(targetKey)) {
-    maps.classMap.set(targetKey, { ...maps.classMap.get(targetKey)!, ...(fieldsToMerge as Partial<ClassEntry>) });
-  } else if (patch.type === 'article' && maps.articleMap.has(targetKey)) {
-    maps.articleMap.set(targetKey, { ...maps.articleMap.get(targetKey)!, ...(fieldsToMerge as Partial<ArticleEntry>) });
+  const {
+    modifies: _m,
+    id: _i,
+    ...fieldsToMerge
+  } = patch as AnyEntry & { modifies?: string };
+  if (patch.type === "sphere" && maps.sphereMap.has(targetKey)) {
+    maps.sphereMap.set(targetKey, {
+      ...maps.sphereMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<SphereEntry>),
+    });
+  } else if (patch.type === "talent" && maps.talentMap.has(targetKey)) {
+    maps.talentMap.set(targetKey, {
+      ...maps.talentMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<TalentEntry>),
+    });
+  } else if (patch.type === "feat" && maps.featMap.has(targetKey)) {
+    maps.featMap.set(targetKey, {
+      ...maps.featMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<FeatEntry>),
+    });
+  } else if (patch.type === "class" && maps.classMap.has(targetKey)) {
+    maps.classMap.set(targetKey, {
+      ...maps.classMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<ClassEntry>),
+    });
+  } else if (patch.type === "article" && maps.articleMap.has(targetKey)) {
+    maps.articleMap.set(targetKey, {
+      ...maps.articleMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<ArticleEntry>),
+    });
   }
 }

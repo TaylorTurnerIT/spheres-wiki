@@ -2,7 +2,6 @@
 id: elemental-transformation
 name: "Elemental Transformation"
 system: power
-sourceBook: unknown-source
 type: talent
 sphere: alteration
 tier: basic
