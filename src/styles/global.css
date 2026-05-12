@@ -1458,70 +1458,98 @@ a:hover {
 }
 
 /* ── Store page ─────────────────────────────────────────── */
-.store-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+.store-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 14px;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-border) transparent;
 }
+.store-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.store-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+.store-carousel::-webkit-scrollbar-thumb {
+  background-color: var(--clr-border);
+  border-radius: 10px;
+}
+
 .store-card {
+  flex: 0 0 140px;
+  scroll-snap-align: start;
   background: var(--clr-bg);
   border: 0.5px solid var(--clr-border);
   border-radius: var(--radius);
-  padding: 12px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
+  transition: transform 0.15s ease;
+}
+.store-card:hover {
+  transform: translateY(-2px);
 }
 .store-card-cover {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: calc(var(--radius) - 1px);
+  border-radius: calc(var(--radius) - 2px);
   border: 0.5px solid var(--clr-border);
 }
 .store-card-cover-placeholder {
   width: 100%;
   aspect-ratio: 3 / 4;
   background: var(--clr-border);
-  border-radius: calc(var(--radius) - 1px);
+  border-radius: calc(var(--radius) - 2px);
 }
 .store-title {
   font-family: var(--font-display);
-  font-size: var(--fs-base);
+  font-size: var(--fs-xs);
   font-weight: 700;
   color: var(--clr-brand);
-  line-height: 1.3;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.4em;
 }
 .store-publisher {
-  font-size: var(--fs-2xs);
+  font-size: var(--fs-3xs);
   color: var(--clr-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .store-buy {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
-  padding-top: 10px;
+  padding-top: 6px;
   border-top: 0.5px solid var(--clr-border);
 }
 .store-price {
   font-family: var(--font-display);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-2xs);
   font-weight: 700;
   color: var(--clr-text);
+}
+.shop-btn {
+  padding: 2px 6px;
+  font-size: var(--fs-3xs);
 }
 
 /* ── Inner page responsive additions ────────────────────── */
 @media (max-width: 1024px) {
-  .store-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 @media (max-width: 768px) {
   .entry-grid {
-    grid-template-columns: 1fr;
-  }
-  .store-grid {
     grid-template-columns: 1fr;
   }
 }
