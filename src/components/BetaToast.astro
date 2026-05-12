@@ -1,6 +1,6 @@
 ---
 ---
-<div id="beta-toast" class="beta-toast" hidden>
+<div id="beta-toast" class="beta-toast is-hidden">
   <div class="beta-toast-content">
     <div class="beta-toast-title">BETA VERSION</div>
     <div class="beta-toast-body">
@@ -31,6 +31,10 @@
 
   .beta-toast.animate {
     animation: slide-in 0.3s ease-out;
+  }
+
+  .beta-toast.is-hidden {
+    display: none !important;
   }
 
   @keyframes slide-in {
@@ -98,27 +102,38 @@
     if (!toast || !closeBtn) return;
 
     // Check if user has dismissed it permanently
-    if (localStorage.getItem('beta-toast-dismissed') === 'true') {
-      toast.hidden = true;
-      return;
+    try {
+      if (localStorage.getItem('beta-toast-dismissed') === 'true') {
+        toast.classList.add('is-hidden');
+        return;
+      }
+    } catch (e) {
+      console.warn("Storage access failed", e);
     }
 
-    toast.hidden = false;
+    // Show it
+    toast.classList.remove('is-hidden');
 
     // Only play animation once per session
-    if (!sessionStorage.getItem('beta-toast-animated')) {
-      toast.classList.add('animate');
-      sessionStorage.setItem('beta-toast-animated', 'true');
-    } else {
-      toast.classList.remove('animate');
-    }
+    try {
+      if (!sessionStorage.getItem('beta-toast-animated')) {
+        toast.classList.add('animate');
+        sessionStorage.setItem('beta-toast-animated', 'true');
+      } else {
+        toast.classList.remove('animate');
+      }
+    } catch (e) {}
 
-    closeBtn.onclick = () => {
-      toast.hidden = true;
-      localStorage.setItem('beta-toast-dismissed', 'true');
+    // Clean listener attachment
+    closeBtn.onclick = (e) => {
+      e.stopPropagation();
+      toast.classList.add('is-hidden');
+      try {
+        localStorage.setItem('beta-toast-dismissed', 'true');
+      } catch (err) {}
     };
   }
 
-  // Run on initial load and view transition navigation
+  // Ensure it runs on every page load/transition
   document.addEventListener('astro:page-load', initToast);
 </script>
