@@ -16,6 +16,12 @@ categoryDefinitions:
   - label: "Alteration Talents"
     tiers: ["basic"]
     excludeTags: ["body", "transformation"]
+  - label: "Advanced Alteration Talents"
+    tiers: ["advanced"]
+    excludeTags: ["basic"]
+  - label: "Feats"
+    tiers: ["feat"]
+    excludeTags: ["combat", "dual-sphere"]
   - label: "Combat Feats"
     tiers: ["feat"]
     tags: ["combat"]

@@ -19,7 +19,7 @@ export function buildCategories(
   const categories: CategoryResult[] = [];
   const usedIds = new Set<string>();
 
-  // 1. Filter out 'base' talents entirely - they are shown at the top
+  // 1. Prepare tier-specific lists (excluding 'base')
   const basicTalents = talents.filter((t) => t.tier === "basic");
   const advancedTalents = talents.filter((t) => t.tier === "advanced");
 
@@ -29,7 +29,7 @@ export function buildCategories(
       const categoryEntries: Array<{ id: string; type: "talent" | "feat" }> =
         [];
 
-      // Only allow basic talents or feats in custom categories for now (Advanced is handled separately)
+      // Filter Basic Talents
       for (const t of basicTalents) {
         if (usedIds.has(t.id)) continue;
         const tierMatch = !def.tiers || def.tiers.includes("basic");
@@ -44,6 +44,22 @@ export function buildCategories(
         }
       }
 
+      // Filter Advanced Talents
+      for (const t of advancedTalents) {
+        if (usedIds.has(t.id)) continue;
+        const tierMatch = !def.tiers || def.tiers.includes("advanced");
+        const tagMatch =
+          !def.tags || def.tags.some((tag) => t.tags.includes(tag));
+        const excludeMatch =
+          !def.excludeTags ||
+          !def.excludeTags.some((tag) => t.tags.includes(tag));
+        if (tierMatch && tagMatch && excludeMatch) {
+          categoryEntries.push({ id: t.id, type: "talent" });
+          usedIds.add(t.id);
+        }
+      }
+
+      // Filter Feats
       for (const f of feats) {
         if (usedIds.has(f.id)) continue;
         const tierMatch = !def.tiers || def.tiers.includes("feat");
@@ -71,34 +87,28 @@ export function buildCategories(
   // 3. Catch-all for Basic Talents
   const remainingBasic = basicTalents.filter((t) => !usedIds.has(t.id));
   if (remainingBasic.length > 0) {
-    // If we already have some categories, use a sub-label, otherwise use the default
-    const label = categories.some((c) => c.id.includes("talent"))
-      ? "Other Basic Talents"
-      : "Basic Talents";
     categories.push({
-      label,
+      label: "Basic Talents",
       id: "basic-talents",
       entries: remainingBasic.map((t) => ({ id: t.id, type: "talent" })),
     });
   }
 
-  // 4. Advanced Talents (Always grouped together)
-  if (advancedTalents.length > 0) {
+  // 4. Catch-all for Advanced Talents
+  const remainingAdvanced = advancedTalents.filter((t) => !usedIds.has(t.id));
+  if (remainingAdvanced.length > 0) {
     categories.push({
       label: "Advanced Talents",
       id: "advanced-talents",
-      entries: advancedTalents.map((t) => ({ id: t.id, type: "talent" })),
+      entries: remainingAdvanced.map((t) => ({ id: t.id, type: "talent" })),
     });
   }
 
   // 5. Catch-all for Feats
   const remainingFeats = feats.filter((f) => !usedIds.has(f.id));
   if (remainingFeats.length > 0) {
-    const label = categories.some((c) => c.label.toLowerCase().includes("feat"))
-      ? "Other Feats"
-      : "Feats";
     categories.push({
-      label,
+      label: "Feats",
       id: "feats",
       entries: remainingFeats.map((f) => ({ id: f.id, type: "feat" })),
     });
