@@ -7,22 +7,25 @@ export interface TocItem {
 
 interface Props {
   items: TocItem[];
+  system: 'power' | 'might' | 'guile' | 'champ';
 }
 
-const { items } = Astro.props;
+const { items, system } = Astro.props;
 ---
 {items.length > 0 && (
-  <nav class="toc" aria-label="On this page">
+  <nav class="toc" aria-label="On this page" style={`--clr-system: var(--clr-${system})`}>
     <p class="toc-title">On This Page</p>
     <ul class="toc-list">
       {items.map(item => (
-        <li>
-          <a href={`#${item.id}`}>{item.label}</a>
+        <li class="toc-category" data-toc-section={item.id}>
+          <a href={`#${item.id}`} class="toc-cat-link">{item.label}</a>
           {item.sub && item.sub.length > 0 && (
             <ul class="toc-sub-list">
-              {item.sub.map(s => (
-                <li><a href={`#${s.id}`}>{s.label}</a></li>
-              ))}
+              <div class="toc-sub-inner">
+                {item.sub.map(s => (
+                  <li><a href={`#${s.id}`} data-toc-item={s.id}>{s.label}</a></li>
+                ))}
+              </div>
             </ul>
           )}
         </li>
@@ -30,3 +33,66 @@ const { items } = Astro.props;
     </ul>
   </nav>
 )}
+
+<script>
+function initToc() {
+  const nav = document.querySelector<HTMLElement>('.toc');
+  if (!nav) return;
+
+  const categories = [...nav.querySelectorAll<HTMLElement>('[data-toc-section]')];
+  const headings = categories
+    .map(cat => ({
+      cat,
+      heading: document.getElementById(cat.dataset.tocSection!),
+      subLinks: [...cat.querySelectorAll<HTMLAnchorElement>('[data-toc-item]')],
+    }))
+    .filter((s): s is typeof s & { heading: HTMLElement } => s.heading !== null);
+
+  function setActive(active: HTMLElement | null) {
+    categories.forEach(cat => {
+      const subList = cat.querySelector<HTMLElement>('.toc-sub-list');
+      const inner = cat.querySelector<HTMLElement>('.toc-sub-inner');
+      const isActive = cat === active;
+      cat.classList.toggle('is-active', isActive);
+      if (subList && inner) {
+        subList.style.maxHeight = isActive ? inner.scrollHeight + 'px' : '0';
+        subList.style.overflow = isActive ? 'visible' : 'hidden';
+      }
+    });
+  }
+
+  function recalc() {
+    // Last heading whose top edge is at or above 25% of viewport = current section
+    let current: HTMLElement | null = headings[0]?.cat ?? null;
+    for (const { cat, heading } of headings) {
+      if (heading.getBoundingClientRect().top <= window.innerHeight * 0.25) {
+        current = cat;
+      }
+    }
+    setActive(current);
+
+    // Highlight the deepest sub-item whose top is at or above 40% of viewport
+    const allSubLinks = nav.querySelectorAll<HTMLAnchorElement>('[data-toc-item]');
+    let activeSub: HTMLAnchorElement | null = null;
+    for (const { subLinks } of headings) {
+      for (const link of subLinks) {
+        const el = document.getElementById(link.dataset.tocItem!);
+        if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.4) {
+          activeSub = link;
+        }
+      }
+    }
+    allSubLinks.forEach(l => l.classList.toggle('is-current', l === activeSub));
+  }
+
+  const observer = new IntersectionObserver(recalc, {
+    rootMargin: '-5% 0px -5% 0px',
+    threshold: [0, 1],
+  });
+  headings.forEach(({ heading }) => observer.observe(heading));
+
+  recalc();
+}
+
+document.addEventListener('astro:page-load', initToc);
+</script>
