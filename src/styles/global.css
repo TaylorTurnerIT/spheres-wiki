@@ -1578,6 +1578,7 @@ a:hover {
   flex-direction: column;
   gap: 16px;
   align-items: start;
+  align-self: stretch;
 }
 @media (max-width: 1024px) {
   .content-columns {
