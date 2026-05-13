@@ -36,10 +36,15 @@ const { items, system } = Astro.props;
 
 <script>
 let activeObserver: IntersectionObserver | null = null;
+let activeScrollHandler: (() => void) | null = null;
 
 document.addEventListener('astro:page-load', () => {
   activeObserver?.disconnect();
   activeObserver = null;
+  if (activeScrollHandler) {
+    window.removeEventListener('scroll', activeScrollHandler);
+    activeScrollHandler = null;
+  }
 
   const nav = document.querySelector<HTMLElement>('.toc');
   if (!nav) return;
@@ -65,7 +70,10 @@ document.addEventListener('astro:page-load', () => {
     });
   }
 
+  const allSubLinks = [...nav.querySelectorAll<HTMLAnchorElement>('[data-toc-item]')];
+
   function recalc() {
+    // Last category heading at or above 25% of viewport = active section
     let current: HTMLElement | null = headings[0]?.cat ?? null;
     for (const { cat, heading } of headings) {
       if (heading.getBoundingClientRect().top <= window.innerHeight * 0.25) {
@@ -74,12 +82,12 @@ document.addEventListener('astro:page-load', () => {
     }
     setActive(current);
 
-    const allSubLinks = nav.querySelectorAll<HTMLAnchorElement>('[data-toc-item]');
+    // Last sub-item at or above 15% of viewport = currently reading
     let activeSub: HTMLAnchorElement | null = null;
     for (const { subLinks } of headings) {
       for (const link of subLinks) {
         const el = document.getElementById(link.dataset.tocItem!);
-        if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.4) {
+        if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.15) {
           activeSub = link;
         }
       }
@@ -87,11 +95,24 @@ document.addEventListener('astro:page-load', () => {
     allSubLinks.forEach(l => l.classList.toggle('is-current', l === activeSub));
   }
 
+  // IO triggers recalc when category headings cross viewport boundary
   activeObserver = new IntersectionObserver(recalc, {
     rootMargin: '-5% 0px -5% 0px',
     threshold: [0, 1],
   });
   headings.forEach(({ heading }) => activeObserver!.observe(heading));
+
+  // Scroll listener catches click-jump navigation that IO may miss
+  let rafPending = false;
+  activeScrollHandler = () => {
+    if (rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(() => {
+      recalc();
+      rafPending = false;
+    });
+  };
+  window.addEventListener('scroll', activeScrollHandler, { passive: true });
 
   recalc();
 });
