@@ -20,13 +20,13 @@ const { items, system } = Astro.props;
         <li class="toc-category" data-toc-section={item.id}>
           <a href={`#${item.id}`} class="toc-cat-link">{item.label}</a>
           {item.sub && item.sub.length > 0 && (
-            <ul class="toc-sub-list">
+            <div class="toc-sub-list">
               <div class="toc-sub-inner">
                 {item.sub.map(s => (
-                  <li><a href={`#${s.id}`} data-toc-item={s.id}>{s.label}</a></li>
+                  <a href={`#${s.id}`} data-toc-item={s.id}>{s.label}</a>
                 ))}
               </div>
-            </ul>
+            </div>
           )}
         </li>
       ))}
@@ -35,7 +35,12 @@ const { items, system } = Astro.props;
 )}
 
 <script>
-function initToc() {
+let activeObserver: IntersectionObserver | null = null;
+
+document.addEventListener('astro:page-load', () => {
+  activeObserver?.disconnect();
+  activeObserver = null;
+
   const nav = document.querySelector<HTMLElement>('.toc');
   if (!nav) return;
 
@@ -56,13 +61,11 @@ function initToc() {
       cat.classList.toggle('is-active', isActive);
       if (subList && inner) {
         subList.style.maxHeight = isActive ? inner.scrollHeight + 'px' : '0';
-        subList.style.overflow = isActive ? 'visible' : 'hidden';
       }
     });
   }
 
   function recalc() {
-    // Last heading whose top edge is at or above 25% of viewport = current section
     let current: HTMLElement | null = headings[0]?.cat ?? null;
     for (const { cat, heading } of headings) {
       if (heading.getBoundingClientRect().top <= window.innerHeight * 0.25) {
@@ -71,7 +74,6 @@ function initToc() {
     }
     setActive(current);
 
-    // Highlight the deepest sub-item whose top is at or above 40% of viewport
     const allSubLinks = nav.querySelectorAll<HTMLAnchorElement>('[data-toc-item]');
     let activeSub: HTMLAnchorElement | null = null;
     for (const { subLinks } of headings) {
@@ -85,14 +87,12 @@ function initToc() {
     allSubLinks.forEach(l => l.classList.toggle('is-current', l === activeSub));
   }
 
-  const observer = new IntersectionObserver(recalc, {
+  activeObserver = new IntersectionObserver(recalc, {
     rootMargin: '-5% 0px -5% 0px',
     threshold: [0, 1],
   });
-  headings.forEach(({ heading }) => observer.observe(heading));
+  headings.forEach(({ heading }) => activeObserver!.observe(heading));
 
   recalc();
-}
-
-document.addEventListener('astro:page-load', initToc);
+});
 </script>
