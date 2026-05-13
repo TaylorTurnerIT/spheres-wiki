@@ -43,35 +43,46 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
   <hr class="page-title-rule" />
 
   {/* Official Section */}
-  <div class="section-heading">
-    <span class="section-heading-text">Official: Core</span>
+  <div class="section-heading" style="margin-top: 20px; border-bottom-width: 2px;">
+    <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Official</span>
     <div class="section-heading-rule"></div>
   </div>
-  {coreBooks.length > 0 ? (
-    <div class="store-carousel">
-      {coreBooks.map(book => <BookCard book={book} />)}
-    </div>
-  ) : <p class="store-empty">Core books coming soon.</p>}
 
-  <div class="section-heading">
-    <span class="section-heading-text">Official: Diamond Recreational Studios</span>
-    <div class="section-heading-rule"></div>
-  </div>
-  {diamondBooks.length > 0 ? (
-    <div class="store-carousel">
-      {diamondBooks.map(book => <BookCard book={book} />)}
+  <div style="margin-top: 25px;">
+    <div class="section-heading">
+      <span class="section-heading-text">Core System</span>
+      <div class="section-heading-rule"></div>
     </div>
-  ) : <p class="store-empty">No DRS books available yet.</p>}
+    {coreBooks.length > 0 ? (
+      <div class="store-carousel">
+        {coreBooks.map(book => <BookCard book={book} />)}
+      </div>
+    ) : <p class="store-empty">Core books coming soon.</p>}
+  </div>
 
-  <div class="section-heading">
-    <span class="section-heading-text">Official: Drop Dead Studios</span>
-    <div class="section-heading-rule"></div>
-  </div>
-  {ddsBooks.length > 0 ? (
-    <div class="store-carousel">
-      {ddsBooks.map(book => <BookCard book={book} />)}
+  <div style="margin-top: 25px;">
+    <div class="section-heading">
+      <span class="section-heading-text">Diamond Recreational Studios</span>
+      <div class="section-heading-rule"></div>
     </div>
-  ) : <p class="store-empty">No DDS books available yet.</p>}
+    {diamondBooks.length > 0 ? (
+      <div class="store-carousel">
+        {diamondBooks.map(book => <BookCard book={book} />)}
+      </div>
+    ) : <p class="store-empty">No DRS books available yet.</p>}
+  </div>
+
+  <div style="margin-top: 25px;">
+    <div class="section-heading">
+      <span class="section-heading-text">Drop Dead Studios</span>
+      <div class="section-heading-rule"></div>
+    </div>
+    {ddsBooks.length > 0 ? (
+      <div class="store-carousel">
+        {ddsBooks.map(book => <BookCard book={book} />)}
+      </div>
+    ) : <p class="store-empty">No DDS books available yet.</p>}
+  </div>
 
   {/* Third Party Section */}
   {sortedTPGroups.length > 0 && (
