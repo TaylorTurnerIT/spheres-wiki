@@ -326,6 +326,40 @@ a:hover {
   background: var(--clr-border);
 }
 
+/* ── Hierarchical section group (page) ─────────────────── */
+.section-group {
+  margin-top: 32px;
+}
+.section-group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.section-group-label {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  color: var(--clr-text);
+}
+.section-group-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--clr-border);
+}
+.section-block {
+  margin-top: 18px;
+}
+.section-empty {
+  font-size: var(--fs-xs);
+  color: var(--clr-muted);
+  font-style: italic;
+  margin: 8px 0;
+}
+
 /* ── Header extras ──────────────────────────────────────── */
 .site-title {
   flex: 1;
@@ -1655,6 +1689,28 @@ a:hover {
 .toc-sub-list a.is-current {
   color: var(--clr-text);
   font-weight: 600;
+}
+
+/* ── TOC hierarchy: group labels ───────────────────────── */
+.toc-group {
+  margin-top: 8px;
+}
+.toc-group-label {
+  display: block;
+  font-size: var(--fs-3xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-muted);
+  margin-bottom: 4px;
+}
+.toc-group-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 /* ── SourceBookCallout ──────────────────────────────────── */
