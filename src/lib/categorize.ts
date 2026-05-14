@@ -27,54 +27,7 @@ export function buildCategories(
   // 2. Process Custom Category Definitions
   if (sphere.categoryDefinitions && sphere.categoryDefinitions.length > 0) {
     for (const def of sphere.categoryDefinitions) {
-      const categoryEntries: Array<{ id: string; type: "talent" | "feat" }> =
-        [];
-
-      // Filter Basic Talents
-      for (const t of basicTalents) {
-        if (usedIds.has(t.id)) continue;
-        const tierMatch = !def.tiers || def.tiers.includes("basic");
-        const tagMatch =
-          !def.tags || def.tags.some((tag) => t.tags.includes(tag));
-        const excludeMatch =
-          !def.excludeTags ||
-          !def.excludeTags.some((tag) => t.tags.includes(tag));
-        if (tierMatch && tagMatch && excludeMatch) {
-          categoryEntries.push({ id: t.id, type: "talent" });
-          usedIds.add(t.id);
-        }
-      }
-
-      // Filter Advanced Talents
-      for (const t of advancedTalents) {
-        if (usedIds.has(t.id)) continue;
-        const tierMatch = !def.tiers || def.tiers.includes("advanced");
-        const tagMatch =
-          !def.tags || def.tags.some((tag) => t.tags.includes(tag));
-        const excludeMatch =
-          !def.excludeTags ||
-          !def.excludeTags.some((tag) => t.tags.includes(tag));
-        if (tierMatch && tagMatch && excludeMatch) {
-          categoryEntries.push({ id: t.id, type: "talent" });
-          usedIds.add(t.id);
-        }
-      }
-
-      // Filter Feats
-      for (const f of feats) {
-        if (usedIds.has(f.id)) continue;
-        const tierMatch = !def.tiers || def.tiers.includes("feat");
-        const tagMatch =
-          !def.tags || def.tags.some((tag) => f.tags.includes(tag));
-        const excludeMatch =
-          !def.excludeTags ||
-          !def.excludeTags.some((tag) => f.tags.includes(tag));
-        if (tierMatch && tagMatch && excludeMatch) {
-          categoryEntries.push({ id: f.id, type: "feat" });
-          usedIds.add(f.id);
-        }
-      }
-
+      const categoryEntries = filterEntries(def, basicTalents, advancedTalents, feats, usedIds);
       if (categoryEntries.length > 0) {
         categories.push({
           label: def.label,
@@ -196,6 +149,7 @@ export function buildSections(
         }
       }
 
+      // Empty categories are included — page renders "No entries yet." for them
       sections.push({ label: secDef.label, id: secId, categories });
     }
   }
