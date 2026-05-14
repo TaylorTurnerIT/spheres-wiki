@@ -78,7 +78,7 @@ export function buildCategories(
         categories.push({
           label: def.label,
           id: def.label.toLowerCase().replace(/\s+/g, "-"),
-          entries: categoryEntries,
+          entries: categoryEntries.sort((a, b) => a.id.localeCompare(b.id)),
         });
       }
     }
@@ -90,7 +90,7 @@ export function buildCategories(
     categories.push({
       label: "Basic Talents",
       id: "basic-talents",
-      entries: remainingBasic.map((t) => ({ id: t.id, type: "talent" })),
+      entries: remainingBasic.map((t) => ({ id: t.id, type: "talent" as const })).sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
 
@@ -100,7 +100,7 @@ export function buildCategories(
     categories.push({
       label: "Advanced Talents",
       id: "advanced-talents",
-      entries: remainingAdvanced.map((t) => ({ id: t.id, type: "talent" })),
+      entries: remainingAdvanced.map((t) => ({ id: t.id, type: "talent" as const })).sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
 
@@ -110,7 +110,7 @@ export function buildCategories(
     categories.push({
       label: "Feats",
       id: "feats",
-      entries: remainingFeats.map((f) => ({ id: f.id, type: "feat" })),
+      entries: remainingFeats.map((f) => ({ id: f.id, type: "feat" as const })).sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
 
