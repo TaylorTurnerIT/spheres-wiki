@@ -1579,6 +1579,10 @@ a:hover {
   gap: 16px;
   align-items: start;
   align-self: stretch;
+  position: sticky;
+  top: 16px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
 }
 @media (max-width: 1024px) {
   .content-columns {
@@ -1593,10 +1597,6 @@ a:hover {
   border-radius: var(--radius);
   padding: 10px 12px;
   font-size: var(--fs-xs);
-  position: sticky;
-  top: 16px;
-  max-height: calc(100vh - 32px);
-  overflow-y: auto;
 }
 .toc-title {
   font-family: var(--font-display);
