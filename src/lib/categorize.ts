@@ -3,6 +3,7 @@ import type {
   FeatEntry,
   SphereEntry,
   TalentCategory,
+  SectionDefinition,
 } from "./types";
 
 export type CategoryResult = {
@@ -115,4 +116,126 @@ export function buildCategories(
   }
 
   return categories;
+}
+
+export type SectionResult = {
+  label: string;
+  id: string;
+  categories: CategoryResult[];
+};
+
+function filterEntries(
+  def: TalentCategory,
+  basicTalents: TalentEntry[],
+  advancedTalents: TalentEntry[],
+  feats: FeatEntry[],
+  usedIds: Set<string>,
+): Array<{ id: string; type: "talent" | "feat" }> {
+  const entries: Array<{ id: string; type: "talent" | "feat" }> = [];
+
+  for (const t of basicTalents) {
+    if (usedIds.has(t.id)) continue;
+    const tierMatch = !def.tiers || def.tiers.includes("basic");
+    const tagMatch = !def.tags || def.tags.some((tag) => t.tags.includes(tag));
+    const excludeMatch = !def.excludeTags || !def.excludeTags.some((tag) => t.tags.includes(tag));
+    if (tierMatch && tagMatch && excludeMatch) {
+      entries.push({ id: t.id, type: "talent" });
+      usedIds.add(t.id);
+    }
+  }
+
+  for (const t of advancedTalents) {
+    if (usedIds.has(t.id)) continue;
+    const tierMatch = !def.tiers || def.tiers.includes("advanced");
+    const tagMatch = !def.tags || def.tags.some((tag) => t.tags.includes(tag));
+    const excludeMatch = !def.excludeTags || !def.excludeTags.some((tag) => t.tags.includes(tag));
+    if (tierMatch && tagMatch && excludeMatch) {
+      entries.push({ id: t.id, type: "talent" });
+      usedIds.add(t.id);
+    }
+  }
+
+  for (const f of feats) {
+    if (usedIds.has(f.id)) continue;
+    const tierMatch = !def.tiers || def.tiers.includes("feat");
+    const tagMatch = !def.tags || def.tags.some((tag) => f.tags.includes(tag));
+    const excludeMatch = !def.excludeTags || !def.excludeTags.some((tag) => f.tags.includes(tag));
+    if (tierMatch && tagMatch && excludeMatch) {
+      entries.push({ id: f.id, type: "feat" });
+      usedIds.add(f.id);
+    }
+  }
+
+  return entries;
+}
+
+export function buildSections(
+  sphere: SphereEntry,
+  talents: TalentEntry[],
+  feats: FeatEntry[],
+): SectionResult[] {
+  const sections: SectionResult[] = [];
+  const usedIds = new Set<string>();
+
+  const basicTalents = talents.filter((t) => t.tier === "basic");
+  const advancedTalents = talents.filter((t) => t.tier === "advanced");
+
+  if (sphere.sectionDefinitions && sphere.sectionDefinitions.length > 0) {
+    for (const secDef of sphere.sectionDefinitions) {
+      const secId = secDef.label.toLowerCase().replace(/\s+/g, "-");
+      const categories: CategoryResult[] = [];
+
+      if (secDef.categories && secDef.categories.length > 0) {
+        for (const catDef of secDef.categories) {
+          const catEntries = filterEntries(catDef, basicTalents, advancedTalents, feats, usedIds);
+          categories.push({
+            label: catDef.label,
+            id: catDef.label.toLowerCase().replace(/\s+/g, "-"),
+            entries: catEntries.sort((a, b) => a.id.localeCompare(b.id)),
+          });
+        }
+      }
+
+      sections.push({ label: secDef.label, id: secId, categories });
+    }
+  }
+
+  // Catch-all: unmatched entries → "Other" section
+  const remainingBasic = basicTalents.filter((t) => !usedIds.has(t.id));
+  const remainingAdvanced = advancedTalents.filter((t) => !usedIds.has(t.id));
+  const remainingFeats = feats.filter((f) => !usedIds.has(f.id));
+
+  if (remainingBasic.length > 0 || remainingAdvanced.length > 0 || remainingFeats.length > 0) {
+    const otherCategories: CategoryResult[] = [];
+    if (remainingBasic.length > 0) {
+      otherCategories.push({
+        label: "Basic Talents",
+        id: "basic-talents",
+        entries: remainingBasic
+          .map((t) => ({ id: t.id, type: "talent" as const }))
+          .sort((a, b) => a.id.localeCompare(b.id)),
+      });
+    }
+    if (remainingAdvanced.length > 0) {
+      otherCategories.push({
+        label: "Advanced Talents",
+        id: "advanced-talents",
+        entries: remainingAdvanced
+          .map((t) => ({ id: t.id, type: "talent" as const }))
+          .sort((a, b) => a.id.localeCompare(b.id)),
+      });
+    }
+    if (remainingFeats.length > 0) {
+      otherCategories.push({
+        label: "Feats",
+        id: "feats",
+        entries: remainingFeats
+          .map((f) => ({ id: f.id, type: "feat" as const }))
+          .sort((a, b) => a.id.localeCompare(b.id)),
+      });
+    }
+    sections.push({ label: "Other", id: "other", categories: otherCategories });
+  }
+
+  return sections;
 }
