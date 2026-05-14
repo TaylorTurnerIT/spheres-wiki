@@ -17,6 +17,11 @@ export type TalentCategory = {
   excludeTags?: string[];
 };
 
+export type SectionDefinition = {
+  label: string;
+  categories?: TalentCategory[];
+};
+
 export type SphereEntry = {
   type: "sphere";
   id: string;
@@ -27,6 +32,7 @@ export type SphereEntry = {
   tags: string[];
   modifies?: string;
   categoryDefinitions?: TalentCategory[];
+  sectionDefinitions?: SectionDefinition[];
 };
 
 export type TalentEntry = {
