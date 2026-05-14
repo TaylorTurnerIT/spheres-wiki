@@ -5,34 +5,60 @@ export interface TocItem {
   sub?: Array<{ id: string; label: string }>;
 }
 
+export interface TocGroup {
+  label: string;
+  categories: TocItem[];
+}
+
 interface Props {
-  items: TocItem[];
+  overview: TocItem;
+  groups: TocGroup[];
   system: 'power' | 'might' | 'guile' | 'champ';
 }
 
-const { items, system } = Astro.props;
+const { overview, groups, system } = Astro.props;
 ---
-{items.length > 0 && (
-  <nav class="toc" aria-label="On this page" style={`--clr-system: var(--clr-${system})`}>
-    <p class="toc-title">On This Page</p>
-    <ul class="toc-list">
-      {items.map(item => (
-        <li class="toc-category" data-toc-section={item.id}>
-          <a href={`#${item.id}`} class="toc-cat-link">{item.label}</a>
-          {item.sub && item.sub.length > 0 && (
-            <div class="toc-sub-list">
-              <div class="toc-sub-inner">
-                {item.sub.map(s => (
-                  <a href={`#${s.id}`} data-toc-item={s.id}>{s.label}</a>
-                ))}
-              </div>
-            </div>
-          )}
-        </li>
-      ))}
-    </ul>
-  </nav>
-)}
+<nav class="toc" aria-label="On this page" style={`--clr-system: var(--clr-${system})`}>
+  <p class="toc-title">On This Page</p>
+  <ul class="toc-list">
+
+    <li class="toc-category" data-toc-section={overview.id}>
+      <a href={`#${overview.id}`} class="toc-cat-link">{overview.label}</a>
+      {overview.sub && overview.sub.length > 0 && (
+        <div class="toc-sub-list">
+          <div class="toc-sub-inner">
+            {overview.sub.map(s => (
+              <a href={`#${s.id}`} data-toc-item={s.id}>{s.label}</a>
+            ))}
+          </div>
+        </div>
+      )}
+    </li>
+
+    {groups.map(group => (
+      <li class="toc-group">
+        <span class="toc-group-label">{group.label}</span>
+        <ul class="toc-group-categories">
+          {group.categories.map(cat => (
+            <li class="toc-category" data-toc-section={cat.id}>
+              <a href={`#${cat.id}`} class="toc-cat-link">{cat.label}</a>
+              {cat.sub && cat.sub.length > 0 && (
+                <div class="toc-sub-list">
+                  <div class="toc-sub-inner">
+                    {cat.sub.map(s => (
+                      <a href={`#${s.id}`} data-toc-item={s.id}>{s.label}</a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </li>
+    ))}
+
+  </ul>
+</nav>
 
 <script>
 let activeObserver: IntersectionObserver | null = null;
