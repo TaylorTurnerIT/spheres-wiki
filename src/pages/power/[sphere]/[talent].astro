@@ -34,12 +34,26 @@ export async function getStaticPaths() {
   const paths = [];
   for (const [, talent] of talentMap) {
     if (talent.system !== 'power') continue;
+
+    // Primary path
     const sphere = [...sphereMap.values()].find(s => s.id === talent.sphere && s.system === 'power');
-    if (!sphere) continue;
-    paths.push({
-      params: { sphere: sphere.id, talent: talent.id },
-      props: { talent, sphere, collEntry: allCollEntries.get(talent.id), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
-    });
+    if (sphere) {
+      paths.push({
+        params: { sphere: sphere.id, talent: talent.id },
+        props: { talent, sphere, collEntry: allCollEntries.get(talent.id), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+      });
+    }
+
+    // Dual sphere path
+    if (talent.dualSphere) {
+      const dualSphere = [...sphereMap.values()].find(s => s.id === talent.dualSphere && s.system === 'power');
+      if (dualSphere) {
+        paths.push({
+          params: { sphere: dualSphere.id, talent: talent.id },
+          props: { talent, sphere: dualSphere, collEntry: allCollEntries.get(talent.id), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+        });
+      }
+    }
   }
 
   return paths;

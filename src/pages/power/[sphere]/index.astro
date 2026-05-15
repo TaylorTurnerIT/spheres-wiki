@@ -47,9 +47,9 @@ export async function getStaticPaths() {
 
   for (const [, sphere] of sphereMap) {
     if (sphere.system !== 'power') continue;
-    const allTalents = [...talentMap.values()].filter(t => t.sphere === sphere.id && t.system === 'power');
+    const allTalents = [...talentMap.values()].filter(t => (t.sphere === sphere.id || t.dualSphere === sphere.id) && t.system === 'power');
     const base       = allTalents.filter(t => t.tier === 'base').sort((a, b) => a.name.localeCompare(b.name));
-    const feats      = [...featMap.values()].filter(f => f.sphere === sphere.id && f.system === 'power').sort((a, b) => a.name.localeCompare(b.name));
+    const feats      = [...featMap.values()].filter(f => (f.sphere === sphere.id || f.dualSphere === sphere.id) && f.system === 'power').sort((a, b) => a.name.localeCompare(b.name));
 
     const sections = buildSections(sphere, allTalents.filter(t => t.tier !== 'base'), feats);
 

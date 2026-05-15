@@ -224,6 +224,15 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
     },
     {
       type: "tag",
+      id: "3pp",
+      label: "3PP",
+      priority: -9,
+      description: "Content from a third-party publisher.",
+      sourceBook: "__builtin__",
+      color: "#7a4200",
+    },
+    {
+      type: "tag",
       id: "sphere",
       label: "Sphere",
       priority: -10,

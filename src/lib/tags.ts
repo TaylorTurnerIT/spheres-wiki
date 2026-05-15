@@ -4,7 +4,7 @@ export function buildOrderedTagIds(
   entry: AnyEntry,
   bookMetaMap: Map<string, BookMeta>,
   tagMap: Map<string, TagEntry>,
-  options?: { includeSphere?: boolean },
+  options?: { includeSphere?: boolean; currentSphereId?: string },
 ): string[] {
   const tags = new Set<string>();
   const userTags =
@@ -35,14 +35,21 @@ export function buildOrderedTagIds(
     tags.add(t);
   }
 
-  // Primary sphere logic: show if includeSphere is true, OR if there are other sphere tags present
-  const isSphereTag = (id: string) => id.endsWith("-sphere");
-
-  const hasOtherSpheres = userTags.some(isSphereTag);
+  // Dual-sphere logic
+  const hasDualSphere = "dualSphere" in entry && entry.dualSphere;
 
   if (entry.type === "talent" || entry.type === "feat") {
-    if (entry.sphere && (options?.includeSphere || hasOtherSpheres)) {
-      tags.add(`${entry.sphere}-sphere`);
+    // Primary sphere
+    if (entry.sphere) {
+      const isMultiSphere =
+        hasDualSphere || userTags.some((id) => id.endsWith("-sphere"));
+      if (options?.includeSphere || isMultiSphere) {
+        tags.add(`${entry.sphere}-sphere`);
+      }
+    }
+    // Dual sphere
+    if ("dualSphere" in entry && entry.dualSphere) {
+      tags.add(`${entry.dualSphere}-sphere`);
     }
   }
 

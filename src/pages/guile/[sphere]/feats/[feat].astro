@@ -34,12 +34,26 @@ export async function getStaticPaths() {
   const paths = [];
   for (const [, feat] of featMap) {
     if (feat.system !== 'guile') continue;
+
+    // Primary path
     const sphere = [...sphereMap.values()].find(s => s.id === feat.sphere && s.system === 'guile');
-    if (!sphere) continue;
-    paths.push({
-      params: { sphere: sphere.id, feat: feat.id },
-      props: { feat, sphere, collEntry: allCollEntries.get(feat.id), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
-    });
+    if (sphere) {
+      paths.push({
+        params: { sphere: sphere.id, feat: feat.id },
+        props: { feat, sphere, collEntry: allCollEntries.get(feat.id), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
+      });
+    }
+
+    // Dual sphere path
+    if (feat.dualSphere) {
+      const dualSphere = [...sphereMap.values()].find(s => s.id === feat.dualSphere && s.system === 'guile');
+      if (dualSphere) {
+        paths.push({
+          params: { sphere: dualSphere.id, feat: feat.id },
+          props: { feat, sphere: dualSphere, collEntry: allCollEntries.get(feat.id), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
+        });
+      }
+    }
   }
 
   return paths;
