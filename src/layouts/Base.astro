@@ -25,6 +25,13 @@ const {
       rel="stylesheet"
     />
     <script defer src="https://cloud.umami.is/script.js" data-website-id="2dac8e59-40a9-431f-b1a5-fb91f7c9a182"></script>
+    <script>
+      // astro:after-swap fires only on ViewTransitions navigations, not initial load.
+      // Umami's auto-track handles initial load; this covers client-side navigation.
+      document.addEventListener('astro:after-swap', () => {
+        (window as any).umami?.track();
+      });
+    </script>
     <ViewTransitions />
     <style is:inline>
       .scroll-restoring { opacity: 0; }
