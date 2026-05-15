@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildResolvedMaps } from '../../src/lib/resolveEntries';
+import { buildResolvedMaps, buildTagMap } from '../../src/lib/resolveEntries';
 import type { AnyEntry } from '../../src/lib/types';
 
 type BookInput = { slug: string; publishedDate: string; entries: AnyEntry[] };
@@ -144,5 +144,81 @@ describe('buildResolvedMaps', () => {
     const maps = buildResolvedMaps([bookWithCollision]);
     expect(maps.talentMap.get('talent:alter-shape')!.name).toBe('Alter Shape');
     expect(maps.sphereMap.get('sphere:alter-shape')!.name).toBe('Should Not Patch');
+  });
+});
+
+describe('buildTagMap', () => {
+  it('stores a tag by its id', () => {
+    const result = buildTagMap([
+      {
+        slug: 'spheres-of-power-core',
+        rawTagEntries: [
+          { id: 'combat', label: 'Combat', color: '#8f2d00', priority: 1, description: 'Combat stuff.' },
+        ],
+      },
+    ]);
+    expect(result.has('combat')).toBe(true);
+    expect(result.get('combat')!.label).toBe('Combat');
+    expect(result.get('combat')!.priority).toBe(1);
+  });
+
+  it('injects sourceBook from book slug, overriding any value in the raw entry', () => {
+    const result = buildTagMap([
+      {
+        slug: 'spheres-of-power-core',
+        rawTagEntries: [
+          { id: 'combat', label: 'Combat', priority: 1, description: 'Combat.' },
+        ],
+      },
+    ]);
+    expect(result.get('combat')!.sourceBook).toBe('spheres-of-power-core');
+  });
+
+  it('sets type to "tag" on the stored entry', () => {
+    const result = buildTagMap([
+      {
+        slug: 'book-a',
+        rawTagEntries: [{ id: 'utility', label: 'Utility', priority: 5, description: 'Utility.' }],
+      },
+    ]);
+    expect(result.get('utility')!.type).toBe('tag');
+  });
+
+  it('throws on duplicate tag id across books', () => {
+    expect(() =>
+      buildTagMap([
+        {
+          slug: 'book-a',
+          rawTagEntries: [{ id: 'combat', label: 'Combat', priority: 1, description: 'A.' }],
+        },
+        {
+          slug: 'book-b',
+          rawTagEntries: [{ id: 'combat', label: 'Combat', priority: 1, description: 'B.' }],
+        },
+      ])
+    ).toThrow('Duplicate tag "combat"');
+  });
+
+  it('error message names both books', () => {
+    expect(() =>
+      buildTagMap([
+        { slug: 'book-a', rawTagEntries: [{ id: 'x', label: 'X', priority: 1, description: 'X.' }] },
+        { slug: 'book-b', rawTagEntries: [{ id: 'x', label: 'X', priority: 1, description: 'X.' }] },
+      ])
+    ).toThrow(/book-a.*book-b|book-b.*book-a/);
+  });
+
+  it('returns empty map when no tag entries', () => {
+    const result = buildTagMap([{ slug: 'book-a', rawTagEntries: [] }]);
+    expect(result.size).toBe(0);
+  });
+
+  it('collects tags from multiple books without conflict', () => {
+    const result = buildTagMap([
+      { slug: 'book-a', rawTagEntries: [{ id: 'combat', label: 'Combat', priority: 1, description: 'A.' }] },
+      { slug: 'book-b', rawTagEntries: [{ id: 'utility', label: 'Utility', priority: 5, description: 'B.' }] },
+    ]);
+    expect(result.size).toBe(2);
+    expect(result.get('utility')!.sourceBook).toBe('book-b');
   });
 });

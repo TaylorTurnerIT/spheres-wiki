@@ -6,6 +6,7 @@ import type {
   FeatEntry,
   ClassEntry,
   ArticleEntry,
+  TagEntry,
   EntryKey,
   ResolvedMaps,
   BookMeta,
@@ -13,6 +14,35 @@ import type {
 
 function entryKey(type: string, id: string): EntryKey {
   return `${type}:${id}`;
+}
+
+type RawTagEntry = {
+  id: string;
+  label: string;
+  color?: string;
+  priority: number;
+  description: string;
+};
+
+export function buildTagMap(
+  books: Array<{ slug: string; rawTagEntries: RawTagEntry[] }>,
+): Map<string, TagEntry> {
+  const tagMap = new Map<string, TagEntry>();
+  for (const book of books) {
+    for (const raw of book.rawTagEntries) {
+      if (tagMap.has(raw.id)) {
+        throw new Error(
+          `Duplicate tag "${raw.id}" defined in both "${tagMap.get(raw.id)!.sourceBook}" and "${book.slug}"`,
+        );
+      }
+      tagMap.set(raw.id, {
+        type: "tag",
+        ...raw,
+        sourceBook: book.slug,
+      });
+    }
+  }
+  return tagMap;
 }
 
 /**
@@ -33,6 +63,7 @@ export function buildResolvedMaps(
   const classMap = new Map<EntryKey, ClassEntry>();
   const articleMap = new Map<EntryKey, ArticleEntry>();
   const entrySourceBook = new Map<EntryKey, string>();
+  const tagMap = new Map<string, TagEntry>();
   // bookMetaMap is always empty here — populated only by resolveEntries() which has Astro runtime access.
   const bookMetaMap = new Map<string, BookMeta>();
 
@@ -68,6 +99,7 @@ export function buildResolvedMaps(
     articleMap,
     entrySourceBook,
     bookMetaMap,
+    tagMap,
   };
 }
 
@@ -98,6 +130,7 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
     publishedDate: string;
     entries: AnyEntry[];
   }> = [];
+  const tagEntriesByBook: Array<{ slug: string; rawTagEntries: RawTagEntry[] }> = [];
 
   for (const collectionSlug of bookMetaMap.keys()) {
     const meta = bookMetaMap.get(collectionSlug);
@@ -111,17 +144,25 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       rawEntries = [];
     }
 
-    const entries: AnyEntry[] = rawEntries.map((e) => {
-      const entry = e.data as AnyEntry;
-      entry.sourceBook = collectionSlug;
-      return entry;
-    });
+    const tagEntries: RawTagEntry[] = rawEntries
+      .filter((e) => (e.data as any).type === "tag")
+      .map((e) => e.data as unknown as RawTagEntry);
 
-    allBooks.push({ slug: collectionSlug, publishedDate, entries });
+    const contentEntries: AnyEntry[] = rawEntries
+      .filter((e) => (e.data as any).type !== "tag")
+      .map((e) => {
+        const entry = e.data as AnyEntry;
+        entry.sourceBook = collectionSlug;
+        return entry;
+      });
+
+    tagEntriesByBook.push({ slug: collectionSlug, rawTagEntries: tagEntries });
+    allBooks.push({ slug: collectionSlug, publishedDate, entries: contentEntries });
   }
 
+  const tagMap = buildTagMap(tagEntriesByBook);
   const maps = buildResolvedMaps(allBooks);
-  return { ...maps, bookMetaMap };
+  return { ...maps, bookMetaMap, tagMap };
 }
 
 // ──── internal helpers ────────────────────────────────────────────────────

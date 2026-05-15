@@ -67,6 +67,16 @@ export type ArticleEntry = {
   modifies?: string;
 };
 
+export type TagEntry = {
+  type: "tag";
+  id: string;
+  label: string;
+  color?: string;
+  priority: number;
+  description: string;
+  sourceBook: string;
+};
+
 export type FeatEntry = {
   type: "feat";
   id: string;
@@ -95,4 +105,5 @@ export type ResolvedMaps = {
   articleMap: Map<EntryKey, ArticleEntry>;
   entrySourceBook: Map<EntryKey, string>;
   bookMetaMap: Map<string, BookMeta>;
+  tagMap: Map<string, TagEntry>;
 };

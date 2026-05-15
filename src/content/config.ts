@@ -66,6 +66,14 @@ const entrySchema = z.discriminatedUnion("type", [
     type: z.literal("article"),
     ...baseFields,
   }),
+  z.object({
+    type: z.literal("tag"),
+    id: z.string().regex(/^[a-z0-9-]+$/, "id must be lowercase kebab-case"),
+    label: z.string(),
+    color: z.string().optional(),
+    priority: z.number().int().min(1),
+    description: z.string(),
+  }),
 ]);
 
 // description is the GFM markdown body — not a frontmatter field
