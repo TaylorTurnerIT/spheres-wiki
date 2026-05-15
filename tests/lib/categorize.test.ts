@@ -167,4 +167,24 @@ describe('buildSections', () => {
     expect(cats[0].entries).toHaveLength(1);
     expect(cats[1].entries).toHaveLength(0);
   });
+
+  it('entry matched in one section cannot appear in a later section', () => {
+    const sphere = makeSphere({
+      sectionDefinitions: [
+        {
+          label: 'Section A',
+          categories: [{ label: 'All Basic', tiers: ['basic'] }],
+        },
+        {
+          label: 'Section B',
+          categories: [{ label: 'All Basic Again', tiers: ['basic'] }],
+        },
+      ],
+    });
+    const talents = [makeTalent('shared', 'basic')];
+    const sections = buildSections(sphere, talents, []);
+
+    expect(sections[0].categories[0].entries.map(e => e.id)).toEqual(['shared']);
+    expect(sections[1].categories[0].entries).toHaveLength(0);
+  });
 });

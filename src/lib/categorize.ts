@@ -3,7 +3,6 @@ import type {
   FeatEntry,
   SphereEntry,
   TalentCategory,
-  SectionDefinition,
 } from "./types";
 
 export type CategoryResult = {
