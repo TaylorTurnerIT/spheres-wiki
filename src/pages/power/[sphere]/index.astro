@@ -9,7 +9,8 @@ import { buildSections } from '@/lib/categorize';
 import type { SectionResult } from '@/lib/categorize';
 import { BOOK_COLLECTIONS } from '@/content/config';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
-import type { SphereEntry, ClassEntry, TalentEntry, FeatEntry, BookMeta } from '@/lib/types';
+import TagBadge from '@/components/TagBadge.astro';
+import type { SphereEntry, ClassEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
   kind: 'sphere' | 'class';
@@ -24,11 +25,12 @@ interface Props {
   featCollEntries: Map<string, any>;
   sourceBook: BookMeta | undefined;
   bookMetaMap: Map<string, BookMeta>;
+  tagMap: Map<string, TagEntry>;
 }
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const { sphereMap, classMap, talentMap, featMap, bookMetaMap } = await resolveEntries();
+  const { sphereMap, classMap, talentMap, featMap, bookMetaMap, tagMap } = await resolveEntries();
 
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
@@ -77,6 +79,7 @@ export async function getStaticPaths() {
         featCollEntries,
         sourceBook: bookMetaMap.get(sphere.sourceBook),
         bookMetaMap,
+        tagMap,
       },
     });
   }
@@ -98,6 +101,7 @@ export async function getStaticPaths() {
         featCollEntries: new Map(),
         sourceBook: bookMetaMap.get(cls.sourceBook),
         bookMetaMap,
+        tagMap,
       },
     });
   }
@@ -105,7 +109,7 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { kind, sphere, cls, base, allTalents, feats, sections, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap } = Astro.props;
+const { kind, sphere, cls, base, allTalents, feats, sections, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap, tagMap } = Astro.props;
 const { talentMap, featMap } = await resolveEntries();
 const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 
@@ -252,8 +256,11 @@ const groups: TocGroup[] = sections.map(sec => ({
                                 <div class="talent-header-bottom">
                                   {talent && <span class="talent-tier talent">Talent</span>}
                                   <span class={`talent-tier ${talent ? talent.tier : 'feat'}`}>{tierLabel}</span>
-                                  {is3pp(entry.sourceBook) && <span class="talent-tag" data-tag="3pp">3PP</span>}
-                                  {entry.tags.map(tag => <span class="talent-tag" data-tag={tag.toLowerCase()}>{tag}</span>)}
+                                  {is3pp(entry.sourceBook) && <TagBadge tagId="3pp" tagMap={tagMap} bookMetaMap={bookMetaMap} />}
+                                  {[...entry.tags]
+                                    .sort((a, b) => (tagMap.get(a)?.priority ?? 999) - (tagMap.get(b)?.priority ?? 999))
+                                    .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
+                                  }
                                 </div>
                               </div>
                               {content && <div class="talent-body"><content.Content /></div>}

@@ -1,0 +1,61 @@
+---
+import { url } from '@/lib/url';
+import WikiPage from '@/layouts/WikiPage.astro';
+import TagBadge from '@/components/TagBadge.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+
+const { tagMap, bookMetaMap } = await resolveEntries();
+
+const sortedTags = [...tagMap.values()].sort(
+  (a, b) => a.priority - b.priority || a.label.localeCompare(b.label),
+);
+---
+<WikiPage title="All Tags — Spheres Wiki">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url('/')} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Tags</span>
+  </nav>
+
+  <div class="content-main" style="max-width: 640px;">
+    <div class="page-title" id="overview">Tags</div>
+    <hr class="page-title-rule" />
+
+    <div class="tag-index-list">
+      {sortedTags.map(tag => (
+        <div class="tag-index-row">
+          <a href={url(`/tags/${tag.id}/`)} class="tag-index-badge" data-astro-prefetch="hover">
+            <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+          </a>
+          <span class="tag-index-desc">{tag.description}</span>
+        </div>
+      ))}
+      {sortedTags.length === 0 && <p>No tags defined yet.</p>}
+    </div>
+  </div>
+</WikiPage>
+
+<style>
+  .tag-index-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .tag-index-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .tag-index-badge {
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .tag-index-badge:hover {
+    opacity: 0.85;
+  }
+  .tag-index-desc {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+  }
+</style>
