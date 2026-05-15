@@ -36,19 +36,13 @@ export function buildOrderedTagIds(
   }
 
   // Primary sphere logic: show if includeSphere is true, OR if there are other sphere tags present
-  const isSphereTag = (id: string) => {
-    const t = tagMap.get(id);
-    return (
-      t?.sourceBook === "__builtin__" &&
-      t?.description?.includes("Associated with the")
-    );
-  };
+  const isSphereTag = (id: string) => id.endsWith("-sphere");
 
   const hasOtherSpheres = userTags.some(isSphereTag);
 
   if (entry.type === "talent" || entry.type === "feat") {
     if (entry.sphere && (options?.includeSphere || hasOtherSpheres)) {
-      tags.add(entry.sphere);
+      tags.add(`${entry.sphere}-sphere`);
     }
   }
 

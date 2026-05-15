@@ -4,7 +4,7 @@ name: "Deep Cover"
 type: feat
 system: power
 sphere: alteration
-tags: ["dual-sphere", "illusion"]
+tags: ["dual-sphere", "illusion-sphere"]
 ---
 
 **Prerequisites:** Alteration sphere, Illusion sphere.

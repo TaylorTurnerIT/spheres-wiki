@@ -240,14 +240,16 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
   const maps = buildResolvedMaps(allBooks);
 
   for (const [, sphere] of maps.sphereMap) {
-    if (!tagMap.has(sphere.id)) {
-      tagMap.set(sphere.id, {
+    const sphereTagId = `${sphere.id}-sphere`;
+    if (!tagMap.has(sphereTagId)) {
+      tagMap.set(sphereTagId, {
         type: "tag",
-        id: sphere.id,
-        label: sphere.name,
+        id: sphereTagId,
+        label: `${sphere.name} (Sphere)`,
         priority: 50,
         description: `Associated with the ${sphere.name} sphere.`,
         sourceBook: "__builtin__",
+        color: `var(--clr-${sphere.system})`,
       });
     }
   }

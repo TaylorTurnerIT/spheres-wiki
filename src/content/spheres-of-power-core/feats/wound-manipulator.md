@@ -4,7 +4,7 @@ name: "Wound Manipulator"
 type: feat
 system: power
 sphere: alteration
-tags: ["dual-sphere", "life"]
+tags: ["dual-sphere", "life-sphere"]
 ---
 
 **Prerequisites:** Alteration sphere, Life sphere.
