@@ -39,6 +39,7 @@ export type TalentEntry = {
   type: "talent";
   id: string;
   sphere: string;
+  dualSphere?: string;
   system: string;
   tier: "base" | "basic" | "advanced";
   name: string;
@@ -84,6 +85,7 @@ export type FeatEntry = {
   name: string;
   sourceBook: string;
   sphere: string;
+  dualSphere?: string;
   tags: string[];
   modifies?: string;
 };

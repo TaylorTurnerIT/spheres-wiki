@@ -4,7 +4,8 @@ name: "Merged Summons"
 type: feat
 system: power
 sphere: alteration
-tags: ["dual-sphere", "conjuration-sphere"]
+dualSphere: conjuration
+tags: ["dual-sphere"]
 ---
 
 **Prerequisites:** Alteration Sphere (Fusion), Conjuration Sphere (Extra Companion).

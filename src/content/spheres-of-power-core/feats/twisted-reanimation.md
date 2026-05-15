@@ -4,7 +4,8 @@ name: "Twisted Reanimation"
 type: feat
 system: power
 sphere: alteration
-tags: ["dual-sphere", "death-sphere"]
+dualSphere: death
+tags: ["dual-sphere"]
 ---
 
 **Prerequisites:** Alteration sphere (Undead Body), Death sphere; or Alteration sphere, Death sphere (Corpse Manipulation).

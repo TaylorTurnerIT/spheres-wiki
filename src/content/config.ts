@@ -51,6 +51,7 @@ const entrySchema = z.discriminatedUnion("type", [
     type: z.literal("talent"),
     ...baseFields,
     sphere: z.string(),
+    dualSphere: z.string().optional(),
     tier: z.enum(["base", "basic", "advanced"]),
   }),
   z.object({
@@ -61,6 +62,7 @@ const entrySchema = z.discriminatedUnion("type", [
     type: z.literal("feat"),
     ...baseFields,
     sphere: z.string(),
+    dualSphere: z.string().optional(),
   }),
   z.object({
     type: z.literal("article"),

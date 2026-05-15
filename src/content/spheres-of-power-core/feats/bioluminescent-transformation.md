@@ -4,7 +4,8 @@ name: "Bioluminescent Transformation"
 type: feat
 system: power
 sphere: alteration
-tags: ["dual-sphere", "light-sphere"]
+dualSphere: light
+tags: ["dual-sphere"]
 ---
 
 **Prerequisites:** Alteration sphere, Light sphere.

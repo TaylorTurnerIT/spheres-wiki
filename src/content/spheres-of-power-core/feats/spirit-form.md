@@ -4,7 +4,8 @@ name: "Spirit Form"
 type: feat
 system: power
 sphere: alteration
-tags: ["dual-sphere", "nature-sphere"]
+dualSphere: nature
+tags: ["dual-sphere"]
 ---
 
 **Prerequisites:** Alteration sphere, Nature sphere (any (spirit) talent).

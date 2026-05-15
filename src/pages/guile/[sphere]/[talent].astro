@@ -77,7 +77,7 @@ const TalentContent = collEntry ? (await collEntry.render()).Content : null;
         {talent.name}
       </div>
       <div class="talent-page-meta">
-        {buildOrderedTagIds(talent, bookMetaMap, tagMap, { includeSphere: true })
+        {buildOrderedTagIds(talent, bookMetaMap, tagMap, { includeSphere: true, currentSphereId: sphere.id })
           .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
         }
       </div>

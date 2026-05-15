@@ -205,7 +205,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                     <a href={url(`/power/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
                   </div>
                   <div class="base-ability-header-bottom">
-                    {buildOrderedTagIds(t, bookMetaMap, tagMap, { includeSphere: false })
+                    {buildOrderedTagIds(t, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere!.id })
                       .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
                     }
                   </div>
@@ -255,7 +255,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                                   {extBook && <span class="talent-source">{extBook.title}</span>}
                                 </div>
                                 <div class="talent-header-bottom">
-                                  {buildOrderedTagIds(entry, bookMetaMap, tagMap, { includeSphere: false })
+                                  {buildOrderedTagIds(entry, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere!.id })
                                     .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
                                   }
                                 </div>
