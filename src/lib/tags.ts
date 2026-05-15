@@ -7,6 +7,10 @@ export function buildOrderedTagIds(
   options?: { includeSphere?: boolean },
 ): string[] {
   const tags = new Set<string>();
+  const userTags =
+    "tags" in entry && Array.isArray(entry.tags)
+      ? entry.tags.map((t) => t.toLowerCase())
+      : [];
 
   if (entry.type === "talent") tags.add("talent");
   if (entry.type === "feat") tags.add("feat");
@@ -26,16 +30,25 @@ export function buildOrderedTagIds(
     tags.add("3pp");
   }
 
-  if (
-    options?.includeSphere &&
-    (entry.type === "talent" || entry.type === "feat")
-  ) {
-    if (entry.sphere) tags.add(entry.sphere);
+  // Add user tags
+  for (const t of userTags) {
+    tags.add(t);
   }
 
-  if ("tags" in entry && Array.isArray(entry.tags)) {
-    for (const t of entry.tags) {
-      tags.add(t.toLowerCase());
+  // Primary sphere logic: show if includeSphere is true, OR if there are other sphere tags present
+  const isSphereTag = (id: string) => {
+    const t = tagMap.get(id);
+    return (
+      t?.sourceBook === "__builtin__" &&
+      t?.description?.includes("Associated with the")
+    );
+  };
+
+  const hasOtherSpheres = userTags.some(isSphereTag);
+
+  if (entry.type === "talent" || entry.type === "feat") {
+    if (entry.sphere && (options?.includeSphere || hasOtherSpheres)) {
+      tags.add(entry.sphere);
     }
   }
 

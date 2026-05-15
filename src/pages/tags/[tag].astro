@@ -1,18 +1,18 @@
 ---
-import { url } from '@/lib/url';
-import WikiPage from '@/layouts/WikiPage.astro';
-import TagBadge from '@/components/TagBadge.astro';
-import { resolveEntries } from '@/lib/resolveEntries';
-import { BOOK_COLLECTIONS } from '@/content/config';
-import { buildOrderedTagIds } from '@/lib/tags';
-import type { TagEntry, BookMeta } from '@/lib/types';
+import { url } from "@/lib/url";
+import WikiPage from "@/layouts/WikiPage.astro";
+import TagBadge from "@/components/TagBadge.astro";
+import { resolveEntries } from "@/lib/resolveEntries";
+import { BOOK_COLLECTIONS } from "@/content/config";
+import { buildOrderedTagIds } from "@/lib/tags";
+import type { TagEntry, BookMeta } from "@/lib/types";
 
 type EntryRow = {
   id: string;
   name: string;
   system: string;
   sphereId: string;
-  entryType: 'talent' | 'feat' | 'sphere';
+  entryType: "talent" | "feat" | "sphere";
   sphereName: string;
   sourceBook: string;
   tags: string[];
@@ -34,15 +34,16 @@ interface Props {
 }
 
 export async function getStaticPaths() {
-  const { getCollection } = await import('astro:content');
-  const { tagMap, talentMap, featMap, sphereMap, bookMetaMap } = await resolveEntries();
+  const { getCollection } = await import("astro:content");
+  const { tagMap, talentMap, featMap, sphereMap, bookMetaMap } =
+    await resolveEntries();
 
   const tagCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
     try {
       const entries = await getCollection(slug as any);
       for (const e of entries) {
-        if ((e.data as any).type === 'tag') {
+        if ((e.data as any).type === "tag") {
           tagCollEntries.set((e.data as any).id, e);
         }
       }
@@ -50,66 +51,82 @@ export async function getStaticPaths() {
   }
 
   const SYSTEM_LABELS: Record<string, string> = {
-    power: 'Spheres of Power',
-    might: 'Spheres of Might',
-    guile: 'Spheres of Guile',
+    power: "Spheres of Power",
+    might: "Spheres of Might",
+    guile: "Spheres of Guile",
   };
 
   const paths = [];
 
   for (const [, tag] of tagMap) {
-    if (tag.sourceBook === '__builtin__') continue;
     const groups: SystemGroup[] = [];
-    for (const system of ['power', 'might', 'guile'] as const) {
+
+    for (const system of ["power", "might", "guile"] as const) {
       const rows: EntryRow[] = [];
 
       for (const [, talent] of talentMap) {
-        if (talent.system !== system || !talent.tags.includes(tag.id)) continue;
+        if (talent.system !== system) continue;
+        const entryTags = buildOrderedTagIds(talent, bookMetaMap, tagMap, {
+          includeSphere: true,
+        });
+        if (!entryTags.includes(tag.id)) continue;
+
         const sphere = [...sphereMap.values()].find(
-          s => s.id === talent.sphere && s.system === system,
+          (s) => s.id === talent.sphere && s.system === system,
         );
         rows.push({
           id: talent.id,
           name: talent.name,
           system,
           sphereId: talent.sphere,
-          entryType: 'talent',
+          entryType: "talent",
           sphereName: sphere?.name ?? talent.sphere,
           sourceBook: talent.sourceBook,
           tags: talent.tags,
           tier: talent.tier,
         });
-        }
+      }
 
-        for (const [, feat] of featMap) {
-        if (feat.system !== system || !feat.tags.includes(tag.id)) continue;
+      for (const [, feat] of featMap) {
+        if (feat.system !== system) continue;
+        const entryTags = buildOrderedTagIds(feat, bookMetaMap, tagMap, {
+          includeSphere: true,
+        });
+        if (!entryTags.includes(tag.id)) continue;
+
         const sphere = [...sphereMap.values()].find(
-          s => s.id === feat.sphere && s.system === system,
+          (s) => s.id === feat.sphere && s.system === system,
         );
         rows.push({
           id: feat.id,
           name: feat.name,
           system,
           sphereId: feat.sphere,
-          entryType: 'feat',
+          entryType: "feat",
           sphereName: sphere?.name ?? feat.sphere,
           sourceBook: feat.sourceBook,
           tags: feat.tags,
         });
-        }
+      }
 
-        for (const [, sphere] of sphereMap) {
-        if (sphere.system !== system || !sphere.tags.includes(tag.id)) continue;
+      for (const [, sphere] of sphereMap) {
+        if (sphere.system !== system) continue;
+        const entryTags = buildOrderedTagIds(sphere, bookMetaMap, tagMap, {
+          includeSphere: true,
+        });
+        if (!entryTags.includes(tag.id)) continue;
+
         rows.push({
           id: sphere.id,
           name: sphere.name,
           system,
           sphereId: sphere.id,
-          entryType: 'sphere',
+          entryType: "sphere",
           sphereName: sphere.name,
           sourceBook: sphere.sourceBook,
           tags: sphere.tags,
-        });      }
+        });
+      }
 
       rows.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -124,7 +141,10 @@ export async function getStaticPaths() {
         tag,
         groups,
         collEntry: tagCollEntries.get(tag.id),
-        bookTitle: bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook,
+        bookTitle:
+          tag.sourceBook === "__builtin__"
+            ? "Built-in"
+            : bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook,
         tagMap,
         bookMetaMap,
       },
@@ -137,11 +157,12 @@ export async function getStaticPaths() {
 const { tag, groups, collEntry, bookTitle, tagMap, bookMetaMap } = Astro.props;
 const TagBody = collEntry?.body ? (await collEntry.render()).Content : null;
 ---
+
 <WikiPage title={`${tag.label} — Tags — Spheres Wiki`}>
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url('/')} data-astro-prefetch="hover">Home</a>
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href={url('/tags/')} data-astro-prefetch="hover">Tags</a>
+    <a href={url("/tags/")} data-astro-prefetch="hover">Tags</a>
     <span class="breadcrumb-sep">›</span>
     <span>{tag.label}</span>
   </nav>
@@ -155,57 +176,85 @@ const TagBody = collEntry?.body ? (await collEntry.render()).Content : null;
 
     <p class="entry-description">{tag.description}</p>
 
-    {TagBody && (
-      <div class="entry-description">
-        <TagBody />
-      </div>
-    )}
+    {
+      TagBody && (
+        <div class="entry-description">
+          <TagBody />
+        </div>
+      )
+    }
 
     <p class="talent-source">{bookTitle}</p>
 
-    {groups.length === 0 && (
-      <p class="section-empty">No content with this tag yet.</p>
-    )}
+    {
+      groups.length === 0 && (
+        <p class="section-empty">No content with this tag yet.</p>
+      )
+    }
 
-    {groups.map(group => (
-      <div class="section-group">
-        <div class="section-group-header">
-          <span class="section-group-label">{group.systemLabel}</span>
-          <div class="section-group-rule"></div>
+    {
+      groups.map((group) => (
+        <div class="section-group">
+          <div class="section-group-header">
+            <span class="section-group-label">{group.systemLabel}</span>
+            <div class="section-group-rule" />
+          </div>
+          <div class="tag-entry-list">
+            {group.entries.map((row) => (
+              <div class="tag-entry-row">
+                {row.entryType === "talent" && (
+                  <a
+                    href={url(`/${row.system}/${row.sphereId}/${row.id}/`)}
+                    class="tag-entry-name"
+                    data-astro-prefetch="hover"
+                  >
+                    {row.name}
+                  </a>
+                )}
+                {row.entryType === "feat" && (
+                  <a
+                    href={url(`/${row.system}/${row.sphereId}/feats/${row.id}/`)}
+                    class="tag-entry-name"
+                    data-astro-prefetch="hover"
+                  >
+                    {row.name}
+                  </a>
+                )}
+                {row.entryType === "sphere" && (
+                  <a
+                    href={url(`/${row.system}/${row.id}/`)}
+                    class="tag-entry-name"
+                    data-astro-prefetch="hover"
+                  >
+                    {row.name}
+                  </a>
+                )}
+                {buildOrderedTagIds(
+                  {
+                    type: row.entryType,
+                    id: row.id,
+                    sourceBook: row.sourceBook,
+                    tags: row.tags,
+                    tier: row.tier as any,
+                    sphere: row.sphereId,
+                  } as any,
+                  bookMetaMap,
+                  tagMap,
+                  { includeSphere: false },
+                ).map((tagId) => (
+                  <TagBadge
+                    tagId={tagId}
+                    tagMap={tagMap}
+                    bookMetaMap={bookMetaMap}
+                  />
+                ))}
+                <span class="tag-entry-sphere">{row.sphereName}</span>{" "}
+              </div>
+            ))}
+          </div>
         </div>
-        <div class="tag-entry-list">
-          {group.entries.map(row => (
-            <div class="tag-entry-row">
-              {row.entryType === 'talent' && (
-                <a href={url(`/${row.system}/${row.sphereId}/${row.id}/`)} class="tag-entry-name" data-astro-prefetch="hover">
-                  {row.name}
-                </a>
-              )}
-              {row.entryType === 'feat' && (
-                <a href={url(`/${row.system}/${row.sphereId}/feats/${row.id}/`)} class="tag-entry-name" data-astro-prefetch="hover">
-                  {row.name}
-                </a>
-              )}
-              {row.entryType === 'sphere' && (
-                <a href={url(`/${row.system}/${row.id}/`)} class="tag-entry-name" data-astro-prefetch="hover">
-                  {row.name}
-                </a>
-              )}
-              {buildOrderedTagIds({
-                type: row.entryType,
-                id: row.id,
-                sourceBook: row.sourceBook,
-                tags: row.tags,
-                tier: row.tier as any,
-                sphere: row.sphereId
-              } as any, bookMetaMap, tagMap, { includeSphere: false })
-                .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
-              }
-              <span class="tag-entry-sphere">{row.sphereName}</span>            </div>
-          ))}
-        </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </WikiPage>
 

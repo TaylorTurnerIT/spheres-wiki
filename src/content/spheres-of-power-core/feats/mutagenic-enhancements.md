@@ -4,7 +4,7 @@ name: "Mutagenic Enhancements"
 type: feat
 system: power
 sphere: alteration
-tags: ["dual-sphere"]
+tags: ["dual-sphere", "enhancement"]
 ---
 
 **Prerequisites:** Alteration sphere, Enhancement sphere (any (enhance) ability).

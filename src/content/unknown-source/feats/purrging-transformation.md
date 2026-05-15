@@ -4,7 +4,7 @@ name: "Purrging Transformation"
 type: feat
 system: power
 sphere: alteration
-tags: ["dual-sphere"]
+tags: ["dual-sphere", "life"]
 ---
 
 **Prerequisites:** Alteration sphere, Life sphere.

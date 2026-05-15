@@ -1,5 +1,6 @@
 ---
-import type { TagEntry, BookMeta } from '@/lib/types';
+import { url } from "@/lib/url";
+import type { TagEntry, BookMeta } from "@/lib/types";
 
 interface Props {
   tagId: string;
@@ -9,24 +10,40 @@ interface Props {
 
 const { tagId, tagMap, bookMetaMap } = Astro.props;
 const tag = tagMap.get(tagId);
-const color = tag?.color ?? 'var(--clr-brand)';
-const bookTitle = tag && tag.sourceBook !== '__builtin__'
-  ? (bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook)
-  : undefined;
+const color = tag?.color ?? "var(--clr-brand)";
+const bookTitle =
+  tag && tag.sourceBook !== "__builtin__"
+    ? bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook
+    : undefined;
 ---
+
 <span class="tag-wrapper">
-  <span
+  <a
+    href={url(`/tags/${tagId}/`)}
     class="talent-tag"
     data-tag={tagId}
     style={tag ? `--tag-clr: ${color}` : undefined}
+    data-astro-prefetch="hover"
   >
     {tag?.label ?? tagId}
-  </span>
-  {tag && (
-    <div class="tag-tooltip" role="tooltip">
-      <span class="tag-tooltip-name">{tag.label}</span>
-      <span class="tag-tooltip-desc">{tag.description}</span>
-      {bookTitle && <span class="tag-tooltip-source">{bookTitle}</span>}
-    </div>
-  )}
+  </a>
+  {
+    tag && (
+      <div class="tag-tooltip" role="tooltip">
+        <span class="tag-tooltip-name">{tag.label}</span>
+        <span class="tag-tooltip-desc">{tag.description}</span>
+        {bookTitle && <span class="tag-tooltip-source">{bookTitle}</span>}
+      </div>
+    )
+  }
 </span>
+
+<style>
+  .talent-tag {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .talent-tag:hover {
+    filter: brightness(1.1);
+  }
+</style>

@@ -4,7 +4,7 @@ name: "Exemplary Transformation"
 type: feat
 system: power
 sphere: alteration
-tags: ["dual-sphere"]
+tags: ["dual-sphere", "enhancement"]
 ---
 
 **Prerequisites:** Alteration Sphere (outsider body), Enhancement Sphere (emphasize belief, mental enhancement, or physical enhancement).
