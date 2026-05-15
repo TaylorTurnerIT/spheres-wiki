@@ -5,6 +5,7 @@ import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import TagBadge from '@/components/TagBadge.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content/config';
+import { buildOrderedTagIds } from '@/lib/tags';
 import type { FeatEntry, SphereEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -75,12 +76,7 @@ const FeatContent = collEntry ? (await collEntry.render()).Content : null;
         {feat.name}
       </div>
       <div class="talent-page-meta">
-        <span class="talent-tier feat">Feat</span>
-        {sourceBook && !['Drop Dead Studios', 'Diamond Recreational Studios'].includes(sourceBook.publisher ?? '') && (
-          <TagBadge tagId="3pp" tagMap={tagMap} bookMetaMap={bookMetaMap} />
-        )}
-        {[...feat.tags]
-          .sort((a, b) => (tagMap.get(a)?.priority ?? 999) - (tagMap.get(b)?.priority ?? 999))
+        {buildOrderedTagIds(feat, bookMetaMap, tagMap, { includeSphere: true })
           .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
         }
       </div>

@@ -1318,9 +1318,20 @@ a:hover {
 }
 .base-ability-header {
   display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.base-ability-header-top {
+  display: flex;
   align-items: baseline;
   gap: 8px;
-  margin-bottom: 8px;
+}
+.base-ability-header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 .base-ability-name {
   font-family: var(--font-display);
@@ -1328,18 +1339,6 @@ a:hover {
   font-weight: 700;
   color: var(--clr-active);
 }
-.base-ability-badge {
-  font-family: var(--font-display);
-  font-size: var(--fs-3xs);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--clr-muted);
-  border: 0.5px solid var(--clr-border);
-  border-radius: 2px;
-  padding: 1px 5px;
-}
-
 /* ── Talent list (sphere detail pages) ──────────────────── */
 .talent-list {
   display: flex;
@@ -1385,52 +1384,21 @@ a:hover {
   font-style: italic;
   white-space: nowrap;
 }
-.talent-tier {
-  font-family: var(--font-display);
-  font-size: var(--fs-3xs);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 1px 5px;
-  border-radius: 2px;
-  white-space: nowrap;
-}
-.talent-tier.base {
-  background: rgba(130, 80, 0, 0.13);
-  color: #7a4800;
-  border: 0.5px solid rgba(130, 80, 0, 0.45);
-}
-.talent-tier.talent {
-  background: rgba(0, 0, 0, 0.08);
-  color: var(--clr-muted);
-  border: 0.5px solid var(--clr-border);
-}
-.talent-tier.basic {
-  background: rgba(22, 90, 28, 0.11);
-  color: #1a6622;
-  border: 0.5px solid rgba(22, 90, 28, 0.4);
-}
-.talent-tier.advanced {
-  background: rgba(23, 75, 147, 0.1);
-  color: var(--clr-power);
-  border: 0.5px solid rgba(23, 75, 147, 0.3);
-}
-.talent-tier.feat {
-  background: rgba(90, 45, 0, 0.12);
-  color: #5a3000;
-  border: 0.5px solid rgba(90, 45, 0, 0.4);
-}
 .talent-tag {
   font-family: var(--font-display);
   font-size: var(--fs-3xs);
   font-weight: 600;
   letter-spacing: 0.04em;
-  text-transform: lowercase;
   padding: 1px 6px;
   border-radius: 3px;
-  background: color-mix(in srgb, var(--tag-clr, var(--clr-brand)) 12%, transparent);
+  background: color-mix(
+    in srgb,
+    var(--tag-clr, var(--clr-brand)) 12%,
+    transparent
+  );
   color: var(--tag-clr, var(--clr-brand));
-  border: 1px solid color-mix(in srgb, var(--tag-clr, var(--clr-brand)) 40%, transparent);
+  border: 1px solid
+    color-mix(in srgb, var(--tag-clr, var(--clr-brand)) 40%, transparent);
   white-space: nowrap;
 }
 .talent-tag[data-tag="3pp"] {

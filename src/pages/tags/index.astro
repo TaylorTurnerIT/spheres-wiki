@@ -6,9 +6,11 @@ import { resolveEntries } from '@/lib/resolveEntries';
 
 const { tagMap, bookMetaMap } = await resolveEntries();
 
-const sortedTags = [...tagMap.values()].sort(
-  (a, b) => a.priority - b.priority || a.label.localeCompare(b.label),
-);
+const sortedTags = [...tagMap.values()]
+  .filter(t => t.sourceBook !== '__builtin__')
+  .sort(
+    (a, b) => a.priority - b.priority || a.label.localeCompare(b.label),
+  );
 ---
 <WikiPage title="All Tags — Spheres Wiki">
   <nav class="breadcrumb" aria-label="Breadcrumb">

@@ -10,7 +10,7 @@ interface Props {
 const { tagId, tagMap, bookMetaMap } = Astro.props;
 const tag = tagMap.get(tagId);
 const color = tag?.color ?? 'var(--clr-brand)';
-const bookTitle = tag
+const bookTitle = tag && tag.sourceBook !== '__builtin__'
   ? (bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook)
   : undefined;
 ---

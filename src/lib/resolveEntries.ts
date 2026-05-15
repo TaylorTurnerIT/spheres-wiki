@@ -32,7 +32,9 @@ export function buildTagMap(
     const seenInBook = new Set<string>();
     for (const raw of book.rawTagEntries) {
       if (seenInBook.has(raw.id)) {
-        throw new Error(`Duplicate tag "${raw.id}" defined twice in "${book.slug}"`);
+        throw new Error(
+          `Duplicate tag "${raw.id}" defined twice in "${book.slug}"`,
+        );
       }
       seenInBook.add(raw.id);
       if (tagMap.has(raw.id)) {
@@ -135,7 +137,10 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
     publishedDate: string;
     entries: AnyEntry[];
   }> = [];
-  const tagEntriesByBook: Array<{ slug: string; rawTagEntries: RawTagEntry[] }> = [];
+  const tagEntriesByBook: Array<{
+    slug: string;
+    rawTagEntries: RawTagEntry[];
+  }> = [];
 
   for (const collectionSlug of bookMetaMap.keys()) {
     const meta = bookMetaMap.get(collectionSlug);
@@ -162,11 +167,91 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       });
 
     tagEntriesByBook.push({ slug: collectionSlug, rawTagEntries: tagEntries });
-    allBooks.push({ slug: collectionSlug, publishedDate, entries: contentEntries });
+    allBooks.push({
+      slug: collectionSlug,
+      publishedDate,
+      entries: contentEntries,
+    });
   }
 
   const tagMap = buildTagMap(tagEntriesByBook);
+
+  const builtins: TagEntry[] = [
+    {
+      type: "tag",
+      id: "talent",
+      label: "Talent",
+      priority: -10,
+      description: "A magical ability.",
+      sourceBook: "__builtin__",
+      color: "var(--clr-power)",
+    },
+    {
+      type: "tag",
+      id: "feat",
+      label: "Feat",
+      priority: -10,
+      description: "An extra ability.",
+      sourceBook: "__builtin__",
+      color: "#5a3000",
+    },
+    {
+      type: "tag",
+      id: "base",
+      label: "Base Ability",
+      priority: -9,
+      description: "Base sphere ability.",
+      sourceBook: "__builtin__",
+      color: "#7a4800",
+    },
+    {
+      type: "tag",
+      id: "basic",
+      label: "Basic",
+      priority: -9,
+      description: "Basic talent.",
+      sourceBook: "__builtin__",
+      color: "#1a6622",
+    },
+    {
+      type: "tag",
+      id: "advanced",
+      label: "Advanced",
+      priority: -9,
+      description: "Advanced talent.",
+      sourceBook: "__builtin__",
+      color: "#203F58",
+    },
+    {
+      type: "tag",
+      id: "sphere",
+      label: "Sphere",
+      priority: -10,
+      description: "A base sphere.",
+      sourceBook: "__builtin__",
+      color: "var(--clr-brand)",
+    },
+  ];
+
+  for (const b of builtins) {
+    if (!tagMap.has(b.id)) tagMap.set(b.id, b);
+  }
+
   const maps = buildResolvedMaps(allBooks);
+
+  for (const [, sphere] of maps.sphereMap) {
+    if (!tagMap.has(sphere.id)) {
+      tagMap.set(sphere.id, {
+        type: "tag",
+        id: sphere.id,
+        label: sphere.name,
+        priority: 50,
+        description: `Associated with the ${sphere.name} sphere.`,
+        sourceBook: "__builtin__",
+      });
+    }
+  }
+
   return { ...maps, bookMetaMap, tagMap };
 }
 

@@ -4,6 +4,7 @@ import WikiPage from '@/layouts/WikiPage.astro';
 import TagBadge from '@/components/TagBadge.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content/config';
+import { buildOrderedTagIds } from '@/lib/tags';
 import type { TagEntry, BookMeta } from '@/lib/types';
 
 type EntryRow = {
@@ -13,6 +14,8 @@ type EntryRow = {
   sphereId: string;
   entryType: 'talent' | 'feat' | 'sphere';
   sphereName: string;
+  sourceBook: string;
+  tags: string[];
   tier?: string;
 };
 
@@ -55,8 +58,8 @@ export async function getStaticPaths() {
   const paths = [];
 
   for (const [, tag] of tagMap) {
+    if (tag.sourceBook === '__builtin__') continue;
     const groups: SystemGroup[] = [];
-
     for (const system of ['power', 'might', 'guile'] as const) {
       const rows: EntryRow[] = [];
 
@@ -72,11 +75,13 @@ export async function getStaticPaths() {
           sphereId: talent.sphere,
           entryType: 'talent',
           sphereName: sphere?.name ?? talent.sphere,
+          sourceBook: talent.sourceBook,
+          tags: talent.tags,
           tier: talent.tier,
         });
-      }
+        }
 
-      for (const [, feat] of featMap) {
+        for (const [, feat] of featMap) {
         if (feat.system !== system || !feat.tags.includes(tag.id)) continue;
         const sphere = [...sphereMap.values()].find(
           s => s.id === feat.sphere && s.system === system,
@@ -88,10 +93,12 @@ export async function getStaticPaths() {
           sphereId: feat.sphere,
           entryType: 'feat',
           sphereName: sphere?.name ?? feat.sphere,
+          sourceBook: feat.sourceBook,
+          tags: feat.tags,
         });
-      }
+        }
 
-      for (const [, sphere] of sphereMap) {
+        for (const [, sphere] of sphereMap) {
         if (sphere.system !== system || !sphere.tags.includes(tag.id)) continue;
         rows.push({
           id: sphere.id,
@@ -100,8 +107,9 @@ export async function getStaticPaths() {
           sphereId: sphere.id,
           entryType: 'sphere',
           sphereName: sphere.name,
-        });
-      }
+          sourceBook: sphere.sourceBook,
+          tags: sphere.tags,
+        });      }
 
       rows.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -183,15 +191,17 @@ const TagBody = collEntry?.body ? (await collEntry.render()).Content : null;
                   {row.name}
                 </a>
               )}
-              <span class={`talent-tier ${row.entryType}`}>
-                {row.entryType === 'talent'
-                  ? (row.tier === 'base' ? 'Base Ability' : row.tier)
-                  : row.entryType === 'feat'
-                  ? 'Feat'
-                  : 'Sphere'}
-              </span>
-              <span class="tag-entry-sphere">{row.sphereName}</span>
-            </div>
+              {buildOrderedTagIds({
+                type: row.entryType,
+                id: row.id,
+                sourceBook: row.sourceBook,
+                tags: row.tags,
+                tier: row.tier as any,
+                sphere: row.sphereId
+              } as any, bookMetaMap, tagMap, { includeSphere: false })
+                .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
+              }
+              <span class="tag-entry-sphere">{row.sphereName}</span>            </div>
           ))}
         </div>
       </div>

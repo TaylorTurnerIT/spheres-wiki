@@ -9,6 +9,7 @@ import { buildSections } from '@/lib/categorize';
 import type { SectionResult } from '@/lib/categorize';
 import { BOOK_COLLECTIONS } from '@/content/config';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
+import { buildOrderedTagIds } from '@/lib/tags';
 import TagBadge from '@/components/TagBadge.astro';
 import type { SphereEntry, ClassEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
 
@@ -113,12 +114,6 @@ const { kind, sphere, cls, base, allTalents, feats, sections, mainCollEntry, tal
 const { talentMap, featMap } = await resolveEntries();
 const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 
-const FIRST_PARTY = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
-const is3pp = (sbSlug: string) => {
-  const pub = bookMetaMap.get(sbSlug)?.publisher;
-  return !!pub && !FIRST_PARTY.has(pub);
-};
-
 // For sphere pages: split body on [TalentName] markers and render each segment
 type RenderedSegment = { type: 'markdown'; html: string } | { type: 'base-ability'; id: string };
 const bodySegments: RenderedSegment[] = [];
@@ -206,8 +201,14 @@ const groups: TocGroup[] = sections.map(sec => ({
             return t ? (
               <div class="base-ability-block" id={t.id} data-pagefind-weight="0.5">
                 <div class="base-ability-header">
-                  <a href={url(`/power/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
-                  <span class="base-ability-badge">Base Ability</span>
+                  <div class="base-ability-header-top">
+                    <a href={url(`/power/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
+                  </div>
+                  <div class="base-ability-header-bottom">
+                    {buildOrderedTagIds(t, bookMetaMap, tagMap, { includeSphere: false })
+                      .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
+                    }
+                  </div>
                 </div>
                 {tContent && <div class="talent-body"><tContent.Content /></div>}
               </div>
@@ -254,11 +255,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                                   {extBook && <span class="talent-source">{extBook.title}</span>}
                                 </div>
                                 <div class="talent-header-bottom">
-                                  {talent && <span class="talent-tier talent">Talent</span>}
-                                  <span class={`talent-tier ${talent ? talent.tier : 'feat'}`}>{tierLabel}</span>
-                                  {is3pp(entry.sourceBook) && <TagBadge tagId="3pp" tagMap={tagMap} bookMetaMap={bookMetaMap} />}
-                                  {[...entry.tags]
-                                    .sort((a, b) => (tagMap.get(a)?.priority ?? 999) - (tagMap.get(b)?.priority ?? 999))
+                                  {buildOrderedTagIds(entry, bookMetaMap, tagMap, { includeSphere: false })
                                     .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
                                   }
                                 </div>

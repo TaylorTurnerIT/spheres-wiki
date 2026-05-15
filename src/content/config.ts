@@ -71,7 +71,7 @@ const entrySchema = z.discriminatedUnion("type", [
     id: z.string().regex(/^[a-z0-9-]+$/, "id must be lowercase kebab-case"),
     label: z.string(),
     color: z.string().optional(),
-    priority: z.number().int().min(1),
+    priority: z.number().int().min(0),
     description: z.string(),
   }),
 ]);
