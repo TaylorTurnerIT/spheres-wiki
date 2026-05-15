@@ -27,6 +27,25 @@ const entrySchema = z.discriminatedUnion("type", [
         }),
       )
       .optional(),
+    sectionDefinitions: z
+      .array(
+        z.object({
+          label: z.string(),
+          categories: z
+            .array(
+              z.object({
+                label: z.string(),
+                tiers: z
+                  .array(z.enum(["base", "basic", "advanced", "feat"]))
+                  .optional(),
+                tags: z.array(z.string()).optional(),
+                excludeTags: z.array(z.string()).optional(),
+              }),
+            )
+            .optional(),
+        }),
+      )
+      .optional(),
   }),
   z.object({
     type: z.literal("talent"),
