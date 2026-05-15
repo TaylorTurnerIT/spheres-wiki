@@ -198,11 +198,13 @@ const groups: TocGroup[] = sections.map(sec => ({
             }
             const t = base.find(b => b.id === seg.id);
             const tContent = talentRendered.find(r => r.id === seg.id);
+            const tBook = t ? bookMetaMap.get(t.sourceBook) : undefined;
             return t ? (
               <div class="base-ability-block" id={t.id} data-pagefind-weight="0.5">
                 <div class="base-ability-header">
                   <div class="base-ability-header-top">
                     <a href={url(`/power/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
+                    {tBook && <span class="talent-source">{tBook.title}</span>}
                   </div>
                   <div class="base-ability-header-bottom">
                     {buildOrderedTagIds(t, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere!.id })
@@ -238,7 +240,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                           if (!entry) return null;
 
                           const content = talent ? talentRendered.find(r => r.id === e.id) : featRendered.find(r => r.id === e.id);
-                          const extBook = entry.sourceBook !== sphere!.sourceBook ? bookMetaMap.get(entry.sourceBook) : undefined;
+                          const entryBook = bookMetaMap.get(entry.sourceBook);
                           const tierLabel = talent ? (talent.tier.charAt(0).toUpperCase() + talent.tier.slice(1)) : 'Feat';
 
                           return (
@@ -252,7 +254,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                                   >
                                     {entry.name}
                                   </a>
-                                  {extBook && <span class="talent-source">{extBook.title}</span>}
+                                  {entryBook && <span class="talent-source">{entryBook.title}</span>}
                                 </div>
                                 <div class="talent-header-bottom">
                                   {buildOrderedTagIds(entry, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere!.id })
