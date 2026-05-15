@@ -29,7 +29,12 @@ export function buildTagMap(
 ): Map<string, TagEntry> {
   const tagMap = new Map<string, TagEntry>();
   for (const book of books) {
+    const seenInBook = new Set<string>();
     for (const raw of book.rawTagEntries) {
+      if (seenInBook.has(raw.id)) {
+        throw new Error(`Duplicate tag "${raw.id}" defined twice in "${book.slug}"`);
+      }
+      seenInBook.add(raw.id);
       if (tagMap.has(raw.id)) {
         throw new Error(
           `Duplicate tag "${raw.id}" defined in both "${tagMap.get(raw.id)!.sourceBook}" and "${book.slug}"`,

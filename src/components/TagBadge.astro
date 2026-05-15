@@ -24,9 +24,9 @@ const bookTitle = tag
   </span>
   {tag && (
     <div class="tag-tooltip" role="tooltip">
-      <p class="tag-tooltip-name">{tag.label}</p>
-      <p class="tag-tooltip-desc">{tag.description}</p>
-      {bookTitle && <p class="tag-tooltip-source">{bookTitle}</p>}
+      <span class="tag-tooltip-name">{tag.label}</span>
+      <span class="tag-tooltip-desc">{tag.description}</span>
+      {bookTitle && <span class="tag-tooltip-source">{bookTitle}</span>}
     </div>
   )}
 </span>

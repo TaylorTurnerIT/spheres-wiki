@@ -221,4 +221,18 @@ describe('buildTagMap', () => {
     expect(result.size).toBe(2);
     expect(result.get('utility')!.sourceBook).toBe('book-b');
   });
+
+  it('throws with clear message on duplicate tag id within the same book', () => {
+    expect(() =>
+      buildTagMap([
+        {
+          slug: 'book-a',
+          rawTagEntries: [
+            { id: 'combat', label: 'Combat', priority: 1, description: 'A.' },
+            { id: 'combat', label: 'Combat Alt', priority: 2, description: 'B.' },
+          ],
+        },
+      ])
+    ).toThrow(/defined twice in "book-a"/);
+  });
 });
