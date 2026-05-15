@@ -1428,62 +1428,58 @@ a:hover {
   text-transform: lowercase;
   padding: 1px 6px;
   border-radius: 3px;
-  background: rgba(100, 80, 40, 0.12);
-  color: #5a4a38;
-  border: 1px solid rgba(100, 80, 40, 0.35);
+  background: color-mix(in srgb, var(--tag-clr, var(--clr-brand)) 12%, transparent);
+  color: var(--tag-clr, var(--clr-brand));
+  border: 1px solid color-mix(in srgb, var(--tag-clr, var(--clr-brand)) 40%, transparent);
   white-space: nowrap;
 }
-.talent-tag[data-tag="transformation"] {
-  background: rgba(23, 75, 147, 0.12);
-  color: #174b93;
-  border-color: rgba(23, 75, 147, 0.4);
-}
-.talent-tag[data-tag="body"] {
-  background: rgba(22, 90, 28, 0.12);
-  color: #1a6622;
-  border-color: rgba(22, 90, 28, 0.4);
-}
-.talent-tag[data-tag="utility"] {
-  background: rgba(90, 45, 150, 0.12);
-  color: #5a2d96;
-  border-color: rgba(90, 45, 150, 0.4);
-}
-.talent-tag[data-tag="instill"] {
-  background: rgba(160, 100, 0, 0.12);
-  color: #8a5500;
-  border-color: rgba(160, 100, 0, 0.4);
-}
-.talent-tag[data-tag="mass"] {
-  background: rgba(0, 100, 120, 0.12);
-  color: #006478;
-  border-color: rgba(0, 100, 120, 0.4);
-}
-.talent-tag[data-tag="range"] {
-  background: rgba(143, 45, 0, 0.12);
-  color: #8f2d00;
-  border-color: rgba(143, 45, 0, 0.4);
-}
-.talent-tag[data-tag="strike"] {
-  background: rgba(153, 0, 0, 0.12);
-  color: #990000;
-  border-color: rgba(153, 0, 0, 0.4);
-}
 .talent-tag[data-tag="3pp"] {
-  background: rgba(130, 70, 0, 0.15);
-  color: #7a4200;
-  border-color: rgba(130, 70, 0, 0.5);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-.talent-tag[data-tag="combat"] {
-  background: rgba(143, 45, 0, 0.12);
-  color: #8f2d00;
-  border-color: rgba(143, 45, 0, 0.4);
+.tag-wrapper {
+  position: relative;
+  display: inline-block;
 }
-.talent-tag[data-tag="dual-sphere"] {
-  background: rgba(60, 0, 120, 0.1);
-  color: #3c0078;
-  border-color: rgba(60, 0, 120, 0.35);
+.tag-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background: var(--clr-surface);
+  border: 0.5px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease;
+  z-index: 100;
+}
+.tag-wrapper:hover .tag-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+.tag-tooltip-name {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--clr-text);
+  margin: 0;
+}
+.tag-tooltip-desc {
+  font-size: var(--fs-2xs);
+  color: var(--clr-text);
+  line-height: 1.4;
+  margin: 0;
+}
+.tag-tooltip-source {
+  font-size: var(--fs-3xs);
+  color: var(--clr-muted);
+  font-style: italic;
+  margin: 0;
 }
 .talent-body {
   font-size: var(--fs-md);
