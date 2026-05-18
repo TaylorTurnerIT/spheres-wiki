@@ -1,9 +1,10 @@
 ---
+import { render } from 'astro:content';
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
-import { BOOK_COLLECTIONS } from '@/content/config';
+import { BOOK_COLLECTIONS } from '@/content.config';
 import TagBadge from '@/components/TagBadge.astro';
 import { buildOrderedTagIds } from '@/lib/tags';
 import type { TalentEntry, SphereEntry, BookMeta, TagEntry } from '@/lib/types';
@@ -26,7 +27,9 @@ export async function getStaticPaths() {
     try {
       const entries = await getCollection(slug as any);
       for (const e of entries) {
-        allCollEntries.set((e.data as any).id, e);
+        if ((e.data as any).type !== 'tag') {
+          allCollEntries.set((e.data as any).id, e);
+        }
       }
     } catch {}
   }
@@ -61,7 +64,7 @@ export async function getStaticPaths() {
 
 const { talent, sphere, collEntry, sourceBook, tagMap, bookMetaMap } = Astro.props;
 
-const TalentContent = collEntry ? (await collEntry.render()).Content : null;
+const TalentContent = collEntry ? (await render(collEntry)).Content : null;
 ---
 <WikiPage title={`${talent.name} — ${sphere.name} — Spheres of Guile Wiki`} activeNamespace="guile">
 
@@ -80,6 +83,7 @@ const TalentContent = collEntry ? (await collEntry.render()).Content : null;
       <div
         class="page-title guile"
         id="overview"
+        transition:name={`entry-title-${talent.id}`}
         data-pagefind-weight="10"
         data-pagefind-meta={`title:${talent.name}`}
         data-pagefind-meta={`sphere:${sphere.name}`}

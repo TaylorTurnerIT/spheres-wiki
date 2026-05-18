@@ -1,9 +1,10 @@
 ---
+import { render } from 'astro:content';
 import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import { resolveEntries } from "@/lib/resolveEntries";
-import { BOOK_COLLECTIONS } from "@/content/config";
+import { BOOK_COLLECTIONS } from "@/content.config";
 import { buildOrderedTagIds } from "@/lib/tags";
 import type { TagEntry, BookMeta } from "@/lib/types";
 
@@ -155,7 +156,7 @@ export async function getStaticPaths() {
 }
 
 const { tag, groups, collEntry, bookTitle, tagMap, bookMetaMap } = Astro.props;
-const TagBody = collEntry?.body ? (await collEntry.render()).Content : null;
+const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
 ---
 
 <WikiPage title={`${tag.label} — Tags — Spheres Wiki`}>
