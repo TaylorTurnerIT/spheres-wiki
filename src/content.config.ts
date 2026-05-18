@@ -57,6 +57,21 @@ const entrySchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal("class"),
     ...baseFields,
+    role: z.string().optional(),
+    hitDie: z.number().int().optional(),
+    startingWealth: z.string().optional(),
+    skillRanksPerLevel: z.number().int().optional(),
+    babProgression: z.enum(["low", "medium", "high"]).optional(),
+    fortSave: z.enum(["poor", "good"]).optional(),
+    refSave: z.enum(["poor", "good"]).optional(),
+    willSave: z.enum(["poor", "good"]).optional(),
+  }),
+  z.object({
+    type: z.literal("class-feature"),
+    ...baseFields,
+    class: z.string(),
+    level: z.number().int().optional(),
+    category: z.string().optional(),
   }),
   z.object({
     type: z.literal("feat"),

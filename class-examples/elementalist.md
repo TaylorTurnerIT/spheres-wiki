@@ -1,0 +1,142 @@
+Elementalists specialize in the command and control of elemental magic, using it to control the battle area, protect allies, and rain destruction down upon their foes.
+
+Role: Elementalists are magical warriors, wielding elemental damage with the same skill and tactical precision a fighter might wield their sword or bow.
+
+Alignment: Any
+
+Hit Die: d8
+
+Starting Wealth: 3d6 x 10 gp (average 105 gp). In addition, each character begins play with an outfit worth 10 gp or less.
+
+Class Skills: The elementalist’s class skills are Acrobatics (Dex), Bluff (Cha), Climb (Str), Craft (Int), Escape Artist (Dex), Fly (Dex), Intimidate (Cha), Knowledge (arcana) (Int), Knowledge (nature) (Int), Knowledge (planes) (Int), Perception (Wis), Profession (Wis), Spellcraft (Int), Stealth (Dex), Survival (Wis), and Swim (Str).
+
+Skill Ranks Per Level: 4 + Int modifier.
+Class Features
+Table: The Elementalist
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Caster Level 	Magic Talents
+1st 	+0 	+2 	+2 	+2 	Casting, spell pool, weave energy 	+0 (1) 	0 (+2)
+2nd 	+1 	+3 	+3 	+3 	Combat feat, evasion 	+1 	1
+3rd 	+2 	+3 	+3 	+3 	Favored element 	+2 	2
+4th 	+3 	+4 	+4 	+4 	Dodge bonus +1 	+3 	3
+5th 	+3 	+4 	+4 	+4 	Elemental defense 	+3 	3
+6th 	+4 	+5 	+5 	+5 	Combat feat 	+4 	4
+7th 	+5 	+5 	+5 	+5 	Elemental movement 	+5 	5
+8th 	+6/+1 	+6 	+6 	+6 	Dodge bonus +2 	+6 	6
+9th 	+6/+1 	+6 	+6 	+6 	Favored element 	+6 	6
+10th 	+7/+2 	+7 	+7 	+7 	Combat feat 	+7 	7
+11th 	+8/+3 	+7 	+7 	+7 	Elemental defense, improved evasion 	+8 	8
+12th 	+9/+4 	+8 	+8 	+8 	Dodge bonus +3 	+9 	9
+13th 	+9/+4 	+8 	+8 	+8 	Elemental movement 	+9 	9
+14th 	+10/+5 	+9 	+9 	+9 	Combat feat 	+10 	10
+15th 	+11/+6/+1 	+9 	+9 	+9 	Favored element 	+11 	11
+16th 	+12/+7/+2 	+10 	+10 	+10 	Dodge bonus +4 	+12 	12
+17th 	+12/+7/+2 	+10 	+10 	+10 	Elemental defense 	+12 	12
+18th 	+13/+8/+3 	+11 	+11 	+11 	Combat feat 	+13 	13
+19th 	+14/+9/+4 	+11 	+11 	+11 	Elemental movement 	+14 	14
+20th 	+15/+10/+5 	+12 	+12 	+12 	Dodge bonus +5, energy body 	+15 	15
+Elementalist.png
+Weapon and Armor Proficiency
+
+An elementalist is proficient with all martial and simple weapons and light armor.
+Casting
+
+An elementalist may combine spheres and talents to create magical effects. An elementalist is considered a Mid-Caster. (Note: All casters gain 2 bonus talents and a casting tradition the first time they gain the casting class feature.)
+Spell Pool
+
+An elementalist gains a small reservoir of energy he can call on to create truly wondrous effects, called a spell pool. This pool contains a number of spell points equal to his class level + his casting ability modifier (minimum 1). This pool replenishes once per day after roughly 8 hours of rest.
+Magic Talents
+
+An elementalist gains 3/4ths of a magic talent per level, according to Table: The Elementalist.
+Weave Energy
+
+An elementalist gains the Destruction sphere as a bonus magic talent and uses his class level as his caster level with the Destruction sphere. This stacks normally with caster levels gained from other sources.
+Evasion (Ex)
+
+At 2nd level an elementalist learns to avoid damage from many area-effect attacks. If an elementalist succeeds at a Reflex saving throw against an attack that normally deals half damage on a successful save, he instead takes no damage. Evasion can be used only if the elementalist is wearing light armor or no armor and carrying no more than a light load. A helpless elementalist does not gain the benefit of evasion.
+Combat Feat
+
+An elementalist’s martial focus grants him a bonus combat feat at 2nd level and every 4 levels thereafter, chosen from those for which he qualifies.
+Favored Element (Su)
+
+At 3rd level, the elementalist chooses one blast type group from the Destruction sphere. When creating a destructive blast from this blast type group, it deals an additional +1/2 damage per elementalist level.
+
+At 9th and 15th level, the elementalist chooses an additional favored element, gaining the same bonus. In addition, the bonus granted by his previous favored elements increase by an additional +1/2 damage per elementalist level.
+Dodge Bonus
+
+At 4th level, an elementalist gains a +1 dodge bonus to his AC. This increases by one for every 4 levels thereafter, to a maximum of +5 at 20th level.
+Elemental Defense (Su)
+
+At 5th level, an elementalist gains resistance 5 to acid, cold, fire, and electricity. At 11th level, this resistance increases to 10. At 17th level, this resistance increases to 15.
+Elemental Movement
+
+At 7th level, the elementalist gains one of the following: a 30 feet swim speed, a 20 feet fly speed with maneuverability (average), a 15 feet burrow speed, or a +20 feet bonus to his base speed. At 13th and 19th levels, the elementalist gains an additional elemental movement and all elemental movements possessed increase by 10 feet.
+Improved Evasion (Ex)
+
+At 11th level, an elementalist’s evasion ability improves. He still takes no damage on a successful Reflex saving throw against attacks, but henceforth he takes only half damage on a failed save. A helpless elementalist does not gain the benefit of improved evasion.
+Energy Body
+
+At 20th level, the elementalist’s body has become one with the energy he weaves. His elemental defense increases to resistance 20, and he gains immunity to sneak attacks and critical hits, and gains DR 10/magic.
+Favored Class Bonuses
+
+Aasimar: Deal +1/2 damage to evil outsiders and undead with your destructive blasts.
+
+Cherufe: All destructive blasts deal an additional +1/4 fire damage.
+
+Cuazaj: All destructive blasts deal an additional +1/4 electricity damage.
+
+Dwarf: +1 energy resistance to acid, cold, electricity, fire, or sonic (maximum 10 per energy type). This stacks with the energy resistance normally gained through this class or any other source.
+
+Elf: +1 foot to one movement type the elementalist possesses. In combat, this only has an effect for every five increases to the movement’s speed.
+
+Fenghuang: Gain +1/6 of a dodge bonus to AC.
+
+Gnome: +1/6 of a magic talent.
+
+Goblin: Add +1/2 to damage rolls the elementalist makes with destructive blasts against an opponent he is flanking or an opponent that is denied its Dexterity bonus to AC.
+
+Half-elf: +1/6 bonus to all damage dealt with unarmed strikes.
+
+Half-orc: Increase the damage dealt with all destructive blasts not augmented by favored element by +1/2.
+
+Halfling: Gain +1/6 of a dodge bonus to AC.
+
+Human: Gain +1/6 of a bonus magic talent.
+
+Merfolk: Gain DR 1/piercing for every 6 times this benefit is taken.
+
+Orc: Deal an additional +1/2 bonus damage vs. objects when using a destructive blast.
+
+Tiefling: All destructive blasts deal an additional +1/4 negative energy damage. This extra negative energy damage has no effect on undead, or other targets normally healed by negative energy.
+Elementalist Feats
+
+The following feats are particularly appropriate or useful for elementalists.
+Extra Magic Talent
+
+Prerequisite: Basic Magic Training or casting class feature.
+
+Benefit: Gain an additional sphere or a talent from a sphere you possess. You may take this feat multiple times. The effects stack.
+Extra Spell Points
+
+Prerequisite: Spell pool.
+
+Benefit: Your spell pool total increases by 2. You may gain this feat multiple times. The effects stack.
+Improved Favored Element
+
+Prerequisites: Two favored elements.
+
+Benefit: Your second and third favored elements receive the same damage bonus as your first favored element.
+Rebuff, Improved (Combat)
+
+Prerequisites: Destruction sphere (Rebuff (blast shape)).
+
+Benefit: Whenever a creature within range is the target of a ranged attack, you may spend a spell point as an immediate action to target the projectile with a destructive blast. Make an opposed attack roll using your caster level in place of your base attack bonus to destroy the projectile and negate the attack. Unusually massive projectiles (such as boulders or ballista bolts) and ranged attacks generated by natural attacks or spell effects are not affected by this ability.
+Rebuff, Superior (Combat)
+
+Prerequisites: Destruction sphere (Rebuff (blast shape)), Improved Rebuff, improved evasion class feature.
+
+Benefit: When using the Rebuff talent to provide cover to allies, you also grant them the benefits of improved evasion.
+Sphere Focus
+
+Prerequisite: Casting class feature.
+
+Benefit: Choose a sphere. You gain a +1 bonus to saving throw DCs for all abilities from that sphere. You may take this feat multiple times. The effects do not stack. Each time it is gained, apply this benefit to a different sphere.
