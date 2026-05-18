@@ -1,5 +1,5 @@
-// src/content/config.ts
 import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
 
 const baseFields = {
   id: z.string().regex(/^[a-z0-9-]+$/, "id must be lowercase kebab-case"),
@@ -78,22 +78,25 @@ const entrySchema = z.discriminatedUnion("type", [
   }),
 ]);
 
-// description is the GFM markdown body — not a frontmatter field
-
-// Auto-discover every book that has a _book.yaml — no manual registration needed.
-const bookYamls = import.meta.glob("./*/_book.yaml");
-const discoveredSlugs = Object.keys(bookYamls).map((p) =>
-  p.replace("./", "").replace("/_book.yaml", ""),
+// Auto-discover every book that has both a _book.yaml AND at least one .md entry.
+const bookYamls = import.meta.glob("./content/*/_book.yaml");
+const bookMarkdowns = import.meta.glob("./content/**/*.md");
+const slugsWithContent = new Set(
+  Object.keys(bookMarkdowns).map((p) => p.split("/")[2]),
 );
+const discoveredSlugs = Object.keys(bookYamls)
+  .map((p) => p.replace("./content/", "").replace("/_book.yaml", ""))
+  .filter((slug) => slugsWithContent.has(slug));
 
 export const BOOK_COLLECTIONS: string[] = discoveredSlugs;
 export type BookCollectionSlug = string;
 
-const bookCollection = defineCollection({
-  type: "content",
-  schema: entrySchema,
-});
-
 export const collections = Object.fromEntries(
-  discoveredSlugs.map((slug) => [slug, bookCollection]),
-) as Record<string, typeof bookCollection>;
+  discoveredSlugs.map((slug) => [
+    slug,
+    defineCollection({
+      loader: glob({ pattern: "**/*.md", base: `./src/content/${slug}` }),
+      schema: entrySchema,
+    }),
+  ]),
+) as Record<string, ReturnType<typeof defineCollection>>;

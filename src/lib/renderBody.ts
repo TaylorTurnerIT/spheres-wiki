@@ -12,7 +12,8 @@ export type BodySegment =
 // Case-insensitive so authors can write [Shapeshift] or [shapeshift].
 const MARKER_RE = /^\[([A-Za-z][A-Za-z0-9-]*)\]\s*$/gm;
 
-export function splitBodyOnMarkers(body: string): BodySegment[] {
+export function splitBodyOnMarkers(body: string | undefined): BodySegment[] {
+  if (!body) return [];
   const segments: BodySegment[] = [];
   MARKER_RE.lastIndex = 0;
   let lastIndex = 0;

@@ -1,4 +1,5 @@
 ---
+import { render } from 'astro:content';
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
@@ -7,7 +8,7 @@ import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { buildSections } from '@/lib/categorize';
 import type { SectionResult } from '@/lib/categorize';
-import { BOOK_COLLECTIONS } from '@/content/config';
+import { BOOK_COLLECTIONS } from '@/content.config';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
 import TagBadge from '@/components/TagBadge.astro';
@@ -38,7 +39,9 @@ export async function getStaticPaths() {
     try {
       const entries = await getCollection(slug as any);
       for (const e of entries) {
-        allCollEntries.set((e.data as any).id, e);
+        if ((e.data as any).type !== 'tag') {
+          allCollEntries.set((e.data as any).id, e);
+        }
       }
     } catch { /* empty collection */ }
   }
@@ -129,18 +132,18 @@ if (kind === 'sphere' && mainCollEntry) {
 
 // For class pages: render full body as-is
 const MainContent = (kind === 'class' && mainCollEntry)
-  ? (await mainCollEntry.render()).Content
+  ? (await render(mainCollEntry)).Content
   : null;
 
 const talentRendered: Array<{ id: string; Content: any }> = [];
 for (const [id, entry] of talentCollEntries) {
-  const { Content } = await entry.render();
+  const { Content } = await render(entry);
   talentRendered.push({ id, Content });
 }
 
 const featRendered: Array<{ id: string; Content: any }> = [];
 for (const [id, entry] of featCollEntries) {
-  const { Content } = await entry.render();
+  const { Content } = await render(entry);
   featRendered.push({ id, Content });
 }
 
@@ -251,6 +254,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                                     href={url(`/power/${sphere!.id}/${talent ? '' : 'feats/'}${entry.id}/`)}
                                     class="talent-name"
                                     data-astro-prefetch="hover"
+                                    transition:name={`entry-title-${entry.id}`}
                                   >
                                     {entry.name}
                                   </a>

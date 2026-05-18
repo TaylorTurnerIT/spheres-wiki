@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import SVGSprite from '@/components/SVGSprite.astro';
 import '@/styles/global.css';
 
@@ -32,7 +32,7 @@ const {
         (window as any).umami?.track();
       });
     </script>
-    <ViewTransitions />
+    <ClientRouter />
     <style is:inline>
       .scroll-restoring { opacity: 0; }
     </style>
