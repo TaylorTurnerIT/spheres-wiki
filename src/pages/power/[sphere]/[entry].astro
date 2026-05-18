@@ -7,11 +7,11 @@ import TagBadge from '@/components/TagBadge.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content.config';
 import { buildOrderedTagIds } from '@/lib/tags';
-import type { TalentEntry, SphereEntry, BookMeta, TagEntry } from '@/lib/types';
+import type { TalentEntry, SphereEntry, ClassEntry, ClassFeatureEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
-  talent: TalentEntry;
-  sphere: SphereEntry;
+  entry: TalentEntry | ClassFeatureEntry;
+  sphere: SphereEntry | ClassEntry;
   collEntry: any;
   sourceBook: BookMeta | undefined;
   tagMap: Map<string, TagEntry>;
@@ -20,7 +20,7 @@ interface Props {
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const { talentMap, sphereMap, bookMetaMap, tagMap } = await resolveEntries();
+  const { talentMap, sphereMap, classMap, classFeatureMap, bookMetaMap, tagMap } = await resolveEntries();
 
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
@@ -35,38 +35,48 @@ export async function getStaticPaths() {
   }
 
   const paths = [];
+
+  // Talents
   for (const [, talent] of talentMap) {
     if (talent.system !== 'power') continue;
-
-    // Primary path
     const sphere = [...sphereMap.values()].find(s => s.id === talent.sphere && s.system === 'power');
     if (sphere) {
       paths.push({
-        params: { sphere: sphere.id, talent: talent.id },
-        props: { talent, sphere, collEntry: allCollEntries.get(talent.id), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+        params: { sphere: sphere.id, entry: talent.id },
+        props: { entry: talent, sphere, collEntry: allCollEntries.get(talent.id), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
       });
     }
-
-    // Dual sphere path
     if (talent.dualSphere) {
       const dualSphere = [...sphereMap.values()].find(s => s.id === talent.dualSphere && s.system === 'power');
       if (dualSphere) {
         paths.push({
-          params: { sphere: dualSphere.id, talent: talent.id },
-          props: { talent, sphere: dualSphere, collEntry: allCollEntries.get(talent.id), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+          params: { sphere: dualSphere.id, entry: talent.id },
+          props: { entry: talent, sphere: dualSphere, collEntry: allCollEntries.get(talent.id), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
         });
       }
+    }
+  }
+
+  // Class Features
+  for (const [, feature] of classFeatureMap) {
+    if (feature.system !== 'power') continue;
+    const cls = [...classMap.values()].find(c => c.id === feature.class && c.system === 'power');
+    if (cls) {
+      paths.push({
+        params: { sphere: cls.id, entry: feature.id },
+        props: { entry: feature, sphere: cls, collEntry: allCollEntries.get(feature.id), sourceBook: bookMetaMap.get(feature.sourceBook), tagMap, bookMetaMap },
+      });
     }
   }
 
   return paths;
 }
 
-const { talent, sphere, collEntry, sourceBook, tagMap, bookMetaMap } = Astro.props;
+const { entry, sphere, collEntry, sourceBook, tagMap, bookMetaMap } = Astro.props;
 
-const TalentContent = collEntry ? (await render(collEntry)).Content : null;
+const EntryContent = collEntry ? (await render(collEntry)).Content : null;
 ---
-<WikiPage title={`${talent.name} — ${sphere.name} — Spheres of Power Wiki`} activeNamespace="power">
+<WikiPage title={`${entry.name} — ${sphere.name} — Spheres of Power Wiki`} activeNamespace="power">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
@@ -75,7 +85,7 @@ const TalentContent = collEntry ? (await render(collEntry)).Content : null;
     <span class="breadcrumb-sep">›</span>
     <a href={url(`/power/${sphere.id}/`)} data-astro-prefetch="hover">{sphere.name}</a>
     <span class="breadcrumb-sep">›</span>
-    <span>{talent.name}</span>
+    <span>{entry.name}</span>
   </nav>
 
   <div class="content-columns">
@@ -83,26 +93,25 @@ const TalentContent = collEntry ? (await render(collEntry)).Content : null;
       <div
         class="page-title power"
         id="overview"
-        transition:name={`entry-title-${talent.id}`}
+        transition:name={`entry-title-${entry.id}`}
         data-pagefind-weight="10"
-        data-pagefind-meta={`title:${talent.name}`}
-        data-pagefind-meta={`sphere:${sphere.name}`}
+        data-pagefind-meta={`title:${entry.name}`}
+        data-pagefind-meta={`${sphere.type === 'sphere' ? 'sphere' : 'class'}:${sphere.name}`}
         data-pagefind-meta="system:Spheres of Power"
-        data-pagefind-meta="type:talent"
-        data-pagefind-meta={`tier:${talent.tier}`}
-        data-pagefind-meta={`tags:${talent.tags.join(', ')}`}
+        data-pagefind-meta={`type:${entry.type}`}
+        data-pagefind-meta={`tags:${entry.tags.join(', ')}`}
       >
-        {talent.name}
+        {entry.name}
       </div>
       <div class="talent-page-meta">
-        {buildOrderedTagIds(talent, bookMetaMap, tagMap, { includeSphere: true, currentSphereId: sphere.id })
+        {buildOrderedTagIds(entry, bookMetaMap, tagMap, { includeSphere: true, currentSphereId: sphere.id })
           .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
         }
       </div>
       <hr class="page-title-rule" />
 
-      {TalentContent
-        ? <div class="entry-description"><TalentContent /></div>
+      {EntryContent
+        ? <div class="entry-description"><EntryContent /></div>
         : <p class="entry-description"><em>Description coming soon.</em></p>
       }
     </div>

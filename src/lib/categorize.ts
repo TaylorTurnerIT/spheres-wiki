@@ -3,12 +3,14 @@ import type {
   FeatEntry,
   SphereEntry,
   TalentCategory,
+  ClassEntry,
+  ClassFeatureEntry,
 } from "./types";
 
 export type CategoryResult = {
   label: string;
   id: string;
-  entries: Array<{ id: string; type: "talent" | "feat" }>;
+  entries: Array<{ id: string; type: "talent" | "feat" | "class-feature" }>;
 };
 
 export function buildCategories(
@@ -26,7 +28,13 @@ export function buildCategories(
   // 2. Process Custom Category Definitions
   if (sphere.categoryDefinitions && sphere.categoryDefinitions.length > 0) {
     for (const def of sphere.categoryDefinitions) {
-      const categoryEntries = filterEntries(def, basicTalents, advancedTalents, feats, usedIds);
+      const categoryEntries = filterEntries(
+        def,
+        basicTalents,
+        advancedTalents,
+        feats,
+        usedIds,
+      );
       if (categoryEntries.length > 0) {
         categories.push({
           label: def.label,
@@ -43,7 +51,9 @@ export function buildCategories(
     categories.push({
       label: "Basic Talents",
       id: "basic-talents",
-      entries: remainingBasic.map((t) => ({ id: t.id, type: "talent" as const })).sort((a, b) => a.id.localeCompare(b.id)),
+      entries: remainingBasic
+        .map((t) => ({ id: t.id, type: "talent" as const }))
+        .sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
 
@@ -53,7 +63,9 @@ export function buildCategories(
     categories.push({
       label: "Advanced Talents",
       id: "advanced-talents",
-      entries: remainingAdvanced.map((t) => ({ id: t.id, type: "talent" as const })).sort((a, b) => a.id.localeCompare(b.id)),
+      entries: remainingAdvanced
+        .map((t) => ({ id: t.id, type: "talent" as const }))
+        .sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
 
@@ -63,7 +75,9 @@ export function buildCategories(
     categories.push({
       label: "Feats",
       id: "feats",
-      entries: remainingFeats.map((f) => ({ id: f.id, type: "feat" as const })).sort((a, b) => a.id.localeCompare(b.id)),
+      entries: remainingFeats
+        .map((f) => ({ id: f.id, type: "feat" as const }))
+        .sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
 
@@ -89,7 +103,8 @@ function filterEntries(
     if (usedIds.has(t.id)) continue;
     const tierMatch = !def.tiers || def.tiers.includes("basic");
     const tagMatch = !def.tags || def.tags.some((tag) => t.tags.includes(tag));
-    const excludeMatch = !def.excludeTags || !def.excludeTags.some((tag) => t.tags.includes(tag));
+    const excludeMatch =
+      !def.excludeTags || !def.excludeTags.some((tag) => t.tags.includes(tag));
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: t.id, type: "talent" });
       usedIds.add(t.id);
@@ -100,7 +115,8 @@ function filterEntries(
     if (usedIds.has(t.id)) continue;
     const tierMatch = !def.tiers || def.tiers.includes("advanced");
     const tagMatch = !def.tags || def.tags.some((tag) => t.tags.includes(tag));
-    const excludeMatch = !def.excludeTags || !def.excludeTags.some((tag) => t.tags.includes(tag));
+    const excludeMatch =
+      !def.excludeTags || !def.excludeTags.some((tag) => t.tags.includes(tag));
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: t.id, type: "talent" });
       usedIds.add(t.id);
@@ -111,7 +127,8 @@ function filterEntries(
     if (usedIds.has(f.id)) continue;
     const tierMatch = !def.tiers || def.tiers.includes("feat");
     const tagMatch = !def.tags || def.tags.some((tag) => f.tags.includes(tag));
-    const excludeMatch = !def.excludeTags || !def.excludeTags.some((tag) => f.tags.includes(tag));
+    const excludeMatch =
+      !def.excludeTags || !def.excludeTags.some((tag) => f.tags.includes(tag));
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: f.id, type: "feat" });
       usedIds.add(f.id);
@@ -119,6 +136,133 @@ function filterEntries(
   }
 
   return entries;
+}
+
+function filterClassFeatures(
+  def: TalentCategory,
+  features: ClassFeatureEntry[],
+  usedIds: Set<string>,
+): Array<{ id: string; type: "class-feature" }> {
+  const entries: Array<{ id: string; type: "class-feature" }> = [];
+
+  for (const f of features) {
+    if (usedIds.has(f.id)) continue;
+
+    const tagMatch = !def.tags || def.tags.some((tag) => f.tags.includes(tag));
+    const excludeMatch =
+      !def.excludeTags || !def.excludeTags.some((tag) => f.tags.includes(tag));
+    const categoryMatch = !def.label || f.category === def.label;
+
+    if (def.tags) {
+      if (tagMatch && excludeMatch) {
+        entries.push({ id: f.id, type: "class-feature" });
+        usedIds.add(f.id);
+      }
+    } else if (categoryMatch && excludeMatch) {
+      entries.push({ id: f.id, type: "class-feature" });
+      usedIds.add(f.id);
+    }
+  }
+
+  return entries;
+}
+
+export function buildClassSections(
+  cls: ClassEntry,
+  features: ClassFeatureEntry[],
+  feats: FeatEntry[],
+): SectionResult[] {
+  const sections: SectionResult[] = [];
+  const usedIds = new Set<string>();
+
+  if (cls.sectionDefinitions && cls.sectionDefinitions.length > 0) {
+    for (const secDef of cls.sectionDefinitions) {
+      const secId = secDef.label.toLowerCase().replace(/\s+/g, "-");
+      const categories: CategoryResult[] = [];
+
+      if (secDef.categories && secDef.categories.length > 0) {
+        for (const catDef of secDef.categories) {
+          let catEntries: Array<{
+            id: string;
+            type: "talent" | "feat" | "class-feature";
+          }> = [];
+
+          if (catDef.tiers && catDef.tiers.includes("feat")) {
+            for (const f of feats) {
+              if (usedIds.has(f.id)) continue;
+              const tagMatch =
+                !catDef.tags || catDef.tags.some((t) => f.tags.includes(t));
+              if (tagMatch) {
+                catEntries.push({ id: f.id, type: "feat" });
+                usedIds.add(f.id);
+              }
+            }
+          } else {
+            catEntries = filterClassFeatures(catDef, features, usedIds);
+          }
+
+          categories.push({
+            label: catDef.label,
+            id: catDef.label.toLowerCase().replace(/\s+/g, "-"),
+            entries: catEntries.sort((a, b) => {
+              const fa = features.find((f) => f.id === a.id);
+              const fb = features.find((f) => f.id === b.id);
+              if (fa?.level !== undefined && fb?.level !== undefined) {
+                return fa.level - fb.level || fa.name.localeCompare(fb.name);
+              }
+              return a.id.localeCompare(b.id);
+            }),
+          });
+        }
+      }
+
+      sections.push({ label: secDef.label, id: secId, categories });
+    }
+  }
+
+  const remainingFeatures = features.filter((f) => !usedIds.has(f.id));
+  const remainingFeats = feats.filter((f) => !usedIds.has(f.id));
+
+  if (remainingFeatures.length > 0 || remainingFeats.length > 0) {
+    const otherCategories: CategoryResult[] = [];
+
+    const cats = Array.from(
+      new Set(remainingFeatures.map((f) => f.category || "Other")),
+    );
+    for (const cat of cats) {
+      const catFeatures = remainingFeatures.filter(
+        (f) => (f.category || "Other") === cat,
+      );
+      otherCategories.push({
+        label: cat,
+        id: cat.toLowerCase().replace(/\s+/g, "-"),
+        entries: catFeatures
+          .map((f) => ({ id: f.id, type: "class-feature" as const }))
+          .sort((a, b) => {
+            const fa = features.find((f) => f.id === a.id);
+            const fb = features.find((f) => f.id === b.id);
+            if (fa?.level !== undefined && fb?.level !== undefined) {
+              return fa.level - fb.level || fa.name.localeCompare(fb.name);
+            }
+            return a.id.localeCompare(b.id);
+          }),
+      });
+    }
+
+    if (remainingFeats.length > 0) {
+      otherCategories.push({
+        label: "Feats",
+        id: "feats",
+        entries: remainingFeats
+          .map((f) => ({ id: f.id, type: "feat" as const }))
+          .sort((a, b) => a.id.localeCompare(b.id)),
+      });
+    }
+
+    sections.push({ label: "Other", id: "other", categories: otherCategories });
+  }
+
+  return sections;
 }
 
 export function buildSections(
@@ -139,7 +283,13 @@ export function buildSections(
 
       if (secDef.categories && secDef.categories.length > 0) {
         for (const catDef of secDef.categories) {
-          const catEntries = filterEntries(catDef, basicTalents, advancedTalents, feats, usedIds);
+          const catEntries = filterEntries(
+            catDef,
+            basicTalents,
+            advancedTalents,
+            feats,
+            usedIds,
+          );
           categories.push({
             label: catDef.label,
             id: catDef.label.toLowerCase().replace(/\s+/g, "-"),
@@ -158,7 +308,11 @@ export function buildSections(
   const remainingAdvanced = advancedTalents.filter((t) => !usedIds.has(t.id));
   const remainingFeats = feats.filter((f) => !usedIds.has(f.id));
 
-  if (remainingBasic.length > 0 || remainingAdvanced.length > 0 || remainingFeats.length > 0) {
+  if (
+    remainingBasic.length > 0 ||
+    remainingAdvanced.length > 0 ||
+    remainingFeats.length > 0
+  ) {
     const otherCategories: CategoryResult[] = [];
     if (remainingBasic.length > 0) {
       otherCategories.push({

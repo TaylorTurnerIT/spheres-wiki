@@ -68,6 +68,7 @@ export function buildResolvedMaps(
   const talentMap = new Map<EntryKey, TalentEntry>();
   const featMap = new Map<EntryKey, FeatEntry>();
   const classMap = new Map<EntryKey, ClassEntry>();
+  const classFeatureMap = new Map<EntryKey, ClassFeatureEntry>();
   const articleMap = new Map<EntryKey, ArticleEntry>();
   const entrySourceBook = new Map<EntryKey, string>();
   const tagMap = new Map<string, TagEntry>();
@@ -83,6 +84,7 @@ export function buildResolvedMaps(
           talentMap,
           featMap,
           classMap,
+          classFeatureMap,
           articleMap,
         });
       } else {
@@ -91,6 +93,7 @@ export function buildResolvedMaps(
           talentMap,
           featMap,
           classMap,
+          classFeatureMap,
           articleMap,
         });
         entrySourceBook.set(key, book.slug);
@@ -103,6 +106,7 @@ export function buildResolvedMaps(
     talentMap,
     featMap,
     classMap,
+    classFeatureMap,
     articleMap,
     entrySourceBook,
     bookMetaMap,
@@ -273,13 +277,19 @@ function storeEntry(
   key: EntryKey,
   maps: Pick<
     ResolvedMaps,
-    "sphereMap" | "talentMap" | "featMap" | "classMap" | "articleMap"
+    | "sphereMap"
+    | "talentMap"
+    | "featMap"
+    | "classMap"
+    | "classFeatureMap"
+    | "articleMap"
   >,
 ): void {
   if (entry.type === "sphere") maps.sphereMap.set(key, entry);
   else if (entry.type === "talent") maps.talentMap.set(key, entry);
   else if (entry.type === "feat") maps.featMap.set(key, entry);
   else if (entry.type === "class") maps.classMap.set(key, entry);
+  else if (entry.type === "class-feature") maps.classFeatureMap.set(key, entry);
   else if (entry.type === "article") maps.articleMap.set(key, entry);
 }
 
@@ -288,7 +298,12 @@ function applyPatch(
   targetKey: EntryKey,
   maps: Pick<
     ResolvedMaps,
-    "sphereMap" | "talentMap" | "featMap" | "classMap" | "articleMap"
+    | "sphereMap"
+    | "talentMap"
+    | "featMap"
+    | "classMap"
+    | "classFeatureMap"
+    | "articleMap"
   >,
 ): void {
   const {
@@ -315,6 +330,14 @@ function applyPatch(
     maps.classMap.set(targetKey, {
       ...maps.classMap.get(targetKey)!,
       ...(fieldsToMerge as Partial<ClassEntry>),
+    });
+  } else if (
+    patch.type === "class-feature" &&
+    maps.classFeatureMap.has(targetKey)
+  ) {
+    maps.classFeatureMap.set(targetKey, {
+      ...maps.classFeatureMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<ClassFeatureEntry>),
     });
   } else if (patch.type === "article" && maps.articleMap.has(targetKey)) {
     maps.articleMap.set(targetKey, {

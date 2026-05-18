@@ -51,10 +51,10 @@ export async function getStaticPaths() {
   const paths = [];
 
   for (const [, sphere] of sphereMap) {
-    if (sphere.system !== 'power') continue;
-    const allTalents = [...talentMap.values()].filter(t => (t.sphere === sphere.id || t.dualSphere === sphere.id) && t.system === 'power');
+    if (sphere.system !== 'might') continue;
+    const allTalents = [...talentMap.values()].filter(t => (t.sphere === sphere.id || t.dualSphere === sphere.id) && t.system === 'might');
     const base       = allTalents.filter(t => t.tier === 'base').sort((a, b) => a.name.localeCompare(b.name));
-    const feats      = [...featMap.values()].filter(f => (f.sphere === sphere.id || f.dualSphere === sphere.id) && f.system === 'power').sort((a, b) => a.name.localeCompare(b.name));
+    const feats      = [...featMap.values()].filter(f => (f.sphere === sphere.id || f.dualSphere === sphere.id) && f.system === 'might').sort((a, b) => a.name.localeCompare(b.name));
 
     const sections = buildSections(sphere, allTalents.filter(t => t.tier !== 'base'), feats);
 
@@ -93,9 +93,9 @@ export async function getStaticPaths() {
   }
 
   for (const [, cls] of classMap) {
-    if (cls.system !== 'power') continue;
-    const features = [...classFeatureMap.values()].filter(f => f.class === cls.id && f.system === 'power');
-    const feats    = [...featMap.values()].filter(f => f.tags.includes(cls.id) && f.system === 'power').sort((a, b) => a.name.localeCompare(b.name));
+    if (cls.system !== 'might') continue;
+    const features = [...classFeatureMap.values()].filter(f => f.class === cls.id && f.system === 'might');
+    const feats    = [...featMap.values()].filter(f => f.tags.includes(cls.id) && f.system === 'might').sort((a, b) => a.name.localeCompare(b.name));
 
     const sections = buildClassSections(cls, features, feats);
 
@@ -197,12 +197,12 @@ const groups: TocGroup[] = sections.map(sec => ({
   })),
 }));
 ---
-<WikiPage title={`${entryName} — Spheres of Power Wiki`} activeNamespace="power">
+<WikiPage title={`${entryName} — Spheres of Might Wiki`} activeNamespace="might">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href={url("/power/")} data-astro-prefetch="hover">Spheres of Power</a>
+    <a href={url("/might/")} data-astro-prefetch="hover">Spheres of Might</a>
     <span class="breadcrumb-sep">›</span>
     <span>{entryName}</span>
   </nav>
@@ -213,12 +213,12 @@ const groups: TocGroup[] = sections.map(sec => ({
       {kind === 'sphere' && sphere && (
         <>
           <div
-            class="page-title power"
+            class="page-title might"
             id="overview"
             data-pagefind-weight="10"
             data-pagefind-meta={`title:${sphere.name}`}
             data-pagefind-meta="type:sphere"
-            data-pagefind-meta="system:Spheres of Power"
+            data-pagefind-meta="system:Spheres of Might"
           >
             <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
             {sphere.name}
@@ -236,7 +236,7 @@ const groups: TocGroup[] = sections.map(sec => ({
               <div class="base-ability-block" id={t.id} data-pagefind-weight="0.5">
                 <div class="base-ability-header">
                   <div class="base-ability-header-top">
-                    <a href={url(`/power/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
+                    <a href={url(`/might/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
                     {tBook && <span class="talent-source">{tBook.title}</span>}
                   </div>
                   <div class="base-ability-header-bottom">
@@ -276,14 +276,10 @@ const groups: TocGroup[] = sections.map(sec => ({
                           const content = talent ? talentRendered.find(r => r.id === e.id) : (feat ? featRendered.find(r => r.id === e.id) : featureRendered.find(r => r.id === e.id));
                           const entryBook = bookMetaMap.get(entry.sourceBook);
 
-                          let tierLabel = 'Feat';
-                          if (talent) tierLabel = talent.tier.charAt(0).toUpperCase() + talent.tier.slice(1);
-                          if (feature) tierLabel = feature.category || 'Feature';
-
                           let entryUrl = '';
-                          if (talent) entryUrl = url(`/power/${sphere!.id}/${entry.id}/`);
-                          else if (feat) entryUrl = url(`/power/${sphere || cls!.id}/feats/${entry.id}/`);
-                          else if (feature) entryUrl = url(`/power/${cls!.id}/${entry.id}/`);
+                          if (talent) entryUrl = url(`/might/${sphere!.id}/${entry.id}/`);
+                          else if (feat) entryUrl = url(`/might/${sphere || cls!.id}/feats/${entry.id}/`);
+                          else if (feature) entryUrl = url(`/might/${cls!.id}/${entry.id}/`);
 
                           return (
                             <div class="talent-entry" id={entry.id} data-pagefind-weight="0.5">
@@ -313,10 +309,6 @@ const groups: TocGroup[] = sections.map(sec => ({
                   }
                 </div>
               ))}
-
-              {sec.categories.length === 0 && (
-                <p class="section-empty">No entries yet.</p>
-              )}
             </div>
           ))}
         </>
@@ -325,12 +317,12 @@ const groups: TocGroup[] = sections.map(sec => ({
       {kind === 'class' && cls && (
         <>
           <div
-            class="page-title power"
+            class="page-title might"
             id="overview"
             data-pagefind-weight="10"
             data-pagefind-meta={`title:${cls.name}`}
             data-pagefind-meta="type:class"
-            data-pagefind-meta="system:Spheres of Power"
+            data-pagefind-meta="system:Spheres of Might"
           >
             {cls.name}
           </div>
@@ -364,9 +356,9 @@ const groups: TocGroup[] = sections.map(sec => ({
                           const entryBook = bookMetaMap.get(entry.sourceBook);
 
                           let entryUrl = '';
-                          if (talent) entryUrl = url(`/power/${sphere?.id || cls.id}/${entry.id}/`);
-                          else if (feat) entryUrl = url(`/power/${sphere?.id || cls.id}/feats/${entry.id}/`);
-                          else if (feature) entryUrl = url(`/power/${cls.id}/${entry.id}/`);
+                          if (talent) entryUrl = url(`/might/${sphere?.id || cls.id}/${entry.id}/`);
+                          else if (feat) entryUrl = url(`/might/${sphere?.id || cls.id}/feats/${entry.id}/`);
+                          else if (feature) entryUrl = url(`/might/${cls.id}/${entry.id}/`);
 
                           return (
                             <div class="talent-entry" id={entry.id} data-pagefind-weight="0.5">
@@ -404,7 +396,7 @@ const groups: TocGroup[] = sections.map(sec => ({
     </div>
 
     <aside class="right-rail">
-      <TableOfContents overview={overview} groups={groups} system="power" />
+      <TableOfContents overview={overview} groups={groups} system="might" />
       <SourceBookCallout book={sourceBook} />
     </aside>
   </div>

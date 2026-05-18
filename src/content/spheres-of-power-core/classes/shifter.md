@@ -12,6 +12,19 @@ fortSave: good
 refSave: good
 willSave: poor
 tags: ["shapeshifting"]
+sectionDefinitions:
+  - label: "Class Features"
+    categories:
+      - label: "Base Feature"
+      - label: "Bestial Trait"
+  - label: "Favored Class Bonuses"
+    categories:
+      - label: "Favored Class Bonus"
+  - label: "Shifter Feats"
+    categories:
+      - label: "Feats"
+        tiers: ["feat"]
+        tags: ["shifter"]
 ---
 
 Experts at physical transformation. Druids, experiments, or lycanthropic scions. Assume shapes to overcome obstacles.

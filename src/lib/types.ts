@@ -56,6 +56,28 @@ export type ClassEntry = {
   sourceBook: string;
   tags: string[];
   modifies?: string;
+  role?: string;
+  hitDie?: number;
+  startingWealth?: string;
+  skillRanksPerLevel?: number;
+  babProgression?: "low" | "medium" | "high";
+  fortSave?: "poor" | "good";
+  refSave?: "poor" | "good";
+  willSave?: "poor" | "good";
+  sectionDefinitions?: SectionDefinition[];
+};
+
+export type ClassFeatureEntry = {
+  type: "class-feature";
+  id: string;
+  class: string;
+  system: string;
+  name: string;
+  sourceBook: string;
+  tags: string[];
+  modifies?: string;
+  level?: number;
+  category?: string;
 };
 
 export type ArticleEntry = {
@@ -95,6 +117,7 @@ export type AnyEntry =
   | TalentEntry
   | FeatEntry
   | ClassEntry
+  | ClassFeatureEntry
   | ArticleEntry;
 
 export type EntryKey = string; // "type:id"
@@ -104,6 +127,7 @@ export type ResolvedMaps = {
   talentMap: Map<EntryKey, TalentEntry>;
   featMap: Map<EntryKey, FeatEntry>;
   classMap: Map<EntryKey, ClassEntry>;
+  classFeatureMap: Map<EntryKey, ClassFeatureEntry>;
   articleMap: Map<EntryKey, ArticleEntry>;
   entrySourceBook: Map<EntryKey, string>;
   bookMetaMap: Map<string, BookMeta>;
