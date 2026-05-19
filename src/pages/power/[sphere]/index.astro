@@ -268,11 +268,16 @@ document.addEventListener('astro:page-load', () => {
       const willCollapse = isExpanded;
 
       if (willCollapse) {
+        entries.style.overflow = 'hidden';
         entries.style.maxHeight = entries.scrollHeight + 'px';
         requestAnimationFrame(() => { entries.style.maxHeight = '0'; });
       } else {
+        entries.style.overflow = 'hidden';
         entries.style.maxHeight = entries.scrollHeight + 'px';
-        entries.addEventListener('transitionend', () => { entries.style.maxHeight = ''; }, { once: true });
+        entries.addEventListener('transitionend', () => {
+          entries.style.maxHeight = '';
+          entries.style.overflow = 'visible';
+        }, { once: true });
       }
 
       btn.setAttribute('aria-expanded', String(!isExpanded));
