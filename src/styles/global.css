@@ -11,6 +11,44 @@ svg {
   display: block;
 }
 
+/* ── Skip navigation ────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--sp-4);
+  z-index: 9999;
+  background: var(--clr-surface);
+  color: var(--clr-brand);
+  border: 2px solid var(--clr-brand);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+.skip-link:focus {
+  top: var(--sp-4);
+}
+
+/* ── Focus styles ───────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--clr-brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ── Design tokens ──────────────────────────────────────── */
 :root {
   /* Surface */
@@ -455,10 +493,14 @@ a:hover {
   color: var(--clr-muted);
   flex-shrink: 0;
 }
+.search-bar:focus-within {
+  outline: 2px solid var(--clr-brand);
+  outline-offset: 1px;
+}
 .search-bar input {
   border: none;
   background: none;
-  outline: none;
+  outline: none; /* focus handled by parent .search-bar:focus-within */
   font-family: var(--font-body);
   font-size: var(--fs-sm);
   color: var(--clr-muted);
@@ -673,6 +715,11 @@ a:hover {
 }
 
 /* ── Page title ─────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 .page-title {
   font-family: var(--font-display);
   font-size: var(--fs-xl);
@@ -1472,7 +1519,8 @@ a:hover {
   transition: opacity 150ms ease;
   z-index: 100;
 }
-.tag-wrapper:hover .tag-tooltip {
+.tag-wrapper:hover .tag-tooltip,
+.tag-wrapper:focus-within .tag-tooltip {
   opacity: 1;
   pointer-events: auto;
 }

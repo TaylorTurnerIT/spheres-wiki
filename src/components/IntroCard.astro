@@ -41,9 +41,9 @@ const meta: Record<Namespace, { name: string; description: string; linkText: str
 const { name, description, linkText, href } = meta[system];
 ---
 <a href={url(href)} class:list={['intro-card', cssClass]} data-astro-prefetch="hover">
-  <div class="intro-card-art">
+  <div class="intro-card-art" aria-hidden="true">
     {system === 'power' && (
-      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <rect width="200" height="80" fill="#0D2850"/>
         <circle cx="100" cy="40" r="55" fill="#174B93" opacity=".35"/>
         <circle cx="100" cy="40" r="34" fill="#1E60BE" opacity=".4"/>
@@ -65,7 +65,7 @@ const { name, description, linkText, href } = meta[system];
       </svg>
     )}
     {system === 'might' && (
-      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <rect width="200" height="80" fill="#3D1200"/>
         <line x1="0"   y1="20"  x2="20"  y2="0"  stroke="#6B2200" stroke-width="1.5" opacity=".4"/>
         <line x1="0"   y1="40"  x2="40"  y2="0"  stroke="#6B2200" stroke-width="1.5" opacity=".4"/>
@@ -89,7 +89,7 @@ const { name, description, linkText, href } = meta[system];
       </svg>
     )}
     {system === 'guile' && (
-      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <rect width="200" height="80" fill="#180B2E"/>
         <line x1="100" y1="40" x2="38"  y2="8"  stroke="#7A4EC0" stroke-width=".8" opacity=".5"/>
         <line x1="100" y1="40" x2="162" y2="8"  stroke="#7A4EC0" stroke-width=".8" opacity=".5"/>
@@ -111,7 +111,7 @@ const { name, description, linkText, href } = meta[system];
       </svg>
     )}
     {system === 'champions' && (
-      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <rect width="200" height="80" fill="#091E0C"/>
         <line x1="100" y1="0"  x2="55"  y2="80" stroke="#1E5E24" stroke-width="10" opacity=".3"/>
         <line x1="100" y1="0"  x2="100" y2="80" stroke="#1E5E24" stroke-width="12" opacity=".3"/>

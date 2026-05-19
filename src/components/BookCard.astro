@@ -8,7 +8,7 @@ interface Props {
 const { book } = Astro.props;
 const CardTag = book.buyUrl ? 'a' : 'div';
 const cardProps = book.buyUrl
-  ? { href: book.buyUrl, target: "_blank", rel: "noopener noreferrer", class: "store-card is-link" }
+  ? { href: book.buyUrl, target: "_blank", rel: "noopener noreferrer", class: "store-card is-link", "aria-label": `${book.title} — buy on DriveThruRPG (opens in new tab)` }
   : { class: "store-card" };
 ---
 <CardTag {...cardProps}>

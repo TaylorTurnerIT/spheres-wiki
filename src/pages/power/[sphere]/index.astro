@@ -146,7 +146,7 @@ const groups: TocGroup[] = sections.map(sec => ({
   <div class="content-columns">
     <div class="content-main">
 
-      <div
+      <h1
         class="page-title power"
         id="overview"
         data-pagefind-weight="10"
@@ -156,7 +156,7 @@ const groups: TocGroup[] = sections.map(sec => ({
       >
         <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
         {sphere.name}
-      </div>
+      </h1>
       <hr class="page-title-rule" />
 
       {bodySegments.map(seg => {
@@ -193,11 +193,11 @@ const groups: TocGroup[] = sections.map(sec => ({
 
           {sec.categories.map(cat => (
             <div class="section-block">
-              <button class="section-heading section-heading-toggle is-collapsed" data-cat-id={cat.id} aria-expanded="false">
+              <button class="section-heading section-heading-toggle is-collapsed" data-cat-id={cat.id} aria-expanded="false" aria-controls={`${cat.id}-entries`}>
                 <span class="section-heading-chevron" aria-hidden="true">▾</span>
                 <span class="section-heading-text" id={cat.id}>{cat.label}</span>
               </button>
-              <div class="section-entries" id={`${cat.id}-entries`} style="max-height: 0">
+              <div class="section-entries" id={`${cat.id}-entries`} style="max-height: 0" aria-hidden="true">
               {cat.entries.length === 0
                 ? <p class="section-empty">No entries yet.</p>
                 : <div class="talent-list">
@@ -248,7 +248,7 @@ const groups: TocGroup[] = sections.map(sec => ({
 
     </div>
 
-    <aside class="right-rail">
+    <aside class="right-rail" aria-label="Page contents">
       <TableOfContents overview={overview} groups={groups} system="power" />
       <SourceBookCallout book={sourceBook} />
     </aside>
@@ -277,6 +277,7 @@ document.addEventListener('astro:page-load', () => {
 
       btn.setAttribute('aria-expanded', String(!isExpanded));
       btn.classList.toggle('is-collapsed', willCollapse);
+      entries.setAttribute('aria-hidden', String(willCollapse));
     });
   });
 });

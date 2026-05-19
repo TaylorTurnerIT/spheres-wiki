@@ -15,13 +15,14 @@ interface Props {
 const { title, description, activeNamespace, pagefindIgnore = false } = Astro.props;
 ---
 <Base title={title} description={description}>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <SiteHeader />
   <BetaToast />
 
   <div class="layout">
     <Sidebar />
 
-    <main class="main">
+    <main class="main" id="main-content">
       <TabNav />
       <div
         class="content-area"
@@ -36,19 +37,50 @@ const { title, description, activeNamespace, pagefindIgnore = false } = Astro.pr
 </Base>
 
 <script>
-  const toggle = document.getElementById('sidebar-toggle');
-  const sidebar = document.getElementById('site-sidebar');
+const FOCUSABLE = 'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+function trapFocus(sidebar: HTMLElement, e: KeyboardEvent) {
+  const focusable = [...sidebar.querySelectorAll<HTMLElement>(FOCUSABLE)];
+  if (focusable.length === 0) return;
+  const first = focusable[0];
+  const last  = focusable[focusable.length - 1];
+  if (e.shiftKey) {
+    if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+  } else {
+    if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+}
+
+document.addEventListener('astro:page-load', () => {
+  const toggle  = document.getElementById('sidebar-toggle');
+  const sidebar = document.getElementById('site-sidebar') as HTMLElement | null;
   const close   = document.getElementById('sidebar-close');
 
   function openSidebar() {
-    sidebar?.classList.add('open');
+    if (!sidebar) return;
+    sidebar.classList.add('open');
+    sidebar.removeAttribute('aria-hidden');
     toggle?.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    // Move focus to first focusable element inside
+    const first = sidebar.querySelector<HTMLElement>(FOCUSABLE);
+    first?.focus();
+    sidebar.addEventListener('keydown', handleKey);
   }
+
   function closeSidebar() {
-    sidebar?.classList.remove('open');
+    if (!sidebar) return;
+    sidebar.classList.remove('open');
+    sidebar.setAttribute('aria-hidden', 'true');
     toggle?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    sidebar.removeEventListener('keydown', handleKey);
+    toggle?.focus();
+  }
+
+  function handleKey(e: KeyboardEvent) {
+    if (e.key === 'Escape') { closeSidebar(); return; }
+    if (e.key === 'Tab' && sidebar) trapFocus(sidebar, e);
   }
 
   toggle?.addEventListener('click', openSidebar);
@@ -56,6 +88,5 @@ const { title, description, activeNamespace, pagefindIgnore = false } = Astro.pr
   sidebar?.addEventListener('click', e => {
     if (e.target === sidebar) closeSidebar();
   });
-
-  document.addEventListener('astro:page-load', closeSidebar);
+});
 </script>

@@ -80,7 +80,7 @@ const TalentContent = collEntry ? (await render(collEntry)).Content : null;
 
   <div class="content-columns">
     <div class="content-main">
-      <div
+      <h1
         class="page-title might"
         id="overview"
         transition:name={`entry-title-${talent.id}`}
@@ -93,7 +93,7 @@ const TalentContent = collEntry ? (await render(collEntry)).Content : null;
         data-pagefind-meta={`tags:${talent.tags.join(', ')}`}
       >
         {talent.name}
-      </div>
+      </h1>
       <div class="talent-page-meta">
         {buildOrderedTagIds(talent, bookMetaMap, tagMap, { includeSphere: true, currentSphereId: sphere.id })
           .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
@@ -107,7 +107,7 @@ const TalentContent = collEntry ? (await render(collEntry)).Content : null;
       }
     </div>
 
-    <aside class="right-rail">
+    <aside class="right-rail" aria-label="Page contents">
       <SourceBookCallout book={sourceBook} />
     </aside>
   </div>

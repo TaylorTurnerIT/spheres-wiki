@@ -182,7 +182,7 @@ const groups: TocGroup[] = sections.map(sec => ({
 
       {kind === 'sphere' && sphere && (
         <>
-          <div
+          <h1
             class="page-title might"
             id="overview"
             data-pagefind-weight="10"
@@ -192,7 +192,7 @@ const groups: TocGroup[] = sections.map(sec => ({
           >
             <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
             {sphere.name}
-          </div>
+          </h1>
           <hr class="page-title-rule" />
 
           {bodySegments.map(seg => {
@@ -285,7 +285,7 @@ const groups: TocGroup[] = sections.map(sec => ({
 
       {kind === 'class' && cls && (
         <>
-          <div
+          <h1
             class="page-title might"
             id="overview"
             data-pagefind-weight="10"
@@ -294,7 +294,7 @@ const groups: TocGroup[] = sections.map(sec => ({
             data-pagefind-meta="system:Spheres of Might"
           >
             {cls.name}
-          </div>
+          </h1>
           <hr class="page-title-rule" />
           {MainContent && <div class="entry-description"><MainContent /></div>}
         </>
@@ -302,7 +302,7 @@ const groups: TocGroup[] = sections.map(sec => ({
 
     </div>
 
-    <aside class="right-rail">
+    <aside class="right-rail" aria-label="Page contents">
       <TableOfContents overview={overview} groups={groups} system="might" />
       <SourceBookCallout book={sourceBook} />
     </aside>

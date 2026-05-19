@@ -32,7 +32,7 @@ const { cls } = Astro.props;
     <span>{cls.name}</span>
   </nav>
 
-  <div
+  <h1
     class="page-title champ"
     data-pagefind-weight="10"
     data-pagefind-meta={`title:${cls.name}`}
@@ -41,7 +41,7 @@ const { cls } = Astro.props;
   >
     <svg class="si page-title-icon" aria-hidden="true"><use href="#si-champ-star" /></svg>
     {cls.name}
-  </div>
+  </h1>
   <hr class="page-title-rule" />
 
   {/* entry description rendered from GFM body — wired in R1-6 */}

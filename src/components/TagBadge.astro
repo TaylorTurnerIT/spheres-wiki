@@ -24,12 +24,13 @@ const bookTitle =
     data-tag={tagId}
     style={tag ? `--tag-clr: ${color}` : undefined}
     data-astro-prefetch="hover"
+    aria-describedby={tag ? `tooltip-${tagId}` : undefined}
   >
     {tag?.label ?? tagId}
   </a>
   {
     tag && (
-      <div class="tag-tooltip" role="tooltip">
+      <div class="tag-tooltip" role="tooltip" id={`tooltip-${tagId}`}>
         <span class="tag-tooltip-name">{tag.label}</span>
         <span class="tag-tooltip-desc">{tag.description}</span>
         {bookTitle && <span class="tag-tooltip-source">{bookTitle}</span>}

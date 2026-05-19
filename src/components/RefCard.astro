@@ -48,7 +48,7 @@ const isChampions = system === 'champions';
         <div class:list={['sphere-list', 'single', `${nsClass}-list`]}>
           {classes.map(cls => (
             <a href={url(`/${cfg.nsRoute}/classes/${cls.id}/`)} class={nsClass} data-astro-prefetch="hover">
-              <svg class="si"><use href="#si-champ-star"/></svg>{cls.name}
+              <svg class="si" aria-hidden="true"><use href="#si-champ-star"/></svg>{cls.name}
             </a>
           ))}
         </div>
@@ -57,7 +57,7 @@ const isChampions = system === 'champions';
           <div class:list={['sphere-list', `${nsClass}-list`]}>
             {spheres.map(s => (
               <a href={url(`/${cfg.nsRoute}/${s.id}/`)} class={nsClass} data-astro-prefetch="hover">
-                <svg class="si"><use href={`#si-${s.icon}`}/></svg>{s.name}
+                <svg class="si" aria-hidden="true"><use href={`#si-${s.icon}`}/></svg>{s.name}
               </a>
             ))}
           </div>

@@ -169,10 +169,10 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
   </nav>
 
   <div class="content-main" style="max-width: 720px;">
-    <div class="page-title" id="overview">
+    <h1 class="page-title" id="overview">
       <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
       {tag.label}
-    </div>
+    </h1>
     <hr class="page-title-rule" />
 
     <p class="entry-description">{tag.description}</p>

@@ -1,12 +1,19 @@
 ---
 import { url } from '@/lib/url';
 ---
-<aside class="sidebar" id="site-sidebar">
+<aside
+  class="sidebar"
+  id="site-sidebar"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Site navigation"
+  aria-hidden="true"
+>
   <div class="sidebar-inner">
     <button class="sidebar-close" id="sidebar-close" aria-label="Close navigation">✕</button>
 
     <div class="sidebar-section">
-      <div class="sidebar-heading nav">Navigation</div>
+      <h2 class="sidebar-heading nav">Navigation</h2>
       <div class="sidebar-links">
         <a href={url("/about/")} data-astro-prefetch="hover" class="nav">About</a>
         <a href={url("/legal/")} data-astro-prefetch="hover" class="nav">Legal &amp; OGL</a>
@@ -18,7 +25,7 @@ import { url } from '@/lib/url';
     <hr class="sidebar-divider" />
 
     <div class="sidebar-section">
-      <div class="sidebar-heading power">Spheres of Power</div>
+      <h2 class="sidebar-heading power">Spheres of Power</h2>
       <div class="sidebar-links">
         <a href={url("/power/")} data-astro-prefetch="hover" class="power">Using Spheres of Power</a>
         <a href={url("/power/")} data-astro-prefetch="hover" class="power">Magic Spheres</a>
@@ -32,7 +39,7 @@ import { url } from '@/lib/url';
     <hr class="sidebar-divider" />
 
     <div class="sidebar-section">
-      <div class="sidebar-heading might">Spheres of Might</div>
+      <h2 class="sidebar-heading might">Spheres of Might</h2>
       <div class="sidebar-links">
         <a href={url("/might/")} data-astro-prefetch="hover" class="might">Using Spheres of Might</a>
         <a href={url("/might/")} data-astro-prefetch="hover" class="might">Combat Spheres</a>
@@ -44,7 +51,7 @@ import { url } from '@/lib/url';
     <hr class="sidebar-divider" />
 
     <div class="sidebar-section">
-      <div class="sidebar-heading guile">Spheres of Guile</div>
+      <h2 class="sidebar-heading guile">Spheres of Guile</h2>
       <div class="sidebar-links">
         <a href={url("/guile/")} data-astro-prefetch="hover" class="guile">Using Spheres of Guile</a>
         <a href={url("/guile/")} data-astro-prefetch="hover" class="guile">Skill Spheres</a>
@@ -56,7 +63,7 @@ import { url } from '@/lib/url';
     <hr class="sidebar-divider" />
 
     <div class="sidebar-section">
-      <div class="sidebar-heading champ">Champions</div>
+      <h2 class="sidebar-heading champ">Champions</h2>
       <div class="sidebar-links">
         <a href={url("/champions/")} data-astro-prefetch="hover" class="champ">Using Champions</a>
         <a href={url("/champions/")} data-astro-prefetch="hover" class="champ">Champion Classes</a>

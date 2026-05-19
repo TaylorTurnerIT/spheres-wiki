@@ -14,11 +14,19 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
       <span class="tagline">{SITE_TAGLINE}</span>
     </a>
     <div class="header-search-anchor">
-      <div class="search-bar">
+      <div class="search-bar" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-owns="search-results" id="search-combobox">
         <svg aria-hidden="true" width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>
-        <input type="search" id="page-search" placeholder="Search spheres, classes, talents…" aria-label="Search" autocomplete="off" />
+        <input
+          type="search"
+          id="page-search"
+          placeholder="Search spheres, classes, talents…"
+          aria-label="Search"
+          aria-autocomplete="list"
+          aria-controls="search-results"
+          autocomplete="off"
+        />
       </div>
-      <div id="search-results" class="search-results-dropdown" hidden></div>
+      <div id="search-results" class="search-results-dropdown" role="listbox" aria-label="Search results" aria-live="polite" hidden></div>
     </div>
     <nav class="header-nav" aria-label="Site navigation">
       {HEADER_NAV.map(({ label, href }) => (
@@ -46,16 +54,26 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
     }
   }
 
-  const searchInput = document.getElementById('page-search') as HTMLInputElement;
-  const resultsDiv = document.getElementById('search-results');
+  const searchInput  = document.getElementById('page-search') as HTMLInputElement;
+  const resultsDiv   = document.getElementById('search-results') as HTMLElement | null;
+  const combobox     = document.getElementById('search-combobox');
+
+  function setExpanded(expanded: boolean) {
+    combobox?.setAttribute('aria-expanded', String(expanded));
+    if (resultsDiv) resultsDiv.hidden = !expanded;
+  }
 
   if (searchInput && resultsDiv) {
     searchInput.addEventListener('focus', initPagefind);
 
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setExpanded(false);
+    });
+
     searchInput.addEventListener('input', async (e) => {
       const query = (e.target as HTMLInputElement).value;
       if (query.length < 2) {
-        resultsDiv.hidden = true;
+        setExpanded(false);
         return;
       }
 
@@ -96,14 +114,14 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
         `;
       }).join('');
 
-      resultsDiv.hidden = false;
+      setExpanded(true);
 
     });
 
     // Close when clicking outside
     document.addEventListener('click', (e) => {
       if (!searchInput.contains(e.target as Node) && !resultsDiv.contains(e.target as Node)) {
-        resultsDiv.hidden = true;
+        setExpanded(false);
       }
     });
   }

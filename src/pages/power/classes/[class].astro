@@ -151,7 +151,7 @@ function ordinal(n: number): string {
   <div class="content-columns">
     <div class="content-main">
 
-      <div
+      <h1
         class="page-title power"
         id="overview"
         data-pagefind-weight="10"
@@ -160,7 +160,7 @@ function ordinal(n: number): string {
         data-pagefind-meta="system:Spheres of Power"
       >
         {cls.name}
-      </div>
+      </h1>
       <hr class="page-title-rule" />
 
       {ClassContent
@@ -181,22 +181,22 @@ function ordinal(n: number): string {
           }
 
           {feature.isTraitContainer && (
-            <button class="trait-catalog-toggle is-collapsed" data-feature-id={feature.id} aria-expanded="false">
+            <button class="trait-catalog-toggle is-collapsed" data-feature-id={feature.id} aria-expanded="false" aria-controls={`${feature.id}-traits`}>
               {feature.name}
               <span class="trait-catalog-toggle-chevron" aria-hidden="true">▾</span>
             </button>
           )}
 
           {feature.isTraitContainer ? (
-            <div class="trait-catalog" id={`${feature.id}-traits`} style="max-height: 0">
+            <div class="trait-catalog" id={`${feature.id}-traits`} style="max-height: 0" aria-hidden="true">
               {traits.map(({ trait, Content: TraitContent }) => (
                 <div class="trait-catalog-entry" id={trait.id}>
-                  <h4 class="trait-catalog-name">
+                  <h3 class="trait-catalog-name">
                     {trait.name}
                     {trait.requires && (
                       <span class="trait-catalog-requires"> (requires {trait.requires})</span>
                     )}
-                  </h4>
+                  </h3>
                   {TraitContent
                     ? <div class="entry-description"><TraitContent /></div>
                     : null
@@ -207,12 +207,12 @@ function ordinal(n: number): string {
           ) : (
             traits.map(({ trait, Content: TraitContent }) => (
               <div class="class-trait" id={trait.id}>
-                <h4 class="class-trait-name">
+                <h3 class="class-trait-name">
                   {trait.name}
                   {trait.requires && (
                     <span class="class-trait-requires"> (requires {trait.requires})</span>
                   )}
-                </h4>
+                </h3>
                 {TraitContent
                   ? <div class="entry-description"><TraitContent /></div>
                   : null
@@ -225,7 +225,7 @@ function ordinal(n: number): string {
 
     </div>
 
-    <aside class="right-rail">
+    <aside class="right-rail" aria-label="Page contents">
       <TableOfContents overview={tocOverview} groups={tocGroups} system="power" />
       <SourceBookCallout book={sourceBook} />
     </aside>
@@ -254,6 +254,7 @@ document.addEventListener('astro:page-load', () => {
 
       btn.setAttribute('aria-expanded', String(!isExpanded));
       btn.classList.toggle('is-collapsed', willCollapse);
+      catalog.setAttribute('aria-hidden', String(willCollapse));
 
       document.dispatchEvent(new CustomEvent('class-feature-collapse', {
         detail: { id: featureId, collapsed: willCollapse },

@@ -16,7 +16,7 @@ const { book } = Astro.props;
     <span class="source-callout-title">{book.title}</span>
     {book.price && <span class="source-callout-price">{book.price}</span>}
     {book.buyUrl && (
-      <a href={book.buyUrl} class="shop-btn" target="_blank" rel="noopener noreferrer">
+      <a href={book.buyUrl} class="shop-btn" target="_blank" rel="noopener noreferrer" aria-label="Buy on DriveThruRPG (opens in new tab)">
         Buy on DriveThruRPG
       </a>
     )}
