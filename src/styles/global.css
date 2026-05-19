@@ -321,9 +321,20 @@ a:hover {
   white-space: nowrap;
 }
 .section-heading-rule {
+  display: block;
   flex: 1;
-  height: 0.5px;
+  height: 1px;
   background: var(--clr-border);
+}
+.section-heading-toggle::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--clr-border);
+  transition: background 0.15s ease;
+}
+.section-heading-toggle:hover::after {
+  background: var(--clr-brand);
 }
 
 /* ── Hierarchical section group (page) ─────────────────── */
@@ -358,6 +369,40 @@ a:hover {
   color: var(--clr-muted);
   font-style: italic;
   margin: 8px 0;
+}
+.section-heading-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+.section-heading-toggle:hover .section-heading-text {
+  color: var(--clr-brand);
+}
+.section-heading-toggle:hover .section-heading-rule {
+  background: var(--clr-brand);
+}
+.section-heading-chevron {
+  display: inline-block;
+  font-size: var(--fs-2xs);
+  color: var(--clr-muted);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.section-heading-toggle:hover .section-heading-chevron {
+  color: var(--clr-brand);
+}
+.section-heading-toggle.is-collapsed .section-heading-chevron {
+  transform: rotate(-90deg);
+}
+.section-entries {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 /* ── Header extras ──────────────────────────────────────── */

@@ -61,8 +61,8 @@ export function buildCategories(
   const remainingFeats = feats.filter((f) => !usedIds.has(f.id));
   if (remainingFeats.length > 0) {
     categories.push({
-      label: "Feats",
-      id: "feats",
+      label: "General Feats",
+      id: "general-feats",
       entries: remainingFeats.map((f) => ({ id: f.id, type: "feat" as const })).sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
@@ -180,8 +180,8 @@ export function buildSections(
     }
     if (remainingFeats.length > 0) {
       otherCategories.push({
-        label: "Feats",
-        id: "feats",
+        label: "General Feats",
+        id: "general-feats",
         entries: remainingFeats
           .map((f) => ({ id: f.id, type: "feat" as const }))
           .sort((a, b) => a.id.localeCompare(b.id)),

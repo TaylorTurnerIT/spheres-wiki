@@ -193,10 +193,11 @@ const groups: TocGroup[] = sections.map(sec => ({
 
           {sec.categories.map(cat => (
             <div class="section-block">
-              <div class="section-heading">
+              <button class="section-heading section-heading-toggle is-collapsed" data-cat-id={cat.id} aria-expanded="false">
+                <span class="section-heading-chevron" aria-hidden="true">▾</span>
                 <span class="section-heading-text" id={cat.id}>{cat.label}</span>
-                <div class="section-heading-rule"></div>
-              </div>
+              </button>
+              <div class="section-entries" id={`${cat.id}-entries`} style="max-height: 0">
               {cat.entries.length === 0
                 ? <p class="section-empty">No entries yet.</p>
                 : <div class="talent-list">
@@ -235,6 +236,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                     })}
                   </div>
               }
+              </div>
             </div>
           ))}
 
@@ -253,3 +255,29 @@ const groups: TocGroup[] = sections.map(sec => ({
   </div>
 
 </WikiPage>
+
+<script>
+document.addEventListener('astro:page-load', () => {
+  document.querySelectorAll<HTMLButtonElement>('.section-heading-toggle').forEach(btn => {
+    const catId = btn.dataset.catId!;
+    const entries = document.getElementById(`${catId}-entries`);
+    if (!entries) return;
+
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      const willCollapse = isExpanded;
+
+      if (willCollapse) {
+        entries.style.maxHeight = entries.scrollHeight + 'px';
+        requestAnimationFrame(() => { entries.style.maxHeight = '0'; });
+      } else {
+        entries.style.maxHeight = entries.scrollHeight + 'px';
+        entries.addEventListener('transitionend', () => { entries.style.maxHeight = ''; }, { once: true });
+      }
+
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+      btn.classList.toggle('is-collapsed', willCollapse);
+    });
+  });
+});
+</script>
