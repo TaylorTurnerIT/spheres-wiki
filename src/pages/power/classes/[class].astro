@@ -3,6 +3,8 @@ import { render } from 'astro:content';
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content.config';
 import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, BookMeta } from '@/lib/types';
@@ -103,6 +105,20 @@ for (const feature of featureEntries) {
   featureRendered.push({ feature, Content, traits });
 }
 
+const tocOverview: TocItem = { id: 'overview', label: 'Overview' };
+const tocGroups: TocGroup[] = featureRendered.length > 0 ? [{
+  label: 'Class Features',
+  categories: featureRendered.map(({ feature, traits }) => {
+    const minLevel = Array.isArray(feature.level) ? Math.min(...feature.level) : feature.level;
+    return {
+      id: feature.id,
+      label: feature.name,
+      meta: `${minLevel}${ordinal(minLevel)}`,
+      sub: traits.length > 0 ? traits.map(({ trait }) => ({ id: trait.id, label: trait.name })) : undefined,
+    };
+  }),
+}] : [];
+
 function levelLabel(level: number | number[]): string {
   if (Array.isArray(level)) {
     return level.map(l => `${l}${ordinal(l)}`).join(', ');
@@ -164,8 +180,15 @@ function ordinal(n: number): string {
             : null
           }
 
+          {feature.isTraitContainer && (
+            <button class="trait-catalog-toggle is-collapsed" data-feature-id={feature.id} aria-expanded="false">
+              {feature.name}
+              <span class="trait-catalog-toggle-chevron" aria-hidden="true">▾</span>
+            </button>
+          )}
+
           {feature.isTraitContainer ? (
-            <div class="trait-catalog">
+            <div class="trait-catalog" id={`${feature.id}-traits`} style="max-height: 0">
               {traits.map(({ trait, Content: TraitContent }) => (
                 <div class="trait-catalog-entry" id={trait.id}>
                   <h4 class="trait-catalog-name">
@@ -203,11 +226,42 @@ function ordinal(n: number): string {
     </div>
 
     <aside class="right-rail">
+      <TableOfContents overview={tocOverview} groups={tocGroups} system="power" />
       <SourceBookCallout book={sourceBook} />
     </aside>
   </div>
 
 </WikiPage>
+
+<script>
+document.addEventListener('astro:page-load', () => {
+  document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
+    const featureId = btn.dataset.featureId!;
+    const catalog = document.getElementById(`${featureId}-traits`);
+    if (!catalog) return;
+
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      const willCollapse = isExpanded;
+
+      if (willCollapse) {
+        catalog.style.maxHeight = catalog.scrollHeight + 'px';
+        requestAnimationFrame(() => { catalog.style.maxHeight = '0'; });
+      } else {
+        catalog.style.maxHeight = catalog.scrollHeight + 'px';
+        catalog.addEventListener('transitionend', () => { catalog.style.maxHeight = ''; }, { once: true });
+      }
+
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+      btn.classList.toggle('is-collapsed', willCollapse);
+
+      document.dispatchEvent(new CustomEvent('class-feature-collapse', {
+        detail: { id: featureId, collapsed: willCollapse },
+      }));
+    });
+  });
+});
+</script>
 
 <style>
   .class-feature {
@@ -254,12 +308,58 @@ function ordinal(n: number): string {
     opacity: 0.75;
   }
 
+  .trait-catalog-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 0;
+    color: var(--clr-muted);
+    font-size: var(--fs-xs);
+    font-family: var(--font-display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+
+  .trait-catalog-toggle::before,
+  .trait-catalog-toggle::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--clr-border);
+    transition: background 0.15s ease;
+  }
+
+  .trait-catalog-toggle:hover {
+    color: var(--clr-brand);
+  }
+
+  .trait-catalog-toggle:hover::before,
+  .trait-catalog-toggle:hover::after {
+    background: var(--clr-brand);
+  }
+
+  .trait-catalog-toggle-chevron {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .trait-catalog-toggle.is-collapsed .trait-catalog-toggle-chevron {
+    transform: rotate(-90deg);
+  }
+
   /* Wrapper/container features — catalog style for many traits */
   .trait-catalog {
     margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
     gap: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
   }
 
   .trait-catalog-entry {

@@ -2,6 +2,7 @@
 export interface TocItem {
   id: string;
   label: string;
+  meta?: string;
   sub?: Array<{ id: string; label: string }>;
 }
 
@@ -23,7 +24,10 @@ const { overview, groups, system } = Astro.props;
   <ul class="toc-list">
 
     <li class="toc-category" data-toc-section={overview.id}>
-      <a href={`#${overview.id}`} class="toc-cat-link">{overview.label}</a>
+      <a href={`#${overview.id}`} class="toc-cat-link">
+        <span>{overview.label}</span>
+        {overview.meta && <span class="toc-cat-level">{overview.meta}</span>}
+      </a>
       {overview.sub && overview.sub.length > 0 && (
         <div class="toc-sub-list">
           <div class="toc-sub-inner">
@@ -41,7 +45,10 @@ const { overview, groups, system } = Astro.props;
         <ul class="toc-group-categories">
           {group.categories.map(cat => (
             <li class="toc-category" data-toc-section={cat.id}>
-              <a href={`#${cat.id}`} class="toc-cat-link">{cat.label}</a>
+              <a href={`#${cat.id}`} class="toc-cat-link">
+                <span>{cat.label}</span>
+                {cat.meta && <span class="toc-cat-level">{cat.meta}</span>}
+              </a>
               {cat.sub && cat.sub.length > 0 && (
                 <div class="toc-sub-list">
                   <div class="toc-sub-inner">
@@ -63,6 +70,7 @@ const { overview, groups, system } = Astro.props;
 <script>
 let activeObserver: IntersectionObserver | null = null;
 let activeScrollHandler: (() => void) | null = null;
+let activeCollapseHandler: ((e: Event) => void) | null = null;
 
 document.addEventListener('astro:page-load', () => {
   activeObserver?.disconnect();
@@ -71,9 +79,20 @@ document.addEventListener('astro:page-load', () => {
     window.removeEventListener('scroll', activeScrollHandler);
     activeScrollHandler = null;
   }
+  if (activeCollapseHandler) {
+    document.removeEventListener('class-feature-collapse', activeCollapseHandler);
+    activeCollapseHandler = null;
+  }
 
   const nav = document.querySelector<HTMLElement>('.toc');
   if (!nav) return;
+
+  const collapsedFeatures = new Set<string>();
+
+  // Pre-populate from any toggles that start collapsed
+  document.querySelectorAll<HTMLButtonElement>('[data-feature-id][aria-expanded="false"]').forEach(btn => {
+    collapsedFeatures.add(btn.dataset.featureId!);
+  });
 
   const categories = [...nav.querySelectorAll<HTMLElement>('[data-toc-section]')];
   const headings = categories
@@ -89,8 +108,9 @@ document.addEventListener('astro:page-load', () => {
       const subList = cat.querySelector<HTMLElement>('.toc-sub-list');
       const inner = cat.querySelector<HTMLElement>('.toc-sub-inner');
       const isActive = cat === active;
+      const isCollapsed = collapsedFeatures.has(cat.dataset.tocSection!);
       cat.classList.toggle('is-active', isActive);
-      if (subList && inner) {
+      if (subList && inner && !isCollapsed) {
         subList.style.maxHeight = isActive ? inner.scrollHeight + 'px' : '0';
       }
     });
@@ -120,6 +140,21 @@ document.addEventListener('astro:page-load', () => {
     }
     allSubLinks.forEach(l => l.classList.toggle('is-current', l === activeSub));
   }
+
+  activeCollapseHandler = (e: Event) => {
+    const { id, collapsed } = (e as CustomEvent<{ id: string; collapsed: boolean }>).detail;
+    const cat = nav.querySelector<HTMLElement>(`[data-toc-section="${id}"]`);
+    if (!cat) return;
+    if (collapsed) {
+      collapsedFeatures.add(id);
+      const subList = cat.querySelector<HTMLElement>('.toc-sub-list');
+      if (subList) subList.style.maxHeight = '0';
+    } else {
+      collapsedFeatures.delete(id);
+      recalc();
+    }
+  };
+  document.addEventListener('class-feature-collapse', activeCollapseHandler);
 
   // IO triggers recalc when category headings cross viewport boundary
   activeObserver = new IntersectionObserver(recalc, {

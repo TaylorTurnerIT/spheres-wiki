@@ -1617,7 +1617,17 @@ a:hover {
   color: var(--clr-text);
   text-decoration: none;
   line-height: 1.3;
-  display: block;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+.toc-cat-level {
+  font-size: 0.8em;
+  opacity: 0.5;
+  font-weight: normal;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 .toc-cat-link:hover {
   color: var(--clr-brand);
