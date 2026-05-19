@@ -154,13 +154,10 @@ function ordinal(n: number): string {
 
       {featureRendered.map(({ feature, Content: FeatureContent, traits }) => (
         <div class={`class-feature${feature.isTraitContainer ? ' class-feature--container' : ''}`} id={feature.id}>
-          <div class="section-heading">
-            <span class="section-heading-text">
-              {feature.name}
-              <span class="class-feature-level"> ({levelLabel(feature.level)})</span>
-            </span>
-            <div class="section-heading-rule"></div>
-          </div>
+          <h2 class="class-feature-heading">
+            {feature.name}
+            <span class="class-feature-level"> ({levelLabel(feature.level)})</span>
+          </h2>
 
           {FeatureContent
             ? <div class="entry-description"><FeatureContent /></div>
@@ -217,20 +214,36 @@ function ordinal(n: number): string {
     margin-top: 2rem;
   }
 
+  .class-feature-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--clr-border);
+    line-height: 1.2;
+  }
+
   .class-feature-level {
-    font-size: 0.8em;
+    font-size: 0.75em;
     font-weight: normal;
-    opacity: 0.7;
+    opacity: 0.65;
+    letter-spacing: 0;
   }
 
   .class-trait {
     margin-top: 1rem;
     padding-left: 1rem;
-    border-left: 2px solid var(--clr-power, #6a3aaa);
+    border-left: 2px solid var(--clr-active);
   }
 
   .class-trait-name {
-    font-size: 1rem;
+    font-family: var(--font-display);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--clr-active);
     margin: 0 0 0.25rem;
   }
 
@@ -251,17 +264,20 @@ function ordinal(n: number): string {
 
   .trait-catalog-entry {
     padding: 0.75rem 0 0.75rem 1rem;
-    border-left: 2px solid var(--clr-power, #6a3aaa);
+    border-left: 2px solid var(--clr-active);
     margin-bottom: 0.25rem;
   }
 
   .trait-catalog-entry + .trait-catalog-entry {
-    border-top: 1px solid color-mix(in srgb, var(--clr-power, #6a3aaa) 20%, transparent);
+    border-top: 1px solid color-mix(in srgb, var(--clr-active) 20%, transparent);
     margin-left: 0;
   }
 
   .trait-catalog-name {
-    font-size: 1rem;
+    font-family: var(--font-display);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--clr-active);
     margin: 0 0 0.35rem;
   }
 

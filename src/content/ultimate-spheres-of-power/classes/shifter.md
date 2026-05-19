@@ -32,8 +32,9 @@ refSaveProgression: good
 willSaveProgression: poor
 ---
 
-> **Note:** This class should not be confused with the Shifter from *Ultimate Wilderness* by Paizo Publishing.
+**Note:** This class should not be confused with the Shifter from *Ultimate Wilderness* by Paizo Publishing.
 
+---
 Shifters are experts at transforming themselves (and often others) into whatever form is most suitable for a situation. Whether they're a druid getting closer to the wilderness, a magical experiment with horrifying implications, or the scion of a lycanthropic bloodline, their ability to become what they want to be makes them hard for anyone to stop.
 
 **Role:** Shifters are experts at infiltration and combat, using their powers to assume many shapes to fit whatever situation they find themselves in.

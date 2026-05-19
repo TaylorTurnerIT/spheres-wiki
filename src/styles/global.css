@@ -1719,7 +1719,7 @@ a:hover {
 .talent-body table {
   width: 100%;
   border-collapse: collapse;
-  font-size: var(--fs-base);
+  font-size: var(--fs-md);
   margin: 12px 0;
 }
 .entry-description th,
