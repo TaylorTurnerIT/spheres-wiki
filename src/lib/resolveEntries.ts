@@ -5,6 +5,8 @@ import type {
   TalentEntry,
   FeatEntry,
   ClassEntry,
+  ClassFeatureEntry,
+  ClassTraitEntry,
   ArticleEntry,
   TagEntry,
   EntryKey,
@@ -68,6 +70,8 @@ export function buildResolvedMaps(
   const talentMap = new Map<EntryKey, TalentEntry>();
   const featMap = new Map<EntryKey, FeatEntry>();
   const classMap = new Map<EntryKey, ClassEntry>();
+  const classFeatureMap = new Map<EntryKey, ClassFeatureEntry>();
+  const classTraitMap = new Map<EntryKey, ClassTraitEntry>();
   const articleMap = new Map<EntryKey, ArticleEntry>();
   const entrySourceBook = new Map<EntryKey, string>();
   const tagMap = new Map<string, TagEntry>();
@@ -83,6 +87,8 @@ export function buildResolvedMaps(
           talentMap,
           featMap,
           classMap,
+          classFeatureMap,
+          classTraitMap,
           articleMap,
         });
       } else {
@@ -91,6 +97,8 @@ export function buildResolvedMaps(
           talentMap,
           featMap,
           classMap,
+          classFeatureMap,
+          classTraitMap,
           articleMap,
         });
         entrySourceBook.set(key, book.slug);
@@ -103,6 +111,8 @@ export function buildResolvedMaps(
     talentMap,
     featMap,
     classMap,
+    classFeatureMap,
+    classTraitMap,
     articleMap,
     entrySourceBook,
     bookMetaMap,
@@ -240,6 +250,33 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       sourceBook: "__builtin__",
       color: "var(--clr-brand)",
     },
+    {
+      type: "tag",
+      id: "ex",
+      label: "Ex",
+      priority: 20,
+      description: "Extraordinary ability — not magical, cannot be dispelled.",
+      sourceBook: "__builtin__",
+      color: "#3a5a3a",
+    },
+    {
+      type: "tag",
+      id: "su",
+      label: "Su",
+      priority: 20,
+      description: "Supernatural ability — magical but not a spell.",
+      sourceBook: "__builtin__",
+      color: "#3a3a7a",
+    },
+    {
+      type: "tag",
+      id: "sp",
+      label: "Sp",
+      priority: 20,
+      description: "Spell-like ability — functions like a spell.",
+      sourceBook: "__builtin__",
+      color: "#5a2a5a",
+    },
   ];
 
   for (const b of builtins) {
@@ -273,13 +310,15 @@ function storeEntry(
   key: EntryKey,
   maps: Pick<
     ResolvedMaps,
-    "sphereMap" | "talentMap" | "featMap" | "classMap" | "articleMap"
+    "sphereMap" | "talentMap" | "featMap" | "classMap" | "classFeatureMap" | "classTraitMap" | "articleMap"
   >,
 ): void {
   if (entry.type === "sphere") maps.sphereMap.set(key, entry);
   else if (entry.type === "talent") maps.talentMap.set(key, entry);
   else if (entry.type === "feat") maps.featMap.set(key, entry);
   else if (entry.type === "class") maps.classMap.set(key, entry);
+  else if (entry.type === "class-feature") maps.classFeatureMap.set(key, entry);
+  else if (entry.type === "class-trait") maps.classTraitMap.set(key, entry);
   else if (entry.type === "article") maps.articleMap.set(key, entry);
 }
 
@@ -288,7 +327,7 @@ function applyPatch(
   targetKey: EntryKey,
   maps: Pick<
     ResolvedMaps,
-    "sphereMap" | "talentMap" | "featMap" | "classMap" | "articleMap"
+    "sphereMap" | "talentMap" | "featMap" | "classMap" | "classFeatureMap" | "classTraitMap" | "articleMap"
   >,
 ): void {
   const {
@@ -315,6 +354,16 @@ function applyPatch(
     maps.classMap.set(targetKey, {
       ...maps.classMap.get(targetKey)!,
       ...(fieldsToMerge as Partial<ClassEntry>),
+    });
+  } else if (patch.type === "class-feature" && maps.classFeatureMap.has(targetKey)) {
+    maps.classFeatureMap.set(targetKey, {
+      ...maps.classFeatureMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<ClassFeatureEntry>),
+    });
+  } else if (patch.type === "class-trait" && maps.classTraitMap.has(targetKey)) {
+    maps.classTraitMap.set(targetKey, {
+      ...maps.classTraitMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<ClassTraitEntry>),
     });
   } else if (patch.type === "article" && maps.articleMap.has(targetKey)) {
     maps.articleMap.set(targetKey, {

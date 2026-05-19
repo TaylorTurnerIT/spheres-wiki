@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { buildResolvedMaps, buildTagMap } from '../../src/lib/resolveEntries';
-import type { AnyEntry } from '../../src/lib/types';
+import type { AnyEntry, ClassFeatureEntry, ClassTraitEntry } from '../../src/lib/types';
 
 type BookInput = { slug: string; publishedDate: string; entries: AnyEntry[] };
 
@@ -34,6 +34,15 @@ const baseBook: BookInput = {
       name: 'Shifter',
       sourceBook: 'spheres-of-power-core',
       tags: [],
+      hitDie: 8,
+      alignment: 'Any non-lawful',
+      startingWealth: '3d6 × 10 gp',
+      skillRanks: 4,
+      classSkills: ['Acrobatics', 'Bluff'],
+      babProgression: '3/4',
+      fortSaveProgression: 'good',
+      refSaveProgression: 'good',
+      willSaveProgression: 'poor',
     },
   ],
 };
@@ -144,6 +153,61 @@ describe('buildResolvedMaps', () => {
     const maps = buildResolvedMaps([bookWithCollision]);
     expect(maps.talentMap.get('talent:alter-shape')!.name).toBe('Alter Shape');
     expect(maps.sphereMap.get('sphere:alter-shape')!.name).toBe('Should Not Patch');
+  });
+});
+
+describe('classFeatureMap and classTraitMap', () => {
+  const featureEntry: ClassFeatureEntry = {
+    type: 'class-feature',
+    id: 'shifter-bestial-trait',
+    system: 'power',
+    name: 'Bestial Trait',
+    sourceBook: 'spheres-of-power-core',
+    tags: [],
+    className: 'shifter',
+    level: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+  };
+
+  const traitEntry: ClassTraitEntry = {
+    type: 'class-trait',
+    id: 'shifter-adaptation',
+    system: 'power',
+    name: 'Adaptation (Ex)',
+    sourceBook: 'spheres-of-power-core',
+    tags: [],
+    className: 'shifter',
+    featureId: 'shifter-bestial-trait',
+  };
+
+  const bookWithFeatures: BookInput = {
+    slug: 'spheres-of-power-core',
+    publishedDate: '2017-01-01',
+    entries: [...baseBook.entries, featureEntry, traitEntry],
+  };
+
+  it('adds class-feature entries under "class-feature:id" key', () => {
+    const maps = buildResolvedMaps([bookWithFeatures]);
+    expect(maps.classFeatureMap.has('class-feature:shifter-bestial-trait')).toBe(true);
+    expect(maps.classFeatureMap.get('class-feature:shifter-bestial-trait')!.className).toBe('shifter');
+  });
+
+  it('stores level as array when provided as array', () => {
+    const maps = buildResolvedMaps([bookWithFeatures]);
+    const f = maps.classFeatureMap.get('class-feature:shifter-bestial-trait')!;
+    expect(Array.isArray(f.level)).toBe(true);
+    expect((f.level as number[])[0]).toBe(2);
+  });
+
+  it('adds class-trait entries under "class-trait:id" key', () => {
+    const maps = buildResolvedMaps([bookWithFeatures]);
+    expect(maps.classTraitMap.has('class-trait:shifter-adaptation')).toBe(true);
+    expect(maps.classTraitMap.get('class-trait:shifter-adaptation')!.featureId).toBe('shifter-bestial-trait');
+  });
+
+  it('class-feature and class-trait recorded in entrySourceBook', () => {
+    const maps = buildResolvedMaps([bookWithFeatures]);
+    expect(maps.entrySourceBook.get('class-feature:shifter-bestial-trait')).toBe('spheres-of-power-core');
+    expect(maps.entrySourceBook.get('class-trait:shifter-adaptation')).toBe('spheres-of-power-core');
   });
 });
 

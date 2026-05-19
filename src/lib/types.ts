@@ -56,6 +56,41 @@ export type ClassEntry = {
   sourceBook: string;
   tags: string[];
   modifies?: string;
+  hitDie: number;
+  alignment: string;
+  startingWealth: string;
+  skillRanks: number;
+  classSkills: string[];
+  babProgression: "full" | "3/4" | "half";
+  fortSaveProgression: "good" | "poor";
+  refSaveProgression: "good" | "poor";
+  willSaveProgression: "good" | "poor";
+};
+
+export type ClassFeatureEntry = {
+  type: "class-feature";
+  id: string;
+  system: string;
+  name: string;
+  sourceBook: string;
+  tags: string[];
+  modifies?: string;
+  className: string;
+  level: number | number[];
+  isTraitContainer?: boolean;
+};
+
+export type ClassTraitEntry = {
+  type: "class-trait";
+  id: string;
+  system: string;
+  name: string;
+  sourceBook: string;
+  tags: string[];
+  modifies?: string;
+  className: string;
+  featureId: string;
+  requires?: string;
 };
 
 export type ArticleEntry = {
@@ -95,6 +130,8 @@ export type AnyEntry =
   | TalentEntry
   | FeatEntry
   | ClassEntry
+  | ClassFeatureEntry
+  | ClassTraitEntry
   | ArticleEntry;
 
 export type EntryKey = string; // "type:id"
@@ -104,6 +141,8 @@ export type ResolvedMaps = {
   talentMap: Map<EntryKey, TalentEntry>;
   featMap: Map<EntryKey, FeatEntry>;
   classMap: Map<EntryKey, ClassEntry>;
+  classFeatureMap: Map<EntryKey, ClassFeatureEntry>;
+  classTraitMap: Map<EntryKey, ClassTraitEntry>;
   articleMap: Map<EntryKey, ArticleEntry>;
   entrySourceBook: Map<EntryKey, string>;
   bookMetaMap: Map<string, BookMeta>;
