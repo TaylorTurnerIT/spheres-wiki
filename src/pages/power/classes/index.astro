@@ -1,0 +1,35 @@
+---
+import { url } from "@/lib/url";
+import WikiPage from '@/layouts/WikiPage.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+
+const { classMap } = await resolveEntries();
+
+const classes = [...classMap.values()]
+  .filter(c => c.system === 'power')
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+<WikiPage title="Spherecaster Classes — Spheres of Power Wiki" activeNamespace="power">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url("/power/")} data-astro-prefetch="hover">Spheres of Power</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Classes</span>
+  </nav>
+
+  <div class="page-title power">Spherecaster Classes</div>
+  <hr class="page-title-rule" />
+
+  <div class="entry-grid">
+    {classes.map(c => (
+      <a href={url(`/power/classes/${c.id}/`)} class="entry-card power" data-astro-prefetch="hover">
+        <div class="entry-card-header">
+          <span class="entry-card-name">{c.name}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+
+</WikiPage>

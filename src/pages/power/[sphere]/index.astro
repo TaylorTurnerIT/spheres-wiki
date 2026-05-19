@@ -12,12 +12,10 @@ import { BOOK_COLLECTIONS } from '@/content.config';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
 import TagBadge from '@/components/TagBadge.astro';
-import type { SphereEntry, ClassEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
+import type { SphereEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
-  kind: 'sphere' | 'class';
-  sphere: SphereEntry | undefined;
-  cls: ClassEntry | undefined;
+  sphere: SphereEntry;
   base: TalentEntry[];
   allTalents: TalentEntry[];
   feats: FeatEntry[];
@@ -32,7 +30,7 @@ interface Props {
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const { sphereMap, classMap, talentMap, featMap, bookMetaMap, tagMap } = await resolveEntries();
+  const { sphereMap, talentMap, featMap, bookMetaMap, tagMap } = await resolveEntries();
 
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
@@ -71,9 +69,7 @@ export async function getStaticPaths() {
     paths.push({
       params: { sphere: sphere.id },
       props: {
-        kind: 'sphere' as const,
         sphere,
-        cls: undefined,
         base,
         allTalents,
         feats,
@@ -88,39 +84,15 @@ export async function getStaticPaths() {
     });
   }
 
-  for (const [, cls] of classMap) {
-    if (cls.system !== 'power') continue;
-    paths.push({
-      params: { sphere: cls.id },
-      props: {
-        kind: 'class' as const,
-        sphere: undefined,
-        cls,
-        base: [],
-        allTalents: [],
-        feats: [],
-        sections: [],
-        mainCollEntry: allCollEntries.get(cls.id),
-        talentCollEntries: new Map(),
-        featCollEntries: new Map(),
-        sourceBook: bookMetaMap.get(cls.sourceBook),
-        bookMetaMap,
-        tagMap,
-      },
-    });
-  }
-
   return paths;
 }
 
-const { kind, sphere, cls, base, allTalents, feats, sections, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap, tagMap } = Astro.props;
+const { sphere, base, allTalents, feats, sections, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap, tagMap } = Astro.props;
 const { talentMap, featMap } = await resolveEntries();
-const entryName = kind === 'sphere' ? sphere!.name : cls!.name;
 
-// For sphere pages: split body on [TalentName] markers and render each segment
 type RenderedSegment = { type: 'markdown'; html: string } | { type: 'base-ability'; id: string };
 const bodySegments: RenderedSegment[] = [];
-if (kind === 'sphere' && mainCollEntry) {
+if (mainCollEntry) {
   for (const seg of splitBodyOnMarkers(mainCollEntry.body)) {
     if (seg.type === 'markdown') {
       bodySegments.push({ type: 'markdown', html: await renderMarkdownFragment(seg.text) });
@@ -129,11 +101,6 @@ if (kind === 'sphere' && mainCollEntry) {
     }
   }
 }
-
-// For class pages: render full body as-is
-const MainContent = (kind === 'class' && mainCollEntry)
-  ? (await render(mainCollEntry)).Content
-  : null;
 
 const talentRendered: Array<{ id: string; Content: any }> = [];
 for (const [id, entry] of talentCollEntries) {
@@ -147,7 +114,6 @@ for (const [id, entry] of featCollEntries) {
   featRendered.push({ id, Content });
 }
 
-// Build ToC
 const overview: TocItem = {
   id: 'overview',
   label: 'Overview',
@@ -167,138 +133,116 @@ const groups: TocGroup[] = sections.map(sec => ({
   })),
 }));
 ---
-<WikiPage title={`${entryName} — Spheres of Power Wiki`} activeNamespace="power">
+<WikiPage title={`${sphere.name} — Spheres of Power Wiki`} activeNamespace="power">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
     <a href={url("/power/")} data-astro-prefetch="hover">Spheres of Power</a>
     <span class="breadcrumb-sep">›</span>
-    <span>{entryName}</span>
+    <span>{sphere.name}</span>
   </nav>
 
   <div class="content-columns">
     <div class="content-main">
 
-      {kind === 'sphere' && sphere && (
-        <>
-          <div
-            class="page-title power"
-            id="overview"
-            data-pagefind-weight="10"
-            data-pagefind-meta={`title:${sphere.name}`}
-            data-pagefind-meta="type:sphere"
-            data-pagefind-meta="system:Spheres of Power"
-          >
-            <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
-            {sphere.name}
+      <div
+        class="page-title power"
+        id="overview"
+        data-pagefind-weight="10"
+        data-pagefind-meta={`title:${sphere.name}`}
+        data-pagefind-meta="type:sphere"
+        data-pagefind-meta="system:Spheres of Power"
+      >
+        <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
+        {sphere.name}
+      </div>
+      <hr class="page-title-rule" />
+
+      {bodySegments.map(seg => {
+        if (seg.type === 'markdown') {
+          return <div class="entry-description" set:html={seg.html} />;
+        }
+        const t = base.find(b => b.id === seg.id);
+        const tContent = talentRendered.find(r => r.id === seg.id);
+        const tBook = t ? bookMetaMap.get(t.sourceBook) : undefined;
+        return t ? (
+          <div class="base-ability-block" id={t.id} data-pagefind-weight="0.5">
+            <div class="base-ability-header">
+              <div class="base-ability-header-top">
+                <a href={url(`/power/${sphere.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
+                {tBook && <span class="talent-source">{tBook.title}</span>}
+              </div>
+              <div class="base-ability-header-bottom">
+                {buildOrderedTagIds(t, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere.id })
+                  .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
+                }
+              </div>
+            </div>
+            {tContent && <div class="talent-body"><tContent.Content /></div>}
           </div>
-          <hr class="page-title-rule" />
+        ) : null;
+      })}
 
-          {bodySegments.map(seg => {
-            if (seg.type === 'markdown') {
-              return <div class="entry-description" set:html={seg.html} />;
-            }
-            const t = base.find(b => b.id === seg.id);
-            const tContent = talentRendered.find(r => r.id === seg.id);
-            const tBook = t ? bookMetaMap.get(t.sourceBook) : undefined;
-            return t ? (
-              <div class="base-ability-block" id={t.id} data-pagefind-weight="0.5">
-                <div class="base-ability-header">
-                  <div class="base-ability-header-top">
-                    <a href={url(`/power/${sphere!.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
-                    {tBook && <span class="talent-source">{tBook.title}</span>}
-                  </div>
-                  <div class="base-ability-header-bottom">
-                    {buildOrderedTagIds(t, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere!.id })
-                      .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
-                    }
-                  </div>
-                </div>
-                {tContent && <div class="talent-body"><tContent.Content /></div>}
+      {sections.map(sec => (
+        <div class="section-group">
+          <div class="section-group-header">
+            <span class="section-group-label">{sec.label}</span>
+            <div class="section-group-rule"></div>
+          </div>
+
+          {sec.categories.map(cat => (
+            <div class="section-block">
+              <div class="section-heading">
+                <span class="section-heading-text" id={cat.id}>{cat.label}</span>
+                <div class="section-heading-rule"></div>
               </div>
-            ) : null;
-          })}
+              {cat.entries.length === 0
+                ? <p class="section-empty">No entries yet.</p>
+                : <div class="talent-list">
+                    {cat.entries.map(e => {
+                      const talent = [...talentMap.values()].find(t => t.id === e.id);
+                      const feat = [...featMap.values()].find(f => f.id === e.id);
+                      const entry = talent || feat;
+                      if (!entry) return null;
 
-          {sections.map(sec => (
-            <div class="section-group">
-              <div class="section-group-header">
-                <span class="section-group-label">{sec.label}</span>
-                <div class="section-group-rule"></div>
-              </div>
+                      const content = talent ? talentRendered.find(r => r.id === e.id) : featRendered.find(r => r.id === e.id);
+                      const entryBook = bookMetaMap.get(entry.sourceBook);
 
-              {sec.categories.map(cat => (
-                <div class="section-block">
-                  <div class="section-heading">
-                    <span class="section-heading-text" id={cat.id}>{cat.label}</span>
-                    <div class="section-heading-rule"></div>
-                  </div>
-                  {cat.entries.length === 0
-                    ? <p class="section-empty">No entries yet.</p>
-                    : <div class="talent-list">
-                        {cat.entries.map(e => {
-                          const talent = [...talentMap.values()].find(t => t.id === e.id);
-                          const feat = [...featMap.values()].find(f => f.id === e.id);
-                          const entry = talent || feat;
-                          if (!entry) return null;
-
-                          const content = talent ? talentRendered.find(r => r.id === e.id) : featRendered.find(r => r.id === e.id);
-                          const entryBook = bookMetaMap.get(entry.sourceBook);
-                          const tierLabel = talent ? (talent.tier.charAt(0).toUpperCase() + talent.tier.slice(1)) : 'Feat';
-
-                          return (
-                            <div class="talent-entry" id={entry.id} data-pagefind-weight="0.5">
-                              <div class="talent-header">
-                                <div class="talent-header-top">
-                                  <a
-                                    href={url(`/power/${sphere!.id}/${talent ? '' : 'feats/'}${entry.id}/`)}
-                                    class="talent-name"
-                                    data-astro-prefetch="hover"
-                                    transition:name={`entry-title-${entry.id}`}
-                                  >
-                                    {entry.name}
-                                  </a>
-                                  {entryBook && <span class="talent-source">{entryBook.title}</span>}
-                                </div>
-                                <div class="talent-header-bottom">
-                                  {buildOrderedTagIds(entry, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere!.id })
-                                    .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
-                                  }
-                                </div>
-                              </div>
-                              {content && <div class="talent-body"><content.Content /></div>}
+                      return (
+                        <div class="talent-entry" id={entry.id} data-pagefind-weight="0.5">
+                          <div class="talent-header">
+                            <div class="talent-header-top">
+                              <a
+                                href={url(`/power/${sphere.id}/${talent ? '' : 'feats/'}${entry.id}/`)}
+                                class="talent-name"
+                                data-astro-prefetch="hover"
+                                transition:name={`entry-title-${entry.id}`}
+                              >
+                                {entry.name}
+                              </a>
+                              {entryBook && <span class="talent-source">{entryBook.title}</span>}
                             </div>
-                          );
-                        })}
-                      </div>
-                  }
-                </div>
-              ))}
-
-              {sec.categories.length === 0 && (
-                <p class="section-empty">No entries yet.</p>
-              )}
+                            <div class="talent-header-bottom">
+                              {buildOrderedTagIds(entry, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere.id })
+                                .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
+                              }
+                            </div>
+                          </div>
+                          {content && <div class="talent-body"><content.Content /></div>}
+                        </div>
+                      );
+                    })}
+                  </div>
+              }
             </div>
           ))}
-        </>
-      )}
 
-      {kind === 'class' && cls && (
-        <>
-          <div
-            class="page-title power"
-            id="overview"
-            data-pagefind-weight="10"
-            data-pagefind-meta={`title:${cls.name}`}
-            data-pagefind-meta="type:class"
-            data-pagefind-meta="system:Spheres of Power"
-          >
-            {cls.name}
-          </div>
-          <hr class="page-title-rule" />
-          {MainContent && <div class="entry-description"><MainContent /></div>}
-        </>
-      )}
+          {sec.categories.length === 0 && (
+            <p class="section-empty">No entries yet.</p>
+          )}
+        </div>
+      ))}
 
     </div>
 

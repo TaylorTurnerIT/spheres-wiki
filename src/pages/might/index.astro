@@ -49,7 +49,7 @@ const classes = [...classMap.values()]
       </div>
       <div class="entry-grid">
         {classes.map(c => (
-          <a href={url(`/might/${c.id}/`)} class="entry-card might" data-astro-prefetch="hover">
+          <a href={url(`/might/classes/${c.id}/`)} class="entry-card might" data-astro-prefetch="hover">
             <div class="entry-card-header">
               <span class="entry-card-name">{c.name}</span>
             </div>

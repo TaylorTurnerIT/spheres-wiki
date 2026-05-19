@@ -1,0 +1,274 @@
+---
+import { render } from 'astro:content';
+import { url } from "@/lib/url";
+import WikiPage from '@/layouts/WikiPage.astro';
+import SourceBookCallout from '@/components/SourceBookCallout.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+import { BOOK_COLLECTIONS } from '@/content.config';
+import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, BookMeta } from '@/lib/types';
+
+interface Props {
+  cls: ClassEntry;
+  classCollEntry: any;
+  featureEntries: ClassFeatureEntry[];
+  featureCollEntries: Map<string, any>;
+  traitEntries: ClassTraitEntry[];
+  traitCollEntries: Map<string, any>;
+  sourceBook: BookMeta | undefined;
+}
+
+export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
+  const { classMap, classFeatureMap, classTraitMap, bookMetaMap } = await resolveEntries();
+
+  const allCollEntries = new Map<string, any>();
+  for (const slug of BOOK_COLLECTIONS) {
+    try {
+      const entries = await getCollection(slug as any);
+      for (const e of entries) {
+        const t = (e.data as any).type;
+        if (t === 'class' || t === 'class-feature' || t === 'class-trait') {
+          allCollEntries.set((e.data as any).id, e);
+        }
+      }
+    } catch { /* empty collection */ }
+  }
+
+  const paths = [];
+
+  for (const [, cls] of classMap) {
+    if (cls.system !== 'power') continue;
+
+    const featureEntries = [...classFeatureMap.values()]
+      .filter(f => f.className === cls.id)
+      .sort((a, b) => {
+        const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
+        const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
+        return aMin - bMin;
+      });
+
+    const traitEntries = [...classTraitMap.values()]
+      .filter(t => t.className === cls.id)
+      .sort((a, b) => a.name.localeCompare(b.name));
+
+    const featureCollEntries = new Map<string, any>();
+    for (const f of featureEntries) {
+      const entry = allCollEntries.get(f.id);
+      if (entry) featureCollEntries.set(f.id, entry);
+    }
+
+    const traitCollEntries = new Map<string, any>();
+    for (const t of traitEntries) {
+      const entry = allCollEntries.get(t.id);
+      if (entry) traitCollEntries.set(t.id, entry);
+    }
+
+    paths.push({
+      params: { class: cls.id },
+      props: {
+        cls,
+        classCollEntry: allCollEntries.get(cls.id),
+        featureEntries,
+        featureCollEntries,
+        traitEntries,
+        traitCollEntries,
+        sourceBook: bookMetaMap.get(cls.sourceBook),
+      },
+    });
+  }
+
+  return paths;
+}
+
+const { cls, classCollEntry, featureEntries, featureCollEntries, traitEntries, traitCollEntries, sourceBook } = Astro.props;
+
+const ClassContent = classCollEntry ? (await render(classCollEntry)).Content : null;
+
+type RenderedTrait = { trait: ClassTraitEntry; Content: any };
+type RenderedFeature = { feature: ClassFeatureEntry; Content: any; traits: RenderedTrait[] };
+
+const featureRendered: RenderedFeature[] = [];
+for (const feature of featureEntries) {
+  const collEntry = featureCollEntries.get(feature.id);
+  const { Content } = collEntry ? await render(collEntry) : { Content: null };
+
+  const featureTraits = traitEntries.filter(t => t.featureId === feature.id);
+  const traits: RenderedTrait[] = [];
+  for (const trait of featureTraits) {
+    const traitCollEntry = traitCollEntries.get(trait.id);
+    const { Content: TraitContent } = traitCollEntry ? await render(traitCollEntry) : { Content: null };
+    traits.push({ trait, Content: TraitContent });
+  }
+
+  featureRendered.push({ feature, Content, traits });
+}
+
+function levelLabel(level: number | number[]): string {
+  if (Array.isArray(level)) {
+    return level.map(l => `${l}${ordinal(l)}`).join(', ');
+  }
+  return `${level}${ordinal(level)}`;
+}
+
+function ordinal(n: number): string {
+  if (n % 100 >= 11 && n % 100 <= 13) return 'th';
+  switch (n % 10) {
+    case 1: return 'st';
+    case 2: return 'nd';
+    case 3: return 'rd';
+    default: return 'th';
+  }
+}
+---
+<WikiPage title={`${cls.name} — Spheres of Power Wiki`} activeNamespace="power">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url("/power/")} data-astro-prefetch="hover">Spheres of Power</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url("/power/classes/")} data-astro-prefetch="hover">Classes</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>{cls.name}</span>
+  </nav>
+
+  <div class="content-columns">
+    <div class="content-main">
+
+      <div
+        class="page-title power"
+        id="overview"
+        data-pagefind-weight="10"
+        data-pagefind-meta={`title:${cls.name}`}
+        data-pagefind-meta="type:class"
+        data-pagefind-meta="system:Spheres of Power"
+      >
+        {cls.name}
+      </div>
+      <hr class="page-title-rule" />
+
+      {ClassContent
+        ? <div class="entry-description"><ClassContent /></div>
+        : <p class="entry-description"><em>Description coming soon.</em></p>
+      }
+
+      {featureRendered.map(({ feature, Content: FeatureContent, traits }) => (
+        <div class={`class-feature${feature.isTraitContainer ? ' class-feature--container' : ''}`} id={feature.id}>
+          <div class="section-heading">
+            <span class="section-heading-text">
+              {feature.name}
+              <span class="class-feature-level"> ({levelLabel(feature.level)})</span>
+            </span>
+            <div class="section-heading-rule"></div>
+          </div>
+
+          {FeatureContent
+            ? <div class="entry-description"><FeatureContent /></div>
+            : null
+          }
+
+          {feature.isTraitContainer ? (
+            <div class="trait-catalog">
+              {traits.map(({ trait, Content: TraitContent }) => (
+                <div class="trait-catalog-entry" id={trait.id}>
+                  <h4 class="trait-catalog-name">
+                    {trait.name}
+                    {trait.requires && (
+                      <span class="trait-catalog-requires"> (requires {trait.requires})</span>
+                    )}
+                  </h4>
+                  {TraitContent
+                    ? <div class="entry-description"><TraitContent /></div>
+                    : null
+                  }
+                </div>
+              ))}
+            </div>
+          ) : (
+            traits.map(({ trait, Content: TraitContent }) => (
+              <div class="class-trait" id={trait.id}>
+                <h4 class="class-trait-name">
+                  {trait.name}
+                  {trait.requires && (
+                    <span class="class-trait-requires"> (requires {trait.requires})</span>
+                  )}
+                </h4>
+                {TraitContent
+                  ? <div class="entry-description"><TraitContent /></div>
+                  : null
+                }
+              </div>
+            ))
+          )}
+        </div>
+      ))}
+
+    </div>
+
+    <aside class="right-rail">
+      <SourceBookCallout book={sourceBook} />
+    </aside>
+  </div>
+
+</WikiPage>
+
+<style>
+  .class-feature {
+    margin-top: 2rem;
+  }
+
+  .class-feature-level {
+    font-size: 0.8em;
+    font-weight: normal;
+    opacity: 0.7;
+  }
+
+  .class-trait {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--clr-power, #6a3aaa);
+  }
+
+  .class-trait-name {
+    font-size: 1rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .class-trait-requires {
+    font-size: 0.85em;
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.75;
+  }
+
+  /* Wrapper/container features — catalog style for many traits */
+  .trait-catalog {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .trait-catalog-entry {
+    padding: 0.75rem 0 0.75rem 1rem;
+    border-left: 2px solid var(--clr-power, #6a3aaa);
+    margin-bottom: 0.25rem;
+  }
+
+  .trait-catalog-entry + .trait-catalog-entry {
+    border-top: 1px solid color-mix(in srgb, var(--clr-power, #6a3aaa) 20%, transparent);
+    margin-left: 0;
+  }
+
+  .trait-catalog-name {
+    font-size: 1rem;
+    margin: 0 0 0.35rem;
+  }
+
+  .trait-catalog-requires {
+    font-size: 0.85em;
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.75;
+  }
+</style>
