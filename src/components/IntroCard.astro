@@ -84,8 +84,25 @@ const { name, description, linkText, href } = meta[system];
         <path d="M100 8 L134 20 L134 46 Q134 67 100 74 Q66 67 66 46 L66 20 Z" fill="none" stroke="#D04800" stroke-width="1.5" opacity=".8"/>
         <line x1="82" y1="22" x2="118" y2="58" stroke="#F07848" stroke-width="2.5" stroke-linecap="round"/>
         <line x1="118" y1="22" x2="82" y2="58" stroke="#F07848" stroke-width="2.5" stroke-linecap="round"/>
+        <g transform="translate(82,22) rotate(135)">
+          <path d="M 0,0 L -6,2 Q -10,8 0,14 Q 10,8 6,2 Z" fill="#C84A00" opacity=".9"/>
+          <path d="M -6,2 Q -10,8 0,14 Q 10,8 6,2" fill="none" stroke="#F07848" stroke-width="1" opacity=".85"/>
+        </g>
+        <g transform="translate(118,22) rotate(225)">
+          <path d="M 0,0 L -6,2 Q -10,8 0,14 Q 10,8 6,2 Z" fill="#C84A00" opacity=".9"/>
+          <path d="M -6,2 Q -10,8 0,14 Q 10,8 6,2" fill="none" stroke="#F07848" stroke-width="1" opacity=".85"/>
+        </g>
+        <g transform="translate(118,58) rotate(-45)">
+          <path d="M 0,0 L -6,2 Q -10,8 0,14 Q 10,8 6,2 Z" fill="#C84A00" opacity=".9"/>
+          <path d="M -6,2 Q -10,8 0,14 Q 10,8 6,2" fill="none" stroke="#F07848" stroke-width="1" opacity=".85"/>
+        </g>
+        <g transform="translate(82,58) rotate(45)">
+          <path d="M 0,0 L -6,2 Q -10,8 0,14 Q 10,8 6,2 Z" fill="#C84A00" opacity=".9"/>
+          <path d="M -6,2 Q -10,8 0,14 Q 10,8 6,2" fill="none" stroke="#F07848" stroke-width="1" opacity=".85"/>
+        </g>
         <circle cx="100" cy="40" r="6" fill="#C84A00"/>
         <circle cx="100" cy="40" r="3.5" fill="#FF8050"/>
+        <circle cx="98" cy="38" r="1.2" fill="#FFA080" opacity=".7"/>
       </svg>
     )}
     {system === 'guile' && (
