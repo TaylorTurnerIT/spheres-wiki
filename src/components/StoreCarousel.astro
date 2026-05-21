@@ -1,0 +1,55 @@
+---
+---
+<div class="carousel-wrapper">
+  <button class="carousel-btn prev" aria-label="Scroll left" style="display: none;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+  </button>
+
+  <div class="store-carousel">
+    <slot />
+  </div>
+
+  <button class="carousel-btn next" aria-label="Scroll right">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </button>
+</div>
+
+<script>
+  function setupCarousels() {
+    const wrappers = document.querySelectorAll('.carousel-wrapper');
+
+    wrappers.forEach(wrapper => {
+      const carousel = wrapper.querySelector('.store-carousel') as HTMLElement;
+      const prevBtn = wrapper.querySelector('.carousel-btn.prev') as HTMLButtonElement;
+      const nextBtn = wrapper.querySelector('.carousel-btn.next') as HTMLButtonElement;
+
+      if (!carousel || !prevBtn || !nextBtn) return;
+
+      const scrollAmount = 400;
+
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+
+      const updateButtons = () => {
+        const { scrollLeft, scrollWidth, clientWidth } = carousel;
+        prevBtn.style.display = scrollLeft <= 0 ? 'none' : 'flex';
+        // Use a small buffer for precision issues
+        nextBtn.style.display = (scrollLeft + clientWidth >= scrollWidth - 5) ? 'none' : 'flex';
+      };
+
+      carousel.addEventListener('scroll', updateButtons);
+      // Run once on load
+      updateButtons();
+      // Also run on resize
+      window.addEventListener('resize', updateButtons);
+    });
+  }
+
+  // Handle initial load and ViewTransitions
+  document.addEventListener('astro:page-load', setupCarousels);
+</script>

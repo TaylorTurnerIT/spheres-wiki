@@ -1,6 +1,7 @@
 ---
 import WikiPage from '@/layouts/WikiPage.astro';
 import BookCard from '@/components/BookCard.astro';
+import StoreCarousel from '@/components/StoreCarousel.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 
 const { bookMetaMap } = await resolveEntries();
@@ -54,9 +55,9 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
       <div class="section-heading-rule"></div>
     </div>
     {coreBooks.length > 0 ? (
-      <div class="store-carousel">
+      <StoreCarousel>
         {coreBooks.map(book => <BookCard book={book} />)}
-      </div>
+      </StoreCarousel>
     ) : <p class="store-empty">Core books coming soon.</p>}
   </div>
 
@@ -66,9 +67,9 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
       <div class="section-heading-rule"></div>
     </div>
     {diamondBooks.length > 0 ? (
-      <div class="store-carousel">
+      <StoreCarousel>
         {diamondBooks.map(book => <BookCard book={book} />)}
-      </div>
+      </StoreCarousel>
     ) : <p class="store-empty">No DRS books available yet.</p>}
   </div>
 
@@ -78,9 +79,9 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
       <div class="section-heading-rule"></div>
     </div>
     {ddsBooks.length > 0 ? (
-      <div class="store-carousel">
+      <StoreCarousel>
         {ddsBooks.map(book => <BookCard book={book} />)}
-      </div>
+      </StoreCarousel>
     ) : <p class="store-empty">No DDS books available yet.</p>}
   </div>
 
@@ -98,9 +99,9 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
             <span class="section-heading-text">{group.name}</span>
             <div class="section-heading-rule"></div>
           </div>
-          <div class="store-carousel">
+          <StoreCarousel>
             {group.books.map(book => <BookCard book={book} />)}
-          </div>
+          </StoreCarousel>
         </div>
       ))}
     </>

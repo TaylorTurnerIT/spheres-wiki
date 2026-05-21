@@ -1,36 +1,48 @@
 ---
-import { FEATURED_RELEASE } from '@/config/site';
-const { title, publisher, price, buyUrl } = FEATURED_RELEASE;
-// Split title on spaces for line breaks in the cover placeholder
-const titleLines = title.split(' ');
+import type { BookMeta } from '@/lib/types';
+import BookCard from './BookCard.astro';
+
+interface Props {
+  book: BookMeta;
+}
+
+const { book } = Astro.props;
 ---
 <div class="shop-widget">
   <div class="shop-widget-label">Latest Release</div>
-  <div class="shop-cover">
-    <div class="shop-cover-inner">
-      <svg class="shop-cover-icon" viewBox="0 0 40 40" fill="none" stroke="rgba(0,0,0,0.35)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="6" y="4" width="28" height="34" rx="2"/>
-        <path d="M12 4v34M6 12h6M6 20h6M6 28h6"/>
-        <path d="M18 12h10M18 16h8M18 20h10M18 24h6M18 28h9M18 32h7"/>
-      </svg>
-      <div class="shop-cover-title">
-        {titleLines.map((word, i) => (
-          <>{word}{i < titleLines.length - 1 ? <br/> : ''}</>
-        ))}
-      </div>
-      <div class="shop-cover-subtitle">{publisher}</div>
-    </div>
-  </div>
-  <div class="shop-buy">
-    <span class="shop-price">{price}</span>
-    <a href={buyUrl} class="shop-btn" target="_blank" rel="noopener noreferrer" aria-label="Buy (opens in new tab)">
-      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M2 2h2l2.5 8h6l1.5-5H6.5"/>
-        <circle cx="8.5" cy="12.5" r="1.2" fill="currentColor" stroke="none"/>
-        <circle cx="12" cy="12.5" r="1.2" fill="currentColor" stroke="none"/>
-      </svg>
-      Buy
-    </a>
+  <div class="featured-book-container">
+    <BookCard book={book} />
   </div>
   <div class="shop-platform">via DriveThruRPG</div>
 </div>
+
+<style>
+  .featured-book-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Remove BookCard's own border and background when featured on home page */
+  .featured-book-container :global(.store-card) {
+    border: none;
+    background: transparent;
+    padding: 10px;
+    flex: 1;
+    width: 100%;
+    transform: none !important;
+  }
+
+  .featured-book-container :global(.store-card:hover) {
+    transform: none !important;
+  }
+
+  .shop-platform {
+    font-size: var(--fs-3xs);
+    color: var(--clr-muted);
+    text-align: center;
+    padding: 4px 8px 8px;
+    font-style: italic;
+    border-top: 0.5px solid var(--clr-border);
+  }
+</style>

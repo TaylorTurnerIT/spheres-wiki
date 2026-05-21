@@ -7,14 +7,6 @@ export const HEADER_NAV = [
   { label: 'Recent Changes', href: '/recent-changes/' },
 ] as const;
 
-export const FEATURED_RELEASE = {
-  title: 'Ultimate Engineering',
-  publisher: 'Drop Dead Studios',
-  price: '$19.99',
-  buyUrl: 'https://preview.drivethrurpg.com/en/product/472038/Ultimate-Engineering?affiliate_id=549120',
-  bookSlug: 'ultimate-engineering',
-} as const;
-
 export const NAMESPACE_COLORS: Record<string, { primary: string; dark: string }> = {
   power:     { primary: '#174B93', dark: '#0D2850' },
   might:     { primary: '#8f2d00', dark: '#3D1200' },

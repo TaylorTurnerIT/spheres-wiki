@@ -365,7 +365,7 @@ a:hover {
   background: var(--clr-border);
 }
 .section-heading-toggle::after {
-  content: '';
+  content: "";
   flex: 1;
   height: 1px;
   background: var(--clr-border);
@@ -715,7 +715,12 @@ a:hover {
 }
 
 /* ── Page title ─────────────────────────────────────────── */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -1551,6 +1556,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Store page ─────────────────────────────────────────── */
 .store-carousel {
   display: flex;
+  align-items: flex-start;
   overflow-x: auto;
   gap: 14px;
   padding-bottom: 12px;
@@ -1559,6 +1565,49 @@ h1, h2, h3, h4, h5, h6 {
   scrollbar-width: thin;
   scrollbar-color: var(--clr-border) transparent;
 }
+.carousel-wrapper {
+  position: relative;
+  margin: 10px 0 30px;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  color: var(--clr-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+.carousel-btn:hover {
+  background: var(--clr-brand);
+  color: #fff;
+  border-color: var(--clr-brand);
+}
+.carousel-btn.prev {
+  left: -16px;
+}
+.carousel-btn.next {
+  right: -16px;
+}
+.carousel-btn svg {
+  width: 18px;
+  height: 18px;
+}
+@media (max-width: 768px) {
+  .carousel-btn {
+    display: none !important;
+  }
+}
+
 .store-carousel::-webkit-scrollbar {
   height: 6px;
 }
@@ -1572,6 +1621,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .store-card {
   flex: 0 0 140px;
+  max-width: 140px;
   scroll-snap-align: start;
   background: var(--clr-bg);
   border: 0.5px solid var(--clr-border);
