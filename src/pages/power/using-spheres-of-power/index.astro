@@ -1,6 +1,11 @@
 ---
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
+import BookCard from '@/components/BookCard.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+
+const { bookMetaMap } = await resolveEntries();
+const usopBook = bookMetaMap.get('ultimate-spheres-of-power');
 ---
 <WikiPage title="Using Spheres of Power — Spheres of Power Wiki" activeNamespace="power">
 
@@ -24,31 +29,17 @@ import WikiPage from '@/layouts/WikiPage.astro';
   </h1>
   <hr class="page-title-rule" />
 
-  <div class="tabview-bar" role="tablist" aria-label="Rules edition">
-    <button class="tabview-btn active" role="tab" aria-selected="true"  aria-controls="tab-ultimate" data-tab="ultimate">Ultimate</button>
-    <button class="tabview-btn"        role="tab" aria-selected="false" aria-controls="tab-original" data-tab="original">Original</button>
-  </div>
+  <div class="usop-content entry-description">
 
-  <!-- ═══════════════════════════════════════════════════════ ULTIMATE TAB -->
-  <div id="tab-ultimate" class="tab-panel entry-description" role="tabpanel">
-
-    <div class="book-float">
-      <a href="https://www.drivethrurpg.com/product/300249/Ultimate-Spheres-of-Power?affiliate_id=549120" target="_blank" rel="noopener noreferrer">
-        <img src="http://spheresofpower.wikidot.com/local--files/test-page/UltimateSpheresofPower.jpg" alt="Ultimate Spheres of Power cover" />
-      </a>
-      <strong>Ultimate Spheres of Power</strong>
-      <span>$29.99</span>
-      <hr />
-    </div>
+    {usopBook && (
+      <div class="book-sidebar">
+        <BookCard book={usopBook} />
+      </div>
+    )}
 
     <div class="wiki-note">
-      <strong>Wiki Note:</strong> If you're new to Spheres of Power, we recommend reading everything on this page. This part of the site introduces the mechanics of the system and defines the various things you'll see on the class pages, including things like how you can spend your Magic Talents, what your saving throws are, how to calculate the number of Spell Points you get, and how Caster Level works with Spheres of Power. For more help, see <a href={url("/power/how-to-build-spherecaster/")} data-astro-prefetch="hover">How to Build a Spherecaster</a>.
+      <strong>Wiki Note:</strong> This wiki focuses on the <strong>Ultimate Spheres of Power</strong> edition of the rules. If you are looking for the original (legacy) Spheres of Power content, it remains available on the <a href="http://spheresofpower.wikidot.com/" target="_blank" rel="noopener noreferrer">original Spheres of Power Wikidot wiki</a>. If you're new to Spheres of Power, we recommend reading everything on this page. For more help, see <a href={url("/power/how-to-build-spherecaster/")} data-astro-prefetch="hover">How to Build a Spherecaster</a>.
     </div>
-
-    <details class="callout-box">
-      <summary><strong>Note: Ultimate vs Original</strong></summary>
-      <p>Spheres of Power was originally published as a single sourcebook. After several years of additions and expansions, it was reprinted in Ultimate Spheres of Power, which is the current and primary edition of the rules. This Wiki still provides access to the old rules (through a special section as well as through tabs like the one you can see on this page) for those who want to use them. Which version of the rules you use is your choice, but we generally encourage using the Ultimate version of the rules, which include numerous changes and improvements based on playtests and years of experience. All pages that host both kinds of content display the Ultimate rules as the default.</p>
-    </details>
 
     <h2>Using The Spheres</h2>
 
@@ -477,203 +468,16 @@ import WikiPage from '@/layouts/WikiPage.astro';
     <p>When using the mythic version of any of these spells, you gain a single mythic sphere mastery of your choice that you may use with the sphere effect.</p>
     <div class="wiki-note"><strong>Wiki Note:</strong> If you are spending mythic power for this spell, you do not need to spend additional mythic power to use the mythic sphere mastery for that effect. Duplicating a sphere effect with wish, miracle, or limited wish does not require spending additional spell points.</div>
 
-  </div><!-- end tab-ultimate -->
-
-  <!-- ════════════════════════════════════════════════════════ ORIGINAL TAB -->
-  <div id="tab-original" class="tab-panel entry-description" hidden role="tabpanel">
-
-    <div class="wiki-note">
-      <strong>Wiki Note:</strong> If you're new to Spheres of Power, we recommend reading everything on this page. This part of the site introduces the mechanics of the system and defines the various things you'll see on the class pages, including things like how you can spend your Magic Talents, what your saving throws are, how to calculate the number of Spell Points you get, and how Caster Level works with Spheres of Power. For more help, see <a href={url("/power/how-to-build-spherecaster/")} data-astro-prefetch="hover">How to Build a Spherecaster</a>.
-    </div>
-
-    <h2>Using The Spheres</h2>
-    <p>Spheres of Power is a completely new magic system that may be used alongside or may completely replace the core Pathfinder spell system.</p>
-    <p>Like spells, the spheres grant a magic user the ability to accomplish great things that would otherwise be impossible. Bending fire, summoning angels, layering enchantments on an unsuspecting creature's mind: all of this and more is possible for a master of the spheres.</p>
-    <p>Like spells, spheres require levels in a magic-using class. Using a sphere ability provokes an attack of opportunity (unless cast defensively or as a swift action), requires a concentration check in difficult situations, ceases to function in an anti-magic field, and is subject to spell resistance. Unlike spells, however, sphere abilities do not require gestures or magic words, nor are they divided between Arcane and Divine sources. Likewise, just as a fighter may take levels in other martial classes without sacrificing his combat ability, a caster may take multiple casting classes without necessarily dividing his power.</p>
-    <p>Where the core Pathfinder magic system grants access to spells and spell levels, magic users using the Spheres of Power system (referred to as 'casters' on this site) use spheres and talents.</p>
-    <p>There are 20 spheres contained in this system, including Alteration, Creation, Conjuration, Dark, Death, Destruction, Divination, Enhancement, Fate, Illusion, Light, Life, Mind, Nature, Protection, Telekinesis, Time, War, Warp, and Weather. The Fallen Fey sphere was published in a later product and is not available to most casters without GM approval.</p>
-    <p>Spheres provide a caster with a broad magical focus; for example, powers that deal with moving objects through space are contained in the Telekinesis sphere, while powers that deal with manipulating winds and rain are contained in the Weather sphere. Each sphere provides the caster with an at-will ability, which may be further refined through gaining talents associated with that sphere. Beyond the spheres themselves, there are several terms that must be explained for use with this system: <strong>Magic Talents, Caster Level, Casting Ability Modifier, Casting Time, Distances, Spell Points, Saving Throw Difficulty Class, and Magic Skill Bonus</strong> and <strong>Magic Skill Defense</strong>.</p>
-
-    <h2>Magic Talents</h2>
-    <p>As a caster gains levels, they gain magic talents. Magic talents, like feats, may be spent to allow a caster to gain new powers and abilities.</p>
-    <p>Whenever a caster gains a magic talent, they may spend it in one of two ways: to gain a new base sphere or to gain a talent associated with a sphere they already possess. The number of magic talents a caster gains differs between classes, but all characters gain two bonus magic talents the first time they gain a level in a casting class, regardless of which class is chosen. Once a talent is spent, it cannot be changed except through retraining, which follows the same rules as retraining a feat.</p>
-
-    <h2>Caster Level</h2>
-    <p>Caster level is not as synonymous with class level in SoP as it is with most of the core Pathfinder spellcasting classes. Instead, it would be more appropriate to think it as akin to Base Attack Bonus: as a creature gains levels in a casting class, they gain caster levels at different rates depending on the class chosen. A multi-classed caster determines his total caster levels by adding together his caster levels from all his classes, similar to how Base Attack Bonus is cumulated between all classes. A caster level of 0 is treated as if it were 1 when determining a caster's capabilities.</p>
-    <p>All casting classes fall into one of three categories: High-Casters, Mid-Casters, and Low-Casters. Each of these groups gains caster levels at a slightly different rate, as indicated by <strong>Table: Caster Level</strong>.</p>
-    <table class="wiki-table">
-      <caption><strong>Table: Caster Level</strong></caption>
-      <thead><tr><th>Level</th><th>High Caster</th><th>Mid-Caster</th><th>Low Caster</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>+1</td><td>0</td><td>0</td></tr>
-        <tr><td>2</td><td>+2</td><td>+1</td><td>+1</td></tr>
-        <tr><td>3</td><td>+3</td><td>+2</td><td>+1</td></tr>
-        <tr><td>4</td><td>+4</td><td>+3</td><td>+2</td></tr>
-        <tr><td>5</td><td>+5</td><td>+3</td><td>+2</td></tr>
-        <tr><td>6</td><td>+6</td><td>+4</td><td>+3</td></tr>
-        <tr><td>7</td><td>+7</td><td>+5</td><td>+3</td></tr>
-        <tr><td>8</td><td>+8</td><td>+6</td><td>+4</td></tr>
-        <tr><td>9</td><td>+9</td><td>+6</td><td>+4</td></tr>
-        <tr><td>10</td><td>+10</td><td>+7</td><td>+5</td></tr>
-        <tr><td>11</td><td>+11</td><td>+8</td><td>+5</td></tr>
-        <tr><td>12</td><td>+12</td><td>+9</td><td>+6</td></tr>
-        <tr><td>13</td><td>+13</td><td>+9</td><td>+6</td></tr>
-        <tr><td>14</td><td>+14</td><td>+10</td><td>+7</td></tr>
-        <tr><td>15</td><td>+15</td><td>+11</td><td>+7</td></tr>
-        <tr><td>16</td><td>+16</td><td>+12</td><td>+8</td></tr>
-        <tr><td>17</td><td>+17</td><td>+12</td><td>+8</td></tr>
-        <tr><td>18</td><td>+18</td><td>+13</td><td>+9</td></tr>
-        <tr><td>19</td><td>+19</td><td>+14</td><td>+9</td></tr>
-        <tr><td>20</td><td>+20</td><td>+15</td><td>+10</td></tr>
-      </tbody>
-    </table>
-
-    <h2>Casting Ability Modifier</h2>
-    <p>Not every class in the Spheres of Power system uses the same mental ability score when determining their magical potency. Just as with the core Pathfinder magic system, some classes use Intelligence, some use Wisdom, and others use Charisma. In Spheres of Power, this is called their casting ability modifier (CAM). Casting ability modifiers are used to determine the Difficulty Class of sphere abilities, as well as the caster's total number of spell points.</p>
-    <p>When adapting an existing class to the Spheres of Power system, use whichever mental ability score was originally used when determining spell potency. If a caster takes levels in multiple casting classes, they must select which of those classes' casting ability modifiers they will use; only one may be applied.</p>
-
-    <h2>Casting Time</h2>
-    <p>Most sphere abilities require a standard action to use, but there are exceptions. Certain abilities, such as metamagic feats and some drawbacks, may increase or decrease a casting time by a certain number of 'steps'. Note: Unless otherwise specified, a sphere ability cannot have a shorter casting time than a swift action, nor a longer casting time than 1 hour.</p>
-    <table class="wiki-table wiki-table--center">
-      <caption><strong>Chart: Casting Times</strong></caption>
-      <tbody>
-        <tr><td>1 Hour</td></tr>
-        <tr><td>10 Minutes</td></tr>
-        <tr><td>1 Minute</td></tr>
-        <tr><td>1 Round</td></tr>
-        <tr><td>Full-Round Action</td></tr>
-        <tr><td>Standard Action</td></tr>
-        <tr><td>Move Action</td></tr>
-        <tr><td>Swift Action</td></tr>
-      </tbody>
-    </table>
-
-    <h2>Distances</h2>
-    <p>Many sphere abilities use Close, Medium, and Long as indicators for their range. Just as with spells, Close equals 25 ft + 5 ft per 2 caster levels, Medium equals 100 ft + 10 ft per caster level, and Long equals 400 ft + 40 ft per caster level.</p>
-
-    <h2>Spell Points</h2>
-    <p>Along with gaining caster levels, casters using the SoP system also gain a spell pool, which accumulates spell points as they gain levels. Spell points are a measure of a spellcaster's capability and are spent to increase the power of their various sphere abilities. Each caster gains a pool of spell points equal to their class level plus their casting ability modifier. Just like with caster level, a caster adds together all their levels in Sphere casting classes when determining the size of their spell pool. A caster's spell pool refreshes every day after roughly 8 hours of rest. These hours do not need to be consecutive.</p>
-
-    <h2>Saving Throw Difficulty Class</h2>
-    <p>Whenever a sphere ability calls for a saving throw, the Difficulty Class (DC) for that saving throw is equal to 10 + 1/2 the caster level + the caster's casting ability modifier. If the targeted creature meets or exceeds this number with their saving throw, they often reduce or negate the effect. If a caster chooses to use an effect at a lower caster level than his maximum, the DC is also lowered.</p>
-
-    <h2>Magic Skill Bonus and Magic Skill Defense</h2>
-    <p>Sometimes, it isn't a caster's raw power that is important, but rather his skill and experience with magic in general. This includes concentration checks or times when a caster directly pits his magic against that of another caster. At these times, the caster's magic skill bonus (MSB) and magic skill defense (MSD) are used to determine the outcome.</p>
-    <p>A caster's MSB is equal to his total levels in casting classes. A caster's MSD is equal to 11 + his total levels in casting classes.</p>
-    <p>Sometimes, a power or circumstance will call for a magic skill check. At this point, the caster making the check rolls a d20 and adds her MSB to the roll. If this equals or exceeds the target's MSD, the check succeeds. If not, the check fails.</p>
-    <p>When a Sphere caster makes a concentration check (as called for by the Pathfinder Core rulebook), instead of rolling a d20 and adding his caster level + his casting ability modifier, he rolls a d20 and adds his MSB + his casting ability modifier to the roll. Treat an effect's caster level/2 as the effective spell level for this purpose. A spellcaster may always choose to manifest a magical effect at a lower caster level than his total in order to make a concentration check easier. Unlike with Vancian magic, it is possible to cast a sphere ability while already concentrating on another, so long as the concentration and the casting use different actions.</p>
-    <div class="example-box"><em>Example: When casting defensively, a caster must make a concentration check (1d20 + caster level + Int, Wis, or Cha) against a DC equal to 15 + double the spell level. In SoP, this would instead require a check equal to 1d20 + MSB + casting ability modifier, and would be against a DC equal to 15 + the caster level of the ability.</em></div>
-    <p>When attempting to penetrate a creature's Spell Resistance, she rolls a d20 and adds her MSB to the roll. An MSB is also used when attempting to counter another caster's magic, such as when using the Counterspell feat.</p>
-    <p>Any feat or ability that would normally call for a caster level check instead calls for an MSB check. Any feat or ability that normally adds to a creature's caster level for the purposes of one of the caster level checks listed above instead adds to their MSB for that purpose.</p>
-    <p>When combining SoP with the core Pathfinder magic system, whenever a caster level check is called for or when a DC of 10 or 11 + a creature's caster level is called for, the character's MSB and MSD should be substituted respectively.</p>
-
-    <h5>Table: Spherecasting and Equivalent Spell Level</h5>
-    <table class="wiki-table">
-      <thead><tr><th>Sphere Caster Level</th><th>Equivalent Spell Level</th><th>Sphere Caster Level</th><th>Equivalent Spell Level</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>0th</td><td>16</td><td>8th</td></tr>
-        <tr><td>2</td><td>1st</td><td>17</td><td>8th</td></tr>
-        <tr><td>3</td><td>1st</td><td>18</td><td>9th</td></tr>
-        <tr><td>4</td><td>2nd</td><td>19</td><td>9th</td></tr>
-        <tr><td>5</td><td>2nd</td><td>20</td><td>10th</td></tr>
-        <tr><td>6</td><td>3rd</td><td>21</td><td>10th</td></tr>
-        <tr><td>7</td><td>3rd</td><td>22</td><td>11th</td></tr>
-        <tr><td>8</td><td>4th</td><td>23</td><td>11th</td></tr>
-        <tr><td>9</td><td>4th</td><td>24</td><td>12th</td></tr>
-        <tr><td>10</td><td>5th</td><td>25</td><td>12th</td></tr>
-        <tr><td>11</td><td>5th</td><td>26</td><td>13th</td></tr>
-        <tr><td>12</td><td>6th</td><td>27</td><td>13th</td></tr>
-        <tr><td>13</td><td>6th</td><td>28</td><td>14th</td></tr>
-        <tr><td>14</td><td>7th</td><td>29</td><td>14th</td></tr>
-        <tr><td>15</td><td>7th</td><td>30</td><td>15th</td></tr>
-      </tbody>
-    </table>
-    <div class="wiki-note"><strong>Wiki Note:</strong> Spheres' rules on Effective Vancian Spell Level do not cite that 9th is the maximum, so this chart assumes the effective spell level can continue to rise. Your GM may rule that 9th is the cap, in which case that is used from a CL of 18th on up.</div>
-
-    <div class="wiki-note" style="margin-top:1.5rem;"><strong>Wiki Note – Concentration:</strong> You may not resume concentrating on an ability once you stop concentrating on it, even if the effect lingers. (Source: A rules discussion with the writers)</div>
-
-  </div><!-- end tab-original -->
+  </div>
 
 </WikiPage>
 
-<script>
-document.addEventListener('astro:page-load', () => {
-  const btns = document.querySelectorAll<HTMLButtonElement>('.tabview-btn');
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btns.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      document.querySelectorAll<HTMLElement>('.tab-panel').forEach(p => { p.hidden = true; });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-      const panel = document.getElementById(`tab-${btn.dataset.tab}`);
-      if (panel) panel.hidden = false;
-    });
-  });
-});
-</script>
-
 <style>
-  /* ── Tab bar ─────────────────────────────────────────────── */
-  .tabview-bar {
-    display: flex;
-    gap: 0;
-    border-bottom: 2px solid var(--clr-border);
-    margin-bottom: 1.5rem;
-  }
-
-  .tabview-btn {
-    padding: 0.45rem 1.1rem;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px;
-    cursor: pointer;
-    font-family: var(--font-display);
-    font-size: var(--fs-sm);
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    color: var(--clr-muted);
-    transition: color 0.15s, border-color 0.15s;
-  }
-
-  .tabview-btn:hover {
-    color: var(--clr-active);
-  }
-
-  .tabview-btn.active {
-    color: var(--clr-active);
-    border-bottom-color: var(--clr-active);
-  }
-
-  /* ── Book float ──────────────────────────────────────────── */
-  .book-float {
+  /* ── Book sidebar ─────────────────────────────────────────── */
+  .book-sidebar {
     float: right;
-    width: 18%;
-    min-width: 90px;
-    padding: 0 0 0.75rem 1.25rem;
-    text-align: center;
-    font-size: var(--fs-xs);
-    line-height: 1.4;
-  }
-
-  .book-float img {
-    width: 100%;
-    display: block;
-    margin-bottom: 0.35rem;
-  }
-
-  .book-float hr {
-    margin: 0.35rem 0;
-    border: none;
-    border-top: 1px solid var(--clr-border);
-  }
-
-  .book-float strong,
-  .book-float span {
-    display: block;
+    width: 160px;
+    margin: 0 0 1rem 1.5rem;
   }
 
   /* ── Note boxes ──────────────────────────────────────────── */
@@ -683,7 +487,7 @@ document.addEventListener('astro:page-load', () => {
     border-radius: 0 4px 4px 0;
     padding: 0.6rem 0.85rem;
     margin: 1rem 0;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
   }
 
   .author-note {
@@ -692,7 +496,7 @@ document.addEventListener('astro:page-load', () => {
     border-radius: 0 4px 4px 0;
     padding: 0.6rem 0.85rem;
     margin: 1rem 0;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
   }
 
   .author-note p { margin: 0.4rem 0 0; }
@@ -703,36 +507,15 @@ document.addEventListener('astro:page-load', () => {
     border-radius: 4px;
     padding: 0.5rem 0.85rem;
     margin: 0.75rem 0;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
   }
-
-  .callout-box {
-    border: 1px solid var(--clr-border);
-    border-radius: 4px;
-    padding: 0.5rem 0.85rem;
-    margin: 1rem 0;
-    font-size: var(--fs-sm);
-  }
-
-  .callout-box summary {
-    cursor: pointer;
-    list-style: disclosure-closed;
-    padding: 0.1rem 0;
-  }
-
-  .callout-box[open] summary {
-    list-style: disclosure-open;
-    margin-bottom: 0.5rem;
-  }
-
-  .callout-box p { margin: 0.4rem 0 0; }
 
   /* ── Tables ──────────────────────────────────────────────── */
   .wiki-table {
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0 1.25rem;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
   }
 
   .wiki-table caption {
@@ -766,21 +549,21 @@ document.addEventListener('astro:page-load', () => {
   }
 
   .table-footnote {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-sm);
     color: var(--clr-muted);
     margin-top: 0.25rem;
   }
 
   /* ── Source tags ─────────────────────────────────────────── */
   .source-tag {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-sm);
     color: var(--clr-muted);
     font-weight: normal;
     font-style: italic;
   }
 
   /* ── Headings ────────────────────────────────────────────── */
-  .tab-panel h2 {
+  .usop-content h2 {
     font-family: var(--font-display);
     font-size: var(--fs-xl);
     font-weight: 700;
@@ -790,7 +573,7 @@ document.addEventListener('astro:page-load', () => {
     border-bottom: 1px solid var(--clr-border);
   }
 
-  .tab-panel h3 {
+  .usop-content h3 {
     font-family: var(--font-display);
     font-size: var(--fs-lg);
     font-weight: 700;
@@ -798,7 +581,7 @@ document.addEventListener('astro:page-load', () => {
     margin: 1.5rem 0 0.4rem;
   }
 
-  .tab-panel h4 {
+  .usop-content h4 {
     font-family: var(--font-display);
     font-size: var(--fs-md);
     font-weight: 700;
@@ -806,7 +589,7 @@ document.addEventListener('astro:page-load', () => {
     margin: 1.2rem 0 0.3rem;
   }
 
-  .tab-panel h5 {
+  .usop-content h5 {
     font-family: var(--font-display);
     font-size: var(--fs-sm);
     font-weight: 700;
@@ -816,7 +599,7 @@ document.addEventListener('astro:page-load', () => {
     margin: 1.2rem 0 0.3rem;
   }
 
-  .tab-panel p { margin: 0.5rem 0; }
-  .tab-panel ul, .tab-panel ol { margin: 0.5rem 0 0.5rem 1.5rem; }
-  .tab-panel li { margin-bottom: 0.25rem; }
+  .usop-content p { margin: 0.5rem 0; }
+  .usop-content ul, .usop-content ol { margin: 0.5rem 0 0.5rem 1.5rem; }
+  .usop-content li { margin-bottom: 0.25rem; }
 </style>
