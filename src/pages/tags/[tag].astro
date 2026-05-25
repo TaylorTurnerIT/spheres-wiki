@@ -159,7 +159,7 @@ const { tag, groups, collEntry, bookTitle, tagMap, bookMetaMap } = Astro.props;
 const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
 ---
 
-<WikiPage title={`${tag.label} — Tags — Spheres Wiki`}>
+<WikiPage title={`${tag.label} — Tags — Spheres Wiki`} pagefindIgnore={true}>
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
@@ -169,13 +169,7 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
   </nav>
 
   <div class="content-main" style="max-width: 720px;">
-    <h1
-      class="page-title"
-      id="overview"
-      data-pagefind-weight="1.0"
-      data-pagefind-meta={`title:${tag.label}`}
-      data-pagefind-meta="type:tag"
-    >
+    <h1 class="page-title" id="overview">
       <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
       {tag.label}
     </h1>
