@@ -87,13 +87,6 @@ document.addEventListener('astro:page-load', () => {
   const nav = document.querySelector<HTMLElement>('.toc');
   if (!nav) return;
 
-  const collapsedFeatures = new Set<string>();
-
-  // Pre-populate from any toggles that start collapsed
-  document.querySelectorAll<HTMLButtonElement>('[data-feature-id][aria-expanded="false"]').forEach(btn => {
-    collapsedFeatures.add(btn.dataset.featureId!);
-  });
-
   const categories = [...nav.querySelectorAll<HTMLElement>('[data-toc-section]')];
   const headings = categories
     .map(cat => ({
@@ -108,7 +101,11 @@ document.addEventListener('astro:page-load', () => {
       const subList = cat.querySelector<HTMLElement>('.toc-sub-list');
       const inner = cat.querySelector<HTMLElement>('.toc-sub-inner');
       const isActive = cat === active;
-      const isCollapsed = collapsedFeatures.has(cat.dataset.tocSection!);
+      
+      // Read the live collapse state directly from the DOM
+      const btn = document.querySelector<HTMLButtonElement>(`[data-feature-id="${cat.dataset.tocSection}"]`);
+      const isCollapsed = btn ? btn.getAttribute('aria-expanded') === 'false' : false;
+
       cat.classList.toggle('is-active', isActive);
       if (subList && inner) {
         if (isCollapsed) {
@@ -145,18 +142,8 @@ document.addEventListener('astro:page-load', () => {
     allSubLinks.forEach(l => l.classList.toggle('is-current', l === activeSub));
   }
 
-  activeCollapseHandler = (e: Event) => {
-    const { id, collapsed } = (e as CustomEvent<{ id: string; collapsed: boolean }>).detail;
-    const cat = nav.querySelector<HTMLElement>(`[data-toc-section="${id}"]`);
-    if (!cat) return;
-    if (collapsed) {
-      collapsedFeatures.add(id);
-      const subList = cat.querySelector<HTMLElement>('.toc-sub-list');
-      if (subList) subList.style.maxHeight = '0';
-    } else {
-      collapsedFeatures.delete(id);
-      recalc();
-    }
+  activeCollapseHandler = () => {
+    recalc();
   };
   document.addEventListener('class-feature-collapse', activeCollapseHandler);
 
