@@ -54,75 +54,76 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
     }
   }
 
-  const searchInput  = document.getElementById('page-search') as HTMLInputElement;
-  const resultsDiv   = document.getElementById('search-results') as HTMLElement | null;
-  const combobox     = document.getElementById('search-combobox');
+  document.addEventListener('astro:page-load', () => {
+    const searchInput  = document.getElementById('page-search') as HTMLInputElement;
+    const resultsDiv   = document.getElementById('search-results') as HTMLElement | null;
+    const combobox     = document.getElementById('search-combobox');
 
-  function setExpanded(expanded: boolean) {
-    combobox?.setAttribute('aria-expanded', String(expanded));
-    if (resultsDiv) resultsDiv.hidden = !expanded;
-  }
+    function setExpanded(expanded: boolean) {
+      combobox?.setAttribute('aria-expanded', String(expanded));
+      if (resultsDiv) resultsDiv.hidden = !expanded;
+    }
 
-  if (searchInput && resultsDiv) {
-    searchInput.addEventListener('focus', initPagefind);
+    if (searchInput && resultsDiv) {
+      searchInput.addEventListener('focus', initPagefind);
 
-    searchInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') setExpanded(false);
-    });
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setExpanded(false);
+      });
 
-    searchInput.addEventListener('input', async (e) => {
-      const query = (e.target as HTMLInputElement).value;
-      if (query.length < 2) {
-        setExpanded(false);
-        return;
-      }
+      searchInput.addEventListener('input', async (e) => {
+        const query = (e.target as HTMLInputElement).value;
+        if (query.length < 2) {
+          setExpanded(false);
+          return;
+        }
 
-      await initPagefind();
-      const search = await pagefind.search(query);
+        await initPagefind();
+        const search = await pagefind.search(query);
 
-      if (search.results.length === 0) {
-        resultsDiv.innerHTML = '<div class="search-no-results">No results found</div>';
-        resultsDiv.hidden = false;
-        return;
-      }
+        if (search.results.length === 0) {
+          resultsDiv.innerHTML = '<div class="search-no-results">No results found</div>';
+          resultsDiv.hidden = false;
+          return;
+        }
 
-      // Show top 8 results
-      const results = await Promise.all(search.results.slice(0, 8).map((r: any) => r.data()));
+        // Show top 8 results
+        const results = await Promise.all(search.results.slice(0, 8).map((r: any) => r.data()));
 
-      resultsDiv.innerHTML = results.map(r => {
-        const title = r.meta.title || "Untitled";
-        const sphere = r.meta.sphere;
-        const system = r.meta.system;
-        const type = r.meta.type;
-        const tier = r.meta.tier;
-        const tags = r.meta.tags ? r.meta.tags.split(',').map((t: string) => t.trim()) : [];
+        resultsDiv.innerHTML = results.map(r => {
+          const title = r.meta.title || "Untitled";
+          const sphere = r.meta.sphere;
+          const system = r.meta.system;
+          const type = r.meta.type;
+          const tier = r.meta.tier;
+          const tags = r.meta.tags ? r.meta.tags.split(',').map((t: string) => t.trim()) : [];
 
-        // Build the rich title line
-        let displayTitle = title;
-        if (sphere && type !== 'sphere') displayTitle += ` — ${sphere}`;
-        if (system) displayTitle += ` — ${system}`;
+          // Build the rich title line
+          let displayTitle = title;
+          if (sphere && type !== 'sphere') displayTitle += ` — ${sphere}`;
+          if (system) displayTitle += ` — ${system}`;
 
-        return `
-          <a href="${r.url}" class="search-result-item" data-system="${system || ''}">
-            <div class="search-result-title">${displayTitle}</div>
-            <div class="search-result-meta">
-              ${tier ? `<span class="search-badge">${tier}</span>` : ''}
-              ${tags.map((t: string) => `<span class="search-badge">${t}</span>`).join('')}
-            </div>
-            <div class="search-result-excerpt">${r.excerpt}</div>
-          </a>
-        `;
-      }).join('');
+          return `
+            <a href="${r.url}" class="search-result-item" data-system="${system || ''}">
+              <div class="search-result-title">${displayTitle}</div>
+              <div class="search-result-meta">
+                ${tier ? `<span class="search-badge">${tier}</span>` : ''}
+                ${tags.map((t: string) => `<span class="search-badge">${t}</span>`).join('')}
+              </div>
+              <div class="search-result-excerpt">${r.excerpt}</div>
+            </a>
+          `;
+        }).join('');
 
-      setExpanded(true);
+        setExpanded(true);
+      });
 
-    });
-
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!searchInput.contains(e.target as Node) && !resultsDiv.contains(e.target as Node)) {
-        setExpanded(false);
-      }
-    });
-  }
+      // Close when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target as Node) && !resultsDiv.contains(e.target as Node)) {
+          setExpanded(false);
+        }
+      });
+    }
+  });
 </script>

@@ -38,7 +38,7 @@ Fast, searchable static wiki for Spheres tabletop RPG. Replace Wikidot site. Hig
 | T3 | x | Implement ranking weights in Pagefind for V4 | V4,I.pagefind |
 | T4 | x | Add validation script for V2 consistency check | V2 |
 | T5 | x | Fix mismatch between test expectation ('feats') and implementation ('general-feats') in categorize.test.ts | I.categorize |
-| T6 | . | Wrap search bar initialization in SiteHeader.astro in an astro:page-load event listener | V11 |
+| T6 | x | Wrap search bar initialization in SiteHeader.astro in an astro:page-load event listener | V11 |
 
 # §B Bugs
 | id | date | cause | fix |
