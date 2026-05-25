@@ -10,7 +10,8 @@
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest run"
+    "test": "vitest run",
+    "validate": "node scripts/validate-v2.mjs"
   },
   "dependencies": {
     "astro": "^6.3.3"

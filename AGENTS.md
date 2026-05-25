@@ -35,7 +35,7 @@ Fast, searchable static wiki for Spheres tabletop RPG. Replace Wikidot site. Hig
 | T1 | x | Audit all `src/content` for V1/V2/V3 compliance | V1,V2,V3 |
 | T2 | x | Verify `SVGSprite.astro` has all icons named in `src/content/**/*.md` | V5 |
 | T3 | x | Implement ranking weights in Pagefind for V4 | V4,I.pagefind |
-| T4 | . | Add validation script for V2 consistency check | V2 |
+| T4 | x | Add validation script for V2 consistency check | V2 |
 | T5 | x | Fix mismatch between test expectation ('feats') and implementation ('general-feats') in categorize.test.ts | I.categorize |
 
 # §B Bugs
