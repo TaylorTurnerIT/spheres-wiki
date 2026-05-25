@@ -354,6 +354,11 @@ document.addEventListener('astro:page-load', () => {
   const table = document.querySelector<HTMLElement>('.content-main table');
   const tocGroupContainer = document.querySelector<HTMLElement>('.toc-list');
 
+  const dropdownContainer = document.querySelector<HTMLElement>('.archetype-dropdown-container');
+  const dropdownTrigger = document.querySelector<HTMLButtonElement>('.archetype-dropdown-trigger');
+  const badgeCount = document.querySelector<HTMLElement>('.archetype-badge-count');
+  const resetBtn = document.querySelector<HTMLButtonElement>('.archetype-reset-btn');
+
   if (checkboxes.length === 0) return;
 
   // Stash original HTML of base features to enable clean hot-swapping/restoring
