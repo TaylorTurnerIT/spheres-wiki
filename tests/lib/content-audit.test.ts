@@ -34,7 +34,19 @@ function getFilesRecursively(dir: string): string[] {
 
 describe('Content Audit', () => {
   const contentDir = path.resolve(__dirname, '../../src/content');
+  const spritePath = path.resolve(__dirname, '../../src/components/SVGSprite.astro');
   
+  const symbolIds = new Set<string>();
+  
+  if (fs.existsSync(spritePath)) {
+    const spriteContent = fs.readFileSync(spritePath, 'utf8');
+    const symbolRegex = /<symbol\s+id="([^"]+)"/g;
+    let match;
+    while ((match = symbolRegex.exec(spriteContent)) !== null) {
+      symbolIds.add(match[1]);
+    }
+  }
+
   if (!fs.existsSync(contentDir)) {
     it('skips if content dir does not exist', () => {});
     return;
@@ -97,6 +109,15 @@ describe('Content Audit', () => {
           expect(frontmatter.sourceBook).toBe(bookSlug);
         }
       });
+
+      if (frontmatter && frontmatter.type === 'sphere') {
+        it('complies with V5: sphere icon exists in SVGSprite.astro', () => {
+          const expectedSymbolId = `si-${frontmatter.icon}`;
+          if (!symbolIds.has(expectedSymbolId)) {
+            expect.fail(`Sphere icon "${frontmatter.icon}" resolved as "${expectedSymbolId}" is missing from SVGSprite.astro`);
+          }
+        });
+      }
     });
   }
 });
