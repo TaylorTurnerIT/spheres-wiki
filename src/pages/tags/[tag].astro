@@ -169,7 +169,13 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
   </nav>
 
   <div class="content-main" style="max-width: 720px;">
-    <h1 class="page-title" id="overview">
+    <h1
+      class="page-title"
+      id="overview"
+      data-pagefind-weight="1.0"
+      data-pagefind-meta={`title:${tag.label}`}
+      data-pagefind-meta="type:tag"
+    >
       <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
       {tag.label}
     </h1>

@@ -14,7 +14,7 @@ const builtinTags = sortedTags.filter((t) => t.sourceBook === "__builtin__");
 const userTags = sortedTags.filter((t) => t.sourceBook !== "__builtin__");
 ---
 
-<WikiPage title="All Tags — Spheres Wiki">
+<WikiPage title="All Tags — Spheres Wiki" pagefindIgnore={true}>
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>

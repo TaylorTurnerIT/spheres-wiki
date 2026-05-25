@@ -45,4 +45,16 @@ describe('Search Weight Verification', () => {
       expect(content).toContain('data-pagefind-weight="10"');
     }
   });
+
+  it('verifies that tag detail pages have data-pagefind-weight="1.0"', () => {
+    const p = path.join(pagesDir, 'tags/[tag].astro');
+    const content = fs.readFileSync(p, 'utf8');
+    expect(content).toContain('data-pagefind-weight="1.0"');
+  });
+
+  it('verifies that tag index page is ignored by pagefind', () => {
+    const p = path.join(pagesDir, 'tags/index.astro');
+    const content = fs.readFileSync(p, 'utf8');
+    expect(content).toContain('pagefindIgnore={true}');
+  });
 });
