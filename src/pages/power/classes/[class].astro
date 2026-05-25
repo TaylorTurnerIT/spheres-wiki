@@ -377,6 +377,7 @@ document.addEventListener('astro:page-load', () => {
 
   // Parse HTML5 template strings containing compiled markdown features
   const templates = Array.from(document.querySelectorAll<HTMLTemplateElement>('.archetype-feature-template')).map(t => {
+    const contentEl = t.content ? t.content.querySelector('.archetype-feature-rendered-content') : t.querySelector('.archetype-feature-rendered-content');
     return {
       featureId: t.dataset.featureId!,
       name: t.dataset.name!,
@@ -385,7 +386,7 @@ document.addEventListener('astro:page-load', () => {
       replaces: JSON.parse(t.dataset.replaces!) as string[],
       alters: JSON.parse(t.dataset.alters!) as string[],
       mutuallyExclusive: JSON.parse(t.dataset.mutuallyExclusive!),
-      html: t.querySelector('.archetype-feature-rendered-content')!.innerHTML
+      html: contentEl ? contentEl.innerHTML : t.innerHTML
     };
   });
 
