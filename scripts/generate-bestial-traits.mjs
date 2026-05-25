@@ -63,7 +63,7 @@ console.log(`Parsed ${traits.length} bestial traits from shifter-class.md\n`);
 let newCount = 0, skipCount = 0, diffCount = 0;
 
 for (const trait of traits) {
-  const filename = `${kebab(trait.name)}.md`;
+  const filename = `shifter-${kebab(trait.name)}.md`;
   const filepath = join(OUT_DIR, filename);
   const content  = renderFile(trait);
 

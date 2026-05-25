@@ -10,7 +10,7 @@ const baseFields = {
   modifies: z.string().optional(),
 };
 
-const entrySchema = z.discriminatedUnion("type", [
+export const entrySchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal("sphere"),
     ...baseFields,

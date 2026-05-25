@@ -53,7 +53,7 @@ describe('buildSections', () => {
     expect(sections[0].categories).toHaveLength(3);
     expect(sections[0].categories[0].id).toBe('basic-talents');
     expect(sections[0].categories[1].id).toBe('advanced-talents');
-    expect(sections[0].categories[2].id).toBe('feats');
+    expect(sections[0].categories[2].id).toBe('general-feats');
   });
 
   it('no sectionDefinitions, no talents, no feats → no sections', () => {
