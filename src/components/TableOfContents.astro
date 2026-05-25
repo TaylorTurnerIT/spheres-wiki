@@ -103,7 +103,7 @@ document.addEventListener('astro:page-load', () => {
       const isActive = cat === active;
       
       // Read the live collapse state directly from the DOM
-      const btn = document.querySelector<HTMLButtonElement>(`[data-feature-id="${cat.dataset.tocSection}"]`);
+      const btn = document.querySelector<HTMLButtonElement>(`[data-feature-id="${cat.dataset.tocSection}"], [data-cat-id="${cat.dataset.tocSection}"]`);
       const isCollapsed = btn ? btn.getAttribute('aria-expanded') === 'false' : false;
 
       cat.classList.toggle('is-active', isActive);

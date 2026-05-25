@@ -283,6 +283,10 @@ document.addEventListener('astro:page-load', () => {
       btn.setAttribute('aria-expanded', String(!isExpanded));
       btn.classList.toggle('is-collapsed', willCollapse);
       entries.setAttribute('aria-hidden', String(willCollapse));
+
+      document.dispatchEvent(new CustomEvent('class-feature-collapse', {
+        detail: { id: catId, collapsed: willCollapse },
+      }));
     });
   });
 });
