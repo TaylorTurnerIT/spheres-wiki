@@ -300,3 +300,46 @@ describe('buildTagMap', () => {
     ).toThrow(/defined twice in "book-a"/);
   });
 });
+
+describe('archetypeMap and archetypeFeatureMap', () => {
+  const archetypeEntry = {
+    type: 'archetype',
+    id: 'apex-shifter',
+    system: 'power',
+    name: 'Apex Shifter',
+    sourceBook: 'spheres-of-power-core',
+    tags: [],
+    className: 'shifter',
+  } as any;
+
+  const featureEntry = {
+    type: 'archetype-feature',
+    id: 'apex-shifter-knowledge',
+    system: 'power',
+    name: 'Knowledge of Many Shapes',
+    sourceBook: 'spheres-of-power-core',
+    tags: [],
+    archetypeId: 'apex-shifter',
+    level: 3,
+    replaces: ['shifter-endurance'],
+    mutuallyExclusive: true,
+  } as any;
+
+  const bookWithArchetypes = {
+    slug: 'spheres-of-power-core',
+    publishedDate: '2017-01-01',
+    entries: [archetypeEntry, featureEntry],
+  };
+
+  it('adds archetype entries under "archetype:id" key', () => {
+    const maps = buildResolvedMaps([bookWithArchetypes]);
+    expect(maps.archetypeMap.has('archetype:apex-shifter')).toBe(true);
+    expect(maps.archetypeMap.get('archetype:apex-shifter')!.className).toBe('shifter');
+  });
+
+  it('adds archetype-feature entries under "archetype-feature:id" key', () => {
+    const maps = buildResolvedMaps([bookWithArchetypes]);
+    expect(maps.archetypeFeatureMap.has('archetype-feature:apex-shifter-knowledge')).toBe(true);
+    expect(maps.archetypeFeatureMap.get('archetype-feature:apex-shifter-knowledge')!.replaces).toContain('shifter-endurance');
+  });
+});

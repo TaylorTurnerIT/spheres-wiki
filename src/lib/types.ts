@@ -103,6 +103,32 @@ export type ArticleEntry = {
   modifies?: string;
 };
 
+export type ArchetypeEntry = {
+  type: "archetype";
+  id: string;
+  system: string;
+  name: string;
+  sourceBook: string;
+  tags: string[];
+  modifies?: string;
+  className: string;
+};
+
+export type ArchetypeFeatureEntry = {
+  type: "archetype-feature";
+  id: string;
+  system: string;
+  name: string;
+  sourceBook: string;
+  tags: string[];
+  modifies?: string;
+  archetypeId: string;
+  level: number | number[];
+  replaces?: string[];
+  alters?: string[];
+  mutuallyExclusive?: boolean;
+};
+
 export type TagEntry = {
   type: "tag";
   id: string;
@@ -132,7 +158,9 @@ export type AnyEntry =
   | ClassEntry
   | ClassFeatureEntry
   | ClassTraitEntry
-  | ArticleEntry;
+  | ArticleEntry
+  | ArchetypeEntry
+  | ArchetypeFeatureEntry;
 
 export type EntryKey = string; // "type:id"
 
@@ -144,6 +172,8 @@ export type ResolvedMaps = {
   classFeatureMap: Map<EntryKey, ClassFeatureEntry>;
   classTraitMap: Map<EntryKey, ClassTraitEntry>;
   articleMap: Map<EntryKey, ArticleEntry>;
+  archetypeMap: Map<EntryKey, ArchetypeEntry>;
+  archetypeFeatureMap: Map<EntryKey, ArchetypeFeatureEntry>;
   entrySourceBook: Map<EntryKey, string>;
   bookMetaMap: Map<string, BookMeta>;
   tagMap: Map<string, TagEntry>;

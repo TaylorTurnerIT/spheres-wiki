@@ -1,0 +1,419 @@
+---
+import { render } from 'astro:content';
+import { url } from "@/lib/url";
+import WikiPage from '@/layouts/WikiPage.astro';
+import SourceBookCallout from '@/components/SourceBookCallout.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+import { BOOK_COLLECTIONS } from '@/content.config';
+import type { ClassEntry, ArchetypeEntry, ArchetypeFeatureEntry, ClassTraitEntry, FeatEntry, BookMeta } from '@/lib/types';
+
+interface Props {
+  archetype: ArchetypeEntry;
+  archetypeCollEntry: any;
+  cls: ClassEntry;
+  features: ArchetypeFeatureEntry[];
+  featureCollEntries: Map<string, any>;
+  associatedTraits: ClassTraitEntry[];
+  associatedTraitsColl: Map<string, any>;
+  associatedFeats: FeatEntry[];
+  associatedFeatsColl: Map<string, any>;
+  sourceBook: BookMeta | undefined;
+}
+
+export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
+  const { classMap, archetypeMap, archetypeFeatureMap, classTraitMap, featMap, bookMetaMap } = await resolveEntries();
+
+  // Load all collection entries for rendering
+  const allCollEntries = new Map<string, any>();
+  for (const slug of BOOK_COLLECTIONS) {
+    try {
+      const entries = await getCollection(slug as any);
+      for (const e of entries) {
+        const t = (e.data as any).type;
+        if (['archetype', 'archetype-feature', 'class-trait', 'feat'].includes(t)) {
+          allCollEntries.set((e.data as any).id, e);
+        }
+      }
+    } catch { /* empty collection */ }
+  }
+
+  const paths = [];
+
+  for (const [, archetype] of archetypeMap) {
+    const cls = classMap.get(`class:${archetype.className}`);
+    if (!cls) continue;
+
+    const features = [...archetypeFeatureMap.values()]
+      .filter(f => f.archetypeId === archetype.id)
+      .sort((a, b) => {
+        const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
+        const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
+        return aMin - bMin;
+      });
+
+    const featureCollEntries = new Map<string, any>();
+    for (const f of features) {
+      const entry = allCollEntries.get(f.id);
+      if (entry) featureCollEntries.set(f.id, entry);
+    }
+
+    // Find associated traits or feats published alongside the archetype
+    const associatedTraits = [...classTraitMap.values()]
+      .filter(t => {
+        if (archetype.id === 'apex-shifter') {
+          return [
+            'shifter-accommodating-form',
+            'shifter-defensive-shift',
+            'shifter-feinting-shift',
+            'shifter-resistant-shift',
+            'shifter-shifting-style'
+          ].includes(t.id);
+        }
+        return false;
+      })
+      .sort((a, b) => a.name.localeCompare(b.name));
+
+    const associatedTraitsColl = new Map<string, any>();
+    for (const t of associatedTraits) {
+      const entry = allCollEntries.get(t.id);
+      if (entry) associatedTraitsColl.set(t.id, entry);
+    }
+
+    const associatedFeats = [...featMap.values()]
+      .filter(f => {
+        if (archetype.id === 'protean') {
+          return f.id === 'extra-breadth-of-form';
+        }
+        return false;
+      })
+      .sort((a, b) => a.name.localeCompare(b.name));
+
+    const associatedFeatsColl = new Map<string, any>();
+    for (const f of associatedFeats) {
+      const entry = allCollEntries.get(f.id);
+      if (entry) associatedFeatsColl.set(f.id, entry);
+    }
+
+    paths.push({
+      params: { class: cls.id, archetype: archetype.id },
+      props: {
+        archetype,
+        archetypeCollEntry: allCollEntries.get(archetype.id),
+        cls,
+        features,
+        featureCollEntries,
+        associatedTraits,
+        associatedTraitsColl,
+        associatedFeats,
+        associatedFeatsColl,
+        sourceBook: bookMetaMap.get(archetype.sourceBook),
+      },
+    });
+  }
+
+  return paths;
+}
+
+const {
+  archetype,
+  archetypeCollEntry,
+  cls,
+  features,
+  featureCollEntries,
+  associatedTraits,
+  associatedTraitsColl,
+  associatedFeats,
+  associatedFeatsColl,
+  sourceBook,
+} = Astro.props;
+
+const ArchetypeContent = archetypeCollEntry ? (await render(archetypeCollEntry)).Content : null;
+
+type RenderedFeature = { feature: ArchetypeFeatureEntry; Content: any };
+const featureRendered: RenderedFeature[] = [];
+for (const feature of features) {
+  const collEntry = featureCollEntries.get(feature.id);
+  const { Content } = collEntry ? await render(collEntry) : { Content: null };
+  featureRendered.push({ feature, Content });
+}
+
+type RenderedTrait = { trait: ClassTraitEntry; Content: any };
+const traitsRendered: RenderedTrait[] = [];
+for (const trait of associatedTraits) {
+  const collEntry = associatedTraitsColl.get(trait.id);
+  const { Content } = collEntry ? await render(collEntry) : { Content: null };
+  traitsRendered.push({ trait, Content });
+}
+
+type RenderedFeat = { feat: FeatEntry; Content: any };
+const featsRendered: RenderedFeat[] = [];
+for (const feat of associatedFeats) {
+  const collEntry = associatedFeatsColl.get(feat.id);
+  const { Content } = collEntry ? await render(collEntry) : { Content: null };
+  featsRendered.push({ feat, Content });
+}
+
+const tocOverview: TocItem = { id: 'overview', label: 'Overview' };
+const tocGroups: TocGroup[] = [];
+
+if (featureRendered.length > 0) {
+  tocGroups.push({
+    label: 'Archetype Features',
+    categories: featureRendered.map(({ feature }) => {
+      const minLevel = Array.isArray(feature.level) ? Math.min(...feature.level) : feature.level;
+      return {
+        id: feature.id,
+        label: feature.name,
+        meta: `${minLevel}${ordinal(minLevel)}`,
+      };
+    }),
+  });
+}
+
+if (traitsRendered.length > 0) {
+  tocGroups.push({
+    label: 'Associated Traits',
+    categories: traitsRendered.map(({ trait }) => ({
+      id: trait.id,
+      label: trait.name,
+    })),
+  });
+}
+
+if (featsRendered.length > 0) {
+  tocGroups.push({
+    label: 'Associated Feats',
+    categories: featsRendered.map(({ feat }) => ({
+      id: feat.id,
+      label: feat.name,
+    })),
+  });
+}
+
+function levelLabel(level: number | number[]): string {
+  if (Array.isArray(level)) {
+    return level.map(l => `${l}${ordinal(l)}`).join(', ');
+  }
+  return `${level}${ordinal(level)}`;
+}
+
+function ordinal(n: number): string {
+  if (n % 100 >= 11 && n % 100 <= 13) return 'th';
+  switch (n % 10) {
+    case 1: return 'st';
+    case 2: return 'nd';
+    case 3: return 'rd';
+    default: return 'th';
+  }
+}
+
+const formatBaseFeatureName = (id: string) => {
+  const clean = id.replace(/^[a-z0-9]+-/, '').replace(/-/g, ' ');
+  return clean.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+};
+---
+<WikiPage title={`${archetype.name} — ${cls.name} Archetype — Spheres of Power Wiki`} activeNamespace="power">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url("/power/")} data-astro-prefetch="hover">Spheres of Power</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url("/power/classes/")} data-astro-prefetch="hover">Classes</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url(`/power/classes/${cls.id}/`)} data-astro-prefetch="hover">{cls.name}</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>{archetype.name}</span>
+  </nav>
+
+  <div class="content-columns">
+    <div class="content-main">
+
+      <h1
+        class="page-title power"
+        id="overview"
+        data-pagefind-weight="10"
+        data-pagefind-meta={`title:${archetype.name}`}
+        data-pagefind-meta="type:archetype"
+        data-pagefind-meta="system:Spheres of Power"
+      >
+        {archetype.name}
+      </h1>
+      <hr class="page-title-rule" />
+
+      {ArchetypeContent
+        ? <div class="entry-description"><ArchetypeContent /></div>
+        : <p class="entry-description"><em>Description coming soon.</em></p>
+      }
+
+      {featureRendered.length > 0 && (
+        <h2 class="section-title">Archetype Features</h2>
+      )}
+
+      {featureRendered.map(({ feature, Content: FeatureContent }) => (
+        <div class="class-feature" id={feature.id}>
+          <h3 class="class-feature-heading">
+            {feature.name}
+            <span class="class-feature-level"> ({levelLabel(feature.level)})</span>
+          </h3>
+
+          {FeatureContent
+            ? <div class="entry-description"><FeatureContent /></div>
+            : null
+          }
+
+          {((feature.replaces && feature.replaces.length > 0) || (feature.alters && feature.alters.length > 0)) && (
+            <div class="archetype-mod-info">
+              {feature.replaces && feature.replaces.length > 0 && (
+                <span class="info-replace"><strong>Replaces:</strong> {feature.replaces.map(formatBaseFeatureName).join(', ')}</span>
+              )}
+              {feature.alters && feature.alters.length > 0 && (
+                <span class="info-alter"><strong>Alters:</strong> {feature.alters.map(formatBaseFeatureName).join(', ')}</span>
+              )}
+            </div>
+          )}
+        </div>
+      ))}
+
+      {traitsRendered.length > 0 && (
+        <>
+          <h2 class="section-title" id="associated-traits">Associated Bestial Traits</h2>
+          <div class="associated-section">
+            {traitsRendered.map(({ trait, Content: TraitContent }) => (
+              <div class="class-trait" id={trait.id}>
+                <h3 class="class-trait-name">
+                  {trait.name}
+                  {trait.requires && (
+                    <span class="class-trait-requires"> (requires {trait.requires})</span>
+                  )}
+                </h3>
+                {TraitContent
+                  ? <div class="entry-description"><TraitContent /></div>
+                  : null
+                }
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {featsRendered.length > 0 && (
+        <>
+          <h2 class="section-title" id="associated-feats">Associated Feats</h2>
+          <div class="associated-section">
+            {featsRendered.map(({ feat, Content: FeatContent }) => (
+              <div class="class-feat" id={feat.id}>
+                <h3 class="class-trait-name">
+                  {feat.name}
+                </h3>
+                {FeatContent
+                  ? <div class="entry-description"><FeatContent /></div>
+                  : null
+                }
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+    </div>
+
+    <aside class="right-rail" aria-label="Page contents">
+      <TableOfContents overview={tocOverview} groups={tocGroups} system="power" />
+      <SourceBookCallout book={sourceBook} />
+    </aside>
+  </div>
+
+</WikiPage>
+
+<style>
+  .section-title {
+    font-family: var(--font-display);
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--clr-brand);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--clr-border);
+    padding-bottom: 0.5rem;
+  }
+
+  .class-feature {
+    margin-top: 2rem;
+    background: color-mix(in srgb, var(--clr-active) 3%, transparent);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--clr-active);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .class-feature-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    letter-spacing: 0.02em;
+    margin: 0 0 0.5em 0;
+    line-height: 1.2;
+  }
+
+  .class-feature-level {
+    font-size: 0.75em;
+    font-weight: normal;
+    opacity: 0.65;
+    letter-spacing: 0;
+  }
+
+  .archetype-mod-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--clr-border);
+    font-size: 0.75rem;
+    color: var(--clr-muted);
+  }
+
+  .info-replace, .info-alter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .info-replace strong, .info-alter strong {
+    font-weight: 600;
+    color: var(--clr-brand);
+  }
+
+  .associated-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .class-trait, .class-feat {
+    padding: 1.25rem;
+    background: color-mix(in srgb, var(--clr-brand) 3%, transparent);
+    border-left: 3px solid var(--clr-brand);
+    border-radius: 6px;
+  }
+
+  .class-trait-name {
+    font-family: var(--font-display);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--clr-brand);
+    margin: 0 0 0.5rem 0;
+  }
+
+  .class-trait-requires {
+    font-size: 0.85em;
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.75;
+  }
+</style>

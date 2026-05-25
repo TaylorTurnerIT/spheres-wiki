@@ -73,6 +73,8 @@ export function buildResolvedMaps(
   const classFeatureMap = new Map<EntryKey, ClassFeatureEntry>();
   const classTraitMap = new Map<EntryKey, ClassTraitEntry>();
   const articleMap = new Map<EntryKey, ArticleEntry>();
+  const archetypeMap = new Map<EntryKey, ArchetypeEntry>();
+  const archetypeFeatureMap = new Map<EntryKey, ArchetypeFeatureEntry>();
   const entrySourceBook = new Map<EntryKey, string>();
   const tagMap = new Map<string, TagEntry>();
   // bookMetaMap is always empty here — populated only by resolveEntries() which has Astro runtime access.
@@ -90,6 +92,8 @@ export function buildResolvedMaps(
           classFeatureMap,
           classTraitMap,
           articleMap,
+          archetypeMap,
+          archetypeFeatureMap,
         });
       } else {
         storeEntry(entry, key, {
@@ -100,6 +104,8 @@ export function buildResolvedMaps(
           classFeatureMap,
           classTraitMap,
           articleMap,
+          archetypeMap,
+          archetypeFeatureMap,
         });
         entrySourceBook.set(key, book.slug);
       }
@@ -114,6 +120,8 @@ export function buildResolvedMaps(
     classFeatureMap,
     classTraitMap,
     articleMap,
+    archetypeMap,
+    archetypeFeatureMap,
     entrySourceBook,
     bookMetaMap,
     tagMap,
@@ -310,7 +318,7 @@ function storeEntry(
   key: EntryKey,
   maps: Pick<
     ResolvedMaps,
-    "sphereMap" | "talentMap" | "featMap" | "classMap" | "classFeatureMap" | "classTraitMap" | "articleMap"
+    "sphereMap" | "talentMap" | "featMap" | "classMap" | "classFeatureMap" | "classTraitMap" | "articleMap" | "archetypeMap" | "archetypeFeatureMap"
   >,
 ): void {
   if (entry.type === "sphere") maps.sphereMap.set(key, entry);
@@ -320,6 +328,8 @@ function storeEntry(
   else if (entry.type === "class-feature") maps.classFeatureMap.set(key, entry);
   else if (entry.type === "class-trait") maps.classTraitMap.set(key, entry);
   else if (entry.type === "article") maps.articleMap.set(key, entry);
+  else if (entry.type === "archetype") maps.archetypeMap.set(key, entry);
+  else if (entry.type === "archetype-feature") maps.archetypeFeatureMap.set(key, entry);
 }
 
 function applyPatch(
@@ -327,7 +337,7 @@ function applyPatch(
   targetKey: EntryKey,
   maps: Pick<
     ResolvedMaps,
-    "sphereMap" | "talentMap" | "featMap" | "classMap" | "classFeatureMap" | "classTraitMap" | "articleMap"
+    "sphereMap" | "talentMap" | "featMap" | "classMap" | "classFeatureMap" | "classTraitMap" | "articleMap" | "archetypeMap" | "archetypeFeatureMap"
   >,
 ): void {
   const {
@@ -369,6 +379,16 @@ function applyPatch(
     maps.articleMap.set(targetKey, {
       ...maps.articleMap.get(targetKey)!,
       ...(fieldsToMerge as Partial<ArticleEntry>),
+    });
+  } else if (patch.type === "archetype" && maps.archetypeMap.has(targetKey)) {
+    maps.archetypeMap.set(targetKey, {
+      ...maps.archetypeMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<ArchetypeEntry>),
+    });
+  } else if (patch.type === "archetype-feature" && maps.archetypeFeatureMap.has(targetKey)) {
+    maps.archetypeFeatureMap.set(targetKey, {
+      ...maps.archetypeFeatureMap.get(targetKey)!,
+      ...(fieldsToMerge as Partial<ArchetypeFeatureEntry>),
     });
   }
 }

@@ -92,6 +92,20 @@ export const entrySchema = z.discriminatedUnion("type", [
     ...baseFields,
   }),
   z.object({
+    type: z.literal("archetype"),
+    ...baseFields,
+    className: z.string(),
+  }),
+  z.object({
+    type: z.literal("archetype-feature"),
+    ...baseFields,
+    archetypeId: z.string(),
+    level: z.union([z.number().int(), z.array(z.number().int())]),
+    replaces: z.array(z.string()).optional(),
+    alters: z.array(z.string()).optional(),
+    mutuallyExclusive: z.boolean().default(true),
+  }),
+  z.object({
     type: z.literal("tag"),
     id: z.string().regex(/^[a-z0-9-]+$/, "id must be lowercase kebab-case"),
     label: z.string(),
