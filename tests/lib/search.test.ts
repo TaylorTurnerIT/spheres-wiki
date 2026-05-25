@@ -57,4 +57,18 @@ describe('Search Weight Verification', () => {
     const content = fs.readFileSync(p, 'utf8');
     expect(content).toContain('pagefindIgnore={true}');
   });
+
+  it('verifies that system index pages are ignored by pagefind', () => {
+    const systemIndexFiles = [
+      'power/index.astro',
+      'might/index.astro',
+      'guile/index.astro',
+      'champions/index.astro',
+    ];
+    for (const f of systemIndexFiles) {
+      const p = path.join(pagesDir, f);
+      const content = fs.readFileSync(p, 'utf8');
+      expect(content).toContain('pagefindIgnore={true}');
+    }
+  });
 });

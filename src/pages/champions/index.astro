@@ -9,7 +9,7 @@ const classes = [...classMap.values()]
   .filter(c => c.system === 'champions')
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
-<WikiPage title="Champions of the Spheres — Spheres Wiki" activeNamespace="champions">
+<WikiPage title="Champions of the Spheres — Spheres Wiki" activeNamespace="champions" pagefindIgnore={true}>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>

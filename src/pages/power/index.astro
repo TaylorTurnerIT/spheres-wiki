@@ -13,7 +13,7 @@ const classes = [...classMap.values()]
   .filter(c => c.system === 'power')
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
-<WikiPage title="Spheres of Power — Spheres Wiki" activeNamespace="power">
+<WikiPage title="Spheres of Power — Spheres Wiki" activeNamespace="power" pagefindIgnore={true}>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>

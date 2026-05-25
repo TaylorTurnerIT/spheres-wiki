@@ -13,7 +13,7 @@ const classes = [...classMap.values()]
   .filter(c => c.system === 'guile')
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
-<WikiPage title="Spheres of Guile — Spheres Wiki" activeNamespace="guile">
+<WikiPage title="Spheres of Guile — Spheres Wiki" activeNamespace="guile" pagefindIgnore={true}>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
