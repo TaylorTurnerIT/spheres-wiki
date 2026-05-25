@@ -28,6 +28,7 @@ Fast, searchable static wiki for Spheres tabletop RPG. Replace Wikidot site. Hig
 - V8: Errata patches do not change original `sourceBook` attribution.
 - V9: Errata patches do not leak `modifies` field onto resolved entry.
 - V10: Each entry claimed by first matching category definition. Entries sorted by `id` ascending.
+- V11: Interactive component initializations and event listeners must run on `astro:page-load` to support Astro View Transitions.
 
 # §T Tasks
 | id | status | task | cites |
@@ -37,7 +38,9 @@ Fast, searchable static wiki for Spheres tabletop RPG. Replace Wikidot site. Hig
 | T3 | x | Implement ranking weights in Pagefind for V4 | V4,I.pagefind |
 | T4 | x | Add validation script for V2 consistency check | V2 |
 | T5 | x | Fix mismatch between test expectation ('feats') and implementation ('general-feats') in categorize.test.ts | I.categorize |
+| T6 | . | Wrap search bar initialization in SiteHeader.astro in an astro:page-load event listener | V11 |
 
 # §B Bugs
 | id | date | cause | fix |
 |---|---|---|---|
+| B1 | 2026-05-25 | Search listeners lost on back/forward navigation due to View Transitions swapped DOM | V11 |
