@@ -110,8 +110,12 @@ document.addEventListener('astro:page-load', () => {
       const isActive = cat === active;
       const isCollapsed = collapsedFeatures.has(cat.dataset.tocSection!);
       cat.classList.toggle('is-active', isActive);
-      if (subList && inner && !isCollapsed) {
-        subList.style.maxHeight = isActive ? inner.scrollHeight + 'px' : '0';
+      if (subList && inner) {
+        if (isCollapsed) {
+          subList.style.maxHeight = '0';
+        } else {
+          subList.style.maxHeight = isActive ? inner.scrollHeight + 'px' : '0';
+        }
       }
     });
   }
@@ -133,7 +137,7 @@ document.addEventListener('astro:page-load', () => {
     for (const { subLinks } of headings) {
       for (const link of subLinks) {
         const el = document.getElementById(link.dataset.tocItem!);
-        if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.15) {
+        if (el && el.getBoundingClientRect().height > 0 && el.getBoundingClientRect().top <= window.innerHeight * 0.15) {
           activeSub = link;
         }
       }

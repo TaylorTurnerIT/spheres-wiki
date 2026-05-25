@@ -21,7 +21,7 @@ sectionDefinitions:
         tiers: ["advanced"]
   - label: "Feats"
     categories:
-      - label: "Feats"
+      - label: "Alteration Feats"
         tiers: ["feat"]
         excludeTags: ["combat", "dual-sphere"]
       - label: "Combat Feats"
