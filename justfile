@@ -1,4 +1,4 @@
-default: pipeline
+default: run
 
 test:
 	npm run test
@@ -12,4 +12,4 @@ build:
 preview:
 	npm run preview
 
-pipeline: test validate build preview
+run: test validate build preview
