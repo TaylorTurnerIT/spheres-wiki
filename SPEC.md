@@ -114,7 +114,7 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T4  | x      | Enhance `/tags/` index — add per-tag entry counts, system breakdown badges, sort by count/alpha; update home ResourceCard from bb-code-template → tags | V1,V3,I.pages |
 | T5  | x      | Create `/community-resources/` page                      | V1,I.pages    |
 | T6  | -      | ~~Create `/citations-guide/` page~~ — removed            | V1,I.pages    |
-| T7  | .      | Create `/contact/` page                                  | V1,I.pages    |
+| T7  | x      | Create `/contact/` page                                  | V1,I.pages    |
 | T8  | .      | Create `/how-to-build-*` guide pages (3 pages)           | V1,I.pages    |
 | T9  | .      | Remove/fix all dead sidebar links (Other Systems block, subsection stubs) | V1,V9 |
 | T10 | .      | Implement `/recent-changes/` with real content (git-log or manual changelog) | V1,I.pages |
