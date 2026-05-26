@@ -4,90 +4,220 @@ import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import { resolveEntries } from "@/lib/resolveEntries";
 
-const { tagMap, bookMetaMap } = await resolveEntries();
+const { tagMap, bookMetaMap, talentMap, featMap, sphereMap, classMap } = await resolveEntries();
 
-const sortedTags = [...tagMap.values()].sort(
-  (a, b) => a.priority - b.priority || a.label.localeCompare(b.label),
-);
+// Count explicit tag usage per tag id, with per-system breakdown
+type TagStats = {
+  total: number;
+  bySystem: Record<string, number>;
+};
 
-const builtinTags = sortedTags.filter((t) => t.sourceBook === "__builtin__");
-const userTags = sortedTags.filter((t) => t.sourceBook !== "__builtin__");
+const stats = new Map<string, TagStats>();
+for (const [id] of tagMap) {
+  stats.set(id, { total: 0, bySystem: {} });
+}
+
+function tally(tags: string[], system: string) {
+  for (const t of tags) {
+    if (!stats.has(t)) continue;
+    const s = stats.get(t)!;
+    s.total++;
+    s.bySystem[system] = (s.bySystem[system] ?? 0) + 1;
+  }
+}
+
+for (const t of talentMap.values())  tally(t.tags, t.system);
+for (const f of featMap.values())    tally(f.tags, f.system);
+for (const s of sphereMap.values())  tally(s.tags, s.system);
+for (const c of classMap.values())   tally(c.tags, c.system);
+
+const SYSTEM_LABELS: Record<string, string> = {
+  power: "Power", might: "Might", guile: "Guile", champions: "Champ",
+};
+const SYSTEM_ORDER = ["power", "might", "guile", "champions"];
+
+// Split + sort: system tags by priority, user tags by priority then alpha
+const builtinTags = [...tagMap.values()]
+  .filter(t => t.sourceBook === "__builtin__")
+  .sort((a, b) => a.priority - b.priority || a.label.localeCompare(b.label));
+
+const userTags = [...tagMap.values()]
+  .filter(t => t.sourceBook !== "__builtin__")
+  .sort((a, b) => a.priority - b.priority || a.label.localeCompare(b.label));
 ---
 
-<WikiPage title="All Tags — Spheres Wiki" pagefindIgnore={true}>
+<WikiPage title="Tags — Spheres Wiki" pagefindIgnore={true}>
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
     <span>Tags</span>
   </nav>
 
-  <div class="content-main" style="max-width: 640px;">
-    <h1 class="page-title" id="overview">Tags</h1>
-    <hr class="page-title-rule" />
+  <h1 class="page-title" id="overview">Tags</h1>
+  <hr class="page-title-rule" />
 
-    {
-      builtinTags.length > 0 && (
-        <>
-          <div class="section-group">
-            <div class="section-group-header">
-              <span class="section-group-label">System Tags</span>
-              <div class="section-group-rule" />
-            </div>
-            <div class="tag-index-list">
-              {builtinTags.map((tag) => (
-                <div class="tag-index-row">
-                  <TagBadge
-                    tagId={tag.id}
-                    tagMap={tagMap}
-                    bookMetaMap={bookMetaMap}
-                  />
-                  <span class="tag-index-desc">{tag.description}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </>
-      )
-    }
+  <p class="tags-summary">
+    {tagMap.size} tag{tagMap.size !== 1 ? "s" : ""} defined.
+    Click any tag to browse all entries that carry it.
+  </p>
 
-    <div class="section-group" style="margin-top: 32px;">
+  {builtinTags.length > 0 && (
+    <div class="section-group" style="margin-top: 24px;">
       <div class="section-group-header">
-        <span class="section-group-label">Descriptors & Content Tags</span>
+        <span class="section-group-label">System Tags</span>
         <div class="section-group-rule" />
       </div>
-      <div class="tag-index-list">
-        {
-          userTags.map((tag) => (
-            <div class="tag-index-row">
-              <TagBadge
-                tagId={tag.id}
-                tagMap={tagMap}
-                bookMetaMap={bookMetaMap}
-              />
-              <span class="tag-index-desc">{tag.description}</span>
+      <div class="tag-table">
+        {builtinTags.map(tag => {
+          const s = stats.get(tag.id)!;
+          return (
+            <div class="tag-row">
+              <div class="tag-row-badge">
+                <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+              </div>
+              <div class="tag-row-desc">{tag.description}</div>
+              <div class="tag-row-stats">
+                {s.total > 0 && (
+                  <span class="tag-count">{s.total}</span>
+                )}
+                {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
+                  <span class={`tag-sys-pip ${sys === 'champions' ? 'champ' : sys}`}
+                    title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
+                    {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
+                  </span>
+                ))}
+              </div>
             </div>
-          ))
-        }
-        {userTags.length === 0 && <p>No tags defined yet.</p>}
+          );
+        })}
       </div>
     </div>
+  )}
+
+  <div class="section-group" style="margin-top: 32px;">
+    <div class="section-group-header">
+      <span class="section-group-label">Descriptors &amp; Content Tags</span>
+      <div class="section-group-rule" />
+    </div>
+    {userTags.length === 0 ? (
+      <p class="section-empty">No content tags defined yet.</p>
+    ) : (
+      <div class="tag-table">
+        {userTags.map(tag => {
+          const s = stats.get(tag.id)!;
+          return (
+            <div class="tag-row">
+              <div class="tag-row-badge">
+                <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+              </div>
+              <div class="tag-row-desc">{tag.description}</div>
+              <div class="tag-row-stats">
+                {s.total > 0 && (
+                  <span class="tag-count">{s.total}</span>
+                )}
+                {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
+                  <span class={`tag-sys-pip ${sys === 'champions' ? 'champ' : sys}`}
+                    title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
+                    {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
+                  </span>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    )}
   </div>
 </WikiPage>
 
 <style>
-  .tag-index-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  .tag-index-row {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-  }
-  .tag-index-desc {
+  .tags-summary {
     font-size: var(--fs-sm);
     color: var(--clr-muted);
+    margin-bottom: 4px;
+  }
+
+  .tag-table {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border: 0.5px solid var(--clr-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .tag-row {
+    display: grid;
+    grid-template-columns: 160px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-bottom: 0.5px solid var(--clr-border);
+    transition: background 0.1s;
+  }
+
+  .tag-row:last-child {
+    border-bottom: none;
+  }
+
+  .tag-row:hover {
+    background: color-mix(in srgb, var(--clr-brand) 4%, transparent);
+  }
+
+  .tag-row-badge {
+    display: flex;
+    align-items: center;
+  }
+
+  .tag-row-desc {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    line-height: 1.4;
+  }
+
+  .tag-row-stats {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .tag-count {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--clr-muted);
+    background: color-mix(in srgb, var(--clr-border) 60%, transparent);
+    padding: 1px 6px;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+
+  .tag-sys-pip {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .tag-sys-pip.power { background: color-mix(in srgb, var(--clr-power) 12%, transparent); color: var(--clr-power); }
+  .tag-sys-pip.might { background: color-mix(in srgb, var(--clr-might) 12%, transparent); color: var(--clr-might); }
+  .tag-sys-pip.guile { background: color-mix(in srgb, var(--clr-guile) 12%, transparent); color: var(--clr-guile); }
+  .tag-sys-pip.champ { background: color-mix(in srgb, var(--clr-champ) 12%, transparent); color: var(--clr-champ); }
+
+  @media (max-width: 600px) {
+    .tag-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .tag-row-stats {
+      justify-content: flex-start;
+    }
   }
 </style>

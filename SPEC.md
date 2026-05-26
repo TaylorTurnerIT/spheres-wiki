@@ -111,7 +111,7 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T1  | x      | Create `/might/classes/[class].astro` (port power template, no archetypes) | V1,V3,I.pages |
 | T2  | x      | Create `/guile/classes/[class].astro` (port power template, no archetypes) | V1,V3,I.pages |
 | T3  | x      | Create `/archetypes/` index page — two sections: (1) Sphere Class Archetypes grouped by system→class, color-coded, collapsible; (2) PF1e Archetypes grouped by base class, "Spheres {Class}" always first, arc system badge colored. Links only to routes that exist. | V1,V9,I.pages,I.content |
-| T4  | .      | Create `/bb-code-template/` page                         | V1,I.pages    |
+| T4  | x      | Enhance `/tags/` index — add per-tag entry counts, system breakdown badges, sort by count/alpha; update home ResourceCard from bb-code-template → tags | V1,V3,I.pages |
 | T5  | .      | Create `/community-resources/` page                      | V1,I.pages    |
 | T6  | .      | Create `/citations-guide/` page                          | V1,I.pages    |
 | T7  | .      | Create `/contact/` page                                  | V1,I.pages    |
