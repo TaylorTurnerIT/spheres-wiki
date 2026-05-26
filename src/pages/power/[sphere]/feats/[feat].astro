@@ -88,7 +88,9 @@ const FeatContent = collEntry ? (await render(collEntry)).Content : null;
         data-pagefind-meta={`title:${feat.name}`}
         data-pagefind-meta={`sphere:${sphere.name}`}
         data-pagefind-meta="system:Spheres of Power"
+        data-pagefind-filter="system:Spheres of Power"
         data-pagefind-meta="type:feat"
+        data-pagefind-filter="type:feat"
         data-pagefind-meta={`tags:${feat.tags.join(', ')}`}
       >
         {feat.name}

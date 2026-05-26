@@ -15,7 +15,9 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
     </a>
     <div class="header-search-anchor">
       <div class="search-bar" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-owns="search-results" id="search-combobox">
-        <svg aria-hidden="true" width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>
+        <button class="search-icon-btn" id="search-icon-btn" aria-label="Open full search">
+          <svg aria-hidden="true" width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>
+        </button>
         <input
           type="search"
           id="page-search"
@@ -64,11 +66,34 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
       if (resultsDiv) resultsDiv.hidden = !expanded;
     }
 
+    const searchIconBtn = document.getElementById('search-icon-btn') as HTMLButtonElement | null;
+
+    searchIconBtn?.addEventListener('click', () => {
+      const q = searchInput?.value.trim() ?? '';
+      window.location.href = q.length >= 2
+        ? `${import.meta.env.BASE_URL}search/?q=${encodeURIComponent(q)}`
+        : `${import.meta.env.BASE_URL}search/`;
+    });
+
     if (searchInput && resultsDiv) {
       searchInput.addEventListener('focus', initPagefind);
 
       searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') setExpanded(false);
+        if (e.key === 'Escape') {
+          setExpanded(false);
+          return;
+        }
+        if (e.key === 'Enter') {
+          const q = searchInput.value.trim();
+          if (q.length >= 2) {
+            window.location.href = `${import.meta.env.BASE_URL}search/?q=${encodeURIComponent(q)}`;
+          }
+          return;
+        }
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          (resultsDiv?.querySelector<HTMLAnchorElement>('.search-result-item'))?.focus();
+        }
       });
 
       searchInput.addEventListener('input', async (e) => {
@@ -88,7 +113,9 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
         }
 
         // Show top 8 results
+        const totalCount = search.results.length;
         const results = await Promise.all(search.results.slice(0, 8).map((r: any) => r.data()));
+        const q = searchInput.value.trim();
 
         resultsDiv.innerHTML = results.map(r => {
           const title = r.meta.title || "Untitled";
@@ -98,7 +125,6 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
           const tier = r.meta.tier;
           const tags = r.meta.tags ? r.meta.tags.split(',').map((t: string) => t.trim()) : [];
 
-          // Build the rich title line
           let displayTitle = title;
           if (sphere && type !== 'sphere') displayTitle += ` — ${sphere}`;
           if (system) displayTitle += ` — ${system}`;
@@ -113,9 +139,31 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
               <div class="search-result-excerpt">${r.excerpt}</div>
             </a>
           `;
-        }).join('');
+        }).join('') + (totalCount > 8
+          ? `<a href="${import.meta.env.BASE_URL}search/?q=${encodeURIComponent(q)}" class="search-see-all">See all ${totalCount} results →</a>`
+          : '');
 
         setExpanded(true);
+      });
+
+      // Arrow nav within dropdown
+      resultsDiv.addEventListener('keydown', (e) => {
+        const items = [...resultsDiv.querySelectorAll<HTMLAnchorElement>('.search-result-item, .search-see-all')];
+        if (e.key === 'Escape') {
+          setExpanded(false);
+          searchInput.focus();
+          return;
+        }
+        if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+        if (!items.length) return;
+        e.preventDefault();
+        const idx = items.indexOf(document.activeElement as HTMLAnchorElement);
+        if (e.key === 'ArrowDown') {
+          (items[idx + 1] ?? items[0]).focus();
+        } else {
+          if (idx <= 0) searchInput.focus();
+          else items[idx - 1].focus();
+        }
       });
 
       // Close when clicking outside

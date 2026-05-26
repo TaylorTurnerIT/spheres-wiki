@@ -188,7 +188,9 @@ const groups: TocGroup[] = sections.map(sec => ({
             data-pagefind-weight="10"
             data-pagefind-meta={`title:${sphere.name}`}
             data-pagefind-meta="type:sphere"
+            data-pagefind-filter="type:sphere"
             data-pagefind-meta="system:Spheres of Might"
+            data-pagefind-filter="system:Spheres of Might"
           >
             <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
             {sphere.name}
@@ -291,7 +293,9 @@ const groups: TocGroup[] = sections.map(sec => ({
             data-pagefind-weight="10"
             data-pagefind-meta={`title:${cls.name}`}
             data-pagefind-meta="type:class"
+            data-pagefind-filter="type:class"
             data-pagefind-meta="system:Spheres of Might"
+            data-pagefind-filter="system:Spheres of Might"
           >
             {cls.name}
           </h1>

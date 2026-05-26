@@ -1,0 +1,691 @@
+---
+import WikiPage from '@/layouts/WikiPage.astro';
+import { url } from '@/lib/url';
+import { resolveEntries } from '@/lib/resolveEntries';
+
+const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, tagMap } = await resolveEntries();
+
+const SYSTEM_META: Record<string, string> = {
+  power:      'Spheres of Power',
+  might:      'Spheres of Might',
+  guile:      'Spheres of Guile',
+  champions:  'Champions of the Spheres',
+};
+
+type ManifestEntry = { url: string; title: string; system: string; type: string; sphere?: string; tags?: string };
+const manifest: ManifestEntry[] = [];
+
+for (const s of sphereMap.values()) {
+  if (!SYSTEM_META[s.system]) continue;
+  manifest.push({ url: url(`/${s.system}/${s.id}/`), title: s.name, system: SYSTEM_META[s.system], type: 'sphere', tags: s.tags.join(', ') });
+}
+for (const t of talentMap.values()) {
+  if (!SYSTEM_META[t.system]) continue;
+  const sph = sphereMap.get(`sphere:${t.sphere}`);
+  manifest.push({ url: url(`/${t.system}/${t.sphere}/${t.id}/`), title: t.name, system: SYSTEM_META[t.system], type: 'talent', sphere: sph?.name ?? t.sphere, tags: t.tags.join(', ') });
+}
+for (const f of featMap.values()) {
+  if (!SYSTEM_META[f.system]) continue;
+  const sph = sphereMap.get(`sphere:${f.sphere}`);
+  manifest.push({ url: url(`/${f.system}/${f.sphere}/feats/${f.id}/`), title: f.name, system: SYSTEM_META[f.system], type: 'feat', sphere: sph?.name ?? f.sphere, tags: f.tags.join(', ') });
+}
+for (const c of classMap.values()) {
+  if (!SYSTEM_META[c.system]) continue;
+  const clsUrl = c.system === 'power'      ? url(`/power/classes/${c.id}/`)
+               : c.system === 'champions'  ? url(`/champions/${c.id}/`)
+               : null; // guile/might classes live on sphere pages — covered by sphere entries
+  if (!clsUrl) continue;
+  manifest.push({ url: clsUrl, title: c.name, system: SYSTEM_META[c.system], type: 'class', tags: c.tags.join(', ') });
+}
+for (const a of archetypeMap.values()) {
+  if (a.system !== 'power') continue;
+  manifest.push({ url: url(`/power/classes/${a.className}/${a.id}/`), title: a.name, system: SYSTEM_META['power'], type: 'archetype', tags: a.tags.join(', ') });
+}
+for (const t of classTraitMap.values()) {
+  if (!SYSTEM_META[t.system]) continue;
+  manifest.push({ url: url(`/${t.system}/classes/${t.className}/traits/${t.id}/`), title: t.name, system: SYSTEM_META[t.system], type: 'class-trait', tags: t.tags.join(', ') });
+}
+
+const staticSpheres = [...new Set([...sphereMap.values()].map(s => s.name))].sort();
+const staticTags = [...tagMap.entries()]
+  .sort((a, b) => (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0]))
+  .map(([id, tag]) => ({ value: id, text: tag.label || id }));
+---
+<WikiPage title="Search — Spheres Wiki" pagefindIgnore={true}>
+
+  <h1 class="page-title">Search</h1>
+  <hr class="page-title-rule" />
+
+  <div class="search-page">
+    <div class="search-page-bar">
+      <svg aria-hidden="true" class="search-page-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>
+      <input
+        id="sp-input"
+        type="search"
+        class="search-page-input"
+        placeholder="Search spheres, classes, talents, feats…"
+        autocomplete="off"
+        aria-label="Search"
+      />
+    </div>
+
+    <div class="search-page-filters" id="sp-filters">
+      <div class="sp-filter-group">
+        <label for="sp-system-select" class="sp-filter-label">System</label>
+        <select id="sp-system-select" autocomplete="off"></select>
+      </div>
+      <div class="sp-filter-group">
+        <label for="sp-type-select" class="sp-filter-label">Type</label>
+        <select id="sp-type-select" autocomplete="off"></select>
+      </div>
+      <div class="sp-filter-group">
+        <label for="sp-sphere-select" class="sp-filter-label">Sphere</label>
+        <select id="sp-sphere-select" autocomplete="off"></select>
+      </div>
+      <div class="sp-filter-group" id="sp-tag-group">
+        <label for="sp-tag-select" class="sp-filter-label">Tag</label>
+        <select id="sp-tag-select" autocomplete="off"></select>
+      </div>
+    </div>
+
+    <div
+      id="sp-data"
+      data-spheres={JSON.stringify(staticSpheres)}
+      data-tags={JSON.stringify(staticTags)}
+      data-manifest={JSON.stringify(manifest)}
+      hidden
+    ></div>
+
+    <div id="sp-status" class="sp-status" hidden></div>
+    <div id="sp-results" class="sp-results"></div>
+    <div id="sp-load-more" class="sp-load-more-wrap" hidden>
+      <button id="sp-load-more-btn" class="sp-load-more-btn">Show more results</button>
+    </div>
+  </div>
+
+</WikiPage>
+
+<style is:global>
+  .search-page {
+    max-width: 780px;
+  }
+  .search-page-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    margin-bottom: 16px;
+  }
+  .search-page-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--clr-muted);
+    flex-shrink: 0;
+  }
+  .search-page-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--clr-text);
+  }
+  .search-page-input::placeholder {
+    color: var(--clr-muted);
+  }
+
+  /* Filter row */
+  .search-page-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+    margin-bottom: 16px;
+  }
+  .sp-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .sp-filter-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+    white-space: nowrap;
+  }
+
+  /* TomSelect overrides — scoped to filter groups */
+  .sp-filter-group .ts-wrapper {
+    min-width: 130px;
+    max-width: 220px;
+    position: relative;
+  }
+  #sp-sphere-group .ts-wrapper {
+    min-width: 150px;
+    max-width: 260px;
+  }
+  .sp-filter-group .ts-control {
+    border-radius: var(--radius) !important;
+    border-color: var(--clr-border) !important;
+    background: var(--clr-bg) !important;
+    font-family: var(--font-body) !important;
+    font-size: var(--fs-xs) !important;
+    padding: 4px 28px 4px 8px !important;
+    min-height: unset !important;
+    box-shadow: none !important;
+    cursor: pointer;
+    color: var(--clr-text);
+  }
+  .sp-filter-group .ts-control.focus {
+    border-color: var(--clr-brand) !important;
+    box-shadow: 0 0 0 1px var(--clr-brand) !important;
+    outline: none !important;
+  }
+  .sp-filter-group .ts-control input {
+    font-family: var(--font-body) !important;
+    font-size: var(--fs-xs) !important;
+    color: var(--clr-text) !important;
+    min-width: 0 !important;
+  }
+  .sp-filter-group .ts-control input::placeholder {
+    color: var(--clr-muted) !important;
+  }
+  .sp-filter-group .ts-wrapper.has-items .ts-control input::placeholder {
+    color: transparent !important;
+  }
+  /* Selected value text */
+  .sp-filter-group .ts-control .item {
+    color: var(--clr-text) !important;
+    font-size: var(--fs-xs) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    border: none !important;
+  }
+  /* Dropdown arrow */
+  .sp-filter-group .ts-wrapper::after {
+    content: '▾';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: var(--clr-muted);
+    pointer-events: none;
+  }
+  /* Clear button */
+  .sp-filter-group .ts-control .clear-button {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--clr-muted) !important;
+    opacity: 0.7;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer;
+  }
+  .sp-filter-group .ts-control .clear-button:hover {
+    color: var(--clr-text) !important;
+    opacity: 1;
+  }
+  .sp-filter-group .ts-wrapper.has-items::after {
+    display: none;
+  }
+  /* Dropdown */
+  .sp-filter-group .ts-dropdown {
+    border-radius: var(--radius) !important;
+    border-color: var(--clr-border) !important;
+    background: var(--clr-bg) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
+    font-family: var(--font-body) !important;
+    font-size: var(--fs-xs) !important;
+    color: var(--clr-text) !important;
+    margin-top: 2px !important;
+  }
+  .sp-filter-group .ts-dropdown .ts-dropdown-content {
+    padding: 4px 0 !important;
+    max-height: 240px;
+  }
+  .sp-filter-group .ts-dropdown .option {
+    padding: 6px 10px !important;
+    color: var(--clr-text) !important;
+  }
+  .sp-filter-group .ts-dropdown .option:hover,
+  .sp-filter-group .ts-dropdown .option.active {
+    background: color-mix(in srgb, var(--clr-brand) 10%, transparent) !important;
+    color: var(--clr-text) !important;
+  }
+  .sp-filter-group .ts-dropdown .option.selected {
+    background: color-mix(in srgb, var(--clr-brand) 16%, transparent) !important;
+    color: var(--clr-brand) !important;
+    font-weight: 600;
+  }
+
+  /* Status */
+  .sp-status {
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    margin-bottom: 12px;
+  }
+  .sp-status.loading::after {
+    content: '…';
+  }
+
+  /* Results */
+  .sp-results {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .sp-result {
+    display: block;
+    padding: 12px 14px;
+    background: var(--clr-bg);
+    border: 0.5px solid var(--clr-border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--clr-text);
+    transition: border-color 0.12s, box-shadow 0.12s;
+  }
+  .sp-result:hover,
+  .sp-result:focus {
+    border-color: var(--clr-brand);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-decoration: none;
+    outline: none;
+  }
+  .sp-result-header {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .sp-result-title {
+    font-family: var(--font-display);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--clr-brand);
+    flex-shrink: 0;
+  }
+  .sp-result-sphere {
+    font-size: var(--fs-3xs);
+    color: var(--clr-muted);
+    font-style: italic;
+  }
+  .sp-badges {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+  .sp-badge {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .sp-badge-type       { background: color-mix(in srgb, var(--clr-brand)  10%, transparent); color: var(--clr-brand);  }
+  .sp-badge-power      { background: color-mix(in srgb, var(--clr-power)  10%, transparent); color: var(--clr-power);  }
+  .sp-badge-might      { background: color-mix(in srgb, var(--clr-might)  10%, transparent); color: var(--clr-might);  }
+  .sp-badge-guile      { background: color-mix(in srgb, var(--clr-guile)  10%, transparent); color: var(--clr-guile);  }
+  .sp-badge-champions  { background: color-mix(in srgb, var(--clr-champ)  10%, transparent); color: var(--clr-champ);  }
+  .sp-result-excerpt {
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    line-height: 1.5;
+  }
+  .sp-result-excerpt mark {
+    background: color-mix(in srgb, var(--clr-brand) 20%, transparent);
+    color: var(--clr-text);
+    border-radius: 2px;
+    padding: 0 1px;
+  }
+  .sp-empty {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    font-style: italic;
+    padding: 24px 0;
+    text-align: center;
+  }
+
+  /* Load more */
+  .sp-load-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  .sp-load-more-btn {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    cursor: pointer;
+    transition: border-color 0.12s, color 0.12s;
+  }
+  .sp-load-more-btn:hover {
+    border-color: var(--clr-brand);
+    color: var(--clr-brand);
+  }
+</style>
+
+<script>
+import TomSelect from 'tom-select';
+import 'tom-select/dist/css/tom-select.css';
+
+const PAGE_SIZE = 20;
+const MAX_RESULTS = 500;
+
+const SYSTEM_MAP: Record<string, { label: string; key: string }> = {
+  'Spheres of Power':        { label: 'Spheres of Power',   key: 'power'     },
+  'Spheres of Might':        { label: 'Spheres of Might',   key: 'might'     },
+  'Spheres of Guile':        { label: 'Spheres of Guile',   key: 'guile'     },
+  'Champions of the Spheres':{ label: 'Champions',          key: 'champions' },
+};
+
+const TYPE_LABELS: Record<string, string> = {
+  sphere:        'Sphere',
+  talent:        'Talent',
+  feat:          'Feat',
+  class:         'Class',
+  archetype:     'Archetype',
+  'class-trait': 'Trait',
+};
+
+const TYPE_ORDER = ['sphere','talent','feat','class','archetype','class-trait'];
+
+let pagefind: any;
+let browseManifest: any[] = [];
+let allData: any[] = [];
+let displayCount = PAGE_SIZE;
+let activeSystem: string | null = null;
+let activeType: string | null = null;
+let activeSphere: string | null = null;
+let activeTag: string | null = null;
+let tsInstances: Record<string, any> = {};
+let browseAll = false;
+
+async function loadPagefind() {
+  if (pagefind) return;
+  // @ts-ignore
+  pagefind = await import(/* @vite-ignore */ `${import.meta.env.BASE_URL}pagefind/pagefind.js`);
+  await pagefind.options({ excerptLength: 30 });
+  await pagefind.init();
+}
+
+function getParams() {
+  const p = new URLSearchParams(window.location.search);
+  return {
+    q:      p.get('q') ?? '',
+    system: p.get('system') ?? '',
+    type:   p.get('type') ?? '',
+    sphere: p.get('sphere') ?? '',
+    tag:    p.get('tag') ?? '',
+  };
+}
+
+function pushParams(q: string, system: string, type: string, sphere: string, tag: string) {
+  const p = new URLSearchParams();
+  if (q)      p.set('q', q);
+  if (system) p.set('system', system);
+  if (type)   p.set('type', type);
+  if (sphere) p.set('sphere', sphere);
+  if (tag)    p.set('tag', tag);
+  const qs = p.toString();
+  history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname);
+}
+
+function systemKeyToMeta(key: string): string {
+  return Object.entries(SYSTEM_MAP).find(([, v]) => v.key === key)?.[0] ?? key;
+}
+
+function parseTags(raw: string): string[] {
+  return raw ? raw.split(',').map(t => t.trim()).filter(Boolean) : [];
+}
+
+function filtered() {
+  return allData.filter(r => {
+    if (activeSystem && systemKeyToMeta(activeSystem) !== (r.meta?.system ?? '')) return false;
+    if (activeType   && (r.meta?.type   ?? '') !== activeType)                     return false;
+    if (activeSphere && (r.meta?.sphere ?? '') !== activeSphere)                   return false;
+    if (activeTag    && !parseTags(r.meta?.tags ?? '').includes(activeTag))        return false;
+    return true;
+  });
+}
+
+function renderResults() {
+  const results    = filtered();
+  const resultsEl  = document.getElementById('sp-results')!;
+  const statusEl   = document.getElementById('sp-status')!;
+  const loadMoreEl = document.getElementById('sp-load-more')!;
+
+  const total   = allData.length;
+  const showing = results.slice(0, displayCount);
+  const hasMore = results.length > displayCount;
+
+  statusEl.className = 'sp-status';
+  statusEl.hidden = false;
+  statusEl.textContent = total === 0
+    ? 'No results found.'
+    : results.length === total
+      ? `${total} result${total === 1 ? '' : 's'}`
+      : `${results.length} of ${total} result${total === 1 ? '' : 's'}`;
+
+  if (total === 0) {
+    resultsEl.innerHTML = `<div class="sp-empty">No results for this query.</div>`;
+    loadMoreEl.hidden = true;
+    return;
+  }
+
+  resultsEl.innerHTML = showing.map(r => {
+    const title     = r.meta?.title ?? 'Untitled';
+    const system    = r.meta?.system ?? '';
+    const type      = r.meta?.type ?? '';
+    const sphere    = r.meta?.sphere ?? '';
+    const sysEntry  = SYSTEM_MAP[system];
+    const sysKey    = sysEntry?.key ?? '';
+    const typeLabel = TYPE_LABELS[type] ?? type;
+
+    return `<a href="${r.url}" class="sp-result">
+      <div class="sp-result-header">
+        <span class="sp-result-title">${title}</span>
+        ${sphere && type !== 'sphere' ? `<span class="sp-result-sphere">${sphere}</span>` : ''}
+        <div class="sp-badges">
+          ${sysKey    ? `<span class="sp-badge sp-badge-${sysKey}">${sysEntry!.label}</span>` : ''}
+          ${typeLabel ? `<span class="sp-badge sp-badge-type">${typeLabel}</span>`             : ''}
+        </div>
+      </div>
+      ${r.excerpt ? `<div class="sp-result-excerpt">${r.excerpt}</div>` : ''}
+    </a>`;
+  }).join('');
+
+  loadMoreEl.hidden = !hasMore;
+}
+
+function makeOnChange(key: string) {
+  return (val: string) => {
+    const input = document.getElementById('sp-input') as HTMLInputElement;
+    if (key === 'system') activeSystem = val || null;
+    if (key === 'type')   activeType   = val || null;
+    if (key === 'sphere') activeSphere = val || null;
+    if (key === 'tag')    activeTag    = val || null;
+    displayCount = PAGE_SIZE;
+    const query = input.value.trim();
+    pushParams(query, activeSystem ?? '', activeType ?? '', activeSphere ?? '', activeTag ?? '');
+
+    if (query.length >= 2) {
+      // Re-filter existing search results — no need to re-fetch
+      renderResults();
+    } else {
+      // No query — browse-all with current filters (or all pages if none)
+      search(null);
+    }
+  };
+}
+
+function clearResults() {
+  document.getElementById('sp-results')!.innerHTML = '';
+  document.getElementById('sp-status')!.hidden = true;
+  document.getElementById('sp-load-more')!.hidden = true;
+  allData = [];
+  browseAll = false;
+}
+
+function initTomSelects(
+  staticSpheres: string[],
+  staticTags: { value: string; text: string }[]
+) {
+  Object.values(tsInstances).forEach(ts => { try { ts.destroy(); } catch {} });
+  tsInstances = {};
+
+  const makeTs = (id: string, key: string, placeholder: string, opts: { value: string; text: string }[]) => {
+    const el = document.getElementById(id) as HTMLSelectElement | null;
+    if (!el) return;
+    const ts = new TomSelect(el, {
+      maxItems: 1,
+      plugins: ['clear_button'],
+      placeholder,
+      create: false,
+      options: opts,
+      onChange: makeOnChange(key),
+    });
+    tsInstances[key] = ts;
+  };
+
+  const systemOpts = Object.values(SYSTEM_MAP).map(e => ({ value: e.key, text: e.label }));
+  const typeOpts   = TYPE_ORDER.filter(t => t in TYPE_LABELS).map(t => ({ value: t, text: TYPE_LABELS[t] }));
+  const sphereOpts = staticSpheres.map(s => ({ value: s, text: s }));
+
+  makeTs('sp-system-select', 'system', 'Any system…',  systemOpts);
+  makeTs('sp-type-select',   'type',   'Any type…',    typeOpts);
+  makeTs('sp-sphere-select', 'sphere', 'Any sphere…',  sphereOpts);
+  makeTs('sp-tag-select',    'tag',    'Any tag…',     staticTags);
+}
+
+async function search(query: string | null) {
+  const statusEl  = document.getElementById('sp-status')!;
+  const resultsEl = document.getElementById('sp-results')!;
+  browseAll = query === null;
+
+  statusEl.hidden = false;
+  statusEl.className = 'sp-status loading';
+  statusEl.textContent = browseAll ? 'Loading' : 'Searching';
+  resultsEl.innerHTML = '';
+  document.getElementById('sp-load-more')!.hidden = true;
+
+  if (browseAll) {
+    allData = browseManifest;
+    displayCount = PAGE_SIZE;
+    renderResults();
+    return;
+  }
+
+  await loadPagefind();
+  const result = await pagefind.search(query);
+  const top    = result.results.slice(0, MAX_RESULTS);
+  allData      = await Promise.all(top.map((r: any) => r.data()));
+  displayCount = PAGE_SIZE;
+
+  renderResults();
+}
+
+let debounceTimer: ReturnType<typeof setTimeout>;
+
+document.addEventListener('astro:page-load', () => {
+  const input = document.getElementById('sp-input') as HTMLInputElement;
+  if (!input) return;
+
+  // Reset state on each navigation
+  activeSystem = null;
+  activeType   = null;
+  activeSphere = null;
+  activeTag    = null;
+  allData      = [];
+  browseAll    = false;
+
+  // Read static build-time data
+  const dataEl = document.getElementById('sp-data') as HTMLElement;
+  const staticSpheres: string[]                       = JSON.parse(dataEl?.dataset.spheres   ?? '[]');
+  const staticTags: { value: string; text: string }[] = JSON.parse(dataEl?.dataset.tags      ?? '[]');
+  browseManifest = (JSON.parse(dataEl?.dataset.manifest ?? '[]') as any[]).map((e: any) => ({
+    url: e.url,
+    meta: { title: e.title, system: e.system, type: e.type, sphere: e.sphere ?? '', tags: e.tags ?? '' },
+    excerpt: '',
+  }));
+
+  initTomSelects(staticSpheres, staticTags);
+
+  // Restore from URL params
+  const { q, system, type, sphere, tag } = getParams();
+  if (system) { activeSystem = system; tsInstances.system?.setValue(system, true); }
+  if (type)   { activeType   = type;   tsInstances.type?.setValue(type,   true); }
+  if (sphere) { activeSphere = sphere; tsInstances.sphere?.setValue(sphere, true); }
+  if (tag)    { activeTag    = tag;    tsInstances.tag?.setValue(tag,    true); }
+
+  if (q) {
+    input.value = q;
+    search(q);
+  } else {
+    search(null);
+  }
+
+  input.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    const val = input.value.trim();
+    pushParams(val, activeSystem ?? '', activeType ?? '', activeSphere ?? '', activeTag ?? '');
+    if (val.length < 2) {
+      clearTimeout(debounceTimer);
+      search(null); // browse-all with current filters (or all pages)
+      return;
+    }
+    debounceTimer = setTimeout(() => search(val), 220);
+  });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      (document.querySelector('.sp-result') as HTMLAnchorElement | null)?.focus();
+    }
+  });
+
+  document.getElementById('sp-results')!.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    const items = [...document.querySelectorAll<HTMLAnchorElement>('.sp-result')];
+    if (!items.length) return;
+    const idx = items.indexOf(document.activeElement as HTMLAnchorElement);
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      (items[idx + 1] ?? items[0]).focus();
+    } else {
+      e.preventDefault();
+      if (idx <= 0) input.focus();
+      else items[idx - 1].focus();
+    }
+  });
+
+  document.getElementById('sp-load-more-btn')?.addEventListener('click', () => {
+    displayCount += PAGE_SIZE;
+    renderResults();
+  });
+});
+</script>
