@@ -80,7 +80,7 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 /archetypes/                   archetypes index (MISSING — T3)
 /bb-code-template/             BB code template (MISSING — T4)
 /community-resources/          community links (MISSING — T5)
-/citations-guide/              citation guide (MISSING — T6)
+/citations-guide/              citation guide (REMOVED)
 /how-to-build-champion/        guide (MISSING — T8)
 /how-to-build-practitioner/    guide (MISSING — T8)
 /how-to-build-spherecaster/    guide (MISSING — T8)
@@ -113,7 +113,7 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T3  | x      | Create `/archetypes/` index page — two sections: (1) Sphere Class Archetypes grouped by system→class, color-coded, collapsible; (2) PF1e Archetypes grouped by base class, "Spheres {Class}" always first, arc system badge colored. Links only to routes that exist. | V1,V9,I.pages,I.content |
 | T4  | x      | Enhance `/tags/` index — add per-tag entry counts, system breakdown badges, sort by count/alpha; update home ResourceCard from bb-code-template → tags | V1,V3,I.pages |
 | T5  | x      | Create `/community-resources/` page                      | V1,I.pages    |
-| T6  | .      | Create `/citations-guide/` page                          | V1,I.pages    |
+| T6  | -      | ~~Create `/citations-guide/` page~~ — removed            | V1,I.pages    |
 | T7  | .      | Create `/contact/` page                                  | V1,I.pages    |
 | T8  | .      | Create `/how-to-build-*` guide pages (3 pages)           | V1,I.pages    |
 | T9  | .      | Remove/fix all dead sidebar links (Other Systems block, subsection stubs) | V1,V9 |
