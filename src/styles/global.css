@@ -453,6 +453,27 @@ a:hover {
   transition: max-height 0.3s ease;
 }
 
+/* ── Page actions bar (expand/collapse all, etc.) ───────── */
+.page-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+.toggle-all-btn {
+  background: none;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  color: var(--clr-muted);
+  cursor: pointer;
+  font-size: var(--fs-xs);
+  padding: 3px 10px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.toggle-all-btn:hover {
+  color: var(--clr-brand);
+  border-color: var(--clr-brand);
+}
+
 /* ── Header extras ──────────────────────────────────────── */
 .site-title {
   flex: 1;

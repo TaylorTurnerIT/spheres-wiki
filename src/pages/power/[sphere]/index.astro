@@ -146,6 +146,10 @@ const groups: TocGroup[] = sections.map(sec => ({
   <div class="content-columns">
     <div class="content-main">
 
+      <div class="page-actions">
+        <button id="toggle-all-sections" class="toggle-all-btn">Collapse All</button>
+      </div>
+
       <h1
         class="page-title power"
         id="overview"
@@ -195,11 +199,11 @@ const groups: TocGroup[] = sections.map(sec => ({
 
           {sec.categories.map(cat => (
             <div class="section-block">
-              <button class="section-heading section-heading-toggle is-collapsed" data-cat-id={cat.id} aria-expanded="false" aria-controls={`${cat.id}-entries`}>
+              <button class="section-heading section-heading-toggle" data-cat-id={cat.id} aria-expanded="true" aria-controls={`${cat.id}-entries`}>
                 <span class="section-heading-chevron" aria-hidden="true">▾</span>
                 <span class="section-heading-text" id={cat.id}>{cat.label}</span>
               </button>
-              <div class="section-entries" id={`${cat.id}-entries`} style="max-height: 0" aria-hidden="true">
+              <div class="section-entries" id={`${cat.id}-entries`} aria-hidden="false">
               {cat.entries.length === 0
                 ? <p class="section-empty">No entries yet.</p>
                 : <div class="talent-list">
@@ -260,36 +264,49 @@ const groups: TocGroup[] = sections.map(sec => ({
 
 <script>
 document.addEventListener('astro:page-load', () => {
-  document.querySelectorAll<HTMLButtonElement>('.section-heading-toggle').forEach(btn => {
+  function toggleSection(btn: HTMLButtonElement, expand: boolean) {
     const catId = btn.dataset.catId!;
     const entries = document.getElementById(`${catId}-entries`);
     if (!entries) return;
 
+    if (!expand) {
+      entries.style.overflow = 'hidden';
+      entries.style.maxHeight = entries.scrollHeight + 'px';
+      requestAnimationFrame(() => { entries.style.maxHeight = '0'; });
+    } else {
+      entries.style.overflow = 'hidden';
+      entries.style.maxHeight = entries.scrollHeight + 'px';
+      entries.addEventListener('transitionend', () => {
+        entries.style.maxHeight = '';
+        entries.style.overflow = 'visible';
+      }, { once: true });
+    }
+
+    btn.setAttribute('aria-expanded', String(expand));
+    btn.classList.toggle('is-collapsed', !expand);
+    entries.setAttribute('aria-hidden', String(!expand));
+
+    document.dispatchEvent(new CustomEvent('class-feature-collapse', {
+      detail: { id: catId, collapsed: !expand },
+    }));
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('.section-heading-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      const willCollapse = isExpanded;
-
-      if (willCollapse) {
-        entries.style.overflow = 'hidden';
-        entries.style.maxHeight = entries.scrollHeight + 'px';
-        requestAnimationFrame(() => { entries.style.maxHeight = '0'; });
-      } else {
-        entries.style.overflow = 'hidden';
-        entries.style.maxHeight = entries.scrollHeight + 'px';
-        entries.addEventListener('transitionend', () => {
-          entries.style.maxHeight = '';
-          entries.style.overflow = 'visible';
-        }, { once: true });
-      }
-
-      btn.setAttribute('aria-expanded', String(!isExpanded));
-      btn.classList.toggle('is-collapsed', willCollapse);
-      entries.setAttribute('aria-hidden', String(willCollapse));
-
-      document.dispatchEvent(new CustomEvent('class-feature-collapse', {
-        detail: { id: catId, collapsed: willCollapse },
-      }));
+      toggleSection(btn, !isExpanded);
     });
+  });
+
+  const toggleAllBtn = document.getElementById('toggle-all-sections') as HTMLButtonElement | null;
+  if (!toggleAllBtn) return;
+
+  toggleAllBtn.addEventListener('click', () => {
+    const shouldExpand = toggleAllBtn.textContent?.trim() === 'Expand All';
+    document.querySelectorAll<HTMLButtonElement>('.section-heading-toggle').forEach(btn => {
+      toggleSection(btn, shouldExpand);
+    });
+    toggleAllBtn.textContent = shouldExpand ? 'Collapse All' : 'Expand All';
   });
 });
 </script>

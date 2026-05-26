@@ -24,40 +24,77 @@ const classes = [...classMap.values()]
   <h1 class="page-title power">Spheres of Power</h1>
   <hr class="page-title-rule" />
 
-  <div class="section-heading">
-    <span class="section-heading-text">Magic Spheres</span>
-    <div class="section-heading-rule"></div>
-  </div>
-
-  <div class="entry-grid">
-    {spheres.map(s => (
-      <a href={url(`/power/${s.id}/`)} class="entry-card power" data-astro-prefetch="hover">
-        <div class="entry-card-header">
-          <svg class="si entry-card-icon" aria-hidden="true"><use href={`#si-${s.icon}`} /></svg>
-          <span class="entry-card-name">{s.name}</span>
-        </div>
-        {/* description from GFM body — wired in R1-6 */}
-      </a>
-    ))}
-  </div>
-
-  {classes.length > 0 && (
-    <div style="margin-top: 20px;">
+  <div class="power-top">
+    <div class="power-spheres">
       <div class="section-heading">
-        <span class="section-heading-text">Spherecaster Classes</span>
+        <span class="section-heading-text">Magic Spheres</span>
         <div class="section-heading-rule"></div>
       </div>
-      <div class="entry-grid">
-        {classes.map(c => (
-          <a href={url(`/power/classes/${c.id}/`)} class="entry-card power" data-astro-prefetch="hover">
+      <div class="entry-grid sphere-grid">
+        {spheres.map(s => (
+          <a href={url(`/power/${s.id}/`)} class="entry-card power sphere-card" data-astro-prefetch="hover">
             <div class="entry-card-header">
-              <span class="entry-card-name">{c.name}</span>
+              <svg class="si entry-card-icon" aria-hidden="true"><use href={`#si-${s.icon}`} /></svg>
+              <span class="entry-card-name">{s.name}</span>
             </div>
-            {/* description from GFM body — wired in R1-6 */}
           </a>
         ))}
       </div>
     </div>
-  )}
+
+    {classes.length > 0 && (
+      <div class="power-classes">
+        <div class="section-heading">
+          <span class="section-heading-text">Spherecaster Classes</span>
+          <div class="section-heading-rule"></div>
+        </div>
+        <div class="entry-grid class-grid">
+          {classes.map(c => (
+            <a href={url(`/power/classes/${c.id}/`)} class="entry-card power" data-astro-prefetch="hover">
+              <div class="entry-card-header">
+                <span class="entry-card-name">{c.name}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
 
 </WikiPage>
+
+<style>
+  .power-top {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .sphere-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sphere-card {
+    padding: 6px 10px;
+  }
+
+  .class-grid {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 900px) {
+    .power-top {
+      grid-template-columns: 1fr;
+    }
+    .sphere-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sphere-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
