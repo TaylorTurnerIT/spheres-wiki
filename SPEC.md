@@ -28,6 +28,8 @@ src/content/<book-slug>/
 ```
 Entry types: `sphere | talent | feat | class | class-feature | class-trait | article | archetype | archetype-feature | tag`
 
+**PF1e base class convention:** PF1e base classes (Fighter, Rogue, etc.) stored as `ClassEntry` with `system: "pf1e"`. Their archetypes use `system: "power"|"might"|"guile"|"champions"` to indicate which sphere system they grant. Archetype named `"Spheres {ClassName}"` (e.g. `"Spheres Fighter"`) is the canonical base conversion and always sorts first in its class group. PF1e classes never appear on system index pages (filtered by system ∈ power/might/guile/champions only).
+
 ### I.resolveEntries — data API
 `resolveEntries()` → `ResolvedMaps`: sphereMap, talentMap, featMap, classMap, classFeatureMap, classTraitMap, articleMap, archetypeMap, archetypeFeatureMap, tagMap, bookMetaMap, entrySourceBook
 
@@ -108,7 +110,7 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 |-----|--------|----------------------------------------------------------|---------------|
 | T1  | x      | Create `/might/classes/[class].astro` (port power template, no archetypes) | V1,V3,I.pages |
 | T2  | x      | Create `/guile/classes/[class].astro` (port power template, no archetypes) | V1,V3,I.pages |
-| T3  | .      | Create `/archetypes/` index page                         | V1,I.pages    |
+| T3  | x      | Create `/archetypes/` index page — two sections: (1) Sphere Class Archetypes grouped by system→class, color-coded, collapsible; (2) PF1e Archetypes grouped by base class, "Spheres {Class}" always first, arc system badge colored. Links only to routes that exist. | V1,V9,I.pages,I.content |
 | T4  | .      | Create `/bb-code-template/` page                         | V1,I.pages    |
 | T5  | .      | Create `/community-resources/` page                      | V1,I.pages    |
 | T6  | .      | Create `/citations-guide/` page                          | V1,I.pages    |

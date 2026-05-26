@@ -1,0 +1,337 @@
+---
+import { url } from "@/lib/url";
+import WikiPage from "@/layouts/WikiPage.astro";
+import { resolveEntries } from "@/lib/resolveEntries";
+import type { ArchetypeEntry, ClassEntry } from "@/lib/types";
+
+const { archetypeMap, classMap, bookMetaMap } = await resolveEntries();
+
+// Systems that have their own sphere-class archetype detail pages
+const SPHERE_SYSTEMS = new Set(["power", "might", "guile", "champions"]);
+const SPHERE_SYSTEM_LABELS: Record<string, string> = {
+  power:     "Spheres of Power",
+  might:     "Spheres of Might",
+  guile:     "Spheres of Guile",
+  champions: "Champions of the Spheres",
+};
+// Only power has [class]/[archetype] detail pages right now
+const SYSTEMS_WITH_ARCHETYPE_PAGES = new Set(["power"]);
+
+type ArcRow = {
+  arc: ArchetypeEntry;
+  book: string | undefined;
+  href: string | null; // null = no detail page yet
+};
+
+type ClassGroup = {
+  classId: string;
+  className: string;
+  arcs: ArcRow[];
+};
+
+type SystemGroup = {
+  system: string;
+  label: string;
+  groups: ClassGroup[];
+};
+
+// Build a fast class lookup: id → ClassEntry
+const classById = new Map<string, ClassEntry>();
+for (const cls of classMap.values()) {
+  classById.set(cls.id, cls);
+}
+
+// Separate archetypes into sphere-class vs pf1e
+const sphereBySystem = new Map<string, Map<string, ArcRow[]>>();
+const pf1eByClass = new Map<string, ArcRow[]>();
+
+for (const [, arc] of archetypeMap) {
+  const cls = classById.get(arc.className);
+  const book = bookMetaMap.get(arc.sourceBook)?.title;
+
+  if (cls && SPHERE_SYSTEMS.has(cls.system)) {
+    // Sphere class archetype
+    const href = SYSTEMS_WITH_ARCHETYPE_PAGES.has(cls.system)
+      ? url(`/${cls.system}/classes/${cls.id}/${arc.id}/`)
+      : null;
+    const row: ArcRow = { arc, book, href };
+
+    if (!sphereBySystem.has(cls.system)) sphereBySystem.set(cls.system, new Map());
+    const byClass = sphereBySystem.get(cls.system)!;
+    if (!byClass.has(arc.className)) byClass.set(arc.className, []);
+    byClass.get(arc.className)!.push(row);
+
+  } else if (cls?.system === "pf1e" || !cls) {
+    // PF1e base class archetype (or unknown class — treat as pf1e)
+    const href = null; // no pf1e archetype detail pages yet
+    const row: ArcRow = { arc, book, href };
+    const key = arc.className;
+    if (!pf1eByClass.has(key)) pf1eByClass.set(key, []);
+    pf1eByClass.get(key)!.push(row);
+  }
+}
+
+// Sort archetypes within each class group alphabetically,
+// but "Spheres {ClassName}" always first
+function sortArcs(arcs: ArcRow[], className: string): ArcRow[] {
+  const baseConversionName = `Spheres ${classById.get(className)?.name ?? className}`;
+  return [...arcs].sort((a, b) => {
+    const aIsBase = a.arc.name === baseConversionName;
+    const bIsBase = b.arc.name === baseConversionName;
+    if (aIsBase && !bIsBase) return -1;
+    if (!aIsBase && bIsBase) return 1;
+    return a.arc.name.localeCompare(b.arc.name);
+  });
+}
+
+// Build final sphere groups in system order
+const SYSTEM_ORDER = ["power", "might", "guile", "champions"];
+const sphereGroups: SystemGroup[] = SYSTEM_ORDER
+  .filter(sys => sphereBySystem.has(sys))
+  .map(sys => {
+    const byClass = sphereBySystem.get(sys)!;
+    const groups: ClassGroup[] = [...byClass.entries()].map(([classId, arcs]) => ({
+      classId,
+      className: classById.get(classId)?.name ?? classId,
+      arcs: sortArcs(arcs, classId),
+    })).sort((a, b) => a.className.localeCompare(b.className));
+    return { system: sys, label: SPHERE_SYSTEM_LABELS[sys], groups };
+  });
+
+// Build pf1e groups sorted by class name, "Spheres X" first within each
+const pf1eGroups: ClassGroup[] = [...pf1eByClass.entries()].map(([classId, arcs]) => ({
+  classId,
+  className: classById.get(classId)?.name ?? classId,
+  arcs: sortArcs(arcs, classId),
+})).sort((a, b) => a.className.localeCompare(b.className));
+
+const totalCount = archetypeMap.size;
+
+const SYS_LABEL: Record<string, string> = {
+  power: 'Power', might: 'Might', guile: 'Guile', champ: 'Champions',
+};
+---
+<WikiPage title="Archetypes Index — Spheres Wiki" pagefindIgnore={true}>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Archetypes</span>
+  </nav>
+
+  <h1 class="page-title" id="overview">Archetypes</h1>
+  <hr class="page-title-rule" />
+
+  <p class="arc-intro">
+    {totalCount} archetype{totalCount !== 1 ? "s" : ""} indexed.
+    Sphere class archetypes modify a sphere system class. Pathfinder 1e archetypes adapt base classes to use the Spheres system.
+  </p>
+
+  <!-- ── Sphere Class Archetypes ─────────────────────────── -->
+  {sphereGroups.length > 0 && (
+    <section class="arc-section">
+      <div class="section-group-header" style="margin-top: 24px;">
+        <span class="section-group-label">Sphere Class Archetypes</span>
+        <div class="section-group-rule"></div>
+      </div>
+
+      {sphereGroups.map(sg => (
+        <div class={`arc-system-block arc-system-${sg.system}`}>
+          <div class={`arc-system-heading section-heading`}>
+            <span class={`section-heading-text ${sg.system === 'champions' ? 'champ' : sg.system}`}>{sg.label}</span>
+            <div class="section-heading-rule"></div>
+          </div>
+
+          {sg.groups.map(cg => (
+            <div class="arc-class-group">
+              <button
+                class="section-heading section-heading-toggle arc-class-toggle"
+                data-group-id={`sphere-${sg.system}-${cg.classId}`}
+                aria-expanded="true"
+                aria-controls={`sphere-${sg.system}-${cg.classId}-list`}
+              >
+                <span class="section-heading-chevron" aria-hidden="true">▾</span>
+                <span class={`section-heading-text ${sg.system === 'champions' ? 'champ' : sg.system}`} id={`sphere-${sg.system}-${cg.classId}`}>
+                  {cg.className}
+                </span>
+              </button>
+
+              <div class="arc-list" id={`sphere-${sg.system}-${cg.classId}-list`} aria-hidden="false">
+                {cg.arcs.map(({ arc, book, href }) => (
+                  <div class="arc-entry">
+                    {href
+                      ? <a href={href} class={`arc-name ${sg.system === 'champions' ? 'champ' : sg.system}`} data-astro-prefetch="hover">{arc.name}</a>
+                      : <span class={`arc-name arc-name--nolink ${sg.system === 'champions' ? 'champ' : sg.system}`}>{arc.name}</span>
+                    }
+                    {book && <span class="arc-source">{book}</span>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </section>
+  )}
+
+  <!-- ── Pathfinder 1e Archetypes ───────────────────────── -->
+  <section class="arc-section">
+    <div class="section-group-header" style="margin-top: 32px;">
+      <span class="section-group-label">Pathfinder 1e Archetypes</span>
+      <div class="section-group-rule"></div>
+    </div>
+
+    {pf1eGroups.length === 0 ? (
+      <p class="section-empty">No Pathfinder 1e archetypes indexed yet.</p>
+    ) : (
+      pf1eGroups.map(cg => (
+        <div class="arc-class-group">
+          <button
+            class="section-heading section-heading-toggle arc-class-toggle"
+            data-group-id={`pf1e-${cg.classId}`}
+            aria-expanded="true"
+            aria-controls={`pf1e-${cg.classId}-list`}
+          >
+            <span class="section-heading-chevron" aria-hidden="true">▾</span>
+            <span class="section-heading-text" id={`pf1e-${cg.classId}`}>{cg.className}</span>
+          </button>
+
+          <div class="arc-list" id={`pf1e-${cg.classId}-list`} aria-hidden="false">
+            {cg.arcs.map(({ arc, book, href }) => {
+              const sysKey = arc.system === 'champions' ? 'champ' : arc.system;
+              return (
+                <div class="arc-entry">
+                  {href
+                    ? <a href={href} class={`arc-name ${sysKey}`} data-astro-prefetch="hover">{arc.name}</a>
+                    : <span class={`arc-name arc-name--nolink`}>{arc.name}</span>
+                  }
+                  <span class={`arc-sys-badge ${sysKey}`}>{SYS_LABEL[sysKey] ?? arc.system}</span>
+                  {book && <span class="arc-source">{book}</span>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))
+    )}
+  </section>
+
+</WikiPage>
+
+<script>
+document.addEventListener('astro:page-load', () => {
+  document.querySelectorAll<HTMLButtonElement>('.arc-class-toggle').forEach(btn => {
+    const groupId = btn.dataset.groupId!;
+    const list = document.getElementById(`${groupId}-list`);
+    if (!list) return;
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        list.style.overflow = 'hidden';
+        list.style.maxHeight = list.scrollHeight + 'px';
+        requestAnimationFrame(() => { list.style.maxHeight = '0'; });
+      } else {
+        list.style.overflow = 'hidden';
+        list.style.maxHeight = list.scrollHeight + 'px';
+        list.addEventListener('transitionend', () => {
+          list.style.maxHeight = '';
+          list.style.overflow = 'visible';
+        }, { once: true });
+      }
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.classList.toggle('is-collapsed', expanded);
+      list.setAttribute('aria-hidden', String(expanded));
+    });
+  });
+});
+</script>
+
+<style>
+  .arc-intro {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    margin-bottom: 8px;
+  }
+
+  .arc-section {
+    max-width: 720px;
+  }
+
+  .arc-system-block {
+    margin-bottom: 16px;
+  }
+
+  .arc-class-group {
+    margin-bottom: 4px;
+  }
+
+  /* Expand/collapse animation */
+  .arc-list {
+    transition: max-height 0.25s ease, overflow 0.25s ease;
+    overflow: visible;
+  }
+
+  .arc-list[aria-hidden="true"] {
+    max-height: 0 !important;
+    overflow: hidden;
+  }
+
+  /* Entry row */
+  .arc-entry {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 5px 12px;
+    border-bottom: 0.5px solid var(--clr-border);
+  }
+
+  .arc-entry:last-child {
+    border-bottom: none;
+  }
+
+  .arc-name {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  a.arc-name:hover {
+    text-decoration: underline;
+  }
+
+  .arc-name--nolink {
+    color: var(--clr-text);
+  }
+
+  /* System-colored names */
+  .arc-name.power  { color: var(--clr-power); }
+  .arc-name.might  { color: var(--clr-might); }
+  .arc-name.guile  { color: var(--clr-guile); }
+  .arc-name.champ  { color: var(--clr-champ); }
+
+  /* PF1e system badge */
+  .arc-sys-badge {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  .arc-sys-badge.power { background: color-mix(in srgb, var(--clr-power) 12%, transparent); color: var(--clr-power); }
+  .arc-sys-badge.might { background: color-mix(in srgb, var(--clr-might) 12%, transparent); color: var(--clr-might); }
+  .arc-sys-badge.guile { background: color-mix(in srgb, var(--clr-guile) 12%, transparent); color: var(--clr-guile); }
+  .arc-sys-badge.champ { background: color-mix(in srgb, var(--clr-champ) 12%, transparent); color: var(--clr-champ); }
+
+  .arc-source {
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    font-style: italic;
+    margin-left: auto;
+  }
+</style>
