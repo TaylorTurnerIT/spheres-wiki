@@ -208,6 +208,7 @@ function ordinal(n: number): string {
 
         {archetypes.length > 0 && (
           <div class="archetypes-selector-group" style="min-width: 250px; flex: 1; max-width: 400px; z-index: 10;">
+            <label for="archetype-select" class="archetypes-selector-label">Archetypes:</label>
             <select id="archetype-select" class="ts-hidden-select" multiple autocomplete="off">
               {archetypes.map(arc => {
                 const collEntry = archetypeCollEntries.get(arc.id);
@@ -255,7 +256,7 @@ function ordinal(n: number): string {
               {traits.map(({ trait, Content: TraitContent }) => (
                 <div class="trait-catalog-entry" id={trait.id}>
                   <h3 class="trait-catalog-name">
-                    {trait.name}
+                    <a href={url(`/power/classes/${cls.id}/traits/${trait.id}/`)} class="trait-catalog-link" data-astro-prefetch="hover">{trait.name}</a>
                     {trait.requires && (
                       <span class="trait-catalog-requires"> (requires {trait.requires})</span>
                     )}
@@ -330,6 +331,9 @@ document.addEventListener('astro:page-load', () => {
       btn.classList.toggle('is-collapsed', willCollapse);
       wrapper.setAttribute('aria-hidden', willCollapse.toString());
       wrapper.classList.toggle('is-open', !willCollapse);
+      document.dispatchEvent(new CustomEvent('class-feature-collapse', {
+        detail: { id: featureId, collapsed: willCollapse },
+      }));
     });
   });
 
@@ -337,7 +341,7 @@ document.addEventListener('astro:page-load', () => {
     document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
       const newBtn = btn.cloneNode(true) as HTMLButtonElement;
       btn.parentNode!.replaceChild(newBtn, btn);
-      
+
       const featureId = newBtn.dataset.featureId!;
       const wrapper = document.getElementById(`${featureId}-traits`);
       if (!wrapper) return;
@@ -345,11 +349,14 @@ document.addEventListener('astro:page-load', () => {
       newBtn.addEventListener('click', () => {
         const isExpanded = newBtn.getAttribute('aria-expanded') === 'true';
         const willCollapse = isExpanded;
-        
+
         newBtn.setAttribute('aria-expanded', (!willCollapse).toString());
         newBtn.classList.toggle('is-collapsed', willCollapse);
         wrapper.setAttribute('aria-hidden', willCollapse.toString());
         wrapper.classList.toggle('is-open', !willCollapse);
+        document.dispatchEvent(new CustomEvent('class-feature-collapse', {
+          detail: { id: featureId, collapsed: willCollapse },
+        }));
       });
     });
   }
@@ -785,6 +792,26 @@ document.addEventListener('astro:page-load', () => {
     flex-shrink: 0;
   }
 
+  .archetypes-selector-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .archetypes-selector-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--clr-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  :global(.archetypes-selector-group .ts-wrapper) {
+    flex: 1;
+    min-width: 0;
+  }
+
   /* TomSelect CSS overrides to match our design */
   :global(.ts-hidden-select) {
     opacity: 0;
@@ -937,6 +964,8 @@ document.addEventListener('astro:page-load', () => {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 700;
+  }
+
   /* Modification Blocks */
   .archetype-modification-block {
     margin-top: 1.25rem;
@@ -1113,6 +1142,15 @@ document.addEventListener('astro:page-load', () => {
     font-weight: 700;
     color: var(--clr-active);
     margin: 0 0 0.35rem;
+  }
+
+  .trait-catalog-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .trait-catalog-link:hover {
+    text-decoration: underline;
   }
 
   .trait-catalog-requires {
