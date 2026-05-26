@@ -106,8 +106,8 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 
 | id  | status | description                                              | cites         |
 |-----|--------|----------------------------------------------------------|---------------|
-| T1  | .      | Create `/might/classes/[class].astro` (port power template, no archetypes) | V1,V3,I.pages |
-| T2  | .      | Create `/guile/classes/[class].astro` (port power template, no archetypes) | V1,V3,I.pages |
+| T1  | x      | Create `/might/classes/[class].astro` (port power template, no archetypes) | V1,V3,I.pages |
+| T2  | x      | Create `/guile/classes/[class].astro` (port power template, no archetypes) | V1,V3,I.pages |
 | T3  | .      | Create `/archetypes/` index page                         | V1,I.pages    |
 | T4  | .      | Create `/bb-code-template/` page                         | V1,I.pages    |
 | T5  | .      | Create `/community-resources/` page                      | V1,I.pages    |

@@ -1,0 +1,403 @@
+---
+import { render } from 'astro:content';
+import { url } from "@/lib/url";
+import WikiPage from '@/layouts/WikiPage.astro';
+import SourceBookCallout from '@/components/SourceBookCallout.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+import { BOOK_COLLECTIONS } from '@/content.config';
+import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, BookMeta } from '@/lib/types';
+
+interface Props {
+  cls: ClassEntry;
+  classCollEntry: any;
+  featureEntries: ClassFeatureEntry[];
+  featureCollEntries: Map<string, any>;
+  traitEntries: ClassTraitEntry[];
+  traitCollEntries: Map<string, any>;
+  sourceBook: BookMeta | undefined;
+}
+
+export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
+  const { classMap, classFeatureMap, classTraitMap, bookMetaMap } = await resolveEntries();
+
+  const allCollEntries = new Map<string, any>();
+  for (const slug of BOOK_COLLECTIONS) {
+    try {
+      const entries = await getCollection(slug as any);
+      for (const e of entries) {
+        const t = (e.data as any).type;
+        if (['class', 'class-feature', 'class-trait'].includes(t)) {
+          allCollEntries.set((e.data as any).id, e);
+        }
+      }
+    } catch { /* empty collection */ }
+  }
+
+  const paths = [];
+
+  for (const [, cls] of classMap) {
+    if (cls.system !== 'might') continue;
+
+    const featureEntries = [...classFeatureMap.values()]
+      .filter(f => f.className === cls.id)
+      .sort((a, b) => {
+        const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
+        const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
+        return aMin - bMin;
+      });
+
+    const traitEntries = [...classTraitMap.values()]
+      .filter(t => t.className === cls.id)
+      .sort((a, b) => a.name.localeCompare(b.name));
+
+    const featureCollEntries = new Map<string, any>();
+    for (const f of featureEntries) {
+      const entry = allCollEntries.get(f.id);
+      if (entry) featureCollEntries.set(f.id, entry);
+    }
+
+    const traitCollEntries = new Map<string, any>();
+    for (const t of traitEntries) {
+      const entry = allCollEntries.get(t.id);
+      if (entry) traitCollEntries.set(t.id, entry);
+    }
+
+    paths.push({
+      params: { class: cls.id },
+      props: {
+        cls,
+        classCollEntry: allCollEntries.get(cls.id),
+        featureEntries,
+        featureCollEntries,
+        traitEntries,
+        traitCollEntries,
+        sourceBook: bookMetaMap.get(cls.sourceBook),
+      },
+    });
+  }
+
+  return paths;
+}
+
+const {
+  cls,
+  classCollEntry,
+  featureEntries,
+  featureCollEntries,
+  traitEntries,
+  traitCollEntries,
+  sourceBook,
+} = Astro.props;
+
+const ClassContent = classCollEntry ? (await render(classCollEntry)).Content : null;
+
+type RenderedTrait = { trait: ClassTraitEntry; Content: any };
+type RenderedFeature = { feature: ClassFeatureEntry; Content: any; traits: RenderedTrait[] };
+
+const featureRendered: RenderedFeature[] = [];
+for (const feature of featureEntries) {
+  const collEntry = featureCollEntries.get(feature.id);
+  const { Content } = collEntry ? await render(collEntry) : { Content: null };
+
+  const featureTraits = traitEntries.filter(t => t.featureId === feature.id);
+  const traits: RenderedTrait[] = [];
+  for (const trait of featureTraits) {
+    const traitCollEntry = traitCollEntries.get(trait.id);
+    const { Content: TraitContent } = traitCollEntry ? await render(traitCollEntry) : { Content: null };
+    traits.push({ trait, Content: TraitContent });
+  }
+
+  featureRendered.push({ feature, Content, traits });
+}
+
+const tocOverview: TocItem = { id: 'overview', label: 'Overview' };
+const tocGroups: TocGroup[] = featureRendered.length > 0 ? [{
+  label: 'Class Features',
+  categories: featureRendered.map(({ feature, traits }) => {
+    const minLevel = Array.isArray(feature.level) ? Math.min(...feature.level) : feature.level;
+    return {
+      id: feature.id,
+      label: feature.name,
+      meta: `${minLevel}${ordinal(minLevel)}`,
+      sub: traits.length > 0 ? traits.map(({ trait }) => ({ id: trait.id, label: trait.name })) : undefined,
+    };
+  }),
+}] : [];
+
+function levelLabel(level: number | number[]): string {
+  if (Array.isArray(level)) {
+    return level.map(l => `${l}${ordinal(l)}`).join(', ');
+  }
+  return `${level}${ordinal(level)}`;
+}
+
+function ordinal(n: number): string {
+  if (n % 100 >= 11 && n % 100 <= 13) return 'th';
+  switch (n % 10) {
+    case 1: return 'st';
+    case 2: return 'nd';
+    case 3: return 'rd';
+    default: return 'th';
+  }
+}
+---
+<WikiPage title={`${cls.name} — Spheres of Might Wiki`} activeNamespace="might">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url("/might/")} data-astro-prefetch="hover">Spheres of Might</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>{cls.name}</span>
+  </nav>
+
+  <div class="content-columns">
+    <div class="content-main">
+
+      <h1
+        class="page-title might"
+        id="overview"
+        data-pagefind-weight="10"
+        data-pagefind-meta={`title:${cls.name}`}
+        data-pagefind-meta="type:class"
+        data-pagefind-filter="type:class"
+        data-pagefind-meta="system:Spheres of Might"
+        data-pagefind-filter="system:Spheres of Might"
+      >
+        {cls.name}
+      </h1>
+      <hr class="page-title-rule" />
+
+      {ClassContent
+        ? <div class="entry-description"><ClassContent /></div>
+        : <p class="entry-description"><em>Description coming soon.</em></p>
+      }
+
+      {featureRendered.map(({ feature, Content: FeatureContent, traits }) => (
+        <div class={`class-feature${feature.isTraitContainer ? ' class-feature--container' : ''}`} id={feature.id} data-level={JSON.stringify(feature.level)}>
+          <h2 class="class-feature-heading">
+            {feature.name}
+            <span class="class-feature-level"> ({levelLabel(feature.level)})</span>
+          </h2>
+
+          {FeatureContent
+            ? <div class="entry-description"><FeatureContent /></div>
+            : null
+          }
+
+          {feature.isTraitContainer && (
+            <button class="trait-catalog-toggle is-collapsed" data-feature-id={feature.id} aria-expanded="false" aria-controls={`${feature.id}-traits`}>
+              {feature.name}
+              <span class="trait-catalog-toggle-chevron" aria-hidden="true">▾</span>
+            </button>
+          )}
+
+          {feature.isTraitContainer ? (
+            <div class="trait-catalog-wrapper" id={`${feature.id}-traits`} aria-hidden="true">
+              <div class="trait-catalog">
+              {traits.map(({ trait, Content: TraitContent }) => (
+                <div class="trait-catalog-entry" id={trait.id}>
+                  <h3 class="trait-catalog-name">
+                    {trait.name}
+                    {trait.requires && (
+                      <span class="trait-catalog-requires"> (requires {trait.requires})</span>
+                    )}
+                  </h3>
+                  {TraitContent
+                    ? <div class="entry-description"><TraitContent /></div>
+                    : null
+                  }
+                </div>
+              ))}
+              </div>
+            </div>
+          ) : (
+            traits.map(({ trait, Content: TraitContent }) => (
+              <div class="class-trait" id={trait.id}>
+                <h3 class="class-trait-name">
+                  {trait.name}
+                  {trait.requires && (
+                    <span class="class-trait-requires"> (requires {trait.requires})</span>
+                  )}
+                </h3>
+                {TraitContent
+                  ? <div class="entry-description"><TraitContent /></div>
+                  : null
+                }
+              </div>
+            ))
+          )}
+        </div>
+      ))}
+
+    </div>
+
+    <aside class="right-rail" aria-label="Page contents">
+      <TableOfContents overview={tocOverview} groups={tocGroups} system="might" />
+      <SourceBookCallout book={sourceBook} />
+    </aside>
+  </div>
+
+</WikiPage>
+
+<script>
+document.addEventListener('astro:page-load', () => {
+  document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
+    const featureId = btn.dataset.featureId!;
+    const wrapper = document.getElementById(`${featureId}-traits`);
+    if (!wrapper) return;
+
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      const willCollapse = isExpanded;
+
+      btn.setAttribute('aria-expanded', (!willCollapse).toString());
+      btn.classList.toggle('is-collapsed', willCollapse);
+      wrapper.setAttribute('aria-hidden', willCollapse.toString());
+      wrapper.classList.toggle('is-open', !willCollapse);
+    });
+  });
+});
+</script>
+
+<style>
+  .class-feature {
+    margin-top: 2rem;
+  }
+
+  .class-feature-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--clr-border);
+    line-height: 1.2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .class-feature-level {
+    font-size: 0.75em;
+    font-weight: normal;
+    opacity: 0.65;
+    letter-spacing: 0;
+  }
+
+  .class-trait {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--clr-active);
+  }
+
+  .class-trait-name {
+    font-family: var(--font-display);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--clr-active);
+    margin: 0 0 0.25rem;
+  }
+
+  .class-trait-requires {
+    font-size: 0.85em;
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.75;
+  }
+
+  .trait-catalog-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 0;
+    color: var(--clr-muted);
+    font-size: var(--fs-xs);
+    font-family: var(--font-display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+
+  .trait-catalog-toggle::before,
+  .trait-catalog-toggle::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--clr-border);
+    transition: background 0.15s ease;
+  }
+
+  .trait-catalog-toggle:hover {
+    color: var(--clr-brand);
+  }
+
+  .trait-catalog-toggle:hover::before,
+  .trait-catalog-toggle:hover::after {
+    background: var(--clr-brand);
+  }
+
+  .trait-catalog-toggle-chevron {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .trait-catalog-toggle.is-collapsed .trait-catalog-toggle-chevron {
+    transform: rotate(-90deg);
+  }
+
+  .trait-catalog-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+  }
+
+  .trait-catalog-wrapper.is-open {
+    grid-template-rows: 1fr;
+  }
+
+  .trait-catalog {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .trait-catalog-entry {
+    padding: 0.75rem 0 0.75rem 1rem;
+    border-left: 2px solid var(--clr-active);
+    margin-bottom: 0.25rem;
+  }
+
+  .trait-catalog-entry + .trait-catalog-entry {
+    border-top: 1px solid color-mix(in srgb, var(--clr-active) 20%, transparent);
+    margin-left: 0;
+  }
+
+  .trait-catalog-name {
+    font-family: var(--font-display);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--clr-active);
+    margin: 0 0 0.35rem;
+  }
+
+  .trait-catalog-requires {
+    font-size: 0.85em;
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.75;
+  }
+</style>
