@@ -1,0 +1,50 @@
+---
+import type { BookMeta } from '@/lib/types';
+import BookCard from './BookCard.astro';
+import { url } from '@/lib/url';
+
+interface Props {
+  latestFirstParty: BookMeta | undefined;
+  latestThirdParty: BookMeta | undefined;
+  coreBooks: BookMeta[];
+}
+
+const { latestFirstParty, latestThirdParty, coreBooks } = Astro.props;
+---
+<div class="home-store">
+  <div class="home-store-header">
+    <span class="home-store-title">Shop the Spheres</span>
+    <a class="home-store-browse" href={url('/store/')}>Browse all →</a>
+  </div>
+
+  <div class="home-store-body">
+    {latestFirstParty && (
+      <div class="home-store-group">
+        <div class="home-store-group-label">Latest First Party</div>
+        <BookCard book={latestFirstParty} />
+      </div>
+    )}
+
+    {latestThirdParty && (
+      <>
+        <div class="home-store-divider" aria-hidden="true"></div>
+        <div class="home-store-group">
+          <div class="home-store-group-label">Latest Third Party</div>
+          <BookCard book={latestThirdParty} />
+        </div>
+      </>
+    )}
+
+    {coreBooks.length > 0 && (
+      <>
+        <div class="home-store-divider" aria-hidden="true"></div>
+        <div class="home-store-group home-store-group--core">
+          <div class="home-store-group-label">Core Books</div>
+          <div class="home-store-core-row">
+            {coreBooks.map(book => <BookCard book={book} />)}
+          </div>
+        </div>
+      </>
+    )}
+  </div>
+</div>
