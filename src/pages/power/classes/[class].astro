@@ -315,6 +315,37 @@ function ordinal(n: number): string {
 import TomSelect from 'tom-select';
 import 'tom-select/dist/css/tom-select.css';
 
+// Replaces matched text only inside text nodes — never touches attribute values.
+function replaceInTextNodes(
+  root: HTMLElement,
+  regex: RegExp,
+  makeNode: (match: string) => Node,
+): void {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+  const nodes: Text[] = [];
+  let n: Node | null;
+  while ((n = walker.nextNode())) nodes.push(n as Text);
+
+  for (const textNode of nodes) {
+    const text = textNode.textContent ?? '';
+    regex.lastIndex = 0;
+    if (!regex.test(text)) continue;
+
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    regex.lastIndex = 0;
+    let m: RegExpExecArray | null;
+    while ((m = regex.exec(text))) {
+      if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      frag.appendChild(makeNode(m[0]));
+      last = m.index + m[0].length;
+    }
+    if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    textNode.replaceWith(frag);
+    regex.lastIndex = 0;
+  }
+}
+
 document.addEventListener('astro:page-load', () => {
 
   // ──── TRAIT CATALOG TOGGLE ──────────────────────────────────────────────
@@ -641,30 +672,35 @@ document.addEventListener('astro:page-load', () => {
         const cell = cells[5];
         if (!cell) return;
 
-        let content = cell.innerHTML;
         activeFeatures.forEach(af => {
+          const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+          const arcName = option ? option.dataset.name! : af.archetypeId;
+
           af.replaces.forEach(baseId => {
-            // Match exactly base feature name inside cell
-            const baseFeature = templates.find(t => t.featureId === baseId) || { name: baseId.replace('shifter-', '').replace(/-/g, ' ') };
-            const regex = new RegExp(`\\b${baseFeature.name}\\b`, 'gi');
-            if (regex.test(content)) {
-              const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
-              const arcName = option ? option.dataset.name! : af.archetypeId;
-              content = content.replace(regex, `<span class="table-archetype-feature" title="${af.name} (${arcName}) replaces $&">${af.name}</span>`);
-            }
+            const baseName = (templates.find(t => t.featureId === baseId) ?? { name: baseId.replace(/^[a-z]+-/, '').replace(/-/g, ' ') }).name;
+            replaceInTextNodes(cell, new RegExp(`\\b${baseName}\\b`, 'gi'), (match) => {
+              const span = document.createElement('span');
+              span.className = 'table-archetype-feature';
+              span.title = `${arcName} replaces ${match}`;
+              span.textContent = af.name;
+              return span;
+            });
           });
 
           af.alters.forEach(baseId => {
-            const baseFeature = templates.find(t => t.featureId === baseId) || { name: baseId.replace('shifter-', '').replace(/-/g, ' ') };
-            const regex = new RegExp(`\\b${baseFeature.name}\\b`, 'gi');
-            if (regex.test(content)) {
-              const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
-              const arcName = option ? option.dataset.name! : af.archetypeId;
-              content = content.replace(regex, `$& <span class="table-altered-badge" title="Altered by ${arcName}">(${arcName} Altered)</span>`);
-            }
+            const baseName = (templates.find(t => t.featureId === baseId) ?? { name: baseId.replace(/^[a-z]+-/, '').replace(/-/g, ' ') }).name;
+            replaceInTextNodes(cell, new RegExp(`\\b${baseName}\\b`, 'gi'), (match) => {
+              const frag = document.createDocumentFragment();
+              frag.appendChild(document.createTextNode(match));
+              const badge = document.createElement('span');
+              badge.className = 'table-altered-badge';
+              badge.title = `Altered by ${arcName}`;
+              badge.textContent = ` (${arcName} Altered)`;
+              frag.appendChild(badge);
+              return frag;
+            });
           });
         });
-        cell.innerHTML = content;
       });
     }
 
