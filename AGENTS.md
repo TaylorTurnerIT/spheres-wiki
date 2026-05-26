@@ -39,8 +39,11 @@ Fast, searchable static wiki for Spheres tabletop RPG. Replace Wikidot site. Hig
 | T4 | x | Add validation script for V2 consistency check | V2 |
 | T5 | x | Fix mismatch between test expectation ('feats') and implementation ('general-feats') in categorize.test.ts | I.categorize |
 | T6 | x | Wrap search bar initialization in SiteHeader.astro in an astro:page-load event listener | V11 |
+| T7 |   | Audit entire website for any possible Flash of Unstyled Content (FOUC) and resolve by removing remote scripts/CSS in favor of local bundling | |
 
 # §B Bugs
 | id | date | cause | fix |
 |---|---|---|---|
 | B1 | 2026-05-25 | Search listeners lost on back/forward navigation due to View Transitions swapped DOM | V11 |
+| B2 | 2026-05-25 | Archetype selector visuals are unfinished | |
+| B3 | 2026-05-25 | Bestial traits dropdown logic completely broken due to CSS grid refactor | |

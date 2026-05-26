@@ -20,6 +20,7 @@ interface Props {
   archetypes: ArchetypeEntry[];
   archetypeFeatures: ArchetypeFeatureEntry[];
   archetypeFeatureCollEntries: Map<string, any>;
+  archetypeCollEntries: Map<string, any>;
 }
 
 export async function getStaticPaths() {
@@ -85,6 +86,12 @@ export async function getStaticPaths() {
       if (entry) archetypeFeatureCollEntries.set(f.id, entry);
     }
 
+    const archetypeCollEntries = new Map<string, any>();
+    for (const a of classArchetypes) {
+      const entry = allCollEntries.get(a.id);
+      if (entry) archetypeCollEntries.set(a.id, entry);
+    }
+
     paths.push({
       params: { class: cls.id },
       props: {
@@ -96,6 +103,7 @@ export async function getStaticPaths() {
         traitCollEntries,
         sourceBook: bookMetaMap.get(cls.sourceBook),
         archetypes: classArchetypes,
+        archetypeCollEntries,
         archetypeFeatures: classArchetypeFeatures,
         archetypeFeatureCollEntries,
       },
@@ -114,6 +122,7 @@ const {
   traitCollEntries,
   sourceBook,
   archetypes = [],
+  archetypeCollEntries = new Map(),
   archetypeFeatures = [],
   archetypeFeatureCollEntries = new Map(),
 } = Astro.props;
@@ -198,30 +207,17 @@ function ordinal(n: number): string {
         </h1>
 
         {archetypes.length > 0 && (
-          <div class="archetype-dropdown-container">
-            <button class="archetype-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
-              <span class="trigger-label">Archetypes</span>
-              <span class="archetype-badge-count" style="display: none;">0</span>
-              <span class="trigger-chevron">▾</span>
-            </button>
-            <div class="archetype-dropdown-menu" role="listbox">
-              <div class="archetype-dropdown-header">
-                <span class="archetype-active-count">None active</span>
-                <button type="button" class="archetype-reset-btn" style="display: none;">Clear all</button>
-              </div>
-              <div class="archetype-options">
-                {archetypes.map(arc => (
-                  <label class="archetype-checkbox-label" data-arc-id={arc.id}>
-                    <input type="checkbox" class="archetype-checkbox" data-archetype-id={arc.id} data-archetype-name={arc.name} />
-                    <span class="archetype-custom-checkbox"></span>
-                    <span class="archetype-checkbox-text">{arc.name}</span>
-                    <a href={url(`/power/classes/${cls.id}/${arc.id}/`)} class="archetype-view-page-link" title={`View ${arc.name} detail page`} target="_blank">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                    </a>
-                  </label>
-                ))}
-              </div>
-            </div>
+          <div class="archetypes-selector-group" style="min-width: 250px; flex: 1; max-width: 400px; z-index: 10;">
+            <select id="archetype-select" class="ts-hidden-select" multiple autocomplete="off">
+              {archetypes.map(arc => {
+                const collEntry = archetypeCollEntries.get(arc.id);
+                const rawText = collEntry?.body || '';
+                const desc = rawText.trim().split('\n')[0].replace(/<[^>]+>/g, '').substring(0, 150) + (rawText.length > 150 ? '...' : '');
+                return (
+                  <option value={arc.id} data-name={arc.name} data-desc={desc || arc.name}>{arc.name}</option>
+                );
+              })}
+            </select>
           </div>
         )}
       </div>
@@ -254,7 +250,8 @@ function ordinal(n: number): string {
           )}
 
           {feature.isTraitContainer ? (
-            <div class="trait-catalog" id={`${feature.id}-traits`} style="max-height: 0" aria-hidden="true">
+            <div class="trait-catalog-wrapper" id={`${feature.id}-traits`} aria-hidden="true">
+              <div class="trait-catalog">
               {traits.map(({ trait, Content: TraitContent }) => (
                 <div class="trait-catalog-entry" id={trait.id}>
                   <h3 class="trait-catalog-name">
@@ -269,6 +266,7 @@ function ordinal(n: number): string {
                   }
                 </div>
               ))}
+              </div>
             </div>
           ) : (
             traits.map(({ trait, Content: TraitContent }) => (
@@ -313,53 +311,54 @@ function ordinal(n: number): string {
 </WikiPage>
 
 <script>
+import TomSelect from 'tom-select';
+import 'tom-select/dist/css/tom-select.css';
+
 document.addEventListener('astro:page-load', () => {
+
   // ──── TRAIT CATALOG TOGGLE ──────────────────────────────────────────────
   document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
     const featureId = btn.dataset.featureId!;
-    const catalog = document.getElementById(`${featureId}-traits`);
-    if (!catalog) return;
+    const wrapper = document.getElementById(`${featureId}-traits`);
+    if (!wrapper) return;
 
     btn.addEventListener('click', () => {
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
       const willCollapse = isExpanded;
-
-      if (willCollapse) {
-        catalog.style.overflow = 'hidden';
-        catalog.style.maxHeight = catalog.scrollHeight + 'px';
-        requestAnimationFrame(() => { catalog.style.maxHeight = '0'; });
-      } else {
-        catalog.style.overflow = 'hidden';
-        catalog.style.maxHeight = catalog.scrollHeight + 'px';
-        catalog.addEventListener('transitionend', () => {
-          catalog.style.maxHeight = '';
-          catalog.style.overflow = 'visible';
-        }, { once: true });
-      }
-
-      btn.setAttribute('aria-expanded', String(!isExpanded));
+      
+      btn.setAttribute('aria-expanded', (!willCollapse).toString());
       btn.classList.toggle('is-collapsed', willCollapse);
-      catalog.setAttribute('aria-hidden', String(willCollapse));
-
-      document.dispatchEvent(new CustomEvent('class-feature-collapse', {
-        detail: { id: featureId, collapsed: willCollapse },
-      }));
+      wrapper.setAttribute('aria-hidden', willCollapse.toString());
+      wrapper.classList.toggle('is-open', !willCollapse);
     });
   });
 
+  function rebindTraitToggles() {
+    document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
+      const newBtn = btn.cloneNode(true) as HTMLButtonElement;
+      btn.parentNode!.replaceChild(newBtn, btn);
+      
+      const featureId = newBtn.dataset.featureId!;
+      const wrapper = document.getElementById(`${featureId}-traits`);
+      if (!wrapper) return;
+
+      newBtn.addEventListener('click', () => {
+        const isExpanded = newBtn.getAttribute('aria-expanded') === 'true';
+        const willCollapse = isExpanded;
+        
+        newBtn.setAttribute('aria-expanded', (!willCollapse).toString());
+        newBtn.classList.toggle('is-collapsed', willCollapse);
+        wrapper.setAttribute('aria-hidden', willCollapse.toString());
+        wrapper.classList.toggle('is-open', !willCollapse);
+      });
+    });
+  }
+
   // ──── DYNAMIC ARCHETYPE SWAPPER ─────────────────────────────────────────
-  const checkboxes = document.querySelectorAll<HTMLInputElement>('.archetype-checkbox');
   const warningBanner = document.querySelector<HTMLElement>('.archetype-warning-banner');
-  const activeCountText = document.querySelector<HTMLElement>('.archetype-active-count');
   const table = document.querySelector<HTMLElement>('.content-main table');
   const tocGroupContainer = document.querySelector<HTMLElement>('.toc-list');
-
-  const dropdownContainer = document.querySelector<HTMLElement>('.archetype-dropdown-container');
-  const dropdownTrigger = document.querySelector<HTMLButtonElement>('.archetype-dropdown-trigger');
-  const badgeCount = document.querySelector<HTMLElement>('.archetype-badge-count');
-  const resetBtn = document.querySelector<HTMLButtonElement>('.archetype-reset-btn');
-
-  if (checkboxes.length === 0) return;
+  const selectEl = document.getElementById('archetype-select') as HTMLSelectElement | null;
 
   // Stash original HTML of base features to enable clean hot-swapping/restoring
   const baseCards = Array.from(document.querySelectorAll<HTMLElement>('.class-feature:not(.dynamic-archetype-feature)'));
@@ -367,6 +366,7 @@ document.addEventListener('astro:page-load', () => {
     if (!card.dataset.originalHtml) {
       card.dataset.originalHtml = card.innerHTML;
       card.dataset.originalDisplay = card.style.display || '';
+      card.dataset.originalId = card.id;
     }
   });
 
@@ -434,63 +434,12 @@ document.addEventListener('astro:page-load', () => {
     return true;
   }
 
-  function updateArchetypes() {
-    const selectedCheckboxes = Array.from(document.querySelectorAll<HTMLInputElement>('.archetype-checkbox:checked'));
-    const selectedArcIds = selectedCheckboxes.map(cb => cb.dataset.archetypeId!);
-    const selectedArcNames = selectedCheckboxes.map(cb => cb.dataset.archetypeName!);
-
-    // Update active visual status text
-    if (activeCountText) {
-      if (selectedArcIds.length === 0) {
-        activeCountText.textContent = "None active";
-        activeCountText.classList.remove('is-active');
-      } else {
-        activeCountText.textContent = `${selectedArcIds.length} active (${selectedArcNames.join(', ')})`;
-        activeCountText.classList.add('is-active');
-      }
-    }
-
-    // Update badge count
-    if (badgeCount) {
-      if (selectedArcIds.length === 0) {
-        badgeCount.style.display = 'none';
-        badgeCount.textContent = '0';
-      } else {
-        badgeCount.style.display = 'inline-block';
-        badgeCount.textContent = String(selectedArcIds.length);
-      }
-    }
-
-    // Update Reset button
-    if (resetBtn) {
-      resetBtn.style.display = selectedArcIds.length > 0 ? 'inline-block' : 'none';
-    }
-
-    // Update checkbox compatibility & grey-out states
-    checkboxes.forEach(cb => {
-      const candidateId = cb.dataset.archetypeId!;
-      const label = cb.closest('.archetype-checkbox-label');
-      
-      if (cb.checked) {
-        cb.disabled = false;
-        if (label) label.classList.remove('is-disabled');
-      } else {
-        const compatible = isCompatible(candidateId, selectedArcIds);
-        if (compatible) {
-          cb.disabled = false;
-          if (label) label.classList.remove('is-disabled');
-        } else {
-          cb.disabled = true;
-          if (label) label.classList.add('is-disabled');
-        }
-      }
-    });
-
+  function updateArchetypes(selectedArcIds: string[]) {
     // 1. Reset all cards to baseline
     baseCards.forEach(card => {
       card.innerHTML = card.dataset.originalHtml!;
       card.style.display = card.dataset.originalDisplay!;
-      card.id = card.getAttribute('id')!; // Restore original ID if altered
+      card.id = card.dataset.originalId!; // Restore original ID if altered
       card.className = 'class-feature' + (card.dataset.originalHtml!.includes('trait-catalog-toggle') ? ' class-feature--container' : '');
     });
 
@@ -511,7 +460,6 @@ document.addEventListener('astro:page-load', () => {
     if (warningBanner) {
       warningBanner.style.display = 'none';
       warningBanner.innerHTML = '';
-      if (dropdownContainer) dropdownContainer.classList.remove('has-conflict');
     }
 
     if (selectedArcIds.length === 0) {
@@ -578,15 +526,14 @@ document.addEventListener('astro:page-load', () => {
       if (warningBanner) {
         warningBanner.innerHTML = `<span class="warning-icon">⚠️</span> <span class="warning-text">${conflictMsg}</span>`;
         warningBanner.style.display = 'block';
-        if (dropdownContainer) dropdownContainer.classList.add('has-conflict');
       }
       return;
     }
 
     // 4. Hot-swap active features!
     activeFeatures.forEach(af => {
-      const cb = document.querySelector<HTMLInputElement>(`.archetype-checkbox[data-archetype-id="${af.archetypeId}"]`);
-      const arcName = cb ? cb.dataset.archetypeName! : af.archetypeId;
+      const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+      const arcName = option ? option.dataset.name! : af.archetypeId;
 
       if (af.replaces.length > 0) {
         // Replacement: Swap in-place inside primary base feature node to preserve Scrollspy intersections
@@ -602,10 +549,10 @@ document.addEventListener('astro:page-load', () => {
             : `${af.level}${ordinal(af.level)}`;
 
           primaryCard.innerHTML = `
-            <h2 class="class-feature-heading">
+            <h2 class="class-feature-heading" title="Replaces: ${primaryBaseId.replace('shifter-', '').replace(/-/g, ' ')}">
               ${af.name}
               <span class="class-feature-level"> (${displayLevel})</span>
-              <span class="badge badge--archetype">${arcName} Feature</span>
+              <span class="badge badge--archetype" title="Replaces ${primaryBaseId.replace('shifter-', '').replace(/-/g, ' ')}">${arcName}</span>
             </h2>
             <div class="entry-description">${af.html}</div>
           `;
@@ -651,7 +598,7 @@ document.addEventListener('astro:page-load', () => {
           <h2 class="class-feature-heading">
             ${af.name}
             <span class="class-feature-level"> (${displayLevel})</span>
-            <span class="badge badge--archetype">${arcName} Feature</span>
+            <span class="badge badge--archetype">${arcName}</span>
           </h2>
           <div class="entry-description">${af.html}</div>
         `;
@@ -694,9 +641,9 @@ document.addEventListener('astro:page-load', () => {
             const baseFeature = templates.find(t => t.featureId === baseId) || { name: baseId.replace('shifter-', '').replace(/-/g, ' ') };
             const regex = new RegExp(`\\b${baseFeature.name}\\b`, 'gi');
             if (regex.test(content)) {
-              const cb = document.querySelector<HTMLInputElement>(`.archetype-checkbox[data-archetype-id="${af.archetypeId}"]`);
-              const arcName = cb ? cb.dataset.archetypeName! : af.archetypeId;
-              content = content.replace(regex, `<s>$&</s> <span class="table-archetype-feature" title="${af.name} (${arcName})">${af.name}</span>`);
+              const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+              const arcName = option ? option.dataset.name! : af.archetypeId;
+              content = content.replace(regex, `<span class="table-archetype-feature" title="${af.name} (${arcName}) replaces $&">${af.name}</span>`);
             }
           });
 
@@ -704,8 +651,8 @@ document.addEventListener('astro:page-load', () => {
             const baseFeature = templates.find(t => t.featureId === baseId) || { name: baseId.replace('shifter-', '').replace(/-/g, ' ') };
             const regex = new RegExp(`\\b${baseFeature.name}\\b`, 'gi');
             if (regex.test(content)) {
-              const cb = document.querySelector<HTMLInputElement>(`.archetype-checkbox[data-archetype-id="${af.archetypeId}"]`);
-              const arcName = cb ? cb.dataset.archetypeName! : af.archetypeId;
+              const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+              const arcName = option ? option.dataset.name! : af.archetypeId;
               content = content.replace(regex, `$& <span class="table-altered-badge" title="Altered by ${arcName}">(${arcName} Altered)</span>`);
             }
           });
@@ -717,15 +664,15 @@ document.addEventListener('astro:page-load', () => {
     // 6. Update ToC List Items
     if (tocGroupContainer) {
       activeFeatures.forEach(af => {
-        const cb = document.querySelector<HTMLInputElement>(`.archetype-checkbox[data-archetype-id="${af.archetypeId}"]`);
-        const arcName = cb ? cb.dataset.archetypeName! : af.archetypeId;
+        const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+        const arcName = option ? option.dataset.name! : af.archetypeId;
 
         af.replaces.forEach(baseId => {
           const tocItem = tocGroupContainer.querySelector<HTMLElement>(`[data-toc-section="${baseId}"]`);
           if (tocItem) {
             const link = tocItem.querySelector<HTMLAnchorElement>('.toc-cat-link')!;
             const span = link.querySelector<HTMLElement>('span')!;
-            span.innerHTML = `<s>${span.textContent}</s> <span class="toc-archetype-text">${af.name} (${arcName})</span>`;
+            span.innerHTML = `<span class="toc-archetype-text" title="Replaces ${span.textContent}">${af.name}</span>`;
             link.setAttribute('href', `#${af.featureId}`);
             tocItem.setAttribute('data-toc-section', af.featureId);
           }
@@ -748,113 +695,66 @@ document.addEventListener('astro:page-load', () => {
     rebindTraitToggles();
   }
 
-  // Handle Checkbox Events
-  checkboxes.forEach(cb => {
-    cb.addEventListener('change', () => {
-      const checked = Array.from(document.querySelectorAll<HTMLInputElement>('.archetype-checkbox:checked'));
-      const activeIds = checked.map(c => c.dataset.archetypeId!).join(',');
-      const urlParams = new URLSearchParams(window.location.search);
-      if (activeIds) {
-        urlParams.set('archetypes', activeIds);
-      } else {
-        urlParams.delete('archetypes');
-      }
-      const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
-      window.history.pushState({ path: newUrl }, '', newUrl);
-
-      updateArchetypes();
-    });
-  });
-
-  // Handle Dropdown Actions
-  if (dropdownTrigger && dropdownContainer) {
-    dropdownTrigger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = dropdownContainer.classList.toggle('is-open');
-      dropdownTrigger.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    document.addEventListener('click', (e) => {
-      const target = e.target as HTMLElement;
-      if (dropdownContainer.classList.contains('is-open') && !dropdownContainer.contains(target)) {
-        dropdownContainer.classList.remove('is-open');
-        dropdownTrigger.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    const menu = dropdownContainer.querySelector('.archetype-dropdown-menu');
-    if (menu) {
-      menu.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
-        if (target.closest('.archetype-view-page-link')) {
-          e.stopPropagation();
-          return;
+  // Initialize TomSelect if present
+  let tomSelectInstance: any = null;
+  if (selectEl) {
+    selectEl.classList.remove('ts-hidden-select');
+    tomSelectInstance = new TomSelect(selectEl, {
+      placeholder: 'Select Archetypes...',
+      plugins: ['remove_button'],
+      closeAfterSelect: true,
+      maxOptions: null,
+      render: {
+        option: function(data: any, escape: any) {
+          return '<div class="ts-custom-option">' +
+            '<span class="title">' + escape(data.text) + '</span>' +
+            '<div class="description" style="font-size: 0.8em; opacity: 0.7; margin-top: 2px;">' + escape(data.desc || '') + '</div>' +
+          '</div>';
         }
-        e.stopPropagation();
-      });
+      },
+      onChange: function(values: string[]) {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (values && values.length > 0) {
+          urlParams.set('archetypes', values.join(','));
+        } else {
+          urlParams.delete('archetypes');
+        }
+        const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+        window.history.pushState({ path: newUrl }, '', newUrl);
+
+        updateArchetypes(values || []);
+
+        // Apply compatibility logic to disable invalid options
+        const currentSelected = values || [];
+        Object.keys(tomSelectInstance.options).forEach(optValue => {
+          const isSelected = currentSelected.includes(optValue);
+          const opt = tomSelectInstance.options[optValue];
+          if (!isSelected) {
+            const comp = isCompatible(optValue, currentSelected);
+            if (opt.disabled !== !comp) {
+              opt.disabled = !comp;
+              tomSelectInstance.updateOption(optValue, opt);
+            }
+          } else {
+            if (opt.disabled) {
+              opt.disabled = false;
+              tomSelectInstance.updateOption(optValue, opt);
+            }
+          }
+        });
+      }
+    });
+
+    // Read initial archetypes from query params on load
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialArchetypes = urlParams.get('archetypes');
+    if (initialArchetypes && tomSelectInstance) {
+      const activeIds = initialArchetypes.split(',');
+      tomSelectInstance.setValue(activeIds); // this triggers onChange which calls updateArchetypes
     }
   }
 
-  if (resetBtn) {
-    resetBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      checkboxes.forEach(cb => cb.checked = false);
-      const urlParams = new URLSearchParams(window.location.search);
-      urlParams.delete('archetypes');
-      const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
-      window.history.pushState({ path: newUrl }, '', newUrl);
-      updateArchetypes();
-    });
-  }
 
-  // Read initial archetypes from query params on load
-  const urlParams = new URLSearchParams(window.location.search);
-  const initialArchetypes = urlParams.get('archetypes');
-  if (initialArchetypes) {
-    const activeIds = initialArchetypes.split(',');
-    activeIds.forEach(id => {
-      const cb = document.querySelector<HTMLInputElement>(`.archetype-checkbox[data-archetype-id="${id}"]`);
-      if (cb) cb.checked = true;
-    });
-    updateArchetypes();
-  }
-
-  function rebindTraitToggles() {
-    document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
-      const newBtn = btn.cloneNode(true) as HTMLButtonElement;
-      btn.parentNode!.replaceChild(newBtn, btn);
-
-      const featureId = newBtn.dataset.featureId!;
-      const catalog = document.getElementById(`${featureId}-traits`);
-      if (!catalog) return;
-
-      newBtn.addEventListener('click', () => {
-        const isExpanded = newBtn.getAttribute('aria-expanded') === 'true';
-        const willCollapse = isExpanded;
-
-        if (willCollapse) {
-          catalog.style.overflow = 'hidden';
-          catalog.style.maxHeight = catalog.scrollHeight + 'px';
-          requestAnimationFrame(() => { catalog.style.maxHeight = '0'; });
-        } else {
-          catalog.style.overflow = 'hidden';
-          catalog.style.maxHeight = catalog.scrollHeight + 'px';
-          catalog.addEventListener('transitionend', () => {
-            catalog.style.maxHeight = '';
-            catalog.style.overflow = 'visible';
-          }, { once: true });
-        }
-
-        newBtn.setAttribute('aria-expanded', String(!isExpanded));
-        newBtn.classList.toggle('is-collapsed', willCollapse);
-        catalog.setAttribute('aria-hidden', String(willCollapse));
-
-        document.dispatchEvent(new CustomEvent('class-feature-collapse', {
-          detail: { id: featureId, collapsed: willCollapse },
-        }));
-      });
-    });
-  }
 
   function ordinal(n: number): string {
     if (n % 100 >= 11 && n % 100 <= 13) return 'th';
@@ -885,227 +785,83 @@ document.addEventListener('astro:page-load', () => {
     flex-shrink: 0;
   }
 
-  .archetype-dropdown-container {
-    position: relative;
-    z-index: 100;
+  /* TomSelect CSS overrides to match our design */
+  :global(.ts-hidden-select) {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
   }
 
-  .archetype-dropdown-trigger {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--clr-bg);
-    border: 1px solid var(--clr-border);
-    border-radius: 8px;
-    padding: 0.45rem 0.8rem;
-    font-family: var(--font-display);
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    color: var(--clr-brand);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  :global(.ts-control) {
+    border-radius: 8px !important;
+    border-color: var(--clr-border) !important;
+    background-color: var(--clr-bg) !important;
+    font-family: var(--font-body) !important;
+    padding: 0.5rem 0.75rem !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   }
 
-  .archetype-dropdown-trigger:hover {
-    border-color: var(--clr-active);
-    color: var(--clr-active);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-
-  .archetype-dropdown-trigger[aria-expanded="true"] {
-    border-color: var(--clr-active);
-    color: var(--clr-active);
-  }
-
-  .archetype-badge-count {
-    background: var(--clr-active);
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 1px 6px;
-    border-radius: 99px;
-    display: inline-block;
-    min-width: 14px;
-    text-align: center;
-    line-height: 1.2;
-  }
-
-  .trigger-chevron {
-    font-size: 0.8em;
-    transition: transform 0.2s ease;
-    opacity: 0.7;
-  }
-
-  .archetype-dropdown-container.is-open .trigger-chevron {
-    transform: rotate(180deg);
-  }
-
-  .archetype-dropdown-menu {
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    right: 0;
-    min-width: 280px;
-    background: var(--clr-bg);
-    border: 1px solid var(--clr-border);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    opacity: 0;
-    transform: translateY(-8px) scale(0.98);
-    pointer-events: none;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .archetype-dropdown-container.is-open .archetype-dropdown-menu {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
-  }
-
-  .archetype-dropdown-header {
+  /* Prevent the input box from resizing vertically when many archetypes are selected */
+  :global(.ts-wrapper.multi .ts-control) {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--clr-border);
-    padding-bottom: 0.6rem;
-    margin-bottom: 0.75rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
   }
-
-  .archetype-dropdown-header .archetype-active-count {
-    font-family: var(--font-display);
-    font-size: var(--fs-xs);
-    color: var(--clr-muted);
-    font-style: italic;
-    font-weight: 500;
-  }
-
-  .archetype-dropdown-header .archetype-active-count.is-active {
-    color: var(--clr-active);
-    font-weight: 700;
-    font-style: normal;
-  }
-
-  .archetype-reset-btn {
-    background: transparent;
-    border: none;
-    color: #ef4444;
-    font-family: var(--font-display);
-    font-size: var(--fs-xxs);
-    font-weight: 600;
-    cursor: pointer;
-    padding: 2px 6px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-  }
-
-  .archetype-reset-btn:hover {
-    background-color: rgba(239, 68, 68, 0.08);
-  }
-
-  .archetype-options {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    max-height: 350px;
-    overflow-y: auto;
-  }
-
-  .archetype-checkbox-label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-family: var(--font-display);
-    font-size: var(--fs-sm);
-    color: var(--clr-muted);
-    user-select: none;
-    transition: all 0.2s ease;
-    padding: 0.35rem 0.5rem;
-    border-radius: 6px;
-  }
-
-  .archetype-checkbox-label:hover {
-    color: var(--clr-active);
-    background-color: color-mix(in srgb, var(--clr-active) 6%, transparent);
-  }
-
-  .archetype-checkbox-label.is-disabled {
-    opacity: 0.35;
-    cursor: not-allowed;
-    pointer-events: none;
-    color: var(--clr-muted) !important;
-    background-color: transparent !important;
-  }
-
-  .archetype-checkbox-label.is-disabled .archetype-custom-checkbox {
-    border-color: var(--clr-border) !important;
-  }
-
-  .archetype-checkbox {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  .archetype-custom-checkbox {
-    height: 16px;
-    width: 16px;
-    background-color: transparent;
-    border: 2px solid var(--clr-muted);
-    border-radius: 4px;
-    margin-right: 0.65rem;
-    position: relative;
-    transition: all 0.2s ease;
-    flex-shrink: 0;
-  }
-
-  .archetype-checkbox:checked ~ .archetype-custom-checkbox {
-    background-color: var(--clr-active);
-    border-color: var(--clr-active);
-  }
-
-  .archetype-custom-checkbox::after {
-    content: "";
-    position: absolute;
+  :global(.ts-wrapper.multi .ts-control::-webkit-scrollbar) {
     display: none;
-    left: 4px;
-    top: 1px;
-    width: 4px;
-    height: 8px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
   }
-
-  .archetype-checkbox:checked ~ .archetype-custom-checkbox::after {
-    display: block;
+  
+  :global(.ts-control.focus) {
+    border-color: var(--clr-active) !important;
+    box-shadow: 0 0 0 1px var(--clr-active), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
   }
-
-  .archetype-checkbox-text {
-    flex-grow: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  
+  :global(.ts-dropdown) {
+    border-radius: 8px !important;
+    border-color: var(--clr-border) !important;
+    background-color: var(--clr-bg) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    font-family: var(--font-body) !important;
   }
-
-  .archetype-view-page-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--clr-muted);
-    opacity: 0.5;
-    padding: 4px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    margin-left: 0.5rem;
+  
+  :global(.ts-dropdown .option) {
+    padding: 0.6rem 1rem !important;
   }
-
-  .archetype-view-page-link:hover {
-    color: var(--clr-active);
+  
+  :global(.ts-dropdown .option.active) {
+    background-color: color-mix(in srgb, var(--clr-active) 8%, transparent) !important;
+    color: var(--clr-body) !important;
+  }
+  
+  :global(.ts-dropdown .option[aria-disabled="true"]) {
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+    background-color: transparent !important;
+    pointer-events: none !important;
+  }
+  
+  :global(.ts-wrapper.multi .ts-control > div) {
+    background-color: color-mix(in srgb, var(--clr-active) 12%, transparent) !important;
+    color: var(--clr-active) !important;
+    border: none !important;
+    border-radius: 99px !important;
+    font-family: var(--font-display) !important;
+    font-weight: 600;
+    padding: 2px 6px 2px 10px !important;
+  }
+  
+  :global(.ts-wrapper.multi .ts-control > div .remove) {
+    border-left: none !important;
+    color: currentColor !important;
+    opacity: 0.6;
+  }
+  
+  :global(.ts-wrapper.multi .ts-control > div .remove:hover) {
+    background: transparent !important;
     opacity: 1;
-    background-color: rgba(var(--clr-active), 0.1);
   }
 
   /* Conflict warning banner */
@@ -1139,11 +895,11 @@ document.addEventListener('astro:page-load', () => {
   }
 
   .class-feature.class-feature--archetype {
-    background: color-mix(in srgb, var(--clr-active) 3%, transparent);
+    background: color-mix(in srgb, var(--clr-active) 3%, transparent); /* Restore a bit more contrast so they aren't completely invisible */
     padding: 1.5rem;
     border-radius: 8px;
-    border-left: 4px solid var(--clr-active);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 2px solid var(--clr-active); /* A much thinner, subtle indicator */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
     animation: fadeIn 0.4s ease forwards;
   }
 
@@ -1172,17 +928,15 @@ document.addEventListener('astro:page-load', () => {
   }
 
   .badge--archetype {
-    font-size: var(--fs-xxs);
+    font-size: 0.65em;
     font-family: var(--font-display);
-    background-color: var(--clr-active);
-    color: #ffffff;
+    background-color: color-mix(in srgb, var(--clr-active) 12%, transparent);
+    color: var(--clr-active);
     padding: 0.15rem 0.5rem;
-    border-radius: 4px;
+    border-radius: 99px; /* Chip style */
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 700;
-  }
-
   /* Modification Blocks */
   .archetype-modification-block {
     margin-top: 1.25rem;
@@ -1237,6 +991,9 @@ document.addEventListener('astro:page-load', () => {
     color: var(--clr-active);
     font-weight: bold;
     font-size: 0.95em;
+    background-color: color-mix(in srgb, var(--clr-active) 12%, transparent);
+    padding: 1px 4px;
+    border-radius: 4px;
   }
 
   :global(.toc-altered-badge) {
@@ -1322,13 +1079,21 @@ document.addEventListener('astro:page-load', () => {
   }
 
   /* Wrapper/container features — catalog style for many traits */
+  .trait-catalog-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+  }
+  .trait-catalog-wrapper.is-open {
+    grid-template-rows: 1fr;
+  }
+  
   .trait-catalog {
-    margin-top: 0.5rem;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     gap: 0;
     overflow: hidden;
-    transition: max-height 0.25s ease;
   }
 
   .trait-catalog-entry {
