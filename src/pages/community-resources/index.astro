@@ -1,0 +1,99 @@
+---
+import { url } from "@/lib/url";
+import WikiPage from '@/layouts/WikiPage.astro';
+
+const COMMUNITY_DOC = "https://docs.google.com/document/d/11IQVVrpyEypUCodmvYqQ_4I_SooDKGXOZZxk8Ic3buY/edit?tab=t.0";
+---
+<WikiPage title="Community Resources — Spheres Wiki" pagefindIgnore={true}>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Community Resources</span>
+  </nav>
+
+  <h1 class="page-title" id="overview">Community Resources</h1>
+  <hr class="page-title-rule" />
+
+  <p class="page-intro">
+    Discords, forums, tools, and community links for Spheres of Power and related systems.
+  </p>
+
+  <div class="resource-link-block">
+    <a href={COMMUNITY_DOC} class="resource-primary-link" target="_blank" rel="noopener noreferrer">
+      <svg class="resource-link-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 2h7l3 3v9H3z"/><path d="M10 2v3h3"/><path d="M5 8h6M5 10.5h6M5 6h3"/>
+      </svg>
+      <div class="resource-link-text">
+        <span class="resource-link-name">Community Resources Document</span>
+        <span class="resource-link-desc">Discords, forums, tools, and links — maintained by the community</span>
+      </div>
+      <svg class="resource-link-external" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 3H3v10h10v-3M13 3H9m4 0v4M7 9l6-6"/>
+      </svg>
+    </a>
+  </div>
+
+</WikiPage>
+
+<style>
+  .page-intro {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    margin-bottom: 24px;
+  }
+
+  .resource-link-block {
+    max-width: 520px;
+  }
+
+  .resource-primary-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--clr-text);
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .resource-primary-link:hover {
+    border-color: var(--clr-brand);
+    background: color-mix(in srgb, var(--clr-brand) 4%, transparent);
+  }
+
+  .resource-link-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    color: var(--clr-brand);
+  }
+
+  .resource-link-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .resource-link-name {
+    font-family: var(--font-display);
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--clr-brand);
+  }
+
+  .resource-link-desc {
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+  }
+
+  .resource-link-external {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    color: var(--clr-muted);
+  }
+</style>
