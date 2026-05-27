@@ -148,25 +148,26 @@ import ScrapeProof from '@/components/ScrapeProof.astro';
     line-height: 1.5;
   }
 
-  .contact-email-link {
+  /* :global needed — these classes are applied to <a> tags created by JS at runtime */
+  :global(.contact-email-link) {
     font-family: var(--font-mono, monospace);
     font-size: var(--fs-sm);
     color: var(--clr-brand);
     text-decoration: none;
   }
 
-  .contact-email-link:hover {
+  :global(.contact-email-link:hover) {
     text-decoration: underline;
   }
 
-  .contact-discord-link {
+  :global(.contact-discord-link) {
     font-size: var(--fs-sm);
     color: #5865F2;
     text-decoration: none;
     font-weight: 600;
   }
 
-  .contact-discord-link:hover {
+  :global(.contact-discord-link:hover) {
     text-decoration: underline;
   }
 

@@ -1,67 +1,50 @@
 ---
 /**
- * Multi-layer scrape protection for sensitive links.
+ * Scrape-proof link component.
  *
- * Layer 1 — JS charCode assembly: value stored as comma-separated char codes,
- *   never as a readable string in HTML or attributes. Defeats HTTP scrapers + regex.
- * Layer 2 — CSS display:none honeypot: garbage injected inside the element,
- *   hidden visually but present in raw HTML. Defeats scrapers that read DOM text.
+ * Static HTML: bare <span id> only — no href, no data attributes, no readable value.
+ * Runtime: inline script XOR-decodes the value and document.createElement's the <a>.
  *
  * type "email"   — value is full address ("user@domain.com")
- *                  JS builds mailto: and sets link text to address
  * type "discord" — value is invite code only ("EfDKxcH")
- *                  JS builds https://discord.gg/{code}
  */
 
 interface Props {
   type: 'email' | 'discord';
   value: string;
-  label?: string;   // link text (required for discord; email uses assembled address)
+  label?: string;
   class?: string;
-  target?: string;
-  rel?: string;
 }
 
-const { type, value, label, class: className, target, rel } = Astro.props;
+const { type, value, label, class: cls } = Astro.props;
 
-// Encode value as char codes — not recognizable as email/URL by naive string matching
-const codes = [...value].map(c => c.charCodeAt(0)).join(',');
-
-// Honeypot content — plausible-looking fragment hidden via CSS
-// Class name looks like a generic formatting utility, not a trap
-const hp = type === 'email' ? '@noply' : '+inv';
+const KEY = 0x1f;
+const enc = [...value].map(c => c.charCodeAt(0) ^ KEY);
+const uid = `sp-${Math.random().toString(36).slice(2, 9)}`;
 ---
 
-<a
-  href="#"
-  data-codes={codes}
-  data-t={type}
-  class={`fmt-sp${className ? ' ' + className : ''}`}
-  target={target ?? (type === 'discord' ? '_blank' : undefined)}
-  rel={rel ?? (type === 'discord' ? 'noopener noreferrer' : undefined)}
->
-  <span class="fmt-vc" aria-hidden="true">{hp}</span>{label ?? (type === 'email' ? 'Loading…' : 'Join Discord')}
-</a>
+<span id={uid}></span>
 
-<script>
-document.addEventListener('astro:page-load', () => {
-  document.querySelectorAll<HTMLAnchorElement>('a.fmt-sp[data-codes][data-t]').forEach(el => {
-    const val = el.dataset.codes!.split(',').map(Number).map(n => String.fromCharCode(n)).join('');
-    const t = el.dataset.t;
-    el.querySelector('.fmt-vc')?.remove();
-    if (t === 'email') {
-      el.href = 'mai' + 'lto:' + val;
-      el.textContent = val;
-    } else if (t === 'discord') {
-      el.href = 'https://' + 'disc' + 'ord' + '.gg/' + val;
+<script define:vars={{ uid, enc, type, label, cls, KEY }} is:inline>
+(function() {
+  function build() {
+    var el = document.getElementById(uid);
+    if (!el || el.tagName === 'A') return;
+    var val = enc.map(function(n) { return String.fromCharCode(n ^ KEY); }).join('');
+    var a = document.createElement('a');
+    if (cls) a.className = cls;
+    if (type === 'email') {
+      a.href = 'ma' + 'il' + 'to:' + val;
+      a.textContent = val;
+    } else if (type === 'discord') {
+      a.href = 'ht' + 'tps://' + 'di' + 'sc' + 'or' + 'd.gg/' + val;
+      a.textContent = label || 'Join Discord';
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
     }
-  });
-});
-</script>
-
-<style>
-  /* Honeypot — visually hidden, present in raw HTML to poison scrapers */
-  .fmt-vc {
-    display: none;
+    el.replaceWith(a);
   }
-</style>
+  document.addEventListener('astro:page-load', build);
+  if (document.readyState !== 'loading') build();
+})();
+</script>

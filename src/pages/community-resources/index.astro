@@ -137,7 +137,8 @@ const COMMUNITY_DOC = "https://docs.google.com/document/d/11IQVVrpyEypUCodmvYqQ_
     color: var(--clr-muted);
   }
 
-  .resource-discord-link {
+  /* :global needed — class applied to <a> created by JS at runtime */
+  :global(.resource-discord-link) {
     font-size: var(--fs-xs);
     font-weight: 600;
     color: #5865F2;
@@ -145,7 +146,7 @@ const COMMUNITY_DOC = "https://docs.google.com/document/d/11IQVVrpyEypUCodmvYqQ_
     margin-top: 2px;
   }
 
-  .resource-discord-link:hover {
+  :global(.resource-discord-link:hover) {
     text-decoration: underline;
   }
 </style>
