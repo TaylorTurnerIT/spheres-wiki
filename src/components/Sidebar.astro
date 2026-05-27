@@ -1,14 +1,7 @@
 ---
 import { url } from '@/lib/url';
+import ScrapeProof from '@/components/ScrapeProof.astro';
 ---
-<script>
-document.addEventListener('astro:page-load', () => {
-  document.querySelectorAll<HTMLAnchorElement>('.discord-sidebar-link[data-dc]').forEach(el => {
-    const code = el.dataset.dc!;
-    el.href = `https://disc` + `ord.gg/${code}`;
-  });
-});
-</script>
 <aside
   class="sidebar"
   id="site-sidebar"
@@ -27,8 +20,8 @@ document.addEventListener('astro:page-load', () => {
         <a href={url("/legal/")} data-astro-prefetch="hover" class="nav">Legal &amp; OGL</a>
         <a href={url("/recent-changes/")} data-astro-prefetch="hover" class="nav">Recent Changes</a>
         <a href={url("/contact/")} data-astro-prefetch="hover" class="nav">Contact</a>
-        <a data-dc="EfDKxcH" href="#discord-dds" class="nav discord-sidebar-link" target="_blank" rel="noopener noreferrer">DDS Discord</a>
-        <a data-dc="Q89NBmmK6a" href="#discord-drs" class="nav discord-sidebar-link" target="_blank" rel="noopener noreferrer">DRS Discord</a>
+        <ScrapeProof type="discord" value="EfDKxcH" label="DDS Discord" class="nav sidebar-discord" />
+        <ScrapeProof type="discord" value="Q89NBmmK6a" label="DRS Discord" class="nav sidebar-discord" />
       </div>
     </div>
 
@@ -103,7 +96,6 @@ document.addEventListener('astro:page-load', () => {
     <div class="sidebar-section">
       <div class="sidebar-heading nav">Quick Links</div>
       <div class="sidebar-links">
-        <a href={url("/bb-code-template/")} data-astro-prefetch="hover">BB Code Profile Template</a>
         <a href={url("/how-to-build-champion/")} data-astro-prefetch="hover">How to Build a Champion</a>
         <a href={url("/how-to-build-practitioner/")} data-astro-prefetch="hover">How to Build a Practitioner</a>
         <a href={url("/how-to-build-spherecaster/")} data-astro-prefetch="hover">How to Build a Spherecaster</a>
@@ -112,3 +104,9 @@ document.addEventListener('astro:page-load', () => {
     </div>
   </div>
 </aside>
+
+<style>
+  .sidebar-discord {
+    text-decoration: none;
+  }
+</style>

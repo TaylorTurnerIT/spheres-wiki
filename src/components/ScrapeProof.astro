@@ -1,0 +1,67 @@
+---
+/**
+ * Multi-layer scrape protection for sensitive links.
+ *
+ * Layer 1 — JS charCode assembly: value stored as comma-separated char codes,
+ *   never as a readable string in HTML or attributes. Defeats HTTP scrapers + regex.
+ * Layer 2 — CSS display:none honeypot: garbage injected inside the element,
+ *   hidden visually but present in raw HTML. Defeats scrapers that read DOM text.
+ *
+ * type "email"   — value is full address ("user@domain.com")
+ *                  JS builds mailto: and sets link text to address
+ * type "discord" — value is invite code only ("EfDKxcH")
+ *                  JS builds https://discord.gg/{code}
+ */
+
+interface Props {
+  type: 'email' | 'discord';
+  value: string;
+  label?: string;   // link text (required for discord; email uses assembled address)
+  class?: string;
+  target?: string;
+  rel?: string;
+}
+
+const { type, value, label, class: className, target, rel } = Astro.props;
+
+// Encode value as char codes — not recognizable as email/URL by naive string matching
+const codes = [...value].map(c => c.charCodeAt(0)).join(',');
+
+// Honeypot content — plausible-looking fragment hidden via CSS
+// Class name looks like a generic formatting utility, not a trap
+const hp = type === 'email' ? '@noply' : '+inv';
+---
+
+<a
+  href="#"
+  data-codes={codes}
+  data-t={type}
+  class={`fmt-sp${className ? ' ' + className : ''}`}
+  target={target ?? (type === 'discord' ? '_blank' : undefined)}
+  rel={rel ?? (type === 'discord' ? 'noopener noreferrer' : undefined)}
+>
+  <span class="fmt-vc" aria-hidden="true">{hp}</span>{label ?? (type === 'email' ? 'Loading…' : 'Join Discord')}
+</a>
+
+<script>
+document.addEventListener('astro:page-load', () => {
+  document.querySelectorAll<HTMLAnchorElement>('a.fmt-sp[data-codes][data-t]').forEach(el => {
+    const val = el.dataset.codes!.split(',').map(Number).map(n => String.fromCharCode(n)).join('');
+    const t = el.dataset.t;
+    el.querySelector('.fmt-vc')?.remove();
+    if (t === 'email') {
+      el.href = 'mai' + 'lto:' + val;
+      el.textContent = val;
+    } else if (t === 'discord') {
+      el.href = 'https://' + 'disc' + 'ord' + '.gg/' + val;
+    }
+  });
+});
+</script>
+
+<style>
+  /* Honeypot — visually hidden, present in raw HTML to poison scrapers */
+  .fmt-vc {
+    display: none;
+  }
+</style>

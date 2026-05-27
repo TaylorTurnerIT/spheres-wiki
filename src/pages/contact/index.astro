@@ -1,6 +1,7 @@
 ---
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
+import ScrapeProof from '@/components/ScrapeProof.astro';
 ---
 <WikiPage title="Contact — Spheres Wiki" pagefindIgnore={true}>
 
@@ -28,15 +29,7 @@ import WikiPage from '@/layouts/WikiPage.astro';
           Direct email is the fastest way to reach the site administrator for wiki-related issues,
           corrections, or contributions.
         </p>
-        <p class="contact-email-line">
-          <a
-            class="contact-email-link"
-            data-u="sphereswiki1"
-            data-d="gmail.com"
-            href="#contact-email"
-            aria-label="Email the administrator"
-          >Loading&hellip;</a>
-        </p>
+        <ScrapeProof type="email" value="sphereswiki1@gmail.com" class="contact-email-link" />
       </div>
     </div>
 
@@ -51,9 +44,7 @@ import WikiPage from '@/layouts/WikiPage.astro';
         <p class="contact-card-desc">
           Official DDS server. Best place for rules questions — community and developers are active.
         </p>
-        <a data-dc="EfDKxcH" href="#discord-dds" class="contact-discord-link" target="_blank" rel="noopener noreferrer">
-          Join DDS Discord →
-        </a>
+        <ScrapeProof type="discord" value="EfDKxcH" label="Join DDS Discord →" class="contact-discord-link" />
       </div>
     </div>
 
@@ -68,9 +59,7 @@ import WikiPage from '@/layouts/WikiPage.astro';
         <p class="contact-card-desc">
           Official DRS server for community discussion and support.
         </p>
-        <a data-dc="Q89NBmmK6a" href="#discord-drs" class="contact-discord-link" target="_blank" rel="noopener noreferrer">
-          Join DRS Discord →
-        </a>
+        <ScrapeProof type="discord" value="Q89NBmmK6a" label="Join DRS Discord →" class="contact-discord-link" />
       </div>
     </div>
 
@@ -96,22 +85,6 @@ import WikiPage from '@/layouts/WikiPage.astro';
   </div>
 
 </WikiPage>
-
-<script>
-document.addEventListener('astro:page-load', () => {
-  document.querySelectorAll<HTMLAnchorElement>('a[data-u][data-d]').forEach(el => {
-    const u = el.dataset.u!;
-    const d = el.dataset.d!;
-    const addr = `${u}@${d}`;
-    el.href = `mailto:${addr}`;
-    el.textContent = addr;
-  });
-  document.querySelectorAll<HTMLAnchorElement>('a[data-dc]').forEach(el => {
-    const code = el.dataset.dc!;
-    el.href = `https://disc` + `ord.gg/${code}`;
-  });
-});
-</script>
 
 <style>
   .contact-blocks {
@@ -151,6 +124,10 @@ document.addEventListener('astro:page-load', () => {
     color: var(--clr-muted);
   }
 
+  .contact-card-icon--discord {
+    color: #5865F2;
+  }
+
   .contact-card-body {
     flex: 1;
     min-width: 0;
@@ -171,10 +148,6 @@ document.addEventListener('astro:page-load', () => {
     line-height: 1.5;
   }
 
-  .contact-email-line {
-    margin: 0;
-  }
-
   .contact-email-link {
     font-family: var(--font-mono, monospace);
     font-size: var(--fs-sm);
@@ -186,20 +159,6 @@ document.addEventListener('astro:page-load', () => {
     text-decoration: underline;
   }
 
-  .contact-community-link {
-    font-size: var(--fs-sm);
-    color: var(--clr-brand);
-    text-decoration: none;
-  }
-
-  .contact-community-link:hover {
-    text-decoration: underline;
-  }
-
-  .contact-card-icon--discord {
-    color: #5865F2;
-  }
-
   .contact-discord-link {
     font-size: var(--fs-sm);
     color: #5865F2;
@@ -208,6 +167,16 @@ document.addEventListener('astro:page-load', () => {
   }
 
   .contact-discord-link:hover {
+    text-decoration: underline;
+  }
+
+  .contact-community-link {
+    font-size: var(--fs-sm);
+    color: var(--clr-brand);
+    text-decoration: none;
+  }
+
+  .contact-community-link:hover {
     text-decoration: underline;
   }
 </style>
