@@ -2,8 +2,9 @@
 import WikiPage from '@/layouts/WikiPage.astro';
 import { url } from '@/lib/url';
 import { resolveEntries } from '@/lib/resolveEntries';
+import { buildOrderedTagIds } from '@/lib/tags';
 
-const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, tagMap } = await resolveEntries();
+const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, tagMap, bookMetaMap } = await resolveEntries();
 
 const SYSTEM_META: Record<string, string> = {
   power:      'Spheres of Power',
@@ -17,17 +18,17 @@ const manifest: ManifestEntry[] = [];
 
 for (const s of sphereMap.values()) {
   if (!SYSTEM_META[s.system]) continue;
-  manifest.push({ url: url(`/${s.system}/${s.id}/`), title: s.name, system: SYSTEM_META[s.system], type: 'sphere', tags: s.tags.join(', ') });
+  manifest.push({ url: url(`/${s.system}/${s.id}/`), title: s.name, system: SYSTEM_META[s.system], type: 'sphere', tags: buildOrderedTagIds(s, bookMetaMap, tagMap).join(', ') });
 }
 for (const t of talentMap.values()) {
   if (!SYSTEM_META[t.system]) continue;
   const sph = sphereMap.get(`sphere:${t.sphere}`);
-  manifest.push({ url: url(`/${t.system}/${t.sphere}/${t.id}/`), title: t.name, system: SYSTEM_META[t.system], type: 'talent', sphere: sph?.name ?? t.sphere, tags: t.tags.join(', ') });
+  manifest.push({ url: url(`/${t.system}/${t.sphere}/${t.id}/`), title: t.name, system: SYSTEM_META[t.system], type: 'talent', sphere: sph?.name ?? t.sphere, tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
 }
 for (const f of featMap.values()) {
   if (!SYSTEM_META[f.system]) continue;
   const sph = sphereMap.get(`sphere:${f.sphere}`);
-  manifest.push({ url: url(`/${f.system}/${f.sphere}/feats/${f.id}/`), title: f.name, system: SYSTEM_META[f.system], type: 'feat', sphere: sph?.name ?? f.sphere, tags: f.tags.join(', ') });
+  manifest.push({ url: url(`/${f.system}/${f.sphere}/feats/${f.id}/`), title: f.name, system: SYSTEM_META[f.system], type: 'feat', sphere: sph?.name ?? f.sphere, tags: buildOrderedTagIds(f, bookMetaMap, tagMap).join(', ') });
 }
 for (const c of classMap.values()) {
   if (!SYSTEM_META[c.system]) continue;
@@ -35,19 +36,23 @@ for (const c of classMap.values()) {
                : c.system === 'champions'  ? url(`/champions/${c.id}/`)
                : null; // guile/might classes live on sphere pages — covered by sphere entries
   if (!clsUrl) continue;
-  manifest.push({ url: clsUrl, title: c.name, system: SYSTEM_META[c.system], type: 'class', tags: c.tags.join(', ') });
+  manifest.push({ url: clsUrl, title: c.name, system: SYSTEM_META[c.system], type: 'class', tags: buildOrderedTagIds(c, bookMetaMap, tagMap).join(', ') });
 }
 for (const a of archetypeMap.values()) {
   if (a.system !== 'power') continue;
-  manifest.push({ url: url(`/power/classes/${a.className}/${a.id}/`), title: a.name, system: SYSTEM_META['power'], type: 'archetype', tags: a.tags.join(', ') });
+  manifest.push({ url: url(`/power/classes/${a.className}/${a.id}/`), title: a.name, system: SYSTEM_META['power'], type: 'archetype', tags: buildOrderedTagIds(a, bookMetaMap, tagMap).join(', ') });
 }
 for (const t of classTraitMap.values()) {
   if (!SYSTEM_META[t.system]) continue;
-  manifest.push({ url: url(`/${t.system}/classes/${t.className}/traits/${t.id}/`), title: t.name, system: SYSTEM_META[t.system], type: 'class-trait', tags: t.tags.join(', ') });
+  manifest.push({ url: url(`/${t.system}/classes/${t.className}/traits/${t.id}/`), title: t.name, system: SYSTEM_META[t.system], type: 'class-trait', tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
 }
 
 const staticSpheres = [...new Set([...sphereMap.values()].map(s => s.name))].sort();
+const sphereNamesLower = new Set(staticSpheres.map(s => s.toLowerCase()));
+const systemKeys = new Set(['power', 'might', 'guile', 'champions']);
+const typeKeys   = new Set(['sphere', 'talent', 'feat', 'class', 'archetype', 'class-trait']);
 const staticTags = [...tagMap.entries()]
+  .filter(([id]) => !sphereNamesLower.has(id) && !systemKeys.has(id) && !typeKeys.has(id))
   .sort((a, b) => (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0]))
   .map(([id, tag]) => ({ value: id, text: tag.label || id }));
 ---
@@ -70,7 +75,7 @@ const staticTags = [...tagMap.entries()]
     </div>
 
     <div class="search-page-filters" id="sp-filters">
-      <div class="sp-filter-group">
+      <div class="sp-filter-group" id="sp-system-group">
         <label for="sp-system-select" class="sp-filter-label">System</label>
         <select id="sp-system-select" autocomplete="off"></select>
       </div>
@@ -78,7 +83,7 @@ const staticTags = [...tagMap.entries()]
         <label for="sp-type-select" class="sp-filter-label">Type</label>
         <select id="sp-type-select" autocomplete="off"></select>
       </div>
-      <div class="sp-filter-group">
+      <div class="sp-filter-group" id="sp-sphere-group">
         <label for="sp-sphere-select" class="sp-filter-label">Sphere</label>
         <select id="sp-sphere-select" autocomplete="off"></select>
       </div>
@@ -107,7 +112,7 @@ const staticTags = [...tagMap.entries()]
 
 <style is:global>
   .search-page {
-    max-width: 780px;
+    max-width: 900px;
   }
   .search-page-bar {
     display: flex;
@@ -163,13 +168,14 @@ const staticTags = [...tagMap.entries()]
 
   /* TomSelect overrides — scoped to filter groups */
   .sp-filter-group .ts-wrapper {
-    min-width: 130px;
-    max-width: 220px;
+    width: 130px;
     position: relative;
   }
+  #sp-system-group .ts-wrapper {
+    width: 172px;
+  }
   #sp-sphere-group .ts-wrapper {
-    min-width: 150px;
-    max-width: 260px;
+    width: 155px;
   }
   .sp-filter-group .ts-control {
     border-radius: var(--radius) !important;
