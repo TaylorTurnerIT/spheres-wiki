@@ -2,11 +2,10 @@
 /**
  * Scrape-proof link component.
  *
- * Static HTML: bare <span id> only — no href, no data attributes, no readable value.
- * Runtime: inline script XOR-decodes the value and document.createElement's the <a>.
- *
- * type "email"   — value is full address ("user@domain.com")
- * type "discord" — value is invite code only ("EfDKxcH")
+ * Static HTML: bare <span id> only.
+ * Encoding: key derived from uid via fold (never stored), value XOR'd into raw
+ * binary base64. No comma-separated decimals, no named enc/key vars, no key
+ * in payload. Scraper needs uid + derivation function + XOR to recover value.
  */
 
 interface Props {
@@ -18,33 +17,21 @@ interface Props {
 
 const { type, value, label, class: cls } = Astro.props;
 
-const KEY = 0x1f;
-const enc = [...value].map(c => c.charCodeAt(0) ^ KEY);
 const uid = `sp-${Math.random().toString(36).slice(2, 9)}`;
+// Key derived from uid — same fold used in browser script, not stored in payload
+const KEY = [...uid].reduce((a, c) => (a ^ c.charCodeAt(0)) & 0xff, 0x42);
+const enc = [...value].map(c => c.charCodeAt(0) ^ KEY);
+// Raw binary base64 — no delimiters, no decimal numbers after decode
+const payload = Buffer.from(enc).toString('base64');
+
+const linkSetup = type === 'email'
+  ? `_4.href='ma'+'il'+'to:'+_3;_4.textContent=_3;`
+  : `_4.href='ht'+'tps://'+'di'+'sc'+'or'+'d.gg/'+_3;_4.textContent=${JSON.stringify(label ?? 'Join Discord')};_4.target='_blank';_4.rel='noopener noreferrer';`;
+
+const clsSetup = cls ? `_4.className=${JSON.stringify(cls)};` : '';
+
+const script = `(function(){var _e=document.getElementById(${JSON.stringify(uid)});function _r(){if(!_e||_e.tagName==='A')return;var _k=[..._e.id].reduce(function(a,c){return(a^c.charCodeAt(0))&255},66);var _p=atob(${JSON.stringify(payload)});var _3=[..._p].map(function(c){return String.fromCharCode(c.charCodeAt(0)^_k)}).join('');var _4=document.createElement('a');${clsSetup}${linkSetup}_e.replaceWith(_4)}document.addEventListener('astro:page-load',_r);if(document.readyState!=='loading')_r()})();`;
 ---
 
 <span id={uid}></span>
-
-<script define:vars={{ uid, enc, type, label, cls, KEY }} is:inline>
-(function() {
-  function build() {
-    var el = document.getElementById(uid);
-    if (!el || el.tagName === 'A') return;
-    var val = enc.map(function(n) { return String.fromCharCode(n ^ KEY); }).join('');
-    var a = document.createElement('a');
-    if (cls) a.className = cls;
-    if (type === 'email') {
-      a.href = 'ma' + 'il' + 'to:' + val;
-      a.textContent = val;
-    } else if (type === 'discord') {
-      a.href = 'ht' + 'tps://' + 'di' + 'sc' + 'or' + 'd.gg/' + val;
-      a.textContent = label || 'Join Discord';
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-    }
-    el.replaceWith(a);
-  }
-  document.addEventListener('astro:page-load', build);
-  if (document.readyState !== 'loading') build();
-})();
-</script>
+<script set:html={script}></script>
