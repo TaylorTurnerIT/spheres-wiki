@@ -1,0 +1,77 @@
+---
+import { url } from '@/lib/url';
+---
+
+<footer class="site-footer">
+  <nav class="site-footer-nav" aria-label="Footer">
+    <a href={url('/privacy/')}>Privacy</a>
+    <span class="site-footer-sep" aria-hidden="true">&middot;</span>
+    <a href={url('/legal/')}>Legal &amp; OGL</a>
+    <span class="site-footer-sep" aria-hidden="true">&middot;</span>
+    <a href={url('/contact/')}>Contact</a>
+  </nav>
+  <p class="site-footer-copy">
+    Spheres Wiki is a fan site. Content under <a href={url('/legal/')}>OGL</a>.
+    Not affiliated with Drop Dead Studios.
+  </p>
+</footer>
+
+<style>
+  .site-footer {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: var(--sp-4) var(--sp-6) var(--sp-6);
+    text-align: center;
+    border-top: 1px solid var(--clr-border);
+  }
+
+  .site-footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--sp-2);
+    flex-wrap: wrap;
+    margin-bottom: var(--sp-2);
+  }
+
+  .site-footer-nav a {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--clr-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .site-footer-nav a:hover {
+    color: var(--clr-text);
+  }
+
+  .site-footer-sep {
+    color: var(--clr-border);
+    font-size: var(--fs-sm);
+  }
+
+  .site-footer-copy {
+    font-family: var(--font-body);
+    font-size: var(--fs-2xs);
+    color: var(--clr-muted);
+    line-height: 1.5;
+  }
+
+  .site-footer-copy a {
+    color: var(--clr-muted);
+    text-decoration: underline;
+  }
+
+  .site-footer-copy a:hover {
+    color: var(--clr-text);
+  }
+
+  @media (max-width: 768px) {
+    .site-footer {
+      padding: var(--sp-4) var(--sp-3) var(--sp-5);
+    }
+  }
+</style>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://taylorturnerit.github.io/spheres-wiki/sitemap-index.xml

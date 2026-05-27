@@ -101,6 +101,10 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 - V8. `si-fallback` symbol must exist in SVGSprite.astro — sphere icon lookup falls back to it rather than rendering broken SVG
 - V9. Sidebar must contain zero dead links — any link not backed by a real route must be removed until that route exists
 - V10. `global.css` must not contain repeated per-system accent rule blocks — system theming achieved via `--clr-ns` custom property set by `data-system` attribute
+- V11. Zero external CDN requests on page load — no analytics, no remote fonts, no third-party scripts; all assets served from site domain
+- V12. No analytics or tracking of any kind — no scripts that phone home, no fingerprinting, no pixel tracking
+- V13. `/privacy/` page must exist, linked from site footer — must disclose: localStorage keys + purpose, GitHub Pages IP collection, third-party link disclaimer, contact email
+- V14. Every `localStorage` write must have documented purpose and user-accessible deletion path — undocumented or infinite-retention keys are prohibited
 
 ---
 
@@ -140,12 +144,21 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T30 | .      | Add localStorage dismiss to BetaToast component          |               |
 | T31 | .      | Add JSON-LD breadcrumb structured data to detail pages   | V6            |
 | T32 | .      | Add RSS feed route (`/rss.xml`)                          |               |
+| T33 | x      | Self-host fonts — install `@fontsource/cinzel` + `@fontsource/crimson-text`, import in Base.astro, delete `fonts.googleapis.com` link; remove all Umami analytics scripts | V11,V12,C8 |
+| T34 | x      | Write `/privacy/` page — localStorage keys, GitHub Pages IP collection, third-party link disclaimer, contact email | V13 |
+| T35 | x      | Add site footer to Base.astro — links: Privacy, Legal (OGL), Contact; appears on all pages | V13,I.pages |
+| T36 | x      | Add `public/robots.txt` — allow all crawlers, link sitemap | I.pages |
+| T37 | x      | Add meta http-equiv security headers — `Referrer-Policy: strict-origin-when-cross-origin`, `X-Content-Type-Options: nosniff` (GitHub Pages limitation: true response headers require Cloudflare/Netlify) | |
+| T38 | x      | Document `localStorage` key inventory in code comment at BetaToast.astro — key name, purpose, retention, deletion path | V14 |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
 Then broken routes (T1→T2→T9→T25→T3→T4→T5→T6→T7→T8).
 Then stubs (T11→T12→T13→T14→T15→T10).
 Then infra (T23→T24→T26→T27→T28→T29→T30→T31→T32).
+**Privacy/compliance batch (do before any significant traffic):** T35→T36→T37→T38.
+  - T33+T34 already done
+  - T35 (footer) links to /privacy/ which exists; build first
 
 ---
 
