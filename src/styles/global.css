@@ -369,20 +369,10 @@ a:hover {
   white-space: nowrap;
 }
 .section-heading-rule {
-  display: block;
-  flex: 1;
-  height: 1px;
-  background: var(--clr-border);
+  display: none;
 }
 .section-heading-toggle::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--clr-border);
-  transition: background 0.15s ease;
-}
-.section-heading-toggle:hover::after {
-  background: var(--clr-brand);
+  display: none;
 }
 
 /* ── Hierarchical section group (page) ─────────────────── */
