@@ -1,6 +1,14 @@
 ---
 import { url } from '@/lib/url';
 ---
+<script>
+document.addEventListener('astro:page-load', () => {
+  document.querySelectorAll<HTMLAnchorElement>('.discord-sidebar-link[data-dc]').forEach(el => {
+    const code = el.dataset.dc!;
+    el.href = `https://disc` + `ord.gg/${code}`;
+  });
+});
+</script>
 <aside
   class="sidebar"
   id="site-sidebar"
@@ -19,6 +27,8 @@ import { url } from '@/lib/url';
         <a href={url("/legal/")} data-astro-prefetch="hover" class="nav">Legal &amp; OGL</a>
         <a href={url("/recent-changes/")} data-astro-prefetch="hover" class="nav">Recent Changes</a>
         <a href={url("/contact/")} data-astro-prefetch="hover" class="nav">Contact</a>
+        <a data-dc="EfDKxcH" href="#discord-dds" class="nav discord-sidebar-link" target="_blank" rel="noopener noreferrer">DDS Discord</a>
+        <a data-dc="Q89NBmmK6a" href="#discord-drs" class="nav discord-sidebar-link" target="_blank" rel="noopener noreferrer">DRS Discord</a>
       </div>
     </div>
 
