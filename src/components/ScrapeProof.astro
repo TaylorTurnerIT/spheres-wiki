@@ -2,26 +2,28 @@
 /**
  * Scrape-proof link component.
  *
- * Static HTML: bare <span id> only.
- * Encoding: key derived from uid via fold (never stored), value XOR'd into raw
- * binary base64. No comma-separated decimals, no named enc/key vars, no key
- * in payload. Scraper needs uid + derivation function + XOR to recover value.
+ * reveal=false (default): link assembled on page load, span placeholder only in HTML.
+ * reveal=true: renders a button; assembly fires only on click — link never in DOM
+ *   until a user interaction. Defeats headless bots that execute JS but don't click.
+ *
+ * type "email"   — value is full address ("user@domain.com")
+ * type "discord" — value is invite code only ("EfDKxcH")
  */
 
 interface Props {
   type: 'email' | 'discord';
   value: string;
-  label?: string;
+  label?: string;       // link text after reveal (discord); email uses assembled address
+  revealLabel?: string; // button text (reveal mode only)
   class?: string;
+  reveal?: boolean;
 }
 
-const { type, value, label, class: cls } = Astro.props;
+const { type, value, label, revealLabel, class: cls, reveal = false } = Astro.props;
 
 const uid = `sp-${Math.random().toString(36).slice(2, 9)}`;
-// Key derived from uid — same fold used in browser script, not stored in payload
 const KEY = [...uid].reduce((a, c) => (a ^ c.charCodeAt(0)) & 0xff, 0x42);
 const enc = [...value].map(c => c.charCodeAt(0) ^ KEY);
-// Raw binary base64 — no delimiters, no decimal numbers after decode
 const payload = Buffer.from(enc).toString('base64');
 
 const linkSetup = type === 'email'
@@ -30,8 +32,17 @@ const linkSetup = type === 'email'
 
 const clsSetup = cls ? `_4.className=${JSON.stringify(cls)};` : '';
 
-const script = `(function(){var _e=document.getElementById(${JSON.stringify(uid)});function _r(){if(!_e||_e.tagName==='A')return;var _k=[..._e.id].reduce(function(a,c){return(a^c.charCodeAt(0))&255},66);var _p=atob(${JSON.stringify(payload)});var _3=[..._p].map(function(c){return String.fromCharCode(c.charCodeAt(0)^_k)}).join('');var _4=document.createElement('a');${clsSetup}${linkSetup}_e.replaceWith(_4)}document.addEventListener('astro:page-load',_r);if(document.readyState!=='loading')_r()})();`;
+const buildLink = `var _k=[..._e.id].reduce(function(a,c){return(a^c.charCodeAt(0))&255},66);var _p=atob(${JSON.stringify(payload)});var _3=[..._p].map(function(c){return String.fromCharCode(c.charCodeAt(0)^_k)}).join('');var _4=document.createElement('a');${clsSetup}${linkSetup}_e.replaceWith(_4);`;
+
+const script = reveal
+  ? `(function(){function _i(){var _e=document.getElementById(${JSON.stringify(uid)});if(!_e||_e.tagName==='A')return;_e.addEventListener('click',function(){${buildLink}});}document.addEventListener('astro:page-load',_i);if(document.readyState!=='loading')_i();})();`
+  : `(function(){function _r(){var _e=document.getElementById(${JSON.stringify(uid)});if(!_e||_e.tagName==='A')return;${buildLink}}document.addEventListener('astro:page-load',_r);if(document.readyState!=='loading')_r();})();`;
+
+const defaultRevealLabel = type === 'email' ? 'Show email address' : `Show invite link`;
 ---
 
-<span id={uid}></span>
+{reveal
+  ? <button id={uid} class={`sp-reveal-btn${cls ? ' ' + cls : ''}`}>{revealLabel ?? defaultRevealLabel}</button>
+  : <span id={uid}></span>
+}
 <script set:html={script}></script>

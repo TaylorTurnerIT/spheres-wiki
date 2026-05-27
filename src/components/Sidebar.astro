@@ -1,6 +1,5 @@
 ---
 import { url } from '@/lib/url';
-import ScrapeProof from '@/components/ScrapeProof.astro';
 ---
 <aside
   class="sidebar"
@@ -20,8 +19,8 @@ import ScrapeProof from '@/components/ScrapeProof.astro';
         <a href={url("/legal/")} data-astro-prefetch="hover" class="nav">Legal &amp; OGL</a>
         <a href={url("/recent-changes/")} data-astro-prefetch="hover" class="nav">Recent Changes</a>
         <a href={url("/contact/")} data-astro-prefetch="hover" class="nav">Contact</a>
-        <ScrapeProof type="discord" value="EfDKxcH" label="DDS Discord" class="nav sidebar-discord" />
-        <ScrapeProof type="discord" value="Q89NBmmK6a" label="DRS Discord" class="nav sidebar-discord" />
+        <a href={url("/contact/")} data-astro-prefetch="hover" class="nav">DDS Discord</a>
+        <a href={url("/contact/")} data-astro-prefetch="hover" class="nav">DRS Discord</a>
       </div>
     </div>
 
@@ -105,8 +104,3 @@ import ScrapeProof from '@/components/ScrapeProof.astro';
   </div>
 </aside>
 
-<style>
-  :global(.sidebar-discord) {
-    text-decoration: none;
-  }
-</style>
