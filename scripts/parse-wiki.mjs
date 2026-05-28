@@ -14,7 +14,7 @@
  * Add new spheres by adding to SPHERE_CONFIGS below.
  */
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, realpathSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -535,7 +535,30 @@ function showDiff(existing, generated) {
   console.log('');
 }
 
+// ─── Exports ──────────────────────────────────────────────────────────────────
+
+export {
+  normalizeQuotes,
+  kebab,
+  convertWikidotTable,
+  cleanBody,
+  parseSectionContext,
+  parseHeading,
+  resolveSourceBook,
+  extractDualSphere,
+  parseWikiFile,
+  parseEntryBlock,
+  SPHERE_CONFIGS,
+  BRACKET_TAGS,
+  PAREN_TAG_MAP,
+  KNOWN_SPHERES,
+};
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
+
+const isMain = !!process.argv[1] && fileURLToPath(import.meta.url) === realpathSync(process.argv[1]).replace(/\\/g, '/');
+
+if (isMain) {
 
 const args = process.argv.slice(2);
 const sphereName = args.find(a => !a.startsWith('-')) ?? null;
@@ -617,3 +640,5 @@ if (MODE === '--validate') {
 } else if (MODE !== '--dry-run') {
   console.log(`\nWrote ${newCount} new file(s), skipped ${skipCount} existing.`);
 }
+
+} // end if (isMain)
