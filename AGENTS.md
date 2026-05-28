@@ -17,6 +17,11 @@ Fast, searchable static wiki for Spheres tabletop RPG. Replace Wikidot site. Hig
 - `src/config/site.ts`: site navigation, featured release, and brand namespace colors.
 - `src/lib/categorize.ts`: categorizes sphere talents and feats, and generates sections (including "Other" catch-all).
 
+# §P Placeholder Conventions
+- Placeholder dates **must** use `1970-01-01` (Unix epoch / UTC 0) — never a "plausible" date like 2020-01-01. An obviously wrong date is immediately visible as a stub; a plausible one is silently wrong.
+- Placeholder strings should be conspicuously fake (e.g. `"PLACEHOLDER"`, `"TBD"`). Do not guess real values.
+- `publishedDate` in `_book.yaml` drives errata ordering (V7). A placeholder must never sort before a real date; `1970-01-01` safely predates all real content.
+
 # §V Invariants
 - V1: All `.md` must match `entrySchema` in `src/content.config.ts`.
 - V2: `id` in frontmatter must match filename (without extension).
