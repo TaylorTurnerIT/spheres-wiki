@@ -624,6 +624,88 @@ Some advanced text.
     assert.equal(entries[0].tier, 'basic');
     assert.equal(entries[1].tier, 'advanced');
   });
+
+  it('H2 with no section context → tier:base entry', () => {
+    const wiki = `
+++ My Base Ability
+This is the base description.
+++ Test Talents
+`.trim();
+    const entries = parseWikiFile(wiki, config);
+    assert.equal(entries.length, 1);
+    assert.equal(entries[0].name, 'My Base Ability');
+    assert.equal(entries[0].tier, 'base');
+    assert.equal(entries[0].type, 'talent');
+    assert.equal(entries[0].bookSlug, 'spheres-of-power-core');
+  });
+
+  it('divs inside base section are embedded as sub-sections, not emitted separately', () => {
+    const wiki = `
+++ My Base Ability
+Base prose.
+[[div style="..."]]
+++++ Built-in Sub
+Sub body.
+[[/div]]
+++ Test Talents
+[[div style="..."]]
+++++ Regular Talent
+Regular body.
+[[/div]]
+`.trim();
+    const entries = parseWikiFile(wiki, config);
+    // base entry + regular talent — NOT base + sub + regular
+    assert.equal(entries.length, 2);
+    assert.equal(entries[0].tier, 'base');
+    assert.ok(entries[0].body.includes('#### Built-in Sub'));
+    assert.ok(entries[0].body.includes('Sub body.'));
+    assert.equal(entries[1].tier, 'basic');
+    assert.equal(entries[1].name, 'Regular Talent');
+  });
+
+  it('base ability ends and talent context restores at section-context H3', () => {
+    const wiki = `
+++ My Base Ability
+Base prose.
+[[div style="..."]]
+++++ Sub Entry
+Sub body.
+[[/div]]
++++ Sphere Talents
+[[div style="..."]]
+++++ Normal Talent
+Normal body.
+[[/div]]
+`.trim();
+    const entries = parseWikiFile(wiki, config);
+    assert.equal(entries.length, 2);
+    assert.equal(entries[0].tier, 'base');
+    assert.equal(entries[1].tier, 'basic');
+  });
+
+  it('base entry body contains prose and sub-sections separated by ---', () => {
+    const wiki = `
+++ Control
+Prose text.
+[[div style="..."]]
+++++ Sub One
+Sub one body.
+[[/div]]
+[[div style="..."]]
+++++ Sub Two
+Sub two body.
+[[/div]]
+++ Test Talents
+`.trim();
+    const entries = parseWikiFile(wiki, config);
+    assert.equal(entries.length, 1);
+    const body = entries[0].body;
+    assert.ok(body.includes('Prose text.'));
+    assert.ok(body.includes('#### Sub One'));
+    assert.ok(body.includes('#### Sub Two'));
+    // sub-sections separated by ---
+    assert.ok(body.includes('---'));
+  });
 });
 
 // ─── parseEntryBlock ──────────────────────────────────────────────────────────

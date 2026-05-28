@@ -39,3 +39,5 @@ sectionDefinitions:
 ---
 
 You can manipulate blood and its properties.
+
+[Blood Control]

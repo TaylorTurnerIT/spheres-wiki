@@ -374,6 +374,31 @@ function parseWikiFile(text, config) {
   const lines = text.split('\n');
   let inDiv = false;
   const divBuffer = [];
+  let baseMode = null; // { name, bodyLines, subSections } — active while inside a base ability section
+
+  // Flush collected base ability text into a tier:base entry.
+  const flushBase = () => {
+    if (!baseMode) return;
+    const { name, bodyLines, subSections } = baseMode;
+    baseMode = null;
+    if (!name) return;
+    const id = kebab(name);
+    if (seenIds.has(id)) return;
+    seenIds.add(id);
+    const cleanedProse = cleanBody(bodyLines.join('\n'));
+    let body;
+    if (subSections.length > 0) {
+      const subParts = subSections
+        .map(s => `#### ${s.name}\n\n${s.body}`)
+        .join('\n\n---\n\n');
+      body = `${cleanedProse}\n\n---\n\n${subParts}\n\n---`;
+    } else {
+      body = cleanedProse;
+    }
+    if (body) {
+      entries.push({ name, tags: [], type: 'talent', tier: 'base', bookSlug: config.primaryBook, body, dualSphere: null });
+    }
+  };
 
   for (const line of lines) {
     const trimmed = line.trim();
@@ -388,12 +413,18 @@ function parseWikiFile(text, config) {
       if (inDiv && divBuffer.length > 0) {
         const divText = divBuffer.join('\n');
         if (/^\+{4}\s/m.test(divText)) {
-          const parsed = parseEntryBlock(divText, { ...sectionCtx }, config);
-          if (parsed) {
-            const id = kebab(parsed.name);
-            if (!seenIds.has(id)) {
-              seenIds.add(id);
-              entries.push(parsed);
+          if (baseMode) {
+            // Inside a base ability section: embed div as sub-section rather than a separate entry
+            const parsed = parseEntryBlock(divText, { type: 'talent', tier: 'basic', sectionTags: [] }, config);
+            if (parsed) baseMode.subSections.push({ name: parsed.name, body: parsed.body });
+          } else {
+            const parsed = parseEntryBlock(divText, { ...sectionCtx }, config);
+            if (parsed) {
+              const id = kebab(parsed.name);
+              if (!seenIds.has(id)) {
+                seenIds.add(id);
+                entries.push(parsed);
+              }
             }
           }
         }
@@ -412,10 +443,32 @@ function parseWikiFile(text, config) {
     const headingMatch = trimmed.match(/^(\+{1,3})(?!\+)\s+(.+)/);
     if (headingMatch) {
       const ctx = parseSectionContext(headingMatch[2]);
-      if (ctx) sectionCtx = ctx;
+      if (ctx) {
+        flushBase();
+        sectionCtx = ctx;
+      } else if (headingMatch[1] === '++') {
+        // H2 with no section context → base ability (e.g. "Blood Control", "Shapeshift")
+        flushBase();
+        const baseName = normalizeQuotes(headingMatch[2].replace(/\s*\[[^\]]+\]/g, '').trim());
+        baseMode = { name: baseName, bodyLines: [], subSections: [] };
+      }
+      // H1/H3 with no context: informational section — no state change
+      continue;
+    }
+
+    // Collect prose for the current base ability (converting H4+ headings to markdown)
+    if (baseMode) {
+      const subHeadingMatch = trimmed.match(/^(\+{4,})\s+(.+)$/);
+      if (subHeadingMatch) {
+        const hashes = '#'.repeat(subHeadingMatch[1].length);
+        baseMode.bodyLines.push(`${hashes} ${normalizeQuotes(subHeadingMatch[2])}`);
+      } else {
+        baseMode.bodyLines.push(line);
+      }
     }
   }
 
+  flushBase();
   return entries;
 }
 
