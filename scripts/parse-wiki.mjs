@@ -24,6 +24,25 @@ const ROOT = join(__dirname, '..');
 // ─── Sphere Configurations ────────────────────────────────────────────────────
 
 const SPHERE_CONFIGS = {
+  blood: {
+    inputFile: 'blood-raw.wiki',
+    sphere: 'blood',
+    system: 'power',
+    primaryBook: 'spheres-of-power-core',
+
+    headingSourceMap: {
+      'BaP':         'blood-and-portents',
+      'CrimDan':     'crimson-dancers-handbook',
+      "Jester's HB": 'jesters-handbook',
+      'Apoc':        null,   // resolve from ^^Source:^^ body line
+      'DbH':         'damnation-by-hunger',
+    },
+
+    bodySourceMap: {
+      'Spheres Apocrypha: Debilitating Talents 2': 'spheres-apocrypha-debilitating-talents-2',
+    },
+  },
+
   alteration: {
     inputFile: 'alteration-raw.wiki',
     sphere: 'alteration',
@@ -246,6 +265,9 @@ const PAREN_TAG_MAP = {
   'mass':           'mass',
   'range':          'range',
   'strike':         'strike',
+  'quicken':        'quicken',
+  'still':          'still',
+  'blood art':      'blood-art',
 };
 
 /**
@@ -283,20 +305,22 @@ function parseHeading(headingLine, sectionCtx, config) {
   }
   head = head.replace(/\s*\[[^\]]+\]/g, '').trim();
 
-  // Extract parenthetical markers: (body), (transformation), (Dual Sphere), (Combat), etc.
+  // Extract parenthetical markers: (body), (quicken, still), (Dual Sphere), (Combat), etc.
+  // Each () block may contain comma-separated values.
   for (const m of head.matchAll(/\(([^)]+)\)/g)) {
-    const content = m[1].trim();
-    const lower = content.toLowerCase().replace(/[\s-]+/g, ' ');
+    for (const part of m[1].split(',')) {
+      const lower = part.trim().toLowerCase().replace(/[\s-]+/g, ' ');
 
-    if (lower === 'dual sphere') {
-      if (!tags.includes('dual-sphere')) tags.push('dual-sphere');
-      type = 'feat';
-    } else if (lower === 'combat') {
-      if (!tags.includes('combat')) tags.push('combat');
-      type = 'feat';
-    } else if (PAREN_TAG_MAP[lower]) {
-      const tag = PAREN_TAG_MAP[lower];
-      if (!tags.includes(tag)) tags.push(tag);
+      if (lower === 'dual sphere') {
+        if (!tags.includes('dual-sphere')) tags.push('dual-sphere');
+        type = 'feat';
+      } else if (lower === 'combat') {
+        if (!tags.includes('combat')) tags.push('combat');
+        type = 'feat';
+      } else if (PAREN_TAG_MAP[lower]) {
+        const tag = PAREN_TAG_MAP[lower];
+        if (!tags.includes(tag)) tags.push(tag);
+      }
     }
   }
   head = head.replace(/\s*\([^)]+\)/g, '').trim();
@@ -344,6 +368,7 @@ function extractDualSphere(bodyText, primarySphere) {
 
 function parseWikiFile(text, config) {
   const entries = [];
+  const seenIds = new Set();
   let sectionCtx = { type: 'talent', tier: 'basic', sectionTags: [] };
 
   const lines = text.split('\n');
@@ -364,7 +389,13 @@ function parseWikiFile(text, config) {
         const divText = divBuffer.join('\n');
         if (/^\+{4}\s/m.test(divText)) {
           const parsed = parseEntryBlock(divText, { ...sectionCtx }, config);
-          if (parsed) entries.push(parsed);
+          if (parsed) {
+            const id = kebab(parsed.name);
+            if (!seenIds.has(id)) {
+              seenIds.add(id);
+              entries.push(parsed);
+            }
+          }
         }
       }
       inDiv = false;
