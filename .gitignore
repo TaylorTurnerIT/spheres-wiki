@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # git worktrees
 .worktrees/
+
+# raw wiki source files (parser input, not versioned)
+*.wiki

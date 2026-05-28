@@ -14,7 +14,7 @@
  * Add new spheres by adding to SPHERE_CONFIGS below.
  */
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, realpathSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -24,6 +24,25 @@ const ROOT = join(__dirname, '..');
 // ─── Sphere Configurations ────────────────────────────────────────────────────
 
 const SPHERE_CONFIGS = {
+  blood: {
+    inputFile: 'blood-raw.wiki',
+    sphere: 'blood',
+    system: 'power',
+    primaryBook: 'spheres-of-power-core',
+
+    headingSourceMap: {
+      'BaP':         'blood-and-portents',
+      'CrimDan':     'crimson-dancers-handbook',
+      "Jester's HB": 'jesters-handbook',
+      'Apoc':        null,   // resolve from ^^Source:^^ body line
+      'DbH':         'damnation-by-hunger',
+    },
+
+    bodySourceMap: {
+      'Spheres Apocrypha: Debilitating Talents 2': 'spheres-apocrypha-debilitating-talents-2',
+    },
+  },
+
   alteration: {
     inputFile: 'alteration-raw.wiki',
     sphere: 'alteration',
@@ -246,6 +265,9 @@ const PAREN_TAG_MAP = {
   'mass':           'mass',
   'range':          'range',
   'strike':         'strike',
+  'quicken':        'quicken',
+  'still':          'still',
+  'blood art':      'blood-art',
 };
 
 /**
@@ -283,20 +305,22 @@ function parseHeading(headingLine, sectionCtx, config) {
   }
   head = head.replace(/\s*\[[^\]]+\]/g, '').trim();
 
-  // Extract parenthetical markers: (body), (transformation), (Dual Sphere), (Combat), etc.
+  // Extract parenthetical markers: (body), (quicken, still), (Dual Sphere), (Combat), etc.
+  // Each () block may contain comma-separated values.
   for (const m of head.matchAll(/\(([^)]+)\)/g)) {
-    const content = m[1].trim();
-    const lower = content.toLowerCase().replace(/[\s-]+/g, ' ');
+    for (const part of m[1].split(',')) {
+      const lower = part.trim().toLowerCase().replace(/[\s-]+/g, ' ');
 
-    if (lower === 'dual sphere') {
-      if (!tags.includes('dual-sphere')) tags.push('dual-sphere');
-      type = 'feat';
-    } else if (lower === 'combat') {
-      if (!tags.includes('combat')) tags.push('combat');
-      type = 'feat';
-    } else if (PAREN_TAG_MAP[lower]) {
-      const tag = PAREN_TAG_MAP[lower];
-      if (!tags.includes(tag)) tags.push(tag);
+      if (lower === 'dual sphere') {
+        if (!tags.includes('dual-sphere')) tags.push('dual-sphere');
+        type = 'feat';
+      } else if (lower === 'combat') {
+        if (!tags.includes('combat')) tags.push('combat');
+        type = 'feat';
+      } else if (PAREN_TAG_MAP[lower]) {
+        const tag = PAREN_TAG_MAP[lower];
+        if (!tags.includes(tag)) tags.push(tag);
+      }
     }
   }
   head = head.replace(/\s*\([^)]+\)/g, '').trim();
@@ -344,11 +368,37 @@ function extractDualSphere(bodyText, primarySphere) {
 
 function parseWikiFile(text, config) {
   const entries = [];
+  const seenIds = new Set();
   let sectionCtx = { type: 'talent', tier: 'basic', sectionTags: [] };
 
   const lines = text.split('\n');
   let inDiv = false;
   const divBuffer = [];
+  let baseMode = null; // { name, bodyLines, subSections } — active while inside a base ability section
+
+  // Flush collected base ability text into a tier:base entry.
+  const flushBase = () => {
+    if (!baseMode) return;
+    const { name, bodyLines, subSections } = baseMode;
+    baseMode = null;
+    if (!name) return;
+    const id = kebab(name);
+    if (seenIds.has(id)) return;
+    seenIds.add(id);
+    const cleanedProse = cleanBody(bodyLines.join('\n'));
+    let body;
+    if (subSections.length > 0) {
+      const subParts = subSections
+        .map(s => `#### ${s.name}\n\n${s.body}`)
+        .join('\n\n---\n\n');
+      body = `${cleanedProse}\n\n---\n\n${subParts}\n\n---`;
+    } else {
+      body = cleanedProse;
+    }
+    if (body) {
+      entries.push({ name, tags: [], type: 'talent', tier: 'base', bookSlug: config.primaryBook, body, dualSphere: null });
+    }
+  };
 
   for (const line of lines) {
     const trimmed = line.trim();
@@ -363,8 +413,20 @@ function parseWikiFile(text, config) {
       if (inDiv && divBuffer.length > 0) {
         const divText = divBuffer.join('\n');
         if (/^\+{4}\s/m.test(divText)) {
-          const parsed = parseEntryBlock(divText, { ...sectionCtx }, config);
-          if (parsed) entries.push(parsed);
+          if (baseMode) {
+            // Inside a base ability section: embed div as sub-section rather than a separate entry
+            const parsed = parseEntryBlock(divText, { type: 'talent', tier: 'basic', sectionTags: [] }, config);
+            if (parsed) baseMode.subSections.push({ name: parsed.name, body: parsed.body });
+          } else {
+            const parsed = parseEntryBlock(divText, { ...sectionCtx }, config);
+            if (parsed) {
+              const id = kebab(parsed.name);
+              if (!seenIds.has(id)) {
+                seenIds.add(id);
+                entries.push(parsed);
+              }
+            }
+          }
         }
       }
       inDiv = false;
@@ -381,10 +443,32 @@ function parseWikiFile(text, config) {
     const headingMatch = trimmed.match(/^(\+{1,3})(?!\+)\s+(.+)/);
     if (headingMatch) {
       const ctx = parseSectionContext(headingMatch[2]);
-      if (ctx) sectionCtx = ctx;
+      if (ctx) {
+        flushBase();
+        sectionCtx = ctx;
+      } else if (headingMatch[1] === '++') {
+        // H2 with no section context → base ability (e.g. "Blood Control", "Shapeshift")
+        flushBase();
+        const baseName = normalizeQuotes(headingMatch[2].replace(/\s*\[[^\]]+\]/g, '').trim());
+        baseMode = { name: baseName, bodyLines: [], subSections: [] };
+      }
+      // H1/H3 with no context: informational section — no state change
+      continue;
+    }
+
+    // Collect prose for the current base ability (converting H4+ headings to markdown)
+    if (baseMode) {
+      const subHeadingMatch = trimmed.match(/^(\+{4,})\s+(.+)$/);
+      if (subHeadingMatch) {
+        const hashes = '#'.repeat(subHeadingMatch[1].length);
+        baseMode.bodyLines.push(`${hashes} ${normalizeQuotes(subHeadingMatch[2])}`);
+      } else {
+        baseMode.bodyLines.push(line);
+      }
     }
   }
 
+  flushBase();
   return entries;
 }
 
@@ -504,7 +588,30 @@ function showDiff(existing, generated) {
   console.log('');
 }
 
+// ─── Exports ──────────────────────────────────────────────────────────────────
+
+export {
+  normalizeQuotes,
+  kebab,
+  convertWikidotTable,
+  cleanBody,
+  parseSectionContext,
+  parseHeading,
+  resolveSourceBook,
+  extractDualSphere,
+  parseWikiFile,
+  parseEntryBlock,
+  SPHERE_CONFIGS,
+  BRACKET_TAGS,
+  PAREN_TAG_MAP,
+  KNOWN_SPHERES,
+};
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
+
+const isMain = !!process.argv[1] && fileURLToPath(import.meta.url) === realpathSync(process.argv[1]).replace(/\\/g, '/');
+
+if (isMain) {
 
 const args = process.argv.slice(2);
 const sphereName = args.find(a => !a.startsWith('-')) ?? null;
@@ -586,3 +693,5 @@ if (MODE === '--validate') {
 } else if (MODE !== '--dry-run') {
   console.log(`\nWrote ${newCount} new file(s), skipped ${skipCount} existing.`);
 }
+
+} // end if (isMain)

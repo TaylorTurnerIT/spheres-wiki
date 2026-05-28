@@ -10,7 +10,7 @@ export type BodySegment =
 
 // Matches a standalone paragraph that is only [SomeName] — the base ability marker.
 // Case-insensitive so authors can write [Shapeshift] or [shapeshift].
-const MARKER_RE = /^\[([A-Za-z][A-Za-z0-9-]*)\]\s*$/gm;
+const MARKER_RE = /^\[([A-Za-z][A-Za-z0-9 -]*)\]\s*$/gm;
 
 export function splitBodyOnMarkers(body: string | undefined): BodySegment[] {
   if (!body) return [];
@@ -22,7 +22,7 @@ export function splitBodyOnMarkers(body: string | undefined): BodySegment[] {
   while ((match = MARKER_RE.exec(body)) !== null) {
     const before = body.slice(lastIndex, match.index).trim();
     if (before) segments.push({ type: 'markdown', text: before });
-    segments.push({ type: 'base-ability', id: match[1].toLowerCase() });
+    segments.push({ type: 'base-ability', id: match[1].toLowerCase().replace(/\s+/g, '-') });
     lastIndex = match.index + match[0].length;
   }
 
