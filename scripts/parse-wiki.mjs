@@ -72,6 +72,31 @@ const SPHERE_CONFIGS = {
       'Arcforge Players Compendium':              'arcforge-players-compendium',
     },
   },
+
+  conjuration: {
+    inputFile: 'conjuration.wiki',
+    sphere: 'conjuration',
+    system: 'power',
+    primaryBook: 'spheres-of-power-core',
+
+    headingSourceMap: {
+      'DbH':              'damnation-by-hunger',
+      'LotS':             'spheres-of-guile',
+      'Apoc':             null,   // resolve from ^^Source:^^ body line
+      'Alienist HB':      'the-alienists-handbook',
+      "Jester's HB":      'jesters-handbook',
+      'SM—':              'barons-uncanny-gateway',
+      '3PP':              null,   // resolve from ^^Source:^^ body line
+      'BaP':              'blood-and-portents',
+      "Gravecaller's HB": 'gravecallers-handbook',
+    },
+
+    bodySourceMap: {
+      'Spheres Apocrypha: Cohorts & Companions':  'spheres-apocrypha-cohorts-and-companions',
+      "Expanded Spheres: Baron's Lost Apocrypha": 'expanded-spheres-barons-lost-apocrypha',
+      'Card Casting 2: Counters and Control':     'unknown-source',
+    },
+  },
 };
 
 // ─── Bracket-style ability type tags (in headings as [tag], not source keys) ──
@@ -94,7 +119,7 @@ const KNOWN_SPHERES = new Set([
 function parseSectionContext(headingText) {
   const lower = headingText.trim().toLowerCase();
 
-  if (lower.includes('feat')) {
+  if (/\bfeats?\b/.test(lower)) {
     return { type: 'feat', tier: null, sectionTags: [] };
   }
   if (lower.includes('advanced') && lower.includes('talent')) {
@@ -268,6 +293,9 @@ const PAREN_TAG_MAP = {
   'quicken':        'quicken',
   'still':          'still',
   'blood art':      'blood-art',
+  'form':           'form',
+  'type':           'type',
+  'companion':      'companion',
 };
 
 /**
@@ -276,6 +304,9 @@ const PAREN_TAG_MAP = {
  */
 function parseHeading(headingLine, sectionCtx, config) {
   let head = headingLine.replace(/^\++\s+/, '').trim();
+
+  // Strip Wikidot color markup: ##rrggbb|text## or ##colorname|text## → text
+  head = head.replace(/##[^|#]+\|([^#]+)##/g, '$1');
 
   const tags = [...(sectionCtx.sectionTags ?? [])];
   let sourceKey = null;
@@ -427,6 +458,9 @@ function parseWikiFile(text, config) {
               }
             }
           }
+        } else if (baseMode) {
+          // Div without a ++++ heading inside a base ability section: include as body prose
+          baseMode.bodyLines.push(...divBuffer);
         }
       }
       inDiv = false;
@@ -447,10 +481,17 @@ function parseWikiFile(text, config) {
         flushBase();
         sectionCtx = ctx;
       } else if (headingMatch[1] === '++') {
-        // H2 with no section context → base ability (e.g. "Blood Control", "Shapeshift")
-        flushBase();
-        const baseName = normalizeQuotes(headingMatch[2].replace(/\s*\[[^\]]+\]/g, '').trim());
-        baseMode = { name: baseName, bodyLines: [], subSections: [] };
+        if (baseMode) {
+          // Consecutive null-context H2 while base ability is active → extend current base ability.
+          // Add as a prose sub-heading rather than flushing and starting a new base entry.
+          const sectionName = normalizeQuotes(headingMatch[2].replace(/\s*\[[^\]]+\]/g, '').trim());
+          baseMode.bodyLines.push(`### ${sectionName}`);
+        } else {
+          // H2 with no section context → base ability (e.g. "Blood Control", "Shapeshift")
+          flushBase();
+          const baseName = normalizeQuotes(headingMatch[2].replace(/\s*\[[^\]]+\]/g, '').trim());
+          baseMode = { name: baseName, bodyLines: [], subSections: [] };
+        }
       }
       // H1/H3 with no context: informational section — no state change
       continue;

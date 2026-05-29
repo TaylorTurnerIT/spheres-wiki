@@ -325,6 +325,17 @@ describe('parseSectionContext', () => {
     const ctx = parseSectionContext('Talent Feats');
     assert.equal(ctx.type, 'feat');
   });
+
+  it('"Companion Features" → null (features ≠ feats)', () => {
+    const ctx = parseSectionContext('Companion Features');
+    assert.equal(ctx, null);
+  });
+
+  it('"Conjuration Talent Types" has "talent" → basic context', () => {
+    const ctx = parseSectionContext('Conjuration Talent Types');
+    assert.equal(ctx?.type, 'talent');
+    assert.equal(ctx?.tier, 'basic');
+  });
 });
 
 // ─── parseHeading ─────────────────────────────────────────────────────────────
@@ -705,6 +716,56 @@ Sub two body.
     assert.ok(body.includes('#### Sub Two'));
     // sub-sections separated by ---
     assert.ok(body.includes('---'));
+  });
+
+  it('consecutive null-context H2 extends base ability instead of creating new entry', () => {
+    const wiki = `
+++ Summon
+Base prose.
+++ Rules Section
+Rules prose.
+[[div style="..."]]
+++++ Sub Entry
+Sub body.
+[[/div]]
++++ Sphere Talents
+[[div style="..."]]
+++++ Normal Talent
+Normal body.
+[[/div]]
+`.trim();
+    const entries = parseWikiFile(wiki, config);
+    // Only 2 entries: one base ability (Summon, extended) + one talent
+    assert.equal(entries.length, 2);
+    assert.equal(entries[0].name, 'Summon');
+    assert.equal(entries[0].tier, 'base');
+    assert.ok(entries[0].body.includes('Base prose.'));
+    assert.ok(entries[0].body.includes('### Rules Section'));
+    assert.ok(entries[0].body.includes('Rules prose.'));
+    assert.ok(entries[0].body.includes('Sub body.'));
+    assert.equal(entries[1].tier, 'basic');
+  });
+
+  it('non-heading div inside base ability is included in body prose', () => {
+    const wiki = `
+++ Summon
+Intro prose.
+[[div style="..."]]
+**Avian**
+A bird form.
+[[/div]]
++++ Sphere Talents
+[[div style="..."]]
+++++ A Talent
+Talent body.
+[[/div]]
+`.trim();
+    const entries = parseWikiFile(wiki, config);
+    assert.equal(entries.length, 2);
+    assert.equal(entries[0].tier, 'base');
+    assert.ok(entries[0].body.includes('Avian'));
+    assert.ok(entries[0].body.includes('A bird form.'));
+    assert.equal(entries[1].name, 'A Talent');
   });
 });
 
