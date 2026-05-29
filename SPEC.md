@@ -166,3 +166,4 @@ Then infra (T23→T24→T26→T27→T28→T29→T30→T31→T32).
 
 | id | date | cause | fix |
 |----|------|-------|-----|
+| B4 | 2026-05-29 | `parseSectionContext` used `includes('feat')` — matched "features" in "+++ Companion Features", premature-flushed base ability and reset section context | Changed to `/\bfeats?\b/` |
