@@ -1,5 +1,6 @@
 ---
 import { url } from "@/lib/url";
+import { SYSTEMS, SYSTEM_DEFAULT } from '@/config/site';
 import type { SphereEntry, ClassEntry } from '@/lib/types';
 
 interface Props {
@@ -10,30 +11,14 @@ interface Props {
 
 const { system, spheres, classes } = Astro.props;
 
-const nsClass = system === 'champions' ? 'champ' : system;
+const sys = SYSTEMS[system];
+const nsClass = sys?.cssKey ?? SYSTEM_DEFAULT.cssKey;
+const cfg = sys
+  ? { title: sys.label, subtitle: sys.subtitle, classLabel: sys.classLabel,
+      buildText: sys.buildText, buildHref: sys.buildHref, nsRoute: system }
+  : { title: system, subtitle: '', classLabel: 'Classes',
+      buildText: 'Browse →', buildHref: `/${system}/`, nsRoute: system };
 
-type NsConfig = {
-  title: string;
-  subtitle: string;
-  classLabel: string;
-  buildText: string;
-  buildHref: string;
-  nsRoute: string;
-};
-
-const nsConfigs: Record<string, NsConfig> = {
-  power:     { title: 'Spheres of Power',  subtitle: 'Magic Spheres',   classLabel: 'Spherecaster Classes', buildText: 'Using Spheres of Power →', buildHref: '/power/using-spheres-of-power/', nsRoute: 'power' },
-  might:     { title: 'Spheres of Might',  subtitle: 'Combat Spheres',  classLabel: 'Practitioner Classes', buildText: 'How to Build a Practitioner →', buildHref: '/might/', nsRoute: 'might' },
-  guile:     { title: 'Spheres of Guile',  subtitle: 'Skill Spheres',   classLabel: 'Operative Classes',    buildText: 'How to Build an Operative →',   buildHref: '/guile/', nsRoute: 'guile' },
-  champions: { title: 'Champions',         subtitle: 'Multi-system',    classLabel: 'Champion Classes',     buildText: 'How to Build a Champion →',     buildHref: '/champions/',        nsRoute: 'champions'        },
-};
-
-const cfg: NsConfig = nsConfigs[system] ?? {
-  title: system, subtitle: '', classLabel: 'Classes',
-  buildText: 'Browse →', buildHref: `/${system}/`, nsRoute: system,
-};
-
-// For champions: show classes in the main list (no spheres). For others: spheres first, classes in subsection.
 const isChampions = system === 'champions';
 ---
 <div class:list={['ref-card', nsClass]}>

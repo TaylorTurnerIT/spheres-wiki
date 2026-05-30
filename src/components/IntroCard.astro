@@ -1,44 +1,19 @@
 ---
 import { url } from "@/lib/url";
-
-type Namespace = 'power' | 'might' | 'guile' | 'champions';
+import { SYSTEMS } from '@/config/site';
 
 interface Props {
-  system: Namespace;
+  system: string;
 }
 
 const { system } = Astro.props;
 
-const cssClass = system === 'champions' ? 'champ' : system;
-
-const meta: Record<Namespace, { name: string; description: string; linkText: string; href: string }> = {
-  power: {
-    name: 'Spheres of Power',
-    description: 'The magic system. Build custom spellcasters by combining magical spheres — flexible talents over spell slots.',
-    linkText: 'Using Spheres of Power →',
-    href: '/power/',
-  },
-  might: {
-    name: 'Spheres of Might',
-    description: 'For martial characters. Craft fighters, archers, brawlers, and commanders from talents instead of rigid feat trees.',
-    linkText: 'Using Spheres of Might →',
-    href: '/might/',
-  },
-  guile: {
-    name: 'Spheres of Guile',
-    description: 'The skills system. Run organizations, craft masterworks, infiltrate networks — with real mechanical weight.',
-    linkText: 'Using Spheres of Guile →',
-    href: '/guile/',
-  },
-  champions: {
-    name: 'Champions of the Spheres',
-    description: 'Blend magic and martial together. Bridge both systems for characters who fight and cast in equal measure.',
-    linkText: 'Using Champions →',
-    href: '/champions/',
-  },
-};
-
-const { name, description, linkText, href } = meta[system];
+const sys = SYSTEMS[system];
+const cssClass = sys?.cssKey ?? system;
+const name = sys?.label ?? system;
+const description = sys?.description ?? '';
+const linkText = sys?.introLinkText ?? 'Browse →';
+const href = sys?.route ?? `/${system}/`;
 ---
 <a href={url(href)} class:list={['intro-card', cssClass]} data-astro-prefetch="hover">
   <div class="intro-card-art" aria-hidden="true">

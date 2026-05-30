@@ -6,7 +6,7 @@ import StoreBar from '@/components/StoreBar.astro';
 import RefCard from '@/components/RefCard.astro';
 import ResourceCard from '@/components/ResourceCard.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
-import { ANNOUNCEMENT } from '@/config/site';
+import { ANNOUNCEMENT, SYSTEMS } from '@/config/site';
 import type { BookMeta } from '@/lib/types';
 
 const { sphereMap, classMap, bookMetaMap } = await resolveEntries();
@@ -29,14 +29,11 @@ const coreBooks = CORE_SLUGS
   .map(slug => bookMetaMap.get(slug))
   .filter((b): b is BookMeta => b !== undefined);
 
-const powerSpheres  = [...sphereMap.values()].filter(s => s.system === 'power');
-const mightSpheres  = [...sphereMap.values()].filter(s => s.system === 'might');
-const guileSpheres  = [...sphereMap.values()].filter(s => s.system === 'guile');
-
-const powerClasses  = [...classMap.values()].filter(c => c.system === 'power');
-const mightClasses  = [...classMap.values()].filter(c => c.system === 'might');
-const guileClasses  = [...classMap.values()].filter(c => c.system === 'guile');
-const champClasses  = [...classMap.values()].filter(c => c.system === 'champions');
+const systemData = Object.keys(SYSTEMS).map(id => ({
+  id,
+  spheres: [...sphereMap.values()].filter(s => s.system === id),
+  classes: [...classMap.values()].filter(c => c.system === id),
+}));
 ---
 <WikiPage title="Home — Spheres of Power Wiki" pagefindIgnore={true}>
 
@@ -51,10 +48,7 @@ const champClasses  = [...classMap.values()].filter(c => c.system === 'champions
 
   <div class="intro-section-label">New to Spheres? Choose a system to start</div>
   <div class="intro-cards">
-    <IntroCard system="power" />
-    <IntroCard system="might" />
-    <IntroCard system="guile" />
-    <IntroCard system="champions" />
+    {systemData.map(({ id }) => <IntroCard system={id} />)}
   </div>
 
   <div class="section-heading">
@@ -63,10 +57,9 @@ const champClasses  = [...classMap.values()].filter(c => c.system === 'champions
   </div>
 
   <div class="ref-grid">
-    <RefCard system="power"     spheres={powerSpheres}  classes={powerClasses} />
-    <RefCard system="might"     spheres={mightSpheres}  classes={mightClasses} />
-    <RefCard system="guile"     spheres={guileSpheres}  classes={guileClasses} />
-    <RefCard system="champions" spheres={[]}            classes={champClasses} />
+    {systemData.map(({ id, spheres, classes }) => (
+      <RefCard system={id} spheres={id === 'champions' ? [] : spheres} classes={classes} />
+    ))}
   </div>
 
   <div class="resources-row">

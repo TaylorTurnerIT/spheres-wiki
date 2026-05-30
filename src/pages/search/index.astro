@@ -3,53 +3,47 @@ import WikiPage from '@/layouts/WikiPage.astro';
 import { url } from '@/lib/url';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
+import { SYSTEMS } from '@/config/site';
 
 const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, tagMap, bookMetaMap } = await resolveEntries();
-
-const SYSTEM_META: Record<string, string> = {
-  power:      'Spheres of Power',
-  might:      'Spheres of Might',
-  guile:      'Spheres of Guile',
-  champions:  'Champions of the Spheres',
-};
 
 type ManifestEntry = { url: string; title: string; system: string; type: string; sphere?: string; tags?: string };
 const manifest: ManifestEntry[] = [];
 
 for (const s of sphereMap.values()) {
-  if (!SYSTEM_META[s.system]) continue;
-  manifest.push({ url: url(`/${s.system}/${s.id}/`), title: s.name, system: SYSTEM_META[s.system], type: 'sphere', tags: buildOrderedTagIds(s, bookMetaMap, tagMap).join(', ') });
+  if (!SYSTEMS[s.system]) continue;
+  manifest.push({ url: url(`/${s.system}/${s.id}/`), title: s.name, system: SYSTEMS[s.system].label, type: 'sphere', tags: buildOrderedTagIds(s, bookMetaMap, tagMap).join(', ') });
 }
 for (const t of talentMap.values()) {
-  if (!SYSTEM_META[t.system]) continue;
+  if (!SYSTEMS[t.system]) continue;
   const sph = sphereMap.get(`sphere:${t.sphere}`);
-  manifest.push({ url: url(`/${t.system}/${t.sphere}/${t.id}/`), title: t.name, system: SYSTEM_META[t.system], type: 'talent', sphere: sph?.name ?? t.sphere, tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
+  manifest.push({ url: url(`/${t.system}/${t.sphere}/${t.id}/`), title: t.name, system: SYSTEMS[t.system].label, type: 'talent', sphere: sph?.name ?? t.sphere, tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
 }
 for (const f of featMap.values()) {
-  if (!SYSTEM_META[f.system]) continue;
+  if (!SYSTEMS[f.system]) continue;
   const sph = sphereMap.get(`sphere:${f.sphere}`);
-  manifest.push({ url: url(`/${f.system}/${f.sphere}/feats/${f.id}/`), title: f.name, system: SYSTEM_META[f.system], type: 'feat', sphere: sph?.name ?? f.sphere, tags: buildOrderedTagIds(f, bookMetaMap, tagMap).join(', ') });
+  manifest.push({ url: url(`/${f.system}/${f.sphere}/feats/${f.id}/`), title: f.name, system: SYSTEMS[f.system].label, type: 'feat', sphere: sph?.name ?? f.sphere, tags: buildOrderedTagIds(f, bookMetaMap, tagMap).join(', ') });
 }
 for (const c of classMap.values()) {
-  if (!SYSTEM_META[c.system]) continue;
+  if (!SYSTEMS[c.system]) continue;
   const clsUrl = c.system === 'power'      ? url(`/power/classes/${c.id}/`)
                : c.system === 'champions'  ? url(`/champions/${c.id}/`)
                : null; // guile/might classes live on sphere pages — covered by sphere entries
   if (!clsUrl) continue;
-  manifest.push({ url: clsUrl, title: c.name, system: SYSTEM_META[c.system], type: 'class', tags: buildOrderedTagIds(c, bookMetaMap, tagMap).join(', ') });
+  manifest.push({ url: clsUrl, title: c.name, system: SYSTEMS[c.system].label, type: 'class', tags: buildOrderedTagIds(c, bookMetaMap, tagMap).join(', ') });
 }
 for (const a of archetypeMap.values()) {
   if (a.system !== 'power') continue;
-  manifest.push({ url: url(`/power/classes/${a.className}/${a.id}/`), title: a.name, system: SYSTEM_META['power'], type: 'archetype', tags: buildOrderedTagIds(a, bookMetaMap, tagMap).join(', ') });
+  manifest.push({ url: url(`/power/classes/${a.className}/${a.id}/`), title: a.name, system: SYSTEMS['power'].label, type: 'archetype', tags: buildOrderedTagIds(a, bookMetaMap, tagMap).join(', ') });
 }
 for (const t of classTraitMap.values()) {
-  if (!SYSTEM_META[t.system]) continue;
-  manifest.push({ url: url(`/${t.system}/classes/${t.className}/traits/${t.id}/`), title: t.name, system: SYSTEM_META[t.system], type: 'class-trait', tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
+  if (!SYSTEMS[t.system]) continue;
+  manifest.push({ url: url(`/${t.system}/classes/${t.className}/traits/${t.id}/`), title: t.name, system: SYSTEMS[t.system].label, type: 'class-trait', tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
 }
 
 const staticSpheres = [...new Set([...sphereMap.values()].map(s => s.name))].sort();
 const sphereNamesLower = new Set(staticSpheres.map(s => s.toLowerCase()));
-const systemKeys = new Set(['power', 'might', 'guile', 'champions']);
+const systemKeys = new Set(Object.keys(SYSTEMS));
 const typeKeys   = new Set(['sphere', 'talent', 'feat', 'class', 'archetype', 'class-trait']);
 const staticTags = [...tagMap.entries()]
   .filter(([id]) => !sphereNamesLower.has(id) && !systemKeys.has(id) && !typeKeys.has(id))

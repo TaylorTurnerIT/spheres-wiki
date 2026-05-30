@@ -127,13 +127,13 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T13 | .      | Add ErrataNotice to sphere/talent detail pages           | V1            |
 | T14 | .      | Create using-spheres intro pages for might, guile, champions | V1,I.pages |
 | T15 | .      | Create article page route (ArticleEntry has no renderer) | V3,I.content  |
-| T16 | .      | Consolidate `site.ts` into single `SYSTEMS` record; delete NAMESPACE_COLORS, NAMESPACE_LABELS, TAB_ORDER | V4,V5,I.config |
-| T17 | .      | Refactor `global.css` accent rules to use `--clr-ns` custom property via `data-system` attribute | V4,V10 |
-| T18 | .      | Drive TabNav from SYSTEMS config; derive currentTab() from route field | V5,I.config |
-| T19 | .      | Derive `search/index.astro` SYSTEM_META from SYSTEMS config | V5,V7,I.config |
-| T20 | .      | Refactor RefCard — delete nsConfigs, read subtitle/classLabel/route from SYSTEMS | V5,I.config |
-| T21 | .      | Refactor `pages/index.astro` home RefCards to loop over SYSTEMS | V3,V5,I.config |
-| T22 | .      | Move IntroCard meta record to SYSTEMS config             | V5,I.config   |
+| T16 | x      | Consolidate `site.ts` into single `SYSTEMS` record; delete NAMESPACE_COLORS, NAMESPACE_LABELS, TAB_ORDER | V4,V5,I.config |
+| T17 | x      | Refactor `global.css` accent rules to use `--clr-ns` custom property via `data-system` attribute | V4,V10 |
+| T18 | x      | Drive TabNav from SYSTEMS config; derive currentTab() from route field | V5,I.config |
+| T19 | x      | Derive `search/index.astro` SYSTEM_META from SYSTEMS config | V5,V7,I.config |
+| T20 | x      | Refactor RefCard — delete nsConfigs, read subtitle/classLabel/route from SYSTEMS | V5,I.config |
+| T21 | x      | Refactor `pages/index.astro` home RefCards to loop over SYSTEMS | V3,V5,I.config |
+| T22 | x      | Move IntroCard meta record to SYSTEMS config             | V5,I.config   |
 | T23 | .      | Add `si-fallback` symbol to SVGSprite.astro; guard icon lookup in sphere templates | V8,I.svg |
 | T24 | .      | Add `@astrojs/sitemap` integration                       | I.pages       |
 | T25 | .      | Create custom `404.astro` page                           | V1,I.pages    |

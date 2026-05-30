@@ -7,29 +7,80 @@ export const HEADER_NAV = [
   { label: 'Recent Changes', href: '/recent-changes/' },
 ] as const;
 
-export const NAMESPACE_COLORS: Record<string, { primary: string; dark: string }> = {
-  power:     { primary: '#174B93', dark: '#0D2850' },
-  might:     { primary: '#8f2d00', dark: '#3D1200' },
-  guile:     { primary: '#5A2D96', dark: '#180B2E' },
-  champions: { primary: '#165A1C', dark: '#091E0C' },
-  default:   { primary: '#535048', dark: '#3E3830' },
+export type SystemConfig = {
+  label: string;
+  color: string;
+  darkColor: string;
+  route: string;
+  cssKey: string;
+  subtitle: string;
+  classLabel: string;
+  description: string;
+  introLinkText: string;
+  buildText: string;
+  buildHref: string;
 };
 
-export const NAMESPACE_LABELS: Record<string, string> = {
-  power:     'Spheres of Power',
-  might:     'Spheres of Might',
-  guile:     'Spheres of Guile',
-  champions: 'Champions of the Spheres',
+export const SYSTEMS: Record<string, SystemConfig> = {
+  power: {
+    label: 'Spheres of Power',
+    color: '#174B93',
+    darkColor: '#0D2850',
+    route: '/power/',
+    cssKey: 'power',
+    subtitle: 'Magic Spheres',
+    classLabel: 'Spherecaster Classes',
+    description: 'The magic system. Build custom spellcasters by combining magical spheres — flexible talents over spell slots.',
+    introLinkText: 'Using Spheres of Power →',
+    buildText: 'Using Spheres of Power →',
+    buildHref: '/power/using-spheres-of-power/',
+  },
+  might: {
+    label: 'Spheres of Might',
+    color: '#8f2d00',
+    darkColor: '#3D1200',
+    route: '/might/',
+    cssKey: 'might',
+    subtitle: 'Combat Spheres',
+    classLabel: 'Practitioner Classes',
+    description: 'For martial characters. Craft fighters, archers, brawlers, and commanders from talents instead of rigid feat trees.',
+    introLinkText: 'Using Spheres of Might →',
+    buildText: 'How to Build a Practitioner →',
+    buildHref: '/might/',
+  },
+  guile: {
+    label: 'Spheres of Guile',
+    color: '#5A2D96',
+    darkColor: '#180B2E',
+    route: '/guile/',
+    cssKey: 'guile',
+    subtitle: 'Skill Spheres',
+    classLabel: 'Operative Classes',
+    description: 'The skills system. Run organizations, craft masterworks, infiltrate networks — with real mechanical weight.',
+    introLinkText: 'Using Spheres of Guile →',
+    buildText: 'How to Build an Operative →',
+    buildHref: '/guile/',
+  },
+  champions: {
+    label: 'Champions of the Spheres',
+    color: '#165A1C',
+    darkColor: '#091E0C',
+    route: '/champions/',
+    cssKey: 'champ',
+    subtitle: 'Multi-system',
+    classLabel: 'Champion Classes',
+    description: 'Blend magic and martial together. Bridge both systems for characters who fight and cast in equal measure.',
+    introLinkText: 'Using Champions →',
+    buildText: 'How to Build a Champion →',
+    buildHref: '/champions/',
+  },
 };
 
-export const TAB_ORDER = [
-  'home',
-  'power',
-  'might',
-  'guile',
-  'champions',
-  'store',
-] as const;
+export const SYSTEM_DEFAULT = {
+  color: '#535048',
+  darkColor: '#3E3830',
+  cssKey: '',
+} as const;
 
 /**
  * Shown as a banner at the top of the home page. Set to null to hide.

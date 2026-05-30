@@ -1,27 +1,27 @@
 ---
 import { url } from "@/lib/url";
-import { NAMESPACE_LABELS } from '@/config/site';
+import { SYSTEMS } from '@/config/site';
 
 const pathname = Astro.url.pathname;
 
 function currentTab(): string {
-  if (pathname.startsWith(url('/power/')))      return 'power';
-  if (pathname.startsWith(url('/might/')))      return 'might';
-  if (pathname.startsWith(url('/guile/')))      return 'guile';
-  if (pathname.startsWith(url('/champions')))   return 'champions';
-  if (pathname.startsWith(url('/store')))       return 'store';
+  const match = Object.entries(SYSTEMS).find(([, sys]) => pathname.startsWith(url(sys.route)));
+  if (match) return match[0];
+  if (pathname.startsWith(url('/store'))) return 'store';
   return 'home';
 }
 
 const active = currentTab();
 
 const tabs = [
-  { slug: 'home',      label: 'Home',                       href: url('/'),                  cls: ''      },
-  { slug: 'power',     label: NAMESPACE_LABELS.power,        href: url('/power/'), cls: 'power' },
-  { slug: 'might',     label: NAMESPACE_LABELS.might,        href: url('/might/'), cls: 'might' },
-  { slug: 'guile',     label: NAMESPACE_LABELS.guile,        href: url('/guile/'), cls: 'guile' },
-  { slug: 'champions', label: NAMESPACE_LABELS.champions,    href: url('/champions/'),        cls: 'champ' },
-  { slug: 'store',     label: 'Store',                      href: url('/store/'),            cls: ''      },
+  { slug: 'home',  label: 'Home',  href: url('/'),      cls: '' },
+  ...Object.entries(SYSTEMS).map(([id, sys]) => ({
+    slug: id,
+    label: sys.label,
+    href: url(sys.route),
+    cls: sys.cssKey,
+  })),
+  { slug: 'store', label: 'Store', href: url('/store/'), cls: '' },
 ];
 ---
 <nav class="tab-nav" aria-label="System navigation">
