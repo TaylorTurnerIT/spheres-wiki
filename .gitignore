@@ -28,3 +28,12 @@ pnpm-debug.log*
 
 # raw wiki source files (parser input, not versioned)
 *.wiki
+
+# Playwright
+playwright-report/
+test-results/
+
+# Claw Code local artifacts
+.claw/settings.local.json
+.claw/sessions/
+.clawhip/
