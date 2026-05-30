@@ -7,11 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist",
+    "build": "node scripts/validate-tags.mjs && astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",
-    "validate": "node scripts/validate-v2.mjs"
+    "validate": "node scripts/validate-v2.mjs && node scripts/validate-tags.mjs"
   },
   "dependencies": {
     "@fontsource/cinzel": "^5.2.8",
