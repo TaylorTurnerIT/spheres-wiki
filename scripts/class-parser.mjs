@@ -250,10 +250,11 @@ function parseClassFile(text, config) {
   }
 
   // Extract body text — intro prose between title and stat block
-  // Stop at the first stat-block field (Role, Alignment, Hit Die, Table)
+  // Stop at the first stat-block field or archetype section
   const statBlockStart = clean.search(
     /\*\*(Role|Alignment|Hit Die|Starting Wealth|Starting Age|Class Skills|Skill Ranks|Proficiencies|Table):\*\*/i,
   );
+  const archetypeStart = clean.search(/\n\+ Archetypes\b/);
   const bodyStart =
     clean.indexOf(
       "\n",
@@ -261,9 +262,13 @@ function parseClassFile(text, config) {
         ? clean.indexOf("parent:")
         : clean.indexOf("title:"),
     ) + 1;
+  const bodyEnd = Math.min(
+    statBlockStart > bodyStart ? statBlockStart : Infinity,
+    archetypeStart > bodyStart ? archetypeStart : Infinity,
+  );
   let bodyText = "";
-  if (statBlockStart > bodyStart) {
-    bodyText = cleanBody(clean.substring(bodyStart, statBlockStart));
+  if (bodyEnd > bodyStart && bodyEnd < Infinity) {
+    bodyText = cleanBody(clean.substring(bodyStart, bodyEnd));
   }
 
   return {
@@ -286,8 +291,8 @@ function parseClassFile(text, config) {
 
 function parseClassFeatures(text) {
   const features = [];
-  // Find all ++ headings (class features)
-  const headingRe = /^\+\+ (.+)$/gm;
+  // Match exactly ++ headings (not +++, ++++)
+  const headingRe = /^\+{2}\s(?!\+)(.+)$/gm;
   const matches = [...text.matchAll(headingRe)];
 
   for (let i = 0; i < matches.length; i++) {
