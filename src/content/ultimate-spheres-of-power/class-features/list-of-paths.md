@@ -735,5 +735,3 @@ Umbrals draw their power from study and emulation of the beings of the shadow re
 
 **Path Mastery:** At level 20, the umbral can make one of her illusions permanent. Only one illusion may be made permanent in this way at one time. If another illusion is designated as permanent, the previous permanent illusion ends.
 ---
-
-[[include sop-template]]

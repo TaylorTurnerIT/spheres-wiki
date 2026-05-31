@@ -176,5 +176,3 @@ Recurring motifs and styles can take on an almost mythical nature over generatio
 
 
 ---
-
-[[include sop-template]]

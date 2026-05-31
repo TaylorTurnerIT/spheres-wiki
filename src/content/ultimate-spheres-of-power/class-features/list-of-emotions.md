@@ -133,6 +133,3 @@ He must succeed at an opposed Charisma check to convince it to do something it w
 
 **Master: Peace of Heart:** The number of temporary hit points granted by the eliciter's touch of peace ability increases to 1d10 + 2 per level.
 ---
-
-[[include sop-template]]
-[[include cots]]

@@ -11,6 +11,3 @@ tags: []
 At 20th level, the commander may have up to three enhanced tactics active at a time, and may activate or switch all three enhanced tactics using the same action as long as he uses the largest activation action.
 
 ---
-
-[[include som-template]]
-[[include cots]]

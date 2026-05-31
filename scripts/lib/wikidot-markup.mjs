@@ -94,6 +94,9 @@ export function cleanBody(text) {
     // Skip image tags
     if (/^\[\[image\b/i.test(trimmed)) continue;
 
+    // Skip Wikidot include directives
+    if (/^\[\[include\b/i.test(trimmed)) continue;
+
     // Skip full-line superscripts (source attribution lines: ^^...^^)
     if (/^\^\^.+\^\^$/.test(trimmed)) continue;
 
