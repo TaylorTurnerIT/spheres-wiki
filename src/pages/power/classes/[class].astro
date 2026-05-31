@@ -315,6 +315,16 @@ function ordinal(n: number): string {
 import TomSelect from 'tom-select';
 import 'tom-select/dist/css/tom-select.css';
 
+// Module-scoped so astro:before-swap can destroy it before the DOM swaps.
+let activeTomSelect: any = null;
+
+document.addEventListener('astro:before-swap', () => {
+  if (activeTomSelect) {
+    activeTomSelect.destroy();
+    activeTomSelect = null;
+  }
+});
+
 // Replaces matched text only inside text nodes — never touches attribute values.
 function replaceInTextNodes(
   root: HTMLElement,
@@ -739,10 +749,9 @@ document.addEventListener('astro:page-load', () => {
   }
 
   // Initialize TomSelect if present
-  let tomSelectInstance: any = null;
   if (selectEl) {
     selectEl.classList.remove('ts-hidden-select');
-    tomSelectInstance = new TomSelect(selectEl, {
+    activeTomSelect = new TomSelect(selectEl, {
       placeholder: 'Select Archetypes...',
       plugins: ['remove_button'],
       closeAfterSelect: true,
@@ -769,19 +778,19 @@ document.addEventListener('astro:page-load', () => {
 
         // Apply compatibility logic to disable invalid options
         const currentSelected = values || [];
-        Object.keys(tomSelectInstance.options).forEach(optValue => {
+        Object.keys(activeTomSelect.options).forEach(optValue => {
           const isSelected = currentSelected.includes(optValue);
-          const opt = tomSelectInstance.options[optValue];
+          const opt = activeTomSelect.options[optValue];
           if (!isSelected) {
             const comp = isCompatible(optValue, currentSelected);
             if (opt.disabled !== !comp) {
               opt.disabled = !comp;
-              tomSelectInstance.updateOption(optValue, opt);
+              activeTomSelect.updateOption(optValue, opt);
             }
           } else {
             if (opt.disabled) {
               opt.disabled = false;
-              tomSelectInstance.updateOption(optValue, opt);
+              activeTomSelect.updateOption(optValue, opt);
             }
           }
         });
@@ -791,9 +800,9 @@ document.addEventListener('astro:page-load', () => {
     // Read initial archetypes from query params on load
     const urlParams = new URLSearchParams(window.location.search);
     const initialArchetypes = urlParams.get('archetypes');
-    if (initialArchetypes && tomSelectInstance) {
+    if (initialArchetypes && activeTomSelect) {
       const activeIds = initialArchetypes.split(',');
-      tomSelectInstance.setValue(activeIds); // this triggers onChange which calls updateArchetypes
+      activeTomSelect.setValue(activeIds); // this triggers onChange which calls updateArchetypes
     }
   }
 
