@@ -688,6 +688,7 @@ if (isMain) {
   // Write class traits
   if (traits.length > 0) {
     const traitEntries = traits.map((t) => ({
+      id: `${className}-${t.slug}`,
       name: t.name,
       slug: t.slug,
       bookSlug: config.primaryBook,
