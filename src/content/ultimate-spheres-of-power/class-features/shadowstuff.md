@@ -6,6 +6,7 @@ system: power
 className: fey-adept
 level: 6
 tags: []
+isTraitContainer: true
 ---
 
 Fey adepts gain a limited ability to wield shadowstuff—the pure essence of shadows. With this power, the fey adept can affect the world around him with his illusions by weaving reality into the images.
@@ -21,33 +22,3 @@ At 6th level, the fey adept may spend shadow points in conjunction with creating
 This follows all the usual rules for creating and maintaining illusions, except the illusion gains an additional benefit depending on what illusion is created. Many of these benefits improve at 12th and 18th levels. Illusions still must possess the appropriate (sensory) talents to be believed. When using an illusion to mimic an effect from another sphere the effect still counts as an Illusion sphere effect (such as when calculating caster level) and does not count as the alternate sphere for other purposes, such as when applying talents or feats based on those spheres.
 
 In order to create reality, the fey adept must spend spell points as usual to create the illusion, plus 1 shadow point + 1 per spell point that would be required by the mimicked effect in question. This includes spell point costs to maintain an effect without concentration (thus, to create a shadow companion that persists without concentration would cost two spell points to create a self-sustained illusion as well as 3 shadow points).
-
-#### Companion
-The fey adept may create an illusionary creature that may interact with the world around it. This creates the equivalent of a companion from the Conjuration sphere, except it only possesses 1/5th a companion's usual hit points. Targets who interact with the illusionary creature are allowed a Will saving throw to disbelieve as usual. Targets who disbelieve the illusionary creature receive only half damage from the creature.
-
-An illusionary companion possesses one (form) talent as is usual for companions, and gains an additional (form) talent at 12th level and 18th level.
-
-#### Destructive Blast
-The fey adept may give substance to an instantaneous effect such as a burst of fire, a bolt of lightning, or another simulated effect. This creates a destructive blast as the Destruction sphere, which may possess any (blast type) talent and (blast shape) talent of the fey adept's choosing. An instantaneous destructive blast cannot be extended through concentration or spell points as is usual with illusions, but a destructive blast with a duration (such as Energy Wall or Energy Sphere) persists as long as the illusion is maintained, to a maximum of 1 round per caster level.
-
-Targets affected by an illusionary destructive blast who succeed at their Will save to disbelieve suffer only half damage and receive a +4 bonus to any saving throw associated with the destructive blast itself.
-
-#### Glamer
-If the fey adept can create a glamer, he may add substance to the glamer, making the change quasi-real. This grants the creature any one trait (except for traits that affect the mind such as Animal Mind, or traits that change the nature of the creature such as making it incorporeal) from the Alteration sphere in addition to the glamer itself.
-
-The glamer must depict the trait to be applied (for example, the glamer must include wings to grant the creature a fly speed). This stacks with shapeshifts applied with the Alteration sphere (as it is an illusion and not an actual shapeshift), but only one glamer may be applied to an individual creature at a time in this manner. Applying a second glamer with shadowstuff to a creature dispels the first glamer, provided they were created by the same caster, or the second caster succeeds at a magic skill check.
-
-A glamer created in this manner may grant up to two traits at 12th level, and up to three traits at 18th level.
-
-#### Nature
-The fey adept may create an illusion of a natural effect, such as those created through the Nature sphere. This can recreate the effects of the Create Fire, Dust Storm, Entangle, Fog, or Vortex geomancing abilities. The area to be affected need not have the usual materials such as water, dust, or plantlife to create this illusion. If a target succeeds at their Will save to disbelieve, they take half damage from the effect if it deals damage and gain a +4 bonus to any saving throw made against the effect.
-
-#### Objects
-The fey adept creates an object that has form, shape, and weight, as if creating an object with the Creation sphere, although it has a hardness of 0, 3 hit points per inch, and weight as if it were made of wood regardless of what the material appears to be. The fey adept may only create an object in this fashion with a size equivalent to 1 Small object per caster level, although this increases to 2 Small objects per caster level at 12th level, and 3 Small objects per caster level at 18th level.
-
-Targets who succeed at their saving throw to disbelieve the illusion realize the object is shadowstuff and not the material it appears to be and suffer only half damage if the object is used to damage them (for example if the object was dropped on them from above).
-
-#### Weather
-The fey adept may create the illusion of a weather effect such as rain, snow, wind, or even combined like in a storm. This creates a severity 4 aridity/precipitation, ash, temperature (cold or heat), vog (with caster level 10 or higher), and/or wind effect (with the resulting storm, snow and other effects if applicable) within a radius of close centered within the fey adept's illusion range. This cannot be used to calm the weather in an area, and has no effect in an area where the weather category to be affected already has a severity of 4 or higher.
-
-If a target succeeds at its Will save to disbelieve, it treats the weather as being 2 steps lesser in severity in regard to itself. This cannot reduce the weather's severity lower than what it was before the fey adept created the illusion. He may create effects of severity level 5 at 12th level, and severity level 6 at 18th level.

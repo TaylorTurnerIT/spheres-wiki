@@ -6,6 +6,7 @@ system: might
 className: armiger
 level: 1
 tags: []
+isTraitContainer: true
 ---
 
 At 1st level, an armiger may customize up to three sets of weapons in a process that takes 8 hours of modification, drilling, and practice each, reworking scabbards, modifying grips, adding hooks and straps, and other tweaks to suit her personal fighting style. Each set may consist of: a single weapon, a pair of weapons that are wielded simultaneously, up to 10 identical thrown weapons, or up to 50 pieces of ammunition. A given weapon cannot be part of more than one set simultaneously. The armiger always treats her active weapon as if it were masterwork.
@@ -21,9 +22,3 @@ If the weapon is thrown as part of an attack, the armiger retains any benefits f
 If the armiger customizes a set of thrown weapons or ammunition, she retains the granted talents as long as at least one of the set remains wielded. If a pair of weapons are customized to be wielded together and one is not being wielded, the armiger loses the benefits of the granted talents until the second weapon is recovered. Should the armiger be wielding weapons from two separate customization sets at the same time, she may choose which weapon is active at the beginning of each turn.
 
 At 3rd level and every 4 levels thereafter (7th, 11th, 15th, etc.), each customized weapon grants an additional talent. The armiger gains an additional customized weapon at her 11th and 19th levels.
-
-#### Customized Weapons and Drawbacks
-If the armiger possesses a sphere-specific drawback, she may use a talent granted by a customized weapon to buy off that drawback. if the armiger gains a base sphere from a customized weapon, with the GM's permission she may apply a drawback to that sphere to gain a bonus talent as normal for a drawback. The drawback and bonus talent must be set at the time the weapon is customized. Such a drawback may be bought off when that weapon grants an additional talent.
-
-#### Author's Note - "Do I Still Have My Talents If I Switch Weapons?"
-Yes. Armiger's customized weapons are not "temporary talents". The armiger does not lose any "constant" benefits of these talents (i.e. prepared alchemy formulae, tamed animal allies, a maintained stance, etc.) as long as the relevant talents are still assigned to that weapon. While the armiger might not have the active, or constant, benefits of certain talents unless the weapon is out, the armiger does not suddenly lose lingering benefits of these talents because they sheathed their knife and drew their sword.

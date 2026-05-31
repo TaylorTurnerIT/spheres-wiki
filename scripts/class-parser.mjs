@@ -287,10 +287,192 @@ function parseClassFile(text, config) {
   };
 }
 
+// ─── Appendix section stripping ───────────────────────────────────────────────
+
+/**
+ * Known appendix heading texts (after stripping Wikidot color markup).
+ * These section headings appear in ---- -delimited blocks at the end of class
+ * source files and contain archetype lists, feats, equipment, etc. — not class
+ * features. We match them by substring so "Armorist Feats" matches "Feats".
+ */
+const APPENDIX_HEADINGS = [
+  "Archetypes",
+  "Favored Class Bonuses",
+  "Class Equipment",
+  "Alternate Class Features",
+  "Feats",
+  "Note:",
+];
+
+/**
+ * Check whether a trimmed line is a whole-line Wikidot structural tag
+ * that can appear between a ---- delimiter and an appendix heading.
+ * Only matches lines that are entirely a structural tag.
+ */
+function isStructuralTag(line) {
+  return /^\[\[\/?(?:div\b.*?\]\]|=\]\])[ \t]*$/i.test(line);
+}
+
+/**
+ * Check whether a trimmed line is a + heading and its content matches one of
+ * the known appendix patterns.
+ */
+function isAppendixHeading(line) {
+  // Match: + heading with optional color markup like + ##993300|Archetypes##
+  const m = line.match(/^\+ (?:##[^|]+\|)?(.+?)(?:##)?$/);
+  if (!m) return false;
+  return APPENDIX_HEADINGS.some((h) => m[1].includes(h));
+}
+
+/**
+ * Strip appendix sections from class source text before feature parsing.
+ *
+ * Appendix sections are ---- -delimited blocks that appear at the end of class
+ * files. They list archetypes, favored class bonuses, feats, equipment, alternate
+ * class features, and design notes — content that belongs to other parsers, not
+ * to class features.
+ *
+ * We detect them by scanning for ---- lines and checking whether the next
+ * substantive line (skipping blanks and [[div]] tags) is a + heading whose text
+ * matches a known appendix pattern. If so, the entire ---- -delimited block is
+ * removed.
+ */
+function stripAppendixSections(text) {
+  const lines = text.split("\n");
+  const out = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    // Potential appendix delimiter?
+    if (/^----[ \t]*$/.test(line)) {
+      // Scan forward past blanks and Wikidot structural tags
+      let peek = i + 1;
+      while (
+        peek < lines.length &&
+        (/^[ \t]*$/.test(lines[peek]) || isStructuralTag(lines[peek].trim()))
+      ) {
+        peek++;
+      }
+
+      // Is the next substantive line an appendix heading?
+      if (peek < lines.length && isAppendixHeading(lines[peek].trim())) {
+        // Found an appendix block — skip the opening ---- and all content
+        // up to (but NOT including) the closing ---- line. We leave the
+        // closing ---- for the next iteration so that consecutive appendix
+        // sections (which share ---- delimiters) are all detected.
+        i++; // skip opening ----
+        while (i < lines.length && !/^----[ \t]*$/.test(lines[i])) {
+          i++;
+        }
+        // i now points at the closing ----; let the next iteration handle it
+        continue;
+      }
+    }
+
+    out.push(line);
+    i++;
+  }
+
+  // Trim orphaned ---- lines left over from the last appendix block.
+  // Also trim trailing blank lines for a clean result.
+  while (out.length > 0 && /^----[ \t]*$/.test(out[out.length - 1])) {
+    out.pop();
+  }
+  while (out.length > 0 && /^[ \t]*$/.test(out[out.length - 1])) {
+    out.pop();
+  }
+
+  return out.join("\n");
+}
+
+// ─── Trait chunk parsing ──────────────────────────────────────────────────────
+
+/**
+ * Parse a single trait from a ++++ chunk extracted from a feature body.
+ * Follows the same extraction pattern as generate-bestial-traits.mjs.
+ *
+ * Returns { name, slug, requires, tags, body } or null if the chunk is empty.
+ */
+function parseTraitChunk(chunk, featureId) {
+  const lines = chunk.split("\n");
+  const heading = lines[0].replace(/^\+\+\+\+\s+/, "").trim();
+  let bodyLines = lines.slice(1);
+
+  // --- Extract source bracket e.g. "[Origin]" or "[Alienist HB]" ---
+  // (We don't resolve these to book names here; they're informational)
+  const sourceMatch = heading.match(/\[([^\]]+)\]\s*$/);
+  const sourceKey = sourceMatch?.[1] ?? null;
+  let head = sourceMatch ? heading.slice(0, sourceMatch.index).trim() : heading;
+
+  // --- Extract (Ex), (Su), (Sp) type marker ---
+  const typeMatch = head.match(/\((Ex|Su|Sp)\)/i);
+  const abilityType = typeMatch ? typeMatch[1].toLowerCase() : null;
+  head = head.replace(/\((Ex|Su|Sp)\)/i, "").trim();
+
+  // --- Extract inline (requires ...) ---
+  let requires = null;
+  const reqMatch = head.match(/\(requires ([^)]+)\)/i);
+  if (reqMatch) {
+    requires = reqMatch[1].trim();
+    head = head.replace(/\(requires [^)]+\)/i, "").trim();
+  }
+
+  // --- Clean name: strip Wikidot color markup and wikilinks ---
+  const name = normalizeQuotes(
+    head
+      .replace(/##[^|#]+\|([^#]+)##/g, "$1")
+      .replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1")
+      .replace(/^[-–—]\s*/, "")
+      .replace(/\s+/g, " ")
+      .trim(),
+  );
+
+  if (!name) return null;
+
+  // --- Clean up body lines ---
+  // Strip Wikidot ^^...^^ superscript source lines
+  bodyLines = bodyLines.filter((l) => !l.trim().startsWith("^^"));
+
+  // Extract **Requires:** lines from body
+  const reqLineIdx = bodyLines.findIndex((l) =>
+    /^\*\*Requires:\*\*/i.test(l.trim()),
+  );
+  if (reqLineIdx !== -1 && !requires) {
+    requires = bodyLines[reqLineIdx]
+      .trim()
+      .replace(/^\*\*Requires:\*\*\s*/i, "")
+      .trim();
+    bodyLines.splice(reqLineIdx, 1);
+  }
+
+  // Strip leading/trailing blank lines
+  while (bodyLines.length && !bodyLines[0].trim()) bodyLines.shift();
+  while (bodyLines.length && !bodyLines[bodyLines.length - 1].trim())
+    bodyLines.pop();
+
+  let body = cleanBody(bodyLines.join("\n"));
+
+  // Add source annotation if present
+  if (sourceKey) {
+    body = `${body}\n\n*Source: ${sourceKey}*`;
+  }
+
+  const tags = abilityType ? [abilityType] : [];
+  const slug = kebab(name);
+
+  return { name, slug, requires, tags, body, featureId };
+}
+
 // ─── Class feature extraction ─────────────────────────────────────────────────
 
 function parseClassFeatures(text) {
+  // Strip appendix sections before parsing features
+  text = stripAppendixSections(text);
+
   const features = [];
+  const allTraits = []; // accumulated across all features
   // Match exactly ++ headings (not +++, ++++)
   const headingRe = /^\+{2}\s(?!\+)(.+)$/gm;
   const matches = [...text.matchAll(headingRe)];
@@ -329,11 +511,41 @@ function parseClassFeatures(text) {
     );
     if (levelMatch) level = parseInt(levelMatch[1]);
 
-    const body = cleanBody(bodyRaw);
-    features.push({ name, type: "class-feature", level, body });
+    // Check for trait sub-entries (++++ headings within the feature body).
+    // Split on ++++ boundaries — the first chunk is the feature description,
+    // subsequent chunks are individual trait entries.
+    const traitChunks = bodyRaw.split(/\n(?=\+\+\+\+ )/);
+    const hasTraits = traitChunks.length > 1;
+
+    let body = cleanBody(traitChunks[0]);
+    let isTraitContainer = false;
+    const featureTraits = [];
+
+    if (hasTraits) {
+      isTraitContainer = true;
+      const featureId = kebab(name);
+      for (let t = 1; t < traitChunks.length; t++) {
+        const chunk = traitChunks[t].trim();
+        if (!chunk.startsWith("++++")) continue;
+        const trait = parseTraitChunk(chunk, featureId);
+        if (trait) {
+          featureTraits.push(trait);
+          allTraits.push(trait);
+        }
+      }
+    }
+
+    features.push({
+      name,
+      type: "class-feature",
+      level,
+      body,
+      isTraitContainer,
+      traits: featureTraits,
+    });
   }
 
-  return features;
+  return { features, traits: allTraits };
 }
 
 // ─── Rendering ────────────────────────────────────────────────────────────────
@@ -426,8 +638,10 @@ if (isMain) {
   }
 
   // Parse and write class features
-  const features = parseClassFeatures(rawText);
-  console.log(`Parsed ${features.length} features from ${config.file}`);
+  const { features, traits } = parseClassFeatures(rawText);
+  console.log(
+    `Parsed ${features.length} features, ${traits.length} traits from ${config.file}`,
+  );
 
   const featureEntries = features
     .filter((f) => f.type === "class-feature")
@@ -441,26 +655,27 @@ if (isMain) {
       tier: "feature",
       dualSphere: null,
       level: f.level,
+      isTraitContainer: f.isTraitContainer || false,
     }));
 
   const contentRoot = join(ROOT, "src", "content");
   const renderFn = (entry) => {
     const id = kebab(entry.name);
-    return (
-      [
-        "---",
-        `id: ${id}`,
-        `name: "${entry.name}"`,
-        `type: class-feature`,
-        `system: ${config.system}`,
-        `className: ${className}`,
-        `level: ${entry.level}`,
-        "tags: []",
-        "---",
-        "",
-        entry.body || "",
-      ].join("\n") + "\n"
-    );
+    const lines = [
+      "---",
+      `id: ${id}`,
+      `name: "${entry.name}"`,
+      `type: class-feature`,
+      `system: ${config.system}`,
+      `className: ${className}`,
+      `level: ${entry.level}`,
+      "tags: []",
+    ];
+    if (entry.isTraitContainer) {
+      lines.push("isTraitContainer: true");
+    }
+    lines.push("---", "", entry.body || "");
+    return lines.join("\n") + "\n";
   };
 
   const { newCount, skipCount } = writeEntries(
@@ -470,9 +685,56 @@ if (isMain) {
     MODE,
   );
 
+  // Write class traits
+  if (traits.length > 0) {
+    const traitEntries = traits.map((t) => ({
+      name: t.name,
+      slug: t.slug,
+      bookSlug: config.primaryBook,
+      type: "class-trait",
+      subdir: `class-traits/${className}`,
+      body: t.body || "",
+      tags: t.tags || [],
+      className,
+      featureId: t.featureId,
+      requires: t.requires || null,
+    }));
+
+    const traitRenderFn = (entry) => {
+      const lines = [
+        "---",
+        `id: ${className}-${entry.slug}`,
+        `name: "${entry.name}"`,
+        `type: class-trait`,
+        `system: ${config.system}`,
+        `tags: ${JSON.stringify(entry.tags)}`,
+        `className: ${entry.className}`,
+        `featureId: ${entry.featureId}`,
+      ];
+      if (entry.requires) {
+        lines.push(`requires: "${entry.requires}"`);
+      }
+      lines.push("---", "", entry.body || "");
+      return lines.join("\n") + "\n";
+    };
+
+    const { newCount: traitNew, skipCount: traitSkip } = writeEntries(
+      traitEntries,
+      contentRoot,
+      traitRenderFn,
+      MODE,
+    );
+
+    if (MODE !== "--dry-run") {
+      console.log(
+        `Wrote ${traitNew} new trait(s), skipped ${traitSkip} existing.`,
+      );
+    }
+  }
+
   if (MODE !== "--dry-run") {
     console.log(
-      `\nWrote ${newCount} new feature(s), skipped ${skipCount} existing.`,
+      `Wrote ${newCount} new feature(s), skipped ${skipCount} existing.`,
     );
   }
 }

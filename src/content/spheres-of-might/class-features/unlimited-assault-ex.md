@@ -12,4 +12,5 @@ At 20th level, the armiger is no longer required to expend martial focus to acti
 
 ---
 
-+ ##993300|Archetypes##
+[[include som-template]]
+[[include cots]]

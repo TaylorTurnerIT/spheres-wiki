@@ -12,4 +12,5 @@ At 20th level, the commander may have up to three enhanced tactics active at a t
 
 ---
 
-+ ##993300|Archetypes##
+[[include som-template]]
+[[include cots]]

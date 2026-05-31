@@ -12,4 +12,5 @@ At 20th level, the scholar chooses any one material imposition she knows; the sc
 
 ---
 
-+ ##993300|Archetypes##
+[[include som-template]]
+[[include cots]]
