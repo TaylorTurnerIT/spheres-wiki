@@ -1,0 +1,465 @@
+#!/usr/bin/env node
+/**
+ * Wikidot class page parser.
+ * Converts class wiki pages to markdown content files with proper frontmatter.
+ *
+ * Usage:
+ *   node scripts/class-parser.mjs <class> [--dry-run|--write|--force|--validate]
+ */
+
+import {
+  readFileSync,
+  existsSync,
+  realpathSync,
+  mkdirSync,
+  writeFileSync,
+} from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+import { normalizeQuotes, cleanBody } from "./lib/wikidot-markup.mjs";
+import { kebab, fmArray, writeEntries } from "./lib/render.mjs";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
+const REPO = "../wdotcrawl/spheresofpower-repo/pages";
+
+// ─── Class Configurations ─────────────────────────────────────────────────────
+
+const CLASS_CONFIGS = {
+  // ── Power classes ──────────────────────────────────────────────────────
+  armorist: {
+    file: `${REPO}/armorist.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  elementalist: {
+    file: `${REPO}/elementalist.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  eliciter: {
+    file: `${REPO}/eliciter.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  "fey-adept": {
+    file: `${REPO}/fey-adept.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  hedgewitch: {
+    file: `${REPO}/hedgewitch.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  incanter: {
+    file: `${REPO}/incanter.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  mageknight: {
+    file: `${REPO}/mageknight.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  shifter: {
+    file: `${REPO}/shifter.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  "soul-weaver": {
+    file: `${REPO}/soul-weaver.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  symbiat: {
+    file: `${REPO}/symbiat.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  thaumaturge: {
+    file: `${REPO}/thaumaturge.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  wraith: {
+    file: `${REPO}/wraith.txt`,
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+  },
+  // ── Might classes ──────────────────────────────────────────────────────
+  armiger: {
+    file: `${REPO}/armiger.txt`,
+    system: "might",
+    primaryBook: "spheres-of-might",
+  },
+  blacksmith: {
+    file: `${REPO}/blacksmith.txt`,
+    system: "might",
+    primaryBook: "spheres-of-might",
+  },
+  commander: {
+    file: `${REPO}/commander.txt`,
+    system: "might",
+    primaryBook: "spheres-of-might",
+  },
+  conduit: {
+    file: `${REPO}/conduit.txt`,
+    system: "might",
+    primaryBook: "spheres-of-might",
+  },
+  scholar: {
+    file: `${REPO}/scholar.txt`,
+    system: "might",
+    primaryBook: "spheres-of-might",
+  },
+  sentinel: {
+    file: `${REPO}/sentinel.txt`,
+    system: "might",
+    primaryBook: "spheres-of-might",
+  },
+  striker: {
+    file: `${REPO}/striker.txt`,
+    system: "might",
+    primaryBook: "spheres-of-might",
+  },
+  technician: {
+    file: `${REPO}/technician.txt`,
+    system: "might",
+    primaryBook: "spheres-of-might",
+  },
+};
+
+// ─── Parsing ──────────────────────────────────────────────────────────────────
+
+/**
+ * Parse a class stat block and the class progression table from the source.
+ * Returns { name, system, hitDie, alignment, startingWealth, skillRanks,
+ *           classSkills, babProgression, fortSave, refSave, willSave, bodyText }
+ */
+function parseClassFile(text, config) {
+  // Strip modules and = blocks (but NOT tabview — stat blocks live inside tabs)
+  let clean = text
+    .replace(/\[\[module[\s\S]*?\[\[\/module\]\]/gi, "")
+    .replace(/\[\[=\]\][\s\S]*?\[\[\/=\]\]/gi, "")
+    // Strip individual tabview/tab tag lines but KEEP content
+    .replace(/^\[\[\/?tab(view)?\b[^\]]*\]\]/gim, "");
+
+  // Extract title
+  const titleMatch = clean.match(/^title:(.+)$/m);
+  const name = titleMatch
+    ? normalizeQuotes(titleMatch[1].trim())
+    : config.className;
+
+  // Parse stat block fields
+  const fields = {};
+  const fieldPatterns = {
+    alignment: /\*\*Alignment:\*\*\s*(.+)$/m,
+    hitDie: /\*\*Hit Die:\*\*\s*d(\d+)/im,
+    startingWealth: /\*\*Starting Wealth:\*\*\s*(.+)$/m,
+    skillRanks: /\*\*Skill Ranks Per Level:\*\*\s*(\d+)/i,
+    classSkills: /\*\*Class Skills:\*\*\s*(.+)$/m,
+  };
+
+  for (const [key, re] of Object.entries(fieldPatterns)) {
+    const m = clean.match(re);
+    if (m) fields[key] = m[1].trim();
+  }
+
+  // Parse class skills into array — split on comma/and, then clean each
+  let classSkills = [];
+  if (fields.classSkills) {
+    // First strip the leading "The X's class skills are..." prefix
+    let skillsText = fields.classSkills
+      .replace(/^[^.]*?(?:class skills are |class skills include )/i, "")
+      .replace(/\.\s*In addition, if this is[^.]+\.[^.]*\.?/gi, "")
+      .replace(/\.$/g, "");
+
+    // Split on comma or " and " (but not "and" inside parentheticals)
+    // First split on comma
+    const parts = skillsText.split(/,\s*/);
+    for (const part of parts) {
+      // Handle "X and Y" at the end
+      const andParts = part.split(/\s+and\s+/);
+      for (const ap of andParts) {
+        let cleaned = ap
+          .replace(/\(Dex\)|\(Str\)|\(Con\)|\(Int\)|\(Wis\)|\(Cha\)/gi, "")
+          .replace(/the .+'s class skills are/gi, "")
+          .replace(/^and\s+/i, "")
+          .trim();
+        if (cleaned.length > 0 && cleaned.length < 50) {
+          classSkills.push(cleaned);
+        }
+      }
+    }
+    // Deduplicate
+    classSkills = [...new Set(classSkills)];
+  }
+
+  // Parse class table for BAB/save progressions
+  const tableMatch = clean.match(
+    /\|\|~ Level \|\|~ Base Attack Bonus \|\|~ Fort Save \|\|~ Ref Save \|\|~ Will Save/i,
+  );
+  let babProgression = null;
+  let fortSave = null,
+    refSave = null,
+    willSave = null;
+
+  if (tableMatch) {
+    const tableStart = tableMatch.index;
+    const tableText = clean.substring(tableStart, tableStart + 3000);
+    const rows = tableText
+      .split("\n")
+      .filter((l) => l.startsWith("||") && /\d/.test(l));
+
+    const babValues = [];
+    const fortValues = [];
+    const refValues = [];
+    const willValues = [];
+
+    for (const row of rows) {
+      const cells = row.split("||").filter((c) => c.trim());
+      if (cells.length >= 5) {
+        const bab = parseInt(cells[1]?.replace(/[^+\-\d]/g, "")) || 0;
+        const fort = parseInt(cells[2]?.replace(/[^+\-\d]/g, "")) || 0;
+        const ref = parseInt(cells[3]?.replace(/[^+\-\d]/g, "")) || 0;
+        const will = parseInt(cells[4]?.replace(/[^+\-\d]/g, "")) || 0;
+        if (bab !== 0 || cells[1]?.includes("+0") || cells[1]?.includes("0"))
+          babValues.push(bab);
+        fortValues.push(fort);
+        refValues.push(ref);
+        willValues.push(will);
+      }
+    }
+
+    // Determine BAB progression from last value
+    if (babValues.length >= 20) {
+      const lastBab = babValues[babValues.length - 1];
+      if (lastBab >= 20) babProgression = "full";
+      else if (lastBab >= 14) babProgression = "3/4";
+      else babProgression = "half";
+    }
+
+    // Determine save progressions from last value
+    if (fortValues.length >= 20) {
+      fortSave = fortValues[fortValues.length - 1] >= 12 ? "good" : "poor";
+      refSave = refValues[refValues.length - 1] >= 12 ? "good" : "poor";
+      willSave = willValues[willValues.length - 1] >= 12 ? "good" : "poor";
+    }
+  }
+
+  // Extract body text (intro prose between title and first class feature/table)
+  const firstFeature = clean.search(/\n\+\+ [A-Za-z]/);
+  const firstTable = clean.search(/\|\|~ Level/);
+  const bodyStart = clean.indexOf("\n", clean.indexOf("title:")) + 1;
+  const bodyEnd = Math.min(
+    firstFeature > 0 ? firstFeature : Infinity,
+    firstTable > 0 ? firstTable : Infinity,
+  );
+  let bodyText = "";
+  if (bodyEnd > bodyStart) {
+    bodyText = cleanBody(clean.substring(bodyStart, bodyEnd));
+  }
+
+  return {
+    name,
+    system: config.system,
+    hitDie: fields.hitDie ? parseInt(fields.hitDie) : null,
+    alignment: fields.alignment || "",
+    startingWealth: fields.startingWealth || "",
+    skillRanks: fields.skillRanks ? parseInt(fields.skillRanks) : null,
+    classSkills,
+    babProgression: babProgression || "3/4",
+    fortSaveProgression: fortSave || "good",
+    refSaveProgression: refSave || "poor",
+    willSaveProgression: willSave || "good",
+    bodyText,
+  };
+}
+
+// ─── Class feature extraction ─────────────────────────────────────────────────
+
+function parseClassFeatures(text) {
+  const features = [];
+  // Find all ++ headings (class features)
+  const headingRe = /^\+\+ (.+)$/gm;
+  const matches = [...text.matchAll(headingRe)];
+
+  for (let i = 0; i < matches.length; i++) {
+    const heading = matches[i][1].trim();
+    // Strip color markup
+    const name = normalizeQuotes(
+      heading.replace(/##[^|#]+\|([^#]+)##/g, "$1").trim(),
+    );
+
+    // Determine type: talent progression, class feature, etc.
+    const lower = name.toLowerCase();
+    if (
+      /magic talents|combat talents|blended training|combat training/i.test(
+        lower,
+      )
+    ) {
+      features.push({ name, type: "talent-progression", level: 1 });
+      continue;
+    }
+
+    // Extract body text until next ++ heading or end
+    const bodyStart = matches[i].index + matches[i][0].length;
+    const bodyEnd = i + 1 < matches.length ? matches[i + 1].index : text.length;
+    const bodyRaw = text.substring(bodyStart, bodyEnd);
+
+    // Determine level from name or body
+    let level = 1;
+    const levelMatch = bodyRaw.match(
+      /(?:At |Starting at |Beginning at )(\d+)[a-z]{2} level/,
+    );
+    if (levelMatch) level = parseInt(levelMatch[1]);
+
+    const body = cleanBody(bodyRaw);
+    features.push({ name, type: "class-feature", level, body });
+  }
+
+  return features;
+}
+
+// ─── Rendering ────────────────────────────────────────────────────────────────
+
+function renderClassPage(parsed, config) {
+  const id = kebab(parsed.name);
+  const skills = JSON.stringify(parsed.classSkills);
+  const lines = [
+    "---",
+    `id: ${id}`,
+    `name: "${parsed.name}"`,
+    "type: class",
+    `system: ${parsed.system}`,
+    "tags: []",
+    `hitDie: ${parsed.hitDie}`,
+    `alignment: "${parsed.alignment}"`,
+    `startingWealth: "${parsed.startingWealth}"`,
+    `skillRanks: ${parsed.skillRanks}`,
+    `classSkills:`,
+    ...parsed.classSkills.map((s) => `  - ${s.includes(",") ? `"${s}"` : s}`),
+    `babProgression: "${parsed.babProgression}"`,
+    `fortSaveProgression: ${parsed.fortSaveProgression}`,
+    `refSaveProgression: ${parsed.refSaveProgression}`,
+    `willSaveProgression: ${parsed.willSaveProgression}`,
+    "---",
+  ];
+  return `${lines.join("\n")}\n\n${parsed.bodyText.trim()}\n`;
+}
+
+// ─── Main ─────────────────────────────────────────────────────────────────────
+
+const isMain =
+  !!process.argv[1] &&
+  fileURLToPath(import.meta.url) ===
+    realpathSync(process.argv[1]).replace(/\\/g, "/");
+
+if (isMain) {
+  const args = process.argv.slice(2);
+  const className = args.find((a) => !a.startsWith("-")) ?? null;
+  const MODE = args.find((a) => a.startsWith("--")) ?? "--dry-run";
+
+  if (!className || !CLASS_CONFIGS[className]) {
+    console.error(
+      "Usage: node scripts/class-parser.mjs <class> [--dry-run|--write|--force|--validate]",
+    );
+    console.error(
+      `Available classes: ${Object.keys(CLASS_CONFIGS).join(", ")}`,
+    );
+    process.exit(1);
+  }
+
+  const config = CLASS_CONFIGS[className];
+  const inputPath = join(ROOT, config.file);
+
+  if (!existsSync(inputPath)) {
+    console.error(`Input file not found: ${config.file}`);
+    process.exit(1);
+  }
+
+  const rawText = readFileSync(inputPath, "utf-8");
+
+  // Parse class page
+  const parsed = parseClassFile(rawText, { ...config, className });
+  const classContent = renderClassPage(parsed, config);
+
+  const classDir = join(ROOT, "src", "content", config.primaryBook, "classes");
+  const classPath = join(classDir, `${kebab(parsed.name)}.md`);
+  const classLabel = `${config.primaryBook}/classes/${kebab(parsed.name)}.md`;
+
+  // Write/validate class page
+  if (MODE === "--dry-run") {
+    console.log(`WOULD WRITE  ${classLabel}`);
+    console.log(classContent);
+    console.log("---");
+  } else if (MODE === "--validate") {
+    if (existsSync(classPath)) {
+      const existing = readFileSync(classPath, "utf-8");
+      if (existing.trim() !== classContent.trim()) {
+        console.log(`DIFF  ${classLabel}`);
+      } else {
+        console.log(`OK    ${classLabel}`);
+      }
+    } else {
+      console.log(`MISS  ${classLabel}`);
+    }
+  } else if (MODE === "--force" || !existsSync(classPath)) {
+    if (!existsSync(classDir)) mkdirSync(classDir, { recursive: true });
+    writeFileSync(classPath, classContent, "utf-8");
+    console.log(`WROTE  ${classLabel}`);
+  }
+
+  // Parse and write class features
+  const features = parseClassFeatures(rawText);
+  console.log(`Parsed ${features.length} features from ${config.file}`);
+
+  const featureEntries = features
+    .filter((f) => f.type === "class-feature")
+    .map((f) => ({
+      name: f.name,
+      bookSlug: config.primaryBook,
+      type: "class-feature",
+      subdir: "class-features",
+      body: f.body || "",
+      tags: [],
+      tier: "feature",
+      dualSphere: null,
+      level: f.level,
+    }));
+
+  const contentRoot = join(ROOT, "src", "content");
+  const renderFn = (entry) => {
+    const id = kebab(entry.name);
+    return (
+      [
+        "---",
+        `id: ${id}`,
+        `name: "${entry.name}"`,
+        `type: class-feature`,
+        `system: ${config.system}`,
+        `className: ${className}`,
+        `level: ${entry.level}`,
+        "tags: []",
+        "---",
+        "",
+        entry.body || "",
+      ].join("\n") + "\n"
+    );
+  };
+
+  const { newCount, skipCount } = writeEntries(
+    featureEntries,
+    contentRoot,
+    renderFn,
+    MODE,
+  );
+
+  if (MODE !== "--dry-run") {
+    console.log(
+      `\nWrote ${newCount} new feature(s), skipped ${skipCount} existing.`,
+    );
+  }
+}

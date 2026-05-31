@@ -1,0 +1,11 @@
+---
+id: stalwart-ex
+name: "Stalwart (Ex)"
+type: class-feature
+system: power
+className: mageknight
+level: 3
+tags: []
+---
+
+At 3rd level, a mageknight can use mental and physical resiliency to avoid certain attacks. If she makes a Fortitude or Will saving throw against an attack that has a reduced effect on a successful save, she instead avoids the effect entirely. A helpless mageknight does not gain the benefit of the stalwart ability.
