@@ -48,6 +48,15 @@ export type TalentEntry = {
   modifies?: string;
 };
 
+export type ClassTableData = {
+  /** Column headers for class-specific (non-standard) columns */
+  extraHeaders: string[];
+  /** Source "Special" column text per level (1-20), for dynamic table rendering */
+  specialSource: Record<number, string>;
+  /** Extra column values per level (1-20); each value array aligns with extraHeaders */
+  extraRowData: Record<number, string[]>;
+};
+
 export type ClassEntry = {
   type: "class";
   id: string;
@@ -65,6 +74,8 @@ export type ClassEntry = {
   fortSaveProgression: "good" | "poor";
   refSaveProgression: "good" | "poor";
   willSaveProgression: "good" | "poor";
+  /** Parsed class progression table data (may be a JSON string in frontmatter) */
+  classTable?: ClassTableData | string;
 };
 
 export type ClassFeatureEntry = {

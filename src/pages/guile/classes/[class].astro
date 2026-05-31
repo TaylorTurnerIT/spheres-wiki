@@ -143,6 +143,108 @@ function ordinal(n: number): string {
     default: return 'th';
   }
 }
+
+// ── Dynamic Class Table Generation ───────────────────────────────────────────
+
+function computeBAB(level: number, progression: string): number {
+  switch (progression) {
+    case "full": return level;
+    case "3/4": return Math.floor(level * 0.75);
+    case "half": return Math.floor(level * 0.5);
+    default: return Math.floor(level * 0.75);
+  }
+}
+
+function computeSave(level: number, progression: string): number {
+  switch (progression) {
+    case "good": return 2 + Math.floor(level / 2);
+    case "poor": return Math.floor(level / 3);
+    default: return Math.floor(level / 3);
+  }
+}
+
+function formatBAB(bab: number): string {
+  const attacks: string[] = [];
+  let val = bab;
+  while (val > 0 && attacks.length < 4) {
+    attacks.push(`+${val}`);
+    val -= 5;
+  }
+  if (attacks.length === 0) return "+0";
+  return attacks.join("/");
+}
+
+function formatSave(val: number): string {
+  return `+${val}`;
+}
+
+function levelOrdinal(level: number): string {
+  return `${level}${ordinal(level)}`;
+}
+
+function parseClassTable(raw: string | undefined): { extraHeaders: string[]; specialSource: Record<number, string>; extraRowData: Record<number, string[]> } | null {
+  if (!raw) return null;
+  try {
+    const parsed = JSON.parse(raw);
+    if (typeof parsed === "string") return JSON.parse(parsed);
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+const classTable = parseClassTable(cls.classTable as string | undefined);
+
+const featuresByLevel: Record<number, string[]> = {};
+for (const f of featureEntries) {
+  const levels = Array.isArray(f.level) ? f.level : [f.level];
+  for (const lvl of levels) {
+    if (!featuresByLevel[lvl]) featuresByLevel[lvl] = [];
+    featuresByLevel[lvl].push(f.name);
+  }
+}
+
+const allHeaders: string[] = [
+  "Level",
+  "Base Attack Bonus",
+  "Fort Save",
+  "Ref Save",
+  "Will Save",
+  "Special",
+  ...(classTable?.extraHeaders || []),
+];
+
+interface TableRow {
+  cells: string[];
+  level: number;
+}
+const tableRows: TableRow[] = [];
+for (let lvl = 1; lvl <= 20; lvl++) {
+  const bab = computeBAB(lvl, cls.babProgression);
+  const fort = computeSave(lvl, cls.fortSaveProgression);
+  const ref = computeSave(lvl, cls.refSaveProgression);
+  const will = computeSave(lvl, cls.willSaveProgression);
+
+  const featNames = featuresByLevel[lvl] || [];
+  const special = featNames.length > 0
+    ? featNames.join(", ")
+    : (classTable?.specialSource?.[lvl] || "—");
+
+  const extraVals = classTable?.extraRowData?.[lvl] || [];
+  const paddedExtras = (classTable?.extraHeaders || []).map((_, i) => extraVals[i] || "—");
+
+  const cells = [
+    levelOrdinal(lvl),
+    formatBAB(bab),
+    formatSave(fort),
+    formatSave(ref),
+    formatSave(will),
+    special,
+    ...paddedExtras,
+  ];
+
+  tableRows.push({ cells, level: lvl });
+}
 ---
 <WikiPage title={`${cls.name} — Spheres of Guile Wiki`} activeNamespace="guile">
 
@@ -175,6 +277,31 @@ function ordinal(n: number): string {
         ? <div class="entry-description"><ClassContent /></div>
         : <p class="entry-description"><em>Description coming soon.</em></p>
       }
+
+      {/* ── Class Progression Table (dynamic) ── */}
+      {tableRows.length > 0 && (
+        <div class="class-table-wrapper">
+          <h2 id="class-table" class="class-table-heading">Table: The {cls.name}</h2>
+          <table class="class-progression-table">
+            <thead>
+              <tr>
+                {allHeaders.map(h => (
+                  <th>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {tableRows.map(row => (
+                <tr>
+                  {row.cells.map((cell, ci) => (
+                    <td data-col={ci}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
 
       {featureRendered.map(({ feature, Content: FeatureContent, traits }) => (
         <div class={`class-feature${feature.isTraitContainer ? ' class-feature--container' : ''}`} id={feature.id} data-level={JSON.stringify(feature.level)}>
@@ -399,5 +526,86 @@ document.addEventListener('astro:page-load', () => {
     font-weight: normal;
     font-style: italic;
     opacity: 0.75;
+  }
+
+  /* ── Class Progression Table ── */
+  .class-table-wrapper {
+    margin: 2rem 0;
+    overflow-x: auto;
+  }
+
+  .class-table-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  .class-progression-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    background: var(--clr-bg-elevated, #1e1e2e);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .class-progression-table thead {
+    background: color-mix(in srgb, var(--clr-active) 15%, var(--clr-bg-elevated, #1e1e2e));
+  }
+
+  .class-progression-table th {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid var(--clr-border);
+    color: var(--clr-active);
+    white-space: nowrap;
+    font-size: 0.85em;
+    letter-spacing: 0.02em;
+  }
+
+  .class-progression-table td {
+    padding: 0.4rem 0.75rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--clr-border) 60%, transparent);
+    white-space: nowrap;
+  }
+
+  .class-progression-table tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--clr-active) 5%, transparent);
+  }
+
+  .class-progression-table tbody tr:hover {
+    background: color-mix(in srgb, var(--clr-active) 12%, transparent);
+  }
+
+  .class-progression-table td:first-child {
+    font-weight: 700;
+    color: var(--clr-active);
+  }
+
+  .class-progression-table td:nth-child(6) {
+    white-space: normal;
+    min-width: 200px;
+    max-width: 400px;
+  }
+
+  :global(.table-archetype-feature) {
+    color: var(--clr-brand);
+    font-weight: 600;
+    cursor: help;
+    border-bottom: 1px dotted var(--clr-brand);
+  }
+
+  :global(.table-altered-badge) {
+    font-size: 0.8em;
+    font-style: italic;
+    opacity: 0.7;
+    color: var(--clr-brand);
   }
 </style>

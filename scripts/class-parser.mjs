@@ -197,7 +197,8 @@ function parseClassFile(text, config) {
     classSkills = [...new Set(classSkills)];
   }
 
-  // Parse class table for BAB/save progressions
+  // ── Parse class progression table (full structured data) ───────────────
+  // Find the table header line: ||~ Level ||~ Base Attack Bonus ||~ ...
   const tableMatch = clean.match(
     /\|\|~ Level \|\|~ Base Attack Bonus \|\|~ Fort Save \|\|~ Ref Save \|\|~ Will Save/i,
   );
@@ -205,47 +206,124 @@ function parseClassFile(text, config) {
   let fortSave = null,
     refSave = null,
     willSave = null;
+  let classTable = null;
 
   if (tableMatch) {
     const tableStart = tableMatch.index;
-    const tableText = clean.substring(tableStart, tableStart + 3000);
-    const rows = tableText
+    // Grab enough text to capture all 20 rows (generous estimate: ~250 chars/row)
+    const tableText = clean.substring(tableStart, tableStart + 6000);
+    const tableLines = tableText
       .split("\n")
-      .filter((l) => l.startsWith("||") && /\d/.test(l));
+      .filter((l) => l.trim().startsWith("||"));
 
-    const babValues = [];
-    const fortValues = [];
-    const refValues = [];
-    const willValues = [];
+    if (tableLines.length >= 2) {
+      // Parse header row to identify column positions by name
+      const headerCells = tableLines[0]
+        .split("||")
+        .filter((c) => c.trim())
+        .map((c) => c.replace(/^~\s*/, "").trim());
 
-    for (const row of rows) {
-      const cells = row.split("||").filter((c) => c.trim());
-      if (cells.length >= 5) {
-        const bab = parseInt(cells[1]?.replace(/[^+\-\d]/g, "")) || 0;
-        const fort = parseInt(cells[2]?.replace(/[^+\-\d]/g, "")) || 0;
-        const ref = parseInt(cells[3]?.replace(/[^+\-\d]/g, "")) || 0;
-        const will = parseInt(cells[4]?.replace(/[^+\-\d]/g, "")) || 0;
-        if (bab !== 0 || cells[1]?.includes("+0") || cells[1]?.includes("0"))
+      const colIndex = (regex) => headerCells.findIndex((c) => regex.test(c));
+      const levelIdx = colIndex(/^Level/i);
+      const babIdx = colIndex(/Base Attack/i);
+      const fortIdx = colIndex(/Fort/i);
+      const refIdx = colIndex(/Ref/i);
+      const willIdx = colIndex(/Will/i);
+      const specialIdx = colIndex(/Special/i);
+
+      // Identify extra (class-specific) columns: everything beyond the 6 standard ones
+      const standardIndices = new Set([
+        levelIdx,
+        babIdx,
+        fortIdx,
+        refIdx,
+        willIdx,
+        specialIdx,
+      ]);
+      const extraIdxs = headerCells
+        .map((_, i) => i)
+        .filter((i) => !standardIndices.has(i));
+      const extraHeaders = extraIdxs.map((i) => headerCells[i]);
+
+      // Parse all data rows (only numeric level rows, skip separator/header repeats)
+      const babValues = [],
+        fortValues = [],
+        refValues = [],
+        willValues = [];
+      const specialSource = {}; // level (1-20) → special cell text
+      const extraRowData = {}; // level (1-20) → [extra cell values]
+
+      for (let r = 1; r < tableLines.length; r++) {
+        const cells = tableLines[r]
+          .split("||")
+          .filter((c) => c.trim())
+          .map((c) => c.replace(/^~\s*/, "").trim());
+
+        // Determine the level from the level column
+        const levelCell = cells[levelIdx] || "";
+        const levelNum = parseInt(levelCell.replace(/[^\d]/g, ""));
+        if (!levelNum || levelNum < 1 || levelNum > 20) continue;
+
+        // BAB & save values for progression detection
+        const bab = parseInt(cells[babIdx]?.replace(/[^+\-\d]/g, "")) || 0;
+        const fort = parseInt(cells[fortIdx]?.replace(/[^+\-\d]/g, "")) || 0;
+        const ref = parseInt(cells[refIdx]?.replace(/[^+\-\d]/g, "")) || 0;
+        const will = parseInt(cells[willIdx]?.replace(/[^+\-\d]/g, "")) || 0;
+
+        if (bab !== 0 || (cells[babIdx] || "").includes("0"))
           babValues.push(bab);
         fortValues.push(fort);
         refValues.push(ref);
         willValues.push(will);
+
+        // Capture Special column text for dynamic table generation
+        if (specialIdx >= 0 && cells[specialIdx]) {
+          // Clean up the special cell text (strip wikidot markup minimally)
+          let sp = cells[specialIdx]
+            .replace(/##[^|#]+\|([^#]+)##/g, "$1")
+            .replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1")
+            .replace(/\[\[footnote\]\]([\s\S]*?)\[\[\/footnote\]\]/g, "")
+            .replace(/\^\^[^^]+\^\^/g, "")
+            .trim();
+          specialSource[levelNum] = normalizeQuotes(sp);
+        }
+
+        // Capture extra cell data per level
+        const extraVals = extraIdxs.map((i) => {
+          let v = (cells[i] || "").trim();
+          // Light cleanup: strip Wikidot footnote/source markup
+          v = v
+            .replace(/\[\[footnote\]\][\s\S]*?\[\[\/footnote\]\]/g, "")
+            .replace(/\^\^[^^]+\^\^/g, "")
+            .trim();
+          return v;
+        });
+        if (extraVals.some((v) => v.length > 0)) {
+          extraRowData[levelNum] = extraVals;
+        }
       }
-    }
 
-    // Determine BAB progression from last value
-    if (babValues.length >= 20) {
-      const lastBab = babValues[babValues.length - 1];
-      if (lastBab >= 20) babProgression = "full";
-      else if (lastBab >= 14) babProgression = "3/4";
-      else babProgression = "half";
-    }
+      // Determine BAB progression from last value
+      if (babValues.length >= 20) {
+        const lastBab = babValues[babValues.length - 1];
+        if (lastBab >= 20) babProgression = "full";
+        else if (lastBab >= 14) babProgression = "3/4";
+        else babProgression = "half";
+      }
 
-    // Determine save progressions from last value
-    if (fortValues.length >= 20) {
-      fortSave = fortValues[fortValues.length - 1] >= 12 ? "good" : "poor";
-      refSave = refValues[refValues.length - 1] >= 12 ? "good" : "poor";
-      willSave = willValues[willValues.length - 1] >= 12 ? "good" : "poor";
+      // Determine save progressions from last value
+      if (fortValues.length >= 20) {
+        fortSave = fortValues[fortValues.length - 1] >= 12 ? "good" : "poor";
+        refSave = refValues[refValues.length - 1] >= 12 ? "good" : "poor";
+        willSave = willValues[willValues.length - 1] >= 12 ? "good" : "poor";
+      }
+
+      // Build structured class table data
+      classTable = {
+        extraHeaders,
+        specialSource,
+        extraRowData,
+      };
     }
   }
 
@@ -284,6 +362,7 @@ function parseClassFile(text, config) {
     refSaveProgression: refSave || "poor",
     willSaveProgression: willSave || "good",
     bodyText,
+    classTable,
   };
 }
 
@@ -557,7 +636,6 @@ function parseClassFeatures(text) {
 
 function renderClassPage(parsed, config) {
   const id = kebab(parsed.name);
-  const skills = JSON.stringify(parsed.classSkills);
   const lines = [
     "---",
     `id: ${id}`,
@@ -575,8 +653,17 @@ function renderClassPage(parsed, config) {
     `fortSaveProgression: ${parsed.fortSaveProgression}`,
     `refSaveProgression: ${parsed.refSaveProgression}`,
     `willSaveProgression: ${parsed.willSaveProgression}`,
-    "---",
   ];
+
+  // Store class table as a JSON blob in frontmatter.
+  // The template will parse it for dynamic table generation.
+  if (parsed.classTable) {
+    lines.push(
+      `classTable: ${JSON.stringify(JSON.stringify(parsed.classTable))}`,
+    );
+  }
+
+  lines.push("---");
   return `${lines.join("\n")}\n\n${parsed.bodyText.trim()}\n`;
 }
 

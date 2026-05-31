@@ -66,6 +66,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     fortSaveProgression: z.enum(["good", "poor"]),
     refSaveProgression: z.enum(["good", "poor"]),
     willSaveProgression: z.enum(["good", "poor"]),
+    classTable: z.string().optional(),
   }),
   z.object({
     type: z.literal("class-feature"),
