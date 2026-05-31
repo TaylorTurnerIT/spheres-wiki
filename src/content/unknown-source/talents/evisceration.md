@@ -1,0 +1,15 @@
+---
+id: evisceration
+name: "Evisceration"
+system: power
+type: talent
+sphere: death
+tier: advanced
+tags: []
+---
+
+**Prerequisites:** Death sphere (avasculation), caster level 10th
+
+You may spend an additional spell point when using avasculation to cause the target to fall to 1 hp rather half their maximum hp on a failed Fortitude save.
+
+**Source:** Card Casting 2: Counters and Control

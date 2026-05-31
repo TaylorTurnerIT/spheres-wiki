@@ -3,8 +3,8 @@ id: spirit-form
 name: "Spirit Form"
 type: feat
 system: power
-sphere: alteration
-dualSphere: nature
+sphere: nature
+dualSphere: alteration
 tags: ["dual-sphere"]
 ---
 

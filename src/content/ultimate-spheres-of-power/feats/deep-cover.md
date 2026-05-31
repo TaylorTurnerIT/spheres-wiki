@@ -3,8 +3,8 @@ id: deep-cover
 name: "Deep Cover"
 type: feat
 system: power
-sphere: alteration
-dualSphere: illusion
+sphere: illusion
+dualSphere: alteration
 tags: ["dual-sphere"]
 ---
 

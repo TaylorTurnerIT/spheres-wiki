@@ -3,7 +3,7 @@ id: extradimensional-gullet
 name: "Extradimensional Gullet"
 type: feat
 system: power
-sphere: alteration
+sphere: warp
 tags: ["combat"]
 ---
 

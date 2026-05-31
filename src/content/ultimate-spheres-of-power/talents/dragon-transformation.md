@@ -9,7 +9,7 @@ tags: ["transformation"]
 ---
 
 You may grant the form of a dragon with your shapeshift.
-**Limbs:** 1 head, 4 legs (front 2 end in hands¹), 1 tail
+**Limbs:** 1 head, 4 legs (front 2 end in hands), 1 tail
 **Speech:** Yes; **Hands:** Yes
 **Speed:** 40 ft. land speed
 **Natural weapons:** bite (primary, 1d6 Medium, 1d4 Small)
@@ -23,5 +23,3 @@ Dragon Transformation offers the following traits, which you may apply to any fo
 - Double the size of a breath weapon (must possess a breath weapon to gain this trait).
 - **Draconic Resistances:** The target gains a +2 racial bonus on saving throws made against magic sleep and paralysis, increasing by +1 per 5 caster levels. In addition, the target adds half your caster level (minimum 1) to the DC of any attempts to intimidate the target.
 - **Warding Scales:** 1/2 of the target's natural armor bonus to AC applies against touch attacks.
-
-¹ The hands granted by Dragon Transformation can fulfill somatic components and manipulate items, but they're not suitable for combat purposes and cannot wield weapons or shields.

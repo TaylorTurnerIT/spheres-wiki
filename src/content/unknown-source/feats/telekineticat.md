@@ -1,0 +1,16 @@
+---
+id: telekineticat
+name: "Telekineticat"
+type: feat
+system: power
+sphere: telekinesis
+tags: []
+---
+
+With all your cosmic power and wisdom, you decided to form your raw and potent telekinetic power into the shape of a cat.
+
+**Prerequisites:** Telekinesis sphere; Mind sphere or Enhancement sphere (Bestow Intelligence (enhance)).
+
+**Benefits:** You gain a familiar, as the wizard arcane bond class feature. This familiar is always a cat, but may grant the familiar special ability from any other familiar. You treat your Telekinesis sphere caster level as your arcane caster level when determining your familiar's abilities (to a maximum of your character level). Your familiar is treated as a force effect and can interact with incorporeal and ethereal creatures and objects as though they were corporeal. If you already possess a familiar, or gain one at a later time from another source, you may choose to have your effective arcane caster level from this feat stack with those from other sources (to a maximum of your character level). If you do not, you may not manifest your telekinetic cat while in the possession of another familiar.
+
+Unlike other familiars, this familiar is directly manifested by your telekinetic magic, and as such, is limited to your Telekinesis sphere range. If your familiar leaves this range, it is immediately dismissed. If your familiar is dismissed (either by being dispelled, walking outside your Telekinesis sphere range, etc.), you may resummon your familiar by spending 1 minute in meditation. If your familiar is dead, you may resummon your familiar whenever you would rest and regain resources.

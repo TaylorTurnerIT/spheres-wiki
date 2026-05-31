@@ -1,0 +1,30 @@
+---
+id: create-nature
+name: "Create Nature"
+system: power
+type: talent
+sphere: nature
+tier: basic
+tags: []
+---
+
+As an instantaneous effect, you may spend a spell point to create your geomancing element anywhere within range. While this is its own geomancing ability, it may also be combined with another geomancing ability as part of the same action, in which case the second geomancing ability comes into effect immediately, using the created element to meet the second ability's prerequisites. You must pay any costs associated with both abilities to combine them in this manner.
+
+Create Nature counts as a geomancing ability or effect belonging to the package being used.
+
+**Air: Create Air:** You create a cloud of air. This creates one 5-foot cube per 2 caster levels (minimum 1 cube) of breathable air. The created cloud of air will immediately displace other gases, liquids, and vapors in the area, but will shortly thereafter behave as normal air. For example, if this talent is used underwater, the created air cloud will form a bubble that will begin to ascend to the surface.
+
+**Earth: Granulate:** You create enough loose dirt or sand to cover a 5-foot radius + 5 feet per 5 caster levels area. You may reduce the spell point cost by 1 (minimum 0 spell points) if you choose to break apart rock and stone within this area (reducing their thickness by 1 inch, +1 inch per 5 caster levels), instead of creating the dirt or sand spontaneously.
+
+__**Collapsing Structures**__
+Generally speaking, single castings of Create Nature (earth) on stone structures will not be enough to compromise the structural integrity of a building. Should half of the structure's load bearing columns, keystones, or walls be reduced to half thickness or less, a weakened area is created. Those who notice the weakened area (with a successful DC 20 Craft (stonemasonry) or Knowledge (engineering) check) may exacerbate the situation by destroying half of the structure's load-bearing objects, triggering a cave-in or collapse. Rules for the cave-in and collapse hazard can be found in the Pathfinder Gamemastery Guide.
+
+**Fire:** While the (fire) package already has the power to Create Fire, you may now combine Create Fire with another geomancing ability, as outlined above. This can include using Affect Fire and Create Fire at the same time to create truly powerful fires. Unlike the uses listed above, you do not need to spend a spell point to combine Create Fire and other geomancing abilities as part of the same action.
+
+**Metal:** You may now use Recover Ore in conjunction with other geomancing abilities, as outlined above, though doing so increases the cost of Recover Ore to 2 spell points instead of 1.
+
+*Hemoglobin:* You may create metal ore out of a living creature's essence. Target a living corporeal creature within your geomancing range. To use hemoglobin, make a ranged touch attack against the target, inflicting 1d2 Constitution damage to the target (Fortitude save for half damage). The die size of the Constitution damage increases by 1 step for every 5 caster levels (1d3, 1d4, 1d6, etc.). Regardless of the creature's size or bodily composition, you Recover Ore of Fine size upon successfully hitting the target. While the name of this ability suggests the target must bleed or have blood, it is not necessary; the only requirement is that the creature be corporeal and living. If the target is immune to ability damage, you still Recover Ore of Fine size.
+
+**Plant: Grow Plants:** You spontaneously grow plants. This may create one tree (to a maximum size equal to that which you can control through the Pummel geomancing ability) or a field of plants within a 5-foot radius + 5 feet per 5 caster levels area. This may create basic plants (corn, underbrush, ivy) and may be combined with Harvest to create edible food, but cannot create plants with inherent qualities (i.e., you cannot create rare herbs, etc.).
+
+**Water: Create Water:** You create a pool of water. You create one 5-foot cube per 2 caster levels (minimum 1 cube) of clean water. Using this ability in conjunction with Vortex can create a vortex that travels on land, so long as it is always touching the ground. Using this ability in conjunction with Freeze can allow you to create walls of ice by freezing vertical spaces as you would normally do horizontal spaces. These walls cover the same area and have the same hit points as usual, but may be arranged in a contiguous wall no more than 5 feet high per inch of thickness.

@@ -1,0 +1,12 @@
+---
+id: aura-of-mystery
+name: "Aura Of Mystery"
+type: feat
+system: power
+sphere: dark
+tags: []
+---
+
+**Prerequisites:** Dark sphere (Obfuscation).
+
+**Benefit:** You gain the benefit of the Obfuscation talent as a constant effect whenever you are in an area of dim light or darkness, whether it is mundane or magical. You may raise and dismiss this effect as a standard action with no spell point cost.

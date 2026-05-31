@@ -18,7 +18,7 @@ You grant the form of a humanoid creature with your shapeshift.
 
 If you so choose, you may forgo applying additional traits to the target. Instead, you may allow the target to retain its natural attacks, special abilities, and movement types that were dependent on its previous form, in essence making the target a hybrid between a humanoid and its previous form.
 
-If this form is being applied to a creature that is already an intelligent humanoid or a creature of a similar makeup, this instead works as the Blank Transformation, but the creature may undergo cosmetic changes without costing a trait. Additionally, you may choose up to two traits from either Blank Transformation or a single (transformation) or (body) talent that you possess that do not grant natural attacks and apply them to the target, as if it were part of this form. These traits are for all purposes not considered to be traits.
+If this form is being applied to a creature that is already an intelligent humanoid or a creature of a similar makeup, this instead works as the Blank Transformation, but the creature may undergo cosmetic changes without costing a trait. Additionally, you may choose up to two traits from either Blank Transformation or a single (transformation) or (body) talent that you possess that do not grant natural attacks and apply them to the target, as if it were part of this form. These traits are for all purposes not considered to be traits. For example, granting 2 traits from a single (transformation) talent, or 1 trait from Blank Transformation and 1 trait from Animalistic Transformation.
 
 Anthropomorphic Transformation offers the following traits, which you may apply to any form:
 

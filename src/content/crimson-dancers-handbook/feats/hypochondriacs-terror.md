@@ -3,8 +3,8 @@ id: hypochondriacs-terror
 name: "Hypochondriac's Terror"
 type: feat
 system: power
-sphere: blood
-dualSphere: mind
+sphere: mind
+dualSphere: blood
 tags: ["dual-sphere"]
 ---
 

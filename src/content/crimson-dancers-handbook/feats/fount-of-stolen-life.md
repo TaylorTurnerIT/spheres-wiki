@@ -3,8 +3,8 @@ id: fount-of-stolen-life
 name: "Fount Of Stolen Life"
 type: feat
 system: power
-sphere: blood
-dualSphere: life
+sphere: life
+dualSphere: blood
 tags: ["dual-sphere"]
 ---
 

@@ -8,36 +8,28 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Blood Sphere Talents"
+      - label: "Blood Talents"
         tiers: ["basic"]
-        excludeTags: ["quicken", "still", "blood-art"]
+        excludeTags: ["blood-art","still","quicken"]
       - label: "Blood Art Talents"
         tiers: ["basic"]
         tags: ["blood-art"]
-      - label: "Quicken Talents"
-        tiers: ["basic"]
-        tags: ["quicken"]
-        excludeTags: ["blood-art"]
       - label: "Still Talents"
         tiers: ["basic"]
         tags: ["still"]
-        excludeTags: ["blood-art"]
+      - label: "Quicken Talents"
+        tiers: ["basic"]
+        tags: ["quicken"]
       - label: "Advanced Blood Talents"
         tiers: ["advanced"]
   - label: "Feats"
     categories:
-      - label: "Blood Sphere Feats"
+      - label: "Blood Feats"
         tiers: ["feat"]
-        excludeTags: ["combat", "dual-sphere"]
-      - label: "Combat Feats"
-        tiers: ["feat"]
-        tags: ["combat"]
+        excludeTags: ["dual-sphere"]
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
-  - label: "Archetypes"
 ---
 
 You can manipulate blood and its properties.
-
-[Blood Control]

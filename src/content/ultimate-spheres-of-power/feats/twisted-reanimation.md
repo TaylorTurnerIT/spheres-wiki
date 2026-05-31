@@ -3,10 +3,12 @@ id: twisted-reanimation
 name: "Twisted Reanimation"
 type: feat
 system: power
-sphere: alteration
-dualSphere: death
+sphere: death
+dualSphere: alteration
 tags: ["dual-sphere"]
 ---
+
+When you reanimate a corpse, its remains shift to suit your purposes.
 
 **Prerequisites:** Alteration sphere (Undead Body), Death sphere; or Alteration sphere, Death sphere (Corpse Manipulation).
 

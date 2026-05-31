@@ -1,0 +1,13 @@
+---
+id: the-emperor
+name: "The Emperor"
+system: power
+type: talent
+sphere: fate
+tier: basic
+tags: []
+---
+
+You may grant a motif that allows its bearer to better project their power. Whenever the target suffers from penalties to attack rolls, damage rolls, saving throws, skill checks, or ability checks, they reduce their total penalty by 1, to a minimum penalty of -1. For every 10 caster levels, they reduce the penalty by an additional 1.
+
+The target may discharge this effect to ignore any one penalty effect to an attack roll, damage roll, saving throw, skill check, or ability check and gain an insight bonus to any rolls that would be affected by that penalty equal to the penalty for 1 round per caster level. If they choose to ignore a penalty from the target's own abilities, actions, or choices (such as backlash from a thaumaturge's forbidden lore, the attack penalty from Power Attack, or The Hanged Man motif), they do not gain this insight bonus.

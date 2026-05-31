@@ -3,8 +3,8 @@ id: destructive-companion
 name: "Destructive Companion"
 type: feat
 system: power
-sphere: conjuration
-dualSphere: destruction
+sphere: destruction
+dualSphere: conjuration
 tags: ["dual-sphere"]
 ---
 

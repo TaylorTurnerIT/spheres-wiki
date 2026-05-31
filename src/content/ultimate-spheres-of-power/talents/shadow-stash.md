@@ -1,0 +1,19 @@
+---
+id: shadow-stash
+name: "Shadow Stash"
+system: power
+type: talent
+sphere: dark
+tier: basic
+tags: ["utility"]
+---
+
+You may stash items in your shadow, storing each as a move action. The items appear on your shadow as if you were wearing or using them. A small item (a ring or a key) might be unnoticeable, while a larger item (a greatsword, a tower shield) would be quite obvious. Your shadow can store non-wearable items, but it must either hold such items in its hands or in a backpack, if you or your shadow is carrying one. You may store up to 5 lbs. of non-living material per caster level. Items have no weight while stashed and can not be used, activated, or provide passive bonuses.
+
+You can retrieve an item worn by your shadow or stored in its backpack as a move action, or an item carried in its hands as a free action, or spend a spell point to retrieve any item as an immediate action. Items stored in your shadow stash cannot be the subject of pickpocket attempts, sunder attempts, or the steal or disarm combat maneuvers unless the creature attempting the maneuver also has the Shadow Stash talent. If your shadow is removed or animated, such as by shadow theft class ability or Shadow Lurk talent, you may not access your shadow stash until your shadow returns. If you die or enter an antimagic area, the contents of your shadow stash immediately appear in the nearest unoccupied space.
+
+Investing a second talent in Shadow Stash allows you quicker access to your stashed items, allowing you to withdraw any worn item as a free action. Furthermore, your shadow gains the ability to don items in your place. For example, if you store a cloak of resistance in your shadow you gain the benefit as if you were wearing it.
+
+If your shadow dons armor, you gain its bonuses, though also suffer any armor check penalty or movement penalty it would provide. This does not increase your number of magic item slots. If you and your shadow don an item in the same slot, you only gain the benefit of the item your physical body is wearing. You may activate magic items worn by your shadow as normal. This does not allow your shadow to wield weapons or shields, or to activate hand-held magic items.
+
+Your shadow can only don items in slots that your physical body possesses. If you are subject to a polymorph effect that would normally remove your armor and equipment, armor donned by your shadow mannequin does not provide any benefits and you may not activate magic items that would otherwise meld with your body.

@@ -3,8 +3,8 @@ id: bioluminescent-transformation
 name: "Bioluminescent Transformation"
 type: feat
 system: power
-sphere: alteration
-dualSphere: light
+sphere: light
+dualSphere: alteration
 tags: ["dual-sphere"]
 ---
 

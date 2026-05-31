@@ -1,0 +1,12 @@
+---
+id: introductory-admixture
+name: "Introductory Admixture"
+type: feat
+system: power
+sphere: destruction
+tags: []
+---
+
+**Prerequisites:** Destruction sphere (Admixture), Conjuration sphere.
+
+**Benefit:** When using Admixture, you may spend an additional spell point to summon a creature in a square adjacent to the target's square or another affected square. If you possess the Mass Summon Talent, you may summon multiple such creatures up to the normal maximum of Mass Summon.

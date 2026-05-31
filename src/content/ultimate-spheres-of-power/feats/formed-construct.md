@@ -3,8 +3,8 @@ id: formed-construct
 name: "Formed Construct"
 type: feat
 system: power
-sphere: blood
-dualSphere: conjuration
+sphere: conjuration
+dualSphere: blood
 tags: ["dual-sphere"]
 ---
 

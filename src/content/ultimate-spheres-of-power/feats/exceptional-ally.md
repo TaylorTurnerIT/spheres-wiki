@@ -3,8 +3,8 @@ id: exceptional-ally
 name: "Exceptional Ally"
 type: feat
 system: power
-sphere: conjuration
-dualSphere: enhancement
+sphere: enhancement
+dualSphere: conjuration
 tags: ["dual-sphere"]
 ---
 

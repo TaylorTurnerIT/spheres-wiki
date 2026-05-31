@@ -3,8 +3,8 @@ id: hemothermia
 name: "Hemothermia"
 type: feat
 system: power
-sphere: blood
-dualSphere: nature
+sphere: nature
+dualSphere: blood
 tags: ["dual-sphere"]
 ---
 

@@ -1,0 +1,23 @@
+---
+id: time-of-the-season
+name: "Time Of The Season"
+system: power
+type: talent
+sphere: time
+tier: basic
+tags: []
+---
+
+You create a temporal bubble which changes the season. Create a sphere with a radius of 10 feet + 5 feet per 2 caster levels centered on a creature, object, or square within reach (or within your Time sphere range, if you possess the Ranged Time talent) and choose one of the following seasons:
+
+**Spring:** The area becomes a refreshing spring. Additionally, you may spend an additional spell point to make this area burst with overgrowth. If you do, the area becomes difficult terrain (effects which allow a creature to move normally in natural terrain, such as woodland stride, ignore this difficult terrain).
+
+**Summer:** The area becomes a warm summer. Additionally, you may spend an additional spell point to make this area cause heatstroke. If you do, creatures that enter this area or are inside this area at the end of your turn must succeed at a Fortitude save or take 1d4 nonlethal damage and are fatigued until they recover from this nonlethal damage.
+
+**Autumn:** The area becomes a tranquil autumn. Additionally, you may spend an additional spell point to make this area filled with rustling leaves and a calming rustic scent. If you do, creatures that enter this area or are inside this area at the end of your turn must succeed at a Will save or be fascinated as long as they remain in this area. This is a mind-affecting effect, and creatures who save against this effect cannot be fascinated by this sphere effect for 24 hours.
+
+**Winter:** The area becomes a frosty winter. Additionally, you may spend an additional spell point to make the area filled with a miniature snowstorm. If you do, the snowstorm obscures all sight in this area, including darkvision, beyond 5 feet. A creature 5 feet away has concealment and creatures farther away have total concealment.
+
+An unwilling creature targeted by this effect can attempt a Will save to negate this effect, and is granted a new saving throw each round as a free action. You must concentrate to maintain this effect, but may spend a spell point to allow it to remain for 1 minute per caster level without concentration.
+
+**Special:** Weather conditions inside this effect's area are treated as severity 1, generally matching the selected season (winter: Cold 1, spring: Heat 1, summer: Heat 1, fall: Cold 1), allowing creatures inside the effect's radius to ignore current weather conditions. Time Of The Season counts as an opposed control weather effect, and changing the weather in an area that includes Time Of The Season's area of effect is treated as opposed casters affecting the same weather category. If Time Of The Season's caster is successful when making a magic skill check in this manner, or an opposed caster is unsuccessful, the weather inside Time Of The Season's area of effect is treated as severity 0. If Time Of The Season's caster is unsuccessful, or an opposed caster is successful, the weather within Time Of The Season's area is unaffected and any season's additional effects (such as spring's overgrowth or summer's intensified heat) are suppressed.

@@ -3,8 +3,8 @@ id: invisible-friend
 name: "Invisible Friend"
 type: feat
 system: power
-sphere: conjuration
-dualSphere: illusion
+sphere: illusion
+dualSphere: conjuration
 tags: ["dual-sphere"]
 ---
 

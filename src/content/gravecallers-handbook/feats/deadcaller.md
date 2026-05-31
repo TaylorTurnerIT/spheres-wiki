@@ -3,7 +3,7 @@ id: deadcaller
 name: "Deadcaller"
 type: feat
 system: power
-sphere: conjuration
+sphere: death
 tags: []
 ---
 

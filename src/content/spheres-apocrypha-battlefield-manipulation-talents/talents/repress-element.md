@@ -1,0 +1,20 @@
+---
+id: repress-element
+name: "Repress Element"
+system: power
+type: talent
+sphere: nature
+tier: basic
+tags: []
+---
+
+As a concentration effect, you may temporarily obliterate an element within a 5-foot radius + 5 feet per 5 caster levels area within range. Creatures of a subtype corresponding to a repressed element are nauseated for the duration of the repression unless they succeed at a Fortitude save (this saving throw is made as soon as they enter the area of repression).
+
+Any effect with a descriptor corresponding to the repressed element does not manifest within the area unless the caster succeeds at a magical skill check. Additional effects apply depending on the element repressed.
+
+- **Air: Vacuum Generation:** The area becomes a vacuum, preventing creatures from breathing or sound (including sonic effects) from moving through the area. Characters cannot cast with verbal components in the vacuum. Starting at caster level 5th, all creatures in the area of the created vacuum take 1d6 bludgeoning damage, plus an additional 1d6 damage for every 5 caster levels thereafter. Creatures who remain within this area must save at the end of your subsequent turns or suffer damage again. If a creature enters this area after its creation, it also suffers this damage. A creature may only be affected by the damage from vacuum once per round, regardless of how many times they enter or exit the area that turn. Creatures that need air to breathe suffer from suffocation in a vacuum as normal. At caster level 10th, all creatures that suffer damage from the vacuum must succeed at a Fortitude save or become fatigued.
+- **Earth: Disintegrate Earth:** Stone and crystalline entities begin to phase out of existence, weakening their defenses. All stone or crystalline objects in the area have their hardness reduced by half your caster level and creatures made of stone or crystal have any DR and natural armor bonuses they possess reduced by half your caster level (minimum 0). Weapons made of stone or crystal deal damage as if they were one size smaller plus an additional size smaller per 5 caster levels (minimum of 1 damage) and AC bonuses granted by armor and shields made of crystal or stone is reduced by half your caster level (minimum 0). A creature is allowed a Fortitude save to negate the effects of this ability on themself and any equipment they are carrying (although they must save again if they leave and re-enter the area).
+- **Fire: Heat Drain:** Combustions are negated in the area. For the duration of the effect, all non-magical fires in the area are extinguished (although they can re-ignite when the effect ends). Any fire damage taken by creatures in the area is halved. All light in the area is decreased by one step plus an additional step for every 5 caster levels you possess. At caster level 10th, electricity damage and damage from explosives is reduced in the same manner as fire damage.
+- **Metal: Disintegrate Metal:** As Disintegrate Earth, save that the effects apply to creatures and equipment made of metal rather than stone or crystal.
+- **Plant: Disintegrate Flora:** As Disintegrate Earth, save that the effects apply to creatures and equipment made of wood, vines, or other plant-based materials rather than stone or crystal.
+- **Water: Evaporation:** The area becomes immensely dry, causing all unattended liquid in the area to evaporate (although it may return to liquid state when the effect ends). Living creatures in the area take a -2 penalty on Fortitude saves. This penalty increases by 1 per 5 caster levels. At caster level 10th, even attended liquids like potions dry up temporarily in the area, although owners are allowed a Fortitude save to negate this effect for as long as they remain in the area (although they must save again if they leave and re-enter the area).

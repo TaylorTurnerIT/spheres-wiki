@@ -10,7 +10,7 @@ sectionDefinitions:
     categories:
       - label: "Conjuration Talents"
         tiers: ["basic"]
-        excludeTags: ["form", "type"]
+        excludeTags: ["form","type"]
       - label: "Form Talents"
         tiers: ["basic"]
         tags: ["form"]
@@ -21,18 +21,15 @@ sectionDefinitions:
         tiers: ["advanced"]
   - label: "Feats"
     categories:
-      - label: "Conjuration Sphere Feats"
+      - label: "Conjuration Feats"
         tiers: ["feat"]
-        excludeTags: ["combat", "dual-sphere"]
+        excludeTags: ["combat","dual-sphere"]
       - label: "Combat Feats"
         tiers: ["feat"]
         tags: ["combat"]
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
-  - label: "Archetypes"
 ---
 
 You have made contracts with outsiders, calling them to your side when you are in need.
-
-[Summon]

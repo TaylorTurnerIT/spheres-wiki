@@ -1,0 +1,27 @@
+---
+id: hostile-glamers
+name: "Hostile Glamers"
+system: power
+type: talent
+sphere: illusion
+tier: basic
+tags: []
+---
+
+You can create glamers that affect the wearer. Targets of a Hostile Glamer may attempt a saving throw to disbelieve in addition to the saving throw granted to resist the glamer being applied to them, and are considered to be 'interacting' with the glamer every round as if it were a figment. For example, if you created an Illusionary Disguise of someone turning into an animal, that person might believe in their own transformation unless they, like others, made their Will save to disbelieve.
+
+**Hostile Blur:** If you possess the Blur talent, the miss chance only affects attacks the target would make.
+
+**Hostile Glamer:** You may apply a glamer to a target that impedes it.
+
+If you may create visual or audible illusions, you may create a glamer that blinds and/or deafens the target respectively (for example, by putting their head in a box).
+
+If you possess Illusionary Touch, you may make a glamer that entangles the target (for example, by creating illusionary ropes to tie them up).
+
+If you possess Illusionary Touch x2, you may create an illusion that hurts them (for example, an illusion of them on fire).
+
+Each of these options count as their own unique hostile glamer.
+
+**Hostile Decoy:** If you possess the Decoy talent, you may create hostile decoys as a trick or glamer; these function the same as a defensive decoy, except instead of granting a miss chance to attacks against the creature, they grant a miss chance to the creature itself. Any attack it makes has a 50% to strike one of the hostile decoys instead of the intended target. The wearer may intentionally strike a hostile decoy, but anyone other than the wearer attempting to target an hostile decoy has a 50% chance to instead hit the wearer.
+
+**Hostile Masque:** If you possess the Masques talent, you may create a Masque glamer that grant a penalty instead of a bonus to the selected skills.

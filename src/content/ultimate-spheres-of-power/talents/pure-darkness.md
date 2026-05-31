@@ -1,0 +1,11 @@
+---
+id: pure-darkness
+name: "Pure Darkness"
+system: power
+type: talent
+sphere: dark
+tier: basic
+tags: []
+---
+
+You may create a darkness effect that negates low-light vision. Darkvision is reduced to 5 feet. In addition, all other senses (blindsight, scent, etc.) are reduced by half. See in darkness is unaffected.

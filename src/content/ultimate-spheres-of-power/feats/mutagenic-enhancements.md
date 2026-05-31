@@ -3,8 +3,8 @@ id: mutagenic-enhancements
 name: "Mutagenic Enhancements"
 type: feat
 system: power
-sphere: alteration
-dualSphere: enhancement
+sphere: enhancement
+dualSphere: alteration
 tags: ["dual-sphere"]
 ---
 

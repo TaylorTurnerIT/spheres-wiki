@@ -23,4 +23,5 @@ Creatures gain a +1 bonus to attack rolls and to AC, as well as a +2 bonus to Fl
 | Large | 10 ft. | 10 ft. |
 | Huge | 15 ft. | 15 ft. |
 
-Note: Unless stated otherwise, size changes affect CMB and CMD.
+
+**Note:** Unless stated otherwise, size changes affect CMB and CMD.

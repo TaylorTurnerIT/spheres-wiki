@@ -3,8 +3,8 @@ id: purrging-transformation
 name: "Purrging Transformation"
 type: feat
 system: power
-sphere: alteration
-dualSphere: life
+sphere: life
+dualSphere: alteration
 tags: ["dual-sphere"]
 ---
 

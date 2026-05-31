@@ -1,0 +1,12 @@
+---
+id: proxy-counterspell
+name: "Proxy Counterspell"
+type: feat
+system: power
+sphere: enhancement
+tags: []
+---
+
+**Prerequisites:** Enhancement sphere, Circle Casting, Counterspell, Spell Proxy.
+
+**Benefit:** Whenever you use Counterspell, any creature under the effects of Create Proxy may spend an immediate action to allow you to end an additional effect. Doing so causes Create Proxy to end immediately for that creature.

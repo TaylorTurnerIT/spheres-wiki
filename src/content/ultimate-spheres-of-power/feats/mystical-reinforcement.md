@@ -1,0 +1,12 @@
+---
+id: mystical-reinforcement
+name: "Mystical Reinforcement"
+type: feat
+system: power
+sphere: war
+tags: []
+---
+
+**Prerequisites:** War sphere, Circle Casting.
+
+**Benefit:** You may use your circle casting to aid other spellcasters within totems you control or whom you share a mandate with as if they had the Circle Casting feat.

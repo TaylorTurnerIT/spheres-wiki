@@ -3,8 +3,8 @@ id: fated-summons
 name: "Fated Summons"
 type: feat
 system: power
-sphere: conjuration
-dualSphere: fate
+sphere: fate
+dualSphere: conjuration
 tags: ["dual-sphere"]
 ---
 
