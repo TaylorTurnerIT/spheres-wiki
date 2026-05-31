@@ -1,6 +1,6 @@
 ---
 id: extra-nightform-requires-night-terror-level-10
-name: "Extra Nightform (requires night terror level 10\)"
+name: "Extra Nightform (requires night terror level 10)"
 type: archetype-feature
 system: power
 archetypeId: night-terror

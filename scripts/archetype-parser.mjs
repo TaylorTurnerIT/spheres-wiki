@@ -172,9 +172,10 @@ function parseArchetypeFile(text, filename) {
 
   for (let i = 0; i < featureMatches.length; i++) {
     let fName = normalizeQuotes(featureMatches[i][1].trim());
-    // Strip trailing colon and ability markers
+    // Strip trailing colon, ability markers, and backslash escapes
     fName = fName
       .replace(/:$/, "")
+      .replace(/\\/g, "")
       .replace(/\s*\((?:Ex|Su|Sp|Ps)\)$/i, "")
       .trim();
 
@@ -243,6 +244,13 @@ function parseArchetypeFile(text, filename) {
   };
 }
 
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+function yamlStr(val) {
+  // Escape double quotes and backslashes for YAML double-quoted strings
+  return '"' + String(val).replace(/\\/g, "\\\\").replace(/"/g, '\\"') + '"';
+}
+
 // ─── Rendering ────────────────────────────────────────────────────────────────
 
 function renderArchetypePage(parsed) {
@@ -250,10 +258,10 @@ function renderArchetypePage(parsed) {
   const lines = [
     "---",
     `id: ${id}`,
-    `name: "${parsed.name}"`,
+    `name: ${yamlStr(parsed.name)}`,
     "type: archetype",
     `system: ${parsed.system}`,
-    ...(parsed.className ? [`className: "${parsed.className}"`] : []),
+    ...(parsed.className ? [`className: ${yamlStr(parsed.className)}`] : []),
     "tags: []",
     "---",
   ];
@@ -269,7 +277,7 @@ function renderArchetypeFeature(parsed, feature) {
   const lines = [
     "---",
     `id: ${id}`,
-    `name: "${feature.name}"`,
+    `name: ${yamlStr(feature.name)}`,
     "type: archetype-feature",
     `system: ${parsed.system}`,
     `archetypeId: ${kebab(parsed.name)}`,

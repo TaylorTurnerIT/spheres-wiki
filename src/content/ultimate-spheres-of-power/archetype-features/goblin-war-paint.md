@@ -1,6 +1,6 @@
 ---
 id: goblin-war-paint
-name: "Goblin "War Paint""
+name: "Goblin War Paint"
 type: archetype-feature
 system: power
 archetypeId: goblin-battle-clown

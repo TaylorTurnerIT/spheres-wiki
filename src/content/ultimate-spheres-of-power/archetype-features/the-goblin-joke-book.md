@@ -1,6 +1,6 @@
 ---
 id: the-goblin-joke-book
-name: "The Goblin "Joke" Book"
+name: "The Goblin Joke Book"
 type: archetype-feature
 system: power
 archetypeId: goblin-battle-clown
