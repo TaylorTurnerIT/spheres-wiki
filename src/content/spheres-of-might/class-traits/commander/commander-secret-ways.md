@@ -14,7 +14,7 @@ Once per day, the commander can use the gather information function of the Diplo
 
 | Gather Information DC | Effect |
 |---|---|
-| 15 | The commander learns of a passage within 1 week’s travel of the nearest settlement of at least 1,000 people that is capable of transporting a small group (maximum 10) to a location within 1 week’s travel of his desired destination. |
-| 25 | The commander learns of a passage within 1 day’s travel of the nearest settlement with at least 50 people that is capable of transporting a small group (maximum 10) to a location within 1 day’s travel of his desired destination. |
-| 35 | The commander learns of a passage within 1 day’s travel of his current location that is capable of transporting him and up to 100 humanoids a day to a location within 1 day’s travel of his desired destination, or to the nearest settlement. |
-| 45 | The commander discovers the location of a passage within 4 hour’s travel of his current location capable of transporting himself and up to 1,000 humanoids a day directly to his desired destination, or to the nearest settlement. |
+| 15 | The commander learns of a passage within 1 week's travel of the nearest settlement of at least 1,000 people that is capable of transporting a small group (maximum 10) to a location within 1 week's travel of his desired destination. |
+| 25 | The commander learns of a passage within 1 day's travel of the nearest settlement with at least 50 people that is capable of transporting a small group (maximum 10) to a location within 1 day's travel of his desired destination. |
+| 35 | The commander learns of a passage within 1 day's travel of his current location that is capable of transporting him and up to 100 humanoids a day to a location within 1 day's travel of his desired destination, or to the nearest settlement. |
+| 45 | The commander discovers the location of a passage within 4 hour's travel of his current location capable of transporting himself and up to 1,000 humanoids a day directly to his desired destination, or to the nearest settlement. |

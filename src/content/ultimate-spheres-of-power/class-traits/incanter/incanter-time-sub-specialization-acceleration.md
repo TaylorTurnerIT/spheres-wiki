@@ -39,6 +39,4 @@ At 20th level, you gain an additional move action each round, but it may only be
 **Cloak of the Elements (Su):** At 20th level, the incanter is protected from weather and elements, taking only half damage from all sources of acid, cold, electricity, fire, and sonic damage.
 ---
 
-[[include sop-template]]
-
 *Source: 3PP*
