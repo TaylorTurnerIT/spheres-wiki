@@ -506,10 +506,15 @@ function parseClassFeatures(text) {
 
     // Determine level from name or body
     let level = 1;
-    const levelMatch = bodyRaw.match(
+    // Pattern 1: "At 2nd level", "Starting at 3rd level", "Beginning at 1st level"
+    let m = bodyRaw.match(
       /(?:At |Starting at |Beginning at )(\d+)[a-z]{2} level/,
     );
-    if (levelMatch) level = parseInt(levelMatch[1]);
+    // Pattern 2: "At level 20"
+    if (!m) {
+      m = bodyRaw.match(/(?:At |Starting at |Beginning at )level (\d+)/);
+    }
+    if (m) level = parseInt(m[1]);
 
     // Check for trait sub-entries (++++ headings within the feature body).
     // Split on ++++ boundaries — the first chunk is the feature description,

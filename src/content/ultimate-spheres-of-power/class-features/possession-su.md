@@ -29,7 +29,7 @@ There are two types of possession: passive and active. The wraith chooses which 
 
 **Table: Active Possession**
 
-| Use the host’s | Use the wraith’s |
+| Use the host's | Use the wraith's |
 |---|---|
 | Strength, Dexterity, and Constitution scores (this modifies the total modifiers for ability checks, armor class, attack rolls, CMB, CMD, skill checks, save DCs based on physical abilities) | Intelligence, Wisdom, and Charisma scores |
 | Bonuses to Strength, Dexterity, and Constitution-based skills (except those from feats the wraith cannot access) | Intelligence, Wisdom, and Charisma based skill modifiers |
@@ -50,7 +50,7 @@ There are two types of possession: passive and active. The wraith chooses which 
 | Extraordinary special abilities and special attacks that require active use, such as freeze, grab, pounce, rend, and swallow whole (do not recalculate save DCs) (requires 6th level) | - |
 | Supernatural special abilities that require activation, such a breath weapons (do not recalculate save DCs) (requires 12th level) | - |
 | Spell-like abilities (do not recalculate save DCs) (requires 16th level) | - |
-| Combat spheres, feats from Hit Dice, class levels, and bonus feats, magic spheres, spellcrafted spells (in addition to the wraith’s, requires 18th level) | - |
+| Combat spheres, feats from Hit Dice, class levels, and bonus feats, magic spheres, spellcrafted spells (in addition to the wraith's, requires 18th level) | - |
 | Auras (do not recalculate save DCs) | - |
 | Ongoing effects that target the body | Ongoing mind-affecting effects |
 |  | Use the alignment subtypes of both wraith and host |

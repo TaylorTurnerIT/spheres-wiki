@@ -4,7 +4,7 @@ name: "Infinite Arsenal (Su)"
 type: class-feature
 system: power
 className: armorist
-level: 1
+level: 20
 tags: []
 ---
 

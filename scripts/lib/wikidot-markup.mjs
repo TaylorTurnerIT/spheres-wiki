@@ -20,6 +20,7 @@ export function normalizeQuotes(str) {
  *   ||~ header ||       → | header |
  *   || cell ||          → | cell |
  * Header cells are detected by the ~ marker; a separator row is inserted.
+ * Applies the same markup conversions as cleanBody to each cell.
  */
 export function convertWikidotTable(tableLines) {
   const result = [];
@@ -28,7 +29,16 @@ export function convertWikidotTable(tableLines) {
   for (const line of tableLines) {
     const isHeader = line.includes("||~");
     const rawCells = line.split("||").filter((_, i) => i > 0);
-    const cells = rawCells.map((cell) => cell.replace(/^~?\s*/, "").trimEnd());
+    const cells = rawCells.map((cell) => {
+      let c = cell.replace(/^~?\s*/, "").trimEnd();
+      // Apply same cleanup as cleanBody to each cell
+      c = c.replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1");
+      c = c.replace(/\[(https?:\/\/[^\s\]]+)\s+([^\]]+)\]/g, "[$2]($1)");
+      c = c.replace(/\[\[footnote\]\]([\s\S]*?)\[\[\/footnote\]\]/g, "$1");
+      c = c.replace(/\/\/([^/]+)\/\//g, "*$1*");
+      c = normalizeQuotes(c);
+      return c;
+    });
     if (cells.length && cells[cells.length - 1].trim() === "") cells.pop();
 
     result.push("| " + cells.join(" | ") + " |");
@@ -117,6 +127,12 @@ export function cleanBody(text) {
 
     // Strip Wikidot wikilinks: [[[display|url]]] or [[[page name]]]
     line = line.replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1");
+
+    // Convert Wikidot external links: [https://url.com Display Text]
+    line = line.replace(/\[(https?:\/\/[^\s\]]+)\s+([^\]]+)\]/g, "[$2]($1)");
+
+    // Strip Wikidot footnote wrappers, keep the footnote text
+    line = line.replace(/\[\[footnote\]\]([\s\S]*?)\[\[\/footnote\]\]/g, "$1");
 
     // Strip inline superscript refs: ^^ARG^^
     line = line.replace(/\^\^[^\^]+\^\^/g, "");
