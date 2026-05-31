@@ -29,84 +29,250 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 
 // ─── Sphere Configurations ────────────────────────────────────────────────────
+// Each sphere has:
+//   inputFile        - path to raw Wikidot source (relative to project root)
+//   sphere           - sphere identifier (lowercase)
+//   system           - "power" | "might" | "guile"
+//   primaryBook      - default book slug for entries without a source key
+//   headingSourceMap - bracket source keys → book slugs (null = resolve from body)
+//   bodySourceMap    - ^^Source: Book Name^^ body lines → book slugs
+
+const REPO = "../wdotcrawl/spheresofpower-repo";
+
+// Shared source mappings used by most spheres
+const COMMON_HEADING_SOURCES = {
+  "3PP": null,
+  "Alienist HB": "the-alienists-handbook",
+  Apoc: null,
+  "Arcforge Addendum": "arcforge-players-compendium",
+  "Archmagi's HB": "unknown-source",
+  BTH: "beast-tamers-handbook",
+  BaP: "blood-and-portents",
+  "Cata. HB": "unknown-source",
+  "Catgirl HB": "unknown-source",
+  CrimDan: "crimson-dancers-handbook",
+  DRS: "diamond-spheres-thaumic-potential",
+  DbH: "damnation-by-hunger",
+  EO3: "unknown-source",
+  "Gravecaller's HB": "gravecallers-handbook",
+  "Jester's HB": "jesters-handbook",
+  "Jester HB": "jesters-handbook",
+  LG: "arcforge-players-compendium",
+  LotS: "spheres-of-guile",
+  "Mana HB": "unknown-source",
+  Origin: "spheres-of-origin",
+  "RW HB": "unknown-source",
+  "SA:BG": null,
+  "SM\u2014": "barons-uncanny-gateway",
+  Warden: "unknown-source",
+};
+
+const COMMON_BODY_SOURCES = {
+  "Spheres Apocrypha: Debilitating Talents 2":
+    "spheres-apocrypha-debilitating-talents-2",
+  "Spheres Apocrypha: Cohorts & Companions":
+    "spheres-apocrypha-cohorts-and-companions",
+  "Spheres Apocrypha: Protokinesis Feats":
+    "spheres-apocrypha-protokinesis-feats",
+  "Spheres Apocrypha: Battlefield Manipulation Talents":
+    "spheres-apocrypha-battlefield-manipulation-talents",
+  "Spheres Apocrypha: Banshee's Gasp": "spheres-apocrypha-banshees-gasp",
+  "Baron's Glorious Arena": "barons-glorious-arena",
+  "Baron's Uncanny Gateway": "barons-uncanny-gateway",
+  "Baron's Hallowed Archive": "barons-hallowed-archive",
+  "Baron's Secluded Library": "barons-secluded-library",
+  "Expanded Spheres: Baron's Lost Apocrypha":
+    "expanded-spheres-barons-lost-apocrypha",
+  "Expanded Spheres: Weaves of War": "expanded-spheres-weaves-of-war",
+  "Arcforge Players Compendium": "arcforge-players-compendium",
+  "Card Casting 2: Counters and Control": "unknown-source",
+  "Card Casting 3: Volatile Variance": "unknown-source",
+};
 
 const SPHERE_CONFIGS = {
-  blood: {
-    inputFile: "blood-raw.wiki",
-    sphere: "blood",
-    system: "power",
-    primaryBook: "spheres-of-power-core",
-
-    headingSourceMap: {
-      BaP: "blood-and-portents",
-      CrimDan: "crimson-dancers-handbook",
-      "Jester's HB": "jesters-handbook",
-      Apoc: null, // resolve from ^^Source:^^ body line
-      DbH: "damnation-by-hunger",
-    },
-
-    bodySourceMap: {
-      "Spheres Apocrypha: Debilitating Talents 2":
-        "spheres-apocrypha-debilitating-talents-2",
-    },
-  },
-
   alteration: {
-    inputFile: "alteration-raw.wiki",
+    inputFile: `${REPO}/alteration.txt`,
     sphere: "alteration",
     system: "power",
-    primaryBook: "spheres-of-power-core",
-
-    // Map bracket source keys in ++++ headings -> content book folder slugs.
-    // null = resolve from ^^Source: ...^^ line in body.
-    headingSourceMap: {
-      DRS: "diamond-spheres-thaumic-potential",
-      "Alienist HB": "the-alienists-handbook",
-      "Jester's HB": "jesters-handbook",
-      "Jester HB": "jesters-handbook",
-      Origin: "spheres-of-origin",
-      LG: "arcforge-players-compendium",
-      "RW HB": "unknown-source",
-      EO3: "unknown-source",
-      "SM—": "barons-uncanny-gateway",
-      "Catgirl HB": "unknown-source",
-      "3PP": null,
-    },
-
-    // Map ^^Source: Book Name^^ body lines -> content book folder slugs.
-    bodySourceMap: {
-      "Baron's Glorious Arena": "barons-glorious-arena",
-      "Expanded Spheres: Baron's Lost Apocrypha":
-        "expanded-spheres-barons-lost-apocrypha",
-      "Arcforge Players Compendium": "arcforge-players-compendium",
-    },
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
   },
-
+  blood: {
+    inputFile: `${REPO}/blood.txt`,
+    sphere: "blood",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
   conjuration: {
-    inputFile: "conjuration.wiki",
+    inputFile: `${REPO}/conjuration.txt`,
     sphere: "conjuration",
     system: "power",
-    primaryBook: "spheres-of-power-core",
-
-    headingSourceMap: {
-      DbH: "damnation-by-hunger",
-      LotS: "spheres-of-guile",
-      Apoc: null, // resolve from ^^Source:^^ body line
-      "Alienist HB": "the-alienists-handbook",
-      "Jester's HB": "jesters-handbook",
-      "SM—": "barons-uncanny-gateway",
-      "3PP": null, // resolve from ^^Source:^^ body line
-      BaP: "blood-and-portents",
-      "Gravecaller's HB": "gravecallers-handbook",
-    },
-
-    bodySourceMap: {
-      "Spheres Apocrypha: Cohorts & Companions":
-        "spheres-apocrypha-cohorts-and-companions",
-      "Expanded Spheres: Baron's Lost Apocrypha":
-        "expanded-spheres-barons-lost-apocrypha",
-      "Card Casting 2: Counters and Control": "unknown-source",
-    },
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  creation: {
+    inputFile: `${REPO}/creation.txt`,
+    sphere: "creation",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  dark: {
+    inputFile: `${REPO}/dark.txt`,
+    sphere: "dark",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  death: {
+    inputFile: `${REPO}/death.txt`,
+    sphere: "death",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  destruction: {
+    inputFile: `${REPO}/destruction.txt`,
+    sphere: "destruction",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  divination: {
+    inputFile: `${REPO}/divination.txt`,
+    sphere: "divination",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  enhancement: {
+    inputFile: `${REPO}/enhancement.txt`,
+    sphere: "enhancement",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  "fallen-fey": {
+    inputFile: `${REPO}/fallen-fey.txt`,
+    sphere: "fallen-fey",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  fate: {
+    inputFile: `${REPO}/fate.txt`,
+    sphere: "fate",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  illusion: {
+    inputFile: `${REPO}/illusion.txt`,
+    sphere: "illusion",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  life: {
+    inputFile: `${REPO}/life.txt`,
+    sphere: "life",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  light: {
+    inputFile: `${REPO}/light.txt`,
+    sphere: "light",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  mana: {
+    inputFile: `${REPO}/mana.txt`,
+    sphere: "mana",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  mind: {
+    inputFile: `${REPO}/mind.txt`,
+    sphere: "mind",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  nature: {
+    inputFile: `${REPO}/nature.txt`,
+    sphere: "nature",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  protection: {
+    inputFile: `${REPO}/protection.txt`,
+    sphere: "protection",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  telekinesis: {
+    inputFile: `${REPO}/telekinesis.txt`,
+    sphere: "telekinesis",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  time: {
+    inputFile: `${REPO}/time.txt`,
+    sphere: "time",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  war: {
+    inputFile: `${REPO}/war.txt`,
+    sphere: "war",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  warp: {
+    inputFile: `${REPO}/warp.txt`,
+    sphere: "warp",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
+  },
+  weather: {
+    inputFile: `${REPO}/weather.txt`,
+    sphere: "weather",
+    system: "power",
+    primaryBook: "ultimate-spheres-of-power",
+    headingSourceMap: { ...COMMON_HEADING_SOURCES },
+    bodySourceMap: { ...COMMON_BODY_SOURCES },
   },
 };
 
@@ -120,6 +286,10 @@ const BRACKET_TAGS = new Set([
   "strike",
   "body",
   "transformation",
+  "curse",
+  "consecration",
+  "ghost strike",
+  "word",
 ]);
 
 // ─── Sphere name registry (for dual-sphere detection) ─────────────────────────
@@ -175,12 +345,8 @@ function parseSectionContext(headingText) {
   return null;
 }
 
-// ─── Quote normalization ──────────────────────────────────────────────────────
-// (re-exported from lib/wikidot-markup.mjs for backward compatibility)
-
-// ─── Wikidot markup cleanup ───────────────────────────────────────────────────
-
-// (convertWikidotTable and cleanBody are imported from lib/wikidot-markup.mjs)
+// ─── Wikidot markup ───────────────────────────────────────────────────────────
+// (normalizeQuotes, convertWikidotTable, cleanBody are imported from lib/)
 
 // ─── Heading parsing ──────────────────────────────────────────────────────────
 
@@ -228,28 +394,24 @@ function parseHeading(headingLine, sectionCtx, config) {
       if (!tags.includes("combat")) tags.push("combat");
       type = "feat";
     } else if (BRACKET_TAGS.has(lower)) {
-      // Ability-type tag like [instill], [mass], [utility] — not a source key
       if (!tags.includes(lower)) tags.push(lower);
     } else if (
       Object.prototype.hasOwnProperty.call(config.headingSourceMap, content)
     ) {
       sourceKey = content;
     } else {
-      // Unknown bracket — treat as source key; may resolve to unknown-source
       sourceKey = content;
     }
   }
   head = head.replace(/\s*\[[^\]]+\]/g, "").trim();
 
   // Extract parenthetical markers: (body), (quicken, still), (Dual Sphere), (Combat), etc.
-  // Each () block may contain comma-separated values.
   for (const m of head.matchAll(/\(([^)]+)\)/g)) {
     for (const part of m[1].split(",")) {
       const lower = part
         .trim()
         .toLowerCase()
         .replace(/[\s-]+/g, " ");
-
       if (lower === "dual sphere") {
         if (!tags.includes("dual-sphere")) tags.push("dual-sphere");
         type = "feat";
@@ -276,8 +438,6 @@ function resolveSourceBook(sourceKey, bodySource, config) {
   const mapped = config.headingSourceMap[sourceKey];
   if (mapped !== undefined && mapped !== null) return mapped;
 
-  // [3PP] or unknown: resolve from body ^^Source: Book Name^^ line.
-  // Normalize smart quotes before comparing (raw wiki uses curly apostrophes).
   if (bodySource) {
     const normalizedSource = normalizeQuotes(bodySource);
     for (const [pattern, slug] of Object.entries(config.bodySourceMap)) {
@@ -315,9 +475,8 @@ function parseWikiFile(text, config) {
   const lines = text.split("\n");
   let inDiv = false;
   const divBuffer = [];
-  let baseMode = null; // { name, bodyLines, subSections } — active while inside a base ability section
+  let baseMode = null;
 
-  // Flush collected base ability text into a tier:base entry.
   const flushBase = () => {
     if (!baseMode) return;
     const { name, bodyLines, subSections } = baseMode;
@@ -363,7 +522,6 @@ function parseWikiFile(text, config) {
         const divText = divBuffer.join("\n");
         if (/^\+{4}\s/m.test(divText)) {
           if (baseMode) {
-            // Inside a base ability section: embed div as sub-section rather than a separate entry
             const parsed = parseEntryBlock(
               divText,
               { type: "talent", tier: "basic", sectionTags: [] },
@@ -385,7 +543,6 @@ function parseWikiFile(text, config) {
             }
           }
         } else if (baseMode) {
-          // Div without a ++++ heading inside a base ability section: include as body prose
           baseMode.bodyLines.push(...divBuffer);
         }
       }
@@ -399,7 +556,6 @@ function parseWikiFile(text, config) {
       continue;
     }
 
-    // Outside divs: detect section headings (H1, H2, H3 — but NOT H4 ++++)
     const headingMatch = trimmed.match(/^(\+{1,3})(?!\+)\s+(.+)/);
     if (headingMatch) {
       const ctx = parseSectionContext(headingMatch[2]);
@@ -408,14 +564,11 @@ function parseWikiFile(text, config) {
         sectionCtx = ctx;
       } else if (headingMatch[1] === "++") {
         if (baseMode) {
-          // Consecutive null-context H2 while base ability is active → extend current base ability.
-          // Add as a prose sub-heading rather than flushing and starting a new base entry.
           const sectionName = normalizeQuotes(
             headingMatch[2].replace(/\s*\[[^\]]+\]/g, "").trim(),
           );
           baseMode.bodyLines.push(`### ${sectionName}`);
         } else {
-          // H2 with no section context → base ability (e.g. "Blood Control", "Shapeshift")
           flushBase();
           const baseName = normalizeQuotes(
             headingMatch[2].replace(/\s*\[[^\]]+\]/g, "").trim(),
@@ -423,11 +576,9 @@ function parseWikiFile(text, config) {
           baseMode = { name: baseName, bodyLines: [], subSections: [] };
         }
       }
-      // H1/H3 with no context: informational section — no state change
       continue;
     }
 
-    // Collect prose for the current base ability (converting H4+ headings to markdown)
     if (baseMode) {
       const subHeadingMatch = trimmed.match(/^(\+{4,})\s+(.+)$/);
       if (subHeadingMatch) {
@@ -460,7 +611,6 @@ function parseEntryBlock(divContent, sectionCtx, config) {
 
   const bodyLines = lines.slice(headingIdx + 1);
 
-  // Extract and remove ^^Source: ...^^ line from body
   let bodySource = null;
   const cleanedLines = bodyLines.filter((l) => {
     const t = l.trim();
@@ -479,7 +629,6 @@ function parseEntryBlock(divContent, sectionCtx, config) {
 
   const body = cleanBody(cleanedLines.join("\n"));
 
-  // Skip cross-reference stubs (e.g. "See General Feats" / "See [[[page]]]")
   if (/^See\s+(\[\[\[|General\b)/i.test(body.trimStart())) return null;
 
   const bookSlug = resolveSourceBook(sourceKey, bodySource, config);
@@ -493,7 +642,7 @@ function parseEntryBlock(divContent, sectionCtx, config) {
 }
 
 // ─── Rendering ────────────────────────────────────────────────────────────────
-// (kebab, fmArray, showDiff are imported from lib/render.mjs)
+// (kebab, fmArray are imported from lib/render.mjs)
 
 function renderTalent(entry, config) {
   const id = kebab(entry.name);
@@ -533,9 +682,6 @@ function renderEntry(entry, config) {
     ? renderFeat(entry, config)
     : renderTalent(entry, config);
 }
-
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-// (These are imported from lib/render.mjs and lib/wikidot-markup.mjs)
 
 // ─── Exports ──────────────────────────────────────────────────────────────────
 
@@ -614,4 +760,4 @@ if (isMain) {
       `\nWrote ${newCount} new file(s), skipped ${skipCount} existing.`,
     );
   }
-} // end if (isMain)
+}
