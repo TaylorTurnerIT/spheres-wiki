@@ -297,11 +297,12 @@ function parseClassFeatures(text) {
 
   for (let i = 0; i < matches.length; i++) {
     const heading = matches[i][1].trim();
-    // Strip color markup AND wikilinks from heading
+    // Strip color markup, wikilinks, AND leading dashes/bullets from heading
     const name = normalizeQuotes(
       heading
         .replace(/##[^|#]+\|([^#]+)##/g, "$1")
         .replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1")
+        .replace(/^[-–—]\s*/, "")
         .trim(),
     );
 
