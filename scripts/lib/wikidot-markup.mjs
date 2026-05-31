@@ -20,7 +20,7 @@ export function normalizeQuotes(str) {
  *   ||~ header ||       → | header |
  *   || cell ||          → | cell |
  * Header cells are detected by the ~ marker; a separator row is inserted.
- * Applies the same markup conversions as cleanBody to each cell.
+ * Applies markup conversions to each cell (links, footnotes, wikilinks).
  */
 export function convertWikidotTable(tableLines) {
   const result = [];
@@ -31,10 +31,21 @@ export function convertWikidotTable(tableLines) {
     const rawCells = line.split("||").filter((_, i) => i > 0);
     const cells = rawCells.map((cell) => {
       let c = cell.replace(/^~?\s*/, "").trimEnd();
-      // Apply same cleanup as cleanBody to each cell
-      c = c.replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1");
+
+      // 1. Combine [URL text][[footnote]]desc[[/footnote]] → [text](URL "desc")
+      c = c.replace(
+        /\[(https?:\/\/[^\s\]]+)\s+([^\]]+)\]\s*\[\[footnote\]\]([\s\S]*?)\[\[\/footnote\]\]/g,
+        (_, url, text, note) => `[${text}](${url} "${note.trim()}")`,
+      );
+
+      // 2. Standalone [URL text] (without footnote) → [text](URL)
       c = c.replace(/\[(https?:\/\/[^\s\]]+)\s+([^\]]+)\]/g, "[$2]($1)");
+
+      // 3. Standalone [[footnote]]desc[[/footnote]] → desc
       c = c.replace(/\[\[footnote\]\]([\s\S]*?)\[\[\/footnote\]\]/g, "$1");
+
+      // 4. Wikilinks, italics, quotes
+      c = c.replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1");
       c = c.replace(/\/\/([^/]+)\/\//g, "*$1*");
       c = normalizeQuotes(c);
       return c;
