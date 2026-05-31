@@ -400,4 +400,49 @@ document.addEventListener('astro:page-load', () => {
     font-style: italic;
     opacity: 0.75;
   }
+
+
+  /* ── Table column dividers (Bound Equipment) ── */
+  :global(#bound-equipment-su table td:nth-child(2)),
+  :global(#bound-equipment-su table td:nth-child(4)),
+  :global(#bound-equipment-su table td:nth-child(6)),
+  :global(#bound-equipment-su table th:nth-child(2)),
+  :global(#bound-equipment-su table th:nth-child(4)),
+  :global(#bound-equipment-su table th:nth-child(6)) {
+    border-right: 2px solid var(--clr-border);
+  }
+
+  /* ── Tooltip popup ── */
+  .tt {
+    color: var(--clr-active);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--clr-active);
+    cursor: help;
+    position: relative;
+  }
+  .tt:hover { color: var(--clr-active-hover, var(--clr-active)); }
+  .tt::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--clr-bg-elevated, #1e1e2e);
+    color: var(--clr-body);
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    max-width: 360px;
+    width: max-content;
+    white-space: normal;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 100;
+  }
+  .tt:hover::after { opacity: 1; }
 </style>
+

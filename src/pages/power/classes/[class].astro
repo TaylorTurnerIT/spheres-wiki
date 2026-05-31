@@ -367,7 +367,7 @@ document.addEventListener('astro:page-load', () => {
     btn.addEventListener('click', () => {
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
       const willCollapse = isExpanded;
-      
+
       btn.setAttribute('aria-expanded', (!willCollapse).toString());
       btn.classList.toggle('is-collapsed', willCollapse);
       wrapper.setAttribute('aria-hidden', willCollapse.toString());
@@ -447,11 +447,11 @@ document.addEventListener('astro:page-load', () => {
     if (selectedArcIds.length === 0) return true;
 
     const candidateFeatures = templates.filter(f => f.archetypeId === candidateArcId);
-    
+
     for (const selectedArcId of selectedArcIds) {
       if (selectedArcId === candidateArcId) continue;
       const selectedFeatures = templates.filter(f => f.archetypeId === selectedArcId);
-      
+
       for (const cf of candidateFeatures) {
         for (const sf of selectedFeatures) {
           // Rule 1: Both replace the same feature and at least one is mutuallyExclusive
@@ -591,8 +591,8 @@ document.addEventListener('astro:page-load', () => {
         if (primaryCard) {
           primaryCard.id = af.featureId;
           primaryCard.className = 'class-feature class-feature--archetype';
-          
-          const displayLevel = Array.isArray(af.level) 
+
+          const displayLevel = Array.isArray(af.level)
             ? af.level.map(l => `${l}${ordinal(l)}`).join(', ')
             : `${af.level}${ordinal(af.level)}`;
 
@@ -619,7 +619,7 @@ document.addEventListener('astro:page-load', () => {
           const baseCard = document.getElementById(baseId);
           if (baseCard) {
             baseCard.classList.add('is-altered');
-            
+
             const modBlock = document.createElement('div');
             modBlock.className = 'archetype-modification-block';
             modBlock.innerHTML = `
@@ -635,7 +635,7 @@ document.addEventListener('astro:page-load', () => {
         });
       } else {
         // Purely new feature: Render dynamic element chronologically
-        const displayLevel = Array.isArray(af.level) 
+        const displayLevel = Array.isArray(af.level)
           ? af.level.map(l => `${l}${ordinal(l)}`).join(', ')
           : `${af.level}${ordinal(af.level)}`;
 
@@ -885,12 +885,12 @@ document.addEventListener('astro:page-load', () => {
   :global(.ts-wrapper.multi .ts-control::-webkit-scrollbar) {
     display: none;
   }
-  
+
   :global(.ts-control.focus) {
     border-color: var(--clr-active) !important;
     box-shadow: 0 0 0 1px var(--clr-active), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
   }
-  
+
   :global(.ts-dropdown) {
     border-radius: 8px !important;
     border-color: var(--clr-border) !important;
@@ -898,23 +898,23 @@ document.addEventListener('astro:page-load', () => {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
     font-family: var(--font-body) !important;
   }
-  
+
   :global(.ts-dropdown .option) {
     padding: 0.6rem 1rem !important;
   }
-  
+
   :global(.ts-dropdown .option.active) {
     background-color: color-mix(in srgb, var(--clr-active) 8%, transparent) !important;
     color: var(--clr-body) !important;
   }
-  
+
   :global(.ts-dropdown .option[aria-disabled="true"]) {
     opacity: 0.4 !important;
     cursor: not-allowed !important;
     background-color: transparent !important;
     pointer-events: none !important;
   }
-  
+
   :global(.ts-wrapper.multi .ts-control > div) {
     background-color: color-mix(in srgb, var(--clr-active) 12%, transparent) !important;
     color: var(--clr-active) !important;
@@ -924,13 +924,13 @@ document.addEventListener('astro:page-load', () => {
     font-weight: 600;
     padding: 2px 6px 2px 10px !important;
   }
-  
+
   :global(.ts-wrapper.multi .ts-control > div .remove) {
     border-left: none !important;
     color: currentColor !important;
     opacity: 0.6;
   }
-  
+
   :global(.ts-wrapper.multi .ts-control > div .remove:hover) {
     background: transparent !important;
     opacity: 1;
@@ -1161,7 +1161,7 @@ document.addEventListener('astro:page-load', () => {
   .trait-catalog-wrapper.is-open {
     grid-template-rows: 1fr;
   }
-  
+
   .trait-catalog {
     min-height: 0;
     display: flex;
@@ -1204,4 +1204,49 @@ document.addEventListener('astro:page-load', () => {
     font-style: italic;
     opacity: 0.75;
   }
+
+
+  /* ── Table column dividers (Bound Equipment) ── */
+  :global(#bound-equipment-su table td:nth-child(2)),
+  :global(#bound-equipment-su table td:nth-child(4)),
+  :global(#bound-equipment-su table td:nth-child(6)),
+  :global(#bound-equipment-su table th:nth-child(2)),
+  :global(#bound-equipment-su table th:nth-child(4)),
+  :global(#bound-equipment-su table th:nth-child(6)) {
+    border-right: 2px solid var(--clr-border);
+  }
+
+  /* ── Tooltip popup ── */
+  .tt {
+    color: var(--clr-active);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--clr-active);
+    cursor: help;
+    position: relative;
+  }
+  .tt:hover { color: var(--clr-active-hover, var(--clr-active)); }
+  .tt::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--clr-bg-elevated, #1e1e2e);
+    color: var(--clr-body);
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    max-width: 360px;
+    width: max-content;
+    white-space: normal;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 100;
+  }
+  .tt:hover::after { opacity: 1; }
 </style>
+

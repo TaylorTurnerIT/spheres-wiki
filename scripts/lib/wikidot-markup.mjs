@@ -32,10 +32,11 @@ export function convertWikidotTable(tableLines) {
     const cells = rawCells.map((cell) => {
       let c = cell.replace(/^~?\s*/, "").trimEnd();
 
-      // 1. Combine [URL text][[footnote]]desc[[/footnote]] → [text](URL "desc")
+      // 1. Combine [URL text][[footnote]]desc[[/footnote]] → <a> with data-tooltip
       c = c.replace(
         /\[(https?:\/\/[^\s\]]+)\s+([^\]]+)\]\s*\[\[footnote\]\]([\s\S]*?)\[\[\/footnote\]\]/g,
-        (_, url, text, note) => `[${text}](${url} "${note.trim()}")`,
+        (_, url, text, note) =>
+          `<a href="${url}" data-tooltip="${note.trim().replace(/"/g, "&quot;")}" class="tt">${text}</a>`,
       );
 
       // 2. Standalone [URL text] (without footnote) → [text](URL)
