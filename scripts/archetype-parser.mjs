@@ -270,10 +270,6 @@ function renderArchetypePage(parsed) {
 
 function renderArchetypeFeature(parsed, feature) {
   const id = kebab(feature.name);
-  const allChanges = [
-    ...feature.replaces.map((r) => `"${r}"`),
-    ...feature.alters.map((a) => `"${a}"`),
-  ];
   const lines = [
     "---",
     `id: ${id}`,

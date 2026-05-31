@@ -13,6 +13,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { normalizeQuotes, cleanBody } from './lib/wikidot-markup.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -133,7 +134,7 @@ function parseChunk(chunk) {
   }
 
   // head is now the clean name
-  const name = head.replace(/\s+/g, ' ').trim();
+  const name = normalizeQuotes(head.replace(/\s+/g, ' ').trim());
   if (!name) return null;
 
   // --- Clean up body lines ---
@@ -152,13 +153,7 @@ function parseChunk(chunk) {
   while (bodyLines.length && !bodyLines[0].trim()) bodyLines.shift();
   while (bodyLines.length && !bodyLines[bodyLines.length - 1].trim()) bodyLines.pop();
 
-  let body = bodyLines.join('\n').trim();
-
-  // Strip Wikidot link markup [[[display text|url]]] or [[[page name]]]
-  body = body.replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, '$1');
-
-  // Normalize non-breaking spaces and other unicode whitespace to regular spaces
-  body = body.replace(/[   ⁠]/g, ' ');
+  const body = cleanBody(bodyLines.join('\n'));
 
   return { name, abilityType, requires, sourceKey, body };
 }

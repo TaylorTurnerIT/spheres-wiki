@@ -119,12 +119,12 @@ describe('convertWikidotTable', () => {
     assert.equal(result[1], '|---|---|');
   });
 
-  it('converts a data row', () => {
+  it('inserts separator after first row when no header cell present', () => {
     const lines = ['|| val1 || val2 ||'];
     const result = convertWikidotTable(lines);
     assert.equal(result[0], '| val1 | val2 |');
-    // no separator for data-only rows
-    assert.equal(result.length, 1);
+    assert.equal(result[1], '|---|---|');
+    assert.equal(result.length, 2);
   });
 
   it('strips trailing empty cell', () => {
@@ -304,9 +304,9 @@ describe('parseSectionContext', () => {
     assert.deepEqual(ctx, { type: 'talent', tier: 'basic', sectionTags: [] });
   });
 
-  it('"Drawbacks" → drawback tier', () => {
+  it('"Drawbacks" → basic tier (drawback is not a valid schema tier)', () => {
     const ctx = parseSectionContext('Drawbacks');
-    assert.deepEqual(ctx, { type: 'talent', tier: 'drawback', sectionTags: [] });
+    assert.deepEqual(ctx, { type: 'talent', tier: 'basic', sectionTags: [] });
   });
 
   it('"Blood Control" (no match) → null', () => {
@@ -832,5 +832,9 @@ describe('exported constants', () => {
     assert.ok(KNOWN_SPHERES.has('death'));
     assert.ok(KNOWN_SPHERES.has('alteration'));
     assert.ok(KNOWN_SPHERES.has('life'));
+  });
+
+  it('KNOWN_SPHERES contains fallen-fey for dual-sphere detection', () => {
+    assert.ok(KNOWN_SPHERES.has('fallen-fey'));
   });
 });

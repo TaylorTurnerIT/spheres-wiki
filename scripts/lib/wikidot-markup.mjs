@@ -58,6 +58,11 @@ export function convertWikidotTable(tableLines) {
     if (isHeader && !separatorInserted) {
       result.push("|" + cells.map(() => "---|").join(""));
       separatorInserted = true;
+    } else if (!separatorInserted && result.length === 1) {
+      // No header row found — insert separator after first data row so the
+      // output is valid Markdown (first row becomes the implicit header).
+      result.push("|" + cells.map(() => "---|").join(""));
+      separatorInserted = true;
     }
   }
 

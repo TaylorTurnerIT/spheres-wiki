@@ -310,6 +310,7 @@ const KNOWN_SPHERES = new Set([
   "destruction",
   "divination",
   "enhancement",
+  "fallen-fey",
   "fate",
   "illusion",
   "life",
@@ -346,7 +347,7 @@ function parseSectionContext(headingText) {
     return { type: "talent", tier: "basic", sectionTags: [] };
   }
   if (lower.includes("drawback")) {
-    return { type: "talent", tier: "drawback", sectionTags: [] };
+    return { type: "talent", tier: "basic", sectionTags: [] };
   }
   return null;
 }
@@ -401,10 +402,6 @@ function parseHeading(headingLine, sectionCtx, config) {
       type = "feat";
     } else if (BRACKET_TAGS.has(lower)) {
       if (!tags.includes(lower)) tags.push(lower);
-    } else if (
-      Object.prototype.hasOwnProperty.call(config.headingSourceMap, content)
-    ) {
-      sourceKey = content;
     } else {
       sourceKey = content;
     }
