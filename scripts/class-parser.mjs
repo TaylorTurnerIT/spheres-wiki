@@ -249,13 +249,16 @@ function parseClassFile(text, config) {
     }
   }
 
-  // Extract body text (intro prose between title and first class feature/table)
-  const firstFeature = clean.search(/\n\+\+ [A-Za-z]/);
-  const firstTable = clean.search(/\|\|~ Level/);
+  // Extract body text — intro prose between title and stat block
+  // Stop at the first stat-block field (Role, Alignment, Hit Die, Table)
+  const statBlockStart = clean.search(
+    /\*\*(Role|Alignment|Hit Die|Starting Wealth|Starting Age|Class Skills|Skill Ranks|Proficiencies|Table):\*\*/i,
+  );
+  const firstHeading = clean.search(/\n\+{1,2}\s/);
   const bodyStart = clean.indexOf("\n", clean.indexOf("title:")) + 1;
   const bodyEnd = Math.min(
-    firstFeature > 0 ? firstFeature : Infinity,
-    firstTable > 0 ? firstTable : Infinity,
+    statBlockStart > 0 ? statBlockStart : Infinity,
+    firstHeading > 0 ? firstHeading : Infinity,
   );
   let bodyText = "";
   if (bodyEnd > bodyStart) {

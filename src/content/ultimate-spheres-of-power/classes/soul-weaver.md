@@ -35,17 +35,3 @@ parent:spheres-of-power
 
 
 Soul Weavers focus on controlling the powers of life and death. While they tend to make townsfolk a bit nervous - especially if the shambling horde of undead follows them into town - those who face great danger tend to appreciate having such a powerful ally at their side.
-
-**Alignment:** Any
-
-**Hit Die:** d6
-
-**Starting Wealth:** 3d6 x 10 gp (average 105 gp). In addition, each character begins play with an outfit worth 10 gp or less.
-
-**Class Skills:** The soul weaver's class skills are Craft (Int), Diplomacy (Cha), Fly (Dex), Heal (Wis), Intimidate (Cha), Knowledge (Arcana; Int), Knowledge (History; Int), Knowledge (Planes; Int), Knowledge (Religion; Int), Linguistics (Int), Profession (Wis), Perform (Cha), Sense Motive (Wis), and Spellcraft (Int).
-
-**Skill Ranks Per Level:** 2 + Int modifier.
-
-+ Class Features
-
-**Table: The Soul Weaver**

@@ -28,18 +28,3 @@ willSaveProgression: good
 ---
 
 Symbiats are fused creatures, where psionic aberrations are pulled in (usually through a horrific process) to inhabit the mind of a caster. Their mastery of mental abilities makes them good leaders, and their psionic powers make them even better at supporting others.
-
-**Role:** A symbiat's abilities make them masters of defence and can push both themselves and their teammates to powerful new heights with the psionics.
-
-**Alignment:** Any
-
-**Hit Die:** d8
-
-**Starting Wealth:** 3d6 x 10 gp (average 105 gp). In addition, each character begins play with an outfit worth 10 gp or less.
-
-**Class Skills:** The symbiat's class skills are Acrobatics (Dex), Craft (Int), Diplomacy (Cha), Fly (Dex), Intimidate (Cha), Knowledge (all) (Int), Linguistics (Int), Perception (Wis), Profession (Wis), Sense Motive (Wis), Spellcraft (Int), and Stealth (Dex).
-
-**Skill Ranks Per Level:** 4 + Int modifier.
-
-+ Class Features
-**Table: The Symbiat**
