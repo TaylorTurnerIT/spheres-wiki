@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # ── Stage 2: Run Playwright tests ─────────────────────────────────────────
-FROM mcr.microsoft.com/playwright:v1.52.0-noble
+FROM mcr.microsoft.com/playwright:v1.60.0-noble
 WORKDIR /app
 
 # Install serve (static file server)
@@ -36,4 +36,4 @@ RUN npm install @playwright/test
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
   CMD npx playwright test --list 2>/dev/null || exit 1
 
-CMD ["sh", "-c", "npx serve dist -l 4321 & sleep 3 && npx playwright test"]
+CMD ["sh", "-c", "npx serve dist -l 4321 & sleep 3 && ./node_modules/.bin/playwright test"]
