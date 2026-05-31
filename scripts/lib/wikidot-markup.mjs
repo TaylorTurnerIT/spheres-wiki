@@ -10,9 +10,7 @@
  * The raw wiki files use Unicode smart quotes (U+2018/2019, U+201C/201D).
  */
 export function normalizeQuotes(str) {
-  return str
-    .replace(/[‘’ʼ`]/g, "'")
-    .replace(/[“”]/g, '"');
+  return str.replace(/[‘’ʼ`]/g, "'").replace(/[“”]/g, '"');
 }
 
 // ─── Table conversion ─────────────────────────────────────────────────────────
@@ -28,15 +26,15 @@ export function convertWikidotTable(tableLines) {
   let separatorInserted = false;
 
   for (const line of tableLines) {
-    const isHeader = line.includes('||~');
-    const rawCells = line.split('||').filter((_, i) => i > 0);
-    const cells = rawCells.map(cell => cell.replace(/^~?\s*/, '').trimEnd());
-    if (cells.length && cells[cells.length - 1].trim() === '') cells.pop();
+    const isHeader = line.includes("||~");
+    const rawCells = line.split("||").filter((_, i) => i > 0);
+    const cells = rawCells.map((cell) => cell.replace(/^~?\s*/, "").trimEnd());
+    if (cells.length && cells[cells.length - 1].trim() === "") cells.pop();
 
-    result.push('| ' + cells.join(' | ') + ' |');
+    result.push("| " + cells.join(" | ") + " |");
 
     if (isHeader && !separatorInserted) {
-      result.push('|' + cells.map(() => '---|').join(''));
+      result.push("|" + cells.map(() => "---|").join(""));
       separatorInserted = true;
     }
   }
@@ -62,7 +60,7 @@ export function convertWikidotTable(tableLines) {
  *   - Source annotation stripping ([SA:...], [BTH], etc.)
  */
 export function cleanBody(text) {
-  const lines = text.split('\n');
+  const lines = text.split("\n");
   const result = [];
   const tableBuffer = [];
 
@@ -70,11 +68,27 @@ export function cleanBody(text) {
     const trimmed = rawLine.trim();
 
     // Skip structural Wikidot tags
-    if (/^\[\[(module|\/module|tabview|\/tabview|tab |\/tab|toc|\/toc|=|\/=)\b/i.test(trimmed)) continue;
+    if (
+      /^\[\[(module|\/module|tabview|\/tabview|tab |\/tab|toc|\/toc|=|\/=)\b/i.test(
+        trimmed,
+      )
+    )
+      continue;
     if (/^\[\[\/?(module|tabview|tab|toc)\]\]/i.test(trimmed)) continue;
 
-    // Skip div wrappers (processed at a higher level)
-    if (/^\[\[div\b/i.test(trimmed) || /^\[\[\/div\]\]/i.test(trimmed)) continue;
+    // Skip div opening wrappers (processed at a higher level)
+    if (/^\[\[div\b/i.test(trimmed)) continue;
+    // Strip closing div tag from start of line, keep trailing text
+    // e.g. "[[/div]]You can manipulate blood..." → "You can manipulate blood..."
+    if (/^\[\[\/div\]\]/.test(trimmed)) {
+      const rest = trimmed.replace(/^\[\[\/div\]\]/, "").trim();
+      if (rest) {
+        // Fall through to process the rest normally
+        while (rest.startsWith(" ")) rest = rest.slice(1);
+        result.push(rest);
+      }
+      continue;
+    }
 
     // Skip image tags
     if (/^\[\[image\b/i.test(trimmed)) continue;
@@ -83,60 +97,63 @@ export function cleanBody(text) {
     if (/^\^\^.+\^\^$/.test(trimmed)) continue;
 
     // Collect Wikidot table lines; flush when table ends
-    if (trimmed.startsWith('||')) {
+    if (trimmed.startsWith("||")) {
       tableBuffer.push(trimmed);
       continue;
     } else if (tableBuffer.length > 0) {
-      if (result.length > 0 && result[result.length - 1].trim() !== '') {
-        result.push('');
+      if (result.length > 0 && result[result.length - 1].trim() !== "") {
+        result.push("");
       }
       result.push(...convertWikidotTable(tableBuffer));
       tableBuffer.length = 0;
-      result.push('');
+      result.push("");
     }
 
     let line = rawLine;
 
     // Strip Wikidot wikilinks: [[[display|url]]] or [[[page name]]]
-    line = line.replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, '$1');
+    line = line.replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1");
 
     // Strip inline superscript refs: ^^ARG^^
-    line = line.replace(/\^\^[^\^]+\^\^/g, '');
+    line = line.replace(/\^\^[^\^]+\^\^/g, "");
 
     // Strip inline body source citations
-    line = line.replace(/\s*\[(?:SA:[A-Z:]+|BTH|Gravecaller[’']s HB|Errata[^\]]*|Catgirl HB[^\]]*)\]/g, '');
+    line = line.replace(
+      /\s*\[(?:SA:[A-Z:]+|BTH|Gravecaller[’']s HB|Errata[^\]]*|Catgirl HB[^\]]*)\]/g,
+      "",
+    );
 
     // Strip source annotations inside bold trait headers
-    line = line.replace(/\*\*([^*]+?):\s*\[[^\]]+\]\*\*/g, '**$1:**');
+    line = line.replace(/\*\*([^*]+?):\s*\[[^\]]+\]\*\*/g, "**$1:**");
 
     // Convert Wikidot italic //text// → *text*
-    line = line.replace(/\/\/([^/]+)\/\//g, '*$1*');
+    line = line.replace(/\/\/([^/]+)\/\//g, "*$1*");
 
     // Inline **Special:** → *Special:* (when not at line start)
     if (!/^\s*\*\*Special:/.test(line)) {
-      line = line.replace(/\*\*Special:\*\*/g, '*Special:*');
+      line = line.replace(/\*\*Special:\*\*/g, "*Special:*");
     }
 
     // Convert bullet * at start of line → -
-    line = line.replace(/^(\s*)\* /, '$1- ');
+    line = line.replace(/^(\s*)\* /, "$1- ");
 
     // Normalize quotes
     line = normalizeQuotes(line);
 
     // Normalize non-breaking spaces
-    line = line.replace(/[  ⁠]/g, ' ');
+    line = line.replace(/[  ⁠]/g, " ");
 
     // Collapse horizontal rule variants
     if (/^-{4,}$/.test(trimmed)) {
-      result.push('---');
+      result.push("---");
       continue;
     }
 
     // Insert blank line before bullet list
     if (/^\s*- /.test(line) && result.length > 0) {
       const prev = result[result.length - 1];
-      if (prev.trim() !== '' && !/^\s*- /.test(prev) && !prev.startsWith('|')) {
-        result.push('');
+      if (prev.trim() !== "" && !/^\s*- /.test(prev) && !prev.startsWith("|")) {
+        result.push("");
       }
     }
 
@@ -145,7 +162,8 @@ export function cleanBody(text) {
 
   // Flush any remaining table buffer
   if (tableBuffer.length > 0) {
-    if (result.length > 0 && result[result.length - 1].trim() !== '') result.push('');
+    if (result.length > 0 && result[result.length - 1].trim() !== "")
+      result.push("");
     result.push(...convertWikidotTable(tableBuffer));
   }
 
@@ -153,5 +171,5 @@ export function cleanBody(text) {
   while (result.length && !result[0].trim()) result.shift();
   while (result.length && !result[result.length - 1].trim()) result.pop();
 
-  return result.join('\n');
+  return result.join("\n");
 }

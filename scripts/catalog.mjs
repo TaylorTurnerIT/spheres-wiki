@@ -21,7 +21,13 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
-const WIKIDOT_REPO = join(ROOT, "..", "wdotcrawl", "spheresofpower-repo");
+const WIKIDOT_REPO = join(
+  ROOT,
+  "..",
+  "wdotcrawl",
+  "spheresofpower-repo",
+  "pages",
+);
 const CONTENT_DIR = join(ROOT, "src", "content");
 
 // ─── Known Sphere Names ───────────────────────────────────────────────────────

@@ -14,7 +14,13 @@
  * Add new spheres by adding to SPHERE_CONFIGS below.
  */
 
-import { readFileSync, existsSync, realpathSync } from "fs";
+import {
+  readFileSync,
+  existsSync,
+  realpathSync,
+  mkdirSync,
+  writeFileSync,
+} from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -37,7 +43,7 @@ const ROOT = join(__dirname, "..");
 //   headingSourceMap - bracket source keys → book slugs (null = resolve from body)
 //   bodySourceMap    - ^^Source: Book Name^^ body lines → book slugs
 
-const REPO = "../wdotcrawl/spheresofpower-repo";
+const REPO = "../wdotcrawl/spheresofpower-repo/pages";
 
 // Shared source mappings used by most spheres
 const COMMON_HEADING_SOURCES = {
@@ -644,6 +650,184 @@ function parseEntryBlock(divContent, sectionCtx, config) {
 // ─── Rendering ────────────────────────────────────────────────────────────────
 // (kebab, fmArray are imported from lib/render.mjs)
 
+/**
+ * Generate a sphere definition page (.md) with intro text and auto-detected
+ * sectionDefinitions based on the talents and feat tags found in the source.
+ */
+function generateSpherePage(text, config) {
+  // 1. Extract intro text — strip blocks whose content should NOT appear, then clean
+  let clean = text
+    // Strip module blocks entirely (CSS has no place in body text)
+    .replace(/\[\[module[\s\S]*?\[\[\/module\]\]/gi, "")
+    // Strip [[=]]...[[/=]] blocks entirely (purchase sidebars)
+    .replace(/\[\[=\]\][\s\S]*?\[\[\/=\]\]/gi, "")
+    // Strip tabview/tab tags as individual lines but KEEP content between them
+    .replace(/^\[\[\/?tab(view)?\b[^\]]*\]\]/gim, "");
+
+  // Find first ++ heading in cleaned text
+  const titleEndIdx = clean.indexOf("\n") + 1;
+  const firstH2Idx = clean.search(/\n\+{2}\s/);
+  let intro = "";
+  if (firstH2Idx > titleEndIdx) {
+    const segment = clean.substring(titleEndIdx, firstH2Idx);
+    intro = cleanBody(segment);
+  }
+
+  // 2. Parse entries to discover tag usage
+  const entries = parseWikiFile(text, config);
+  const talents = entries.filter(
+    (e) => e.type === "talent" && e.tier !== "base",
+  );
+  const feats = entries.filter((e) => e.type === "feat");
+
+  // Collect tags, separated by organizational vs mechanical
+  const usedOrgTags = new Set();
+  const usedFeatTags = new Set();
+  const hasAdvanced = talents.some((e) => e.tier === "advanced");
+  const hasLegendary = talents.some((e) => e.tier === "legendary");
+
+  // Tags that create separate UI sections (vs mechanical descriptors that don't)
+  const ORG_TAGS = new Set([
+    "body",
+    "transformation",
+    "blood-art",
+    "consecration",
+    "ghost strike",
+    "word",
+    "curse",
+    "quicken",
+    "still",
+    "form",
+    "type",
+    "companion",
+  ]);
+
+  for (const e of talents) {
+    for (const t of e.tags) {
+      if (ORG_TAGS.has(t)) usedOrgTags.add(t);
+    }
+  }
+  for (const e of feats) {
+    for (const t of e.tags) {
+      if (t === "combat" || t === "dual-sphere") usedFeatTags.add(t);
+    }
+  }
+
+  // 3. Build talent categories from organizational tags only
+  const talentCategories = [];
+  const talentExcludeAll = [];
+
+  const TAG_LABELS = {
+    body: "Body Talents",
+    transformation: "Transformation Talents",
+    "blood-art": "Blood Art Talents",
+    consecration: "Consecration Talents",
+    "ghost strike": "Ghost Strike Talents",
+    word: "Word Talents",
+    curse: "Curse Talents",
+    quicken: "Quicken Talents",
+    still: "Still Talents",
+    form: "Form Talents",
+    type: "Type Talents",
+    companion: "Companion Talents",
+  };
+
+  for (const tag of usedOrgTags) {
+    const label = TAG_LABELS[tag] || `${capitalize(tag)} Talents`;
+    talentCategories.push({
+      label,
+      tiers: ["basic"],
+      tags: [tag],
+    });
+    talentExcludeAll.push(tag);
+  }
+
+  // Main talent category (excludes all org tags)
+  talentCategories.unshift({
+    label: `${capitalize(config.sphere)} Talents`,
+    tiers: ["basic"],
+    ...(talentExcludeAll.length > 0 ? { excludeTags: talentExcludeAll } : {}),
+  });
+
+  if (hasAdvanced) {
+    talentCategories.push({
+      label: `Advanced ${capitalize(config.sphere)} Talents`,
+      tiers: ["advanced"],
+    });
+  }
+
+  if (hasLegendary) {
+    talentCategories.push({
+      label: `Legendary ${capitalize(config.sphere)} Talents`,
+      tiers: ["legendary"],
+    });
+  }
+
+  // 4. Feat categories
+  const featCategories = [];
+  const featExcludeAll = [];
+  if (usedFeatTags.has("combat")) featExcludeAll.push("combat");
+  if (usedFeatTags.has("dual-sphere")) featExcludeAll.push("dual-sphere");
+
+  featCategories.push({
+    label: `${capitalize(config.sphere)} Feats`,
+    tiers: ["feat"],
+    ...(featExcludeAll.length > 0 ? { excludeTags: featExcludeAll } : {}),
+  });
+
+  if (usedFeatTags.has("combat")) {
+    featCategories.push({
+      label: "Combat Feats",
+      tiers: ["feat"],
+      tags: ["combat"],
+    });
+  }
+  if (usedFeatTags.has("dual-sphere")) {
+    featCategories.push({
+      label: "Dual Sphere Feats",
+      tiers: ["feat"],
+      tags: ["dual-sphere"],
+    });
+  }
+
+  // 5. Build sectionDefinitions
+  const sectionDefinitions = [];
+  if (talentCategories.length > 0) {
+    sectionDefinitions.push({ label: "Talents", categories: talentCategories });
+  }
+  if (featCategories.length > 0) {
+    sectionDefinitions.push({ label: "Feats", categories: featCategories });
+  }
+
+  // 6. Render to YAML frontmatter
+  const lines = ["---"];
+  lines.push(`id: ${config.sphere}`);
+  lines.push(`name: "${capitalize(config.sphere)}"`);
+  lines.push(`system: ${config.system}`);
+  lines.push("type: sphere");
+  lines.push(`icon: ${config.sphere}`);
+  lines.push("tags: []");
+  lines.push("sectionDefinitions:");
+  for (const section of sectionDefinitions) {
+    lines.push(`  - label: "${section.label}"`);
+    lines.push("    categories:");
+    for (const cat of section.categories) {
+      lines.push(`      - label: "${cat.label}"`);
+      lines.push(`        tiers: ${JSON.stringify(cat.tiers)}`);
+      if (cat.tags) lines.push(`        tags: ${JSON.stringify(cat.tags)}`);
+      if (cat.excludeTags)
+        lines.push(`        excludeTags: ${JSON.stringify(cat.excludeTags)}`);
+    }
+  }
+  lines.push("---");
+
+  return `${lines.join("\n")}\n\n${intro.trim()}\n`;
+}
+
+function capitalize(str) {
+  return str.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
 function renderTalent(entry, config) {
   const id = kebab(entry.name);
   const tags = fmArray(entry.tags);
@@ -695,6 +879,7 @@ export {
   resolveSourceBook,
   extractDualSphere,
   parseWikiFile,
+  generateSpherePage,
   parseEntryBlock,
   SPHERE_CONFIGS,
   BRACKET_TAGS,
@@ -733,6 +918,38 @@ if (isMain) {
   }
 
   const rawText = readFileSync(inputPath, "utf-8");
+
+  // ── Sphere page ─────────────────────────────────────────────────────────
+  const sphereContent = generateSpherePage(rawText, config);
+  const sphereDir = join(ROOT, "src", "content", config.primaryBook, "spheres");
+  const spherePath = join(sphereDir, `${config.sphere}.md`);
+  const sphereLabel = `${config.primaryBook}/spheres/${config.sphere}.md`;
+
+  if (MODE === "--dry-run") {
+    console.log(`WOULD WRITE  ${sphereLabel}`);
+    console.log(sphereContent);
+    console.log("---");
+  } else if (MODE === "--validate") {
+    if (existsSync(spherePath)) {
+      const existing = readFileSync(spherePath, "utf-8");
+      if (existing.trim() !== sphereContent.trim()) {
+        console.log(`DIFF  ${sphereLabel}`);
+        // dynamic import to avoid circular issues
+        const { showDiff } = await import("./lib/render.mjs");
+        showDiff(existing, sphereContent);
+      } else {
+        console.log(`OK    ${sphereLabel}`);
+      }
+    } else {
+      console.log(`MISS  ${sphereLabel}`);
+    }
+  } else if (MODE === "--force" || !existsSync(spherePath)) {
+    if (!existsSync(sphereDir)) mkdirSync(sphereDir, { recursive: true });
+    writeFileSync(spherePath, sphereContent, "utf-8");
+    console.log(`WROTE  ${sphereLabel}`);
+  }
+
+  // ── Talent & feat entries ───────────────────────────────────────────────
   const entries = parseWikiFile(rawText, config);
 
   const talents = entries.filter((e) => e.type === "talent");
