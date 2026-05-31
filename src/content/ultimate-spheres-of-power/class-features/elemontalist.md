@@ -1,6 +1,6 @@
 ---
 id: elemontalist
-name: "[[[Elemontalist]]]"
+name: "Elemontalist"
 type: class-feature
 system: power
 className: elementalist

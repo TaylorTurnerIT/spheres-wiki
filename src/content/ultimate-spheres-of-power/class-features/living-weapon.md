@@ -1,6 +1,6 @@
 ---
 id: living-weapon
-name: "[[[Living Weapon]]]"
+name: "Living Weapon"
 type: class-feature
 system: power
 className: armorist

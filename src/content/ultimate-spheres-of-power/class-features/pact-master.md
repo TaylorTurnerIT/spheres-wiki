@@ -1,6 +1,6 @@
 ---
 id: pact-master
-name: "[[[Pact Master]]]"
+name: "Pact Master"
 type: class-feature
 system: power
 className: thaumaturge

@@ -8,7 +8,7 @@ level: 3
 tags: []
 ---
 
-+++ Alteration
+### Alteration
 **Battleshaping (Su):** At 3rd level, the incanter may grant himself or a creature under the effects of his shapeshift one trait as a swift action. This trait cannot cost a spell point and must be one that he can grant through his shapeshift. This trait lasts for 1 round per 2 incanter levels and if the target so chooses they may resist this effect without the need for a saving throw. This trait stacks with polymorph effects, including shapeshift.
 
 At 11th level, the incanter can grant two traits in this fashion. A target can only be under the effects of one use of battleshaping at any time. The incanter can use this ability a number of times per day equal to 3 + his casting ability modifier.
@@ -17,7 +17,7 @@ At 11th level, the incanter can grant two traits in this fashion. A target can o
 
 **Shapeshifter's Renewal (Su):** At 20th level, whenever the incanter places a shapeshift on a target and spends a spell point to maintain it without concentration, he may choose to remove any poison and non-magical disease from the target and heal the target 2 hit points per incanter level.
 
-++++ Alteration Sub-Specialization: Bioreaver [EO3]
+#### Alteration Sub-Specialization: Bioreaver [EO3]
 The following abilities replace battleshaping, change shape, and shapeshifter's renewal.
 
 **Rend Flesh (Su):** At 3rd level, the incanter gains the Alteration sphere Twisted Shapeshift talent as a bonus talent. When using the Twisted Shapeshift talent, the incanter reduces the spell point cost of the shapeshift by 1 (minimum 1) as long as he does not apply a transformation to the target(s) (except Blank Transformation). In addition, when the incanter spends 1 spell point to make their shapeshift deal damage with the Twisted Shapeshift talent, a successful saving throw against the shapeshift only halves the damage dealt. The incanter cannot use this in combination with the Homogenize Alteration sphere advanced talent.
@@ -28,7 +28,7 @@ The incanter may use this ability an additional time per day for every 4 incante
 
 **Flay Flesh (Su):** At 20th level, whenever a creature fails their saving throw against the incanter's shapeshift ability, he can spend 2 additional spell points as an immediate action to force the target to succeed an additional Fortitude saving throw or have their internal organs exposed. If the target fails this additional saving throw, the target loses all natural armor bonuses they possess and gains vulnerability to bludgeoning, piercing, and slashing damage for 1 minute or until the shapeshift ends, whichever comes first.
 
-+++ Bear
+### Bear
 
 **Bear Companion (Su):** You gain an animal companion, as the druid class feature, treating your incanter levels as druid levels for this purpose. This companion must be a bear, and begins with an Intelligence of 6.
 
@@ -40,7 +40,7 @@ At 11th level, the bear gains the advanced creature template.
 
 At 15th level, the bear gains spell resistance equal to your incanter level + 11.
 
-+++ Blood
+### Blood
 **Red Minion (Su):** At 3rd level, the incanter gains a Tiny blood construct as a permanent servant. As the incanter gains levels, he may choose to increase the size of the construct based on the following table, changeable when the incanter gains a level. The incanter may choose to advance the blood construct's Hit Dice to that of an available size without actually increasing its size, if he so chooses.
 
 | Incanter Level | Construct |
@@ -58,35 +58,35 @@ A slain blood construct may be replaced with an 8 hour ritual and sufficient blo
 
 **Hemorrhagic Mastery (Su):** At 20th level, any bleed damage the incanter deals is increased by 1/2 his incanter level. This bonus bleed damage is not increased by Empower Spell or similar effects. Additionally, whenever he uses blood control, he can roll twice to penetrate a creature's spell resistance and take the better result.
 
-+++ Conjuration
+### Conjuration
 **Summoner's Charm (Su):** At 3rd level, whenever the incanter summons a companion from the Conjuration sphere and maintain its presence through concentration, the companion remains for a number of rounds after he ceases concentrating equal to 1/2 his incanter level (minimum 1) before disappearing.
 
 **Aura of Banishment (Su):** At 8th level, as a free action the incanter can emit a 30-foot aura of banishment for one round. He may emit this aura for a total number of rounds per day equal to his incanter level. These rounds do not need to be consecutive. Any summoned or called creature in the area (except those he specifies) must attempt a Will save each round. Once the creature fails a Will saving throw, it is staggered as long as it remains inside the aura. If it fails a second Will saving throw, it is immediately sent back to its home plane and the spell or effect that summoned it immediately ends. If that spell or effect summoned more than one creature, only the creature that failed its saving throws is affected. If the summoned creature was a companion, it cannot be summoned again for 1 minute.
 
 **Mirrored Summoning:** At 20th level, once per day when the incanter summons a companion, he may summon a duplicate of that companion with the same action. He must spend all required spell points to summon this duplicate companion, just as with the original.
 
-+++ Creation
+### Creation
 **Creator's Focus (Su):** At 3rd level, whenever the incanter maintains an object he has created with the Creation sphere through concentration, that object remains a number of additional rounds equal to 1/2 his incanter level (minimum 1 round) after he ceases concentrating before disappearing.
 
 **Master of Creation (Sp):** At 8th level, whenever the incanter creates an object with the Creation sphere, the cost of creating the object is reduced by 1 spell point (minimum 0). Only one such object can be created with master of creation at a time; if another object is created using master of creation, any previous objects created with master of creation are immediately dismissed.
 
 **Unbreakable (Su):** At 20th level, the incanter gains a +2 natural armor bonus. All of his worn equipment and any object he creates gain a +10 bonus to its hardness.
 
-+++ Dark
+### Dark
 **Home in the Dark (Su):** At 3rd level, the incanter gains blindsense 10 feet when within an area of dim light or darkness. This bonus increases by 5 feet per 5 incanter levels he possesses, to a maximum of 30 feet at 20th level.
 
 **Shadow Step (Sp):** At 8th level, the incanter can use this ability to walk through the Plane of Shadow and reappear as a standard action. He can travel up to 30 feet per incanter level per day in this fashion, either in a single round or broken up across multiple shadow steps. This movement must be used in 5 feet increments and does not provoke an attack of opportunity. Travel through the Shadow Plane is imprecise; when he arrives, he re-enters 1 square off target, as per the rules for thrown splash weapons. If this would place him in an occupied square, he instead arrives in the nearest safe location. When he arrives, he is cloaked in shadow and gain concealment for 1 round. He may bring other willing creatures with him, but he must expend an equal amount of distance for each additional creature brought with him. They likewise re-enter off target (roll location for each creature) and are cloaked in shadow for 1 round.
 
 **Shadow Renewal:** At 20th level, the incanter gains fast healing 5 while in dim light or darkness. This fast healing is suppressed while in any level of illumination brighter than dim light.
 
-+++ Death
+### Death
 **Power over Undead (Su):** At 3rd level, the incanter receives Command Undead or Turn Undead as a bonus feat. He can channel energy a number of times per day equal to 3 + his casting ability modifier, but only to use the selected feat. He can take other feats to add to this ability, such as Extra Channel and Improved Channel, but not feats that alter this ability, such as Elemental Channel and Alignment Channel. The DC to save against these feats is equal to 10 + 1/2 his incanter level + his casting ability modifier.
 
 **Bolster (Sp):** At 8th level, the incanter can touch an undead creature as a standard action and infuse it with negative energy. It gains a +2 profane bonus on all attack rolls, damage rolls, and saving throws, as well as 2 temporary hit point per Hit Die and a +4 bonus to its channel resistance. These bonuses last for a number of rounds equal to the incanter's casting ability modifier (minimum 1). The bonuses and temporary hit points are immediately dispelled if the creature is within the area of a consecrate spell or a Hallowed Totem. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Spirit Touch (Sp):** At 20th level, the incanter can touch incorporeal creatures as if his body, natural weapons, and wielded weapons were all under the effects of the ghost touch weapon special ability. He may activate or suppress this ability as a free action, and while this ability is active, he is immune to the touch attacks of shadows, ghosts, and other incorporeal creatures.
 
-++++ Death Sub-Specialization: Guide of the Dead
+#### Death Sub-Specialization: Guide of the Dead [Gravecaller's HB]
 The following abilities replace power over undead, bolster, and spirit touch.
 
 **House Soul (Su):** At 3rd level, the incanter gains the ability to house an unbodied soul within a corpse. With a special ritual requiring 8 hours, the incanter can raise a single skeleton or zombie as a housed soul. This functions as the Death sphere reanimate sphere effect and an undead raised this way benefits from the incanter's Death sphere talents which benefit undead he creates. The incanter can only have one housed soul raised at any time and can dismiss the housed soul as a standard action, releasing the soul and destroying the undead.
@@ -107,28 +107,28 @@ In addition, if the incanter possesses the ability to apply a template to a skel
 
 **Greater Forms (Su):** At 20th level, the incanter may raise a housed soul in a more powerful body. This functions as the Death sphere Greater Undead advanced talent, allowing the incanter to raise an undead with a challenge rating less than or equal to 1/2 his incanter level. An undead raised this way is still a housed soul for all other purposes. Add a number of racial Hit Dice to the housed soul until it has an amount equal to your incanter level, adjust its Intelligence score, and grant it the weakness to possession and of pure body qualities. If the undead is not mindless, the incanter may choose to grant the housed soul a bonus to its Intelligence score equal to 1/2 his incanter level instead of replacing its existing Intelligence score.
 
-+++++ Lingering Spirits and Housed Souls
+##### Lingering Spirits and Housed Souls
 Lingering spirits are the souls of the deceased, human or otherwise. These spirits have no statistics, similar to a soul from a soul weaver's bound nexus class feature, but are not under anyone's control and have some amount of free will. Characters should feel free to bond, commune, and interact with these lingering spirits but may find it difficult to communicate complex ideas or concepts if they do not possess an ability to speak with the dead (such as the Death sphere Gravetongue talent). Lingering spirits are an intentionally open-ended mechanic to allow this specialization's abilities to fluidly fit a multitude of character concepts.
 
 The guide of the dead sub-specialization grants incanters, soul weavers with the shepherd of the lost archetype, and others the ability to better interact with lingering spirits, raising them as housed souls. Some may befriend and make use of the same spirit throughout their career, much like a spiritualist and their phantom, while others may be less friendly with those they raise as housed souls, treating them as slaves or tools. Characters with this specialization may choose to continue to use the same spirit, and grant that spirit a new body each time they raise a housed soul or choose new spirits each time. A lingering spirit is not destroyed when the housed soul is destroyed and may choose to remain with the one who raised them or return to wherever they came from.
 
 When GMing for a character with the ability to raise housed souls, giving the spirit a purpose or goal in the nearby area that the soul weaver can achieve to help put the spirit to rest can help add additional depth and roleplay to the soul weaver's narrative. Sometimes this can be as simple as the spirit of a slain animal or adventurer lingering near their killer's lair, where avenging the spirit will be enough to put it at peace. Other spirits may have more complex goals and emotions. Not all spirits need to have a way to put them at peace, and characters can choose to retain the spirit and bring them as a companion on their journey. Ultimately, being flexible with lingering spirits and housed souls and understanding this interaction is a more intimate partnership than ordinary necromancy will help add depth to the character's story.
 
-+++ Destruction
+### Destruction
 **Intense Magic (Su):** At 3rd level, whenever the incanter creates a destructive blast that deals hit point damage, he adds 1/2 his incanter level to the damage dealt (minimum +1). This bonus damage is not increased by Empower Spell or similar effects. This damage is of the same type as the destructive blast.
 
 **Penetrating Blast (Sp):** At 8th level, when the incanter uses a destructive blast and rolls to penetrate spell resistance, he may roll twice and take the higher result. He may use this ability once per day at 8th level, and one additional time per day for every 6 levels beyond 8th.
 
 **Indestructible:** At 20th level, the incanter becomes immune to critical hits and precision damage. When below 0 hit points, he does not die until his negative total is in excess of twice his Constitution score.
 
-+++ Divination
+### Divination
 **Forewarned (Su):** At 3rd level, the incanter can always act in the surprise round even if he fails to attempt a Perception roll to notice a foe, but he is still considered flat-footed until he takes an action. In addition, he receives a bonus on initiative checks equal to 1/2 his incanter level (minimum +1).
 
 **Foretell (Su):** At 8th level, the incanter can utter a prediction of the immediate future as a free action. For one round, he emits a 30-foot aura of fortune that aids his allies or hinders his enemies, as chosen by him at the time of prediction. If he chooses to aid, he and his allies gain a +2 luck bonus on ability checks, attack rolls, magic skill checks, saving throws, and skill checks. If he chooses to hinder, his enemies take a –2 penalty on those rolls instead. He can use this ability for a number of rounds per day equal to his incanter level. These rounds do not need to be consecutive.
 
 **Perfect Knowledge:** At 20th level, anytime the incanter would roll for initiative or a Knowledge check, instead assume the roll would have resulted in a natural 20.
 
-++++ Divination Sub-Specialization: Precognition [3PP]
+#### Divination Sub-Specialization: Precognition [3PP]
 
 The following abilities replace foretell and perfect knowledge.
 
@@ -138,7 +138,7 @@ At 8th level, each day when you rest to regain spell points, you gain a +3 insig
 **Perpetual Foresight (Su)**
 At 20th, anytime you roll a d20, you may spend an immediate action to roll a second time and choose either result. You may choose to use this ability after you see the result.
 
-++++ Divination Sub-Specialization: Recollection [3PP]
+#### Divination Sub-Specialization: Recollection [3PP]
 
 The following abilities replace forewarned and foretell.
 
@@ -148,70 +148,70 @@ At 3rd level, you gain a magic talent as a bonus talent. Whenever you rest to re
 **Instant Recall (Su)**
 At 8th level, you may divine as a non-action, gaining information on any subjects you can perceive as if you had spent a full minute observing each of them. You may use this ability once per day at 8th level and an additional time every 6 levels thereafter.
 
-++++ Divination Sub-Specialization: Tactician
+#### Divination Sub-Specialization: Tactician
 The following abilities replace forewarned and foretell.
 
 **Preempt Fumble (Su):** At 3rd level, as an immediate action you can cause any creature within 60 feet to reroll any attack or saving throw it missed or failed that same round and accept the new result. You can use this ability a number of times per day equal to 3 + your casting ability modifier.
 
 **Share Information (Su):** At 8th level, when you use a (divine) talent you can choose a number of creatures equal to your casting ability modifier within 60 feet. Those creatures gain the exact same information you gain from the (divine) talent for as long as you maintain concentration on it, although this is not enough to distract them or impose penalties in any way.
 
-+++ Enhancement
+### Enhancement
 **Physical Enhancement:** At 3rd level, the incanter gains a +1 bonus to one physical ability score (Strength, Dexterity, or Constitution). This bonus increases by +1 for every five incanter levels he possesses. He can change this bonus to a new ability score when he rests to regain spell points.
 
 **Perfection Of Self (Su):** At 8th level, as a free action the incanter can grant himself an enhancement bonus to a single ability score equal to 1/2 his incanter level for one round. He may use this ability for a number of rounds per day equal to his incanter level.
 
 **Permanent Enhancement (Su):** At 20th level, the incanter can make one enhancement permanent. He can have no more than one enhancement made permanent in this way at one time. If he designates another enhancement as permanent, the previous permanent enhancement ends.
 
-+++ Fallen Fey
+### Fallen Fey
 **Fey Nature (Ex):** At 3rd level, while under the effects of his fey-link the incanter gains DR/cold iron and an insight bonus to attack rolls made with natural weapons granted by the Fallen Fey sphere equal to half his class level.
 
 **Resist Fey Lures (Ex):** At 8th level, the incanter may roll twice and take the better result on saves against mind-affecting abilities originating from creatures of the fey type.
 
 **Fey-Touched (Ex):** At 20th level, the incanter is treated as a fey rather than as a humanoid (or whatever his creature type was) for the purpose of spells and magical effects. He is always considered under the effects of a fey-link, though fey-blessings still only last for the usual duration of a fey-link when activated.
 
-+++ Fate
+### Fate
 **Prescience (Su):** At 3rd level, the incanter may, at the beginning of his turn, spend a free action to roll a single d20. At any point before his next turn, he may use the result of this roll as the result of any d20 roll he is required to make. If he does not use the d20 result before his next turn, it is lost. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Tugging Strands (Su):** At 8th level, as a non-action the incanter can force a creature within line of sight to reroll any one roll that it has just made before the result of the roll is revealed. The result of the reroll must be taken, even if it is worse than the original roll. He can use this ability once per day at 8th level, and one additional time per day for every 6 levels beyond 8th.
 
 **Fated Protection (Su):** At 20th level, whenever he would be affected by a sphere effect, spell, or spell-like ability that allows a saving throw, he can roll twice to save against the effect and take the better result.
 
-+++ Illusion
+### Illusion
 **Extended Illusions (Su):** At 3rd level, any illusion the incanter creates and maintains through concentration lasts a number of additional rounds equal to 1/2 his incanter level after he stops maintaining concentration (minimum +1).
 
 **Bedeviling Aura (Su):** At 8th level, as a standard action you can emit a 30-foot aura that bedevils your enemies with phantasmal assailants. Enemies within this aura move at half speed, are unable to take attacks of opportunity, and are considered to be flanked. This is a mind-affecting effect. Maintaining this effect is a free action, and you can use this ability for a number of rounds per day equal to your incanter level. These rounds do not need to be consecutive.
 
 **Permanent Illusion:** At 20th level, the incanter can make one illusion permanent. He can have no more than one illusion made permanent in this way at one time. If he designates another illusion as permanent, the previous permanent illusion ends.
 
-+++ Life
+### Life
 **Bolstering Essence (Sp):** At 3rd level, the incanter may grant himself temporary hit points equal to his incanter level as a free action. These hit points last for 1 round. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Life Sight (Su):** At 8th level, the incanter can give himself blindsight to a range of 10 feet as a free action for 1 round. He may use this ability a number of times per day equal to his incanter level. This ability only allows him to detect living creatures and undead creatures. This sight also tells him whether a creature is living or undead. Constructs and other creatures that are neither living nor undead cannot be seen with this ability. The range of this ability increases by 10 feet at 12th level, and by an additional 10 feet for every four levels beyond 12th. These rounds do not need to be consecutive.
 
 **Life Essence (Su):** At 20th level, the incanter becomes immune to death effects and gains fast healing 1.
 
-+++ Light
+### Light
 **Lighteyes (Su):** At 3rd level, the incanter gains Perception as a class skill and he gains an insight bonus equal to 1/2 his incanter level on all Perception checks. This bonus increases to being equal to his incanter level when detecting invisible or incorporeal creatures.
 
 **Disappearance (Sp):** At 8th level, the incanter may bend light around himself, giving himself the invisible condition as a swift action. The incanter may use this ability for a total number of rounds per day equal to his incanter level, and these rounds do not need to be consecutive. Ending this invisibility is a free action.
 
 **See All:** At 20th level, the incanter can see perfectly in darkness of any kind, even magical darkness that normally impedes darkvision. The target may see all invisible and ethereal creatures as if they were normally visible. Such creatures are visible to you as translucent shapes, allowing you easily to discern the difference between visible, invisible, and ethereal creatures.
 
-+++ Mana
+### Mana
 **Mana Master:** The incanter's mastery over magic is unmatched by any other. At 3rd level, he gains a +2 bonus on all Spellcraft and Knowledge (arcana) checks, increasing by +1 at 7th level and every 4 levels thereafter. Additionally, he gains a +1 bonus to all magic skill checks, and his magic skill defense.
 
 **Reinforce Magic:** At 8th level when an ally within close range of the incanter casts or attempts to dispel a sphere effect, as a free action that may be taken outside of his turn he may reinforce that magical effect. This grants the ally the benefits of his mana master ability, but only for that specific use of the sphere effect. Additionally, the bonus to magic skill checks and his magic skill defense from his mana master ability increases by 1 at 8th level and every 8 levels thereafter. He may use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Impossible Magic:** The incanter's magic will forever be unimpeded, and his mastery of antimagic provides him with a defense against it. At 20th level, when the incanter casts a sphere effect, he may spend up to 10 additional spell points when casting it to reinforce the sphere effect. The sphere effect is unimpeded by any attempt to counterspell it (which fails automatically) and penetrates any antimagic effects originating from creatures with a magic skill bonus lower than twice the amount of additional spell points used to reinforce the sphere effect.
 
-+++ Mind
+### Mind
 **Enchanting Smile (Su):** At 3rd level, the incanter gains Bluff, Diplomacy, and Intimidate as class skills and gains a +2 insight bonus to checks with those skills. This bonus increases by +1 for every five incanter levels he possesses, up to a maximum of +6 at 20th level.
 
 **Aura of Despair (Su):** At 8th level, the incanter can spend a free action to emit a 30-foot aura of despair for one round, for a maximum number of rounds per day equal to his incanter level. Enemies within this aura take a –2 penalty on ability checks, attack rolls, damage rolls, saving throws, and skill checks. These rounds do not need to be consecutive. This is a mind-affecting effect.
 
 **Reflective Mind:** At 20th level, whenever the incanter succeeds at a saving throw against a mind-affecting effect, a spell of the enchantment school, or an effect from the Mind sphere, that spell or effect does not affect him and is instead reflected back at its caster, treating the incanter as if they had cast the spell (such as for the purpose of charm or domination effects).
 
-+++ Nature
+### Nature
 **Animal Companion (Ex):** Beginning at 3rd level, the incanter gains an animal companion, as the druid class feature, treating his incanter levels as druid levels for this purpose.
 
 **Empower Companion (Su):** At 8th level, the incanter may touch an animal to infuse it with power. The animal immediately gains the advanced creature simple template: it gains a +2 bonus on all rolls, including damage rolls and special ability DCs, a +4 bonus to AC and CMD, and +2 hit points per Hit Die. This lasts for a number of rounds equal to his casting ability modifier.
@@ -220,7 +220,7 @@ During this time, the animal's primal instincts take hold for the duration of th
 
 **Life Connection:** At 20th level, the incanter may transfer up to half of any hit point damage dealt to himself to his animal companion.
 
-++++ Nature Sub-Specialization: Aeromancer (air) [EO3]
+#### Nature Sub-Specialization: Aeromancer (air) [EO3]
 The following abilities replace animal companion, empower companion, and life connection.
 
 **Warding Winds (Ex):** At 3rd level, the incanter gains a circumstance bonus to his AC against ranged attacks equal to the circumstance bonus granted by his Nature sphere Breeze geomancing ability. This bonus is negated against any unusually massive ranged weapons (such as boulders or ballista bolts) or ranged attacks generated by spell effects. The bonus granted by this effect is calculated using the incanter's permanent Nature sphere caster level (not including bonuses from implements, casting tradition boons, etc.). Additionally, when the incanter uses a geomancing or spirit ability from the air package that requires concentration, he may concentrate on the effect as a move action, instead of a standard action (or a swift action if he may already concentrate on an effect as a move action).
@@ -229,7 +229,7 @@ The following abilities replace animal companion, empower companion, and life co
 
 **Blessing of the Zephyr (Ex):** At 20th level, the incanter may choose to make one instance of a geomancing or spirit ability from the air package that he casts be permanent. Any spell point costs must be paid as normal, and if the effect requires concentration, its duration instead changes to permanent (until changed). The incanter can have no more than one effect made permanent with this ability at one time. If the incanter designates another geomancing or spirit ability as permanent, the previous permanent effect ends.
 
-++++ Nature Sub-Specialization: Ferromancer (metal) [EO3]
+#### Nature Sub-Specialization: Ferromancer (metal) [EO3]
 The following abilities replace animal companion, empower companion, and life connection.
 
 **Vicious Magnetism (Ex):** At 3rd level, the incanter may use his Magnetize ability on unwilling creatures (or their attended objects) that consist mostly of metal by spending 1 additional spell point, with a successful Will saving throw negating the effect. Additionally, when using the Magnetize ability to make an attack against a creature, the incanter deals an additional amount of damage equal to his casting ability modifier (minimum 1).
@@ -246,7 +246,7 @@ The incanter also gains the following metal spirit ability:
 - **Recover Ore:** The incanter may choose to make one instance of their Recover Ore ability permanent. If the incanter designates another instance of the Recover Ore ability as permanent, the previous permanent effect ends.
 - **Reforge:** The incanter may reshape metal objects into forms with complex moving parts (making a Craft check against the object's Craft DC). The incanter gains a bonus to Craft checks made this way equal to 1/2 their caster level.
 
-++++ Nature Sub-Specialization: Hydromancer (water) [EO3]
+#### Nature Sub-Specialization: Hydromancer (water) [EO3]
 The following abilities replace animal companion, empower companion, and life connection.
 
 **Fluid Motion (Su):** At 3rd level, the incanter adds his casting ability modifier (minimum 1) as a bonus on Swim checks and to his Combat Maneuver Defense against bull rush, drag, grapple, reposition, and trip attempts. The incanter also gains the following water spirit ability:
@@ -265,7 +265,7 @@ Maintaining this effect is a free action, and the incanter can use this ability 
 
 Additionally, whenever the incanter uses his grace of the marid spirit ability, he can spend an additional spell point to also grant the target the following benefits: The target gains DR 10/slashing, increases their reach by +10 feet, and impose a -4 penalty to attempts made to confirm a critical hit against them. The target (and their equipment) can also pass through small holes or narrow openings and cracks (except other creatures). Finally, they can spend a standard action to extinguish a non-magical fire by touching it; they can attempt to extinguish magical fires this way as well, but it requires a successful magic skill check against the caster's magic skill defense (the MSD of a supernatural effect is 11 + the CR of the effect's source). Even if they fail to extinguish a fire, they are not harmed by it.
 
-++++ Nature Sub-Specialization: Phytomancer (plant) [EO3]
+#### Nature Sub-Specialization: Phytomancer (plant) [EO3]
 The following abilities replace animal companion, empower companion, and life connection.
 
 **Deadly Flora (Su):** At 3rd level, the incanter can spend a standard action to cause a single branch he has animated using Pummel to explode, dealing 1d6 bludgeoning damage per 3 incanter levels he possesses to all creatures within 10 feet of the branch (Reflex halves), and destroying the branch. Additionally, the incanter can spend a spell point when using the Entangle geomancing ability to have them deal 1 bleed damage each round a creature remains entangled within the area, which stacks with itself (maximum equal to 1 + his casting ability modifier).
@@ -274,7 +274,7 @@ The following abilities replace animal companion, empower companion, and life co
 
 **Natural Soul (Ex):** At 20th level, the incanter is treated as either his original creature type or a plant for the purposes of spells and abilities, whichever is most beneficial to him. Additionally, he gains immunity to mind-affecting and poison effects; the incanter may choose to be affected by such effects if they wish (such as being subject to a beneficial mind-affecting effect).
 
-++++ Nature Sub-Specialization: Pyromancer (fire) [EO3]
+#### Nature Sub-Specialization: Pyromancer (fire) [EO3]
 The following abilities replace animal companion, empower companion, and life connection.
 
 **Heat-Resistant (Ex):** At 3rd level, the incanter gains fire resistance equal to his incanter level which stacks with other sources of fire resistance the incanter may possess. Additionally, the incanter treats any aridity or heat weather effects as being 1 step lesser in severity plus 1 additional step at 11th and 19th level. This reduction in severity does not reduce the effects of a Weather sphere mantle, or similar beneficial effects based on the weather's severity.
@@ -285,7 +285,7 @@ The following abilities replace animal companion, empower companion, and life co
 
 - **Flesh of the Inferno (spirit):** You can spend a standard action and 2 spell points to have your body give off an intense heat for 1 round per caster level. Creatures within 60 feet who observe you (functioning as a gaze attack) and do not avert their gaze from you are dazzled and treat all creatures as if they had concealment (20% miss chance) for 1 round). Additionally, whenever you would be reduced to 0 or fewer hit points, you immediately stabilize. Finally, your body gives off such intense heat that any enemy that ends their turn within 10 feet of you suffers fire damage equal to the largest sized fire you can create, and is set on fire; a successful Reflex save halves this damage and negates catching fire. A creature can only be affected by this spirit talent once per round.
 
-++++ Nature Sub-Specialization: Terramancer (earth) [EO3]
+#### Nature Sub-Specialization: Terramancer (earth) [EO3]
 The following abilities replace animal companion, empower companion, and life connection.
 
 **Earthen Guard (Su):** At 3rd level, the incanter reduces any forced movement (such as a bull rush attempt, but not a teleportation effect) by 5 feet, plus an additional 5 feet for every 10 incanter levels he possesses (to a minimum of 0 feet). The incanter also gains the following earth spirit ability:
@@ -298,14 +298,14 @@ At 20th level, the incanter may spend an additional spell point when using this 
 
 **Soul of the Mountain (Su):** At 20th level, the incanter becomes immune to bull-rush, reposition, overrun, and trip combat maneuvers, and gains DR/adamantine equal to his incanter level.
 
-+++ Protection
+### Protection
 **Resistance (Ex):** At 3rd level, the incanter gains resistance equal to his incanter level to an energy type of his choice, chosen when he rests to regain spell points.
 
 **Energy Absorption (Su):** At 8th level, the incanter gains an amount of energy absorption equal to 3 times his incanter level per day. Whenever he takes energy damage, apply immunity, vulnerability (if any), and resistance first and apply the rest to this absorption, reducing his daily total by that amount. Any damage in excess of his absorption is applied to him normally.
 
 **Protected Life (Su):** At 20th level, the first time each day that the incanter would be reduced to 0 or fewer hit points by damage, he is instead reduced to 1.
 
-++++ Protection Sub-Specialization: Lattice Weaver
+#### Protection Sub-Specialization: Lattice Weaver
 This following ability replaces resistance, energy absorption, and protected life.
 
 **Lattice (Su):** Beginning at 3rd level, the lattice weaver gains the ability to call forth a floating mass of crystals made of solid force which they can control using their Protection sphere abilities.
@@ -324,7 +324,7 @@ At 15th level, the incanter may seed a ward with lattice blades, causing all squ
 
 At 20th level, the incanter may spend a standard action to wrap himself in a mobile sphere of lattice crystals. While encased, he gains improved cover against all attacks, has a fly speed of 60 feet with perfect maneuverability, and ignores difficult terrain. Whenever he moves, he can move through enemy squares, and when he does so the enemy must succeed at a Reflex save with a DC of 10 + 1/2 his incanter level + his casting ability modifier or take 1d6 force damage for every level the incanter has gained. A successful save halves this damage. He may carry others with him inside the sphere, if he can physically pick them up but they are effectively unable to act while within.
 
-+++ Incanter Sphere Specialization: Technomancy [LG]
+### Incanter Sphere Specialization: Technomancy [LG]
 
 **Extended Sprite (Su):** At 3rd level, any sprite the incanter creates and maintains through concentration lasts a number of additional rounds equal to 1/2 his incanter level after he stops maintaining concentration (minimum 1).
 
@@ -332,7 +332,7 @@ At 20th level, the incanter may spend a standard action to wrap himself in a mob
 
 **Permanent Sprite (Su):** At 20th level, the incanter can make one sprite permanent. He can have no more than one sprite made permanent in this way at one time. If he designates another sprite as permanent, the previous permanent sprite ends.
 
-++++ Technomancy Sub-Specialization: Energy [LG]
+#### Technomancy Sub-Specialization: Energy [LG]
 
 The following abilities replace extended sprite, warning sprite and permanent sprite
 
@@ -342,21 +342,21 @@ The following abilities replace extended sprite, warning sprite and permanent sp
 
 **Magical Superconductor (Su):** At 20th level, the incanter may execute a program on himself or any technological item on his person as if the target was a host for one of his sprites. For the purpose of determining the sprite's effects, the incanter may consider himself a construct.
 
-+++ Telekinesis
+### Telekinesis
 **Telekinetic Impediment (Sp):** At 3rd level, the incanter may spend an immediate action to attempt to impede an attack made against a creature within 30 feet of him, including himself. He must declare he is using this ability before the attack roll is made. The attack suffers a -1 penalty, -1 per 5 incanter levels he possesses. He may use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Great Flight (Su):** Starting at 8th level, as a free action the incanter may grant himself a fly speed of 50 feet with perfect maneuverability for a number of minutes per day equal to his incanter level. This duration does not need to be consecutive, but it must be used in 1 minute increments.
 
 **Telekinetic Stability (Su):** At 20th level, the incanter gains a circumstance bonus equal to his incanter level to Fly checks, Acrobatics checks, and his CMD.
 
-+++ Time
+### Time
 **Fast (Su):** At 3rd level, the incanter gains a +10 feet bonus to his base movement speed, +5 feet for every 5 incanter levels he possesses.
 
 **Retry (Su):** At 8th level, as a non-action the incanter may force a target within 30 feet of him to reroll a dice roll they just made, taking the second result regardless of whether it is worse or better. He must decide to use this ability after the roll is made but before the results are revealed. He may use this ability once per day at 8th level, plus an additional time for every 6 levels beyond 8th.
 
 **Twist Time (Su):** At 20th level, the incanter gains two swift actions per turn instead of one.
 
-++++ Time Sub-Specialization: Acceleration [3PP]
+#### Time Sub-Specialization: Acceleration [3PP]
 
 The following abilities replace retry and twist time.
 
@@ -367,21 +367,21 @@ At 8th level, your movement ignores difficult terrain. Once per day as a non-act
 At 20th level, you gain an additional move action each round, but it may only be used for either the move, stand up, or mount/dismount actions.
 
 
-+++ War
+### War
 **Seize the Initiative (Su):** At 3rd level, whenever the incanter and his allies roll for initiative, he can grant one ally within 30 feet the ability to roll twice and take either result. This decision is made before the initiative roll is made. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Cooperative Defense:** At 8th level, whenever a spell or effect targets the incanter and one or more allies within 30 feet, he can use this ability to allow his allies to use his saving throw against the effect in place of their own. Each ally must make this choice individually before the rolls are made. Using this ability is an immediate action. He can use this ability once per day at 8th level, and one additional time per day for every four incanter levels beyond 8th.
 
 **War Mage (Ex):** At 20th level, the incanter and all allies within 60 feet gain a +2 circumstance bonus to attack rolls and damage rolls.
 
-+++ Warp
+### Warp
 **Shift (Su):** At 3rd level, the incanter can teleport to a nearby space as a swift action. This movement does not provoke an attack of opportunity. He must be able to see the space that he is moving into. He cannot take other creatures with him when he uses this ability (except for familiars). He can move 5 feet for every two incanter levels he possesses (minimum 5 feet). He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Dimensional Lord (Sp):** At 8th level, whenever a creature attempts to use a teleportation effect or summon a creature within 30 feet of him, the incanter may attempt to block the effect by attempting a magic skill check as an immediate action. If the check succeeds, the effect or spell fails and is wasted; otherwise, it is unaffected. He can use this ability once per day plus one additional time for every 6 incanter levels he possesses beyond 8th.
 
 **Warp Mastery (Su):** At 20th level, the incanter quadruples the distance he may teleport. This also affects his shift power, and he may use shift as a free action.
 
-+++ Weather
+### Weather
 **Weatherworn (Ex):** At 3rd level, the incanter can treat the effects of any weather as being 1 step lesser in severity for himself. This improves to 2 steps at 12th level, and 3 steps at 20th level.
 
 **Cyclone:** At 8th level, the incanter can create a vortex of turbulent wind around himself as a standard action. This vortex has a radius of up to 10 feet and a maximum height of 10 feet per incanter level. Any ranged attack passing through this vortex automatically misses. Any flying creature moving through the vortex must make a Fly skill check or immediately fall from the sky, taking falling damage (the creature cannot make a Fly check to reduce or negate this damage). Creatures on the ground cannot pass through the vortex without first making a Strength check. The DC of this check is equal to 10 + the incanter's MSB. The vortex is faintly visible and can be spotted with a DC 15 Perception skill check. Maintaining this ability is a free action and the incanter can use this ability for a number of rounds per day equal to his incanter level. These rounds do not need to be consecutive.
@@ -431,7 +431,7 @@ At 20th level, you gain an additional move action each round, but it may only be
 + Incanter Feats
 The following feats are particularly appropriate or useful for incanters
 
-++++ Hybridized Specialty [3PP]
+#### Hybridized Specialty [3PP]
 
 **Prerequisites:** Sphere Specialization or Professional Method class feature
 

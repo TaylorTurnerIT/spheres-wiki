@@ -7,7 +7,7 @@ className: "Raveler"
 tags: []
 ---
 
-These enigmatic ravelers have turned their ability to weave and unweave the fabric of magic outwards, directing their energies towards unweaving the very fabric of their target’s physical reality.
+These enigmatic ravelers have turned their ability to weave and unweave the fabric of magic outwards, directing their energies towards unweaving the very fabric of their target's physical reality.
 
 
 ++ ##00c000|Unweave Reality (Su)##

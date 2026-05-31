@@ -1,6 +1,6 @@
 ---
 id: radiant-protean
-name: "[[[Radiant Protean]]]"
+name: "Radiant Protean"
 type: class-feature
 system: power
 className: shifter

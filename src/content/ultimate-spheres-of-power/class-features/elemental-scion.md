@@ -1,6 +1,6 @@
 ---
 id: elemental-scion
-name: "[[[Elemental Scion]]]"
+name: "Elemental Scion"
 type: class-feature
 system: power
 className: shifter

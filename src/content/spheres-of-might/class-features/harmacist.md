@@ -1,6 +1,6 @@
 ---
 id: harmacist
-name: "[[[Harmacist]]]"
+name: "Harmacist"
 type: class-feature
 system: might
 className: scholar

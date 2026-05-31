@@ -1,6 +1,6 @@
 ---
 id: iron-mage
-name: "[[[Iron Mage]]]"
+name: "Iron Mage"
 type: class-feature
 system: power
 className: hedgewitch

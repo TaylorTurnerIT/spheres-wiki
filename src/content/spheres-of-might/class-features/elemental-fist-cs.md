@@ -1,6 +1,6 @@
 ---
 id: elemental-fist-cs
-name: "[[[Elemental Fist]]] [CS]"
+name: "Elemental Fist [CS]"
 type: class-feature
 system: might
 className: striker

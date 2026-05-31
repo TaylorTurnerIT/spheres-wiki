@@ -38,7 +38,7 @@ At 1st level, the extricator gains Distill Compound as a bonus feat. This replac
 ++ Disrupting Blast (Su)
 At 1st level, the extricator gains the Destruction sphere as a bonus sphere and the Energy Focus drawback, choosing their unique blast type group of Pattern that has only the following (blast type) talent within it. This drawback can be bought off as normal. If the extricator already possesses the Destruction sphere, they do not gain the Energy Focus drawback. If they already possess the Energy Focus drawback, they gain a bonus talent and change the type of energy with the Energy Focus drawback to (pattern).
 
-++++ Disrupting Blast (blast type, pattern)
+#### Disrupting Blast (blast type, pattern)
 Choose a creature type (without having to select a subtype). You may change this creature type by spending a spell point as a free action or whenever you gain psionic focus. This destructive blast only deals untyped damage to creatures of this type and ignores any spell resistance that such targets possess. Blasts with this blast type count as the disrupt pattern class feature for the purpose of cryptic insights, feats, and items.
 
 This ability alters disrupt pattern and enhanced disruption.

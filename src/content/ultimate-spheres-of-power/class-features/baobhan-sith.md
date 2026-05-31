@@ -1,6 +1,6 @@
 ---
 id: baobhan-sith
-name: "[[[Baobhan Sith]]]"
+name: "Baobhan Sith"
 type: class-feature
 system: power
 className: wraith

@@ -1,6 +1,6 @@
 ---
 id: operative
-name: "[[[Operative]]]"
+name: "Operative"
 type: class-feature
 system: power
 className: symbiat

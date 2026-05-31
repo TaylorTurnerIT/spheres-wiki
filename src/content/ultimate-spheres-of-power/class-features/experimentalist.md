@@ -1,6 +1,6 @@
 ---
 id: experimentalist
-name: "[[[Experimentalist]]]"
+name: "Experimentalist"
 type: class-feature
 system: power
 className: thaumaturge

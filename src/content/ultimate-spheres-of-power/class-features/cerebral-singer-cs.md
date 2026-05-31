@@ -1,6 +1,6 @@
 ---
 id: cerebral-singer-cs
-name: "[[[Cerebral Singer]]] [CS]"
+name: "Cerebral Singer [CS]"
 type: class-feature
 system: power
 className: symbiat

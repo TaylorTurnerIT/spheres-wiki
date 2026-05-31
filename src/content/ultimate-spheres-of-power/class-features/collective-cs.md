@@ -1,6 +1,6 @@
 ---
 id: collective-cs
-name: "[[[Collective]]] [CS]"
+name: "Collective [CS]"
 type: class-feature
 system: power
 className: wraith

@@ -14,4 +14,4 @@ This ability replaces omnikinesis.
 
 In addition, they gain the following bardic masterpiece:
 
-++++ The Consequence of the Harmonious Convergence
+#### The Consequence of the Harmonious Convergence

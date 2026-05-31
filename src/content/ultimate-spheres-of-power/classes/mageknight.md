@@ -30,12 +30,4 @@ refSaveProgression: poor
 willSaveProgression: good
 ---
 
-parent:spheres-of-power
-
-
-
-
-
-
-
-The Mageknight is a warrior who mixes magic and blade in the heat of combat. Unlike the [[[Armorist]]], who focuses on calling forth weapons, the Mageknight prefers to enhance their weapons with a wide variety of magical tricks. Mageknights aren't limited in their choice of Spheres, so they tend to come up with unique combinations that suit their personal style.
+The Mageknight is a warrior who mixes magic and blade in the heat of combat. Unlike the Armorist, who focuses on calling forth weapons, the Mageknight prefers to enhance their weapons with a wide variety of magical tricks. Mageknights aren't limited in their choice of Spheres, so they tend to come up with unique combinations that suit their personal style.

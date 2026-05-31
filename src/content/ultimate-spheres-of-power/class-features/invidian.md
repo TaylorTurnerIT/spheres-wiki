@@ -1,6 +1,6 @@
 ---
 id: invidian
-name: "[[[Invidian]]]"
+name: "Invidian"
 type: class-feature
 system: power
 className: symbiat

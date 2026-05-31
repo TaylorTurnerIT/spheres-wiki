@@ -1,6 +1,6 @@
 ---
 id: empathic-duelist-cs
-name: "[[[Empathic Duelist]]] [CS]"
+name: "Empathic Duelist [CS]"
 type: class-feature
 system: power
 className: eliciter

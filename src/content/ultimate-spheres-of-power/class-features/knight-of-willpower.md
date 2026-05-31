@@ -1,6 +1,6 @@
 ---
 id: knight-of-willpower
-name: "[[[Knight of Willpower]]]"
+name: "Knight of Willpower"
 type: class-feature
 system: power
 className: thaumaturge

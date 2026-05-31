@@ -18,7 +18,7 @@ At 3rd level, a fey adept selects a single mimesis, gaining the mimesis' associa
 
 At 7th, 11th, 15th, and 19th levels, the fey adept gains additional abilities associated with his mimesis.
 
-+++ Allegory Mimesis
+### Allegory Mimesis
 Stories and art are often used to teach moral lessons or explain complex subjects to an audience, but the abstractions and metaphors inevitably deviate from the reality of a situation. Fey Adepts of this mimesis leverage magic and illusion to heighten the stakes of philosophies and behaviors to a supernatural level, binding them within curated stories where only the righteous are victorious.
 
 **Associated Sphere:** Fate Sphere
@@ -31,7 +31,7 @@ Stories and art are often used to teach moral lessons or explain complex subject
 
 **Moral Distortion (Su):** At 19th level, whenever a creature affected by one of your glamers or in the area of one of your illusions would be affected by an ability, you may choose what alignment the creature is considered for the purpose of determining the effects of the ability. In addition, you may have any luck, sacred, or profane bonuses such creature benefits from become penalties of equal value.
 
-+++ Composition Mimesis
+### Composition Mimesis
 From a painter fabricating depth to a magician disappearing behind a curtain to a stagecrafter fitting a grand battle into a theatre, the distortion of space is a storied practice in the field of illusions. Fey adepts of this mimesis excel at distorting perceptions of space to place their foes and allies in pivotal locations.
 
 **Associated Sphere:** Warp
@@ -44,7 +44,7 @@ From a painter fabricating depth to a magician disappearing behind a curtain to 
 
 **Trick of Proximity (Su):** At 19th level, you and your allies may treat creatures affected by your glamer and creatures in the area of your illusions as being in any other square affected by one of your illusions for the purpose of targeting them. A creature still gains concealment against an attack if the attacker cannot see their original position. A creature cannot take damage multiple times from a single area effect. 
 
-+++ Continuity Mimesis
+### Continuity Mimesis
 A capable storyteller knows how to compress an entire life into a single night or stretch a single defining second into an extended sequence. Through the language of tales, past periods can be revisited, futures introduced, and moments held for generations. Fey adepts who specialize in the continuity mimesis leverage their illusions to distort a being's relationship with cause, effect, and time itself.
 
 **Associated Sphere:** Time Sphere
@@ -57,7 +57,7 @@ A capable storyteller knows how to compress an entire life into a single night o
 
 **Skip Ahead (Su):** At 19th level, while a creature is within range of your Time sphere abilities and is affected by your glamer, you may spend 3 spell points as a standard action to create a duplicate of the creature outside of time, instantaneously replacing that creature with its duplicate should any harm come to it. Until the start of your next turn, the target's hit points cannot change and the target cannot gain any new conditions or be affected by any new spells or nondamaging effects. An unwilling creature is allowed a Will save against this effect with a DC equal to your Time sphere DC.
 
-+++ Exoticism Mimesis
+### Exoticism Mimesis
 With the proper distortion of context, a being or location can seem impossible to understand or engage. People are quick to draw lines between what they recognize and what is new to them, and a fey adept of this mimesis can leverage difference to sunder alliances and sow fear and discomfort.
 
 **Associated Sphere:** Protection Sphere
@@ -70,7 +70,7 @@ With the proper distortion of context, a being or location can seem impossible t
 
 **Lost in an Endless Sea (Su):** At 19th level, whenever you create a glamer over a creature, you may spend any number of additional spell points and choose a single (aegis) for every spell point spent. As long as the glamer remains on the creature, any target the creature uses their abilities on (including themself, at your discretion) is considered to be protected by all of the aegi chosen with this ability.
 
-+++ Idolatry Mimesis
+### Idolatry Mimesis
 The impulses and personality of an individual can ripple through history, or some people say. Legends are quick to attribute societal factors to the character of a single person, fabricating heroes who drive the course of destiny. Fey adepts of this mimesis bind the conditions of many creatures to a single leader or scapegoat.
 
 **Associated Sphere:** Mind Sphere
@@ -83,7 +83,7 @@ The impulses and personality of an individual can ripple through history, or som
 
 **Ravaging Centrality (Su):** At 19th level, whenever a leader you have designated takes damage, you may redirect up to half of that damage to any of the leader's allies who did not disbelieve the designating glamer.
 
-+++ Ludonarrative Mimesis
+### Ludonarrative Mimesis
 Games are a potent form of abstraction, quantifying complex interactions through specific metrics and randomized determinators. It's easy to mistake the sphere of game mechanics as a full picture of reality even within a simulated space. Fey adepts of this mimesis can twist the rules of a perceived game to benefit their allies or hinder their foes.
 
 **Associated Sphere:** War Sphere (Small Unit Strategist drawback, selecting a (momentum) talent)
@@ -96,7 +96,7 @@ Games are a potent form of abstraction, quantifying complex interactions through
 
 **Escalating Complexity (Su):** At 19th level, you may reduce the action required to gain or refill a momentum pool from a standard action to a move or swift action. In addition, you may spend 5 momentum to reduce the casting time of an Illusion sphere effect by 1 step or 10 momentum to reduce the casting time by 2 steps. 
 
-+++ Macabre Mimesis
+### Macabre Mimesis
 The ravaging power of grief, fear, and hopelessness leads to many attributing supernatural properties to these feelings or entwining their control with death or necromancy rather than emotions. Fey adepts who seize control of these so-called "negative" feelings or spectacles that elicit them can exploit this connection by weaving deathly magics into their illusions, making targets obsess over spectres of doom.
 
 **Associated Sphere:** Death Sphere
@@ -109,7 +109,7 @@ The ravaging power of grief, fear, and hopelessness leads to many attributing su
 
 **Dread Domain (Su):** At 19th level, whenever a creature dies or is reduced to 0 hit points while within the area of one of your illusions, you may imprison its soul in an illusory realm of your own creation. You may release a soul at any time, and your death causes any souls to be released. As long as the soul remains within this realm, the creature cannot be resurrected by creatures besides you by any means short of wish, miracle, or similar effects. In addition, you may learn any information that the imprisoned creature knows by sending it through countless illusory interactions in subjective time. You may affect an imprisoned soul with magic sphere effects as if it had died the previous round.
 
-+++ Personification Mimesis
+### Personification Mimesis
 Mortal cognition has a tendency to assign wills and personalities to inanimate forces, a phenomenon which may have been the impetus for many gods, spirits, and other beings said to embody wind, earth, fate, or a thousand other concepts. Fey adepts of this mimesis can make reality itself abide by humanistic principles temporarily, bargaining with ephemeral and inanimate interlocutors.
 
 **Associated Sphere:** Enhancement Sphere with the Constructor Drawback (You gain either the Animate Object or the Bestow Intelligence talent, as per the drawback)
@@ -122,7 +122,7 @@ Mortal cognition has a tendency to assign wills and personalities to inanimate f
 
 **Universal Humanity (Su):** At 19th level, your presence infuses your surroundings with life force. Whenever an object or effect comes within 30 feet of you, if you have an enhancement sphere ability which could grant it intelligence or motion (such as the Animate Object talent for an object, the Animate Tornado feat for a whirlwind, or the Give Magic Life advanced talent for a spell), you may use such an effect as an immediate action by spending an additional spell point. If the effect or object is controlled by another creature, they are entitled to a Will save (DC 10 + ½ your fey adept level + your casting ability modifier) to negate this effect. Whenever you animate a creature or object using an Enhancement sphere ability, you may make a Diplomacy check to make a request of the target as part of the action.
 
-+++ Pseudology Mimesis 
+### Pseudology Mimesis
 With enough deductive leaps, all things can be thought of as connected to each other or drawing from a singular source. Disparate and unrelated elements can be entwined through tricks of language or montage, creating false models of reality out of spurious associations. Fey adepts of this mimesis may have a specific construction which they seek to impose or may simply take advantage of a given target's superstitions as they entrap them in a web of correlation.
 
 **Associated Sphere:** Mana Sphere
@@ -135,7 +135,7 @@ With enough deductive leaps, all things can be thought of as connected to each o
 
 **Arcane Dominion (Su):** At 19th level, while a creature is within the area of one of your illusions, you may have it and any creatures or areas it targets with magic effects be constantly affected as if it were in the area of a single Shuffle effect you could create.
 
-+++ Revelation Mimesis
+### Revelation Mimesis
 Artists have long said that stories have a power to convey truth in a way that facts simply cannot, and many have learned to utilize song, writing, or other mediums to express the hidden aspects of reality. Fey adepts of the revelation mimesis see the potential of their illusions to uncover authentic understandings which would be concealed by the conventional world.
 
 **Associated Sphere:** Divination Sphere
@@ -148,7 +148,7 @@ Artists have long said that stories have a power to convey truth in a way that f
 
 **Constructed Reality (Su):** At 19th level, whenever a creature is within the area of one of your illusions, they roll twice on all d20 rolls and take the result of your choice.
 
-+++ Spectacle Mimesis
+### Spectacle Mimesis
 Light is a storied tool of tales and deception, drawing attention to particular locales and conditioning audiences to focus on the most illuminated targets. Fey adepts who use the spectacle mimesis can turn vast regions into their stage
 
 **Associated Sphere:** Light
@@ -161,7 +161,7 @@ Light is a storied tool of tales and deception, drawing attention to particular 
 
 **Grand Staging (Su):** At 19th level, you may increase the size of any illusions you create to encompass any areas of bright light from your glow effects.
 
-+++ Tradition Mimesis
+### Tradition Mimesis
 Recurring motifs and styles can take on an almost mythical nature over generations of use, forming complex tapestries of interconnected legends and associations. A collection of folklore with well-established roots in culture can become a secondary overlay of reality that fey adepts are more than willing to exploit. Wielders of this mimesis conjure semblances of mythical items and powers to impersonate the favor of storied beings such as fey.
 
 **Associated Sphere:** Fallen Fey
@@ -209,27 +209,27 @@ Recurring motifs and styles can take on an almost mythical nature over generatio
 + Fey Adept Feats
 The following feats are particularly appropriate or useful for fey adepts.
 
-++++ Extra Magic Talent
+#### Extra Magic Talent
 **Prerequisite:** Basic Magic Training or casting class feature.
 
 **Benefit:** Gain an additional sphere or a talent from a sphere you possess. You may take this feat multiple times. The effects stack.
 
-++++ Extra Shadowstuff
+#### Extra Shadowstuff
 **Prerequisite:** Shadowstuff class feature.
 
 **Benefit:** Increase the number of shadow points you possess by 2. You may gain this feat multiple times. The effects stack.
 
-++++ Extra Spell Points
+#### Extra Spell Points
 **Prerequisite:** Spell pool.
 
 **Benefit:** Your spell pool total increases by 2. You may gain this feat multiple times. The effects stack.
 
-++++ Psychosomatic Healing
+#### Psychosomatic Healing
 **Prerequisite:** Create reality class feature.
 
 **Benefit:** You may create an illusion around a creature that gives the appearance and feeling that the creature is in good health. This illusion works not only on the creature, but on anyone observing the creature. Whenever the creature takes damage from any source, the amount of damage taken is reduced by half your caster level (minimum 0). Unlike damage reduction, this can not be bypassed, except if the attacker manages to disbelieve the illusion.
 
-++++ Shrouding Aegis
+#### Shrouding Aegis
 **Prerequisites:** Protection sphere, shadowstuff class feature.
 
 **Benefit:** You may spend a point of shadowstuff to create a shrouding aegis. A shrouding aegis protects its bearer through the use of illusion by either obscuring their image, making them appear in a slightly different location, or disguising their movements.
@@ -238,7 +238,7 @@ The illusions act intelligently and are constantly shifting, causing the creatur
 
 Those who succeed at the save or are immune to illusions are not affected by the shroud. Once a creature succeeds at their saving throw, they do not need to attempt any additional saving throws against that shroud. The shroud is considered an illusion, and benefits from your abilities that enhance illusions.
 
-++++ Sphere Focus
+#### Sphere Focus
 **Prerequisite:** Casting class feature.
 
 **Benefit:** Choose a sphere. You gain a +1 bonus to saving throw DCs for all abilities from that sphere. You may take this feat multiple times. The effects do not stack. Each time it is gained, apply this benefit to a different sphere.
@@ -250,28 +250,28 @@ The first time you gain a surreal feat you also gain a shadow pool as the fey ad
 
 **Wiki Note:** Many surreal feats require the shadowmark class feature. The Surreal Strike (surreal) feat grants this feature.
 
-++++ Emulation Expert (Surreal)
+#### Emulation Expert (Surreal)
 **Prerequisites:** Illusion sphere (Manipulate Aura (sensory, magic)); Illusion sphere (Shadow Infusion) or shadow pool; Shadow Magic or create reality class feature.
 
 **Benefit:** When using the Shadow Magic feat or create reality class feature to duplicate effects from another sphere, you may spend a shadow point to treat the effect as both from the Illusion sphere and the sphere it is mimicking. This allows you to apply bonuses from items, class features, talents or feats that benefit that sphere as well as the Illusion sphere.
 
 This feat does not allow you to apply the caster level bonus from staves for two different spheres. For example, when using create reality or Shadow Magic to produce a destructive blast, you may apply Destruction talents you possess and apply the caster level bonus from either a staff of Destruction or Illusion, apply bonus damage from elementalist energy specialization class feature and treat both your fey adept and elementalist levels as full caster levels for calculating the caster level.
 
-++++ Entranced in Unreality (Surreal) [SM—]
+#### Entranced in Unreality (Surreal) [SM—]
 
 **Benefits:** For every minor severance you possess, you gain one additional shadow point. For every greater severance you possess, you instead gain three additional shadow points.
 
-++++ Gather Shadowstuff (Surreal)
+#### Gather Shadowstuff (Surreal)
 **Prerequisite:** Shadowmark class feature.
 
 **Benefit:** In place of spending a shadow point you may use shadowmark as a full-round action.
 
-++++ Greater Shadowmark (Surreal)
+#### Greater Shadowmark (Surreal)
 **Prerequisite:** Shadowmark 1d6.
 
 **Benefit:** Your shadowmark deals d8s for damage instead of d6s.
 
-++++ Gulf in Reality (Surreal) [SM—]
+#### Gulf in Reality (Surreal) [SM—]
 
 **Prerequisites:** Illusion Sphere (Selective Illusions, Suppression)
 
@@ -285,7 +285,7 @@ This feat does not allow you to apply the caster level bonus from staves for two
 
 The glamered creature and the unreal creature can affect each other normally through intermediaries. For instance, while the unreal creature would be immune to the direct effects of a geomancy effect, if the spell caused a room's ceiling to collapse, the unreal creature would not be immune to the effects of the collapse.
 
-++++ Shadow Magic (Surreal)
+#### Shadow Magic (Surreal)
 **Prerequisites:** Illusion sphere (Shadow Infusion) or shadow pool.
 
 **Benefit:** You may mimic other spheres of magic by shaping shadowstuff. As a free action, you may spend 1 shadow point to grant yourself a temporary magic sphere or talent you do not possess from the following list: Alteration, Conjuration, Creation, Dark, Death, Destruction, Enhancement, Light, Nature, Protection or Weather sphere for 1 minute. For every 5 surreal feats you possess, you may grant yourself an additional temporary talent from the chosen sphere. You must still meet any prerequisites that the talents possess. When gaining multiple talents with this feat, you may use a talent gained this way as a prerequisite for other gained talents.
@@ -294,31 +294,31 @@ Any sphere talents or abilities gained from this feat are treated as if they wer
 
 The effective caster level of effects created using this feat is equal to your caster level in the Illusion sphere -2 (minimum 1). You may not have more than one sphere effect active at a time from the spheres granted from this feat. A second use of this feat immediately ends the duration of the previous use.
 
-++++ Shadow Shield (Surreal)
+#### Shadow Shield (Surreal)
 **Benefit:** You may, as a swift action, spend a shadow point to create a protective layer of shadowstuff around a creature or object within 25 feet + 5 feet per 2 character level. This grants 1d4 temporary hit points for every character level you possess. Any creature that has at least 1 temporary hit point granted by your shadow shield also gains damage reduction 1/-. This damage reduction improves by an additional 1 per 5 character levels you possess. These temporary hit points last 1 minute.
 
-++++ Shadow Shield, Improved (Surreal)
+#### Shadow Shield, Improved (Surreal)
 **Prerequisite:** Shadow Shield.
 
 **Benefit:** Improve the temporary hit points granted by your shadow shield to 1d4+1 per character level. Instead of providing DR/-, the shadow shield reduces all hit point damage from all sources by the same amount.
 
-++++ Shadowblast (Surreal)
+#### Shadowblast (Surreal)
 **Prerequisite:** Shadowmark class feature.
 
 **Benefit:** When using your shadowmark, you may spend an extra shadow point to change the effect from a ranged touch attack into a close-ranged cone. All creatures within this area are allowed a Reflex save for half damage. If they succeed at this Reflex save, they do not suffer the penalty to Will saves.
 
-++++ Shadowstuff Armament (Surreal)
+#### Shadowstuff Armament (Surreal)
 **Benefit:** As a move action or a free action with the expenditure of a shadow point, you may create and instantaneously equip a non-magical version of a weapon, piece of ammunition, light armor, or light shield you are proficient with out of stable shadowstuff. In the case of exotic weapons, you must have studied a pre-existing version of the weapon for at least 1 week. This object dissipates one round after you are no longer in contact with it or if you use this feat a second time. Creating ammunition using this feat may be done as part of the same action required to load a weapon instead of a move action without having to spend a shadow point.
 
 **Special:** You may create an additional simultaneous object with a single use of this feat per 5 character levels.
 
-++++ Shadowy Slay (Surreal)
+#### Shadowy Slay (Surreal)
 **Benefit:** Any time you deal damage to a creature from an illusion source you may spend a shadow point to allow the creature to be briefly attacked through its shadow. Any attack made against the target may resolve as a touch attack. This effect lasts 1 minute or until the creature is hit by a touch attack.
 
-++++ Surreal Strike (Surreal)
+#### Surreal Strike (Surreal)
 **Benefit:** You gain shadowmark as the fey adept class feature, but use your character level -4 (minimum 1) as your fey adept level for the purposes of determining damage and Will save penalties.
 
-++++ Violent Shadow (Surreal)
+#### Violent Shadow (Surreal)
 **Prerequisites:** Shadowmark 3d6, shadow pool.
 
 **Benefit:** You may spend a shadow point as a full-round action to make a single attack with your shadowmark. Rather than a ranged touch attack, treat your shadowmark as a melee touch attack with a 10-foot reach. Regardless of if your attack hits or not, you may make attacks of opportunity as melee touch attacks with a 10-foot reach with your shadowmark without additional expenditure of points from your shadow pool until the beginning of your next turn. If you have multiple attacks from a high base attack bonus or effects such as haste you can (as part of the full-round action) make as many attacks with your violent shadow as your base attack bonus allows.

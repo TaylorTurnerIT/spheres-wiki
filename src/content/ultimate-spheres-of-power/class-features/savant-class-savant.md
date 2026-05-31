@@ -1,6 +1,6 @@
 ---
 id: savant-class-savant
-name: "[[[Savant-class | Savant]]]"
+name: "Savant-class "
 type: class-feature
 system: power
 className: thaumaturge

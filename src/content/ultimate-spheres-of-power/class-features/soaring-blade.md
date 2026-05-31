@@ -1,6 +1,6 @@
 ---
 id: soaring-blade
-name: "[[[Soaring Blade]]]"
+name: "Soaring Blade"
 type: class-feature
 system: power
 className: armorist

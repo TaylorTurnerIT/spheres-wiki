@@ -1,6 +1,6 @@
 ---
 id: genius
-name: "[[[Genius]]]"
+name: "Genius"
 type: class-feature
 system: power
 className: thaumaturge

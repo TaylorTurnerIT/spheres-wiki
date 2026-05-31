@@ -1,6 +1,6 @@
 ---
 id: malefactor
-name: "[[[Malefactor]]]"
+name: "Malefactor"
 type: class-feature
 system: power
 className: symbiat

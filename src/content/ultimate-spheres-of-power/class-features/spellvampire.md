@@ -1,6 +1,6 @@
 ---
 id: spellvampire
-name: "[[[Spellvampire]]]"
+name: "Spellvampire"
 type: class-feature
 system: power
 className: shifter

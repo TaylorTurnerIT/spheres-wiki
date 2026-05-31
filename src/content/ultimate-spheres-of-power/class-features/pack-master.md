@@ -1,6 +1,6 @@
 ---
 id: pack-master
-name: "[[[Pack Master]]]"
+name: "Pack Master"
 type: class-feature
 system: power
 className: shifter

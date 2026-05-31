@@ -1,6 +1,6 @@
 ---
 id: immersed-sm
-name: "[[[Immersed]]] [SM—]"
+name: "Immersed [SM—]"
 type: class-feature
 system: power
 className: fey-adept

@@ -1,6 +1,6 @@
 ---
 id: engineer-drs
-name: "[[[Engineer]]] [DRS]"
+name: "Engineer [DRS]"
 type: class-feature
 system: might
 className: scholar

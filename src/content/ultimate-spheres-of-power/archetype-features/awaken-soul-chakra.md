@@ -24,7 +24,7 @@ Unless specified otherwise below, the sadhu's caster level for any major chakra 
 
 See the Jade Feats section for more information on using chakras.
 
-+++ ##000000|Air Chakra##
+### ##000000|Air Chakra##
 The Anahata chakra, the "Unstruck Note", is located just to the right of the physical heart. It is the middle chakra in the system of seven and as such is the integrator of opposites; male and female, mind and body, ego and unity, light and shadow, good and evil, life and death. This chakra governs respiration and promotes feelings of love, compassion, and a sense of peace and centeredness. It has power over charisma, balance, the element of air, and can also influence social acceptance and relationships.
 
 The common symbol of this chakra is twelve petals of a red or white hue, while the center point is a smoky color. The color associated with harnessing this chakra is green. The sounds associated with harnessing this chakra are "Yam" and "Ay". The somatic mudra for this chakra is pressing the pads of the middle fingers together. Those who harness this chakra focus on deep breathing.

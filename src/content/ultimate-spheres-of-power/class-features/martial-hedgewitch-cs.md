@@ -1,6 +1,6 @@
 ---
 id: martial-hedgewitch-cs
-name: "[[[Martial Hedgewitch]]] [CS]"
+name: "Martial Hedgewitch [CS]"
 type: class-feature
 system: power
 className: hedgewitch

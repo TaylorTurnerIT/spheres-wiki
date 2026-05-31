@@ -18,4 +18,4 @@ A rancer is spiritually bound to his orthella, and as such is always mentally aw
 
 This ability replaces mount.
 ---
-++++ Orthella (Fire)
+#### Orthella (Fire)

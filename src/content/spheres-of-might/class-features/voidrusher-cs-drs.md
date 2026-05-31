@@ -1,6 +1,6 @@
 ---
 id: voidrusher-cs-drs
-name: "[[[Voidrusher]]] [CS] [DRS]"
+name: "Voidrusher [CS] [DRS]"
 type: class-feature
 system: might
 className: striker
@@ -39,7 +39,7 @@ Voidrushers combine their innate talents with the inhuman might of a powerful ou
 
 + ##993300|Class Equipment##
 
-++++ Adamantine Knuckles [TS:WAT]
+#### Adamantine Knuckles [TS:WAT]
 **Aura** moderate Enhancement; **CL** 7th
 **Slot** hands; **Price** 15,000 gp; **Weight** 1/2 lbs.
 
@@ -48,7 +48,7 @@ These creatively-designed adamantine combat knuckles are hard for most warriors 
 **Construction Requirements**
 Craft Apparatus, Enhancement sphere, creator must have the drill knuckle class feature; **Cost** 7,500 gp
 
-++++ Arts Manual [TS:WAT]
+#### Arts Manual [TS:WAT]
 **Aura** moderate War; **CL** 6th
 **Slot** none; **Price** 15,000 gp; **Weight** 1/2 lbs.
 
@@ -57,7 +57,7 @@ This thick, leather-bound manual is covered from front to back with intricate di
 **Construction Requirements**
 Craft Apparatus, War sphere, creator must have the striker art class feature, creator must have the striker arts being added to this item; **Cost** 7,500 gp
 
-++++ Risk And Reward [TS:WAT]
+#### Risk And Reward [TS:WAT]
 **Aura** moderate War; **CL** 8th
 **Slot** chest; **Price** 25,000 gp; **Weight** 3 lbs.
 

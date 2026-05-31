@@ -14,7 +14,7 @@ Divide the result by the spell level of the incoming spell to see what fraction 
 
 You must decide whether or not to expend your ki focus with this chakra after you have been hit by the attacking spell, but before any saving throws are rolled and before any effects are determined. If you and the spellcaster both have active spell turning effects, they cancel each other out.
 
-+++ ##000000|Sound Chakra##
+### ##000000|Sound Chakra##
 The Vishuddha chakra, or the communication chakra, is located in the throat and relates to communication and creativity. Through this chakra the world is experienced symbolically with vibration of the sounds of language. This chakra governs self-expression, spiritual drive, the ethereal, and the akashic memory. It has power over the energy of sound, language, communication, the ethereal, and the akashic memory.
 
 The symbol that commonly depicts this chakra is sixteen smoke-colored petals with a sky-blue center. The color associated with harnessing this chakra is bright blue. The sounds associated with harnessing this chakra are "Ham" and "Eee". The somatic mudra required to harness this presses the pads of the index fingers together. Those wishing to harness this chakra focus on moving with sound, feeling sound move the body, and releasing energy with sound.

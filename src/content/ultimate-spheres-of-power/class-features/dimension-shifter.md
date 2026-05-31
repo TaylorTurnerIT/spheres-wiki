@@ -1,6 +1,6 @@
 ---
 id: dimension-shifter
-name: "[[[Dimension Shifter]]]"
+name: "Dimension Shifter"
 type: class-feature
 system: power
 className: shifter

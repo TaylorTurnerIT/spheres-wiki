@@ -32,4 +32,4 @@ refSaveProgression: good
 willSaveProgression: good
 ---
 
-Eliciters are masters of emotion, using their control of others’ minds to accomplish their goals.
+Eliciters are masters of emotion, using their control of others' minds to accomplish their goals.

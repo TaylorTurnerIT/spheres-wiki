@@ -14,7 +14,7 @@ At the end of each round an elemental avatar spends in apex state, they take 1 p
 
 This ability replaces omnikinesis.
 ---
-+++ ##000000|Elemental Avatar Composite Blasts##
+### ##000000|Elemental Avatar Composite Blasts##
 The following composite blasts are available to elemental avatars.
 
-++++ Avatar Blast
+#### Avatar Blast

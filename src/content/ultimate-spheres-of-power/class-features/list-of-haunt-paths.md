@@ -8,7 +8,7 @@ level: 1
 tags: []
 ---
 
-+++ Path of the Ancestor
+### Path of the Ancestor
 Rather than a malevolent controller, an ancestor protects those he is attached to.
 
 **Path Sphere:** Protection
@@ -21,7 +21,7 @@ Rather than a malevolent controller, an ancestor protects those he is attached t
 
 **Greater Path Possession:** The ancestor may now activate two (aegis) talents instead of one as part of possessing a willing creature; the spell point reduction applies separately to each.
 
-+++ Path of the Anima
+### Path of the Anima
 An anima manipulates the very elements around himself.
 
 **Path Sphere:** Nature or Weather
@@ -50,7 +50,7 @@ An anima manipulates the very elements around himself.
 
 **Greater Path Possession:** The anima does not need to spend a spell point to create and actively possess an elemental or plant creature with his path possession ability. Creatures with the plant type or elemental subtype gain no benefit from the Hallow word of the Fate sphere, the protection from evil spell, or similar effects against possession attempts by the anima. Mindless creatures of the plant type or elemental subtype no longer receive a saving throw against the anima's possession.
 
-+++ Path of the Corruptor
+### Path of the Corruptor
 A corruptor marshals an undead army to spread his influence.
 
 **Path Sphere:** Death
@@ -63,7 +63,7 @@ A corruptor marshals an undead army to spread his influence.
 
 **Greater Path Possession:** The corruptor does not need to spend a spell point to possess an undead creature under his control. Undead creatures gain no benefit from the Hallow word of the Fate sphere, the protection from evil spell, or similar effects against possession attempts by the corruptor.
 
-+++ Path of the Cryptid
+### Path of the Cryptid
 Able to unlock the primal wrath of wild beasts, cryptids can be fearsome warriors.
 
 **Path Sphere:** Alteration
@@ -78,7 +78,7 @@ Able to unlock the primal wrath of wild beasts, cryptids can be fearsome warrior
 
 Creatures with the animal or magic beast types gain no benefit from the Hallow word of the Fate sphere, the protection from evil spell, or similar effects against possession attempts by the cryptid.
 
-+++ Path of the Despoiler
+### Path of the Despoiler
 A despoiler feeds on pestilence and decay.
 
 **Path Sphere:** Death
@@ -97,7 +97,7 @@ Creatures of the vermin type are always counted as willing when the despoiler at
 
 **Greater Path Possession:** The despoiler does not need to spend a spell point to possess creature of the vermin type. Such creatures gain no benefit from the Hallow word of the Fate sphere, the protection from evil spell, or similar effects against possession attempts by the wraith.
 
-+++ Path of the Gremlin [LG]
+### Path of the Gremlin [LG]
 
 A gremlin interferes with technology and machinery, often by seizing direct control.
 
@@ -114,7 +114,7 @@ A gremlin interferes with technology and machinery, often by seizing direct cont
 **AI and Construct Possession effects**
 When an AI and a possessing creature both seek control over a single construct body, they compete for control as if they were competing AI. Each competing AI attempts an opposed gizmo penetration checkUEn (1d20 + its gizmo level) while each possessing creature attempts an opposed magic skill check, with magic skill and gizmo penetration checks opposing each other as necessary. The force with the highest result takes control of the host gizmo for that round, with a new opposed gizmo penetration or magic skill check each round. If a competing force has not been in control of the host gizmo for 3 rounds, it loses the ability to compete for control of the gizmo until the force in control of the gizmo relinquishes control.
 
-+++ Path of the Moroi
+### Path of the Moroi
 Wraith that are drawn to, and sometimes feed on, blood.
 
 **Path Sphere:** Blood
@@ -127,7 +127,7 @@ Wraith that are drawn to, and sometimes feed on, blood.
 
 **Greater Path Possession:** The blood wraith's possession ability is not a mind-affecting ability when targeting creatures that are under the effects of his blood control and such creatures gain no benefit from the Hallow word of the Fate sphere, the protection from evil spell, or similar effects against the moroi's possession.
 
-+++ Path of the Poltergeist
+### Path of the Poltergeist
 A poltergeist is adept at moving creatures and objects as well as possessing and animating objects.
 
 **Path Sphere:** Telekinesis
@@ -140,7 +140,7 @@ A poltergeist is adept at moving creatures and objects as well as possessing and
 
 **Greater Path Possession:** The poltergeist may possess large numbers of Tiny or smaller objects, creating a swarm; treat a swarm so animated as a Medium-sized animated object with the swarm subtype (generate statistics per the improved path possession of the Path of the Despoiler, but with the construct type). Mindless creatures of the construct type no longer receive a save against his possession.
 
-+++ Path of the Phantasm
+### Path of the Phantasm
 Hunters that hide inside their illusion, deceiving their prey into a false security.
 
 **Path Sphere:** Illusion
@@ -153,7 +153,7 @@ Hunters that hide inside their illusion, deceiving their prey into a false secur
 
 **Greater Path Possession:** The phantasm's possession ability does not count as a mind-affecting effect when used on creature's within an area of an illusion that the phantasm created.
 
-+++ Path of the Shadow
+### Path of the Shadow
 A shadow lurks in darkness, seizing those foolish enough to enter their penumbra.
 
 **Path Sphere:** Dark
@@ -166,7 +166,7 @@ A shadow lurks in darkness, seizing those foolish enough to enter their penumbra
 
 **Greater Path Possession:** The shadow's possession ability does not count as a mind-affecting effect when used on creature's within an area of darkness that the shadow created.
 
-+++ Path of the Spook
+### Path of the Spook
 A spook feeds on fear and insanity.
 
 **Path Sphere:** Mind
@@ -220,27 +220,27 @@ When attempting to possess a creature with one of these conditions, the spook ma
 + Wraith Feats
 The following feats are particularly appropriate or useful for wraiths.
 
-++++ Extra Magic Talent
+#### Extra Magic Talent
 **Prerequisite:** Basic Magic Training or casting class feature.
 
 **Benefit:** Gain an additional sphere or a talent from a sphere you possess. You may take this feat multiple times. The effects stack.
 
-++++ Extra Spell Points
+#### Extra Spell Points
 **Prerequisite:** Spell pool.
 
 **Benefit:** Your spell pool total increases by 2. You may gain this feat multiple times. The effects stack.
 
-++++ Extra Wraith Haunt
+#### Extra Wraith Haunt
 **Prerequisite:** Wraith haunt class feature.
 
 **Benefit:** You gain an additional wraith haunt. You may take this feat multiple times. The effects stack.
 
-++++ Sphere Focus
+#### Sphere Focus
 **Prerequisite:** Casting class feature.
 
 **Benefit:** Choose a sphere. You gain a +1 bonus to saving throw DCs for all abilities from that sphere. You may take this feat multiple times. The effects do not stack. Each time it is gained, apply this benefit to a different sphere.
 
-++++ Strengthened Possession
+#### Strengthened Possession
 **Prerequisite:** Possession class feature.
 
 **Benefit:** You count your wraith level as 4 higher when determining the maximum CR of a creature you may possess, the save DC of your possession ability, and your effective wraith level for determining the effect of path abilities (though does not grant access to path abilities that have not yet been gained). This bonus cannot increase your effective wraith level above your Hit Dice.

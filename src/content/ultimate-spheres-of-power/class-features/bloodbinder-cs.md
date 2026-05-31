@@ -1,6 +1,6 @@
 ---
 id: bloodbinder-cs
-name: "[[[Bloodbinder]]] [CS]"
+name: "Bloodbinder [CS]"
 type: class-feature
 system: power
 className: armorist

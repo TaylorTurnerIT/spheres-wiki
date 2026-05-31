@@ -1,6 +1,6 @@
 ---
 id: skulk
-name: "[[[Skulk]]]"
+name: "Skulk"
 type: class-feature
 system: power
 className: fey-adept

@@ -1,6 +1,6 @@
 ---
 id: runescriber
-name: "[[[Runescriber]]]"
+name: "Runescriber"
 type: class-feature
 system: might
 className: conduit

@@ -1,6 +1,6 @@
 ---
 id: draugr-cs
-name: "[[[Draugr]]] [CS]"
+name: "Draugr [CS]"
 type: class-feature
 system: power
 className: wraith

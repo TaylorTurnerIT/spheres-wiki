@@ -1,6 +1,6 @@
 ---
 id: mistshade
-name: "[[[Mistshade]]]"
+name: "Mistshade"
 type: class-feature
 system: power
 className: wraith

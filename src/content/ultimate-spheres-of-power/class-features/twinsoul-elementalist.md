@@ -1,6 +1,6 @@
 ---
 id: twinsoul-elementalist
-name: "[[[Twinsoul Elementalist]]]"
+name: "Twinsoul Elementalist"
 type: class-feature
 system: power
 className: elementalist

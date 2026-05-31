@@ -1,6 +1,6 @@
 ---
 id: battlemind-cs
-name: "[[[Battlemind]]] [CS]"
+name: "Battlemind [CS]"
 type: class-feature
 system: power
 className: symbiat

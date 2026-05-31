@@ -1,6 +1,6 @@
 ---
 id: hypnotist
-name: "[[[Hypnotist]]]"
+name: "Hypnotist"
 type: class-feature
 system: power
 className: eliciter

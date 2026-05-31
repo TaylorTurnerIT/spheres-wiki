@@ -1,6 +1,6 @@
 ---
 id: adamant-guardian
-name: "[[[Adamant Guardian]]]"
+name: "Adamant Guardian"
 type: class-feature
 system: might
 className: sentinel

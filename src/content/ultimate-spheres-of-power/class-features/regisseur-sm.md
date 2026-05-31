@@ -1,6 +1,6 @@
 ---
 id: regisseur-sm
-name: "[[[Regisseur]]] [SM—]"
+name: "Regisseur [SM—]"
 type: class-feature
 system: power
 className: fey-adept

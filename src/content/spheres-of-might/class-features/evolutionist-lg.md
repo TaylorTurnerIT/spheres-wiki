@@ -1,6 +1,6 @@
 ---
 id: evolutionist-lg
-name: "[[[Evolutionist]]] [LG]"
+name: "Evolutionist [LG]"
 type: class-feature
 system: might
 className: striker

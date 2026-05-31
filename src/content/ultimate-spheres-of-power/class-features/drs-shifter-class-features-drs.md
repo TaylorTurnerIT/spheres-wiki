@@ -1,6 +1,6 @@
 ---
 id: drs-shifter-class-features-drs
-name: "[[[DRS Shifter Class Features]]] [DRS]"
+name: "DRS Shifter Class Features [DRS]"
 type: class-feature
 system: power
 className: shifter
@@ -14,7 +14,7 @@ This page contains new or alternative class features for shifter published by DR
 + Class Equipment
 The following magical items are especially appropriate for shifters.
 
-++++ Parsertongue [TS:WAT]
+#### Parsertongue [TS:WAT]
 **Aura** moderate Enhancement; **CL** 8th
 **Slot** head; **Price** 3,000 gp; **Weight** 2 lbs.
 
@@ -23,7 +23,7 @@ This snakeskin mouthguard is tied around the head by string. When worn by a crea
 **Construction Requirements**
 Craft Apparatus, Enhancement sphere (Bestow Intelligence (enhance)), creator must have the steal languages class feature; **Cost** 1,500 gp
 
-++++ Shifter's Shard [TS:WAT]
+#### Shifter's Shard [TS:WAT]
 **Aura** moderate Alteration; **CL** 6th
 **Slot** neck; **Price** 10,000 gp; **Weight** 1/2 lbs.
 
@@ -32,7 +32,7 @@ This shard of bone is taken from the corpse of a shapeshifting creature and wrap
 **Construction Requirements**
 Craft Apparatus, Alteration sphere, creator must have the bestial trait class feature, creator must have the bestial traits being added to this item; **Cost** 5,000 gp
 
-++++ Uptake Gloves [TS:WAT]
+#### Uptake Gloves [TS:WAT]
 **Aura** moderate Enhancement; **CL** 6th
 **Slot** wrists; **Price** 8,000 gp; **Weight** 1 lb.
 

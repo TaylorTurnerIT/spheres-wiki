@@ -18,7 +18,7 @@ Only one soul gem can be created from a dying creature. Any attempt to resurrect
 
 If a creature does not possess a soul, they are unaffected by this talent. If a creature's soul is already pledged to another entity such as a god or outsider, said entity may seek to reclaim the soul somehow.
 
-+++++ The Value of Souls
+##### The Value of Souls
 Trapped souls are one of the fundamental currencies throughout Abaddon, the Abyss, and Hell. Three key factors influence a soul's value in the soul trade: the strength of the soul's life force (which relates directly to the CR of the creature from which the soul was harvested), the soul's age (how long the soul has been cycled through reincarnation, which directly relates to the sapience of the creature from which the soul was harvested), and the soul's flavor (which is determined by factors that include the alignment, personality, and religion of the creature from which the soul was harvested). It is worth noting that while trading in souls may prove lucrative, the practice may be considered evil or an affront to the natural order in certain settings unless one is trading souls for an altruistic purpose (such as to smash purchased prisons and release the souls trapped within).
 
 **Life Force:** A souls' life force sets its base gp value. This is equal to the CR of the creature from which the soul was harvested x 1000. Thus, the base value of a CR 1 creature is 1000 gp, while the base value of a CR 20 creature's soul is 20,000 gp.
@@ -29,5 +29,5 @@ Trapped souls are one of the fundamental currencies throughout Abaddon, the Abys
 
 A soul's value can be used as currency when purchasing favors from outsiders or may be used as the materials to craft items. Other uses such as spell, ritual, or incantation components may exist at GM discretion.
 
-+++++ Oath of Loyalty and Souls
+##### Oath of Loyalty and Souls
 When a being who has sworn an Oath of Loyalty dies, the being or organization which they have sworn the Oath of Loyalty to (referred to as the claimant) may claim the character's soul. A claimed soul cannot be resurrected by any means short of a wish or miracle spell (unless the claimant wishes otherwise) and the claimant is automatically aware of any successful resurrection of a soul they have claimed. A claimed soul resurrected in this way is considered to have forsworn any Oaths of Loyalty they have previously sworn.

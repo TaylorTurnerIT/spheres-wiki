@@ -1,6 +1,6 @@
 ---
 id: chronomancer
-name: "[[[Chronomancer]]]"
+name: "Chronomancer"
 type: class-feature
 system: power
 className: symbiat

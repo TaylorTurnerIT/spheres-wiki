@@ -1,6 +1,6 @@
 ---
 id: laughing-hyena
-name: "[[[Laughing Hyena]]]"
+name: "Laughing Hyena"
 type: class-feature
 system: might
 className: sentinel

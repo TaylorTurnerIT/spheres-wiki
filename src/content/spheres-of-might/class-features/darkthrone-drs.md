@@ -1,6 +1,6 @@
 ---
 id: darkthrone-drs
-name: "[[[Darkthrone]]] [DRS]"
+name: "Darkthrone [DRS]"
 type: class-feature
 system: might
 className: sentinel

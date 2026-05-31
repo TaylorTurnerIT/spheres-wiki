@@ -1,6 +1,6 @@
 ---
 id: martial-shifter-cs
-name: "[[[Martial Shifter]]] [CS]"
+name: "Martial Shifter [CS]"
 type: class-feature
 system: power
 className: shifter

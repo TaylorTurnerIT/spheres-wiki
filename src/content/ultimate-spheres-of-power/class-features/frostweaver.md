@@ -1,6 +1,6 @@
 ---
 id: frostweaver
-name: "[[[Frostweaver]]]"
+name: "Frostweaver"
 type: class-feature
 system: power
 className: incanter

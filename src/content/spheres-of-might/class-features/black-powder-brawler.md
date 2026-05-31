@@ -1,6 +1,6 @@
 ---
 id: black-powder-brawler
-name: "[[[Black Powder Brawler]]]"
+name: "Black Powder Brawler"
 type: class-feature
 system: might
 className: striker

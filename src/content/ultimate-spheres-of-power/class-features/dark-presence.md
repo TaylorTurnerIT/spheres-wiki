@@ -1,6 +1,6 @@
 ---
 id: dark-presence
-name: "[[[Dark Presence]]]"
+name: "Dark Presence"
 type: class-feature
 system: power
 className: eliciter

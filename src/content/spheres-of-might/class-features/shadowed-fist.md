@@ -1,6 +1,6 @@
 ---
 id: shadowed-fist
-name: "[[[Shadowed Fist]]]"
+name: "Shadowed Fist"
 type: class-feature
 system: might
 className: striker

@@ -1,6 +1,6 @@
 ---
 id: seelie-disciple
-name: "[[[Seelie Disciple]]]"
+name: "Seelie Disciple"
 type: class-feature
 system: power
 className: fey-adept

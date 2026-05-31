@@ -36,6 +36,6 @@ refSaveProgression: poor
 willSaveProgression: good
 ---
 
-“Knowledge is power.”
+"Knowledge is power."
 
 Scholars are not front-line combatants. They're not weapons experts, nor are they charismatic leaders. What they are, are adventurers who use their brains instead of their brawn, identifying enemy's weaknesses, laying dangerous traps, and leveraging their diverse knowledge to turn the tide of battle. Scholars lack a wizard's magical mastery to supplement their mind's strength, relying instead on keen observation and mechanical mastery to win their battles.

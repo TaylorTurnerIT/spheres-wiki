@@ -1,6 +1,6 @@
 ---
 id: telekinetic-warrior
-name: "[[[Telekinetic Warrior]]]"
+name: "Telekinetic Warrior"
 type: class-feature
 system: power
 className: symbiat

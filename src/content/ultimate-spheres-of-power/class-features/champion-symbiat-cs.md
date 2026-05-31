@@ -1,6 +1,6 @@
 ---
 id: champion-symbiat-cs
-name: "[[[Champion Symbiat]]] [CS]"
+name: "Champion Symbiat [CS]"
 type: class-feature
 system: power
 className: symbiat

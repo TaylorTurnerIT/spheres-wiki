@@ -1,6 +1,6 @@
 ---
 id: protean
-name: "[[[Protean]]]"
+name: "Protean"
 type: class-feature
 system: power
 className: shifter

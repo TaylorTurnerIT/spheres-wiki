@@ -1,6 +1,6 @@
 ---
 id: martial-armorist-cs
-name: "[[[Martial Armorist]]] [CS]"
+name: "Martial Armorist [CS]"
 type: class-feature
 system: power
 className: armorist

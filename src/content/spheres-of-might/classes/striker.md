@@ -32,6 +32,6 @@ refSaveProgression: poor
 willSaveProgression: good
 ---
 
-“Who needs a weapon when I am one?”
+"Who needs a weapon when I am one?"
 
 To a striker, only one thing matters; rhythm. Combat is a delicate dance for these daredevils, weaving in and out of skirmishes wearing little or no armor and often only bringing their fist to bare. But to a striker, combat isn't worth it without risk, as they thrive on taking risks and living to tell the tale. While other warriors may boast of their ability to hold others at bay, a striker delights in risking life and limb in the pursuit of the combat high which drives them, willing to do anything in order to reach that state of excitement, even at the cost of their lives.

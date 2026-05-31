@@ -8,7 +8,7 @@ level: 1
 tags: []
 ---
 
-+++ Academia
+### Academia
 The academian understands the theory behind magic, letting her accomplish feats akin to those of the greatest of wizards.
 
 **Class Skills:** Knowledge (geography) (Int), Knowledge (nature) (Int), Knowledge (planes) (Int).
@@ -29,7 +29,7 @@ The academian understands the theory behind magic, letting her accomplish feats 
 
 **Path Mastery:** The academian gains a +2 bonus to one mental ability score of her choice.
 
-+++ Astrology
+### Astrology
 The astrologer draws power and inspiration from the stars and heavens, channeling their light and interpreting their movements.
 
 **Class Skills:** Knowledge (geography) (Int), Knowledge (planes) (Int), Perception (Wis).
@@ -56,7 +56,7 @@ The astrologer draws power and inspiration from the stars and heavens, channelin
 
 **Path Mastery:** Increase her effective hedgewitch level by 5 when determining the strength of her celestial auras. In addition, she can project and change her aura once per turn as a free action instead of a swift action.
 
-+++ Black Magic
+### Black Magic
 The black magician has delved into magic theories and practices some believe are better left untouched.
 
 **Class Skills:** Disguise (Cha), Intimidate (Cha), Knowledge (planes).
@@ -88,7 +88,7 @@ At 17th level, she can permanently confuse the target.
 
 **Path Mastery:** The black magician gains a witch's grand hex, treating her hedgewitch levels as witch levels and her casting ability modifier as her Intelligence modifier when determining the effects.
 
-+++ Charlatanism
+### Charlatanism
 The charlatan learned to use showmanship to enhance her magic and magic to enhance her showmanship, until few can tell where one ends and the other begins.
 
 **Class Skills:** Disable Device (Dex), Disguise (Cha), Sleight of Hand (Dex).
@@ -119,7 +119,7 @@ When successfully making an attack against a creature within 30 feet that is fla
 
 **Path Mastery:** When spending a guile point as part of a skill check, she adds +6 to that check instead of +4. When spending a guile point to deal sneak attack, she rolls d8s instead of d6s.
 
-+++ Combat
+### Combat
 The combatant has studied martial disciplines and knows how to implement magic on a battlefield.
 
 **Class Skills:** Climb (Str), Intimidate (Cha), Swim (Str).
@@ -151,7 +151,7 @@ She may not have more than one weapon enhanced in this manner at a time. If she 
 
 **Path Mastery:** The combatant gains a +2 bonus to one physical ability score of her choice.
 
-+++ Covenant
+### Covenant
 Whether as a member of a mystery religion, a follower of totemic spirits, or a researcher into ancient gods, the devotee's power comes through study and devotion to powers unseen.
 
 **Class Skills:** Knowledge (history) (Int), Knowledge (planes) (Int), Knowledge (religion) (Int).
@@ -178,7 +178,7 @@ She may also expend two uses of this ability to channel energy, as the cleric cl
 
 **Path Mastery:** She uses d8s instead of d6s when using her path power to heal, harm, or channel energy.
 
-+++ Dreamwalker
+### Dreamwalker
 Dreams are as comfortable to the dreamwalker as the physical world, and by using her magic she can twist them to her will.
 
 **Class Skills:** Knowledge (planes) (Int), Knowledge (religion) (Int), Perception (Wis).
@@ -214,7 +214,7 @@ She may connect to multiple groups in the same dream (connecting to each separat
 
 **Path Mastery:** Merging the dreamwalker's dreamspace with a target's dreams no longer costs a spell point.
 
-+++ Exorcism
+### Exorcism
 The exorcist battles monsters on behalf of those who cannot do so themselves.
 
 **Class Skills:** Knowledge (dungeoneering) (Int), Knowledge (planes) (Int), Knowledge (religion) (Int).
@@ -268,7 +268,7 @@ Each sanction also has an additional effect dependent on the sanction. Effects l
 
 **Path Mastery:** While the exorcist's sanction is active, any attack or ability that includes her as a target has a 50% chance of failing to affect her if it originates from a type of creature she is currently sanctioning, even if that creature is not currently affected by her sanction.
 
-+++ Font Of Inspiration
+### Font Of Inspiration
 The font of inspiration uses magic to enhance their cunning and uncover the secrets of this world.
 
 **Class Skills:** Knowledge (dungeoneering) (Int), Knowledge (planes) (Int), Knowledge (religion) (Int).
@@ -295,7 +295,7 @@ A hedgewitch can only have one target of studied combat at a time. This ability 
 
 **Path Mastery:** The font of inspiration gains a +2 bonus to her casting ability score.
 
-+++ Fortune [SM—]
+### Fortune [SM—]
 
 The fortuneteller reads the strands of fates and understands how to twist them to their advantage in a variety of scenarios.
 
@@ -326,7 +326,7 @@ At 17th level, the fortuneteller gains 4 additional fortune dice at the start of
 
 **Path Mastery:** When selecting a fortune die with a roll result equal to or lower than her casting ability modifier to use on herself, the fortuneteller doesn't expend that fortune die. In addition, any critical threats made against the hedgewitch only confirm if the second roll results in a natural 20 on the die.
 
-+++ Green Magic
+### Green Magic
 The green magician's magic comes from communion with nature.
 
 **Class Skills:** Knowledge (nature) (Int), Ride (Dex), Survival (Wis).
@@ -351,7 +351,7 @@ The green magician's magic comes from communion with nature.
 
 **Path Mastery:** The green magician's animal companion gains spell resistance equal to her hedgewitch level + 11. As a full-round action, she may summon her companion to her side from anywhere, even across planes. Treat her hedgewitch level as her caster level for the purpose of this ability.
 
-+++ Herbology
+### Herbology
 The herbalist studies the magical nature of plant life, using herbs to harm and heal.
 
 **Class Skills:** Knowledge (geography) (Int), Knowledge (nature) (Int), Survival (Wis).
@@ -414,7 +414,7 @@ At 17th level, she may change the effect of her poison to making the target slee
 
 **Path Mastery:** At 20th level, the herbalist's healing concoction always heals maximum hit points and her herbalist's poison deals maximum damage.
 
-+++ Lamentation
+### Lamentation [SA:BG]
 Lamenters glorify the passing of the dead, often holding strong feelings for those who have passed, or will soon pass. They have close relationships with banshees, gaining many of their powers in a unique form.
 
 **Class Skills:** Intimidate (Cha), Knowledge (religion) (Int), Perception (Wis).
@@ -458,7 +458,7 @@ As the lamenter gains levels, she gains access to new forms of miseries. All lam
 
 **Path Mastery:** The lamenter's agony manifests within her body, causing her screams to spread her pain, and her form to lose its composure. The lamenter gains a 60-foot fly speed (perfect maneuverability) and, similar to being incorporeal, is immune to all nonmagical attack forms. Even when she is struck by a magical weapon or spell, she only suffers half damage from corporeal sources, although spells that do not deal damage still function on her normally, even if from a corporeal source. Spells that deal force damage and weapons with the ghost touch special ability deal damage to the lamenter normally. Any effect that would otherwise ignore or reduce an incorporeal creature's ability to reduce damage by 50% functions normally on the lamenter.
 
-+++ Magonian
+### Magonian
 Magonians ride the winds and clouds, using their magic to empower airships and other flying contraptions.
 
 **Class Skills:** Knowledge (geography) (Int), Knowledge (nature) (Int), Survival (Wis).
@@ -508,7 +508,7 @@ At 17th level, she can choose to make her clouds noxious. Creatures inside a nox
 
 **Path Mastery:** At 20th level she may activate any usage of her magonian path power as a swift action instead of a standard action. If she possesses Permanent Control, she may command her attuned vessels as a free action once per round instead of a swift action.
 
-+++ Spiritualism
+### Spiritualism
 The spiritualist's allies are not from the mortal world, and whisper secrets in her ear.
 
 **Class Skills:** Knowledge (history) (Int), Knowledge (local) (Int), Knowledge (religion) (Int).
@@ -537,7 +537,7 @@ At 17th level, she may gain the benefit of one magic talent as an immediate acti
 
 **Path Mastery:** The spiritualist may channel spirit allies to gain the benefit of any number of magic talents as a swift action. Each magic talent selected counts toward her daily uses of this ability.
 
-+++ Technomancer [LG]
+### Technomancer [LG]
 
 Technomancers supplement unusual technologies with magic and ritual, restoring function and pattern where mechanical knowledge is sparse.
 
@@ -566,7 +566,7 @@ Technomancers supplement unusual technologies with magic and ritual, restoring f
 **Path Mastery:** As a full-round action, the technomancer may activate a piece of technological equipment which could normally be activated as a standard action, and use a magic sphere effect which could be used as a standard action or shorter as part of the same action.
 
 
-+++ Tempest-Tost
+### Tempest-Tost
 The tempest-tost's power comes from harnessing the storm, both the one within and without.
 
 **Class Skills:** Knowledge (nature) (Int), Perception (Wis), Survival (Wis).
@@ -625,7 +625,7 @@ She may suppress this electric crackling as a free action, losing all of its ben
 
 **Path Mastery:** Once per day as a free action she may choose to enter all three states at once, gaining all the relevant benefits. This lasts for 10 minutes, after which she randomly chooses a new state as normal.
 
-+++ Temporal Traveler
+### Temporal Traveler
 The temporal traveler is a time traveler, or at least has explored time and space through the manipulation of magic and esoteric devices, hiding among the locals through a combination of future insights and clever misdirection.
 
 **Class Skills:** Disguise (Cha), Knowledge (history) (Int), Knowledge (planes) (Int).
@@ -655,7 +655,7 @@ In addition, she gains access to the following deeds:
 
 **Path Mastery:** The temporal traveler's insights from different times and places let her see all manner of things from all manner of angles. She can take 20 on any Knowledge check, and may do so without spending any increased time.
 
-+++ Tinker [CotS]
+### Tinker [CotS]
 You experiment with complex devices.
 
 **Class Skills:** Disable Device (Dex), Knowledge (dungeoneering) (Int), Knowledge (engineering) (Int)
@@ -677,7 +677,7 @@ A hedgewitch with the tinker path adds the following secrets to those she may se
 
 **Path Mastery:** The tinker gains a +2 bonus to one mental ability score of their choice.
 
-+++ Transmuter
+### Transmuter
 Famous for turning troublesome adventurers into toads, transmuters practice a special form of witchcraft wherein they can transform objects, animals, and even people into whatever they desire.
 
 **Class Skills:** Intimidate (Cha), Knowledge (engineering) (Int), Knowledge (nature) (Int).
@@ -713,7 +713,7 @@ At 17th level, she can permanently transform a humanoid with 5 or fewer Hit Dice
 
 **Path Mastery:** The transmuter may spend spell points in place of transmuter path power uses, and may expend 2 transmuter path power uses in place of a spell point for Creation sphere effects.
 
-+++ Umbral
+### Umbral
 Umbrals draw their power from study and emulation of the beings of the shadow realms.
 **Class Skills:** Disguise (Cha), Intimidate (Cha), Knowledge (planes) (Int).
 
@@ -774,22 +774,22 @@ Umbrals draw their power from study and emulation of the beings of the shadow re
 + Hedgewitch Feats
 The following feats are particularly appropriate or useful for hedgewitches.
 
-++++ Extra Magic Talent
+#### Extra Magic Talent
 **Prerequisite:** Basic Magic Training or casting class feature.
 
 **Benefit:** Gain an additional sphere or a talent from a sphere you possess. You may take this feat multiple times. The effects stack.
 
-++++ Extra Secret
+#### Extra Secret
 **Prerequisite:** Secrets class feature.
 
 **Benefit:** Gain an extra secret for which you qualify. You may gain this feat multiple times. The effects stack.
 
-++++ Extra Spell Points
+#### Extra Spell Points
 **Prerequisite:** Spell pool.
 
 **Benefit:** Your spell pool total increases by 2. You may gain this feat multiple times. The effects stack.
 
-++++ Sphere Focus
+#### Sphere Focus
 **Prerequisite:** Casting class feature.
 
 **Benefit:** Choose a sphere. You gain a +1 bonus to saving throw DCs for all abilities from that sphere. You may take this feat multiple times. The effects do not stack. Each time it is gained, apply this benefit to a different sphere.

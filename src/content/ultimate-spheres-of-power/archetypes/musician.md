@@ -21,15 +21,15 @@ The musician can spend 1 spell point whenever they use a Performance sphere abil
 
 A sphere ability can only benefit from a single (spellbound) effect at one time (unless otherwise specified).
 
-++++ Empowered (spellbound)
+#### Empowered (spellbound)
 An empowered performance treats its effective Perform ranks as being 2 higher for determining its effects, plus an additional 1 for every 5 bard levels he possesses.
 
-++++ Impassioned (spellbound)
+#### Impassioned (spellbound)
 At 4th level, an impassioned performance causes all enemies that start their turn within the ability's area to suffer 1d6 sonic damage, +1d6 per 5 bard levels he possesses (Fortitude negates).
 
 An impassioned *lyric* affects the target of the *lyric*, and when it is expended, causes the target to suffer 2d6 sonic damage + 2d6 per 5 bard levels he possesses (Fortitude halves).
 
-++++ Restorative (spellbound)
+#### Restorative (spellbound)
 At 4th level, a restorative ability grants any affected creature(s) fast healing equal to the musician's casting ability modifier (minimum 1, maximum 1/2 bard level) for as long as they benefit from the performance.
 
 A restorative *act* causes ally's that contribute to the *act* to double their granted fast healing for the duration.

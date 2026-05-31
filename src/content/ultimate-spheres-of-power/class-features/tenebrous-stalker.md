@@ -1,6 +1,6 @@
 ---
 id: tenebrous-stalker
-name: "[[[Tenebrous Stalker]]]"
+name: "Tenebrous Stalker"
 type: class-feature
 system: power
 className: elementalist

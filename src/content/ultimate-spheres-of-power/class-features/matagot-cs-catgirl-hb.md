@@ -1,6 +1,6 @@
 ---
 id: matagot-cs-catgirl-hb
-name: "[[[Matagot]]] [CS, Catgirl HB]"
+name: "Matagot [CS, Catgirl HB]"
 type: class-feature
 system: power
 className: wraith

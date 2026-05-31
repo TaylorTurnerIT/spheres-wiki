@@ -1,6 +1,6 @@
 ---
 id: whitesmith
-name: "[[[Whitesmith]]]"
+name: "Whitesmith"
 type: class-feature
 system: power
 className: armorist
@@ -15,7 +15,7 @@ Whitesmiths are particularly good at enhancing the gear of their allies.
 + Class Equipment
 The following magical items are especially appropriate for armorists.
 
-++++ Armorist's Toolkit [TS:WAT]
+#### Armorist's Toolkit [TS:WAT]
 **Aura** faint Creation; **CL** 5th
 **Slot** none; **Price** 2,500 gp; **Weight** 4 lbs.
 
@@ -26,7 +26,7 @@ All items created in this way are standard items of their type; you cannot, for 
 **Construction Requirements**
 Craft Apparatus, Creation sphere (Divided Creation [mass], Expanded Materials (material), Forge (alter), Practiced Creation), creator must have the summon equipment ability; **Cost** 1,250 gp
 
-++++ Expanded Arsenal [TS:WAT]
+#### Expanded Arsenal [TS:WAT]
 **Aura** faint War; **CL** 5th
 **Slot** slotless; **Price** 12,500 gp; **Weight** 2 lbs.
 

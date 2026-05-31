@@ -1,6 +1,6 @@
 ---
 id: warmonger
-name: "[[[Warmonger]]]"
+name: "Warmonger"
 type: class-feature
 system: power
 className: symbiat
@@ -15,7 +15,7 @@ Warmongers are geniuses when it comes to War.
 + Class Equipment
 The following magical items are especially appropriate for symbiats.
 
-++++ Circlet Of Second Sight [TS:WAT]
+#### Circlet Of Second Sight [TS:WAT]
 **Aura** moderate Divination and Mind; **CL** 6th
 **Slot** head; **Price** 6,500 gp; **Weight** 1/2 lbs.
 
@@ -24,7 +24,7 @@ This metal circlet rests gently on the forehead and has several cat's eye chryso
 **Construction Requirements**
 Craft Apparatus, Forge Charm, Divination sphere, Mind sphere, creator must have the ESP class feature; Cost 3,250 gp
 
-++++ Mental Guard [TS:WAT]
+#### Mental Guard [TS:WAT]
 **Aura** moderate Protection; **CL** 8th
 **Slot** ring; **Price** 12,000 gp; **Weight** 1 lb.
 
@@ -35,7 +35,7 @@ In addition, once per day, the wearer may roll twice on any Will saving throw an
 **Construction Requirements**
 Craft Apparatus, Protection sphere, creator must have the two minds class feature; **Cost** 6,000 gp
 
-++++ Pushing Force [TS:WAT]
+#### Pushing Force [TS:WAT]
 **Aura** moderate Telekinesis; **CL** 8th
 **Slot** ring; **Price** 15,000 gp; **Weight** 2 lbs.
 

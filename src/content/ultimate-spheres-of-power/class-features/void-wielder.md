@@ -1,6 +1,6 @@
 ---
 id: void-wielder
-name: "[[[Void Wielder]]]"
+name: "Void Wielder"
 type: class-feature
 system: power
 className: armorist

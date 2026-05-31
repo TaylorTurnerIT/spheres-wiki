@@ -1,6 +1,6 @@
 ---
 id: famine-spirit
-name: "[[[Famine Spirit]]]"
+name: "Famine Spirit"
 type: class-feature
 system: power
 className: shifter

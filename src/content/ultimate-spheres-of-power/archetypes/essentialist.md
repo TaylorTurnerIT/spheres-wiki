@@ -11,12 +11,12 @@ While other alchemists dabble with explosive concoctions, the essentialist extra
 
 This archetype requires sphere alchemist or [SM—] champion alchemist.
 
-+++ Elements of Life
+### Elements of Life
 At 1st level, the essentialist gains the Life sphere, as well as the Medicinal drawback, gaining the Instill Life talent as normal. If he already possesses the Life sphere, he gains the Instill Life talent without the drawback. When the essentialist uses a Life sphere ability with the Instill Life talent, he may use his class level as his caster level. This stacks normally with caster levels gained from other sources.
 
 This replaces throw anything.
 
-+++ Essences
+### Essences
 When the essentialist imbues a consumable using his Instill Life talent, he may further imbue it with a powerful magic that brings out the inner power of those who consume it. Imbuing essence is a free action, but it can only be imbued into a consumable that has had a Life sphere ability placed into it by the essentialist. He may do this a number of times per day equal to his class level + his casting ability modifier. When the consumable is consumed, the imbiber receives the effects of both the Life sphere ability and the essence.
 
 The imbiber of an essence experiences a brief sense of euphoria as it takes effect. The essence acts to magnify the life force of the imbiber; whatever strengths they have are enhanced.
@@ -27,7 +27,7 @@ The effects of the essence last for 1 minute per class level of the essentialist
 
 This replaces bombs.
 
-+++ Mutated Essence
+### Mutated Essence
 Once per day, the essentialist may produce an essence that is mutated. It takes 1 hour to prepare a mutated essence, and once made, it remains potent until the essentialist regains his essences. A mutated essence counts towards the essentialist's daily limit on the number of essences he can create.
 
 A mutated essence can only be used by the essentialist that created it. Anyone else who drinks a mutated essence must succeed at a Fortitude save (DC 10 + 1/2 the essentialist's level + his casting ability modifier) or become nauseated for 1 hour. They receive no

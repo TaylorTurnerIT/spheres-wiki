@@ -1,6 +1,6 @@
 ---
 id: pactmage
-name: "[[[Pactmage]]]"
+name: "Pactmage"
 type: class-feature
 system: power
 className: thaumaturge

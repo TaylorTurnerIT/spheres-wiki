@@ -1,6 +1,6 @@
 ---
 id: stitcher-cs
-name: "[[[Stitcher]]] [CS]"
+name: "Stitcher [CS]"
 type: class-feature
 system: might
 className: scholar

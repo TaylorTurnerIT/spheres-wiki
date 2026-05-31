@@ -1,6 +1,6 @@
 ---
 id: sidhe-invoker
-name: "[[[Sidhe Invoker]]]"
+name: "Sidhe Invoker"
 type: class-feature
 system: power
 className: fey-adept

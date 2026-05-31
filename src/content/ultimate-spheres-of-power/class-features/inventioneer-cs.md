@@ -1,6 +1,6 @@
 ---
 id: inventioneer-cs
-name: "[[[Inventioneer]]] [CS]"
+name: "Inventioneer [CS]"
 type: class-feature
 system: power
 className: armorist

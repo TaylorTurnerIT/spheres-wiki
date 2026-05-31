@@ -1,6 +1,6 @@
 ---
 id: goblin-joke
-name: "Goblin Joke"
+name: "Goblin \"Joke\""
 type: archetype-feature
 system: power
 archetypeId: goblin-battle-clown

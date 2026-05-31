@@ -1,6 +1,6 @@
 ---
 id: sympath
-name: "[[[Sympath]]]"
+name: "Sympath"
 type: class-feature
 system: power
 className: eliciter
@@ -13,7 +13,7 @@ Sympaths create a phantom to give power to their emotions.
 + Class Equipment
 The following magical items are especially appropriate for eliciters.
 
-++++ Ardent Ring [TS:WAT]
+#### Ardent Ring [TS:WAT]
 **Aura** moderate Mind; **CL** 8th
 **Slot** ring; **Price** 10,000 gp (lesser) or 24,000 gp (greater); **Weight** 1/2 lbs.
 
@@ -22,7 +22,7 @@ These elaborate rings come in a variety of styles, each of which helps the weare
 **Construction Requirements**
 Craft Apparatus, Mind sphere (Expanded Charm, Powerful Charm), creator must have the emotions ability, creator must have the emotion powers being added to the ring; **Cost** 5,000 gp (lesser) or 12,000 gp (greater)
 
-++++ Hypnotizing Pendant [TS:WAT]
+#### Hypnotizing Pendant [TS:WAT]
 **Aura** moderate Mind; **CL** 10th
 **Slot** none; **Price** 25,000 gp; **Weight** 1 lb.
 
@@ -31,7 +31,7 @@ This slender golden pendant is eye-catching and easy to follow as it moves. Thre
 **Construction Requirements**
 Craft Marvelous Item, Mind sphere (Subtlety), creator must have the hypnotism ability; **Cost** 12,500 gp
 
-++++ Snap Out Of It [TS:WAT]
+#### Snap Out Of It [TS:WAT]
 **Aura** faint Mind; **CL** 5th
 **Slot** hands; **Price** 16,000 gp; **Weight** 1/10 lbs.
 

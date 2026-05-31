@@ -1,6 +1,6 @@
 ---
 id: bonewright
-name: "[[[Bonewright]]]"
+name: "Bonewright"
 type: class-feature
 system: power
 className: armorist

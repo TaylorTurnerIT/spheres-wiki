@@ -1,6 +1,6 @@
 ---
 id: swarmheart
-name: "[[[Swarmheart]]]"
+name: "Swarmheart"
 type: class-feature
 system: power
 className: wraith

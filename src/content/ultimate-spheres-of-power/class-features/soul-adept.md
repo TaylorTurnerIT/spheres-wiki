@@ -1,6 +1,6 @@
 ---
 id: soul-adept
-name: "[[[Soul Adept]]]"
+name: "Soul Adept"
 type: class-feature
 system: power
 className: elementalist

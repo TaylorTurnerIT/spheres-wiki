@@ -1,6 +1,6 @@
 ---
 id: apex-shifter
-name: "[[[Apex Shifter]]]"
+name: "Apex Shifter"
 type: class-feature
 system: power
 className: shifter

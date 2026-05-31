@@ -1,6 +1,6 @@
 ---
 id: night-terror-drs
-name: "[[[Night Terror]]] [DRS]"
+name: "Night Terror [DRS]"
 type: class-feature
 system: power
 className: shifter

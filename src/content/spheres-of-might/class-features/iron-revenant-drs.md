@@ -1,6 +1,6 @@
 ---
 id: iron-revenant-drs
-name: "[[[Iron Revenant]]] [DRS]"
+name: "Iron Revenant [DRS]"
 type: class-feature
 system: might
 className: sentinel

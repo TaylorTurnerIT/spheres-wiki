@@ -1,6 +1,6 @@
 ---
 id: devourer
-name: "[[[Devourer]]]"
+name: "Devourer"
 type: class-feature
 system: power
 className: thaumaturge

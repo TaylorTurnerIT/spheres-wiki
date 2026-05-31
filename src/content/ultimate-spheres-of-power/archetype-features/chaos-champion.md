@@ -10,7 +10,7 @@ tags: []
 
 At 20th level, whenever the avowed would have an active smite on a creature, she gains the benefits of the Freedom (word) Fate talent for as long as the creature is under the effects of her smite.
 
-+++ Pledge of Justice
+### Pledge of Justice
 "Oh thank Asarius you're alive! One minute he was raising his hands and -"
 
 "Get off! Did you get him? Where is he?"

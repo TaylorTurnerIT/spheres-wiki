@@ -1,6 +1,6 @@
 ---
 id: dendrite
-name: "[[[Dendrite]]]"
+name: "Dendrite"
 type: class-feature
 system: power
 className: hedgewitch

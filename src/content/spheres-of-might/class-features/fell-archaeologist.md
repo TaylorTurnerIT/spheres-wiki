@@ -1,6 +1,6 @@
 ---
 id: fell-archaeologist
-name: "[[[Fell Archaeologist]]]"
+name: "Fell Archaeologist"
 type: class-feature
 system: might
 className: scholar

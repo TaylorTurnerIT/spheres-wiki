@@ -1,6 +1,6 @@
 ---
 id: barfighter
-name: "[[[Barfighter]]]"
+name: "Barfighter"
 type: class-feature
 system: might
 className: striker

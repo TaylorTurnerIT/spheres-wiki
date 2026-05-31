@@ -1,6 +1,6 @@
 ---
 id: technopath-lg
-name: "[[[Technopath]]] [LG]"
+name: "Technopath [LG]"
 type: class-feature
 system: power
 className: symbiat

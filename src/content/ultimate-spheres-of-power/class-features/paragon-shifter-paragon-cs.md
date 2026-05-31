@@ -1,6 +1,6 @@
 ---
 id: paragon-shifter-paragon-cs
-name: "[[[paragon-shifter | Paragon]]] [CS]"
+name: "paragon-shifter  [CS]"
 type: class-feature
 system: power
 className: shifter

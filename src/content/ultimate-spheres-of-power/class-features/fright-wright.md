@@ -1,6 +1,6 @@
 ---
 id: fright-wright
-name: "[[[Fright Wright]]]"
+name: "Fright Wright"
 type: class-feature
 system: power
 className: eliciter

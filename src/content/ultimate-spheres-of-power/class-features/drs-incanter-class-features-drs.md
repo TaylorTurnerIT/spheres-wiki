@@ -1,6 +1,6 @@
 ---
 id: drs-incanter-class-features-drs
-name: "[[[DRS Incanter Class Features]]] [DRS]"
+name: "DRS Incanter Class Features [DRS]"
 type: class-feature
 system: power
 className: incanter
@@ -13,7 +13,7 @@ This page contains new or alternative class features for incanter published by D
 + Class Equipment
 The following magical item is especially appropriate for incanters.
 
-++++ Lattice Of Knowledge [TS:WAT]
+#### Lattice Of Knowledge [TS:WAT]
 **Aura** faint Variable (see text); **CL** 3rd
 **Slot** any; **Price** 15,000 gp; **Weight** 2 lbs.
 
@@ -22,7 +22,7 @@ This crystalline lattice hums with elemental energy and has an aura that matches
 **Construction Requirements**
 Craft Apparatus, the sphere associated with the sphere specialization in this item, creator must know the incanter sphere specialization added to this item; **Cost** 7,500 gp
 
-++++ Specialist's Staff [TS]
+#### Specialist's Staff [TS]
 **Aura** faint Untyped; **CL** Same as user's normal CL; 3 if unbonded
 **Slot** none; **Price** Varies, see description; **Weight** 4 lbs.
 

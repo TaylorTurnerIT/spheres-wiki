@@ -1,6 +1,6 @@
 ---
 id: drs-thaumaturge-class-features-drs
-name: "[[[DRS Thaumaturge Class Features]]] [DRS]"
+name: "DRS Thaumaturge Class Features [DRS]"
 type: class-feature
 system: power
 className: thaumaturge
@@ -15,7 +15,7 @@ This page contains new or alternative class features for thaumaturge published b
 + Class Equipment
 The following magical items are especially appropriate for thaumaturges. The savant archetype is functionally its own class, so magical items for the savant are included on its page instead.
 
-++++ Invoker's Crystal [TS:WAT]
+#### Invoker's Crystal [TS:WAT]
 **Aura** moderate Universal; **CL** 9th
 **Slot** none; **Price** 15,000 gp; **Weight** 1/2 lbs.
 
@@ -24,7 +24,7 @@ These crystals come in countless combinations of colors and shapes, but each glo
 **Construction Requirements**
 Craft Apparatus, Mana sphere, creator must have the invocations class feature; **Cost** 7,500 gp
 
-++++ Scroll Of Lost Lore [TS:WAT]
+#### Scroll Of Lost Lore [TS:WAT]
 **Aura** moderate Divination; **CL** 7th
 **Slot** none; **Price** 9,000 gp; **Weight** 2 lbs.
 

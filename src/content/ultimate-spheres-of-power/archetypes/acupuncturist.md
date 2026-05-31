@@ -7,7 +7,7 @@ className: "Investigator"
 tags: []
 ---
 
-Equal parts doctors and martial artists, acupuncturists are able to leverage their training in anatomy to strike at their enemies’ pressure points. Using their hands or tiny acupuncture needles, they debilitate and wear down foes by turning their bodies against them.
+Equal parts doctors and martial artists, acupuncturists are able to leverage their training in anatomy to strike at their enemies' pressure points. Using their hands or tiny acupuncture needles, they debilitate and wear down foes by turning their bodies against them.
 
 ++ ##993300|Proficiencies##
 Acupuncturists are proficient with simple weapons and acupuncture needles, as well as light armor and bucklers. In addition, if this is this character's first level in any class, they may select a martial tradition of their choice.

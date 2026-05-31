@@ -28,4 +28,4 @@ refSaveProgression: poor
 willSaveProgression: good
 ---
 
-The Thaumaturge is willing to go places most other casters wouldn’t dare to tread. Their agreements give them access to ancient and forbidden knowledge, and they’re capable of using it to great effect. Each Thaumaturge chooses their own pursuit, and they often specialize in a handful of potent powers.
+The Thaumaturge is willing to go places most other casters wouldn't dare to tread. Their agreements give them access to ancient and forbidden knowledge, and they're capable of using it to great effect. Each Thaumaturge chooses their own pursuit, and they often specialize in a handful of potent powers.

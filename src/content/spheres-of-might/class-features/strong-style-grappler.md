@@ -1,6 +1,6 @@
 ---
 id: strong-style-grappler
-name: "[[[Strong Style Grappler]]]"
+name: "Strong Style Grappler"
 type: class-feature
 system: might
 className: striker

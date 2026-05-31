@@ -26,10 +26,10 @@ This replaces persistent mutagen.
 ++ ##4B0092|Machinist Discoveries##
 The machinist can select from the following alchemist discoveries, in addition to general alchemist discoveries.
 
-++++ Grand Machinagen (Su) (requires greater machinagen, machinist 16)
+#### Grand Machinagen (Su) (requires greater machinagen, machinist 16)
 The machinist's machinagen now grants a 100% chance to negate a critical hit or source of precision damage, reducing all hit point damage from all sources by an amount equal to his operative ability modifier (minimum 1), and a -6 penalty to his Wisdom score.
 
-++++ Greater Machinagen (Su) (requires machinist 12)
+#### Greater Machinagen (Su) (requires machinist 12)
 The machinist's machinagen now grants the benefits of moderate fortification (granting a 50% chance to negate a critical hit or source of precision damage), hardness equal to his operative ability modifier (minimum 1), and a -4 penalty to his Wisdom score.
 
 [[include sog-template]]

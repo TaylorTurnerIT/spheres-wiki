@@ -1,6 +1,6 @@
 ---
 id: beastlord
-name: "[[[Beastlord]]]"
+name: "Beastlord"
 type: class-feature
 system: power
 className: shifter

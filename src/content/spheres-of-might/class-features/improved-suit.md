@@ -12,27 +12,27 @@ An improved suit of clothing cannot be worn underneath armor. Anyone other than 
 
 **Prerequisites:** A suit of clothing or light armor.
 
-+++ ##993300|Improvements##
+### ##993300|Improvements##
 
-++++ Aided Flight
+#### Aided Flight
 The suit can gain the aided flight improvement, as if it were an improved backpack.
 
-++++ Armor Improvements
+#### Armor Improvements
 The suit can gain the air bladder, parachute, and resistance improvements, as if it were a suit of improved armor.
 
-++++ Augmented Reflexes (Requires Electric Insight)
+#### Augmented Reflexes (Requires Electric Insight)
 The suit is outfitted with low-level electric equipment that improves the wearer's reaction time. The wearer gains a +2 enhancement bonus to Dexterity. This bonus increases by +1 at 5th level and every four levels thereafter.
 
-++++ Camouflage
+#### Camouflage
 The suit is designed to have its appearance easily changed to fit its environment. With 1 minute of work, the wearer may cause the suit to grant him a bonus equal to 1/2 the technician's level (minimum: 1) to all Stealth checks made in a single terrain, chosen from the ranger's list of favored terrains. However, he suffers a penalty equal to 1/2 the technician's level (minimum: 1) to Stealth checks made in any other terrain. Removing or changing camouflage also takes 1 minute.
 
-++++ Glider
+#### Glider
 The suit grants the wearer a bonus to Fly checks equal to 1/2 the technician's level (minimum: 1). If the suit possesses the parachute improvement as well, the parachute improves, granting a fly speed of 30 ft. with average maneuverability. However, this fly speed does not allow the wearer to gain altitude; he may fly down or straight, but not up.
 
-++++ Slick Materials
+#### Slick Materials
 The suit grants the wearer a bonus to Escape Artist checks equal to 1/2 the technician's level (minimum: 1).
 
-++++ Spring-Loaded
+#### Spring-Loaded
 The suit gains the dispense improvement, as if it were an improved shield. This improvement can be taken multiple times.
 ---
 + ##993300|Independent Invention##

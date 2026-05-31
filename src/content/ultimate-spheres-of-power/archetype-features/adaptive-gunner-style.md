@@ -12,5 +12,5 @@ The adaptive gunner must choose the adaptive gunner style detailed below for the
 
 ---
 
-++++ Adaptive Gunner Style
+#### Adaptive Gunner Style
 Adaptive gunners learn to adjust their tactics on the fly, cycling through the elemental potential of their hand cannons to target an enemy's weakness.

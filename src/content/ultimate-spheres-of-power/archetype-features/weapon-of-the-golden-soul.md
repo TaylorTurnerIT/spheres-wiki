@@ -29,7 +29,7 @@ This replaces Perfect Self.
 
 ---
 
-+++ ##000000|Special Material: Jade##
+### ##000000|Special Material: Jade##
 In some lands, jade holds special properties when battling infernals (creatures with the aberration, fey, goblinoid, incorporeal, outsider, or undead type or subtype). A weapon or ammunition made of jade is treated having the bane property (+2 enhancement bonus to attack and damage and +2d6 damage) when wielded against infernals. Armor made of jade grants the wearer spell resistance against the spells and spell-like abilities of infernals. The amount of spell resistance is dependent on the type of armor. It grants spell resistance 13 if it's light armor, spell resistance 15 if it's medium armor, and spell resistance 17 if it's heavy armor. Any item normally made out of wood or metal can be made out of jade.
 
 | Type of Jade Item (Cost Modifier) |

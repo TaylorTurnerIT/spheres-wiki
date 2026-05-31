@@ -13,4 +13,4 @@ The runesinger moves up to his speed. During this movement, he does not provoke 
 + ##993300|Rune Feats##
 Rune feats enhance how runes may be used. Runesingers may choose to gain rune feats in place of any combat feat granted by their class, or may use the feats granted to them for advancing in level.
 
-++++ Advanced Rune Invocation (Rune)
+#### Advanced Rune Invocation (Rune)

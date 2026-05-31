@@ -1,6 +1,6 @@
 ---
 id: unseen-horror
-name: "[[[Unseen Horror]]]"
+name: "Unseen Horror"
 type: class-feature
 system: power
 className: thaumaturge

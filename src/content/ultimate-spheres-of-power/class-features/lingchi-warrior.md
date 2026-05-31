@@ -1,6 +1,6 @@
 ---
 id: lingchi-warrior
-name: "[[[Lingchi Warrior]]]"
+name: "Lingchi Warrior"
 type: class-feature
 system: power
 className: armorist

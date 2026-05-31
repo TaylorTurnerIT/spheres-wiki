@@ -1,6 +1,6 @@
 ---
 id: surveyor-cs
-name: "[[[Surveyor]]] [CS]"
+name: "Surveyor [CS]"
 type: class-feature
 system: might
 className: scholar
@@ -48,7 +48,7 @@ Surveyors are particularly adept at studying battlefields instead of creatures.
 + ##993300|Class Equipment##
 The following magical items are especially appropriate for scholars.
 
-++++ Advanced Study Guide [TS:WAT]
+#### Advanced Study Guide [TS:WAT]
 **Aura** moderate Divination; **CL** 8th
 **Slot** none; **Price** 40,000 gp; **Weight** 3 lbs.
 
@@ -57,7 +57,7 @@ This thick book is too technical for any but the most well-read individuals to p
 **Construction Requirements**
 Craft Apparatus, Divination sphere, creator must have the scholar's knack being added to this item; **Cost** 20,000 gp
 
-++++ Explosive Chemicals Kit [TS:WAT]
+#### Explosive Chemicals Kit [TS:WAT]
 **Aura** faint Destruction; **CL** 6th
 **Slot** none; **Price** 3,000 gp; **Weight** 2 lbs.
 
@@ -66,7 +66,7 @@ This metal kit contains additional materials that are useful for enhancing certa
 **Construction Requirements**
 Smith Magical Weapons And Armor, Destruction sphere (Explosive Orb (blast shape)), creator must have the flashbangs class feature; **Cost** 1,500 gp
 
-++++ Hazsit Tools [TS:WAT]
+#### Hazsit Tools [TS:WAT]
 **Aura** moderate Life; **CL** 7th
 **Slot** none; **Price** 8,000 gp; **Weight** 15 lbs.
 

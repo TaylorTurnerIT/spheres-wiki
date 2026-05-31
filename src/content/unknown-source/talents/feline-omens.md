@@ -20,7 +20,7 @@ The grimalkin cannot speak normally, but understands any language you speak and 
 
 The shade acts on your initiative and must remain within medium range of you or have its tether to your magic become greatly weakened. If the shade would take damage while outside of this range and weakened, it is immediately dismissed and this fey-blessing ends. You may only have a single shade summoned at one time; if the shade would die, you may summon a new shade as a full-round action. When this fey-blessing ends, the shade is automatically dismissed.
 
-+++++ Grimalkin Shade
+##### Grimalkin Shade
 The grimalkin shade is a creature which has simplified statistics using the caster's statistics or caster level, determined when the fey-blessing is cast.
 
 **Core Statistics**

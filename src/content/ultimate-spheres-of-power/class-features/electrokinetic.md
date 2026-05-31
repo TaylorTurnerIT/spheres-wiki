@@ -1,6 +1,6 @@
 ---
 id: electrokinetic
-name: "[[[Electrokinetic]]]"
+name: "Electrokinetic"
 type: class-feature
 system: power
 className: elementalist

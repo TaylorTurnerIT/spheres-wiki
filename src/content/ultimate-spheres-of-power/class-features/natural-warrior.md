@@ -1,6 +1,6 @@
 ---
 id: natural-warrior
-name: "[[[Natural Warrior]]]"
+name: "Natural Warrior"
 type: class-feature
 system: power
 className: elementalist

@@ -30,6 +30,6 @@ refSaveProgression: poor
 willSaveProgression: good
 ---
 
-“Right tool, right job.”
+"Right tool, right job."
 
 A warrior trained in a variety of weapons, mastering different techniques with each, able to quickly bring the best tool to bear against her foes.

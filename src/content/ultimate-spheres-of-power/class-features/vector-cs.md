@@ -1,6 +1,6 @@
 ---
 id: vector-cs
-name: "[[[Vector]]] [CS]"
+name: "Vector [CS]"
 type: class-feature
 system: power
 className: symbiat

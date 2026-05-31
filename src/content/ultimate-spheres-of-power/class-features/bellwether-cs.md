@@ -1,6 +1,6 @@
 ---
 id: bellwether-cs
-name: "[[[Bellwether]]] [CS]"
+name: "Bellwether [CS]"
 type: class-feature
 system: power
 className: eliciter

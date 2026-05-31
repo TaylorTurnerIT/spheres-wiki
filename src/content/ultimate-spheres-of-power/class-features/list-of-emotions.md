@@ -8,7 +8,7 @@ level: 8
 tags: []
 ---
 
-+++ Apathy
+### Apathy
 **Minor: Touch of Apathy (Su):** As a standard action, the eliciter may make a touch attack against a target, stealing its desire to act. The creature loses its standard action on its next turn. Once a creature has been affected by touch of apathy, it is immune to its effects for 24 hours. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Lesser: Lethargic:** The eliciter's touch of apathy causes the target to lose both its standard and move action for 1 round.
@@ -17,7 +17,7 @@ tags: []
 
 **Master: Stop:** When using the eliciter's touch of apathy, the target must also succeed at a Will save or be paralyzed for 1d4+1 rounds.
 
-+++ Aversion
+### Aversion
 **Minor: Touch of Paranoia (Su):** The eliciter make a melee touch attack against an enemy, and if successful, fill them with an irrational sense of dread and anxiety. If they fail a Will save, then for the next round they act in a far more defensive manner. On their turn, they can not willingly enter a square that is threatened by more creatures than their current square, and they must move immediately if a less threatened square is within their movement range and they can get there without taking damage or drawing an attack of opportunity. They may use special abilities to do so, but are not required to. If not threatened they may move freely, but may not willingly move into a threatened square. In addition, they must use their standard action to do one of the following: heal themselves, activate defensive abilities, reposition themselves to defend themselves more effectively, or take the total defense action. They can not willingly perform any action that might draw an attack of opportunity, and they can not make attacks except for attacks of opportunity. They can still flank. This effect lasts 1 round, and is a mind-affecting effect, but is not a fear effect.
 
 He can use this ability a number of times per day equal to 3 + his casting ability modifier.
@@ -28,7 +28,7 @@ He can use this ability a number of times per day equal to 3 + his casting abili
 
 **Master: Suspicion:** The eliciter's touch of paranoia lasts 3 rounds.
 
-+++ Enmity
+### Enmity
 **Minor: Touch of Enmity (Su):** As a standard action, the eliciter may make a touch attack against a creature to force that creature to immediately make an attack of opportunity against one of its allies (Will negates). The ally designated must be within the touched creature's threatened area.
 
 **Lesser: Crushing Hatred:** When using the eliciter's touch of enmity on a target, that target gains a bonus to its attack and damage roll equal to 1/2 his eliciter level (minimum 1) for the attack of opportunity.
@@ -39,7 +39,7 @@ He can use this ability a number of times per day equal to 3 + his casting abili
 
 Once the creature has attacked the designated target, it loses the eliciter's crushing hatred bonus and may conclude its turn as normal. If it would be impossible for the creature to attack the designated target, the creature spends its turn moving as close as it can to the target, or (if the target's new location is unknown) spends its turn looking for its designated target as best as it can.
 
-+++ Excitement
+### Excitement
 **Minor: Touch of Zeal (Su):** The eliciter may touch a willing creature as a standard action, flooding it with a passion for the moment and the world around it. The target gains one 5 feet increase to its movement speed per 2 eliciter levels (minimum 5 feet). In addition, the target gains a dodge bonus to AC and Reflex saves and a competence bonus to Acrobatics and Fly checks equal to 1 + 1 per 4 eliciter levels. These bonuses last for 1 round. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Lesser: Vim and Vigor:** The effects of the eliciter's touch of zeal ability last for 2 rounds instead of 1.
@@ -48,7 +48,7 @@ Once the creature has attacked the designated target, it loses the eliciter's cr
 
 **Master: Unbridled:** The effects of the eliciter's touch of zeal ability last for 3 rounds instead of 2.
 
-+++ Fear
+### Fear
 **Minor: Touch of Fear (Su):** The eliciter can make a melee touch attack as a standard action to make a target frightened for 1 round (Will negates). A successful save still leaves the target shaken for 1 round. This does not stack with other shaken effects. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Lesser: Weaken Resolve:** When the eliciter successfully touches a target with his touch of fear, they are shaken for 1 round per 2 eliciter levels he possesses, regardless of whether they succeed at their save to negate the frightened effect.
@@ -57,7 +57,7 @@ Once the creature has attacked the designated target, it loses the eliciter's cr
 
 **Master: Dread:** The eliciter's touch of fear causes targets who fail their save to become panicked for a number of rounds equal to his casting ability modifier. Panicked creatures drop everything held, run away at top speed, and cower if attacked.
 
-+++ Futility [RW HB]
+### Futility [RW HB]
 The eliciter wields futility, the emotion of failure, ineptitude, and incompetence, which many lesser creatures are afflicted with when faced by the vastness of the cosmos.
 
 **Minor: Touch of Futility (Su):** As a standard action, the eliciter may make a melee touch attack against a target. The creature rolls twice on any d20 rolls made for 1 round, taking the worse result. Once a creature has been affected by touch of futility, it is immune to its effects for 24 hours. The eliciter can use this ability a number of times per day equal to 3 + his casting ability modifier.
@@ -68,7 +68,7 @@ The eliciter wields futility, the emotion of failure, ineptitude, and incompeten
 
 **Master: Overwhelming Failure:** Touch of futility's duration becomes permanent. At the end of an affected creature's turn, that creature may attempt a Will saving throw as a free action to end this effect. A saving throw made this way is not affected by touch of futility.
 
-+++ Grief
+### Grief
 **Minor: Touch of Grief (Su):** As a standard action, the eliciter may make a touch attack against a target to fill it with crushing sadness. This inflicts 1d6 points of nonlethal damage + 1 for every two eliciter levels he possesses and sickens the target for 1 round. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Lesser: Paralyzing Grief:** When the eliciter uses his touch of grief on a target, that target must succeed at a Will save or also be nauseated for 1 round.
@@ -77,7 +77,7 @@ The eliciter wields futility, the emotion of failure, ineptitude, and incompeten
 
 **Master: Pure Grief:** When the eliciter uses his touch of grief on a target, the target is sickened for 1 round per 2 eliciter levels he possesses.
 
-+++ Joy
+### Joy
 **Minor: Touch of Joy (Su):** The eliciter can touch a willing creature as a standard action, filling it with elation and confidence in all it undertakes. For the next round, any time the target rolls a d20, he may roll twice and take the more favorable result. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Lesser: Lingering Joy:** The effects of the eliciter's touch of joy ability last for 2 rounds instead of 1.
@@ -86,7 +86,7 @@ The eliciter wields futility, the emotion of failure, ineptitude, and incompeten
 
 **Master: Pure Joy:** The effects of the eliciter's touch of joy ability lasts for 3 rounds instead of 2.
 
-+++ Love
+### Love
 **Minor: Charming Touch (Su):** The eliciter can charm a living humanoid by touching it. Creatures in combat and those with a hostile attitude toward him are unaffected. Creatures receive a Will saving throw to negate the effect. Creatures that fail their save change their attitude toward him to friendly for 1 round per eliciter level. The target views him and his words in favorable ways (although this does not grant the ability to communicate with the target if it cannot already understand him).
 
 He must succeed at an opposed Charisma check to convince it to do something it would not normally do, and requests that are against its nature or fatal to itself are never obeyed. Any hostile action by him and his allies breaks the effect. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
@@ -97,7 +97,7 @@ He must succeed at an opposed Charisma check to convince it to do something it w
 
 **Master: Obsession:** The eliciter's charming touch ability causes the target to be consumed with love for him, to the exclusion of all thoughts of self or previous obligation. The target's attitude becomes helpful instead of friendly. The target will do anything he asks of it, even things it would not normally do. Gross violations of its nature (asking a good person to attack its allies, etc.) allows the target a new saving throw with a +2 bonus to throw off the entire effect. A target never obeys requests that are obviously fatal.
 
-+++ Loyalty
+### Loyalty
 **Minor: Touch of Clarity (Su):** The eliciter can touch a willing creature, filling it with a powerful desire to protect and serve its allies. This lasts a number of rounds equal to his eliciter level. While under this effect, the creature may perform an aid another action as a swift action. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Lesser: Nobility:** When a creature under the effects of touch of clarity uses the aid another action, the ally they aid may apply the bonus to both their attack roll and their AC instead of just one of them.
@@ -106,7 +106,7 @@ He must succeed at an opposed Charisma check to convince it to do something it w
 
 **Master: Compassion (Su):** Whenever a creature under the effects of touch of clarity aids another willing ally, they may also transfer any number of hit points, temporary hit points, or magic effects attached to them to the person they are aiding.
 
-+++ Rage
+### Rage
 **Minor: Touch of Rage (Su):** The eliciter can touch a willing creature as a standard action, giving it a morale bonus on attack rolls, damage rolls, and Will saving throws equal to 1/2 his eliciter level (minimum 1) for 1 round. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 
 **Lesser: Lingering Rage:** The bonuses granted by the eliciter's touch of rage last for 2 rounds instead of 1.
@@ -115,7 +115,7 @@ He must succeed at an opposed Charisma check to convince it to do something it w
 
 **Master: Pure Rage:** The bonuses granted by the eliciter's touch of rage last for 3 rounds instead of 2.
 
-+++ Resolve
+### Resolve
 **Minor: Touch of Determination (Su):** The eliciter can touch a willing creature as a standard action, filling it with courage and the will to do what needs to be done. The creature gains a competence bonus to attack rolls, skill rolls, and saving throws that starts at 0, but increases by 1 any time they fail an attack roll, skill roll, or saving throw, up to a maximum equal to his casting ability modifier. The effect disappears after 1 minute. He may do this a number of times per day equal to 3 + his casting ability modifier.
 
 **Lesser: Willful:** While under the effects of touch of determination, the creature is immune to fear, and to any spell or sphere effect that possesses or exercises mental control over them (including enchantment (charm) effects and enchantment (compulsion) effects).
@@ -124,7 +124,7 @@ He must succeed at an opposed Charisma check to convince it to do something it w
 
 **Master: Relentless:** While under the effects of touch of determination, the creature is immune to the effects of the fatigued and sickened conditions (though they may still have those conditions). In addition, they treat the confused, dazed and stunned conditions as being equal to the staggered condition for as long as they are relentless. Finally, if they are reduced to less than 1 hit point, their resolve immediately ends, and they remain at 1 hit point without falling below it.
 
-+++ Tranquility
+### Tranquility
 **Minor: Touch of Peace (Su):** The eliciter may touch a willing creature as a standard action, allowing a contented feeling to flood through it that lessens pain. The target gains 1d6 temporary hit points, +1 per level. These temporary hit points last for one minute. This ability may be used a number of times per day equal to 3 + his casting ability modifier.
 
 **Lesser: Peace of Mind:** So long as a target still has temporary hit points granted by the eliciter's touch of peace, they gain a +4 bonus to all saving throws against emotion or mind-altering effects.
@@ -170,49 +170,49 @@ He must succeed at an opposed Charisma check to convince it to do something it w
 + Eliciter Feats
 The following feats are particularly appropriate or useful for eliciters.
 
-++++ Dynopathy
+#### Dynopathy
 **Prerequisites:** Mind sphere, emotion class feature, caster level 5th.
 
 **Benefit:** You may fuel raw magical energy from your spell pool and into your emotion class feature. You may spend a spell point instead of a daily use of an emotion for emotions with limited daily uses.
 
-++++ Elicit Strike (Combat)
+#### Elicit Strike (Combat)
 **Prerequisite:** Emotion class feature.
 
 **Benefit:** If you make a successful melee attack against an opponent, in addition to dealing your weapon damage, you can spend a swift action to deliver the effects of an emotion power delivered by touch.
 
-++++ Emotional Conduit [Gen. HB]
+#### Emotional Conduit [Gen. HB]
 **Prerequisites:** Leadership sphere, (cohort) package, emotion class feature.
 
 As a joint action, you may channel your emotion class feature through one of your cohorts within medium range (100 feet + 10 feet per class level in the class that grants the emotion class feature), treating it as the origin for the effect but using your save DC, durations, and other parameters. Any required attack roll is resolved with the cohort's base attack bonus, attributes, and other attack roll modifiers.
 
-++++ Extra Emotion
+#### Extra Emotion
 **Prerequisite:** Emotion class feature.
 
 **Benefit:** Gain the minor power of a new emotion or the next level of an emotion you already possess. You may take this feat multiple times. The effects stack.
 
-++++ Extra Magic Talent
+#### Extra Magic Talent
 **Prerequisite:** Basic Magic Training or casting class feature.
 
 **Benefit:** Gain an additional sphere or a talent from a sphere you possess. You may take this feat multiple times. The effects stack.
 
-++++ Extra Spell Points
+#### Extra Spell Points
 **Prerequisite:** Spell pool.
 
 **Benefit:** Your spell pool total increases by 2. You may gain this feat multiple times. The effects stack.
 
-++++ Greater Hypnosis
+#### Greater Hypnosis
 **Prerequisite:** Hypnotism class feature.
 
 **Benefit:** The range at which you may affect targets with your hypnotism increases to medium range.
 
 **Normal:** You may only affect targets with your hypnotism at close range.
 
-++++ Impassion
+#### Impassion
 **Prerequisites:** War sphere, emotion class feature.
 
 **Benefit:** You may spend a spell point to rally an ally with any emotion from your emotion class feature that targets a single creature. You do not need to be within touch range, even if the emotion normally requires it.
 
-++++ Soul-Piercing Gaze
+#### Soul-Piercing Gaze
 **Prerequisite:** Emotion class feature.
 
 **Benefit:** As a standard action, you may attempt to make eye contact with all enemies within close range. The enemies must be able to see and hear you to be affected. Each enemy receives a Reflex saving throw against a DC 10 + 1/2 your class level + your casting ability modifier against the gaze. Enemies may attempt to avert your gaze as they would a gaze attack (such as by averting their eyes or wearing a blindfold).
@@ -221,17 +221,17 @@ If at least one enemy fails their saving throw, you may choose one enemy that fa
 
 When using Soul-Piercing Gaze, it is difficult for observers to detect the use of any supernatural ability. You may attempt a Bluff check vs. the passive Perception (DC 11 + Perception modifier) of any observers to disguise what you are doing.
 
-++++ Sphere Focus
+#### Sphere Focus
 **Prerequisite:** Casting class feature.
 
 **Benefit:** Choose a sphere. You gain a +1 bonus to saving throw DCs for all abilities from that sphere. You may take this feat multiple times. The effects do not stack. Each time it is gained, apply this benefit to a different sphere.
 
-++++ Synchronicity
+#### Synchronicity
 **Prerequisite:** Emotion class feature.
 
 **Benefit:** You may enhance an emotion power that has a range of touch and a single target to extend the range to 30 feet and the maximum number of targets to be equal to your casting ability modifier. Each target of the emotion power must be within close range of each other as well as you. If the power grants a saving throw to resist, the DC is reduced by 2. Using an emotion power in this way costs 3 daily uses of the power instead of 1.
 
-++++ Trance
+#### Trance
 **Prerequisite:** Emotion class feature.
 
 **Benefit:** You may apply any emotion power with 'touch' in the name to yourself as a move action instead of a standard action. Doing so does not provoke an attack of opportunity.

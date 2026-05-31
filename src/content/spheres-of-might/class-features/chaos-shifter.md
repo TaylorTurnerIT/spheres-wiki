@@ -1,6 +1,6 @@
 ---
 id: chaos-shifter
-name: "[[[Chaos Shifter]]]"
+name: "Chaos Shifter"
 type: class-feature
 system: might
 className: striker

@@ -7,7 +7,7 @@ className: "Druid"
 tags: []
 ---
 
-Druids of the Mythos are often bound to strange places like the Dreamlands. The following archetype is available to any druid, but is usually applied to [[[gnorri]]] druids.
+Druids of the Mythos are often bound to strange places like the Dreamlands. The following archetype is available to any druid, but is usually applied to gnorri druids.
 
 While the gnorri can travel above the waves, most spend their entire lives underwater, and some gnorri have found the ocean a source of tremendous spiritual support. These gnorri have developed druidic traditions that embrace a life in the ocean wilds and favor alliances and bonds with natural creatures of the deep.
 

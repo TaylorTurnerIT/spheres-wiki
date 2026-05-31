@@ -1,6 +1,6 @@
 ---
 id: paragon
-name: "[[[Paragon]]]"
+name: "Paragon"
 type: class-feature
 system: might
 className: sentinel

@@ -1,6 +1,6 @@
 ---
 id: arcanophage
-name: "[[[Arcanophage]]]"
+name: "Arcanophage"
 type: class-feature
 system: power
 className: elementalist

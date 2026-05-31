@@ -1,6 +1,6 @@
 ---
 id: martial-thaumaturge-cs
-name: "[[[Martial Thaumaturge]]] [CS]"
+name: "Martial Thaumaturge [CS]"
 type: class-feature
 system: power
 className: thaumaturge

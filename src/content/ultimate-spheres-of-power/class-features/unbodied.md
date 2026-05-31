@@ -1,6 +1,6 @@
 ---
 id: unbodied
-name: "[[[Unbodied]]]"
+name: "Unbodied"
 type: class-feature
 system: power
 className: wraith
@@ -13,7 +13,7 @@ Unbodied wraiths can exist permanently in an incorporeal form.
 + Class Equipment
 The following magical items are especially appropriate for wraiths.
 
-++++ Haunting Doll [TS:WAT]
+#### Haunting Doll [TS:WAT]
 **Aura** moderate Death; **CL** 7th
 **Slot** none; **Price** 15,000 gp; **Weight** 3 lbs.
 
@@ -24,7 +24,7 @@ Additionally, a haunting doll is difficult to dispose of; unless the owner spend
 **Construction Requirements**
 Craft Apparatus, Death sphere, creator must have the wraith haunt class feature; **Cost** 7,500 gp
 
-++++ Wraith Dust [TS:WAT]
+#### Wraith Dust [TS:WAT]
 **Aura** moderate Death; **CL** 8th
 **Slot** none; **Price** 25,000 gp; **Weight** 1 lb.
 

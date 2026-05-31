@@ -1,6 +1,6 @@
 ---
 id: solipsist
-name: "[[[Solipsist]]]"
+name: "Solipsist"
 type: class-feature
 system: power
 className: fey-adept

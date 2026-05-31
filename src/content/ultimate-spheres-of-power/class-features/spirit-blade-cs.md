@@ -1,6 +1,6 @@
 ---
 id: spirit-blade-cs
-name: "[[[Spirit Blade]]] [CS]"
+name: "Spirit Blade [CS]"
 type: class-feature
 system: power
 className: armorist

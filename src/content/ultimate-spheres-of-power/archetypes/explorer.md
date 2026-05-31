@@ -34,4 +34,4 @@ This replaces hunter's bond.
 
 ++ ##4B0092|Explorer Territories##
 
-+++ ##4B0092|Academic## [SM—]
+### ##4B0092|Academic## [SM—]

@@ -1,6 +1,6 @@
 ---
 id: void-gazer
-name: "[[[Void Gazer]]]"
+name: "Void Gazer"
 type: class-feature
 system: power
 className: thaumaturge

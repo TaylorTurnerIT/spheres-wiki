@@ -1,6 +1,6 @@
 ---
 id: ebonmage-drs
-name: "[[[Ebonmage]]] [DRS]"
+name: "Ebonmage [DRS]"
 type: class-feature
 system: power
 className: thaumaturge

@@ -1,6 +1,6 @@
 ---
 id: slime-savant
-name: "[[[Slime Savant]]]"
+name: "Slime Savant"
 type: class-feature
 system: might
 className: scholar

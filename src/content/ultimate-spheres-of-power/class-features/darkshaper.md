@@ -1,6 +1,6 @@
 ---
 id: darkshaper
-name: "[[[Darkshaper]]]"
+name: "Darkshaper"
 type: class-feature
 system: power
 className: armorist

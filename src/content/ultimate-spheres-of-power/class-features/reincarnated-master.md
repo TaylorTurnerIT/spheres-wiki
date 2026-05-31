@@ -1,6 +1,6 @@
 ---
 id: reincarnated-master
-name: "[[[Reincarnated Master]]]"
+name: "Reincarnated Master"
 type: class-feature
 system: power
 className: incanter

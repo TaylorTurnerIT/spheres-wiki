@@ -1,6 +1,6 @@
 ---
 id: archmage
-name: "[[[Archmage]]]"
+name: "Archmage"
 type: class-feature
 system: power
 className: incanter

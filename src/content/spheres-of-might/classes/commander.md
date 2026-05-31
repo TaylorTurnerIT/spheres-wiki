@@ -34,6 +34,6 @@ refSaveProgression: poor
 willSaveProgression: good
 ---
 
-“All men must follow, except for those who lead.”
+"All men must follow, except for those who lead."
 
 Commanders are an essential component of any army, coordinating and organizing their troops. Oftentimes, the same skills that serve when leading an army are directly relevant to leading an adventuring group. Whether commanding legions or a handful of intrepid explorers, commanders are at their best when they have a stout-hearted group of comrades whose strengths they can leverage towards victory.

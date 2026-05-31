@@ -1,6 +1,6 @@
 ---
 id: gravecrawler
-name: "[[[Gravecrawler]]]"
+name: "Gravecrawler"
 type: class-feature
 system: power
 className: symbiat

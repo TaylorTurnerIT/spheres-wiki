@@ -1,6 +1,6 @@
 ---
 id: inspired-inventor-cs-lg
-name: "[[[Inspired Inventor]]] [CS] [LG]"
+name: "Inspired Inventor [CS] [LG]"
 type: class-feature
 system: power
 className: fey-adept

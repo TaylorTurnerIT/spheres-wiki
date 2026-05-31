@@ -1,6 +1,6 @@
 ---
 id: soulfire-master
-name: "[[[Soulfire Master]]]"
+name: "Soulfire Master"
 type: class-feature
 system: power
 className: thaumaturge

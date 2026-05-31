@@ -14,7 +14,7 @@ At 20th level, a sentinel cannot die while she has an active challenge against a
 + ##993300|Feats##
 The following feats are especially helpful or appropriate for Sentinels.
 
-++++ Protective Reserve
+#### Protective Reserve
 
 **Prerequisites:** Sentinel's reserve class feature.
 

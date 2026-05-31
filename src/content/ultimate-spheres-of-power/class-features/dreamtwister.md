@@ -1,6 +1,6 @@
 ---
 id: dreamtwister
-name: "[[[Dreamtwister]]]"
+name: "Dreamtwister"
 type: class-feature
 system: power
 className: fey-adept

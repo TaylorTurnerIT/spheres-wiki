@@ -64,7 +64,8 @@ export function cleanBody(text) {
   const result = [];
   const tableBuffer = [];
 
-  for (const rawLine of lines) {
+  for (const rawLineOrig of lines) {
+    let rawLine = rawLineOrig;
     const trimmed = rawLine.trim();
 
     // Skip structural Wikidot tags
@@ -79,15 +80,15 @@ export function cleanBody(text) {
     // Skip div opening wrappers (processed at a higher level)
     if (/^\[\[div\b/i.test(trimmed)) continue;
     // Strip closing div tag from start of line, keep trailing text
-    // e.g. "[[/div]]You can manipulate blood..." → "You can manipulate blood..."
     if (/^\[\[\/div\]\]/.test(trimmed)) {
       const rest = trimmed.replace(/^\[\[\/div\]\]/, "").trim();
       if (rest) {
-        // Fall through to process the rest normally
-        while (rest.startsWith(" ")) rest = rest.slice(1);
-        result.push(rest);
+        // Process through standard line cleaning below
+        rawLine = rest;
+        // Don't continue — fall through to the wikilink/italic/etc processing
+      } else {
+        continue;
       }
-      continue;
     }
 
     // Skip image tags
@@ -146,6 +147,15 @@ export function cleanBody(text) {
     // Collapse horizontal rule variants
     if (/^-{4,}$/.test(trimmed)) {
       result.push("---");
+      continue;
+    }
+
+    // Convert Wikidot headings to Markdown: ++++ → ####, +++ → ###
+    const headingMatch = trimmed.match(/^(\+{3,})\s+(.+)$/);
+    if (headingMatch) {
+      const level = headingMatch[1].length;
+      const h = "#".repeat(level);
+      result.push(`${h} ${normalizeQuotes(headingMatch[2])}`);
       continue;
     }
 

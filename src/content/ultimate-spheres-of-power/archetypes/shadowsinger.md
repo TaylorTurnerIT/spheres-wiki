@@ -7,7 +7,7 @@ className: "Bard"
 tags: []
 ---
 
-+++ Shadowsinger (Bard Archetype)
+### Shadowsinger (Bard Archetype)
 
 *What gathers to watch from the shadows are the many eyes of darkness – called to the siren's soft song under the moonlight.*
 

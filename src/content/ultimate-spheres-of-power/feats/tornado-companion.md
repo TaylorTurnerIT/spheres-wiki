@@ -11,7 +11,7 @@ tags: []
 
 **Benefit:** You can select a tornado to serve as your companion. You acquire and advance this creature in the same way as the companion detailed in the class feature used as a prerequisite for this feat. You can also dismiss the creature as dictated by your class feature.
 
-+++++ Tornado (companion)
+##### Tornado (companion)
 **Starting Statistics**
 **Size** Large, **Speed** fly 50 ft. (Good); **AC** +3 natural armor, **Attack** slam (1d4); **Str** 16, **Dex** 17, **Con** -, **Int** -, **Wis** 3, **Cha** 1; **Special Qualities** fluid, whirlwind (10-15 ft. high, 1d4+3 damage, DC 10 + 1/2 HD + Str modifier), construct immunities, darkvision 60 ft. **CMD** cannot be tripped
 

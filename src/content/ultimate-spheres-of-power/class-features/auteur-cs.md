@@ -1,6 +1,6 @@
 ---
 id: auteur-cs
-name: "[[[Auteur]]] [CS]"
+name: "Auteur [CS]"
 type: class-feature
 system: power
 className: fey-adept

@@ -1,6 +1,6 @@
 ---
 id: champion-shifter-drs
-name: "[[[Champion Shifter]]] [DRS]"
+name: "Champion Shifter [DRS]"
 type: class-feature
 system: power
 className: shifter

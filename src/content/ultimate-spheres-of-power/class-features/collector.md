@@ -1,6 +1,6 @@
 ---
 id: collector
-name: "[[[Collector]]]"
+name: "Collector"
 type: class-feature
 system: power
 className: armorist

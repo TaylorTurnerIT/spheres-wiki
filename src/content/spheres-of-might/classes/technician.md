@@ -33,6 +33,6 @@ refSaveProgression: poor
 willSaveProgression: good
 ---
 
-“If it only works as intended, it’s not working well enough.”
+"If it only works as intended, it's not working well enough."
 
 A technician is a man with a plan, capable of taking a piece of equipment and seeing not what it is, but what it could be. No matter what the problem, the technician is the one who will find a way to invent, contrive, or improvise a way to solve it. A technician could be a professional thief, a medieval engineer, or a master mechanic, but such details are unimportant in the long run. What is important is that when something needs doing or needs improving, the technician is the one who will see it gets done.

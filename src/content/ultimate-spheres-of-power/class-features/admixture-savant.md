@@ -1,6 +1,6 @@
 ---
 id: admixture-savant
-name: "[[[Admixture Savant]]]"
+name: "Admixture Savant"
 type: class-feature
 system: power
 className: elementalist

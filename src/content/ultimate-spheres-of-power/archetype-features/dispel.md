@@ -18,45 +18,45 @@ Beginning at 3rd level, the antimage learns new methods and techniques on how to
 
 This replaces mercy or cruelty.
 
-++++ Counterspell (requires 6th level)
+#### Counterspell (requires 6th level)
 The antimage gains a counterspell feat that she qualifies for as a bonus feat. She may select this technique multiple times. The antimage must be at least 6th level to take this technique.
 
-++++ Cleanse (requires 9th level)
+#### Cleanse (requires 9th level)
 The antimage can use the Counterspell feat as a free action once per turn, as long as she only targets herself when using Counterspell this way.
 
-++++ Expanded Nullmagic
+#### Expanded Nullmagic
 The antimage gains three additional points of nullmagic within her nullmagic pool. She may select this technique multiple times, and its effects stack.
 
-++++ Mageguard Training
+#### Mageguard Training
 The antimage gains the Disruptive feat as a bonus feat. At 9th level, she also gains the Spellbreaker feat as a bonus feat. She does not need to meet the prerequisites for these feats, and she treats her antimage level as a fighter level for the purposes of qualifying for feats with either of these as a prerequisite.
 
-++++ Nullmagic Glide (requires 6th level)
+#### Nullmagic Glide (requires 6th level)
 The antimage forges her nullmagic aura around herself, causing her to temporarily become an exception in the presence of most spell effects. As an immediate action as part of another action she takes that allows her to move, the antimage can spend a point of nullmagic to ignore all spell effects that would restrict her movement until she ends her movement. This includes difficult terrain, a stone wall created using the Creation sphere (as long as it is not instantaneous), a bubble of distorted time from the Time sphere, areas of darkness created using the Dark sphere, etc. The antimage must end her movement in an open space, otherwise she is shunted back to where she was before the movement. If the antimage ends her movement inside of a spell effect, she immediately suffers its effects, if any.
 
 At 11th level, the antimage can spend an additional point of nullmagic when using this ability to be able to ignore effects that were created through magic even if they are instantaneous, such as the Create Materials Creation sphere advanced talent (but not materials that are otherwise non-magical and shaped with magic, such as the Forge Creation sphere talent).
 
-++++ Nullmagic Shell
+#### Nullmagic Shell
 The nullmagic reservoir that the antimage holds forms a physical protective layer over her body. The antimage can spend 1 point of nullmagic as a free action to gain DR/- and energy resistance to acid, cold, electricity, and fire damage equal to 1/2 her antimage level for 1 round. The damage reduction and resistances gained from this ability only function against magical or supernatural sources (such as an enchanted weapon or a magic effect that deals damage).
 
 At 12th level, the antimage can spend an additional point of nullmagic when using this ability to increase the damage reduction and resistance to an amount equal to her antimage level, and increase the duration to 2 rounds.
 
-++++ Nullmagic Shutdown (requires 14th level)
+#### Nullmagic Shutdown (requires 14th level)
 The antimage can spend 2 points of nullmagic as a full-round action to form a protective anti-magic shell around herself for 1 round per 5 antimage levels she possesses.
 
 While benefiting from this ability, the antimage cannot be targeted by any spell effect that targets creatures, in addition to suppressing the effects of any magic items (even if they are disrupted) or harmless spell effects that she is benefiting from, with any time passing still counting against their duration.
 
-++++ Pacified Disruption
+#### Pacified Disruption
 The antimage may allow a number of allies equal to her practitioner modifier to use any items she has disrupted as if the antimage was wielding or holding it. She must select these allies each day after resting by spending 10 minutes imbuing them with a small amount of her nullmagic force.
 
-++++ Permit Assistance
+#### Permit Assistance
 Harnessing a more defined control over her spell resistance, the antimage gains the ability to allow small glimpses of magic to pass through and affect her. Whenever the antimage is targeted by a spell, she can voluntarily allow the spell to succeed its check to bypass her spell resistance without having to first lower it, requiring no roll to be made.
 
 If the antimage is immune to magic, she can allow the magic to affect her normally, bypassing her own immunity.
 
-++++ Physical Training (requires 6th level)
+#### Physical Training (requires 6th level)
 The antimage trains her physical prowess, expanding her martial capabilities. The antimage gains two combat talents as bonus talents. The antimage can choose this nullshaping technique an additional time starting at 12th level.
 
-++++ Rites Against Conjurations (requires 6th level)
+#### Rites Against Conjurations (requires 6th level)
 The antimage learns to defend herself against spellcasters who bind others to do their bidding. As a swift action, the antimage can spend 1 point of nullmagic to allow her manavoid mantle to ward against summoned creatures for a number of minutes equal to her level. For the duration, the manavoid mantle prevents contact by any type of summoned creature, causing any natural weapon attacks of summoned creatures to fail and the creatures to recoil if such attacks require touching the antimage.
 
 If a summoned creature that possesses spell resistance attempts to attack the antimage, the antimage must attempt a magic skill check using her antimage level in place of her magic skill bonus against the spell resistance.

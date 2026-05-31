@@ -1,6 +1,6 @@
 ---
 id: word-witch
-name: "[[[Word Witch]]]"
+name: "Word Witch"
 type: class-feature
 system: power
 className: fey-adept

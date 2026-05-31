@@ -22,8 +22,8 @@ If the armiger customizes a set of thrown weapons or ammunition, she retains the
 
 At 3rd level and every 4 levels thereafter (7th, 11th, 15th, etc.), each customized weapon grants an additional talent. The armiger gains an additional customized weapon at her 11th and 19th levels.
 
-++++ Customized Weapons and Drawbacks
+#### Customized Weapons and Drawbacks
 If the armiger possesses a sphere-specific drawback, she may use a talent granted by a customized weapon to buy off that drawback. if the armiger gains a base sphere from a customized weapon, with the GM's permission she may apply a drawback to that sphere to gain a bonus talent as normal for a drawback. The drawback and bonus talent must be set at the time the weapon is customized. Such a drawback may be bought off when that weapon grants an additional talent.
 
-++++ Author's Note - "Do I Still Have My Talents If I Switch Weapons?"
+#### Author's Note - "Do I Still Have My Talents If I Switch Weapons?"
 Yes. Armiger's customized weapons are not "temporary talents". The armiger does not lose any "constant" benefits of these talents (i.e. prepared alchemy formulae, tamed animal allies, a maintained stance, etc.) as long as the relevant talents are still assigned to that weapon. While the armiger might not have the active, or constant, benefits of certain talents unless the weapon is out, the armiger does not suddenly lose lingering benefits of these talents because they sheathed their knife and drew their sword.

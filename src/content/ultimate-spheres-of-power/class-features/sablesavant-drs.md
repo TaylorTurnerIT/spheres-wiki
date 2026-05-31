@@ -1,6 +1,6 @@
 ---
 id: sablesavant-drs
-name: "[[[Sablesavant]]] [DRS]"
+name: "Sablesavant [DRS]"
 type: class-feature
 system: power
 className: elementalist

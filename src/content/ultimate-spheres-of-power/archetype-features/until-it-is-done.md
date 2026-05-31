@@ -10,5 +10,5 @@ tags: []
 
 At 20th level, the avowed gains DR 5/-; this stacks with any other DR of the same type she possesses. In addition, the avowed may always use her divine touch ability as a swift action, even when targeting another creature. Finally, whenever she defeats an opponent opposite her pledge alignment whose CR is equal to at least half her character level (rounded down, minimum 1/2) , she regains 1 use of her divine touch ability;
 
-+++ Pledge of Continuity [SM—]
+### Pledge of Continuity [SM—]
 The pledge of continuity pursues the stability of cause and effect, fighting for the linearity of time and the maintenance of a comprehensible continuum of events.

@@ -1,6 +1,6 @@
 ---
 id: warleader
-name: "[[[Warleader]]]"
+name: "Warleader"
 type: class-feature
 system: power
 className: armorist

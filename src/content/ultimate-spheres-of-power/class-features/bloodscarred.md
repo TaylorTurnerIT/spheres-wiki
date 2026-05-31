@@ -1,6 +1,6 @@
 ---
 id: bloodscarred
-name: "[[[Bloodscarred]]]"
+name: "Bloodscarred"
 type: class-feature
 system: power
 className: symbiat

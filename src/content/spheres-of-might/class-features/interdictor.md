@@ -1,6 +1,6 @@
 ---
 id: interdictor
-name: "[[[Interdictor]]]"
+name: "Interdictor"
 type: class-feature
 system: might
 className: conduit

@@ -1,6 +1,6 @@
 ---
 id: nocturnal-predator
-name: "[[[Nocturnal Predator]]]"
+name: "Nocturnal Predator"
 type: class-feature
 system: power
 className: shifter

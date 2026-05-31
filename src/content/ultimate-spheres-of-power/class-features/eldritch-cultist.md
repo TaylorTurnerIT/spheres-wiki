@@ -1,6 +1,6 @@
 ---
 id: eldritch-cultist
-name: "[[[Eldritch Cultist]]]"
+name: "Eldritch Cultist"
 type: class-feature
 system: power
 className: thaumaturge

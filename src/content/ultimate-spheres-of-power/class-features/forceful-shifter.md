@@ -1,6 +1,6 @@
 ---
 id: forceful-shifter
-name: "[[[Forceful Shifter]]]"
+name: "Forceful Shifter"
 type: class-feature
 system: power
 className: shifter

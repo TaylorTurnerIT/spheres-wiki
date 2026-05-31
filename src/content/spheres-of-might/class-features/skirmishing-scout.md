@@ -1,6 +1,6 @@
 ---
 id: skirmishing-scout
-name: "[[[Skirmishing Scout]]]"
+name: "Skirmishing Scout"
 type: class-feature
 system: might
 className: striker

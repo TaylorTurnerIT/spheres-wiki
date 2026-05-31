@@ -1,6 +1,6 @@
 ---
 id: wunderkind-wop
-name: "[[[Wunderkind]]] [WoP]"
+name: "Wunderkind [WoP]"
 type: class-feature
 system: power
 className: fey-adept
@@ -13,7 +13,7 @@ The Wunderkind is essentially a complete change to the Fey Adept's abilities, ma
 + Class Equipment
 The following magical items are especially appropriate for fey adepts.
 
-++++ Quasielemental Crystal [TS:WAT]
+#### Quasielemental Crystal [TS:WAT]
 **Aura** faint Destruction; **CL** 4th
 **Slot** ring; **Price** 18,000 gp; **Weight** 1/5 lbs.
 
@@ -22,7 +22,7 @@ This golden ring is set with a shadowy crystal that occasionally flickers with e
 **Construction Requirements**
 Craft Apparatus, Destruction sphere (Admixture, any (blast type) talent), creator must have the shadowmark ability; **Cost** 9,000 gp
 
-++++ Shadowguard [TS:WAT]
+#### Shadowguard [TS:WAT]
 **Aura** moderate (lesser or regular) or strong (greater) Illusion; **CL** 6th (lesser), 9th (regular), or 15th (greater)
 **Slot** wrists; **Price** 7,750 gp (lesser), 51,000 gp (regular), 133,750 gp (greater); **Weight** 3 lbs.
 

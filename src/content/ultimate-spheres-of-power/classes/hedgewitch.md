@@ -30,4 +30,4 @@ refSaveProgression: poor
 willSaveProgression: good
 ---
 
-The hedgewitch is a student dabbling in whatever arts interest them the most. Versatile and independent, they often have more tricks up their sleeves than opponents expect, and there’s few problems they cannot help resolve.
+The hedgewitch is a student dabbling in whatever arts interest them the most. Versatile and independent, they often have more tricks up their sleeves than opponents expect, and there's few problems they cannot help resolve.

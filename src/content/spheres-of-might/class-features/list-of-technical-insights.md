@@ -10,16 +10,16 @@ tags: []
 
 At 2nd level and every two levels thereafter, the technician gains additional insights that expand his knowledge and capacity. He may choose one of the technical insights below. Unless otherwise noted, a technical insight may only be selected once.
 
-++++ Aesthetic Insight
+#### Aesthetic Insight
 The technician knows how to create inventions that are user-friendly, balanced, and sleek. Other creatures suffer only half the usual penalty when attempting to use one of his inventions. If attempting to pilot an independent invention, the piloting DC increases by +2 per improvement rather than +4.
 
-++++ Always Ready (Ex)
+#### Always Ready (Ex)
 The technician may expend a gadget to create any non-magical piece of equipment with a market value of 10 gp or less and a size of one cubic foot or smaller, such as rope, soap, oil, etc. This item remains functional for 1 hour per technician level.
 
-++++ Anatomical Insight (Ex)
+#### Anatomical Insight (Ex)
 Whenever the technician attacks a target who is flat-footed, is denied their Dexterity bonus to AC, or that the technician is flanking, the technician's attacks deal an additional amount of damage equal to 1/2 the technician's class level (minimum: 1). This insight qualifies the technician for feats and other options that require sneak attack dice, as if each point of precision damage dealt was a sneak attack die that always rolls '1'. This stacks with any sneak attack the technician might possess from another source.
 
-++++ Architectural Insight (Ex)
+#### Architectural Insight (Ex)
 With 10 minutes of work, the technician can expend a gadget to create quick, artificial structures that last for 24 hours.
 
 The nature of the structure depends on what materials are available; if the technician only has cloth available he can create a cloth structure, but if he is in a forest or has access to wood he may build a structure out of wood, and if he is in a cave with loose stones or have access to stone he could build a structure out of stone. The technician must have about 10 square feet of cloth, 50 lbs. of wood, or 100 lbs. of stone to create a 5 ft. square of structure. Other materials can be substituted with GM permission, and the GM makes the final decision about what materials are available. All structures have 5 hp per technician level, but a hardness dependent on the material in question (0 for cloth, 5 for wood, 8 for stone).
@@ -32,7 +32,7 @@ Platforms either raise terrain by 5 ft. in a single 5 ft. square, or create a br
 
 Walls are 10 ft. tall and long, and impede movement unless a creature first climbs or destroys the wall. The technician may expend an additional gadget when creating the wall to create stairs to allow easy scaling on one side, and to allow someone climbing the wall from that side to stand on the top and fire, retaining partial cover from attacks coming from the other side.
 
-++++ Chemical Insight
+#### Chemical Insight
 The technician unlocks special options for his inventions, as detailed under that section. Whenever he creates an independent invention, he may give it the alchemical subtype by adding the following properties (a construct or independent invention cannot possess more than one subtype):
 
 - **Alchemy:** All natural attacks made by the alchemical construct deal an additional 1d6 acid damage.
@@ -48,12 +48,12 @@ In addition, whenever he creates an detonator, he may choose to grant it one of 
 - **Incendiary:** The detonator deals all fire damage instead of half fire/half piercing, and any flammable materials within its area of effect catch fire. Creatures who fail their Reflex save are also set on fire.
 - **Smoke:** The detonator fills a 5 ft. radius + 5 ft per five levels with harmless smoke. The smoke obscures all sight, including darkvision, beyond 5 feet. A creature within 5 feet has concealment (attacks have a 20% miss chance). Creatures farther away have total concealment (50% miss chance, and the attacker can't use sight to locate the target). The smoke remains for 1 minute per level. A moderate wind (11+ mph) disperses the smoke in 4 rounds; a strong wind (21+ mph) disperses the smoke in 1 round. The technician may choose to have this detonator not deal damage. Instead, all creatures within the blast area or who enter the area must pass a Fortitude save or be sickened for 1d4+1 rounds. If a creature stays in this area for multiple rounds they must make an additional save each round or be sickened. If a target is already sickened and enters the area or stays in the area for an additional round, they must pass a Fortitude save or be nauseated for 1 round.
 
-++++ Demolitions Insight
+#### Demolitions Insight
 The technician's detonators deal full damage to objects rather than half, and deals an additional 3 damage per technician level to unattended objects, walls, and terrain.
 
 Additionally, the technician may choose to give his detonator a cone area of effect rather than a burst area of effect. Rather than affecting all squares within 5 ft., it affects everything in a 15 ft. cone. He may choose which direction this cone extends when holding or placing the detonator, and if the detonator destroys a wall or piece of terrain, it can affect creatures on the other side of the blast. If combined with a benefit from Chemical Insight, the cone's size becomes 3x the effect's radius.
 
-++++ Electric Insight
+#### Electric Insight
 The technician gains many new options for inventions, as detailed under that section.
 
 He may give his independent inventions the robot subtype by adding the following properties (a construct or independent invention cannot possess more than one subtype):
@@ -68,13 +68,13 @@ In addition, he may create the following gadgets:
 - **Shocker:** The technician may attach a gadget to a target that fills them with low-grade electric shocks, debilitating them. Make a melee touch attack against a target. The technician may also throw the gadget as a ranged touch attack with a range increment of 10 ft. If successful, the target suffers 1d8 nonlethal damage per round for a number of rounds equal to the technician's level. Each round the target suffers this damage, their muscles seize up causing them to be sickened and staggered. Either the affected target or another creature may remove this gadget as a standard action. The gadget cannot be used again after being removed.
 - **Taser:** The technician may create a gadget that sends electric shocks through a target to incapacitate them. Make a melee touch attack against a target. That target suffers 1d8 electricity damage for every level the technician possesses, half of which is nonlethal damage. The target must pass a Fortitude save or be sickened and staggered for 1 round. The technician may choose to make the taser weaker than his maximum damage if he so chooses.
 
-++++ Expert's Insight
+#### Expert's Insight
 The technician chooses a number of skills equal to his Intelligence modifier. He may take 10 on these skills, even when stress or other circumstances would normally impede him from doing so. A technician must be at least level 10 to select this insight. This insight may be gained multiple times, choosing additional skills each time.
 
-++++ Gadgeteer [SUE]
+#### Gadgeteer [SUE]
 The technician gains the Tinker sphere as a bonus talent. In addition, the technician's gadgets class feature may use their ranks in their Tinker sphere associated skill instead of their technician class level to determine its effects.
 
-++++ Golemsmith
+#### Golemsmith
 You gain the Craft Construct feat. You may use your ranks in any relevant Craft or Profession skills as your caster level with this feat and for the required check to create the construct, but you may only use it to create animated objects. These animated objects cannot possess the haunted drawback.
 
 If you have chemical insight, you may create any 'alchemical' constructs from official bestiaries, as well any construct so long as you give it the alchemical subtype.
@@ -87,49 +87,49 @@ If you have steampowered insight, you may create any 'steam' constructs from off
 
 If you possess the Craft Wondrous Items and Craft Magical Arms and Armor feats, these restrictions are lifted and you may craft any constructs you meet the prerequisites for. A technician must be at least level 8 and possess Greater Craftsman to gain this insight.
 
-++++ Greater Craftsman
+#### Greater Craftsman
 The technician may create permanent inventions. These inventions are still limited by the maximum number of improvements he is able to give them, but do not count against his usual maximum number of inventions. Just as with all inventions, permanent inventions still grant penalties to anyone other than the technician who uses them.
 
 In addition to any other costs, a permanent invention costs 500 gp x (the technician's level x the number of improvements) to create. Crafting a permanent invention uses the same time crafting rules as magic items, and just as with magic items, the technician may decrease his effective technician level when creating a permanent invention. However, an item must still have an effective technician level high enough for its total number of improvements (thus, an item must be constructed with a minimum technician level of 5 to gain 2 improvements, etc.). The technician must be at least level 6 to gain this insight.
 
 **Author's Note:** Greater Craftsman borrows from magic item crafting rules in many ways (except where it differs). Crafting a permanent invention does not require a Craft check (or similar check), however, you cannot (1) craft inventions with more improvements than you could with your normal inventions, (2) "bypass prerequisites" and add the effects or benefits of technician insights you do not possess.
 
-++++ Gunpowder Insight
+#### Gunpowder Insight
 The technician gains proficiency with all firearms (except siege weapons) and gains the Gunsmithing feat. If the technician already possesses these abilities via feats or martial talents, he may immediately retrain them.
 
 In addition, the technician may make the following gadget:
 
 - **Firework:** This gadget flies in a specific direction and loudly explodes in a color of the technician's choice. A firework is considered a splash weapon, but with a range increment of 100 ft. The firework deals 1d6 fire damage per 2 technician levels on a direct hit, and the target must pass a Fortitude save or be blinded for 1 round. On a successful save, the target is still dazzled for 1 round. Creatures within 5 ft. of the target square suffer splash damage equal to the firework's minimum damage and are dazzled for 1 round.
 
-++++ Intuition (Ex)
+#### Intuition (Ex)
 The technician has learned to trust his gut as much as calculations, and to have faith in wisdom and meditation as well as science.
 
 He gains a pool of intuition points equal to 1 + his Wisdom modifier (minimum: 1). These intuition points refresh after roughly 8 hours of rest. A technician may spend 1 point of intuition as part of any skill check or ability check to add 1d6 to that roll. He may spend 2 points as part of an attack roll or saving throw to also gain this bonus. The decision to spend intuition must be made before the d20 is rolled. Intuition can only be used once on any individual roll.
 
-++++ Intuition, Combat
+#### Intuition, Combat
 The technician's intuition pool increases by 1. When spending intuition to improve an attack roll or saving throw, he only needs to spend 1 point instead of 2.
 
 A technician must have the intuition technical insight to select this insight.
 
-++++ Intuition, Lucky
+#### Intuition, Lucky
 The technician's luck pool and intuition pool both increase by 1 point. In addition, he may spend luck points as if they were intuition points, and intuition points as if they were luck points.
 
 A technician must possess the luck and intuition technical insights to gain this insight.
 
-++++ Intuition, Meditative
+#### Intuition, Meditative
 The technician's intuition pool increases by 1, and counts as a ki pool when meeting the prerequisites for feats. In addition to other uses of intuition, he may spend a point to grant himself a +20 enhancement bonus to speed for 1 round, a +4 dodge bonus to AC for 1 round, or a +20 bonus on a single Acrobatics check made to jump. An intuition pool counts as a supernatural ability when used in these ways.
 
 A technician must have the intuition technical insight to select this insight.
 
-++++ Intuition, Reactive
+#### Intuition, Reactive
 The technician's intuition pool increased by 1. Rather than spending a point of intuition before the d20 is rolled, he may spend his intuition after the die is rolled but before the results are revealed. This can change a failure into a success.
 
 A technician must have the intuition technical insight to select this insight.
 
-++++ Inventor's Insight
+#### Inventor's Insight
 The technician may create one extra invention with no more than 1 improvement. Alternately, he may add 1 additional improvement to one of his other inventions. If he dismantles this invention, he may create a new invention with 1 improvement, or choose another invention to gain +1 improvement. This insight may be selected multiple times. The effects do not stack. Each time this insight is gained, the technician may create a new invention with only 1 improvement, or choose a different invention to gain a bonus improvement.
 
-++++ Luck
+#### Luck
 The technician's plans and creations are often halfbaked and highly improvised, yet somehow always seem to work out.
 
 The technician gains a pool of luck equal to 1 + his Charisma modifier (minimum: 1). This pool replenishes after roughly 8 hours of rest. Throughout the day, he may spend luck points to accomplish any of the following feats.
@@ -137,7 +137,7 @@ The technician gains a pool of luck equal to 1 + his Charisma modifier (minimum:
 - **Uncanny Disarm (Ex):** As a standard action, the technician may spend a luck point and throw an object or fire a ranged weapon at a trap or object within 30 ft. to attempt a Disable Device check to disable or sabotage it. This could include disarming a trap, jamming a door, causing a chandelier to fall immediately or fall in 1 round, or cause a mechanical object such as a siege engine or a crossbow or firearm to gain the broken condition. If the object to be affected is being carried by a creature, he must succeed at a ranged touch attack against the target first. He suffers a -5 penalty to his Disable Device check when making an Uncanny Disarm.
 - **Quick Fix (Ex):** The technician may spend 1 luck point as a move action to remove the broken condition from an object for 1 minute.
 
-++++ Luck, Combatant's
+#### Luck, Combatant's
 The technician knows how to stay one step ahead of an opponent and survive situations he should not be able to. His luck pool increases by 1, and he gains the following abilities:
 
 - **Lucky Strike (Ex):** Whenever the technician threatens a critical hit, he may spend a point of luck to roll the critical confirmation twice and take the better result.
@@ -145,7 +145,7 @@ The technician knows how to stay one step ahead of an opponent and survive situa
 
 A technician must possess the luck technical insight to gain this insight.
 
-++++ Luck, Showman's
+#### Luck, Showman's
 The technician knows how to use showmanship to his advantage. His luck pool increases by 1 point, and he gains the following abilities:
 
 - **Manipulative (Ex):** Whenever the technician makes a Bluff check or Sense Motive check, he may spend 1 point of luck to roll the dice twice and take the better result. He must choose to use this ability before the dice are rolled.
@@ -153,7 +153,7 @@ The technician knows how to use showmanship to his advantage. His luck pool incr
 
 A technician must possess the luck technical insight to gain this insight.
 
-++++ Luck, Socialite's
+#### Luck, Socialite's
 People are like machines, and can be manipulated just as easily. The technician's luck pool increases by 1, and he gains the following abilities:
 
 - **Charming Smile (Ex):** Whenever he makes a Diplomacy check or Intimidate check, the technician may spend 1 point of luck to roll twice and take the better result.
@@ -161,10 +161,10 @@ People are like machines, and can be manipulated just as easily. The technician'
 
 A technician must possess the luck technical insight to gain this insight.
 
-++++ Magic Craftsmanship
+#### Magic Craftsmanship
 The technician gains the Master Craftsman feat and either the Craft Wondrous Items or Craft Magical Arms and Armor feat (player's choice). The technician may use his ranks in any relevant Craft or Profession skill as his caster level and when making checks with either feat, not just the skill selected with Master Craftsman. This insight may be gained twice. If gained a second time, the technician gains the feat not chosen the first time. The technician must be at least level 6 to gain this insight.
 
-++++ Mechanical Best Friends (Ex)
+#### Mechanical Best Friends (Ex) [BTH]
 The technician gains either the Beastmastery sphere Animal Companion or Pet talent as a bonus talent, even if he does not possess the Beastmastery base sphere. The technician may use his ranks in Craft (mechanical) or Knowledge (engineering) in place of his base attack bonus when determining his effective druid level for the Animal Companion talent (not his base attack bonus -3) and his arcane caster level for the Pet talent. If the technician gains this technical insight a second time, he gains whichever talent he did not choose the first time (between Animal Companion and Pet).
 
 The technician can spend 8 hours creating a construct in the likeness of an animal companion or familiar, or modify their existing animal companion or familiar, to create a construct companion or familiar (hereby referred to as "construct pet"). A construct pet uses the appropriate animal companion or familiar's base statistics and is otherwise treated as a normal animal companion or familiar, with the following exceptions:
@@ -178,7 +178,7 @@ If the technician's animal companion or familiar would die, or their construct p
 
 **Special:** If the technician gains the ability to add a subtype to an independent invention, he may give his construct pet one subtype (a construct pet cannot possess more than one subtype this way). The technician can add or change a subtype granted this way whenever he spends 8 hours repairing or building a construct pet.
 
-++++ Mechanical Insight
+#### Mechanical Insight
 The technician unlocks special options for his inventions, as detailed under that section. He may also give his independent inventions the clockwork subtype by adding the following properties (a construct or independent invention cannot possess more than one subtype):
 
 - **Winding:** The construct must be wound with a special key in order to function. As a general rule, a fully wound clockwork can remain active for 1 day per HD, but shorter or longer durations are possible.
@@ -192,16 +192,16 @@ In addition, he may add one of the following triggering mechanisms to his detona
 - **Remote:** A remote trigger allows the gadget to be placed as a standard action, then triggered as a swift action from anywhere within medium range. He may place multiple detonators and detonate them with the same swift action, but as mentioned under detonators, multiple blast radiuses do not stack.
 - **Timed:** A timed trigger causes the detonator to explode after a set amount of time. A timed trigger has a duration of 1 hour per technician level rather than 10 minutes per technician level.
 
-++++ Medical Insight (Ex)
+#### Medical Insight (Ex)
 The technician may create a gadget that heals a target within his natural reach for a number of hit points equal to 1d8 + his technician level. At 5th level and every four levels thereafter, this gadget heals for an additional 1d8. The technician may also create a gadget that empowers a willing target within his natural reach. That target gains a +2 alchemical bonus to Strength, Dexterity, and Constitution for 1 minute per technician level.
 
-++++ Poisoner's Insight
+#### Poisoner's Insight
 The technician no longer suffers a chance to poison himself when applying poison to a weapon, and may apply poison to a weapon as a move action rather than a standard action.
 
-++++ Professional Insight (Ex)
+#### Professional Insight (Ex)
 The technician adds 1/2 his technician level to all Craft and Profession skill checks.
 
-++++ Steampower Insight
+#### Steampower Insight
 The technician unlocks special options for his inventions, as detailed under that section. He may also give his independent inventions the steampowered subtype by adding the following properties (a construct or independent invention cannot possess more than one subtype):
 
 - **Refill:** A steampowered construct can only function for 1 day per HD before needing to be refilled with water. A Medium construct must be refilled with 8 gallons of water. This is multiplied by 4 for each size category over Medium, or divided by 4 for every size category below Medium.

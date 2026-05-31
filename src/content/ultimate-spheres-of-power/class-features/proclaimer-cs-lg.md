@@ -1,6 +1,6 @@
 ---
 id: proclaimer-cs-lg
-name: "[[[Proclaimer]]] [CS] [LG]"
+name: "Proclaimer [CS] [LG]"
 type: class-feature
 system: power
 className: eliciter

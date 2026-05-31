@@ -1,6 +1,6 @@
 ---
 id: entropic-sage
-name: "[[[Entropic Sage]]]"
+name: "Entropic Sage"
 type: class-feature
 system: power
 className: hedgewitch

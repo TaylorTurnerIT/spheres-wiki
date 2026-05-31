@@ -1,6 +1,6 @@
 ---
 id: arcanopulser-cs
-name: "[[[Arcanopulser]]] [CS]"
+name: "Arcanopulser [CS]"
 type: class-feature
 system: power
 className: elementalist

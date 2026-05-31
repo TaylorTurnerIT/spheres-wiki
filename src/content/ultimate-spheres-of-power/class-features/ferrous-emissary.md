@@ -1,6 +1,6 @@
 ---
 id: ferrous-emissary
-name: "[[[Ferrous Emissary]]]"
+name: "Ferrous Emissary"
 type: class-feature
 system: power
 className: armorist

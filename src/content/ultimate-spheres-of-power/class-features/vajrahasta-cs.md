@@ -1,6 +1,6 @@
 ---
 id: vajrahasta-cs
-name: "[[[Vajrahasta]]] [CS]"
+name: "Vajrahasta [CS]"
 type: class-feature
 system: power
 className: armorist

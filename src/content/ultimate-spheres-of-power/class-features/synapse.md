@@ -1,6 +1,6 @@
 ---
 id: synapse
-name: "[[[Synapse]]]"
+name: "Synapse"
 type: class-feature
 system: power
 className: symbiat

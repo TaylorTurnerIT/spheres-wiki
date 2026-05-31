@@ -1,6 +1,6 @@
 ---
 id: dragonblooded-mortal
-name: "[[[Dragonblooded Mortal]]]"
+name: "Dragonblooded Mortal"
 type: class-feature
 system: power
 className: hedgewitch

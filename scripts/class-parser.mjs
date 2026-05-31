@@ -254,15 +254,16 @@ function parseClassFile(text, config) {
   const statBlockStart = clean.search(
     /\*\*(Role|Alignment|Hit Die|Starting Wealth|Starting Age|Class Skills|Skill Ranks|Proficiencies|Table):\*\*/i,
   );
-  const firstHeading = clean.search(/\n\+{1,2}\s/);
-  const bodyStart = clean.indexOf("\n", clean.indexOf("title:")) + 1;
-  const bodyEnd = Math.min(
-    statBlockStart > 0 ? statBlockStart : Infinity,
-    firstHeading > 0 ? firstHeading : Infinity,
-  );
+  const bodyStart =
+    clean.indexOf(
+      "\n",
+      clean.indexOf("parent:") > 0
+        ? clean.indexOf("parent:")
+        : clean.indexOf("title:"),
+    ) + 1;
   let bodyText = "";
-  if (bodyEnd > bodyStart) {
-    bodyText = cleanBody(clean.substring(bodyStart, bodyEnd));
+  if (statBlockStart > bodyStart) {
+    bodyText = cleanBody(clean.substring(bodyStart, statBlockStart));
   }
 
   return {
@@ -291,9 +292,12 @@ function parseClassFeatures(text) {
 
   for (let i = 0; i < matches.length; i++) {
     const heading = matches[i][1].trim();
-    // Strip color markup
+    // Strip color markup AND wikilinks from heading
     const name = normalizeQuotes(
-      heading.replace(/##[^|#]+\|([^#]+)##/g, "$1").trim(),
+      heading
+        .replace(/##[^|#]+\|([^#]+)##/g, "$1")
+        .replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1")
+        .trim(),
     );
 
     // Determine type: talent progression, class feature, etc.

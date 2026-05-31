@@ -1,6 +1,6 @@
 ---
 id: fey-incarnate
-name: "[[[Fey Incarnate]]]"
+name: "Fey Incarnate"
 type: class-feature
 system: power
 className: shifter

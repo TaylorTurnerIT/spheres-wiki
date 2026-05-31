@@ -1,6 +1,6 @@
 ---
 id: id
-name: "[[[Id]]]"
+name: "Id"
 type: class-feature
 system: power
 className: eliciter

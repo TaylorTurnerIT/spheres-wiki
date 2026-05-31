@@ -1,6 +1,6 @@
 ---
 id: dimensional-defender
-name: "[[[Dimensional Defender]]]"
+name: "Dimensional Defender"
 type: class-feature
 system: might
 className: sentinel

@@ -1,6 +1,6 @@
 ---
 id: triple-goddess
-name: "[[[Triple Goddess]]]"
+name: "Triple Goddess"
 type: class-feature
 system: power
 className: hedgewitch
@@ -13,7 +13,7 @@ Triple Goddesses are the masters of Life, Death, and Fate.
 + Class Equipment
 The following magical items are especially appropriate for hedgewitches.
 
-++++ Amateur's Reference [TS:WAT]
+#### Amateur's Reference [TS:WAT]
 **Aura** faint Universal; **CL** 4th
 **Slot** none; **Price** 15,000 gp; **Weight** 2 lbs.
 
@@ -22,7 +22,7 @@ These well-read books come in a variety of shapes and styles, from clay tablets 
 **Construction Requirements**
 Craft Apparatus, Mana sphere, creator must have the hedgewitch path benefit being used; **Cost** 7,500 gp
 
-++++ Battle Censer [TS:WAT]
+#### Battle Censer [TS:WAT]
 **Aura** moderate Destruction; **CL** 10th
 **Slot** none; **Price** 28,316 gp; **Weight** 5 lbs.
 
@@ -55,7 +55,7 @@ If a creature wielding the battle censer has more than one hedgewitch path benef
 **Construction Requirements**
 Smith Magical Weapons And Armor, any three base magical spheres, creator must have the hedgewitch paths ability; **Cost** 14,158 gp
 
-++++ Book Of Secrets [TS:WAT]
+#### Book Of Secrets [TS:WAT]
 **Aura** faint Mana; **CL** 5th
 **Slot** none; **Price** 15,000 gp; **Weight** 3 lbs.
 

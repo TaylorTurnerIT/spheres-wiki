@@ -1,6 +1,6 @@
 ---
 id: darkness-defender
-name: "[[[Darkness Defender]]]"
+name: "Darkness Defender"
 type: class-feature
 system: might
 className: sentinel

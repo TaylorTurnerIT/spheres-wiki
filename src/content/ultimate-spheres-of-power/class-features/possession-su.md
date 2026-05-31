@@ -57,12 +57,12 @@ There are two types of possession: passive and active. The wraith chooses which 
 |  | Use both wraith and host weapon and armor proficiencies |
 
 
-++++ Passive Possession
+#### Passive Possession
 Passive possession grants no control over the possessed creature, though shares the creature's senses and may communicate telepathically with it. Attempting to passively possess an unwilling target costs a spell point.
 
 The wraith maintains his Intelligence, Wisdom, Charisma, level, class, base attack bonus, alignment, mental abilities, extraordinary abilities not derived from physical form, combat talents, supernatural abilities, and magical abilities such as spells, sphere abilities, and spell-like abilities. Should the host become dazed, stunned, or unconscious, the wraith may control their body as normal as if actively possessing the host for the duration of the dazed, stunned, or unconscious condition. Targeted mind-affecting effects apply only to the mind in control of the body; if the wraith is not controlling the host, then the wraith is not the target. When successfully attempting a passive possession, if the wraith is unobserved by the target, he may attempt a Stealth check opposed by the target creature's Perception check. If successful, the creature is not aware that it has failed a Will save or that it has become passively possessed.
 
-++++ Active Possession
+#### Active Possession
 Active possession involves taking control of the possessed creature. Attempting active possession requires a spell point. The wraith maintains his abilities as in passive possession. The body retains its Strength, Dexterity, Constitution, hit points, natural abilities, and automatic abilities. A body with extra limbs does not allow the wraith to make more attacks (or more advantageous two-weapon or two-handed attacks) than normal.
 
 The wraith gains no automatic knowledge of and cannot choose to activate the body's extraordinary abilities until 6th level or supernatural abilities until 12th level. The creature's combat talents, feats that require active use, magic talents, spells, sphere abilities, and spell-like abilities cannot be accessed until the levels shown on Table: Active Possession.

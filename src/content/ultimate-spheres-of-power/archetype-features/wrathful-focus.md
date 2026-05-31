@@ -17,4 +17,4 @@ This replaces channel energy.
 
 + ##00c000|New Feat##
 
-++++ Extra Condemnation
+#### Extra Condemnation

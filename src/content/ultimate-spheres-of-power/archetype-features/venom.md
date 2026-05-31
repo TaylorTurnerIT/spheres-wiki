@@ -18,28 +18,28 @@ This replaces patron spells.
 + ##000000|Withering Hexes##
 The following hexes are available to withering witches.
 
-++++ Black Blood (Ex) (Major Hex)
+#### Black Blood (Ex) (Major Hex)
 You are healed by negative energy, as if you were undead. This does not change how positive energy affects you.
 
-++++ Corrupting Touch (Ex)
+#### Corrupting Touch (Ex)
 You gain the touch of corruption ability of an antipaladin of equal level, and may heal undead with a touch. Each use of your touch of corruption ability expends a use of your corruption ability. If you are healed by negative energy, you may expend a swift action to heal yourself.
 
-++++ Dark Anathema (Su)
+#### Dark Anathema (Su)
 You gain the Anathema feat, even if you don't meet the prerequisites. You may use your anathema ability by expending uses of your corruption ability, but when you do, your anathema does negative energy damage, but only affects those with the good descriptor or with a good alignment. You qualify for other Anathema feats.
 
-++++ Dripping Black (Ex)
+#### Dripping Black (Ex)
 When you make an attack with a natural weapon, you may poison the creature. The poison works as if the target had made contact with an object corrupted with the venom corruption.
 
-++++ Perversion (Su)
+#### Perversion (Su)
 Whenever you damage a creature with your corruption, they must make a Will save or their alignment moves step towards your alignment for 1 minute. This stacks with itself, but will not cause characters to lose class features (as it is only temporary) but can influence behaviour that might cause them to lose class features. The movement is only along one axis (Law-Chaos or Good-Evil) and the withering witch may choose which axis takes precedence if there is a difference in alignment in both directions.
 
-++++ Unholy Ritual (Ex)
+#### Unholy Ritual (Ex)
 By spending one minute chanting, you may spend 1 spell point to regain a use of your corruption ability. You may do this multiple times, consecutively or separately.
 
-++++ Wave of Darkness (Su)
+#### Wave of Darkness (Su)
 You may expend 2 uses of your corruption to channel negative energy as a cleric of equal level. The DC for your channeling is determined by your casting ability modifier. You qualify for channeling feats.
 
-++++ Whispered Word (Ex)
+#### Whispered Word (Ex)
 When an adjacent ally uses a sphere ability, you may spend an immediate action to corrupt it. The corruption still uses your class level and casting ability modifier to determine its effects.
 
 ---

@@ -1,6 +1,6 @@
 ---
 id: wild-mage
-name: "[[[Wild Mage]]]"
+name: "Wild Mage"
 type: class-feature
 system: power
 className: thaumaturge

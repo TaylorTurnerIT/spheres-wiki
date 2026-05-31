@@ -1,6 +1,6 @@
 ---
 id: astrologian-cs
-name: "[[[Astrologian]]] [CS]"
+name: "Astrologian [CS]"
 type: class-feature
 system: might
 className: scholar

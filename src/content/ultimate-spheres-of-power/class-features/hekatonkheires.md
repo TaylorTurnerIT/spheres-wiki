@@ -1,6 +1,6 @@
 ---
 id: hekatonkheires
-name: "[[[Hekatonkheires]]]"
+name: "Hekatonkheires"
 type: class-feature
 system: power
 className: symbiat

@@ -1,6 +1,6 @@
 ---
 id: caller-cs
-name: "[[[Caller]]] [CS]"
+name: "Caller [CS]"
 type: class-feature
 system: might
 className: scholar
