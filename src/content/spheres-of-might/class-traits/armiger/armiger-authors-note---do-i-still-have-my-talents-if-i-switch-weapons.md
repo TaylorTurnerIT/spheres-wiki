@@ -1,6 +1,6 @@
 ---
 id: armiger-authors-note---do-i-still-have-my-talents-if-i-switch-weapons
-name: "Author's Note - "Do I Still Have My Talents If I Switch Weapons?""
+name: "Author's Note - \"Do I Still Have My Talents If I Switch Weapons?\""
 type: class-trait
 system: might
 tags: []

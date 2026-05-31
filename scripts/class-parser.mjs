@@ -556,13 +556,13 @@ function renderClassPage(parsed, config) {
   const lines = [
     "---",
     `id: ${id}`,
-    `name: "${parsed.name}"`,
+    `name: ${JSON.stringify(parsed.name)}`,
     "type: class",
     `system: ${parsed.system}`,
     "tags: []",
     `hitDie: ${parsed.hitDie}`,
-    `alignment: "${parsed.alignment}"`,
-    `startingWealth: "${parsed.startingWealth}"`,
+    `alignment: ${JSON.stringify(parsed.alignment)}`,
+    `startingWealth: ${JSON.stringify(parsed.startingWealth)}`,
     `skillRanks: ${parsed.skillRanks}`,
     `classSkills:`,
     ...parsed.classSkills.map((s) => `  - ${s.includes(",") ? `"${s}"` : s}`),
@@ -664,7 +664,7 @@ if (isMain) {
     const lines = [
       "---",
       `id: ${id}`,
-      `name: "${entry.name}"`,
+      `name: ${JSON.stringify(entry.name)}`,
       `type: class-feature`,
       `system: ${config.system}`,
       `className: ${className}`,
@@ -705,7 +705,7 @@ if (isMain) {
       const lines = [
         "---",
         `id: ${className}-${entry.slug}`,
-        `name: "${entry.name}"`,
+        `name: ${JSON.stringify(entry.name)}`,
         `type: class-trait`,
         `system: ${config.system}`,
         `tags: ${JSON.stringify(entry.tags)}`,
@@ -713,7 +713,7 @@ if (isMain) {
         `featureId: ${entry.featureId}`,
       ];
       if (entry.requires) {
-        lines.push(`requires: "${entry.requires}"`);
+        lines.push(`requires: ${JSON.stringify(entry.requires)}`);
       }
       lines.push("---", "", entry.body || "");
       return lines.join("\n") + "\n";
