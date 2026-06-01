@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <!-- Large Ellipse behind the sphere -->
-  <ellipse cx="64" cy="64" rx="60" ry="22" fill="none" stroke="#FF8080" stroke-width="8" transform="rotate(-35 64 64)" opacity="0.6"/>
+  <!-- Large Ellipse (Top/Back Half) behind the sphere -->
+  <path d="M 4 64 A 60 22 0 0 1 124 64" fill="none" stroke="#FF8080" stroke-width="8" transform="rotate(-35 64 64)" opacity="0.6"/>
 
   <!-- Outer Sphere Layer (scaled down slightly from 48) -->
   <circle cx="64" cy="64" r="44" fill="#990000" />
@@ -10,4 +10,7 @@
 
   <!-- Core Highlight -->
   <circle cx="56" cy="56" r="11" fill="#FFCCCC" />
+
+  <!-- Large Ellipse (Bottom/Front Half) in front of the sphere -->
+  <path d="M 124 64 A 60 22 0 0 1 4 64" fill="none" stroke="#FF8080" stroke-width="8" transform="rotate(-35 64 64)" opacity="0.6"/>
 </svg>
