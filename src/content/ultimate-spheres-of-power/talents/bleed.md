@@ -4,7 +4,7 @@ name: "Bleed"
 type: talent
 system: power
 sphere: blood
-tier: basic
+tier: base
 tags: ["quicken"]
 ---
 

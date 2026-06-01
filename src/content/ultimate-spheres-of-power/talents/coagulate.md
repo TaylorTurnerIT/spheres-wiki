@@ -4,7 +4,7 @@ name: "Coagulate"
 type: talent
 system: power
 sphere: blood
-tier: basic
+tier: base
 tags: ["still"]
 ---
 
