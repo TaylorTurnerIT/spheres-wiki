@@ -4,6 +4,7 @@ name: "Light"
 system: power
 type: sphere
 icon: light
+description: "You may create and manipulate light."
 tags: []
 sectionDefinitions:
   - label: "Talents"
@@ -25,4 +26,12 @@ sectionDefinitions:
         tags: ["dual-sphere"]
 ---
 
-You may create and manipulate light.
+[Glow]
+
+[Lens]
+
+### Light Talent Types
+
+**Light:** Some talents are designated (light), which add additional effects to your glow ability. You may only apply the benefits of one (light) talent to any individual glow effect. When augmenting a glow effect with a (light) talent, the effect is applied once per round, at the end of the caster's turn.
+
+**Nimbus:** Some Light talents are designated (nimbus), which notes a talent that alters the area of light shed by your glow effects, changing the area in which light is increased as well as where the effects of (light) talents are applied. You may only apply a single (nimbus) talent to a glow at a time but may switch between them and the normal area of your glow as a free action.

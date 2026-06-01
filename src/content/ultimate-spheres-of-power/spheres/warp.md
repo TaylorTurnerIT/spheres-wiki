@@ -4,6 +4,7 @@ name: "Warp"
 system: power
 type: sphere
 icon: warp
+description: "You can twist space to your whim."
 tags: []
 sectionDefinitions:
   - label: "Talents"
@@ -25,4 +26,10 @@ sectionDefinitions:
         tags: ["dual-sphere"]
 ---
 
-You can twist space to your whim.
+[Teleport]
+
+### Warp Talent Types
+
+#### Bend Space
+
+Talents marked (space) grant you ways of bending and folding space. Bending space requires a standard action, and you must be touching the target or location to be affected.

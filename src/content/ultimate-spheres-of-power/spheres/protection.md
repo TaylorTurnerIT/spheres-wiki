@@ -4,6 +4,7 @@ name: "Protection"
 system: power
 type: sphere
 icon: protection
+description: "You are a user of the magics of preservation."
 tags: []
 sectionDefinitions:
   - label: "Talents"
@@ -25,4 +26,12 @@ sectionDefinitions:
         tags: ["dual-sphere"]
 ---
 
-You are a user of the magics of preservation.
+[Aegis]
+
+[Ward]
+
+### Protection Talent Types
+
+#### Succor
+
+A (succor) talent allows you to create an effect by sacrificing an aegis you created. This is an immediate action that can be performed using any aegis you created that you have line of effect to. The resulting effect occurs to the creature that bore the aegis. These talents require line of sight, but otherwise have unlimited range.

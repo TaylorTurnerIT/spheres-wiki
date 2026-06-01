@@ -4,6 +4,7 @@ name: "Time"
 system: power
 type: sphere
 icon: time
+description: "You can alter the flow of time itself."
 tags: []
 sectionDefinitions:
   - label: "Talents"
@@ -25,4 +26,8 @@ sectionDefinitions:
         tags: ["dual-sphere"]
 ---
 
-You can alter the flow of time itself.
+[Alter Time]
+
+### Time Talent Types
+
+Some Time talents are marked (time). These talents grant you additional alter time abilities.

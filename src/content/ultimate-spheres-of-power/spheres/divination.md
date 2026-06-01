@@ -4,6 +4,7 @@ name: "Divination"
 system: power
 type: sphere
 icon: divination
+description: "You can predict the future and gain information not available to the usual 5 senses."
 tags: []
 sectionDefinitions:
   - label: "Talents"
@@ -25,4 +26,8 @@ sectionDefinitions:
         tags: ["dual-sphere"]
 ---
 
-You can predict the future and gain information not available to the usual 5 senses.
+[Divine]
+
+### Alternate Divinations
+
+If you possess certain other spheres, you may divine for information other than magical auras. These alternate divinations are available based on which spheres you possess and are detailed in those spheres' talent descriptions.

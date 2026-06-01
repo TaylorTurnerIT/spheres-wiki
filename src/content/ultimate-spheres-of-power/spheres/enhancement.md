@@ -4,6 +4,7 @@ name: "Enhancement"
 system: power
 type: sphere
 icon: enhancement
+description: "You may place enhancements on creatures and objects, altering their properties."
 tags: []
 sectionDefinitions:
   - label: "Talents"
@@ -25,4 +26,8 @@ sectionDefinitions:
         tags: ["dual-sphere"]
 ---
 
-You may place enhancements on creatures and objects, altering their properties.
+[Enhance]
+
+### Enhancement Talent Types
+
+Some talents are marked (enhance). These talents grant you new enhancements you may bestow.
