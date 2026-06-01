@@ -15,6 +15,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     type: z.literal("sphere"),
     ...baseFields,
     icon: z.string(),
+    description: z.string().optional(),
     categoryDefinitions: z
       .array(
         z.object({
