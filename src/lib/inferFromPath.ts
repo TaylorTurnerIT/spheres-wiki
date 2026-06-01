@@ -1,7 +1,13 @@
 // src/lib/inferFromPath.ts
 
+export type EntryType =
+  | 'sphere' | 'talent' | 'feat' | 'class'
+  | 'class-feature' | 'class-trait'
+  | 'archetype' | 'archetype-feature'
+  | 'article' | 'tag';
+
 export type InferredFields = {
-  type?: string;
+  type?: EntryType;
   id?: string;
   sphere?: string;
   className?: string;
@@ -18,7 +24,7 @@ export type InferredFields = {
  * frontmatter data — frontmatter always wins, enabling per-file overrides.
  */
 export function inferFromPath(fileId: string): InferredFields {
-  const parts = fileId.replace(/\.md$/, '').split('/');
+  const parts = fileId.replace(/\.mdx?$/, '').split('/');
   const [s0, s1, s2, s3, s4, s5] = parts;
 
   // ── 2-segment paths (legacy flat) ─────────────────────────────────────────
