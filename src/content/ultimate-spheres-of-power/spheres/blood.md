@@ -59,13 +59,14 @@ Blood loss is inflicted on the creature whose blood is manipulated by a blood ar
 
 A creature who cannot suffer blood loss cannot be the target of a blood art. Targets that gain immunity to bleed damage from their creature type, subtype, or a template cannot suffer blood loss. Creatures that gain immunity to bleed damage from other sources are susceptible to blood loss, but still benefit from their immunity against bleed damage. Some creatures that are normally immune to bleed damage but that frequently feed on blood may be susceptible to blood loss. Any creature that has used the blood drain universal monster ability in the previous hour or any creature composed largely of blood (such as a blood golem) may suffer blood loss. Other appropriate creatures may also suffer blood loss, at the GM’s discretion.
 
-> Author's Note: "What Exactly Is Blood Loss"
-> 
-> Blood loss is an additional "cost" associated with a blood art. It is damage, but it is not the sphere effect's damage. It cannot be modified, increased or interacted with like a sphere effect's regular damage or effects. Metamagic contingent on an effect dealing damage to a target, such as the Dazing Spell metamagic, would not consider or treat the blood loss mechanic as the sphere effect's damage. Suffering blood loss as part of casting a blood art does not force the caster to make a concentration check.
+#### Author's Note: "What Exactly Is Blood Loss"
+
+Blood loss is an additional "cost" associated with a blood art. It is damage, but it is not the sphere effect's damage. It cannot be modified, increased or interacted with like a sphere effect's regular damage or effects. Metamagic contingent on an effect dealing damage to a target, such as the Dazing Spell metamagic, would not consider or treat the blood loss mechanic as the sphere effect's damage. Suffering blood loss as part of casting a blood art does not force the caster to make a concentration check.
+
+---
 
 <details>
 <summary>Optional Rules</summary>
-
 
 #### Blood as a Spell Component or Focus
 Using a portion of a creature’s blood as an additional spell component creates a bond between the caster and the target, making the effect harder for the target to resist. Gathering sufficient blood, one vial’s worth, requires inflicting 1 point of Constitution damage to a willing or helpless creature as a full-round action. When used as an additional spell component, the save DC of the spell or sphere effect is increased by +1 per vial used (to a maximum of +4) against the creature whose blood was used, though any other creatures making a save against the spell or sphere effect has the DC reduced by an equal amount.

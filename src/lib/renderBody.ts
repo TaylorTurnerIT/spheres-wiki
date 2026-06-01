@@ -3,6 +3,7 @@ import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
+import rehypeRaw from 'rehype-raw';
 
 export type BodySegment =
   | { type: 'markdown'; text: string }
@@ -35,8 +36,9 @@ export function splitBodyOnMarkers(body: string | undefined): BodySegment[] {
 const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
-  .use(remarkRehype)
-  .use(rehypeStringify);
+  .use(remarkRehype, { allowDangerousHtml: true })
+  .use(rehypeRaw)
+  .use(rehypeStringify, { allowDangerousHtml: true });
 
 export async function renderMarkdownFragment(md: string): Promise<string> {
   const file = await processor.process(md);
