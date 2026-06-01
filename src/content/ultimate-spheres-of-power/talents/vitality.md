@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: alteration
 tier: basic
-tags: ["requires-crimson-dancer-9"]
+tags: []
 ---
 
 You may add the following traits to your forms:

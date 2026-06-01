@@ -5,7 +5,7 @@ system: power
 type: sphere
 icon: nature
 description: "You can command the very terrain to do your bidding."
-tags: ["see-text"]
+tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
