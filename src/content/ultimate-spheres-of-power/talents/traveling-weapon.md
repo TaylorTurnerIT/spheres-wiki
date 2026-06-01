@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: enhancement
 tier: basic
-tags: []
+tags: ["enhance"]
 ---
 
 You may enhance a melee weapon, granting it the throwing and returning weapon special abilities.

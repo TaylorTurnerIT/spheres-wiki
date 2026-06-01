@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fallen-fey
 tier: basic
-tags: []
+tags: ["fey-blessing"]
 ---
 
 You may spend a spell point to summon a creature of the fey type with a CR of no greater than your caster level/3 as a 1-round action. The creature appears within 30 feet of you and remains and serves you for as long as you concentrate or for the duration of your fey-link if you spend an additional spell point. The creature obeys your commands, but unless you speak the creature's language, only basic communication is possible (attacking an enemy, defending the caster, etc.).

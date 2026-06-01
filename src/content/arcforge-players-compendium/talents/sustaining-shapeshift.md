@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: alteration
 tier: advanced
-tags: ["utility"]
+tags: ["lg", "utility"]
 ---
 
 **Prerequisite:** Alteration sphere.

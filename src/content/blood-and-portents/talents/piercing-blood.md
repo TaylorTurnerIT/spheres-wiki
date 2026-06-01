@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: blood
 tier: basic
-tags: ["blood-art"]
+tags: ["blood art", "blood-art"]
 ---
 
 As a standard action, you briefly impale the target on a solidified column, such as a spear or cross, made from their own blood. On a failed Fortitude save, the target suffers blood loss, takes 1d6 piercing damage per 2 caster levels you possess (minimum 1d6), and is staggered for 1 round.

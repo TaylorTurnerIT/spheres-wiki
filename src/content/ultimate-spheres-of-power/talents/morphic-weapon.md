@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: alteration
 tier: basic
-tags: []
+tags: ["su"]
 ---
 
 You may add the following traits to your forms:

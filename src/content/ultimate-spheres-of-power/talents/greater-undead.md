@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: advanced
-tags: []
+tags: ["core"]
 ---
 
 **Prerequisites:** Death sphere (Sustained Necromancy, Permanent Undead (advanced)), caster level 5th.

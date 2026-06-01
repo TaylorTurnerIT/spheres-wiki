@@ -4,7 +4,7 @@ name: "Suppressed Spell"
 type: feat
 system: power
 sphere: illusion
-tags: []
+tags: ["metamagic"]
 tier: feat
 ---
 

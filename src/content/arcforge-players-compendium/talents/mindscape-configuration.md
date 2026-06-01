@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: advanced
-tags: []
+tags: ["lg"]
 ---
 
 **Prerequisites:** Mind sphere (Mindscape (advanced, charm)), caster level 5th.

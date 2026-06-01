@@ -4,7 +4,7 @@ name: "Between Two Worlds"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["necrosis"]
 tier: feat
 ---
 

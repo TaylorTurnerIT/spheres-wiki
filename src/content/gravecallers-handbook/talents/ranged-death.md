@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: basic
-tags: ["range"]
+tags: ["gravecaller's hb", "range"]
 ---
 
 Increase the range at which you can reanimate from touch to close range, your ghost strike from medium to long range, and the range you can use your dominion abilities from close to medium range.

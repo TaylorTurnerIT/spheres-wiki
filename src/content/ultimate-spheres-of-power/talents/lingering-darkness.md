@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: dark
 tier: basic
-tags: []
+tags: ["duration"]
 ---
 
 When you cease concentrating on a darkness or blot effect, you may choose to have the effect remain for two rounds before dissipating.

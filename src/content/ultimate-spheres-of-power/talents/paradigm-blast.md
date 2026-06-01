@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: basic
-tags: []
+tags: ["blast type", "holy"]
 ---
 
 If you are of lawful alignment, you may spend a spell point to make your destructive blast deal axiomatic damage. If you are of chaotic alignment, you may spend a spell point to have your destructive blast deal anarchic damage. You cannot use this blast type if you are of neither alignment.

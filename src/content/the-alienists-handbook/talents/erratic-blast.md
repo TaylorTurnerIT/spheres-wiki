@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: advanced
-tags: []
+tags: ["alienist hb", "blast type"]
 ---
 
 **Prerequisite:** Destruction sphere.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: blood
 tier: advanced
-tags: []
+tags: ["sp"]
 ---
 
 **Prerequisites:** Blood sphere (Control Oxygenation (quicken, still)), caster level 18th.

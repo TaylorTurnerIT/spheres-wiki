@@ -1,7 +1,7 @@
 ---
 id: conduit
 name: "Conduit"
-tags: []
+tags: ["+ 100 bp"]
 hitDie: 8
 alignment: "Any."
 startingWealth: "4d6 × 10 gp (average 105 gp)"

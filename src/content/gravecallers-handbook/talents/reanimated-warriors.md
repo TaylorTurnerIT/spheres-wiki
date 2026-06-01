@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: basic
-tags: ["dominion"]
+tags: ["dominion", "gravecaller's hb"]
 ---
 
 Choose a combat talent, combat feat, or teamwork feat you possess. Undead you reanimate and control gain the benefit of this talent or feat when they are within your dominion range. You cannot choose a feat that has another feat as a prerequisite nor feats that grant open-ended bonuses (such as Extra Combat Talent), but your undead do not otherwise need to meet the feat's prerequisites.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: enhancement
 tier: basic
-tags: []
+tags: ["enhance"]
 ---
 
 You may enhance creatures, increasing or decreasing their speed.

@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: life
 dualSphere: alteration
-tags: ["dual-sphere"]
+tags: ["catgirl hb", "dual sphere", "dual-sphere"]
 tier: feat
 ---
 

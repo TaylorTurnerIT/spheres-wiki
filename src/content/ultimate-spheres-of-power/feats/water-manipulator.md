@@ -4,7 +4,7 @@ name: "Water Manipulator"
 type: feat
 system: power
 sphere: nature
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere"]
 tier: feat
 ---
 

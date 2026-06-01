@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: []
+tags: ["archmagi's hb", "expunge"]
 ---
 
 **Prerequisites:** Mana sphere (Oversaturation Surge), caster level 1st.

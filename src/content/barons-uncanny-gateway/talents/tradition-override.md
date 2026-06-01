@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: []
+tags: ["sm—"]
 ---
 
 **Prerequisites:** Mana Sphere (Gift of Knowledge (manipulation))

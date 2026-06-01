@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: creation
 tier: advanced
-tags: ["utility"]
+tags: ["material", "utility"]
 ---
 
 **Prerequisites:** Creation, caster level 1st.

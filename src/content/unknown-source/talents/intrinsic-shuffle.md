@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: []
+tags: ["archmagi's hb"]
 ---
 
 **Prerequisites:** Mana sphere (Flexible Shuffle), caster level 10th.

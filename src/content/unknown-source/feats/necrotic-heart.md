@@ -4,7 +4,7 @@ name: "Necrotic Heart"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["cata. hb", "necrosis"]
 tier: feat
 ---
 

@@ -4,7 +4,7 @@ name: "Squadron Network"
 type: feat
 system: power
 sphere: war
-tags: []
+tags: ["alienist hb", "squadron"]
 tier: feat
 ---
 

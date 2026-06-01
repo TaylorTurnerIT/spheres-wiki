@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: protection
 tier: advanced
-tags: []
+tags: ["aegis", "sa:md"]
 ---
 
 **Prerequisites:** Protection sphere (Deathless (aegis)), caster level 7th.

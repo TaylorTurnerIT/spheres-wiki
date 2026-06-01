@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: time
 tier: basic
-tags: []
+tags: ["time"]
 ---
 
 You may spend a spell point to increase or decrease a target's age by 1 category (unwilling creatures attempt a Fortitude save to negate). This adds or removes penalties to physical ability scores but does not add or remove bonuses to mental ability scores. You may move the target 1 age category older or younger, plus an additional category for every 5 caster levels possessed.

@@ -4,7 +4,7 @@ name: "Shadow Shield"
 type: feat
 system: power
 sphere: illusion
-tags: []
+tags: ["surreal"]
 tier: feat
 ---
 

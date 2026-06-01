@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: creation
 tier: basic
-tags: []
+tags: ["material"]
 ---
 
 You may alter or create non-magical fires with your normal limitations on size, as if it were an object. When creating objects, you may create the object already on fire. Flaming objects deal 1d6 fire damage to any creature who touches the object, such as by having it dropped on them or used as a weapon against them. You may also light the terrain on fire or summon burning materials as a form of hazardous terrain. This behaves and deals damage as a fire created by the Nature sphere instead of as normal for hazardous terrain. A fire that has insufficient fuel quickly burns itself out if not maintained through concentration.

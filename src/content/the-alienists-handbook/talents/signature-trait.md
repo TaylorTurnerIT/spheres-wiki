@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: alteration
 tier: advanced
-tags: []
+tags: ["alienist hb"]
 ---
 
 **Prerequisites:** Alteration sphere, caster level 10th.

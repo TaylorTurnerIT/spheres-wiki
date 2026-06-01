@@ -1,7 +1,7 @@
 ---
 id: commander
 name: "Commander"
-tags: []
+tags: ["trade", "utility"]
 hitDie: 8
 alignment: "Commanders can be of any alignment, but are typically lawful as their use of tactics and coordination favor an ordered mind."
 startingWealth: "5d6 x 10 gp (average 175 gp). In addition, each character begins play with an outfit worth 10 gp or less."

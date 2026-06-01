@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: conjuration
 tier: advanced
-tags: []
+tags: ["sm—"]
 ---
 
 **Prerequisites:** Conjuration Sphere (Channel Companion (advanced)), Death Sphere (Project Spirit)

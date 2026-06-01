@@ -4,7 +4,7 @@ name: "Maintain Proxy"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["proxy"]
 tier: feat
 ---
 

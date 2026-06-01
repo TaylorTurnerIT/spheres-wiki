@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: basic
-tags: []
+tags: ["gravecaller's hb"]
 ---
 
 When you reanimate a creature you may reanimate it as a variant skeleton or zombie, such as a bloody skeleton, burning skeleton, fast zombie, or plague zombie. When reanimating a creature in this way, they count as twice their normal Hit Dice when casting the reanimate sphere effect, but once controlled, count normally against your Hit Dice limit.

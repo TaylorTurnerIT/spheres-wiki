@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: basic
-tags: ["manipulation"]
+tags: ["amp", "archmagi's hb", "manipulation"]
 ---
 
 By stretching and reshaping magic, you can reconfigure how magical effects take shape.

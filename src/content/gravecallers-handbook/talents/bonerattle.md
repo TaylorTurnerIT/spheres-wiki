@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: basic
-tags: ["ghost-strike"]
+tags: ["ghost strike", "ghost-strike", "gravecaller's hb"]
 ---
 
 You may make a ghost strike that painfully contorts the target's skeleton, exoskeleton, or body. The target suffers 1d6 + 1d6 per 3 caster levels damage and moves 5 feet + 5 feet per 10 caster levels into an unoccupied space of your choice (Fortitude partial; half damage and no forced movement). Forced movement from this effect does not provoke attacks of opportunity, and the target can only move into a space it could reach with its natural movement. The target receives a +4 bonus to their saving throw if you would move them into a location that is directly harmful to them (such as onto a bed of spikes, out of a window, etc.).

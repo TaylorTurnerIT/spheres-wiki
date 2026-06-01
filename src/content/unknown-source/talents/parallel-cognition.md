@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["utility"]
+tags: ["cognition", "utility"]
 ---
 
 As a standard action you can divide your mental attention to gain two sets of actions each turn, one physical and one mental.

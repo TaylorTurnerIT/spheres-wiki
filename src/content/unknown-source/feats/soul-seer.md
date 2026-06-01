@@ -4,7 +4,7 @@ name: "Soul Seer"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["archmagi's hb"]
 tier: feat
 ---
 

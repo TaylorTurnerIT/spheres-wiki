@@ -4,7 +4,7 @@ name: "Scouting Tactics"
 type: feat
 system: power
 sphere: war
-tags: []
+tags: ["squadron"]
 tier: feat
 ---
 

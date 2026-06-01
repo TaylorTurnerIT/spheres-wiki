@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: mind
 dualSphere: blood
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere"]
 tier: feat
 ---
 

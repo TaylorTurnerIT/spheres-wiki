@@ -4,7 +4,7 @@ name: "Stellar Evoker"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["rw hb"]
 tier: feat
 ---
 

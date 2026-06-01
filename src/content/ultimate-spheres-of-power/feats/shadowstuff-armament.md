@@ -4,7 +4,7 @@ name: "Shadowstuff Armament"
 type: feat
 system: power
 sphere: illusion
-tags: []
+tags: ["surreal"]
 tier: feat
 ---
 

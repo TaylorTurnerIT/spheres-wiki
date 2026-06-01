@@ -4,7 +4,7 @@ name: "Web Mastery"
 type: feat
 system: power
 sphere: alteration
-tags: ["combat"]
+tags: ["combat", "combat, companion"]
 tier: feat
 ---
 

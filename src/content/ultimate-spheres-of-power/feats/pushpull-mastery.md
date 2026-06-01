@@ -4,7 +4,7 @@ name: "Push/Pull Mastery"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["drawback"]
 tier: feat
 ---
 

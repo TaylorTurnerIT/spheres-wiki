@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: advanced
-tags: []
+tags: ["lg"]
 ---
 
 **Prerequisites:** Destruction sphere (Blast Salvo, Explosive Orb).

@@ -4,7 +4,7 @@ name: "Dispelling Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["admixture", "counterspell"]
 tier: feat
 ---
 

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["utility"]
+tags: ["cognition", "utility"]
 ---
 
 You can analyze information with a glance. As a swift or move action you can read up to 500 words or analyze a complex work of art, value an item with Appraise, get a hunch or sense enchantment with Sense Motive, search for tracks with Survival, or intentionally search with Perception.

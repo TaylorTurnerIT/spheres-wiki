@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: blood
 tier: basic
-tags: []
+tags: ["requires crimson dancer 12"]
 ---
 
 Your Bleed (quicken) ability now deals 2 points of damage per caster level.

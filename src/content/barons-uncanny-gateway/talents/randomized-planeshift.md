@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: warp
 tier: advanced
-tags: []
+tags: ["sm—"]
 ---
 
 **Prerequisites:** Warp sphere (Unseeing Teleport), caster level 5th.

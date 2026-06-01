@@ -4,7 +4,7 @@ name: "Totemic Channeling"
 type: feat
 system: power
 sphere: war
-tags: []
+tags: ["channeling"]
 tier: feat
 ---
 

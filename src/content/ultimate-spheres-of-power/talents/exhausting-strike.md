@@ -4,7 +4,7 @@ name: "Exhausting Strike"
 type: talent
 system: power
 sphere: death
-tier: basic
+tier: base
 tags: []
 ---
 

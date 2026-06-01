@@ -4,7 +4,7 @@ name: "Spreading Magic"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["proxy"]
 tier: feat
 ---
 

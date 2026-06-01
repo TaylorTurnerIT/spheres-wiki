@@ -4,7 +4,7 @@ name: "Deadcaller"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["gravecaller's hb"]
 tier: feat
 ---
 

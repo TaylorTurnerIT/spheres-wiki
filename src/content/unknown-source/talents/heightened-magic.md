@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: basic
-tags: ["manipulation"]
+tags: ["amp", "archmagi's hb", "manipulation"]
 ---
 
 You can push your magical talents to new levels of power.

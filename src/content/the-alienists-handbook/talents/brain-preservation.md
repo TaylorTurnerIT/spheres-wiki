@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: warp
 tier: advanced
-tags: []
+tags: ["alienist hb"]
 ---
 
 **Prerequisites:** Warp sphere (Organ Detachment (advanced, space)), caster level 15th.

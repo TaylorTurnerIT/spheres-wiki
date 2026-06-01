@@ -2,7 +2,7 @@
 id: prowess
 name: "Prowess"
 level: 2
-tags: []
+tags: ["boast", "drs"]
 isTraitContainer: true
 ---
 

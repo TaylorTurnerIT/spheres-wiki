@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: time
 tier: basic
-tags: []
+tags: ["time"]
 ---
 
 As an immediate action, you may spend 2 spell points to force a target to redo their turn (Will negates if unwilling). The target is returned to where their turn began, and any skill checks, attack rolls, movement, attacks of opportunity, etc. that occurred during their turn become as if they never happened. The target may perform the same actions again (remaking any rolls required by such actions), or they may choose completely different actions. If you choose to redo your own turn in this manner, you do not recover the action or spell points spent using this ability.

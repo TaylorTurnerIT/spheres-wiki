@@ -4,7 +4,7 @@ name: "Heroic Companion"
 type: feat
 system: power
 sphere: conjuration
-tags: []
+tags: ["luck"]
 tier: feat
 ---
 

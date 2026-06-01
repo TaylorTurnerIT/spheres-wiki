@@ -4,7 +4,7 @@ name: "Venomous Spit"
 type: feat
 system: power
 sphere: conjuration
-tags: ["companion"]
+tags: ["combat, companion", "companion"]
 tier: feat
 ---
 

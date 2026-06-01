@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: dark
 tier: advanced
-tags: []
+tags: ["darkness"]
 ---
 
 **Prerequisites:** Dark sphere (Greater Darkness), caster level 10th.

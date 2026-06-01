@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: advanced
-tags: ["sense"]
+tags: ["origin", "sense"]
 ---
 
 **Prerequisites:** Divination sphere, caster level 1st.

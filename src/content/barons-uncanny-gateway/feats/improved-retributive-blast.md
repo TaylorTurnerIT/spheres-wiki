@@ -4,7 +4,7 @@ name: "Improved Retributive Blast"
 type: feat
 system: power
 sphere: destruction
-tags: ["combat"]
+tags: ["combat", "sm—"]
 tier: feat
 ---
 

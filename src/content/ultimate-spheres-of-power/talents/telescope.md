@@ -4,7 +4,7 @@ name: "Telescope"
 type: talent
 system: power
 sphere: light
-tier: basic
+tier: base
 tags: ["lens"]
 ---
 

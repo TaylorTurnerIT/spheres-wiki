@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: advanced
-tags: []
+tags: ["eo3"]
 ---
 
 **Prerequisites:** Divination sphere, caster level 1st.

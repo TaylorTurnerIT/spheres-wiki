@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: telekinesis
 tier: basic
-tags: []
+tags: ["ex", "harvest", "requires steampower insight"]
 ---
 
 When using telekinesis to lift a creature or creatures and spending a spell point to create a Sustained Force on them, you may grant that creature the ability to control their own movement for the duration of the Sustained Force. They gain a fly speed equal to your telekinesis speed, with maneuverability (perfect).

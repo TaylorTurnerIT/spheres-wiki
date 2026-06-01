@@ -4,7 +4,7 @@ name: "Dimensional Archer"
 type: feat
 system: power
 sphere: warp
-tags: []
+tags: ["champion", "mythic"]
 tier: feat
 ---
 

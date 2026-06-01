@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: light
 tier: basic
-tags: []
+tags: ["light"]
 ---
 
 You may create bright light that covers an area in confusing colors and designs. All squares in the area of this bright light are considered difficult terrain.

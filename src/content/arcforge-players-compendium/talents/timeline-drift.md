@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: warp
 tier: advanced
-tags: []
+tags: ["lg"]
 ---
 
 **Prerequisites:** Warp sphere (Distant Teleport, Unseeing Teleport), caster level 10th.

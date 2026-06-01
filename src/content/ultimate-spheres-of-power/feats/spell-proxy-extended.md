@@ -4,7 +4,7 @@ name: "Spell Proxy, Extended"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["proxy"]
 tier: feat
 ---
 

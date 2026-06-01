@@ -4,7 +4,7 @@ name: "Admixture Efficiency"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["sm—"]
 tier: feat
 ---
 

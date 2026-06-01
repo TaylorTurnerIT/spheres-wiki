@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: weather
 tier: basic
-tags: ["utility"]
+tags: ["cold", "drs", "mantle", "utility"]
 ---
 
 When a creature bearing your mantle is in an area of Cold of severity level 2 or higher, they gain a +3 circumstance bonus to saving throws against (and the skill DC to apply) anger effects, and to any Appraise, Intimidate, or Sense Motive checks made against the bearer of the mantle, +2 for each category above 2nd.

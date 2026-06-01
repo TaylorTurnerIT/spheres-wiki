@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: conjuration
 tier: basic
-tags: ["form"]
+tags: ["classification", "form"]
 ---
 
 Your companion gains a new set of natural attacks chosen from the list below. A companion must possess the prerequisite limbs and cannot already have a natural attack attached to that limb. A companion may gain this talent multiple times. Each time they gain this talent, they gain a new set of natural attacks.

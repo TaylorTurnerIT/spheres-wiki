@@ -4,7 +4,7 @@ name: "Cumulative Nimbus"
 type: feat
 system: power
 sphere: weather
-tags: []
+tags: ["teamwork"]
 tier: feat
 ---
 

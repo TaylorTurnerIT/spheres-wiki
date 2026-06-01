@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: war
 tier: advanced
-tags: ["utility"]
+tags: ["trade", "utility"]
 ---
 
 **Prerequisites:** War sphere, caster level 10th.

@@ -4,7 +4,7 @@ name: "Revitalizing Grasp"
 type: feat
 system: power
 sphere: life
-tags: []
+tags: ["warden"]
 tier: feat
 ---
 

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: basic
-tags: ["manipulation"]
+tags: ["amp", "archmagi's hb", "manipulation"]
 ---
 
 Subtle magics can allow a mage to utilize their powers more easily.

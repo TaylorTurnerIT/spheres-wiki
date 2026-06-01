@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: warp
 tier: advanced
-tags: []
+tags: ["alienist hb"]
 ---
 
 **Prerequisites:** Warp sphere (Plane Manipulator (space)).

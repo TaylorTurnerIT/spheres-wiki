@@ -4,7 +4,7 @@ name: "Manifestation"
 type: feat
 system: power
 sphere: conjuration
-tags: ["companion"]
+tags: ["archmagi's hb", "companion"]
 tier: feat
 ---
 

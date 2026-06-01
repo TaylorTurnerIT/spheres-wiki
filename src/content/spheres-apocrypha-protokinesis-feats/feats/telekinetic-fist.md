@@ -4,7 +4,7 @@ name: "Telekinetic Fist"
 type: feat
 system: power
 sphere: telekinesis
-tags: ["combat"]
+tags: ["combat", "protokinesis"]
 tier: feat
 ---
 

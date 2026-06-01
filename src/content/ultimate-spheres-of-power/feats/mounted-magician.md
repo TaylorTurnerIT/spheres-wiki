@@ -4,7 +4,7 @@ name: "Mounted Magician"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["core"]
 tier: feat
 ---
 

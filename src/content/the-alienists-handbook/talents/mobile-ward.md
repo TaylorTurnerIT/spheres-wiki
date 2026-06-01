@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: protection
 tier: advanced
-tags: []
+tags: ["alienist hb"]
 ---
 
 **Prerequisites:** Protection sphere, caster level 5th.

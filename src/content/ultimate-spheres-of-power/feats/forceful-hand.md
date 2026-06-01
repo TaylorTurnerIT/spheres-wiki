@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: telekinesis
 dualSphere: protection
-tags: ["dual-sphere"]
+tags: ["abj. hb", "dual sphere", "dual-sphere"]
 tier: feat
 ---
 

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: []
+tags: ["cloud", "eo3"]
 ---
 
 You imbue an area, creature or object with a field of disruptive cognitive energy, making it difficult to communicate or convey expression and meaning. This cloud lasts for one minute per caster level. Additionally, whenever a creature benefiting from a sphere effect granting them additional languages or insights into language would enter the cloud, you may attempt a magic skill check against the effect's magic skill defense. If you succeed, the effect is dispelled; if you fail, the effect is not affected and cannot be dispelled by the same cloud for 24 hours. If you possess the Mass Charm talent, you may choose to have the cloud ignore any amount of creatures you designate, which can be changed as a free action.

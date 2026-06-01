@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: enhancement
 tier: advanced
-tags: []
+tags: ["enhance"]
 ---
 
 **Prerequisites:** Enhancement Sphere (Deadly Weapon), caster level 5th

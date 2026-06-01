@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: creation
 tier: basic
-tags: []
+tags: ["alter"]
 ---
 
 You may alter an object's size for 1 minute per caster level. When using alter you may cause any object you may affect to increase or decrease by 1 size category. This doubles or halves the object's height and width and multiplies or divides its weight by 8.

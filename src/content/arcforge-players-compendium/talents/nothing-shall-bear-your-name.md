@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: advanced
-tags: []
+tags: ["lg"]
 ---
 
 **Prerequisites:** Death sphere (Soul Trap (advanced)), Mind sphere (Inception (charm), Mass Charm, Powerful Charm), caster level 15th.

@@ -2,7 +2,7 @@
 id: runes
 name: "Runes"
 level: 1
-tags: []
+tags: ["ex"]
 ---
 
 The runesinger has the ability to create magical runes that grant him special powers in combat. For each rune that he knows, he paints, tattoos, or scars a symbol onto his skin. Each rune grants him two abilities, an attack ability and movement ability. Once either ability is used, the rune is drained of magical power, and becomes darkened. It can not be used again until it becomes bright, which happens naturally 1 minute after use. Rune abilities are supernatural abilities, and can be identified with a DC 25 Arcana check if somewhere visible.

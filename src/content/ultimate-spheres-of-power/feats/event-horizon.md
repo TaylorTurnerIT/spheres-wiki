@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: telekinesis
 dualSphere: dark
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere"]
 tier: feat
 ---
 

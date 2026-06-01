@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: protection
 tier: basic
-tags: []
+tags: ["alienist hb"]
 ---
 
 When you create a ward, you may alter its shape so that it takes the form of a close-range cone or a medium-range line, each emanating from yourself (or from within a location where you could center a ward if you possess the Distant Protection talent). If you spend 1 additional spell point, you may shape the ward in any area you desire out of contiguous 5-foot cubes, up to a maximum of 2 cubes per caster level.

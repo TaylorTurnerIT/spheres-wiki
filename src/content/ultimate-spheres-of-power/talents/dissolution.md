@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: creation
 tier: advanced
-tags: []
+tags: ["alter"]
 ---
 
 **Prerequisites:** Creation sphere (Potent Alteration).

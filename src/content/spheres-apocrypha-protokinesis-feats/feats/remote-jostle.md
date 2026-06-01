@@ -4,7 +4,7 @@ name: "Remote Jostle"
 type: feat
 system: power
 sphere: telekinesis
-tags: ["combat"]
+tags: ["combat", "protokinesis"]
 tier: feat
 ---
 

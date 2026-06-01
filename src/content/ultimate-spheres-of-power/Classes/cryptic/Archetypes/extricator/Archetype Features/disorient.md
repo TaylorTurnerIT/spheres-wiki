@@ -2,7 +2,7 @@
 id: disorient
 name: "Disorient"
 level: 1
-tags: []
+tags: ["expunge"]
 ---
 
 Creatures within the area take a -1 penalty on attack rolls

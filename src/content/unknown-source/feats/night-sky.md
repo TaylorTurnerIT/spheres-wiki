@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: light
 dualSphere: dark
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere", "rw hb"]
 tier: feat
 ---
 

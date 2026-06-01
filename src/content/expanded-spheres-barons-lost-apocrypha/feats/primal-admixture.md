@@ -4,7 +4,7 @@ name: "Primal Admixture"
 type: feat
 system: power
 sphere: nature
-tags: []
+tags: ["admixture"]
 tier: feat
 ---
 

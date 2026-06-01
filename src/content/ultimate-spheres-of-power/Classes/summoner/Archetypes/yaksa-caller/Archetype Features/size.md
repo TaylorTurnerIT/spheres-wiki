@@ -2,7 +2,7 @@
 id: size
 name: "Size"
 level: 1
-tags: []
+tags: ["2"]
 ---
 
 Medium;

@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: weather
 dualSphere: life
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere", "warden"]
 tier: feat
 ---
 

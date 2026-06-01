@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: advanced
-tags: ["word"]
+tags: ["sm—", "word"]
 ---
 
 **Prerequisites:** Fate sphere

@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: death
 dualSphere: alteration
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere"]
 tier: feat
 ---
 

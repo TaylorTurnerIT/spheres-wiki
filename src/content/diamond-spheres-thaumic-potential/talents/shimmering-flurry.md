@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: weather
 tier: basic
-tags: ["utility"]
+tags: ["drs", "mantle", "snow", "utility"]
 ---
 
 When a creature bearing your mantle is in an area of Cold and Precipitation of severity 2 or higher, the creature bearing your mantle (as well as creature's observing such a creature) gain a +3 circumstance bonus to saving throws against (and skill DCs to apply) effects that rely on visual components, Diplomacy checks, and checks made as an impressive display of skill, to create a diversion, or to entertain. This bonus increases by +2 per category above severity level 2.

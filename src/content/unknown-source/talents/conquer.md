@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: ["manipulation"]
+tags: ["archmagi's hb", "manipulation"]
 ---
 
 **Prerequisites:** Mana sphere (Imbued Vessel), caster level 10th.

@@ -4,7 +4,7 @@ name: "Inhuman Defiler"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["cata. hb", "defiler", "drawback", "necrosis"]
 tier: feat
 ---
 

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: conjuration
 tier: advanced
-tags: []
+tags: ["alienist hb"]
 ---
 
 **Prerequisites:** Conjuration sphere (Call The Departed), caster level 5th.

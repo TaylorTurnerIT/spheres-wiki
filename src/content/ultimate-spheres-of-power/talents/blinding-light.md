@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: light
 tier: basic
-tags: []
+tags: ["light"]
 ---
 
 When you cause a creature to glow, you may choose to make that target dazzled, giving it a -1 penalty to attack rolls and Perception checks.

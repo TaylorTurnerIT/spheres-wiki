@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: time
 dualSphere: creation
-tags: ["dual-sphere"]
+tags: ["alienist hb", "dual sphere", "dual-sphere"]
 tier: feat
 ---
 

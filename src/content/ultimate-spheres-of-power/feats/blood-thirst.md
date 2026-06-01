@@ -4,7 +4,7 @@ name: "Blood Thirst"
 type: feat
 system: power
 sphere: blood
-tags: []
+tags: ["ex"]
 tier: feat
 ---
 

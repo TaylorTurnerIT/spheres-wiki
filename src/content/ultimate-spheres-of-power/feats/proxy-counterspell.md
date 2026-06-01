@@ -4,7 +4,7 @@ name: "Proxy Counterspell"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["proxy"]
 tier: feat
 ---
 

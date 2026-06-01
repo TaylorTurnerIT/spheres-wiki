@@ -4,7 +4,7 @@ name: "Cooperative Reanimate"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["teamwork"]
 tier: feat
 ---
 

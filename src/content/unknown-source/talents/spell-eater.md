@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: protection
 tier: advanced
-tags: []
+tags: ["aegis"]
 ---
 
 **Prerequisites:** Protection sphere (Negation (succor)), caster level 10th

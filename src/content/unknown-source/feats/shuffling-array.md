@@ -4,7 +4,7 @@ name: "Shuffling Array"
 type: feat
 system: power
 sphere: mana
-tags: []
+tags: ["archmagi's hb"]
 tier: feat
 ---
 

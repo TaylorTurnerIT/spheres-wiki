@@ -4,7 +4,7 @@ name: "Instructive Command"
 type: feat
 system: power
 sphere: war
-tags: []
+tags: ["squadron"]
 tier: feat
 ---
 

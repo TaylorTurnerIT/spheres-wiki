@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: enhancement
 tier: basic
-tags: []
+tags: ["enhance"]
 ---
 
 You may enhance a weapon, granting it the corrosive, flaming, frost, or shock weapon special abilities. The weapons deal an extra point of elemental damage for every 2 caster levels possessed.

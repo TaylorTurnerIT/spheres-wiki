@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: light
 tier: basic
-tags: []
+tags: ["light"]
 ---
 
 You grant a creature that you have caused to glow brightly a weapon of light they may wield as a weapon. The weapon can be shaped into any melee weapon the holder is proficient with as a swift action, and initially appears as whatever weapon they choose. On a hit, this does an additional 1d4 fire damage + 1d4 damage for every 4 caster levels that you possess.

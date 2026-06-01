@@ -5,7 +5,7 @@ system: power
 type: sphere
 icon: protection
 description: "You are a user of the magics of preservation."
-tags: []
+tags: ["1"]
 sectionDefinitions:
   - label: "Talents"
     categories:

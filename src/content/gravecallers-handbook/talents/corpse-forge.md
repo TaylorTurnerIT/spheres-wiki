@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: advanced
-tags: ["dominion"]
+tags: ["dominion", "gravecaller's hb"]
 ---
 
 **Prerequisites:** Death sphere (Corpse Manipulation), caster level 3rd.

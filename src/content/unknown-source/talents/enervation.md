@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: advanced
-tags: []
+tags: ["eo3"]
 ---
 
 **Prerequisites:** Death sphere (Drain (ghost strike)), caster level 15th.

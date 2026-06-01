@@ -4,7 +4,7 @@ name: "Spiteful End"
 type: feat
 system: power
 sphere: fate
-tags: []
+tags: ["sm—"]
 tier: feat
 ---
 

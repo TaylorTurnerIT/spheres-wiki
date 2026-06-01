@@ -4,7 +4,7 @@ name: "Ensouled Illuminations"
 type: feat
 system: power
 sphere: light
-tags: []
+tags: ["gravecaller's hb"]
 tier: feat
 ---
 

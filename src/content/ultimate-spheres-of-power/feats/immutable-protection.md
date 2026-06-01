@@ -4,7 +4,7 @@ name: "Immutable Protection"
 type: feat
 system: power
 sphere: protection
-tags: []
+tags: ["abj. hb"]
 tier: feat
 ---
 

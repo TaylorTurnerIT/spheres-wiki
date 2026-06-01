@@ -4,7 +4,7 @@ name: "Banshee's Sotto Voce"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["gravecaller's hb", "necrosis"]
 tier: feat
 ---
 

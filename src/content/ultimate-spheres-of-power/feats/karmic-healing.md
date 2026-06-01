@@ -4,7 +4,7 @@ name: "Karmic Healing"
 type: feat
 system: power
 sphere: life
-tags: []
+tags: ["chance"]
 tier: feat
 ---
 

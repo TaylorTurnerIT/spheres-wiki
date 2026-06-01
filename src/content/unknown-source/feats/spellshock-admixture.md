@@ -4,7 +4,7 @@ name: "Spellshock Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["admixture", "mana hb"]
 tier: feat
 ---
 

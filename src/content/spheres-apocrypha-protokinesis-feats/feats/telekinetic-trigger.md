@@ -4,7 +4,7 @@ name: "Telekinetic Trigger"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["protokinesis"]
 tier: feat
 ---
 

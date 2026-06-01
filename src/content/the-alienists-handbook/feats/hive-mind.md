@@ -4,7 +4,7 @@ name: "Hive Mind"
 type: feat
 system: power
 sphere: war
-tags: []
+tags: ["alienist hb", "squadron"]
 tier: feat
 ---
 

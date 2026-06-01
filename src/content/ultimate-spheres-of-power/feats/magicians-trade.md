@@ -4,7 +4,7 @@ name: "Magician's Trade"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["counterspell"]
 tier: feat
 ---
 

@@ -4,7 +4,7 @@ name: "Kinetic Juggler"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["protokinesis"]
 tier: feat
 ---
 

@@ -4,7 +4,7 @@ name: "Digital Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["admixture", "lg"]
 tier: feat
 ---
 

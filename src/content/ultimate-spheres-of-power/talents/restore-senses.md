@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: life
 tier: basic
-tags: []
+tags: ["cure"]
 ---
 
 Your cure ability heals an additional 1 hit point per caster level. When restoring a target's mind, the target is also cured of the confused and dazed conditions, and the frightened and panicked conditions are completely removed rather than lessened; as well as all temporary or magical removal of their senses. This includes blindness, deafness, loss of tremorsense, blindsense, etc.

@@ -4,7 +4,7 @@ name: "Fleshwarp Adept"
 type: feat
 system: power
 sphere: alteration
-tags: []
+tags: ["eo3"]
 tier: feat
 ---
 

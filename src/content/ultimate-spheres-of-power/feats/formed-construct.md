@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: conjuration
 dualSphere: blood
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere"]
 tier: feat
 ---
 

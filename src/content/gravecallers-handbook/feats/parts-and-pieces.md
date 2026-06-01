@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: enhancement
 dualSphere: death
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere", "gravecaller's hb"]
 tier: feat
 ---
 

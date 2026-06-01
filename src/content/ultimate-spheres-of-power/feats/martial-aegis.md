@@ -4,7 +4,7 @@ name: "Martial Aegis"
 type: feat
 system: power
 sphere: protection
-tags: ["combat"]
+tags: ["abj. hb", "combat"]
 tier: feat
 ---
 

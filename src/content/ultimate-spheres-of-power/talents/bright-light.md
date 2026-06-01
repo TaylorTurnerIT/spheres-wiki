@@ -4,7 +4,7 @@ name: "Bright Light"
 type: talent
 system: power
 sphere: light
-tier: basic
+tier: base
 tags: []
 ---
 

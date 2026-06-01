@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: illusion
 dualSphere: enhancement
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere"]
 tier: feat
 ---
 

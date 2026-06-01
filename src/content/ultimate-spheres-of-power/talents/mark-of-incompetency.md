@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: []
+tags: ["expunge"]
 ---
 
 **Requirements:** Mana sphere (Mark Of Instability), caster level 1st.

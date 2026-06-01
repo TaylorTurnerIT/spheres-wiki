@@ -4,7 +4,7 @@ name: "Suffer By Proxy"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["drawback", "proxy"]
 tier: feat
 ---
 

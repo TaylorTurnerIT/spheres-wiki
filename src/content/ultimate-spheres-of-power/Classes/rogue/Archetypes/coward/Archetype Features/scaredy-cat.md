@@ -2,7 +2,7 @@
 id: scaredy-cat
 name: "Scaredy-Cat"
 level: 1
-tags: []
+tags: ["catgirl hb"]
 ---
 
 At 1st level, the coward is treated as if he was permanently suffering from the shaken condition and takes a -4 penalty against all fear effects whenever he is in combat. However, he is no stranger to fear and can negate some of the detrimental effects.

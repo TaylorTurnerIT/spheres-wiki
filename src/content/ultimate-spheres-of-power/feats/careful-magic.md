@@ -4,7 +4,7 @@ name: "Careful Magic"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["drawback"]
 tier: feat
 ---
 

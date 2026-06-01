@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: illusion
 tier: basic
-tags: ["sensory"]
+tags: ["sensory", "sound"]
 ---
 
 You may add whatever sounds you desire to an illusion. You cannot make more sound than four normal humans per caster level could make. (A horde of rats running and squeaking is equal to eight humans running and shouting. A roaring lion is equal to the noise from 16 humans, while a roaring dragon is equal to the noise from 32 humans.)

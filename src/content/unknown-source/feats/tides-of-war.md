@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: war
 dualSphere: mana
-tags: ["dual-sphere"]
+tags: ["archmagi's hb", "dual sphere", "dual-sphere"]
 tier: feat
 ---
 

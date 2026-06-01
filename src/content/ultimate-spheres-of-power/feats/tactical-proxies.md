@@ -4,7 +4,7 @@ name: "Tactical Proxies"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["proxy"]
 tier: feat
 ---
 

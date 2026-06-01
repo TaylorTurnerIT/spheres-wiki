@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: dark
 tier: advanced
-tags: []
+tags: ["shadow"]
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow)), caster level 5th.

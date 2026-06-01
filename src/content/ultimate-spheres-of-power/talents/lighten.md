@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: enhancement
 tier: basic
-tags: []
+tags: ["enhance"]
 ---
 
 You may spend a spell point to enhance an item or creature, reducing its weight or even making it weightless. The maximum sized object you can affect is given on Table: Lighten Object.

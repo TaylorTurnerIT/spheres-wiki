@@ -4,7 +4,7 @@ name: "Minor Charm Specialist"
 type: feat
 system: power
 sphere: mind
-tags: []
+tags: ["warden"]
 tier: feat
 ---
 

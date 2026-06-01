@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: time
 tier: advanced
-tags: []
+tags: ["2", "time"]
 ---
 
 **Prerequisites:** Time sphere, caster level 10th.

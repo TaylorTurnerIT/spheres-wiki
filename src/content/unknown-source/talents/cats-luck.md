@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: advanced
-tags: ["consecration", "word"]
+tags: ["catgirl hb", "consecration", "word"]
 ---
 
 A white cat and black cat both watched on, as the tall ones quibbled. They laughed, and played, and so the tall ones experienced both fortune and misfortune with a wave of their paws.

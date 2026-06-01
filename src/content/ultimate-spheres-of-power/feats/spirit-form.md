@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: nature
 dualSphere: alteration
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere"]
 tier: feat
 ---
 

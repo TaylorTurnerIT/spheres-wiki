@@ -4,7 +4,7 @@ name: "Mystic Generosity"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["proxy"]
 tier: feat
 ---
 

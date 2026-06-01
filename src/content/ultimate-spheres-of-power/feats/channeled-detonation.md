@@ -4,7 +4,7 @@ name: "Channeled Detonation"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["channeling"]
 tier: feat
 ---
 

@@ -4,7 +4,7 @@ name: "Mystic Choreography"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["drawback", "proxy"]
 tier: feat
 ---
 

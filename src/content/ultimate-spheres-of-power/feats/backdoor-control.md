@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: mind
 dualSphere: enhancement
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere"]
 tier: feat
 ---
 

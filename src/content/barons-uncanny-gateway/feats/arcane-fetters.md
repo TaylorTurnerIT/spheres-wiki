@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: protection
 dualSphere: creation
-tags: ["dual-sphere"]
+tags: ["dual sphere", "dual-sphere", "sm—"]
 tier: feat
 ---
 

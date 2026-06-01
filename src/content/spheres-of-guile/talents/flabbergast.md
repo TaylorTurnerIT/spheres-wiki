@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["charm"]
+tags: ["charm", "lots"]
 ---
 
 You bombard the target with shocking revelations and displays which leave them reeling.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: creation
 tier: advanced
-tags: []
+tags: ["material"]
 ---
 
 **Prerequisites:** Creation sphere (Plasma Production (material)), caster level 10th.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: []
+tags: ["cloud"]
 ---
 
 You imbue an area to persuade travelers to wander elsewhere.

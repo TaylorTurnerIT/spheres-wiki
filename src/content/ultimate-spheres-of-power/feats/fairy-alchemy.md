@@ -4,7 +4,7 @@ name: "Fairy Alchemy"
 type: feat
 system: power
 sphere: fallen-fey
-tags: []
+tags: ["champion"]
 tier: feat
 ---
 

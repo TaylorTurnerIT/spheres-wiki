@@ -4,7 +4,7 @@ name: "Channel Life"
 type: feat
 system: power
 sphere: life
-tags: []
+tags: ["channeling"]
 tier: feat
 ---
 

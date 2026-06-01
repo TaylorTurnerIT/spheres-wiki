@@ -1,7 +1,7 @@
 ---
 id: shadow-boxer
 name: "Shadow Boxer"
-tags: []
+tags: ["combat"]
 ---
 
 **Alignment:** Any

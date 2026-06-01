@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: protection
 tier: advanced
-tags: ["ward"]
+tags: ["aegis", "rw hb", "ward"]
 ---
 
 Your magics create refuge against the dangers of space and planes unknown.

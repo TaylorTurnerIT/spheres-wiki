@@ -4,7 +4,7 @@ name: "Platoon Commander"
 type: feat
 system: power
 sphere: war
-tags: []
+tags: ["squadron"]
 tier: feat
 ---
 

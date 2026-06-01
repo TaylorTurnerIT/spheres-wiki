@@ -4,7 +4,7 @@ name: "Channel Destruction"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["channeling"]
 tier: feat
 ---
 

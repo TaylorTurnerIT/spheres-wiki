@@ -4,7 +4,7 @@ name: "Derelict Dreamspace"
 type: feat
 system: power
 sphere: mind
-tags: []
+tags: ["sm—"]
 tier: feat
 ---
 

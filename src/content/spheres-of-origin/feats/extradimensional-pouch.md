@@ -4,7 +4,7 @@ name: "Extradimensional Pouch"
 type: feat
 system: power
 sphere: warp
-tags: []
+tags: ["origin"]
 tier: feat
 ---
 

@@ -4,7 +4,7 @@ name: "Suffused Blasts"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["sm—"]
 tier: feat
 ---
 

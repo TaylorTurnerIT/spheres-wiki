@@ -4,7 +4,7 @@ name: "Hungry"
 type: feat
 system: power
 sphere: conjuration
-tags: ["combat", "companion"]
+tags: ["combat", "combat, companion", "companion"]
 tier: feat
 ---
 

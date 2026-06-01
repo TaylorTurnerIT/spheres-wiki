@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: alteration
 tier: basic
-tags: ["utility"]
+tags: ["drs", "utility"]
 ---
 
 You may add the following traits to your forms:

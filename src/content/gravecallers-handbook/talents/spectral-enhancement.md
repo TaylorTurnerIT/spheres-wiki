@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: enhancement
 tier: basic
-tags: []
+tags: ["enhance", "gravecaller's hb"]
 ---
 
 You may enhance objects, increasing their ability to interact with the insubstantial.

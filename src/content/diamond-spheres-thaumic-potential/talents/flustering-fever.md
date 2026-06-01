@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: weather
 tier: basic
-tags: ["utility"]
+tags: ["drs", "heat", "mantle", "utility"]
 ---
 
 When a creature bearing your mantle is in an area of Heat of severity level 2 or higher, they gain a +3 circumstance bonus to Intimidate checks made to insult or pose a menace, +2 for each category above 2nd. If the bearer of the mantle is suffering from an anger condition, they treat the severity of Heat as being 1 higher for the purposes of determining this talent's effects.

@@ -4,7 +4,7 @@ name: "Shadowblast"
 type: feat
 system: power
 sphere: illusion
-tags: []
+tags: ["surreal"]
 tier: feat
 ---
 

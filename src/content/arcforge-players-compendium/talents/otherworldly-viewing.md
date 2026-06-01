@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: advanced
-tags: []
+tags: ["lg"]
 ---
 
 **Prerequisites:** Divination sphere (Greater Divine [range], Viewing (divine)), caster level 10th.

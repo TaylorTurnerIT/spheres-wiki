@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: advanced
-tags: []
+tags: ["sp"]
 ---
 
 **Prerequisites:** Death sphere (Project Spirit (advanced)), caster level 10th.
