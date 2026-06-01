@@ -4,7 +4,7 @@ import { glob } from "astro/loaders";
 const baseFields = {
   id: z.string().regex(/^[a-z0-9-]+$/, "id must be lowercase kebab-case"),
   name: z.string(),
-  system: z.string(),
+  system: z.string().optional(),
   sourceBook: z.string().optional(),
   tags: z.array(z.string()).default([]),
   modifies: z.string().optional(),
