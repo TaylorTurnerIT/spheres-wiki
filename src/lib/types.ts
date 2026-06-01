@@ -5,6 +5,7 @@ export type BookMeta = {
   title: string;
   publisher: string;
   publishedDate: string;
+  system?: 'power' | 'might' | 'guile' | 'champions';
   price?: string;
   buyUrl?: string;
   coverImage?: string;
