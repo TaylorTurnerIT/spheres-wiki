@@ -4,9 +4,11 @@ name: "Pawstpone"
 type: feat
 system: power
 sphere: time
-tags: ["catgirl-hb"]
+tags: []
 tier: feat
 ---
+**Source:** Unknown (catgirl-hb)
+
 
 **Prerequisites:** Time sphere, caster level 5th.
 

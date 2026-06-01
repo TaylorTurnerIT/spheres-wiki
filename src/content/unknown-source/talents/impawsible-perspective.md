@@ -5,8 +5,10 @@ system: power
 type: talent
 sphere: illusion
 tier: advanced
-tags: ["catgirl-hb"]
+tags: []
 ---
+**Source:** Unknown (catgirl-hb)
+
 
 Whenever you create an illusion, you may empower it to be incredibly difficult to perceive and disbelieve.
 

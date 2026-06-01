@@ -5,9 +5,8 @@ system: power
 type: talent
 sphere: time
 tier: advanced
-tags: ["bth", "time"]
+tags: ["time"]
 ---
-
 You channel the timelessness of the jian crane into a whirling prismatic globe of possibilities.
 
 **Prerequisite:** Time sphere.

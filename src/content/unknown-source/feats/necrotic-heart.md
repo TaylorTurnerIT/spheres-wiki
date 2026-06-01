@@ -4,9 +4,11 @@ name: "Necrotic Heart"
 type: feat
 system: power
 sphere: death
-tags: ["cata-hb", "necrosis"]
+tags: ["necrosis"]
 tier: feat
 ---
+**Source:** Unknown (cata-hb)
+
 
 Your body is sustained by necromantic power.
 

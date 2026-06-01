@@ -5,9 +5,11 @@ type: feat
 system: power
 sphere: life
 dualSphere: alteration
-tags: ["catgirl-hb", "dual-sphere"]
+tags: ["dual-sphere"]
 tier: feat
 ---
+**Source:** Unknown (catgirl-hb)
+
 
 **Prerequisites:** Alteration sphere, Life sphere.
 

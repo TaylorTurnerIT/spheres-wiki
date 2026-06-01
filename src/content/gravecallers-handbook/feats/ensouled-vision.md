@@ -4,10 +4,9 @@ name: "Ensouled Vision"
 type: feat
 system: power
 sphere: divination
-tags: ["gravecallers-hb"]
+tags: []
 tier: feat
 ---
-
 **Prerequisites:** Divination sphere, bound nexus class feature.
 
 **Benefit:** You can share perception with your souls, allowing you to see, smell, hear, etc. as though you were in that soul's space.

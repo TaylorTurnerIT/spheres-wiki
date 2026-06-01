@@ -5,10 +5,9 @@ type: feat
 system: power
 sphere: enhancement
 dualSphere: death
-tags: ["dual-sphere", "gravecallers-hb"]
+tags: ["dual-sphere"]
 tier: feat
 ---
-
 "Arms and legs make perfectly acceptable furniture, minions, and anything in between." – Kul'thiran, Master Necrotaxidermist
 
 **Prerequisites:** Death sphere (Piecemeal Reanimation (dominion)), Enhancement sphere (Animate Object (enhance)).

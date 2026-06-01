@@ -4,9 +4,11 @@ name: "Inhuman Defiler"
 type: feat
 system: power
 sphere: death
-tags: ["cata-hb", "defiler", "drawback", "necrosis"]
+tags: ["defiler", "drawback", "necrosis"]
 tier: feat
 ---
+**Source:** Unknown (cata-hb)
+
 
 Your destructive powers and undead ambitions feed into each other.
 

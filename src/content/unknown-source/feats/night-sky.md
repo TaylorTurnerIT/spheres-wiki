@@ -5,9 +5,11 @@ type: feat
 system: power
 sphere: light
 dualSphere: dark
-tags: ["dual-sphere", "rw-hb"]
+tags: ["dual-sphere"]
 tier: feat
 ---
+**Source:** Unknown (rw-hb)
+
 
 It was no longer dark, for the twinkling lights danced and distracted in their own new ways.
 

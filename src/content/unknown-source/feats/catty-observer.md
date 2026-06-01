@@ -4,9 +4,11 @@ name: "Catty Observer"
 type: feat
 system: power
 sphere: protection
-tags: ["catgirl-hb"]
+tags: []
 tier: feat
 ---
+**Source:** Unknown (catgirl-hb)
+
 
 "She brings the food on a regular basis, delivering the fine dry cubes of nourishment to my bowl. She is worth protecting." – Meowlin the Omnicatster
 

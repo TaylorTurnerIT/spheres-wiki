@@ -5,9 +5,8 @@ system: power
 type: talent
 sphere: enhancement
 tier: basic
-tags: ["enhance", "gravecallers-hb"]
+tags: ["enhance"]
 ---
-
 You may enhance objects, increasing their ability to interact with the insubstantial.
 
 You may enhance an object to be treated as though it were solid to an incorporeal creature, allowing an incorporeal creature to manipulate or hold the object, but also preventing an incorporeal creature from freely passing through the object (such as enhancing a wall or cage to impede a ghost). If you would enhance an object to trap an incorporeal creature, the creature may attempt a Reflex save to immediately move to the nearest unoccupied space outside the object (see Catches, Nets, and Cages in the Creation sphere, Ultimate Spheres of Power pg. 254). The maximum sized object you can affect this way is given on Table: Spectral Enhancement.

@@ -5,9 +5,8 @@ system: power
 type: talent
 sphere: death
 tier: basic
-tags: ["ghost-strike", "gravecallers-hb"]
+tags: ["ghost-strike"]
 ---
-
 You may make a ghost strike that painfully contorts the target's skeleton, exoskeleton, or body. The target suffers 1d6 + 1d6 per 3 caster levels damage and moves 5 feet + 5 feet per 10 caster levels into an unoccupied space of your choice (Fortitude partial; half damage and no forced movement). Forced movement from this effect does not provoke attacks of opportunity, and the target can only move into a space it could reach with its natural movement. The target receives a +4 bonus to their saving throw if you would move them into a location that is directly harmful to them (such as onto a bed of spikes, out of a window, etc.).
 
 If you spend an additional spell point when using this ghost strike, the target is repeatedly wracked with pain for a short time. On a failed Fortitude saving throw against this ghost strike's initial effects, the target is afflicted for a number of rounds equal to 1/2 your caster level (minimum 1). For the duration of this effect, the target suffers the effects of this ghost strike at the start of its turn, taking damage and being forced to move. The target is granted a new saving throw against this ghost strike to reduce its effects, but a successful saving throw does not end this ghost strike's duration.

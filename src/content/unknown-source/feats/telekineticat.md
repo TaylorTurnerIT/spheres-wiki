@@ -4,9 +4,11 @@ name: "Telekineticat"
 type: feat
 system: power
 sphere: telekinesis
-tags: ["catgirl-hb", "protokinesis"]
+tags: ["protokinesis"]
 tier: feat
 ---
+**Source:** Unknown (catgirl-hb)
+
 
 With all your cosmic power and wisdom, you decided to form your raw and potent telekinetic power into the shape of a cat.
 

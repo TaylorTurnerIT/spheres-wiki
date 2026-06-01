@@ -5,9 +5,8 @@ system: power
 type: talent
 sphere: death
 tier: basic
-tags: ["dominion", "gravecallers-hb"]
+tags: ["dominion"]
 ---
-
 You gain the following abilities which allow you to direct, manipulate, and command undead creatures you control within your dominion range:
 
 - **Command Attack:** As a standard action, one undead within your dominion range makes an attack against a creature within its threatened reach (or range, if the undead can use a ranged weapon). If you possess the Mass Death Magic talent, you may spend an additional spell point to grant an attack to 1 additional undead per 2 caster levels (minimum 1). If a creature would be attacked by more than one undead with this effect, choose one undead to be the primary attacker. Each additional undead attacking that same target instead uses the aid another action to assist the primary attacking undead's attack roll, even if those undead could not normally use the aid another action to assist against that target. If you possess the Reanimated Warriors talent, you may use this ability to allow your undead to assist your own efforts. As an immediate action after you make a weapon attack roll, you may choose one undead within your dominion range. That undead either uses the aid another action to assist your attack roll or is granted an attack of opportunity against the target of your attack, provided that your attack hits the target. An undead granted the ability to use the aid another action or granted an attack of opportunity this way must be able to take the action normally, such as being in a position to aid another you normally or by having the target of your attack within their threatened area.

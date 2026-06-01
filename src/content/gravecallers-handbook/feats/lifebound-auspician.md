@@ -4,10 +4,9 @@ name: "Lifebound Auspician"
 type: feat
 system: power
 sphere: life
-tags: ["gravecallers-hb"]
+tags: []
 tier: feat
 ---
-
 You bend the forces of the cosmos to the heartbeat of mortality.
 **Prerequisites:** Fate sphere; Death sphere or Life sphere; caster level 3rd.
 

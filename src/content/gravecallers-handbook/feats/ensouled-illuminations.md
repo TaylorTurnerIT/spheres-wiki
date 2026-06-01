@@ -4,10 +4,9 @@ name: "Ensouled Illuminations"
 type: feat
 system: power
 sphere: light
-tags: ["gravecallers-hb"]
+tags: []
 tier: feat
 ---
-
 They linger, float and dance like lanterns in the evening sky.
 
 **Prerequisites:** Light sphere, bound nexus class feature.

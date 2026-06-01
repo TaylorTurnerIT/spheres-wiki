@@ -5,8 +5,10 @@ system: power
 type: talent
 sphere: alteration
 tier: advanced
-tags: ["rw-hb"]
+tags: []
 ---
+**Source:** Unknown (rw-hb)
+
 
 Your magic infuses the target's new form with the speed of powerful elementals.
 

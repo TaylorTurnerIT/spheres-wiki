@@ -4,10 +4,9 @@ name: "Banshee's Sotto Voce"
 type: feat
 system: power
 sphere: death
-tags: ["gravecallers-hb", "necrosis"]
+tags: ["necrosis"]
 tier: feat
 ---
-
 Whisper your lamentations to the world.
 
 **Prerequisite:** Death sphere.

@@ -4,10 +4,9 @@ name: "Versatile Feeding"
 type: feat
 system: power
 sphere: death
-tags: ["gravecallers-hb"]
+tags: []
 tier: feat
 ---
-
 You have learned the art of funneling necromantic power between yourself and your minions.
 
 **Prerequisites:** Death sphere (Necrotic Feeding (ghost strike)).
