@@ -1,4 +1,5 @@
 // src/lib/resolveEntries.ts
+import { inferFromPath } from './inferFromPath';
 import type {
   AnyEntry,
   SphereEntry,
@@ -172,23 +173,36 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       rawEntries = [];
     }
 
-    const tagEntries: RawTagEntry[] = rawEntries
-      .filter((e) => (e.data as any).type === "tag")
-      .map((e) => e.data as unknown as RawTagEntry);
+    const bookSystem = meta?.system;
 
-    const contentEntries: AnyEntry[] = rawEntries
-      .filter((e) => (e.data as any).type !== "tag")
-      .map((e) => {
-        const entry = e.data as AnyEntry;
-        entry.sourceBook = collectionSlug;
-        return entry;
-      });
+    const tagEntriesForBook: RawTagEntry[] = [];
+    const contentEntriesForBook: AnyEntry[] = [];
 
-    tagEntriesByBook.push({ slug: collectionSlug, rawTagEntries: tagEntries });
+    for (const e of rawEntries) {
+      const inferred = inferFromPath(e.id);
+      const raw = e.data as Record<string, unknown>;
+      const effectiveType = raw.type ?? inferred.type;
+
+      // Merge: inferred base → book system default → frontmatter override → sourceBook
+      const merged = {
+        ...inferred,
+        ...(bookSystem !== undefined ? { system: bookSystem } : {}),
+        ...raw,
+        sourceBook: collectionSlug,
+      };
+
+      if (effectiveType === "tag") {
+        tagEntriesForBook.push(merged as unknown as RawTagEntry);
+      } else if (effectiveType !== undefined) {
+        contentEntriesForBook.push(merged as AnyEntry);
+      }
+    }
+
+    tagEntriesByBook.push({ slug: collectionSlug, rawTagEntries: tagEntriesForBook });
     allBooks.push({
       slug: collectionSlug,
       publishedDate,
-      entries: contentEntries,
+      entries: contentEntriesForBook,
     });
   }
 
