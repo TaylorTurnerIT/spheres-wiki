@@ -150,6 +150,7 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T36 | x      | Add `public/robots.txt` — allow all crawlers, link sitemap | I.pages |
 | T37 | x      | Add meta http-equiv security headers — `Referrer-Policy: strict-origin-when-cross-origin`, `X-Content-Type-Options: nosniff` (GitHub Pages limitation: true response headers require Cloudflare/Netlify) | |
 | T38 | x      | Document `localStorage` key inventory in code comment at BetaToast.astro — key name, purpose, retention, deletion path | V14 |
+| T39 | .      | Add content version selector (Original/Ultimate/Polished) with thematically appropriate design. Hover effects explain categories. Gray out/disable if content missing. Hide 'Ultimate' entirely for non-'power' systems. | |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
