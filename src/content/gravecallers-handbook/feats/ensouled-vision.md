@@ -4,7 +4,7 @@ name: "Ensouled Vision"
 type: feat
 system: power
 sphere: divination
-tags: ["gravecaller's hb"]
+tags: ["gravecallers-hb"]
 tier: feat
 ---
 

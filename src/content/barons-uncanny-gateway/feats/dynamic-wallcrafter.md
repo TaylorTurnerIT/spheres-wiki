@@ -4,7 +4,7 @@ name: "Dynamic Wallcrafter"
 type: feat
 system: power
 sphere: protection
-tags: ["sm—"]
+tags: ["sm"]
 tier: feat
 ---
 

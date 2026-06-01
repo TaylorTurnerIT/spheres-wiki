@@ -1,6 +1,6 @@
 ---
 type: tag
-id: metamagic
+id: "metamagic"
 label: "Metamagic"
 color: "#fa8231"
 priority: 15

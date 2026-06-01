@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: time
 tier: advanced
-tags: ["sm—"]
+tags: ["sm"]
 ---
 
 **Prerequisites:** Time Sphere (retry)

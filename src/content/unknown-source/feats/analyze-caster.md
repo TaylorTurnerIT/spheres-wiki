@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: mana
 dualSphere: divination
-tags: ["archmagi's hb", "dual sphere", "dual-sphere"]
+tags: ["archmagis-hb", "dual-sphere"]
 tier: feat
 ---
 

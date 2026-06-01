@@ -1,6 +1,6 @@
 ---
 type: tag
-id: acid
+id: "acid"
 label: "Acid"
 color: "#4b6a2f"
 priority: 15

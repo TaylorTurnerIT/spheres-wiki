@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: basic
-tags: ["curse", "ghost strike", "ghost-strike"]
+tags: ["curse", "ghost-strike"]
 ---
 
 You may spend a spell point to make a ghost strike that permanently curses the target to become plagued by chickens, ducks, or another similar bird of your choice (Will negates). Whenever the target draws a weapon or pulls an item out of a container, they have a 50% chance of drawing a live bird instead. The bird's starting attitude toward the target is hostile, and will react appropriately to being drawn out by its ankles (or other part of its body). A bird's body created by this effect disappears if it dies.

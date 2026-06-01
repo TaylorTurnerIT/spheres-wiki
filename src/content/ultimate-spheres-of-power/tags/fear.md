@@ -1,6 +1,6 @@
 ---
 type: tag
-id: fear
+id: "fear"
 label: "Fear"
 color: "#7f1d1d"
 priority: 15

@@ -4,7 +4,7 @@ name: "Companionship"
 type: feat
 system: power
 sphere: protection
-tags: ["abj. hb", "warden"]
+tags: ["abj-hb", "warden"]
 tier: feat
 ---
 

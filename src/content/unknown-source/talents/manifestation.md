@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: ["archmagi's hb", "companion"]
+tags: ["archmagis-hb", "companion"]
 ---
 
 **Prerequisites:** Mana sphere (Gift Of Knowledge, Limited Manifestation), at least 3 other spheres known, caster level 20th.

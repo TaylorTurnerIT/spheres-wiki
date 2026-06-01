@@ -4,7 +4,7 @@ name: "Improved Selective Blast"
 type: feat
 system: power
 sphere: destruction
-tags: ["combat", "sm—"]
+tags: ["combat", "sm"]
 tier: feat
 ---
 

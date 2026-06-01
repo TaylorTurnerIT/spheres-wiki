@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: protection
 tier: advanced
-tags: ["aegis", "alienist hb"]
+tags: ["aegis", "alienist-hb"]
 ---
 
 **Prerequisites:** Protection sphere, caster level 10th.

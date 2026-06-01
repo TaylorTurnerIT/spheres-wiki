@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: advanced
-tags: ["geomancing", "metal and plant"]
+tags: ["geomancing", "metal-and-plant"]
 ---
 
 **Prerequisites:** Nature sphere ((metal) package, (plant) package), caster level 5th.

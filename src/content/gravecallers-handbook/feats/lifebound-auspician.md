@@ -4,7 +4,7 @@ name: "Lifebound Auspician"
 type: feat
 system: power
 sphere: life
-tags: ["gravecaller's hb"]
+tags: ["gravecallers-hb"]
 tier: feat
 ---
 

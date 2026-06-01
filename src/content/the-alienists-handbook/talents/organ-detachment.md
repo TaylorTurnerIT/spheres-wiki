@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: warp
 tier: advanced
-tags: ["alienist hb", "space"]
+tags: ["alienist-hb", "space"]
 ---
 
 **Prerequisites:** Warp sphere, caster level 10th.

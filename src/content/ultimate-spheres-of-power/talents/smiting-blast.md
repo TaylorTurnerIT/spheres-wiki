@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: basic
-tags: ["blast type", "holy"]
+tags: ["blast-type", "holy"]
 ---
 
 If you are of good alignment, you may spend a spell point to make your destructive blast deal sacred damage. If you are of evil alignment, you may spend a spell point to have your destructive blast deal profane damage. You cannot use this blast type if you are of neither alignment.

@@ -1,6 +1,6 @@
 ---
 type: tag
-id: combat
+id: "combat"
 label: "Combat"
 color: "#8f2d00"
 priority: 1

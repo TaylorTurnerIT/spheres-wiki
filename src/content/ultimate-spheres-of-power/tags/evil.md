@@ -1,6 +1,6 @@
 ---
 type: tag
-id: evil
+id: "evil"
 label: "Evil"
 color: "#581c87"
 priority: 15

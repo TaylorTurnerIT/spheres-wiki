@@ -4,7 +4,7 @@ name: "Pawstpone"
 type: feat
 system: power
 sphere: time
-tags: ["catgirl hb"]
+tags: ["catgirl-hb"]
 tier: feat
 ---
 

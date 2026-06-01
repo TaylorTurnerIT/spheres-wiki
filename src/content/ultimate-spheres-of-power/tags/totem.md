@@ -1,6 +1,6 @@
 ---
 type: tag
-id: totem
+id: "totem"
 label: "Totem"
 priority: 5
 description: "Provides abilities related to the Totem tag."

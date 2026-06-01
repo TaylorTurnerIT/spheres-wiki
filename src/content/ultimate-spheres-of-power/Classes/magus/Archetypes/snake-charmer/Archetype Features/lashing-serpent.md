@@ -3,7 +3,7 @@ id: lashing-serpent
 name: "Lashing Serpent"
 level: 2
 replaces: ["the spellstrike ability"]
-tags: ["stance", "youxia hb"]
+tags: ["stance", "youxia-hb"]
 ---
 
 At 2nd level, the snake charmer gains the ability to shape the Light Whip veil and increases his total veils shaped by 1. In addition to its normal properties, the veil can be used to create a masterwork scorpion whip. This whip disappears immediately if it leaves the magus' possession, though it can be reformed as a standard action. When determining the hardness and other properties of the whip, treat it as a standard veil. While wielding the lightwhip as a weapon you can use it to perform a Reposition combat maneuver in place of a melee attack.

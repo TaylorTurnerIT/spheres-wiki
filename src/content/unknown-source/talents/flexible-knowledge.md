@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: ["archmagi's hb", "manipulation"]
+tags: ["archmagis-hb", "manipulation"]
 ---
 
 **Prerequisites:** Mana sphere (Gift Of Knowledge, Transfer), caster level 5th.

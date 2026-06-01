@@ -4,7 +4,7 @@ name: "Augmenting Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: ["admixture", "sm—"]
+tags: ["admixture", "sm"]
 tier: feat
 ---
 

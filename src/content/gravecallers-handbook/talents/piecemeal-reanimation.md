@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: basic
-tags: ["dominion", "gravecaller's hb"]
+tags: ["dominion", "gravecallers-hb"]
 ---
 
 You gain the following abilities which allow you to reanimate incomplete corpses and individual corpse parts:

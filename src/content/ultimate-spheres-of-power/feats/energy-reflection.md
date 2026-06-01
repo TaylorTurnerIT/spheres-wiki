@@ -4,7 +4,7 @@ name: "Energy Reflection"
 type: feat
 system: power
 sphere: protection
-tags: ["abj. hb"]
+tags: ["abj-hb"]
 tier: feat
 ---
 

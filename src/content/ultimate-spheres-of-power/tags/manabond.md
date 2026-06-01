@@ -1,6 +1,6 @@
 ---
 type: tag
-id: manabond
+id: "manabond"
 label: "Manabond"
 color: "#45aaf2"
 priority: 15

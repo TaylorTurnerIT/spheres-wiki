@@ -4,7 +4,7 @@ name: "Tainted Manabond"
 type: feat
 system: power
 sphere: mana
-tags: ["alienist hb"]
+tags: ["alienist-hb"]
 tier: feat
 ---
 

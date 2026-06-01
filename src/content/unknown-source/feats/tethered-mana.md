@@ -4,7 +4,7 @@ name: "Tethered Mana"
 type: feat
 system: power
 sphere: mana
-tags: ["archmagi's hb"]
+tags: ["archmagis-hb"]
 tier: feat
 ---
 

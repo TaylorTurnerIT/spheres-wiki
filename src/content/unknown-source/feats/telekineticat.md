@@ -4,7 +4,7 @@ name: "Telekineticat"
 type: feat
 system: power
 sphere: telekinesis
-tags: ["catgirl hb", "protokinesis"]
+tags: ["catgirl-hb", "protokinesis"]
 tier: feat
 ---
 

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["cognition", "sa:bg"]
+tags: ["cognition", "sabg"]
 ---
 
 Whenever you succeed a saving throw against a mind-affecting effect, you may spend 1 spell point as a free action that can be taken outside of your turn to terrify the source of that effect, provided you can identify and see the effect's source.

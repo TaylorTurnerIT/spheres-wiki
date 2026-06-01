@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: advanced
-tags: ["alienist hb"]
+tags: ["alienist-hb"]
 ---
 
 **Prerequisite:** Mind sphere.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: basic
-tags: ["blast shape"]
+tags: ["blast-shape"]
 ---
 
 Instead of a single destructive blast, you unleash a volley of destructive power. You deliver 2 surges, each requiring a melee touch attack or a ranged touch attack within range. A ranged surge counts as a ray attack. Each surge may be delivered at the same or different targets, but all surges must be delivered simultaneously. Determine the damage dealt by each surge by distributing the damage dice dealt by your destructive blast between each surge. A surge must deal at least 1 damage die or you do not create that surge. If you spend an additional spell point, you may deliver one additional surge, plus 1 surge for every 6 caster levels you possess.

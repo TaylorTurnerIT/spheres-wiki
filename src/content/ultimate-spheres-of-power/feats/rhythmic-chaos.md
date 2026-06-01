@@ -4,7 +4,7 @@ name: "Rhythmic Chaos"
 type: feat
 system: power
 sphere: mana
-tags: ["wild magic"]
+tags: ["wild-magic"]
 tier: feat
 ---
 

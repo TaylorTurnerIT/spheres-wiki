@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: ["alienist hb", "geomancing", "water"]
+tags: ["alienist-hb", "geomancing", "water"]
 ---
 
 You may create clouds of fog attached to yourself or to other creatures. A fog cloud attached to a creature is called a riding fog. This functions as a regular fog and can be dispersed by wind, except that it moves with the creature it is attached to, becomes inactive if that creature is knocked unconscious and is dispelled if they are killed. The fog continues to function if it goes beyond the range of its creator.

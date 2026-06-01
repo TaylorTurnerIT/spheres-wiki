@@ -4,7 +4,7 @@ name: "Solipsistic Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: ["sm—"]
+tags: ["sm"]
 tier: feat
 ---
 

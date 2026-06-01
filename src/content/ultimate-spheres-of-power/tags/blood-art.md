@@ -1,6 +1,6 @@
 ---
 type: tag
-id: blood-art
+id: "blood-art"
 label: "Blood Art"
 color: "#8B0000"
 priority: 8

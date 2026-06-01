@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: weather
 tier: advanced
-tags: ["cata. hb"]
+tags: ["cata-hb"]
 ---
 
 **Prerequisites:** Destruction sphere, Weather sphere (Radiation Lord), caster level 10th.

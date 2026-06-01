@@ -4,7 +4,7 @@ name: "Ability Channel"
 type: feat
 system: power
 sphere: conjuration
-tags: ["alienist hb"]
+tags: ["alienist-hb"]
 tier: feat
 ---
 

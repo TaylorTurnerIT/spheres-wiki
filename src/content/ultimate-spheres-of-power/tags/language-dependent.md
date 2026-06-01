@@ -1,6 +1,6 @@
 ---
 type: tag
-id: language-dependent
+id: "language-dependent"
 label: "Language-dependent"
 color: "#6b7280"
 priority: 15

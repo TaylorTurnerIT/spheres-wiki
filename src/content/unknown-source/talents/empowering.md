@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: basic
-tags: ["archmagi's hb", "manabond"]
+tags: ["archmagis-hb", "manabond"]
 ---
 
 You create a manabond that allows you to easily empower or alter your ally's magical abilities. You can use an (amp) on a willing recipient of your manabond as part of the action used to concentrate on your manabond each round.

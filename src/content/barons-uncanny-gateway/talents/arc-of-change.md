@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: advanced
-tags: ["sm—", "utility"]
+tags: ["sm", "utility"]
 ---
 
 **Prerequisites:** Divination Sphere, Time Sphere

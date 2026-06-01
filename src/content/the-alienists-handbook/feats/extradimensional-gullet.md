@@ -4,7 +4,7 @@ name: "Extradimensional Gullet"
 type: feat
 system: power
 sphere: warp
-tags: ["alienist hb", "combat"]
+tags: ["alienist-hb", "combat"]
 tier: feat
 ---
 

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: advanced
-tags: ["alienist hb"]
+tags: ["alienist-hb"]
 ---
 
 **Prerequisites:** Destruction sphere (Admixture, Blast Salvo (blast shape), Greater Admixture (advanced), Split Blast (advanced)), caster level 10th.

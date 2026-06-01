@@ -1,6 +1,6 @@
 ---
 type: tag
-id: good
+id: "good"
 label: "Good"
 color: "#fcd34d"
 priority: 15

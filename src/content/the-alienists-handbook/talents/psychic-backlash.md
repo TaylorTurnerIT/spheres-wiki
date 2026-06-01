@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: advanced
-tags: ["alienist hb", "su"]
+tags: ["alienist-hb", "su"]
 ---
 
 **Prerequisites:** Mind sphere (Psychic Vengeance).

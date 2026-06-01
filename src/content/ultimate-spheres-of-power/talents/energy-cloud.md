@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: advanced
-tags: ["blast shape"]
+tags: ["blast-shape"]
 ---
 
 **Prerequisites:** Destruction sphere, caster level 10th.

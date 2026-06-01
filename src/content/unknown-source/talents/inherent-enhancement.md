@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: enhancement
 tier: advanced
-tags: ["archmagi's hb", "enhance"]
+tags: ["archmagis-hb", "enhance"]
 ---
 
 **Prerequisites:** Enhancement sphere (Deep Enhancement, Mental Enhancement, Physical Enhancement), caster level 17th.

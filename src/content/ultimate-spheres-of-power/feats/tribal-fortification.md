@@ -5,7 +5,7 @@ type: feat
 system: power
 sphere: war
 dualSphere: protection
-tags: ["abj. hb", "dual sphere", "dual-sphere"]
+tags: ["abj-hb", "dual-sphere"]
 tier: feat
 ---
 

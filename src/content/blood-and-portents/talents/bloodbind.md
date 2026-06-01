@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: blood
 tier: basic
-tags: ["blood art", "blood-art"]
+tags: ["blood-art"]
 ---
 
 As a standard action, you bind the target with their own blood, constricting the target with chains, vines, or tattoo-like stains. On a failed Fortitude save, the target suffers blood loss and is bound. A creature bound by this effect is entangled. You may concentrate to maintain this effect each round, or may spend a spell point as a free action to allow this effect to persist for 1 round per caster level without concentration. A creature is allowed a new saving throw each round as a move action to end this effect.

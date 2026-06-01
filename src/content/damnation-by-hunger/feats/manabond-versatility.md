@@ -4,7 +4,7 @@ name: "Manabond Versatility"
 type: feat
 system: power
 sphere: mana
-tags: ["dual sphere", "dual-sphere"]
+tags: ["dual-sphere"]
 tier: feat
 ---
 

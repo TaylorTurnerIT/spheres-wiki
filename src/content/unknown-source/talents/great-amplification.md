@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: ["archmagi's hb"]
+tags: ["archmagis-hb"]
 ---
 
 **Prerequisites:** Mana sphere (at least one (amp) talent), caster level 5th.

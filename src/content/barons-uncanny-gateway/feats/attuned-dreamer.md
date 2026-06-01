@@ -4,7 +4,7 @@ name: "Attuned Dreamer"
 type: feat
 system: power
 sphere: mind
-tags: ["sm—"]
+tags: ["sm"]
 tier: feat
 ---
 

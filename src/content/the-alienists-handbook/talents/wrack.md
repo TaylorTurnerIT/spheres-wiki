@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["alienist hb", "charm"]
+tags: ["alienist-hb", "charm"]
 ---
 
 You flood your target with disturbing sensations

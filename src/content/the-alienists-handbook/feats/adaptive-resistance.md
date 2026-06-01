@@ -4,7 +4,7 @@ name: "Adaptive Resistance"
 type: feat
 system: power
 sphere: alteration
-tags: ["alienist hb"]
+tags: ["alienist-hb"]
 tier: feat
 ---
 

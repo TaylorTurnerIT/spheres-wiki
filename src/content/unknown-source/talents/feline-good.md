@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: life
 tier: advanced
-tags: ["catgirl hb"]
+tags: ["catgirl-hb"]
 ---
 
 The recipients of your life magic are momentarily protected by your affection and care, the harsh effects momentarily stalled as your magic gently caresses them.

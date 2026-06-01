@@ -1,6 +1,6 @@
 ---
 type: tag
-id: cold
+id: "cold"
 label: "Cold"
 color: "#3b82f6"
 priority: 15

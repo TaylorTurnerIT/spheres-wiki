@@ -1,6 +1,6 @@
 ---
 type: tag
-id: mind-affecting
+id: "mind-affecting"
 label: "Mind-affecting"
 color: "#d946ef"
 priority: 15

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: ["sm—"]
+tags: ["sm"]
 ---
 
 **Prerequisites:** Mana Sphere

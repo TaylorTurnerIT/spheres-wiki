@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: blood
 tier: basic
-tags: ["blood art", "blood-art"]
+tags: ["blood-art"]
 ---
 
 Whenever you cause another creature to suffer blood loss, you gain an amount of temporary hit points equal to the blood loss for a number of rounds equal to your casting ability modifier. Whenever you would take blood loss damage, these temporary hit points are lost first.

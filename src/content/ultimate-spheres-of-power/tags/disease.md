@@ -1,6 +1,6 @@
 ---
 type: tag
-id: disease
+id: "disease"
 label: "Disease"
 color: "#92400e"
 priority: 15

@@ -1,6 +1,6 @@
 ---
 type: tag
-id: fire
+id: "fire"
 label: "Fire"
 color: "#ef4444"
 priority: 15

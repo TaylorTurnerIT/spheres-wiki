@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: ["amp", "archmagi's hb", "manipulation"]
+tags: ["amp", "archmagis-hb", "manipulation"]
 ---
 
 **Prerequisites:** Mana sphere (Initiate's Training), caster level 5th.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: protection
 tier: advanced
-tags: ["arcforge addendum", "combat", "lg", "mythic"]
+tags: ["arcforge-addendum", "combat", "lg", "mythic"]
 ---
 
 **Prerequisites:** Protection sphere (Spell Ward (aegis, ward)), caster level 10th.

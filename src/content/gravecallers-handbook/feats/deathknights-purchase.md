@@ -4,7 +4,7 @@ name: "Deathknight's Purchase"
 type: feat
 system: power
 sphere: death
-tags: ["combat", "gravecaller's hb", "necrosis"]
+tags: ["combat", "gravecallers-hb", "necrosis"]
 tier: feat
 ---
 

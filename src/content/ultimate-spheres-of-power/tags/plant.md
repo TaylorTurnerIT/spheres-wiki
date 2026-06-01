@@ -1,6 +1,6 @@
 ---
 type: tag
-id: plant
+id: "plant"
 label: "Plant"
 priority: 5
 description: "Provides abilities related to the Plant tag."

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: creation
 tier: advanced
-tags: ["alienist hb"]
+tags: ["alienist-hb"]
 ---
 
 **Prerequisites:** Creation sphere (Duplicate (advanced), Exquisite Detail, Fleshcraft (advanced, material)), Enhancement sphere (Animate Object (enhance), Bestow Intelligence (enhance), Bestow Life (advanced)), caster level 15th.

@@ -1,6 +1,6 @@
 ---
 type: tag
-id: emotion
+id: "emotion"
 label: "Emotion"
 color: "#ec4899"
 priority: 15

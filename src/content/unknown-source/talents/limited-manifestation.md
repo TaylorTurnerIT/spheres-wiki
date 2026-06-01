@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: ["archmagi's hb"]
+tags: ["archmagis-hb"]
 ---
 
 **Prerequisites:** Mana sphere (Gift Of Knowledge), at least 3 other spheres known, caster level 15th.

@@ -4,7 +4,7 @@ name: "Catty Observer"
 type: feat
 system: power
 sphere: protection
-tags: ["catgirl hb"]
+tags: ["catgirl-hb"]
 tier: feat
 ---
 

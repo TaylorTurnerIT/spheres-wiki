@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: basic
-tags: ["amp", "archmagi's hb", "manipulation"]
+tags: ["amp", "archmagis-hb", "manipulation"]
 ---
 
 You can empower and bolster your magic as you create it.

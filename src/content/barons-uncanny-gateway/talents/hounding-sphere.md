@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: advanced
-tags: ["sm—"]
+tags: ["sm"]
 ---
 
 **Prerequisites:** Destruction Sphere (Energy Sphere), caster level 10th

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: alteration
 tier: basic
-tags: ["rw hb", "transformation"]
+tags: ["rw-hb", "transformation"]
 ---
 
 You may grant the form of an elemental with your shapeshift.

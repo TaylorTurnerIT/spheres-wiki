@@ -1,6 +1,6 @@
 ---
 type: tag
-id: meld
+id: "meld"
 label: "Meld"
 color: "#a55eea"
 priority: 15

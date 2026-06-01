@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: advanced
-tags: ["alienist hb", "sense"]
+tags: ["alienist-hb", "sense"]
 ---
 
 **Prerequisites:** Divination sphere (Detect Scrying (sense)).
