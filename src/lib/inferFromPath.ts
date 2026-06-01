@@ -41,45 +41,63 @@ export function inferFromPath(fileId: string): InferredFields {
     }
   }
 
-  // ── 3-segment paths ────────────────────────────────────────────────────────
+  // ── 3-segment legacy paths ──────────────────────────────────────────────────
   if (parts.length === 3) {
-    // Legacy: class-features/{cid}/{id}
     if (s0 === 'class-features')  return { type: 'class-feature', className: s1, id: s2 };
-    // Legacy: class-traits/{cid}/{id}
     if (s0 === 'class-traits')    return { type: 'class-trait', className: s1, id: s2 };
-    // New: spheres/{sid}/index
-    if (s0 === 'spheres' && s2 === 'index') return { type: 'sphere', id: s1 };
-    // New: classes/{cid}/index
-    if (s0 === 'classes' && s2 === 'index') return { type: 'class', id: s1 };
   }
 
-  // ── 4-segment paths ────────────────────────────────────────────────────────
-  if (parts.length === 4) {
-    // New: spheres/{sid}/talents/{id}
-    if (s0 === 'spheres' && s2 === 'talents') return { type: 'talent', sphere: s1, id: s3 };
-    // New: spheres/{sid}/feats/{id}
-    if (s0 === 'spheres' && s2 === 'feats')   return { type: 'feat', sphere: s1, id: s3 };
-    // New: classes/{cid}/features/{id}
-    if (s0 === 'classes' && s2 === 'features') return { type: 'class-feature', className: s1, id: s3 };
-  }
+  const last = parts[parts.length - 1];
+  const prev = parts.length > 1 ? parts[parts.length - 2] : '';
+  const prev2 = parts.length > 2 ? parts[parts.length - 3] : '';
 
-  // ── 5-segment paths ────────────────────────────────────────────────────────
-  if (parts.length === 5) {
-    // New: classes/{cid}/archetypes/{aid}/index
-    if (s0 === 'classes' && s2 === 'archetypes' && s4 === 'index') {
-      return { type: 'archetype', className: s1, id: s3 };
+  // ── Flexible nesting rules ──────────────────────────────────────────────────
+
+  if (parts.length >= 4) {
+    // Archetype Features: .../Archetypes/[aid]/Archetype Features/[id] or features
+    if (prev === 'Archetype Features' || (prev === 'features' && parts[parts.length - 4].toLowerCase() === 'archetypes')) {
+      const aid = parts[parts.length - 3];
+      return { type: 'archetype-feature', archetypeId: aid, id: last };
+    }
+    // Class Traits: .../[cid]/Class Features/[fid]/Class Traits/[id] or features/traits
+    if (prev === 'Class Traits' || (prev === 'traits' && parts[parts.length - 4].toLowerCase() === 'features')) {
+      const fid = parts[parts.length - 3];
+      // cid is two levels above fid: .../[cid]/Class Features/[fid]
+      const cid = parts[parts.length - 5] || parts[1]; // fallback if nesting is weird
+      return { type: 'class-trait', className: cid, featureId: fid, id: last };
     }
   }
 
-  // ── 6-segment paths ────────────────────────────────────────────────────────
-  if (parts.length === 6) {
-    // New: classes/{cid}/features/{fid}/traits/{id}
-    if (s0 === 'classes' && s2 === 'features' && s4 === 'traits') {
-      return { type: 'class-trait', className: s1, featureId: s3, id: s5 };
+  if (parts.length >= 3) {
+    // Class Features: .../[cid]/Class Features/[id] or features/[id]
+    if (prev === 'Class Features' || prev === 'features') {
+      const cid = parts[parts.length - 3];
+      return { type: 'class-feature', className: cid, id: last };
     }
-    // New: classes/{cid}/archetypes/{aid}/features/{id}
-    if (s0 === 'classes' && s2 === 'archetypes' && s4 === 'features') {
-      return { type: 'archetype-feature', archetypeId: s3, id: s5 };
+    // Archetypes: .../[cid]/Archetypes/[aid]/[aid] or index
+    if ((prev2 === 'Archetypes' || prev2 === 'archetypes') && (last === prev || last === 'index')) {
+      const aid = prev;
+      const cid = parts[parts.length - 4];
+      return { type: 'archetype', className: cid, id: aid };
+    }
+    // Sphere talents and feats
+    if (prev === 'talents') {
+      const sid = parts[parts.length - 3];
+      return { type: 'talent', sphere: sid, id: last };
+    }
+    if (prev === 'feats') {
+      const sid = parts[parts.length - 3];
+      return { type: 'feat', sphere: sid, id: last };
+    }
+    // Spheres root
+    if (parts.length >= 3 && parts[parts.length - 3] === 'spheres' && (last === prev || last === 'index')) {
+       return { type: 'sphere', id: prev };
+    }
+  }
+
+  if (s0.toLowerCase() === 'classes') {
+    if (last === prev || last === 'index') {
+      return { type: 'class', id: prev };
     }
   }
 

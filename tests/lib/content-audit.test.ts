@@ -16,6 +16,7 @@ vi.mock('astro/loaders', () => ({
 
 // Now import entrySchema safely
 import { entrySchema } from '../../src/content.config';
+import { inferFromPath } from '../../src/lib/inferFromPath';
 
 function getFilesRecursively(dir: string): string[] {
   const results: string[] = [];
@@ -91,9 +92,14 @@ describe('Content Audit', () => {
       it('complies with V1: matches entrySchema', () => {
         if (!frontmatter) return;
         
-        const result = entrySchema.safeParse(frontmatter);
+        // Extract relative path inside the book directory
+        const fileId = pathParts.slice(1).join('/');
+        const inferred = inferFromPath(fileId);
+        const merged = { ...inferred, ...frontmatter };
+        
+        const result = entrySchema.safeParse(merged);
         if (!result.success) {
-          const errors = result.error.errors.map(e => `${e.path.join('.')}: ${e.message}`).join(', ');
+          const errors = result.error.issues.map(e => `${e.path.join('.')}: ${e.message}`).join(', ');
           expect.fail(`Schema validation failed: ${errors}`);
         }
       });
