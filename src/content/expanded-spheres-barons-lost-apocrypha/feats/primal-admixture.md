@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: nature
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Nature sphere.

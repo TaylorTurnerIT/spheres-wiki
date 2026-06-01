@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: death
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Death sphere (Expanded Necromancy), caster level 3rd.

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: telekinesis
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Telekinesis sphere, Mind Limb, base attack bonus +5.

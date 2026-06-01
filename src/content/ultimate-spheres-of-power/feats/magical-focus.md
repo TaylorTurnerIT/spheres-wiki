@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: enhancement
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Enhancement sphere; Focus Casting drawback or Galvanized drawback.

@@ -6,6 +6,7 @@ system: power
 sphere: nature
 dualSphere: divination
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Divination Sphere (viewing), Nature Sphere

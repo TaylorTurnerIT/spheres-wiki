@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: alteration
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Alteration sphere (Vermin Transformation (transformation)) or web bestial trait; poison bestial trait or racial poison ability.

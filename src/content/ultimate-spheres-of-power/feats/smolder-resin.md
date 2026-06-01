@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: nature
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Nature sphere ((fire) package and (plant) package).

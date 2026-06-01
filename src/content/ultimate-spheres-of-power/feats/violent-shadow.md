@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: illusion
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Shadowmark 3d6, shadow pool.

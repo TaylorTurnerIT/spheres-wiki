@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: light
 tags: []
+tier: feat
 ---
 
 They linger, float and dance like lanterns in the evening sky.

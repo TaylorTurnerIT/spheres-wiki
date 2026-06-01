@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: fallen-fey
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Alchemy sphere, Fallen Fey sphere (Fairy Dust (fey-blessing)).

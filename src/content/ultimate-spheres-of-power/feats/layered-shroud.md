@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: weather
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Weather sphere (one (shroud) talent), caster level 10th.

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: destruction
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Alteration sphere, Destruction sphere (Admixture).

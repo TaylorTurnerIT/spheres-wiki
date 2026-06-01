@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: mana
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Mana sphere; Protection sphere, War sphere, Life sphere (Diagnose) or Mind sphere (Project Thoughts).

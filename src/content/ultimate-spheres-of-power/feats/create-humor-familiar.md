@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: blood
 tags: []
+tier: feat
 ---
 
 **Prerequisite:** Blood sphere.

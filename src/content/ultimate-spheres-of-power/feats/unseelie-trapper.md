@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: fallen-fey
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Fallen Fey sphere (Snare Setter (fey-blessing)), Trap sphere.

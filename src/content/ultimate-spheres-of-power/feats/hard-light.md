@@ -6,6 +6,7 @@ system: power
 sphere: light
 dualSphere: creation
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Creation sphere, Light sphere.

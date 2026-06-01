@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: death
 tags: []
+tier: feat
 ---
 
 Your blood flow slows and heartbeat grows erratic without significant harm to you, increasing your ability to survive freezing temperatures and electric shocks.

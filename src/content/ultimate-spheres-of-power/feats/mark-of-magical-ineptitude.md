@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: mana
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Mana sphere (Mark Of Instability, Mark Of Incompetency), caster level 7th.

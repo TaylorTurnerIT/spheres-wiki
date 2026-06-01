@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: destruction
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Selective Admixture, Destruction sphere (Admixture, Selective Blast), any one Admixture feat.

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: destruction
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Illusion sphere.

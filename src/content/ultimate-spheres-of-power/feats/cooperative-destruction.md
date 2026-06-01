@@ -6,6 +6,7 @@ system: power
 sphere: destruction
 dualSphere: creation
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Creation sphere (Plasma Production (material), Potent Alteration), Destruction sphere.

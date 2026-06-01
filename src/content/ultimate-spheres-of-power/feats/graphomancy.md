@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: protection
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Craft (calligraphy) 1 rank, Protection sphere.

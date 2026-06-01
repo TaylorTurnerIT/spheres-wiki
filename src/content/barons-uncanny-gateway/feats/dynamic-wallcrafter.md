@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: protection
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Destruction Sphere (energy wall) or Protection Sphere (greater barrier)

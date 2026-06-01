@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: war
 tags: []
+tier: feat
 ---
 
 **Prerequisite:** War sphere.

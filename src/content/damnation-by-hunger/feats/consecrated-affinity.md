@@ -6,6 +6,7 @@ system: power
 sphere: mana
 dualSphere: fate
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 Your presence warps the fabric of magic, binding creatures together.

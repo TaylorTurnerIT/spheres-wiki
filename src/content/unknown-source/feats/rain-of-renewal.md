@@ -6,6 +6,7 @@ system: power
 sphere: weather
 dualSphere: life
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisite:** Life sphere (Stabilizing Invigoration), Weather sphere.

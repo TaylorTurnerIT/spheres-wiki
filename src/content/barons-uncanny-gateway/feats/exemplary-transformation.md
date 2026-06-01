@@ -6,6 +6,7 @@ system: power
 sphere: enhancement
 dualSphere: alteration
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Alteration Sphere (outsider body), Enhancement Sphere (emphasize belief, mental enhancement, or physical enhancement)

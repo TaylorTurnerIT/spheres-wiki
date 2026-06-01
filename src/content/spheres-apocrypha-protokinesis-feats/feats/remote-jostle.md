@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: telekinesis
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisite:** Telekinesis sphere.

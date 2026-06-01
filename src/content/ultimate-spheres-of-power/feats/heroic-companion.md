@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: conjuration
 tags: []
+tier: feat
 ---
 
 **Prerequisite:** Beastmastery sphere, Conjuration sphere, animal companion, familiar, or eidolon.

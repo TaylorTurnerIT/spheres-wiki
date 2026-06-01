@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: illusion
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Illusion sphere (Mage Feint), base attack bonus +3.

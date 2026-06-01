@@ -6,6 +6,7 @@ system: power
 sphere: warp
 dualSphere: dark
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Dark sphere, Warp sphere (Extradimensional Room (space)).

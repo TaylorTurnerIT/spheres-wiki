@@ -6,6 +6,7 @@ system: power
 sphere: nature
 dualSphere: destruction
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 The diverse powers of nature are yours to distort.

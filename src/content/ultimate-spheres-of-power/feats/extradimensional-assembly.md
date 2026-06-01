@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: warp
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Telekinesis sphere (Whirlwind Assembly), Warp sphere (Extradimensional Storage (space)).

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: nature
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Fallen Fey sphere (Water Creature (fey-blessing)), Nature sphere ((water) package).

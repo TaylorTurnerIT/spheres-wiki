@@ -6,6 +6,7 @@ system: power
 sphere: time
 dualSphere: death
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 Your chronomantic power extends to blurring the moment between life and death.

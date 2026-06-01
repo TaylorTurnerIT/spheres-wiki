@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: light
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Con 13, Survival 3 ranks, Light sphere.

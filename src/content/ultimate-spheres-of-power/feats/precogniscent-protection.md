@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: divination
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Divination sphere (one or more (sense) talents or abilities).

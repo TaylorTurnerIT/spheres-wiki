@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: warp
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Dark sphere (Shadow Stash), Warp sphere (Extradimensional Storage).

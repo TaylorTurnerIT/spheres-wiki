@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: telekinesis
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Use Magic Device 3 ranks, Telekinesis sphere, Mind Limb.

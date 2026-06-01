@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: death
 tags: []
+tier: feat
 ---
 
 Your nerves fail, increasing your pain tolerance and general resilience.

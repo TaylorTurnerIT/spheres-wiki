@@ -6,6 +6,7 @@ system: power
 sphere: enhancement
 dualSphere: death
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 "Arms and legs make perfectly acceptable furniture, minions, and anything in between." – Kul'thiran, Master Necrotaxidermist

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: warp
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Warp sphere, +3 base attack bonus.

@@ -6,6 +6,7 @@ system: power
 sphere: nature
 dualSphere: enhancement
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Enhancement sphere, Nature sphere ((metal) package).

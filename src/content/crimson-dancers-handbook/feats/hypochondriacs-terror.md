@@ -6,6 +6,7 @@ system: power
 sphere: mind
 dualSphere: blood
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 When you take over a creature's bodily functions, you may also blend in your mental manipulation to torture them from the inside out.

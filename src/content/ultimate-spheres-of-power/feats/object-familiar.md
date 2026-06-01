@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: enhancement
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), ability to acquire a familiar.

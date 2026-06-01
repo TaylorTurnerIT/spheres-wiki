@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: destruction
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction Sphere (energy bomb)

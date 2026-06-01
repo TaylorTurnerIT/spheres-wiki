@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: alteration
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Alteration sphere (Additional Limbs) or multiple heads.

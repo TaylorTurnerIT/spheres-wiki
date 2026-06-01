@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: conjuration
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Conjuration sphere (Call Planar Creature).

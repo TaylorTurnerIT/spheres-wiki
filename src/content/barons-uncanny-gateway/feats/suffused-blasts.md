@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: destruction
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Paradigm Blast (blast type) or Smiting Blast (blast type)).

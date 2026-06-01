@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: life
 tags: []
+tier: feat
 ---
 
 **Prerequisite:** Life sphere (at least one (vitality) talent), lay on hands class feature.

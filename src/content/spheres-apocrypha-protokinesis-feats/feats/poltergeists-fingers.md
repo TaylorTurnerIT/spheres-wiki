@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: telekinesis
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Sleight of Hand 3 ranks, Telekinesis sphere, Mind Limb.

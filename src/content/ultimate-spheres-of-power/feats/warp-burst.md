@@ -6,6 +6,7 @@ system: power
 sphere: warp
 dualSphere: destruction
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Explosive Orb (blast shape)), Warp sphere.

@@ -6,6 +6,7 @@ system: power
 sphere: war
 dualSphere: enhancement
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Enhancement sphere, War sphere.

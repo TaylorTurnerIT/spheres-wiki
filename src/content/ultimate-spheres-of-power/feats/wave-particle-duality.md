@@ -6,6 +6,7 @@ system: power
 sphere: light
 dualSphere: illusion
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Illusion sphere, Light sphere.

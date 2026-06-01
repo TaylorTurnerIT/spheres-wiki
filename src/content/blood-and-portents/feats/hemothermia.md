@@ -6,6 +6,7 @@ system: power
 sphere: nature
 dualSphere: blood
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Blood sphere (any (blood art)), Nature sphere.

@@ -6,6 +6,7 @@ system: power
 sphere: destruction
 dualSphere: conjuration
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Conjuration sphere (Explosive Companion (form)), Destruction sphere.

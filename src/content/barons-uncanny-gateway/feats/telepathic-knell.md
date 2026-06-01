@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: mind
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Mind Sphere

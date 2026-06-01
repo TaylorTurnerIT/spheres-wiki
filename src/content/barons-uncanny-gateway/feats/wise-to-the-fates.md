@@ -6,6 +6,7 @@ system: power
 sphere: fate
 dualSphere: divination
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Divination Sphere, Fate Sphere

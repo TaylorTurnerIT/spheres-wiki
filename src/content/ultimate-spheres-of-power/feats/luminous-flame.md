@@ -6,6 +6,7 @@ system: power
 sphere: nature
 dualSphere: light
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Light sphere, Nature sphere ((fire) package).

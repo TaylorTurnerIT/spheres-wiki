@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: telekinesis
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Telekinesis sphere, Improved Unarmed Strike, base attack bonus +5.

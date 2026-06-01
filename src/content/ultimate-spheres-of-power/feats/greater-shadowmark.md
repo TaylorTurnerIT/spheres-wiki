@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: illusion
 tags: []
+tier: feat
 ---
 
 **Prerequisite:** Shadowmark 1d6.

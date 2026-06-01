@@ -6,6 +6,7 @@ system: power
 sphere: warp
 dualSphere: protection
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Protection sphere, Warp sphere.

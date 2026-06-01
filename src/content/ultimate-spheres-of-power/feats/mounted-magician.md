@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: enhancement
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Handle Animal 3 ranks, Ride 3 ranks, Enhancement sphere, casting class feature.

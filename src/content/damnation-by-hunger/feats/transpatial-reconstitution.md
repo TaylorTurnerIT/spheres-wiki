@@ -6,6 +6,7 @@ system: power
 sphere: warp
 dualSphere: life
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 Your form in this particular world is one of many. Material from beyond can replace any damaged components.

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: death
 tags: []
+tier: feat
 ---
 
 Your emotional and reflex responses fade, allowing you to shrug off distracting conditions.

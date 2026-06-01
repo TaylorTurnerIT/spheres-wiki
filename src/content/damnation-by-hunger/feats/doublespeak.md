@@ -6,6 +6,7 @@ system: power
 sphere: mind
 dualSphere: fate
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 What might spell doom for one listener brings the greatest of joy to another.

@@ -6,6 +6,7 @@ system: power
 sphere: illusion
 dualSphere: death
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Death sphere, Illusion sphere (Illusionary Touch (sensory, touch) x2, Illusionary Disguise ability).

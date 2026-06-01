@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: life
 tags: []
+tier: feat
 ---
 
 You bend the forces of the cosmos to the heartbeat of mortality.

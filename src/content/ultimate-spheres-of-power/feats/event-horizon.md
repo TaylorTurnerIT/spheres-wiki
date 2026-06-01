@@ -6,6 +6,7 @@ system: power
 sphere: telekinesis
 dualSphere: dark
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Dark sphere, Telekinesis sphere (Gravity Well).

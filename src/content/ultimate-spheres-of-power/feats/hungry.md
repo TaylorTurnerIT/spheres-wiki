@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: conjuration
 tags: ["combat", "companion"]
+tier: feat
 ---
 
 **Prerequisites:** Ravenous Companion, caster level 10th.

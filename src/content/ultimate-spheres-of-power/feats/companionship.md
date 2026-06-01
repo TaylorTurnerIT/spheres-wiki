@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: protection
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Protection sphere, 3rd-level paladin.

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: telekinesis
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Acrobatics 3 ranks, Telekinesis sphere.

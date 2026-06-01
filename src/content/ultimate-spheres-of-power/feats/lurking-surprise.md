@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: dark
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow), Sinister Surprise).

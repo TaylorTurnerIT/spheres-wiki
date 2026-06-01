@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: mana
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Mana sphere

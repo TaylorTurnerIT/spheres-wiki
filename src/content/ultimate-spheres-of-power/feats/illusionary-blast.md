@@ -6,6 +6,7 @@ system: power
 sphere: illusion
 dualSphere: destruction
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere, Illusion sphere (Illusionary Touch (sensory, touch) x2).

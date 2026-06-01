@@ -6,6 +6,7 @@ system: power
 sphere: war
 dualSphere: light
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Light sphere, War sphere.

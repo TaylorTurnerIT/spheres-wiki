@@ -6,6 +6,7 @@ system: power
 sphere: weather
 dualSphere: destruction
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere, Weather sphere.

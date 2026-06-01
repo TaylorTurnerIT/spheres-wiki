@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: mind
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Mind sphere (Mass Charm).

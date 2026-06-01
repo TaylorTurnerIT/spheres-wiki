@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: fate
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Death or Fate sphere
