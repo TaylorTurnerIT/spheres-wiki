@@ -49,7 +49,7 @@ const isChampions = system === 'champions';
           {classes.length > 0 && (
             <div class="ref-subsection">
               <div class="ref-subsection-label">{cfg.classLabel}</div>
-              <div class="sphere-list">
+              <div class:list={['sphere-list', `${nsClass}-list`]}>
                 {classes.map(cls => (
                   <a href={url(`/${cfg.nsRoute}/classes/${cls.id}/`)} class={nsClass} data-astro-prefetch="hover">{cls.name}</a>
                 ))}

@@ -1109,10 +1109,11 @@ h6 {
   font-size: var(--fs-base);
   font-family: var(--font-body);
   line-height: 1;
-  padding: 3.5px 4px;
+  padding: 4px 6px;
+  margin-bottom: 3px;
   break-inside: avoid;
   white-space: nowrap;
-  border-radius: 3px;
+  border-radius: 4px;
   transition: background 0.12s ease;
   text-decoration: none;
 }
@@ -1284,25 +1285,19 @@ h6 {
 .entry-card {
   background: var(--clr-bg);
   border: 0.5px solid var(--clr-border);
-  border-left: 3px solid;
-  border-radius: var(--radius);
-  padding: 10px 12px;
+  border-left: 3px solid var(--clr-ns, currentColor);
+  border-radius: 6px;
+  padding: 8px 12px;
   display: flex;
   flex-direction: column;
   gap: 4px;
   text-decoration: none;
   color: var(--clr-text);
-  transition:
-    background 0.15s ease,
-    transform 0.12s ease;
+  transition: background 0.15s ease;
 }
 .entry-card:hover {
-  background: var(--clr-surface);
-  transform: translateX(2px);
+  background: color-mix(in srgb, var(--clr-ns) 4%, var(--clr-surface));
   text-decoration: none;
-}
-.entry-card {
-  border-left-color: var(--clr-ns, currentColor);
 }
 .entry-card-header {
   display: flex;
@@ -1330,6 +1325,22 @@ h6 {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ── Sphere button styling ──────────────────────────────── */
+.sphere-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 900px) {
+  .sphere-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .sphere-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .page-title-icon {

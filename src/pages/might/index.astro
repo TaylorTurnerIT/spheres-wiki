@@ -29,9 +29,9 @@ const classes = [...classMap.values()]
     <div class="section-heading-rule"></div>
   </div>
 
-  <div class="entry-grid">
+  <div class="entry-grid sphere-grid">
     {spheres.map(s => (
-      <a href={url(`/might/${s.id}/`)} class="entry-card might" data-astro-prefetch="hover">
+      <a href={url(`/might/${s.id}/`)} class="entry-card might sphere-card" data-astro-prefetch="hover">
         <div class="entry-card-header">
           <svg class="si entry-card-icon" aria-hidden="true"><use href={`#si-${s.icon}`} /></svg>
           <span class="entry-card-name">{s.name}</span>
