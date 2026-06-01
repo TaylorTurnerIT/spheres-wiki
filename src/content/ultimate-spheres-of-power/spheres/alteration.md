@@ -35,7 +35,7 @@ sectionDefinitions:
 
 [Shapeshift]
 
-##### Note: Legs
+#### Note: Legs
 
 Creatures without legs are immune to being tripped. Creatures with 4 or more legs gain a +4 bonus to their CMD vs. trip for each pair of legs beyond the first, and are treated as quadrupeds for the purpose of their carrying capacity.
 
