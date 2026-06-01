@@ -1,7 +1,8 @@
 ---
 type: tag
-description: ""
+description: "Content originating from a specific sourcebook or handbook."
 priority: 0
+color: "#2E4053"
 id: "youxia-hb"
 label: "Youxia Hb"
 ---
