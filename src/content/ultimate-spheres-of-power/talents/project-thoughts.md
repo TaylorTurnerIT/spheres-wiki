@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["utility"]
+tags: ["utility", "charm"]
 ---
 
 You can communicate directly into the mind of another.

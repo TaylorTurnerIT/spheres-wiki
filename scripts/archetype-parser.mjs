@@ -26,7 +26,7 @@ import { kebab, fmArray } from "./lib/render.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
-const REPO = "../wdotcrawl/spheresofpower-repo/pages";
+const REPO = "../spheresofpower-latest/pages";
 const CONTENT = join(ROOT, "src", "content");
 
 // ─── Book mapping for archetypes ──────────────────────────────────────────────

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: advanced
-tags: []
+tags: ["word"]
 ---
 
 **Prerequisites:** Fate sphere (Bless (word)), caster level 5th.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: []
+tags: ["charm"]
 ---
 
 You protect the target's mind from heavier thoughts and connections.

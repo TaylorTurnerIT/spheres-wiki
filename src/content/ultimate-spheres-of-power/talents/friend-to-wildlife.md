@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: ["utility"]
+tags: ["utility", "spirit"]
 ---
 
 Choose either animals or vermin. You may take this talent twice to gain both options.

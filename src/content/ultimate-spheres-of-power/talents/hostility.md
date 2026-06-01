@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: []
+tags: ["charm"]
 ---
 
 You cause the target to enter a blinding rage.

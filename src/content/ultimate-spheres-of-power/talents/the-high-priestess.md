@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: advanced
-tags: []
+tags: ["motif"]
 ---
 
 **Prerequisites:** Fate sphere (one (motif) talent), caster level 5th.

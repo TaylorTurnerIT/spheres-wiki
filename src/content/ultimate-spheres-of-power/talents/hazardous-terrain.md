@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["geomancing"]
 ---
 
 You know how to make many of your geomancing abilities particularly dangerous.

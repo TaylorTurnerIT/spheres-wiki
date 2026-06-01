@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["geomancing"]
 ---
 
 You may manipulate the elements to take on different shapes. The types and forms you can create are determined by your Nature packages, as outlined below:

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: []
+tags: ["charm"]
 ---
 
 You freeze the target in place.

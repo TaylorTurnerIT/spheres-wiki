@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: []
+tags: ["motif"]
 ---
 
 You may grant a motif that allows the target to subsume themselves in the group. The target gains an aura with a radius of 30 feet that gives allies other than the target a +2 insight bonus to saving throws against mind-affecting effects. This bonus increases by +1 for every 5 caster levels.

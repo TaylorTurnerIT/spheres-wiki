@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["spirit"]
 ---
 
 As an immediate action, (or a free action usable even when it is not your turn by spending a spell point) you may reach out with one of your elements. This grants you the following abilities, depending on which packages you possess. You may only use Wreath Of Elements once per round.

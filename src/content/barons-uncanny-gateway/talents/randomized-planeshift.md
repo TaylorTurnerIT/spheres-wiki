@@ -32,4 +32,4 @@ If you possess the Portal talent, you may cause any portals you create to random
 | 78–84 | Astral Plane |
 | 85–90 | Random demiplane |
 | 91–95 | Material Plane (random world) |
-| 96–100 | GM’s choice |
+| 96–100 | GM's choice |

@@ -43,7 +43,7 @@ const ROOT = join(__dirname, "..");
 //   headingSourceMap - bracket source keys → book slugs (null = resolve from body)
 //   bodySourceMap    - ^^Source: Book Name^^ body lines → book slugs
 
-const REPO = "../wdotcrawl/spheresofpower-repo/pages";
+const REPO = "../spheresofpower-latest/pages";
 
 // Shared source mappings used by most spheres
 const COMMON_HEADING_SOURCES = {
@@ -372,6 +372,36 @@ const PAREN_TAG_MAP = {
   form: "form",
   type: "type",
   companion: "companion",
+  consecration: "consecration",
+  "ghost strike": "ghost-strike",
+  word: "word",
+  curse: "curse",
+  shape: "shape",
+  motif: "motif",
+  arcana: "arcana",
+  geomancing: "geomancing",
+  spirit: "spirit",
+  totem: "totem",
+  mandate: "mandate",
+  rally: "rally",
+  sense: "sense",
+  divine: "divine",
+  trick: "trick",
+  lens: "lens",
+  charm: "charm",
+  manipulation: "manipulation",
+  ward: "ward",
+  boon: "boon",
+  bane: "bane",
+  dominion: "dominion",
+  air: "air",
+  water: "water",
+  earth: "earth",
+  fire: "fire",
+  metal: "metal",
+  plant: "plant",
+  weather: "weather",
+  wind: "wind",
 };
 
 /**
@@ -651,7 +681,7 @@ function parseEntryBlock(divContent, sectionCtx, config) {
  * Generate a sphere definition page (.md) with intro text and auto-detected
  * sectionDefinitions based on the talents and feat tags found in the source.
  */
-function generateSpherePage(text, config) {
+function generateSpherePage(text, config, existingContent = null) {
   // 1. Extract intro text — strip blocks whose content should NOT appear, then clean
   let clean = text
     // Strip module blocks entirely (CSS has no place in body text)
@@ -697,6 +727,24 @@ function generateSpherePage(text, config) {
     "form",
     "type",
     "companion",
+    "shape",
+    "motif",
+    "arcana",
+    "geomancing",
+    "spirit",
+    "totem",
+    "mandate",
+    "rally",
+    "sense",
+    "divine",
+    "trick",
+    "lens",
+    "charm",
+    "manipulation",
+    "ward",
+    "boon",
+    "bane",
+    "dominion",
   ]);
 
   for (const e of talents) {
@@ -797,13 +845,7 @@ function generateSpherePage(text, config) {
   }
 
   // 6. Render to YAML frontmatter
-  const lines = ["---"];
-  lines.push(`id: ${config.sphere}`);
-  lines.push(`name: "${capitalize(config.sphere)}"`);
-  lines.push(`system: ${config.system}`);
-  lines.push("type: sphere");
-  lines.push(`icon: ${config.sphere}`);
-  lines.push("tags: []");
+  const lines = [];
   lines.push("sectionDefinitions:");
   for (const section of sectionDefinitions) {
     lines.push(`  - label: "${section.label}"`);
@@ -816,9 +858,29 @@ function generateSpherePage(text, config) {
         lines.push(`        excludeTags: ${JSON.stringify(cat.excludeTags)}`);
     }
   }
-  lines.push("---");
 
-  return `${lines.join("\n")}\n\n${intro.trim()}\n`;
+  if (existingContent) {
+    let [empty, frontmatter, ...bodyParts] = existingContent.split("---");
+    let body = bodyParts.join("---");
+    // Replace existing sectionDefinitions
+    let newFm = frontmatter.replace(/sectionDefinitions:[\s\S]*?(?=\n\w|---|$)/, lines.join("\n") + "\n");
+    if (!newFm.includes("sectionDefinitions:")) {
+      newFm += lines.join("\n") + "\n";
+    }
+    return `---${newFm}---${body}`;
+  }
+
+  const outLines = ["---"];
+  outLines.push(`id: ${config.sphere}`);
+  outLines.push(`name: "${capitalize(config.sphere)}"`);
+  outLines.push(`system: ${config.system}`);
+  outLines.push("type: sphere");
+  outLines.push(`icon: ${config.sphere}`);
+  outLines.push("tags: []");
+  outLines.push(...lines);
+  outLines.push("---");
+
+  return `${outLines.join("\n")}\n\n${intro.trim()}\n`;
 }
 
 function capitalize(str) {
@@ -917,9 +979,13 @@ if (isMain) {
   const rawText = readFileSync(inputPath, "utf-8");
 
   // ── Sphere page ─────────────────────────────────────────────────────────
-  const sphereContent = generateSpherePage(rawText, config);
   const sphereDir = join(ROOT, "src", "content", config.primaryBook, "spheres");
   const spherePath = join(sphereDir, `${config.sphere}.md`);
+  let existingContent = null;
+  if (existsSync(spherePath)) {
+    existingContent = readFileSync(spherePath, "utf-8");
+  }
+  const sphereContent = generateSpherePage(rawText, config, existingContent);
   const sphereLabel = `${config.primaryBook}/spheres/${config.sphere}.md`;
 
   if (MODE === "--dry-run") {

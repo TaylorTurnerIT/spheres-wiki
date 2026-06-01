@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: []
+tags: ["charm"]
 ---
 
 You may make someone see things that are not there.

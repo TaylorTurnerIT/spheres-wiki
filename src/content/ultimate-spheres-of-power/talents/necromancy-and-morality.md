@@ -51,8 +51,5 @@ Wrestling with the complicated ethical questions or reveling in the moral gray a
 **Craftsmanship:** Creating undead is seen as a form of expression, similar to music or sculpture. Pristine, sparkling skeletons in royal regalia stand at key points, ready for a use of Necrotic Senses to quickly observe distant locations. Ballets involving dozens of elaborately-costumed zombies are popular entertainment.
 
 **Hunted:** Out of hatred, duty, or sport, a cabal of undead-hunters scours the area. They may or may not care about apprehending the necromancer behind the reanimation, so long as they're able to take down their quarry.
-[[include old-death]]
 
 ---
-
-[[include sop-template]]

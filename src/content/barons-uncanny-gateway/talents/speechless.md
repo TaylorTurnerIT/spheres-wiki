@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["utility"]
+tags: ["utility", "charm"]
 ---
 
 You impose a failure to communicate

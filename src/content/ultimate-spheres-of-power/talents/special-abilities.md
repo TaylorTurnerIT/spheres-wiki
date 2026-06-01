@@ -114,8 +114,8 @@ Animated objects can gain more CP by applying flaws, which hamper the animated o
 
 | d100 | Result |
 |---|---|
-| 1 | For 1 minute per caster level, the target suffers a temporary penalty to Strength equal to half the effect’s caster level. |
-| 2 | For 1d6 rounds, the caster’s clothing, gear, and surrounding environment animate, causing the caster to be entangled. |
+| 1 | For 1 minute per caster level, the target suffers a temporary penalty to Strength equal to half the effect's caster level. |
+| 2 | For 1d6 rounds, the caster's clothing, gear, and surrounding environment animate, causing the caster to be entangled. |
 | 3 | (Combat) All appropriate weapons wielded by creatures within close range of the target gain the keen special ability for 1 round per caster level. |
 | 4 | For 1 minute per caster level, all weapons wielded by a hostile creature within medium range of the caster gains double the benefit from its enhancement bonus to attack and damage rolls. Hardness and hit points are unaffected. |
 | 5 | (Combat) For 1 round per caster level, all manufactured weapons within close range of the caster are enhanced as the Enhance Equipment ability. |
@@ -134,9 +134,9 @@ Animated objects can gain more CP by applying flaws, which hamper the animated o
 | 18 | For 1 day per caster level, the caster quadruples his carrying capacity. This stacks with other magic that improves carrying capacity. |
 | 19 | For 1 minute per caster level, all hostile creatures within close range of the caster gain a competence bonus on all mental attribute-based skill checks equal to 1/4 caster level (minimum 1). |
 | 20 | For 1 minute per caster level, all weapons wielded by a creature within medium range of the caster gains double the benefit from its enhancement bonus to attack and damage rolls. Hardness and hit points are unaffected. |
-| 21 | For 1 minute per caster level, the target suffers a penalty to Constitution equal to half the effect’s caster level. Creature without a Constitution score instead suffer the penalty to Charisma. Objects instead take a penalty to hardness equal to the Constitution penalty. |
+| 21 | For 1 minute per caster level, the target suffers a penalty to Constitution equal to half the effect's caster level. Creature without a Constitution score instead suffer the penalty to Charisma. Objects instead take a penalty to hardness equal to the Constitution penalty. |
 | 22 | For 1 minute per caster level, all armor and shields worn by a creature within medium range of the caster gain double the benefit from its enhancement bonus to AC. Hardness and hit points are unaffected. |
-| 23 | For 1 minute per caster level, the target gains a temporary enhancement bonus to Strength equal to half the effect’s caster level. |
+| 23 | For 1 minute per caster level, the target gains a temporary enhancement bonus to Strength equal to half the effect's caster level. |
 | 24 | The casting time decreases by 2 steps. |
 | 25 | The effect fails and the action is lost. Spell points or spell slots are lost. |
 | 26 | For 1d6 rounds, objects within close range of the target or center of the target area animate, causing the all creatures within the area to be entangled. A Reflex save negates this effect for 1 round for a given creature. |
@@ -146,11 +146,11 @@ Animated objects can gain more CP by applying flaws, which hamper the animated o
 | 30 | For 1 minute per caster level, the caster gains a +1d4 bonus on all magical skill checks. |
 | 31 | (Combat) For 1 minute per caster level, all hostile creatures within close range of the caster gain a 10 ft. enhancement bonus to all movement speeds. This bonus increases by 10 ft. per 10 caster levels. |
 | 32 | The caster takes 1d4 points of Constitution damage even if he would normally be immune to ability damage. Creatures without a Constitution score instead take Charisma damage. |
-| 33 | For 1 minute per caster level, the target gains a temporary enhancement bonus to Wisdom equal to half the effect’s caster level. For inanimate targets, treat this as the Bestow Intelligence talent. |
+| 33 | For 1 minute per caster level, the target gains a temporary enhancement bonus to Wisdom equal to half the effect's caster level. For inanimate targets, treat this as the Bestow Intelligence talent. |
 | 34 | For 1 minute per caster level, all creatures within close range of the caster take a penalty on all mental attribute- based skill checks equal to 1/4 caster level (minimum 1). |
 | 35 | (Combat) For 1 round per caster level, all manufactured weapons within close range of the target are enhanced as the Enhance Equipment ability. |
 | 36 | (Combat) The caster is stunned for 1 round. |
-| 37 | For 1 minute per caster level, the target suffers a temporary penalty to Wisdom equal to half the effect’s caster level. This has no effect on mindless creatures or objects. |
+| 37 | For 1 minute per caster level, the target suffers a temporary penalty to Wisdom equal to half the effect's caster level. This has no effect on mindless creatures or objects. |
 | 38 | For 1 minute per caster level, no armor or shield worn by a creature within medium range of the caster benefits from its enhancement bonus to AC. Hardness and hit points are unaffected. |
 | 39 | For 1d6 rounds, objects within close range of the caster momentarily animate, causing the all creatures within the area to be entangled. A Reflex save negates this effect for 1 round for a given creature. |
 | 40 | For 1 minute per caster level, the caster gains a competence bonus on all mental attribute-based skill checks equal to 1/2 caster level (minimum 1). |
@@ -163,7 +163,7 @@ Animated objects can gain more CP by applying flaws, which hamper the animated o
 | 47 | For 1 minute per caster level, creatures within close range of the caster gain a competence bonus on all physical attribute-based skill checks equal to 1/4 caster level (minimum 1). |
 | 48 | The casting time decreases by 1 step. |
 | 49 | For 1 minute per caster level, no weapon wielded by an allied creature within medium range of the caster benefits from its enhancement bonus to attack and damage rolls. Hardness and hit points are unaffected. |
-| 50 | One unattended object of Diminutive size or smaller per caster level within close range of the caster become animated as per the Animate Object talent for 1 minute per caster level. This object is under the caster’s control and will aid the caster to the best of their ability. The size affected increases by one category per 5 caster levels. |
+| 50 | One unattended object of Diminutive size or smaller per caster level within close range of the caster become animated as per the Animate Object talent for 1 minute per caster level. This object is under the caster's control and will aid the caster to the best of their ability. The size affected increases by one category per 5 caster levels. |
 | 51 | (Combat) For 1 round per caster level, all objects and creatures within close range of the target are lightened as the Lighten talent. Creatures may succeed on a Will save to negate this effect. |
 | 52 | (Combat) For 1 round per caster level, all weapons wielded by allied creatures within close range of the target gain the fragile quality, even if they are magical or masterwork. |
 | 53 | For 1 hour per caster level, the caster halves their carrying capacity. This is applied after other magic that alters carrying capacity. |
@@ -179,7 +179,7 @@ Animated objects can gain more CP by applying flaws, which hamper the animated o
 | 63 | For 1 minute per caster level, no armor or shield worn by an allied creature within medium range of the caster benefits from its enhancement bonus to AC. Hardness and hit points are unaffected. |
 | 64 | The caster loses knowledge of any of the talents used in the effect (but not the base sphere) for the length of the effect (minimum 1 round). |
 | 65 | All objects within close range of the caster become weightless for 1d6 rounds. |
-| 66 | For 1 minute per caster level, the target suffers a temporary penalty to Charisma equal to half the effect’s caster level. This has no effect on mindless creatures or objects. |
+| 66 | For 1 minute per caster level, the target suffers a temporary penalty to Charisma equal to half the effect's caster level. This has no effect on mindless creatures or objects. |
 | 67 | For 1 minute per caster level, all hostile creatures within close range of the caster take a penalty on all mental attribute-based skill checks equal to 1/4 caster level (minimum 1). |
 | 68 | The spell point cost of the effect increases by 1. If the caster does not have enough spell points, he is instead staggered until the end of his next turn. |
 | 69 | For 1 minute per caster level, all allied creatures within close range of the caster take a 10 ft. penalty to all movement speeds. This penalty increases by 10 ft. per 10 caster levels. |
@@ -189,7 +189,7 @@ Animated objects can gain more CP by applying flaws, which hamper the animated o
 | 73 | (Combat) For 1 round per caster level, all hostile creatures within close range of the caster gain a +1 + 1/5 caster level resistance bonus to all saving throws. |
 | 74 | The caster loses access to this sphere for 1d6 rounds. |
 | 75 | For 1 minute per caster level, caster gains a competence bonus on all physical attribute-based skill checks equal to 1/2 caster level (minimum 1). |
-| 76 | For 1 minute per caster level, the target suffers a temporary penalty to intelligence equal to half the effect’s caster level. This has no effect on mindless creatures or objects. |
+| 76 | For 1 minute per caster level, the target suffers a temporary penalty to intelligence equal to half the effect's caster level. This has no effect on mindless creatures or objects. |
 | 77 | For 1 minute per caster level, all allied creatures within close range of the caster gain a 10 ft. enhancement bonus to all movement speeds. This bonus increases by 10 ft. per 10 caster levels. |
 | 78 | (Combat) For 1 round per caster level, all objects and creatures within close range of the caster are lightened as the Lighten talent. Creatures may succeed on a Will save to negate this effect. |
 | 79 | For 1 minute per caster level, all hostile creatures within close range of the caster take a 10 ft. penalty to all movement speeds. This penalty increases by 10 ft. per 10 caster levels. |
@@ -200,13 +200,13 @@ Animated objects can gain more CP by applying flaws, which hamper the animated o
 | 84 | For 1 minute per caster level, the caster takes a penalty on all mental attribute-based skill checks equal to 1/2 caster level (minimum 1). |
 | 85 | For 10 minutes per caster level, the caster gains a 10 ft. enhancement bonus to all movement speeds. This bonus increases by 10 ft. per 10 caster levels. |
 | 86 | The spell point cost of the effect decreases by 1. If the effect did not require any spell points, the caster instead gains 1 temporary spell point that expires at the end of his next turn. |
-| 87 | For 1 minute per caster level, the target gains a temporary enhancement bonus to Intelligence equal to half the effect’s caster level. For inanimate targets, treat this as the Bestow Intelligence talent. |
+| 87 | For 1 minute per caster level, the target gains a temporary enhancement bonus to Intelligence equal to half the effect's caster level. For inanimate targets, treat this as the Bestow Intelligence talent. |
 | 88 | Roll twice and choose the result. Ignore any results that require rerolls. If both rolls thus ignored, there is no effect. |
 | 89 | For 1 round per caster level, all weapons wielded by hostile creatures within close range of the caster gain the fragile quality, even if they are magical or masterwork. |
-| 90 | For 1 minute per caster level, the target gains a temporary enhancement bonus to Charisma equal to half the effect’s caster level. For inanimate targets, treat this as the Bestow Intelligence talent. |
+| 90 | For 1 minute per caster level, the target gains a temporary enhancement bonus to Charisma equal to half the effect's caster level. For inanimate targets, treat this as the Bestow Intelligence talent. |
 | 91 | (Combat) For 1 round per caster level, all weapons wielded by allied creatures within close range of the caster gain the fragile quality, even if they are magical or masterwork. |
 | 92 | One unattended object of Diminutive size or smaller per caster level within close range of the caster become animated as per the Animate Object talent for 1 minute. This object is neutral toward the caster and attempt to flee any conflict, but otherwise meanders aimlessly. The size affected increases by one category per 5 caster levels. |
-| 93 | The caster takes a number of points of ability damage to his casting attribute equal to the effect’s caster level/4 (minimum 1) even if he would normally be immune to ability damage. |
+| 93 | The caster takes a number of points of ability damage to his casting attribute equal to the effect's caster level/4 (minimum 1) even if he would normally be immune to ability damage. |
 | 94 | The effect fails, but the action is not lost. Spell points or spell slots spent are lost. |
 | 95 | (Combat) For 1 round per caster level, all appropriate weapons wielded by creatures within close range of the caster gain the keen special ability. |
 | 96 | For 1 round per caster level, all weapons wielded by hostile creatures within close range of the target gain the fragile quality, even if they are magical or masterwork. |
@@ -215,8 +215,5 @@ Animated objects can gain more CP by applying flaws, which hamper the animated o
 | 99 | The spell point cost of the effect increases by 1d4. If the caster does not have enough spell points, he is instead dazed until the end of his next turn. |
 | 100 | (Combat) For 1 round per caster level, all appropriate weapons wielded by hostile creatures within close range of the target gain the keen special ability. |
 
-[[include old-enhancement]]
 
 ---
-
-[[include sop-template]]

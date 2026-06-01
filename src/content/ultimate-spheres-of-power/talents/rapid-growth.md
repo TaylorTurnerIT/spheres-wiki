@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: advanced
-tags: []
+tags: ["plant", "geomancing"]
 ---
 
 **Prerequisites:** Nature sphere ((plant) package, Create Nature (geomancing)), caster level 15th.

@@ -59,7 +59,7 @@ If the GM deems it appropriate, certain other situations might allow a target to
 |---|---|
 | An illusionary wall | Illusionary Touch (if felt) |
 | A glen full of trees | Complex Illusion |
-| A warrior blocking the target’s way | Illusionary Sound, Illusionary Touch (to engage in combat with target) |
+| A warrior blocking the target's way | Illusionary Sound, Illusionary Touch (to engage in combat with target) |
 | A table laden with food | Illusionary Odor, Illusionary Touch (if consumed by target) |
 | A room filled with fire | Illusionary Sound, Illusionary Touch |
 | An army of orcs chasing the target | Complex Illusion, Illusionary Sound, Illusionary Touch (to engage in combat with target) |

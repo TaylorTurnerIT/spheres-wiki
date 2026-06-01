@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: basic
-tags: []
+tags: ["fire"]
 ---
 
 Your destructive blast deals fire damage using d8 instead of d6 as its damage die.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: []
+tags: ["charm"]
 ---
 
 You imbue a target with an increased sense of self-worth, capacity for persuasion, and force of personality (Will negates).

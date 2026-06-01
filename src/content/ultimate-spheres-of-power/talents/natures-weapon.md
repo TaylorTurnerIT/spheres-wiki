@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["spirit"]
 ---
 
 You may perform one of the following special attacks or gain one of the following benefits. In addition to the effects that already possess a duration, if you possess the ability to grant (spirit) talent abilities to another you may spend a spell point as a standard action to grant a target the ability to use one of these attacks for 1 round per caster level. The options available are dependent on your Nature packages, as outlined below:

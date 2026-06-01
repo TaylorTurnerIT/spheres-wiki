@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: advanced
-tags: ["utility"]
+tags: ["utility", "divine"]
 ---
 
 **Prerequisites:** Divination sphere (Discern Individual (sense)), caster level 1st.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: ["curse"]
+tags: ["curse", "word"]
 ---
 
 You may spend a spell point as a standard action to place a word on a target debilitating them more severely the less similar their outlook on life is to yours. The effect of this word depends on the number of steps away its alignment is from your own. A target with the same alignment as you is unaffected, while all others are affected as follows:

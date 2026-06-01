@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["water", "geomancing"]
 ---
 
 Your mastery of water is delicate and intricate. You may manipulate snow as if it were liquid water.

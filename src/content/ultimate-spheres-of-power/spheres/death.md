@@ -11,7 +11,10 @@ sectionDefinitions:
     categories:
       - label: "Death Talents"
         tiers: ["basic"]
-        excludeTags: ["curse"]
+        excludeTags: ["dominion","curse"]
+      - label: "Dominion Talents"
+        tiers: ["basic"]
+        tags: ["dominion"]
       - label: "Curse Talents"
         tiers: ["basic"]
         tags: ["curse"]

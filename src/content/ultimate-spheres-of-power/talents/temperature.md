@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["fire", "geomancing"]
 ---
 
 Your control over fire extends to a level of mastery over temperature. You gain the following geomancing abilities.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["spirit"]
 ---
 
 You may spend a spell point as a move action to wrap an element around yourself for 1 minute per caster level. This allows you to grant yourself one of the benefits outlined below, dependent on the packages you possess:

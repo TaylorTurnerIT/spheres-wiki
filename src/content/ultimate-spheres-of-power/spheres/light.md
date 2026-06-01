@@ -11,6 +11,10 @@ sectionDefinitions:
     categories:
       - label: "Light Talents"
         tiers: ["basic"]
+        excludeTags: ["lens"]
+      - label: "Lens Talents"
+        tiers: ["basic"]
+        tags: ["lens"]
       - label: "Advanced Light Talents"
         tiers: ["advanced"]
   - label: "Feats"

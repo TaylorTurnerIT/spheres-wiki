@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: []
+tags: ["consecration"]
 ---
 
 You may spend a spell point to fill an area with an enduring presence of an alignment you possess (chaotic, evil, good, or lawful).

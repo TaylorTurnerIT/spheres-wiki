@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: advanced
-tags: []
+tags: ["sense"]
 ---
 
 **Prerequisites:** Divination sphere (Ghost Sight (sense)), caster level 10th.

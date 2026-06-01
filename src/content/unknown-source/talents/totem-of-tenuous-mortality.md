@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: war
 tier: advanced
-tags: []
+tags: ["totem"]
 ---
 
 **Prerequisites:** War sphere, caster level 5th.

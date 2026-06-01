@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: []
+tags: ["manipulation"]
 ---
 
 **Prerequisites:** Mana sphere (Imbued Vessel), caster level 10th.

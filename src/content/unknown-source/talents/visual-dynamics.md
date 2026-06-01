@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: basic
-tags: []
+tags: ["manipulation"]
 ---
 
 You can manipulate how easy it is to witness your magic.

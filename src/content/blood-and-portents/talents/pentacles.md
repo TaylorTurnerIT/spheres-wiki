@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: []
+tags: ["motif", "arcana"]
 ---
 
 You actualize the target's success and prosperity. When granted as a motif, the target gains a +1 bonus on one saving throw, chosen when granted as a motif. This bonus increases by +1 for every 10 caster levels.

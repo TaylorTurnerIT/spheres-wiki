@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: basic
-tags: []
+tags: ["manipulation"]
 ---
 
 You can infuse your magic with a sense of intelligence, allowing it to react in special ways.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: []
+tags: ["word"]
 ---
 
 You may spend a spell point to place a word on a creature that enhances its existing strengths. Choose an ability score. The target gains a +1 bonus to ability checks and skill checks based on that ability score. In addition, the target gains a benefit for the chosen ability score as detailed on the table below.
@@ -21,4 +21,4 @@ This effect lasts as long as you concentrate, but you may always spend a spell p
 | Constitution | The target gains 1 temporary hit point, plus 1 temporary hit point for every 5 caster levels. These temporary hit points refresh each round, but do not stack. |
 | Intelligence | The target treats all untrained skills as though they had one skill rank in them, and gains a +2 bonus to all trained skills. This bonus increases by +1 for every 5 caster levels. |
 | Wisdom | The target can attempt either a Perception or Sense Motive check as a free action once per round and gains a +1 bonus to initiative checks. This bonus increases by +1 for every 5 caster levels. |
-| Charisma | The target may use Intimidate to demoralize as a swift action (or a free action once per round if they can already do so as a swift action) and attempt to influence a creature’s attitude using Diplomacy in 1 round by taking a -10 penalty. |
+| Charisma | The target may use Intimidate to demoralize as a swift action (or a free action once per round if they can already do so as a swift action) and attempt to influence a creature's attitude using Diplomacy in 1 round by taking a -10 penalty. |

@@ -11,10 +11,22 @@ sectionDefinitions:
     categories:
       - label: "Fate Talents"
         tiers: ["basic"]
-        excludeTags: ["curse"]
+        excludeTags: ["consecration","curse","motif","arcana","word"]
+      - label: "Consecration Talents"
+        tiers: ["basic"]
+        tags: ["consecration"]
       - label: "Curse Talents"
         tiers: ["basic"]
         tags: ["curse"]
+      - label: "Motif Talents"
+        tiers: ["basic"]
+        tags: ["motif"]
+      - label: "Arcana Talents"
+        tiers: ["basic"]
+        tags: ["arcana"]
+      - label: "Word Talents"
+        tiers: ["basic"]
+        tags: ["word"]
       - label: "Advanced Fate Talents"
         tiers: ["advanced"]
   - label: "Feats"

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["water", "geomancing"]
 ---
 
 When you create Fog, you may add one of the following additional effects depending on what other packages you possess.

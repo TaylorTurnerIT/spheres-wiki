@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: advanced
-tags: []
+tags: ["earth", "geomancing"]
 ---
 
 **Prerequisites:** Nature sphere ((earth) package, Manipulate Nature (geomancing)), caster level 15th.

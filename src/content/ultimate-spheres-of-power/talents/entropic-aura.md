@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: advanced
-tags: ["curse"]
+tags: ["curse", "consecration"]
 ---
 
 **Prerequisites:** Fate sphere, Death sphere, caster level 10th.

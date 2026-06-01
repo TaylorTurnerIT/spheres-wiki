@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: advanced
-tags: []
+tags: ["spirit"]
 ---
 
 **Prerequisites:** Nature sphere (Friend To Wildlife (spirit)), caster level 1st.

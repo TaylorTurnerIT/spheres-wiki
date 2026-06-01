@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["utility"]
+tags: ["utility", "charm"]
 ---
 
 You add trivia, knowledge, and memories to a person's mind, whether or not this information is grounded in fact.

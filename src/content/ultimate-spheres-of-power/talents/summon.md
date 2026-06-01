@@ -24,7 +24,7 @@ Every companion comes with one of the following base forms, chosen by the caster
 
 **Table: Companion**
 
-| Caster’s Caster Level | Hit Dice | Base Attack Bonus | Skill Points | Feats | Natural Armor Bonus | Good Saves | Bad Saves | Special |
+| Caster's Caster Level | Hit Dice | Base Attack Bonus | Skill Points | Feats | Natural Armor Bonus | Good Saves | Bad Saves | Special |
 |---|---|---|---|---|---|---|---|---|
 | 1st | 1 | +1 | 1 | 1 | +0 | +2 | +0 | - |
 | 2nd | 2 | +2 | 2 | 1 | +1 | +3 | +0 | Evasion |

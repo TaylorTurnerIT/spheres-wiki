@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["plant", "geomancing"]
 ---
 
 Your mastery of plantlife becomes even more pronounced. Increase the maximum radius of your Entangle by an additional 5 feet per 5 caster levels.

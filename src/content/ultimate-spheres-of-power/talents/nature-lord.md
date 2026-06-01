@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["geomancing"]
 ---
 
 Treat your caster level as 5 higher when determining the maximum area radius and height you can affect with your geomancing abilities that affect an area (such as Bury, Dust Storm, Entangle, Fog, Gust Of Wind, Purify Air, Tremor, or Vortex).

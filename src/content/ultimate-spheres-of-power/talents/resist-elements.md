@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["spirit"]
 ---
 
 As a swift or move action, you may grant yourself one of the following benefits for 1 round, depending on what packages you possess. You may spend a spell point to gain one of these benefits for 1 minute per caster level, or to gain it for one round as an immediate action.

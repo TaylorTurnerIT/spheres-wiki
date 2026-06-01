@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: basic
-tags: []
+tags: ["manipulation"]
 ---
 
 Your elemental magic further burdens creatures. The following (amp) effects affect creatures when they suffer damage from an amplified sphere effect; only the first instance of damage from any sphere effect applies their effects, even if the sphere effect deals continuous damage.

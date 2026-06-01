@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: basic
-tags: ["utility"]
+tags: ["utility", "divine"]
 ---
 
 You may spend a spell point to divine whether a particular action will bring good or bad results for you in the immediate future.

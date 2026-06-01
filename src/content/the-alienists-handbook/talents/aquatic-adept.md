@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["water", "geomancing", "spirit"]
 ---
 
 You gain several abilities which improve your capacity to operate underwater.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: []
+tags: ["motif"]
 ---
 
 You may grant a motif that lets the target focus the vagaries of time on a creature or object. The target's unarmed strikes, natural attacks, and manufactured weapons ignore a number of points of damage reduction and hardness up to 5 + 1 per 4 caster levels.

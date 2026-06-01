@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: advanced
-tags: ["curse", "utility"]
+tags: ["curse", "utility", "word"]
 ---
 
 **Prerequisites:** Fate sphere, caster level 10th.

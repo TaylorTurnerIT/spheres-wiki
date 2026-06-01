@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["plant", "geomancing"]
 ---
 
 You may direct your animated branches to attack as a free action instead of a move action. In addition, you may cause a branch to perform any of the following actions instead of making an attack.

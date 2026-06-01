@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: advanced
-tags: []
+tags: ["consecration"]
 ---
 
 **Prerequisites:** Fate sphere, Life sphere, caster level 15th.

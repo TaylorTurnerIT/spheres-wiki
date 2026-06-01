@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["geomancing"]
 ---
 
 You may purify the nature around you, making brackish water drinkable, poisonous plants edible, and hazardous air breathable.

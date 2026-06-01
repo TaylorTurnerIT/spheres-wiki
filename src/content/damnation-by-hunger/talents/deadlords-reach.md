@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: advanced
-tags: []
+tags: ["dominion"]
 ---
 
 **Prerequisites:** Death sphere (Icy Grip, any one (dominion) talent), caster level 5th.

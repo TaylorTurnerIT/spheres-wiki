@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: []
+tags: ["motif"]
 ---
 
 You may grant a motif that protects the target's subconscious and allows them to project their mind onto attackers. The target gains a +2 insight bonus to saving throws against mind-affecting effects. This bonus increases by +1 for every 10 caster levels.

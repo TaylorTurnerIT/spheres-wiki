@@ -11,6 +11,10 @@ sectionDefinitions:
     categories:
       - label: "Protection Talents"
         tiers: ["basic"]
+        excludeTags: ["ward"]
+      - label: "Ward Talents"
+        tiers: ["basic"]
+        tags: ["ward"]
       - label: "Advanced Protection Talents"
         tiers: ["advanced"]
   - label: "Feats"

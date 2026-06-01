@@ -15,6 +15,6 @@ Alternately, you may focus on a target you wish to attack as a standard action. 
 | Perception Check ≥ | Examples |
 |---|---|
 | DC | Number of seen objects, weight of a held object |
-| DC + 1 | Speed of something seen, exact time based on the sun’s position |
+| DC + 1 | Speed of something seen, exact time based on the sun's position |
 | DC + 5 | Number of people from their footsteps, distance from a singing bird |
 | DC + 10 | Distance from smelled food, number of soldiers milling in an army |

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: advanced
-tags: []
+tags: ["dominion"]
 ---
 
 **Prerequisites:** Death sphere (Corpse Manipulation), caster level 3rd.

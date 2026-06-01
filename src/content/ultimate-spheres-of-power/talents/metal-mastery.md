@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: basic
-tags: []
+tags: ["metal", "geomancing"]
 ---
 
 Whenever you use Recover Ore, you gain the ability to Recover Ore of iron, lead, or steel. Upon reaching caster level 5th, you add cold iron and silver to the types of ore you may recover. At caster level 10th, you gain the ability to recover mithral ore.

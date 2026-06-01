@@ -114,10 +114,18 @@ svg {
 }
 
 /* ── Namespace custom property ─────────────────────────── */
-.power { --clr-ns: var(--clr-power); }
-.might { --clr-ns: var(--clr-might); }
-.guile { --clr-ns: var(--clr-guile); }
-.champ { --clr-ns: var(--clr-champ); }
+.power {
+  --clr-ns: var(--clr-power);
+}
+.might {
+  --clr-ns: var(--clr-might);
+}
+.guile {
+  --clr-ns: var(--clr-guile);
+}
+.champ {
+  --clr-ns: var(--clr-champ);
+}
 
 /* ── Base typography ────────────────────────────────────── */
 body {
@@ -341,10 +349,13 @@ a:hover {
 
 /* ── Sphere icon ────────────────────────────────────────── */
 .si {
-  width: 15px;
-  height: 15px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
-  opacity: 0.8;
+  opacity: 0.95;
+  overflow: visible;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.15));
 }
 
 /* ── Utility: section heading with rule ─────────────────── */
@@ -454,7 +465,9 @@ a:hover {
   cursor: pointer;
   font-size: var(--fs-xs);
   padding: 3px 10px;
-  transition: color 0.15s, border-color 0.15s;
+  transition:
+    color 0.15s,
+    border-color 0.15s;
 }
 .toggle-all-btn:hover {
   color: var(--clr-brand);
@@ -524,7 +537,10 @@ a:hover {
   padding: 0;
   cursor: pointer;
   color: var(--clr-muted);
-  transition: color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease,
+    transform 0.1s ease;
 }
 .search-icon-btn:hover {
   color: var(--clr-brand);
@@ -639,10 +655,18 @@ a:hover {
   color: var(--clr-muted);
 }
 
-[data-system="Spheres of Power"]         { --clr-ns: var(--clr-power); }
-[data-system="Spheres of Might"]         { --clr-ns: var(--clr-might); }
-[data-system="Spheres of Guile"]         { --clr-ns: var(--clr-guile); }
-[data-system="Champions of the Spheres"] { --clr-ns: var(--clr-champ); }
+[data-system="Spheres of Power"] {
+  --clr-ns: var(--clr-power);
+}
+[data-system="Spheres of Might"] {
+  --clr-ns: var(--clr-might);
+}
+[data-system="Spheres of Guile"] {
+  --clr-ns: var(--clr-guile);
+}
+[data-system="Champions of the Spheres"] {
+  --clr-ns: var(--clr-champ);
+}
 
 .search-result-item {
   border-left: 3px solid var(--clr-ns, transparent);
@@ -767,6 +791,10 @@ h6 {
   display: flex;
   align-items: center;
 }
+
+.page-title:has(.page-title-icon) {
+  font-size: 3rem;
+}
 .page-title-rule {
   border: none;
   border-top: 1px solid var(--clr-border);
@@ -809,8 +837,8 @@ h6 {
 .intro-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 /* ── Intro card ─────────────────────────────────────────── */
@@ -847,14 +875,14 @@ h6 {
   display: block;
 }
 .intro-card-body {
-  padding: 10px 12px;
+  padding: 8px 10px;
 }
 .intro-card-name {
   font-family: var(--font-display);
   font-size: var(--fs-2xs);
   font-weight: 700;
   letter-spacing: 0.03em;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 .intro-card .intro-card-name {
   color: var(--clr-ns, inherit);
@@ -862,7 +890,7 @@ h6 {
 .intro-card-desc {
   font-size: var(--fs-2xs);
   line-height: 1.45;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .intro-card-link {
   font-family: var(--font-body);
@@ -1305,9 +1333,9 @@ h6 {
 }
 
 .page-title-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
   flex-shrink: 0;
 }
 
@@ -1491,7 +1519,7 @@ h6 {
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease;
 }
 .carousel-btn:hover {

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: advanced
-tags: []
+tags: ["word"]
 ---
 
 **Prerequisites:** Fate Sphere, caster level 10th

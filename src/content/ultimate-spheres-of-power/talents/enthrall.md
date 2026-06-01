@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["utility"]
+tags: ["utility", "charm"]
 ---
 
 You cause a creature to regard you as its friend. If you or your allies are attacking or threatening the creature, they gain a +5 bonus to their saving throw against this charm. A DC 25 Sense Motive check reveals the target of this charm has been enchanted. This is an enchantment (charm) effect instead of an enchantment (compulsion) effect.

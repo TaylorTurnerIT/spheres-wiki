@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: []
+tags: ["motif", "arcana"]
 ---
 
 You actualize the target's abundant energy and passion. When granted as a motif, the target gains a +2 bonus on initiative checks. This bonus increases by +1 for every 10 caster levels.

@@ -10,7 +10,10 @@ sectionDefinitions:
     categories:
       - label: "Mana Talents"
         tiers: ["basic"]
-        excludeTags: ["curse"]
+        excludeTags: ["manipulation","curse"]
+      - label: "Manipulation Talents"
+        tiers: ["basic"]
+        tags: ["manipulation"]
       - label: "Curse Talents"
         tiers: ["basic"]
         tags: ["curse"]

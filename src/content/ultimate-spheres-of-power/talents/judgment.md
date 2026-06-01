@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: []
+tags: ["motif"]
 ---
 
 You may grant a motif that heightens the target's discernment. It requires only a full-round action for the target to attempt a Sense Motive check to get a hunch about a situation and a swift action to attempt a Perception check to intentionally search for a stimulus.

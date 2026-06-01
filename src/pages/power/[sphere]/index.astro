@@ -146,10 +146,6 @@ const groups: TocGroup[] = sections.map(sec => ({
   <div class="content-columns">
     <div class="content-main">
 
-      <div class="page-actions">
-        <button id="toggle-all-sections" class="toggle-all-btn">Collapse All</button>
-      </div>
-
       <h1
         class="page-title power"
         id="overview"
@@ -193,6 +189,11 @@ const groups: TocGroup[] = sections.map(sec => ({
           </div>
         ) : null;
       })}
+      {sections.length > 0 && (
+        <div class="page-actions">
+          <button id="toggle-all-sections" class="toggle-all-btn">Collapse All</button>
+        </div>
+      )}
 
       {sections.map(sec => (
         <div class="section-group">

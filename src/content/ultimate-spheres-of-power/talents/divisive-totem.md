@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: war
 tier: basic
-tags: []
+tags: ["totem"]
 ---
 
 You must spend a spell point to create a divisive totem. While within this totem, enemies lose trust in all other creatures. They have no allies except themselves, only enemies. If an effect can only target allies, they can only use it on themselves. They resist the help of other creatures, attempt saving throws even when an ability is harmless (such as healing), and resist being touched. Enemy creatures can not move through other creatures' squares. Summoned and conjured creatures no longer obey commands. This is a mind-affecting compulsion ability.

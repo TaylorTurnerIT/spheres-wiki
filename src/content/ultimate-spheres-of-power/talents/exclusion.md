@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: protection
 tier: basic
-tags: []
+tags: ["ward"]
 ---
 
 You can create a ward that prevents entry of a common material or element chosen when you create the ward. You may choose an element based on their physical material (such as stone, metal, water, or acid), form of energy (such as fire or light) or based on their physical properties (such as poisonous materials or living materials). Magical and non-magical materials excluded have great difficulty entering the ward, but are unaffected once inside.

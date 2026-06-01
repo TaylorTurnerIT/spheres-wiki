@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: nature
 tier: advanced
-tags: []
+tags: ["fire", "water", "geomancing"]
 ---
 
 **Prerequisites:** Nature sphere ((fire) and (water) package, Create Nature (geomancing), Temperature (fire, geomancing)), caster level 15th.

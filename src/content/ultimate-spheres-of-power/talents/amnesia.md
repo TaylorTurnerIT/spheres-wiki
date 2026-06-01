@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: []
+tags: ["charm"]
 ---
 
 You may reach into a subject's memory and remove information and awareness of people, places, things, or events.

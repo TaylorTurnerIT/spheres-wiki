@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: ["utility"]
+tags: ["utility", "word"]
 ---
 
 Rather than targeting creatures, this word targets doors, chests, and other objects that can open or close. You may spend a spell point to open a door or container, as if you were attempting a Disable Device check to unlock it or, if the opening is stuck and no lock is present, a Strength check to force it open. Attempt a magic skill check with a +10 bonus against the lock's Disable Device DC or the door's Stuck DC.

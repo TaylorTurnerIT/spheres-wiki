@@ -11,6 +11,10 @@ sectionDefinitions:
     categories:
       - label: "Mind Talents"
         tiers: ["basic"]
+        excludeTags: ["charm"]
+      - label: "Charm Talents"
+        tiers: ["basic"]
+        tags: ["charm"]
       - label: "Advanced Mind Talents"
         tiers: ["advanced"]
   - label: "Feats"

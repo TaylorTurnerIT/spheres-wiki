@@ -28,7 +28,7 @@ You may spend 2 spell points and 1 hour to observe a creature or object as if us
 | Connection | Will Save Modifier |
 |---|---|
 | Likeness or picture | -2 |
-| You have one of the creature’s possessions, or have a person present who once owned the object | -4 |
+| You have one of the creature's possessions, or have a person present who once owned the object | -4 |
 | You possess a piece of the subject (body part, lock of hair, broken fragment, etc.) | -10 |
 
 
