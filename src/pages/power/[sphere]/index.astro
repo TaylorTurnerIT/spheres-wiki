@@ -165,6 +165,10 @@ const groups: TocGroup[] = sections.map(sec => ({
       </h1>
       <hr class="page-title-rule" />
 
+      {mainCollEntry?.data?.description && (
+        <p class="sphere-description">{mainCollEntry.data.description}</p>
+      )}
+
       {bodySegments.map(seg => {
         if (seg.type === 'markdown') {
           return <div class="entry-description" set:html={seg.html} />;
