@@ -1,5 +1,36 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
+import { inferFromPath } from "./lib/inferFromPath";
+
+function spheresLoader(options: Parameters<typeof glob>[0] & { base: string }) {
+  const baseLoader = glob(options);
+  return {
+    ...baseLoader,
+    name: "spheres-loader",
+    load: async (context: any) => {
+      const originalParseData = context.parseData;
+      context.parseData = async (args: any) => {
+        // options.base is like "./src/content/spheres-of-might"
+        const slug = options.base.split('/').pop() || '';
+        const pathPrefix = `/src/content/${slug}/`;
+        const idx = args.filePath.indexOf(pathPrefix);
+        
+        if (idx !== -1) {
+          const relativePath = args.filePath.substring(idx + pathPrefix.length);
+          const inferred = inferFromPath(relativePath);
+          args.data = { ...inferred, ...args.data };
+        } else {
+          // Fallback if somehow pathPrefix isn't found
+          const inferred = inferFromPath(args.id);
+          args.data = { ...inferred, ...args.data };
+        }
+        
+        return originalParseData(args);
+      };
+      return baseLoader.load(context);
+    },
+  };
+}
 
 const baseFields = {
   id: z.string().regex(/^[a-z0-9-]+$/, "id must be lowercase kebab-case"),
@@ -134,7 +165,7 @@ export const collections = Object.fromEntries(
   discoveredSlugs.map((slug) => [
     slug,
     defineCollection({
-      loader: glob({ pattern: "**/*.md", base: `./src/content/${slug}` }),
+      loader: spheresLoader({ pattern: "**/*.md", base: `./src/content/${slug}` }),
       schema: entrySchema,
     }),
   ]),
