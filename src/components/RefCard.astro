@@ -11,6 +11,10 @@ interface Props {
 
 const { system, spheres, classes } = Astro.props;
 
+const half = Math.ceil(spheres.length / 2);
+const col1 = spheres.slice(0, half);
+const col2 = spheres.slice(half);
+
 const sys = SYSTEMS[system];
 const nsClass = sys?.cssKey ?? SYSTEM_DEFAULT.cssKey;
 const cfg = sys
@@ -39,12 +43,21 @@ const isChampions = system === 'champions';
         </div>
       ) : (
         <>
-          <div class:list={['sphere-list', `${nsClass}-list`]}>
-            {spheres.map(s => (
-              <a href={url(`/${cfg.nsRoute}/${s.id}/`)} class={nsClass} data-astro-prefetch="hover">
-                <svg class="si" aria-hidden="true"><use href={`#si-${s.icon}`}/></svg>{s.name}
-              </a>
-            ))}
+          <div class="sphere-cols">
+            <div class:list={['sphere-col', `${nsClass}-list`]}>
+              {col1.map(s => (
+                <a href={url(`/${cfg.nsRoute}/${s.id}/`)} class={nsClass} data-astro-prefetch="hover">
+                  <svg class="si" aria-hidden="true"><use href={`#si-${s.icon}`}/></svg>{s.name}
+                </a>
+              ))}
+            </div>
+            <div class:list={['sphere-col', `${nsClass}-list`]}>
+              {col2.map(s => (
+                <a href={url(`/${cfg.nsRoute}/${s.id}/`)} class={nsClass} data-astro-prefetch="hover">
+                  <svg class="si" aria-hidden="true"><use href={`#si-${s.icon}`}/></svg>{s.name}
+                </a>
+              ))}
+            </div>
           </div>
           {classes.length > 0 && (
             <div class="ref-subsection">
