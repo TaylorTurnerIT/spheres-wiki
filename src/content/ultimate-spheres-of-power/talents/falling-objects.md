@@ -1,0 +1,25 @@
+---
+id: falling-objects
+name: "Falling Objects"
+type: talent
+system: power
+sphere: creation
+tier: basic
+tags: []
+---
+
+Objects that fall upon characters deal falling damage based on their size according to Table: Object Size.
+
+Objects made of stone or harder substances deal double falling damage, while soft object such as cloth deal half falling damage. An object falling less than 30 feet also deals half falling damage, while an object falling more than 150 feet deals double falling damage. These multipliers stack; a stone object falling 150 feet would deal x4 damage, while a cloth object falling 20 feet would deal 1/4th damage. A falling object takes the same amount of falling damage as it deals, and no falling object can deal more than 20d6 falling damage. Additional damage, such as through enhancements, acid coatings, etc., is not multiplied or divided by hardness or falling distance.
+
+Dropping an object on a creature is considered an attack with a ranged weapon with a range increment of 20 feet. This distance is measured from the object’s starting point to the target’s square, rather than the distance between you and the target. When making an attack roll with a falling object, use your Intelligence instead of your Dexterity when calculating your attack bonus.
+
+When dropping an object on a target that is larger than the dropped object, make an attack roll against their AC. This is similar to a weapon attack. When dropping an object that is the same size or larger than the target, make an attack roll against their touch AC. This is similar to using an indirect-fire siege weapon, and carries some additional rules:
+
+When using a Large or larger object like an indirect-fire siege weapon, the object targets a creature in a square, but also deals half its falling damage as splash damage to additional creatures within 5 feet + 5 feet per size category above Large of the object being dropped.
+
+When using a dropped object of Medium size or larger like an indirect-fire siege engine, you may target a grid intersection instead of a creature like you can with a splash weapon, in which case direct damage is not dealt and splash damage (if any) affects creatures as normal. Also, like a splash weapon, if you miss with a dropped object, the object veers off course one space per range increment. Roll a d8 to determine the direction in which the object veered off-course, just as with a splash weapon.
+
+A dropped, hard, non-wall/covering object larger than the creatures underneath it will push creatures out of the area where it fell to the nearest unoccupied spaces, while objects the same size or smaller would themselves move to the nearest unoccupied spaces. Walls and coverings larger than the objects underneath them function as catches, described below.
+
+A dropped soft non-covering object, such as a large bundle of cloth, that is larger than the creatures underneath it neither moves creatures nor becomes a catch, and instead forces the targets to pass a Reflex save or be knocked prone and buried underneath the object itself.

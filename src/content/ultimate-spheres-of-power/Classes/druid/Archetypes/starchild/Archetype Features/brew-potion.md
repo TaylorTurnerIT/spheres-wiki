@@ -3,7 +3,7 @@ id: brew-potion
 name: "Brew Potion"
 level: 2
 replaces: ["the druid’s woodland stride class feature"]
-tags: []
+tags: ["item-creation", "mythic"]
 ---
 
 At 2nd level, the starchild receives Brew Potion as a bonus feat.

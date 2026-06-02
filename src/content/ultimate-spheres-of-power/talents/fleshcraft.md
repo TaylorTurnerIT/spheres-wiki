@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: creation
 tier: advanced
-tags: []
+tags: ["material"]
 ---
 
 **Prerequisites:** Creation sphere (any (material) talent), caster level 10th.

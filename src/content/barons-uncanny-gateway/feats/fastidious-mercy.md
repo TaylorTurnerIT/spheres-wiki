@@ -4,7 +4,8 @@ name: "Fastidious Mercy"
 type: feat
 system: power
 sphere: fate
-tags: []
+tags: ["sm"]
+tier: feat
 ---
 
 **Prerequisites:** Fate Sphere (Mercy)

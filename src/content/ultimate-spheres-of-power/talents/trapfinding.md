@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: advanced
-tags: ["sense"]
+tags: ["ex", "sense"]
 ---
 
 **Prerequisites:** Divination sphere (See Hazard (sense)), caster level 1st.

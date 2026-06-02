@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: mana
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Spellcraft 1 rank, Mana sphere.

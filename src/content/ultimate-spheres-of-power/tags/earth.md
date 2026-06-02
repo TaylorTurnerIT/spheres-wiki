@@ -1,6 +1,6 @@
 ---
 type: tag
-id: earth
+id: "earth"
 label: "Earth"
 color: "#78350f"
 priority: 15

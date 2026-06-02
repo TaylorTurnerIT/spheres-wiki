@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: advanced
-tags: []
+tags: ["blast-shape", "sm"]
 ---
 
 **Prerequisites:** Destruction Sphere

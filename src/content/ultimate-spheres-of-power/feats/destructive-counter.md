@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: creation
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Creation sphere (any (material) talent).

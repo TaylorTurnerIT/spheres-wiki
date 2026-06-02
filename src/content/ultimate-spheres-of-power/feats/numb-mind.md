@@ -4,7 +4,8 @@ name: "Numb Mind"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["necrosis"]
+tier: feat
 ---
 
 Your emotional and reflex responses fade, allowing you to shrug off distracting conditions.

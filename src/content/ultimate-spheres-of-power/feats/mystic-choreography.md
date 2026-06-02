@@ -4,7 +4,8 @@ name: "Mystic Choreography"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["drawback", "proxy"]
+tier: feat
 ---
 
 **Prerequisites:** Enhancement sphere; at least one of the Skilled Casting, Somatic Casting, or Verbal Casting drawbacks; Circle Casting, Spell Proxy.

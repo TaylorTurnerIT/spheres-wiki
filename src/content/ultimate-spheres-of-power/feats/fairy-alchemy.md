@@ -4,7 +4,8 @@ name: "Fairy Alchemy"
 type: feat
 system: power
 sphere: fallen-fey
-tags: []
+tags: ["champion"]
+tier: feat
 ---
 
 **Prerequisites:** Alchemy sphere, Fallen Fey sphere (Fairy Dust (fey-blessing)).

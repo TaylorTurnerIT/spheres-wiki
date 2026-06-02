@@ -4,7 +4,8 @@ name: "Web Mastery"
 type: feat
 system: power
 sphere: alteration
-tags: ["combat"]
+tags: ["combat", "combat", "companion"]
+tier: feat
 ---
 
 **Prerequisites:** Alteration sphere (Vermin Transformation (transformation)) or web bestial trait.

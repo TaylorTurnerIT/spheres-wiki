@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: conjuration
 tags: ["companion"]
+tier: feat
 ---
 
 **Prerequisites:** Conjuration sphere (Battle Creature (form) or Shield Bearer (form)), companion with 6 or more Hit Dice.

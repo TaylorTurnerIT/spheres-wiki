@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: weather
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Weather sphere, caster level 5th.

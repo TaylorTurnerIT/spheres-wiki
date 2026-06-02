@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: advanced
-tags: ["utility"]
+tags: ["cognition", "utility"]
 ---
 
 **Prerequisites:** Mind sphere (Intuit Knowledge (cognition)), caster level 5th.

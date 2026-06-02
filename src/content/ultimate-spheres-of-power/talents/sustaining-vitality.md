@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: life
 tier: basic
-tags: []
+tags: ["vitality"]
 ---
 
 Your ally receives a +2 circumstance bonus to AC and saving throws.

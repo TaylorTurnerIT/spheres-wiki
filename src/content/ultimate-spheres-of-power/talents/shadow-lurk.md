@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: dark
 tier: basic
-tags: []
+tags: ["shadow"]
 ---
 
 As a standard action you may spend a spell point to have a target's shadow split off from them and form a shadow lurk that acts as an independent creature unwaveringly loyal to you for 10 minutes per caster level. A shadow lurk appears as a shaded, obviously spurious version of the target. It is weightless and its equipment is entirely illusionary. It has the same skills, feats, and attributes as the target, except that its Strength score is 3, and only has a number of hit points equal to your caster level.

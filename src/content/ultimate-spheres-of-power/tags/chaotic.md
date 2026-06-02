@@ -1,6 +1,6 @@
 ---
 type: tag
-id: chaotic
+id: "chaotic"
 label: "Chaotic"
 color: "#6d28d9"
 priority: 15

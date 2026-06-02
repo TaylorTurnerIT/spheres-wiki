@@ -1,6 +1,6 @@
 ---
 type: tag
-id: death
+id: "death"
 label: "Death"
 color: "#450a0a"
 priority: 15

@@ -4,7 +4,8 @@ name: "Greater Shadowmark"
 type: feat
 system: power
 sphere: illusion
-tags: []
+tags: ["surreal"]
+tier: feat
 ---
 
 **Prerequisite:** Shadowmark 1d6.

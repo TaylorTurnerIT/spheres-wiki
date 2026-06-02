@@ -6,6 +6,7 @@ system: power
 sphere: enhancement
 dualSphere: conjuration
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Conjuration sphere, Enhancement sphere (at least one (enhance) talent).

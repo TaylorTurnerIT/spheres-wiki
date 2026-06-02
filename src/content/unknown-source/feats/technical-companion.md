@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: conjuration
 tags: ["companion"]
+tier: feat
 ---
 
 **Prerequisites:** Conjuration Sphere, Technique Crafting

@@ -4,7 +4,8 @@ name: "Improved Selective Blast"
 type: feat
 system: power
 sphere: destruction
-tags: ["combat"]
+tags: ["combat", "sm"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction Sphere (selective blast)

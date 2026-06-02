@@ -4,7 +4,8 @@ name: "Wandering Spirit"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["necrosis"]
+tier: feat
 ---
 
 Your soul begins to loosen its grip on your body, preparing itself to flee if threatened.

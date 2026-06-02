@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: warp
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Intimidate 5 ranks, Warp sphere.

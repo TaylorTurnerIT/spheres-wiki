@@ -1,0 +1,25 @@
+---
+id: mindscape-configuration
+name: "Mindscape Configuration"
+system: power
+type: talent
+sphere: mind
+tier: advanced
+tags: []
+---
+**Source:** Unknown (lg)
+
+
+**Prerequisites:** Mind sphere (Mindscape (advanced, charm)), caster level 5th.
+
+You learn to manipulate mindscapes in a variety of ways.
+
+**Dream Distortion:** By spending an additional spell point when using the mindscape charm or any of the abilities in mindscape configuration, you may affect a dreamscape as if it were a mindscape.
+
+**Immersive Mindscape:** When using the greater or powerful charm versions of mindscape, you may spend an additional spell point to create an immersive mindscape in place of a binary mindscape. You are allowed to control whether this mindscape is overt or veiled, as well as whether it is harmful or harmless. You may also determine the shape, size, and gravity of the mindscape. You must also create a method of exit from the mindscape when you manifest this power, and that method must be possible to achieve based on the traits of the mindscape, even if it is obscure or difficult. The GM decides whether a method of escape is reasonable. Anything that would be a reasonable method of waking from a dream during deep sleep could allow one to leave a mindscape. If you choose to create a veiled mindscape, the first time another creature interacts with the environment, it can attempt a Will save to disbelieve the effect. Disbelieving a mindscape reveals to that creature that it is within a mindscape and gives it the knowledge needed to leave the mindscape, but does not free it from the mindscape. If you possess the Create Demiplane talent from the Warp sphere, you may alter the magic traits of this mindscape as you could with a demiplane.
+
+**Mindscape Door (requires Warp sphere):** While inside a mindscape, you may teleport eligible targets from the mindscape into other planes. If you are in a binary mindscape, you may teleport yourself out of the mindscape back into your body even though you cannot normally create magic sphere effects in a binary mindscape. In addition, if you can teleport into a space which contains a creature whose mind is in a mindscape, you may choose to teleport a target into their mindscape. If you attempt to use this augment to make a target enter a binary mindscape, one creature of your choice inside the binary mindscape is allowed a Will save against your warp sphere DC, being shunted out of the mindscape on a failed save. The two creatures who remain resume any ongoing psychic duel with the remaining participant if the creature fails its save, but the entering creature is shunted out if the ejected creature succeeds.
+
+**Mindscape Entity (requires Illusion sphere):** By spending 1 spell point while in an immersive mindscape, you may infuse the mindscape with an illusory creature which acts believably on all accounts, plus an additional creature for every additional spell point spent. The creatures may be created anywhere in the mindscape, and may take any form. You automatically sense anything that the creatures sense and may direct the creatures to act in whatever manner you wish. The creatures last as long as the mindscape does, but you may eliminate any creature you create as a free action. Individuals who interact with the creatures are allowed a Will save against your Illusion DC to recognize them as illusions. If you use this ability while outside of a mindscape, you may generate your creations inside of the mindscape of a creature within range of your charm. The creator of this mindscape is allowed a Will save to prevent you from sending one or more creatures into their mindscape.
+
+**Mindscape Probe (requires Divination sphere):** While you are affecting a creature with the lesser charm version of mindscape, you may use any (divine) effects as if you were in the creature's location in the mindscape. This does not allow you to cast any non-(divine) magic effects in a binary mindscape.

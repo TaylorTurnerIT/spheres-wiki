@@ -4,7 +4,8 @@ name: "Scouting Tactics"
 type: feat
 system: power
 sphere: war
-tags: []
+tags: ["squadron"]
+tier: feat
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

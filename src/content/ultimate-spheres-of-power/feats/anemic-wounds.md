@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: death
 tags: []
+tier: feat
 ---
 
 Foes find the wounds you inflict hard to heal.

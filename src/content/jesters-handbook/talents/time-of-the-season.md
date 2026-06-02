@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: time
 tier: basic
-tags: []
+tags: ["time"]
 ---
 
 You create a temporal bubble which changes the season. Create a sphere with a radius of 10 feet + 5 feet per 2 caster levels centered on a creature, object, or square within reach (or within your Time sphere range, if you possess the Ranged Time talent) and choose one of the following seasons:

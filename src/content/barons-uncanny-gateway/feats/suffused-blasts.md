@@ -4,7 +4,8 @@ name: "Suffused Blasts"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["sm"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Paradigm Blast (blast type) or Smiting Blast (blast type)).

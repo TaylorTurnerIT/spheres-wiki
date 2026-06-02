@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: war
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Divination Sphere, War Sphere (any momentum talent)

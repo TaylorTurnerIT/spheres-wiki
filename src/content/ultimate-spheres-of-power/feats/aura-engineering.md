@@ -6,6 +6,7 @@ system: power
 sphere: illusion
 dualSphere: divination
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Divination sphere, Illusion sphere (Deceive Dweomer, Manipulate Aura (sensory, magic)).

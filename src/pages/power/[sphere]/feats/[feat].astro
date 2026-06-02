@@ -28,7 +28,7 @@ export async function getStaticPaths() {
       const entries = await getCollection(slug as any);
       for (const e of entries) {
         if ((e.data as any).type !== 'tag') {
-          allCollEntries.set((e.data as any).id, e);
+          allCollEntries.set(`${(e.data as any).type}:${(e.data as any).id}`, e);
         }
       }
     } catch {}
@@ -43,7 +43,7 @@ export async function getStaticPaths() {
     if (sphere) {
       paths.push({
         params: { sphere: sphere.id, feat: feat.id },
-        props: { feat, sphere, collEntry: allCollEntries.get(feat.id), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
+        props: { feat, sphere, collEntry: allCollEntries.get(`feat:${feat.id}`), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
       });
     }
 
@@ -53,7 +53,7 @@ export async function getStaticPaths() {
       if (dualSphere) {
         paths.push({
           params: { sphere: dualSphere.id, feat: feat.id },
-          props: { feat, sphere: dualSphere, collEntry: allCollEntries.get(feat.id), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
+          props: { feat, sphere: dualSphere, collEntry: allCollEntries.get(`feat:${feat.id}`), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
         });
       }
     }

@@ -4,7 +4,8 @@ name: "Squadron Commander"
 type: feat
 system: power
 sphere: war
-tags: []
+tags: ["ex", "squadron"]
+tier: feat
 ---
 
 **Prerequisite:** War sphere.

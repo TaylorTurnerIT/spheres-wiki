@@ -4,7 +4,8 @@ name: "Heroic Companion"
 type: feat
 system: power
 sphere: conjuration
-tags: []
+tags: ["luck"]
+tier: feat
 ---
 
 **Prerequisite:** Beastmastery sphere, Conjuration sphere, animal companion, familiar, or eidolon.

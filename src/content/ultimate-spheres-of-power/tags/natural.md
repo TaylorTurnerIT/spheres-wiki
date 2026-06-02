@@ -1,6 +1,6 @@
 ---
 type: tag
-id: natural
+id: "natural"
 label: "Natural"
 color: "#10b981"
 priority: 10

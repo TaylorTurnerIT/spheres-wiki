@@ -4,7 +4,8 @@ name: "Cooperative Reanimate"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["teamwork"]
+tier: feat
 ---
 
 Undead you and your allies create resonate with each of your souls.

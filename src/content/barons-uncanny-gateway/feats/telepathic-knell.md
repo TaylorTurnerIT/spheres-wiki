@@ -4,7 +4,8 @@ name: "Telepathic Knell"
 type: feat
 system: power
 sphere: mind
-tags: ["combat"]
+tags: ["combat", "sm"]
+tier: feat
 ---
 
 **Prerequisites:** Mind Sphere

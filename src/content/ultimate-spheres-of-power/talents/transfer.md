@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: basic
-tags: ["manipulation"]
+tags: ["manipulation", "program"]
 ---
 
 You can spend a spell point to bestow your magical potential to a creature other than yourself, granting the target 2 temporary spell points, plus 1 for every 5 caster levels you possess. After the target uses a sphere effect that costs at least 1 spell point, all granted temporary spell points are removed, even if the effect did not use all of them.

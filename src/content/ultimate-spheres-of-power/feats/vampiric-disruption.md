@@ -4,7 +4,8 @@ name: "Vampiric Disruption"
 type: feat
 system: power
 sphere: life
-tags: []
+tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Life sphere (Affliction).

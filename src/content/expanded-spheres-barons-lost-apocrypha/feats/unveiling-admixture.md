@@ -4,7 +4,8 @@ name: "Unveiling Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["admixture"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Divination Sphere (Sensory Overload or Viewing).

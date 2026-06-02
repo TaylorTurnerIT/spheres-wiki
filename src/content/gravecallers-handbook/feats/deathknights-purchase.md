@@ -4,9 +4,9 @@ name: "Deathknight's Purchase"
 type: feat
 system: power
 sphere: death
-tags: ["combat"]
+tags: ["combat", "necrosis"]
+tier: feat
 ---
-
 Their suffering is your salvation. Break their souls across the iron that is your will.
 
 **Prerequisite:** Death sphere.

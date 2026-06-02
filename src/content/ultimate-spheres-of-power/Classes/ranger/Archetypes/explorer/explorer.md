@@ -1,7 +1,7 @@
 ---
 id: explorer
 name: "Explorer"
-tags: []
+tags: ["trade", "utility"]
 ---
 
 Nature knows no bounds in what it is capable of–the explorer is no different. These rangers have a broad skill-set, understanding that to truly thrive in nature, one must be willing to adapt to it.

@@ -6,6 +6,7 @@ system: power
 sphere: enhancement
 dualSphere: alteration
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Alteration sphere, Enhancement sphere (any (enhance) ability).

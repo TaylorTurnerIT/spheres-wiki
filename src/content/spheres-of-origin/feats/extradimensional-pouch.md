@@ -4,7 +4,8 @@ name: "Extradimensional Pouch"
 type: feat
 system: power
 sphere: warp
-tags: []
+tags: ["origin"]
+tier: feat
 ---
 
 **Prerequisites:** Form sphere (Hidden Storage [auxiliary]), Warp sphere (Extradimensional Storage x2).

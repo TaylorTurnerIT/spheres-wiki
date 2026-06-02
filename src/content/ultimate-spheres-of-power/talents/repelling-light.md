@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: light
 tier: basic
-tags: []
+tags: ["light"]
 ---
 
 You may spend a spell point to create light that repels unwanted creatures. Choose one creature type. In the case of humanoids and outsiders, you must instead choose one subtype.

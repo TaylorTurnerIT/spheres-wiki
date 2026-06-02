@@ -4,7 +4,8 @@ name: "Dimensional Archer"
 type: feat
 system: power
 sphere: warp
-tags: []
+tags: ["champion", "mythic"]
+tier: feat
 ---
 
 **Prerequisites:** Warp sphere, +3 base attack bonus.

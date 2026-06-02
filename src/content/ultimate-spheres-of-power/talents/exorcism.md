@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fate
 tier: basic
-tags: ["word"]
+tags: ["su", "word"]
 ---
 
 As a standard action, you may spend a spell point to place this word on a target suffering from a mind-affecting, curse, or possession effect and attempt a magic skill check.

@@ -6,6 +6,7 @@ system: power
 sphere: illusion
 dualSphere: conjuration
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Illusion sphere (Suppression (glamer)), Conjuration sphere (Shadow Creature (form)).

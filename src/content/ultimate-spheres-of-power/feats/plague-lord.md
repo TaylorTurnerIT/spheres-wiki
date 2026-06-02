@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: death
 tags: []
+tier: feat
 ---
 
 Diseases you inflict fester at an alarming rate.

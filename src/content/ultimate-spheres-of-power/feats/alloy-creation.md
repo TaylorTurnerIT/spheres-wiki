@@ -6,6 +6,7 @@ system: power
 sphere: nature
 dualSphere: creation
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Creation sphere, Nature sphere ((metal) package).

@@ -4,7 +4,8 @@ name: "Hemomancy"
 type: feat
 system: power
 sphere: death
-tags: []
+tags: ["necrosis"]
+tier: feat
 ---
 
 **Prerequisite:** Death sphere.

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: creation
 tags: []
+tier: feat
 ---
 
 **Prerequisite:** Creation sphere.

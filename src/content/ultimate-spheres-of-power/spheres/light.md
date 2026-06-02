@@ -32,7 +32,11 @@ sectionDefinitions:
 
 [Glow]
 
+[Bright Light]
+
 [Lens]
+
+[Telescope]
 
 ### Light Talent Types
 

@@ -4,7 +4,8 @@ name: "Solipsistic Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["sm"]
+tier: feat
 ---
 
 **Prerequisites:** Selective Admixture, Destruction sphere (Admixture, Selective Blast), any one Admixture feat.

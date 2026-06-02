@@ -1,6 +1,6 @@
 ---
 type: tag
-id: mass
+id: "mass"
 label: "Mass"
 color: "#006478"
 priority: 7

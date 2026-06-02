@@ -4,7 +4,8 @@ name: "Dimensional Athlete"
 type: feat
 system: power
 sphere: warp
-tags: []
+tags: ["champion"]
+tier: feat
 ---
 
 **Prerequisites:** Athletics sphere, Warp sphere.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: enhancement
 tier: basic
-tags: []
+tags: ["enhance"]
 ---
 
 You may spend a spell point to enhance an object, bestowing movement and a semblance of life. The object obeys your command and understands your language, but as it is not intelligent, it can only obey simple commands such as 'move', 'fight', 'guard', 'stop', etc.

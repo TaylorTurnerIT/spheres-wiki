@@ -1,6 +1,6 @@
 ---
 type: tag
-id: utility
+id: "utility"
 label: "Utility"
 color: "#5a2d96"
 priority: 5

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: ["manipulation"]
+tags: ["amp", "manipulation"]
 ---
 
 **Prerequisites:** Mana sphere, caster level 10th.

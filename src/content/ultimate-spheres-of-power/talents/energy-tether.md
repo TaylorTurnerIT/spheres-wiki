@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: basic
-tags: []
+tags: ["blast-shape"]
 ---
 
 You may send out a tendril of energy to bind your foe to you. Make a ranged touch attack against a target within range. If successful, the target suffers your destructive blast damage (Fortitude half). You may concentrate to maintain this tether each round, or may spend a spell point as a free action to allow it to persist for 1 round per caster level without concentration.

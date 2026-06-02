@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: enhancement
 tier: advanced
-tags: []
+tags: ["enhance", "sm"]
 ---
 
 **Prerequisites:** Enhancement Sphere

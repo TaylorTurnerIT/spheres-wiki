@@ -4,7 +4,8 @@ name: "Force Shield"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["protokinesis"]
+tier: feat
 ---
 
 **Prerequisite:** Telekinesis sphere.

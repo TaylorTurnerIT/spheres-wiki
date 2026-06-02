@@ -1,6 +1,6 @@
 ---
 type: tag
-id: strike
+id: "strike"
 label: "Strike"
 color: "#990000"
 priority: 9

@@ -40,7 +40,7 @@ export async function getStaticPaths() {
       const entries = await getCollection(slug as any);
       for (const e of entries) {
         if ((e.data as any).type !== 'tag') {
-          allCollEntries.set((e.data as any).id, e);
+          allCollEntries.set(`${(e.data as any).type}:${(e.data as any).id}`, e);
         }
       }
     } catch { /* empty collection */ }
@@ -58,13 +58,13 @@ export async function getStaticPaths() {
 
     const talentCollEntries = new Map<string, any>();
     for (const t of allTalents) {
-      const entry = allCollEntries.get(t.id);
+      const entry = allCollEntries.get(`talent:${t.id}`);
       if (entry) talentCollEntries.set(t.id, entry);
     }
 
     const featCollEntries = new Map<string, any>();
     for (const f of feats) {
-      const entry = allCollEntries.get(f.id);
+      const entry = allCollEntries.get(`feat:${f.id}`);
       if (entry) featCollEntries.set(f.id, entry);
     }
 
@@ -78,7 +78,7 @@ export async function getStaticPaths() {
         allTalents,
         feats,
         sections,
-        mainCollEntry: allCollEntries.get(sphere.id),
+        mainCollEntry: allCollEntries.get(`sphere:${sphere.id}`),
         talentCollEntries,
         featCollEntries,
         sourceBook: bookMetaMap.get(sphere.sourceBook),
@@ -100,7 +100,7 @@ export async function getStaticPaths() {
         allTalents: [],
         feats: [],
         sections: [],
-        mainCollEntry: allCollEntries.get(cls.id),
+        mainCollEntry: allCollEntries.get(`class:${cls.id}`),
         talentCollEntries: new Map(),
         featCollEntries: new Map(),
         sourceBook: bookMetaMap.get(cls.sourceBook),

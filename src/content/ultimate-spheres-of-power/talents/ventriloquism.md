@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fallen-fey
 tier: basic
-tags: []
+tags: ["fey-blessing", "utility"]
 ---
 
 As a free action once per round, you can make your voice (or any sound that you can normally make vocally) seem to issue from any location within medium range, or long range if you spend an additional spell point when activating this fey-blessing.

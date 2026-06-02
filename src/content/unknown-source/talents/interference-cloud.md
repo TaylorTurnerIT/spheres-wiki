@@ -5,8 +5,10 @@ system: power
 type: talent
 sphere: weather
 tier: advanced
-tags: []
+tags: ["radiation", "shroud"]
 ---
+**Source:** Unknown (cata-hb)
+
 
 **Prerequisites:** Destruction sphere, Weather sphere (Radiation Lord (advanced)), caster level 10th.
 

@@ -4,7 +4,8 @@ name: "Counterweight"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["protokinesis"]
+tier: feat
 ---
 
 **Prerequisites:** Acrobatics 3 ranks, Telekinesis sphere.

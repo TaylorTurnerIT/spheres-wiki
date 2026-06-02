@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: light
 tier: advanced
-tags: []
+tags: ["light"]
 ---
 
 **Prerequisites:** Light sphere, caster level 10th.

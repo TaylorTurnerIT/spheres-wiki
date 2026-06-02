@@ -1,7 +1,7 @@
 ---
 id: technician
 name: "Technician"
-tags: []
+tags: ["trade", "utility"]
 hitDie: 8
 alignment: "Any."
 startingWealth: "5d6 × 10 gp (average 175 gp). In addition, each character begins play with an outfit worth 10 gp or less."

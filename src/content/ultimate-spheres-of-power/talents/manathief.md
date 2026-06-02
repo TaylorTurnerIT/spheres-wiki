@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mana
 tier: advanced
-tags: []
+tags: ["expunge"]
 ---
 
 **Prerequisites:** Mana sphere, caster level 1st.

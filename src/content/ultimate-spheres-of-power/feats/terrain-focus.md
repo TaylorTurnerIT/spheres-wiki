@@ -4,7 +4,8 @@ name: "Terrain Focus"
 type: feat
 system: power
 sphere: nature
-tags: []
+tags: ["drawback"]
+tier: feat
 ---
 
 **Prerequisites:** Nature sphere, Terrain Casting drawback.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: warp
 tier: advanced
-tags: []
+tags: ["sm"]
 ---
 
 **Prerequisites:** Warp sphere (Extradimensional Room, Mass Teleport [mass], Portal (advanced), Wormhole (space)), caster level 5th.

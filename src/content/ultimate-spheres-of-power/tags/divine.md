@@ -1,6 +1,6 @@
 ---
 type: tag
-id: divine
+id: "divine"
 label: "Divine"
 color: "#f59e0b"
 priority: 10

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: illusion
 tags: ["combat"]
+tier: feat
 ---
 
 **Prerequisites:** Illusion sphere (Blur (glamer), Decoy (glamer)).

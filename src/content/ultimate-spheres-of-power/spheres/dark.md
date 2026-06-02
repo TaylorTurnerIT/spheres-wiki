@@ -35,6 +35,8 @@ Some talents are marked (darkness). These talents add additional effects that ca
 
 Some talents are marked (meld). These talents grant you additional melds you can grant to targets.
 
+[Darkvision]
+
 #### Blot Talents
 
 Dark talents listed with the (blot) tag are treated the same as talents with the (darkness) tag, except in addition to adding an effect, they cause the darkness to manifest as a blot. A blot is a darkness effect created on a two-dimensional surface, such as the ground or a wall, appearing as an inky coating rather than a volume of decreased illumination. Blots do not affect the light level of the area.

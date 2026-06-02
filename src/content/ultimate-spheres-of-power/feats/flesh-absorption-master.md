@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: death
 tags: []
+tier: feat
 ---
 
 Your body reaches peak conditioning for digesting prey and holding corpses for fodder.

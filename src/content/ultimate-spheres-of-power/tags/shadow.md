@@ -1,6 +1,6 @@
 ---
 type: tag
-id: shadow
+id: "shadow"
 label: "Shadow"
 color: "#374151"
 priority: 15

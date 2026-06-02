@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: creation
 tier: basic
-tags: []
+tags: ["material"]
 ---
 
 By spending a spell point when you alter or create an object, you may work with gaseous materials. You may create gases or change their composition into any other known substance with Change Material. A 5-foot cube equals a Medium object. Half a cube equals a Small object, but this decreases the DC of any created gaseous effect by 2 and halves any damage from harmful gases for any creature within that space. You must have line of sight to accomplish this, and as such cannot alter the air in a creature's lungs or other, similar situations.

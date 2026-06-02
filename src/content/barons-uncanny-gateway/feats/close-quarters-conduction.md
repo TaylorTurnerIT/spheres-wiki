@@ -4,7 +4,8 @@ name: "Close-Quarters Conduction"
 type: feat
 system: power
 sphere: destruction
-tags: ["combat"]
+tags: ["combat", "sm"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction Sphere (at least one (blast type) talent that deals electricity damage)

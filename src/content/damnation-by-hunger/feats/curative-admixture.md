@@ -4,7 +4,8 @@ name: "Curative Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["admixture"]
+tier: feat
 ---
 
 Ruinous and restorative power alike flow from your will.

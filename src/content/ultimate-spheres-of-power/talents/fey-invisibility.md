@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fallen-fey
 tier: advanced
-tags: []
+tags: ["fey-blessing"]
 ---
 
 **Prerequisites:** Fallen Fey sphere (Fade (fey-blessing)), caster level 5th.

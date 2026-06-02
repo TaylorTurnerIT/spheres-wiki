@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: illusion
 tier: basic
-tags: []
+tags: ["sensory", "touch"]
 ---
 
 You may make an illusion that feels real to the touch, including temperature and texture. Your illusion still cannot hold weight (thus while touching the wall would only grant a new saving throw, being thrown into the wall would still cause the creature to pass through).

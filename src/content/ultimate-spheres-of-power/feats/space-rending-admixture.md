@@ -4,7 +4,8 @@ name: "Space-Rending Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["admixture"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Warp sphere (Unwilling Teleport).

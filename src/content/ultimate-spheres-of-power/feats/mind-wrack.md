@@ -4,7 +4,8 @@ name: "Mind Wrack"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["admixture"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Mind sphere.

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: advanced
-tags: []
+tags: ["sm"]
 ---
 
 **Prerequisites:** Divination Sphere (Divine Future)

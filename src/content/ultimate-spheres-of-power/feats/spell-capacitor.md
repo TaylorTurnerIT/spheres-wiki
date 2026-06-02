@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: time
 tags: []
+tier: feat
 ---
 
 **Prerequisite:** Time sphere.

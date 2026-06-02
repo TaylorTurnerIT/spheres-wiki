@@ -4,7 +4,8 @@ name: "Twilight Adept"
 type: feat
 system: power
 sphere: light
-tags: []
+tags: ["teamwork"]
+tier: feat
 ---
 
 **Prerequisite:** Dark sphere or Light sphere.

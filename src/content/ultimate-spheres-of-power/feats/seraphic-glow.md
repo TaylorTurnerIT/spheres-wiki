@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: light
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Light sphere, good alignment.

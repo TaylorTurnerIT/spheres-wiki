@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: weather
 tier: base
-tags: []
+tags: ["sp"]
 ---
 
 As a standard action, you may control all weather within medium range, adjusting either the wind, temperature, or precipitation levels. If you are in a confined area such as inside a building, your control only extends to the edge of that space.

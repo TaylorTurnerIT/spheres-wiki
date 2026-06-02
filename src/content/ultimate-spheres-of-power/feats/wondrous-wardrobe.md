@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: creation
 tags: []
+tier: feat
 ---
 
 **Prerequisites:** Creation sphere (Expanded Materials (material)).

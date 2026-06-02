@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: creation
 tier: advanced
-tags: []
+tags: ["create"]
 ---
 
 **Prerequisites:** Creation sphere (Acidic Creation (material)), caster level 5th.

@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: destruction
 tags: []
+tier: feat
 ---
 
 Amidst ruin, you have learned to support those whom you favor.

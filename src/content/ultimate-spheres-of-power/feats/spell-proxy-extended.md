@@ -4,7 +4,8 @@ name: "Spell Proxy, Extended"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["proxy"]
+tier: feat
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, at least one Proxy feat.

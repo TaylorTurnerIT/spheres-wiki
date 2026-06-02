@@ -4,7 +4,8 @@ name: "Force Shield, Improved"
 type: feat
 system: power
 sphere: telekinesis
-tags: ["combat"]
+tags: ["combat", "protokinesis"]
+tier: feat
 ---
 
 **Prerequisites:** Telekinesis sphere, Force Shield, character level 5th.

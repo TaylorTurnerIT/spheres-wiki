@@ -6,6 +6,7 @@ system: power
 sphere: light
 dualSphere: alteration
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Alteration sphere, Light sphere.

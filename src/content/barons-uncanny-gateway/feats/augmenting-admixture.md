@@ -4,7 +4,8 @@ name: "Augmenting Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["admixture", "sm"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction Sphere (Admixture), Enhancement sphere.

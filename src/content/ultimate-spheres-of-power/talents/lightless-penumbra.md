@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: dark
 tier: advanced
-tags: []
+tags: ["shadow"]
 ---
 
 **Prerequisites:** Dark sphere (Shadowed Mien (shadow)), caster level 1st.

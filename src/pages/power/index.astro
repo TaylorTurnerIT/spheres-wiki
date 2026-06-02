@@ -71,14 +71,6 @@ const classes = [...classMap.values()]
     align-items: start;
   }
 
-  .sphere-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .sphere-card {
-    padding: 6px 10px;
-  }
-
   .class-grid {
     grid-template-columns: 1fr;
   }
@@ -86,15 +78,6 @@ const classes = [...classMap.values()]
   @media (max-width: 900px) {
     .power-top {
       grid-template-columns: 1fr;
-    }
-    .sphere-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .sphere-grid {
-      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>

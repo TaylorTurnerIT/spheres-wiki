@@ -6,6 +6,7 @@ system: power
 sphere: warp
 dualSphere: divination
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Divination sphere, Warp sphere (Teleport Beacon (space)).

@@ -6,6 +6,7 @@ system: power
 sphere: dark
 dualSphere: illusion
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow)), Illusion sphere (Illusionary Disguise ability).

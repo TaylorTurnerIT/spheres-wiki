@@ -4,7 +4,8 @@ name: "Revitalizing Grasp"
 type: feat
 system: power
 sphere: life
-tags: []
+tags: ["warden"]
+tier: feat
 ---
 
 **Prerequisite:** Life sphere (at least one (vitality) talent), lay on hands class feature.

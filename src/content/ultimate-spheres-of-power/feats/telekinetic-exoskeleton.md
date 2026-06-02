@@ -4,7 +4,8 @@ name: "Telekinetic Exoskeleton"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["protokinesis"]
+tier: feat
 ---
 
 **Prerequisites:** Telekinesis sphere, character level 3rd.

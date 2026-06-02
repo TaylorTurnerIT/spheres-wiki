@@ -4,7 +4,8 @@ name: "Telekinetic Fist"
 type: feat
 system: power
 sphere: telekinesis
-tags: ["combat"]
+tags: ["combat", "protokinesis"]
+tier: feat
 ---
 
 **Prerequisites:** Telekinesis sphere, Improved Unarmed Strike, base attack bonus +5.

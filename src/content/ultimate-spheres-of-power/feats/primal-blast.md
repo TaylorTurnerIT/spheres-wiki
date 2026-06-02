@@ -6,6 +6,7 @@ system: power
 sphere: nature
 dualSphere: destruction
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (any (blast type) talent), Nature sphere (any package).

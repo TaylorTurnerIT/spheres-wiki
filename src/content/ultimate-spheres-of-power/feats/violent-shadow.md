@@ -4,7 +4,8 @@ name: "Violent Shadow"
 type: feat
 system: power
 sphere: illusion
-tags: []
+tags: ["surreal"]
+tier: feat
 ---
 
 **Prerequisites:** Shadowmark 3d6, shadow pool.

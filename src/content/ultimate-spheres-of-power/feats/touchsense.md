@@ -4,7 +4,8 @@ name: "Touchsense"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["protokinesis"]
+tier: feat
 ---
 
 **Prerequisites:** Perception 5 ranks, Telekinesis sphere.

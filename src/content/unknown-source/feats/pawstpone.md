@@ -5,7 +5,10 @@ type: feat
 system: power
 sphere: time
 tags: []
+tier: feat
 ---
+**Source:** Unknown (catgirl-hb)
+
 
 **Prerequisites:** Time sphere, caster level 5th.
 

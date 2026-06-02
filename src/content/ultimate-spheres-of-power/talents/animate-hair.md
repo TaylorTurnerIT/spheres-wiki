@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fallen-fey
 tier: basic
-tags: []
+tags: ["fey-blessing"]
 ---
 
 Your hair grows long and animates. You may activate the following abilities as fey-blessings:

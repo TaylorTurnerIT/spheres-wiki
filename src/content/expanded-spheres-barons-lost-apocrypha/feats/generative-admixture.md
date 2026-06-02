@@ -4,7 +4,8 @@ name: "Generative Admixture"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["admixture"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Creation sphere.

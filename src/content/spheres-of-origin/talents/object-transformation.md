@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: alteration
 tier: basic
-tags: ["transformation"]
+tags: ["origin", "transformation"]
 ---
 
 **Limbs:** None

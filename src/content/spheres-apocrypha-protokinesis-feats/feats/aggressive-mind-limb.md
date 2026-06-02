@@ -4,7 +4,8 @@ name: "Aggressive Mind Limb"
 type: feat
 system: power
 sphere: telekinesis
-tags: ["combat"]
+tags: ["combat", "protokinesis"]
+tier: feat
 ---
 
 **Prerequisites:** Telekinesis sphere, Mind Limb, base attack bonus +5.

@@ -5,7 +5,7 @@ system: power
 type: sphere
 icon: death
 description: "You may command the powers of unlife."
-tags: []
+tags: ["motif"]
 sectionDefinitions:
   - label: "Talents"
     categories:
@@ -34,6 +34,8 @@ sectionDefinitions:
 ---
 
 [Ghost Strike]
+
+[Exhausting Strike]
 
 [Reanimate]
 

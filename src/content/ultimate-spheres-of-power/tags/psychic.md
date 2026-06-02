@@ -1,6 +1,6 @@
 ---
 type: tag
-id: psychic
+id: "psychic"
 label: "Psychic"
 color: "#8b5cf6"
 priority: 10

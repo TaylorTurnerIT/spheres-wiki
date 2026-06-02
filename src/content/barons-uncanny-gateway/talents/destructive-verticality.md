@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: advanced
-tags: []
+tags: ["sm"]
 ---
 
 **Prerequisites:** Destruction Sphere (Energy Sphere, Explosive Orb, or Sculpt Blast)

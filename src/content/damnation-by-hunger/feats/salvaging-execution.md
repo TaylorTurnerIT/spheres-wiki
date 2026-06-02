@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: blood
 tags: []
+tier: feat
 ---
 
 Death is not the end of your wrath.

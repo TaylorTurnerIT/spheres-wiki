@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: light
 tier: basic
-tags: []
+tags: ["light"]
 ---
 
 When you cause a creature to glow, you can help eradicate toxic substances they are afflicted with, granting them a +1 circumstance bonus on all Fortitude saves against poisons and diseases, increasing by 1 for every 10 caster levels. When you cause an object to glow, as an instantaneous effect you may purify rotten, diseased or poisonous food and drink, causing it to become suitable for consumption. This has no effect on magical diseases or poisons.

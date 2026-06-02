@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: conjuration
 tags: ["companion"]
+tier: feat
 ---
 
 **Prerequisites:** Conjuration sphere (Earth Creature (form)), caster level 5th.

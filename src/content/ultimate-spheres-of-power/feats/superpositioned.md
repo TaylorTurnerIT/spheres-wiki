@@ -6,6 +6,7 @@ system: power
 sphere: warp
 dualSphere: illusion
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Illusion sphere (Decoy (glamer), Suppression (glamer)), Warp sphere, caster level 5th.

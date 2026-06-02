@@ -4,7 +4,8 @@ name: "Proxy Network"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["proxy"]
+tier: feat
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Spell Proxy.

@@ -4,7 +4,8 @@ name: "Essence Plunder"
 type: feat
 system: power
 sphere: mana
-tags: ["combat"]
+tags: ["combat", "sm"]
+tier: feat
 ---
 
 **Prerequisites:** Mana sphere

@@ -4,7 +4,8 @@ name: "Poltergeist's Fingers"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["protokinesis"]
+tier: feat
 ---
 
 **Prerequisites:** Sleight of Hand 3 ranks, Telekinesis sphere, Mind Limb.

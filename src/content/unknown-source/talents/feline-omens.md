@@ -5,8 +5,10 @@ system: power
 type: talent
 sphere: fallen-fey
 tier: basic
-tags: []
+tags: ["fey-blessing"]
 ---
+**Source:** Unknown (catgirl-hb)
+
 
 You may activate the following as fey-blessings:
 

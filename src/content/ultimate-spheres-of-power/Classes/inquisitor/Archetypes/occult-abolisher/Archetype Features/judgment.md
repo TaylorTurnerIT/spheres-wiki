@@ -2,7 +2,7 @@
 id: judgment
 name: "Judgment"
 level: 10
-tags: []
+tags: ["motif"]
 ---
 
 The following occult abolisher judgment works differently than those of a standard inquisitor:

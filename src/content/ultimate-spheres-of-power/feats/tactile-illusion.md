@@ -6,6 +6,7 @@ system: power
 sphere: telekinesis
 dualSphere: illusion
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Illusion sphere (Illusionary Touch (sensory, touch) x2), Telekinesis sphere (Finesse).

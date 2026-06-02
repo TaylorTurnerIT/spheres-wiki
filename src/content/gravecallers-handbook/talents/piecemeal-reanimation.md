@@ -7,7 +7,6 @@ sphere: death
 tier: basic
 tags: ["dominion"]
 ---
-
 You gain the following abilities which allow you to reanimate incomplete corpses and individual corpse parts:
 
 **Reanimate Piecemeal Undead:** You can reanimate an individual part or parts of a corpse as a piecemeal undead, such as reanimating a corpse's arm or skull or a torso with an arm. When reanimating piecemeal undead this way, use the statistics of an appropriately sized animated object (see the Enhancement sphere, Ultimate Spheres of Power pg. 288, 577) with the undead construction flaw and no other construction point abilities or construction flaws. Piecemeal undead otherwise count as an undead creature you reanimated, count against the total number of reanimated creatures you may have active at any one time normally, and obey your commands as normal for an undead you reanimated. A piecemeal undead will usually be anywhere from three sizes smaller to approximately the same size as the original corpse. See **Table: Piecemeal Undead** to determine the appropriate animated object size for a piecemeal undead.

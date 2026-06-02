@@ -5,9 +5,8 @@ system: power
 type: talent
 sphere: divination
 tier: basic
-tags: ["utility"]
+tags: ["sp", "utility"]
 ---
-
 When you divine, instead of concentrating on the effect, you may spend an additional spell point to create an immobile sensor within your Divination sphere range which lasts for 10 minutes per caster level or 1 hour per caster level if you spend an additional spell point. This sensor can be detected as though it were a scrying sensor (Perception DC 20 + caster level) and dispelled.
 
 When you create a sensor, you may choose to either divine for creatures, detecting any creature which enters the sensor's range, or divine with a (divine) effect which locates information in an area (such as the base Divination sphere effect, the Divine Undead alternate divination, or the Detect Spellcaster talent, but not the Ultravision alternate divination or the Augury talent).

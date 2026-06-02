@@ -6,6 +6,7 @@ system: power
 sphere: nature
 dualSphere: destruction
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Fire Blast (blast type, fire)), Nature sphere ((fire) package), caster level 3rd.

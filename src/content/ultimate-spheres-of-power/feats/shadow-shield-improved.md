@@ -4,7 +4,8 @@ name: "Shadow Shield, Improved"
 type: feat
 system: power
 sphere: illusion
-tags: []
+tags: ["surreal"]
+tier: feat
 ---
 
 **Prerequisite:** Shadow Shield.

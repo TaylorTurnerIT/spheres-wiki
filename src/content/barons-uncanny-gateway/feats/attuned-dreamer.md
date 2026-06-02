@@ -4,7 +4,8 @@ name: "Attuned Dreamer"
 type: feat
 system: power
 sphere: mind
-tags: []
+tags: ["sm"]
+tier: feat
 ---
 
 **Prerequisites:** Dreamspace, either Dreamwalking Initiate or dreamwalker hedgewitch path power

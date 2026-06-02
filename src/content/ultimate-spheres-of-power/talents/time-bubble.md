@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: time
 tier: basic
-tags: []
+tags: ["time"]
 ---
 
 You may spend a spell point to create a bubble of distorted time around yourself that extends outward in a sphere with a radius of up to 15-foot + 5 feet per 5 caster levels. This sphere lasts for 1 round per caster level and moves with you, remaining centered around you at all times. Time passing within this sphere moves at a different rate than time outside, granting all creatures within the sphere partial concealment from attacks originating from outside the sphere. If a creature occupies a space both within the sphere and without (such as a Large or larger creature), creatures within the sphere do not gain partial concealment against its attacks, but the creature takes 1d8 damage per two caster levels as its body is torn apart by conflicting temporal forces. This damage occurs when the creature first enters the spaces within and without the time bubble, and at the start of their turn each round they remain within the affected area. Creatures cannot be damaged by this effect more than once per round. You may spend an additional spell point when you create this sphere to apply the effects of the Haste or Slow abilities (including the effects from Improved Haste or Improved Slow) to all creatures within the sphere's affected area; you may choose at the time of casting whether or not to subject yourself to these additional effects.

@@ -4,7 +4,8 @@ name: "Primal Admixture"
 type: feat
 system: power
 sphere: nature
-tags: []
+tags: ["admixture"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Nature sphere.

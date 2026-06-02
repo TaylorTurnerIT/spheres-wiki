@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: illusion
 tier: basic
-tags: []
+tags: ["glamer"]
 ---
 
 As an illusion, you may create glamers that suppress and eliminate sensation rather than creating their own. Suppressions cannot be negated or disbelieved through a Will save. You may suppress any sense that you can affect when creating illusions, but each such Suppression is considered a separate glamer.

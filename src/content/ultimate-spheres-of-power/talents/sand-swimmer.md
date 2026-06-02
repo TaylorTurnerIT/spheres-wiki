@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: weather
 tier: basic
-tags: []
+tags: ["aridity", "mantle"]
 ---
 
 When a creature bearing your mantle is in an area of Aridity of severity level 2 or higher, they can swim through sand as if it were water at a speed of 30 feet and gain tremorsense 30 feet (even if they stand on ground other than sand). They may breathe sand as if it were air. The speed and tremorsense range both increase by 5 feet per category above severity level 2.

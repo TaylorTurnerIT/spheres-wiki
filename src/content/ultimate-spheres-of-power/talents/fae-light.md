@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fallen-fey
 tier: basic
-tags: ["utility"]
+tags: ["fey-blessing", "utility"]
 ---
 
 You shed light like a torch. You may alter the color, extinguish, or resume this effect as a free action. If you possess the Light sphere, you may count as being under the effects of your own glow while this fey-blessing is active.

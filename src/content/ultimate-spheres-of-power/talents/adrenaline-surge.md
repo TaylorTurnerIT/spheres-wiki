@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: life
 tier: basic
-tags: []
+tags: ["tension"]
 ---
 
 When you use a Life sphere talent or ability on an ally other than yourself, you may spend one spell point to also give them an adrenaline surge. The ally may do one of the following as an immediate action:

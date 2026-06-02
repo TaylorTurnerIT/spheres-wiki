@@ -5,7 +5,8 @@ type: feat
 system: power
 sphere: nature
 dualSphere: divination
-tags: ["dual-sphere"]
+tags: ["dual-sphere", "sm"]
+tier: feat
 ---
 
 **Prerequisites:** Divination Sphere (viewing), Nature Sphere

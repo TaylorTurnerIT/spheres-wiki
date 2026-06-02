@@ -4,7 +4,8 @@ name: "Suffer By Proxy"
 type: feat
 system: power
 sphere: enhancement
-tags: []
+tags: ["drawback", "proxy"]
+tier: feat
 ---
 
 **Prerequisites:** Enhancement sphere, Draining Casting drawback, Circle Casting, Spell Proxy.

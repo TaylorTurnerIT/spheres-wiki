@@ -2,7 +2,7 @@
 id: danger-sense
 name: "Danger Sense"
 level: 3
-tags: []
+tags: ["ex"]
 ---
 
 At 3rd level, the nightblazer receives danger sense as an unchained rogue of equal level.

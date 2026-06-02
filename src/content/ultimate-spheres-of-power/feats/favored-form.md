@@ -5,6 +5,7 @@ type: feat
 system: power
 sphere: alteration
 tags: []
+tier: feat
 ---
 
 **Prerequisite:** Alteration sphere.

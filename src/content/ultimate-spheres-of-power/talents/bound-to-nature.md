@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fallen-fey
 tier: advanced
-tags: []
+tags: ["fey-blessing"]
 ---
 
 **Prerequisites:** Fallen Fey sphere, caster level 10th.

@@ -1,6 +1,6 @@
 ---
 type: tag
-id: lawful
+id: "lawful"
 label: "Lawful"
 color: "#1d4ed8"
 priority: 15

@@ -6,6 +6,7 @@ system: power
 sphere: death
 dualSphere: alteration
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 When you reanimate a corpse, its remains shift to suit your purposes.

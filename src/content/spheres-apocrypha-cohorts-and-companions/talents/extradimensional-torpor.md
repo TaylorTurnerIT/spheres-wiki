@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: warp
 tier: advanced
-tags: []
+tags: ["space"]
 ---
 
 **Prerequisites:** Warp sphere (Extradimensional Storage (space)).

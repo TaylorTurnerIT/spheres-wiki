@@ -349,13 +349,13 @@ a:hover {
 
 /* ── Sphere icon ────────────────────────────────────────── */
 .si {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
   opacity: 0.95;
   overflow: visible;
-  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25))
-    drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.15));
+  filter: drop-shadow(0px 1.5px 2px rgba(0, 0, 0, 0.4))
+    drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.3));
 }
 
 /* ── Utility: section heading with rule ─────────────────── */
@@ -572,6 +572,7 @@ a:hover {
 .header-nav {
   flex: 1;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 28px;
   font-family: var(--font-body);
@@ -592,6 +593,33 @@ a:hover {
 }
 .hamburger svg {
   display: block;
+}
+.a11y-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--clr-brand);
+  padding: 0;
+  transform: translateY(-3px);
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+.a11y-trigger:hover {
+  border-color: var(--clr-brand);
+  background: color-mix(in srgb, var(--clr-brand) 6%, transparent);
+}
+.a11y-trigger:focus-visible {
+  outline: 2px solid var(--clr-brand);
+  outline-offset: 2px;
 }
 
 /* ── Search Results Dropdown ────────────────────────────── */
@@ -851,7 +879,8 @@ h6 {
   transition:
     box-shadow 0.18s ease,
     transform 0.18s ease;
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: var(--clr-text);
 }
@@ -876,6 +905,9 @@ h6 {
 }
 .intro-card-body {
   padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .intro-card-name {
   font-family: var(--font-display);
@@ -897,6 +929,7 @@ h6 {
   font-style: italic;
   font-weight: 600;
   font-size: var(--fs-2xs);
+  margin-top: auto;
 }
 .intro-card .intro-card-link {
   color: var(--clr-ns, inherit);
@@ -1094,33 +1127,68 @@ h6 {
   text-decoration: none;
 }
 
-/* ── Sphere list ────────────────────────────────────────── */
+/* ── Sphere cols (centered icon-list in ref cards) ──────── */
+.sphere-cols {
+  display: flex;
+  justify-content: center;
+}
+.sphere-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0 8px;
+}
+.sphere-col + .sphere-col {
+  border-left: 0.5px solid var(--clr-border);
+}
+
+/* ── Sphere list (plain list — classes subsection) ──────── */
 .sphere-list {
   columns: 2;
-  column-gap: 6px;
+  column-gap: 16px;
+  column-rule: 0.5px solid var(--clr-border);
 }
 .sphere-list.single {
   columns: 1;
 }
-.sphere-list a {
+.sphere-list a,
+.sphere-col a {
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: var(--fs-base);
   font-family: var(--font-body);
+  font-weight: 600;
   line-height: 1;
-  padding: 3.5px 4px;
-  break-inside: avoid;
+  padding: 4px 6px;
   white-space: nowrap;
-  border-radius: 3px;
-  transition: background 0.12s ease;
+  border-radius: 4px;
+  transition:
+    background 0.12s ease,
+    transform 0.1s ease;
   text-decoration: none;
 }
 .sphere-list a {
+  margin-bottom: 3px;
+  break-inside: avoid;
+}
+.sphere-list a,
+.sphere-col a {
   color: var(--clr-ns, inherit);
 }
-.sphere-list a:hover {
+.sphere-list a:hover,
+.sphere-col a:hover {
   text-decoration: none;
+  transform: translateX(2px);
+}
+.sphere-list a:hover .si,
+.sphere-col a:hover .si {
+  transform: scale(1.12);
+  transition: transform 0.1s ease;
+}
+.sphere-list a:active,
+.sphere-col a:active {
+  transform: translateX(2px) scale(0.96);
 }
 .power-list a:hover {
   background: rgba(23, 75, 147, 0.06);
@@ -1284,25 +1352,19 @@ h6 {
 .entry-card {
   background: var(--clr-bg);
   border: 0.5px solid var(--clr-border);
-  border-left: 3px solid;
-  border-radius: var(--radius);
-  padding: 10px 12px;
+  border-left: 3px solid var(--clr-ns, currentColor);
+  border-radius: 6px;
+  padding: 8px 12px;
   display: flex;
   flex-direction: column;
   gap: 4px;
   text-decoration: none;
   color: var(--clr-text);
-  transition:
-    background 0.15s ease,
-    transform 0.12s ease;
+  transition: background 0.15s ease;
 }
 .entry-card:hover {
-  background: var(--clr-surface);
-  transform: translateX(2px);
+  background: color-mix(in srgb, var(--clr-ns) 4%, var(--clr-surface));
   text-decoration: none;
-}
-.entry-card {
-  border-left-color: var(--clr-ns, currentColor);
 }
 .entry-card-header {
   display: flex;
@@ -1310,8 +1372,8 @@ h6 {
   gap: 8px;
 }
 .entry-card-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
 }
 .entry-card-name {
@@ -1330,6 +1392,22 @@ h6 {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ── Sphere button styling ──────────────────────────────── */
+.sphere-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 900px) {
+  .sphere-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .sphere-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .page-title-icon {

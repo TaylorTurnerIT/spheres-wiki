@@ -4,7 +4,8 @@ name: "Kinetic Drift"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["protokinesis"]
+tier: feat
 ---
 
 **Prerequisites:** Telekinesis sphere, Counterweight, character level 5th.

@@ -4,7 +4,8 @@ name: "Improved Energy Bomb"
 type: feat
 system: power
 sphere: destruction
-tags: ["combat"]
+tags: ["combat", "sm"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction Sphere (energy bomb)

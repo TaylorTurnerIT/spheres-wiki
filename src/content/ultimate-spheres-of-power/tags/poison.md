@@ -1,6 +1,6 @@
 ---
 type: tag
-id: poison
+id: "poison"
 label: "Poison"
 color: "#065f46"
 priority: 15

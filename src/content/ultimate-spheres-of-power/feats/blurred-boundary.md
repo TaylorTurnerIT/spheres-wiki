@@ -6,6 +6,7 @@ system: power
 sphere: protection
 dualSphere: illusion
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Illusion sphere (any (glamer) talent), Protection sphere.

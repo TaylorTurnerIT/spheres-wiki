@@ -4,7 +4,8 @@ name: "Unseelie Trapper"
 type: feat
 system: power
 sphere: fallen-fey
-tags: []
+tags: ["champion"]
+tier: feat
 ---
 
 **Prerequisites:** Fallen Fey sphere (Snare Setter (fey-blessing)), Trap sphere.

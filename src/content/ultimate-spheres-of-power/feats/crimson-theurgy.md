@@ -6,6 +6,7 @@ system: power
 sphere: death
 dualSphere: blood
 tags: ["dual-sphere"]
+tier: feat
 ---
 
 **Prerequisites:** Blood sphere, Death sphere.

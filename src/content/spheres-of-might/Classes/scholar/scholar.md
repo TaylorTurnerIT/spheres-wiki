@@ -1,7 +1,7 @@
 ---
 id: scholar
 name: "Scholar"
-tags: []
+tags: ["mythic"]
 hitDie: 6
 alignment: "Any."
 startingWealth: "5d6 x 10 gp (average 175 gp) plus 1 healer’s kit. In addition, each character begins play with an outfit worth 10 gp or less."

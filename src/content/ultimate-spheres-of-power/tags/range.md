@@ -1,6 +1,6 @@
 ---
 type: tag
-id: range
+id: "range"
 label: "Range"
 color: "#8f2d00"
 priority: 8

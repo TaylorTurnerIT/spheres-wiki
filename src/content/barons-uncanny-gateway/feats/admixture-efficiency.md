@@ -4,7 +4,8 @@ name: "Admixture Efficiency"
 type: feat
 system: power
 sphere: destruction
-tags: []
+tags: ["sm"]
+tier: feat
 ---
 
 **Prerequisites:** Destruction Sphere (Admixture), any Admixture feat, MSB +7

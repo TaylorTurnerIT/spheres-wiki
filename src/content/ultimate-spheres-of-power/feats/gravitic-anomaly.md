@@ -4,7 +4,8 @@ name: "Gravitic Anomaly"
 type: feat
 system: power
 sphere: telekinesis
-tags: []
+tags: ["protokinesis"]
+tier: feat
 ---
 
 **Prerequisites:** Telekinesis sphere, Counterweight.

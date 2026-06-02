@@ -1,6 +1,6 @@
 ---
 type: tag
-id: instill
+id: "instill"
 label: "Instill"
 color: "#8a5500"
 priority: 6

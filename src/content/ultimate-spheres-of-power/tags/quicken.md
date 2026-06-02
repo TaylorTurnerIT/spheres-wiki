@@ -1,6 +1,6 @@
 ---
 type: tag
-id: quicken
+id: "quicken"
 label: "Quicken"
 color: "#B22222"
 priority: 8

@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: light
 tier: basic
-tags: []
+tags: ["light"]
 ---
 
 You may place a glow on a source of written information, such as a book, to cause it to reveal any information deliberately recorded in it. Anyone who takes even a moment to examine the light (a free action) can read the entire body of work, regardless of length, damage to the text or language barriers - the observer does not even need to be able to read. Even erased text can be read.

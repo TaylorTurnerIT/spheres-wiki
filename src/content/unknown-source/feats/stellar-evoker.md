@@ -5,7 +5,10 @@ type: feat
 system: power
 sphere: destruction
 tags: []
+tier: feat
 ---
+**Source:** Unknown (rw-hb)
+
 
 Your magics orbit you creating an orrery of color and power around your person.
 

@@ -7,6 +7,8 @@ sphere: weather
 tier: advanced
 tags: []
 ---
+**Source:** Unknown (cata-hb)
+
 
 **Prerequisites:** Destruction sphere, Weather sphere (Radiation Lord), caster level 10th.
 

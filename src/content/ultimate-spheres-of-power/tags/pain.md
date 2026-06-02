@@ -1,6 +1,6 @@
 ---
 type: tag
-id: pain
+id: "pain"
 label: "Pain"
 color: "#be123c"
 priority: 15
