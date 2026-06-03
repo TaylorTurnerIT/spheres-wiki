@@ -8,22 +8,38 @@ const { bookMetaMap } = await resolveEntries();
 const allBooks = [...bookMetaMap.values()];
 
 // Core Slugs
-const CORE_SLUGS = new Set([
+const CORE_SLUGS = [
   'ultimate-spheres-of-power',
   'spheres-of-might',
   'spheres-of-guile',
   'champions-of-the-spheres'
-]);
+];
 
 const OFFICIAL_PUBLISHERS = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
 
 // Helper to sort by date descending
 const sortByDate = (a: any, b: any) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
 
-// Groupings
-const coreBooks = allBooks.filter(b => CORE_SLUGS.has(b.slug)).sort(sortByDate);
+// Featured Core Books (with placeholders for missing)
+const featuredCoreBooks = CORE_SLUGS.map(slug => {
+  const existing = allBooks.find(b => b.slug === slug);
+  if (existing) return existing;
+  // Placeholder
+  return {
+    title: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+    publisher: 'Drop Dead Studios',
+    slug,
+    isComingSoon: true
+  };
+});
+
+// Groupings (Core system content now in respective publishers, so we just filter by publisher)
 const diamondBooks = allBooks.filter(b => b.publisher === 'Diamond Recreational Studios').sort(sortByDate);
-const ddsBooks = allBooks.filter(b => b.publisher === 'Drop Dead Studios' && !CORE_SLUGS.has(b.slug)).sort(sortByDate);
+const ddsBooks = allBooks.filter(b => b.publisher === 'Drop Dead Studios').sort(sortByDate);
+
+// Latest arrivals
+const latestFirstParty = allBooks.filter(b => OFFICIAL_PUBLISHERS.has(b.publisher)).sort(sortByDate)[0];
+const latestThirdParty = allBooks.filter(b => !OFFICIAL_PUBLISHERS.has(b.publisher) && b.publisher !== 'Unknown').sort(sortByDate)[0];
 
 const thirdPartyGroups = allBooks
   .filter(b => !OFFICIAL_PUBLISHERS.has(b.publisher) && b.publisher !== 'Unknown')
@@ -43,34 +59,60 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
   <h1 class="page-title">Store</h1>
   <hr class="page-title-rule" />
 
+  <div class="store-top-row">
+    {/* New Arrivals */}
+    <div class="store-top-col">
+      {(latestFirstParty || latestThirdParty) && (
+        <div class="section-heading" style="margin-top: 10px; border-bottom-width: 2px;">
+          <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">New Arrivals</span>
+          <div class="section-heading-rule"></div>
+        </div>
+      )}
+      <StoreCarousel>
+        {latestFirstParty && (
+          <div class="new-arrival-item">
+            <div class="arrival-badge official">Official</div>
+            <BookCard book={latestFirstParty} />
+          </div>
+        )}
+        {latestThirdParty && (
+          <div class="new-arrival-item">
+            <div class="arrival-badge third-party">Third-Party</div>
+            <BookCard book={latestThirdParty} />
+          </div>
+        )}
+      </StoreCarousel>
+    </div>
+
+    {/* Featured Releases */}
+    <div class="store-top-col">
+      <div class="section-heading" style="margin-top: 10px; border-bottom-width: 2px;">
+        <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Featured Core Releases</span>
+        <div class="section-heading-rule"></div>
+      </div>
+      
+      <StoreCarousel>
+        {featuredCoreBooks.map(book => (
+          book.isComingSoon ? (
+             <div class="store-card coming-soon-card">
+               <div class="store-card-cover-placeholder">
+                 <span>Coming Soon</span>
+               </div>
+               <div class="store-title">{book.title}</div>
+               <div class="store-publisher">{book.publisher}</div>
+             </div>
+          ) : (
+            <BookCard book={book as any} />
+          )
+        ))}
+      </StoreCarousel>
+    </div>
+  </div>
+
   {/* Official Section */}
-  <div class="section-heading" style="margin-top: 10px; border-bottom-width: 2px;">
-    <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Official</span>
+  <div class="section-heading" style="margin-top: 40px; border-bottom-width: 2px;">
+    <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Official Publishers</span>
     <div class="section-heading-rule"></div>
-  </div>
-
-  <div style="margin-top: 15px;">
-    <div class="section-heading">
-      <span class="section-heading-text">Core System</span>
-      <div class="section-heading-rule"></div>
-    </div>
-    {coreBooks.length > 0 ? (
-      <StoreCarousel>
-        {coreBooks.map(book => <BookCard book={book} />)}
-      </StoreCarousel>
-    ) : <p class="store-empty">Core books coming soon.</p>}
-  </div>
-
-  <div style="margin-top: 15px;">
-    <div class="section-heading">
-      <span class="section-heading-text">Diamond Recreational Studios</span>
-      <div class="section-heading-rule"></div>
-    </div>
-    {diamondBooks.length > 0 ? (
-      <StoreCarousel>
-        {diamondBooks.map(book => <BookCard book={book} />)}
-      </StoreCarousel>
-    ) : <p class="store-empty">No DRS books available yet.</p>}
   </div>
 
   <div style="margin-top: 15px;">
@@ -85,10 +127,22 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
     ) : <p class="store-empty">No DDS books available yet.</p>}
   </div>
 
+  <div style="margin-top: 15px;">
+    <div class="section-heading">
+      <span class="section-heading-text">Diamond Recreational Studios</span>
+      <div class="section-heading-rule"></div>
+    </div>
+    {diamondBooks.length > 0 ? (
+      <StoreCarousel>
+        {diamondBooks.map(book => <BookCard book={book} />)}
+      </StoreCarousel>
+    ) : <p class="store-empty">No DRS books available yet.</p>}
+  </div>
+
   {/* Third Party Section */}
   {sortedTPGroups.length > 0 && (
     <>
-      <div class="section-heading" style="margin-top: 25px; border-bottom-width: 2px;">
+      <div class="section-heading" style="margin-top: 40px; border-bottom-width: 2px;">
         <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Third Party Content</span>
         <div class="section-heading-rule"></div>
       </div>
@@ -110,6 +164,65 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
 </WikiPage>
 
 <style>
+  .store-top-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 25px;
+  }
+  @media (max-width: 1024px) {
+    .store-top-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  .new-arrival-item {
+    flex: 0 0 140px;
+    max-width: 140px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .arrival-badge {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 3px;
+  }
+  .arrival-badge.official {
+    background: var(--clr-brand);
+    color: #fff;
+  }
+  .arrival-badge.third-party {
+    background: var(--clr-surface);
+    color: var(--clr-text);
+    border: 0.5px solid var(--clr-border);
+  }
+
+  .coming-soon-card {
+    opacity: 0.6;
+    cursor: default;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coming-soon-card .store-card-cover-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-muted);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
   .store-empty {
     font-size: var(--fs-xs);
     color: var(--clr-muted);

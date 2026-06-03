@@ -151,6 +151,7 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T37 | x      | Add meta http-equiv security headers — `Referrer-Policy: strict-origin-when-cross-origin`, `X-Content-Type-Options: nosniff` (GitHub Pages limitation: true response headers require Cloudflare/Netlify) | |
 | T38 | x      | Document `localStorage` key inventory in code comment at BetaToast.astro — key name, purpose, retention, deletion path | V14 |
 | T39 | .      | Add content version selector (Original/Ultimate/Polished) with thematically appropriate design. Hover effects explain categories. Gray out/disable if content missing. Hide 'Ultimate' entirely for non-'power' systems. | |
+| T40 | .      | Create a "config" page that allows the user to filter out specific content site-wide (e.g. hiding all third-party content, hiding "April Fools" content) and save these preferences. | |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
@@ -165,6 +166,8 @@ Then infra (T23→T24→T26→T27→T28→T29→T30→T31→T32).
 
 ## §B Bugs
 
-| id | date | cause | fix |
-|----|------|-------|-----|
+| id | date       | cause | fix |
+|----|------------|-------|-----|
 | B4 | 2026-05-29 | `parseSectionContext` used `includes('feat')` — matched "features" in "+++ Companion Features", premature-flushed base ability and reset section context | Changed to `/\bfeats?\b/` |
+| B5 | 2026-06-03 | "SM-" tag needs to be removed from codebase | Pending |
+| B6 | 2026-06-03 | z-index issue on tags page: tags appear on top of search bar results/dropdown | Pending |
