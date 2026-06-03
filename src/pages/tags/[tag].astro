@@ -175,7 +175,7 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
     </h1>
     <hr class="page-title-rule" />
 
-    <p class="entry-description">{tag.description}</p>
+    <p class="entry-description" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
 
     {
       TagBody && (
