@@ -36,3 +36,9 @@ sectionDefinitions:
 [Divine]
 
 [Sense]
+
+### Divination Talent Types
+
+Some talents are marked (divine). These grant you different things you may divine for in place of magic.
+
+Some talents are marked (sense). These talents grant you additional senses you may grant.
