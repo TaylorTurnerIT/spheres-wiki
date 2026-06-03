@@ -20,5 +20,5 @@ A creature may not be affected by both a (quicken) and a (still) ability at the 
 
 When you gain the Blood sphere, you learn the following abilities:
 
-[Bleed](@talent:talents-bleed)
+[Bleed](@talent:bleed)
 [Coagulate](@talent:coagulate)

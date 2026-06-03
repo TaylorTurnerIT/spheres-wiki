@@ -69,11 +69,12 @@ for (const filePath of allFiles) {
       hasError = true;
     }
 
-    // Global ID uniqueness check
-    if (!idMap.has(frontmatter.id)) {
-      idMap.set(frontmatter.id, []);
+    // Type-scoped ID uniqueness check
+    const typeIdKey = `${frontmatter.type}:${frontmatter.id}`;
+    if (!idMap.has(typeIdKey)) {
+      idMap.set(typeIdKey, []);
     }
-    idMap.get(frontmatter.id).push(filePath);
+    idMap.get(typeIdKey).push(filePath);
   }
 
   // tag checks
@@ -92,11 +93,11 @@ for (const filePath of allFiles) {
   }
 }
 
-for (const [id, files] of idMap.entries()) {
+for (const [key, files] of idMap.entries()) {
   if (files.length > 1) {
     const fileList = files.map((f) => path.relative(contentDir, f)).join(", ");
     console.error(
-      `Error: Duplicate ID "${id}" found in ${files.length} files: [${fileList}]`,
+      `Error: Duplicate ID "${key}" found in ${files.length} files: [${fileList}]`,
     );
     hasError = true;
   }
