@@ -44,12 +44,12 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
   <hr class="page-title-rule" />
 
   {/* Official Section */}
-  <div class="section-heading" style="margin-top: 20px; border-bottom-width: 2px;">
+  <div class="section-heading" style="margin-top: 10px; border-bottom-width: 2px;">
     <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Official</span>
     <div class="section-heading-rule"></div>
   </div>
 
-  <div style="margin-top: 25px;">
+  <div style="margin-top: 15px;">
     <div class="section-heading">
       <span class="section-heading-text">Core System</span>
       <div class="section-heading-rule"></div>
@@ -61,7 +61,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
     ) : <p class="store-empty">Core books coming soon.</p>}
   </div>
 
-  <div style="margin-top: 25px;">
+  <div style="margin-top: 15px;">
     <div class="section-heading">
       <span class="section-heading-text">Diamond Recreational Studios</span>
       <div class="section-heading-rule"></div>
@@ -73,7 +73,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
     ) : <p class="store-empty">No DRS books available yet.</p>}
   </div>
 
-  <div style="margin-top: 25px;">
+  <div style="margin-top: 15px;">
     <div class="section-heading">
       <span class="section-heading-text">Drop Dead Studios</span>
       <div class="section-heading-rule"></div>
@@ -88,13 +88,13 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
   {/* Third Party Section */}
   {sortedTPGroups.length > 0 && (
     <>
-      <div class="section-heading" style="margin-top: 50px; border-bottom-width: 2px;">
+      <div class="section-heading" style="margin-top: 25px; border-bottom-width: 2px;">
         <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Third Party Content</span>
         <div class="section-heading-rule"></div>
       </div>
 
       {sortedTPGroups.map(group => (
-        <div style="margin-top: 25px;">
+        <div style="margin-top: 15px;">
           <div class="section-heading">
             <span class="section-heading-text">{group.name}</span>
             <div class="section-heading-rule"></div>
