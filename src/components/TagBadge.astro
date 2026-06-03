@@ -32,7 +32,7 @@ const bookTitle =
     tag && (
       <div class="tag-tooltip" role="tooltip" id={`tooltip-${tagId}`}>
         <span class="tag-tooltip-name">{tag.label}</span>
-        <span class="tag-tooltip-desc">{tag.description}</span>
+        <span class="tag-tooltip-desc" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
         {bookTitle && <span class="tag-tooltip-source">{bookTitle}</span>}
       </div>
     )
