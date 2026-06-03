@@ -1,6 +1,6 @@
 ---
 id: shout-of-triumph-destruction-sm
-name: "Shout of Triumph (Destruction): [SM—]"
+name: "Shout of Triumph (Destruction):"
 level: 1
 tags: []
 ---

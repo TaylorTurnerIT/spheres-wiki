@@ -6,7 +6,7 @@ tags: []
 
 A hemetic philosopher learns to unlock the hidden potential of blood through the application of alchemy.
 
-This archetype requires sphere alchemist or [SM—] champion alchemist.
+This archetype requires sphere alchemist or champion alchemist (Studio M—).
 
 ### Class Skills
 The hemetic philosopher gains Knowledge (all) (Int) as class skills.

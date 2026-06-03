@@ -1,6 +1,6 @@
 ---
 id: addendum-sm
-name: "Addendum: [SM—]"
+name: "Addendum:"
 level: 1
 replaces: ["spell kenning"]
 tags: []

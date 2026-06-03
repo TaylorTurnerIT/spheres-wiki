@@ -13,4 +13,4 @@ The conduit gains the Artifice or Tinker sphere as a bonus sphere. This wonder m
 ### 4th-Level
 The following wonders require you to be 4th level in the conduit class.
 
-*Source: SM—*
+

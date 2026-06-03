@@ -1,6 +1,6 @@
 ---
 id: elemental-surge-neutrality-sm
-name: "Elemental Surge (Neutrality): [SM—]"
+name: "Elemental Surge (Neutrality):"
 level: 1
 tags: []
 ---

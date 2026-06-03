@@ -292,7 +292,7 @@ A hedgewitch can only have one target of studied combat at a time. This ability 
 
 **Path Mastery:** The font of inspiration gains a +2 bonus to her casting ability score.
 
-### Fortune [SM—]
+### Fortune (Studio M—)
 
 The fortuneteller reads the strands of fates and understands how to twist them to their advantage in a variety of scenarios.
 

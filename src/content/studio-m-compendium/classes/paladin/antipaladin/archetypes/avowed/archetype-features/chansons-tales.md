@@ -1,6 +1,6 @@
 ---
 id: chansons-tales-sm
-name: "Chansons (Tales): [SM—]"
+name: "Chansons (Tales):"
 level: 1
 replaces: ["channel positive energy or channel negative energy"]
 tags: []

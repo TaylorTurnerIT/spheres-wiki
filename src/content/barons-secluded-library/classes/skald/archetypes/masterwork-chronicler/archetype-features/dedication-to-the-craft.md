@@ -1,6 +1,6 @@
 ---
 id: dedication-to-the-craft-sm
-name: "Dedication to the Craft [SM—]"
+name: "Dedication to the Craft"
 level: 1
 tags: []
 ---

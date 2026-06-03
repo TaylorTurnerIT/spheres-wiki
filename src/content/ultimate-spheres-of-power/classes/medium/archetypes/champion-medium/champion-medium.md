@@ -4,7 +4,7 @@ name: "Champion Medium"
 tags: []
 ---
 
-## Trade Tradition [SM—]
+## Trade Tradition (Studio M—)
 If this is this character's first level in any class, the champion medium may select a trade tradition of their choice, and have a competent trade rank. The champion medium gains a number of skill ranks at each level equal to 4 + their Intelligence modifier.
 
 This replaces the medium's normal class skills.

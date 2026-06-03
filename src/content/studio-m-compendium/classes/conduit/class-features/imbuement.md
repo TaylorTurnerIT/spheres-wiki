@@ -1,6 +1,6 @@
 ---
 id: imbuement-sm
-name: "Imbuement [SM—]"
+name: "Imbuement"
 level: 7
 tags: []
 isTraitContainer: true

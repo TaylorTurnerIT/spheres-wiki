@@ -31,4 +31,4 @@ This replaces hunter's bond.
 
 ## Explorer Territories
 
-### Academic [SM—]
+### Academic (Studio M—)
