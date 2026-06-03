@@ -9,18 +9,15 @@ tags: ["motif"]
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Death Talents"
-        tiers: ["basic"]
-        excludeTags: ["dominion","curse","ghost-strike"]
       - label: "Dominion Talents"
         tiers: ["basic"]
         tags: ["dominion"]
       - label: "Ghost Strike Talents"
         tiers: ["basic"]
         tags: ["ghost-strike"]
-      - label: "Curse Talents"
+      - label: "Death Talents"
         tiers: ["basic"]
-        tags: ["curse"]
+        excludeTags: ["dominion","ghost-strike"]
       - label: "Advanced Death Talents"
         tiers: ["advanced"]
   - label: "Feats"

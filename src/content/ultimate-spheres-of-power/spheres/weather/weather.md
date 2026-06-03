@@ -9,15 +9,15 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Weather Talents"
-        tiers: ["basic"]
-        excludeTags: ["mantle", "shroud"]
       - label: "Mantle Talents"
         tiers: ["basic"]
         tags: ["mantle"]
       - label: "Shroud Talents"
         tiers: ["basic"]
         tags: ["shroud"]
+      - label: "Weather Talents"
+        tiers: ["basic"]
+        excludeTags: ["mantle", "shroud"]
       - label: "Advanced Weather Talents"
         tiers: ["advanced"]
   - label: "Feats"

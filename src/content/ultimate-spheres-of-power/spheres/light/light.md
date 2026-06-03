@@ -9,13 +9,6 @@ tags: []
 sectionDefinitions:
   - label: Talents
     categories:
-      - label: Light Sphere Talents
-        tiers:
-          - basic
-        excludeTags:
-          - lens
-          - light
-          - nimbus
       - label: Lens Talents
         tiers:
           - basic
@@ -30,6 +23,13 @@ sectionDefinitions:
         tiers:
           - basic
         tags:
+          - nimbus
+      - label: Light Sphere Talents
+        tiers:
+          - basic
+        excludeTags:
+          - lens
+          - light
           - nimbus
       - label: Advanced Light Talents
         tiers:

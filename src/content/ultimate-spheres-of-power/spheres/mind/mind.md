@@ -9,9 +9,6 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Mind Talents"
-        tiers: ["basic"]
-        excludeTags: ["charm", "cloud", "cognition"]
       - label: "Charm Talents"
         tiers: ["basic"]
         tags: ["charm"]
@@ -21,6 +18,9 @@ sectionDefinitions:
       - label: "Cognition Talents"
         tiers: ["basic"]
         tags: ["cognition"]
+      - label: "Mind Talents"
+        tiers: ["basic"]
+        excludeTags: ["charm", "cloud", "cognition"]
       - label: "Advanced Mind Talents"
         tiers: ["advanced"]
   - label: "Feats"

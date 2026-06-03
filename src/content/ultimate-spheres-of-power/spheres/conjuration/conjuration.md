@@ -9,15 +9,15 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Conjuration Talents"
-        tiers: ["basic"]
-        excludeTags: ["form","type"]
       - label: "Form Talents"
         tiers: ["basic"]
         tags: ["form"]
       - label: "Type Talents"
         tiers: ["basic"]
         tags: ["type"]
+      - label: "Conjuration Talents"
+        tiers: ["basic"]
+        excludeTags: ["form","type"]
       - label: "Advanced Conjuration Talents"
         tiers: ["advanced"]
   - label: "Feats"

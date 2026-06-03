@@ -10,7 +10,7 @@ At 5th level, the antimage gains the Counterspell feat, even if she does not mee
 
 This replaces lay on hands and channel positive energy or touch of corruption and channel negative energy.
 
-++ ##993300|Nullshaping Techniques (Su)##
+## Nullshaping Techniques (Su)
 Beginning at 3rd level, the antimage learns new methods and techniques on how to use her nullmagic pool. She may select one nullshaping technique from below. At 6th level and every 3 levels thereafter, she gains another nullshaping technique.
 
 This replaces mercy or cruelty.
@@ -60,7 +60,7 @@ If a summoned creature that possesses spell resistance attempts to attack the an
 
 If the antimage fails to overcome the creature's spell resistance, the creature can ignore the effects of this ability. If a summoned creature's summoner is within line of sight of the antimage, they may attempt a magic skill check against the antimage's magic skill defense, using their antimage level in place of their magic skill bonus, to ignore the effects of this ability for the purpose of any creatures they have summoned. Any individual creature is only allowed one attempt to bypass this ability; any further attempts automatically fail.
 
-++ ##993300|Bastion against Magic (Su)##
+## Bastion against Magic (Su)
 At 3rd level, as long as the antimage has at least 1 point of nullmagic within her nullmagic pool, she gains spell resistance equal to 6 + her antimage level. Every time this spell resistance successfully negates a spell effect, she loses 1 point of nullmagic unless the effect originated from a creature who is affected by the antimage's smite magic.
 
 At 9th level and 14th level, this spell resistance increases by 5, to 11 + her antimage level at 9th level and to 16 + her antimage level at 14th level.
@@ -69,12 +69,12 @@ At 19th level, as long as the antimage has at least 1 point of nullmagic within 
 
 This replaces aura of courage or aura of cowardice.
 
-++ ##993300|Aura of Spellhunt (Su)##
+## Aura of Spellhunt (Su)
 At 11th level, an antimage can expend two uses of her smite magic ability to grant the ability to smite magic to all creatures within 10 feet, using her bonuses. Allies must use this smite magic ability by the start of the antimage's next turn, and the bonuses only last for 1 minute. Using this ability is a free action, and creatures capable of casting spell effects gain no benefit from this ability.
 
 This replaces aura of justice or aura of vengeance.
 
-++ ##993300|Invulnerable Shield against Magic (Su)##
+## Invulnerable Shield against Magic (Su)
 
 At 14th level, the antimage can spend 2 points of nullmagic as a standard action to relinquish her bastion against magic, losing any benefits from the class feature and allowing it to act as a globe of invulnerability with the exception that it excludes any sphere effect with a caster level equal to or lower than 10 (or all spells up to 5th level), and the globe's area is a 10-foot radius sphere centered around the antimage (or a corner she occupies) that does not move from the area it was activated. This globe lasts for a number of rounds equal to her practitioner modifier (minimum 1), but can be dismissed as a swift action. As long as the globe remains active, the antimage loses the benefits of her bastion against magic ability.
 
@@ -84,7 +84,7 @@ At 20th level, no longer loses the benefits of her bastion against magic ability
 
 This replaces aura of faith or aura of sin.
 
-++ ##993300|Apotheosis of Antimagic (Su)##
+## Apotheosis of Antimagic (Su)
 At 20th level, the antimage becomes the ultimate stopping force for everything that is magical. The antimage can spend 2 points of nullmagic as a standard action to gain an antimagic aura centered on herself that moves as she does, that prevents the use of magic as per the Protection sphere Spell Ward talent and Antimagic Aura advanced talent, although it has no effect on items with the disrupted ability. If the antimage moves the field into a summoned creature, they are entitled a Reflex save (DC 20 + the antimage's practitioner modifier) to instead be repelled to the edge of the aura at the end of the antimage's movement. This antimagic aura can be dispelled normally, and has a magic skill defense equal to 11 + the antimage's level.
 
 The antimage has precise control of this antimagic field, and may adjust the radius as a free action once per round, shrinking it to as small as a 5-foot radius, or as large as a 30-foot radius. The antimage must spend 1 point of nullmagic each round as a free action to maintain the antimagic aura. This antimagic field can be dispelled using the Counterspell feat against a DC equal to 11 + the antimage's level.

@@ -9,12 +9,12 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Warp Talents"
-        tiers: ["basic"]
-        excludeTags: ["space"]
       - label: "Space Talents"
         tiers: ["basic"]
         tags: ["space"]
+      - label: "Warp Talents"
+        tiers: ["basic"]
+        excludeTags: ["space"]
       - label: "Advanced Warp Talents"
         tiers: ["advanced"]
   - label: "Feats"

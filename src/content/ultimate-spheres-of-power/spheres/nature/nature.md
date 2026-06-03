@@ -9,15 +9,15 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Nature Talents"
-        tiers: ["basic"]
-        excludeTags: ["geomancing","spirit"]
       - label: "Geomancing Talents"
         tiers: ["basic"]
         tags: ["geomancing"]
       - label: "Spirit Talents"
         tiers: ["basic"]
         tags: ["spirit"]
+      - label: "Nature Talents"
+        tiers: ["basic"]
+        excludeTags: ["geomancing","spirit"]
       - label: "Advanced Nature Talents"
         tiers: ["advanced"]
   - label: "Feats"

@@ -8,9 +8,6 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Mana Talents"
-        tiers: ["basic"]
-        excludeTags: ["manipulation","curse","expunge","manabond"]
       - label: "Expunge Talents"
         tiers: ["basic"]
         tags: ["expunge"]
@@ -20,9 +17,9 @@ sectionDefinitions:
       - label: "Manipulation Talents"
         tiers: ["basic"]
         tags: ["manipulation"]
-      - label: "Curse Talents"
+      - label: "Mana Talents"
         tiers: ["basic"]
-        tags: ["curse"]
+        excludeTags: ["manipulation","expunge","manabond"]
       - label: "Advanced Mana Talents"
         tiers: ["advanced"]
   - label: "Feats"

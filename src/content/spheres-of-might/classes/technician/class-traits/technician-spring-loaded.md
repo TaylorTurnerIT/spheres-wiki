@@ -10,7 +10,7 @@ featureId: improved-suit
 
 The suit gains the dispense improvement, as if it were an improved shield. This improvement can be taken multiple times.
 ---
-+ ##993300|Independent Invention##
+# Independent Invention
 
 In addition to improving weapons and armor, the technician can create an independent invention. These independent inventions are considered creatures that possess the construct creature type, but they cannot be awakened or modified as a construct can. An independent invention possesses its own hit points, armor class, saving throws, and ability scores. It can carry items like a horse or wagon can. However, unlike other construct creatures, independent inventions cannot act, move, or attack on their own.
 

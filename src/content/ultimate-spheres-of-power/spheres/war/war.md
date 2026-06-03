@@ -9,9 +9,6 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "War Talents"
-        tiers: ["basic"]
-        excludeTags: ["mandate","momentum","rally","totem"]
       - label: "Mandate Talents"
         tiers: ["basic"]
         tags: ["mandate"]
@@ -24,6 +21,9 @@ sectionDefinitions:
       - label: "Totem Talents"
         tiers: ["basic"]
         tags: ["totem"]
+      - label: "War Talents"
+        tiers: ["basic"]
+        excludeTags: ["mandate","momentum","rally","totem"]
       - label: "Advanced War Talents"
         tiers: ["advanced"]
   - label: "Feats"

@@ -12,7 +12,7 @@ For every 5 levels after the first, increase the damage the poison does by 1d6, 
 
 This replaces patron spells.
 ---
-+ ##000000|Withering Hexes##
+# Withering Hexes
 The following hexes are available to withering witches.
 
 #### Black Blood (Ex) (Major Hex)

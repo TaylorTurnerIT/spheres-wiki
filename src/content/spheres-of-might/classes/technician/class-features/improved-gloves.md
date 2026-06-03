@@ -10,4 +10,4 @@ Anyone other than the technician himself suffers a -2 penalty to all Strength or
 
 **Prerequisites:** A pair of gloves, a prosthetic arm, or fist weapons, such as brass knuckles, cestus, gauntlet, katar, knuckle axe, punching dagger, rope gauntlet, sap, scizore, spiked gauntlet, or tekko-kagi.
 
-### ##993300|Improvements##
+### Improvements

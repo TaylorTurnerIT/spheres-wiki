@@ -8,12 +8,12 @@ The font of creativity is a near-endlessly broad well to be drawn upon, and so i
 
 This requires champion bard (*Champions of the Spheres © 2017, Drop Dead Studios LLC.*).
 
-++ ##4B0092|Blended Expertise##
+## Blended Expertise
 Whenever a musician would gain a combat or magic talent from his class levels, he may instead choose to gain a skill talent. The musician uses his casting ability modifier as his operative ability modifier.
 
 This alters blended training.
 
-++ ##4B0092|Spellbound Performance (Su)##
+## Spellbound Performance (Su)
 The musician can spend 1 spell point whenever they use a Performance sphere ability to make it spellbound for 1 minute (or until the Performance sphere ability ends, whichever comes first), applying a single (spellbound) effect to the performance. If a (spellbound) effect requires a saving throw, it uses his Performance save DC. At 1st level, the musician gains the following options they have when making an ability spellbound.
 
 A sphere ability can only benefit from a single (spellbound) effect at one time (unless otherwise specified).
@@ -33,7 +33,7 @@ A restorative *act* causes ally's that contribute to the *act* to double their g
 
 A restorative *lyric* can be expended to heal 1d10 + 1d10 hit points per 4 bard levels he possesses.
 
-++ ##4B0092|Musician's Muse##
+## Musician's Muse
 The musician has a thoroughly developed style of performance that acts as an anchor for his creative exploits, At 1st level, the musician chooses this creative style, known as his muse. Once selected, this choice cannot be changed. 
 
 The musician gains the Performance sphere as a bonus skill talent, although must choose one of the packages associated with his chosen muse. At 4th level, and for every 4 levels thereafter, he gains an additional ability from his muse.

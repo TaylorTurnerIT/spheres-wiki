@@ -6,15 +6,15 @@ tags: []
 
 Some souls pledge themselves to the gods; to their homes, or their values. But of all such people, there's a certain sect that rejects the use of magic; whether divine or arcane. To them, the use of this magic is the bane to reality, and the source of all suffering, or the one force that can still oppose them.
 
-++ ##993300|Class Skills and Skill Ranks##
+## Class Skills and Skill Ranks
 An antimage adds Knowledge (arcana) and Perception to her list of class skills. Diplomacy and Knowledge (religion) are not class skills for an antimage. The antimage gains 4 + her Intelligence modifier skill ranks per level rather than 2 + her Intelligence modifier skill ranks per level.
 
 This alters skills and class skills.
 
-++ ##993300|Proficiencies##
+## Proficiencies
 An antimage is proficient with simple weapons as well as light armor and bucklers. In addition, if this is the character's first level in any class, she may select a martial tradition of her choice.
 
-++ ##993300|Code of Conduct##
+## Code of Conduct
 An antimage's code of conduct is often more personal than normal paladins. They may be considered to be part of a cult in some societies, or lone wolves with personal vendettas against the use of magic. Still, they share common strings of ethics that ties them together under one title. An antimage may be of any alignment.
 
 An antimage is forbidden from learning or using spell effects from any source. They are forbidden from gaining any class levels in a class that grants the ability to create spell effects (such as the casting class feature, but not supernatural features), and from using any racial spell effects they possess.

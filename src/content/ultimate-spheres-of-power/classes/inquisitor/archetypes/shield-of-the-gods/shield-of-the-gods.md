@@ -8,4 +8,4 @@ The shield of the gods protects the faithful by any means necessary.
 
 This archetype requires sphere inquisitor or champion inquisitor.
 
-+
+# 

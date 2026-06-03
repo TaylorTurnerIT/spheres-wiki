@@ -10,4 +10,4 @@ An improved suit of clothing cannot be worn underneath armor. Anyone other than 
 
 **Prerequisites:** A suit of clothing or light armor.
 
-### ##993300|Improvements##
+### Improvements

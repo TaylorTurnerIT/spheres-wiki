@@ -10,5 +10,5 @@ featureId: conduit-wonders
 
 The conduit can use unravel arcana on non-utility (hack) talents applied to magical effects that are affecting a creature, causing the magical effect to be suppressed as normal when unraveled.
 
-### ##4B0092|8th-Level##
+### 8th-Level
 The following wonders require you to be 8th level in the conduit class.

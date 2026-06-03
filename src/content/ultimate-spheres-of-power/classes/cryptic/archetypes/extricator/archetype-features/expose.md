@@ -9,15 +9,15 @@ Creatures within the area take a -1 penalty to AC Every four cryptic levels ther
 
 This ability replaces Altered Defense. Favored class bonuses which improve altered defense improve the penalties inflicted by this ability at an identical rate.
 
-++ Rapid Unravel (Su)
+## Rapid Unravel (Su)
 Starting at 4th level, an extricator can use her unraveling ability as a free action by expending her psionic focus, even when it is not her turn. This ability replaces rapid defense.
 
-++ Perpetual Unravel (Su)
+## Perpetual Unravel (Su)
 At 14th level, An extricator is no longer limited to how many rounds per day she can have the unraveling ability active. The extricator can still change the effect as a swift action.
 
 This ability replaces Enduring Defense.
 
-++ Voidheart (Su)
+## Voidheart (Su)
 At 20th level, an extricator can select the following supreme insight One with the Void: The void has subsumed your being, rendering your own pattern indistinguishable from the enigmatic oblivion. You are considered an outsider for the purpose of spells, powers, and other effects, and is immune to energy drain, death effects, and negative energy damage. What's more, you are shielded against divination effects as per the Mind Blank advanced protection talent.
 
 

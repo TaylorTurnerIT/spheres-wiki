@@ -16,10 +16,10 @@ tags: ["metamagic"]
 
 If you lose a loyalty you chose for this feat, you may immediately choose a different loyalty you have to use it with.
 
-+++ Alignment effects
+### Alignment effects
 While removing alignment-based spells is suggested as an option in Pathfinder Unchained, removing alignment- based talents would make Fate much less attractive than other spheres. Instead, if you decide to remove alignment-based spells you should treat Fate talents as if you were using the subjective morality variant: Fate talents that affect an opposing alignment instead affect anyone with loyalties that directly contradict the caster’s own. The talents Enmity and Metaphysical Cloak, because they interact with the default alignment system, should be removed in such a campaign.
 
-+++ Hero Points
+### Hero Points
 Hero points represent the ability of true heroes to bend reality to their own story, to cheat fate, or to call in a debt from Lady Luck. In addition to the uses detailed in Advanced Player’s Guide, spending a hero point may have one of the following effects:
 
 **Empower:** You can spend a hero point to gain a +2 bonus to your caster level and MSD for one sphere effect or to your MSB for one magic skill check.
@@ -30,4 +30,4 @@ Hero points represent the ability of true heroes to bend reality to their own st
 
 In addition, the following feat and talent may be made available in campaigns using hero points.
 
-+++ Feats
+### Feats

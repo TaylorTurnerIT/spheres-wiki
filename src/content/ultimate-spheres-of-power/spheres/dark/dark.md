@@ -9,15 +9,15 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Dark Talents"
-        tiers: ["basic"]
-        excludeTags: ["blot", "darkness", "shadow", "meld"]
       - label: "Blot/Darkness/Shadow Talents"
         tiers: ["basic"]
         tags: ["blot", "darkness", "shadow"]
       - label: "Meld Talents"
         tiers: ["basic"]
         tags: ["meld"]
+      - label: "Dark Talents"
+        tiers: ["basic"]
+        excludeTags: ["blot", "darkness", "shadow", "meld"]
       - label: "Advanced Dark Talents"
         tiers: ["advanced"]
   - label: "Feats"

@@ -24,4 +24,4 @@ In any case, the courts do not necessarily require moral alignments; a summer to
 
 ----
 
-+ ##000000|Wild Magic##
+# Wild Magic

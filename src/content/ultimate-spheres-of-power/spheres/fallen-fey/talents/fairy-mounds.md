@@ -12,5 +12,5 @@ Fairy mounds allow travel without these difficulties. Each side of the portal in
 
 ----
 
-+ Setting Application
+# Setting Application
 This section is not intended to present settings or advocate particular sets of options, but simply to present thoughts on different ways fey creatures and Faerie can be used to color and enrich a setting.

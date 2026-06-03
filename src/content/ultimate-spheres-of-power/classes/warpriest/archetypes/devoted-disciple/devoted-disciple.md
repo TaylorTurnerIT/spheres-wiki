@@ -8,4 +8,4 @@ To truly master something requires a singular devotion to it. The devoted discip
 
 This archetype requires sphere warpriest or champion warpriest.
 
-+
+# 

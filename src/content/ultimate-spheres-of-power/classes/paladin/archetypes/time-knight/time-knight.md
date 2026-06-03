@@ -11,7 +11,7 @@ Time knights are proficient with simple weapons, as well as light armor and buck
 
 This alters the paladin's normal weapon and armor proficiencies.
 
-### ##00c000|Blended Training##
+### Blended Training
 From 1st level on, the time knight gains a talent each time she gains a class level. This talent may be spent on either magic talents or combat talents. The time knight is considered a Low-Caster. This counts as the casting class feature. (Note: All casters gain 2 bonus talents and a casting tradition the first time they gain the casting class feature.)
 
 This replaces the paladin's aura of good and the spellcasting paladins normally gain at 4th level.

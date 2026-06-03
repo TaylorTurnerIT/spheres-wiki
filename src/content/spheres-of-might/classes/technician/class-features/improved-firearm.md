@@ -10,4 +10,4 @@ Anyone other than the technician himself suffers a -2 penalty to attack rolls pe
 
 **Prerequisites:** The Gunsmith feat, any firearm.
 
-### ##993300|Improvements##
+### Improvements

@@ -12,6 +12,6 @@ You slow the target’s movements and perception of time. The target has its mov
 
 If a Haste and Slow ability are used on the same creature, the second caster must attempt a magic skill check against the effect of the first caster. On a failure the target is unaffected. On a success, the effects counter each other, leaving neither in place.
 
-+++ Time Talent Types
+### Time Talent Types
 Some Time talents are marked (time). These talents grant you additional alter time abilities.
 ----

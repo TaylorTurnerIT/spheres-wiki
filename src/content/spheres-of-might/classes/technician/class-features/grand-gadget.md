@@ -12,4 +12,4 @@ Rather than create an improved version of another object or an independent machi
 
 A grand gadget can gain 1 improvement, +1 improvement at 5th level and every four levels thereafter. Anyone other than the technician suffers a -2 penalty to attack rolls or to the grand gadget's save DCs per improvement when using it.
 
-### ##993300|Improvements##
+### Improvements

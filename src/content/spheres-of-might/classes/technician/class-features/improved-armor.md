@@ -10,4 +10,4 @@ Anyone other than the technician suffers a -2 penalty to the armor's maximum Dex
 
 **Prerequisites:** A suit of medium or heavy armor.
 
-### ##993300|Improvements##
+### Improvements

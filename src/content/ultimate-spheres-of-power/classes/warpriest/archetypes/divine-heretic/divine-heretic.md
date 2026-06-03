@@ -8,4 +8,4 @@ The divine heretic is considered a villain by some, but knows his way is the tru
 
 This archetype requires sphere warpriest or champion warpriest.
 
-+
+# 

@@ -4,6 +4,6 @@ name: "Chessmaster (Archetype)"
 tags: []
 ---
 
-+ Class Features
+# Class Features
 
 **Table: The Tru

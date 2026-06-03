@@ -5,4 +5,4 @@ level: 1
 tags: []
 ---
 
-+2 natural armor;
+# 2 natural armor;

@@ -1,6 +1,6 @@
 ---
 id: 993300martial-companion
-name: "##993300|Martial Companion##"
+name: "Martial Companion"
 type: talent
 system: power
 sphere: conjuration

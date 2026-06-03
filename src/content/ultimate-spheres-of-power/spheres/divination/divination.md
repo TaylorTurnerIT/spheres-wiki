@@ -9,15 +9,15 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Divination Talents"
-        tiers: ["basic"]
-        excludeTags: ["divine","sense"]
       - label: "Divine Talents"
         tiers: ["basic"]
         tags: ["divine"]
       - label: "Sense Talents"
         tiers: ["basic"]
         tags: ["sense"]
+      - label: "Divination Talents"
+        tiers: ["basic"]
+        excludeTags: ["divine","sense"]
       - label: "Advanced Divination Talents"
         tiers: ["advanced"]
   - label: "Feats"
@@ -36,5 +36,3 @@ sectionDefinitions:
 [Divine]
 
 [Sense]
-
-

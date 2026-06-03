@@ -9,15 +9,15 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Alteration Talents"
-        tiers: ["basic"]
-        excludeTags: ["body","transformation"]
       - label: "Body Talents"
         tiers: ["basic"]
         tags: ["body"]
       - label: "Transformation Talents"
         tiers: ["basic"]
         tags: ["transformation"]
+      - label: "Alteration Talents"
+        tiers: ["basic"]
+        excludeTags: ["body","transformation"]
       - label: "Advanced Alteration Talents"
         tiers: ["advanced"]
   - label: "Feats"

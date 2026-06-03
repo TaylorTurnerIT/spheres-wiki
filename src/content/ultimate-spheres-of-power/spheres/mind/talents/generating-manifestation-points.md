@@ -18,5 +18,5 @@ In addition to the normal methods of generating manifestation points, a psionic 
 * **Generating MP from Spell Points:** As a free action, a combatant may expend a spell point to generate MP. The combatant generates 1 MP for every spell point spent plus an additional MP for every 4 points of MSB they possess. If the combatant is part of a manabond or other effect which shares a spell point reserve with other creatures or items, he may draw spell points from these other sources as well as his own reserve.
 
 ----
-+ Archetypes Specializing in Mind
+# Archetypes Specializing in Mind
 [[div style="padding: 0 10px; border: 1px solid black; margin-top: 5px"]]

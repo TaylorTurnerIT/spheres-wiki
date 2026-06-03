@@ -10,4 +10,4 @@ Anyone other than the technician himself suffers a -1 penalty to all Strength an
 
 **Prerequisites:** A backpack.
 
-### ##993300|Improvements##
+### Improvements

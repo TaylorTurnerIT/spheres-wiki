@@ -9,15 +9,15 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Destruction Talents"
-        tiers: ["basic"]
-        excludeTags: ["blast-shape", "blast-type"]
       - label: "Blast Shape Talents"
         tiers: ["basic"]
         tags: ["blast-shape"]
       - label: "Blast Type Talents"
         tiers: ["basic"]
         tags: ["blast-type"]
+      - label: "Destruction Talents"
+        tiers: ["basic"]
+        excludeTags: ["blast-shape", "blast-type"]
       - label: "Advanced Destruction Talents"
         tiers: ["advanced"]
   - label: "Feats"

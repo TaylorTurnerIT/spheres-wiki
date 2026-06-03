@@ -12,4 +12,4 @@ Many improvements grant different lenses. Improved goggles can only have one len
 
 **Prerequisites:** Glasses, goggles, or a monocle.
 
-### ##993300|Improvements##
+### Improvements

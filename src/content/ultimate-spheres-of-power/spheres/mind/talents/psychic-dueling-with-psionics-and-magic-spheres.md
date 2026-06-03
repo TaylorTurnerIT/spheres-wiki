@@ -35,17 +35,17 @@ In addition to the normal methods of generating manifestation points, a psionic 
 - **Generating MP from Spell Points:** As a free action, a combatant may expend a spell point to generate MP. The combatant generates 1 MP for every spell point spent plus an additional MP for every 4 points of MSB they possess. If the combatant is part of a manabond or other effect which shares a spell point reserve with other creatures or items, he may draw spell points from these other sources as well as his own reserve.
 
 ---
-++ Banshee
+## Banshee
 Banshees are a type of Soul Weaver who specializes in manipulating the mental states of others.
-++ Beastlord
+## Beastlord
 The Beastlord is a Shifter who can command and control animals, magical beasts, and vermin.
-++ Cerebral Analyst
+## Cerebral Analyst
 Cerebral Analysts are Investigators who focus their mental powers inward.
-++ Egregore
+## Egregore
 The Egregore is a Symbiat who has mastered using the Mind sphere to link and empower their allies.
-++ Fright Wright
+## Fright Wright
 The Fright Wright is an Eliciter who uses powerful mind magic to cause debilitating fear in their foes.
-++ Impressor
+## Impressor
 The Impressor is a Fighter who has learned how to apply the Emotions of an Eliciter to targets (friends or foes) during combat.
 ---
 

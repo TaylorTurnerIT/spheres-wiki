@@ -9,12 +9,12 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Enhancement Talents"
-        tiers: ["basic"]
-        excludeTags: ["enhance"]
       - label: "Enhance Talents"
         tiers: ["basic"]
         tags: ["enhance"]
+      - label: "Enhancement Talents"
+        tiers: ["basic"]
+        excludeTags: ["enhance"]
       - label: "Advanced Enhancement Talents"
         tiers: ["advanced"]
   - label: "Feats"

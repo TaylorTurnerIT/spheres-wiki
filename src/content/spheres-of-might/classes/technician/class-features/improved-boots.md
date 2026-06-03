@@ -12,4 +12,4 @@ Many improvements grant the boots different modes. The wearer may only have one 
 
 **Prerequisites:** A pair of boots, which may be both common boots or armored boots from a suit of armor, and may include a blade boot.
 
-### ##993300|Improvements##
+### Improvements
