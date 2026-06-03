@@ -1,5 +1,5 @@
 // src/lib/resolveEntries.ts
-import { inferFromPath } from './inferFromPath';
+import { inferFromPath } from "./inferFromPath";
 import type {
   AnyEntry,
   SphereEntry,
@@ -201,7 +201,10 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       }
     }
 
-    tagEntriesByBook.push({ slug: collectionSlug, rawTagEntries: tagEntriesForBook });
+    tagEntriesByBook.push({
+      slug: collectionSlug,
+      rawTagEntries: tagEntriesForBook,
+    });
     allBooks.push({
       slug: collectionSlug,
       publishedDate,
@@ -252,7 +255,7 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       type: "tag",
       id: "advanced",
       label: "Advanced",
-      priority: -9,
+      priority: -8,
       description: "Advanced talent.",
       sourceBook: "__builtin__",
       color: "#203F58",
@@ -280,7 +283,8 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       id: "ex",
       label: "Ex",
       priority: 100,
-      description: "Extraordinary Abilities (Ex): Extraordinary abilities are nonmagical. They are, however, not something that just anyone can do or even learn to do without extensive training. Effects or areas that suppress or negate magic have no effect on extraordinary abilities. [Source](https://www.aonprd.com/Rules.aspx?ID=414)",
+      description:
+        "Extraordinary abilities are nonmagical. Effects or areas that suppress or negate magic have no effect on extraordinary abilities. [Source](https://www.aonprd.com/Rules.aspx?ID=414)",
       sourceBook: "__builtin__",
       color: "#8C1D40",
     },
@@ -289,7 +293,8 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       id: "su",
       label: "Su",
       priority: 100,
-      description: "Supernatural Abilities (Su): Supernatural abilities are magical but not spell-like. Supernatural abilities are not subject to spell resistance and do not function in areas where magic is suppressed or negated (such as an antimagic field). A supernatural ability’s effect cannot be dispelled and is not subject to counterspells. See Table 16–1 for a summary of the types of special abilities. [Source](https://www.aonprd.com/Rules.aspx?ID=414)",
+      description:
+        "Supernatural abilities are magical but not spell-like. Supernatural abilities are not subject to spell resistance and do not function in areas where magic is suppressed or negated (such as an antimagic field). A supernatural ability’s effect cannot be dispelled and is not subject to counterspells. [Source](https://www.aonprd.com/Rules.aspx?ID=414)",
       sourceBook: "__builtin__",
       color: "#8C1D40",
     },
@@ -298,7 +303,8 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       id: "sp",
       label: "Sp",
       priority: 100,
-      description: "Spell-Like Abilities (Sp): Spell-like abilities, as the name implies, are magical abilities that are very much like spells. Spell-like abilities are subject to spell resistance and dispel magic. They do not function in areas where magic is suppressed or negated (such as an antimagic field). Spell-like abilities can be dispelled, but they cannot be counterspelled or used to counterspell. [Source](https://www.aonprd.com/Rules.aspx?ID=414)",
+      description:
+        "Spell-like abilities, as the name implies, are magical abilities that are very much like spells. Spell-like abilities are subject to spell resistance and dispel magic. They do not function in areas where magic is suppressed or negated (such as an antimagic field). Spell-like abilities can be dispelled, but they cannot be counterspelled or used to counterspell. [Source](https://www.aonprd.com/Rules.aspx?ID=414)",
       sourceBook: "__builtin__",
       color: "#8C1D40",
     },
@@ -336,7 +342,15 @@ function storeEntry(
   key: EntryKey,
   maps: Pick<
     ResolvedMaps,
-    "sphereMap" | "talentMap" | "featMap" | "classMap" | "classFeatureMap" | "classTraitMap" | "articleMap" | "archetypeMap" | "archetypeFeatureMap"
+    | "sphereMap"
+    | "talentMap"
+    | "featMap"
+    | "classMap"
+    | "classFeatureMap"
+    | "classTraitMap"
+    | "articleMap"
+    | "archetypeMap"
+    | "archetypeFeatureMap"
   >,
 ): void {
   if (entry.type === "sphere") maps.sphereMap.set(key, entry);
@@ -347,7 +361,8 @@ function storeEntry(
   else if (entry.type === "class-trait") maps.classTraitMap.set(key, entry);
   else if (entry.type === "article") maps.articleMap.set(key, entry);
   else if (entry.type === "archetype") maps.archetypeMap.set(key, entry);
-  else if (entry.type === "archetype-feature") maps.archetypeFeatureMap.set(key, entry);
+  else if (entry.type === "archetype-feature")
+    maps.archetypeFeatureMap.set(key, entry);
 }
 
 function applyPatch(
@@ -355,7 +370,15 @@ function applyPatch(
   targetKey: EntryKey,
   maps: Pick<
     ResolvedMaps,
-    "sphereMap" | "talentMap" | "featMap" | "classMap" | "classFeatureMap" | "classTraitMap" | "articleMap" | "archetypeMap" | "archetypeFeatureMap"
+    | "sphereMap"
+    | "talentMap"
+    | "featMap"
+    | "classMap"
+    | "classFeatureMap"
+    | "classTraitMap"
+    | "articleMap"
+    | "archetypeMap"
+    | "archetypeFeatureMap"
   >,
 ): void {
   const {
@@ -383,12 +406,18 @@ function applyPatch(
       ...maps.classMap.get(targetKey)!,
       ...(fieldsToMerge as Partial<ClassEntry>),
     });
-  } else if (patch.type === "class-feature" && maps.classFeatureMap.has(targetKey)) {
+  } else if (
+    patch.type === "class-feature" &&
+    maps.classFeatureMap.has(targetKey)
+  ) {
     maps.classFeatureMap.set(targetKey, {
       ...maps.classFeatureMap.get(targetKey)!,
       ...(fieldsToMerge as Partial<ClassFeatureEntry>),
     });
-  } else if (patch.type === "class-trait" && maps.classTraitMap.has(targetKey)) {
+  } else if (
+    patch.type === "class-trait" &&
+    maps.classTraitMap.has(targetKey)
+  ) {
     maps.classTraitMap.set(targetKey, {
       ...maps.classTraitMap.get(targetKey)!,
       ...(fieldsToMerge as Partial<ClassTraitEntry>),
@@ -403,7 +432,10 @@ function applyPatch(
       ...maps.archetypeMap.get(targetKey)!,
       ...(fieldsToMerge as Partial<ArchetypeEntry>),
     });
-  } else if (patch.type === "archetype-feature" && maps.archetypeFeatureMap.has(targetKey)) {
+  } else if (
+    patch.type === "archetype-feature" &&
+    maps.archetypeFeatureMap.has(targetKey)
+  ) {
     maps.archetypeFeatureMap.set(targetKey, {
       ...maps.archetypeFeatureMap.get(targetKey)!,
       ...(fieldsToMerge as Partial<ArchetypeFeatureEntry>),
