@@ -111,7 +111,8 @@ A companion gains 2 skill points per level (reduced to 1 for low Intelligence) a
 
 **Devotion:** At 5 Hit Dice, a companion gains a +4 morale bonus on Will saves against charm and enchantment effects, such as enchantment school spells or the Mind sphere.
 
-**Multiattack:** At 7 Hit Dice, a companion gains Multiattack as a bonus feat if it has 3 or more natural attacks and does not already have that feat. If it does not have the requisite 3 or more natural attacks (or it is reduced to less than 3 attacks), the companion instead gains a second attack with one of its natural weapons, albeit at a –5 penalty. If the companion later gains 3 or more natural attacks, it loses this additional attack and instead gains Multiattack.
+**Multiattack:** At 7 Hit Dice, a companion gains Multiattack as a bonus feat if it has 3 or more natural attacks and does not already have that feat. If it does not have the requisite 3 or more natural attacks (or it is reduced to less than 3 attacks), the companion instead gains a second attack with one of its natural weapons, albeit at a -5 penalty. If the companion later gains 3 or more natural attacks, it loses this additional attack and instead gains Multiattack.
+
 ---
 ### Companion Archetypes
 Upon gaining a Conjuration sphere companion, you may select archetypes to apply to it. Once selected, the archetype cannot be removed from that companion. Each companion may have different archetypes. A companion may have more than one archetype as long as the archetypes do not replace or modify the same features or abilities.
