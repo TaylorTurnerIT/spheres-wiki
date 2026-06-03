@@ -447,7 +447,6 @@ a:hover {
   transform: rotate(-90deg);
 }
 .section-entries {
-  overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
@@ -1425,6 +1424,11 @@ h6 {
   background: var(--clr-bg);
   padding: 12px 14px;
   margin: 14px 0;
+  position: relative;
+}
+.base-ability-block:hover,
+.base-ability-block:focus-within {
+  z-index: 10;
 }
 .base-ability-header {
   display: flex;
@@ -1461,6 +1465,11 @@ h6 {
   border-radius: var(--radius);
   background: var(--clr-bg);
   padding: 12px 14px;
+  position: relative;
+}
+.talent-entry:hover,
+.talent-entry:focus-within {
+  z-index: 10;
 }
 .talent-header {
   display: flex;
@@ -1536,6 +1545,10 @@ h6 {
   pointer-events: none;
   transition: opacity 150ms ease;
   z-index: 100;
+}
+.tag-wrapper:hover,
+.tag-wrapper:focus-within {
+  z-index: 10;
 }
 .tag-wrapper:hover .tag-tooltip,
 .tag-wrapper:focus-within .tag-tooltip {
