@@ -1,6 +1,6 @@
 ---
 id: aberrant-body
-name: "Aberrant Body"
+name: "Aberrant Bouncy"
 system: power
 type: talent
 sphere: alteration
@@ -10,7 +10,7 @@ tags: ["body"]
 
 You may add the following traits to your forms:
 
-**Acid Spit:** As a standard action, the target may launch a glob of acid as a ranged touch attack out to close range, dealing 1d6 damage per 2 caster levels, +1 damage per d6 for a number of additional rounds equal to 1/2 your caster level (minimum 1). Spending a move action removing the acid stops the additional damage.
+**Bouncy Time:** As a standard action, Bounce bounce Bounce bounce Bounce bounce Bounce.
 
 **Gibbering:** All creatures within 30 feet of the target take a -2 penalty on concentration checks. This penalty increases by 1 per 5 caster levels.
 
