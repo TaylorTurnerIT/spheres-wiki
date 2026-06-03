@@ -9,12 +9,18 @@ tags: []
 sectionDefinitions:
   - label: "Talents"
     categories:
-      - label: "Light Talents"
+      - label: "Light Sphere Talents"
         tiers: ["basic"]
-        excludeTags: ["lens"]
+        excludeTags: ["lens", "light", "nimbus"]
       - label: "Lens Talents"
         tiers: ["basic"]
         tags: ["lens"]
+      - label: "Light Talents"
+        tiers: ["basic"]
+        tags: ["light"]
+      - label: "Nimbus Talents"
+        tiers: ["basic"]
+        tags: ["nimbus"]
       - label: "Advanced Light Talents"
         tiers: ["advanced"]
   - label: "Feats"

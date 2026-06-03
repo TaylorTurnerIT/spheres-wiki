@@ -10,6 +10,10 @@ sectionDefinitions:
     categories:
       - label: "Fallen Fey Talents"
         tiers: ["basic"]
+        excludeTags: ["fey-blessing"]
+      - label: "Fey-blessing Talents"
+        tiers: ["basic"]
+        tags: ["fey-blessing"]
       - label: "Advanced Fallen Fey Talents"
         tiers: ["advanced"]
   - label: "Feats"

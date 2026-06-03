@@ -10,7 +10,13 @@ sectionDefinitions:
     categories:
       - label: "Mana Talents"
         tiers: ["basic"]
-        excludeTags: ["manipulation","curse"]
+        excludeTags: ["manipulation","curse","expunge","manabond"]
+      - label: "Expunge Talents"
+        tiers: ["basic"]
+        tags: ["expunge"]
+      - label: "Manabond Talents"
+        tiers: ["basic"]
+        tags: ["manabond"]
       - label: "Manipulation Talents"
         tiers: ["basic"]
         tags: ["manipulation"]

@@ -11,10 +11,13 @@ sectionDefinitions:
     categories:
       - label: "Death Talents"
         tiers: ["basic"]
-        excludeTags: ["dominion","curse"]
+        excludeTags: ["dominion","curse","ghost-strike"]
       - label: "Dominion Talents"
         tiers: ["basic"]
         tags: ["dominion"]
+      - label: "Ghost Strike Talents"
+        tiers: ["basic"]
+        tags: ["ghost-strike"]
       - label: "Curse Talents"
         tiers: ["basic"]
         tags: ["curse"]
@@ -24,13 +27,16 @@ sectionDefinitions:
     categories:
       - label: "Death Feats"
         tiers: ["feat"]
-        excludeTags: ["combat","dual-sphere"]
+        excludeTags: ["combat","dual-sphere","necrosis"]
       - label: "Combat Feats"
         tiers: ["feat"]
         tags: ["combat"]
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
+      - label: "Necrosis Feats"
+        tiers: ["feat"]
+        tags: ["necrosis"]
 ---
 
 [Ghost Strike]

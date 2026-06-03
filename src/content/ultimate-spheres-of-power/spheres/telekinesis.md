@@ -17,13 +17,16 @@ sectionDefinitions:
     categories:
       - label: "Telekinesis Feats"
         tiers: ["feat"]
-        excludeTags: ["combat","dual-sphere"]
+        excludeTags: ["combat","dual-sphere","protokinesis"]
       - label: "Combat Feats"
         tiers: ["feat"]
         tags: ["combat"]
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
+      - label: "Protokinesis Feats"
+        tiers: ["feat"]
+        tags: ["protokinesis"]
 ---
 
 [Telekinesis]

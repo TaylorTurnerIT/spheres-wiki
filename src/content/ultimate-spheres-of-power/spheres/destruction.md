@@ -11,19 +11,29 @@ sectionDefinitions:
     categories:
       - label: "Destruction Talents"
         tiers: ["basic"]
+        excludeTags: ["blast-shape", "blast-type"]
+      - label: "Blast Shape Talents"
+        tiers: ["basic"]
+        tags: ["blast-shape"]
+      - label: "Blast Type Talents"
+        tiers: ["basic"]
+        tags: ["blast-type"]
       - label: "Advanced Destruction Talents"
         tiers: ["advanced"]
   - label: "Feats"
     categories:
       - label: "Destruction Feats"
         tiers: ["feat"]
-        excludeTags: ["combat","dual-sphere"]
+        excludeTags: ["combat","dual-sphere","admixture"]
       - label: "Combat Feats"
         tiers: ["feat"]
         tags: ["combat"]
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
+      - label: "Admixture Feats"
+        tiers: ["feat"]
+        tags: ["admixture"]
 ---
 
 [Destructive Blast]

@@ -11,6 +11,13 @@ sectionDefinitions:
     categories:
       - label: "Life Talents"
         tiers: ["basic"]
+        excludeTags: ["cure", "vitality"]
+      - label: "Cure Talents"
+        tiers: ["basic"]
+        tags: ["cure"]
+      - label: "Vitality Talents"
+        tiers: ["basic"]
+        tags: ["vitality"]
       - label: "Advanced Life Talents"
         tiers: ["advanced"]
   - label: "Feats"

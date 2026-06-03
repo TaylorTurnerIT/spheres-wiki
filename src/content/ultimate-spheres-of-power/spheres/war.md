@@ -11,10 +11,13 @@ sectionDefinitions:
     categories:
       - label: "War Talents"
         tiers: ["basic"]
-        excludeTags: ["mandate","rally","totem"]
+        excludeTags: ["mandate","momentum","rally","totem"]
       - label: "Mandate Talents"
         tiers: ["basic"]
         tags: ["mandate"]
+      - label: "Momentum Talents"
+        tiers: ["basic"]
+        tags: ["momentum"]
       - label: "Rally Talents"
         tiers: ["basic"]
         tags: ["rally"]
@@ -27,13 +30,16 @@ sectionDefinitions:
     categories:
       - label: "War Feats"
         tiers: ["feat"]
-        excludeTags: ["combat","dual-sphere"]
+        excludeTags: ["combat","dual-sphere","squadron"]
       - label: "Combat Feats"
         tiers: ["feat"]
         tags: ["combat"]
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
+      - label: "Squadron Feats"
+        tiers: ["feat"]
+        tags: ["squadron"]
 ---
 
 [Totem]

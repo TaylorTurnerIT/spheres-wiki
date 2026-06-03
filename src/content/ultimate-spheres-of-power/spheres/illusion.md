@@ -24,13 +24,16 @@ sectionDefinitions:
     categories:
       - label: "Illusion Feats"
         tiers: ["feat"]
-        excludeTags: ["combat","dual-sphere"]
+        excludeTags: ["combat","dual-sphere","surreal"]
       - label: "Combat Feats"
         tiers: ["feat"]
         tags: ["combat"]
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
+      - label: "Surreal Feats"
+        tiers: ["feat"]
+        tags: ["surreal"]
 ---
 
 [Illusion]

@@ -4,4 +4,4 @@ name: "Exorcist"
 level: 1
 tags: ["champion", "combat"]
 ---
-At 1st level, an occult abolisher must select the [http://spheresofpower.wikidot.com/pm-inquisitor-inquisitions exorcism inquisition] as her domain.
+At 1st level, an occult abolisher must select the exorcism inquisition as her domain.

@@ -11,10 +11,16 @@ sectionDefinitions:
     categories:
       - label: "Protection Talents"
         tiers: ["basic"]
-        excludeTags: ["ward"]
+        excludeTags: ["aegis", "ward", "succor"]
+      - label: "Aegis Talents"
+        tiers: ["basic"]
+        tags: ["aegis"]
       - label: "Ward Talents"
         tiers: ["basic"]
         tags: ["ward"]
+      - label: "Succor Talents"
+        tiers: ["basic"]
+        tags: ["succor"]
       - label: "Advanced Protection Talents"
         tiers: ["advanced"]
   - label: "Feats"

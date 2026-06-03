@@ -11,19 +11,26 @@ sectionDefinitions:
     categories:
       - label: "Enhancement Talents"
         tiers: ["basic"]
+        excludeTags: ["enhance"]
+      - label: "Enhance Talents"
+        tiers: ["basic"]
+        tags: ["enhance"]
       - label: "Advanced Enhancement Talents"
         tiers: ["advanced"]
   - label: "Feats"
     categories:
       - label: "Enhancement Feats"
         tiers: ["feat"]
-        excludeTags: ["combat","dual-sphere"]
+        excludeTags: ["combat","dual-sphere","proxy"]
       - label: "Combat Feats"
         tiers: ["feat"]
         tags: ["combat"]
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
+      - label: "Proxy Feats"
+        tiers: ["feat"]
+        tags: ["proxy"]
 ---
 
 [Enhance]

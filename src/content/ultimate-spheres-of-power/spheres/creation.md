@@ -11,6 +11,13 @@ sectionDefinitions:
     categories:
       - label: "Creation Talents"
         tiers: ["basic"]
+        excludeTags: ["alter", "material"]
+      - label: "Alter Talents"
+        tiers: ["basic"]
+        tags: ["alter"]
+      - label: "Material Talents"
+        tiers: ["basic"]
+        tags: ["material"]
       - label: "Advanced Creation Talents"
         tiers: ["advanced"]
   - label: "Feats"
