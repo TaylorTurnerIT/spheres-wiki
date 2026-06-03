@@ -20,16 +20,6 @@ A creature may not be affected by both a (quicken) and a (still) ability at the 
 
 When you gain the Blood sphere, you learn the following abilities:
 
----
-
 #### Bleed
 
-You may cause the target of your blood control to take bleed damage equal to your caster level for the duration of your blood control. This damage can be stopped prior to the end of your blood control by the Coagulate ability, a DC 15 Heal check, or any amount of magical healing or fast healing/regeneration.
-
----
-
 #### Coagulate
-
-You may end any bleed damage affecting the target of your blood control. For the duration of the blood control, the target reduces any bleed damage taken by 1 + 1 per 3 caster levels and any creature using an effect that would inflict bleed damage must succeed at a magic skill check or have the bleed damage negated. Creatures imposing bleed damage via non-magical abilities (such as an attack that deals bleed damage) may substitute their base attack bonus for their magic skill bonus on this check.
-
----

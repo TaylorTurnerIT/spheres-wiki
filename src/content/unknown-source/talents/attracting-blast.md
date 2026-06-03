@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: destruction
 tier: basic
-tags: ["blast-type", "electric"]
+tags: ["blast-type", "electricity"]
 ---
 **Source:** Unknown (lg)
 

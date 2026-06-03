@@ -147,11 +147,28 @@ for (const [id, entry] of featCollEntries) {
   featRendered.push({ id, Content });
 }
 
+const orderedBase: typeof base = [];
+const baseSet = new Set(base.map(t => t.id));
+for (const seg of bodySegments) {
+  if (seg.type === 'base-ability' && baseSet.has(seg.id)) {
+    const t = base.find(b => b.id === seg.id);
+    if (t) {
+      orderedBase.push(t);
+      baseSet.delete(seg.id);
+    }
+  }
+}
+for (const t of base) {
+  if (baseSet.has(t.id)) {
+    orderedBase.push(t);
+  }
+}
+
 // Build ToC
 const overview: TocItem = {
   id: 'overview',
   label: 'Overview',
-  sub: base.length > 0 ? base.map(t => ({ id: t.id, label: t.name })) : undefined,
+  sub: orderedBase.length > 0 ? orderedBase.map(t => ({ id: t.id, label: t.name })) : undefined,
 };
 
 const groups: TocGroup[] = sections.map(sec => ({
