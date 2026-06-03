@@ -15,47 +15,56 @@ function getSourceBookDirs(): string[] {
     .sort();
 }
 
+function loadBookYaml(book: string): Record<string, unknown> | null {
+  const yamlPath = path.join(contentDir, book, '_book.yaml');
+  if (!fs.existsSync(yamlPath)) return null;
+  try {
+    return parseYaml(fs.readFileSync(yamlPath, 'utf8')) ?? {};
+  } catch {
+    return {};
+  }
+}
+
 const sourceBooks = getSourceBookDirs();
 
 describe('_book.yaml validation', () => {
-  it('found source book directories', () => {
-    expect(sourceBooks.length).toBeGreaterThan(0);
+  it('every source book directory has a _book.yaml', () => {
+    const missing = sourceBooks.filter(
+      book => !fs.existsSync(path.join(contentDir, book, '_book.yaml'))
+    );
+    if (missing.length > 0) {
+      expect.fail(`Missing _book.yaml in:\n  ${missing.join('\n  ')}`);
+    }
   });
 
-  for (const book of sourceBooks) {
-    const bookPath = path.join(contentDir, book);
-    const yamlPath = path.join(bookPath, '_book.yaml');
-
-    describe(`${book}`, () => {
-      it('has _book.yaml', () => {
-        expect(fs.existsSync(yamlPath), `missing _book.yaml in ${book}`).toBe(true);
-      });
-
-      if (!fs.existsSync(yamlPath)) return;
-
-      let data: Record<string, unknown> = {};
-
-      it('parses as valid YAML', () => {
-        const raw = fs.readFileSync(yamlPath, 'utf8');
-        expect(() => { data = parseYaml(raw) ?? {}; }).not.toThrow();
-      });
-
+  it('every _book.yaml has all required fields filled (no empty values)', () => {
+    const violations: string[] = [];
+    for (const book of sourceBooks) {
+      const data = loadBookYaml(book);
+      if (!data) continue;
       for (const field of REQUIRED_FIELDS) {
-        it(`has non-empty field: ${field}`, () => {
-          const raw = fs.readFileSync(yamlPath, 'utf8');
-          const parsed: Record<string, unknown> = parseYaml(raw) ?? {};
-          const value = parsed[field];
-          expect(value, `${book}/_book.yaml: field "${field}" is missing`).toBeDefined();
-          expect(String(value ?? '').trim(), `${book}/_book.yaml: field "${field}" is empty`).not.toBe('');
-        });
+        const val = data[field];
+        if (val === undefined || String(val).trim() === '') {
+          violations.push(`${book}: "${field}" is empty or missing`);
+        }
       }
+    }
+    if (violations.length > 0) {
+      expect.fail(`Incomplete _book.yaml fields:\n  ${violations.join('\n  ')}`);
+    }
+  });
 
-      it('publishedDate is not epoch placeholder (1970-01-01)', () => {
-        const raw = fs.readFileSync(yamlPath, 'utf8');
-        const parsed: Record<string, unknown> = parseYaml(raw) ?? {};
-        const date = String(parsed['publishedDate'] ?? '');
-        expect(date, `${book}/_book.yaml: publishedDate is epoch placeholder`).not.toBe(EPOCH_DATE);
-      });
-    });
-  }
+  it('no _book.yaml uses epoch date placeholder (1970-01-01)', () => {
+    const violations: string[] = [];
+    for (const book of sourceBooks) {
+      const data = loadBookYaml(book);
+      if (!data) continue;
+      if (String(data['publishedDate'] ?? '') === EPOCH_DATE) {
+        violations.push(book);
+      }
+    }
+    if (violations.length > 0) {
+      expect.fail(`Epoch date placeholder in:\n  ${violations.join('\n  ')}`);
+    }
+  });
 });
