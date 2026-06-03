@@ -4,7 +4,7 @@ name: "Creating New Blasts"
 system: power
 type: talent
 sphere: destruction
-tier: base
+tier: basic
 tags: []
 ---
 

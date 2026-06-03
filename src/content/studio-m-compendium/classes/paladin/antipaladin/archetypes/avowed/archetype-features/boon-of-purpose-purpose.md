@@ -1,5 +1,5 @@
 ---
-id: boon-of-purpose-purpose-sm
+id: boon-of-purpose-purpose
 name: "Boon of Purpose (Purpose):"
 level: 1
 tags: []

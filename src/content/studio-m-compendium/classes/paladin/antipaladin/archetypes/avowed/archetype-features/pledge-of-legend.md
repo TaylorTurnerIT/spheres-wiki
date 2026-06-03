@@ -1,6 +1,7 @@
 ---
 id: pledge-of-legend
 name: "Pledge of Legend"
+level: 1
 tags: []
 ---
 

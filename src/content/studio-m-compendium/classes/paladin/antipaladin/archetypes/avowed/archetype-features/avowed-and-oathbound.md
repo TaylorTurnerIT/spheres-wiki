@@ -1,6 +1,7 @@
 ---
 id: avowed-and-oathbound
 name: "Avowed and Oathbound Paladin/Antipaladin"
+level: 1
 tags: []
 ---
 

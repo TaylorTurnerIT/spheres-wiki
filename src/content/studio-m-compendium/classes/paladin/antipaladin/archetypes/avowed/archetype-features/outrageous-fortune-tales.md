@@ -1,5 +1,5 @@
 ---
-id: outrageous-fortune-tales-sm
+id: outrageous-fortune-tales
 name: "Outrageous Fortune (Tales):"
 level: 1
 replaces: ["lay on hands or touch of corruption"]

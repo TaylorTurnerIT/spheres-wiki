@@ -1,5 +1,5 @@
 ---
-id: imbuement-sm
+id: imbuement
 name: "Imbuement"
 level: 7
 tags: []

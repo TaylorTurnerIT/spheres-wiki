@@ -1,5 +1,5 @@
 ---
-id: invoke-elements-neutrality-sm
+id: invoke-elements-neutrality
 name: "Invoke Elements (Neutrality):"
 level: 1
 tags: []

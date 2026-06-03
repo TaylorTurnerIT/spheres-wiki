@@ -1,6 +1,7 @@
 ---
 id: pledge-of-condemnation
 name: "Pledge of Condemnation"
+level: 1
 tags: []
 ---
 

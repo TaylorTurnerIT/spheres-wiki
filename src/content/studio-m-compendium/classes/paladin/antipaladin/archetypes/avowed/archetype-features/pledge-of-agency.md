@@ -1,6 +1,7 @@
 ---
 id: pledge-of-agency
 name: "Pledge of Agency"
+level: 1
 tags: []
 ---
 

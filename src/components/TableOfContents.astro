@@ -87,11 +87,25 @@ document.addEventListener('astro:page-load', () => {
   const nav = document.querySelector<HTMLElement>('.toc');
   if (!nav) return;
 
+  const getTargetElement = (id: string): HTMLElement | null => {
+    try {
+      const cands = document.querySelectorAll(`[id="${CSS.escape(id)}"]`);
+      for (const cand of cands) {
+        if (['talent-entry', 'base-ability-block', 'class-feature-block', 'archetype-feature-block', 'section-heading-text', 'page-title', 'class-traits-section', 'article-section', 'equipment-section'].some(c => cand.classList.contains(c))) {
+          return cand as HTMLElement;
+        }
+      }
+      return cands[0] as HTMLElement | null;
+    } catch {
+      return document.getElementById(id);
+    }
+  };
+
   const categories = [...nav.querySelectorAll<HTMLElement>('[data-toc-section]')];
   const headings = categories
     .map(cat => ({
       cat,
-      heading: document.getElementById(cat.dataset.tocSection!),
+      heading: getTargetElement(cat.dataset.tocSection!),
       subLinks: [...cat.querySelectorAll<HTMLAnchorElement>('[data-toc-item]')],
     }))
     .filter((s): s is typeof s & { heading: HTMLElement } => s.heading !== null);
@@ -133,7 +147,7 @@ document.addEventListener('astro:page-load', () => {
     let activeSub: HTMLAnchorElement | null = null;
     for (const { subLinks } of headings) {
       for (const link of subLinks) {
-        const el = document.getElementById(link.dataset.tocItem!);
+        const el = getTargetElement(link.dataset.tocItem!);
         if (el && el.getBoundingClientRect().height > 0 && el.getBoundingClientRect().top <= window.innerHeight * 0.15) {
           activeSub = link;
         }

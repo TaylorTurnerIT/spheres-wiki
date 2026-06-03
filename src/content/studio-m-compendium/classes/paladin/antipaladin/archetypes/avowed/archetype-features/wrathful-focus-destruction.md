@@ -1,5 +1,5 @@
 ---
-id: wrathful-focus-destruction-sm
+id: wrathful-focus-destruction
 name: "Wrathful Focus (Destruction):"
 level: 1
 tags: []

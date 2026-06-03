@@ -1,5 +1,5 @@
 ---
-id: addendum-sm
+id: addendum
 name: "Addendum:"
 level: 1
 replaces: ["spell kenning"]

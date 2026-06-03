@@ -1,5 +1,5 @@
 ---
-id: trade-tradition-sm
+id: trade-tradition
 name: "Trade Tradition:"
 level: 1
 replaces: ["the skald’s normal class skills"]

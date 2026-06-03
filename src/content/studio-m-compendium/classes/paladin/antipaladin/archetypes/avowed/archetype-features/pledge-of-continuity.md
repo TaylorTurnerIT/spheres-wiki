@@ -1,6 +1,7 @@
 ---
 id: pledge-of-continuity
 name: "Pledge of Continuity"
+level: 1
 tags: []
 ---
 

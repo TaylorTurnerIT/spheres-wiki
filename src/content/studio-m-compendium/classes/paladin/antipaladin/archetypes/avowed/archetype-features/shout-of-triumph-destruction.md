@@ -1,5 +1,5 @@
 ---
-id: shout-of-triumph-destruction-sm
+id: shout-of-triumph-destruction
 name: "Shout of Triumph (Destruction):"
 level: 1
 tags: []
