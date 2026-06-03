@@ -47,4 +47,17 @@ Tests: 25,436 passed (no regression)
 
 ---
 
-## Fix 3: Parallel `getCollection` in `resolveEntries` (planned)
+## Fix 3: Parallel `getCollection` in `resolveEntries` — REVERTED
+
+Tried `Promise.all` over 35 `getCollection` calls. Reverted: `getCollection` reads from an in-memory store after first load, so no I/O to parallelize. Benefit was noise-level; sequential loop is clearer.
+
+---
+
+## Final Results (clean system, load ~4)
+
+| Stage | real | notes |
+|-------|------|-------|
+| Pre-session baseline | ~55s | user-reported |
+| After fix 1 + fix 2 | ~55s | confirmed no regression |
+
+Net: fixes 1 and 2 landed, fix 3 reverted. Build time maintained or slightly improved vs baseline despite new v2 validation running in every build.
