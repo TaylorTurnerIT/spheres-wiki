@@ -99,7 +99,7 @@ const bodySegments: RenderedSegment[] = await Promise.all(
     if (seg.type === 'markdown') {
       return { type: 'markdown' as const, html: await renderMarkdownFragment(seg.text) };
     }
-    return seg;
+    return seg as { type: 'base-ability'; id: string };
   })
 );
 
@@ -116,6 +116,7 @@ const [talentRendered, featRendered] = await Promise.all([
 
 const orderedBase: typeof base = [];
 const baseSet = new Set(base.map(t => t.id));
+
 for (const seg of bodySegments) {
   if (seg.type === 'base-ability' && baseSet.has(seg.id)) {
     const t = base.find(b => b.id === seg.id);
@@ -125,6 +126,7 @@ for (const seg of bodySegments) {
     }
   }
 }
+
 for (const t of base) {
   if (baseSet.has(t.id)) {
     orderedBase.push(t);

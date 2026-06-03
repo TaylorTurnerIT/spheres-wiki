@@ -35,6 +35,6 @@ sectionDefinitions:
 
 [Divine]
 
-### Alternate Divinations
+[Sense]
 
-If you possess certain other spheres, you may divine for information other than magical auras. These alternate divinations are available based on which spheres you possess and are detailed in those spheres' talent descriptions.
+
