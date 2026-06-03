@@ -1340,6 +1340,21 @@ h6 {
 .talent-body li {
   margin-bottom: 0.25em;
 }
+.entry-description a,
+.talent-body a,
+.tag-tooltip-desc a,
+.tag-row-desc a {
+  color: var(--clr-active);
+  text-decoration: underline;
+  text-decoration-color: var(--clr-border);
+  text-underline-offset: 2px;
+}
+.entry-description a:hover,
+.talent-body a:hover,
+.tag-tooltip-desc a:hover,
+.tag-row-desc a:hover {
+  text-decoration-color: var(--clr-active);
+}
 
 /* ── Entry grid (namespace index pages) ────────────────── */
 .entry-grid {
