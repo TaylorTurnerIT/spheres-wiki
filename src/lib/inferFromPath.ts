@@ -70,31 +70,31 @@ export function inferFromPath(fileId: string): InferredFields {
   // ── Flexible nesting rules ──────────────────────────────────────────────────
 
   if (parts.length >= 4) {
-    // Archetype Features: .../Archetypes/[aid]/Archetype Features/[id] or features
+    // Archetype Features: .../archetypes/[aid]/archetype-features/[id] or features
     if (
-      prev === "Archetype Features" ||
+      prev === "archetype-features" ||
       (prev === "features" &&
         parts[parts.length - 4].toLowerCase() === "archetypes")
     ) {
       const aid = parts[parts.length - 3];
       return { type: "archetype-feature", archetypeId: aid, id: last };
     }
-    // Class Traits: .../[cid]/Class Features/[fid]/Class Traits/[id] or features/traits
+    // Class Traits: .../[cid]/class-features/[fid]/class-traits/[id] or features/traits
     if (
-      prev === "Class Traits" ||
+      prev === "class-traits" ||
       (prev === "traits" &&
         parts[parts.length - 4].toLowerCase() === "features")
     ) {
       const fid = parts[parts.length - 3];
-      // cid is two levels above fid: .../[cid]/Class Features/[fid]
+      // cid is two levels above fid: .../[cid]/class-features/[fid]
       const cid = parts[parts.length - 5] || parts[1]; // fallback if nesting is weird
       return { type: "class-trait", className: cid, featureId: fid, id: last };
     }
   }
 
   if (parts.length >= 3) {
-    // Class Features: .../[cid]/Class Features/[id] or features/[id]
-    if (prev === "Class Features" || prev === "features") {
+    // Class Features: .../[cid]/class-features/[id] or features/[id]
+    if (prev === "class-features" || prev === "features") {
       const cid = parts[parts.length - 3];
       return { type: "class-feature", className: cid, id: last };
     }
