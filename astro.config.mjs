@@ -1,6 +1,7 @@
 // astro.config.mjs
 import { defineConfig } from "astro/config";
 import { parse as parseYaml } from "yaml";
+import remarkEntryLinks from "./src/lib/remarkEntryLinks.ts";
 
 /** Vite plugin: transform *.yaml / *.yml imports into ES modules */
 const yamlPlugin = {
@@ -21,6 +22,11 @@ export default defineConfig({
   prefetch: {
     prefetchAll: false,
     defaultStrategy: "hover",
+  },
+  markdown: {
+    remarkPlugins: [
+      [remarkEntryLinks, { base: "/spheres-wiki/" }]
+    ],
   },
   vite: {
     plugins: [yamlPlugin],

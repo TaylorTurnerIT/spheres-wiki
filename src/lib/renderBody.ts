@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeRaw from 'rehype-raw';
+import remarkEntryLinks from './remarkEntryLinks';
 
 export type BodySegment =
   | { type: 'markdown'; text: string }
@@ -33,14 +34,16 @@ export function splitBodyOnMarkers(body: string | undefined): BodySegment[] {
   return segments;
 }
 
-const processor = unified()
+const processor = (base: string) => unified()
   .use(remarkParse)
+  .use(remarkEntryLinks, { base })
   .use(remarkGfm)
   .use(remarkRehype, { allowDangerousHtml: true })
   .use(rehypeRaw)
   .use(rehypeStringify, { allowDangerousHtml: true });
 
 export async function renderMarkdownFragment(md: string): Promise<string> {
-  const file = await processor.process(md);
+  const base = import.meta.env.BASE_URL;
+  const file = await processor(base).process(md);
   return String(file);
 }
