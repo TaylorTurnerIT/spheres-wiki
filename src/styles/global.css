@@ -149,6 +149,8 @@ a:hover {
 .site-header-wrap {
   background: var(--clr-bg);
   border-bottom: 1px solid var(--clr-border);
+  position: relative;
+  z-index: 9999;
 }
 
 .site-header {

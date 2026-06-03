@@ -170,4 +170,4 @@ Then infra (T23→T24→T26→T27→T28→T29→T30→T31→T32).
 |----|------------|-------|-----|
 | B4 | 2026-05-29 | `parseSectionContext` used `includes('feat')` — matched "features" in "+++ Companion Features", premature-flushed base ability and reset section context | Changed to `/\bfeats?\b/` |
 | B5 | 2026-06-03 | "SM-" tag needs to be removed from codebase | Pending |
-| B6 | 2026-06-03 | z-index issue on tags page: tags appear on top of search bar results/dropdown | Pending |
+| B6 | 2026-06-03 | z-index issue on tags page: tags appear on top of search bar results/dropdown | Added `position: relative` and `z-index: 9999` to `.site-header-wrap` |
