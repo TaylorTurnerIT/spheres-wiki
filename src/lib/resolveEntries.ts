@@ -133,7 +133,10 @@ export function buildResolvedMaps(
  * Astro-aware wrapper. Import this in pages/layouts.
  * Cannot be called in vitest tests (depends on Astro runtime).
  */
+let resolveEntriesCache: ResolvedMaps | null = null;
+
 export async function resolveEntries(): Promise<ResolvedMaps> {
+  if (resolveEntriesCache) return resolveEntriesCache;
   const { getCollection } = await import("astro:content");
 
   // Auto-discover books via _book.yaml files — no hardcoded list needed.
@@ -322,7 +325,8 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
     }
   }
 
-  return { ...maps, bookMetaMap, tagMap };
+  resolveEntriesCache = { ...maps, bookMetaMap, tagMap };
+  return resolveEntriesCache;
 }
 
 // ──── internal helpers ────────────────────────────────────────────────────

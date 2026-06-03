@@ -88,31 +88,31 @@ export async function getStaticPaths() {
 }
 
 const { sphere, base, allTalents, feats, sections, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap, tagMap } = Astro.props;
-const { talentMap, featMap } = await resolveEntries();
+
+const talentById = new Map(allTalents.map(t => [t.id, t]));
+const featById = new Map(feats.map(f => [f.id, f]));
 
 type RenderedSegment = { type: 'markdown'; html: string } | { type: 'base-ability'; id: string };
-const bodySegments: RenderedSegment[] = [];
-if (mainCollEntry) {
-  for (const seg of splitBodyOnMarkers(mainCollEntry.body)) {
+const rawSegments = mainCollEntry ? splitBodyOnMarkers(mainCollEntry.body) : [];
+const bodySegments: RenderedSegment[] = await Promise.all(
+  rawSegments.map(async (seg) => {
     if (seg.type === 'markdown') {
-      bodySegments.push({ type: 'markdown', html: await renderMarkdownFragment(seg.text) });
-    } else {
-      bodySegments.push(seg);
+      return { type: 'markdown' as const, html: await renderMarkdownFragment(seg.text) };
     }
-  }
-}
+    return seg;
+  })
+);
 
-const talentRendered: Array<{ id: string; Content: any }> = [];
-for (const [id, entry] of talentCollEntries) {
-  const { Content } = await render(entry);
-  talentRendered.push({ id, Content });
-}
-
-const featRendered: Array<{ id: string; Content: any }> = [];
-for (const [id, entry] of featCollEntries) {
-  const { Content } = await render(entry);
-  featRendered.push({ id, Content });
-}
+const [talentRendered, featRendered] = await Promise.all([
+  Promise.all([...talentCollEntries].map(async ([id, entry]) => {
+    const { Content } = await render(entry);
+    return { id, Content };
+  })),
+  Promise.all([...featCollEntries].map(async ([id, entry]) => {
+    const { Content } = await render(entry);
+    return { id, Content };
+  })),
+]);
 
 const orderedBase: typeof base = [];
 const baseSet = new Set(base.map(t => t.id));
@@ -143,9 +143,8 @@ const groups: TocGroup[] = sections.map(sec => ({
     id: cat.id,
     label: cat.label,
     sub: cat.entries.map(e => {
-      const talent = [...talentMap.values()].find(t => t.id === e.id);
-      const feat = [...featMap.values()].find(f => f.id === e.id);
-      return { id: e.id, label: talent?.name ?? feat?.name ?? e.id };
+      const entry = talentById.get(e.id) ?? featById.get(e.id);
+      return { id: e.id, label: entry?.name ?? e.id };
     }),
   })),
 }));
@@ -230,8 +229,8 @@ const groups: TocGroup[] = sections.map(sec => ({
                 ? <p class="section-empty">No entries yet.</p>
                 : <div class="talent-list">
                     {cat.entries.map(e => {
-                      const talent = [...talentMap.values()].find(t => t.id === e.id);
-                      const feat = [...featMap.values()].find(f => f.id === e.id);
+                      const talent = talentById.get(e.id);
+                      const feat = featById.get(e.id);
                       const entry = talent || feat;
                       if (!entry) return null;
 
