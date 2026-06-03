@@ -168,12 +168,13 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
     <span>{tag.label}</span>
   </nav>
 
-  <div class="content-main" style="max-width: 720px;">
+  <div class="content-main">
     <h1 class="page-title" id="overview">
       <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
-      {tag.label}
     </h1>
     <hr class="page-title-rule" />
+    
+    {bookTitle && <p class="talent-source">{bookTitle}</p>}
 
     <p class="entry-description" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
 
@@ -184,8 +185,6 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
         </div>
       )
     }
-
-    <p class="talent-source">{bookTitle}</p>
 
     {
       groups.length === 0 && (
