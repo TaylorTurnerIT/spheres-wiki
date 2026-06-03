@@ -9,7 +9,6 @@ tags: ["transformation"]
 ---
 **Source:** Unknown (rw-hb)
 
-
 You may grant the form of an elemental with your shapeshift.
 **Limbs:** mutable (up to 1 head, 2 legs, 2 arms, chosen when form is granted)
 **Speech:** Yes; **Hands:** Yes (if arms granted)

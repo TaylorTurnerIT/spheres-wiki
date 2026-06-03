@@ -9,7 +9,6 @@ tags: []
 ---
 **Source:** Unknown (lg)
 
-
 **Prerequisite:** Alteration sphere.
 
 You may add the following additional traits to your form:

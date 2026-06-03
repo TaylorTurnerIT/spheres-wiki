@@ -21,7 +21,6 @@ When you gain the Divination sphere, you gain the ability to divine for magical 
 | 12-20 | Strong |
 | 21+ | Overwhelming |
 
-
 A magical aura lingers after its original source dissipates (in the case of spells and sphere effects) or is destroyed (in the case of a magic item). In such a case, divining reveals an aura strength of dim (even weaker than a faint aura). How long the aura lingers at this dim level depends on its original power:
 
 **Table: Lingering Aura**
@@ -36,7 +35,6 @@ A magical aura lingers after its original source dissipates (in the case of spel
 When using Spellcraft to identify the properties of a magic item or ongoing effect, you may use divine in place of the detect magic spell. Outsiders and elementals are not magical in and of themselves, but if they are summoned, the conjuration effect registers.
 
 **Overwhelming Auras:** Whenever an individual divines or senses an aura whose strength is overwhelming, from a source whose Hit Dice or caster level is equal to or greater than the caster's character level + 10, that individual becomes stunned for 1 round.
-
 
 <details>
 <summary><b>Alternate Divinations</b> <br>

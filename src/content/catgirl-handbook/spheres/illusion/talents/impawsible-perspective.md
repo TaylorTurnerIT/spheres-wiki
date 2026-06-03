@@ -9,7 +9,6 @@ tags: []
 ---
 **Source:** Unknown (catgirl-hb)
 
-
 Whenever you create an illusion, you may empower it to be incredibly difficult to perceive and disbelieve.
 
 **Prerequisites:** Illusion sphere (Manipulate Aura (sensory, magic)), caster level 10th.

@@ -40,7 +40,6 @@ An anima manipulates the very elements around himself.
 | 16th | Huge | 27 | Huge |
 | 20th | Greater (Huge) Elemental or Gargantuan Animated Plant | 64 | Gargantuan |
 
-
 **Path Skill:** Knowledge (nature) (Int)
 
 **Improved Path Possession:** The anima may possess creatures with the plant type or the elemental subtype corresponding to the spheres and packages possessed, ignoring any type-based immunity to mind-affecting effects. Such creatures take a -2 penalty on saves against the anima's possession.

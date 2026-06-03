@@ -25,5 +25,4 @@ Your illusions, when behaving autonomously, act and react more or less realistic
 | 17-18 | Advanced communication and moderate planning (as a dumb human). |
 | 19-20 | Advanced planning (as an average human). |
 
-
 Phantom Mind illusions resist casual testing, as they know when they should respond and how, and can outsmart less intelligent creatures without direction from you. Creatures with an Intelligence score lower than half the caster level of the illusion gain no benefits from obvious signs of trickery and cannot outsmart them with causal testing.

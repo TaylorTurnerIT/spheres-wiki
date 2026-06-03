@@ -21,6 +21,4 @@ At 12th level, when the explorer denotes a creature as his quarry, he can shapes
 #### Evolved Physicality
 At 17th level, the explorer's tamed creatures gain the improved evasion ability. Additionally, traits originating from talents benefitting from the favored transformation ability do not count towards the total number of traits that the explorer can apply to a shapeshift, as long as it is used on himself or a tamed creature.
 
-
-
 [[include sog-template]]

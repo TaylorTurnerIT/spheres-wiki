@@ -20,7 +20,6 @@ A paladin or antipaladin with the avowed archetype may replace the class feature
 - Options that replace aura of resolve or aura of despair instead replace the 8th-level ability granted by the avowed's pledge.
 - Options that replace holy champion or unholy champion instead replace the 20th-level ability granted by the avowed's pledge.
 
-
 ---
 
 [[include cots]]

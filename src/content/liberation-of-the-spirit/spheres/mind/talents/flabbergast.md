@@ -9,7 +9,6 @@ tags: ["charm"]
 ---
 **Source:** Unknown (lots)
 
-
 You bombard the target with shocking revelations and displays which leave them reeling.
 
 **Lesser Charm:** The target gains the uncertain condition for 1 minute per caster level (Will negates).

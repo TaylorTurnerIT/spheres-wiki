@@ -47,7 +47,6 @@ At 20th level, the void conduit gains the Conjuration sphere Lingering Companion
 
 This replaces twin eidolon.
 
-
 [[include cots]]
 [[include sop-template]]
 [[include som-template]]

@@ -18,5 +18,4 @@ The scholar's understanding of atmospheric phenomenon and ability to control and
 | Winter | Frigid cold, blizzard, or thaw |
 | Late Winter | Hurricane-force winds or early spring |
 
-
 The scholar can control the general tendencies of the weather, such as the direction and intensity of the wind. She cannot control specific applications of the weather—where lightning strikes, for example, or the exact path of a tornado. The weather continues as the scholar left it for up to one hour, or until she uses this ability to designate a new kind of weather (which fully manifests itself 10 minutes later). Contradictory conditions are not possible simultaneously. The scholar must have the lightning rod knack to select this knack.

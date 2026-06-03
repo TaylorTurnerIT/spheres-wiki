@@ -20,7 +20,6 @@ This ability replaces Enduring Defense.
 ## Voidheart (Su)
 At 20th level, an extricator can select the following supreme insight One with the Void: The void has subsumed your being, rendering your own pattern indistinguishable from the enigmatic oblivion. You are considered an outsider for the purpose of spells, powers, and other effects, and is immune to energy drain, death effects, and negative energy damage. What's more, you are shielded against divination effects as per the Mind Blank advanced protection talent.
 
-
 ---
 
 [[include cots]]

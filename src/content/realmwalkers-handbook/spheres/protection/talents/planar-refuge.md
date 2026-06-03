@@ -9,7 +9,6 @@ tags: ["aegis", "ward"]
 ---
 **Source:** Unknown (rw-hb)
 
-
 Your magics create refuge against the dangers of space and planes unknown.
 
 **Prerequisites:** Protection sphere, caster level 5th.

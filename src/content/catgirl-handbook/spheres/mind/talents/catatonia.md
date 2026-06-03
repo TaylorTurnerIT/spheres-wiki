@@ -9,7 +9,6 @@ tags: []
 ---
 **Source:** Unknown (catgirl-hb)
 
-
 You wrap the weary kittens in a soft and warm blanket so they might drift off to sleep.
 
 **Prerequisites:** Mind sphere (Powerful Charm, Sleep (charm)), caster level 10th.

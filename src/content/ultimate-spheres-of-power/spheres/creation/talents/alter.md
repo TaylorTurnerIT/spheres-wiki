@@ -37,7 +37,6 @@ A DC 15 Appraise check reveals the object as a magical fake. Fabricated objects 
 | Mithral | 15 | 30/in. of thickness |
 | Adamantine | 20 | 40/in. of thickness |
 
-
 **Table: Object Size**
 
 | Object Size | Minimum Caster level (number of Small objects contained) | Example Objects | Maximum Weight (lbs.) | Falling Damage (to both object and target) |
@@ -50,7 +49,6 @@ A DC 15 Appraise check reveals the object as a magical fake. Fabricated objects 
 | Colossal | 32 | Ship | 78,125 | 5d6 |
 | Colossal+ | 64 | Tavern | 390,625 | 6d6 |
 
-
 **Table: Weapon Sizes**
 
 | Weapon Type | Size Adjustment (From Size of Intended Wielder) |
@@ -60,7 +58,6 @@ A DC 15 Appraise check reveals the object as a magical fake. Fabricated objects 
 | Light weapons | Two sizes smaller |
 | One-handed weapons | One size smaller |
 | Two-handed weapons | Same size |
-
 
 There are dozens of ways a created object can interact with the world, and many of the details of those interactions are determined by the GM. The following notes, however, include clarifications about various types of created objects.
 

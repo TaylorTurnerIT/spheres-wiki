@@ -9,7 +9,6 @@ tags: ["charm"]
 ---
 **Source:** Unknown (lots)
 
-
 You stoke the target's anger into a raging inferno.
 
 **Lesser Charm:** The target gains either the angry or livid condition towards a target of your choice for 1 round per caster level (Will negates).

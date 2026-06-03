@@ -9,7 +9,6 @@ tags: ["aegis"]
 ---
 **Source:** Unknown (samd)
 
-
 **Prerequisites:** Protection sphere (Deathless (aegis)), caster level 7th.
 
 When you create a Deathless aegis, you may spend an additional spell point to create an Undying aegis instead. In addition to the effects of the Deathless aegis, the subject is immune to energy drain and any negative energy effects, including channeled negative energy.

@@ -9,7 +9,6 @@ tags: []
 ---
 **Source:** Unknown (lg)
 
-
 **Prerequisites:** Mind sphere (Mindscape (advanced, charm)), caster level 5th.
 
 You learn to manipulate mindscapes in a variety of ways.

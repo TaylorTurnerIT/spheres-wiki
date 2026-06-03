@@ -91,7 +91,6 @@ The antimage has precise control of this antimagic field, and may adjust the rad
 
 This replaces holy champion or unholy champion.
 
-
 ---
 
 [[include cots]]

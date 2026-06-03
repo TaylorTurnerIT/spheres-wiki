@@ -9,7 +9,6 @@ tags: []
 ---
 **Source:** Unknown (cata-hb)
 
-
 Fallout of severity level 3 forces creatures inside the area to attempt a Fortitude save each hour (DC 15, +1 per previous check) or take 1 point of Constitution damage.
 
 Severity level 4 functions as severity level 3, save that checks must be made every 10 minutes rather than every hour.

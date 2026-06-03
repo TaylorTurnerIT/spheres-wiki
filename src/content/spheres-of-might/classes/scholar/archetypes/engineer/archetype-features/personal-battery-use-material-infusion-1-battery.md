@@ -16,6 +16,5 @@ When using a blaster as a standard action (or as part of a special attack action
 
 This replaces flashbangs.
 
-
 [[include som-template]]
 [[include tinker-template]]

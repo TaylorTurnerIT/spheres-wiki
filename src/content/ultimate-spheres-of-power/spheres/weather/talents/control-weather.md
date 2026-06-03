@@ -139,7 +139,6 @@ Severity of the snow or storm effects depends on the severity of the Precipitati
 | 6 | Flash flood | Great blizzard | Monsoon |
 | 7 | Great flood | Avalanche | Typhoon |
 
-
 **Rain Effects**
 **Mist:** Mist grants all creatures concealment from any creatures over 100 feet away (all attacks suffer a 20% miss chance).
 

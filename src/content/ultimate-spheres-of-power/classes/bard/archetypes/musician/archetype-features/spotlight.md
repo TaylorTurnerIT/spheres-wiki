@@ -15,7 +15,4 @@ At 20th level, the musician gains the All The World's A Stage Performance sphere
 
 *Crescendo:* The musician finishes the performance with a flourish, bathing a 120-foot radius (centered on him) in resplendent, awe-inspiring radiance, increasing the light level of the area by one step. All hostile creatures within the area that can see or hear the musician must succeed at a Will saving throw or become dazed, prone and helpless for 1 minute–affected creatures receive a new saving throw against this effect each round at the start of their turn, although it is a full-round action (which does not provoke attacks of opportunity) to do so. A creature that succeeds their saving throw is still staggered for the remaining duration.
 
-
-
-
 [[include sog-template]]

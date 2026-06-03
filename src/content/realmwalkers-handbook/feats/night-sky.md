@@ -10,7 +10,6 @@ tier: feat
 ---
 **Source:** Unknown (rw-hb)
 
-
 It was no longer dark, for the twinkling lights danced and distracted in their own new ways.
 
 **Prerequisites:** Dark sphere, Light sphere.

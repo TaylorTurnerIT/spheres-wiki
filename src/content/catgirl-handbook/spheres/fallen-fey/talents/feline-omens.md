@@ -9,7 +9,6 @@ tags: ["fey-blessing"]
 ---
 **Source:** Unknown (catgirl-hb)
 
-
 You may activate the following as fey-blessings:
 
 **Bayun's Meow:** You can produce a dreadful, baying meow. As a move action, all other creatures within close range must succeed at a Will save or be deafened and shaken for 1 round per 5 caster levels (minimum 1). This is a fear and sonic effect. Whenever you use this ability, you may choose to target a single creature rather than affect all creatures in the area.

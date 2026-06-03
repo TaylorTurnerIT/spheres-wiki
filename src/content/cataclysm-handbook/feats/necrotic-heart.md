@@ -9,7 +9,6 @@ tier: feat
 ---
 **Source:** Unknown (cata-hb)
 
-
 Your body is sustained by necromantic power.
 
 **Prerequisite:** Death sphere.

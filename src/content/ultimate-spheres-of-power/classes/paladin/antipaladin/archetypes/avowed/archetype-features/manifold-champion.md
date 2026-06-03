@@ -7,7 +7,6 @@ tags: []
 
 At 20th level, the damage reduction from the avowed's paladin or antipaladin class features is replaced with DR 10/-. In addition, the avowed's damage bonus from smite is no longer halved against targets not opposite to her pledge alignment.
 
-
 ### Pledge of Order
 "You are under arrest for breaching the Yaledian code of conduct, please raise your hands in the air and refrain from any unneeded spell casting or movement." - A typical request made by Yaledian law enforcement, usually met with hostility.
 

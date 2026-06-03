@@ -9,7 +9,6 @@ tier: feat
 ---
 **Source:** Unknown (catgirl-hb)
 
-
 With all your cosmic power and wisdom, you decided to form your raw and potent telekinetic power into the shape of a cat.
 
 **Prerequisites:** Telekinesis sphere; Mind sphere or Enhancement sphere (Bestow Intelligence (enhance)).

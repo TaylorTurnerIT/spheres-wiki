@@ -9,7 +9,6 @@ tags: []
 ---
 **Source:** Unknown (rw-hb)
 
-
 Your magic infuses the target's new form with the speed of powerful elementals.
 
 **Prerequisites:** Alteration sphere (Elemental Transformation (transformation)), caster level 7th.

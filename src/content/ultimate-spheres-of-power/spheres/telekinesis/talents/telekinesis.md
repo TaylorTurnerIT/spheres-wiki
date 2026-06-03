@@ -29,7 +29,6 @@ Creatures or objects made of lighter materials, mostly open space, or reduced to
 | 50th | Colossal+++ | Temple | 4,883 tons |
 | 60th | Colossal++++ | Cathedral | 24,414 tons |
 
-
 Your telekinesis is simple and cannot perform dexterous actions (tying a knot, opening a book, turning a key, etc.). Any object you control with telekinesis has a touch AC of 10 + your casting ability modifier + any size modifier, and a CMD of 10 + your caster level + your casting ability modifier + the object's size modifier. If ever a Strength check is required (such as a creature trying to battle you for control of an item), you may use your casting ability modifier as your Strength modifier for that purpose. If another target attempts to use telekinesis on something you are already affecting with telekinesis, they must overcome your MSD first, or the attempt fails.
 
 The following special rules apply to certain activities you may perform with telekinesis:

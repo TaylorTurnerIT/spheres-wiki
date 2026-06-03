@@ -34,5 +34,4 @@ For example, Astore is an elementalist with the Admixture talent. He creates the
 | 5 | Searing Blast |
 | 6 | Roll twice and admixture both blast types, rerolling any further results of 6 |
 
-
 **Addendum:** You may select 5, 7, 12, 14, 16, 24, or 30 blast type talents with your erratic blast, rolling dice appropriate to the number of talents chosen and abiding by the normal restrictions.

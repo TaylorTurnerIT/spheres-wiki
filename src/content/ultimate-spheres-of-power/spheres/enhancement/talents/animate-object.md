@@ -29,6 +29,5 @@ You can only have a number of animated object Hit Dice at once equal to twice yo
 | 36 | Colossal++ | Warehouse | 19d10+120 | 8 |
 | 42 | Colossal+++ | Cathedral | 22d10+150 | 9 |
 
-
 **Animated Object Special Qualities**
 All animated objects possess construction qualities and construction flaws. However, these are not options the player has the power to choose; an animated object's construction qualities and flaws are instead chosen by the GM to reflect the item in question. For example, animating an object made from cloth grants it the 'cloth' construction flaw, while animating a slingshot would create an animated object with the ranged attack construction quality.

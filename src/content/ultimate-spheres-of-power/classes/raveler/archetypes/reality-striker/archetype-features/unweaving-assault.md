@@ -12,8 +12,6 @@ At 8th level, and again at 15th level, when the reality striker uses this abilit
 
 This replaces the raveler's bonus talents gained at levels 2, 8, 14, and 20. A martial raveler and casting raveler can also select this archetype, replacing their bonus combat talents or bonus magic talents gained at levels 2, 8, 14, and 20 instead.
 
-
-
 ---
 
 [[include cots]]

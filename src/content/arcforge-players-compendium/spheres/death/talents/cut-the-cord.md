@@ -9,7 +9,6 @@ tags: []
 ---
 **Source:** Unknown (lg)
 
-
 **Prerequisites:** Death sphere (Soul Trap (advanced)), caster level 15th.
 
 When using the Soul Trap talent to trap a soul, you may instead choose to sever it. You do not need a gemstone and do not capture its soul. Instead the creature can no longer be resurrected except by use of spells such as wish, miracle or true resurrection or talents such as Supreme Resurrection from the Life sphere.

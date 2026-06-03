@@ -562,7 +562,6 @@ Technomancers supplement unusual technologies with magic and ritual, restoring f
 
 **Path Mastery:** As a full-round action, the technomancer may activate a piece of technological equipment which could normally be activated as a standard action, and use a magic sphere effect which could be used as a standard action or shorter as part of the same action.
 
-
 ### Tempest-Tost
 The tempest-tost's power comes from harnessing the storm, both the one within and without.
 

@@ -171,5 +171,4 @@ Recurring motifs and styles can take on an almost mythical nature over generatio
 
 **Ambiguous Legend (Su):** At 19th level, you may spend an immediate action to exchange any fey-blessings or syncretized magic effects you have created on targets affected by your fey-link with other effects of equal or lesser spell point cost. For each effect, use the lesser duration between the new effect and the remaining duration of the replaced effect.
 
-
 ---

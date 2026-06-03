@@ -22,7 +22,6 @@ You may divine the presence of individual auras. When divining in a location, yo
 | 13-16 | Strong | 1d6x10 minutes |
 | 17+ | Overwhelming | 1d6 days |
 
-
 It is also possible for someone to adopt an alias, as the same aura is detected multiple places, but may be more difficult to identify as the same person. If you possess a secret identity, such as with the vigilante class or in another way with GM approval, your secret identity and primary identity will detect as different people.
 
 **Vigilantes, Fugitives, and Divine Identity:** While it is very easy to identify lower level creatures individually, their auras do not last very long, which is why many petty thieves can go undetected, even in settlements that have access to this ability. However, thieves of great skill or renown can quickly become easy to spot, becoming celebrities in their own right as their deeds are easily identified, even if they themselves are difficult to capture.

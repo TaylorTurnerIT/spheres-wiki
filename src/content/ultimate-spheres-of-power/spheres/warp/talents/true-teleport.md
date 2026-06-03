@@ -24,7 +24,6 @@ To see how well the teleportation works, roll d100 and consult the following tab
 | Viewed once | 01–76 | 77–88 | 89–96 | 97–100 |
 | False destination | — | — | 81–92 | 93–100 |
 
-
 **Familiarity:** "Very familiar" is a place where you have been very often and where you feel at home. "Studied carefully" is a place you know well, either because you can currently physically see it or you have been there often. "Seen casually" is a place that you have seen more than once but with which you are not very familiar. "Viewed once" is a place that you have seen once, possibly using magic such as the Scrying advanced talent. "False destination" is a place that does not truly exist or if you are teleporting to an otherwise familiar location that no longer exists as such or has been so completely altered as to no longer be familiar to you. When traveling to a false destination, roll 1d20+80 to obtain results on the table, rather than rolling d100, since there is no real destination for you to hope to arrive at or even be off target from.
 
 **On Target:** You appear where you want to be.

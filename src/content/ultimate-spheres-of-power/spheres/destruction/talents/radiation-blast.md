@@ -24,7 +24,6 @@ Radiation is a poison effect, whose initial effect causes Constitution drain and
 | High | 22 | 2d4 Con drain | 1d6 Str damage/day |
 | Severe | 30 | 4d6 Con drain | 2d6 Str damage/day |
 
-
 **Initial Effect:** Radiation initially deals Constitution drain unless the exposed character succeeds at a Fortitude saving throw. A new saving throw must be attempted to resist radiation's initial damage each round a victim remains exposed to it.
 
 **Secondary Effect:** Secondary effects from radiation deal Strength damage at a much slower rate than most poisons. This secondary effect ends only after a character succeeds at two consecutive Fortitude saving throws to resist secondary radiation damage. If a character has Strength damage equal to his current Strength score, further damage dealt a secondary effect is instead Constitution damage.

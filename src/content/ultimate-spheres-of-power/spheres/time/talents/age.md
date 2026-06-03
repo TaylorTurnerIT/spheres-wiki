@@ -23,7 +23,6 @@ This cannot cause the target to die of old age, nor become so young they were ne
 | Old Age | -2 to all physical ability scores |
 | Venerable | -3 to all physical ability scores |
 
-
 You may also target an object instead of a creature.
 
 Attended objects are permitted a Will save by their holder to negate this ability. Unless noted, the chosen effect persists for as long as you concentrate, or for 1 minute per caster level if you spend an additional spell point. Choose from the following effects:

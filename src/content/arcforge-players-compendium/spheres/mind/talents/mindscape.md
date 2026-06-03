@@ -9,7 +9,6 @@ tags: ["charm"]
 ---
 **Source:** Unknown (lg)
 
-
 **Prerequisite:** Mind sphere.
 
 You shape a target's thoughts into an ethereal space for engagement.

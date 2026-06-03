@@ -9,7 +9,6 @@ tags: ["utility"]
 ---
 **Source:** Diamond Spheres: Thaumic Potential
 
-
 You may add the following traits to your forms:
 
 **Appealing Visage:** The target gains a +2 circumstance bonus to Diplomacy and Perform checks, in addition to checks made as an impressive display of skill. This bonus increases by 1 for every 4 caster levels you possess. Additionally, any creature that the target impresses has the numerical effects of the impressed condition increased by +2.

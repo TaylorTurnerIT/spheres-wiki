@@ -21,7 +21,6 @@ The duration of an ongoing possession may be reset with the same action and spel
 | Level +1 to level -4 | 1 minute/level | 1 hour/level | 8 hours/level |
 | < level -4 | 10 minutes/level | 1 day/level | 1 day/level |
 
-
 There are two types of possession: passive and active. The wraith chooses which to initiate as part of attempting possession.
 
 **Table: Active Possession**

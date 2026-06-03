@@ -30,7 +30,6 @@ Failure means the target is not usable as an object. A creature under the effect
 | 10th | Precious metals (gold, silver) |
 | 15th | Gems, specialty metals (cold iron, mithril) |
 
-
 Object Transformation offers the following traits, which you may apply to any form:
 
 - **Construct Plating:** The target gains DR 2/adamantine. This improves by 1 per 5 caster levels.

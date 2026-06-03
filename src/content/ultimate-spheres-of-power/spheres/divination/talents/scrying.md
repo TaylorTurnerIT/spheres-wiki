@@ -31,5 +31,4 @@ You may spend 2 spell points and 1 hour to observe a creature or object as if us
 | You have one of the creature's possessions, or have a person present who once owned the object | -4 |
 | You possess a piece of the subject (body part, lock of hair, broken fragment, etc.) | -10 |
 
-
 If the save fails, you can see and hear the subject and its surroundings (approximately 10 feet in all directions of the subject) as if you were present. If the saving throw succeeds, you cannot scry on the target again for 24 hours. If the subject moves, the sensor follows at a speed of up to 150 feet.

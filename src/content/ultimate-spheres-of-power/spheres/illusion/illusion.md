@@ -85,7 +85,6 @@ If the GM deems it appropriate, certain other situations might allow a target to
 | A room filled with fire | Illusionary Sound, Illusionary Touch |
 | An army of orcs chasing the target | Complex Illusion, Illusionary Sound, Illusionary Touch (to engage in combat with target) |
 
-
 **Cover and Concealment:** Figments and glamers provide concealment if they block line of sight. A figment of a wall, for example, would grant total concealment unless the attacker disbelieved the illusion, whereas a figment of fog would only grant partial concealment.
 
 Glamers that are used to change the size of a creature to appear larger than it is grants a 10% miss chance for each size increase due to concealment. If a creature is glamered to appear larger and its larger size would provide a cover bonus to another target, it instead grants this same concealment bonus to miss chance.

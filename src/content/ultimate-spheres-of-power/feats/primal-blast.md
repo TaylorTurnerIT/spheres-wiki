@@ -22,5 +22,4 @@ tier: feat
 | (Plant) package | Acid, force |
 | (Water) package | Cold, crystal |
 
-
 **Author's Note:** When using the Primal Blast feat, you do not substitute an ability score's bonus damage (e.g. Strength, Dexterity) for your casting ability modifier, you instead do not gain your normal ability score as bonus damage and separately add your casting modifier. Effectively, the attack does not add the ability score and adds your casting modifier as a separate damage bonus. This differs from an unchained rogue's finesse training feature, which replaces Strength with Dexterity and then calculates normally. For example, when using the Destruction sphere Energy Strike talent with a 2 handed weapon, you would only receive your casting ability modifier as bonus damage and not 1.5x your casting ability modifier.

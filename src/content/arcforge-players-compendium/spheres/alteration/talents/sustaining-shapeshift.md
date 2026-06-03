@@ -9,7 +9,6 @@ tags: ["utility"]
 ---
 **Source:** Unknown (lg)
 
-
 **Prerequisite:** Alteration sphere.
 
 When you target a creature with a shapeshift that costs at least one spell point, they are considered to have eaten and drank enough food and water to sustain them for 24 hours after the shapeshift ends. 

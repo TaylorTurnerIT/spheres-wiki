@@ -9,7 +9,6 @@ tier: feat
 ---
 **Source:** Unknown (catgirl-hb)
 
-
 "She brings the food on a regular basis, delivering the fine dry cubes of nourishment to my bowl. She is worth protecting." – Meowlin the Omnicatster
 
 **Prerequisites:** Life sphere (Diagnose) or Protection sphere (Status); magic skill bonus +3.

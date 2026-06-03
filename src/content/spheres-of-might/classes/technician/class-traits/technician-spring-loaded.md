@@ -45,7 +45,6 @@ An independent invention cannot wear armor, but is instead considered to always 
 | 19 | 19d10 | Colossal | Fine | +6 | +6 | 5 |
 | 20 | 20d10 | Colossal | Fine | +6 | +6 | 5 |
 
-
 Table: Size Bonuses and Penalties
 
 | Size | Base Str/Dex | Hit Points | AC/Attack | Natural AC | CMB/CMD | Space | Natural Reach | Fly Skill | Stealth Skill |
@@ -59,7 +58,6 @@ Table: Size Bonuses and Penalties
 | Huge | 30/6 | +40 | –2 | +9 | +2 | 15 ft. | 15 ft. | –4 | –8 |
 | Gargantuan | 38/6 | +60 | –4 | +13 | +4 | 20 ft. | 20 ft. | –6 | –12 |
 | Colossal | 46/6 | +80 | –8 | +18 | +8 | 30 ft. | 30 ft. | –8 | –16 |
-
 
 | Size | Cost | Weight |
 |---|---|---|

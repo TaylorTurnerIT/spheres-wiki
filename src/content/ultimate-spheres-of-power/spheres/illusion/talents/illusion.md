@@ -27,13 +27,11 @@ As a standard action, you may spend a spell point to create an illusion within c
 | 50th | Colossal++++++ | 340-ft. cube |
 | 60th | Colossal+++++++ | 500-ft. cube |
 
-
 **Figments:** You may create an illusion that is a figment of anything you may clearly imagine, which behaves according to your desires.
 
 **Glamers:** You may create an illusion that is a glamer. The maximum size of creature you may apply this glamer to is determined by your illusion maximum size.
 
 When you gain this base sphere, you gain the following type of glamer:
-
 
 ---
 

@@ -22,7 +22,6 @@ If the technician possesses chemical insight, he may give the invention a flamet
 | Gargantuan | 60 ft. | 120 ft. | 5 | 100 gp |
 | Colossal | 80 ft. | 160 ft. | 6 | 150 gp |
 
-
 ### Vehicle
 The invention is designed to carry creatures and cargo from one space to another. It can carry a total number of creatures equal to twice its size category (4 Medium creatures can fit inside a Large invention, 8 Medium creatures can fit inside a Huge invention, etc.), and is treated as a quadruped when determining its carrying capacity. A technician may choose to make the vehicle land, sea, or air-based: land vehicles begin with a speed of 40 ft., sea vehicles begin with a swim speed of 30 ft. (land base speed of 0 ft.), and air vehicles begin with the flight improvement (no land speed; a technician must possess steampower insight to create an air vehicle).
 

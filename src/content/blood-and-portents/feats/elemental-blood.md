@@ -27,5 +27,4 @@ When creating a weapon with the Gory Armaments talent, you can have the weapon g
 | Electricity | shocking | shocking burst |
 | Fire | flaming | flaming burst |
 
-
 **Special:** This feat replaces the Acid Blood and Burning Blood feats.

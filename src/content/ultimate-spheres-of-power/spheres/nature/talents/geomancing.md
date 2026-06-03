@@ -67,7 +67,6 @@ If a creature has caught on fire, treat that fire as being Tiny-sized for the pu
 | 30th | Colossal++ | - | 9d6 | 70-ft. square |
 | 35th | Colossal+++ | - | 10d6 | 100-ft. square |
 
-
 **Create Fire:** Concentration, no requirements. You may produce a Diminutive-sized magical fire that burns without fuel. This fire may be 1 size category larger per 5 caster levels, and may be used to ignite flammable materials to create self-sustaining, non-magical fire. If a target is within the area of the created fire, they suffer damage as normal for that fire's size and catch fire. A successful Reflex save halves the damage and negates catching fire.
 
 **Manipulate Lava:** Instantaneous or concentration, requires lava. You may manipulate lava. This is exactly the same as the Freeze and Vortex powers from the (water) package, except you must spend an additional spell point for each ability, and you must target lava. Frozen lava becomes obsidian, with a hardness of 5 and 3 hit points per caster level and does not deal damage per round to trapped creatures.
@@ -103,7 +102,6 @@ While this effect is instantaneous and thus cannot be dispelled, ore breaks back
 | Steel | 30/in. thickness | 10 |
 | Tin | 20/in. thickness | 9 |
 
-
 **Table: Recover Ore**
 
 | Minimum Caster Level | Required Earth to Pull From | Ore Size Recovered | Ore Damage | Ore Weight (maximum) | Sample Item* |
@@ -117,7 +115,6 @@ While this effect is instantaneous and thus cannot be dispelled, ore breaks back
 | 16 | 125-ft. cube | Huge | 2d6 | 16 tons | Wagon |
 | 32 | 350-ft. cube | Gargantuan | 3d6 | 125 tons | Catapult |
 | 64 | 500-ft. cube | Colossal | 4d6 | 2,500 tons | Ship |
-
 
 *Sample items listed are sized for a Medium-sized creature; modify the object size accordingly for objects sized for smaller or larger creatures.
 
@@ -157,7 +154,6 @@ In place of animating a branch of Large-size or larger, you may animate a pair o
 | Huge | Juvenile Tree | +2 | 2d6 | 15 ft. | 5 | 5 | 50 |
 | Gargantuan | Typical Adult Tree | +4 | 3d6 | 20 ft. | 4 | 5 | 150 |
 | Colossal | Massive Tree | +8 | 4d6 | 30 ft. | 3 | 5 | 500 |
-
 
 **Number of Branches Per Size Category of Tree**
 
@@ -200,7 +196,6 @@ Running or charging requires a DC 20 Acrobatics check, falling prone on a failur
 | Huge | 4 |
 | Gargantuan | 8 |
 | Colossal | 16 |
-
 
 **Vortex:** Concentration, requires a large body of liquid. You may create a spinning vortex in a body of liquid that sucks creatures and objects to its center. This vortex is 5 feet wide at its base, is 10 feet high + 5 feet per 5 caster levels, and is half as wide at the top as it is high. Any creature entering this area must succeed at a Reflex save or suffer bludgeoning damage equal to 1d8 + 1/2 your caster level (minimum 0). If the creature is smaller than the vortex, they must succeed at a second Reflex save or be pulled into the middle of the vortex. Creatures in the middle of the vortex suffer bludgeoning damage once per round with no save, and must succeed at a Reflex save each round or be unable to move, and on a success may only move at half their swim speed. A vortex cannot contain more creatures than would exceed its volume.
 

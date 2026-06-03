@@ -9,7 +9,6 @@ tags: ["utility"]
 ---
 **Source:** Diamond Spheres: Hustle & Bustle
 
-
 You may add the following traits to your forms:
 
 **Powerful Charge:** Choose one natural attack the target possesses. When charging, that attack deals damage as if it were one size larger and receives 1-1/2 times the target's Strength bonus to damage instead of 1 times.

@@ -49,7 +49,6 @@ If this expunge is used on a creature that is already spellburned, they immediat
 | 17th | 1d8 |
 | 21st | 2d6 |
 
-
 **Note:** The expunge ability is created with the intention of being used upon other spellcasters that utilize the Spheres of Power system of magic, but can be made to work with other systems of magic as well. When used against a spellcaster that utilizes the core system of magic in the Pathfinder Roleplaying Game, a GM may allow it to damage spell slots or spells prepared. To calculate which spells are affected, total the number of spell point damage taken. The caster suffering from the spell point damage talent may then choose an amount of spell slots or prepared spells to lose. They must choose an amount of spells that amount to the points cost, following this list to determine the value of each spell level in spell points:
 
 **Level 1-2:** 1 spell point, **Level 3-5:** 2 spell points, **Level 6-8:** 3 spell points, **Level 9:** 4 spell points.

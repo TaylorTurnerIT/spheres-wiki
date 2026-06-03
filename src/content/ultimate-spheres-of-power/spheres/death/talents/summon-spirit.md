@@ -31,7 +31,6 @@ You may spend 3 spell points and 1 hour to summon the spirit of a dead creature.
 | Possession or garment | -4 |
 | Corpse/remains | -10 |
 
-
 **Table: Time Deceased**
 
 | Time the Creature has been Dead | Will Save Modifier |
@@ -40,7 +39,6 @@ You may spend 3 spell points and 1 hour to summon the spirit of a dead creature.
 | 10 years | +4 |
 | 100 years | +6 |
 | 1000 years | +8 |
-
 
 On a successful saving throw, the target does not appear and may choose to retaliate spiritually, giving you 2 temporary negative levels that last 24 hours (meaning you must save against them becoming permanent). While friends may choose to purposefully fail their saving throw and come willingly, in most other cases being ripped from the afterlife is a horrid experience and can turn even the nicest of spirits hostile. If a spirit succeeds at their saving throw against this effect they cannot be summoned again by the same caster for 1 month. Sometimes, the spirits of heroes, kings, and others are protected by a deity and are simply unable to be summoned.
 

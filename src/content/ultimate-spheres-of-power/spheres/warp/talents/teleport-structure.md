@@ -26,7 +26,6 @@ If you use Group Teleport in conjunction with this talent, you may teleport all 
 | 25th | Colossal+ | Tavern |
 | 30th | Colossal++ | Castle |
 
-
 ##### Warping Structures (Store and Teleport Structure)
 A vehicle or building that is occupied is counted as attended or in a creature's possession, preventing it from being teleported or stored unless all occupying creatures are willing and/or helpless, or targeted with Unwilling Teleport.
 

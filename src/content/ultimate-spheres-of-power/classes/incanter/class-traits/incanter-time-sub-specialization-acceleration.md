@@ -16,7 +16,6 @@ At 8th level, your movement ignores difficult terrain. Once per day as a non-act
 **Rapid Movement (Su)**
 At 20th level, you gain an additional move action each round, but it may only be used for either the move, stand up, or mount/dismount actions.
 
-
 ### War
 **Seize the Initiative (Su):** At 3rd level, whenever the incanter and his allies roll for initiative, he can grant one ally within 30 feet the ability to roll twice and take either result. This decision is made before the initiative roll is made. He can use this ability a number of times per day equal to 3 + his casting ability modifier.
 

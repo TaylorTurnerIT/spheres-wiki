@@ -9,7 +9,6 @@ tier: feat
 ---
 **Source:** Unknown (catgirl-hb)
 
-
 **Prerequisites:** Time sphere, caster level 5th.
 
 **Benefits:** Whenever you cast a sphere effect, you may instead delay the sphere effect and create a temporal mote attached to either the targets of the spell or the targeted square or grid intersection. All targets and variables for the sphere effect must be chosen when the effect is delayed. You cannot choose to concentrate on a delayed sphere effect and must choose to spend an additional spell point to maintain the sphere effect when the effect is first delayed.

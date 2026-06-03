@@ -9,7 +9,6 @@ tags: []
 ---
 **Source:** Unknown (lg)
 
-
 **Prerequisites:** Death sphere (Soul Trap (advanced)), Mind sphere (Inception (charm), Mass Charm, Powerful Charm), caster level 15th.
 
 When you use Cut The Cord* or Soul TrapUSoP on a creature, any recollection of the target is wiped from existence. Any memories including that target are revised such that no creature which can be affected by your charm ever recalls the target's existence, their memories being revised as per the Inception greater charm (this effect functions even across planes). You can choose to exempt any number of creatures from the memory revisions of this talent.
