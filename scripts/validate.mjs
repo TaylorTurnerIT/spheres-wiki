@@ -94,24 +94,20 @@ for (const filePath of allFiles) {
 
 for (const [id, files] of idMap.entries()) {
   if (files.length > 1) {
+    const fileList = files.map((f) => path.relative(contentDir, f)).join(", ");
     console.error(
-      `Error: Duplicate ID "${id}" found in ${files.length} files:`,
+      `Error: Duplicate ID "${id}" found in ${files.length} files: [${fileList}]`,
     );
-    for (const f of files) {
-      console.error(`  ${path.relative(contentDir, f)}`);
-    }
     hasError = true;
   }
 }
 
 for (const [tag, files] of [...referencedTags.entries()].sort()) {
   if (definedTags.has(tag) || isSyntheticTag(tag)) continue;
+  const fileList = files.map((f) => path.relative(contentDir, f)).join(", ");
   console.error(
-    `Undefined tag "${tag}" referenced in ${files.length} file(s):`,
+    `Undefined tag "${tag}" referenced in ${files.length} file(s): [${fileList}]`,
   );
-  for (const f of files) {
-    console.error(`  ${path.relative(contentDir, f)}`);
-  }
   hasError = true;
 }
 
