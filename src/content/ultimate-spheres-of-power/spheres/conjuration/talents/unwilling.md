@@ -8,7 +8,7 @@ tier: basic
 tags: []
 ---
 
-^^**Source:** [https://www.drivethrurpg.com/product/297259/Spheres-Apocrypha-Cohorts-and-Companions?affiliate_id=549120 Spheres Apocrypha: Cohorts & Companions]^^
+^^**Source:** [https://www.drivethrurpg.com/product/297259/Spheres-Apocrypha-Cohorts-and-Companions Spheres Apocrypha: Cohorts & Companions]^^
 
 Your Conjuration sphere companion serves you unwillingly. Whenever you summon the companion, the first time you or it rolls for initiative during a combat encounter, or whenever you are engaged in an activity that requires a skill check and more then 1 round to accomplish (such as crafting items, recuperating, or researching rituals), it must attempt a Will saving throw against your Conjuration sphere DC. If the companion fails the Will save, you establish control over the companion.
 
