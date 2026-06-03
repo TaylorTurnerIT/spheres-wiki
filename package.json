@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/validate-tags.mjs && astro build && pagefind --site dist",
+    "build": "node scripts/validate.mjs && astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",
@@ -16,7 +16,7 @@
     "test:e2e:docker": "docker compose -f docker-compose.e2e.yml up --build --abort-on-container-exit --exit-code-from playwright",
     "test:e2e:docker:full": "docker build -f Dockerfile.e2e -t spheres-wiki-e2e . && docker run --rm spheres-wiki-e2e",
     "test:all": "vitest run && playwright test",
-    "validate": "node scripts/validate-v2.mjs && node scripts/validate-tags.mjs"
+    "validate": "node scripts/validate.mjs"
   },
   "dependencies": {
     "@fontsource/cinzel": "^5.2.8",

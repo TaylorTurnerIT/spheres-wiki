@@ -30,7 +30,20 @@ Tests: 25,436 passed (no regression)
 
 ---
 
-## Fix 2: Merge validate scripts (planned)
+## Fix 2: Merge validate scripts into single pass
+
+**Change**: `validate-v2.mjs` + `validate-tags.mjs` → single `validate.mjs`. One file walk, one YAML parse per file. Also wired into `build` so v2 consistency now checked on every build.
+
+**Measured (3 runs each, load avg ~8):**
+
+| Command | avg real | delta |
+|---------|----------|-------|
+| `node scripts/validate-tags.mjs && node scripts/validate-v2.mjs` (old) | 2.43s | — |
+| `node scripts/validate.mjs` (new) | 1.09s | **-1.34s (-55%)** |
+
+Note: full `npm run build` times showed high variance (59-81s) due to system load avg 8.2 — astro portion is unchanged, variance is OS noise.
+
+Tests: 25,436 passed (no regression)
 
 ---
 
