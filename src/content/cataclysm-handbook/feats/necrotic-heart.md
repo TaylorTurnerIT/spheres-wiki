@@ -7,7 +7,6 @@ sphere: death
 tags: ["necrosis"]
 tier: feat
 ---
-**Source:** Unknown (cata-hb)
 
 Your body is sustained by necromantic power.
 

@@ -7,7 +7,6 @@ sphere: mind
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (catgirl-hb)
 
 You wrap the weary kittens in a soft and warm blanket so they might drift off to sleep.
 

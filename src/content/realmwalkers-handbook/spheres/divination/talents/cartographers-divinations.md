@@ -7,7 +7,6 @@ sphere: divination
 tier: advanced
 tags: ["divine", "utility"]
 ---
-**Source:** Unknown (rw-hb)
 
 Great diviners often learn a number of wide-reaching but imprecise tools which can map entire regions and battlefields, grant precise directions, and learn about the terrain.
 

@@ -7,7 +7,6 @@ sphere: warp
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Warp sphere (Pouncing Teleport, Segmented Warp), caster level 5th.
 

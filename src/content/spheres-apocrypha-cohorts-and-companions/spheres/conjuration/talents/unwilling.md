@@ -8,8 +8,6 @@ tier: basic
 tags: []
 ---
 
-^^**Source:** [https://www.drivethrurpg.com/product/297259/Spheres-Apocrypha-Cohorts-and-Companions Spheres Apocrypha: Cohorts & Companions]^^
-
 Your Conjuration sphere companion serves you unwillingly. Whenever you summon the companion, the first time you or it rolls for initiative during a combat encounter, or whenever you are engaged in an activity that requires a skill check and more then 1 round to accomplish (such as crafting items, recuperating, or researching rituals), it must attempt a Will saving throw against your Conjuration sphere DC. If the companion fails the Will save, you establish control over the companion.
 
 As long as you have control over your companion it obeys your commands and treats you as friendly for the purposes of the Handle Animal skill (if it possesses the bestial archetype). However if the companion succeeds on its Will save (you are not informed if it succeeds) the companion breaks free from your control and seeks revenge against you. A creature free from your control cannot be dismissed as a free action, and remains summoned for the remainder of its normal duration plus an additional minute per caster level.

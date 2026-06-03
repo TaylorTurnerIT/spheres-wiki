@@ -7,7 +7,6 @@ sphere: mind
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Mind sphere (Mindscape (advanced, charm)), caster level 5th.
 

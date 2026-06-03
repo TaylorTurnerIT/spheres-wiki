@@ -7,7 +7,6 @@ sphere: protection
 tier: advanced
 tags: ["aegis"]
 ---
-**Source:** Unknown (samd)
 
 **Prerequisites:** Protection sphere (Deathless (aegis)), caster level 7th.
 

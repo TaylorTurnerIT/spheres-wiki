@@ -7,7 +7,6 @@ sphere: telekinesis
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Telekinesis sphere (Telekinetic Maneuver), caster level 5th.
 

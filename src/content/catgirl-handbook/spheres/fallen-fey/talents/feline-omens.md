@@ -7,7 +7,6 @@ sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---
-**Source:** Unknown (catgirl-hb)
 
 You may activate the following as fey-blessings:
 

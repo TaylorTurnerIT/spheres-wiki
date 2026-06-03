@@ -7,7 +7,6 @@ sphere: conjuration
 tier: basic
 tags: []
 ---
-**Source:** Unknown (lots)
 
 A guileful companion may combine skill spheres and talents to perform unique actions. A guileful companion gains Trade Expertise as a bonus talent.
 

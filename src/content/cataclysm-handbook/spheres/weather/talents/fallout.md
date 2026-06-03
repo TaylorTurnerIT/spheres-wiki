@@ -7,7 +7,6 @@ sphere: weather
 tier: basic
 tags: []
 ---
-**Source:** Unknown (cata-hb)
 
 Fallout of severity level 3 forces creatures inside the area to attempt a Fortitude save each hour (DC 15, +1 per previous check) or take 1 point of Constitution damage.
 

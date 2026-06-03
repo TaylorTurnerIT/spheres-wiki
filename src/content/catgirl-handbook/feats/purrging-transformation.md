@@ -8,7 +8,6 @@ dualSphere: alteration
 tags: ["dual-sphere"]
 tier: feat
 ---
-**Source:** Unknown (catgirl-hb)
 
 **Prerequisites:** Alteration sphere, Life sphere.
 

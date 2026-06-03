@@ -7,7 +7,6 @@ sphere: warp
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Warp sphere (Distant Teleport, Unseeing Teleport), caster level 10th.
 

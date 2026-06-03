@@ -12,4 +12,3 @@ tags: ["ghost-strike"]
 
 You may spend an additional spell point when using avasculation to cause the target to fall to 1 hp rather half their maximum hp on a failed Fortitude save.
 
-**Source:** Card Casting 2: Counters and Control

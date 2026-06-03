@@ -7,7 +7,6 @@ sphere: alteration
 tier: basic
 tags: ["utility"]
 ---
-**Source:** Diamond Spheres: Thaumic Potential
 
 You may add the following traits to your forms:
 

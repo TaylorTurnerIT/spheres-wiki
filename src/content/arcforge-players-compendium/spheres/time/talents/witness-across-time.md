@@ -7,7 +7,6 @@ sphere: time
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Time sphere, caster level 10th.
 

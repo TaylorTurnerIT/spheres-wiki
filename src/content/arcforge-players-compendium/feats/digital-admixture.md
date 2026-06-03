@@ -7,7 +7,6 @@ sphere: destruction
 tags: ["admixture"]
 tier: feat
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Destruction sphere (Admixture), Technomancy sphere.
 

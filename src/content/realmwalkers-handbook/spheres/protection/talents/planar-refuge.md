@@ -7,7 +7,6 @@ sphere: protection
 tier: advanced
 tags: ["aegis", "ward"]
 ---
-**Source:** Unknown (rw-hb)
 
 Your magics create refuge against the dangers of space and planes unknown.
 

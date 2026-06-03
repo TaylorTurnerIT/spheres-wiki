@@ -7,7 +7,6 @@ sphere: mind
 tier: advanced
 tags: ["charm"]
 ---
-**Source:** Unknown (lg)
 
 **Prerequisite:** Mind sphere.
 

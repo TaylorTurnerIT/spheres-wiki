@@ -7,7 +7,6 @@ sphere: alteration
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisite:** Alteration sphere.
 

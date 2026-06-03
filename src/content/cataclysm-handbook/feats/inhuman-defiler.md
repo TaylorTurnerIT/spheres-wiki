@@ -7,7 +7,6 @@ sphere: death
 tags: ["defiler", "drawback", "necrosis"]
 tier: feat
 ---
-**Source:** Unknown (cata-hb)
 
 Your destructive powers and undead ambitions feed into each other.
 

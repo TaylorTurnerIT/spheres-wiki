@@ -12,4 +12,3 @@ tags: []
 
 You may create a glyph as a standard action rather than using the normal casting time.
 
-**Source:** Card Casting 2: Counters and Control

@@ -7,7 +7,6 @@ sphere: death
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Death sphere (Soul Trap (advanced)), Mind sphere (Inception (charm), Mass Charm, Powerful Charm), caster level 15th.
 

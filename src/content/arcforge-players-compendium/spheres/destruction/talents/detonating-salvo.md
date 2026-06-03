@@ -7,7 +7,6 @@ sphere: destruction
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Destruction sphere (Blast Salvo, Explosive Orb).
 

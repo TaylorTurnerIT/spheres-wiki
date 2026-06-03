@@ -7,7 +7,6 @@ sphere: divination
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Divination sphere (Greater Divine [range], Viewing (divine)), caster level 10th.
 

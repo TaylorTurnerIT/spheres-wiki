@@ -7,7 +7,6 @@ sphere: alteration
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (rw-hb)
 
 Your magic infuses the target's new form with the speed of powerful elementals.
 

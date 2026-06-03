@@ -7,7 +7,6 @@ sphere: death
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Death sphere (Soul Trap (advanced)), caster level 15th.
 

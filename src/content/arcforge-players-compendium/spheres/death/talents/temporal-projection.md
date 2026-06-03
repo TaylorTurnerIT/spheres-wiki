@@ -7,7 +7,6 @@ sphere: death
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Death sphere (Astral Projection (advanced), Astral Travel (advanced), Project Spirit (advanced)), Time sphere, caster level 20th.
 

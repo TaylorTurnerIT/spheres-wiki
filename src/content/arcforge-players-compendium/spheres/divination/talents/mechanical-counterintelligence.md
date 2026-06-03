@@ -7,7 +7,6 @@ sphere: divination
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Divination sphere (Detect Scrying (sense)).
 

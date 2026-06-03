@@ -7,7 +7,6 @@ sphere: divination
 tier: advanced
 tags: ["utility"]
 ---
-**Source:** Unknown (lg)
 
 **Prerequisites:** Divination sphere (Detect Spellcaster (divine)).
 

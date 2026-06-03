@@ -7,7 +7,6 @@ sphere: illusion
 tier: advanced
 tags: []
 ---
-**Source:** Unknown (catgirl-hb)
 
 Whenever you create an illusion, you may empower it to be incredibly difficult to perceive and disbelieve.
 

@@ -7,7 +7,6 @@ sphere: mind
 tier: basic
 tags: ["charm"]
 ---
-**Source:** Unknown (lots)
 
 You bombard the target with shocking revelations and displays which leave them reeling.
 

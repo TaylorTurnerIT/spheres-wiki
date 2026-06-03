@@ -12,4 +12,3 @@ You form a manabond that makes targeting between creatures more costly. Whenever
 
 For every 10 caster levels you possess, you may increase the spell point cost by an additional 1.
 
-**Source:** Card Casting 2: Counters and Control

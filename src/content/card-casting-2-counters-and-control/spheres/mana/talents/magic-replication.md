@@ -18,4 +18,3 @@ Time clones created with this talent cannot create additional time clones or sim
 
 *Multitarget Spell (amp):* You can spend 1 additional spell point on an effect to choose one additional target within range for a targeted effect. If the effect requires an attack roll, you must make a separate attack roll for the new target, and they are allowed a saving throw as normal. This reduces the effect's caster level by 4
 
-**Source:** Card Casting 2: Counters and Control

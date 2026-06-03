@@ -7,7 +7,6 @@ sphere: mind
 tier: basic
 tags: ["charm"]
 ---
-**Source:** Unknown (lots)
 
 You stoke the target's anger into a raging inferno.
 
