@@ -104,6 +104,18 @@ svg {
   /* CTA */
   --clr-cta: #2c8738;
 
+  /* Tag semantic color buckets — ≤5 hues
+     Bucket 1: entry-type  → borrows --clr-power / --clr-might / --clr-brand
+     Bucket 2: tier/level  → amber family */
+  --clr-tag-tier-base:  #6b3c00;   /* deep amber: Base Ability */
+  --clr-tag-tier-basic: #9a6200;   /* golden amber: Basic talent */
+  --clr-tag-tier-adv:   #1a3a5a;   /* dark navy: Advanced talent */
+  /* Bucket 3: provenance */
+  --clr-tag-prov:       #474540;   /* warm gray: 3PP content */
+  /* Bucket 4: PF1e rules descriptor */
+  --clr-tag-rules:      #8c1d40;   /* crimson: Ex / Su / Sp */
+  /* Bucket 5: sphere cross-reference → auto-gen uses var(--clr-{system}) */
+
   /* Spacing scale */
   --sp-1: 4px;
   --sp-2: 8px;
