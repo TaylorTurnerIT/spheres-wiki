@@ -80,18 +80,18 @@ const FeatContent = collEntry ? (await render(collEntry)).Content : null;
 
   <div class="content-columns">
     <div class="content-main">
-      <h1
+            <span data-pagefind-meta={`title:${feat.name}`} hidden></span>
+      <span data-pagefind-meta={`sphere:${sphere.name}`} hidden></span>
+      <span data-pagefind-filter="system:Spheres of Might" hidden></span>
+      <span data-pagefind-filter="type:feat" hidden></span>
+      <span data-pagefind-meta={`tags:${feat.tags.join(', ')}`} hidden></span>
+<h1
         class="page-title might"
         id="overview"
         transition:name={`entry-title-${feat.id}`}
         data-pagefind-weight="2.0"
-        data-pagefind-meta={`title:${feat.name}`}
-        data-pagefind-meta={`sphere:${sphere.name}`}
         
-        data-pagefind-filter="system:Spheres of Might"
         
-        data-pagefind-filter="type:feat"
-        data-pagefind-meta={`tags:${feat.tags.join(', ')}`}
       >
         {feat.name}
       </h1>

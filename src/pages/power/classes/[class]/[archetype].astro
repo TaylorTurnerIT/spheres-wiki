@@ -230,15 +230,15 @@ const formatBaseFeatureName = (id: string) => {
   <div class="content-columns">
     <div class="content-main">
 
-      <h1
+            <span data-pagefind-meta={`title:${archetype.name}`} hidden></span>
+      <span data-pagefind-filter="type:archetype" hidden></span>
+      <span data-pagefind-filter="system:Spheres of Power" hidden></span>
+<h1
         class="page-title power"
         id="overview"
         data-pagefind-weight="10"
-        data-pagefind-meta={`title:${archetype.name}`}
         
-        data-pagefind-filter="type:archetype"
         
-        data-pagefind-filter="system:Spheres of Power"
       >
         {archetype.name}
       </h1>

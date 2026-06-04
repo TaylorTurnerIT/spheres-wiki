@@ -164,15 +164,15 @@ const groups: TocGroup[] = sections.map(sec => ({
   <div class="content-columns">
     <div class="content-main">
 
-      <h1
+            <span data-pagefind-meta={`title:${sphere.name}`} hidden></span>
+      <span data-pagefind-filter="type:sphere" hidden></span>
+      <span data-pagefind-filter="system:Spheres of Power" hidden></span>
+<h1
         class="page-title power"
         id="overview"
         data-pagefind-weight="10"
-        data-pagefind-meta={`title:${sphere.name}`}
         
-        data-pagefind-filter="type:sphere"
         
-        data-pagefind-filter="system:Spheres of Power"
       >
         <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
         {sphere.name}

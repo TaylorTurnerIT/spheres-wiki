@@ -77,17 +77,17 @@ const orderedTagIds = buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {});
 
   <div class="content-columns">
     <div class="content-main">
-      <h1
+            <span data-pagefind-meta={`title:${trait.name}`} hidden></span>
+      <span data-pagefind-filter="type:class-trait" hidden></span>
+      <span data-pagefind-filter="system:Spheres of Power" hidden></span>
+      <span data-pagefind-meta={`class:${cls.name}`} hidden></span>
+      <span data-pagefind-meta={`tags:${trait.tags.join(', ')}`} hidden></span>
+<h1
         class="page-title power"
         id="overview"
         data-pagefind-weight="2.0"
-        data-pagefind-meta={`title:${trait.name}`}
         
-        data-pagefind-filter="type:class-trait"
         
-        data-pagefind-filter="system:Spheres of Power"
-        data-pagefind-meta={`class:${cls.name}`}
-        data-pagefind-meta={`tags:${trait.tags.join(', ')}`}
       >
         {trait.name}
       </h1>

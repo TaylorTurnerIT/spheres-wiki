@@ -619,7 +619,9 @@ async function search(query: string | null) {
   await loadPagefind();
   const result = await pagefind.search(query);
   const top    = result.results.slice(0, MAX_RESULTS);
-  allData      = await Promise.all(top.map((r: any) => r.data()));
+  const data   = await Promise.all(top.map((r: any) => r.data()));
+  // Filter out the `#overview` sub-results which duplicate the main page result
+  allData      = data.filter((r: any) => !r.url.endsWith('#overview'));
   displayCount = PAGE_SIZE;
 
   renderResults();

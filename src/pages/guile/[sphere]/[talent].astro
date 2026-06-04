@@ -80,19 +80,19 @@ const TalentContent = collEntry ? (await render(collEntry)).Content : null;
 
   <div class="content-columns">
     <div class="content-main">
-      <h1
+            <span data-pagefind-meta={`title:${talent.name}`} hidden></span>
+      <span data-pagefind-meta={`sphere:${sphere.name}`} hidden></span>
+      <span data-pagefind-filter="system:Spheres of Guile" hidden></span>
+      <span data-pagefind-filter="type:talent" hidden></span>
+      <span data-pagefind-meta={`tier:${talent.tier}`} hidden></span>
+      <span data-pagefind-meta={`tags:${talent.tags.join(', ')}`} hidden></span>
+<h1
         class="page-title guile"
         id="overview"
         transition:name={`entry-title-${talent.id}`}
         data-pagefind-weight="2.0"
-        data-pagefind-meta={`title:${talent.name}`}
-        data-pagefind-meta={`sphere:${sphere.name}`}
         
-        data-pagefind-filter="system:Spheres of Guile"
         
-        data-pagefind-filter="type:talent"
-        data-pagefind-meta={`tier:${talent.tier}`}
-        data-pagefind-meta={`tags:${talent.tags.join(', ')}`}
       >
         {talent.name}
       </h1>
