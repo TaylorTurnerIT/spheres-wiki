@@ -1612,7 +1612,7 @@ h6 {
 }
 .carousel-wrapper {
   position: relative;
-  margin: 0px 0 0px;
+  margin: 0 -8px;
 }
 .carousel-btn {
   position: absolute;
@@ -1638,10 +1638,10 @@ h6 {
   border-color: var(--clr-brand);
 }
 .carousel-btn.prev {
-  left: -16px;
+  left: -8px;
 }
 .carousel-btn.next {
-  right: -16px;
+  right: -8px;
 }
 .carousel-btn svg {
   width: 18px;
