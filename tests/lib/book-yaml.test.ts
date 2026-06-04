@@ -8,10 +8,13 @@ const EPOCH_DATE = '1970-01-01';
 
 const contentDir = path.resolve(__dirname, '../../src/content');
 
+const SYSTEM_BOOKS = new Set(['__built-in__']);
+
 function getSourceBookDirs(): string[] {
   if (!fs.existsSync(contentDir)) return [];
   return fs.readdirSync(contentDir)
     .filter(name => fs.statSync(path.join(contentDir, name)).isDirectory())
+    .filter(name => !SYSTEM_BOOKS.has(name))
     .sort();
 }
 
