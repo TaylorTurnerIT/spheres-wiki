@@ -103,7 +103,7 @@ const staticTags = [...tagMap.entries()]
     <div id="sp-tag-templates" hidden>
       {[...tagMap.values()].map(tag => (
         <div data-tag-template={tag.id}>
-          <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} asSpan={true} />
+          <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} asSpan={true} stripLinks={true} />
         </div>
       ))}
     </div>
