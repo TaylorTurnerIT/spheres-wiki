@@ -1,8 +1,11 @@
 # SPEC — Spheres Wiki
 
+> Single source of truth for **what** this project must do: goal, constraints, interface contracts, invariants, open tasks, and bug log.
+> For **how to work in the repo** (structure, commands, content model, conventions) see [`AGENTS.md`](./AGENTS.md).
+
 ## §G Goal
 
-Fast static wiki for Spheres tabletop RPG (Power/Might/Guile/Champions). Content-first: adding new book/sphere/talent requires only markdown+yaml files, no code changes. Deployed GitHub Pages `/spheres-wiki/`.
+Fast static wiki for the Spheres tabletop RPG (Power/Might/Guile/Champions) by Drop Dead Studios — a replacement for the legacy Wikidot site. Content-first: adding a new book/sphere/talent requires only markdown + yaml files, no code changes. Mobile-first UX, ranked client-side search. Deployed to GitHub Pages at `/spheres-wiki/`.
 
 ---
 
@@ -15,6 +18,9 @@ Fast static wiki for Spheres tabletop RPG (Power/Might/Guile/Champions). Content
 - C5. OGL compliance — all content under Open Game License; legal page must exist
 - C6. New sphere in existing system must appear site-wide with only content files added (no component edits) — except icon SVG which requires one `<symbol>` addition to SVGSprite.astro
 - C7. New game system requires coordinated changes across config, CSS, nav, pages — this is acceptable but must be documented in §I
+- C8. Toolchain pinned — Astro 6.x SSG + TypeScript, Node.js ≥ 22.12.0
+- C9. Entry metadata is path-encoded — `src/content/<book>/<type>/*.md`; `type` (and sphere/feats nesting) inferred from path by `inferFromPath` (see I.content), so frontmatter stays minimal
+- C10. All entry `id`s are lowercase kebab-case (`^[a-z0-9-]+$`), enforced by `entrySchema`
 
 ---
 
@@ -42,6 +48,15 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 
 ### I.svg — icon contract
 `SVGSprite.astro` defines `<symbol id="si-{name}">` for each sphere icon name. Sphere entries reference by `icon: {name}` field. `si-fallback` symbol must exist as default.
+
+### I.categorize — section builder
+`src/lib/categorize.ts`: groups a sphere's talents/feats into display sections from the sphere's `categoryDefinitions`/`sectionDefinitions`. Unmatched entries fall into an "Other" catch-all. Each entry is claimed by the first matching category (see V24).
+
+### I.pagefind — search index + ranking
+Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight is marked in `WikiPage.astro`. Result ranking weights primary entries (spheres, classes) above talents/feats (see V18).
+
+### I.layout — page shell
+`WikiPage.astro`: header + sidebar + tab nav + content slot; sets Pagefind indexing scope/weight per page. `Base.astro`: html shell, meta/OG tags, footer, self-hosted fonts + `global.css` load.
 
 ### I.pages — route map (current + target)
 ```
@@ -89,7 +104,17 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 
 ---
 
+## §P Placeholder Conventions
+
+- Placeholder dates **must** use `1970-01-01` (Unix epoch / UTC 0) — never a "plausible" date like 2020-01-01. An obviously wrong date is immediately visible as a stub; a plausible one is silently wrong.
+- Placeholder strings should be conspicuously fake (e.g. `"PLACEHOLDER"`, `"TBD"`). Do not guess real values.
+- `publishedDate` in `_book.yaml` drives errata ordering (V21). A placeholder must never sort before a real date; `1970-01-01` safely predates all real content.
+
+---
+
 ## §V Invariants
+
+**Site / routing / config (V1–V14)**
 
 - V1. Every internal `<a href>` must resolve to an existing route at build time — no 404s in nav, sidebar, or home resource links
 - V2. Adding a book folder (`_book.yaml` + at least one `.md`) must require zero changes outside `src/content/` — content pipeline fully auto-discovers
@@ -105,6 +130,20 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 - V12. No analytics or tracking of any kind — no scripts that phone home, no fingerprinting, no pixel tracking
 - V13. `/privacy/` page must exist, linked from site footer — must disclose: localStorage keys + purpose, GitHub Pages IP collection, third-party link disclaimer, contact email
 - V14. Every `localStorage` write must have documented purpose and user-accessible deletion path — undocumented or infinite-retention keys are prohibited
+
+**Content / schema / errata (V15–V25)**
+
+- V15. All `.md` must match `entrySchema` in `src/content.config.ts`
+- V16. `id` in frontmatter must match filename (without extension)
+- V17. `sourceBook` must match the parent folder slug
+- V18. Search results must prioritize spheres and classes over talents/feats
+- V19. Every sphere icon referenced by an entry must exist in `SVGSprite.astro` (the `si-fallback` of V8 is a safety net, not a substitute)
+- V20. Duplicate tag IDs are prohibited across all books
+- V21. Errata patches (`modifies` field) applied in chronological order of books' `publishedDate` ascending
+- V22. Errata patches do not change original `sourceBook` attribution
+- V23. Errata patches do not leak `modifies` field onto resolved entry
+- V24. Each entry claimed by first matching category definition. Entries sorted by `id` ascending
+- V25. Interactive component initializations and event listeners must run on `astro:page-load` to support Astro View Transitions
 
 ---
 
@@ -144,7 +183,7 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T30 | .      | Add localStorage dismiss to BetaToast component          |               |
 | T31 | .      | Add JSON-LD breadcrumb structured data to detail pages   | V6            |
 | T32 | .      | Add RSS feed route (`/rss.xml`)                          |               |
-| T33 | x      | Self-host fonts — install `@fontsource/cinzel` + `@fontsource/crimson-text`, import in Base.astro, delete `fonts.googleapis.com` link; remove all Umami analytics scripts | V11,V12,C8 |
+| T33 | x      | Self-host fonts — install `@fontsource/cinzel` + `@fontsource/crimson-text`, import in Base.astro, delete `fonts.googleapis.com` link; remove all Umami analytics scripts | V11,V12 |
 | T34 | x      | Write `/privacy/` page — localStorage keys, GitHub Pages IP collection, third-party link disclaimer, contact email | V13 |
 | T35 | x      | Add site footer to Base.astro — links: Privacy, Legal (OGL), Contact; appears on all pages | V13,I.pages |
 | T36 | x      | Add `public/robots.txt` — allow all crawlers, link sitemap | I.pages |
@@ -155,6 +194,13 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T41 | .      | Tag system — resolve 17 multi-sphere tags: assign to primary sphere or leave cross-sphere. Candidates: `admixture` (dest/mana/nature), `air` (dest/nature), `cold` (dest/weather), `fire` (dest/nature), `companion` (alt/conj/mana), `counterspell` (dest/enh/mind), `curse` (death/fate/mana), `light` (dest/light), `metamagic` (fate/ill/warp), `all` (warp/weather), `auxiliary` (dark/div/prot), `champion` (fey/warp), `ghost-strike` (death/fate), `manipulation` (mana/prot), `program` (death/mana/prot), `teamwork` (death/light/weather). | I.content |
 | T42 | .      | Tag system — audit 16 unused tags (defined but not applied to any entry): `background`, `bleed`, `boast`, `cohort`, `equipment`, `item-creation`, `ki-blaster`, `leap`, `legendary`, `minor-artifact`, `mutation`, `potent`, `racial`, `ritual`, `slam`, `stance`. Assign sphere where clear; move cross-sphere ones to `__built-in__`; delete if genuinely obsolete. | I.content |
 | T43 | .      | Tag system — show sphere link on `/tags/[tag]/` detail page when `tag.sphere` is set. | I.pages |
+| T44 | .      | Audit entire website for any possible Flash of Unstyled Content (FOUC) and resolve by removing remote scripts/CSS in favor of local bundling | V11 |
+| T45 | x      | Audit all `src/content` for V15/V16/V17 compliance       | V15,V16,V17 |
+| T46 | x      | Verify `SVGSprite.astro` has all icons named in `src/content/**/*.md` | V19 |
+| T47 | x      | Implement ranking weights in Pagefind for V18            | V18,I.pagefind |
+| T48 | x      | Add validation script for V16 consistency check          | V16           |
+| T49 | x      | Fix mismatch between test expectation ('feats') and implementation ('general-feats') in categorize.test.ts | I.categorize |
+| T50 | x      | Wrap search bar initialization in SiteHeader.astro in an `astro:page-load` event listener | V25 |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
@@ -165,12 +211,17 @@ Then infra (T23→T24→T26→T27→T28→T29→T30→T31→T32).
   - T33+T34 already done
   - T35 (footer) links to /privacy/ which exists; build first
 
+Tasks T44–T50 carried from the legacy AGENTS.md spec: T45–T50 done; **T44 (FOUC audit) still open.**
+
 ---
 
 ## §B Bugs
 
 | id | date       | cause | fix |
 |----|------------|-------|-----|
+| B1 | 2026-05-25 | Search listeners lost on back/forward navigation due to View Transitions swapped DOM | V25 / T50 — init moved to `astro:page-load` |
+| B2 | 2026-05-25 | Archetype selector visuals are unfinished | _(open)_ |
+| B3 | 2026-05-25 | Bestial traits dropdown logic completely broken due to CSS grid refactor | _(open)_ |
 | B4 | 2026-05-29 | `parseSectionContext` used `includes('feat')` — matched "features" in "+++ Companion Features", premature-flushed base ability and reset section context | Changed to `/\bfeats?\b/` |
 | B5 | 2026-06-03 | "SM-" tag needs to be removed from codebase | Resolved |
 | B6 | 2026-06-03 | z-index issue on tags page: tags appear on top of search bar results/dropdown | Added `position: relative` and `z-index: 9999` to `.site-header-wrap` |
