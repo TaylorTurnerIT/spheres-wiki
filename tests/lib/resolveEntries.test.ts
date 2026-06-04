@@ -343,3 +343,17 @@ describe('archetypeMap and archetypeFeatureMap', () => {
     expect(maps.archetypeFeatureMap.get('archetype-feature:apex-shifter-knowledge')!.replaces).toContain('shifter-endurance');
   });
 });
+
+describe('buildTagMap — negative priorities', () => {
+  it('accepts tags with negative priority values', () => {
+    const map = buildTagMap([
+      {
+        slug: '__built-in__',
+        rawTagEntries: [
+          { id: 'talent', label: 'Talent', priority: -10, description: 'A magical ability.', color: 'var(--clr-power)' },
+        ],
+      },
+    ]);
+    expect(map.get('talent')?.priority).toBe(-10);
+  });
+});
