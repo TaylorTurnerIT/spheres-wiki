@@ -44,6 +44,34 @@ const builtinTags = [...tagMap.values()]
 const userTags = [...tagMap.values()]
   .filter(t => t.sourceBook !== "__built-in__")
   .sort((a, b) => a.priority - b.priority || a.label.localeCompare(b.label));
+
+// Group content tags by sphere
+type SphereGroup = {
+  sphereId: string;
+  sphereName: string;
+  sphereSystem: string;
+  tags: typeof userTags;
+};
+
+const sphereGroupMap = new Map<string, SphereGroup>();
+const unassignedTags: typeof userTags = [];
+
+for (const tag of userTags) {
+  if (!tag.sphere) { unassignedTags.push(tag); continue; }
+  const sphereEntry = sphereMap.get(`sphere:${tag.sphere}`);
+  if (!sphereGroupMap.has(tag.sphere)) {
+    sphereGroupMap.set(tag.sphere, {
+      sphereId: tag.sphere,
+      sphereName: sphereEntry?.name ?? tag.sphere,
+      sphereSystem: sphereEntry?.system ?? "power",
+      tags: [],
+    });
+  }
+  sphereGroupMap.get(tag.sphere)!.tags.push(tag);
+}
+
+const sphereGroups = [...sphereGroupMap.values()]
+  .sort((a, b) => a.sphereName.localeCompare(b.sphereName));
 ---
 
 <WikiPage title="Tags — Spheres Wiki" pagefindIgnore={true}>
@@ -110,40 +138,79 @@ const userTags = [...tagMap.values()]
     </div>
   )}
 
-  <div class="section-group" style="margin-top: 32px;">
-    <div class="section-group-header">
-      <span class="section-group-label">Descriptors &amp; Content Tags</span>
-      <div class="section-group-rule" />
-    </div>
-    {userTags.length === 0 ? (
-      <p class="section-empty">No content tags defined yet.</p>
-    ) : (
-      <div class="tag-table">
-        {userTags.map(tag => {
-          const s = stats.get(tag.id)!;
-          return (
-            <div class="tag-row">
-              <div class="tag-row-badge">
-                <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
-              </div>
-              <div class="tag-row-desc" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
-              <div class="tag-row-stats">
-                {s.total > 0 && (
-                  <span class="tag-count">{s.total}</span>
-                )}
-                {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
-                  <span class={`tag-sys-pip ${sys === 'champions' ? 'champ' : sys}`}
-                    title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
-                    {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
-                  </span>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    )}
-  </div>
+  {userTags.length === 0 ? (
+    <p class="section-empty" style="margin-top: 32px;">No content tags defined yet.</p>
+  ) : (
+    <>
+      {sphereGroups.map(group => (
+        <div class="section-group" style="margin-top: 24px;">
+          <div class="section-group-header">
+            <a
+              href={url(`/power/${group.sphereId}/`)}
+              class={`section-group-label sphere-group-label ${group.sphereSystem}`}
+              data-astro-prefetch="hover"
+            >
+              {group.sphereName}
+            </a>
+            <div class="section-group-rule" />
+          </div>
+          <div class="tag-table">
+            {group.tags.map(tag => {
+              const s = stats.get(tag.id)!;
+              return (
+                <div class="tag-row">
+                  <div class="tag-row-badge">
+                    <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+                  </div>
+                  <div class="tag-row-desc" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
+                  <div class="tag-row-stats">
+                    {s.total > 0 && <span class="tag-count">{s.total}</span>}
+                    {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
+                      <span class={`tag-sys-pip ${sys === 'champions' ? 'champ' : sys}`}
+                        title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
+                        {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+
+      {unassignedTags.length > 0 && (
+        <div class="section-group" style="margin-top: 24px;">
+          <div class="section-group-header">
+            <span class="section-group-label">General</span>
+            <div class="section-group-rule" />
+          </div>
+          <div class="tag-table">
+            {unassignedTags.map(tag => {
+              const s = stats.get(tag.id)!;
+              return (
+                <div class="tag-row">
+                  <div class="tag-row-badge">
+                    <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+                  </div>
+                  <div class="tag-row-desc" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
+                  <div class="tag-row-stats">
+                    {s.total > 0 && <span class="tag-count">{s.total}</span>}
+                    {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
+                      <span class={`tag-sys-pip ${sys === 'champions' ? 'champ' : sys}`}
+                        title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
+                        {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </>
+  )}
 </WikiPage>
 
 <style>
@@ -269,6 +336,17 @@ const userTags = [...tagMap.values()]
   .tag-sys-pip.might { background: color-mix(in srgb, var(--clr-might) 12%, transparent); color: var(--clr-might); }
   .tag-sys-pip.guile { background: color-mix(in srgb, var(--clr-guile) 12%, transparent); color: var(--clr-guile); }
   .tag-sys-pip.champ { background: color-mix(in srgb, var(--clr-champ) 12%, transparent); color: var(--clr-champ); }
+
+  a.sphere-group-label {
+    text-decoration: none;
+  }
+  a.sphere-group-label:hover {
+    text-decoration: underline;
+  }
+  a.sphere-group-label.power { color: var(--clr-power); }
+  a.sphere-group-label.might { color: var(--clr-might); }
+  a.sphere-group-label.guile { color: var(--clr-guile); }
+  a.sphere-group-label.champions { color: var(--clr-champ); }
 
   @media (max-width: 600px) {
     .tag-row {
