@@ -56,13 +56,29 @@ const userTags = [...tagMap.values()]
   <h1 class="page-title" id="overview">Tags</h1>
   <hr class="page-title-rule" />
 
+  <p class="tags-intro">
+    Tags appear as colored badges on every entry — talents, feats, spheres, and classes.
+    Hover any badge for a description. Click it to browse every entry that carries that tag.
+  </p>
+
+  <div class="tags-legend">
+    <div class="tags-legend-col">
+      <strong>System Tags</strong> are applied automatically by the wiki based on entry type, tier, and publisher.
+      They appear in the same order on every entry and cannot be set manually in content files.
+    </div>
+    <div class="tags-legend-col">
+      <strong>Descriptor &amp; Content Tags</strong> come from the source books themselves.
+      They describe game mechanics, damage types, creature keywords, and other rule categories
+      defined by each book's authors.
+    </div>
+  </div>
+
   <p class="tags-summary">
-    {tagMap.size} tag{tagMap.size !== 1 ? "s" : ""} defined.
-    Click any tag to browse all entries that carry it.
+    {tagMap.size} tag{tagMap.size !== 1 ? "s" : ""} total &mdash; {builtinTags.length} system, {userTags.length} content.
   </p>
 
   {builtinTags.length > 0 && (
-    <div class="section-group" style="margin-top: 24px;">
+    <div class="section-group" style="margin-top: 16px;">
       <div class="section-group-header">
         <span class="section-group-label">System Tags</span>
         <div class="section-group-rule" />
@@ -131,6 +147,41 @@ const userTags = [...tagMap.values()]
 </WikiPage>
 
 <style>
+  .tags-intro {
+    font-size: var(--fs-sm);
+    color: var(--clr-text);
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .tags-legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+    background: var(--clr-surface);
+    border: 0.5px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 16px;
+  }
+
+  .tags-legend-col {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    line-height: 1.5;
+  }
+
+  .tags-legend-col strong {
+    color: var(--clr-text);
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    .tags-legend {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .tags-summary {
     font-size: var(--fs-sm);
     color: var(--clr-muted);
