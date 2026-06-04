@@ -249,7 +249,7 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       priority: -9,
       description: "Basic talent.",
       sourceBook: "__builtin__",
-      color: "#1a6622",
+      color: "var(--clr-power)",
     },
     {
       type: "tag",

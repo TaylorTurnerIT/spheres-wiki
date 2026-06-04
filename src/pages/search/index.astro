@@ -504,22 +504,10 @@ function renderResults() {
         ${sphere && type !== 'sphere' ? `<span class="tag-wrapper"><span class="talent-tag">${sphere}</span></span>` : ''}
         ${tags.map(t => {
           let c = tagColorMap[t];
-          
-          // 'Talent' and 'Basic' explicitly share a distinct blue color
-          if (t.toLowerCase() === 'talent' || t.toLowerCase() === 'basic') {
-            c = '#174B93';
-          }
 
           // If we have a fully pre-rendered TagBadge component for this tag, inject it
           let templateHtml = tagTemplates[t];
           if (templateHtml) {
-            if (t.toLowerCase() === 'basic') {
-              // Override template style to match our custom color
-              templateHtml = templateHtml.replace(/style="[^"]*"/, `style="--tag-clr: ${c}"`);
-              if (!templateHtml.includes('style=')) {
-                templateHtml = templateHtml.replace('class="talent-tag"', `class="talent-tag" style="--tag-clr: ${c}"`);
-              }
-            }
             return templateHtml;
           }
           
