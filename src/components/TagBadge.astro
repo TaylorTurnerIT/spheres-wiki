@@ -14,7 +14,7 @@ const { tagId, tagMap, bookMetaMap, asSpan = false, stripLinks = false } = Astro
 const tag = tagMap.get(tagId);
 const color = tag?.color ?? "var(--clr-brand)";
 const bookTitle =
-  tag && tag.sourceBook !== "__builtin__"
+  tag && tag.sourceBook !== "__built-in__"
     ? bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook
     : undefined;
 

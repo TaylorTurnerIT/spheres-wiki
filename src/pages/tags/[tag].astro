@@ -143,7 +143,7 @@ export async function getStaticPaths() {
         groups,
         collEntry: tagCollEntries.get(tag.id),
         bookTitle:
-          tag.sourceBook === "__builtin__"
+          tag.sourceBook === "__built-in__"
             ? "Built-in"
             : bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook,
         tagMap,

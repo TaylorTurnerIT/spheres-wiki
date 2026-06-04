@@ -38,11 +38,11 @@ const SYSTEM_ORDER = ["power", "might", "guile", "champions"];
 
 // Split + sort: system tags by priority, user tags by priority then alpha
 const builtinTags = [...tagMap.values()]
-  .filter(t => t.sourceBook === "__builtin__")
+  .filter(t => t.sourceBook === "__built-in__")
   .sort((a, b) => a.priority - b.priority || a.label.localeCompare(b.label));
 
 const userTags = [...tagMap.values()]
-  .filter(t => t.sourceBook !== "__builtin__")
+  .filter(t => t.sourceBook !== "__built-in__")
   .sort((a, b) => a.priority - b.priority || a.label.localeCompare(b.label));
 ---
 
