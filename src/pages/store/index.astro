@@ -71,14 +71,14 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
       <StoreCarousel>
         {latestFirstParty && (
           <div class="new-arrival-item">
-            <div class="arrival-badge official">Official</div>
             <BookCard book={latestFirstParty} />
+            <div class="arrival-badge official">Official</div>
           </div>
         )}
         {latestThirdParty && (
           <div class="new-arrival-item">
-            <div class="arrival-badge third-party">Third-Party</div>
             <BookCard book={latestThirdParty} />
+            <div class="arrival-badge third-party">Third-Party</div>
           </div>
         )}
       </StoreCarousel>
@@ -110,7 +110,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
   </div>
 
   {/* Official Section */}
-  <div class="section-heading" style="margin-top: 40px; border-bottom-width: 2px;">
+  <div class="section-heading" style="margin-top: 20px; border-bottom-width: 2px;">
     <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Official Publishers</span>
     <div class="section-heading-rule"></div>
   </div>
@@ -142,7 +142,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
   {/* Third Party Section */}
   {sortedTPGroups.length > 0 && (
     <>
-      <div class="section-heading" style="margin-top: 40px; border-bottom-width: 2px;">
+      <div class="section-heading" style="margin-top: 20px; border-bottom-width: 2px;">
         <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Third Party Content</span>
         <div class="section-heading-rule"></div>
       </div>

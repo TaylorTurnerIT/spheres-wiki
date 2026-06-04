@@ -1665,8 +1665,9 @@ h6 {
 }
 
 .store-card {
-  flex: 0 0 140px;
+  flex: none;
   max-width: 140px;
+  width: 140px;
   scroll-snap-align: start;
   background: var(--clr-bg);
   border: 0.5px solid var(--clr-border);
@@ -1709,7 +1710,7 @@ h6 {
   border-radius: calc(var(--radius) - 2px);
 }
 .source-callout-wrapper .store-card {
-  flex: 0 0 180px;
+  flex: none;
   max-width: 180px;
   width: 180px;
 }
