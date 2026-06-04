@@ -214,106 +214,6 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
 
   const tagMap = buildTagMap(tagEntriesByBook);
 
-  const builtins: TagEntry[] = [
-    {
-      type: "tag",
-      id: "talent",
-      label: "Talent",
-      priority: -10,
-      description: "A magical ability.",
-      sourceBook: "__builtin__",
-      color: "var(--clr-power)",
-    },
-    {
-      type: "tag",
-      id: "feat",
-      label: "Feat",
-      priority: -10,
-      description: "An extra ability.",
-      sourceBook: "__builtin__",
-      color: "#5a3000",
-    },
-    {
-      type: "tag",
-      id: "base",
-      label: "Base Ability",
-      priority: -9,
-      description: "Base sphere ability.",
-      sourceBook: "__builtin__",
-      color: "#7a4800",
-    },
-    {
-      type: "tag",
-      id: "basic",
-      label: "Basic",
-      priority: -9,
-      description: "Basic talent.",
-      sourceBook: "__builtin__",
-      color: "var(--clr-power)",
-    },
-    {
-      type: "tag",
-      id: "advanced",
-      label: "Advanced",
-      priority: -8,
-      description: "Advanced talent.",
-      sourceBook: "__builtin__",
-      color: "#203F58",
-    },
-    {
-      type: "tag",
-      id: "3pp",
-      label: "3PP",
-      priority: -9,
-      description: "Content from a third-party publisher.",
-      sourceBook: "__builtin__",
-      color: "#7a4200",
-    },
-    {
-      type: "tag",
-      id: "sphere",
-      label: "Sphere",
-      priority: -10,
-      description: "A base sphere.",
-      sourceBook: "__builtin__",
-      color: "var(--clr-brand)",
-    },
-    {
-      type: "tag",
-      id: "ex",
-      label: "Ex",
-      priority: 100,
-      description:
-        "Extraordinary abilities are nonmagical. Effects or areas that suppress or negate magic have no effect on extraordinary abilities. [Source](https://www.aonprd.com/Rules.aspx?ID=414)",
-      sourceBook: "__builtin__",
-      color: "#8C1D40",
-    },
-    {
-      type: "tag",
-      id: "su",
-      label: "Su",
-      priority: 100,
-      description:
-        "Supernatural abilities are magical but not spell-like. Supernatural abilities are not subject to spell resistance and do not function in areas where magic is suppressed or negated (such as an antimagic field). A supernatural ability’s effect cannot be dispelled and is not subject to counterspells. [Source](https://www.aonprd.com/Rules.aspx?ID=414)",
-      sourceBook: "__builtin__",
-      color: "#8C1D40",
-    },
-    {
-      type: "tag",
-      id: "sp",
-      label: "Sp",
-      priority: 100,
-      description:
-        "Spell-like abilities, as the name implies, are magical abilities that are very much like spells. Spell-like abilities are subject to spell resistance and dispel magic. They do not function in areas where magic is suppressed or negated (such as an antimagic field). Spell-like abilities can be dispelled, but they cannot be counterspelled or used to counterspell. [Source](https://www.aonprd.com/Rules.aspx?ID=414)",
-      sourceBook: "__builtin__",
-      color: "#8C1D40",
-    },
-  ];
-
-  for (const b of builtins) {
-    if (!tagMap.has(b.id)) tagMap.set(b.id, b);
-  }
-
   const maps = buildResolvedMaps(allBooks);
 
   for (const [, sphere] of maps.sphereMap) {
@@ -325,7 +225,7 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
         label: `${sphere.name} (Sphere)`,
         priority: 50,
         description: `Associated with the ${sphere.name} sphere.`,
-        sourceBook: "__builtin__",
+        sourceBook: "__built-in__",
         color: `var(--clr-${sphere.system})`,
       });
     }
