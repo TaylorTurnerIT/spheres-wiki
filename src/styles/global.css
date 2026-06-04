@@ -1001,8 +1001,8 @@ h6 {
 }
 .home-store .store-card {
   flex: unset;
-  max-width: 140px;
-  width: 140px;
+  max-width: 180px;
+  width: 180px;
 }
 .shop-btn {
   display: inline-flex;
@@ -1665,8 +1665,8 @@ h6 {
 }
 
 .store-card {
-  flex: 0 0 140px;
-  max-width: 140px;
+  flex: 0 0 180px;
+  max-width: 180px;
   scroll-snap-align: start;
   background: var(--clr-bg);
   border: 0.5px solid var(--clr-border);
