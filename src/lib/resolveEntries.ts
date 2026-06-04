@@ -25,6 +25,7 @@ type RawTagEntry = {
   color?: string;
   priority: number;
   description: string;
+  sphere?: string;
 };
 
 export function buildTagMap(

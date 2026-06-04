@@ -2,7 +2,7 @@
 id: reach
 name: "Reach"
 level: 1
-tags: ["ex", "origin"]
+tags: ["ex"]
 ---
 
 15 ft.;

@@ -149,6 +149,7 @@ export type TagEntry = {
   priority: number;
   description: string;
   sourceBook: string;
+  sphere?: string;
 };
 
 export type FeatEntry = {

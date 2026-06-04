@@ -145,6 +145,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     color: z.string().optional(),
     priority: z.number().int(),
     description: z.string(),
+    sphere: z.string().optional(),
   }),
 ]);
 
