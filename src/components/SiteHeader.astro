@@ -10,8 +10,11 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
       </svg>
     </button>
     <a href={url("/")} class="site-title" data-astro-prefetch="hover">
-      <span class="name">{SITE_TITLE}</span>
-      <span class="tagline">{SITE_TAGLINE}</span>
+      <img src={url("/favicon.svg")} alt="Site Logo" class="site-logo" />
+      <div class="site-title-text">
+        <span class="name">{SITE_TITLE}</span>
+        <span class="tagline">{SITE_TAGLINE}</span>
+      </div>
     </a>
     <div class="header-search-anchor">
       <div class="search-bar" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-owns="search-results" id="search-combobox">
