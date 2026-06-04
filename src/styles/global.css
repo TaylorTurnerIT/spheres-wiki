@@ -1698,6 +1698,7 @@ h6 {
 }
 .store-card-cover {
   width: 100%;
+  height: auto;
   aspect-ratio: 17 / 22;
   object-fit: cover;
   border-radius: calc(var(--radius) - 2px);
@@ -1705,6 +1706,7 @@ h6 {
 }
 .store-card-cover-placeholder {
   width: 100%;
+  height: auto;
   aspect-ratio: 17 / 22;
   background: var(--clr-border);
   border-radius: calc(var(--radius) - 2px);
