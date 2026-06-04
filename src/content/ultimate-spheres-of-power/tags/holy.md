@@ -5,4 +5,5 @@ priority: 0
 color: "#4A235A"
 id: "holy"
 label: "Holy"
+sphere: "destruction"
 ---
