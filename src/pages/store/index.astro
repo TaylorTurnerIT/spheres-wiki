@@ -68,7 +68,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
           <div class="section-heading-rule"></div>
         </div>
       )}
-      <StoreCarousel>
+      <div style="display: flex; gap: 14px; padding: 12px 8px 16px 0; margin-top: -12px;">
         {latestFirstParty && (
           <div class="new-arrival-item">
             <BookCard book={latestFirstParty} />
@@ -81,7 +81,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
             <div class="arrival-badge third-party">Third-Party</div>
           </div>
         )}
-      </StoreCarousel>
+      </div>
     </div>
 
     {/* Featured Releases */}
