@@ -154,7 +154,7 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
               <div class="search-result-title">${displayTitle}</div>
               <div class="search-result-meta">
                 ${tier ? `<span class="search-badge">${tier}</span>` : ''}
-                ${tags.map((t: string) => `<span class="search-badge">${t}</span>`).join('')}
+                ${tags.map((t: string) => `<span class="search-badge">${t.toLowerCase() === 'base' ? 'Base Ability' : t}</span>`).join('')}
               </div>
               <div class="search-result-excerpt">${r.excerpt}</div>
             </a>

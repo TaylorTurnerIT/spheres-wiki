@@ -1,5 +1,6 @@
 ---
 import WikiPage from '@/layouts/WikiPage.astro';
+import TagBadge from '@/components/TagBadge.astro';
 import { url } from '@/lib/url';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
@@ -48,7 +49,7 @@ const typeKeys   = new Set(['sphere', 'talent', 'feat', 'class', 'archetype', 'c
 const staticTags = [...tagMap.entries()]
   .filter(([id]) => !sphereNamesLower.has(id) && !systemKeys.has(id) && !typeKeys.has(id))
   .sort((a, b) => (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0]))
-  .map(([id, tag]) => ({ value: id, text: tag.label || id }));
+  .map(([id, tag]) => ({ value: id, text: tag.label || id, color: tag.color }));
 ---
 <WikiPage title="Search — Spheres Wiki" pagefindIgnore={true}>
 
@@ -98,13 +99,21 @@ const staticTags = [...tagMap.entries()]
     <div id="sp-status" class="sp-status" hidden></div>
     <div id="sp-results" class="sp-results"></div>
     <div id="sp-load-more" class="sp-load-more-sentinel" hidden></div>
+
+    <div id="sp-tag-templates" hidden>
+      {[...tagMap.values()].map(tag => (
+        <div data-tag-template={tag.id}>
+          <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} asSpan={true} />
+        </div>
+      ))}
+    </div>
   </div>
 
 </WikiPage>
 
 <style is:global>
   .search-page {
-    max-width: 900px;
+    width: 100%;
   }
   .search-page-bar {
     display: flex;
@@ -316,32 +325,19 @@ const staticTags = [...tagMap.entries()]
     color: var(--clr-brand);
     flex-shrink: 0;
   }
-  .sp-result-sphere {
-    font-size: var(--fs-3xs);
-    color: var(--clr-muted);
-    font-style: italic;
-  }
-  .sp-badges {
+  .sp-result-title.sp-text-power { color: var(--clr-power); }
+  .sp-result-title.sp-text-might { color: var(--clr-might); }
+  .sp-result-title.sp-text-guile { color: var(--clr-guile); }
+  .sp-result-title.sp-text-champions { color: var(--clr-champ); }
+
+  .sp-result-footer {
     display: flex;
-    gap: 4px;
+    gap: 6px;
     flex-wrap: wrap;
-    margin-left: auto;
+    margin-top: 10px;
+    align-items: center;
   }
-  .sp-badge {
-    font-family: var(--font-display);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    padding: 1px 6px;
-    border-radius: 3px;
-    white-space: nowrap;
-  }
-  .sp-badge-type       { background: color-mix(in srgb, var(--clr-brand)  10%, transparent); color: var(--clr-brand);  }
-  .sp-badge-power      { background: color-mix(in srgb, var(--clr-power)  10%, transparent); color: var(--clr-power);  }
-  .sp-badge-might      { background: color-mix(in srgb, var(--clr-might)  10%, transparent); color: var(--clr-might);  }
-  .sp-badge-guile      { background: color-mix(in srgb, var(--clr-guile)  10%, transparent); color: var(--clr-guile);  }
-  .sp-badge-champions  { background: color-mix(in srgb, var(--clr-champ)  10%, transparent); color: var(--clr-champ);  }
+
   .sp-result-excerpt {
     font-size: var(--fs-xs);
     color: var(--clr-muted);
@@ -403,6 +399,8 @@ let activeSphere: string | null = null;
 let activeTag: string | null = null;
 let tsInstances: Record<string, any> = {};
 let browseAll = false;
+let tagColorMap: Record<string, string> = {};
+let tagTemplates: Record<string, string> = {};
 
 async function loadPagefind() {
   if (pagefind) return;
@@ -484,17 +482,56 @@ function renderResults() {
     const sysEntry  = SYSTEM_MAP[system];
     const sysKey    = sysEntry?.key ?? '';
     const typeLabel = TYPE_LABELS[type] ?? type;
+    const tier      = r.meta?.tier ?? '';
+    let tags      = parseTags(r.meta?.tags ?? '');
+    
+    // Explicitly add Type and Tier to the beginning of the tags array so they render
+    if (type && type !== 'sphere') {
+      const formattedTier = tier ? tier.charAt(0).toUpperCase() + tier.slice(1) : '';
+      const displayType = formattedTier ? `${formattedTier} ${typeLabel}` : typeLabel;
+      if (!tags.includes(displayType.toLowerCase())) {
+        tags.unshift(displayType);
+      }
+    }
 
     return `<a href="${r.url}" class="sp-result">
       <div class="sp-result-header">
-        <span class="sp-result-title">${title}</span>
-        ${sphere && type !== 'sphere' ? `<span class="sp-result-sphere">${sphere}</span>` : ''}
-        <div class="sp-badges">
-          ${sysKey    ? `<span class="sp-badge sp-badge-${sysKey}">${sysEntry!.label}</span>` : ''}
-          ${typeLabel ? `<span class="sp-badge sp-badge-type">${typeLabel}</span>`             : ''}
-        </div>
+        <span class="sp-result-title ${sysKey ? `sp-text-${sysKey}` : ''}">${title}</span>
       </div>
       ${r.excerpt ? `<div class="sp-result-excerpt">${r.excerpt}</div>` : ''}
+      <div class="sp-result-footer">
+        ${sysKey    ? `<span class="tag-wrapper"><span class="talent-tag" style="--tag-clr: var(--clr-${sysKey === 'champions' ? 'champ' : sysKey})">${sysEntry!.label}</span></span>` : ''}
+        ${sphere && type !== 'sphere' ? `<span class="tag-wrapper"><span class="talent-tag">${sphere}</span></span>` : ''}
+        ${tags.map(t => {
+          let c = tagColorMap[t];
+          
+          // 'Talent' and 'Basic' explicitly share a distinct blue color
+          if (t.toLowerCase() === 'talent' || t.toLowerCase() === 'basic') {
+            c = '#174B93';
+          }
+
+          // If we have a fully pre-rendered TagBadge component for this tag, inject it
+          let templateHtml = tagTemplates[t];
+          if (templateHtml) {
+            if (t.toLowerCase() === 'basic') {
+              // Override template style to match our custom color
+              templateHtml = templateHtml.replace(/style="[^"]*"/, `style="--tag-clr: ${c}"`);
+              if (!templateHtml.includes('style=')) {
+                templateHtml = templateHtml.replace('class="talent-tag"', `class="talent-tag" style="--tag-clr: ${c}"`);
+              }
+            }
+            return templateHtml;
+          }
+          
+          // Fallback if tag lacks a tooltip definition
+          const style = c ? ` style="--tag-clr: ${c}"` : '';
+          const displayMap: Record<string, string> = { 'ex': 'Extraordinary', 'su': 'Supernatural', 'sp': 'Spell-like' };
+          let display = displayMap[t.toLowerCase()] || t;
+          if (display.toLowerCase() === 'base') display = 'Base Ability';
+          
+          return `<span class="tag-wrapper"><span class="talent-tag" data-tag="${t}"${style}>${display}</span></span>`;
+        }).join('')}
+      </div>
     </a>`;
   }).join('');
 
@@ -605,12 +642,28 @@ document.addEventListener('astro:page-load', () => {
   // Read static build-time data
   const dataEl = document.getElementById('sp-data') as HTMLElement;
   const staticSpheres: string[]                       = JSON.parse(dataEl?.dataset.spheres   ?? '[]');
-  const staticTags: { value: string; text: string }[] = JSON.parse(dataEl?.dataset.tags      ?? '[]');
+  const staticTags: { value: string; text: string; color?: string }[] = JSON.parse(dataEl?.dataset.tags      ?? '[]');
   browseManifest = (JSON.parse(dataEl?.dataset.manifest ?? '[]') as any[]).map((e: any) => ({
     url: e.url,
     meta: { title: e.title, system: e.system, type: e.type, sphere: e.sphere ?? '', tags: e.tags ?? '' },
     excerpt: '',
   }));
+
+  tagColorMap = {};
+  staticTags.forEach(t => {
+    if (t.color) {
+      tagColorMap[t.text] = t.color;
+      tagColorMap[t.value] = t.color;
+    }
+  });
+
+  tagTemplates = {};
+  document.querySelectorAll('[data-tag-template]').forEach(el => {
+    const key = el.getAttribute('data-tag-template');
+    if (key) {
+      tagTemplates[key] = el.innerHTML;
+    }
+  });
 
   initTomSelects(staticSpheres, staticTags);
 

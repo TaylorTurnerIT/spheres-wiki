@@ -264,13 +264,15 @@ for (let lvl = 1; lvl <= 20; lvl++) {
         id="overview"
         data-pagefind-weight="10"
         data-pagefind-meta={`title:${cls.name}`}
-        data-pagefind-meta="type:class"
+        
         data-pagefind-filter="type:class"
-        data-pagefind-meta="system:Spheres of Might"
+        
         data-pagefind-filter="system:Spheres of Might"
       >
         {cls.name}
       </h1>
+      <span data-pagefind-meta="type:class" hidden></span>
+        <span data-pagefind-meta="system:Spheres of Might" hidden></span>
       <hr class="page-title-rule" />
 
       {ClassContent

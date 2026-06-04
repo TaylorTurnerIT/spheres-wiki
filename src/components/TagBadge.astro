@@ -6,28 +6,31 @@ interface Props {
   tagId: string;
   tagMap: Map<string, TagEntry>;
   bookMetaMap: Map<string, BookMeta>;
+  asSpan?: boolean;
 }
 
-const { tagId, tagMap, bookMetaMap } = Astro.props;
+const { tagId, tagMap, bookMetaMap, asSpan = false } = Astro.props;
 const tag = tagMap.get(tagId);
 const color = tag?.color ?? "var(--clr-brand)";
 const bookTitle =
   tag && tag.sourceBook !== "__builtin__"
     ? bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook
     : undefined;
+
+const TagElement = asSpan ? 'span' : 'a';
 ---
 
 <span class="tag-wrapper">
-  <a
-    href={url(`/tags/${tagId}/`)}
+  <TagElement
+    href={!asSpan ? url(`/tags/${tagId}/`) : undefined}
     class="talent-tag"
     data-tag={tagId}
     style={tag ? `--tag-clr: ${color}` : undefined}
-    data-astro-prefetch="hover"
+    data-astro-prefetch={!asSpan ? "hover" : undefined}
     aria-describedby={tag ? `tooltip-${tagId}` : undefined}
   >
     {tag?.label ?? tagId}
-  </a>
+  </TagElement>
   {
     tag && (
       <div class="tag-tooltip" role="tooltip" id={`tooltip-${tagId}`}>

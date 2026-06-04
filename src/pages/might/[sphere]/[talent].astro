@@ -87,15 +87,17 @@ const TalentContent = collEntry ? (await render(collEntry)).Content : null;
         data-pagefind-weight="2.0"
         data-pagefind-meta={`title:${talent.name}`}
         data-pagefind-meta={`sphere:${sphere.name}`}
-        data-pagefind-meta="system:Spheres of Might"
+        
         data-pagefind-filter="system:Spheres of Might"
-        data-pagefind-meta="type:talent"
+        
         data-pagefind-filter="type:talent"
         data-pagefind-meta={`tier:${talent.tier}`}
         data-pagefind-meta={`tags:${talent.tags.join(', ')}`}
       >
         {talent.name}
       </h1>
+      <span data-pagefind-meta="system:Spheres of Might" hidden></span>
+        <span data-pagefind-meta="type:talent" hidden></span>
       <div class="talent-page-meta">
         {buildOrderedTagIds(talent, bookMetaMap, tagMap, { includeSphere: true, currentSphereId: sphere.id })
           .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)

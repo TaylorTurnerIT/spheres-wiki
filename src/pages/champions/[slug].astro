@@ -36,14 +36,16 @@ const { cls } = Astro.props;
     class="page-title champ"
     data-pagefind-weight="10"
     data-pagefind-meta={`title:${cls.name}`}
-    data-pagefind-meta="type:class"
+    
     data-pagefind-filter="type:class"
-    data-pagefind-meta="system:Champions of the Spheres"
+    
     data-pagefind-filter="system:Champions of the Spheres"
   >
     <svg class="si page-title-icon" aria-hidden="true"><use href="#si-champ-star" /></svg>
     {cls.name}
   </h1>
+      <span data-pagefind-meta="type:class" hidden></span>
+        <span data-pagefind-meta="system:Champions of the Spheres" hidden></span>
   <hr class="page-title-rule" />
 
   {/* entry description rendered from GFM body — wired in R1-6 */}

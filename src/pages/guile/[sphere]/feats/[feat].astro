@@ -87,14 +87,16 @@ const FeatContent = collEntry ? (await render(collEntry)).Content : null;
         data-pagefind-weight="2.0"
         data-pagefind-meta={`title:${feat.name}`}
         data-pagefind-meta={`sphere:${sphere.name}`}
-        data-pagefind-meta="system:Spheres of Guile"
+        
         data-pagefind-filter="system:Spheres of Guile"
-        data-pagefind-meta="type:feat"
+        
         data-pagefind-filter="type:feat"
         data-pagefind-meta={`tags:${feat.tags.join(', ')}`}
       >
         {feat.name}
       </h1>
+      <span data-pagefind-meta="system:Spheres of Guile" hidden></span>
+        <span data-pagefind-meta="type:feat" hidden></span>
       <div class="talent-page-meta">
         {buildOrderedTagIds(feat, bookMetaMap, tagMap, { includeSphere: true, currentSphereId: sphere.id })
           .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)

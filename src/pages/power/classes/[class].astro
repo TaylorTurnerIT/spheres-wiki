@@ -310,13 +310,15 @@ for (let lvl = 1; lvl <= 20; lvl++) {
           id="overview"
           data-pagefind-weight="10"
           data-pagefind-meta={`title:${cls.name}`}
-          data-pagefind-meta="type:class"
+          
           data-pagefind-filter="type:class"
-          data-pagefind-meta="system:Spheres of Power"
+          
           data-pagefind-filter="system:Spheres of Power"
         >
           {cls.name}
         </h1>
+      <span data-pagefind-meta="type:class" hidden></span>
+        <span data-pagefind-meta="system:Spheres of Power" hidden></span>
 
         {archetypes.length > 0 && (
           <div class="archetypes-selector-group" style="min-width: 250px; flex: 1; max-width: 400px; z-index: 10;">
