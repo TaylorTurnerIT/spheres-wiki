@@ -1001,8 +1001,8 @@ h6 {
 }
 .home-store .store-card {
   flex: unset;
-  max-width: 180px;
-  width: 180px;
+  max-width: 140px;
+  width: 140px;
 }
 .shop-btn {
   display: inline-flex;
@@ -1665,8 +1665,8 @@ h6 {
 }
 
 .store-card {
-  flex: 0 0 180px;
-  max-width: 180px;
+  flex: 0 0 140px;
+  max-width: 140px;
   scroll-snap-align: start;
   background: var(--clr-bg);
   border: 0.5px solid var(--clr-border);
@@ -1697,16 +1697,21 @@ h6 {
 }
 .store-card-cover {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 17 / 22;
   object-fit: cover;
   border-radius: calc(var(--radius) - 2px);
   border: 0.5px solid var(--clr-border);
 }
 .store-card-cover-placeholder {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 17 / 22;
   background: var(--clr-border);
   border-radius: calc(var(--radius) - 2px);
+}
+.source-callout-wrapper .store-card {
+  flex: 0 0 180px;
+  max-width: 180px;
+  width: 180px;
 }
 .store-title {
   font-family: var(--font-display);

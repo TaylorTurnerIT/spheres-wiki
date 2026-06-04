@@ -23,7 +23,7 @@ if (book.coverImage) {
 ---
 <CardTag {...cardProps}>
   {coverImg
-    ? <Image src={coverImg} alt={book.title} width={180} height={240} class="store-card-cover" loading="lazy" />
+    ? <Image src={coverImg} alt={book.title} class="store-card-cover" loading="lazy" />
     : <div class="store-card-cover-placeholder" aria-hidden="true"></div>
   }
   <div class="store-title">{book.title}</div>
