@@ -152,6 +152,9 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 | T38 | x      | Document `localStorage` key inventory in code comment at BetaToast.astro — key name, purpose, retention, deletion path | V14 |
 | T39 | .      | Add content version selector (Original/Ultimate/Polished) with thematically appropriate design. Hover effects explain categories. Gray out/disable if content missing. Hide 'Ultimate' entirely for non-'power' systems. | |
 | T40 | .      | Create a "config" page that allows the user to filter out specific content site-wide (e.g. hiding all third-party content, hiding "April Fools" content) and save these preferences. | |
+| T41 | .      | Tag system — resolve 17 multi-sphere tags: assign to primary sphere or leave cross-sphere. Candidates: `admixture` (dest/mana/nature), `air` (dest/nature), `cold` (dest/weather), `fire` (dest/nature), `companion` (alt/conj/mana), `counterspell` (dest/enh/mind), `curse` (death/fate/mana), `light` (dest/light), `metamagic` (fate/ill/warp), `all` (warp/weather), `auxiliary` (dark/div/prot), `champion` (fey/warp), `ghost-strike` (death/fate), `manipulation` (mana/prot), `program` (death/mana/prot), `teamwork` (death/light/weather). | I.content |
+| T42 | .      | Tag system — audit 16 unused tags (defined but not applied to any entry): `background`, `bleed`, `boast`, `cohort`, `equipment`, `item-creation`, `ki-blaster`, `leap`, `legendary`, `minor-artifact`, `mutation`, `potent`, `racial`, `ritual`, `slam`, `stance`. Assign sphere where clear; move cross-sphere ones to `__built-in__`; delete if genuinely obsolete. | I.content |
+| T43 | .      | Tag system — show sphere link on `/tags/[tag]/` detail page when `tag.sphere` is set. | I.pages |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
