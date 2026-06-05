@@ -3,7 +3,7 @@ id: mageknight-martial-adaptation
 name: "Martial Adaptation"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: mageknight
 featureId: mystic-combat-su
 ---

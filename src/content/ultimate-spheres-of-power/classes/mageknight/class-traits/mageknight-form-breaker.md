@@ -3,7 +3,7 @@ id: mageknight-form-breaker
 name: "Form-Breaker"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: mageknight
 featureId: mystic-combat-su
 ---

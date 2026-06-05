@@ -3,7 +3,7 @@ id: shifter-animal-trainer
 name: "Animal Trainer"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 ---

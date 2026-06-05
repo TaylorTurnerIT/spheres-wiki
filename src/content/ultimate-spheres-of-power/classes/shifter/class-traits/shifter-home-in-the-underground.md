@@ -3,7 +3,7 @@ id: shifter-home-in-the-underground
 name: "Home in the Underground"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 requires: "shifter 4"

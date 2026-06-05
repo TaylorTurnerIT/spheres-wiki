@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: warp
 tier: basic
-tags: ["sp", "space", "utility"]
+tags: ["spell-like", "space", "utility"]
 ---
 
 You gain a permanent extradimensional space that may hold up to 10 pounds per caster level of non-living material. You can create a portal to this extradimensional space within arm's reach at will. Placing an object in this space or calling an object from this space requires a full-round action, but may be done as a swift action by spending a spell point. Living things and attended objects cannot be placed in your extradimensional storage. If you die (or are destroyed, if you lack a Constitution score), all contents of your extradimensional space appear in your square or the nearest unoccupied space.

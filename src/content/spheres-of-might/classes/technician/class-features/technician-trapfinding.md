@@ -3,7 +3,7 @@ id: technician-trapfinding
 name: Trapfinding
 level: 1
 tags:
-  - ex
+  - extraordinary
   - sense
 ---
 

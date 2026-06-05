@@ -3,7 +3,7 @@ id: armiger-menagerie-trainer
 name: "Menagerie Trainer"
 type: class-trait
 system: might
-tags: ["ex"]
+tags: ["extraordinary"]
 className: armiger
 featureId: prowess
 ---

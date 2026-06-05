@@ -3,7 +3,7 @@ id: striker-phasic-blitz
 name: "Phasic Blitz"
 type: class-trait
 system: might
-tags: ["su"]
+tags: ["supernatural"]
 className: striker
 featureId: striker-art-ex
 requires: "adrenaline rush"

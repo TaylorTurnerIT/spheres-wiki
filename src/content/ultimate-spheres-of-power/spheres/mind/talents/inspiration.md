@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: basic
-tags: ["charm", "ex"]
+tags: ["charm", "extraordinary"]
 ---
 
 You inspire competence in the target.

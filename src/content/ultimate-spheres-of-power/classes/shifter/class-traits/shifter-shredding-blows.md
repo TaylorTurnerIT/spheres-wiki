@@ -3,7 +3,7 @@ id: shifter-shredding-blows
 name: "Shredding Blows"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 ---

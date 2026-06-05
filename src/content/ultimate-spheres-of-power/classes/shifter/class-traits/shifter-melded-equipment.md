@@ -3,7 +3,7 @@ id: shifter-melded-equipment
 name: "Melded Equipment"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: shifter
 featureId: bestial-trait
 requires: "shifter 10"

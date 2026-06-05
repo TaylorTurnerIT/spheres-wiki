@@ -3,7 +3,7 @@ id: blacksmith-toymaker
 name: "Toymaker"
 type: class-trait
 system: might
-tags: ["ex"]
+tags: ["extraordinary"]
 className: blacksmith
 featureId: smithing-insight-ex
 ---

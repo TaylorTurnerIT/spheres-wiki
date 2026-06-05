@@ -3,7 +3,7 @@ id: shifter-living-death
 name: "Living Death"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: shifter
 featureId: bestial-trait
 requires: "adaptation or undead kin"

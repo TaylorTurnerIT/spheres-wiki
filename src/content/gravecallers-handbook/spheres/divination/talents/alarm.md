@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: divination
 tier: basic
-tags: ["sp", "utility"]
+tags: ["spell-like", "utility"]
 ---
 When you divine, instead of concentrating on the effect, you may spend an additional spell point to create an immobile sensor within your Divination sphere range which lasts for 10 minutes per caster level or 1 hour per caster level if you spend an additional spell point. This sensor can be detected as though it were a scrying sensor (Perception DC 20 + caster level) and dispelled.
 

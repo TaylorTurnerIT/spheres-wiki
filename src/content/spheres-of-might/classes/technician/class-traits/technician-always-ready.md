@@ -3,7 +3,7 @@ id: technician-always-ready
 name: "Always Ready"
 type: class-trait
 system: might
-tags: ["ex"]
+tags: ["extraordinary"]
 className: technician
 featureId: list-of-technical-insights
 ---

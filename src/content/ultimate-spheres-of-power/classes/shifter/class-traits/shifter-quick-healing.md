@@ -3,7 +3,7 @@ id: shifter-quick-healing
 name: "Quick Healing"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: shifter
 featureId: bestial-trait
 ---

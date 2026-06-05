@@ -3,7 +3,7 @@ id: armorist-shadow-armory
 name: "Shadow Armory"
 type: class-trait
 system: power
-tags: ["sp"]
+tags: ["spell-like"]
 className: armorist
 featureId: arsenal-trick
 ---

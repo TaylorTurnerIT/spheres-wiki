@@ -4,7 +4,7 @@ name: "Squadron Commander"
 type: feat
 system: power
 sphere: war
-tags: ["ex", "squadron"]
+tags: ["extraordinary", "squadron"]
 tier: feat
 ---
 

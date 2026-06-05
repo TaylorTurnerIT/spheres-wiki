@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: death
 tier: advanced
-tags: ["ex"]
+tags: ["extraordinary"]
 ---
 
 **Prerequisites:** Death sphere, caster level 5th.

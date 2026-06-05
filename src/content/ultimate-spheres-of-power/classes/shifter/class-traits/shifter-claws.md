@@ -3,7 +3,7 @@ id: shifter-claws
 name: "Claws"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 ---

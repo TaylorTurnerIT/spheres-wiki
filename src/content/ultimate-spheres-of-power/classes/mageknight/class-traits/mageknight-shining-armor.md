@@ -3,7 +3,7 @@ id: mageknight-shining-armor
 name: "Shining Armor"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: mageknight
 featureId: mystic-combat-su
 ---

@@ -3,7 +3,7 @@ id: shifter-poison
 name: "Poison"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 requires: "shifter 6"

@@ -3,7 +3,7 @@ id: technician-architectural-insight
 name: "Architectural Insight"
 type: class-trait
 system: might
-tags: ["ex"]
+tags: ["extraordinary"]
 className: technician
 featureId: list-of-technical-insights
 ---

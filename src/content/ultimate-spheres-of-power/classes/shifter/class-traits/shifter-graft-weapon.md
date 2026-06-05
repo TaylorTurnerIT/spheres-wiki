@@ -3,7 +3,7 @@ id: shifter-graft-weapon
 name: "Graft Weapon"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: shifter
 featureId: bestial-trait
 ---

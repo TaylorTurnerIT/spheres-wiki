@@ -3,7 +3,7 @@ id: armorist-morphic-weapon
 name: "Morphic Weapon"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: armorist
 featureId: arsenal-trick
 ---

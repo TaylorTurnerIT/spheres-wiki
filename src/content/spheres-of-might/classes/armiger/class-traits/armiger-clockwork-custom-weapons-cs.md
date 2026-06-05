@@ -3,7 +3,7 @@ id: armiger-clockwork-custom-weapons-cs
 name: "Clockwork Custom Weapons [CS]"
 type: class-trait
 system: might
-tags: ["su"]
+tags: ["supernatural"]
 className: armiger
 featureId: prowess
 ---

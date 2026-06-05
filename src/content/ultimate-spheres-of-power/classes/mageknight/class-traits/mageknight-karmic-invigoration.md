@@ -3,7 +3,7 @@ id: mageknight-karmic-invigoration
 name: "Karmic Invigoration"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: mageknight
 featureId: mystic-combat-su
 requires: "Life sphere, Marked class feature"

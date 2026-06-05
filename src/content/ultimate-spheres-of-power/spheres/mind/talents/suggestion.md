@@ -5,7 +5,7 @@ type: talent
 system: power
 sphere: mind
 tier: basic
-tags: ["sp"]
+tags: ["spell-like"]
 ---
 
 You may plant thoughts into a target’s mind.

@@ -3,7 +3,7 @@ id: shifter-adaptation
 name: "Adaptation"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 ---

@@ -3,7 +3,7 @@ id: shifter-taste-for-blood
 name: "Taste for Blood"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 requires: "shifter 6"

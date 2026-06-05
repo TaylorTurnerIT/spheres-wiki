@@ -5,7 +5,7 @@ type: talent
 system: power
 sphere: mana
 tier: basic
-tags: ["ex", "manipulation"]
+tags: ["extraordinary", "manipulation"]
 ---
 
 You may manipulate the rules of magic within a radius of up to 10 feet + 5 feet per 10 caster levels, centered anywhere within range, affecting all magical and supernatural effects cast within or that pass through the area for up to 1 round per caster level. You must concentrate to maintain this ability, but you may spend a spell point as a free action to allow the effect to persist without concentration for its maximum duration. The caster of an effect changed by this ability is allowed a Will Save to ignore the effects of Shuffle for that effect.

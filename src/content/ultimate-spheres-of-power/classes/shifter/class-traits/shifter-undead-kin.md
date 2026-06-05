@@ -3,7 +3,7 @@ id: shifter-undead-kin
 name: "Undead Kin"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: shifter
 featureId: bestial-trait
 ---

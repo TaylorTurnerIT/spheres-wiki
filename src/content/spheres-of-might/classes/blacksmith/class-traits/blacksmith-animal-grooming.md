@@ -3,7 +3,7 @@ id: blacksmith-animal-grooming
 name: "Animal Grooming"
 type: class-trait
 system: might
-tags: ["ex"]
+tags: ["extraordinary"]
 className: blacksmith
 featureId: smithing-insight-ex
 ---

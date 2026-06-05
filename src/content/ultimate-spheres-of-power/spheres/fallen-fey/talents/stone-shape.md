@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: fallen-fey
 tier: basic
-tags: ["fey-blessing", "sp"]
+tags: ["fey-blessing", "spell-like"]
 ---
 
 You gain a competence bonus on Craft checks equal to your caster level for items primarily composed of stone and may craft such objects as if you had the appropriate tools.

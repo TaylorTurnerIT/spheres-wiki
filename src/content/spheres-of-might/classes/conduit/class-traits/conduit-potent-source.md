@@ -3,7 +3,7 @@ id: conduit-potent-source
 name: "Potent Source"
 type: class-trait
 system: might
-tags: ["su"]
+tags: ["supernatural"]
 className: conduit
 featureId: conduit-wonders
 ---

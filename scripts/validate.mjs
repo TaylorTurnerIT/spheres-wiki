@@ -8,7 +8,14 @@ import { parse as parseYaml } from "yaml";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.resolve(__dirname, "../src/content");
 
-const BUILTIN_TAGS = new Set(["ex", "su", "sp", "advanced", "3pp", "sphere"]);
+const BUILTIN_TAGS = new Set([
+  "extraordinary",
+  "supernatural",
+  "spell-like",
+  "advanced",
+  "3pp",
+  "sphere",
+]);
 
 function isSyntheticTag(tag) {
   return BUILTIN_TAGS.has(tag) || tag.endsWith("-sphere");

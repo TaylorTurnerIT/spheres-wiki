@@ -3,7 +3,7 @@ id: technician-anatomical-insight
 name: "Anatomical Insight"
 type: class-trait
 system: might
-tags: ["ex"]
+tags: ["extraordinary"]
 className: technician
 featureId: list-of-technical-insights
 ---

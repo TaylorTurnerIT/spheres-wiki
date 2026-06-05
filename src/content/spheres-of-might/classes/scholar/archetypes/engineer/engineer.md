@@ -1,7 +1,7 @@
 ---
 id: engineer
 name: "Engineer"
-tags: ["ex", "trade", "utility"]
+tags: ["extraordinary", "trade", "utility"]
 ---
 
 # Engineer (Scholar Archetype)

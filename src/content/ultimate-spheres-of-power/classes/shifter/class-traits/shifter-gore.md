@@ -3,7 +3,7 @@ id: shifter-gore
 name: "Gore"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 ---

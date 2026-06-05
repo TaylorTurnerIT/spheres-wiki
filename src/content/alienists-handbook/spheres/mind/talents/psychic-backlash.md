@@ -5,7 +5,7 @@ system: power
 type: talent
 sphere: mind
 tier: advanced
-tags: ["su"]
+tags: ["supernatural"]
 ---
 **Prerequisites:** Mind sphere (Psychic Vengeance).
 

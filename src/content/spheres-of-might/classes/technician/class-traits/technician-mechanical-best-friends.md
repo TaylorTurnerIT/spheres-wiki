@@ -3,7 +3,7 @@ id: technician-mechanical-best-friends
 name: "Mechanical Best Friends"
 type: class-trait
 system: might
-tags: ["ex"]
+tags: ["extraordinary"]
 className: technician
 featureId: list-of-technical-insights
 ---

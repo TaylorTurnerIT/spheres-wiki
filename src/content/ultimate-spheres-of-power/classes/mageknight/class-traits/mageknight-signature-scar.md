@@ -3,7 +3,7 @@ id: mageknight-signature-scar
 name: "Signature Scar"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: mageknight
 featureId: mystic-combat-su
 ---

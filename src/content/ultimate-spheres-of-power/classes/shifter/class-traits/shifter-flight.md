@@ -3,7 +3,7 @@ id: shifter-flight
 name: "Flight"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 requires: "shifter 6"

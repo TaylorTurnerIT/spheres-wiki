@@ -3,7 +3,7 @@ id: shifter-alternate-class-feature-enhanced-defense
 name: "Alternate Class Feature: Enhanced Defense"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: enhanced-attacks-su
 ---

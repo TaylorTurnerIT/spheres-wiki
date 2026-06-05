@@ -3,7 +3,7 @@ id: shifter-bite
 name: "Bite"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 ---

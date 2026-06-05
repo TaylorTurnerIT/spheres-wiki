@@ -3,7 +3,7 @@ id: shifter-spines
 name: "Spines"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 ---

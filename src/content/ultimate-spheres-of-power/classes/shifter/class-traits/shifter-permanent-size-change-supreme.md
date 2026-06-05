@@ -3,7 +3,7 @@ id: shifter-permanent-size-change-supreme
 name: "Permanent Size Change, Supreme"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 requires: "incredible permanent size change, shifter 20"

@@ -3,7 +3,7 @@ id: shifter-magical-attacks
 name: "Magical Attacks"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: shifter
 featureId: bestial-trait
 ---

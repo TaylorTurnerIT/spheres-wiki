@@ -3,7 +3,7 @@ id: shifter-fortification
 name: "Fortification"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 requires: "shifter level 6"

@@ -3,7 +3,7 @@ id: mageknight-arcane-weapon-focus
 name: "Arcane Weapon Focus"
 type: class-trait
 system: power
-tags: ["su"]
+tags: ["supernatural"]
 className: mageknight
 featureId: mystic-combat-su
 ---

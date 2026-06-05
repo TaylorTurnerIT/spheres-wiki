@@ -3,7 +3,7 @@ id: shifter-fast-healing
 name: "Fast Healing"
 type: class-trait
 system: power
-tags: ["ex"]
+tags: ["extraordinary"]
 className: shifter
 featureId: bestial-trait
 requires: "quick healing bestial trait, shifter level 10"
