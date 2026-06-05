@@ -179,8 +179,9 @@ const prestigeClasses = [...classMap.values()]
   }
 
   .sphere-badge-grid {
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px;
     margin-bottom: 32px;
   }
 
@@ -189,10 +190,10 @@ const prestigeClasses = [...classMap.values()]
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4px 2px;
+    padding: 6px 2px;
     background: var(--clr-bg);
     border: 1px solid var(--clr-border);
-    border-radius: 12px;
+    border-radius: 8px;
     text-decoration: none;
     transition: all 0.2s ease;
     aspect-ratio: 1 / 1;
@@ -200,8 +201,8 @@ const prestigeClasses = [...classMap.values()]
   }
 
   .sphere-badge:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(23, 75, 147, 0.18);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(23, 75, 147, 0.12);
     border-color: var(--clr-power);
     background: var(--clr-surface);
   }
@@ -210,34 +211,56 @@ const prestigeClasses = [...classMap.values()]
     width: 72px;
     height: 72px;
     background: color-mix(in srgb, var(--clr-power) 10%, var(--clr-surface));
-    border: 1.5px solid var(--clr-border);
+    border: 1px solid var(--clr-border);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     color: var(--clr-power);
     transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .sphere-badge:hover .sphere-badge-icon {
-    transform: scale(1.15);
+    transform: scale(1.1);
     border-color: var(--clr-power);
-    background: color-mix(in srgb, var(--clr-power) 15%, var(--clr-surface));
   }
 
   .sphere-badge-icon .si {
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 68px;
   }
 
   .sphere-badge-name {
     font-family: var(--font-display);
-    font-size: var(--fs-sm);
+    font-size: 11px;
     font-weight: 700;
     color: var(--clr-power);
-    line-height: 1.2;
-    letter-spacing: 0.02em;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    padding: 0 2px;
+  }
+
+  @media (min-width: 1280px) {
+    .sphere-badge-grid {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .sphere-badge-grid {
+      grid-template-columns: repeat(10, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .sphere-badge-grid {
+      grid-template-columns: repeat(8, 1fr);
+    }
   }
 
   .class-grid {
