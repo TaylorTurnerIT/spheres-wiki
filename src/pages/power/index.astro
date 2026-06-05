@@ -2,7 +2,6 @@
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
-import ResourceCard from '@/components/ResourceCard.astro';
 
 const { sphereMap, classMap } = await resolveEntries();
 
@@ -20,15 +19,70 @@ const classes = [...classMap.values()]
   .filter(c => c.system === 'power' && baseClassIds.includes(c.id))
   .sort((a, b) => a.name.localeCompare(b.name));
 
-// Prestige classes usually aren't in the baseClassIds but are power system
-// For now, we'll look for anything with "Prestige" in its name or tags if possible,
-// but since we don't have that yet, we'll just prep the section.
 const prestigeClasses = [...classMap.values()]
   .filter(c => c.system === 'power' && !baseClassIds.includes(c.id) && c.tags?.includes('prestige'))
   .sort((a, b) => a.name.localeCompare(b.name));
-
 ---
 <WikiPage title="Spheres of Power — Spheres Wiki" activeNamespace="power" pagefindIgnore={true}>
+
+  <div class="power-banner" aria-hidden="true">
+    <svg viewBox="0 0 800 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="pwrBannerGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#1E60BE" stop-opacity="0.32"/>
+          <stop offset="100%" stop-color="#0D2850" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="800" height="140" fill="#0D2850"/>
+      <rect width="800" height="140" fill="url(#pwrBannerGlow)"/>
+      <!-- Wide orbital ellipses -->
+      <!-- <ellipse cx="400" cy="70" rx="345" ry="46" fill="none" stroke="#2A5C9E" stroke-width="0.5" opacity="0.22"/> -->
+      <!-- <ellipse cx="400" cy="70" rx="265" ry="33" fill="none" stroke="#3A6EB5" stroke-width="0.5" opacity="0.2" transform="rotate(-15 400 70)"/> -->
+      <!-- <ellipse cx="400" cy="70" rx="185" ry="23" fill="none" stroke="#4A80C8" stroke-width="0.6" opacity="0.26" transform="rotate(20 400 70)"/> -->
+      <!-- Central orb scaled up from IntroCard (scale 1.9x, centered at 400,70) -->
+      <g transform="translate(400,70) scale(1.9) translate(-100,-40)">
+        <circle cx="100" cy="40" r="30" fill="#174B93" opacity=".35"/>
+        <circle cx="100" cy="40" r="22" fill="#1E60BE" opacity=".4"/>
+        <path d="M 76 40 A 24 9 0 0 1 124 40" fill="none" stroke="#5B8ED4" stroke-width="1" opacity=".45" transform="rotate(-35 100 40)"/>
+        <circle cx="100" cy="40" r="13" fill="#2E6FD6" opacity=".95"/>
+        <circle cx="100" cy="40" r="8"  fill="#4A90E8"/>
+        <circle cx="97"  cy="37" r="3"  fill="#A0CCFF" opacity=".7"/>
+        <path d="M 124 40 A 24 9 0 0 1 76 40" fill="none" stroke="#5B8ED4" stroke-width="1" opacity=".45" transform="rotate(-35 100 40)"/>
+      </g>
+      <!-- Stars: far left -->
+      <circle cx="22"  cy="18"  r="1.2" fill="#7AABFF" opacity=".55"/>
+      <circle cx="45"  cy="72"  r="1.0" fill="#9ABFFF" opacity=".5"/>
+      <circle cx="68"  cy="38"  r="1.1" fill="#7AABFF" opacity=".6"/>
+      <circle cx="30"  cy="110" r="0.9" fill="#9ABFFF" opacity=".4"/>
+      <circle cx="88"  cy="94"  r="1.0" fill="#7AABFF" opacity=".45"/>
+      <circle cx="15"  cy="52"  r="0.8" fill="#9ABFFF" opacity=".4"/>
+      <circle cx="110" cy="20"  r="1.1" fill="#7AABFF" opacity=".55"/>
+      <circle cx="55"  cy="125" r="1.0" fill="#9ABFFF" opacity=".35"/>
+      <!-- Stars: left-center -->
+      <circle cx="155" cy="14"  r="1.0" fill="#7AABFF" opacity=".5"/>
+      <circle cx="190" cy="58"  r="1.1" fill="#9ABFFF" opacity=".5"/>
+      <circle cx="220" cy="100" r="0.9" fill="#7AABFF" opacity=".45"/>
+      <circle cx="175" cy="118" r="1.0" fill="#9ABFFF" opacity=".4"/>
+      <circle cx="245" cy="32"  r="1.2" fill="#7AABFF" opacity=".6"/>
+      <circle cx="135" cy="82"  r="0.9" fill="#9ABFFF" opacity=".45"/>
+      <!-- Stars: right-center -->
+      <circle cx="555" cy="16"  r="1.0" fill="#7AABFF" opacity=".5"/>
+      <circle cx="610" cy="58"  r="1.1" fill="#9ABFFF" opacity=".5"/>
+      <circle cx="580" cy="105" r="0.9" fill="#7AABFF" opacity=".45"/>
+      <circle cx="625" cy="122" r="1.0" fill="#9ABFFF" opacity=".4"/>
+      <circle cx="660" cy="34"  r="1.2" fill="#7AABFF" opacity=".6"/>
+      <circle cx="640" cy="86"  r="0.9" fill="#9ABFFF" opacity=".45"/>
+      <!-- Stars: far right -->
+      <circle cx="778" cy="20"  r="1.2" fill="#7AABFF" opacity=".65"/>
+      <circle cx="755" cy="74"  r="1.0" fill="#9ABFFF" opacity=".5"/>
+      <circle cx="732" cy="36"  r="1.1" fill="#7AABFF" opacity=".6"/>
+      <circle cx="770" cy="108" r="0.9" fill="#9ABFFF" opacity=".45"/>
+      <circle cx="712" cy="94"  r="1.0" fill="#7AABFF" opacity=".5"/>
+      <circle cx="785" cy="55"  r="0.8" fill="#9ABFFF" opacity=".4"/>
+      <circle cx="690" cy="18"  r="1.1" fill="#7AABFF" opacity=".55"/>
+      <circle cx="745" cy="127" r="1.0" fill="#9ABFFF" opacity=".35"/>
+    </svg>
+  </div>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
@@ -37,7 +91,39 @@ const prestigeClasses = [...classMap.values()]
   </nav>
 
   <h1 class="page-title power">Spheres of Power</h1>
+  <p>Spheres of Power is a unique magic system created by Drop Dead Studios for use with the Pathfinder Roleplaying Game. In this variant system, players choose their magical abilities from among twenty different spheres, spending Magic Talents to create a uniquely customized character. Spheres of Power is more about what you can do than what you can't — it gives you the tools you need to create a character, then lets you decide how to flavor it. For more information about the mechanics, see 'Using Spheres of Power' below.</p>
   <hr class="page-title-rule" />
+
+  <!-- <div class="section-heading">
+    <span class="section-heading-text">Getting Started</span>
+    <div class="section-heading-rule"></div>
+  </div> -->
+  <div class="gs-grid">
+    <a href={url("/power/using-spheres-of-power/")} class="gs-card" data-astro-prefetch="hover">
+      <div class="gs-card-icon">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 3h5a1 1 0 0 1 1 1v9H2V3zM14 3H9a1 1 0 0 0-1 1v9h6V3z"/>
+        </svg>
+      </div>
+      <div class="gs-card-body">
+        <div class="gs-card-title">Using Spheres of Power</div>
+        <div class="gs-card-desc">Fundamental rules for casting, spell points, and caster levels.</div>
+      </div>
+      <span class="gs-card-arrow" aria-hidden="true">→</span>
+    </a>
+    <a href={url("/power/how-to-build-spherecaster/")} class="gs-card" data-astro-prefetch="hover">
+      <div class="gs-card-icon">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14.5 3.5v9a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1zM4 6.5h8M4 9.5h5"/>
+        </svg>
+      </div>
+      <div class="gs-card-body">
+        <div class="gs-card-title">How to Build a Spherecaster</div>
+        <div class="gs-card-desc">A step-by-step guide to creating your first magical character.</div>
+      </div>
+      <span class="gs-card-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
 
   <div class="section-heading">
     <span class="section-heading-text">Magic Spheres</span>
@@ -54,11 +140,7 @@ const prestigeClasses = [...classMap.values()]
     ))}
   </div>
 
-  <div class="section-heading">
-    <span class="section-heading-text">Other Spheres</span>
-    <div class="section-heading-rule"></div>
-  </div>
-  <div class="entry-grid sphere-badge-grid">
+  <div class="entry-grid sphere-badge-grid other-badge-grid">
     <a href={url("/power/bear/")} class="sphere-badge power" data-astro-prefetch="hover">
       <div class="sphere-badge-icon">
         <svg class="si" aria-hidden="true"><use href="#si-bear" /></svg>
@@ -74,41 +156,14 @@ const prestigeClasses = [...classMap.values()]
   </div>
 
   <div class="section-heading">
-    <span class="section-heading-text">Getting Started</span>
-    <div class="section-heading-rule"></div>
-  </div>
-
-  <div class="power-intro">
-    <ResourceCard
-      name="Using Spheres of Power"
-      description="Fundamental rules for casting, spell points, and caster levels."
-      href={url("/power/using-spheres-of-power/")}
-    >
-      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 14.5h8M8 1v11M4.5 5.5l3.5-3.5 3.5 3.5"/>
-      </svg>
-    </ResourceCard>
-    <ResourceCard
-      name="How to Build a Spherecaster"
-      description="A step-by-step guide to creating your first magical character."
-      href={url("/power/how-to-build-spherecaster/")}
-    >
-      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14.5 3.5v9a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1zM4 6.5h8M4 9.5h5"/>
-      </svg>
-    </ResourceCard>
-  </div>
-
-  <div class="section-heading">
     <span class="section-heading-text">Spherecaster Classes</span>
     <div class="section-heading-rule"></div>
   </div>
-  <div class="entry-grid class-grid">
+  <div class="class-roster">
     {classes.map(c => (
-      <a href={url(`/power/classes/${c.id}/`)} class="entry-card power" data-astro-prefetch="hover">
-        <div class="entry-card-header">
-          <span class="entry-card-name">{c.name}</span>
-        </div>
+      <a href={url(`/power/classes/${c.id}/`)} class="class-item" data-astro-prefetch="hover">
+        <span class="class-item-name">{c.name}</span>
+        <span class="class-item-arrow" aria-hidden="true">→</span>
       </a>
     ))}
   </div>
@@ -119,49 +174,37 @@ const prestigeClasses = [...classMap.values()]
         <span class="section-heading-text">Prestige Classes</span>
         <div class="section-heading-rule"></div>
       </div>
-      <div class="entry-grid class-grid">
+      <div class="class-roster">
         {prestigeClasses.map(c => (
-          <a href={url(`/power/classes/${c.id}/`)} class="entry-card power" data-astro-prefetch="hover">
-            <div class="entry-card-header">
-              <span class="entry-card-name">{c.name}</span>
-            </div>
+          <a href={url(`/power/classes/${c.id}/`)} class="class-item" data-astro-prefetch="hover">
+            <span class="class-item-name">{c.name}</span>
+            <span class="class-item-arrow" aria-hidden="true">→</span>
           </a>
         ))}
       </div>
     </>
   )}
 
-  <div class="power-footer-grid">
-    <div class="footer-section">
-      <div class="section-heading">
-        <span class="section-heading-text">Feats</span>
-        <div class="section-heading-rule"></div>
-      </div>
-      <ul class="link-list">
+  <div class="quick-links-grid">
+    <div class="quick-links-group">
+      <h3 class="quick-links-heading">Feats</h3>
+      <ul class="quick-links-list">
         <li><a href={url("/power/feats/")}>General Feats</a></li>
         <li><a href={url("/power/feats/casting-feats/")}>Casting Feats</a></li>
         <li><a href={url("/power/feats/dual-sphere-feats/")}>Dual Sphere Feats</a></li>
       </ul>
     </div>
-
-    <div class="footer-section">
-      <div class="section-heading">
-        <span class="section-heading-text">Equipment</span>
-        <div class="section-heading-rule"></div>
-      </div>
-      <ul class="link-list">
+    <div class="quick-links-group">
+      <h3 class="quick-links-heading">Equipment</h3>
+      <ul class="quick-links-list">
         <li><a href={url("/power/equipment/")}>Magical Items</a></li>
         <li><a href={url("/power/equipment/staves/")}>Staves</a></li>
-        <li><a href={url("/power/equipment/weapons/")}>Weapons & Armor</a></li>
+        <li><a href={url("/power/equipment/weapons/")}>Weapons &amp; Armor</a></li>
       </ul>
     </div>
-
-    <div class="footer-section">
-      <div class="section-heading">
-        <span class="section-heading-text">Rules</span>
-        <div class="section-heading-rule"></div>
-      </div>
-      <ul class="link-list">
+    <div class="quick-links-group">
+      <h3 class="quick-links-heading">Rules</h3>
+      <ul class="quick-links-list">
         <li><a href={url("/power/casting-traditions/")}>Casting Traditions</a></li>
         <li><a href={url("/power/oaths/")}>Oaths</a></li>
         <li><a href={url("/power/wild-magic/")}>Wild Magic</a></li>
@@ -172,21 +215,140 @@ const prestigeClasses = [...classMap.values()]
 </WikiPage>
 
 <style>
-  .power-intro {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
-    margin-bottom: 32px;
+  /* ── Banner ──────────────────────────────────────────── */
+  .power-banner {
+    margin: calc(-1 * var(--sp-4)) calc(-1 * var(--sp-5)) 20px;
+    border-radius: 0 var(--radius) 0 0;
+    overflow: hidden;
+    position: relative;
   }
 
+  .power-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: linear-gradient(to bottom, transparent, var(--clr-surface));
+    pointer-events: none;
+  }
+
+  .power-banner svg {
+    display: block;
+    width: 100%;
+    height: 200px;
+  }
+
+  /* ── Page header ─────────────────────────────────────── */
+  .page-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    font-style: italic;
+    color: var(--clr-muted);
+    margin-bottom: 20px;
+    line-height: 1.55;
+  }
+
+  /* ── Getting Started cards (compact horizontal) ──────── */
+  .gs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .gs-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 14px;
+    background: var(--clr-bg);
+    border: 0.5px solid var(--clr-border);
+    border-left: 3px solid var(--clr-power);
+    border-radius: 0 4px 4px 0;
+    text-decoration: none;
+    color: var(--clr-text);
+    transition: background 0.14s ease, transform 0.14s ease;
+  }
+
+  .gs-card:hover {
+    background: color-mix(in srgb, var(--clr-power) 5%, var(--clr-surface));
+    transform: translateX(2px);
+    text-decoration: none;
+  }
+
+  .gs-card-icon {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-power);
+    opacity: 0.8;
+  }
+
+  .gs-card-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .gs-card-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .gs-card-title {
+    font-family: var(--font-display);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--clr-power);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .gs-card-desc {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    line-height: 1.3;
+    font-style: italic;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .gs-card-arrow {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--clr-power);
+    opacity: 0.35;
+    flex-shrink: 0;
+    transition: opacity 0.14s ease, transform 0.14s ease;
+  }
+
+  .gs-card:hover .gs-card-arrow {
+    opacity: 0.8;
+    transform: translateX(3px);
+  }
+
+  /* ── Sphere badge grid ───────────────────────────────── */
   .sphere-badge-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 0;
     border-top: 1px solid var(--clr-border);
     border-left: 1px solid var(--clr-border);
-    margin-bottom: 12px;
+    margin-bottom: 0;
     background: var(--clr-bg);
+  }
+
+  .other-badge-grid {
+    margin-top: 6px;
+    margin-bottom: 24px;
   }
 
   .sphere-badge {
@@ -267,66 +429,151 @@ const prestigeClasses = [...classMap.values()]
     }
   }
 
-  .class-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 10px;
-    margin-bottom: 32px;
-  }
-
-  .entry-card.power {
-    border-left-width: 4px;
-    background: var(--clr-bg);
-    transition: all 0.2s ease;
-  }
-
-  .entry-card.power:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(23, 75, 147, 0.1);
-    border-color: var(--clr-power);
-    background: var(--clr-surface);
-  }
-
-  .entry-card.power .entry-card-name {
-    color: var(--clr-power);
-    font-size: var(--fs-sm);
-  }
-
-  .power-footer-grid {
+  /* ── Class roster ────────────────────────────────────── */
+  .class-roster {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 32px;
-    margin-top: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .class-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 14px;
+    background: var(--clr-bg);
+    border: 0.5px solid var(--clr-border);
+    border-left: 3px solid var(--clr-power);
+    border-radius: 0 4px 4px 0;
+    text-decoration: none;
+    transition: background 0.14s ease, transform 0.14s ease, box-shadow 0.14s ease;
+  }
+
+  .class-item-name {
+    font-family: var(--font-display);
+    font-size: var(--fs-base);
+    font-weight: 700;
+    color: var(--clr-power);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .class-item-arrow {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--clr-power);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.14s ease, transform 0.14s ease;
+    flex-shrink: 0;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .class-item:hover {
+      background: color-mix(in srgb, var(--clr-power) 6%, var(--clr-surface));
+      transform: translateX(2px);
+      box-shadow: 2px 0 8px rgba(23, 75, 147, 0.08);
+      text-decoration: none;
+    }
+
+    .class-item:hover .class-item-arrow {
+      opacity: 0.7;
+      transform: translateX(0);
+    }
+  }
+
+  /* ── Quick links ─────────────────────────────────────── */
+  .quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 48px;
-    padding: 24px;
-    background: color-mix(in srgb, var(--clr-power) 5%, var(--clr-surface));
-    border-radius: 8px;
     border: 1px solid var(--clr-border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--clr-power) 4%, var(--clr-surface));
   }
 
-  .footer-section .section-heading {
-    margin-top: 0;
+  .quick-links-group {
+    padding: 20px 20px 18px;
+    border-right: 1px solid var(--clr-border);
   }
 
-  .link-list {
+  .quick-links-group:last-child {
+    border-right: none;
+  }
+
+  .quick-links-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--clr-power);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  .quick-links-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
   }
 
-  .link-list li {
-    margin-bottom: 10px;
-  }
-
-  .link-list a {
+  .quick-links-list a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 6px;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    font-weight: 600;
     color: var(--clr-power);
     text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    transition: transform 0.15s ease;
+    border-radius: 3px;
+    transition: background 0.12s ease, padding-left 0.12s ease;
   }
 
-  .link-list a:hover {
-    transform: translateX(4px);
-    color: color-mix(in srgb, var(--clr-power) 80%, black);
+  .quick-links-list a::before {
+    content: '›';
+    font-size: 1.1em;
+    line-height: 1;
+    opacity: 0.4;
+    flex-shrink: 0;
+    transition: opacity 0.12s ease;
+  }
+
+  .quick-links-list a:hover {
+    background: color-mix(in srgb, var(--clr-power) 8%, transparent);
+    padding-left: 10px;
+    text-decoration: none;
+  }
+
+  .quick-links-list a:hover::before {
+    opacity: 1;
+  }
+
+  @media (max-width: 640px) {
+    .quick-links-grid {
+      grid-template-columns: 1fr;
+      border-radius: 4px;
+    }
+
+    .quick-links-group {
+      border-right: none;
+      border-bottom: 1px solid var(--clr-border);
+    }
+
+    .quick-links-group:last-child {
+      border-bottom: none;
+    }
+
+    .class-roster {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>
