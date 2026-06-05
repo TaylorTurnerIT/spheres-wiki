@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: basic
 tags: ["instill"]
+
 ---
 
 As a standard action you may touch a small container of liquid and instill an alter effect inside it, which functions as an oil. Effects that do not cost a spell point have their cost increased to 1 spell point when used in this manner.

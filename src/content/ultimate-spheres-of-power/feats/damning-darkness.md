@@ -6,6 +6,7 @@ system: power
 sphere: dark
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Dark sphere, evil alignment.

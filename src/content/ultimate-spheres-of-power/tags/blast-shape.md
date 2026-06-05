@@ -6,4 +6,5 @@ color: "#4A235A"
 id: "blast-shape"
 label: "Blast Shape"
 sphere: "destruction"
+
 ---

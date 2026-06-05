@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: imagination
+
 ---
 
 The conduit produces a Dark sphere blot effect with the Shadowing Darkness talent, which can be augmented with the following talents: Flat Black, Looming Darkness, Snagging Darkness, Tenebrous Legerdemain.

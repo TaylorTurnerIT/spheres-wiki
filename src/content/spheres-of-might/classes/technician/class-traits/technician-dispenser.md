@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: improved-shield
+
 ---
 
 The technician outfits the shield with an item for quick retrieval, such as a light weapon, a potion, a wand, or another item such as a 50 ft. length of rope or a set of tools. Other items may be used with GM approval, so long as they are reasonably smaller than the shield in question. Loading an item into the dispenser is a standard action, but retrieving the item is a free action.

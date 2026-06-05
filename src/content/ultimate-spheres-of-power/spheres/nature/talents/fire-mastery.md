@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["fire", "geomancing"]
+
 ---
 
 You gain a number of ways of expressing mastery over fire. You gain the following geomancing abilities:

@@ -4,6 +4,7 @@ name: "Customized Weapons (Ex)"
 level: 1
 tags: []
 isTraitContainer: true
+
 ---
 
 At 1st level, an armiger may customize up to three sets of weapons in a process that takes 8 hours of modification, drilling, and practice each, reworking scabbards, modifying grips, adding hooks and straps, and other tweaks to suit her personal fighting style. Each set may consist of: a single weapon, a pair of weapons that are wielded simultaneously, up to 10 identical thrown weapons, or up to 50 pieces of ammunition. A given weapon cannot be part of more than one set simultaneously. The armiger always treats her active weapon as if it were masterwork.

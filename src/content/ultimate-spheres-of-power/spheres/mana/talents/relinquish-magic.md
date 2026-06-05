@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["manipulation"]
+
 ---
 
 As a swift action, you can manipulate the magic of a harmless sphere effect with a non-instantaneous duration that only affects you, granting any amount of creatures within your natural reach its effects. Doing so ends the effect and divides the remaining duration of the effect across all affected creatures. The duration must be divided in the same increments the effect's duration was granted in (for example, an aegis must be divided in 1 hour increments). This talent can only be used to relinquish effects within 1 round of the effect's creation.

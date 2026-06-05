@@ -6,6 +6,7 @@ type: talent
 sphere: divination
 tier: advanced
 tags: ["utility", "divine"]
+
 ---
 
 **Prerequisites:** Divination sphere (Read Omens (advanced, divine)), caster level 10th.

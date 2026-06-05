@@ -5,6 +5,7 @@ level: 3
 replaces:
   - armor training 1, 2, 3, and 4
 tags: []
+
 ---
 
 An impressor gains emotions as the eliciter class feature of the same name. At 3rd level and every 4 levels thereafter, an impressor gains an emotion power of his or her choice, using fighter levels as eliciter levels when determining which powers he or she qualifies for, as well as the strength of his emotions. These levels stack with any eliciter levels he or she possesses. An impressor cannot gain a lesser power before 5th level, a greater power before 8th level, or a master power before 11th level.

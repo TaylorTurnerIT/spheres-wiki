@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["enhance"]
+
 ---
 You may enhance objects, increasing their ability to interact with the insubstantial.
 

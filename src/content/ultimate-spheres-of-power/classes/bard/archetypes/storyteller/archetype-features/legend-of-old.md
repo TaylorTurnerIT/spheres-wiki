@@ -3,6 +3,7 @@ id: legend-of-old
 name: "Legend of Old"
 level: 3
 tags: []
+
 ---
 
 At 3rd level, the storyteller can summon a legendary figure from the tales of old. The storyteller selects a particular figure that remains constant throughout his adventures. The legendary hero takes the form of a character of any class, whose level is equal to the storytellers level +2. The storyteller can only call upon the power of the legendary figure for so long. At 3rd level, he can use this ability for a number of rounds per day equal to 8 + his Charisma modifier. At each level after 3rd a storyteller can use legend of old for 2 additional rounds per day.

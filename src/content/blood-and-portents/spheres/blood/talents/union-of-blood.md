@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Blood sphere, caster level 10th.

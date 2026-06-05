@@ -4,6 +4,7 @@ name: "Spiritual Ally"
 level: 9
 replaces: ["divine bond or fiendish boon"]
 tags: []
+
 ---
 
 The avowed gains the service of an unusually intelligent and loyal creature to serve her in her battles. This creature is usually a heavy horse, although more exotic mounts are also suitable. This spiritual ally functions as a druid's animal companion, using her avowed level as her effective druid level. Spiritual allies have an Intelligence of at least 6.

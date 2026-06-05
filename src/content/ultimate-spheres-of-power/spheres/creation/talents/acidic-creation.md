@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: basic
 tags: ["material"]
+
 ---
 
 By spending an additional spell point when you create an object, you may work with material with basic acidic properties. You may create acidic liquids (3 cubic feet equals a Small object, and is enough to cover a 5-foot square).

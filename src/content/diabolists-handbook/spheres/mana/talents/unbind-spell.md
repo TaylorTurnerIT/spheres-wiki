@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Mana sphere (Essentialize (manipulation)), caster level 10th.

@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: basic
 tags: ["blood-art", "still"]
+
 ---
 
 You can cause the bodies you control to respond in gruesome and disgusting manners.

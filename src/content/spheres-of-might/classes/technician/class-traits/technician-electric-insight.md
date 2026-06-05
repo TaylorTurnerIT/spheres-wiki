@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 The technician gains many new options for inventions, as detailed under that section.

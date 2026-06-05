@@ -6,6 +6,7 @@ system: power
 tags: []
 className: armorist
 featureId: arsenal-trick
+
 ---
 
 The armorist may summon equipment or create bound equipment out of darkwood, darkleaf cloth, greenwood, or normal wood treated with the ironwood ritual.

@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: conduit-wonders
+
 ---
 
 The conduit produces a Counterspell sphere ability (as per the feat), which can be augmented with the following feats (as long as they meet the magic skill bonus prerequisite): Counterspell Mastery, Draining Surge, Improved Counterspell, Spellthief.

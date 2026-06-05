@@ -6,6 +6,7 @@ type: talent
 sphere: death
 tier: base
 tags: []
+
 ---
 
 When you are a living creature, death can be scary. Death is the end of the world we know. For many people, this association between fear and death often leads to avoidance and disgust of all things connected with death - corpses, graveyards, mortuaries, and the like - and a mistrust of those that willing associate themselves with such things.

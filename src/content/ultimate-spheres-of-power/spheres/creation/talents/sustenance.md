@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: advanced
 tags: ["material", "utility"]
+
 ---
 
 **Prerequisites:** Creation, caster level 1st.

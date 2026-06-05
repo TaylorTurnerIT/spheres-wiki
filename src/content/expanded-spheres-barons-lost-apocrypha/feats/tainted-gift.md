@@ -6,6 +6,7 @@ system: power
 sphere: mana
 tags: []
 tier: feat
+
 ---
 
 **Prerequisite:** Mana Sphere (Gift of Knowledge)

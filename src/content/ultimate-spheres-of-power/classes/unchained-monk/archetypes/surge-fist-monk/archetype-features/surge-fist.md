@@ -3,6 +3,7 @@ id: surge-fist
 name: "Surge Fist"
 level: 1
 tags: []
+
 ---
 
 The surge fist monk's signature technique involves drawing threads of latent elemental energy from the world around them and infusing it into concussive blasts.

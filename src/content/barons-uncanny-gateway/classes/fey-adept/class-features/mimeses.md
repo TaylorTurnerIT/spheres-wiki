@@ -3,6 +3,7 @@ id: mimeses
 name: "Mimeses"
 level: 3
 tags: []
+
 ---
 
 Fey Adepts are not the only magicians to wield complex illusions or even the only ones to weave shadows into semipresent realities. A certain level of artistry is foundational to a fey adept's expertise, this refined expression manifesting in a unique path known as a mimesis.

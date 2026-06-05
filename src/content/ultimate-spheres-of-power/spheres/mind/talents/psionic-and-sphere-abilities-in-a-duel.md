@@ -6,6 +6,7 @@ system: power
 sphere: mind
 tier: basic
 tags: []
+
 ---
 
 For the purpose of use, a psionic character retains their psionic focus while in a psychic duel, and may expend or regain it while in the duel.

@@ -6,6 +6,7 @@ system: power
 sphere: mana
 tags: []
 tier: feat
+
 ---
 **Prerequisites:** Mana sphere; Death sphere, Destruction sphere, Mind sphere, or Nature sphere ((water) package).
 

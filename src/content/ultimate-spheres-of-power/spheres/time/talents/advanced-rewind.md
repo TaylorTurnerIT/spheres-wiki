@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Time sphere (Age (time)), caster level 10th.

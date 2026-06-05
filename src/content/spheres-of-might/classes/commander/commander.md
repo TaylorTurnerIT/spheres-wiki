@@ -30,6 +30,7 @@ babProgression: "3/4"
 fortSaveProgression: good
 refSaveProgression: poor
 willSaveProgression: good
+
 ---
 
 "All men must follow, except for those who lead."

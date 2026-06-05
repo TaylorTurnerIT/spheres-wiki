@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["enhance"]
+
 ---
 
 You may enhance creatures, increasing or decreasing their speed.

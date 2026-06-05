@@ -24,6 +24,7 @@ babProgression: "3/4"
 fortSaveProgression: good
 refSaveProgression: poor
 willSaveProgression: good
+
 ---
 
 "My will cannot break, but your body can."

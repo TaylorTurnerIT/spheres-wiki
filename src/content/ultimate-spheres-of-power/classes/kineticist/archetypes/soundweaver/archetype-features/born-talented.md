@@ -3,6 +3,7 @@ id: born-talented
 name: "Born Talented"
 level: 1
 tags: []
+
 ---
 
 At 1st level, the soundweaver gains the cantikinesis, improved cantikinesis, and greater cantikinesis utility wild talents without needing to meet their prerequisites.

@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: basic
 tags: []
+
 ---
 When using Shuffle, you may instead shape the shuffle in the form of contiguous 5-foot squares, up to a maximum of 3 squares + 1 square per 2 caster levels. Additionally, you gain the following options:
 

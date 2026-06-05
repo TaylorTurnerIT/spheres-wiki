@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["utility", "geomancing"]
+
 ---
 
 **Prerequisites:** Nature sphere, caster level 1st.

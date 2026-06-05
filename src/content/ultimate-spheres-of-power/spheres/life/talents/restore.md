@@ -6,6 +6,7 @@ type: talent
 sphere: life
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may touch a target and spend a spell point to restore their health (Will negates (harmless)). When using restore, you must choose to restore mind, body, or soul. If affecting multiple targets, this choice becomes the same for all targets.

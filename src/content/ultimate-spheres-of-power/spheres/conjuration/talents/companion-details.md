@@ -6,6 +6,7 @@ system: power
 sphere: conjuration
 tier: basic
 tags: []
+
 ---
 
 Similar to a summoner’s eidolon, a Conjuration sphere companion does not gain the normal skill points, weapon proficiencies, or darkvision trait normally granted by the outsider type. Companions act on their own initiative count unless otherwise noted.

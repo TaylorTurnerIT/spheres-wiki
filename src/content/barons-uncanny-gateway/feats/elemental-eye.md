@@ -7,6 +7,7 @@ sphere: nature
 dualSphere: divination
 tags: ["dual-sphere", "sm"]
 tier: feat
+
 ---
 
 **Prerequisites:** Divination Sphere (viewing), Nature Sphere

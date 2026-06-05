@@ -3,6 +3,7 @@ id: roses
 name: "Roses"
 level: 1
 tags: []
+
 ---
 
 Allies within the aura gain a +2 bonus to saving throws made against pain effects and ongoing effects (but not the initial check to avoid the effect, such as the saving throw to not catch fire when affected by such an effect).

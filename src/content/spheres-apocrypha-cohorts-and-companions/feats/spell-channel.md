@@ -6,6 +6,7 @@ system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat
+
 ---
 
 **Prerequisites:** Conjuration sphere (Spell Conduit).

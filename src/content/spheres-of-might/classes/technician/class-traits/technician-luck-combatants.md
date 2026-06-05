@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 The technician knows how to stay one step ahead of an opponent and survive situations he should not be able to. His luck pool increases by 1, and he gains the following abilities:

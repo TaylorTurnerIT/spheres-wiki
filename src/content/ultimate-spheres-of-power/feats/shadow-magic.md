@@ -6,6 +6,7 @@ system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat
+
 ---
 
 Prerequisites: Illusion sphere (Shadow Infusion) or shadow pool.

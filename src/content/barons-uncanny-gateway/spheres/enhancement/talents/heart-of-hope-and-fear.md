@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: ["sm"]
+
 ---
 
 **Prerequisites:** Enhancement sphere (normalize), Fate sphere (hold on hope)

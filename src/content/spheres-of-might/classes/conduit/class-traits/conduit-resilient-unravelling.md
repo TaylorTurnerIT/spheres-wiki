@@ -7,6 +7,7 @@ tags: []
 className: conduit
 featureId: conduit-wonders
 requires: "unravel esoterica"
+
 ---
 
 Whenever the conduit uses unravel arcana to dismiss an ongoing esoterica, it does not dispel the effect, but instead reduces its effective caster level by half its current value each time–if its caster level reaches 0, it is dispelled.

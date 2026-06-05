@@ -4,6 +4,7 @@ name: "Terror Attack"
 level: 1
 replaces: ["the normal conditions under which a rogue may perform their sneak attack"]
 tags: []
+
 ---
 
 A goblin battle clown can only deliver his sneak attack against targets who have been demoralized (such as via Intimidate) by him within a number of rounds equal to the goblin battle clown's Charisma modifier. This replaces the normal conditions under which a rogue may perform their sneak attack.

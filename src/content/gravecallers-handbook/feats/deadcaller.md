@@ -6,6 +6,7 @@ system: power
 sphere: death
 tags: []
 tier: feat
+
 ---
 The otherworldly are called like the departed, for little distinguishes the transient soul.
 

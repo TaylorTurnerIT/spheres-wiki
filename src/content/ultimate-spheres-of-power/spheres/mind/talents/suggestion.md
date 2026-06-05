@@ -6,6 +6,7 @@ system: power
 sphere: mind
 tier: basic
 tags: ["sp"]
+
 ---
 
 You may plant thoughts into a target’s mind.

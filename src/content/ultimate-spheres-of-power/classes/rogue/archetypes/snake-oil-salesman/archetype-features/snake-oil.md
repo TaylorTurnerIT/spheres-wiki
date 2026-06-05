@@ -3,6 +3,7 @@ id: snake-oil
 name: "Snake Oil"
 level: 1
 tags: []
+
 ---
 
 Rather than placing an enhancement from the enhancement sphere onto a target, a snake oil salesman can create a magical substance such as a pill, a pinch of powder, or a small vial of liquid. The creature who ingests this substance gains the effects of the enhancement, as if she had the Special Delivery drawback with the same duration and limitations.

@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: ["sm"]
+
 ---
 
 **Prerequisites:** Mana Sphere

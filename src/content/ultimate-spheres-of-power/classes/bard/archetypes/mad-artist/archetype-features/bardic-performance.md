@@ -3,6 +3,7 @@ id: bardic-performance
 name: "Bardic Performance"
 level: 1
 tags: []
+
 ---
 
 A mad artist has access to the following bardic performances.

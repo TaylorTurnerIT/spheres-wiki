@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: advanced
 tags: ["utility"]
+
 ---
 
 **Prerequisites:** Fate sphere (Geas (advanced)), caster level 10th.

@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Dark sphere (Step Through Darkness (meld)), caster level 10th.

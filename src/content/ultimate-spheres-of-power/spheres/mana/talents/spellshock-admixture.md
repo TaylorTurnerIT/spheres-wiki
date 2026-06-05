@@ -6,6 +6,7 @@ system: power
 sphere: mana
 tags: ["admixture"]
 tier: feat
+
 ---
 **Prerequisites:** Destruction sphere (Admixture), Mana sphere.
 

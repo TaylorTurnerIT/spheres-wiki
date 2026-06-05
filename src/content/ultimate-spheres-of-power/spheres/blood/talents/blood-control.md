@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may establish a link to the blood of a target within close range. Unwilling targets are permitted a Fortitude save, and the effect is subject to spell resistance. Targets with less than half their maximum hit points take a -4 penalty on this save. This link lasts for as long as you concentrate, though you may spend a spell point for it to last 1 round per caster level without concentration.

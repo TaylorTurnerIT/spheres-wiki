@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: conduit-wonders
+
 ---
 
 The conduit gains the Artifice or Tinker sphere as a bonus sphere. This wonder may be taken multiple times.

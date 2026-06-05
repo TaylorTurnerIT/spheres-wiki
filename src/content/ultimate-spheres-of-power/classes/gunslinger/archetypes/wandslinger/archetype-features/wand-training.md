@@ -3,6 +3,7 @@ id: wand-training
 name: "Wand Training"
 level: 5
 tags: []
+
 ---
 
 Starting at 5th level, a wandslinger gains a bonus equal to his Dexterity modifier on damage rolls with Destructive Blasts cast from wands, and may use his class level in place of the wand's caster level when determining the save DC of any Destructive Blast he casts from a wand.

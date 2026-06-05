@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: basic
 tags: ["material"]
+
 ---
 
 When you create an object, you may work with any non-harmful material with a hardness of 5 or less, including glass, ice, or leather. You may create water (3 cubic feet equals a Small object), but not gases or flesh. As you gain caster levels, you also gain the ability to steadily make more materials, as detailed in the table below. When creating objects made from stone, gems, or metal, double the maximum weight per size category of the objects you can create.

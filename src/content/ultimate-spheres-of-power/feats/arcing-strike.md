@@ -6,6 +6,7 @@ system: power
 sphere: divination
 tags: ["combat"]
 tier: feat
+
 ---
 
 **Prerequisites:** Destruction sphere (Guided Strike (blast shape)), caster level 11th.

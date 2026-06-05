@@ -3,6 +3,7 @@ id: trapmaster-ex
 name: "Trapmaster (Ex)"
 level: 7
 tags: []
+
 ---
 
 At 7th level, all uses of the Disable Device skill have their required time decreased by 2 steps instead of 1.

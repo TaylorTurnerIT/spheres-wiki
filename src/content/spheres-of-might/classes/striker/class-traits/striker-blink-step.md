@@ -7,6 +7,7 @@ tags: []
 className: striker
 featureId: striker-art-ex
 requires: "Striker 5"
+
 ---
 
 The striker can use her speed step tension technique as a free action.

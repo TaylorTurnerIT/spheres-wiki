@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 The technician gains proficiency with all firearms (except siege weapons) and gains the Gunsmithing feat. If the technician already possesses these abilities via feats or martial talents, he may immediately retrain them.

@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: improved-armor
+
 ---
 
 The penalty to movement from the armor is cut in half. This improvement can be taken twice. If taken a second time, this improvement removes the movement penalty completely.

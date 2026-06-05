@@ -7,6 +7,7 @@ sphere: war
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 You can rally the hearts of your people - even after they have stopped beating.

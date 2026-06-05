@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Creation sphere (Exquisite Detail), Enhancement sphere (Bestow Intelligence (enhance)), caster level 5th.

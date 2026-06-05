@@ -3,6 +3,7 @@ id: elemental-shape
 name: "Elemental Shape"
 level: 6
 tags: []
+
 ---
 
 At 6th level the planar custodian gains the ability to use their wild shape ability once per day, plus an additional time per day for each 2 planar custodian levels they possess (up to 7 times at 18th level). However, they are limited in what they can shapeshift into depending upon their elemental focus.

@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: basic
 tags: ["instill"]
+
 ---
 
 As a standard action you may touch a small container of liquid and instill a meld or shadow effect inside it, which functions as a potion or oil.

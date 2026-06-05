@@ -6,6 +6,7 @@ system: power
 sphere: conjuration
 tier: basic
 tags: []
+
 ---
 
 The Conjuration sphere raises concerns among many regarding both action economy overwhelming encounters and additional bodies swamping the game. While the Conjuration sphere offers interesting options for solo campaigns, letting a single character cover numerous other roles, the more standard group campaign requires different considerations.

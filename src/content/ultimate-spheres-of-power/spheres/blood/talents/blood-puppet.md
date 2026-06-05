@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: basic
 tags: ["quicken"]
+
 ---
 
 You may spend a spell point to use blood control to take control of the target's body. For 1 round per caster level or until the blood control ends (whichever comes first), you can concentrate on the target, spending an action to force the target's body to take the same type of action, acting on simultaneously.

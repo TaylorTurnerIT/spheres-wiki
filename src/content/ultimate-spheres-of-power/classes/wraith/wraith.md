@@ -27,6 +27,7 @@ babProgression: "3/4"
 fortSaveProgression: poor
 refSaveProgression: good
 willSaveProgression: good
+
 ---
 
 Emulating powerful and perilous creatures such as ghosts and shadow demons, wraiths gain the power to fade into the ether. A diverse group, each wraith is attuned to certain types of creatures or states of mind. This attunement can be exploited to seize control, turning foes into puppets. Some gain their talents from exposure to possessing entities, others obtain their power as part of returning from death themselves, or via other, more esoteric, paths.

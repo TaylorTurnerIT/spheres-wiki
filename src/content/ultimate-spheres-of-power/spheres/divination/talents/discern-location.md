@@ -6,6 +6,7 @@ type: talent
 sphere: divination
 tier: advanced
 tags: ["utility", "divine"]
+
 ---
 
 **Prerequisites:** Divination sphere (Dowsing (divine), Greater Divine [range]), caster level 15th.

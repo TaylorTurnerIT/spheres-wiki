@@ -4,6 +4,7 @@ name: "Ancient Kenning"
 level: 2
 replaces: ["well-versed"]
 tags: []
+
 ---
 
 The growling marauder has access to old stories and secret histories that can enhance his martial power and spell casting.

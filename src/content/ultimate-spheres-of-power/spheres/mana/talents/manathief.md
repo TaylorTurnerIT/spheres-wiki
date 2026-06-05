@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: ["expunge"]
+
 ---
 
 **Prerequisites:** Mana sphere, caster level 1st.

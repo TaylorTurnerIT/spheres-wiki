@@ -7,6 +7,7 @@ sphere: nature
 dualSphere: enhancement
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Enhancement sphere, Nature sphere ((plant) package).

@@ -7,6 +7,7 @@ tags: []
 className: conduit
 featureId: concordance
 requires: "Weather sphere or transmutation spell"
+
 ---
 
 The conduit gains the following options when producing this esoterica:

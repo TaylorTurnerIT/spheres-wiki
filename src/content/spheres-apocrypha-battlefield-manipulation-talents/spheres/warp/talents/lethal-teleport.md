@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Warp sphere (Unwilling Teleport), caster level 5th.

@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Mana sphere (Flow (manabond)), caster level 7th.

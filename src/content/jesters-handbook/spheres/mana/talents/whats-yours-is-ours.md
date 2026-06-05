@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Mana sphere (Soulmate (manabond)), caster level 1st.

@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Enhancement sphere (Magic Sink (enhance)), Protection sphere (Spell Ward (aegis, ward)), caster level 1st.

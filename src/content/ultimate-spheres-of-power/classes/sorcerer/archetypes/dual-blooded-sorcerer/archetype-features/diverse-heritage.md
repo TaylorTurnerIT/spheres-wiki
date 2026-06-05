@@ -3,6 +3,7 @@ id: diverse-heritage
 name: "Diverse Heritage"
 level: 1
 tags: []
+
 ---
 
 The dual-blooded sorcerer may choose a second sorcerer bloodline. He receives the bonus class skill, bloodline arcana, and bloodline powers of both bloodlines, and when choosing his bloodline feats may choose from either list. Bonuses from different bloodline arcanas do not stack with each other.

@@ -6,6 +6,7 @@ type: talent
 sphere: death
 tier: basic
 tags: []
+
 ---
 
 You can alter a corpse in one of the following ways by touching it as a standard action:

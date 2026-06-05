@@ -7,6 +7,7 @@ sphere: telekinesis
 dualSphere: enhancement
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Enhancement sphere, Telekinesis sphere.

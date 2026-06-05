@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Mana Sphere (Knowledge Drain (advanced), Manathief (advanced, expunge), Gift of Knowledge (manipulation)), caster level 1st

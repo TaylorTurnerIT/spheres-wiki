@@ -2,6 +2,7 @@
 id: hemetic-philosopher
 name: "Hemetic Philosopher"
 tags: []
+
 ---
 
 A hemetic philosopher learns to unlock the hidden potential of blood through the application of alchemy.

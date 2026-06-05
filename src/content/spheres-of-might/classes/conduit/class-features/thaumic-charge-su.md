@@ -3,6 +3,7 @@ id: thaumic-charge-su
 name: "Thaumic Charge (Su)"
 level: 1
 tags: []
+
 ---
 
 At 1st level, the conduit can spend 1 hour holding an object to instill a thaumic charge within it–this hour must be uninterrupted and requires a great deal of focus to achieve. The conduit can only have a single item instilled with thaumic charge at a time; instilling it within a second item causes the first one to lose its thaumic charge. At 15th and 20th level, the conduit can have an additional item instilled with thaumic charge at one time.

@@ -7,6 +7,7 @@ sphere: illusion
 dualSphere: alteration
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Alteration sphere, Illusion sphere.

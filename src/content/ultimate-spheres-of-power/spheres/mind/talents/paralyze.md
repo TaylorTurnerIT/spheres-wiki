@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
+
 ---
 
 You freeze the target in place.

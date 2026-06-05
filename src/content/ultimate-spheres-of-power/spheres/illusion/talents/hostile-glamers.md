@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: basic
 tags: ["glamer"]
+
 ---
 
 You can create glamers that affect the wearer. Targets of a Hostile Glamer may attempt a saving throw to disbelieve in addition to the saving throw granted to resist the glamer being applied to them, and are considered to be 'interacting' with the glamer every round as if it were a figment. For example, if you created an Illusionary Disguise of someone turning into an animal, that person might believe in their own transformation unless they, like others, made their Will save to disbelieve.

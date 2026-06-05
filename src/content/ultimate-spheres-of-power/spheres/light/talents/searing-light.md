@@ -6,6 +6,7 @@ type: talent
 sphere: light
 tier: basic
 tags: ["light"]
+
 ---
 
 You may create bright light that burns targets in its area. All creatures in the area suffer 1 point of fire damage per caster level per round they are within this area of bright light. Undead, oozes, and creatures harmed by daylight take 2 points of fire damage per caster level. This does not affect the target of the glow itself.

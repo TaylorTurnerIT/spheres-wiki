@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: basic
 tags: ["meld"]
+
 ---
 
 You may spend a spell point to grant a target immunity to all negative effects from your (darkness) or (blot) talents for 1 hour per caster level. This does not grant the target the ability to see in your darkness if it does not already possess the means to do so, but it does allow creatures with darkvision to see in Pure Darkness.

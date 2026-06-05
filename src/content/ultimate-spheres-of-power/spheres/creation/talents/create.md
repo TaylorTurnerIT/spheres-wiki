@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may spend a spell point to create a non-magical, unattended object out of vegetable matter such as wood, hemp, or cotton in either your hand or an adjacent square. You may create objects with multiple materials, provided you can create all the materials required. Adamantine cannot be altered or created, except for the Repair and Destroy abilities. The object may be of equivalent size to one Small object per caster level and lasts as long as you continue to concentrate, to a maximum of 1 minute per caster level. When creating an object you may spend an additional spell point to allow that object to persist for 1 minute per caster level without concentration. A created object may be dismissed as a standard action.

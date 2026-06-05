@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Conjuration Sphere (Link, Otherworldly Audience, Spell Conduit x2, Spell-Linked Companion), caster level 15th.

@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Illusion sphere (Lingering Illusion, Programmed Illusion), caster level 8th.

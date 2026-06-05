@@ -4,6 +4,7 @@ name: "Weapon of the Golden Soul"
 level: 20
 replaces: ["Perfect Self"]
 tags: []
+
 ---
 
 At 20th level, the kensai's living ki weapon becomes sentient, a weapon of the golden soul. Often, like the birth of a child, it can be estimated by the kensai, but exactly when it happens is usually random. There is one constant though; it always happens during combat.

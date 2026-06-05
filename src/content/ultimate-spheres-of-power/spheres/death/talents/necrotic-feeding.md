@@ -6,6 +6,7 @@ type: talent
 sphere: death
 tier: basic
 tags: ["ghost-strike"]
+
 ---
 
 You may make a ghost strike that causes a living creature that is below 0 hit points but stabilized to resume dying. You may also spend a spell point to make a ghost strike that, when it strikes a target below 0 hit points, kills it instantly (Will negates).

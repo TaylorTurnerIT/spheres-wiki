@@ -3,6 +3,7 @@ id: reduced-existence
 name: "Reduced Existence"
 level: 2
 tags: []
+
 ---
 
 At 2nd level a nihilicist is constantly under the effects of negate aroma, only needs to consume 1/4 as much food and water to survive, and only needs to sleep 2 hours per day. At 6th level they are constantly under the effects of nondetection with a caster level equal to their nihilicist level and no longer need to breathe or sleep, gaining immunity to sleep effects (though they still must rest 2 hours to recover from burn).

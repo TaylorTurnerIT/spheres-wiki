@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: advanced
 tags: ["curse", "consecration"]
+
 ---
 
 **Prerequisites:** Fate sphere, Death sphere, caster level 10th.

@@ -7,6 +7,7 @@ sphere: protection
 dualSphere: fate
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Fate sphere, Protection sphere (Punishment)

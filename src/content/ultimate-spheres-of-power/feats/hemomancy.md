@@ -6,6 +6,7 @@ system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat
+
 ---
 
 **Prerequisite:** Death sphere.

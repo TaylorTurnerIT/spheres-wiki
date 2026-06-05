@@ -6,6 +6,7 @@ type: talent
 sphere: light
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Light sphere (Flicker (light)), caster level 15th.

@@ -6,6 +6,7 @@ system: power
 sphere: weather
 tier: basic
 tags: []
+
 ---
 
 Heat works very similarly to Cold. Hot environments can deal lethal or nonlethal fire damage to a creature. A creature dealt damage in this manner becomes fatigued (heatstroke), and cannot recover from fatigue or damage until cooled off (reaches shade, survives until nightfall, gets doused in water, and so forth). If a character takes an amount of nonlethal fire damage equal to her total hit points, any further damage from a hot environment is lethal fire damage.

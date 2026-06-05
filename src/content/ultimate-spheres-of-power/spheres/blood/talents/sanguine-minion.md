@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Blood sphere (Extract Blood Construct, Lengthened Control), caster level 5th.

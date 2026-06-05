@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: advanced
 tags: ["curse"]
+
 ---
 
 **Prerequisites:** Fate sphere (Exorcism (word), Geas (advanced, word), Greater Geas (advanced), Mark Of Judgment (advanced)), caster level 15th.

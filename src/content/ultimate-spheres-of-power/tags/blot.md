@@ -6,4 +6,5 @@ color: "#4A235A"
 id: "blot"
 label: "Blot"
 sphere: "dark"
+
 ---

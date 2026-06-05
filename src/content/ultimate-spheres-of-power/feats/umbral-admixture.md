@@ -6,6 +6,7 @@ system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat
+
 ---
 
 **Prerequisites:** Dark sphere, Destruction sphere (Admixture).

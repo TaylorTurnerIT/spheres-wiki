@@ -6,6 +6,7 @@ system: power
 tags: []
 className: armorist
 featureId: arsenal-trick
+
 ---
 
 The armorist's bound and summoned armor gains the jousting and hosteling special abilities. Creatures contained within hosteling equipment are harmlessly ejected when the equipment is dismissed.

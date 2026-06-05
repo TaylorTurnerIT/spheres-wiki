@@ -6,6 +6,7 @@ type: talent
 sphere: protection
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Protection sphere (Glyph), caster level 5th.

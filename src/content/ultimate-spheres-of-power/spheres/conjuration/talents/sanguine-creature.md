@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["form"]
+
 ---
 
 Choose one of the following abilities. This talent may be taken more than once; each time a different ability may be gained:

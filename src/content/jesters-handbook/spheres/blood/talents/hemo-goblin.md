@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: basic
 tags: []
+
 ---
 
 You may spend a spell point to target a creature within blood control range that is taking bleed damage, under the effects of your blood control, or has less than half their hit points remaining. You summon a hemo goblin, an otherwise ordinary goblin (Pathfinder RPG Bestiary pg. 156), into a square adjacent to the target. The hemo goblin gains a bonus to its armor class, attack rolls, saving throws, and skill checks equal to your caster level.

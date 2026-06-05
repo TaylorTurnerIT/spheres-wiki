@@ -3,6 +3,7 @@ id: grace-of-the-crane
 name: "Grace of the Crane"
 level: 2
 tags: []
+
 ---
 
 At 2nd level, when moving through a threatened area, the seng only provokes an attack of opportunity when he moves more than one-quarter his base speed in any threatened area.

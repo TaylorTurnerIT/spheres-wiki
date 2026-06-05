@@ -3,6 +3,7 @@ id: smite-occult
 name: "Smite Occult"
 level: 4
 tags: []
+
 ---
 
 Once per day, a shadow templar can call out to divine to aid her in her struggle against practitioners of the occult. As a swift action, the shadow templar chooses one target within sight to smite. If this target is bound to a spirit or possesses the occult subtype, the shadow templar adds her Charisma bonus (if any) to her attack rolls and adds her paladin (or antipaladin) level to all damage rolls made against the target of her smite. Smite occult attacks automatically bypass any DR the creature might possess.

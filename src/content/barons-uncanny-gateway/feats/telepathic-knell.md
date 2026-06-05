@@ -6,6 +6,7 @@ system: power
 sphere: mind
 tags: ["combat", "sm"]
 tier: feat
+
 ---
 
 **Prerequisites:** Mind Sphere

@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["metal", "geomancing"]
+
 ---
 
 **Prerequisites:** Nature sphere ((metal) package, Metal Mastery (metal, geomancing)), caster level 10th.

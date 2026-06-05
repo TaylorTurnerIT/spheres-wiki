@@ -6,6 +6,7 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
+
 ---
 
 The scholar carefully lays out an unbroken circle of salt, creating a protective circle around herself and up to 1 adjacent ally per 2 class levels (minimum 1) that lasts for a number of rounds equal to the scholar's Intelligence bonus (minimum 1). If a protected ally moves outside of the square they occupied when the circle was created, the protective energy is disrupted and the effect immediately ends. While within this circle, the scholar and protected allies gain a circumstance bonus to saving throws against spells, spell-like abilities, and supernatural effects equal to the scholar's Intelligence bonus (minimum 1). Whenever the scholar succeeds on a saving throw against such an effect while protected by the circle, she immediately regains her martial focus if it is currently expended.

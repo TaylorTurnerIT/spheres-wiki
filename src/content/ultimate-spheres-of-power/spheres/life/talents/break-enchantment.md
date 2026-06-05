@@ -6,6 +6,7 @@ type: talent
 sphere: life
 tier: basic
 tags: []
+
 ---
 
 As a special application of restore, you may spend an additional spell point to remove all magic from the target that has a duration instead of restoring mind, body, or soul. This may be used against curses including cursed equipment, although it does not remove the curse from the equipment and instead suppresses the effect long enough for the item to be removed.

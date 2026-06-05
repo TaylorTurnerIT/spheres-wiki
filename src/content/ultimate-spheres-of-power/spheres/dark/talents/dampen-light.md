@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: basic
 tags: ["darkness"]
+
 ---
 
 You can dampen light in an area. This functions similarly to creating darkness, using the same range and area, but it lasts for 1 minute per caster level without the need for concentration and only lowers light levels by one step within the area.

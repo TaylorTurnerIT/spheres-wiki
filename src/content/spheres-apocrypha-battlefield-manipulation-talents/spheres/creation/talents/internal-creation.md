@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Creation sphere (Distant Creation [range], Potent Alteration).

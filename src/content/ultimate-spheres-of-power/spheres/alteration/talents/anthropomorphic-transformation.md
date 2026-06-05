@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: basic
 tags: ["transformation"]
+
 ---
 
 You grant the form of a humanoid creature with your shapeshift.

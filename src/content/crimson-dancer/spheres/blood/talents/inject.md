@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: basic
 tags: []
+
 ---
 
 As part of casting a blood art or blood control, you may increase the casting time by one step (usually a standard to a full-round action) and inflict 1 point of Constitution damage to yourself. If you do, make a melee touch attack or ranged touch attack against a creature within your blood control range, marking them with your blood. If successful, the struck creature is marked by your blood for 1 round per caster level. A marked creature is treated as though it had less than half its maximum hit points remaining for the purpose of the save penalty of any blood control targeting that creature, and your Blood sphere effects targeting the struck creature ignore any spell resistance it possesses. A marked creature can spend a standard action or two move actions to wipe the blood off and end this effect. Immersion in water, heavy rain, or similar effects may also end this effect, subject to GM discretion. When delivering this effect as a melee touch attack, you may hold the charge, and if you possess the Hemokinesis talent, you may hold the charge when using the ranged option.

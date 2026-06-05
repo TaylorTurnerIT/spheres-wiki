@@ -6,6 +6,7 @@ system: power
 sphere: destruction
 tags: ["channeling"]
 tier: feat
+
 ---
 
 **Prerequisites:** Destruction sphere, channel energy class feature.

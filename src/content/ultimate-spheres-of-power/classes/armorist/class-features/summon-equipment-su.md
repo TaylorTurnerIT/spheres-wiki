@@ -3,6 +3,7 @@ id: summon-equipment-su
 name: "Summon Equipment (Su)"
 level: 1
 tags: []
+
 ---
 
 An armorist may spend a spell point as a swift action or move action to conjure a weapon, shield, or suit of armor into her hands or directly onto her body, which stays for 1 minute per class level before disappearing.

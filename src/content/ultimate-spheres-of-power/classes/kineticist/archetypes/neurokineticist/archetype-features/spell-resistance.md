@@ -3,6 +3,7 @@ id: spell-resistance
 name: "Spell Resistance"
 level: 1
 tags: ["potent"]
+
 ---
 
 yes

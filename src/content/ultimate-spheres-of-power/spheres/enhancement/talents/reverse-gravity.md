@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: ["enhance"]
+
 ---
 
 **Prerequisites:** Enhancement sphere (Lighten (enhance)), caster level 15th.

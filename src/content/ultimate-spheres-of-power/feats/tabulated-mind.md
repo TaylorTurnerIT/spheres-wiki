@@ -6,6 +6,7 @@ system: power
 sphere: divination
 tags: []
 tier: feat
+
 ---
 
 **Prerequisite:** Divination sphere.

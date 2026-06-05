@@ -6,6 +6,7 @@ system: power
 sphere: alteration
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Alteration sphere (Mass Alteration); animal companion or familiar.

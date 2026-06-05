@@ -6,6 +6,7 @@ system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat
+
 ---
 
 **Prerequisites:** Destruction sphere (at least one (blast type) talent that deals cold damage).

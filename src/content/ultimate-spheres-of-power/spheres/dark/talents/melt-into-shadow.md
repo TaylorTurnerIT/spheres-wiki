@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Dark sphere (Animated Shadow (advanced, shadow), Flowing Darkness, Shadow Lurk (shadow)), caster level 10th.

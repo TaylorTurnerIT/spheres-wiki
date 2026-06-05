@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: ["blast-type", "fire", "light"]
+
 ---
 
 **Prerequisites:** Destruction sphere (any two (blast type) talents in the fire blast type group), caster level 5th.

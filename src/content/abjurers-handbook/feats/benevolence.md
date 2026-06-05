@@ -7,6 +7,7 @@ sphere: protection
 dualSphere: life
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 **Prerequisites:** Life sphere (Fount Of Life), Protection sphere.
 

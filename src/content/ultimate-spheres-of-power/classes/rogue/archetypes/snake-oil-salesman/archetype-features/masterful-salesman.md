@@ -3,6 +3,7 @@ id: masterful-salesman
 name: "Masterful Salesman"
 level: 20
 tags: []
+
 ---
 
 A snake oil salesman can sell fire to a fire elemental. At 20th level, she gains a unique enhancement; by spending a spell point, she may enhance a single object on her person to seem incredibly valuable to onlookers. When she does so, select one of the following options:

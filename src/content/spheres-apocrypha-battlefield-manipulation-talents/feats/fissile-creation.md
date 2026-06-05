@@ -7,6 +7,7 @@ sphere: destruction
 dualSphere: creation
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Creation sphere, Destruction sphere (Explosive Orb (blast shape)).

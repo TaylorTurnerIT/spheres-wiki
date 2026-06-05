@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: basic
 tags: ["blast-type", "crystal"]
+
 ---
 
 You craft your destructive blast into a series of jagged crystal shards, dealing slashing damage and using d4 instead of d6 as its damage die. Any creature struck by the attack or that failed their Reflex saving throw if one was required must succeed at a Reflex save or have its movement speed reduced in half until 24 hours pass, or it receives at least 1 point of fast healing/magical healing/regeneration. This effect may also be healed as a caltrop wound. In addition, every space affected by the razor blast becomes covered in jagged crystals. Any creature who moves over such a space must succeed at a Reflex save or suffer 1 point of damage and have its speed reduced by half, as detailed above.

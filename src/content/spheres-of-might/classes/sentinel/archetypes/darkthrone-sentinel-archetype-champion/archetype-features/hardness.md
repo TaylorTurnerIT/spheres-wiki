@@ -4,6 +4,7 @@ name: "Hardness"
 level: 1
 replaces: ["counter-critical"]
 tags: []
+
 ---
 
 5 + 1/2 the darkthrone's class level

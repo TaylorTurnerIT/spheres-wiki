@@ -4,6 +4,7 @@ name: "Unbelievable Force"
 level: 14
 replaces: ["the bonus feat gained at 14th level"]
 tags: []
+
 ---
 
 At 14th level, when the impossible warrior uses improbable strike against a creature or object, he may dispel up to 1d4 effects on the target. He may name any number of effects (after having rolled to determine how many effects he will dispel) and leave the rest to be determined randomly or to have not further effects dispelled.

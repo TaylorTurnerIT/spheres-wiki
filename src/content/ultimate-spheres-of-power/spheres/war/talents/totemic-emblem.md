@@ -6,6 +6,7 @@ type: talent
 sphere: war
 tier: basic
 tags: []
+
 ---
 
 You may create totems attached to objects. A totem attached to an object is called a totemic emblem. This functions as a regular totem, except that it has a radius of 30 feet, it moves with the object it is attached to, and is dispelled if the object is destroyed. Totemic emblems continue to function if they go beyond long range of their creator, but the creator can only rally those within that totem if they are within long range.

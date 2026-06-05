@@ -6,6 +6,7 @@ type: talent
 sphere: war
 tier: base
 tags: []
+
 ---
 
 A rally is a magical effect you may enact as an immediate action, targeting a creature within the area of effect of one of your totems (or with whom you share a mandate, as detailed below), granting the target bonuses or allowing them to take certain actions. You must be within long range of a target to rally that target. If a rally targets a specific creature, it is subject to spell resistance.

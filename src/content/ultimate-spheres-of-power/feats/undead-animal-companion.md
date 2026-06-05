@@ -6,6 +6,7 @@ system: power
 sphere: death
 tags: []
 tier: feat
+
 ---
 
 Your animal companions serve you beyond the grave.

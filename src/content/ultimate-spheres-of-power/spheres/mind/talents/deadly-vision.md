@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: advanced
 tags: ["charm"]
+
 ---
 
 **Prerequisites:** Mind sphere (Vision (charm)), caster level 10th.

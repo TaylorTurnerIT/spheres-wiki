@@ -3,6 +3,7 @@ id: deeds
 name: "Deeds"
 level: 2
 tags: []
+
 ---
 
 Lucky Bastards spend kismet points to accomplish deeds. Most deeds grant the lucky bastard a momentary bonus or effect, but some provide longer-lasting effects. Some deeds remain in effect while the lucky bastard has at least 1 kismet point, but do not require expending kismet to be maintained. An lucky bastard can only perform deeds of her level or lower. Unless otherwise noted, a deed can be performed multiple successive times, as long as the lucky bastard has or spends the required number of kismet points to perform the deed.
@@ -24,9 +25,11 @@ At 18th level the lucky bastard gains the swashbuckler's cheat death deed (using
 __Felicitous Footwork (Ex):__ At 18th level, the lucky bastard may spend a kismet point as a standard action to apply the turnabout deed to all attacks made against her before the beginning of her next turn. She also gains a bonus on Acrobatics checks equal to twice the current size of her kismet pool; if the size of her kismet pool decreases, so does this bonus.
 
 This ability replaces the rogue talents gained at 2nd, 4th, 12th, and 18th level.
+
 ---
 #### Kismet
 Kismet counts as luck for the purpose of qualifying for and activating feats, but not for other purposes. If a character has a kismet ability from two sources, the kismet points from the two sources do not stack, but the character regains kismet in any way either class feature allows them to. If the character's kismet abilities would give them kismet points based on different ability scores, they use the highest.
+
 ---
 
 [[include sop-template]]

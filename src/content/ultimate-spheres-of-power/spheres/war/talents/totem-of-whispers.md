@@ -6,6 +6,7 @@ type: talent
 sphere: war
 tier: basic
 tags: ["totem"]
+
 ---
 
 The area of your totem is filled with quiet voices that distract and unnerve your enemies. Enemies take a -1 penalty to their concentration checks and Perception checks involving listening. This increases by -1 for every 2 caster levels you possess.

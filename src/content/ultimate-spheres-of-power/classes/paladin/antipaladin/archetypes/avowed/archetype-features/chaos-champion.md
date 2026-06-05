@@ -3,6 +3,7 @@ id: chaos-champion
 name: "Chaos Champion"
 level: 20
 tags: []
+
 ---
 
 At 20th level, whenever the avowed would have an active smite on a creature, she gains the benefits of the Freedom (word) Fate talent for as long as the creature is under the effects of her smite.

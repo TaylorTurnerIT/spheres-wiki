@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: base
 tags: []
+
 ---
 
 Altering an object is a standard action and requires you to touch the object to be altered. Alter is subject to spell resistance. You cannot alter an animate target (such as a golem or animated object) and the object must be non-magical and unattended (not held, worn, or part of a creature's equipment). While some talents may affect these limitations, artifacts can never be altered.

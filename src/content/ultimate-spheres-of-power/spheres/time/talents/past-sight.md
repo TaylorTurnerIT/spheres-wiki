@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: advanced
 tags: ["utility"]
+
 ---
 
 **Prerequisites:** Time sphere, caster level 5th.

@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Warp sphere (Mass Teleport [mass], Wormhole (space)), caster level 5th.

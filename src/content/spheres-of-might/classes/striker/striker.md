@@ -28,6 +28,7 @@ babProgression: "3/4"
 fortSaveProgression: good
 refSaveProgression: poor
 willSaveProgression: good
+
 ---
 
 "Who needs a weapon when I am one?"

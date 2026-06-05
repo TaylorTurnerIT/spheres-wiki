@@ -3,6 +3,7 @@ id: pull-from-darkness
 name: "Pull From Darkness"
 level: 1
 tags: []
+
 ---
 
 *The ebonmage's magics reach into and beyond the void, channeling its power into absolute darkness.*

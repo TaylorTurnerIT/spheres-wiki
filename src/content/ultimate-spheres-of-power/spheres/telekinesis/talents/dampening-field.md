@@ -6,6 +6,7 @@ type: talent
 sphere: telekinesis
 tier: basic
 tags: []
+
 ---
 
 You may use your telekinetic force to protect and stabilize creatures and objects that you are lifting.

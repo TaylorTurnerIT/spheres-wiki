@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: basic
 tags: ["transformation"]
+
 ---
 
 You may grant the form of a serpent with your shapeshift.

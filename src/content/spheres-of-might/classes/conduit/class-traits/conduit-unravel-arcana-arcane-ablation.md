@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: subjectivity
+
 ---
 
 At 7th level, the conduit can unravel arcana as a free action (usable outside of their turn) before they attempt a saving throw, allowing them to roll the saving throw twice and take the highest result.

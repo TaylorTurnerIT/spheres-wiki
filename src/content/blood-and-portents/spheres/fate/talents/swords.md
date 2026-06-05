@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif", "arcana"]
+
 ---
 
 You actualize the target's power to bring about action. When granted as a motif, the target gains a +1 bonus on attack rolls. This bonus increases by +1 for every 10 caster levels.

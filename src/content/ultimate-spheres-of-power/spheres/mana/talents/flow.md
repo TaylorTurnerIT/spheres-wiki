@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["manabond"]
+
 ---
 
 As a manabond, you can create a magical stream between yourself and the recipient. Each round, as part of maintaining your manabond, you may choose to either funnel or sap the recipient of this manabond.

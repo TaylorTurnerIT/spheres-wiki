@@ -6,6 +6,7 @@ type: talent
 sphere: protection
 tier: advanced
 tags: ["aegis", "ex"]
+
 ---
 
 **Prerequisites:** Protection sphere (Energy Resistance (aegis, ward)), caster level 10th.

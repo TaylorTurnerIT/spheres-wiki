@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: ["curse"]
+
 ---
 
 **Prerequisites:** Mana sphere, caster level 10th.

@@ -3,6 +3,7 @@ id: unravel-arcana-su
 name: "Unravel Arcana (Su)"
 level: 3
 tags: []
+
 ---
 
 At 3rd level, the conduit learns how to unravel their own arcane meddling, often with great effect. The conduit can dismiss a non-utility (hack) talent they have applied to an attended object, affecting the creature attending it with an effect of the conduit's choice, chosen from below. Unless otherwise specified, the object must be within close range (using their Spellhacking range) of the conduit to unravel arcana. If such an effect has a saving throw, it uses their Spellhacking save DC.

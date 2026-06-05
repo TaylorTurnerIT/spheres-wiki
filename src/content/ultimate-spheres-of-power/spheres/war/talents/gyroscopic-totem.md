@@ -6,6 +6,7 @@ type: talent
 sphere: war
 tier: basic
 tags: ["totem"]
+
 ---
 
 You must spend a spell point to create a gyroscopic totem. Gravitational fluctuations keep enemies within this totem unbalanced while they remain within. An unbalanced creature can still move, but entering squares draws attacks of opportunity as if they had left the square, and the creature can not take 5-foot steps.

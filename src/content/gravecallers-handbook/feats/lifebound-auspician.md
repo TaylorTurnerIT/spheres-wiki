@@ -6,6 +6,7 @@ system: power
 sphere: life
 tags: []
 tier: feat
+
 ---
 You bend the forces of the cosmos to the heartbeat of mortality.
 **Prerequisites:** Fate sphere; Death sphere or Life sphere; caster level 3rd.

@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: advanced
 tags: ["alter"]
+
 ---
 
 **Prerequisites:** Creation sphere (Potent Alteration).

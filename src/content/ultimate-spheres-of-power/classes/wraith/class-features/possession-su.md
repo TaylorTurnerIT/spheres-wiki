@@ -4,6 +4,7 @@ name: "Possession (Su)"
 level: 2
 tags: []
 isTraitContainer: true
+
 ---
 
 At 2nd level, the wraith may attempt to possess a creature within his natural reach as a standard action. This is a mind-affecting possession effect. The challenge rating of the creature determines the duration of the possession, per the Table: Possession Duration (creatures such as animal companions, Conjuration sphere companions, and familiars are treated as having a CR of their Hit Dice - 2 for this purpose).

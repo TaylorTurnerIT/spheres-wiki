@@ -6,6 +6,7 @@ type: talent
 sphere: weather
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Weather sphere (Wind Lord (advanced)), caster level 10th.

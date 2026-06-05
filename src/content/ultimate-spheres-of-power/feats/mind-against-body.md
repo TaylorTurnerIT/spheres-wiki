@@ -6,6 +6,7 @@ system: power
 sphere: telekinesis
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Telekinesis sphere (Telekinetic Maneuver).

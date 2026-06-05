@@ -2,6 +2,7 @@
 id: shadowsinger
 name: "Shadowsinger"
 tags: []
+
 ---
 
 ### Shadowsinger (Bard Archetype)

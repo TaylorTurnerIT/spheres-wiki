@@ -3,6 +3,7 @@ id: glitched-out
 name: "Glitched-Out"
 level: 1
 tags: []
+
 ---
 
 When engaged in combat with a glitch a creature may inexplicably gain a new template if the GM spends recoils on this.

@@ -7,6 +7,7 @@ sphere: fate
 dualSphere: divination
 tags: ["dual-sphere", "sm"]
 tier: feat
+
 ---
 
 **Prerequisites:** Divination Sphere (augury or divine future), Fate Sphere

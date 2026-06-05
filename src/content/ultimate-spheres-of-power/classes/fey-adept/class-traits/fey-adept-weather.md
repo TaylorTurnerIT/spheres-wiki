@@ -6,6 +6,7 @@ system: power
 tags: []
 className: fey-adept
 featureId: shadowstuff
+
 ---
 
 The fey adept may create the illusion of a weather effect such as rain, snow, wind, or even combined like in a storm. This creates a severity 4 aridity/precipitation, ash, temperature (cold or heat), vog (with caster level 10 or higher), and/or wind effect (with the resulting storm, snow and other effects if applicable) within a radius of close centered within the fey adept's illusion range. This cannot be used to calm the weather in an area, and has no effect in an area where the weather category to be affected already has a severity of 4 or higher.

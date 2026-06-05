@@ -24,6 +24,7 @@ babProgression: "full"
 fortSaveProgression: good
 refSaveProgression: poor
 willSaveProgression: good
+
 ---
 
 Armorists are among the most direct masters of the spheres, and indeed, tend to see magic as only the first step in resolving a situation. Their ability to call forth whatever equipment a situation requires makes them more flexible than many of their opponents realize.

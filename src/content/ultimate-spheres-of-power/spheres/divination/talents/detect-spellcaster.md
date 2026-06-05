@@ -6,6 +6,7 @@ type: talent
 sphere: divination
 tier: basic
 tags: ["divine"]
+
 ---
 
 You may spend a spell point to divine the spellcasting capabilities of a creature you can see within range, utilizing the chart below. Targeted individuals who only have extraordinary and supernatural abilities show up as having no spellcasting aura, whereas those who have spherecasting, spells, or spell-like abilities show an aura depending on the highest effective spell level of an ability they can use. As always, treat a spherecaster's caster level divided by 2 as their effective spell level. You may also attempt a Spellcraft check to discover the caster's casting tradition, even if they have not produced any magical effects for you to observe.

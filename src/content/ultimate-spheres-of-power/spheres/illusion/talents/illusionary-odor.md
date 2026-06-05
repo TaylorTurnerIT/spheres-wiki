@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: basic
 tags: ["sensory", "taste-smell"]
+
 ---
 
 You may add smell and taste to your illusions. For example, you may change something's taste or create the smell of smoke.

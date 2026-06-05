@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may invoke a word of power, affecting a single creature or object within close range. Words are subject to spell resistance.

@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
+
 ---
 
 You point out obvious things the target did wrong, hoping they'll do better next time.

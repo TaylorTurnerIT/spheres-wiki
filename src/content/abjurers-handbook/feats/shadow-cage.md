@@ -7,6 +7,7 @@ sphere: protection
 dualSphere: dark
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 **Prerequisites:** Dark sphere, Protection sphere.
 

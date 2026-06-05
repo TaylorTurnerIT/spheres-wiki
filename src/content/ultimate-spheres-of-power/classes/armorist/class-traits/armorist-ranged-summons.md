@@ -6,6 +6,7 @@ system: power
 tags: []
 className: armorist
 featureId: arsenal-trick
+
 ---
 
 The armorist may summon (or boost, if she is capable of doing so) equipment directly onto a willing ally anywhere within 60 feet to which she has both line of sight and line of effect.

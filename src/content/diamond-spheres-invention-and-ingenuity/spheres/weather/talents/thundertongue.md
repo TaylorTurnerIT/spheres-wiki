@@ -6,6 +6,7 @@ type: talent
 sphere: weather
 tier: basic
 tags: ["mantle", "storm"]
+
 ---
 
 When a creature bearing your mantle is in an area of Wind and Precipitation of severity level 3 or higher, they gain a +3 circumstance bonus to Intimidate and Perform checks, +2 for each category above 3rd. Additionally, creatures suffer no penalty to Perception checks to hear the voice of a creature bearing your mantle due to strong winds, effectively allowing it to be heard above any prevailing wind conditions (even if it would otherwise be impossible).

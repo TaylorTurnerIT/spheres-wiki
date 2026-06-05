@@ -6,6 +6,7 @@ system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat
+
 ---
 
 **Prerequisites:** Alteration sphere (Serpentine Transformation (transformation) or Vermin Transformation (transformation)), poison bestial trait, or racial poison ability.

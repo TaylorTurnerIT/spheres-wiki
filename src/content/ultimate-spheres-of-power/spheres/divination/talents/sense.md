@@ -6,6 +6,7 @@ type: talent
 sphere: divination
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may grant yourself paranormal senses for 1 hour/caster level. When you gain the Divination sphere, you gain the following sense.

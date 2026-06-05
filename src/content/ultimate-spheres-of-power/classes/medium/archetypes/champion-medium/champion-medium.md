@@ -2,6 +2,7 @@
 id: champion-medium
 name: "Champion Medium"
 tags: []
+
 ---
 
 ## Trade Tradition (Studio M—)

@@ -3,6 +3,7 @@ id: sightless-invocation
 name: "Sightless Invocation"
 level: 1
 tags: []
+
 ---
 
 At 1st level, when using forbidden lore, affected targets are confused for 1 round (Will negates).

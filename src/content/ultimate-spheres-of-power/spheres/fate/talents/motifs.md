@@ -6,6 +6,7 @@ system: power
 sphere: fate
 tier: basic
 tags: []
+
 ---
 
 Some talents are marked (motif). These grant you motifs you can grant to targets.

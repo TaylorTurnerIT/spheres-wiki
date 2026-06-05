@@ -6,6 +6,7 @@ type: talent
 sphere: death
 tier: basic
 tags: ["dominion"]
+
 ---
 You gain the following abilities which allow you to direct, manipulate, and command undead creatures you control within your dominion range:
 

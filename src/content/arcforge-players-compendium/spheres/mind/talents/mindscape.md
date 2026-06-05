@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: advanced
 tags: ["charm"]
+
 ---
 
 **Prerequisite:** Mind sphere.

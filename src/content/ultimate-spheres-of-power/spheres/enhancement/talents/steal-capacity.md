@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["enhance"]
+
 ---
 
 You may spend a spell point to apply an enhancement to a creature, rendering it incapable of performing some action it normally could. This can be used to rob the character of the power of speech, or some other form of communication it possesses, such as telepathy, writing, or performing sign language.

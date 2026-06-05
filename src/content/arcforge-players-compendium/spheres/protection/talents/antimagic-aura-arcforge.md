@@ -6,6 +6,7 @@ type: talent
 sphere: protection
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Protection sphere (Spell Ward (aegis, ward) or Technological Suppression (aegis, ward)), caster level 10th.

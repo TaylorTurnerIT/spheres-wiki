@@ -3,6 +3,7 @@ id: bound-equipment-su
 name: "Bound Equipment (Su)"
 level: 1
 tags: []
+
 ---
 
 An armorist gains a bond with a specific weapon, shield, or suit of armor that is far greater than with her other summoned equipment. Bound equipment is summoned and treated just like summoned equipment, except it does not cost a spell point to summon, cannot be used by anyone other than the armorist herself (the item's magic does not function in another's hands), comes with limitless ammunition, and disappears 1 round after leaving the armorist's hands. She gains another piece of bound equipment at 5th level, 10th level, 15th level, and 20th level, and may bond implements beginning at 5th level.

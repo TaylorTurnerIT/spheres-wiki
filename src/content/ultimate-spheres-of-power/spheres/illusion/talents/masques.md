@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: basic
 tags: ["utility", "glamer"]
+
 ---
 
 You may create glamers that subtly change the way someone is perceived, aiding in their social interactions. Choose two of the following skills: Bluff, Diplomacy, Intimidate, or Perform. You may take this talent a second time to be able to choose all four skills.

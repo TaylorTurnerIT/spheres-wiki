@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["curse", "word"]
+
 ---
 
 You may spend a spell point to place a curse upon a weapon that causes it to turn against its wielder. The next time it is used to make an attack, the attack automatically hits the wielder.

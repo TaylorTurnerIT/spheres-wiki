@@ -6,6 +6,7 @@ type: talent
 sphere: death
 tier: advanced
 tags: []
+
 ---
 **Prerequisites:** Death sphere (Sustained Necromancy, Permanent Undead (advanced)), caster level 5th.
 

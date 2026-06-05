@@ -6,6 +6,7 @@ type: talent
 sphere: fallen-fey
 tier: advanced
 tags: ["utility"]
+
 ---
 
 **Prerequisites:** 5th caster or higher.

@@ -6,6 +6,7 @@ system: power
 sphere: mana
 tags: ["combat", "sm"]
 tier: feat
+
 ---
 
 **Prerequisites:** Mana sphere

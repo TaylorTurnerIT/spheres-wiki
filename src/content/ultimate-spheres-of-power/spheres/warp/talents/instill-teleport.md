@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: basic
 tags: ["instill"]
+
 ---
 
 As a standard action you may spend a spell point to touch a small container of liquid and instill a teleport or bend space that affects a single target inside it, which functions as a potion or oil. The instilled effect cannot have a trigger/normally require an immediate or readied action to activate, nor have a duration of concentration.

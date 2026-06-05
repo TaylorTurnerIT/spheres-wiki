@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["ex", "form"]
+
 ---
 
 Your companion gains either darkvision 60 feet, low-light vision, or the scent ability. If your companion possesses darkvision from another source, increase its range by 30 feet. If it already possesses the scent ability, it may either increase its range to 60 feet or gain the keen scent ability.

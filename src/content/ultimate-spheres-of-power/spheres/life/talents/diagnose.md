@@ -6,6 +6,7 @@ type: talent
 sphere: life
 tier: basic
 tags: ["utility"]
+
 ---
 
 As a swift action, you can learn any conditions that are affecting a living creature (unconscious, dying, nauseated, panicked, stunned, poisoned, diseased, confused, etc.) within range of your Life sphere abilities.

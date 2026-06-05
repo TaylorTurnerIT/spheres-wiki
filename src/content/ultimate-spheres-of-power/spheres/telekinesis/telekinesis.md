@@ -27,6 +27,7 @@ sectionDefinitions:
       - label: "Protokinesis Feats"
         tiers: ["feat"]
         tags: ["protokinesis"]
+
 ---
 
 [Telekinesis]

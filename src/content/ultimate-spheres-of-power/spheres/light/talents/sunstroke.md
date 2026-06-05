@@ -6,6 +6,7 @@ type: talent
 sphere: light
 tier: basic
 tags: ["light"]
+
 ---
 
 When you place a glow effect on a creature, you may choose to deal it 1d4 nonlethal fire damage per 2 caster levels (minimum 1d4). The creature takes this damage each round the glow is in effect. A successful Fortitude save negates the damage for that round, while two consecutive Fortitude saves ends the effect.

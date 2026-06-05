@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: advanced
 tags: ["time"]
+
 ---
 
 **Prerequisites:** Time sphere (Eject (time)), caster level 17th.

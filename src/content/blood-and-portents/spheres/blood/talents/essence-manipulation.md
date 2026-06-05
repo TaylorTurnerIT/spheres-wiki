@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Blood sphere or Duelist sphere (Ooze Ichor); base attack bonus +1 or caster level 1st.

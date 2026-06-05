@@ -3,6 +3,7 @@ id: ghostwalk
 name: "Ghostwalk"
 level: 6
 tags: []
+
 ---
 
 As a move action, a spectral infiltrator can partially shift his body, allowing him to move with wraithlike silence. While using this ability, his body and equipment becomes incorporeal for most purposes (although he still suffers half damage from non-magical corporeal sources), though he can't fly or pass through solid objects or creatures. However, he can move at his normal speed along any surface, including horizontal and vertical surfaces and liquids, and is never slowed by difficult terrain, and gains a bonus equal to his class level to sound-based Stealth checks.

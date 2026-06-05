@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: imagination
+
 ---
 
 The conduit produces a Warp sphere Blink, Distort Size, or Plane Manipulator bend space effect.

@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: basic
 tags: ["blast-shape", "instill"]
+
 ---
 
 As a standard action, you may touch a small container of liquid and spend a spell point to instill a destructive blast inside it. As a standard action, this can be primed and thrown as a splash weapon. A direct hit deals the destructive blast's damage to the target and damage equal to the minimum blast damage is dealt in a 5-foot splash radius. Any creature taking damage from either the direct hit or the splash must save against any additional effects of the blast type.

@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["form"]
+
 ---
 
 Your companion gains one of the following special monster qualities: Fast healing 1, leaping attack, pounce, rend, rock catching, rock throwing, or trample.

@@ -6,6 +6,7 @@ system: power
 sphere: mind
 tags: ["sm"]
 tier: feat
+
 ---
 
 **Benefits:** You gain a dreamspace, as the Dreamspace feat, save that you cannot bring any items with you when you enter or leave.

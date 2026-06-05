@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: basic
 tags: ["transformation"]
+
 ---
 
 You may grant the form of a spider, insect, or other such creature with your shapeshift.

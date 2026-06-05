@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["word"]
+
 ---
 
 You utter an ominous question towards the target. The target takes damage as though hit by a greataxe appropriately sized to you (Medium 1d12) and is shaken for a number of rounds equal to half your caster level. This damage is not modified by your Strength or any other modifiers you may possess which would otherwise apply to a damage roll.

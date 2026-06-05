@@ -3,6 +3,7 @@ id: evolve-dweomer
 name: "Evolve Dweomer"
 level: 10
 tags: []
+
 ---
 
 At 10th level, the conduit's font of inner magic can deeply change a magical item when they thaumically charge it, increasing its power greatly. As long as an object remains thaumically charged by the conduit, it gains increased benefits, depending on the type of object:

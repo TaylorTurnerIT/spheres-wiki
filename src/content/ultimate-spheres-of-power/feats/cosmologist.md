@@ -6,6 +6,7 @@ system: power
 sphere: warp
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Knowledge (planes) 15 ranks, Warp sphere (Create Demiplane, Extradimensional Room (space)).

@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["air", "geomancing"]
+
 ---
 
 **Prerequisites:** Nature sphere ((air) package, Manipulate Nature (geomancing)), caster level 15th.

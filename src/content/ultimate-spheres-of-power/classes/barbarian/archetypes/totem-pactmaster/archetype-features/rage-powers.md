@@ -3,6 +3,7 @@ id: rage-powers
 name: "Rage Powers"
 level: 1
 tags: []
+
 ---
 
 The totem pactmaster is based entirely upon his totem rage powers. In addition to the totem powers themselves, the following rage powers complement the totem pactmaster archetype (depending on the totem chosen): animal fury*, ferocious companion, greater ferocious companion, low-light vision*, night vision*, raging climber*, raging leaper*, raging swimmer*, and swift foot*.

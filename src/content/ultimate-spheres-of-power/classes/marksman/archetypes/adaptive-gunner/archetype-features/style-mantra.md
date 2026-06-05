@@ -3,6 +3,7 @@ id: style-mantra
 name: "Style Mantra"
 level: 3
 tags: []
+
 ---
 
 Starting at 3rd level, as long as the adaptive gunner maintains psionic focus, he gains an amount of temporary essence equal to ½ his class level (rounded down) that can only be invested in his Hand Cannon veil. This essence may exceed the normal capacity of his Hand Cannon, and does not stack with essence gained through the gunner's contemplation ability or other abilities.

@@ -2,6 +2,7 @@
 id: essentialist
 name: "Essentialist"
 tags: []
+
 ---
 
 While other alchemists dabble with explosive concoctions, the essentialist extracts the most potent biological elements from flora and fauna to create elixirs that heal and nourish the living body. More than healing, the medicines the essentialist creates enhances the body, bringing out the true strength of the subject. Many essentialists have stated that consuming an essence reveals the real you, and the rest of the time you are but a shadow of yourself.

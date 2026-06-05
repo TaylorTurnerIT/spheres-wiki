@@ -7,6 +7,7 @@ sphere: telekinesis
 dualSphere: creation
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Creation sphere, Telekinesis sphere.

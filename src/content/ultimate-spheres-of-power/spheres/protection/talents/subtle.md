@@ -6,6 +6,7 @@ type: talent
 sphere: protection
 tier: advanced
 tags: ["aegis"]
+
 ---
 
 **Prerequisites:** Protection sphere, caster level 5th.

@@ -3,6 +3,7 @@ id: folken-oddities
 name: "Folken Oddities"
 level: 2
 tags: []
+
 ---
 
 Starting at 2nd level, a folken gains an oddity from the list below. He gains another folken oddity for every two levels of folken attained after 2nd level. Unless otherwise noted, a folken cannot select an individual oddity more than once.

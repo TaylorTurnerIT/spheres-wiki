@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: basic
 tags: []
+
 ---
 
 When activating a (time) effect that targets an area, you may adjust the affected area to one of the following shapes:

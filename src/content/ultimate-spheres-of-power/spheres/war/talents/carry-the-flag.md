@@ -6,6 +6,7 @@ type: talent
 sphere: war
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** War sphere, caster level 10th.

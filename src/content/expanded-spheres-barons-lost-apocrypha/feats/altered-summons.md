@@ -7,6 +7,7 @@ sphere: conjuration
 dualSphere: alteration
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Alteration Sphere, Conjuration Sphere

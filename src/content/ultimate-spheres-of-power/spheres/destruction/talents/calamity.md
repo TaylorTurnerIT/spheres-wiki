@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: ["blast-shape"]
+
 ---
 
 **Prerequisites:** Destruction sphere (Explosive Orb (blast shape) or Sculpt Blast (blast shape)), caster level 10th.

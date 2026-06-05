@@ -6,6 +6,7 @@ system: might
 tags: ["ex"]
 className: armiger
 featureId: prowess
+
 ---
 
 The armiger gains the Beastmastery sphere as a bonus talent. The armiger can attune her customized weapons to her animal allies by training and working with her animal allies. As part of customizing a weapon, the armiger can attune that customized weapon to one animal ally. Each customized weapon can only be attuned to a single animal ally, but an animal ally can be attuned to more than one customized weapon.

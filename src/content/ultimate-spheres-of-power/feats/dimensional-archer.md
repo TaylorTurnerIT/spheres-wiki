@@ -6,6 +6,7 @@ system: power
 sphere: warp
 tags: ["champion", "mythic"]
 tier: feat
+
 ---
 
 **Prerequisites:** Warp sphere, +3 base attack bonus.

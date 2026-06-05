@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["amp", "manipulation"]
+
 ---
 You can push your magical talents to new levels of power.
 

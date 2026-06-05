@@ -6,6 +6,7 @@ system: power
 sphere: war
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** War sphere, caster level 10th.

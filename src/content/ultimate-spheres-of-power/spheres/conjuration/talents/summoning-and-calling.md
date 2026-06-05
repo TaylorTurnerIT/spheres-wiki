@@ -6,6 +6,7 @@ system: power
 sphere: conjuration
 tier: basic
 tags: []
+
 ---
 
 The base summon ability has the [summoning] descriptor, and as such a Conjuration sphere companion cannot touch creatures warded with the appropriate protection from (alignment) spell, the Hallow word of the Fate sphere, and similar effects. This limitation bars the companion from striking a creature so warded with any weapons that the companion gains from Conjuration sphere talents. A Conjuration sphere companion is sent home by dispel magic, the Counterspell feat, and similar effects, though may be re-summoned as if the duration of the summon had ended, incurring the normal cost and casting time. If the companion is dismissed, dispelled, or slain, any spells or sphere effects it cast expire immediately (per the summoning descriptor). A Conjuration sphere companion winks out if they enter an antimagic field or similar effect. They reappear in the same spot once the field goes away. Time spent winked out counts normally against the duration of the summon.

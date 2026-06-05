@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
+
 ---
 You flood your target with disturbing sensations
 

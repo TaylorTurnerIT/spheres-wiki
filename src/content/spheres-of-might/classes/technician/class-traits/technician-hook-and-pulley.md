@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: gadgets-ex
+
 ---
 
 The technician may create a gadget that allows him to manipulate objects from a distance. This gadget counts as a thrown weapon with a range increment of 20 ft. Make a ranged touch attack against an unattended object that he could hold in one hand. If successful, he may move that object to his hand as a free action. Targets whose natural reach includes the path that object must take (i.e., are within the line of effect) can make a Reflex save as an immediate action to attempt to grab the object as it flies by.

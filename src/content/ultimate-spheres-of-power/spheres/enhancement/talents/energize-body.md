@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["enhance"]
+
 ---
 
 You may enhance a target's physical resilience. This suppresses the fatigued condition or reduces the exhausted condition to fatigued for the duration. You may spend a spell point to instead completely suppress the exhausted condition for the duration. The target is still considered to be suffering those conditions for the purposes of effects that would render them fatigued or exhausted. If the target is sleeping, this enhancement causes them to immediately wake up.

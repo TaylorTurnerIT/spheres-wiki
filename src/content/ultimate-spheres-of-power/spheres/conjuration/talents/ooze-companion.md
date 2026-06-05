@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["type"]
+
 ---
 
 Your companion mimics the properties of oozes. The companion gains the ooze creature type. Your companion can move through an area as small as one-quarter its space without squeezing or one-eighth its space when squeezing. The companion gains moderate fortification.

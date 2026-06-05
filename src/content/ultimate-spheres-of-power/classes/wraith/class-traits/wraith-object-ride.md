@@ -6,6 +6,7 @@ system: power
 tags: []
 className: wraith
 featureId: wraith-haunts
+
 ---
 
 The wraith may spend a spell point to passively possess an object for up to 1 hour per level. Attended objects receive a Will save. The object can be no smaller than Tiny and no larger than Huge. At level 10, the minimum object size decreases to Diminutive and the maximum increases to Gargantuan. The wraith retains his normal senses while possessing an object.

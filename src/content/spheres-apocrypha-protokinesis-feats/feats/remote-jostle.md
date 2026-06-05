@@ -6,6 +6,7 @@ system: power
 sphere: telekinesis
 tags: ["combat", "protokinesis"]
 tier: feat
+
 ---
 
 **Prerequisite:** Telekinesis sphere.

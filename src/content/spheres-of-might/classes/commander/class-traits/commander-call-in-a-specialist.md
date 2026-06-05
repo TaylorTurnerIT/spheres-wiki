@@ -6,6 +6,7 @@ system: might
 tags: []
 className: commander
 featureId: logistic-specialty-ex
+
 ---
 
 The commander makes many contacts over the course of his career, including individuals with unique skill sets capable of turning the tide of a critical battle or provide crucial information. Once per week, the commander may spread the word in any small town or larger settlement that he is looking for such a specialist to aid in a particular task.

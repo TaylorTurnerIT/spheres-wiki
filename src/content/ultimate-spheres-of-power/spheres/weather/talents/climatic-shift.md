@@ -6,6 +6,7 @@ type: talent
 sphere: weather
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Weather sphere (Lengthened Weather), caster level 15th.

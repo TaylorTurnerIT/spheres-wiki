@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["geomancing"]
+
 ---
 
 As an instantaneous effect, you may spend a spell point to create your geomancing element anywhere within range. While this is its own geomancing ability, it may also be combined with another geomancing ability as part of the same action, in which case the second geomancing ability comes into effect immediately, using the created element to meet the second ability's prerequisites. You must pay any costs associated with both abilities to combine them in this manner.

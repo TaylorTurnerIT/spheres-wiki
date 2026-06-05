@@ -6,6 +6,7 @@ system: power
 sphere: illusion
 tags: []
 tier: feat
+
 ---
 
 Your agents are abnormally difficult to shake from your grip.

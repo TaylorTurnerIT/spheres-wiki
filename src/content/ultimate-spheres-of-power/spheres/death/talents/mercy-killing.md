@@ -6,6 +6,7 @@ type: talent
 sphere: death
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Death sphere (Corpse Manipulation or Killing Curse).

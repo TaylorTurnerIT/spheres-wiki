@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: advanced
 tags: ["utility"]
+
 ---
 
 **Prerequisite:** Alteration sphere.

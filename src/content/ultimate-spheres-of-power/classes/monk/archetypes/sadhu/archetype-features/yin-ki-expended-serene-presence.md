@@ -3,6 +3,7 @@ id: yin-ki-expended-serene-presence
 name: "Yin Ki Expended – Serene Presence"
 level: 1
 tags: []
+
 ---
 
 By expending his ki focus as a free action that may be used out of turn when attacked, the sadhu uses the force of his presence, personality, compassion, and sense of peace to shield himself from an attack. The decision to use this ability must be made before damage is rolled. When the sadhu expends his ki focus, he can oppose any attack made against him with a Diplomacy check for the next round. If his Diplomacy check result meets or exceeds the attack roll, the attack misses regardless of the sadhu's Armor Class. For every point of yin-aligned ki beyond the first that he expends, the sadhu gains a +5 insight bonus to his Diplomacy check.

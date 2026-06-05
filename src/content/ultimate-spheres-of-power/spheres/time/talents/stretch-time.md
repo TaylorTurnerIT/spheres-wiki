@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: basic
 tags: ["time"]
+
 ---
 
 You may spend a spell point to decelerate time within a 10-foot radius burst, +5 feet per 5 caster levels.

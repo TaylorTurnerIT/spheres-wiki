@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: basic
 tags: []
+
 ---
 
 When you use Haste or Slow on a creature (or group of creatures, such as with the Mass Time talent), you may spend an extra spell point to augment the natural healing abilities of all affected targets. With Haste, you can grant them fast healing equal to 1 + 1 per 5 caster levels you possess for the duration of the effect.

@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Blood sphere (Martyr's Tithings (blood art)), caster level 7th.

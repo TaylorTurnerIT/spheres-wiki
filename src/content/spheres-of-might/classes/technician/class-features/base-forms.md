@@ -4,6 +4,7 @@ name: "Base Forms"
 level: 1
 tags: []
 isTraitContainer: true
+
 ---
 
 Every invention begins with one base form, and gains an improvement at 1st level and every four levels thereafter. The base forms the invention can take include siege engine, mechanical arm, and vehicle.

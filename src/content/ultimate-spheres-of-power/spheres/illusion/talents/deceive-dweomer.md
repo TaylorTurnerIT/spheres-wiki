@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Illusion sphere (Manipulate Aura (sensory, magic)), caster level 1st.

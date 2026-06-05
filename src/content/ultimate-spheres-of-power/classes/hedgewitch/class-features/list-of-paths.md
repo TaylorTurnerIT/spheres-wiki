@@ -3,6 +3,7 @@ id: list-of-paths
 name: "List of Paths"
 level: 1
 tags: []
+
 ---
 
 ### Academia
@@ -730,4 +731,5 @@ Umbrals draw their power from study and emulation of the beings of the shadow re
 - **Improved Shadow Sculptor:** The umbral gains a +1 to the effective caster level of effects produced by Shadow Magic. She may take this secret up to twice and the effects stack.
 
 **Path Mastery:** At level 20, the umbral can make one of her illusions permanent. Only one illusion may be made permanent in this way at one time. If another illusion is designated as permanent, the previous permanent illusion ends.
+
 ---

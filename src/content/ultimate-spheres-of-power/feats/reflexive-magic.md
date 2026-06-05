@@ -6,6 +6,7 @@ system: power
 sphere: war
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** War sphere, base attack bonus +11.

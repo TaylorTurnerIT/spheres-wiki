@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Conjuration sphere (Channel Companion), caster level 10th.

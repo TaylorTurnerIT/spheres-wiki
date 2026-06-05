@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["utility", "charm"]
+
 ---
 
 You can communicate directly into the mind of another.

@@ -6,6 +6,7 @@ system: power
 sphere: illusion
 tags: ["combat"]
 tier: feat
+
 ---
 
 **Prerequisites:** Illusion sphere (Decoy (glamer), Mage Feint), base attack bonus +3.

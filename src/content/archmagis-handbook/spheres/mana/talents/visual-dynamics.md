@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["amp", "manipulation"]
+
 ---
 You can manipulate how easy it is to witness your magic.
 

@@ -3,6 +3,7 @@ id: extra-nightform-requires-night-terror-level-10
 name: "Extra Nightform (requires night terror level 10)"
 level: 1
 tags: []
+
 ---
 
 The night terror may select 1 additional nightform. This bestial trait may only be selected once.

@@ -6,6 +6,7 @@ type: talent
 sphere: light
 tier: basic
 tags: []
+
 ---
 
 As a free action you may cause any glow within your range to shed non-visible light. While shedding non-visible light, a glow does not outline a creature with light, impose a Stealth penalty, or increase light levels within its radius. However, (light) talents applied to the glow still function as if it was shedding light in its normal area.

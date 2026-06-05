@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
+
 ---
 
 You mentally pull and tug at the target's muscles and the aspects of its mind that relate to motor functions.

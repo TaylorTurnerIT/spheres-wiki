@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["instill"]
+
 ---
 
 As a standard action you may touch a small container of liquid and instill a spirit effect inside it, which functions as a potion or oil. Spirit effects with an instantaneous or concentration duration cannot be instilled, and if you do not have the ability to grant spirit effects to other creatures, the instilled liquid is only usable by you.

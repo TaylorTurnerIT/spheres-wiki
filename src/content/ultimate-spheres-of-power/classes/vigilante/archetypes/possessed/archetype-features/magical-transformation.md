@@ -3,6 +3,7 @@ id: magical-transformation
 name: "Magical Transformation"
 level: 1
 tags: []
+
 ---
 
 A possessed's transformation between identities is assisted by magic. This makes it faster than usual, but also more noticeable.

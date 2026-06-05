@@ -7,6 +7,7 @@ sphere: fate
 dualSphere: destruction
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Destruction Sphere (Conflagrant Cluster), Fate Sphere

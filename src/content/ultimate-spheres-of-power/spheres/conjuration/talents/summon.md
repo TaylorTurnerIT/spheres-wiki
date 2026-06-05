@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may spend a spell point to summon a creature you have made a contract with (called a companion) causing it to appear in an adjacent square, ready to act on your following turn. You must concentrate to maintain the companion's presence, but may always spend an additional spell point to allow the summoned creature to remain for 1 minute per caster level without concentration.

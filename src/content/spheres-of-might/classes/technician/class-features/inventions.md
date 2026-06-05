@@ -3,6 +3,7 @@ id: inventions
 name: "Inventions"
 level: 1
 tags: []
+
 ---
 
 Every technician knows how to create custom items, called inventions. Inventions could be anything from a simple improved crossbow, to a powerful and complex machine that to the uneducated appears to be magic. Inventions are finicky, improvised things that require constant tinkering and fixing, and there is a limit to how many a technician can maintain at any one time. A technician can have and maintain a maximum of 1 invention at 1st level, plus an additional invention at 3rd level and every 4 levels thereafter. If the technician has already reached this limit and wishes to create a new invention, he must select one of his existing inventions to dismantle. Whenever an invention includes an ability that calls for a saving throw, the DC equals 10 + 1/2 the technician's class level + the technician's Intelligence modifier.

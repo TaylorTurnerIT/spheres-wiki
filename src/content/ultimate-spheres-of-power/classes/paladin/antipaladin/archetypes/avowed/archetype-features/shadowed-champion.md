@@ -3,6 +3,7 @@ id: shadowed-champion
 name: "Shadowed Champion"
 level: 20
 tags: []
+
 ---
 
 At 20th level, the avowed cannot be caught unaware by the target of her smite, making her unable to be feinted, flanked, or otherwise caught flat-footed by the target.

@@ -6,6 +6,7 @@ system: power
 sphere: life
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Life sphere (Resuscitate), caster level 5th.

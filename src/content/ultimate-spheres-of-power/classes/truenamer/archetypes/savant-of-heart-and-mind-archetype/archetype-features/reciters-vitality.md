@@ -3,6 +3,7 @@ id: reciters-vitality
 name: "Reciter's Vitality"
 level: 5
 tags: []
+
 ---
 
 Starting at 5th level, whenever the savant of heart and mind successfully recites a recitation from the Codex of Heart and Mind, he gains fast healing 1 for a number of rounds equal to the recitation level of that recitation. At 11th level and 17th level, the amount of fast healing gained in this manner increases by +1, to a maximum of fast healing 3 at 17th level.

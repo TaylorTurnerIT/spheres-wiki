@@ -4,6 +4,7 @@ name: "Mystic Combat (Su)"
 level: 2
 tags: []
 isTraitContainer: true
+
 ---
 
 At 2nd level and every 4 levels thereafter, a mageknight gains a new way to enhance her physical abilities through magic.

@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: basic
 tags: []
+
 ---
 
 When using an Illusion sphere effect you may spend an additional spell point to render the illusion quasi-real, granting it the shadow descriptor. If you have a shadow pool you may use a shadow point instead of a spell point. Illusions that you grant the (shadow) descriptor to with the Shadow Infusion talent are modified in the following ways:

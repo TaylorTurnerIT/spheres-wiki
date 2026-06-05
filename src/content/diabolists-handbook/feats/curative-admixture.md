@@ -6,6 +6,7 @@ system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat
+
 ---
 
 Ruinous and restorative power alike flow from your will.

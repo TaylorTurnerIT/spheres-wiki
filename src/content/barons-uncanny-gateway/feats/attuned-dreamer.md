@@ -6,6 +6,7 @@ system: power
 sphere: mind
 tags: ["sm"]
 tier: feat
+
 ---
 
 **Prerequisites:** Dreamspace, either Dreamwalking Initiate or dreamwalker hedgewitch path power

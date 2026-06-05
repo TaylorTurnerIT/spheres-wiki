@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 The technician's detonators deal full damage to objects rather than half, and deals an additional 3 damage per technician level to unattended objects, walls, and terrain.

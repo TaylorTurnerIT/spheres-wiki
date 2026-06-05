@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["fire", "su"]
+
 ---
 
 **Prerequisites:** Nature sphere ((fire) package, Ranged Geomancy [range] x2), caster level 5th.

@@ -6,6 +6,7 @@ type: talent
 sphere: protection
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Protection sphere (Fortifier), caster level 5th

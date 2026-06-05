@@ -6,6 +6,7 @@ system: power
 sphere: fate
 tier: basic
 tags: ["metamagic"]
+
 ---
 
 **Benefit:** When you select this feat, choose two of your loyalties. When you prepare (if you are a prepared caster) or cast (if you are a spontaneous caster or spherecaster) an aligned spell, choose weal or woe. If you choose woe all variable, numeric effects of the spell are decreased by half (including bonuses to those dice rolls) for creatures sharing one of the chosen loyalties and increased by half (including bonuses to those dice rolls) for creatures with loyalties that directly contradict one of these loyalties (even if they share the other loyalty). If the spell does not have variable, numeric effects, it instead has its saving throw DC and effective spell level decreased by 2 against creatures sharing one of the selected loyalties and increased by 2 against creatures with loyalties that directly contradict one of these loyalties (even if they share the other loyalty). If you choose weal, these effects are reversed. The spells effects do not change for other creatures. Spells that neither do damage nor have a saving throw cannot be affected by Align Spell.

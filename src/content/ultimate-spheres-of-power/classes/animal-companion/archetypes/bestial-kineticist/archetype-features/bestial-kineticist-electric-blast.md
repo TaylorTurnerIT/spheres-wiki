@@ -5,6 +5,7 @@ level: 1
 tags:
   - blast-type
   - electricity
+
 ---
 
 - air or electricity subtype

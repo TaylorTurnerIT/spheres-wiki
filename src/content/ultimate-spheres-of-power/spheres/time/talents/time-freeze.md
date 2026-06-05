@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: basic
 tags: ["time"]
+
 ---
 
 You may spend one spell point to freeze all activity within a 10-foot radius burst, + 5 feet per 5 caster levels. If used as a readied action, this can stop ranged attacks or instantaneous magical effects (such as destructive blasts), but in the case of effects that target areas, only the effect contained within the Time Freeze's area is stopped. Unwilling targets (including allies if they choose) are allowed a Will save to negate this effect for themselves or effects originating from them (attacks, magic, etc.). You can choose whether or not to affect yourself with your own time freeze.

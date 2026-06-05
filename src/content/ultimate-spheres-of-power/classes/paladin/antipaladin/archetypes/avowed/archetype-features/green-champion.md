@@ -3,6 +3,7 @@ id: green-champion
 name: "Green Champion"
 level: 20
 tags: []
+
 ---
 
 At 20th level, whenever the avowed would have an active smite on a creature, she gains a +4 natural armor bonus to her AC, which stacks with other sources of natural armor, in addition to gaining a 75% chance to negate critical hits and precision damage against the target of her smite. The avowed retains the effects of this ability even while under the effects of a polymorph effect.

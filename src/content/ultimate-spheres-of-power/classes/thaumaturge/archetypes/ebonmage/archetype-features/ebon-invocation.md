@@ -3,6 +3,7 @@ id: ebon-invocation
 name: "Ebon Invocation"
 level: 3
 tags: []
+
 ---
 
 At 3rd level, when using forbidden lore to augment the *gloom* sphere ability, the ebonmage may add 1 additional (darkness) or (blot) to the *gloom*. The ebonmage must pay for any additional spell point costs for the chosen option as appropriate.

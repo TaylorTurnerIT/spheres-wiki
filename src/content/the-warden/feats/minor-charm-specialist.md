@@ -6,6 +6,7 @@ system: power
 sphere: mind
 tags: ["warden"]
 tier: feat
+
 ---
 
 **Prerequisite:** Mind sphere.

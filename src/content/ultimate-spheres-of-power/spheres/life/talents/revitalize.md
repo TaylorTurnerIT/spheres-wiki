@@ -6,6 +6,7 @@ type: talent
 sphere: life
 tier: basic
 tags: []
+
 ---
 
 You may choose for your cure to grant the target fast healing instead of directly healing damage. This grants the target fast healing 1 for 1 minute per caster level. Increase the amount of fast healing granted by the number of (cure) talents you possess. This no longer counts as cure for talents such as Fount Of Life or others.

@@ -6,6 +6,7 @@ type: talent
 sphere: divination
 tier: advanced
 tags: ["sm", "utility"]
+
 ---
 
 **Prerequisites:** Divination Sphere, Time Sphere

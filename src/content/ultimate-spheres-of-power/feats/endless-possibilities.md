@@ -7,6 +7,7 @@ sphere: life
 dualSphere: fate
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Fate sphere, Life sphere.

@@ -3,6 +3,7 @@ id: privacy
 name: "Privacy Policy"
 type: article
 tags: []
+
 ---
 
 <div class="article-content">

@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: basic
 tags: ["instill"]
+
 ---
 
 As a standard action you may touch a small container of liquid and instill a glamer inside it, which functions as a potion or oil. The glamer cannot have a duration of concentration, and cannot be augmented by Committed Deception. You must spend an additional spell point to instill a trick.

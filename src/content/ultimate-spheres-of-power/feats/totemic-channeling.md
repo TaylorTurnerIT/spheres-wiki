@@ -6,6 +6,7 @@ system: power
 sphere: war
 tags: ["channeling"]
 tier: feat
+
 ---
 
 **Prerequisites:** War sphere, channel energy class feature.

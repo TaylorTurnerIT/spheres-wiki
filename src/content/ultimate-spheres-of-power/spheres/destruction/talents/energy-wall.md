@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: basic
 tags: ["blast-shape"]
+
 ---
 
 You may craft your destructive blast into a 5-foot-by-5-foot cubic wall with a duration of concentration, so long as it is fully contained within your destructive blast range. You may spend a spell point to increase this effect and create a wall up to 20 feet high and up to 20 feet wide per caster level in a straight line, or a hemisphere with a radius up to 5 feet per 2 caster levels (minimum 5 feet). If used in either way, the duration increases to 1 round per caster level.

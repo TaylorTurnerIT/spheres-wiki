@@ -3,6 +3,7 @@ id: haunt-path
 name: "Haunt Path"
 level: 1
 tags: []
+
 ---
 
 At 1st level, the wraith chooses a haunt path. Once selected, this choice cannot be changed. Path skills are always class skills for wraiths with that path.

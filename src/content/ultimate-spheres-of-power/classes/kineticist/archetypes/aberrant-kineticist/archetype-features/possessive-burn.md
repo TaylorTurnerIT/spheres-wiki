@@ -3,6 +3,7 @@ id: possessive-burn
 name: "Possessive Burn"
 level: 1
 tags: []
+
 ---
 
 Rather than summoning elemental matter from the elemental planes, an aberrant kineticist conjures fragments of the space between stars. An aberrant kineticist uses their Wisdom modifier instead of their Constitution modifier to determine their damage with wild talents, the DCs of Constitution-based wild talents, the durations of wild talents with Constitution-based durations, their bonus on concentration checks for wild talents, and other Constitution-based effects of all their wild talents.

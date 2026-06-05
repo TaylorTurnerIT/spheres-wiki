@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: ["blast-type"]
+
 ---
 **Prerequisite:** Destruction sphere.
 

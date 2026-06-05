@@ -6,6 +6,7 @@ type: talent
 sphere: life
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Life sphere (Restore Health (cure), Revitalize), caster level 15th.

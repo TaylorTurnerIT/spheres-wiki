@@ -7,6 +7,7 @@ sphere: life
 dualSphere: blood
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Blood sphere, Life sphere (Fount Of Life).

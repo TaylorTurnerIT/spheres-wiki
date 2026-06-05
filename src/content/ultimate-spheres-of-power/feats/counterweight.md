@@ -6,6 +6,7 @@ system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat
+
 ---
 
 **Prerequisites:** Acrobatics 3 ranks, Telekinesis sphere.

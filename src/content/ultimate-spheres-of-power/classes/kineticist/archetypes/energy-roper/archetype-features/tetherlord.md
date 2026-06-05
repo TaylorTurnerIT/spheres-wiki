@@ -3,6 +3,7 @@ id: tetherlord
 name: "Tetherlord"
 level: 20
 tags: []
+
 ---
 
 At 20th level, the energy roper has mastered their ability to bind others in their kinetic tendrils. The cumulative penalty to combat maneuvers to initiate or maintain grapples imposed by their own feats and abilities, including the -4 penalty to initiate or maintain a grapple with one hand and the -10 penalty to tie up a grappled target, is reduced by 3 plus an additional 1 for each point of burn they possess (penalties imposed by other creatures' abilities are not reduced this way).

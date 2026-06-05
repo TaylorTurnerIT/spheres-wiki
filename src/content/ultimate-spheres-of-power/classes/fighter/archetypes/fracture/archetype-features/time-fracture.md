@@ -4,6 +4,7 @@ name: "Time Fracture"
 level: 6
 replaces: ["the bonus feat normally gained at 6th level"]
 tags: []
+
 ---
 
 Starting at 6th level, the fracture may expend two of his attacks of opportunity for the round as a swift action to enter a state of broken time called a "time fracture" that allows him to accomplish more in a small amount of time than he normally could. When the fracture uses this ability, he may perform either of the following options:

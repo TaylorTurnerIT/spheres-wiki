@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: basic
 tags: ["blast-type", "stone"]
+
 ---
 
 Your destructive blast becomes a hail of smooth stones, dealing bludgeoning damage and using d4 instead of d6 as its damage die. You may make a bull rush as a free action at range against the target or targets struck by the attack or that failed their Reflex saving throw if one was required. Your CMB for this check is equal to your caster level + your casting ability modifier, and all targets are pushed from the point of origin of the effect. (This is usually yourself, but if using a talent such as Explosive Orb, it would be the center of the blast. If using Energy Wall, each square of wall is considered the center of effect for those who enter that section. If using Guided Strike, you may choose from which direction you want to push the target, even pushing them up or down if you should desire. Pushing a target into the ground knocks them prone if the bull rush is successful.)

@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Fate sphere (at least one [curse] (word) talent), caster level 10th.

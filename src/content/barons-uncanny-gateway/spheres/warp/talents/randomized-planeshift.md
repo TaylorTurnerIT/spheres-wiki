@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: advanced
 tags: ["sm"]
+
 ---
 
 **Prerequisites:** Warp sphere (Unseeing Teleport), caster level 5th.

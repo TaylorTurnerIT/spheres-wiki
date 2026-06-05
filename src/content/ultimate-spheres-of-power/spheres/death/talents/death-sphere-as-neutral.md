@@ -6,6 +6,7 @@ system: power
 sphere: death
 tier: basic
 tags: []
+
 ---
 
 For the rules closest to those presented in the base Spheres of Power book, the following suggestions are made:

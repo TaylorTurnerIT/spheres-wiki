@@ -2,6 +2,7 @@
 id: seng
 name: "Seng"
 tags: []
+
 ---
 
 These monks are among those most commonly encountered in some lands. They live an ascetic lifestyle, hoping to find the path to enlightenment. By escaping the bonds of this reality and the karmic wheel of birth, death, and rebirth, they become one with nirvana.

@@ -6,6 +6,7 @@ system: might
 tags: ["ex"]
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 The technician gains either the Beastmastery sphere Animal Companion or Pet talent as a bonus talent, even if he does not possess the Beastmastery base sphere. The technician may use his ranks in Craft (mechanical) or Knowledge (engineering) in place of his base attack bonus when determining his effective druid level for the Animal Companion talent (not his base attack bonus -3) and his arcane caster level for the Pet talent. If the technician gains this technical insight a second time, he gains whichever talent he did not choose the first time (between Animal Companion and Pet).

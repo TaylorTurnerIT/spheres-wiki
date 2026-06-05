@@ -6,6 +6,7 @@ system: might
 tags: ["ex"]
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 With 10 minutes of work, the technician can expend a gadget to create quick, artificial structures that last for 24 hours.

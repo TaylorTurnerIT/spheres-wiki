@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Destruction sphere (Extended Range [range] x2), caster level 5th.

@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: basic
 tags: ["utility"]
+
 ---
 
 You may stash items in your shadow, storing each as a move action. The items appear on your shadow as if you were wearing or using them. A small item (a ring or a key) might be unnoticeable, while a larger item (a greatsword, a tower shield) would be quite obvious. Your shadow can store non-wearable items, but it must either hold such items in its hands or in a backpack, if you or your shadow is carrying one. You may store up to 5 lbs. of non-living material per caster level. Items have no weight while stashed and can not be used, activated, or provide passive bonuses.

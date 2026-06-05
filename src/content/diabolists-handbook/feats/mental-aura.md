@@ -6,6 +6,7 @@ system: power
 sphere: mind
 tags: []
 tier: feat
+
 ---
 
 Your very presence can be enough to exert your inhuman will on others.

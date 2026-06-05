@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["consecration"]
+
 ---
 
 While this consecration is in effect, every creature within the area regains 5 hit points plus 1 hit point per caster level at the beginning of their turn, but only up to the amount of damage they have taken since their last turn and since you created this consecration. This consecration affects all creatures, but you may spend a spell point when you create this consecration to make it only affect your allies. If a creature has taken enough damage to kill or destroy it, this consecration has no effect on them. This stacks with fast healing and, as it is cosmic in origin rather than positive energy, affects non-living creatures such as undead and constructs. You must concentrate to maintain this consecration, but you may spend a spell point as a free action to allow this effect to continue for 1 round per caster level without concentration.

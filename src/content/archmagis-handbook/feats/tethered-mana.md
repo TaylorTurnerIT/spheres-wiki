@@ -6,6 +6,7 @@ system: power
 sphere: mana
 tags: []
 tier: feat
+
 ---
 **Prerequisites:** Mana sphere (Hardened Bond).
 

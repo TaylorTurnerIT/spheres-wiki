@@ -3,6 +3,7 @@ id: revelatory-channel
 name: "Revelatory Channel"
 level: 5
 tags: []
+
 ---
 
 At 5th level, when a cultist channels energy, she can also choose to use the energy to bend the thoughts of living creatures affected by the ability.

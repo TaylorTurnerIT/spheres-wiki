@@ -6,6 +6,7 @@ system: power
 sphere: war
 tier: basic
 tags: []
+
 ---
 
 Talents marked (momentum) grant you a momentum pool, as well as a method of using it.

@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: basic
 tags: []
+
 ---
 
 You may spend a spell point to have your shapeshift deal 1d6 per two caster levels (minimum 1d6) untyped damage to all targets that fail their save against the shapeshift. You may add the following traits to your forms:

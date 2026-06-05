@@ -7,6 +7,7 @@ sphere: enhancement
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 You can project your soul into an object to give it a semblance of life.

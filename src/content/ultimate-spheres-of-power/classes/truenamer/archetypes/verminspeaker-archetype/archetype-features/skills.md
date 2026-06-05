@@ -3,6 +3,7 @@ id: skills
 name: "Skills"
 level: 1
 tags: []
+
 ---
 
 This lists the animal's total skill ranks. Animal companions can assign skill ranks to any skill listed under Animal Skills. If an animal companion increases its Intelligence to 10 or higher, it gains bonus skill ranks as normal. An animal companion cannot have more ranks in a skill than it has Hit Dice.

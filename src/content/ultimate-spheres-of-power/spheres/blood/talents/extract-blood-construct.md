@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: basic
 tags: []
+
 ---
 
 You may drain the blood of a dead creature within blood control range and animate it as a blood construct as a standard action within 1 minute per caster level of the creature's death. If the creature (or creatures) were under the effects of your blood control at the time of their death, you may reduce the required time to a swift action. This blood construct is of a size according to the below table, but may not be larger than one size smaller than the dead creature's size.

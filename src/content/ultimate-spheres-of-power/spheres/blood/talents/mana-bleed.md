@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: basic
 tags: []
+
 ---
 
 As a swift action, you may force a creature under the effects of your blood control and taking bleed damage to lose 1 spell point. This loss increases by one die size (1d2, 1d3, 1d4, 1d6, etc.) for every five caster levels. Creatures that possess spell slots instead lose spell slots, based on the level of the slot. Each slot is equivalent to a number of spell points: level 1-2: 1 spell point, 3-5: 2 spell points, 6-8: 3 spell points, 9: 4 spell points. The target creature chooses which spell slots are lost. If affecting a creature with psionic manifesting (see Psionics Unleashed by Dreamscarred Press), the creature loses a number of power points equal to the number of spell points that would have been lost multiplied by 1 + its Hit Dice/4.

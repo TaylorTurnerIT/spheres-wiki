@@ -6,6 +6,7 @@ system: power
 sphere: fallen-fey
 tier: basic
 tags: []
+
 ---
 
 Fairy mounds allow travel without these difficulties. Each side of the portal in a fairy mound remains fixed unless sundered by powerful magic and the difference in time flow is fixed by the mound’s creator. As the locations are known and constant, encounters at the mound are not random. However, creatures with the power to create such mounds rarely do so without cause. Mounds will usually be found deep in the desmenes of powerful lords of faerie and watched and guarded appropriately.

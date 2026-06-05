@@ -6,6 +6,7 @@ system: might
 tags: ["ex"]
 className: blacksmith
 featureId: smithing-insight-ex
+
 ---
 
 The blacksmith gains a familiar, as the wizard's arcane bond option, using his blacksmith levels as wizard levels for this purpose, as well as Object Familiar (Ultimate Spheres of Power pg. 481) as a bonus feat, even if he does not meet the prerequisites.

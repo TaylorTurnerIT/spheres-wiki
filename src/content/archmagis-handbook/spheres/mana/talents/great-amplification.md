@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
+
 ---
 **Prerequisites:** Mana sphere (at least one (amp) talent), caster level 5th.
 

@@ -7,6 +7,7 @@ sphere: fate
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 Your power over the dead extends to influence over their destiny.

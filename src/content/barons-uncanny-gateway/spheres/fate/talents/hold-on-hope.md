@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: advanced
 tags: ["sm", "word"]
+
 ---
 
 **Prerequisites:** Fate sphere

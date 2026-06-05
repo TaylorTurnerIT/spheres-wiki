@@ -6,6 +6,7 @@ type: talent
 sphere: telekinesis
 tier: basic
 tags: []
+
 ---
 
 You may throw your telekinetic power at an object, aiding or impeding its natural movement. As a readied action, you may push a projectile, creature, thrown object, or another caster's Bludgeon up to one size larger than your telekinesis limit. If aiding, you may increase a weapon's range increment by half your telekinesis speed and increase its effective size by 1 size category +1 per 5 caster levels for the purposes of dealing damage and determining if another caster may Catch the object with their own telekinesis. If aiding a creature, you may choose to instead grant it an enhancement bonus to its movement equal to 1/2 your telekinesis speed. You may also add 1d6 damage + 1d6 per 5 caster levels to the falling damage a target suffers. This ability may be used to cause damage to a target that was successfully tripped.

@@ -6,9 +6,11 @@ system: might
 tags: []
 className: technician
 featureId: improved-suit
+
 ---
 
 The suit gains the dispense improvement, as if it were an improved shield. This improvement can be taken multiple times.
+
 ---
 # Independent Invention
 

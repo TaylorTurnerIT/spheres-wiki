@@ -6,6 +6,7 @@ type: talent
 sphere: life
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may spend a spell point to touch a target and heal it an amount of damage equal to 1d8 + your caster level. To living creatures, this is a harmless positive energy effect, but it is harmful to undead and other creatures normally damaged by positive energy (Will half).

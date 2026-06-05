@@ -3,6 +3,7 @@ id: aura-of-warding
 name: "Aura of Warding"
 level: 8
 tags: []
+
 ---
 
 At 8th level, the avowed radiates a subtle protective aura, granting all allies within 10 feet of her a +2 morale bonus to saving throws against magical effects. This bonus is doubled against effects that originate from creatures that the avowed has an active smite on.

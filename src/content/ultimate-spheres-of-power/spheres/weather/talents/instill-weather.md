@@ -6,6 +6,7 @@ type: talent
 sphere: weather
 tier: basic
 tags: ["instill"]
+
 ---
 
 As a standard action you may touch a small container of liquid and instill a mantle or shroud inside it, which functions as a potion or oil. You must spend a spell point to allow shrouds to endure without concentration.

@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Warp sphere (Extradimensional Storage (space)), caster level 1st.

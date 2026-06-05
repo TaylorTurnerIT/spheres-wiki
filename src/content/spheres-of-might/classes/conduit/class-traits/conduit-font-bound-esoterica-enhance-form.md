@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: physicality
+
 ---
 
 The conduit produces an Alteration sphere shapeshift with the Blank Transformation shapeshift with the Bestial Spirit talent, which can be augmented with the following talents: Agile, Bestial Reflexes, Bully.

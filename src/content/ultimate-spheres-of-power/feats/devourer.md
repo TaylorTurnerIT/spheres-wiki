@@ -6,6 +6,7 @@ system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat
+
 ---
 
 **Prerequisites:** Alteration sphere (Serpentine Transformation (transformation)) or swallow whole ability, character level 10th.

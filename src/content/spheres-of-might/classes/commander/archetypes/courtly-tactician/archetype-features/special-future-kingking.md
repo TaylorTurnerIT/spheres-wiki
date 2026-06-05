@@ -3,6 +3,7 @@ id: special-future-kingking
 name: "Special – Future Kingking"
 level: 1
 tags: []
+
 ---
 
 The courtly tactician uses the greater of their effective kingking level and their actual kingking level when determining the effects of a courtier ability granted by field policies. If the courtly tactician would have the same courtier twice, they use the higher of their effective kingking level and actual kingking level to determine its effects.

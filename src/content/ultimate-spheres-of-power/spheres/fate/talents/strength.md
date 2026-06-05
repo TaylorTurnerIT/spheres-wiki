@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif"]
+
 ---
 
 You may grant a motif that enhances a target's might and will. The target gains a +2 insight bonus to CMB and CMD, as well as to Strength checks and Strength-based skill checks. This bonus increases by +1 for every 4 caster levels.

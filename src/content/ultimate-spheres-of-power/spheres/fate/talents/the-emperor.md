@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif"]
+
 ---
 
 You may grant a motif that allows its bearer to better project their power. Whenever the target suffers from penalties to attack rolls, damage rolls, saving throws, skill checks, or ability checks, they reduce their total penalty by 1, to a minimum penalty of -1. For every 10 caster levels, they reduce the penalty by an additional 1.

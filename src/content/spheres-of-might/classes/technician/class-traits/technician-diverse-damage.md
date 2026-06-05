@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: improved-melee-weapon
+
 ---
 
 The weapon gains one damage type it did not possess (slashing, piercing, or bludgeoning). This improvement can be taken multiple times. Each time it is taken, the weapon gains a different damage type. The technician cannot grant a weapon a damage type it already possesses.

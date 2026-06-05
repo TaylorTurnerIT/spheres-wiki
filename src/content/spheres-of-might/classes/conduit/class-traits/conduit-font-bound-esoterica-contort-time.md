@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: subjectivity
+
 ---
 
 The conduit produces a Shift Time alter time effect.

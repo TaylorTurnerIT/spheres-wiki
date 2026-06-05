@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: imbuement-sm
+
 ---
 
 At 7th level, the conduit can unravel arcana as a free action (usable outside of their turn) before a creature attempts a combat maneuver or MSB check against the conduit's equipment or active magic effects, forcing the attacker to roll twice and take the lower result.

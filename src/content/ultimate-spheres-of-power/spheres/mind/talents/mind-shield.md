@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
+
 ---
 
 You may establish a ward on the mind of another, one capable of providing protection from mental assault.

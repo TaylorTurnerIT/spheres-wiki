@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: ["manipulate"]
+
 ---
 
 **Prerequisites:** Mana Sphere, caster level 5th

@@ -2,6 +2,7 @@
 id: knave
 name: "Knave"
 tags: []
+
 ---
 
 Some people believe that rules do not apply to them. Others realize that rules do not apply to anyone. For the knave, there is no goodness in being obvious or honest, and adaptability is an art form all itself. Whether he's drinking with man-eating demons or telling dirty jokes to the queen, the knave knows how to talk, fight, or spellcast his way out of anything.

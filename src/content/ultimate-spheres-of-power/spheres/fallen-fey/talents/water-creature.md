@@ -6,6 +6,7 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
+
 ---
 
 This fey-blessing grants you the ability to communicate and control water. When granted, you gain the following abilities:

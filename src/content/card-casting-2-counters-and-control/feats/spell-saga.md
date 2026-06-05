@@ -6,6 +6,7 @@ system: power
 sphere: time
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Cascade Spell, Pawstpone

@@ -6,6 +6,7 @@ system: power
 sphere: mind
 tags: ["combat"]
 tier: feat
+
 ---
 
 **Prerequisites:** Mind sphere, Improved Unarmed Strike, Pressure Point Proficiency, character level 5th.

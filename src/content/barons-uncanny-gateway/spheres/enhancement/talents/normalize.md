@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: ["enhance", "sm"]
+
 ---
 
 **Prerequisites:** Enhancement Sphere

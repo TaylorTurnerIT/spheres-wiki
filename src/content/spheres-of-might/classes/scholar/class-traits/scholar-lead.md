@@ -6,6 +6,7 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
+
 ---
 
 Lead is a metal particularly problematic for practitioners of divination magic, foiling the magical emanations they rely upon. When the scholar first gains this imposition she learns how to craft a thin helmet liner that must use at least 10 sp worth of lead and costs 1 hour and a total of 100 gp times the scholar's class level to create. A lead helmet liner crafted in this manner may be sold for 1/2 its crafting cost, as long as it is currently functioning.

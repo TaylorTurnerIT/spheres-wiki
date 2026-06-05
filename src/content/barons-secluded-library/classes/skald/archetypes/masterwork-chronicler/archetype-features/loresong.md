@@ -4,6 +4,7 @@ name: "Loresong"
 level: 2
 replaces: ["well-versed and rage powers"]
 tags: []
+
 ---
 
 Allies affected by the masterwork chronicler's inspired rage are still able to use Charisma-, Dexterity-, and Intelligence-based skills and any ability that requires patience or concentration (including casting spells).

@@ -3,6 +3,7 @@ id: form-of-the-dragon
 name: "Form of the Dragon"
 level: 1
 tags: []
+
 ---
 
 A dragon pact kineticist treats their tail slap as a primary attack, and all of their natural attacks gained from this archetype have their critical range doubled. This increase does not stack with any other increase to critical range.

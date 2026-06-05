@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may command terrain and natural effects to act on your behalf. The effect produced depends on the environmental aspect targeted. Each effect must be centered or targeted within close range. Because geomancing manipulates natural elements, it is not subject to spell resistance, even if a geomancing ability targets a creature directly.

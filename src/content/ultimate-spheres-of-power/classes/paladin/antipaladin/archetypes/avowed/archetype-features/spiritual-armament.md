@@ -3,6 +3,7 @@ id: spiritual-armament
 name: "Spiritual Armament"
 level: 1
 tags: []
+
 ---
 
 When she gains this divine bond, the avowed gains her choice of a spiritual weapon, armor, or shield. Once chosen, this cannot be changed. Once per day as a standard action, she may enhance the chosen equipment by calling upon the aid of a celestial spirit for 1 minute per level.

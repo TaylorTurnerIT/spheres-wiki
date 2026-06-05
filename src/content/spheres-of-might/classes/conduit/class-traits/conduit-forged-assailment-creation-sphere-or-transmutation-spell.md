@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: volatility
+
 ---
 
 The conduit produces a Creation sphere create effect, which can be augmented with the Created Momentum talent.

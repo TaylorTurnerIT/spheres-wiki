@@ -34,6 +34,7 @@ sectionDefinitions:
       - label: "Necrosis Feats"
         tiers: ["feat"]
         tags: ["necrosis"]
+
 ---
 
 [Ghost Strike]

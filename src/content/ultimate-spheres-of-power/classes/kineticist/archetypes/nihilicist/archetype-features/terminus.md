@@ -3,6 +3,7 @@ id: terminus
 name: "Terminus"
 level: 20
 tags: []
+
 ---
 
 At 20th level, the amount of nihil damage which must be converted to apply a condition to a creature is reduced by 1/5.

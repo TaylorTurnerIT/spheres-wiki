@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: basic
 tags: ["space"]
+
 ---
 
 You may create a small pocket dimension, accessible through a shimmering portal that either appears in the air before you or on a touched, reasonably flat surface. This pocket dimension measures one 10-foot cube per caster level, arranged as you wish so long as the space is continuous. You can make the entrance as small as 5-foot square or as large as 10-foot square. You can select its light level and temperature (from -40° F to 120° F, -40° C to 50° C), but otherwise it is a featureless location.

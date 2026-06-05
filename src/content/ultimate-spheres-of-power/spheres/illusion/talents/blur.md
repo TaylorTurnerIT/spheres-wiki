@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: basic
 tags: ["glamer"]
+
 ---
 
 As a trick you may designate a single 5-foot cube as a figment that distorts perception. This distortion lasts for one round per caster level. Any effect originating from a source whose line of sight begins inside or crosses this area incurs a 20% miss chance + 5% per caster level (maximum 50%) due to concealment. Any creature may attempt a Will save as a free action once per round to ignore this miss chance for 1 round. You may only have one such disruption at a time. Using this trick a second time immediately end the duration of the previous casting of this trick.

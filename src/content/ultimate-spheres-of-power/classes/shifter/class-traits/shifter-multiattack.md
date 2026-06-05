@@ -6,6 +6,7 @@ system: power
 tags: []
 className: shifter
 featureId: bestial-trait
+
 ---
 
 The shifter gains the Multiattack feat.

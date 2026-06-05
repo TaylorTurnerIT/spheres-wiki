@@ -4,6 +4,7 @@ name: "Ki Shifting"
 level: 1
 replaces: ["the monk class ability the beastsoul monk gives up for this ki power"]
 tags: []
+
 ---
 
 A beastsoul monk may select the Alteration sphere or talents from that sphere for which she qualifies in place any of the following monk class abilities: slow fall (4th), high jump (5th), wholeness of body (7th), diamond body (11th), abundant step (12th), diamond soul (13th), quivering palm (15th), timeless body (17th), tongue of the sun and moon (17th), empty body (19th), and perfect self (20th).

@@ -3,6 +3,7 @@ id: spells
 name: "Spells"
 level: 4
 tags: []
+
 ---
 
 Beginning at 4th level, a yamabushi gains the ability to cast a small number of divine spells, which are drawn from the paladin spell list (see page 231 of the Pathinder® Roleplaying Game Core Rulebook™). A yamabushi must choose and prepare his spells in advance.

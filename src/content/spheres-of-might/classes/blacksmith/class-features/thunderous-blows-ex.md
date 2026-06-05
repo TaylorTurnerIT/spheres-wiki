@@ -3,6 +3,7 @@ id: thunderous-blows-ex
 name: "Thunderous Blows (Ex)"
 level: 1
 tags: []
+
 ---
 
 Starting at 1st level, the blacksmith becomes particularly adept at striking crafted creations in exactly the right place and manner to damage them most effectively. When the blacksmith makes an attack action or attack of opportunity, he deals an additional 1d6 damage if making a successful sunder attempt or if attacking a construct or object (including animated objects). This damage increases by 1d6 at 3rd level and every two levels thereafter. The blacksmith never provokes attacks of opportunity for attempting the sunder combat maneuver, and whenever the blacksmith chooses to destroy an item held or worn by a creature with a sunder attempt any excess damage is applied to the item's wielder. The blacksmith counts as having the Improved Sunder feat for determining prerequisites.

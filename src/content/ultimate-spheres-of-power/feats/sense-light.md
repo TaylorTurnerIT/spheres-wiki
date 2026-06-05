@@ -6,6 +6,7 @@ system: power
 sphere: light
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Perception 5 ranks, Light sphere.

@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: base
 tags: []
+
 ---
 
 Unlike spells, talents in various Spheres of Power releases mostly lack descriptor tags. While in most cases the appropriate tag can be inferred for a given talent or entire sphere, for several options it is helpful to explicitly specify which talents bear the curse descriptor.

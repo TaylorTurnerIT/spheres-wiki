@@ -6,6 +6,7 @@ system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat
+
 ---
 
 **Prerequisite:** Shadowmark 1d6.

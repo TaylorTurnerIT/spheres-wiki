@@ -6,6 +6,7 @@ type: talent
 sphere: light
 tier: advanced
 tags: ["light"]
+
 ---
 
 **Prerequisites:** Light sphere, caster level 10th.

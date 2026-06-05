@@ -6,6 +6,7 @@ system: might
 tags: ["ex"]
 className: blacksmith
 featureId: smithing-insight-ex
+
 ---
 
 The blacksmith gains the Beastmastery sphere as a bonus talent.

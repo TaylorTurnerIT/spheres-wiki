@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Alteration sphere (Swarm Shape), caster level 10th.

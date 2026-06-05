@@ -3,6 +3,7 @@ id: soul-eidolon
 name: "Soul Eidolon"
 level: 1
 tags: []
+
 ---
 
 A mirrored soul may summon a lost aspect of himself to aid in combat. This soul eidolon functions as a Conjuration sphere companion with a caster level equal to the mirrored soul's class level. Unlike most effects, this caster level does not stack with those gained from other sources. A soul eidolon may be summoned with a 10 minute ritual that does not cost any spell points and remains for up to 24 hrs. without concentration, though may be banished, dismissed, or slain as usual for a Conjuration sphere companion.

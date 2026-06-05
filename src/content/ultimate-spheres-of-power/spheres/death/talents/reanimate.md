@@ -6,6 +6,7 @@ type: talent
 sphere: death
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may touch an intact dead body and spend a spell point to reanimate it as a zombie or skeleton (depending on the composition of the body in question) for 1 minute per caster level. This creature gains the zombie or skeleton template and obeys your commands, although only basic commands such as "go", "stay", "follow me", "attack", or "guard" are understandable. While specifics can be given ("guard this area against humans but let goblins pass"), undead are unintelligent and easily fooled.

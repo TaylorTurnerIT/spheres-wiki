@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites** Illusion sphere (Illusionary Touch (sensory, touch) x2), caster level 5th.

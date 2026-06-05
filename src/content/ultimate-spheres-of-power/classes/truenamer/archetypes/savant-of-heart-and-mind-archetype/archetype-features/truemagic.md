@@ -3,6 +3,7 @@ id: truemagic
 name: "Truemagic"
 level: 1
 tags: []
+
 ---
 
 This works like the truenamer class feature of the same name, with the following exceptions.

@@ -6,6 +6,7 @@ type: talent
 sphere: fallen-fey
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Fallen Fey sphere (Greater Fey-Link), caster level 15th.

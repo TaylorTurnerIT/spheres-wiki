@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif"]
+
 ---
 
 You may allow a target to surrender themselves to fate. The target takes a -3 penalty to all saving throws, but rolls each saving throw twice and chooses the better roll. This penalty decreases by 1 for every 10 caster levels.

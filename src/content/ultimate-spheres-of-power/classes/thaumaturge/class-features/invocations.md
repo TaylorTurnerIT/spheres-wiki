@@ -4,6 +4,7 @@ name: "Invocations"
 level: 1
 tags: []
 isTraitContainer: true
+
 ---
 
 Thaumaturges control power in its purest form; whether through bargains with outsiders, the summoning of primal spirits, or simply an untamable spark in their soul, a thaumaturge can invoke a limited amount of truly wondrous power.

@@ -6,6 +6,7 @@ type: talent
 sphere: divination
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Divination Sphere (Viewing)

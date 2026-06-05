@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["manipulation"]
+
 ---
 You may manipulate your own well of magic and transfer your capacity partially into a targeted creature. If the target is unwilling, they may attempt a Will save to resist this effect.
 

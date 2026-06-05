@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Nature sphere (Deep Nature), caster level 10th.

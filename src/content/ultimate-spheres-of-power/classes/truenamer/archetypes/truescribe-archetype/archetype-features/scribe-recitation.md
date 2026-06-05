@@ -3,6 +3,7 @@ id: scribe-recitation
 name: "Scribe Recitation"
 level: 1
 tags: []
+
 ---
 
 At 1st level, the truescribe has devised a system of notation that can record all of the subtle linguistic qualities of the First Language. Whenever the truescribe spends an hour apologizing to the universe each day as part of the Law of Finite Malleability, she may also produce written recitations, otherwise known as recitation scrolls. Recitation scrolls are just like arcane or divine scrolls, save they record a recitation rather than a spell, have no cost to manufacture, must be a scroll of a recitation the truescribe knows how to recite herself, and are too obscure in nature to sell to the mass market.

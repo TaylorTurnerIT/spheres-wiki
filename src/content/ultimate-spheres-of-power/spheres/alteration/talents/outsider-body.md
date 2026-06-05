@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: basic
 tags: ["body"]
+
 ---
 
 You may add the following traits to your forms. A single form cannot possess traits that grant opposed subtypes (for example, a target cannot possess both the Celestial Form and Fiendish Form traits), and some traits have specific requirements before they can be granted to a target.

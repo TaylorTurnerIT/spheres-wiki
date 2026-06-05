@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["form"]
+
 ---
 
 You companion gains the swallow whole ability, allowing it to make a grapple attempt to swallow a creature that it has grappled at the start of its turn as a standard action. If the companion possesses a bite attack, a successful grapple check to swallow whole deals bite damage.

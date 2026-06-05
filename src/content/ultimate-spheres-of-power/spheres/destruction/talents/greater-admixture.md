@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), caster level 5th.

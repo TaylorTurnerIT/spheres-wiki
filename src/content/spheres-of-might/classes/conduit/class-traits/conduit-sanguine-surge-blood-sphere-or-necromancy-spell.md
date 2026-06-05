@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: physicality
+
 ---
 
 The conduit produces a Blood sphere Blood Rebuff, Gory Armaments, Internal Propulsion, or Martyr's Tithings blood art effect.

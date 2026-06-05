@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: base
 tags: []
+
 ---
 
 In a manner similar to psychic mages, psionicists and spherecasters are capable of projecting their minds onto the universe to create quasi-real planes known as mindscapes. The following rules are added in addition to the rules from psychic dueling introduced in Occult Adventures.
@@ -47,6 +48,7 @@ The Egregore is a Symbiat who has mastered using the Mind sphere to link and emp
 The Fright Wright is an Eliciter who uses powerful mind magic to cause debilitating fear in their foes.
 ## Impressor
 The Impressor is a Fighter who has learned how to apply the Emotions of an Eliciter to targets (friends or foes) during combat.
+
 ---
 
 #### Wild Magic Generator

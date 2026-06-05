@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
+
 ---
 **Prerequisites:** Warp sphere (Plane Manipulator (space)).
 

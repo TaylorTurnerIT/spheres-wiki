@@ -7,6 +7,7 @@ sphere: mind
 dualSphere: enhancement
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Enhancement sphere (Bestow Intelligence (enhance)), Mind sphere (Expanded Charm).

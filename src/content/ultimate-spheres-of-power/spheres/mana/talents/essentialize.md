@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["manipulation"]
+
 ---
 
 You may manipulate a target within range that is under the effects of a harmless sphere effect, causing the effect to end. If the effect has a duration greater than 1 minute and at least half its original duration remaining, you gain temporary spell points equal to half the effect's cost in spell points (minimum 0). You gain no spell points if the effect cost no spell points or was cast using temporary spell points (even partially), or if the effect had targeted multiple creatures. At 10th caster level, you instead gain temporary spell points equal to its full cost, but only if the duration was greater than 1 hour and had at least half its original duration remaining.

@@ -6,6 +6,7 @@ system: power
 sphere: protection
 tags: ["combat"]
 tier: feat
+
 ---
 **Prerequisites:** Protection sphere, base attack bonus +1.
 

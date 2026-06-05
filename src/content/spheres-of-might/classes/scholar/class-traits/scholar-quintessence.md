@@ -6,6 +6,7 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
+
 ---
 
 Quintessence is the raw material from which the outer planes are formed, a nebulous substance which can subvert even the forces of time. The scholar can create and apply a spread of quintessence to a 5-foot square or a Medium-sized or smaller object within her natural reach (Large targets count as 2 Medium-sized targets, Huge targets count as 2 Large-sized targets, Gargantuan targets count as 2 Huge-sized targets, etc.). Quintessence can also be applied to willing creatures, although such creatures are considered helpless so long as they are covered and cannot remove the quintessence by their own power. Creating and applying this quintessence takes 1 round, which provokes attacks of opportunity. The scholar may create a number of 5-foot squares equal to 1/2 her class level per day.

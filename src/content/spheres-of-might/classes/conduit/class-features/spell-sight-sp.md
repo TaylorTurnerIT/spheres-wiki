@@ -3,6 +3,7 @@ id: spell-sight-sp
 name: "Spell Sight (Sp)"
 level: 3
 tags: []
+
 ---
 
 At 3rd level, the conduit can spend a move action and concentrate on a single item or creature within 60 feet to determine if it is magical (as the base Divination sphere divine ability).

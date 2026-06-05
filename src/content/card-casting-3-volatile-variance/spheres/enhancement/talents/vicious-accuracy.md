@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: ["enhance"]
+
 ---
 
 **Prerequisites:** Enhancement Sphere (Deadly Weapon), caster level 5th

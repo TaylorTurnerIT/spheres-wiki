@@ -6,6 +6,7 @@ system: power
 sphere: life
 tags: ["channeling"]
 tier: feat
+
 ---
 
 **Prerequisites:** Life sphere, channel energy class feature.

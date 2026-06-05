@@ -7,6 +7,7 @@ sphere: warp
 dualSphere: mana
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 **Prerequisites:** Mana sphere, Warp sphere (Plane Manipulator).
 

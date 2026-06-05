@@ -6,4 +6,5 @@ color: "#4A235A"
 id: "ki"
 label: "Ki"
 sphere: "divination"
+
 ---

@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: basic
 tags: []
+
 ---
 
 When attempting to create a cage that occupies the same space as a creature, you may spend an additional spell point to create a full-body confinement cage. Treat a 1-inch thick cage created in this fashion as an object the same size as the creature. The target may still breathe and may still attempt Strength checks to escape, but are otherwise unable to attack the cage or take any action which requires physical movement. If spikes or harmful materials are applied to the inside of such a full-body confinement cage, the target suffers damage each round they remain inside the cage.

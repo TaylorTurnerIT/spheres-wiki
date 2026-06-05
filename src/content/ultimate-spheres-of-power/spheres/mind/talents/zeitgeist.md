@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: advanced
 tags: ["cloud"]
+
 ---
 
 **Prerequisites:** Mind sphere (Mass Charm [mass], Project Thoughts (charm)), caster level 10th.

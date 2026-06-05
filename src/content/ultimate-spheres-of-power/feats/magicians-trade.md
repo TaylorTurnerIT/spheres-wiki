@@ -6,6 +6,7 @@ system: power
 sphere: enhancement
 tags: ["counterspell"]
 tier: feat
+
 ---
 
 **Prerequisites:** Enhancement sphere, Counterspell.

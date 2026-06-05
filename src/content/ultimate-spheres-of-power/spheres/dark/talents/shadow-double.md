@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: advanced
 tags: ["shadow"]
+
 ---
 
 **Prerequisites:** Dark sphere (Animated Shadow (advanced, shadow), Shadow Lurk (shadow)), caster level 15th.

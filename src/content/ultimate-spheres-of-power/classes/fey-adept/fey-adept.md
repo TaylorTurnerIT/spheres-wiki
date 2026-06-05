@@ -28,6 +28,7 @@ babProgression: "half"
 fortSaveProgression: poor
 refSaveProgression: poor
 willSaveProgression: good
+
 ---
 
 Fey Adepts specialize in using illusion and the creation of partially-real shadows to get their job done.

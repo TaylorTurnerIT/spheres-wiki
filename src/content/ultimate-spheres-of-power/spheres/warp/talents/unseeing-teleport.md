@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: basic
 tags: []
+
 ---
 
 You may spend an additional spell point when making a teleport to no longer require line of sight to the destination; instead of choosing a spot to appear, you may instead indicate a direction and distance.

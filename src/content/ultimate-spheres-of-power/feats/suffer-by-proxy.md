@@ -6,6 +6,7 @@ system: power
 sphere: enhancement
 tags: ["drawback", "proxy"]
 tier: feat
+
 ---
 
 **Prerequisites:** Enhancement sphere, Draining Casting drawback, Circle Casting, Spell Proxy.

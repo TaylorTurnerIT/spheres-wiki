@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: basic
 tags: []
+
 ---
 
 Increase the amount of damage dealt or damage healed when you use your Destroy or Repair ability to 1d6 + your caster level.

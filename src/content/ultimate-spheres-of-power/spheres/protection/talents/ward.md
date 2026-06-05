@@ -6,6 +6,7 @@ type: talent
 sphere: protection
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may create a ward centered on yourself with a radius of up to 10 feet + 5 feet per caster level, but can also be made so small as to only cover yourself. Wards remain as long as you concentrate, but you may spend a spell point to allow them to remain for 1 round per caster level without concentration. Wards remain in the location they were created, even if you move (however, if the ward is created entirely on top of a vehicle, it will move with that vehicle). If a ward affects targets inside it, its effects are subject to spell resistance.

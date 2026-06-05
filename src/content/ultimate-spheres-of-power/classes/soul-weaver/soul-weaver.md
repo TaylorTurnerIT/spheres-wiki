@@ -25,6 +25,7 @@ babProgression: "half"
 fortSaveProgression: poor
 refSaveProgression: poor
 willSaveProgression: good
+
 ---
 
 Soul Weavers focus on controlling the powers of life and death. While they tend to make townsfolk a bit nervous - especially if the shambling horde of undead follows them into town - those who face great danger tend to appreciate having such a powerful ally at their side.

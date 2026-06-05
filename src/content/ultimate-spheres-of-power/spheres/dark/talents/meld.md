@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: base
 tags: []
+
 ---
 
 Melds are effects that can be granted to a creature that alter the way they interact with darkness. The caster must touch a target as a standard action to grant them the benefits of a (meld) talent, and unwilling targets may attempt a Will save to negate. A dark caster begins with knowledge of the following meld:

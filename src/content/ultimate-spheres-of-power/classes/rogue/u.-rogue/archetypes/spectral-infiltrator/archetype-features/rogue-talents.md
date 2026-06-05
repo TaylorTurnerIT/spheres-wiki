@@ -3,6 +3,7 @@ id: rogue-talents
 name: "Rogue Talents"
 level: 1
 tags: []
+
 ---
 
 A spectral infiltrator can choose from the following rogue talents in addition to those available to all rogues:

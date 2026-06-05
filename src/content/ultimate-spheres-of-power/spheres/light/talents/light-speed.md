@@ -6,6 +6,7 @@ type: talent
 sphere: light
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Light sphere (Flicker (light), Incarnate Glow (advanced)), caster level 15th.

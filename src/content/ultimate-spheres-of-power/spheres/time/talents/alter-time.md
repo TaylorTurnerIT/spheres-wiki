@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: base
 tags: []
+
 ---
 
 The base Time sphere grants you two methods to alter time. All alter time effects require a standard action to activate (unless otherwise stated) and have a range of touch, and are subject to spell resistance. Effects that target an area are centered on you. Effects maintained through concentration require you to remain within close range of the target or location after placing the effect.

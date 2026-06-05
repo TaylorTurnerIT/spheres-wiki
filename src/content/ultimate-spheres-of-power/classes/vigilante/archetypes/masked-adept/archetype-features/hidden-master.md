@@ -4,6 +4,7 @@ name: "Hidden Master"
 level: 1
 replaces: ["vigilante specialization"]
 tags: []
+
 ---
 
 At 1st level, the masked adept chooses one magic sphere to be his hidden sphere. He receives this sphere as a bonus talent, and uses his class level as his caster level with this sphere. This stacks with other caster level sources normally.

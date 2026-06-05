@@ -6,6 +6,7 @@ system: power
 tags: []
 className: incanter
 featureId: list-of-sphere-specializations
+
 ---
 
 The following abilities replace extended sprite, warning sprite and permanent sprite

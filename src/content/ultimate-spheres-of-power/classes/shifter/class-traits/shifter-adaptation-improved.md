@@ -7,6 +7,7 @@ tags: []
 className: shifter
 featureId: bestial-trait
 requires: "adaptation"
+
 ---
 
 The shifter gains resistance to acid, cold, electricity, fire, and sonic equal to her shifter level.

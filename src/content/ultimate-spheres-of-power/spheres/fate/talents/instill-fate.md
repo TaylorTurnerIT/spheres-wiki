@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["instill"]
+
 ---
 
 As a standard action you may touch a small container of liquid and instill a motif or word inside it, which functions as a potion or oil. The word cannot have a duration of concentration, nor have a trigger/normally require an immediate action to activate.

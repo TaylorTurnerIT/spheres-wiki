@@ -3,6 +3,7 @@ id: paper
 name: "Paper"
 level: 1
 tags: []
+
 ---
 
 This sculpture has half the normal hit points for its kind and gains the [wood] subtype.

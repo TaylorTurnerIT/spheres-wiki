@@ -3,6 +3,7 @@ id: kinetic-blood
 name: "Kinetic Blood"
 level: 1
 tags: []
+
 ---
 
 Like other bloodragers, the awakened draws their powers from an ancestor, usually an outsider, fey, undead, or aberration. However, while a typical bloodrager would manifest sorcerous powers, an awakened's power manifests as elemental control.

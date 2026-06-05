@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 The technician unlocks special options for his inventions, as detailed under that section. He may also give his independent inventions the clockwork subtype by adding the following properties (a construct or independent invention cannot possess more than one subtype):

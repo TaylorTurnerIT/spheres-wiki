@@ -6,6 +6,7 @@ system: power
 tags: []
 className: wraith
 featureId: possession-su
+
 ---
 
 Passive possession grants no control over the possessed creature, though shares the creature's senses and may communicate telepathically with it. Attempting to passively possess an unwilling target costs a spell point.

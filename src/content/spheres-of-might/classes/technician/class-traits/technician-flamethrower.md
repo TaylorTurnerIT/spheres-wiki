@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: base-forms
+
 ---
 
 If the technician possesses chemical insight, he may give the invention a flamethrower. This weapon deals 1d6 fire damage per technician level in a cone or line, but does not count as a weapon for the purpose of feats and talents, as other siege engines do. Any creatures within the flamethrower's area of effect may make a Reflex save (DC 10 + 1/2 technician level + Intelligence modifier) to halve the damage.

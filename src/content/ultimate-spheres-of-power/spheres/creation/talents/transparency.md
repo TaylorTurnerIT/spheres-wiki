@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: basic
 tags: ["alter", "utility"]
+
 ---
 
 You may convert any material into a more transparent version of itself as long as you concentrate for up to 1 minute per caster level, but you may always spend a spell point to allow the effect to remain without concentration for its maximum duration.

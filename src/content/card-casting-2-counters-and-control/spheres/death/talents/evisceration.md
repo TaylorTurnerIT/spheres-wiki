@@ -6,6 +6,7 @@ type: talent
 sphere: death
 tier: advanced
 tags: ["ghost-strike"]
+
 ---
 
 **Prerequisites:** Death sphere (avasculation), caster level 10th

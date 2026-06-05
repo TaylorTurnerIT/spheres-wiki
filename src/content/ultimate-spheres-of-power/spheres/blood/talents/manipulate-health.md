@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: basic
 tags: ["quicken", "still"]
+
 ---
 
 As a free action, you may ascertain the general condition of any creature under the effects of your blood control according to the list below:

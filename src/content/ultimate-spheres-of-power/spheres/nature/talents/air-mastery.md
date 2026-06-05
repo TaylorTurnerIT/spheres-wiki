@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["air", "geomancing"]
+
 ---
 
 When you use the Gust Of Wind ability, you may create a cone area of effect instead of a line. Additionally, you gain the following geomancing abilities:

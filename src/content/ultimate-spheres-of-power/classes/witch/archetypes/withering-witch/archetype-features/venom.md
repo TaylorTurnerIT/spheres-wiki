@@ -4,6 +4,7 @@ name: "Venom"
 level: 1
 replaces: ["patron spells"]
 tags: []
+
 ---
 
 The withering witch may corrupt a sphere ability or hex that creates non-living physical matter, such as with the  Creation sphere, a barrier from the Protection sphere, or matter created by certain blast types of the Destruction sphere. It is innately poisonous, and any creature other than the witch that comes into contact with it must make a Fortitude save with a DC equal to 10 + 1/2 her class level + her casting ability modifier or be poisoned. Treat this as a contact poison with instant onset that does 1d6 damage with a frequency period of 1 round and a duration in rounds equal to the withering witch's casting ability modifier. A single successful Fortitude saving throw cures the poison. Although living matter cannot be corrupted with this ability, matter which has been made poisonous can still be animated by other means.
@@ -11,6 +12,7 @@ The withering witch may corrupt a sphere ability or hex that creates non-living 
 For every 5 levels after the first, increase the damage the poison does by 1d6, to a maximum of 4d6 at 16th level.
 
 This replaces patron spells.
+
 ---
 # Withering Hexes
 The following hexes are available to withering witches.

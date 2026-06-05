@@ -6,6 +6,7 @@ system: power
 sphere: weather
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Weather sphere, any (mantle) talent, magic skill bonus +5.

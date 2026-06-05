@@ -6,6 +6,7 @@ system: power
 sphere: life
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Life sphere (Affliction).

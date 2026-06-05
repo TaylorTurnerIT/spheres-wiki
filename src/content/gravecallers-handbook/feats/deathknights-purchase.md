@@ -6,6 +6,7 @@ system: power
 sphere: death
 tags: ["combat", "necrosis"]
 tier: feat
+
 ---
 Their suffering is your salvation. Break their souls across the iron that is your will.
 

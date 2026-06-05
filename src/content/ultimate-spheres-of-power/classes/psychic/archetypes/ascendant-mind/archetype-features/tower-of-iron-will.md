@@ -4,6 +4,7 @@ name: "Tower of Iron Will"
 level: 9
 replaces: ["phrenic amplifications", "telepathic bond", "remake self"]
 tags: []
+
 ---
 
 As an immediate action in response to needing to attempt a saving throw, the ascendant mind can create a field of psychic energy around her body. She receives a circumstance bonus to her saving throw equal to her phrenic modifier.

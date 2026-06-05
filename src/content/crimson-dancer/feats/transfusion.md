@@ -6,6 +6,7 @@ system: power
 sphere: blood
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Blood sphere (Absorb Blood), caster level 5th.

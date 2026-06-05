@@ -4,6 +4,7 @@ name: "Greatness"
 level: 1
 replaces: ["the bonus feat gained at 1st level"]
 tags: []
+
 ---
 
 The war hero is bound for greatness, and when he walks the path fate has laid out for him, it covers him in glory. The war hero can achieve greatness by dropping an enemy to 0 or fewer hit points, confirming a critical hit on them, passing a saving throw against one of their abilities, or by sundering one of their weapons, their shield or their armor so that it is destroyed. The enemy must have at least half as many Hit Dice as the war hero has.

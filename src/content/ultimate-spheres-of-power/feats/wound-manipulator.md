@@ -7,6 +7,7 @@ sphere: life
 dualSphere: alteration
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Alteration sphere, Life sphere.

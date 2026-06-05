@@ -6,6 +6,7 @@ type: talent
 sphere: light
 tier: basic
 tags: ["light"]
+
 ---
 
 You may place a glow on a manufactured weapon, a piece of armor or a shield. When placed on a weapon, it does full damage to incorporeal creatures. If placed on a shield or piece of armor, you may apply its full bonus to AC against the melee attacks of incorporeal creatures.

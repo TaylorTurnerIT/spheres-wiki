@@ -6,6 +6,7 @@ type: talent
 sphere: divination
 tier: advanced
 tags: ["utility"]
+
 ---
 
 **Prerequisites:** Divination sphere (Detect Spellcaster (divine)).

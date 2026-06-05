@@ -33,6 +33,7 @@ sectionDefinitions:
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
+
 ---
 
 The Mana sphere has received significant errata, applied on 8/14/22.

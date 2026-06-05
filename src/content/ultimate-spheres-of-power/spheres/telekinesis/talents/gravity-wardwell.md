@@ -6,6 +6,7 @@ type: talent
 sphere: telekinesis
 tier: basic
 tags: []
+
 ---
 
 As a standard action, you can create an area of gravity that either pulls objects in or keeps them out. Select either yourself or a spot within range of your telekinesis, and choose either to attract or repel.

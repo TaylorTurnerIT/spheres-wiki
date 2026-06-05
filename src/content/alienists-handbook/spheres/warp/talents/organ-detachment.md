@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: advanced
 tags: ["space"]
+
 ---
 **Prerequisites:** Warp sphere, caster level 10th.
 

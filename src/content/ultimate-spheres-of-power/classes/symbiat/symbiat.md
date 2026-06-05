@@ -23,6 +23,7 @@ babProgression: "3/4"
 fortSaveProgression: poor
 refSaveProgression: good
 willSaveProgression: good
+
 ---
 
 Symbiats are fused creatures, where psionic aberrations are pulled in (usually through a horrific process) to inhabit the mind of a caster. Their mastery of mental abilities makes them good leaders, and their psionic powers make them even better at supporting others.

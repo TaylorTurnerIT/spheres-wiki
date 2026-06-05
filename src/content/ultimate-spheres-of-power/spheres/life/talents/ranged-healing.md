@@ -6,6 +6,7 @@ type: talent
 sphere: life
 tier: basic
 tags: ["range"]
+
 ---
 
 Your cure, invigorate, and restore abilities have a range of close rather than touch.

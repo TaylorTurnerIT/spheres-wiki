@@ -3,6 +3,7 @@ id: list-of-emotions
 name: "List of Emotions"
 level: 8
 tags: []
+
 ---
 
 ### Apathy
@@ -129,4 +130,5 @@ He must succeed at an opposed Charisma check to convince it to do something it w
 **Greater: Exonerate (Su):** As a standard action, the eliciter may remove the exhausted, fatigued, frightened, nauseated, shaken, or sickened condition (choose one) from a willing ally within 30 feet that may see or hear him. He may use this ability once per day at 8th level, plus 1 extra time per day for every 4 eliciter levels he possesses beyond 8th.
 
 **Master: Peace of Heart:** The number of temporary hit points granted by the eliciter's touch of peace ability increases to 1d10 + 2 per level.
+
 ---

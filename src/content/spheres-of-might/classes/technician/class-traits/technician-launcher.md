@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: gadgets-ex
+
 ---
 
 The technician can create a gadget to allow him to throw an object. The object can travel 10 ft. + 5 ft. per technician level before the technician begins adding range penalties or calculating its maximum range.

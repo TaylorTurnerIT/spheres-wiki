@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: advanced
 tags: ["curse"]
+
 ---
 
 **Prerequisites:** Fate sphere (Geas (advanced, word), Greater Geas (advanced)), caster level 10th.

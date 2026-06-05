@@ -6,6 +6,7 @@ system: power
 sphere: protection
 tags: []
 tier: feat
+
 ---
 **Prerequisite:** Protection sphere.
 

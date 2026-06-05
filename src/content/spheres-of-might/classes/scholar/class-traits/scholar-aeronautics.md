@@ -6,6 +6,7 @@ system: might
 tags: []
 className: scholar
 featureId: scholars-knack-ex
+
 ---
 
 The scholar has learned how to construct a basic gliding apparatus that can be quickly assembled and disassembled for easy use. It takes the scholar 1 hour to assemble the glider, and it has a number of hit points equal to the scholar's class level, hardness equal to twice her Intelligence bonus (minimum 2), and weighs 10 lbs. The scholar may attach the glider to her or an ally's pack or clothing as a standard action; while it is attached, the character can make a DC 15 Fly check to fall safely from any height without taking falling damage. When falling safely, they may make an additional DC 15 Fly check to glide, moving 5 ft. laterally for every 10 ft. they fall. Allies may use a glider in this manner once for a maximum number of rounds equal to 1 + the scholar's Intelligence modifier before it breaks, and the scholar can use the glider in this way a total number of times per day equal to her Intelligence bonus (minimum 1) for the same duration; any attempt to exceed this usage results in failure and causes the glider to break, forcing the scholar to spend an hour building a new one before it can be used again. Only one glider can be attached to a single creature at a time.

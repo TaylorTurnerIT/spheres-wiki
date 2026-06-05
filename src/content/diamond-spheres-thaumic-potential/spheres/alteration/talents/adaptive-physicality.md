@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: basic
 tags: ["utility"]
+
 ---
 
 You may add the following traits to your forms:

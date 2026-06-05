@@ -6,6 +6,7 @@ system: power
 sphere: blood
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Blood sphere; Brew Potion or the Alchemy sphere (formulae) package.

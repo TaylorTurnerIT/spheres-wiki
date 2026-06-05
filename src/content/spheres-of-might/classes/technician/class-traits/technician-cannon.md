@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: base-forms
+
 ---
 
 If the technician is proficient with firearms and possesses the gunsmithing feat, he may make the invention's weapon a cannon. This functions similarly to a ballista; unlike a handheld firearm, this cannon never targets touch AC, and has no chance of misfire. Cannons deal bludgeoning and piercing damage and have a critical threat range of x3.

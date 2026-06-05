@@ -6,6 +6,7 @@ system: power
 sphere: mana
 tags: ["wild-magic"]
 tier: feat
+
 ---
 
 **Prerequisite:** Mana sphere.

@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif"]
+
 ---
 
 You may grant a motif that helps the target make the most of their current circumstances. The target gains a +2 insight bonus to attacks of opportunity and untrained skill checks. This bonus increases by +1 for every five caster levels.

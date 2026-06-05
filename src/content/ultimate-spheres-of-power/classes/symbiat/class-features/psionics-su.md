@@ -4,6 +4,7 @@ name: "Psionics (Su)"
 level: 7
 tags: []
 isTraitContainer: true
+
 ---
 
 A symbiat's alien mind empowers the symbiat with strength and subtlety far beyond what most casters can achieve. A symbiat may create psionic effects from the list below for a total number of rounds per day equal to 4 + his Intelligence modifier. Every level gained beyond 1st grants him an additional 2 rounds he may create psionic effects.

@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: basic
 tags: ["material"]
+
 ---
 
 You may create items that require processing, such as alchemical items and poisons. You may spend 1 spell point to create an alchemical item or poison worth up to 25 gp per caster level. This functions exactly as the normal alchemical item or poison, except that any DC is 10 + your casting ability modifier + 1/2 your caster level and any hit point damage it deals is increased by your casting ability modifier. These alchemical items or poisons remain for the normal duration of a created object, at which point they disappear as usual (but any effects inflicted on creatures or objects remain). You may also alter mundane alchemical items or poisons up to a maximum value of 25 gp per caster level, enhancing their potency in the same way for the normal duration, at which point the items return to their normal damage and saving throw DC. This does not stack with other effects that increase the item's DC.

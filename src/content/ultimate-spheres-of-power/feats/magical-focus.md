@@ -6,6 +6,7 @@ system: power
 sphere: enhancement
 tags: ["drawback"]
 tier: feat
+
 ---
 
 **Prerequisites:** Enhancement sphere; Focus Casting drawback or Galvanized drawback.

@@ -3,6 +3,7 @@ id: dismiss-pact-spirits
 name: "Dismiss Pact Spirits"
 level: 4
 tags: []
+
 ---
 
 At 4th level, a shadow templar can spend two uses of lay on hands or two minutes of protection against spirits† in order to attempt to cast a spirit or possessing agent out of a creature, as dismiss pact spirit†.

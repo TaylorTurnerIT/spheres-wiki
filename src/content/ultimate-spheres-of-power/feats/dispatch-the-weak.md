@@ -6,6 +6,7 @@ system: power
 sphere: death
 tags: []
 tier: feat
+
 ---
 
 Weakened bodies make for easy targets for your death effects.

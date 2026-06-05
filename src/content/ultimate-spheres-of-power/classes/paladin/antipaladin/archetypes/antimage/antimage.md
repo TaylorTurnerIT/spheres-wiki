@@ -2,6 +2,7 @@
 id: antimage
 name: "Antimage"
 tags: []
+
 ---
 
 Some souls pledge themselves to the gods; to their homes, or their values. But of all such people, there's a certain sect that rejects the use of magic; whether divine or arcane. To them, the use of this magic is the bane to reality, and the source of all suffering, or the one force that can still oppose them.

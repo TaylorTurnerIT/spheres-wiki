@@ -6,6 +6,7 @@ system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat
+
 ---
 
 **Prerequisites:** Telekinesis sphere, Counterweight, character level 5th.

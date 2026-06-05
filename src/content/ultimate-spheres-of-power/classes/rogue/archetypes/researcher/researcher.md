@@ -2,6 +2,7 @@
 id: researcher
 name: "Researcher"
 tags: []
+
 ---
 
 Researchers learn whatever they can, however they can. Some are primarily scholars: content to absorb knowledge from endless books and correspondence, who only face danger when their inquiries provoke forces opposed to sharing what they have learned— particularly secrets mortals were not meant to know.

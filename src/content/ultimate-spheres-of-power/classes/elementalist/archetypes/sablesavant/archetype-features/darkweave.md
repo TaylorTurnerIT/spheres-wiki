@@ -3,6 +3,7 @@ id: darkweave
 name: "Darkweave"
 level: 20
 tags: []
+
 ---
 
 The sablesavant's body has become fully steeped in the powers they wield. At 20th level, the sablesavant gains regeneration 5 (which is reduced to fast healing 5 while in bright light) and immunity to critical hits and precision damage (including sneak attack).

@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: basic
 tags: ["time"]
+
 ---
 
 By connecting the target to versions of themselves that exist in alternate timelines, you grant the target an insight bonus on all Knowledge checks equal to 1/2 your caster level and the ability to attempt such checks untrained. You must concentrate to maintain this effect, but may spend a spell point to allow it to remain for 1 minute per caster level without concentration.

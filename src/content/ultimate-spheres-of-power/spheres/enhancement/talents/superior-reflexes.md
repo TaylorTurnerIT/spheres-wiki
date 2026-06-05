@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["enhance"]
+
 ---
 
 You may enhance creatures, giving them a +1 bonus to initiative and allowing them to make an additional attack of opportunity each round. In addition, they may make attacks of opportunity while flat-footed.

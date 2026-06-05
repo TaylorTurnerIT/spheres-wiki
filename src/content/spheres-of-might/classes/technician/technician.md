@@ -29,6 +29,7 @@ babProgression: "3/4"
 fortSaveProgression: good
 refSaveProgression: poor
 willSaveProgression: good
+
 ---
 
 "If it only works as intended, it's not working well enough."

@@ -4,6 +4,7 @@ name: "Improved Goggles"
 level: 1
 tags: []
 isTraitContainer: true
+
 ---
 
 Anyone other than the technician suffers a -1 penalty on attack rolls and Perception checks for each improvement the improved goggles possesses (if dividing this penalty in half such as via the aesthetic insight improvement, the -1 penalty alternates between Perception and attack with each improvement).

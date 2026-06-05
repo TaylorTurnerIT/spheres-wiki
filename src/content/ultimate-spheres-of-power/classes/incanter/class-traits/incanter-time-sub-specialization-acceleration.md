@@ -6,6 +6,7 @@ system: power
 tags: []
 className: incanter
 featureId: list-of-sphere-specializations
+
 ---
 
 The following abilities replace retry and twist time.
@@ -36,6 +37,7 @@ At 20th level, you gain an additional move action each round, but it may only be
 **Cyclone:** At 8th level, the incanter can create a vortex of turbulent wind around himself as a standard action. This vortex has a radius of up to 10 feet and a maximum height of 10 feet per incanter level. Any ranged attack passing through this vortex automatically misses. Any flying creature moving through the vortex must make a Fly skill check or immediately fall from the sky, taking falling damage (the creature cannot make a Fly check to reduce or negate this damage). Creatures on the ground cannot pass through the vortex without first making a Strength check. The DC of this check is equal to 10 + the incanter's MSB. The vortex is faintly visible and can be spotted with a DC 15 Perception skill check. Maintaining this ability is a free action and the incanter can use this ability for a number of rounds per day equal to his incanter level. These rounds do not need to be consecutive.
 
 **Cloak of the Elements (Su):** At 20th level, the incanter is protected from weather and elements, taking only half damage from all sources of acid, cold, electricity, fire, and sonic damage.
+
 ---
 
 *Source: 3PP*

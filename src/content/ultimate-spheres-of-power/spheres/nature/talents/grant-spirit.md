@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: basic
 tags: []
+
 ---
 
 When activating one of your spirit Nature abilities, you may touch a willing target and grant them the benefit of your (spirit) talent, rather than gaining it yourself. This can only be done with (spirit) talents that have a non-concentration duration, and requires a minimum of a standard action when granting an effect to another.

@@ -6,6 +6,7 @@ type: talent
 sphere: life
 tier: advanced
 tags: ["warden"]
+
 ---
 
 **Prerequisites:** Life sphere (Break Enchantment, Greater Resurrection (advanced), Make Whole (advanced), Restore Senses (cure), Restore Spirit (cure), Resurrection (advanced), Resuscitate), caster level 20th.

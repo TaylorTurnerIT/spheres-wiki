@@ -4,6 +4,7 @@ name: "Many Paths"
 level: 4
 replaces: ["the bonus feat gained at 4th level"]
 tags: []
+
 ---
 
 At 4th level, the war hero gains a second lesser heroic aura, and chooses a totem for that aura following the same restrictions as the aura gained at 1st level. He may also retrain the totem chosen at 1st level.

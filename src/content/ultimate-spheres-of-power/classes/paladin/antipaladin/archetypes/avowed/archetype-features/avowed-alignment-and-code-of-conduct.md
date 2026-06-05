@@ -3,6 +3,7 @@ id: avowed-alignment-and-code-of-conduct
 name: Alignment and Code of Conduct
 level: 1
 tags: []
+
 ---
 
 The avowed must be of her pledge alignment, and loses all class features except proficiencies if she ever willingly commits an act that would be adversely against her pledge alignment (an evil act if you are good, a chaotic act if you are lawful, etc.).

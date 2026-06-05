@@ -3,6 +3,7 @@ id: delayed-combat-training
 name: "Delayed Combat Training"
 level: 4
 tags: []
+
 ---
 
 At 4th level and every two levels afterwards, a warrior of blind faith gains a combat talent of their choice. Warriors of blind faith use Charisma as their practitioner modifier.

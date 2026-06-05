@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["mass"]
+
 ---
 
 When using a geomancing or spirit effect which targets a creature or object, you may spend an additional spell point to affect an additional 1 target per 2 caster levels (minimum 1) at the same time. Each target must be within range and must be affected by the same geomancing or spirit effect.

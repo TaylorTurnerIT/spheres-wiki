@@ -6,6 +6,7 @@ system: power
 tags: []
 className: incanter
 featureId: incanter-specializations
+
 ---
 
 The incanter gains a familiar, as the wizard's arcane bond option, using his incanter levels as wizard levels for this purpose.

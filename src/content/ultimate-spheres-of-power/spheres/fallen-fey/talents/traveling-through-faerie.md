@@ -6,6 +6,7 @@ system: power
 sphere: fallen-fey
 tier: basic
 tags: []
+
 ---
 
 The land of Faerie is a place where the usual rules of time, space, and location do not apply. Sometimes time moves faster or slower, and yet, a place might have a permanent weather pattern or even time of day, which changes as slowly as the seasons do on the material plane. The denizens of Faerie might populate entire cities, and look upon an intruder from the material plane with as much distrust as a mortal city might look upon a visiting ogre. As such, while the PCs might have incredible adventures in the realm of Faerie as determined by them and the GM, most mortal visitors to the world of Faerie do so only temporarily; using Faerie as a shortcut for their desired travels in the mortal world.

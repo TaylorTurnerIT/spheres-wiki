@@ -3,6 +3,7 @@ id: yin-ki-expended-constitution-boost
 name: "Yin Ki Expended – Constitution Boost"
 level: 1
 tags: []
+
 ---
 
 The sadhu temporarily increases his Constitution score by 1 for every point of yin-aligned ki he expends. This ability lasts 10 minutes for every two class levels.

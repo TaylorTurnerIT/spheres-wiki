@@ -7,6 +7,7 @@ sphere: mana
 dualSphere: divination
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 **Prerequisites:** Mana sphere, Divination sphere (Detect Spellcaster (divine)), caster level 9th.
 

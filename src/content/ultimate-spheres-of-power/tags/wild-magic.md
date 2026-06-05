@@ -6,4 +6,5 @@ color: "#4A235A"
 id: "wild-magic"
 label: "Wild Magic"
 sphere: "mana"
+
 ---

@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: advanced
 tags: ["consecration"]
+
 ---
 
 **Prerequisites:** Fate sphere, Life sphere, caster level 15th.

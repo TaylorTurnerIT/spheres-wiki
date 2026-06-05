@@ -2,6 +2,7 @@
 id: extricator
 name: "Extricator"
 tags: []
+
 ---
 
 Cryptics are scholars of the universe, skilled at seeing and manipulating the underlying fabrics that make up all things. Extricators are specialists in the art of sundering these patterns, of unmaking reality at the most fundamental level.

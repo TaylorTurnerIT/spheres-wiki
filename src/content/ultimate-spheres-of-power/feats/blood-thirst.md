@@ -6,6 +6,7 @@ system: power
 sphere: blood
 tags: ["ex"]
 tier: feat
+
 ---
 
 **Prerequisites:** Blood sphere, bite attack.

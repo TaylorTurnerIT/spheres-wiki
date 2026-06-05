@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["utility", "charm"]
+
 ---
 
 You compel words of honesty in your subject, bringing truth to their voice.

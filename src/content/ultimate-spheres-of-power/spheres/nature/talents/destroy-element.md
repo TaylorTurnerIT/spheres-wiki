@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["spirit"]
+
 ---
 
 As a standard action you may spend a spell point to remove and deconstruct your elements. This requires a melee or ranged touch attack against a target within your geomancing range. You may use the following abilities depending on what packages you possess.

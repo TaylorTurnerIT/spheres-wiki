@@ -6,6 +6,7 @@ system: power
 sphere: divination
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Knowledge (history) 1 rank, Divination sphere.

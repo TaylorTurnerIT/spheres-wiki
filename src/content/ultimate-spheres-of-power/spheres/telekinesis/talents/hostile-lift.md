@@ -6,6 +6,7 @@ system: power
 sphere: telekinesis
 tier: basic
 tags: []
+
 ---
 
 You may spend a spell point to lift an unwilling creature with telekinesis. The target is allowed a Will save to negate this effect, plus an additional Will save each round the effect is maintained. Telekinesis used in this way is subject to spell resistance.

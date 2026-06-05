@@ -34,6 +34,7 @@ sectionDefinitions:
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
+
 ---
 
 [Aegis]

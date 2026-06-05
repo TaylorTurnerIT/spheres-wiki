@@ -3,6 +3,7 @@ id: evoke-dweomer-sp
 name: "Evoke Dweomer (Sp)"
 level: 1
 tags: []
+
 ---
 
 At 1st level, the conduit can call upon the magic within an object to evoke certain effects. As a standard action (unless changed due to an applied talent or the sphere effect itself), the conduit can produce an effect from a magical item that they are touching (or an unattended object within their natural reach), known as an esoterica. Some esoterica require a sphere or spell of a certain school to be within the item's construction requirements to be produced, and are listed within its description.

@@ -3,6 +3,7 @@ id: skull-companion
 name: "Skull Companion"
 level: 1
 tags: []
+
 ---
 
 A grave witch selects as her familiar a skull harvested from a graveyard that contains at least one hundred bodies. The skull must be that of a humanoid or ghoul. This skull stores the witch's spells as a normal witch's familiar does, but does not possess any of the other abilities possessed by a familiar. If the skull is lost or destroyed, it can be replaced normally.

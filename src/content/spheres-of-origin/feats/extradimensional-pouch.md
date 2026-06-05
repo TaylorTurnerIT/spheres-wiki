@@ -6,6 +6,7 @@ system: power
 sphere: warp
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Form sphere (Hidden Storage [auxiliary]), Warp sphere (Extradimensional Storage x2).

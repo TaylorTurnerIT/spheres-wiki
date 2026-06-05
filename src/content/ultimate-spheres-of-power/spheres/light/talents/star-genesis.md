@@ -6,6 +6,7 @@ type: talent
 sphere: light
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Light sphere (Intensity Control), caster level 10th.

@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: []
+
 ---
 **Prerequisites:** Destruction sphere (Admixture, Blast Salvo (blast shape), Greater Admixture (advanced), Split Blast (advanced)), caster level 10th.
 

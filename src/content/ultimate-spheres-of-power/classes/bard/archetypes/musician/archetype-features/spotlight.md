@@ -3,6 +3,7 @@ id: spotlight
 name: "Spotlight"
 level: 16
 tags: []
+
 ---
 
 The ability's area becomes illuminated in bright light, imposing a -20 penalty to Stealth checks to all creatures within this light, as well as making such creatures lose the benefits of invisibility for as long as they remain within the area. Additionally, any attacks made against an enemy within the ability's area gain a +4 circumstance bonus.

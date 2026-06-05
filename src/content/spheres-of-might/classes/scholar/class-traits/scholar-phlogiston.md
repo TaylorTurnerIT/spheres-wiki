@@ -6,6 +6,7 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
+
 ---
 
 Also known as aether, this rainbow fluid was once thought to be the source of all heat. While this has long since been demonstrated untrue, phlogiston nonetheless possesses numerous useful heat-related properties. Its strange relationship to the elements also gives it an edge in suppressing planar magic. The scholar gains the ability to craft a phlogiston emitter which can fire a ray of phlogiston as a ranged touch attack with a range of 30 feet. A struck target gains vulnerability to fire and must succeed at a magic skill check to use any form of extradimensional travel (which includes effects such as teleportation spells, Warp sphere teleport effects, and other effects such as astral projection, blink, dimension door, ethereal jaunt, etherealness, gate, maze, and plane shift) for a number of rounds equal to the scholar's Intelligence modifier. The DC of this magic skill check is equal to 11 + the scholar's level.

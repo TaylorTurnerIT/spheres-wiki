@@ -7,6 +7,7 @@ sphere: warp
 dualSphere: time
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Time sphere, Warp sphere (Extradimensional Storage (space)).

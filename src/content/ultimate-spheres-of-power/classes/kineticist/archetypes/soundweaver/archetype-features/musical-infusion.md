@@ -3,6 +3,7 @@ id: musical-infusion
 name: "Musical Infusion"
 level: 3
 tags: []
+
 ---
 
 At 3rd level, the soundweaver learns both a substance and a form infusion for which they qualify. They learn an additional substance and form infusion at 7th and 15th levels; this is in addition to any bonus wild talents they learn when selecting their elemental focus as an expanded element.

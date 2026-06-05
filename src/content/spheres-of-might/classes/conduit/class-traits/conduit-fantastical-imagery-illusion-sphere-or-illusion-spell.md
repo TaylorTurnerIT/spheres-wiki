@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: imagination
+
 ---
 
 The conduit produces an Illusion sphere figment illusion with the Enlarged Illusion and Patterns talent, which can be augmented with the following talents: Committed Deception, Focused Imagination, Illusionary Terrain, Lingering Illusion, Programmed Illusion.

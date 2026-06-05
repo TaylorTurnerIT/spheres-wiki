@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif", "arcana"]
+
 ---
 
 You actualize the target's heightened empathy and creativity. When granted as a motif, the target gains a +2 bonus on Intelligence-, Wisdom-, and Charisma-based skill checks. This bonus increases by +1 for every 10 caster levels.

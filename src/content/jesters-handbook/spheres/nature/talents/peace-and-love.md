@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["spirit"]
+
 ---
 
 **Prerequisites:** Nature sphere, Mind sphere.

@@ -3,6 +3,7 @@ id: favored-element-su
 name: "Favored Element (Su)"
 level: 3
 tags: []
+
 ---
 
 At 3rd level, the elementalist chooses one blast type group from the Destruction sphere. When creating a destructive blast from this blast type group, it deals an additional +1/2 damage per elementalist level.

@@ -6,6 +6,7 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
+
 ---
 
 The scholar learns how to cultivate and distill the cordyceps-family of fungus, that have been studied to override the nervous systems of living or dead creatures to create a zombie-like state.

@@ -6,6 +6,7 @@ system: power
 sphere: mind
 tier: basic
 tags: []
+
 ---
 
 In addition to the normal methods of generating manifestation points, a psionic character may generate manifestation points using the following methods.

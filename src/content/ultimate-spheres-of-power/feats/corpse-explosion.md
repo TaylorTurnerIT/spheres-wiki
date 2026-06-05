@@ -7,6 +7,7 @@ sphere: destruction
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 You can cause a corpse to explode like a literal bomb.

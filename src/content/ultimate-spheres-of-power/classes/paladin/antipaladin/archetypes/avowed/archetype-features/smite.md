@@ -4,6 +4,7 @@ name: "Smite"
 level: 4
 alters: ["smite evil or smite good"]
 tags: []
+
 ---
 
 Once per day, the avowed can call out to the powers of her deity to grant her strength. As a swift action, the avowed chooses one target within sight to smite. If the target has an alignment that is opposite to her pledge alignment, the smite is successful; otherwise, the ability is wasted with no effect.

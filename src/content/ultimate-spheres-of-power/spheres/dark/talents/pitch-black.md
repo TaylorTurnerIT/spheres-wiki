@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Dark sphere (Pure Darkness (darkness)), caster level 10th.

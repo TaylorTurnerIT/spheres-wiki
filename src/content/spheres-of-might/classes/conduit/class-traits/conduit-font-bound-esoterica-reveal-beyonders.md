@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: cognizance
+
 ---
 
 The conduit produces a Divination sphere divine, with either the base divine option or the Divine Shapechanger, Divine Unnaturals, Divine Shadow, Divine Undead, Divine Faetouched, or Divine Force alternate divination.

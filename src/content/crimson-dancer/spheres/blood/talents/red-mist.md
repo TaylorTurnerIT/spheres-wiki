@@ -6,6 +6,7 @@ type: talent
 sphere: blood
 tier: basic
 tags: []
+
 ---
 
 As a move action, you may cause a creature under the effects of your blood control and suffering from bleed damage to have their lost blood disperse into a mist, filling their space, granting them concealment (attacks made by the creature or targeting the creature have a 20% miss chance). This effect persists until you end it as a free action, the creature stops taking bleed damage, or your blood control ends. Your vision is not impaired by a mist you create.

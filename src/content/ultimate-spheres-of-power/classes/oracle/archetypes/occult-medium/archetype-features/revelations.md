@@ -3,6 +3,7 @@ id: revelations
 name: "Revelations"
 level: 1
 tags: []
+
 ---
 
 An occult medium must select the following revelations at the indicated levels.

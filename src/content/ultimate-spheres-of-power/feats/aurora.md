@@ -7,6 +7,7 @@ sphere: weather
 dualSphere: light
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Light sphere, Weather sphere.

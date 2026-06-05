@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may expunge the energy from a creature within close range, applying the effects of a single (expunge) talent that you possess upon the creature.

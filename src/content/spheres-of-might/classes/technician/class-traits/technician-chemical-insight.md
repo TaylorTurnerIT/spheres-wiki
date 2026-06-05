@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 The technician unlocks special options for his inventions, as detailed under that section. Whenever he creates an independent invention, he may give it the alchemical subtype by adding the following properties (a construct or independent invention cannot possess more than one subtype):

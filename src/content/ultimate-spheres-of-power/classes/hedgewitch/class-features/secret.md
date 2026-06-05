@@ -4,6 +4,7 @@ name: "Secret"
 level: 2
 tags: []
 isTraitContainer: true
+
 ---
 
 At 2nd level and every 2 levels thereafter, a hedgewitch learns a secret, gaining further insights into the unseen world. Unless noted otherwise, secrets may only be taken once.

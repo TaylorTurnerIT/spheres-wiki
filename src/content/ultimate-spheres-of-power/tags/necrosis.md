@@ -6,4 +6,5 @@ color: "#4A235A"
 id: "necrosis"
 label: "Necrosis"
 sphere: "death"
+
 ---

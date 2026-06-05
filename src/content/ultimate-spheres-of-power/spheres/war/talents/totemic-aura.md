@@ -6,6 +6,7 @@ type: talent
 sphere: war
 tier: basic
 tags: []
+
 ---
 
 You may create totems attached to yourself or to other creatures. A totem attached to a creature is called a totemic aura. This functions as a regular totem, except that it has a radius of 30 feet, it moves with the creature it is attached to, becomes inactive if that creature is knocked unconscious and is dispelled if they are killed. They continue to function if they go beyond long range of their creator, but the creator can only rally those within that totem (including the creature it is attached to) if they are within long range.

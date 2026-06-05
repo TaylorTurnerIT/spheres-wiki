@@ -7,6 +7,7 @@ sphere: mind
 dualSphere: dark
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Dark sphere (Looming Darkness (blot, darkness)), Mind sphere.

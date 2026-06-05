@@ -7,6 +7,7 @@ sphere: light
 dualSphere: destruction
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Destruction sphere, Light sphere.

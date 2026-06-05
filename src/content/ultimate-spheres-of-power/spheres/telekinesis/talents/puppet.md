@@ -6,6 +6,7 @@ type: talent
 sphere: telekinesis
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Telekinesis sphere (Finesse, Telekinetic Maneuver), caster level 10th.

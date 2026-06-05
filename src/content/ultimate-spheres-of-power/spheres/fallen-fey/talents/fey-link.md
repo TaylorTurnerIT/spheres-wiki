@@ -6,6 +6,7 @@ type: talent
 sphere: fallen-fey
 tier: base
 tags: []
+
 ---
 
 As a swift action, you change your creature type to fey for 1 minute per caster level. You are treated as a fey and no longer count as your previous creature type for all purposes including spells, magic items, etc., but you do not gain any of the benefits of the fey type or lose the benefits of your previous creature type, and still possess any subtypes you previously possessed (thus, an elf using this ability would be treated as a fey with the elf subtype).
@@ -13,6 +14,7 @@ As a swift action, you change your creature type to fey for 1 minute per caster 
 Whenever fey-link is active, you may spend 1 spell point as a free action to gain the benefits of a fey-blessing until the end of the fey-link. There is no limit to the number of fey-blessings you may have active at a time, but each one must be activated separately, and all only endure until the end of the fey-link. Renewing a fey-link does not increase the duration of a fey-blessing, and ends all fey-blessings you currently possess.
 
 When you gain the Fallen Fey sphere, you gain the following fey-blessing:
+
 ---
 **Alteration Sphere:** Some fey-blessings belong to the polymorph subschool. A willing creature under the effects of one of these abilities may still be targeted by the shapeshift ability of the Alteration sphere or vice-versa. Each such fey-blessing maintained during the shapeshift reduces the number of traits that may be assigned as part of the shapeshift by 1. Unthreatening Form functions as a base transformation and may have traits added to it as if it were Blank Transformation.
 

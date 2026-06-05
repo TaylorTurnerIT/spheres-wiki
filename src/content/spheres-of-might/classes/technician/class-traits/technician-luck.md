@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 The technician's plans and creations are often halfbaked and highly improvised, yet somehow always seem to work out.

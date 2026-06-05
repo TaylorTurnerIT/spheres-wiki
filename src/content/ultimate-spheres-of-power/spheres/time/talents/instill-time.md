@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: basic
 tags: ["instill"]
+
 ---
 
 As a standard action you may touch a small container of liquid and instill an alter time effect that targets a single creature or object inside it, which functions as a potion or oil. The chosen effect cannot have a duration of concentration.

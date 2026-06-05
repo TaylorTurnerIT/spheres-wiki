@@ -3,6 +3,7 @@ id: simple-trap-creation
 name: "Simple Trap Creation"
 level: 2
 tags: []
+
 ---
 
 At 2nd level, a trapsetter can quickly create simple traps, as detailed below, without expending any money at all provided he is in a setting where the materials for the trap are readily available. The DC of the Craft (traps) skill check required to create any of these traps is listed in parentheses after the trap's name, as is the time required to build the trap. New simple traps could be designed by creative players, but such new designs must be approved by the GM before they are used.

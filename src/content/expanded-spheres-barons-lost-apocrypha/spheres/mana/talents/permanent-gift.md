@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Mana sphere (Flexible Knowledge, Gift of Insight, Gift Of Knowledge, Gift That Keeps on Giving), caster level 15th

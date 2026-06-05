@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["form"]
+
 ---
 
 Your companion gains one of the following traits: Constrict (as the Tentacles talent from the Alteration sphere), grab, lunge, pull, poison (as the Vermin Transformation talent from the Alteration sphere), or trip.

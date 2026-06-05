@@ -3,6 +3,7 @@ id: bonus-feat
 name: "Bonus Feat"
 level: 1
 tags: ["ex"]
+
 ---
 
 At 1st, 2nd, and every 2 levels thereafter, an incanter gains a bonus feat. This may be spent to gain an extra magic talent, drawback, proxy, and theurge feats, or any feat which has casting as a prerequisite (item creation feats, metamagic feats, Sphere Focus, Circle Casting, etc.).

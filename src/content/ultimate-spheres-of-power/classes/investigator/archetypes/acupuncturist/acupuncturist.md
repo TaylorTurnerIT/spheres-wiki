@@ -2,6 +2,7 @@
 id: acupuncturist
 name: "Acupuncturist"
 tags: []
+
 ---
 
 Equal parts doctors and martial artists, acupuncturists are able to leverage their training in anatomy to strike at their enemies' pressure points. Using their hands or tiny acupuncture needles, they debilitate and wear down foes by turning their bodies against them.

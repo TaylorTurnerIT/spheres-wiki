@@ -6,6 +6,7 @@ system: power
 sphere: death
 tags: ["defiler", "drawback", "necrosis"]
 tier: feat
+
 ---
 
 Your destructive powers and undead ambitions feed into each other.

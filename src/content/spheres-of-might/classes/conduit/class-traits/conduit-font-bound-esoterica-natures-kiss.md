@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: concordance
+
 ---
 
 The conduit chooses a Nature sphere package and produces a Nature Sphere spirit ability with the Nature's Carapace talent, which can be augmented with the following talents: choose an additional package, Deep Nature, Nature's Sight.

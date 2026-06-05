@@ -3,6 +3,7 @@ id: efficient-scrolling
 name: "Efficient Scrolling"
 level: 10
 tags: []
+
 ---
 
 Starting at 10th level, the following feats no longer increase the activation cost of the sigil of the campaigning soldier when their corresponding pockets are refilled: The Devout Soldier and The Inquisitive Soldier.

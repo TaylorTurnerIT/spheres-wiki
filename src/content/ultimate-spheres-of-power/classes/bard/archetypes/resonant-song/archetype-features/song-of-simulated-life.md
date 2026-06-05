@@ -4,6 +4,7 @@ name: "Song of Simulated Life"
 level: 1
 replaces: ["the dirge of doom performance"]
 tags: []
+
 ---
 
 A resonant song of 8th level or higher can use her performance to sing a false life into her Hands of the Bard veil, allowing it to move separately from her body at her command.

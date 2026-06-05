@@ -7,6 +7,7 @@ sphere: illusion
 dualSphere: enhancement
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Enhancement sphere, Illusion sphere (Illusionary Touch (sensory, touch) x2).

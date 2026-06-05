@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
+
 ---
 
 You can send a piece of your mind into your target to see the world through their eyes (save negates). The target gets a new Will save every time you use this ability, although consecutive rounds do not give additional saves. While this link to your target remains, you can choose to use this ability at any time before the link expires, or have its activation linked to a specific event that your target may experience. If a target fails their saving throw against this ability, they do not realize it is being used on them.

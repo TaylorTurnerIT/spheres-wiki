@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["cloud"]
+
 ---
 
 You imbue a creature or object with a field of refracting cognitive energy that makes it difficult to focus on what or where the field masks.

@@ -3,6 +3,7 @@ id: note-who-is-this-and-why-do-i-care
 name: "Note: Who is this, and why do I care?"
 level: 1
 tags: []
+
 ---
 
 > The storyteller is encouraged to explain the heroic/legendary nature of his legend of old. Certain classes work better than others, but regardless of the choice the legend should be one that could be reasonably expected to assist the players. The antipaladin Darkin isn't likely to help people assault the underworld. A storyteller often has a complex relationship with this legend- perhaps there is some quality in the hero they seek to emulate or an aspect of them they see in themselves.

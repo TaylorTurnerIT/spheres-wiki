@@ -6,6 +6,7 @@ type: talent
 sphere: death
 tier: basic
 tags: ["instill"]
+
 ---
 
 As a standard action you may touch a small container of liquid and instill a reanimate inside it, which functions as an oil. This cannot be combined with Sustained Reanimation, and undead created through an instilled liquid still consider you their creator, counting against your totals and following your commands.

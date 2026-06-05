@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: improved-armor
+
 ---
 
 The armor includes a light or one-handed weapon that may be extended as a swift action, and retracted as a standard action. This weapon is attached to the armor and cannot be disarmed, but the hand needed to wield the weapon cannot be used for any other purpose when the weapon is extended.

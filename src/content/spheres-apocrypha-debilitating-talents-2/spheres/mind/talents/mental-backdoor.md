@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: []
+
 ---
 
 If a target would fail their saving throw against one of your charms, you may spend a spell point to force them to immediately attempt a second Will saving throw. If they fail this second saving throw, a mental weakness is created with the creatures mind, allowing you to bypass the creature's will easier.

@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: improved-armor
+
 ---
 
 The armor's maximum Dexterity bonus is increased by 1, and the armor's armor check penalty is reduced by 1. This improvement may be taken multiple times, increasing these bonuses by the number of times this improvement is taken.

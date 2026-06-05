@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["form"]
+
 ---
 
 Your companion gains one of the abilities listed below. This talent may be taken more than once; each time a different ability may be gained:

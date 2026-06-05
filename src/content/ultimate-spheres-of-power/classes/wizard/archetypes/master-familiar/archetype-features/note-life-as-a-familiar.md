@@ -3,6 +3,7 @@ id: note-life-as-a-familiar
 name: "Note: Life as a Familiar"
 level: 1
 tags: []
+
 ---
 
 Keep in mind that most familiars are unusual in many regards:

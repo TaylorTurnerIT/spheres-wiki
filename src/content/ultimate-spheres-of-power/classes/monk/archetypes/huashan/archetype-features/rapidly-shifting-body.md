@@ -3,6 +3,7 @@ id: rapidly-shifting-body
 name: "Rapidly Shifting Body"
 level: 5
 tags: []
+
 ---
 
 At 5th level, the huashan knows how to roll with the impact of violent force and how to shift his internal organs with his ki in order to lessen damage. While the huashan is ki focused and not surprised or unaware of an attack, he is not subject to nonlethal damage. He has a 50% chance of negating critical hit damage and sneak attack damage. Furthermore, he is immune to being stunned while ki focused.

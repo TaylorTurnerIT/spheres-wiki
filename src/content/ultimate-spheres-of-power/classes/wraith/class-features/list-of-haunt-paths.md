@@ -3,6 +3,7 @@ id: list-of-haunt-paths
 name: "List of Haunt Paths"
 level: 1
 tags: []
+
 ---
 
 ### Path of the Ancestor
@@ -176,4 +177,5 @@ A spook feeds on fear and insanity.
 **Greater Path Possession:** The penalty that creatures that are frightened, cowering, panicked, or paralyzed take on saves against the wraith's possession ability increases to -4.
 
 When attempting to possess a creature with one of these conditions, the spook may attempt a magical skill check against the MSD of any magical effect that would prevent possession, such as the Hallow word of the Fate sphere, the protection from evil spell, or similar effects. If successful, the spook may possess the creature and is unaffected by the bypassed effect for the duration of the possession.
+
 ---

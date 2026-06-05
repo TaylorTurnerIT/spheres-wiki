@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: advanced
 tags: ["sm"]
+
 ---
 
 **Prerequisites:** Conjuration Sphere (Channel Companion (advanced)), Death Sphere (Project Spirit)

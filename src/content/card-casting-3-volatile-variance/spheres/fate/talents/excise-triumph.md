@@ -6,6 +6,7 @@ type: talent
 sphere: fate
 tier: advanced
 tags: ["curse", "word"]
+
 ---
 
 **Prerequisites:** Fate Sphere, caster level 5th

@@ -3,6 +3,7 @@ id: mutated-essence
 name: "Mutated Essence"
 level: 14
 tags: []
+
 ---
 
 Once per day, the essentialist may produce an essence that is mutated. It takes 1 hour to prepare a mutated essence, and once made, it remains potent until the essentialist regains their essences. A mutated essence counts towards the essentialist's daily limit on the number of essences they can create.

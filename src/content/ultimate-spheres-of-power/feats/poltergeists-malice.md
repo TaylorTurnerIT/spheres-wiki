@@ -7,6 +7,7 @@ sphere: telekinesis
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 Every mistake your foes make brings them closer to your service.

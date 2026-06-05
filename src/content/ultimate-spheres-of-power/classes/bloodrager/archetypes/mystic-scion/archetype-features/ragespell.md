@@ -4,6 +4,7 @@ name: "Ragespell"
 level: 2
 replaces: ["uncanny dodge and improved uncanny dodge"]
 tags: []
+
 ---
 
 At 2nd level, the mystic scion begins to harness the destructive magics within them. He gains the Destruction sphere with the Energy Focus drawback (which grants them a bonus blast type talent). If they possess this sphere from another source, they gain another Destruction talent of their choice.

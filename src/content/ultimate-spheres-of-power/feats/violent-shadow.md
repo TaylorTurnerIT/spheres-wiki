@@ -6,6 +6,7 @@ system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat
+
 ---
 
 **Prerequisites:** Shadowmark 3d6, shadow pool.

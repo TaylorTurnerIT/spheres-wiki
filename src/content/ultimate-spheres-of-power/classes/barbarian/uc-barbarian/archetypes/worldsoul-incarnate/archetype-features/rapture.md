@@ -3,6 +3,7 @@ id: rapture
 name: "Rapture"
 level: 1
 tags: []
+
 ---
 
 Simple minds perceive the primal force of nature as an anger that destroys, but the enlightened know its true nature. Nature destroys without anger or hate - those are human failings. Destruction is just half of the cycle of life, the other is creation, and nature is the cycle. The worldsoul incarnate is the avatar of the cycle. She destroys without rage, while creating and re-creating herself.

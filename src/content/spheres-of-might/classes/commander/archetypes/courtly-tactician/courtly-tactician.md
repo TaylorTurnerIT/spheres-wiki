@@ -2,6 +2,7 @@
 id: courtly-tactician
 name: "Courtly Tactician"
 tags: []
+
 ---
 
 # Courtly Tactician (Commander Archetype)

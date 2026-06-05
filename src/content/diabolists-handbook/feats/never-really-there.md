@@ -7,6 +7,7 @@ sphere: warp
 dualSphere: mind
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 Your escape masks any memory of your presence.

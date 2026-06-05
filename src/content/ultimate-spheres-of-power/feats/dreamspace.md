@@ -7,6 +7,7 @@ sphere: warp
 dualSphere: mind
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Mind sphere, Warp sphere.

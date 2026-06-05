@@ -3,6 +3,7 @@ id: reality-hacking
 name: "Reality Hacking"
 level: 1
 tags: []
+
 ---
 
 The glitch can begin to tug at the underpinnings of reality modifying things in subtle ways and outright breaking the rules in other instances. At 1st level, 2nd level and every even level thereafter a glitch gains a "hack" they can perform in order to modify reality to fit their whim. This typically revolves around modifying the fundamental nature of creatures or objects.

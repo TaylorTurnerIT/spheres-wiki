@@ -6,6 +6,7 @@ system: power
 tags: ["ex"]
 className: shifter
 featureId: enhanced-attacks-su
+
 ---
 
 At 4th level, the shifter gains DR/magic equal to 1/3 their shifter level. If the shifter would gain damage reduction from another source which is bypassed by a material or alignment, that damage reduction is improved to also require a magic weapon. For example, a shifter which gains damage reduction bypassed by silver would instead gain damage reduction bypassed by silver and magic (noted DR/ silver and magic) and a shifter which gains damage reduction bypassed by a good-aligned weapon would instead gain damage reduction bypassed by a good-aligned magic weapon (noted DR/good and magic).

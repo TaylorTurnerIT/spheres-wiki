@@ -3,6 +3,7 @@ id: wraith-form-su
 name: "Wraith Form (Su)"
 level: 1
 tags: []
+
 ---
 
 At 1st level, for a number of rounds per day equal to his class level plus his casting ability modifier, the wraith may gain the incorporeal subtype, with the following modifications:

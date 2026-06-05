@@ -6,6 +6,7 @@ system: power
 sphere: conjuration
 tier: basic
 tags: []
+
 ---
 
 Conjuration sphere companions are normally directly under the player’s control. They obey commands, even if the commands would obviously cause the companion harm, as the worst that can happen is that they vanish to be re-summoned another time. However, the GM may choose to have the companion refuse orders that needlessly cause the companion to suffer, such as ordering it to stand in the campfire (without fire resistance) for no reason. Consistent abuse and being forced to act outside of its desires could, however, lead some companions to breaking their link with the caster. If this were to happen, the caster can form a link with a new companion after resting, transferring (form) talents as appropriate (or retraining them to suit, with GM permission).

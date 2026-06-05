@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["ex", "form"]
+
 ---
 
 This talent may only be applied to companions with a base form suitable to serve as a mount (usually quadruped, serpentine, or vermin, though others may be allowed at the GM's discretion).

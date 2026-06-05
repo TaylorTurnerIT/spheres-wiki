@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["cognition", "utility"]
+
 ---
 
 When you use Perception to intentionally search for stimuli (typically a move action), you may measure a single aspect of whatever you perceive. You may calculate this aspect with perfect accuracy depending on how your Perception check compares to the DC to perceive it, requiring higher results to estimate from vague or incomplete information (see the table below).

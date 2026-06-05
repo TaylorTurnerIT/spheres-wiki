@@ -3,6 +3,7 @@ id: legal
 name: "Legal & OGL"
 type: article
 tags: []
+
 ---
 
 <div class="article-content">

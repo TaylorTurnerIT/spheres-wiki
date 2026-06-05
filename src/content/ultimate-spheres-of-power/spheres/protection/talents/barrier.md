@@ -6,6 +6,7 @@ system: power
 sphere: protection
 tier: basic
 tags: ["program"]
+
 ---
 
 You may create a ward that creates a mostly-transparent wall of force at its perimeter. While this barrier does not block line of sight, it does block line of effect; thus, while you could still target a creature through the barrier (such as for an attack that attempts to break the barrier and still deal damage to the creature on the other side), the barrier does stop attacks, movement, breath weapons, and any spells or sphere effects that rely on line of effect until the barrier is destroyed. Ethereal creatures are technically stopped by the barrier, but can usually find a way around it (as the barrier does not cut through objects, and so usually stops at ground level). Creatures inside a space where a barrier is created are shunted to the nearest empty space on the outside.

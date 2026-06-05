@@ -4,6 +4,7 @@ name: "Symbol of Hope"
 level: 3
 replaces: ["the unshakable and startling appearance class features"]
 tags: []
+
 ---
 
 At 3rd level, the living banner gains the War sphere and one War talent with the (rally) descriptor. This does not cause the vigilante to be treated as a caster for any other purpose. The living banner uses his class level as his casting level for all purposes with this sphere.

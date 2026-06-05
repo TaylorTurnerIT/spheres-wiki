@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["type"]
+
 ---
 
 Your Conjuration companion is strongly tied to the alignment planes. Choose one of the following alignment groups. Your companion gains two of the options listed under that alignment group. Taking this talent a second time grants the remaining two options under that alignment.

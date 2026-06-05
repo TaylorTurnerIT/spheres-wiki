@@ -6,6 +6,7 @@ type: talent
 sphere: protection
 tier: advanced
 tags: ["aegis"]
+
 ---
 
 **Prerequisites:** Protection sphere (Resistance (aegis)), caster level 15th.

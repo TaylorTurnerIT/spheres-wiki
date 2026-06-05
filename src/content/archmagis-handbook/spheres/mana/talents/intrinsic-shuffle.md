@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
+
 ---
 **Prerequisites:** Mana sphere (Flexible Shuffle), caster level 10th.
 

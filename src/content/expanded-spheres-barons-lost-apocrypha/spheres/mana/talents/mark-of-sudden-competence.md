@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Mana Sphere (Mark of Incompetency, Mark of Instability), caster level 5th

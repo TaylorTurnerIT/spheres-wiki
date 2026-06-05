@@ -7,6 +7,7 @@ sphere: nature
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 Plant and animal matter are equally suitable focuses for your magic.

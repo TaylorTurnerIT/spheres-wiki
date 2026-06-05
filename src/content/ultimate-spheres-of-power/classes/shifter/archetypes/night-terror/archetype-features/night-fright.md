@@ -3,6 +3,7 @@ id: night-fright
 name: "Night Fright"
 level: 5
 tags: []
+
 ---
 
 At 5th level, the night terror's voice carries easily through the darkness. The night terror may speak directly to a creature they can see within close range (using the night terror's Dark sphere caster level to determine range); this functions similar to telepathy but requires both the night terror and target to be within the same darkened area; when speaking this way, the night terror may choose whether they can be heard normally or only by the target creature. This method of speech allows the night terror to use Intimidate to demoralize a target without the target needing to clearly see the night terror, provided both the night terror and creature are within the same darkened area, and increases the range for demoralization to close range. If the night terror would inflict a fear condition greater than shaken, and the target is unaware of the night terror's position, the target treats their current space as the source of its fear when determining where to flee.

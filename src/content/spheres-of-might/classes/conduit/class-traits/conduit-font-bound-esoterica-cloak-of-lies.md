@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: imagination
+
 ---
 
 The conduit can produce an Illusion sphere glamer illusion or trick with the Blur or Masques talent, which can be augmented with the following talents: Lingering Illusion, Oblivious.

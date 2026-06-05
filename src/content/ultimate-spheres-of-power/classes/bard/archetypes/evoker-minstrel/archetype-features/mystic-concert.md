@@ -3,6 +3,7 @@ id: mystic-concert
 name: "Mystic Concert"
 level: 1
 tags: []
+
 ---
 
 When an evoker minstrel uses a kinetic blast during a bardic performance, they receive a circumstance bonus to damage equal to twice the bonus to attack rolls they receive from cantikinesis.

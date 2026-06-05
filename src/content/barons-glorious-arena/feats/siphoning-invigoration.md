@@ -6,6 +6,7 @@ system: power
 sphere: life
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Life Sphere (Greater Invigorate, Taste of Victory)

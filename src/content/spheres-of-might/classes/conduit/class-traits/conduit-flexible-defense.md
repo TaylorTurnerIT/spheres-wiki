@@ -6,6 +6,7 @@ system: might
 tags: []
 className: conduit
 featureId: empathy
+
 ---
 
 The conduit treats any armor or shield they are holding as requiring the Enhancement and Protection spheres as part of its construction requirements for the purposes of their conduit class features. The conduit can produce the following esoterica: 

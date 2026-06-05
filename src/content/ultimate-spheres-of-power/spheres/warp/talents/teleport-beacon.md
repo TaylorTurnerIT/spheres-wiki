@@ -6,6 +6,7 @@ type: talent
 sphere: warp
 tier: basic
 tags: ["space"]
+
 ---
 
 You may spend a spell point to designate a touched spot, object, or creature as a personal dimensional beacon, which lasts for one hour per caster level. You may spend a spell point to teleport yourself to your teleport beacon regardless of how far away it is, so long as it is on the same plane. If your teleport beacon is a creature or object, you may instead teleport your teleport beacon to you. You must use the Unwilling Teleport talent to do this with an unwilling creature, and they are allowed a saving throw as normal.

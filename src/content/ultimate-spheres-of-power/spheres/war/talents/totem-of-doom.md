@@ -6,6 +6,7 @@ type: talent
 sphere: war
 tier: basic
 tags: ["totem"]
+
 ---
 
 You must spend a spell point to place a totem of doom. All enemies in the area become shaken (no save). This effect lasts as long as they remain within the totem's effect area. The effects of this totem are not cumulative with itself or other sources of fear.

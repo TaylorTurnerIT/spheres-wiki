@@ -6,6 +6,7 @@ system: power
 sphere: mana
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 Magic can be woven and bound in all of its myriad forms.

@@ -4,6 +4,7 @@ name: "Impossible Answer"
 level: 2
 replaces: ["the bonus feat gained at 2nd level"]
 tags: []
+
 ---
 
 At 2nd level, the impossible warrior gains the ability to parry spells, spell-like abilities, and sphere abilities used against him while they are being cast. Whenever such an ability is used against him exclusively, or a successful attack roll is made using such an effect, he may use an immediate action to attempt to counter the effect.

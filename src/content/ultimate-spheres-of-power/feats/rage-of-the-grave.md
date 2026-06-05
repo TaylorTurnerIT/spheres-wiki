@@ -6,6 +6,7 @@ system: power
 sphere: death
 tags: ["combat"]
 tier: feat
+
 ---
 
 Your revenant-like anger fuels you even in death, granting you one last chance to take down your killers.

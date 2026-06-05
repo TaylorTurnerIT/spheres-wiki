@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: basic
 tags: []
+
 ---
 
 Choose a number of extraordinary or supernatural abilities dependent on your target's base form (darkvision, scent, racial breath weapon, etc.). You may choose to allow the target to retain these abilities in place of trait you would normally grant them as part of your shapeshift, at a cost of one trait per ability.

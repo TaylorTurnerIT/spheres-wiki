@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: basic
 tags: []
+
 ---
 
 As a trick, you may force a target to succeed at a Will save or lose their Dexterity bonus to armor class until their turn. This trick is treated as a feint for feats, talents, and effects that trigger off of a feint.

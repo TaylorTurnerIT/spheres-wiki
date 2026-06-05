@@ -4,6 +4,7 @@ name: "Divine Works"
 level: 1
 replaces: ["spontaneous casting"]
 tags: []
+
 ---
 
 The faithful shepherd has been gifted by his deity with minor miracles he can use to protect and heal his allies - and to spread the good word. The faithful shepherd gains 1 divine work at 1st level, and an additional divine work every odd level after the 1st, for a total of 10 at 19th level. Each divine work may be chosen once only. He may choose from the following works:

@@ -3,6 +3,7 @@ id: onslaught-blast
 name: "Onslaught Blast"
 level: 1
 tags: []
+
 ---
 
 At 1st level, whenever the onslaught blaster uses their kinetic blast, they fire multiple blasts. The damage of these blasts is equal to 1d6+1 for physical and 1d6 for energy blasts. They can fire an additional blast for every 2 kineticist levels past 1st. Each unique target hit takes additional damage equal to the onslaught blaster's Constitution modifier for physical blasts and 1/2 their Constitution modifier for energy blasts. The targets of each attack are decided before any attack roll is made. If the onslaught blaster applies a substance or form infusion to their blast, it applies to all blasts.

@@ -6,6 +6,7 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: []
+
 ---
 
 If your companion is reduced to 0 hit points and disappears, you may re-summon it by increasing the spell point cost of summon by one. The companion reappears at one quarter of its maximum hit points with 1 temporary negative level. Any other conditions or ongoing effects on the companion are removed.

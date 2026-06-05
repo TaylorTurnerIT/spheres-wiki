@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: advanced
 tags: ["alter", "sm"]
+
 ---
 
 **Prerequisites:** Creation Sphere (Potent Alteration), caster level 5th

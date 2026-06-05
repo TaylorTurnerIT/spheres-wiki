@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["cloud"]
+
 ---
 
 You may cause a location or object to radiate a cloud that invites or repels either creatures of a given type (such as monstrous humanoids or outsiders with the fire subtype), a specific kind of creature (such as blue dragons or red-furred hobgoblins), or creatures of a specific alignment (such as lawful neutral creatures).

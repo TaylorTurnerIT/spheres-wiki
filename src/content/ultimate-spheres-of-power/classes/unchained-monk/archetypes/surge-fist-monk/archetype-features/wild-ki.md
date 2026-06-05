@@ -3,6 +3,7 @@ id: wild-ki
 name: "Wild Ki"
 level: 4
 tags: []
+
 ---
 
 A surge fist monk can alter their surge fists the same way kineticists can bend their kinetic blasts. At 4th level, they select a 1st level substance infusion of their surge fist's element (or a 1st level universal substance infusion). By spending an amount of ki points equal to the infusion's burn cost as a free action, they can apply that infusion to their surge fist.

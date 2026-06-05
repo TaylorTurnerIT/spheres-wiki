@@ -3,6 +3,7 @@ id: coward-talents
 name: "Coward Talents"
 level: 4
 tags: []
+
 ---
 
 Starting at 4th level, a coward gains one coward talent. He gains an additional coward talent for every 2 levels of coward attained after 4nd level. A coward cannot select an individual talent more than once.

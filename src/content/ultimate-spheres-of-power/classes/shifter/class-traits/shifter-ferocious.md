@@ -7,6 +7,7 @@ tags: ["ex"]
 className: shifter
 featureId: bestial-trait
 requires: "endurance, shifter 6"
+
 ---
 
 The shifter gains the Diehard feat.

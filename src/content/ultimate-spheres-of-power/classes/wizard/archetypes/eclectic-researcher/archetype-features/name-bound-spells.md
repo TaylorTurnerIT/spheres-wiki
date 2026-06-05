@@ -3,6 +3,7 @@ id: name-bound-spells
 name: "Name-Bound Spells"
 level: 1
 tags: []
+
 ---
 
 Starting at 1st level, an eclectic researcher may incorporate her identity into any spell she crafts; this involves personalized imagery and symbolism. Once she completes a spell developed through this method, she must name the spell after herself – any attempt at modesty or subtlety in the spell's name renders the entire spell useless.

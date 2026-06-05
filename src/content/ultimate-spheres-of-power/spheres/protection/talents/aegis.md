@@ -6,6 +6,7 @@ type: talent
 sphere: protection
 tier: base
 tags: []
+
 ---
 
 As a standard action, you may touch a creature and spend a spell point, granting them an aegis for 1 hour per caster level. Unwilling targets are allowed a Will save to resist gaining an aegis, and aegis is subject to spell resistance.

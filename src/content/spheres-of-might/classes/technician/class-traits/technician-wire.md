@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: improved-melee-weapon
+
 ---
 
 The technician attaches a wire to his weapon, allowing him to retrieve it as a swift action, such as after throwing it or being disarmed. Treat this wire as if it were 50 ft. of rope when determining the weapon's maximum range or its statistics if a creature attempts to break it.

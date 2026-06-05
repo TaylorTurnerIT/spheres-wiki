@@ -2,6 +2,7 @@
 id: miracle-soldier
 name: "Miracle Soldier"
 tags: []
+
 ---
 
 Embodying the complexities of modern conflict, miracle soldiers merge magical and psionic techniques with intense martial discipline, harnessing an immense variety of different abilities to achieve victory at any costs.

@@ -7,6 +7,7 @@ sphere: protection
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 Undead that you create are even harder to destroy than normal.

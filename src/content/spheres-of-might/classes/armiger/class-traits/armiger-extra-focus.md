@@ -7,6 +7,7 @@ tags: []
 className: armiger
 featureId: prowess
 requires: "Armiger 6"
+
 ---
 
 The armiger gains the Great Focus feat as a bonus feat.

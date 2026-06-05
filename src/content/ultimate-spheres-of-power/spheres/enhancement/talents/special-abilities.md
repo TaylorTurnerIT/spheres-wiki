@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: base
 tags: []
+
 ---
 
 Animated objects have a number of Construction Points (CP) used to purchase abilities and defenses in addition to those presented above. A Medium-sized animated object has 2 CP; differently sized animated objects have CP totals as detailed on the size chart on this page. If an animated object spends more CP than its size category would allow, its CR increases by 1 (minimum of +1) for every 2 additional CP spent.
@@ -63,6 +64,7 @@ Animated objects can gain more CP by applying flaws, which hamper the animated o
 **Noncombatant (Ex; +1 CP):** The animated object does not possess a slam natural attack and cannot take hostile actions. If the animated object ever gains an Intelligence score, as a free action at the start of its turn, the animated object can attempt a Will save with a DC equal to the caster's Enhancement sphere DC to defy this construction flaw for 1 round.
 **Slower (Ex, +1 CP):** One of the animated object's movement modes decreases by – 10 feet.
 **Undead (Ex; +1 CP):** The animated object is made of corpse materials such as flesh or smooth bone; change its type to undead, adjust its Charisma score to be equal to its Strength score, replace construct traits (Ex) with undead immunities (Ex), and replaces its hardness with an equal amount of damage reduction bypassed by bludgeoning damage. It is still mindless. This flaw cannot be applied alongside the aberration flaw. *Special:* If the animated object also possesses the haunted construction flaw, the animated object is stunned for 1 round whenever it fails a saving throw against a positive energy effect. This bypassesses any immunities the animated object may possess.
+
 ---
 
 #### Wild Magic Generator

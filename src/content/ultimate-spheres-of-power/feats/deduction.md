@@ -6,6 +6,7 @@ system: power
 sphere: war
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** War sphere, studied combat class feature.

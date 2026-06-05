@@ -6,6 +6,7 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
+
 ---
 
 For the duration of the fey-link, you gain an uncanny ability to meddle with the possessions of other creatures. You may perform the Steal combat maneuver without provoking attacks of opportunity and may use your ranks in the Sleight of Hand skill in place of your base attack bonus when determining your combat maneuver check for the Steal combat maneuver. Any time you attempt a Sleight of Hand check or Steal combat maneuver against a creature within your natural reach, you may also rearrange its possessions.

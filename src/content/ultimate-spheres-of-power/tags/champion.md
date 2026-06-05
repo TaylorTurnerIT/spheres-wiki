@@ -5,4 +5,5 @@ priority: 0
 color: "#117A65"
 id: "champion"
 label: "Champion"
+
 ---

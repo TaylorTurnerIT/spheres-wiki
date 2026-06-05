@@ -6,6 +6,7 @@ type: talent
 sphere: weather
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Destruction sphere, Weather sphere (Radiation Lord (advanced)), caster level 10th.

@@ -7,6 +7,7 @@ sphere: telekinesis
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Death sphere, Telekinesis sphere (Divided Mind).

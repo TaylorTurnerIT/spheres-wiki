@@ -3,6 +3,7 @@ id: damage
 name: "Damage"
 level: 1
 tags: []
+
 ---
 
 untyped

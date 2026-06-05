@@ -6,6 +6,7 @@ type: talent
 sphere: mana
 tier: advanced
 tags: ["amp", "manipulation"]
+
 ---
 **Prerequisites:** Mana sphere (Initiate's Training), caster level 5th.
 

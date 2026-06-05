@@ -6,4 +6,5 @@ color: "#4A235A"
 id: "cure"
 label: "Cure"
 sphere: "life"
+
 ---

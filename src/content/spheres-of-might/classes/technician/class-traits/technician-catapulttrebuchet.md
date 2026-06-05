@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: base-forms
+
 ---
 
 A catapult and a trebuchet are both siege weapons that throw large loads such as rocks high into the air to fall on their target. Although catapults and trebuchets use different mechanisms to accomplish this feat, for the purposes of an independent invention, they are mechanically handled the same.

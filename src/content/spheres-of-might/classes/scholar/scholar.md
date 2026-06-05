@@ -32,6 +32,7 @@ babProgression: "3/4"
 fortSaveProgression: good
 refSaveProgression: poor
 willSaveProgression: good
+
 ---
 
 "Knowledge is power."

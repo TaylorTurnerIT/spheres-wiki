@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: basic
 tags: ["transformation"]
+
 ---
 
 **Limbs:** none

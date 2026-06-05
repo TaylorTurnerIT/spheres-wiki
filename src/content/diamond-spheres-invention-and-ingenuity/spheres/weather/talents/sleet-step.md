@@ -6,6 +6,7 @@ type: talent
 sphere: weather
 tier: basic
 tags: ["mantle", "snow"]
+
 ---
 
 When a creature bearing your mantle is in an area of Cold and Precipitation of severity 2 or higher, they can move across ice and snow without penalty, and do not need to attempt Acrobatics checks to run or charge on ice. Additionally, such creatures bearing your mantle gain a +10-foot circumstance bonus to their land speed on ice and snow, +5-feet for each category above light snow.

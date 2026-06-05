@@ -2,6 +2,7 @@
 id: thaskalos
 name: "Thaskalos"
 tags: []
+
 ---
 
 These monks profess to be philosophers and scholars with a peaceful and religious outlook. They have proven to be very proficient wrestlers and grapplers. Despite their often professed love of peace, these monks seem to thrive on conflict. Some also take a vow of silence. They come to the east to assist the missions being established by western missionaries.

@@ -6,6 +6,7 @@ type: talent
 sphere: illusion
 tier: basic
 tags: ["magic", "sensory"]
+
 ---
 
 You may make illusions that create or change magical auras. As a figment or glamer you may change an area, spell, creature, or object's magical aura to make the aura appear as a magic effect or item you specify, or as if under the effects of a spell or sphere ability you specify, or reduce the caster level of its existent aura. You cannot create or lower an aura's perceived caster level more than up to twice your caster level. Making an aura appear to have a caster level of 0 completely conceals a magical aura as if the target was non-magical. You may make these changes as part of creating an illusion (including altering or erasing the aura of the illusion itself), or independently as a trick with a duration of up to 1 day per caster level.

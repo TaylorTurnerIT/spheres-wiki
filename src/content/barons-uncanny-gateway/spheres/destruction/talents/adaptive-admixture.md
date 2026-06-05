@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: ["sm"]
+
 ---
 
 **Prerequisites:** Destruction Sphere (Admixture)

@@ -2,6 +2,7 @@
 id: musician
 name: "Musician"
 tags: []
+
 ---
 
 The font of creativity is a near-endlessly broad well to be drawn upon, and so it stands to reason that there are many different ways a bard can show their prowess. A musician is such a variation, as they focus on the more mundane form of performances and how they can be augmented with magic.

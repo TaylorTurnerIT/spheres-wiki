@@ -7,6 +7,7 @@ tags: []
 className: technician
 featureId: base-forms
 requires: "Mechanical Insight"
+
 ---
 
 An invention must possess the mechanical arm form to gain this improvement. The inventions' mechanical arm gains one of two benefits, chosen from the following options:

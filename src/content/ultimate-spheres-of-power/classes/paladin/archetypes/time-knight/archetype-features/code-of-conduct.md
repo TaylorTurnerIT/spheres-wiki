@@ -3,6 +3,7 @@ id: code-of-conduct
 name: "Code of Conduct"
 level: 1
 tags: []
+
 ---
 
 The time knight must be of any good alignment and instantly loses all class features except proficiencies, martial traditions, and combat talents if her alignment ever ceases to be good. Additionally the time knight must do her best to slay or imprison any evil creature she encounters who possess the Time sphere or any of its talents, evil creatures that know time magic spells such as haste, slow, or time stop, or evil creatures with abilities that allow them to manipulate time.

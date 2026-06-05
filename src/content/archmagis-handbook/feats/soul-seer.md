@@ -6,6 +6,7 @@ system: power
 sphere: death
 tags: []
 tier: feat
+
 ---
 **Prerequisites:** Death sphere, caster level 5th.
 

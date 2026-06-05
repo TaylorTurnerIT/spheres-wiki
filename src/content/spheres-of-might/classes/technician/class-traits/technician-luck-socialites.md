@@ -6,6 +6,7 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
+
 ---
 
 People are like machines, and can be manipulated just as easily. The technician's luck pool increases by 1, and he gains the following abilities:

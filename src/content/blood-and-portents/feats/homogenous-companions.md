@@ -6,6 +6,7 @@ system: power
 sphere: conjuration
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** Conjuration sphere (Extra Companion, any (form) or (type) talent).

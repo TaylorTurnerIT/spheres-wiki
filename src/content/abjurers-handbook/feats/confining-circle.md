@@ -6,6 +6,7 @@ system: power
 sphere: protection
 tags: []
 tier: feat
+
 ---
 **Prerequisites:** Protection sphere (Repel Chaos/Evil/Good/Law (ward)).
 

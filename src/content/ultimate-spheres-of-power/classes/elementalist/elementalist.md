@@ -27,6 +27,7 @@ babProgression: "3/4"
 fortSaveProgression: good
 refSaveProgression: good
 willSaveProgression: good
+
 ---
 
 Elementalists specialize in the command and control of elemental magic, using it to control the battle area, protect allies, and rain destruction down upon their foes.

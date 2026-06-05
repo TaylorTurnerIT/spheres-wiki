@@ -3,6 +3,7 @@ id: tension-techniques-ex
 name: "Tension Techniques (Ex)"
 level: 1
 tags: []
+
 ---
 
 A striker can spend tension in order to accomplish incredible feats and each tension technique can only be used once per round (if an ability does not have an associated action listed, using it is a free action which can be done during anyone's turn). Unless stated otherwise, you must activate a tension technique before any applicable rolls are made. For example, if you activate Expert Guard, you must do so before making a saving throw.

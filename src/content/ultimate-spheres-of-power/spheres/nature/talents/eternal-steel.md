@@ -6,6 +6,7 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["geomancing", "metal-and-plant"]
+
 ---
 
 **Prerequisites:** Nature sphere ((metal) package, (plant) package, Living Steel (advanced)), caster level 8th.

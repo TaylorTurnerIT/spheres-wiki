@@ -6,6 +6,7 @@ type: talent
 sphere: fallen-fey
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** 8th caster or higher.

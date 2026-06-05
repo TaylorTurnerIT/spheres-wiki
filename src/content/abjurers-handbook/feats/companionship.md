@@ -6,6 +6,7 @@ system: power
 sphere: protection
 tags: ["warden"]
 tier: feat
+
 ---
 **Prerequisites:** Protection sphere, 3rd-level paladin.
 

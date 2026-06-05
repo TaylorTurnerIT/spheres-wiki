@@ -6,6 +6,7 @@ system: power
 sphere: war
 tags: []
 tier: feat
+
 ---
 
 **Prerequisites:** War sphere; bardic performance or raging song class feature.

@@ -3,6 +3,7 @@ id: surge-fist-monk-surging-strike
 name: Surging Strike
 level: 4
 tags: []
+
 ---
 
 A surge fist monk can make ki strikes with their surge fist. A surge fist monk must be 8th level to select this ki power.

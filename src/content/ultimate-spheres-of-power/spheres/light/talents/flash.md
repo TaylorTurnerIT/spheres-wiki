@@ -6,6 +6,7 @@ type: talent
 sphere: light
 tier: basic
 tags: []
+
 ---
 
 You may choose to apply the effects of (light) talents at any point during your turn as a free action instead of only at the end of your turn. You may still only apply the effects of (light) talents once per round.

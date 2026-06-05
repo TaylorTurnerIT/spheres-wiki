@@ -3,6 +3,7 @@ id: favored-focus
 name: "Favored Focus"
 level: 7
 tags: []
+
 ---
 
 At 7th level, the entropist has adapted to their powers well enough to choose one they favor, and is capable of accessing their powers in this element at any time. They select one element from their array, permanently learning a single simple blast and the basic utility and defense wild talents of that element, and receive a permanent +1 bonus to DCs and caster levels on wild talents of this element. They cannot replace a basic utility wild talent gained this way with another utility wild talent. In addition, they can access the simple blast and basic utility wild talent this grants even if they've lost their attuned heirloom, but treat themselves as a kineticist 1/5 their entropist level to determine their effects until the attuned heirloom is replaced.

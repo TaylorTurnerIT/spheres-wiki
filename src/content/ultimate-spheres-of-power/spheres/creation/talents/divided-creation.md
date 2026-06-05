@@ -6,6 +6,7 @@ type: talent
 sphere: creation
 tier: basic
 tags: ["mass"]
+
 ---
 
 When creating an object, you may instead create multiple objects within range. Each created object must be of the same general type (suits of armor, wall sections, catapults, etc.), and the total size of all created objects cannot exceed your maximum creation size. Alternatively, you may create a single 'object' that would normally consist of a multitude of parts (i.e., if creating a tavern with this talent, it would appear with chairs, beds, barrels, etc.).

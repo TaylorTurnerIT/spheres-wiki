@@ -6,6 +6,7 @@ system: power
 sphere: fallen-fey
 tags: ["champion"]
 tier: feat
+
 ---
 
 **Prerequisites:** Fallen Fey sphere (Snare Setter (fey-blessing)), Trap sphere.

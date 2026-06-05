@@ -6,6 +6,7 @@ type: talent
 sphere: telekinesis
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Telekinesis sphere (Affix (advanced), Effortless Telekinesis (advanced), Idle Concentration), caster level 15th.

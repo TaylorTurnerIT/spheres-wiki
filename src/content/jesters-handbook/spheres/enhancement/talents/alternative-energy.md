@@ -6,6 +6,7 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Enhancement sphere (Energy Enhancement (enhance)), caster level 5th.

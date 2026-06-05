@@ -6,6 +6,7 @@ type: talent
 sphere: time
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Time sphere (Improved Haste), caster level 9th.

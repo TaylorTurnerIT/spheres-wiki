@@ -4,6 +4,7 @@ name: "Dispel"
 level: 5
 replaces: ["lay on hands and channel positive energy or touch of corruption and channel negative energy", "mercy or cruelty", "aura of courage or aura of cowardice", "aura of justice or aura of vengeance", "aura of faith or aura of sin", "holy champion or unholy champion"]
 tags: []
+
 ---
 
 At 5th level, the antimage gains the Counterspell feat, even if she does not meet the prerequisites, and is treated as if she had the casting class feature when meeting the prerequisites for counterspell feats. The antimage uses her class level as her magic skill bonus, and spends points of null magic in place of spell points when she uses counterspell feats.

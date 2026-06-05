@@ -3,6 +3,7 @@ id: sizable-reasoning
 name: "Sizable Reasoning"
 level: 5
 tags: []
+
 ---
 
 At 5th level, the thaskalos knows that all living creatures are connected by an intricate web of life and experiences. When he speaks, he can play on those connections to bring peace to a conflict. He gains a +2 bonus on Diplomacy checks to use words and reason to defuse a tense situation. If the monk calms a violent situation, he and his comrades gain experience as if they overcame their enemies through force of arms.

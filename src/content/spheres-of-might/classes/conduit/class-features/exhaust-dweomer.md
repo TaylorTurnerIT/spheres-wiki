@@ -3,6 +3,7 @@ id: exhaust-dweomer
 name: "Exhaust Dweomer"
 level: 2
 tags: []
+
 ---
 
 At 2nd level, the conduit can exhaust an equipped magical item from a willing creature within their natural reach to augment the conduit's abilities, causing its magical properties to be suppressed (becoming a nonmagical item) for 3 rounds (or 1 round if it is thaumically charged), after which the item recovers its magical properties. 

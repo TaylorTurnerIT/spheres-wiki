@@ -6,6 +6,7 @@ system: power
 tags: []
 className: soul-weaver
 featureId: bound-nexus
+
 ---
 
 At 16th level, the soul weaver may expend a soul to bring a creature who has died within 48 hours back to life. This lasts for 24 hours, and the target is returned to full health (although they do not recover other things, such as spells or spell points already used), and the target gains 1 permanent negative level while under the effect of this ability.

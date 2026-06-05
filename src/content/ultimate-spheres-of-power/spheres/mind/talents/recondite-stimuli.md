@@ -6,6 +6,7 @@ type: talent
 sphere: mind
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Mind sphere, caster level 1st.

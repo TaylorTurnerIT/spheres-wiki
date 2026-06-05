@@ -4,6 +4,7 @@ name: "Well-Mapped Specialty"
 level: 9
 alters: ["battlefield specialist"]
 tags: []
+
 ---
 
 The courtly tactician does not select specific terrains. Instead, the courtly tactician may spend 24 hours (which may include traveling, resting, and other light activity) while within a terrain to prepare for that terrain, treating it as a selected terrain for the battlefield specialist ability. The courtly tactician may only have a single prepared terrain this way.

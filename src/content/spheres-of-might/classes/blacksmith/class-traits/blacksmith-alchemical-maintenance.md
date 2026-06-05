@@ -6,6 +6,7 @@ system: might
 tags: []
 className: blacksmith
 featureId: smithing-insight-ex
+
 ---
 
 You gain the Alchemy sphere for the (formulae) package and must select the Armor Maintenance Kit talent with the free (formulae) talent granted by that package.

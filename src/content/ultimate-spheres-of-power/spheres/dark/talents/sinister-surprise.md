@@ -6,6 +6,7 @@ type: talent
 sphere: dark
 tier: basic
 tags: []
+
 ---
 
 When spending a spell point to create an area of darkness or blot that persists without concentration, you may opt to create a darkness or blot effect that remains dormant until triggered by a creature entering the 10-foot square area at the center of your dormant darkness or blot effect.

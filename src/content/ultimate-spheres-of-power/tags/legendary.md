@@ -5,4 +5,5 @@ priority: 0
 color: "#4A235A"
 id: "legendary"
 label: "Legendary"
+
 ---

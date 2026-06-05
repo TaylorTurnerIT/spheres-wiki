@@ -3,6 +3,7 @@ id: balanced-ki-focused-freedom-from-death
 name: "Balanced Ki Focused – Freedom From Death"
 level: 1
 tags: []
+
 ---
 
 When reduced to the disabled condition, the sadhu may act normally without penalty or restriction to his actions.

@@ -6,6 +6,7 @@ system: might
 tags: []
 className: striker
 featureId: striker-art-ex
+
 ---
 
 The striker gains the Beastmastery sphere as a bonus talent and Mounted Athlete as a bonus feat, even if she does not have the prerequisites normally required for this feat.

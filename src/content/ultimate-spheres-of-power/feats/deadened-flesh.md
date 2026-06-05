@@ -6,6 +6,7 @@ system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat
+
 ---
 
 Your nerves fail, increasing your pain tolerance and general resilience.

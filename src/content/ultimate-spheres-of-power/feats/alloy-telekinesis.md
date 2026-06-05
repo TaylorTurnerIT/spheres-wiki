@@ -7,6 +7,7 @@ sphere: telekinesis
 dualSphere: nature
 tags: ["dual-sphere"]
 tier: feat
+
 ---
 
 **Prerequisites:** Telekinesis sphere, Nature sphere ((metal) package).

@@ -6,6 +6,7 @@ type: talent
 sphere: alteration
 tier: basic
 tags: []
+
 ---
 
 As a trait, you may change a creature's size. You may enlarge or reduce a creature's size by one category, +1 additional size category per 5 caster levels, enlarging or reducing the size of their equipment as well. You cannot enlarge beyond Large size nor reduce beyond Tiny size until caster level 10, and can never enlarge beyond Huge nor reduce beyond Diminutive.

@@ -5,6 +5,7 @@ level: 8
 replaces: ["life bond, life link, shield ally, and greater shield ally", "maker’s call and transposition", "twin eidolon"]
 alters: ["merge forms"]
 tags: []
+
 ---
 
 : At 8th level, once per round, whenever the void conduit uses their commandment ability (or the void conduit's avatar otherwise makes a successful attack or a creature fails its saving throw against one of the avatar's abilities), the void conduit gains a number of temporary hit points equal to their void conduit level. These temporary hit points stack with themselves, to a maximum of 1/2 the void conduit's maximum hit points. These temporary hit points last for 1 minute.

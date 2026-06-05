@@ -3,6 +3,7 @@ id: shield-ally
 name: "Shield Ally"
 level: 1
 tags: []
+
 ---
 
 For the purpose of the shield ally and greater shield ally class features a broodmother considers any infected creature to be her eidolon.

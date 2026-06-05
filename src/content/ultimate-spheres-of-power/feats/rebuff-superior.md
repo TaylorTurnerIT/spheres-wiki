@@ -6,6 +6,7 @@ system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat
+
 ---
 
 **Prerequisites:** Destruction sphere (Rebuff (blast shape)), Improved Rebuff, improved evasion class feature.

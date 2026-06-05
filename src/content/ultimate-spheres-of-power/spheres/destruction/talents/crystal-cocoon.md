@@ -6,6 +6,7 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: []
+
 ---
 
 **Prerequisites:** Destruction sphere (any two (blast type) talents in the crystal blast type group including either Crystal Blast or Living Crystal Blast), caster level 10th.
