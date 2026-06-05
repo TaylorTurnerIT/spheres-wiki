@@ -22,6 +22,31 @@ const classes = [...classMap.values()]
 const prestigeClasses = [...classMap.values()]
   .filter(c => c.system === 'power' && !baseClassIds.includes(c.id) && c.tags?.includes('prestige'))
   .sort((a, b) => a.name.localeCompare(b.name));
+
+const classDescs: Record<string, string> = {
+  'armorist':     'Focuses on summoning magical weapons and armor to suit the task at hand.',
+  'mageknight':   'Essentially a Magic Swordsman, with natural resilience against magical effects and martial techniques powered by Spell Points.',
+  'elementalist': 'Focuses on manipulating one or more elements, specializing in the Destruction sphere.',
+  'eliciter':     'Focuses on the use of the Mind Sphere to dominate enemies and bend them to your will.',
+  'hedgewitch':   'Built around Paths — thematic combinations of powers that can be mixed to create a uniquely talented individual.',
+  'shifter':      'Focuses on the Alteration Sphere, with unmatched ability to take and exploit different forms.',
+  'symbiat':      'Possessed by a spirit granting control of the Mind and Telekinesis spheres, excelling as a battlefield leader.',
+  'wraith':       'Excels in a variety of areas thanks to its choice of a Haunt Path and a suite of supernatural Wraith Haunts.',
+  'fey-adept':    'Specializes in the Illusion Sphere, with the ability to imitate other powers through Shadowstuff.',
+  'incanter':     'Not so much a class as a toolkit — trades class abilities for more Magic Talents and casting-focused feats than anyone else.',
+  'soul-weaver':  'An expert in the use of Life and Death, with a particular emphasis on summoning and bolstering the spirits of the dead.',
+  'thaumaturge':  'A dedicated specialist — knows fewer Magic Talents but can enhance and break the limits of what they focus on.',
+};
+
+const classTiers = [
+  { label: 'Low Casters',  ids: ['armorist', 'mageknight'] },
+  { label: 'Mid Casters',  ids: ['elementalist', 'eliciter', 'hedgewitch', 'shifter', 'symbiat', 'wraith'] },
+  { label: 'High Casters', ids: ['fey-adept', 'incanter', 'soul-weaver', 'thaumaturge'] },
+];
+
+const classById = new Map(
+  [...classMap.values()].filter(c => c.system === 'power').map(c => [c.id, c])
+);
 ---
 <WikiPage title="Spheres of Power — Spheres Wiki" activeNamespace="power" pagefindIgnore={true}>
 
@@ -161,56 +186,75 @@ const prestigeClasses = [...classMap.values()]
     <span class="section-heading-text">Spherecaster Classes</span>
     <div class="section-heading-rule"></div>
   </div>
-  <div class="class-roster">
-    {classes.map(c => (
-      <a href={url(`/power/classes/${c.id}/`)} class="class-item" data-astro-prefetch="hover">
-        <span class="class-item-name">{c.name}</span>
-        <span class="class-item-arrow" aria-hidden="true">→</span>
-      </a>
-    ))}
-  </div>
 
-  {prestigeClasses.length > 0 && (
-    <>
-      <div class="section-heading">
-        <span class="section-heading-text">Prestige Classes</span>
-        <div class="section-heading-rule"></div>
-      </div>
-      <div class="class-roster">
-        {prestigeClasses.map(c => (
-          <a href={url(`/power/classes/${c.id}/`)} class="class-item" data-astro-prefetch="hover">
-            <span class="class-item-name">{c.name}</span>
-            <span class="class-item-arrow" aria-hidden="true">→</span>
-          </a>
-        ))}
-      </div>
-    </>
-  )}
+  <div class="classes-and-links">
+    <div class="class-lists">
+      {classTiers.map(tier => {
+        const tierClasses = tier.ids.map(id => classById.get(id)).filter(Boolean);
+        return tierClasses.length > 0 && (
+          <div class="class-tier-group">
+            <div class="class-tier-label">{tier.label}</div>
+            <div class="class-roster">
+              {tierClasses.map(c => (
+                <a href={url(`/power/classes/${c!.id}/`)} class="class-item" data-astro-prefetch="hover">
+                  <div class="class-item-header">
+                    <span class="class-item-name">{c!.name}</span>
+                    <span class="class-item-arrow" aria-hidden="true">→</span>
+                  </div>
+                  {classDescs[c!.id] && <p class="class-item-desc">{classDescs[c!.id]}</p>}
+                </a>
+              ))}
+            </div>
+          </div>
+        );
+      })}
 
-  <div class="quick-links-grid">
-    <div class="quick-links-group">
-      <h3 class="quick-links-heading">Feats</h3>
-      <ul class="quick-links-list">
-        <li><a href={url("/power/feats/")}>General Feats</a></li>
-        <li><a href={url("/power/feats/casting-feats/")}>Casting Feats</a></li>
-        <li><a href={url("/power/feats/dual-sphere-feats/")}>Dual Sphere Feats</a></li>
-      </ul>
+      {prestigeClasses.length > 0 && (
+        <>
+          <div class="section-heading prestige-heading">
+            <span class="section-heading-text">Prestige Classes</span>
+            <div class="section-heading-rule"></div>
+          </div>
+          <div class="class-roster">
+            {prestigeClasses.map(c => (
+              <a href={url(`/power/classes/${c.id}/`)} class="class-item" data-astro-prefetch="hover">
+                <div class="class-item-header">
+                  <span class="class-item-name">{c.name}</span>
+                  <span class="class-item-arrow" aria-hidden="true">→</span>
+                </div>
+                {classDescs[c.id] && <p class="class-item-desc">{classDescs[c.id]}</p>}
+              </a>
+            ))}
+          </div>
+        </>
+      )}
     </div>
-    <div class="quick-links-group">
-      <h3 class="quick-links-heading">Equipment</h3>
-      <ul class="quick-links-list">
-        <li><a href={url("/power/equipment/")}>Magical Items</a></li>
-        <li><a href={url("/power/equipment/staves/")}>Staves</a></li>
-        <li><a href={url("/power/equipment/weapons/")}>Weapons &amp; Armor</a></li>
-      </ul>
-    </div>
-    <div class="quick-links-group">
-      <h3 class="quick-links-heading">Rules</h3>
-      <ul class="quick-links-list">
-        <li><a href={url("/power/casting-traditions/")}>Casting Traditions</a></li>
-        <li><a href={url("/power/oaths/")}>Oaths</a></li>
-        <li><a href={url("/power/wild-magic/")}>Wild Magic</a></li>
-      </ul>
+
+    <div class="quick-links-grid">
+      <div class="quick-links-group">
+        <h3 class="quick-links-heading">Feats</h3>
+        <ul class="quick-links-list">
+          <li><a href={url("/power/feats/")}>General Feats</a></li>
+          <li><a href={url("/power/feats/casting-feats/")}>Casting Feats</a></li>
+          <li><a href={url("/power/feats/dual-sphere-feats/")}>Dual Sphere Feats</a></li>
+        </ul>
+      </div>
+      <div class="quick-links-group">
+        <h3 class="quick-links-heading">Equipment</h3>
+        <ul class="quick-links-list">
+          <li><a href={url("/power/equipment/")}>Magical Items</a></li>
+          <li><a href={url("/power/equipment/staves/")}>Staves</a></li>
+          <li><a href={url("/power/equipment/weapons/")}>Weapons &amp; Armor</a></li>
+        </ul>
+      </div>
+      <div class="quick-links-group">
+        <h3 class="quick-links-heading">Rules</h3>
+        <ul class="quick-links-list">
+          <li><a href={url("/power/casting-traditions/")}>Casting Traditions</a></li>
+          <li><a href={url("/power/oaths/")}>Oaths</a></li>
+          <li><a href={url("/power/wild-magic/")}>Wild Magic</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -281,7 +325,7 @@ const prestigeClasses = [...classMap.values()]
     opacity: 0.55;
     flex-shrink: 0;
     line-height: 1.4;
-    transition: color 0.12s ease, opacity 0.12s ease;
+    transition: color 0.12s ease, opacity 0.12s ease, transform 0.15s ease;
   }
 
   .gs-card:hover {
@@ -292,6 +336,13 @@ const prestigeClasses = [...classMap.values()]
   .gs-card:hover::before {
     color: var(--clr-power);
     opacity: 1;
+    transform: translateX(3px);
+  }
+
+  .gs-card:hover .gs-card-title {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--clr-power) 35%, transparent);
+    text-underline-offset: 3px;
   }
 
   .gs-card-icon {
@@ -308,7 +359,7 @@ const prestigeClasses = [...classMap.values()]
     font-family: var(--font-body);
     font-size: var(--fs-md);
     font-weight: 700;
-    color: inherit;
+    color: var(--clr-power);
     line-height: 1.4;
   }
 
@@ -418,78 +469,128 @@ const prestigeClasses = [...classMap.values()]
     }
   }
 
-  /* ── Class roster ────────────────────────────────────── */
-  .class-roster {
+  /* ── Classes + links layout ─────────────────────────── */
+  .classes-and-links {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 8px;
-    margin-bottom: 28px;
+    grid-template-columns: 1fr 200px;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 48px;
+  }
+
+  .class-lists {
+    min-width: 0;
+  }
+
+  .prestige-heading {
+    margin-top: 24px;
+  }
+
+  /* ── Class tier groups ───────────────────────────────── */
+  .class-tier-group + .class-tier-group {
+    margin-top: 18px;
+  }
+
+  .class-tier-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+    opacity: 0.75;
+    padding-bottom: 5px;
+  }
+
+  /* ── Class roster (editorial list) ──────────────────── */
+  .class-roster {
+    display: flex;
+    flex-direction: column;
   }
 
   .class-item {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 11px 14px;
-    background: var(--clr-bg);
-    border: 0.5px solid var(--clr-border);
-    border-left: 3px solid var(--clr-power);
-    border-radius: 0 4px 4px 0;
+    flex-direction: column;
+    gap: 2px;
+    padding: 7px 0;
+    border-bottom: 0.5px solid var(--clr-border);
     text-decoration: none;
-    transition: background 0.14s ease, transform 0.14s ease, box-shadow 0.14s ease;
+    color: var(--clr-text);
+    transition: color 0.12s ease;
+  }
+
+  .class-item:first-child {
+    border-top: 0.5px solid var(--clr-border);
+  }
+
+  .class-item-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
   }
 
   .class-item-name {
     font-family: var(--font-display);
-    font-size: var(--fs-base);
+    font-size: var(--fs-md);
     font-weight: 700;
     color: var(--clr-power);
     letter-spacing: 0.02em;
     line-height: 1.2;
+    transition: text-decoration-color 0.12s ease;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
   }
 
   .class-item-arrow {
     font-family: var(--font-body);
     font-size: var(--fs-md);
-    color: var(--clr-power);
+    color: var(--clr-muted);
     opacity: 0;
-    transform: translateX(-4px);
-    transition: opacity 0.14s ease, transform 0.14s ease;
     flex-shrink: 0;
+    transition: opacity 0.12s ease, transform 0.12s ease;
+  }
+
+  .class-item-desc {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    font-style: italic;
+    line-height: 1.4;
+    margin: 0;
   }
 
   @media (hover: hover) and (pointer: fine) {
-    .class-item:hover {
-      background: color-mix(in srgb, var(--clr-power) 6%, var(--clr-surface));
-      transform: translateX(2px);
-      box-shadow: 2px 0 8px rgba(23, 75, 147, 0.08);
-      text-decoration: none;
+    .class-item:hover .class-item-name {
+      text-decoration-color: color-mix(in srgb, var(--clr-power) 35%, transparent);
     }
 
     .class-item:hover .class-item-arrow {
-      opacity: 0.7;
-      transform: translateX(0);
+      opacity: 0.6;
+      transform: translateX(3px);
     }
   }
 
-  /* ── Quick links ─────────────────────────────────────── */
+  /* ── Quick links (vertical sidebar) ─────────────────── */
   .quick-links-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--clr-border);
     border-radius: 6px;
     overflow: hidden;
     background: color-mix(in srgb, var(--clr-power) 4%, var(--clr-surface));
+    position: sticky;
+    top: 16px;
   }
 
   .quick-links-group {
-    padding: 20px 20px 18px;
-    border-right: 1px solid var(--clr-border);
+    padding: 16px 16px 14px;
+    border-bottom: 1px solid var(--clr-border);
   }
 
   .quick-links-group:last-child {
-    border-right: none;
+    border-bottom: none;
   }
 
   .quick-links-heading {
