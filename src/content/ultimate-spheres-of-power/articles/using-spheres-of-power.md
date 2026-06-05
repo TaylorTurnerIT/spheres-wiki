@@ -7,7 +7,7 @@ tags: []
 ---
 
 <div class="wiki-note">
-  <strong>Wiki Note:</strong> This wiki focuses on the <strong>Ultimate Spheres of Power</strong> edition of the rules. If you are looking for the original (legacy) Spheres of Power content, it remains available on the <a href="http://spheresofpower.wikidot.com/" target="_blank" rel="noopener noreferrer">original Spheres of Power Wikidot wiki</a>. If you're new to Spheres of Power, we recommend reading everything on this page. For more help, see <strong>How to Build a Spherecaster</strong>.
+  <strong>Wiki Note:</strong> This wiki focuses on the <strong>Ultimate Spheres of Power</strong> edition of the rules. If you are looking for the original (legacy) Spheres of Power content, it remains available on the <a href="http://spheresofpower.wikidot.com/" target="_blank" rel="noopener noreferrer">original Spheres of Power Wikidot wiki</a>. If you're new to Spheres of Power, we recommend reading everything on this page. For more help, see [How to Build a Spherecaster](/power/how-to-build-spherecaster/).
 </div>
 
 ## Using The Spheres

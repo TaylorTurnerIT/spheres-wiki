@@ -96,9 +96,9 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 /bb-code-template/             BB code template (MISSING — T4)
 /community-resources/          community links (MISSING — T5)
 /citations-guide/              citation guide (REMOVED)
-/how-to-build-champion/        guide (MISSING — T8)
-/how-to-build-practitioner/    guide (MISSING — T8)
-/how-to-build-spherecaster/    guide (MISSING — T8)
+/power/how-to-build-spherecaster/ guide (exists)
+/power/how-to-build-champion/      guide (MISSING — T8)
+/power/how-to-build-practitioner/    guide (MISSING — T8)
 404                            custom 404 page (MISSING — T18)
 ```
 
@@ -158,7 +158,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 | T5  | x      | Create `/community-resources/` page                      | V1,I.pages    |
 | T6  | -      | ~~Create `/citations-guide/` page~~ — removed            | V1,I.pages    |
 | T7  | x      | Create `/contact/` page                                  | V1,I.pages    |
-| T8  | .      | Create `/how-to-build-*` guide pages (3 pages)           | V1,I.pages    |
+| T8  | ~      | Create `/power/how-to-build-*` guide pages (Spherecaster done; 2 remaining) | V1,I.pages    |
 | T9  | .      | Remove/fix all dead sidebar links (Other Systems block, subsection stubs) | V1,V9 |
 | T10 | .      | Implement `/recent-changes/` with real content (git-log or manual changelog) | V1,I.pages |
 | T11 | .      | Wire champion class body + features into `/champions/[slug]` | V1,I.pages |
