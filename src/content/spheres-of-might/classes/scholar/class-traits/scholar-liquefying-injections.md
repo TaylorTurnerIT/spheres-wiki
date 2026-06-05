@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: scholars-knack-ex
-
 ---
 
 The scholar may deliver one poison she has prepared or knows an Alchemy talent for as a melee touch attack; this poison is treated as being a contact poison even if it normally would not be. In addition to the poison's normal effects, targets who fail their saving throw begin to liquefy.

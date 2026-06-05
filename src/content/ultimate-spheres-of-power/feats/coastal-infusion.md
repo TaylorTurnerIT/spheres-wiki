@@ -6,7 +6,6 @@ system: power
 sphere: nature
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Nature sphere ((earth) package and (water) package).

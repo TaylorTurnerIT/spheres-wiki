@@ -4,7 +4,6 @@ name: "Mobility Binds"
 level: 2
 replaces: ["the nimble class feature and the pistolwhip, deadshot, and lightning reload deeds"]
 tags: []
-
 ---
 
 Starting at 2nd level, the hashasheen unlocks the ability to bind veils to his feet chakra. Despite lacking true veilweaving abilities, the hashasheen can readily control the flow of energy through these chakra to aid his mobility, granting him the following deeds:

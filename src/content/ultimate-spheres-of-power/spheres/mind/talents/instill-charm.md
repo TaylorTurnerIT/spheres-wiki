@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["instill"]
-
 ---
 
 As a standard action you may touch a small container of liquid and instill a charm inside it, which functions as a potion or oil. You may create an instilled liquid of a greater or powerful charm, but must spend a spell point to create a lesser charm. Lesser charms created in this way are not limited to only being usable once per target.

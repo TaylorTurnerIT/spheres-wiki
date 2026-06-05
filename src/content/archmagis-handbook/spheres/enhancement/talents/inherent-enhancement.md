@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: ["enhance"]
-
 ---
 **Prerequisites:** Enhancement sphere (Deep Enhancement, Mental Enhancement, Physical Enhancement), caster level 17th.
 

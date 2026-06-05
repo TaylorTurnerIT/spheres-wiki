@@ -6,7 +6,6 @@ type: talent
 sphere: dark
 tier: base
 tags: []
-
 ---
 
 As a standard action, you may create a sphere of darkness with a radius of up to 10 feet + 5 feet per 2 caster levels, centered anywhere within medium range. This darkness radiates from a central point, and cannot extend through walls. You must concentrate to maintain this sphere, but you may always spend 1 spell point as a free action to make the darkness last for 1 minute per level without concentration. You must remain within medium range of the darkness to sustain it through concentration.

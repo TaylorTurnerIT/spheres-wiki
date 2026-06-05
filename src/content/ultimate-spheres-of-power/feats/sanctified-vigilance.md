@@ -7,7 +7,6 @@ sphere: war
 dualSphere: fate
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Fate sphere, War sphere (any (rally) talent).

@@ -3,7 +3,6 @@ id: malleability-dc-modifier
 name: "Malleability DC Modifier"
 level: 6
 tags: []
-
 ---
 
 # 2

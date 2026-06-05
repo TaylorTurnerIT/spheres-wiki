@@ -3,7 +3,6 @@ id: occult-flexibility
 name: "Occult Flexibility"
 level: 6
 tags: []
-
 ---
 
 An occult bruiser can take a move action to gain one minor granted ability belonging to a spirit whose Knowledge Tasks she has completed and that she isn't currently bound to. While doing so, she is forced to show the physical sign and personality influence of any spirits whose granted abilities she gains while using this ability. This effect lasts 1 minute, but any penalties accrued from disobeying a personality influence imparted onto the binder using this ability remains for 24 hours, as usual for such penalties. The occult bruiser may use this ability a number of times per day equal to 3 + 1/2 her brawler level (minimum 1). The occult bruiser can use this ability again before the duration expires in order to replace the previous granted ability with another choice.

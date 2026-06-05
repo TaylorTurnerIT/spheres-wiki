@@ -7,7 +7,6 @@ tags: []
 className: armorist
 featureId: arsenal-trick
 requires: "bound equipment"
-
 ---
 
 The armorist may bind an additional piece of equipment.

@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: concordance
-
 ---
 
 At 17th level, the conduit releases a pulse that suffuses the weather and terrain within a 60-foot radius area of the conduit with incredibly raw magic, and continues to do so for 1 minute. This area follows the conduit.

@@ -6,7 +6,6 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Destruction sphere (Blast Salvo, Explosive Orb).

@@ -6,7 +6,6 @@ type: talent
 sphere: creation
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Creation sphere (Plasma Production (material)), caster level 5th.

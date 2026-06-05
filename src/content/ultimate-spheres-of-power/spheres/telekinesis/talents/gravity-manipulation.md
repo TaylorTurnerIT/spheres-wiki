@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Telekinesis sphere (Gravity Shift), caster level 15th.

@@ -7,7 +7,6 @@ tags: []
 className: technician
 featureId: base-forms
 requires: "Mechanical Insight"
-
 ---
 
 The invention is designed to sit one creature (the pilot) who controls the invention's movements from the inside. The pilot must be the same size or smaller than the invention.

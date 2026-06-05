@@ -6,7 +6,6 @@ system: power
 sphere: life
 tags: []
 tier: feat
-
 ---
 
 **Prerequisite:** Life sphere.

@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Mind sphere (Confusion (charm)), caster level 10th.

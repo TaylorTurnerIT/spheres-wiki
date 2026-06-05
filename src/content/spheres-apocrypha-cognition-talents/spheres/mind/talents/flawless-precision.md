@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: advanced
 tags: ["cognition"]
-
 ---
 
 **Prerequisites:** Mind sphere (Arcane Calculation (cognition), Rapid Processing (cognition)), caster level 10th.

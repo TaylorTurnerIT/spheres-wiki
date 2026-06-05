@@ -3,7 +3,6 @@ id: crimson-vials
 name: "Crimson Vials"
 level: 3
 tags: []
-
 ---
 
 Starting at 3rd level, the hemetic philosopher may spend one minute to create a temporary potion. If he spends a spell point he may reduce this to a full-round action that provokes attacks of opportunity. The potion may have a complexity of no higher than 1 per three class levels and lasts one hour per class level. A potion created in this way normally has a caster level equal to the hemetic philosopher's blood sphere caster level, but he may choose to create a potion at a lower caster level. He may have a number of temporary potions in existence at a time equal to his Intelligence modifier; creating one beyond this limit causes the oldest one to become inert and useless.

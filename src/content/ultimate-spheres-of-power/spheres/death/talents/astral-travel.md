@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: advanced
 tags: ["utility"]
-
 ---
 
 **Prerequisites:** Death sphere (Astral Projection (advanced), Project Spirit (advanced)), caster level 15th.

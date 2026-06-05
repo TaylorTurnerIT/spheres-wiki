@@ -3,7 +3,6 @@ id: living-ki-weapon
 name: "Living Ki Weapon"
 level: 4
 tags: []
-
 ---
 
 The kensai begins play with a masterwork weapon selected from the list of weapons in the weapon group he selected (if he chooses unarmed strike or natural weapons, he instead gains a +1 competence bonus to attacks). This is his living ki weapon. Once per day, a kensai may spend 1 hour in weapon practice to attune his ki to a new weapon with which he is proficient.

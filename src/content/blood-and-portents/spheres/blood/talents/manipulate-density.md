@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: basic
 tags: ["quicken", "still"]
-
 ---
 
 You gain the following abilities which manipulate the density of the target's blood:

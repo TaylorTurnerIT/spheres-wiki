@@ -3,7 +3,6 @@ id: illuminating-manuscripts
 name: "Illuminating Manuscripts"
 level: 2
 tags: []
-
 ---
 
 Starting at 2nd level, a truescribe becomes more adept at the production of recitation scrolls. In addition to the recitation scrolls granted by the scribe recitation class feature, the truescribe can prepare a 1st-level recitation scroll from the Codex of Heart and Mind whenever she prepares recitation scrolls. The same production and scroll reading guidelines apply.

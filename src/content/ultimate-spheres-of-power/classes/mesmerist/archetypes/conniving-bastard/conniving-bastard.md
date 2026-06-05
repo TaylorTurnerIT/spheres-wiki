@@ -2,7 +2,6 @@
 id: conniving-bastard
 name: "Conniving Bastard"
 tags: []
-
 ---
 
 His mind is his first weapon. He looks deeply into others, tricking them, influencing them, and outright controlling them. Then the knives come out.

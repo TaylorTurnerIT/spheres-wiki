@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: advanced
 tags: ["utility", "sense"]
-
 ---
 
 **Prerequisites:** Divination sphere, caster level 5th.

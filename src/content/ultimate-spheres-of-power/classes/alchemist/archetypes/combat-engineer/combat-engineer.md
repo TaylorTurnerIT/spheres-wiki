@@ -2,7 +2,6 @@
 id: combat-engineer
 name: "Combat Engineer"
 tags: []
-
 ---
 
 A combat engineer is an alchemist who focuses their magic and invention to the service of a cause - usually a nation and army.

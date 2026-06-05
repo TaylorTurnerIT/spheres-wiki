@@ -6,7 +6,6 @@ type: talent
 sphere: creation
 tier: advanced
 tags: ["material"]
-
 ---
 
 **Prerequisites:** Creation sphere (any (material) talent), caster level 10th.

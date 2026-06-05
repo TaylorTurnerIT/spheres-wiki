@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
-
 ---
 
 You may directly control another creature's body.

@@ -6,7 +6,6 @@ system: might
 tags: []
 className: technician
 featureId: improved-shield
-
 ---
 
 As a standard action, the bearer may expand the shield, granting himself total cover until the beginning of his next turn. When using a shield in this way, the bearer must choose one edge of his space. That edge is treated as a solid wall for attacks targeting him only. The bearer gains total cover for attacks that pass through this edge and no cover for attacks that do not pass through this edge. The shield does not, however, provide cover against targeted spells; a spellcaster can cast a spell on the bearer by targeting the shield his is holding.

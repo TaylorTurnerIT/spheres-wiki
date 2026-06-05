@@ -40,7 +40,6 @@ sectionDefinitions:
       - label: "Squadron Feats"
         tiers: ["feat"]
         tags: ["squadron"]
-
 ---
 
 [Totem]

@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "ground"
 label: "Ground"
 sphere: "nature"
-
 ---

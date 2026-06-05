@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["geomancing", "spirit", "water"]
-
 ---
 You gain several abilities which improve your capacity to operate underwater.
 

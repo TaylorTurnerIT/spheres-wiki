@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Alteration sphere (Object Transformation (transformation)), caster level 1st.

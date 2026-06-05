@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: basic
 tags: []
-
 ---
 
 You may place a ghost strike of your choice onto an adjacent, unoccupied area up to one 5-foot square per two caster levels (minimum one 5-foot square), that lashes out at the first creature who enter its area, similar to a haunt.

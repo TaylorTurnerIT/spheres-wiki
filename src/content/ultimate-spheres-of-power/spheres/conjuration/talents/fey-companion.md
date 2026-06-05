@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["type"]
-
 ---
 
 Your companion has strong ties to the Faerie. The companion gains the fey creature type. The companion gains DR 2/ cold iron +1 per 5 Hit Dice, +1 saves vs. charms and sleep +1 per 5 Hit Dice.

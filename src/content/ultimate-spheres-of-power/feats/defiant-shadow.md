@@ -6,7 +6,6 @@ system: power
 sphere: dark
 tags: []
 tier: feat
-
 ---
 
 **Prerequisite:** Dark sphere.

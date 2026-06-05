@@ -6,7 +6,6 @@ system: power
 sphere: destruction
 tags: ["admixture", "counterspell"]
 tier: feat
-
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Counterspell

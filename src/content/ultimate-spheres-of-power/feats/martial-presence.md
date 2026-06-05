@@ -6,7 +6,6 @@ system: power
 sphere: war
 tags: ["combat"]
 tier: feat
-
 ---
 
 **Prerequisites:** Combat Stamina, base attack bonus +1.

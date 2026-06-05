@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: empathy
-
 ---
 
 The conduit produces a Life sphere cure, which can be augmented with the following talents: Adrenaline Surge, Lingering Resilience, Sustaining Vitality.

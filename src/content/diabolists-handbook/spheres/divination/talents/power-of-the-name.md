@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: advanced
 tags: ["utility"]
-
 ---
 
 **Prerequisites:** Divination sphere (Hear Name (advanced)), caster level 10th.

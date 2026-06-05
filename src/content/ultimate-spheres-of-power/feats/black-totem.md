@@ -7,7 +7,6 @@ sphere: war
 dualSphere: dark
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Dark sphere, War sphere.

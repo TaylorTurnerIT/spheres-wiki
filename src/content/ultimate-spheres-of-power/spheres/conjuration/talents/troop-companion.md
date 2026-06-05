@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: advanced
 tags: ["form"]
-
 ---
 
 **Prerequisites:** Conjuration sphere.

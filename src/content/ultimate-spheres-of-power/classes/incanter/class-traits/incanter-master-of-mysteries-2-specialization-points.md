@@ -6,7 +6,6 @@ system: power
 tags: ["su"]
 className: incanter
 featureId: incanter-specializations
-
 ---
 
 The incanter has training in the deep mysteries in magic, and his influence can be felt by all spell casters. As a standard action, he may tune himself to the environment, so that all magic flows through him. He must spend a standard action every round to maintain the attunement, and he can only be attuned for a maximum number of rounds per day equal to his class level + his casting ability modifier. These rounds do not need to be consecutive.

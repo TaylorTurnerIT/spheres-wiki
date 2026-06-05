@@ -3,7 +3,6 @@ id: greater-bloodrage
 name: "Greater Bloodrage"
 level: 11
 tags: []
-
 ---
 
 At 11th level, the mystic scion gains the unchained barbarian's greater rage ability.

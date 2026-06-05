@@ -6,7 +6,6 @@ system: power
 sphere: life
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Life sphere, inspiration class feature.

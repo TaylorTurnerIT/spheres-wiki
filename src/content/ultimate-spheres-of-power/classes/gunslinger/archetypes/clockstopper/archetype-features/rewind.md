@@ -4,7 +4,6 @@ name: "Rewind"
 level: 15
 replaces: ["the slinger’s luck deed"]
 tags: []
-
 ---
 
 At 15th level, the clockstopper gains the Second Chance talent from the Time sphere as a bonus talent; if the clockstopper already possesses the Second Chance talent, they may instead gain any talent from the Time sphere they qualify for.

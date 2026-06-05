@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: basic
 tags: ["mass"]
-
 ---
 
 When creating a figment, you may spend an additional spell point to divide the figment into multiple, independent components. The combined size and range of these figments must still be within your maximum illusion size, but each component can appear differently and behave differently. While each component can be given its own set of programmed instructions, you can only actively control one component at a time. For example, when creating an illusion of a tavern, a creature with this talent could create a bustling group of people inside the tavern as part of the same illusion.

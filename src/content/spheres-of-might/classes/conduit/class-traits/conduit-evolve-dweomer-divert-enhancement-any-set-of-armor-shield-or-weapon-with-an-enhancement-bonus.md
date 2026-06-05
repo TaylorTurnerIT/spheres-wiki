@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: empathy
-
 ---
 
 At 10th level, the conduit can spend a free action at the start of their turn to transfer some or all of the object's enhancement bonus as a bonus to another statistic until their next turn to themselves or an ally within 10 feet, depending on the object. 

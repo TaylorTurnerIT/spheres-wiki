@@ -5,7 +5,6 @@ level: 1
 tags:
   - blast-type
   - fire
-
 ---
 
 - fire subtype

@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: basic
 tags: ["divine", "utility"]
-
 ---
 You may divine the presence of valuable items within range. Items exude an aura depending on their gold piece value and collections of material (such as piles of gold coins, a bushel of exotic fruit, or chests full of gemstones) radiate their auras as a single aura. You gain an insight bonus on Appraise checks equal to half your caster level to discern the value of objects you divine with this sphere effect. Utilize the following chart when determining value:
 

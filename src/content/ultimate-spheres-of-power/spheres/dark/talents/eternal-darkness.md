@@ -6,7 +6,6 @@ type: talent
 sphere: dark
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Dark sphere (Lingering Darkness), caster level 10th.

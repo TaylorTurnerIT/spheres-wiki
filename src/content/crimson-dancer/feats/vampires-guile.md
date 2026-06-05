@@ -7,7 +7,6 @@ sphere: mind
 dualSphere: blood
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Blood sphere, Mind sphere.

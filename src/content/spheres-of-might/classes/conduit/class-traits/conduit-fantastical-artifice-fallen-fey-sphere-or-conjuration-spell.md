@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: imbuement-sm
-
 ---
 
 You can create a Fallen Fey sphere Aelfwine, Enchanting Music, or Fairy Dust fey link, which can be augmented with any of the listed talents or the following talents: Bounty of the Fey, Greater Fey Link, or Share Link

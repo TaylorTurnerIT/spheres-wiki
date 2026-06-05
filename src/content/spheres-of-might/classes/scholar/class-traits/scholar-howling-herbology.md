@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
-
 ---
 
 The mandrake root is feared in myth and legend for its ability to rend the life from mortals with its banshee-like wail. The scholar knows that while much of this is simply myth, the root does contain certain properties that gave rise to the legends. By ingesting a small portion of ground mandrake root mixed with various catalyzing agents, the scholar is able to unleash a piercing scream that deals an amount of sonic damage equal to 1d4 per class level to all creatures within a 30 ft. radius (Fortitude save for half). This ability affects objects and undead. The scholar herself is immune to the damage from this effect.

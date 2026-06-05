@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: basic
 tags: ["blood-art"]
-
 ---
 
 When using a blood art that allows a Fortitude save, you may replace all Fortitude saves that effect allows for with Will saves.

@@ -4,7 +4,6 @@ name: "Goblin \"Joke\""
 level: 4
 replaces: ["the rogue’s 4th level rogue talent"]
 tags: []
-
 ---
 
 "What does a burning dog sound like?"

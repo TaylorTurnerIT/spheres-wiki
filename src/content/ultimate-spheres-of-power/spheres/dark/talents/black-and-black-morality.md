@@ -6,7 +6,6 @@ type: talent
 sphere: dark
 tier: advanced
 tags: ["blot", "darkness", "shadow"]
-
 ---
 
 **Prerequisites:** Dark sphere (Gaze Into The Abyss), caster level 10th.

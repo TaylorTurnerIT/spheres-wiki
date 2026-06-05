@@ -3,7 +3,6 @@ id: soul-with-many-faces-spirit
 name: Spirit
 level: 1
 tags: []
-
 ---
 
 At 1st level, when the soul with many faces gains a spirit, she gains one of the spheres associated with that spirit as a bonus magical talent. This is her spirit sphere, and she uses her class level as her caster level with that sphere. This stacks with other caster level sources normally.

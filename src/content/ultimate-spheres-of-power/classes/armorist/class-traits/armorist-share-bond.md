@@ -6,7 +6,6 @@ system: power
 tags: []
 className: armorist
 featureId: arsenal-trick
-
 ---
 
 The armorist may cause a piece of summoned or bound equipment to appear on or in the possession of a Conjuration sphere companion that she has summoned. The companion must be within 25 feet + 5 feet per two armorist levels. The companion may be treated as the armorist for the purposes of maintaining the bound equipment in its possession.

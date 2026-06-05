@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
-
 ---
 
 You may make someone see things that are not there.

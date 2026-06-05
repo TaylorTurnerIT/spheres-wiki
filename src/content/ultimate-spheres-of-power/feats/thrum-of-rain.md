@@ -6,7 +6,6 @@ system: power
 sphere: weather
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Weather sphere; bardic performance or raging song class feature.

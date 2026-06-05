@@ -6,7 +6,6 @@ system: power
 sphere: enhancement
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Enhancement sphere, Cantrips.

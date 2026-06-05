@@ -6,7 +6,6 @@ system: power
 sphere: warp
 tags: ["champion"]
 tier: feat
-
 ---
 
 **Prerequisites:** Athletics sphere, Warp sphere.

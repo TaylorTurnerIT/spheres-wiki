@@ -3,7 +3,6 @@ id: master-technique
 name: "Master Technique"
 level: 1
 tags: []
-
 ---
 
 Upon reaching 20th level, the adaptive gunner gains the master technique Mobile Devastation.

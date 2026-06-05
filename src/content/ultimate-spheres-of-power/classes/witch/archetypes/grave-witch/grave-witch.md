@@ -2,7 +2,6 @@
 id: grave-witch
 name: "Grave Witch"
 tags: []
-
 ---
 
 Some witches use dark rites to access the hidden knowledge and powers of the grave. The following archetype is available to any witch, but is primarily used by Mythos ghouls.

@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["utility", "charm"]
-
 ---
 
 You can pull information from a target's mind.

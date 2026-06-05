@@ -6,7 +6,6 @@ system: power
 sphere: weather
 tier: basic
 tags: []
-
 ---
 
 When you gain your first (mantle) talent, you gain the ability, as a standard action, to touch a creature and spend a spell point, bestowing your mantle upon it. Unwilling targets may attempt a Will save to resist a mantle being placed on them. A mantle lasts for one hour per caster level, and is subject to spell resistance.

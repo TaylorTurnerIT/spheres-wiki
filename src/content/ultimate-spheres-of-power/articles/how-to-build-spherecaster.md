@@ -4,7 +4,6 @@ name: "How to Build a Spherecaster"
 type: article
 system: power
 tags: []
-
 ---
 
 Looking for help building your first Spherecaster? You're in the right place. This page will walk you through the process of creating a Spherecaster, with an emphasis on when and where you should select each part of your character. Note that this page assumes you know how to build a character in the normal Pathfinder system. If this is your first character ever, ask your GM to guide you through the process.

@@ -3,7 +3,6 @@ id: magical-expertise
 name: "Magical Expertise"
 level: 3
 tags: []
-
 ---
 
 At 3rd level, the conduit gains a bonus equal to 1/2 their conduit level to Knowledge checks to recall information about artifacts and magical items, and to Spellcraft and Use Magic Device checks.

@@ -3,7 +3,6 @@ id: apex-state
 name: "Apex State"
 level: 20
 tags: []
-
 ---
 
 At 20th level, an elemental avatar has reached the zenith of their skill, becoming a true avatar. As a free action, an elemental avatar can enter an apex state. While in this apex state, an elemental avatar treats all of their elemental defenses as well as your elemental overflow as though they have accepted 10 points of burn for the purpose of their effects, and reduces the total burn required for all kinetic blast by 2.

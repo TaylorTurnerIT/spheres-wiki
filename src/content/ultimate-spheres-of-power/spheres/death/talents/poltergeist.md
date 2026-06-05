@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: basic
 tags: ["ghost-strike"]
-
 ---
 
 You may make a ghost strike that attaches a vengeful poltergeist to the target, disrupting their actions. Whenever the target makes a d20 roll within 1 round per caster level, you can choose for them take a -3 penalty to the roll, ending this effect. This penalty is increased by 1 for every 6 caster levels you have.

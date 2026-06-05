@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: basic
 tags: []
-
 ---
 
 As a trick, you may designate a 5-foot cube within your illusion range as a flanking partner for you and your allies. This partner remains for one round per caster level. You may only have one phantasmal flanking partner at a time. Creating a new cube causes the previous one to immediately dissipate.

@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Warp Sphere (teleport beacon or warp link)

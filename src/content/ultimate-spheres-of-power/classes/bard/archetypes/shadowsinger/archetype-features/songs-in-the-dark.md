@@ -3,7 +3,6 @@ id: songs-in-the-dark
 name: "Songs in the Dark"
 level: 3
 tags: []
-
 ---
 
 At 3rd level, the shadowsinger gains the shadow whisper cantata bardic masterpiece (even if they do not meet the masterpiece's prerequisites) and may adjust the *gloom* as a move or swift action (even when not maintaining the masterpiece). The shadowsinger's and their allies may treat the *gloom*'s area as a beneficial emotion effect (effectively choosing to suffer no additional effects but still be affected by an emotion effect). 

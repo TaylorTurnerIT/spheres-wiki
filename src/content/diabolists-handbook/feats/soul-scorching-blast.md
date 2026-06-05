@@ -6,7 +6,6 @@ system: power
 sphere: destruction
 tags: []
 tier: feat
-
 ---
 
 Rather than their body, you attack the very essence of your foes.

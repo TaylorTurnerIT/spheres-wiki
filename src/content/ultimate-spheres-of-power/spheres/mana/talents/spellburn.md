@@ -6,7 +6,6 @@ system: power
 sphere: mana
 tier: basic
 tags: []
-
 ---
 
 You can damage a creature's capacity for power against a target. This attempt automatically fails against creatures that do not have at least 1 spell point. They are permitted a Will save to negate the effects, otherwise they suffer 1 spell point damage plus 1 per 10 caster levels you possess. You can spend an additional spell point as part of using this ability to also have the creature become spellburned. While spellburned, the creature must succeed at another Will save at the end of their turn for a number of rounds equal to your casting ability modifier or suffer 1d2 spell point damage, increasing by one step for every 4 caster levels beyond 1st (1d2, 1d3, 1d4, 1d6, 1d8, 2d6, etc.). On a success, the effect ends.

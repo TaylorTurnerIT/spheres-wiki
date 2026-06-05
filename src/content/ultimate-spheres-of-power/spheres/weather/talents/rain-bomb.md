@@ -6,7 +6,6 @@ type: talent
 sphere: weather
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Weather sphere (Rain Lord (advanced)), caster level 1st.

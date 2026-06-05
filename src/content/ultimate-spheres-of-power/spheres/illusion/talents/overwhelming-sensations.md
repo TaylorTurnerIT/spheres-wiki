@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: basic
 tags: []
-
 ---
 
 As a trick you may force a target to succeed at a Will save or suffer extreme sensation for one round per two caster levels (minimum 1). Select one of the effects on Table: Overwhelming Sensations based on what sensory talents you possess.

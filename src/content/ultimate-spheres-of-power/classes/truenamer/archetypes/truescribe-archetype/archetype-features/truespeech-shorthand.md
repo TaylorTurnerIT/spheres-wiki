@@ -3,7 +3,6 @@ id: truespeech-shorthand
 name: "Truespeech Shorthand"
 level: 12
 tags: []
-
 ---
 
 At 12th level, a truescribe has invented a shorthand methodology that makes her recitation scrolls significantly easier to read. If the truescribe shares her system with a willing creature, a process that requires 8 hours of instruction, that creature gains the ability to use the truescribe's recitation scrolls.

@@ -6,7 +6,6 @@ system: power
 sphere: war
 tags: ["ex", "squadron"]
 tier: feat
-
 ---
 
 **Prerequisite:** War sphere.

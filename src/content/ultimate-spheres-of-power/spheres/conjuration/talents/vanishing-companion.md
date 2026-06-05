@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: advanced
 tags: ["form"]
-
 ---
 
 **Prerequisites:** Conjuration sphere (Camouflaged Companion (form)), caster level 10th.

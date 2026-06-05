@@ -7,7 +7,6 @@ sphere: protection
 dualSphere: creation
 tags: ["dual-sphere", "sm"]
 tier: feat
-
 ---
 
 **Prerequisites:** Creation Sphere (Restrictive Casting), Protection Sphere (Distant Protection)

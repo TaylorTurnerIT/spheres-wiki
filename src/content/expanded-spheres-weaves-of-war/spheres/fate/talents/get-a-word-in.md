@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Fate Sphere

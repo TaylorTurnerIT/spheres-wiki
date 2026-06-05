@@ -7,7 +7,6 @@ sphere: protection
 dualSphere: enhancement
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Enhancement Sphere, Protection Sphere (Plexing Aegis)

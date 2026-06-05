@@ -24,7 +24,6 @@ sectionDefinitions:
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
-
 ---
 
 ### Note: Flavor and Faerie

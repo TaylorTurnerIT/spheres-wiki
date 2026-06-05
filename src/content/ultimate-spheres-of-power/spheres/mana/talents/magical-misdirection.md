@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["manabond"]
-
 ---
 
 You form a manabond that confounds targeted magical effects. Any time you or the recipient is targeted by a single-targeted sphere effect that is harmless or requires a Fortitude or Will saving throw, you may redirect the effect to yourself or the recipient as a free action that can be taken outside of your turn (Will negates if the recipient is unwilling).

@@ -7,7 +7,6 @@ sphere: weather
 dualSphere: life
 tags: ["dual-sphere", "warden"]
 tier: feat
-
 ---
 
 **Prerequisite:** Life sphere (Stabilizing Invigoration), Weather sphere.

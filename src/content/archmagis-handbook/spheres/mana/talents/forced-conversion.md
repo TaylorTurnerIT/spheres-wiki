@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: advanced
 tags: ["expunge"]
-
 ---
 **Prerequisites:** Mana sphere (Oversaturation Surge), caster level 1st.
 

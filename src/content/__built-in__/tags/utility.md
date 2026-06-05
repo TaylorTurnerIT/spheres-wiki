@@ -10,5 +10,4 @@ description: >-
   If you have the skill expertise feature, you get extra [utility] talents in addition to your skill talents that can be of any kind.
 
   A character who would gain a [utility] talent they already possess as a bonus talent must choose another [utility] talent as the replacement bonus talent.
-
 ---

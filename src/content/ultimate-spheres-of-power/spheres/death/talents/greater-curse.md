@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Death sphere (Curse (ghost strike)), caster level 15th.

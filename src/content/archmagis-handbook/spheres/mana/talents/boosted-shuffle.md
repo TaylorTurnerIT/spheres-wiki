@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: advanced
 tags: ["amp", "manipulation"]
-
 ---
 **Prerequisites:** Mana sphere, caster level 1st.
 

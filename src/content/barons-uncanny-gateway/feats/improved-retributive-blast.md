@@ -6,7 +6,6 @@ system: power
 sphere: destruction
 tags: ["combat", "sm"]
 tier: feat
-
 ---
 
 **Prerequisites:** Destruction Sphere (Retributive Blast)

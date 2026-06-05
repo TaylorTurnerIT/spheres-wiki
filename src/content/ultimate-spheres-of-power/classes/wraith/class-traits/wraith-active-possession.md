@@ -6,7 +6,6 @@ system: power
 tags: []
 className: wraith
 featureId: possession-su
-
 ---
 
 Active possession involves taking control of the possessed creature. Attempting active possession requires a spell point. The wraith maintains his abilities as in passive possession. The body retains its Strength, Dexterity, Constitution, hit points, natural abilities, and automatic abilities. A body with extra limbs does not allow the wraith to make more attacks (or more advantageous two-weapon or two-handed attacks) than normal.

@@ -7,7 +7,6 @@ replaces:
 tags:
   - trade
   - utility
-
 ---
 
 At 1st level, the beastmaster gains Animal Empathy from the Beastmastery sphere as a bonus talent.

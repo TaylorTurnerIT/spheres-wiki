@@ -6,7 +6,6 @@ system: power
 sphere: fallen-fey
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Fallen Fey sphere (Beckoning Call (fey-blessing) or Enchanting Music (fey-blessing)); bardic performance or raging song class feature.

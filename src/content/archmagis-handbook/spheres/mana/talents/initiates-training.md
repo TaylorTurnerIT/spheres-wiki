@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["amp", "manipulation"]
-
 ---
 Subtle magics can allow a mage to utilize their powers more easily.
 

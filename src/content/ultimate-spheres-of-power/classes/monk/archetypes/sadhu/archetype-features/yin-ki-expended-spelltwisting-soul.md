@@ -3,7 +3,6 @@ id: yin-ki-expended-spelltwisting-soul
 name: "Yin Ki Expended – Spelltwisting Soul"
 level: 1
 tags: []
-
 ---
 
 With a powerful expenditure of ki, you turn a spell or spell-like ability back upon the caster. When targeted by a spell or spell-like ability, you can expend your ki focus as an immediate free action to reflect the spell or spell-like ability back upon the originating caster. This ability does not turn back area spells unless the sadhu is the center or target (example: fireball). The cost to reflect a spell or spell-like ability is 1 point of ki per two levels of a spell (round down, minimum one ki). You may partially turn spells as well. For each two points of ki expended, subtract one from the spell level of the incoming spell.

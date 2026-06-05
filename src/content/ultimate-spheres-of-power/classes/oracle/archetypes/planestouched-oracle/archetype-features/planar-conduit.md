@@ -4,7 +4,6 @@ name: "Planar Conduit"
 level: 1
 replaces: ["the mystery class feature"]
 tags: []
-
 ---
 
 At 1st level, the planestouched oracle selects an element from those available to a kineticist, gaining one simple blast associated with that element.

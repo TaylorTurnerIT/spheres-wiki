@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: advanced
 tags: ["divine"]
-
 ---
 **Prerequisites:** Divination sphere (Viewing (divine)), caster level 5th.
 

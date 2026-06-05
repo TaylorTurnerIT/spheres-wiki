@@ -7,7 +7,6 @@ tags: []
 className: armorist
 featureId: arsenal-trick
 requires: "armorist 6, bind implement class feature"
-
 ---
 
 When the armorist binds an implement, she may choose to bond with a specific piece of clothing, worn accessory, or jewelry as a "wearable implement" instead of a weapon, shield, or suit of armor. A wearable implement is slotless and does not  take up a magic item slot.

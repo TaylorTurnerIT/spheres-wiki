@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
-
 ---
 
 You tamper with a mind's language center, and the muscles controlling speech to impede or alter the flow of words. Will save negates.

@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
-
 ---
 
 Lodestone's unusual properties often seem like magic to the uninitiated, but to the scholar, it is a predictable and reliable tool. The scholar may activate this imposition in one of two ways: firstly, the scholar may draw one primarily metal item or creature within 60 ft. + 10 ft. per class level directly towards herself. This item or creature cannot weigh more than 50 lbs. per class level the scholar possesses, and if it is a living creature or an item held by a living creature, the scholar must succeed on a combat maneuver check against the opponent's CMD, using her class level in place of her base attack bonus and her Intelligence modifier in place of her Strength modifier for the check. Upon a successful use of this ability, the targeted creature or item is moved up to 10 ft. per class level directly towards the scholar; if this ability is used on a creature, this movement provokes attacks of opportunity.

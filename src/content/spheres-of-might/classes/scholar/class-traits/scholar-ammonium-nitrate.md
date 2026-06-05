@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
-
 ---
 
 Advanced research into various chemical reactions has taught the scholar how to create a substance that can drastically lower temperatures, or even freeze an opponent solid. The scholar may activate this imposition in two ways:

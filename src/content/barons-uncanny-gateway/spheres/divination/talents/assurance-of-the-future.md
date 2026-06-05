@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: advanced
 tags: ["sm"]
-
 ---
 
 **Prerequisites:** Divination Sphere (Divine Future)

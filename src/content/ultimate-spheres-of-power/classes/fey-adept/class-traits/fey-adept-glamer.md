@@ -6,7 +6,6 @@ system: power
 tags: []
 className: fey-adept
 featureId: shadowstuff
-
 ---
 
 If the fey adept can create a glamer, he may add substance to the glamer, making the change quasi-real. This grants the creature any one trait (except for traits that affect the mind such as Animal Mind, or traits that change the nature of the creature such as making it incorporeal) from the Alteration sphere in addition to the glamer itself.

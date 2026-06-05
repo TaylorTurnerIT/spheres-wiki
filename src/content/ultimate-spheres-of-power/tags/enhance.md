@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "enhance"
 label: "Enhance"
 sphere: "enhancement"
-
 ---

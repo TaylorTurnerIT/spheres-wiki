@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "material"
 label: "Material"
 sphere: "creation"
-
 ---

@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Mana sphere (Knowledge Drain, Manathief, Gift Of Knowledge), caster level 15th

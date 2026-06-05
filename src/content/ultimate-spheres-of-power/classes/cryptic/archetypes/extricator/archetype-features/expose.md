@@ -3,7 +3,6 @@ id: expose
 name: "Expose"
 level: 4
 tags: []
-
 ---
 
 Creatures within the area take a -1 penalty to AC Every four cryptic levels thereafter, this penalty increases by 1 (to 2 at 5th level, 3 at 9th level, 4 at 13th level, and 5 at 17th level).

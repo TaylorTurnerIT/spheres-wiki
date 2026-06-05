@@ -6,7 +6,6 @@ system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat
-
 ---
 
 **Prerequisites:** Alteration sphere (Transform Object).

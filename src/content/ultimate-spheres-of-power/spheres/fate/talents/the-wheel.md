@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif"]
-
 ---
 
 You may grant a motif that empowers the target almost at random. Roll 1d4 when you grant the motif. The target gains a +1 insight bonus to rolls indicated on the table below. This bonus increases by +1 for every 10 caster levels. In addition, for every 10 caster levels, roll an additional 1d4, applying the bonus to that category as well. Bonuses from rolling the same result more than once stack.

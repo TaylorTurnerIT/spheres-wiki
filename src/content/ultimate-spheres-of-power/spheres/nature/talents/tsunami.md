@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["water", "geomancing"]
-
 ---
 
 **Prerequisites:** Nature sphere ((water) package, Manipulate Nature (geomancing)), caster level 15th.

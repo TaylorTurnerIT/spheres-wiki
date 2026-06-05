@@ -4,7 +4,6 @@ name: "Mystic Resilience"
 level: 13
 replaces: ["the diamond soul and timeless body class features"]
 tags: []
-
 ---
 
 At 13th level the mysterial can blend ki and essence to give his body and mind a burst of focus and clarity. By spending 2 ki points and investing 2 points of Essence in this ability as an immediate action, the mysterial may make an additional saving throw against all ongoing spell effects or conditions currently affecting him.

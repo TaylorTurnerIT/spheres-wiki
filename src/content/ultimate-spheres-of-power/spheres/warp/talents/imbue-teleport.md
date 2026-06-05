@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: basic
 tags: []
-
 ---
 
 When you would teleport a target, you may imbue them with the ability to teleport instead of immediately teleporting them. The imbued target gains the ability to teleport itself once with the same details (such as caster level, talents, spell point expenditures) as you used with the original casting. However, the target may only teleport themselves and not others.

@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: base
 tags: []
-
 ---
 
 You may place charms on creatures. Charms require a standard action to use, have a range of close, and are subject to spell resistance. You may only use charms on targets that possess your own creature type (humanoid for humanoids, etc.) although the Expanded Charm talent changes this. Each charm has three strengths; lesser, greater, and powerful. Lesser charms are at-will abilities, but you may not target an individual creature more than once in a day with any individual lesser charm. Greater charms cost a spell point to use and powerful charms cost 2 points to use. You must possess the Powerful Charm talent before you may use any powerful charms.

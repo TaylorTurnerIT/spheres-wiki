@@ -6,7 +6,6 @@ system: power
 sphere: blood
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Blood sphere or Duelist sphere, character level 7th.

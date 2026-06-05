@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Life sphere (Break Enchantment, Make Whole (advanced), Restore Senses (cure), Restore Spirit (cure), Resurrection (advanced), Resuscitate), caster level 15th.

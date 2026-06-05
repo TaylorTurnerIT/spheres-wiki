@@ -3,7 +3,6 @@ id: list-of-haunt-paths
 name: "List of Haunt Paths"
 level: 1
 tags: []
-
 ---
 
 ### Path of the Ancestor

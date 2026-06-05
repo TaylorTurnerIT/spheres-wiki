@@ -6,7 +6,6 @@ system: might
 tags: []
 className: blacksmith
 featureId: smithing-insight-ex
-
 ---
 
 The blacksmith learns to fight and maneuver in his armor better. While wearing armor, the blacksmith reduces the armor check penalty by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by his armor by 1. The blacksmith also learns to move at his normal speed when wearing medium armor. This counts as the fighter's armor training class feature.

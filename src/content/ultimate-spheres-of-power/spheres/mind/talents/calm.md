@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
-
 ---
 
 You may suppress emotions in hostile creatures or provide ease to excitement and confidence. You may deny raging creatures their battles or joyous creatures their revelry.

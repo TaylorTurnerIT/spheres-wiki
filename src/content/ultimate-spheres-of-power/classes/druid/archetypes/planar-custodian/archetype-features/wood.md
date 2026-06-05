@@ -3,7 +3,6 @@ id: wood
 name: "Wood"
 level: 1
 tags: []
-
 ---
 
 - Jungle, Plant, Plains, Swamp

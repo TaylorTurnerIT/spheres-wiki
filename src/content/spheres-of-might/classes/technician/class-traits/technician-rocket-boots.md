@@ -7,7 +7,6 @@ tags: []
 className: technician
 featureId: improved-boots
 requires: "Chemical Insight"
-
 ---
 
 The boots come equipped with packets that may be ignited to add power to a jump. Whenever the wearer makes an Acrobatics check to jump as part of a move action, as a free action they may activate a rocket boot packet, increasing the distance of the jump by 5 ft. per technician level in any direction. This can allow their jumping distance to exceed their movement for the round.

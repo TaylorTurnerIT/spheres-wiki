@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: basic
 tags: []
-
 ---
 
 By spending an additional spell point at the time you create an illusion, you may designate any number of targets to be immune to the illusion. This allows you to, once per round per illusion as a free action, allow any number of targets to be treated as automatically disbelieving the illusion or completely suppress the effect without ending it (but must still concentrate if the effect is being maintained via concentration). While this allows the creature to be treated as if they disbelieved the illusion, this does not actually force them to gain knowledge of the illusion.

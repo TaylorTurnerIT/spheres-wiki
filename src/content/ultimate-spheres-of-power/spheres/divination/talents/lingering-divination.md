@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: basic
 tags: []
-
 ---
 
 When you divine, the ability lasts 2 rounds after you stop concentrating.

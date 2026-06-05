@@ -3,7 +3,6 @@ id: bend-fate
 name: "Bend Fate"
 level: 9
 tags: []
-
 ---
 
 At 9th level, the entropist learns to sacrifice a little of their power to subtly guide the fates to bend to their will. When rolling to determine their shuffling focus element, the entropist can choose to reroll the result once per day. If they choose to reroll, however, they cannot prepare wild talents at the highest level at which they could normally prepare them, and they must take the result of the second roll to determine their shuffling element even if it is the same as the first.

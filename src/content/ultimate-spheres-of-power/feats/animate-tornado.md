@@ -7,7 +7,6 @@ sphere: weather
 dualSphere: enhancement
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), Weather sphere (Tornado Lord, Wind Lord).

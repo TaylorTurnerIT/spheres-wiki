@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: scholars-knack-ex
-
 ---
 
 The scholar gains one of the following crafting feats: Brew Potion, Craft Rod, Craft Staff, Craft Wand, Craft Wondrous Item, or Forge Ring. The scholar uses her class level as her caster level but must otherwise meet the prerequisites of the chosen feat (so a 4th level scholar could take Brew Potion or Craft Wondrous Item with this knack, but not take Craft Rod until she was at least 9th level).

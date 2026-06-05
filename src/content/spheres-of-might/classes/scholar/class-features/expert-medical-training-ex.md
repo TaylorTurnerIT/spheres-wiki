@@ -3,7 +3,6 @@ id: expert-medical-training-ex
 name: "Expert Medical Training (Ex)"
 level: 9
 tags: []
-
 ---
 
 At 9th level, the scholar's research has taught her rare and little known techniques for treating even the most virulent and uncommon ailments; the scholar may expend 10 uses of a healer's kit as a standard action that provokes attacks of opportunity and make a DC 25 Heal check to cure any one of the following conditions affecting a creature: confusion, cursed, or disease (including magical diseases).

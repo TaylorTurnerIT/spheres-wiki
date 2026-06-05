@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
-
 ---
 
 The scholar learns how to combine a small sample of a chosen element with other materials to grow a living elemental that they can keep in a small container, such as a bottle or potion vial. When this imposition is chosen, the scholar selects one of the following: air, earth, fire, or water.

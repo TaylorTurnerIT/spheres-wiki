@@ -6,7 +6,6 @@ system: power
 sphere: death
 tags: []
 tier: feat
-
 ---
 
 Undead you create are even stronger than usual.

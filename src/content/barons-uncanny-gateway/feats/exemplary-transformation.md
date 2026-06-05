@@ -7,7 +7,6 @@ sphere: enhancement
 dualSphere: alteration
 tags: ["dual-sphere", "sm"]
 tier: feat
-
 ---
 
 **Prerequisites:** Alteration Sphere (outsider body), Enhancement Sphere (emphasize belief, mental enhancement, or physical enhancement)

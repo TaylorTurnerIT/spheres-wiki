@@ -6,7 +6,6 @@ system: power
 sphere: enhancement
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), base attack bonus +1.

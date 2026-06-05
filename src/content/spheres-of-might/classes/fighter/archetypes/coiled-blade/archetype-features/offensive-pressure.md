@@ -3,7 +3,6 @@ id: offensive-pressure
 name: "Offensive Pressure"
 level: 4
 tags: []
-
 ---
 
 Whenever the coiled blade successfully damages a creature with a weapon from one of his weapon training groups, he gains 1 tension.

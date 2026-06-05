@@ -3,7 +3,6 @@ id: water-wysp
 name: "Water Wysp"
 level: 1
 tags: []
-
 ---
 
 poison, water

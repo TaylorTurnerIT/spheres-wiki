@@ -6,7 +6,6 @@ type: talent
 sphere: time
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Time sphere (Witness Across Time* (advanced)), caster level 10th.

@@ -6,7 +6,6 @@ type: talent
 sphere: light
 tier: base
 tags: []
-
 ---
 
 As a standard action, you may cause an object or creature in medium range to glow for 1 minute per caster level, outlining it with light as a candle, which may be of any color you wish. This requires a touch attack or ranged touch attack, and is subject to spell resistance. The object or creature becomes outlined with light, giving it a -20 penalty on Stealth checks and negating all bonuses usually bestowed by invisibility, blink effects, darkness, or similar effects.

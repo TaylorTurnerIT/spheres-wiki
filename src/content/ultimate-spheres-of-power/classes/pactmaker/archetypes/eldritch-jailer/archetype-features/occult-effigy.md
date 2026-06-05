@@ -3,7 +3,6 @@ id: occult-effigy
 name: "Occult Effigy"
 level: 1
 tags: []
-
 ---
 
 An eldritch jailer possesses a ritualistic effigy that houses a terrible, otherworldly being. This effigy can be any object that can be held in one hand and weighs 1 lb. or less. An eldritch jailer's effigy houses an extradimensional space that contains an eidolon, using the eldritch jailer's pactmaker level as her effective summoner level.

@@ -6,7 +6,6 @@ type: talent
 sphere: destruction
 tier: advanced
 tags: ["blast-type"]
-
 ---
 
 **Prerequisites:** Destruction sphere, caster level 5th.

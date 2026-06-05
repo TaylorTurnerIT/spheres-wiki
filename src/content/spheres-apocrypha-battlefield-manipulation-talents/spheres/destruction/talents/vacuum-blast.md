@@ -6,7 +6,6 @@ type: talent
 sphere: destruction
 tier: basic
 tags: ["air", "blast-type"]
-
 ---
 
 Your destructive blast creates a pocket of empty space that pulls things in, dealing bludgeoning damage. You may make a drag combat maneuver as a free action at range against any creature struck by the attack or that failed their Reflex saving throw if one was required. Your CMB for this check is your caster level + your casting ability modifier, and all targets are dragged towards the point of origin of the effect. You do not move with the targets of your drag.

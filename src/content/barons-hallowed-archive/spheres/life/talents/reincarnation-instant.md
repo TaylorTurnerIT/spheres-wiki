@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Life Sphere (Reincarnation (advanced), Resurrection (advanced), Resuscitate), caster level 15th

@@ -4,7 +4,6 @@ name: "Improved Boots"
 level: 1
 tags: []
 isTraitContainer: true
-
 ---
 
 Anyone other than the technician himself has his base land movement speed reduced by 5 ft. per improvement while wearing improved boots (if dividing this penalty in half such as via the aesthetic insight improvement, it reduces to 5 ft. per 2 improvements).

@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm"]
-
 ---
 
 You cause the target to enter a blinding rage.

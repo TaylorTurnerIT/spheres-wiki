@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: cognizance
-
 ---
 
 The conduit produces a Divination sphere Blindfolded Oracle, Foreshadow, Ghost Sight, Prescience, or Unhooded Sight sense.

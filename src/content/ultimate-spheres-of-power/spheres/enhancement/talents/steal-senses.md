@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["enhance", "su"]
-
 ---
 
 You may spend a spell point to apply an enhancement to a creature, causing it to become either blind or deaf (your choice), or to lose one special sense such as blindsense, blindsight, the scent ability, tremorsense, etc.

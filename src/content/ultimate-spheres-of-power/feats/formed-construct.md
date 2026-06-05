@@ -7,7 +7,6 @@ sphere: conjuration
 dualSphere: blood
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Blood sphere (Extract Blood Construct), Conjuration sphere.

@@ -33,7 +33,6 @@ sectionDefinitions:
           - feat
         tags:
           - dual-sphere
-
 ---
 
 [Alter Time]

@@ -5,5 +5,4 @@ priority: 0
 id: "aridity"
 label: "Aridity"
 sphere: "weather"
-
 ---

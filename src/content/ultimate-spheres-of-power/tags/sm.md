@@ -5,5 +5,4 @@ priority: 0
 color: "#8C1D40"
 id: "sm"
 label: "Sm—"
-
 ---

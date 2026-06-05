@@ -4,7 +4,6 @@ name: "Self-Coating Canister"
 level: 14
 replaces: ["swift poisoning", "mutagen", "persistent mutagen"]
 tags: []
-
 ---
 
 This flourish can be added to armor, clothing, or a weapon. The machinist can expend one of his bombs (or similar splash weapon) as a standard action, storing the volatile solution within the flourish (and choosing any discoveries to add to the bomb when inserted, if necessary). A weapon with this flourish deals an additional 1d6 points of energy damage on a successful attack; the damage type is determined by the type of damage dealt by the bomb inserted within the canister. This persists for a single successful attack, plus an additional attack for every odd alchemist level he possesses beyond 1st. Armor or clothing with this flourish gains energy absorption equal to 3 x 1 per odd alchemist level he possesses; the damage type being determined by the type of damage dealt by the bomb inserted within the canister. Damage is applied to this absorption after applying resistances and vulnerabilities. This energy absorption lasts for 1 hour per alchemist level he possesses.

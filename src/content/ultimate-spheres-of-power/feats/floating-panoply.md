@@ -6,7 +6,6 @@ system: power
 sphere: telekinesis
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Enhancement sphere (Mass Enhancement), Telekinesis sphere (Divided Mind), Enhancing Telekinesis, caster level 7th.

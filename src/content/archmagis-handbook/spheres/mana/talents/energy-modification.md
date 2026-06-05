@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["amp", "manipulation"]
-
 ---
 You can alter the energy of your magic directly into other forms. Any time you use an (amp) talent on a sphere effect that deals damage, you may choose for that damage to become nonlethal damage.
 

@@ -5,5 +5,4 @@ priority: 0
 color: "#117A65"
 id: "all"
 label: "All"
-
 ---

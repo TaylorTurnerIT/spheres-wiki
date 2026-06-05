@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif"]
-
 ---
 
 You may grant a motif that ensures a glorious dawn after the darkest night. Whenever the target is below 50% of their maximum hit points, they roll twice on all saving throws and take the better result.

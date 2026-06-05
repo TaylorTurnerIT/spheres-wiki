@@ -6,7 +6,6 @@ system: power
 tags: []
 sphere: alteration
 tier: feat
-
 ---
 
 **Prerequisite:** Breadth of form class feature.

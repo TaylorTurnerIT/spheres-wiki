@@ -2,7 +2,6 @@
 id: ocean-herder
 name: "Ocean Herder"
 tags: []
-
 ---
 
 Druids of the Mythos are often bound to strange places like the Dreamlands. The following archetype is available to any druid, but is usually applied to gnorri druids.

@@ -3,7 +3,6 @@ id: hypnotism-su
 name: "Hypnotism (Su)"
 level: 4
 tags: []
-
 ---
 
 An eliciter may manipulate another with little more than a look and a word. The eliciter targets a single creature, which must be within close range and able to see and hear the eliciter. Hypnotizing a target is a standard action. The eliciter may use hypnotism a number of times per day equal to 3 + 1/2 his eliciter level.

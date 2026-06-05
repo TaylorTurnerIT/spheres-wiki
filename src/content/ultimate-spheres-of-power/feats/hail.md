@@ -6,7 +6,6 @@ system: power
 sphere: war
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** War sphere, Mystic Focus, casting class feature, ability to gain martial focus.

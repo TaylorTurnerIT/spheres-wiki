@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: basic
 tags: ["instill"]
-
 ---
 
 As a standard action you may touch a small container of liquid and instill a cure, a restore, or an invigorate used in conjunction with the Greater Invigorate talent, or a use of the Affliction talent, which functions as a potion or oil. This cannot be augmented by the Empathic Healing talent.

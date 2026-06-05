@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Warp sphere (Enduring Portal, Mass Teleport [mass], Portal (advanced), Teleport Beacon (space), Unwilling Teleport, Wormhole (space)), caster level 15th.

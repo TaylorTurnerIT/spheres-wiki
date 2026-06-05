@@ -6,7 +6,6 @@ system: power
 sphere: conjuration
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Conjuration sphere (Link).

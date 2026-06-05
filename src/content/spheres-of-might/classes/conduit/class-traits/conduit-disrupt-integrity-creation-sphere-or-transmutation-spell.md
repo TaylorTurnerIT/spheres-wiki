@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: volatility
-
 ---
 
 The conduit gains the following options when producing this esoterica:

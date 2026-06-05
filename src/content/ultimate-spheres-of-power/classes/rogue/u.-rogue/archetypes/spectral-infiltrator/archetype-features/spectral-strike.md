@@ -4,7 +4,6 @@ name: "Spectral Strike"
 level: 20
 replaces: ["master strike"]
 tags: []
-
 ---
 
 At 20th level, a spectral infiltrator is able to breach the defenses of his foe's minds in addition to their physical bastions. Once per round, when the spectral infiltrator deals sneak attack damage while incorporeal, he can force the target to make a Will save or be possessed (as if by the Possession advanced talent).

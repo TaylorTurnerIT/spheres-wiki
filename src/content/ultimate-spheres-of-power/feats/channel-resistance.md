@@ -6,7 +6,6 @@ system: power
 sphere: death
 tags: []
 tier: feat
-
 ---
 
 You and undead you create are resistant to channeled energies.

@@ -3,7 +3,6 @@ id: yin-ki-expended-fire-lights-the-way
 name: "Yin Ki Expended – Fire Lights the Way"
 level: 1
 tags: []
-
 ---
 
 The sadhu strikes with the light of fire as his fists, feet, weapons, and ammunition burn with flames of inspiration. For each point of ki expended, the sadhu gains a +1 morale bonus to his attack rolls for a number of rounds equal to his Wisdom bonus (if any).

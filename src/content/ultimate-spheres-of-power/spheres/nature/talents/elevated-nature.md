@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["geomancing"]
-
 ---
 
 Your geomancing abilities can now affect greater depths and heights; rocks fly, vines reach, and fire blazes in such a way as to affect creatures at much higher or lower elevations than normal.

@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Mana sphere (Infinite Bond (advanced), Ranged Mana x2), caster level 15th.

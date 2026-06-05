@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: basic
 tags: ["quicken", "still"]
-
 ---
 
 This talent requires that the target be under the effects of your blood control and cannot be used as part of initiating blood control.

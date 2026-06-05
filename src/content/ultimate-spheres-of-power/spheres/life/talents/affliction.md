@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: basic
 tags: []
-
 ---
 
 When using cure you may invert the effect from positive energy to negative energy. This has no effect on undead and damages the living (Will half). This requires a melee or ranged touch attack against the target, and if used at range is considered a ray. This cannot be combined with Fount Of Life.

@@ -3,7 +3,6 @@ id: two-weapon-specialty
 name: "Two-Weapon Specialty"
 level: 17
 tags: []
-
 ---
 
 When a telekinetic bladeshifter creates a light melee weapon with a telekinetic blast, they can create a second light melee weapon in their offhand (these do not need to be identical). When applying an enhancement bonus from their forcewoven weapon ability, they split that bonus as they see fit between these two weapons. They can also select double melee weapons for the telekinetic blade ability, and they also gain proficiency with exotic light melee weapons and weapons with the double quality. The telekinetic bladeshifter must possess Two-Weapon Fighting to select this specialty.

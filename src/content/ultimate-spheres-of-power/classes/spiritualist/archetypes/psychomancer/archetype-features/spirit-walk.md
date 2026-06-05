@@ -4,7 +4,6 @@ name: "Spirit Walk"
 level: 9
 replaces: ["see invisible"]
 tags: []
-
 ---
 
 At 9th level, the psychomancer gains the Project Spirit advanced talent of the Death sphere. When he uses this talent, he may use his class level as his caster level if it is higher.

@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Telekinesis sphere (Effortless Telekinesis (advanced), Idle Concentration), caster level 10th

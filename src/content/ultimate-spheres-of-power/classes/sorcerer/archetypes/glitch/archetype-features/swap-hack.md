@@ -3,7 +3,6 @@ id: swap-hack
 name: "Swap (Hack)"
 level: 1
 tags: []
-
 ---
 
 As a full-round action that provokes an attack of opportunity a glitch may, once per encounter, swap one creature within 30 feet of her with another creature of equivalent CR. When she does this she selects 4 creatures of the same CR or of a CR no more than 2 higher than the CR of the creature it is being swapped for and the GM selects which of the 4 creatures it should be swapped for. It occupies the same square as the creature swapped, only remains swapped for a number of minutes equal to the level of the glitch, and this ability may only be used to target enemy creatures. Killing a creature automatically swaps it back to it's original form.

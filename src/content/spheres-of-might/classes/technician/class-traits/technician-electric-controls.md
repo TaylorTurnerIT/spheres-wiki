@@ -7,7 +7,6 @@ tags: []
 className: technician
 featureId: base-forms
 requires: "Electric Insight"
-
 ---
 
 The invention can be controlled from a distance via a small box, a tiny object weighing 1 lb. that the technician creates. Controlling the invention only requires a move action on the part of the pilot so long as they are holding this box, and the pilot can control the invention from anywhere within medium range (100 ft. +10 ft. per level). This does not stack with the suit improvement.

@@ -6,7 +6,6 @@ system: power
 sphere: war
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** War sphere, animal focus class feature.

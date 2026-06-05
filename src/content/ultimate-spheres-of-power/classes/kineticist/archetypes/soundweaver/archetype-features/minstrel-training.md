@@ -3,7 +3,6 @@ id: minstrel-training
 name: "Minstrel Training"
 level: 1
 tags: []
-
 ---
 
 A soundweaver uses their Charisma modifier in place of their Constitution modifier to determine any effects from their kineticist class features and wild talents which would normally be determined by their Constitution (such as determining maximum burn per day, damage from kinetic blasts, or DCs associated with infusion wild talents).

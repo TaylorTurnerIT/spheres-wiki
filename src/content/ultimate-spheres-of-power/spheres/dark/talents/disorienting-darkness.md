@@ -6,7 +6,6 @@ type: talent
 sphere: dark
 tier: basic
 tags: ["darkness"]
-
 ---
 
 You may create a darkness effect that has a chance to disorient anyone who enters it. When a creature within this area attempts to move, or when a creature first enters this area, they must succeed at a Will save or become disoriented. A creature must attempt this Will save every time they enter the area of darkness. If the creature fails this saving throw, they must roll a d8 to determine direction: 1 is their intended direction, with 2-8 rotating around the creature in a clockwise direction. The target moves that direction as if it were their intended course. The target does not realize they are off-course until their next turn or until they leave the area of darkness.

@@ -3,7 +3,6 @@ id: bind-spirit
 name: "Bind Spirit"
 level: 4
 tags: []
-
 ---
 
 A weird witch may seal pacts with otherworldly entities known as spirits. In order to summon a spirit, the weird witch must learn the spirit's ceremony, constellation, personality, and seal by completing its four Knowledge Tasks; see Researching the Spirit for more information on this process. A weird witch begins play having completed all four Knowledge Tasks for one 1st-level spirit of her choice that belongs to her chosen constellation (see soul-bound familiar).

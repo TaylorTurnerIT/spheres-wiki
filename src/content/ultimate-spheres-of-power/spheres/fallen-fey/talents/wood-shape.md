@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
-
 ---
 
 You gain a competence bonus on Craft checks equal to your caster level for items primarily composed of wood and may craft such objects as if you had the appropriate tools.

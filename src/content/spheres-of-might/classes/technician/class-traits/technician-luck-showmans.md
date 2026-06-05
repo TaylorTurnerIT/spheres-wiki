@@ -6,7 +6,6 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
-
 ---
 
 The technician knows how to use showmanship to his advantage. His luck pool increases by 1 point, and he gains the following abilities:

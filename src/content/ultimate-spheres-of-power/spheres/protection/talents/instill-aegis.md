@@ -6,7 +6,6 @@ type: talent
 sphere: protection
 tier: basic
 tags: ["instill"]
-
 ---
 
 As a standard action you may touch a small container of liquid and instill an aegis inside it, which functions as a potion or oil.

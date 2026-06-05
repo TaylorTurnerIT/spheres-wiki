@@ -7,7 +7,6 @@ sphere: warp
 dualSphere: divination
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 When you create a realm, you are sure to keep a close eye on it.

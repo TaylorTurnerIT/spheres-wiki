@@ -6,7 +6,6 @@ system: might
 tags: []
 className: technician
 featureId: base-forms
-
 ---
 
 A ballista is a giant crossbow that fires its bolts directly at the target. This is treated the same as a standard ranged weapon attack. Ballistas do piercing damage and possess a critical threat range of 19-20/x2

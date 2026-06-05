@@ -6,7 +6,6 @@ system: power
 sphere: fallen-fey
 tier: basic
 tags: []
-
 ---
 
 While throughout this book it is assumed that there is a separate plane that is the home or origin of fey creatures, this may not be true in all settings. In building or modifying a setting, it is important to ask what you want different elements to do. In some types of game, the fey are simply a creature type, more magical than humanoids, less strange than aberrations, and less aligned than outsiders. If that is all you need, the rest of this chapter may be of little interest.

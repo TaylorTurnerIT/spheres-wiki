@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["cognition", "utility"]
-
 ---
 
 As a standard action you may gain a rough understanding of a target's language. You can grasp basic concepts (such as 'danger,' 'help,' or 'wait') but not complex details. This also allows you to communicate in the same language as long as you continue concentrating, though with the same limitation to basic concepts. The effects of this last for as long as you concentrate.

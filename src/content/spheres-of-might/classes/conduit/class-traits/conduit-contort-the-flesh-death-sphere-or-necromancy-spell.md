@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: physicality
-
 ---
 
 The conduit produces a Death sphere Bonerattle, Hunger, or Weakening ghost strike.

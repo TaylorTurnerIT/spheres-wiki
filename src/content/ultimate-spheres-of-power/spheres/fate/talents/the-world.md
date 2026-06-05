@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["utility", "motif"]
-
 ---
 
 You may grant a motif that enhances the target's ability to succeed in all their endeavors whenever they commit their efforts. Whenever they take 10 or take 20 on a skill check, they gain a +2 insight bonus to the result. This bonus increases by +1 for every 5 caster levels.

@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif"]
-
 ---
 
 You may grant a motif that protects against the whims of luck. When the target rolls a natural 1 on a saving throw or attack roll, they may reroll it. If the new roll is also a natural 1, this effect does not allow them to reroll again, though the motif 's discharge effect may allow them to.

@@ -3,7 +3,6 @@ id: list-of-paths
 name: "List of Paths"
 level: 1
 tags: []
-
 ---
 
 ### Academia

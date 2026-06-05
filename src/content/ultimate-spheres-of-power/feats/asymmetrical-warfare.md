@@ -7,7 +7,6 @@ sphere: war
 dualSphere: illusion
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Illusion sphere, War sphere.

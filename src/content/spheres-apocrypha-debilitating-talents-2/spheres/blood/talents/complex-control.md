@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: basic
 tags: []
-
 ---
 
 Creatures affected by your blood control may be affected by both (quicken) and (still) talents at the same time.

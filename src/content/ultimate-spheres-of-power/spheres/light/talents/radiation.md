@@ -7,7 +7,6 @@ sphere: light
 tier: advanced
 tags:
   - light
-
 ---
 
 **Prerequisites:** Light sphere (Irradiance (light)), caster level 10th.

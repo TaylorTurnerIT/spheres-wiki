@@ -4,7 +4,6 @@ name: "Material Array"
 level: 1
 alters: ["the kineticist’s class skills"]
 tags: []
-
 ---
 
 - Poison, Sound, Viscera, Wood

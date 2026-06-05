@@ -3,7 +3,6 @@ id: insults
 name: "Insults"
 level: 1
 tags: []
-
 ---
 
 In place of hexes a harpy gets insults, quips, and sleights that they can sling at their enemies. Ever insulted a man so hard his hair fell out or called someone a name so vile they vomited? That's exactly what harpies can do at 1st level. They can take a creature's heart out of their chest and stomp on it with a word.

@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: basic
 tags: []
-
 ---
 
 When you teleport a target you may change their orientation and lower their velocity. This allows you to turn the target up to 360 degrees, which lets you turn them during a charge or run action and either give or remove the prone condition, and cancel out momentum-based movement (such as falling, being thrown or pushed), which effectively resets any distance they have fallen. Using this talent to respond to actions or events outside of your turn typically requires a readied action.

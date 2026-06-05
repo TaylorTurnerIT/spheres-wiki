@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Warp sphere (Mass Teleport [mass], Ranged Warp [range]), caster level 10th.

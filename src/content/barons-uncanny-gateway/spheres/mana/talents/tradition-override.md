@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: advanced
 tags: ["sm"]
-
 ---
 
 **Prerequisites:** Mana Sphere (Gift of Knowledge (manipulation))

@@ -3,7 +3,6 @@ id: poisoned-tomes
 name: "//Poisoned Tomes://"
 level: 7
 tags: []
-
 ---
 
 Members of the Poisoned Tomes gain the Alchemy sphere (poison) package as a bonus sphere at 1st level. If the runic knight already possesses the Alchemy sphere (poison) package, he may instead select any talent he qualifies for from the Alchemy sphere. In addition, the member of the Poisoned Tomes can apply poison to a weapon as a swift action.

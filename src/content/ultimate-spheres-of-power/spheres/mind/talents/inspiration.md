@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm", "ex"]
-
 ---
 
 You inspire competence in the target.

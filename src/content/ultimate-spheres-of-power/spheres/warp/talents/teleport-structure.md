@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Warp sphere (Teleport Object), caster level 5th.

@@ -4,7 +4,6 @@ name: "Personal Battery Use [Material Infusion] (1 battery)"
 level: 1
 replaces: ["flashbangs"]
 tags: []
-
 ---
 
 When using a blaster as a standard action (or as part of a special attack action with a blaster add-on), you may expend martial focus in addition to the battery cost to use this personal battery use.

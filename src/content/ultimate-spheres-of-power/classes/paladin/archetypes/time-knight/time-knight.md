@@ -2,7 +2,6 @@
 id: time-knight
 name: "Time Knight"
 tags: []
-
 ---
 
 While many paladins serve as guardians and enforcers for goodly gods, time knights serve a more enigmatic power. While discipline and righteousness are important factors to a being's suitability to act as a time knight, they are given much more leeway in how they choose to combat evil forces that disrupt the natural flow of time.

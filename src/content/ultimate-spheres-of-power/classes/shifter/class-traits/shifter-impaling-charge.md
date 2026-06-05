@@ -7,7 +7,6 @@ tags: ["ex"]
 className: shifter
 featureId: bestial-trait
 requires: "powerful charge"
-
 ---
 
 The shifter gains the Impaling Charge feat.

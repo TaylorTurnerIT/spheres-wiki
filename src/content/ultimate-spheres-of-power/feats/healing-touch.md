@@ -6,7 +6,6 @@ system: power
 sphere: life
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Life sphere; lay on hands or fervor class feature.

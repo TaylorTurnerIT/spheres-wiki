@@ -4,7 +4,6 @@ name: "Pestilence Swarm"
 level: 2
 replaces: ["the terror gained at 2nd level and modifies the channel terror ability, replacing the option to channel terrors through a melee weapon"]
 tags: []
-
 ---
 
 From 1st level on, the swarm master must use one of his veils shaped to shape the Pestilence Cloak veil. As the swarm master grows in power he can use this veil in new and terrifying ways.

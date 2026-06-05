@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: basic
 tags: ["glamer"]
-
 ---
 
 As a trick you may create an illusionary creature in the same square as a real creature, called a decoy. A decoy may perform any of the following actions.

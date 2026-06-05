@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Conjuration sphere, caster level 1st.

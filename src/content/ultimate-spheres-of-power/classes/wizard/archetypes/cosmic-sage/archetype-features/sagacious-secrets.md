@@ -4,7 +4,6 @@ name: "Sagacious Secrets"
 level: 2
 replaces: ["arcane school"]
 tags: []
-
 ---
 
 Beginning at 2nd level, the cosmic sage begins to assemble magical secrets to aid in his spherecasting. He may create a book of notes and formulae that can help him assist in his spherecasting. Despite its contents, it is just a normal book, and if lost, can be replaced in about 8 hours - the book is only for quick reference.

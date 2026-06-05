@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: advanced
 tags: ["quicken", "still"]
-
 ---
 
 **Prerequisites:** Blood sphere (Cardiovascular Mastery (quicken, still)), caster level 10th.

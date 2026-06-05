@@ -6,7 +6,6 @@ system: power
 sphere: fallen-fey
 tier: basic
 tags: []
-
 ---
 
 If emphasizing the fey link to nature, tying fey courts to the seasons can be useful. In temperate climates, this could simply give you summer and winter courts, mapped roughly over the seelie and unseelie mentioned previously, or could be expanded to give spring, summer, fall, and winter courts.

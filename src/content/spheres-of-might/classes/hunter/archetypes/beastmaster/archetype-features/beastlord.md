@@ -4,7 +4,6 @@ name: "Beastlord"
 level: 14
 replaces: ["greater empathic link"]
 tags: []
-
 ---
 
 At 14th level, all creatures of the animal type have a starting disposition toward the beastmaster of at least friendly. Any animal that is commanded to attack the beastmaster or her allies within close range must first succeed on a Will save (DC 10 + 1/2 the beastmaster's level + her Charisma modifier) or spend its turn cowering.

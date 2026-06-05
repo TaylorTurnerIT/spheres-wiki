@@ -6,7 +6,6 @@ system: power
 sphere: creation
 tier: basic
 tags: []
-
 ---
 
 A catch is any wall or covering larger than the target underneath it that is dropped on a target and then rests on top of them to impede their movement. A net is a catch made from cloth, rope, chains, or other pliable materials that is the same size as the target underneath it. A cage is a wall or covering that is wrapped around a target so as to impede their movement without dealing falling damage first.

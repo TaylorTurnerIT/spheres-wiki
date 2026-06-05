@@ -4,7 +4,6 @@ name: "Dimensional Tear"
 level: 2
 replaces: ["the utility wild talent gained at 2nd level"]
 tags: []
-
 ---
 
 At 2nd level, as a standard action a dimensional ripper can accept 1 point of burn to create up to 2 tears in the dimension veil for 1 minute per dimensional ripper level they possess. They can also choose to create tears as a full round action without needing to accept burn. The dimensional ripper must select a number of empty squares within 50 ft. of themselves equal to the amount of tears they wish to create to which they have line of sight, creating a tear in each of those squares (these squares cannot contain hazardous terrain).

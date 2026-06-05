@@ -6,7 +6,6 @@ system: power
 sphere: mind
 tier: basic
 tags: []
-
 ---
 
 Talents marked with the (cloud) tag allow the caster to spend a standard action to create clouds of mental energy that emanate from an area, object, or creature within close range. When applying a cloud to an unwilling creature or an attended object they are allowed a Will save to resist, and both placing a cloud and the effects of a cloud are subject to spell resistance. A creature is immune to cloud effects placed upon itself or its worn and carried equipment.

@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: base
 tags: []
-
 ---
 
 You can create a manabond between yourself and the targeted creature as either a swift action made as part of successfully using an (expunge) or (manipulation) talent that costs a spell point and targets a creature, or as a move action by touching a creature and spending a spell point. A manabond lasts for as long as you concentrate, to a maximum of 1 minute per caster level.

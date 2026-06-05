@@ -7,7 +7,6 @@ sphere: time
 dualSphere: creation
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 **Prerequisites:** Creation sphere (Expanded Materials (material)), Time sphere.
 

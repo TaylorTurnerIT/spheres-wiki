@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: []
-
 ---
 
 As a standard action, you may grant a creature within close range the benefit of your fey-link. To target an unwilling creature, you must spend a spell point and it is allowed a Will save to negate the effect.

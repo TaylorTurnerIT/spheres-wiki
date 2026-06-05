@@ -4,7 +4,6 @@ name: "Improbable Strike"
 level: 6
 replaces: ["the bonus feat gained at 6th level"]
 tags: []
-
 ---
 
 At 6th level, the impossible warrior may use his impossible answer to dispel a spell, spell-like, or sphere effect currently affecting a creature or object. A successful check ends the effect, or suppresses it for 1d4 rounds if it is a permanent effect. The impossible warrior may do this as a standard action, or as a swift action when he hits with a melee attack or uses a combat maneuver on the target creature or object. Using this ability either way does not require the impossible warrior to disperse the spell or ability afterward.

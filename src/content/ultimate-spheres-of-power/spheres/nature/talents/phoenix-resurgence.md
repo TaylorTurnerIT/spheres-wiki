@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["fire", "spirit"]
-
 ---
 
 **Prerequisites:** Nature sphere ((fire) package, Resist Elements (spirit), Wreath Of Elements (spirit)), caster level 1st.

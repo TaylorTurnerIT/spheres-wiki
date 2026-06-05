@@ -4,7 +4,6 @@ name: "Animate Dreams"
 level: 1
 replaces: ["the druid’s wild shape class feature"]
 tags: []
-
 ---
 
 A starchild's mind is like an inner universe, bubbling with esoteric and exotic concepts due to the expansion of her consciousness. Things tend to leap forth from her mind, warping and distorting reality randomly. On the superficial level, this may cause innocuous things like paintings to temporarily shift to reflect what she dreamed about the night before, mirrors to show her as she appeared in a dream, or even people's faces to temporarily appear like figures from a recent dream.

@@ -3,7 +3,6 @@ id: advanced-rogue-talents
 name: "Advanced Rogue Talents"
 level: 1
 tags: []
-
 ---
 
 A spectral infiltrator can choose from the following advanced rogue talents in addition to those available to all rogues:

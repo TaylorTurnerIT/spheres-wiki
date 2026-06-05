@@ -3,7 +3,6 @@ id: yin-ki-expended-empty-body
 name: "Yin Ki Expended – Empty Body"
 level: 1
 tags: []
-
 ---
 
 The sadhu may assume an ethereal state for 1 round per yin-aligned ki point expended plus 1 additional round per point of Wisdom bonus (if any), as though using the spell etherealness.

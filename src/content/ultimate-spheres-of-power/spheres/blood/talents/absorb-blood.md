@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: basic
 tags: []
-
 ---
 
 When a creature within blood control range takes bleed damage to their hit points, as a free action that may be taken even when it is not your turn you may choose a different creature under the effects of your blood control to gain an amount of temporary hit points equal to the bleed damage taken by the first creature. These temporary hit points last for 1 minute per caster level. Each creature may only provide temporary hit points to one other creature.

@@ -34,7 +34,6 @@ sectionDefinitions:
       - label: "Surreal Feats"
         tiers: ["feat"]
         tags: ["surreal"]
-
 ---
 
 [Illusion]

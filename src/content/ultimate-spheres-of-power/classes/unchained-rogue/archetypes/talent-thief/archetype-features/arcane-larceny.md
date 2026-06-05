@@ -4,7 +4,6 @@ name: "Arcane Larceny"
 level: 10
 replaces: ["the second and third weapons selected for finesse training"]
 tags: []
-
 ---
 
 At 10th level, when a talent thief steals a target's shadow, he can opt to examine target's repertoire of magical talents and temporarily steal one sphere possessed by the target and one sphere talent for ever four sneak attack damage dice he possesses instead of gaining temporary spell points. The stolen sphere and talents last for 1 round per caster level, during which time the talent thief may spend his own spell points to use these talents as if he possessed them. The talent thief must meet any prerequisites to use stolen talents. The target loses access to the stolen talents, but not the basic ability of the stolen sphere, until the effect expires. If the target has the ability to shuffle magic talents, such as the Spiritualism hedgewitch tradition, arcane larceny does not prevent them from swapping stolen talents for new ones.

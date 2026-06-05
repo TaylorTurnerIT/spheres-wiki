@@ -3,7 +3,6 @@ id: yang-ki-expended-third-eye
 name: "Yang Ki Expended – Third Eye"
 level: 1
 tags: []
-
 ---
 
 As the sadhu develops his mind and ability with his ki, he learns to peer into the minds of others to untangle the thoughts and emotions that lurk there. The sadhu can sense the thoughts of others and use that information to guide his actions. By expending his ki focus, the sadhu can focus his attention upon one creature with an Intelligence of 6 or higher. The target of this ability makes a Will save (DC 10 + half the sadhu's level + his Wisdom modifier) to resist. On a failed save, the sadhu gains a +2 bonus on Sense Motive checks against the target per point of ki expended in this chakra for the duration of this ability. The sadhu can automatically detect the target's lies as he reads the target's intentions.

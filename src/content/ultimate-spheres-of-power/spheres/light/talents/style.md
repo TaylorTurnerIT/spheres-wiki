@@ -6,7 +6,6 @@ type: talent
 sphere: light
 tier: basic
 tags: ["utility"]
-
 ---
 
 Your glows may be composed of multiple colors, allowing you to outline or highlight specific portions of a glowing object or create art. When you cause your glow to shed light, you may also create patterns and different colors in the light it sheds, casting intricate designs on surfaces. These patterns may be highly detailed and complex, though creating art of high craftsmanship requires you to succeed on an appropriate Craft check, usually Craft (painting). You determine and create the pattern as part of making the glow or light, but may change it as a free action once per turn.

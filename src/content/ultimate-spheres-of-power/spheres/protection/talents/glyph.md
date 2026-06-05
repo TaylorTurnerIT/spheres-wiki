@@ -6,7 +6,6 @@ type: talent
 sphere: protection
 tier: basic
 tags: []
-
 ---
 
 At the time of casting a ward you may choose to shape the ward into a glyph: a magical trap whose effects are not immediately active until triggered. A glyph is cast upon a 5-foot-by- 5-foot area and takes the form of a 6 inch tall symbol, faintly visible on a surface. The glyph lasts for 1 hour per caster level or until activated by a trigger specified by the caster at the time it is created. When activated, the glyph becomes the center point for the ward, and it performs its function for a number of rounds equal to your caster level, and then the ability ends.

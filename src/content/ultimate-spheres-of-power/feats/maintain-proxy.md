@@ -6,7 +6,6 @@ system: power
 sphere: enhancement
 tags: ["proxy"]
 tier: feat
-
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, at least one Proxy feat.

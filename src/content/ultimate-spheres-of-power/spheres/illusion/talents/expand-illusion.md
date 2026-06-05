@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Illusion sphere (Enlarged Illusion), caster level 1st.

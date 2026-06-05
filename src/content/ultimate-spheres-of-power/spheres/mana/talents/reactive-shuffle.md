@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
-
 ---
 
 **Requirements:** Mana sphere, caster level 7th.

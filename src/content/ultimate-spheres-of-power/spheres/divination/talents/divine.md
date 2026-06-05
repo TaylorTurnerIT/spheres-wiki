@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: base
 tags: []
-
 ---
 
 You may divine to gain information. To divine, you must spend 1 minute meditating, although you may spend a spell point to decrease this time to a single standard action. Divining always has a duration of concentration, but you must spend a full-round action concentrating (you can take no other action except free actions); you are flat-footed while concentrating on divining. Divining reveals information from sources within medium range of you as an emanation; it reveals information each round the effect it is maintained. Divining can penetrate most barriers, but 3 feet of wood or dirt, 1 foot of stone, 1 inch of common metal, or a thin sheet of lead blocks it.

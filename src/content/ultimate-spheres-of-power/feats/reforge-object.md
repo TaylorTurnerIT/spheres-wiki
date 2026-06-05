@@ -7,7 +7,6 @@ sphere: enhancement
 dualSphere: creation
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), Creation sphere (Potent Alteration).

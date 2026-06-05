@@ -3,7 +3,6 @@ id: daemon-neutral-or-neutral-evil
 name: "Daemon (Neutral or Neutral Evil)"
 level: 1
 tags: []
-
 ---
 
 Acid

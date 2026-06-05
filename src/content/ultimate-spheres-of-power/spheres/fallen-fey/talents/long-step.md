@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
-
 ---
 
 For the duration of the fey-link, you can teleport up to 10 feet as a move action. This movement does not provoke an attack of opportunity and you must have line of sight to your destination.

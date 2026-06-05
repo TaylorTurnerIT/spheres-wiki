@@ -6,7 +6,6 @@ system: power
 sphere: creation
 tags: ["combat"]
 tier: feat
-
 ---
 
 **Prerequisites:** Creation sphere (Created Momentum).

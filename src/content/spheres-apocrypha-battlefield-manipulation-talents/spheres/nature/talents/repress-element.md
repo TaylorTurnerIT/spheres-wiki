@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["geomancing"]
-
 ---
 
 As a concentration effect, you may temporarily obliterate an element within a 5-foot radius + 5 feet per 5 caster levels area within range. Creatures of a subtype corresponding to a repressed element are nauseated for the duration of the repression unless they succeed at a Fortitude save (this saving throw is made as soon as they enter the area of repression).

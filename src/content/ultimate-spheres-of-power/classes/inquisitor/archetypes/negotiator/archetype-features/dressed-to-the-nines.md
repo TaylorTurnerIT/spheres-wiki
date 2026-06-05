@@ -4,7 +4,6 @@ name: "Dressed to the Nines"
 level: 1
 replaces: ["monster lore"]
 tags: []
-
 ---
 
 The negotiator gains dressed to the nines, as the battle butler class feature of the same name, using her Wisdom score in place of her Charisma score.

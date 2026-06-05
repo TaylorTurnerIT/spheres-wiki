@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["word"]
-
 ---
 
 You may spend a spell point to place a word on a creature that enhances its existing strengths. Choose an ability score. The target gains a +1 bonus to ability checks and skill checks based on that ability score. In addition, the target gains a benefit for the chosen ability score as detailed on the table below.

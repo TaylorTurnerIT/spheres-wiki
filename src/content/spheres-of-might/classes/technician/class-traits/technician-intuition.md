@@ -6,7 +6,6 @@ system: might
 tags: ["ex"]
 className: technician
 featureId: list-of-technical-insights
-
 ---
 
 The technician has learned to trust his gut as much as calculations, and to have faith in wisdom and meditation as well as science.

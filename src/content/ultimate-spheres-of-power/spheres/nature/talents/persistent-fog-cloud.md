@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["water", "spirit"]
-
 ---
 
 **Prerequisites:** Nature sphere ((water) package, Deep Nature), caster level 10th.

@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "defiler"
 label: "Defiler"
 sphere: "death"
-
 ---

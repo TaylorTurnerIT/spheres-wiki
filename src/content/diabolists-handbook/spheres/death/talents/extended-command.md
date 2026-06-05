@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Death sphere (Command Undead (ghost strike), Sustained Necromancy).

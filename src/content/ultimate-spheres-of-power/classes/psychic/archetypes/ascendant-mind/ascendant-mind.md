@@ -2,7 +2,6 @@
 id: ascendant-mind
 name: "Ascendant Mind"
 tags: []
-
 ---
 
 In a perfect world, those with the greatest intelligence would rule. But in this world, those with the greatest power rule. The ascendant mind transmutes thought into power, and thus makes the world more perfect by her mere presence. She will open the minds of others, and fill them with her insights, while removing the cumbersome free will she finds within.

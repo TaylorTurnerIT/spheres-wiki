@@ -3,7 +3,6 @@ id: yin-ki-expended-chain-of-lightning
 name: "Yin Ki Expended – Chain of Lightning"
 level: 1
 tags: []
-
 ---
 
 The sadhu can unleash a ranged electrical touch attack that deals 1d6 points of damage +1d6 per additional ki point expended plus 1d6 per point of Wisdom bonus (if any). Targets may make a Reflex saving throw (DC 10 + half the sadhu's level + Wisdom modifier) to take half damage. This attack can strike at a total number of targets equal to the number of ki points spent. Each target may be up to 10 feet away from a previously struck target. With each additional target the damage decreases by -5 points and each additional target must be within 10 feet of the previously struck target. If at any point the attack misses a target in the, then any additional targets designated to be struck after that one cannot be struck by the chain of lightning either. The total range of the chain of lightning is 10 feet per class level. A 5th level sadhu's chain of lightning cannot progress beyond 50 feet. After the lightning travels that far, it cannot strike any more opponents regardless of the sadhu's expended of ki points.

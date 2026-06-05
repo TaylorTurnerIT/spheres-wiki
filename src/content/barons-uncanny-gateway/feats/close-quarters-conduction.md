@@ -6,7 +6,6 @@ system: power
 sphere: destruction
 tags: ["combat", "sm"]
 tier: feat
-
 ---
 
 **Prerequisites:** Destruction Sphere (at least one (blast type) talent that deals electricity damage)

@@ -28,7 +28,6 @@ sectionDefinitions:
       - label: "Dual Sphere Feats"
         tiers: ["feat"]
         tags: ["dual-sphere"]
-
 ---
 
 **Polished Spheres [DRS]**: Polished Dark is a fully rewritten Dark sphere.

@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
-
 ---
 
 You summon a flask, gourd, stein, or wineskin filled with fairy liquor, which replenishes itself after each drink. The flask is weightless and has hardness 5 and 5 hit points per caster level. If the flask is destroyed, this fey-blessing ends immediately. You may determine the quality of the brew with a Craft (alcohol) or Profession (brewer) check made as part of activating this fey-blessing, but the result has no impact on its efficacy. You may drink from it as a move action; you may allow a creature whom you are within the natural reach of to drink from it as a standard action on their turn with no action required on your part. This counts as consuming an alcoholic beverage. Choose one of the following effects when the flask is created:

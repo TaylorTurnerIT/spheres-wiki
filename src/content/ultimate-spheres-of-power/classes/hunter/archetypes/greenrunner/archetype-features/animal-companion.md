@@ -3,7 +3,6 @@ id: animal-companion
 name: "Animal Companion"
 level: 1
 tags: []
-
 ---
 
 At 1st level, the greenrunner gains the Beastmastery sphere as a bonus sphere. He must select the (handle animal) Beastmastery package. If he already possesses the Beastmastery sphere, but not the (handle animal) Beastmastery package, he gains that package, and if that package is already possessed, he gains a talent from that sphere as a bonus talent. The greenrunner uses his class level as his Base Attack Bonus with this sphere to determine its effects, but not for attack rolls.

@@ -6,7 +6,6 @@ type: talent
 sphere: time
 tier: advanced
 tags: ["sm"]
-
 ---
 
 **Prerequisites:** Time Sphere (retry)

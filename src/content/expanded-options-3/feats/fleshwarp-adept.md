@@ -6,7 +6,6 @@ system: power
 sphere: alteration
 tags: []
 tier: feat
-
 ---
 **Prerequisites:** Alteration sphere (Twisted Shapeshift), caster level 5th.
 

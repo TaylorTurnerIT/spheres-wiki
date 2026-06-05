@@ -6,7 +6,6 @@ system: power
 sphere: warp
 tags: ["combat"]
 tier: feat
-
 ---
 
 Magical gateways are tools you can weaponize.

@@ -3,7 +3,6 @@ id: occult-familiar
 name: "Occult Familiar"
 level: 1
 tags: []
-
 ---
 
 After successfully sealing a pact with a spirit, a weird witch does not bind the spirit onto her own soul. Rather, she binds the spirit onto her familiar's soul. Both witch and familiar manifest the spirit's physical sign, but only the familiar suffers the spirit's personality influence and benefits from the spirit's granted abilities, favored allies, and favored enemies. The familiar uses the weird witch's binder level when determining the effects of its granted abilities and powers. The familiar cannot receive a spirit's vestigial companion and it does not receive the granted ability (or abilities) that must be exchanged for the spirit's granted ability. For example, if a weird witch seals a pact with Aza'zati, her familiar cannot summon Aza'zati's viper vestigial companion and it does not gain Aza'zati's smaller is better granted ability.

@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["instill"]
-
 ---
 
 As a standard action you may touch a small container of liquid and instill an enhancement inside it, which functions as a potion or oil. You must spend a spell point to make the enhancement endure without concentration. Enhancements that create creatures (such as Animate Object) still consider you their creator, counting against your totals and following your commands.

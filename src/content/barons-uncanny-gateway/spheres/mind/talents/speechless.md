@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm", "sm", "utility"]
-
 ---
 
 You impose a failure to communicate

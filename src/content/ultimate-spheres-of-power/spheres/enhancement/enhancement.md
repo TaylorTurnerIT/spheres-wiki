@@ -31,7 +31,6 @@ sectionDefinitions:
       - label: "Proxy Feats"
         tiers: ["feat"]
         tags: ["proxy"]
-
 ---
 
 [Enhance]

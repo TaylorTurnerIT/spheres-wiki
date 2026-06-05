@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: cognizance
-
 ---
 
 At 7th level, the conduit can unravel arcana as a swift action to gain one of the following benefits against the attending creature for 2 rounds:

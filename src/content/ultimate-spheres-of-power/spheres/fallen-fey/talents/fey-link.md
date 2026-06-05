@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: base
 tags: []
-
 ---
 
 As a swift action, you change your creature type to fey for 1 minute per caster level. You are treated as a fey and no longer count as your previous creature type for all purposes including spells, magic items, etc., but you do not gain any of the benefits of the fey type or lose the benefits of your previous creature type, and still possess any subtypes you previously possessed (thus, an elf using this ability would be treated as a fey with the elf subtype).

@@ -3,7 +3,6 @@ id: infect
 name: "Infect"
 level: 1
 tags: []
-
 ---
 
 At 1st level, the broodmother can make a touch attack to infect a creature. A creature infected receives a Fortitude save (DC 10 + 1/2 broodmother level + Constitution modifier). Failure means the creature is infected. Infected creatures take a stacking -2 penalty on Will saves against the broodmother's queen bee class feature to a maximum of her broodmother's level.

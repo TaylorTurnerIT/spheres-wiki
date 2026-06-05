@@ -3,7 +3,6 @@ id: technically-minded
 name: "Technically Minded"
 level: 2
 tags: []
-
 ---
 
 At 2nd level, a technician gains a bonus to all Knowledge (engineering) checks equal to 1/2 his technician level, and takes half the usual time when using the Craft skill to repair an object.

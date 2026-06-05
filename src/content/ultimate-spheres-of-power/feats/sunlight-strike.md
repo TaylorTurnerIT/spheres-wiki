@@ -6,7 +6,6 @@ system: power
 sphere: light
 tags: ["combat"]
 tier: feat
-
 ---
 
 **Prerequisites:** Light sphere; Arcane Strike or Imbued Strike.

@@ -6,7 +6,6 @@ type: talent
 sphere: creation
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Creation sphere (Expanded Materials (material), Lengthened Creation; (Change Material (alter), Forge (alter), Permanent Change (advanced)) or Create Materials (advanced)), caster level 15th.

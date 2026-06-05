@@ -3,7 +3,6 @@ id: avowed-and-oathbound
 name: "Avowed and Oathbound Paladin/Antipaladin"
 level: 1
 tags: []
-
 ---
 
 A paladin or antipaladin with the avowed archetype may replace the class features gained from this archetype with new class features gained from taking paladin or antipaladin oaths as follows.

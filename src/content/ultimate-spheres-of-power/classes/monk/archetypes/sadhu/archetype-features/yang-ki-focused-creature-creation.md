@@ -3,7 +3,6 @@ id: yang-ki-focused-creature-creation
 name: "Yang Ki Focused – Creature Creation"
 level: 1
 tags: []
-
 ---
 
 The sadhu gives life to a creature, or creatures, of his own creation. With a powerful shout, the sadhu creates a monster out of pure sonic energy and ambient ki. It appears where the sadhu designates and acts immediately, on the sadhu's turn. If the sadhu does not give it a command, it attacks his opponents to the best of its ability. The sadhu can communicate with it and can direct it not to attack, to attack particular enemies, or to perform other actions.

@@ -6,7 +6,6 @@ type: talent
 sphere: time
 tier: basic
 tags: []
-
 ---
 
 As a standard action, you may spend a spell point to edit the past, retroactively obtaining a generic object, such as a mundane item or a commonly-available magic item such as a healing potion, worth less than 100 gp per caster level. The object immediately appears on your person or in a container or extradimensional space attended by you. The cost of the item is immediately deducted from the wealth (usually coins, but can be nonmagical gemstones or other nonmagical objects used for trade) you currently carry.

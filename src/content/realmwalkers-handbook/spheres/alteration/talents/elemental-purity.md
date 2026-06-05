@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: advanced
 tags: []
-
 ---
 
 Your magic infuses the target's new form with the speed of powerful elementals.

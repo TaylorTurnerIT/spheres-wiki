@@ -3,7 +3,6 @@ id: forcewoven-weapon
 name: "Forcewoven Weapon"
 level: 3
 tags: []
-
 ---
 
 At 3rd level, whenever a telekinetic bladeshifter uses their telekinetic blast, they can choose to create a weapon entirely out of force. A telekinetic blast used this way deals force damage and targets touch AC, but deals half its normal damage and is subject to spell resistance. If they possess force blast, they can accept an additional 2 points of burn when using their telekinetic blast; doing so allows the weapon to deal its full damage and is treated as applying a substance infusion.

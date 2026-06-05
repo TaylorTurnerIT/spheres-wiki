@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["utility", "spirit"]
-
 ---
 
 You may spend a spell point to commune with the elements for 1 minute per caster level.

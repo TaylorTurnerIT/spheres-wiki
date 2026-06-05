@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Alteration sphere (Lingering Transformation), caster level 10th.

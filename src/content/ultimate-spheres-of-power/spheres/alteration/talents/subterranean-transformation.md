@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: basic
 tags: ["transformation"]
-
 ---
 
 You may grant the form of a subterranean animal or magical beast with your shapeshift.

@@ -7,7 +7,6 @@ sphere: illusion
 dualSphere: dark
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Dark sphere, Illusion sphere.

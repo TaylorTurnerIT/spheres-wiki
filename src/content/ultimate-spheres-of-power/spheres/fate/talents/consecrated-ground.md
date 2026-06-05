@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Fate sphere (Bound Consecration), caster level 5th.

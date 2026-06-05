@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["air", "geomancing"]
-
 ---
 When using Breeze, you may spend a spell point to have it affect an area, granting its benefits to all creatures within a 15-foot radius + 5 feet per 5 caster levels. Additionally, when you use Breeze, you may add any of the following additional effects depending on what other packages you possess.
 

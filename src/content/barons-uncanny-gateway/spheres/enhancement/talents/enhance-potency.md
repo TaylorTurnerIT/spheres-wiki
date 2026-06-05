@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["enhance", "sm"]
-
 ---
 
 You may apply an enhancement to an item, trap, or other object, including those created through sphere effects. While this enhancement is in effect, use the higher of the item's normal saving throw DC and your Enhancement sphere DC for saving throws against the item's effects. If the item is a trap, door, or other device that can be interacted with through the Disable Device skill, you may increase the Disable Device DC of the item to 10 + your casting ability modifier +  your caster level.

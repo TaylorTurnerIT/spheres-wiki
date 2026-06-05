@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
-
 ---
 
 By activating this fey-blessing, you gain a pouch of fairy dust. This pouch has hardness 5 and 5 hit points per caster level. The pouch is weightless and may not be used to hold anything other than the fairy dust it contains. If the pouch is destroyed, this fey-blessing ends. Destroying the pouch fills a 10-foot radius with the chosen fairy dust, affecting all creatures in the area, including the caster. A successful saving throw against any effect that allows it grants the affected creature immunity to that effect from that caster for 24 hours. You gain knowledge of two types of fairy dust when you gain this talent; you may activate any one type of dust that you know when activating this fey-blessing. Choose from the following options:

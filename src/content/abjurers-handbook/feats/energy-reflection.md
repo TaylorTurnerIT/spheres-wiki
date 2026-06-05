@@ -6,7 +6,6 @@ system: power
 sphere: protection
 tags: []
 tier: feat
-
 ---
 **Prerequisites:** Protection sphere (Energy Resistance (aegis, ward)).
 

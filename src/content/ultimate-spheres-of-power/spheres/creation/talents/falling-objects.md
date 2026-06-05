@@ -6,7 +6,6 @@ system: power
 sphere: creation
 tier: basic
 tags: []
-
 ---
 
 Objects that fall upon characters deal falling damage based on their size according to Table: Object Size.

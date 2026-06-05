@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: base
 tags: []
-
 ---
 
 As a standard action, you may spend a spell point to create an illusion within close range. This illusion may be a figment or a glamer, and has a duration of concentration, to a maximum of 1 minute per caster level. By default, these illusions are visual only. You cannot move further away from the illusion than your illusion range while maintaining it through concentration, and the illusion is limited in size according to Table: Illusion Maximum Size.

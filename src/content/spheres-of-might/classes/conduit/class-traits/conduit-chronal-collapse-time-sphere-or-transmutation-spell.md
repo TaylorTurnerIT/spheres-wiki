@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: subjectivity
-
 ---
 
 The conduit produces a Broken Time, Causality, or Steal Time alter time effect.

@@ -6,7 +6,6 @@ system: power
 sphere: death
 tags: []
 tier: feat
-
 ---
 You have learned the art of funneling necromantic power between yourself and your minions.
 

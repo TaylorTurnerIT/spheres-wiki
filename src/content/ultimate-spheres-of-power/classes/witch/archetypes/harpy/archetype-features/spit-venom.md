@@ -3,7 +3,6 @@ id: spit-venom
 name: "Spit Venom"
 level: 1
 tags: ["combat", "mythic"]
-
 ---
 
 A creature affected by this insult is poisoned by a specific injury poison of the harpy's choice whose value is equal to or less than 100 gp per harpy level.

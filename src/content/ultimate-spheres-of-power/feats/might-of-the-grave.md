@@ -7,7 +7,6 @@ sphere: enhancement
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 When you reanimate a body, you can grant it magical enhancements for a short time.

@@ -6,7 +6,6 @@ system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat
-
 ---
 
 **Prerequisites:** Destruction sphere (Energy Sphere (blast shape)).

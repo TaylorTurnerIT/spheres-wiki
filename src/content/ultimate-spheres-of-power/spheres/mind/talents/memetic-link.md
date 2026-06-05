@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Mind sphere (Enthrall (charm), Mass Charm [mass], Powerful Charm, Project Thoughts (charm)), caster level 10th.

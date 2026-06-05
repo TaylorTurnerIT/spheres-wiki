@@ -6,7 +6,6 @@ system: power
 sphere: enhancement
 tags: ["drawback"]
 tier: feat
-
 ---
 
 **Prerequisites:** Enhancement sphere, Extended Casting drawback.

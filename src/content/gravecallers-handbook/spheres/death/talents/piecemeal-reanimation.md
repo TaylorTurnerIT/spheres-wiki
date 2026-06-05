@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: basic
 tags: ["dominion"]
-
 ---
 You gain the following abilities which allow you to reanimate incomplete corpses and individual corpse parts:
 

@@ -4,7 +4,6 @@ name: "Contemplation"
 level: 6
 replaces: ["the trapmaker ability and the insights gained at 6th, 10th, 14th, and 18th level"]
 tags: []
-
 ---
 
 The raveler gains the ability to fuel veils and other essence receptacles with psionic energy instead of essence. By spending 1 power point per receptacle as a swift action, the raveler may treat an essence receptacle as though it were invested with a point of essence for 3 rounds. This does not stack with, though it may overlap, standard essence invested in a given receptacle. At 6th level and every three levels thereafter, the raveler may spend an additional 3 power points per receptacle he wishes to invest to treat it as being invested with an additional point of essence.

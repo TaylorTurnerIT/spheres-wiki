@@ -6,7 +6,6 @@ system: power
 sphere: fate
 tags: []
 tier: feat
-
 ---
 
 **Prerequisite:** Fate sphere.

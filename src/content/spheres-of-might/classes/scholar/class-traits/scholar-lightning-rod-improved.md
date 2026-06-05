@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: scholars-knack-ex
-
 ---
 
 The scholar's understanding of atmospheric phenomenon and ability to control and manipulate atmospheric conditions with her lightning rod quarterstaff reaches new heights. The scholar can spend a standard action while carrying or wielding her quarterstaff to raise or lower the temperature within 30 ft. around herself by up to 5 degrees Fahrenheit per class level, simultaneously granting herself and any allies within the affected area fire resistance (if she increases the temperature) or cold resistance (if she lowers the temperature) equal to her class level. The scholar and any allies granted resistance by this ability are also immune to nonlethal damage due to exposure to extreme temperatures. In addition, the scholar can spend 1 minute focusing on nothing but activating her lightning rod to change the weather in the local area over a 1 mile radius centered on her. She can call forth weather appropriate to the climate and season of the area she is in, and can also use this ability to cause the weather in the area to become calm and normal for the season.

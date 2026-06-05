@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
-
 ---
 
 As a move action, you may summon one masterwork musical instrument, be it percussion, string, or wind, of a size no greater than 1 size smaller than your own size. The instrument is weightless and has hardness 5 and 5 hit points per caster level.

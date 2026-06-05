@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif"]
-
 ---
 
 The target's calm and clarity shields them in time of distress. The duration of any fear effect on the target is reduced by 2 rounds, to a minimum of 1. This reduction in duration increases by 1 round for every 5 caster levels.

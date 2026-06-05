@@ -7,7 +7,6 @@ sphere: nature
 dualSphere: alteration
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Alteration sphere, Nature sphere (any (spirit) talent).

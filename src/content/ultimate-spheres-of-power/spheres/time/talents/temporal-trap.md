@@ -6,7 +6,6 @@ type: talent
 sphere: time
 tier: basic
 tags: []
-
 ---
 
 You may spend a spell point to place an alter time effect onto an adjacent, unoccupied 5-foot square in addition to the normal costs of that effect. Any creature who steps onto the square activates the alter time effect; if it is normally a targeted ability, the creature is immediately affected by that ability, though they are allowed a saving throw as normal, if appropriate.

@@ -4,7 +4,6 @@ name: "Chosen By the Stars"
 level: 3
 replaces: ["the order class feature and the order ability normally gained at 15th level"]
 tags: []
-
 ---
 
 From 1st level on the celestial knight adds Knowledge (arcana) and Knowledge (planes) to his list of class skills, and gains wild empathy as a druid of his class level.

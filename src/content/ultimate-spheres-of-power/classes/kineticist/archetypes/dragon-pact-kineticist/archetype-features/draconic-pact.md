@@ -3,7 +3,6 @@ id: draconic-pact
 name: "Draconic Pact"
 level: 1
 tags: []
-
 ---
 
 The powers of a dragon pact kineticist are forged through the pact made with a true dragon of very old age or older, requiring both parties to agree on terms. Some dragon pact kineticists seek out such pacts, while others are born into them without any knowledge (this decision should be left up to the player to decide upon). This pact bestows the dragon with the ability to always be aware of their benefactor's locations and actions, although most dragons rarely intercede in the affairs of their chosen pact bound, instead allowing them to do as they wish.

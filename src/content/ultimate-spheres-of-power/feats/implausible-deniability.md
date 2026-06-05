@@ -7,7 +7,6 @@ sphere: mind
 dualSphere: illusion
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Illusion sphere (Manipulate Aura (sensory, magic), Programmed Illusion), Mind sphere.

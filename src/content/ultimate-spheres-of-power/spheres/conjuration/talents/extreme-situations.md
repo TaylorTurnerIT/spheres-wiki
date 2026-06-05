@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["form"]
-
 ---
 
 Your companion suffers no harm from being in a hot or cold environment and can exist comfortably in conditions between -50 and 140 degrees Fahrenheit (-45 and 60 degrees Celsius) without having to attempt Fortitude saves. The companion's equipment is likewise protected. This does not provide any protection from fire or cold damage, nor does it protect against other environmental hazards such as smoke, lack of air, and so forth.

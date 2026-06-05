@@ -2,7 +2,6 @@
 id: kensai
 name: "Kensai"
 tags: []
-
 ---
 
 The kensai is a skilled martial artist dedicated to the perfection of a single martial style and through it, perfection of the self and harmony with the heavens. They seek harmony within themselves. They are clear, calm, and committed. Kensai pursue a degree of harmony with a chosen martial style that few other martial artists could ever hope to achieve. Kensai believe that this is the way to set themselves on the path to enlightenment.

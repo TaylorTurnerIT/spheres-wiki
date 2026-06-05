@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["motif"]
-
 ---
 
 You may grant a motif that allows the target to recognize the greatest threat to their goals. As a free action once per round they may assess an opponent they can see. The target learns the enemy's approximate CR (see Table: Enemy CR). For every five caster levels, the target may use this an additional time per round.

@@ -6,7 +6,6 @@ system: power
 tags: []
 className: incanter
 featureId: list-of-sphere-specializations
-
 ---
 
 This following ability replaces resistance, energy absorption, and protected life.

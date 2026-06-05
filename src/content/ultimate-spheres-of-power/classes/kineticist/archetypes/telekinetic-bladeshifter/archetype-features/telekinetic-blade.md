@@ -4,7 +4,6 @@ name: "Telekinetic Blade"
 level: 1
 alters: ["elemental overflow, kinetic blast, and infusions, and replaces the infusions learned at 1st, 5th, 9th, 13th, and 17th levels"]
 tags: []
-
 ---
 
 At 1st level, the telekinetic bladeshifter chooses one light melee, one-handed melee, or thrown weapon they are proficient with that is not an unarmed strike, natural weapon, or projectile weapon. Whenever they use telekinetic blast, rather than functioning as normal for a kinetic blast, it transforms the object used for this blast into the chosen weapon, and is a free action usable once per turn. The telekinetic bladeshifter is treated in all ways as if wielding the chosen weapon except it deals damage as a warpriest's sacred weapon (using their telekinetic bladeshifter level as their effective warpriest level) and it can be affected by feats and abilities which affect kinetic blasts. Substance infusions and metakinesis applied to telekinetic blasts used this way work the same as if used in conjunction with the kinetic whip infusion. This effect lasts until the beginning of the telekinetic bladeshifter's next turn or until they choose to end it as a free action.

@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: basic
 tags: ["utility"]
-
 ---
 
 Your Alteration sphere abilities allow targets to imitate individual creatures with which you are familiar. The +10 circumstance bonus on Disguise checks provided by the Alteration sphere applies to Disguise checks to appear as that specific individual.

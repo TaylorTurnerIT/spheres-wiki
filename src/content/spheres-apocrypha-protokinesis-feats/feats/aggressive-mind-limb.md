@@ -6,7 +6,6 @@ system: power
 sphere: telekinesis
 tags: ["combat", "protokinesis"]
 tier: feat
-
 ---
 
 **Prerequisites:** Telekinesis sphere, Mind Limb, base attack bonus +5.

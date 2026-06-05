@@ -3,7 +3,6 @@ id: advanced-cantikinesis
 name: "Advanced Cantikinesis"
 level: 8
 tags: []
-
 ---
 
 At 8th level, the soundweaver chooses a second instrument for cantikinesis. This instrument cannot be one associated with the same Perform skill as their first (for example, a soundweaver who manifests a sitar can select a drum, but cannot select a mandolin). At 16th level, they choose a third instrument, which cannot be associated with the same Perform skill as either of the instruments they can manifest. Each time they select a new instrument this way, they gain a simple kinetic blast as per improved cantikinesis, but do not gain composite blasts with it, and it can only be performed with the instrument with which it is associated. Only one instrument can be manifested at a time unless the soundweaver is performing a kinetic concert.

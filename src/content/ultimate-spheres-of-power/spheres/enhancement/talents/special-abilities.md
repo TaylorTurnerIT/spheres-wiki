@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: base
 tags: []
-
 ---
 
 Animated objects have a number of Construction Points (CP) used to purchase abilities and defenses in addition to those presented above. A Medium-sized animated object has 2 CP; differently sized animated objects have CP totals as detailed on the size chart on this page. If an animated object spends more CP than its size category would allow, its CR increases by 1 (minimum of +1) for every 2 additional CP spent.

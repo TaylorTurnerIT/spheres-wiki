@@ -3,7 +3,6 @@ id: absorb-bloodline
 name: "Absorb Bloodline"
 level: 1
 tags: []
-
 ---
 
 At 1st level, the hemophage does not gain a bloodline. Instead, he can temporarily access one by drinking the blood of creatures with the appropriate bloodline or other associated creatures. By drinking fresh blood (which inflicts 1 point of Constitution damage from a helpless, unconscious, or willing creature as a standard action or by inflicting ability damage with the blood drain ability) from a bloodrager or sorcerer with the given bloodline or from a creature associated with that bloodline (other than himself), the hemophage may choose to gain the ability to use the bloodline powers (but not bonus spells, proficiencies, and so on) as appropriate to his level indefinitely. This ability is usable any number of times per day, though gaining a new bloodline removes the benefits of any previous use. Gaining a bloodline again does not restore uses of abilities with limited activations, any uses of that ability are expended until recovered as normal.

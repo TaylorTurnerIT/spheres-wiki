@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Mind sphere (Mindscape (advanced, charm)), caster level 5th.

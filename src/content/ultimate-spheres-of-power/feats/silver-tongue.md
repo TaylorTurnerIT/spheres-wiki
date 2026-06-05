@@ -6,7 +6,6 @@ system: power
 sphere: mind
 tags: []
 tier: feat
-
 ---
 
 **Prerequisite:** Mind sphere.

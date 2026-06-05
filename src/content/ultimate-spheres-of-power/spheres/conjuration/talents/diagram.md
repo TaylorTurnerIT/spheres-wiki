@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Conjuration sphere (Call Planar Creature (advanced)), caster level 1st.

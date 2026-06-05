@@ -28,7 +28,6 @@ babProgression: "3/4"
 fortSaveProgression: good
 refSaveProgression: good
 willSaveProgression: poor
-
 ---
 
 **Note:** This class should not be confused with the Shifter from Ultimate Wilderness by Paizo Publishing.

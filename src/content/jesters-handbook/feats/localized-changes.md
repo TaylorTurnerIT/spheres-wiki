@@ -7,7 +7,6 @@ sphere: weather
 dualSphere: time
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Time sphere (Time Of The Season (time)), Weather sphere.

@@ -6,7 +6,6 @@ system: power
 tags: []
 className: incanter
 featureId: list-of-sphere-specializations
-
 ---
 
 The following abilities replace animal companion, empower companion, and life connection.

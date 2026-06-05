@@ -3,7 +3,6 @@ id: hyperspeed
 name: "Hyperspeed"
 level: 1
 tags: []
-
 ---
 
 Speedsters gain a +10 foot bonus to their land speed for every level of speedster they possess and gain Run as a bonus feat at 1st level. They only gain this bonus so long as they have at least 1 unused Ki point and are unarmored and unencumbered.

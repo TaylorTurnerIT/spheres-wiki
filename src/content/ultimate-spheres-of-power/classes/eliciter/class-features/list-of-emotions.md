@@ -3,7 +3,6 @@ id: list-of-emotions
 name: "List of Emotions"
 level: 8
 tags: []
-
 ---
 
 ### Apathy

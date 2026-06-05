@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: base
 tags: []
-
 ---
 
 In a manner similar to psychic mages, psionicists and spherecasters are capable of projecting their minds onto the universe to create quasi-real planes known as mindscapes. The following rules are added in addition to the rules from psychic dueling introduced in Occult Adventures.

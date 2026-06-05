@@ -7,7 +7,6 @@ sphere: warp
 dualSphere: light
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Light sphere, Warp sphere.

@@ -2,7 +2,6 @@
 id: sphere-summoner
 name: "Sphere Summoner"
 tags: []
-
 ---
 
 ### Casting

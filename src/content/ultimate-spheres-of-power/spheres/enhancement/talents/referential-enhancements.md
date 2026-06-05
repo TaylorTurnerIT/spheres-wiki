@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Enhancement sphere (Deep Enhancement, Mass Enhancement [mass]), caster level 15th.

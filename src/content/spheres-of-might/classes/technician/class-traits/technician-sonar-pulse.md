@@ -7,7 +7,6 @@ tags: []
 className: technician
 featureId: exocortex-lg
 requires: "Echolocators"
-
 ---
 
 The echosense from echolocators improves to blindsight (Echosight).

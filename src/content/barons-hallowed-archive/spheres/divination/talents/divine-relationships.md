@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: basic
 tags: ["utility", "divine"]
-
 ---
 
 You can determine whether or not two or more creatures have any sort of relationship. The amount of information gleaned depends on how long you study a particular area or set of subjects.

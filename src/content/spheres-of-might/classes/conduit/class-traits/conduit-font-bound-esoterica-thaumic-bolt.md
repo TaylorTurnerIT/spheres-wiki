@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: volatility
-
 ---
 
 The conduit produces a Destruction sphere destructive blast, which can be augmented with the following talents: Blast Salvo, Force Blast, or Guided Strike.

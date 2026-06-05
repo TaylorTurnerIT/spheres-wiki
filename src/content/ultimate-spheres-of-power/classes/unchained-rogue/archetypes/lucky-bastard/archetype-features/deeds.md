@@ -3,7 +3,6 @@ id: deeds
 name: "Deeds"
 level: 2
 tags: []
-
 ---
 
 Lucky Bastards spend kismet points to accomplish deeds. Most deeds grant the lucky bastard a momentary bonus or effect, but some provide longer-lasting effects. Some deeds remain in effect while the lucky bastard has at least 1 kismet point, but do not require expending kismet to be maintained. An lucky bastard can only perform deeds of her level or lower. Unless otherwise noted, a deed can be performed multiple successive times, as long as the lucky bastard has or spends the required number of kismet points to perform the deed.

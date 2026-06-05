@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: basic
 tags: []
-
 ---
 
 As a standard action you may create a crimson spread with a 5-foot radius within your blood control range. Creatures that are in this area when it is cast or that start their turn within the area must succeed at a Fortitude save or be under the effects of your blood control until the end of a turn in which they did not start within the affected area. Select a (quicken) or a (still) ability as part of creating this area; you may apply the selected ability to the affected creatures. Creatures that succeed at a saving throw against blood control while within the vortex cannot be affected by that vortex again.

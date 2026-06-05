@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Warp sphere (Pouncing Teleport, Segmented Warp), caster level 5th.

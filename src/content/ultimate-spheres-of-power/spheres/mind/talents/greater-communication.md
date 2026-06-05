@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: advanced
 tags: ["utility"]
-
 ---
 
 **Prerequisites:** Mind sphere (Project Thoughts (charm)), caster level 10th.

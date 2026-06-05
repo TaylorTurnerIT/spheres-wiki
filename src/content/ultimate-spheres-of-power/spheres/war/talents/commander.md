@@ -8,7 +8,6 @@ tier: advanced
 tags:
   - trade
   - utility
-
 ---
 
 **Prerequisites:** War sphere, caster level 10th.

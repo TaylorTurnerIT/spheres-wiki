@@ -6,7 +6,6 @@ system: power
 sphere: alteration
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Alteration sphere (Additional Limbs) or multiple heads.

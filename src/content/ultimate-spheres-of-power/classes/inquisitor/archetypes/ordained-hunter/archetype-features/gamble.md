@@ -3,7 +3,6 @@ id: gamble
 name: "Gamble."
 level: 1
 tags: []
-
 ---
 
 When the ordained hunter spends at least one spell point on a Fate sphere effect, she can choose to roll a d3. If the d3 is a 1 she loses an additional spell point. If the d3 is a 2, she spends the spell points normally. If the d3 is a 3, the ordained hunter still spends the spell points, but regains one kismet point. She can attempt this for as many spell points as she might spend in a round, but can only regain one kismet point per round in this way. She cannot gamble a spell point if the increased spell point cost of the sphere effect would reduce her to 0 spell points.

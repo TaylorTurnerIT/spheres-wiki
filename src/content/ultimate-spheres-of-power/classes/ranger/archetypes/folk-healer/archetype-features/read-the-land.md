@@ -4,7 +4,6 @@ name: "Read the Land"
 level: 7
 replaces: ["woodland stride"]
 tags: []
-
 ---
 
 At 7th level as a full-round action, the folk healer may spend a spell point to tap into the ambient life force of a region, expanding her consciousness and giving her special insight into its nature. This area must be a continuous area smaller than 1 square mile, and it ends at any point the terrain changes significantly (such as moving from forest to prairie, or moving underground). While in the land she has read, the folk healer gains an insight bonus equal to +2 to Knowledge (Geography), Survival, Stealth, and Perception checks as well as initiative.

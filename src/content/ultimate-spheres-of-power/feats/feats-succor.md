@@ -6,7 +6,6 @@ system: power
 sphere: war
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** War sphere, lay on hands class feature.

@@ -7,7 +7,6 @@ tags: []
 className: armorist
 featureId: arsenal-trick
 requires: "armorist 10"
-
 ---
 
 The armorist's implements gain the erudite special ability.

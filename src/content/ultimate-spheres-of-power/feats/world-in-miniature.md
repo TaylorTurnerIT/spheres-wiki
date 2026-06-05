@@ -6,7 +6,6 @@ system: power
 sphere: warp
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Nature sphere, Warp sphere (Extradimensional Room (space) or Extradimensional Storage (space)).

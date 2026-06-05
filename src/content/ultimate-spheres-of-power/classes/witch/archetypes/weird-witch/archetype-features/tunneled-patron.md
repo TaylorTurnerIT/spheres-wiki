@@ -3,7 +3,6 @@ id: tunneled-patron
 name: "Tunneled Patron"
 level: 1
 tags: []
-
 ---
 
 At 1st level, when a weird witch gains her familiar, she must also select a patron from the list of occult patrons. She may only seal pacts with spirits belonging to her chosen patron's constellation. All other constellations are barred to her.

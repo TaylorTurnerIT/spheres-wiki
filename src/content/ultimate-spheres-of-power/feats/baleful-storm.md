@@ -7,7 +7,6 @@ sphere: weather
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 When thunder rolls and lightning cracks, your minions rise.

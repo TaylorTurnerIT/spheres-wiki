@@ -4,7 +4,6 @@ name: "Using Spheres of Power"
 type: article
 system: power
 tags: []
-
 ---
 
 <div class="wiki-note">

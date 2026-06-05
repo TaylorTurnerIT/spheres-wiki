@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: conduit-wonders
-
 ---
 
 The conduit gains the Invasive Hacking Spellhacking talent as a bonus talent. The conduit can evoke dweomer from attended objects within their natural reach, although if the source is unwilling, a successful Will save causes the effect to fail (although the conduit retains the daily use expended). 

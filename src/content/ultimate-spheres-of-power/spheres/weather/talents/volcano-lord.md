@@ -6,7 +6,6 @@ type: talent
 sphere: weather
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Weather sphere, Nature sphere ((earth) package, (fire) package), caster level 10th.

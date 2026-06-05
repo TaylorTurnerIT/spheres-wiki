@@ -7,7 +7,6 @@ sphere: fate
 dualSphere: conjuration
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Conjuration Sphere, Fate Sphere

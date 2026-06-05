@@ -6,7 +6,6 @@ system: power
 sphere: mind
 tags: ["counterspell"]
 tier: feat
-
 ---
 
 **Prerequisites:** Illusion sphere or Mind sphere; Counterspell.

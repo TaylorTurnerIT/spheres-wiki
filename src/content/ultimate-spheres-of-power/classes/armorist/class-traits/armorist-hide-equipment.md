@@ -6,7 +6,6 @@ system: power
 tags: []
 className: armorist
 featureId: arsenal-trick
-
 ---
 
 The armorist's bound and summoned gear gain the glamered special ability.

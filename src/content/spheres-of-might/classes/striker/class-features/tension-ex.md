@@ -3,7 +3,6 @@ id: tension-ex
 name: "Tension (Ex)"
 level: 3
 tags: []
-
 ---
 
 A striker is at home in battle, thriving on the raw energy of combat to fuel her attacks. A striker begins the day with no tension, but can gain tension in the following ways (a striker cannot gain tension from each of these more than once per round and a striker must be in combat to gain tension):

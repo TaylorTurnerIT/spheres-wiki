@@ -6,7 +6,6 @@ system: power
 sphere: alteration
 tags: ["combat", "combat", "companion"]
 tier: feat
-
 ---
 
 **Prerequisites:** Alteration sphere (Vermin Transformation (transformation)) or web bestial trait.

@@ -4,7 +4,6 @@ name: "Blessing/Blight"
 level: 2
 tags: []
 isTraitContainer: true
-
 ---
 
 All ensouled creatures are under a soul weaver's power, and a soul weaver can cause incredible effects to befall both allies and enemies.

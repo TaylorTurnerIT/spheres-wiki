@@ -6,7 +6,6 @@ system: power
 tags: ["su"]
 className: mageknight
 featureId: mystic-combat-su
-
 ---
 
 As a swift action, you may spend a spell point to charge a melee weapon you are holding with magical energy. It remains charged for a number of minutes equal to your casting ability modifier. You can add your casting ability modifier instead of your Dexterity or Strength modifier to attack rolls when wielding this weapon.

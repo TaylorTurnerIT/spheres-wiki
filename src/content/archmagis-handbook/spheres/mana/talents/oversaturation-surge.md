@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["expunge"]
-
 ---
 Your target's magic begins to destabilize unless they succeed at a Fortitude save. At the end of the target's next turn, they suffer 1 spell point damage for each temporary spell point they possess, and suffer 1d8 untyped damage for every spell point damage suffered (maximum 1d8 per caster level). If the target possessed temporary spell points that brought them above their normal maximum spell point total, the spell point damage and maximum amount of damage dealt by this talent are doubled (to a maximum of 2d8 per caster level). A creature affected by this talent is always aware of its effects.
 

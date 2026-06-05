@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: basic
 tags: []
-
 ---
 
 You may spend a spell point to make a telekinetic Catch as an immediate action. If you possess the Telekinetic Push talent, you may spend a spell point to perform pushes as an immediate action.

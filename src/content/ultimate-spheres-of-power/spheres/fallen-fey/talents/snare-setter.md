@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
-
 ---
 
 You may make a snare that functions as a magic trap. You may conjure and set a snare as a standard action in a square  within close range, which blends with its surroundings (DC 20 + caster level Perception check for a character with the trapfinding ability to locate). One end of the snare is tied in a loop that contracts around one or more of the limbs of any creature stepping inside the circle. The cord-like object tightens around the creature, dealing no damage but causing it to be entangled and preventing it from moving from that space.

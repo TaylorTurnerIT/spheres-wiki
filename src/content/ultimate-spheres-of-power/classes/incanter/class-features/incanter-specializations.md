@@ -4,7 +4,6 @@ name: "Incanter Specializations"
 level: 1
 tags: []
 isTraitContainer: true
-
 ---
 
 At 1st level, the incanter may choose a series of specializations, gaining additional abilities at the cost of some versatility. Every specialization costs a number of the incanter's bonus feats, as indicated by the chart below. Each specialization costs either 1, 2, or 3 specialization points. The incanter cannot have more than 5 points worth of specializations.

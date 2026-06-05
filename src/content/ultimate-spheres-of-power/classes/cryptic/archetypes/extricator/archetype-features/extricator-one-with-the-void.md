@@ -5,7 +5,6 @@ level: 1
 replaces:
   - Scribe Tattoo
 tags: []
-
 ---
 
 Powers of destruction have subsumed your being, rendering your own pattern indistinguishable from the enigmatic oblivion. You are considered an outsider for the purpose of spells, powers, and other effects, and are immune to energy drain, death effects, and negative energy damage. In addition, you are shielded against divination effects as per the Unplottable advanced Protection sphere talent.

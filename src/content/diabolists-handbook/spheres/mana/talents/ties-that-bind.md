@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisite:** Mana sphere (Infinite Bond (advanced), Magical Conduit, Ranged Mana x2), caster level 10th.

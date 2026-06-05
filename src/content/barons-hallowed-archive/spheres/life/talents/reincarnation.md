@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: advanced
 tags: ["utility"]
-
 ---
 
 **Prerequisites:** Life Sphere (Resurrection (advanced), Resuscitate)), caster level 10th

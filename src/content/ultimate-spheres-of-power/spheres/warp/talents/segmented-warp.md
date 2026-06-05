@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: basic
 tags: []
-
 ---
 
 You may spend a spell point to split a teleport in two. You cast a single teleport on yourself and pay any spell point costs once, but may teleport yourself twice in quick succession.

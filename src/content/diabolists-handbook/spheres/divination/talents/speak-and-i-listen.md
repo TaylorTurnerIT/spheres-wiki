@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Divination sphere (Hear Name (advanced)); Divination sphere (Greater Divine [range], Viewing (divine), Scrying (advanced)) or Warp sphere (Distant Teleport, Unseeing Teleport, True Teleport); caster level 10th.

@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Death sphere (Cut The Cord (advanced), Nothing Shall Bear Your Name (advanced), Soul Trap (advanced)), Mind sphere (Inception (charm), Mass Charm, Powerful Charm), Time sphere, Warp sphere (Distant Teleport, Timeline Drift (advanced), Time Warp (advanced), True Teleport (advanced), Unseeing Teleport), caster level 20th.

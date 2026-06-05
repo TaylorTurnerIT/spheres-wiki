@@ -3,7 +3,6 @@ id: infuse-spirit-companion
 name: "Infuse Spirit Companion"
 level: 1
 tags: []
-
 ---
 
 Beginning at 1st level, a pactsworn hunter shares additional occult power with her spirit companion, increasing its combat effectiveness. If the pactsworn hunter's spirit companion is Small or smaller, her spirit companion can change its size to Medium as a swift action, gaining a +2 bonus to Strength that stacks with the normal Strength adjustments for increasing in size, as detailed under the polymorph subtype in Chapter 9 of the Pathfinder Roleplaying Game Core Rulebook. She can use this ability for a number of minutes per day equal to her hunter level (minimum 1).

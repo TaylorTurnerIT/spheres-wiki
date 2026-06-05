@@ -3,7 +3,6 @@ id: monstrous-aspects
 name: "Monstrous Aspects"
 level: 1
 tags: []
-
 ---
 
 When an unbound pactmaker seals a good pact with a spirit, her body gains a bestial mutation as a result of her master bartering techniques. She selects one type of animal (such as bear, tiger, and so on) and gains one monstrous aspect in the form of an ability that the chosen animal possesses for the duration of the pact. A monstrous aspect is considered a minor granted ability and manifests physically upon the unbound pactmaker. The nature of the mutation is decided by the player but this is a real mutation that is treated like a spirit's physical sign except that it cannot be suppressed. An unbound pactmaker can gain up to one monstrous aspect per good pact that she makes with a spirit. She cannot select the same mutation more than once.

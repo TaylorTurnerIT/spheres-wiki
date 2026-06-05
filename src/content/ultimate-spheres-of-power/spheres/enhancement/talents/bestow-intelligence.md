@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["enhance"]
-
 ---
 
 You may spend a spell point to enhance an animal, plant, object, or mindless creature, granting it temporary intelligence. The target becomes a magical creature (or intelligent item if an object), and gains an Intelligence, Charisma, and Wisdom score of 6 + 1/2 your caster level (or its original score, whichever is higher), as well as an alignment equal to your own, and the ability to speak and understand one language of your choice which you also speak and understand, +1 language you know per point of Intelligence bonus. It also gains normal senses to 60 feet if it did not previously possess any. However, temporary minds do not grant skill points or feats, nor the ability to move. However, a target with a bestowed mind no longer counts as mindless for purposes such as immunities.

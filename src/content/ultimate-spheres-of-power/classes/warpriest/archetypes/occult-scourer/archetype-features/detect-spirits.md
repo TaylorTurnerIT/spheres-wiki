@@ -3,7 +3,6 @@ id: detect-spirits
 name: "Detect Spirits"
 level: 3
 tags: []
-
 ---
 
 At 3rd level, an occult scourer can use detect pact spirits† at will.

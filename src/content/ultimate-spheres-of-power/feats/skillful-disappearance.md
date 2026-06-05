@@ -6,7 +6,6 @@ system: power
 sphere: warp
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Warp sphere.

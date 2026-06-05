@@ -6,7 +6,6 @@ system: power
 sphere: blood
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Blood sphere; ability to cast any sphere effect, spell, or spell-like ability with the acid, cold, electricity, or fire descriptor.

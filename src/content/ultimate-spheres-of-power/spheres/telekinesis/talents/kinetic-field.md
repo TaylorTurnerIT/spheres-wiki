@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: basic
 tags: []
-
 ---
 
 You may spend a spell point to apply your telekinesis as kinetic energy across an area instead of directly onto targets. This fills an area with a radius of up to 10 feet + 5 feet per five caster levels with kinetic energy, which manifests in one of the following ways, each of which may be made into a Sustained Force.

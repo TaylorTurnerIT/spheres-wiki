@@ -6,7 +6,6 @@ system: power
 sphere: weather
 tags: ["teamwork"]
 tier: feat
-
 ---
 
 **Prerequisites:** Weather sphere (any (shroud) talent), magic skill bonus +5.

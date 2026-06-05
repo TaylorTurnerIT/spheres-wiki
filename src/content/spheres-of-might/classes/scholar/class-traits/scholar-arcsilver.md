@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
-
 ---
 
 The scholar learns how to use arcsilver to disperse and manipulate electricity to her advantage. The scholar may activate this imposition to apply arcsilver coils strategically upon her person, granting her electricity resistance 5 for a number of rounds equal to her practitioner modifier (minimum 1). This electricity resistance increases by 5 for every 5 class levels the scholar possesses beyond 5th.

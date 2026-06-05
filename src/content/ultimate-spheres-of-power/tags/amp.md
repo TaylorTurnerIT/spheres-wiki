@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "amp"
 label: "Amp"
 sphere: "mana"
-
 ---

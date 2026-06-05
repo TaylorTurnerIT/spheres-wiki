@@ -5,7 +5,6 @@ level: 3
 replaces:
   - the ki pool gained at 3rd level
 tags: []
-
 ---
 
 A yamabushi at first level gains a small reservoir of energy she can call on to create truly wondrous effects, called a spell pool. This pool contains a number of spell points equal to her class level + her casting ability modifier (minimum: 1).

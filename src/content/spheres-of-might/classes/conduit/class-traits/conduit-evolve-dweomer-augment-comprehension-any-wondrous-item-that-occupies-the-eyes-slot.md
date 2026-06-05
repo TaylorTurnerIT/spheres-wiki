@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: cognizance
-
 ---
 
 At 10th level, if the object would grant or improve the senses of its wearer, the distance of such senses are doubled (for example, an item that grants darkvision up to 60 feet would instead grant it up to 120 feet); this increase also applies to esoterica and spells that the item may be able to produce. If the item normally grants darkvision, it also allows the conduit to see in areas of magical darkness within the same distance.

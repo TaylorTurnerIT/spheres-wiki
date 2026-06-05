@@ -6,7 +6,6 @@ system: power
 sphere: weather
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Weather sphere; animal companion with an effective druid level of 7.

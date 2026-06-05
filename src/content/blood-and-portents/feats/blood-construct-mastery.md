@@ -6,7 +6,6 @@ system: power
 sphere: blood
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Blood sphere (Extract Blood Construct), Blood sphere caster level 5th.

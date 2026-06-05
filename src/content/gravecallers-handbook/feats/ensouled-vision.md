@@ -6,7 +6,6 @@ system: power
 sphere: divination
 tags: []
 tier: feat
-
 ---
 **Prerequisites:** Divination sphere, bound nexus class feature.
 

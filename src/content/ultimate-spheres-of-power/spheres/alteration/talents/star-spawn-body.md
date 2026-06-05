@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: advanced
 tags: ["body"]
-
 ---
 
 **Prerequisites:** Alteration sphere (Aberrant Body (body) or Cosmic Body (body)), caster level 5th.

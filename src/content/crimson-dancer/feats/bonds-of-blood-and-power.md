@@ -7,7 +7,6 @@ sphere: mana
 dualSphere: blood
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Blood sphere, Mana sphere.

@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: ["all", "utility"]
-
 ---
 
 **Prerequisites:** Warp sphere (Extradimensional Room (space)), Creation sphere (Expanded Materials (material)), caster level 15th.

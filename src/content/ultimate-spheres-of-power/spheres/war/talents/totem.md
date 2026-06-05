@@ -6,7 +6,6 @@ type: talent
 sphere: war
 tier: base
 tags: []
-
 ---
 
 As a standard action, you may place a totem. A totem is an effect on a 50-foot + 5 feet per 2 caster level radius area centered on you, but does not move as you do (if a totem is created entirely on top of a vehicle, it will move with that vehicle but only extend to the edge of the vehicle's space). Creatures who leave this area lose the effects of your totem. You must concentrate to maintain a totem, but may always spend a spell point as a free action to allow a totem to remain for 1 minute per caster level without concentration.

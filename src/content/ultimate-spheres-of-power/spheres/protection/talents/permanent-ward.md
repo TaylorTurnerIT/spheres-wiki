@@ -6,7 +6,6 @@ type: talent
 sphere: protection
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Protection sphere (Enduring Protection), caster level 10th.

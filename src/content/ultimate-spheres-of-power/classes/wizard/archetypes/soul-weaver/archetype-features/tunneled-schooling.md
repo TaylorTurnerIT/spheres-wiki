@@ -3,7 +3,6 @@ id: tunneled-schooling
 name: "Tunneled Schooling"
 level: 1
 tags: []
-
 ---
 
 At 1st level, a soul weaver chooses three constellations. He may only seal pacts with starless spirits and spirits belonging to his chosen constellation. All other constellations are barred to him. A soul weaver may not select constellations with this ability that are in opposition to one another, such as Dragon and Hero.

@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: basic
 tags: []
-
 ---
 
 You may lay a teleport effect onto an adjacent, unoccupied 5-foot square. If you possess the Ranged Warp talent, you may place this effect anywhere within that range. This is a latent teleport effect, except it only activates when a creature steps onto the target square, and must target the triggering creature.

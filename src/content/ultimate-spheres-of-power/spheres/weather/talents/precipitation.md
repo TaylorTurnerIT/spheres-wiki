@@ -6,7 +6,6 @@ system: power
 sphere: weather
 tier: basic
 tags: []
-
 ---
 
 Precipitation has the most severe interaction with the other weather categories, as the conditions change depending on the temperature and wind.

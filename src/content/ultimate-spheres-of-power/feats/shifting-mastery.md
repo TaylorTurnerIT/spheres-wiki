@@ -6,7 +6,6 @@ system: power
 sphere: alteration
 tags: []
 tier: feat
-
 ---
 
 **Prerequisite:** Combat Casting.

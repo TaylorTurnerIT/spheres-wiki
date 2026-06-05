@@ -6,7 +6,6 @@ type: talent
 sphere: destruction
 tier: base
 tags: []
-
 ---
 
 As a standard action, you may deliver a burst of blunt magical force as a melee touch attack or a ranged touch attack within close range. A destructive blast is subject to spell resistance, and while it bypasses DR/magic, it does not automatically bypass other forms of damage reduction if it deals physical damage (bludgeoning, slashing, or piercing). A ranged destructive blast counts as a ray attack.

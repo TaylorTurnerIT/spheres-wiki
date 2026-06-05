@@ -4,7 +4,6 @@ name: "Slowed"
 level: 1
 replaces: ["mercies or cruelties"]
 tags: []
-
 ---
 
 The target is stuck in time, and is paralyzed for 1 round.

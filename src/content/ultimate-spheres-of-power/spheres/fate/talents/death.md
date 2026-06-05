@@ -7,7 +7,6 @@ sphere: fate
 tier: advanced
 tags:
   - motif
-
 ---
 
 **Prerequisites:** Fate sphere (one (motif) talent), caster level 5th.

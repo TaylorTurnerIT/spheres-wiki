@@ -4,7 +4,6 @@ name: "Shadowstuff"
 level: 6
 tags: []
 isTraitContainer: true
-
 ---
 
 Fey adepts gain a limited ability to wield shadowstuff—the pure essence of shadows. With this power, the fey adept can affect the world around him with his illusions by weaving reality into the images.

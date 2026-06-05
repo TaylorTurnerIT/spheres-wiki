@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: advanced
 tags: ["utility"]
-
 ---
 
 **Prerequisites:** Divination sphere (Greater Divine [range], Viewing (divine)), caster level 10th.

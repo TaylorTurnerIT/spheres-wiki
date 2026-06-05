@@ -6,7 +6,6 @@ system: power
 sphere: time
 tags: ["combat"]
 tier: feat
-
 ---
 
 **Prerequisite:** Time sphere.

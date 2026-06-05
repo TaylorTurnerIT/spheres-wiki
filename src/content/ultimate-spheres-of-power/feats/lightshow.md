@@ -6,7 +6,6 @@ system: power
 sphere: light
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Light sphere, bardic performance class ability.

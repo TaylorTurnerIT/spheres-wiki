@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "squadron"
 label: "Squadron"
 sphere: "war"
-
 ---

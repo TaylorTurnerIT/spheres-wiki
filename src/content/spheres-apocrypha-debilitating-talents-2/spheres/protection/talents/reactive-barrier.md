@@ -6,7 +6,6 @@ type: talent
 sphere: protection
 tier: basic
 tags: []
-
 ---
 
 When you create a barrier, you may spend a spell point or increase the casting time by one step (usually from a standard to a full-round action) to allow the barrier to react to damage.

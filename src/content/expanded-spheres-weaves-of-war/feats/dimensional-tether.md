@@ -6,7 +6,6 @@ system: power
 sphere: mana
 tags: []
 tier: feat
-
 ---
 
 **Prerequisite**: Destruction Sphere (energy tether) or Mana Sphere (hardened bond)

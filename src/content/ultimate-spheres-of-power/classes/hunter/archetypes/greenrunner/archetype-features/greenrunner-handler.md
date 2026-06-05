@@ -7,7 +7,6 @@ replaces:
 tags:
   - trade
   - utility
-
 ---
 
 At 1st level, the greenrunner gains Animal Empathy from the Beastmastery sphere as a bonus talent.

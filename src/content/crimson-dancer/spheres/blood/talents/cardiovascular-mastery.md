@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: basic
 tags: ["quicken", "still"]
-
 ---
 
 Creatures under your control have the rhythm of their hearts closely monitored and controlled.

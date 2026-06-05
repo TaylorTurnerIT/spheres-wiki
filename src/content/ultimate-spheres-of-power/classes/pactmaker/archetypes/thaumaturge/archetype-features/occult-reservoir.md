@@ -3,7 +3,6 @@ id: occult-reservoir
 name: "Occult Reservoir"
 level: 1
 tags: []
-
 ---
 
 A thaumaturge has an innate pool of occult energy that she can draw upon to fuel her occult exploits and enhance her spirits' granted abilities. Each day, after sealing her first pact with a spirit, the thaumaturge's occult reservoir fills with raw spiritual energy, gaining a number of points equal to 3 + 1/2 her pactmaker level. Any points she had from the previous day are lost.

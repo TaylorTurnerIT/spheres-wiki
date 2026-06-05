@@ -7,7 +7,6 @@ sphere: nature
 dualSphere: destruction
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Destruction sphere, Nature sphere (any (geomancing) talent).

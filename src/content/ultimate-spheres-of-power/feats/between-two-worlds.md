@@ -6,7 +6,6 @@ system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat
-
 ---
 
 You can reverse the flow of your body's energies, changing what will heal and harm you.

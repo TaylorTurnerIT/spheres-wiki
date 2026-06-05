@@ -4,7 +4,6 @@ name: "Gadgets (Ex)"
 level: 1
 tags: []
 isTraitContainer: true
-
 ---
 
 Technicians are experts at building things, be they improvised tools or unique mechanical marvels. These items, called gadgets, are built out of components the technician has prepared in his spare time out of commonly-found items; so long as the technician has access to a trap bag, he is assumed to have access to all the parts he needs to build his gadgets, and to have already prepared components beforehand to quickly create whatever gadget he needs.

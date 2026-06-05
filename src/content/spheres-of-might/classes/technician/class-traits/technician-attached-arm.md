@@ -6,7 +6,6 @@ system: might
 tags: []
 className: technician
 featureId: improved-backpack
-
 ---
 
 The improved backpack contains an attached mechanical arm. This arm can hold objects or retrieve them from the wearer, although it does not possess the fine motor skills to wield a weapon or make Dexterity-based skill checks, and does not grant additional attacks. However, each attached arm gains 1 of the following qualities. This improvement may be gained multiple times. Note: If the technician possesses mechanical insight, each arm gains 2 qualities instead of 1.

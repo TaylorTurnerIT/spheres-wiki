@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: advanced
 tags: ["ex"]
-
 ---
 
 **Prerequisites:** Death sphere, caster level 5th.

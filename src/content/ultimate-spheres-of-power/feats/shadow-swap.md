@@ -6,7 +6,6 @@ system: power
 sphere: dark
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow), Step Through Darkness (meld)).

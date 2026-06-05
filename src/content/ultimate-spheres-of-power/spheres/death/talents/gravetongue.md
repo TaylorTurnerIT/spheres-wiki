@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: basic
 tags: ["utility"]
-
 ---
 
 You may spend a spell point as a standard action to gain the ability to speak with undead and corpses for 1 minute per caster level. You can communicate with, ask questions of, and receive answers from them. A mindless undead or corpse spoken to with gravetongue does not maintain any memory of its life or death - only the time that has elapsed since its death (and reanimation).

@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: advanced
 tags: []
-
 ---
 **Prerequisites:** Conjuration sphere (Call The Departed), caster level 5th.
 

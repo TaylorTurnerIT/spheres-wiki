@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Death sphere (Soul Trap (advanced)), caster level 15th.

@@ -6,7 +6,6 @@ system: power
 sphere: light
 tags: []
 tier: feat
-
 ---
 
 **Prerequisite:** Light sphere.

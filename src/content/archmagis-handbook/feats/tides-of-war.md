@@ -7,7 +7,6 @@ sphere: war
 dualSphere: mana
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 **Prerequisites:** Mana sphere (Magical Conduit), War sphere.
 

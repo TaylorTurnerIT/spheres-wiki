@@ -7,7 +7,6 @@ sphere: enhancement
 dualSphere: creation
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Creation sphere, Enhancement sphere (Lighten (enhance)).

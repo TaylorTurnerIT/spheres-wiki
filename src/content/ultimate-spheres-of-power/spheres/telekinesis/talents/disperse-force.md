@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Telekinesis sphere (Quick Reactions, Telekinetic Push), caster level 10th.

@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: ["utility"]
-
 ---
 
 **Prerequisites:** Warp sphere (Extradimensional Storage (space)).

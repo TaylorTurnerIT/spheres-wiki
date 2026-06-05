@@ -6,7 +6,6 @@ type: talent
 sphere: light
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Light sphere (Lingering Glow), caster level 1st.

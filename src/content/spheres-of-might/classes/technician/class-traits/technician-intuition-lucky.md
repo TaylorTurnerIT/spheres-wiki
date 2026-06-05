@@ -6,7 +6,6 @@ system: might
 tags: []
 className: technician
 featureId: list-of-technical-insights
-
 ---
 
 The technician's luck pool and intuition pool both increase by 1 point. In addition, he may spend luck points as if they were intuition points, and intuition points as if they were luck points.

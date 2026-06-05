@@ -6,7 +6,6 @@ system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat
-
 ---
 
 **Prerequisites:** Conjuration sphere (Greater Summoning, Lingering Companion (form)).

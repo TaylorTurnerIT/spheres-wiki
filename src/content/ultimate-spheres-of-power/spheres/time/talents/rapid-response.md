@@ -6,7 +6,6 @@ type: talent
 sphere: time
 tier: basic
 tags: ["time"]
-
 ---
 
 You grant the target a competence bonus to initiative checks equal to 1/2 your caster level (minimum 1) and the ability to act in the surprise round even if they fail their Perception check to notice the presence of foes. You must concentrate to maintain this effect, but may spend a spell point to allow it to remain for 10 minutes per caster level without concentration.

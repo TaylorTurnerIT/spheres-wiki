@@ -7,7 +7,6 @@ tags: []
 className: technician
 featureId: improved-backpack
 requires: "Steampower Insight"
-
 ---
 
 The improved backpack possesses a propeller that can be activated as a move action. One round later, the wearer gains a 20 ft. fly speed with a maneuverability of average.

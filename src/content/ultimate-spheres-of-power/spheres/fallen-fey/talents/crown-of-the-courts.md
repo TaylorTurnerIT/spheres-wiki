@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
-
 ---
 
 You conjure and don a crown representing a chosen court, usually seelie or unseelie (though others may be available depending on setting), gaining an aura of authority over the fey.

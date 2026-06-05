@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: base
 tags: []
-
 ---
 
 As a standard action, you may create small, simple illusions called tricks. Unless otherwise stated, a trick persists for 1 minute per level or until dismissed.

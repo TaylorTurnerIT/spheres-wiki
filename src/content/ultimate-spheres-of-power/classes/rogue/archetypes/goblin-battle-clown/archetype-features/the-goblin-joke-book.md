@@ -3,7 +3,6 @@ id: the-goblin-joke-book
 name: "The Goblin \"Joke\" Book"
 level: 1
 tags: []
-
 ---
 
 "Guess where my knife is!"

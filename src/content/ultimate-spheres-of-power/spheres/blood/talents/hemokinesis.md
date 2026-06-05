@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: basic
 tags: []
-
 ---
 
 You gain the following abilities:

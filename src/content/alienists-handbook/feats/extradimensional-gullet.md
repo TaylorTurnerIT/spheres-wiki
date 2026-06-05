@@ -6,7 +6,6 @@ system: power
 sphere: warp
 tags: ["combat"]
 tier: feat
-
 ---
 **Prerequisites:** Swallow whole, Alteration sphere (Serpentine Transformation (transformation)), or Death sphere (Tomb Of Flesh); Warp sphere (Extradimensional Room (space)).
 

@@ -3,7 +3,6 @@ id: possessed-fire
 name: Fire
 level: 1
 tags: []
-
 ---
 
 The vigilante gains a +10 ft. bonus to his land movement speed.

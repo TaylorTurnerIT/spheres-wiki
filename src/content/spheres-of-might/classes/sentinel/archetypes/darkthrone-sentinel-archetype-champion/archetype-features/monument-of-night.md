@@ -3,7 +3,6 @@ id: monument-of-night
 name: "Monument of Night"
 level: 1
 tags: []
-
 ---
 
 When the darkthrone uses the *ecliptic patrol* ability (granted by the Shadow Defender feat), instead of the darkthrone increasing their threatened area, the darkthrone instead creates a "monument of night" which manifests for as long as the darkthrone *patrols* this way. The monument of night has an effective reach equal to 20 feet + 5 feet per 4 base attack bonus. The darkthrone may create the monument of night anywhere, provided that the darkthrone is within the monument of night's effective reach once it is created (i.e. if the radius is 20 feet, the monument could be placed 20 feet away). The monument of night's statistics is detailed below. A creature that attacks the monument of night provokes an attack of opportunity from the darkthrone (no more than once per round).

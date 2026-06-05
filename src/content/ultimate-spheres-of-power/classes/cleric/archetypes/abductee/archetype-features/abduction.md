@@ -3,7 +3,6 @@ id: abduction
 name: "Abduction"
 level: 7
 tags: []
-
 ---
 
 As a standard action the abductee can designate one creature within 30 feet of her to become the target of an extra dimensional rift - sucked in and spat back out violently a second later. Although the trip lasts but a brief moment for most, a trip to the far places in the universe is traumatic and disorienting as the transported creature witnesses the face of alien beings, aberrant horrors and is exposed to the total realization of the chaos of the cosmos.

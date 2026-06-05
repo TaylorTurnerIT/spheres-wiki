@@ -3,7 +3,6 @@ id: superior-scrolling
 name: "Superior Scrolling"
 level: 14
 tags: []
-
 ---
 
 Starting at 14th level, Greater and Grandmaster sigils of the campaigning soldier inscribed by the campaigner grant a greater arcana pocket and a greater gloriana pocket. These pockets come pre-filled.

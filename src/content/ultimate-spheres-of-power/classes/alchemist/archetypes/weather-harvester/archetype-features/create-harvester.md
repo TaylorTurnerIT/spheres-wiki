@@ -3,7 +3,6 @@ id: create-harvester
 name: "Create Harvester"
 level: 1
 tags: []
-
 ---
 
 At 1st level a weather harvester gains the unique ability to create devices that channel the awe-inspiring power of weather to create other magical effects. Harvesters are magic items that use the talent-based system and function once per day. The weather harvester need not have the prerequisite base spheres or talents to make the harvester.

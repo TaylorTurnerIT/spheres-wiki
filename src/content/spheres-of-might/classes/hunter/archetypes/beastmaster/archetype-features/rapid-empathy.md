@@ -4,7 +4,6 @@ name: "Rapid Empathy"
 level: 8
 replaces: ["second animal focus"]
 tags: []
-
 ---
 
 At 8th level, the beastmaster reduces the time required to use her Animal Empathy talent to a full-round action.

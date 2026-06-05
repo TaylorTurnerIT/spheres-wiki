@@ -3,7 +3,6 @@ id: cast-sutra
 name: "Cast Sutra"
 level: 1
 tags: []
-
 ---
 
 At 1st level, these monks cast paper talismans with sacred writing, to combat enemies of their faith. They gain the Sutra Caster feat (see also Sutra Magic). A contemplative monk must still meet the ability score and religious prerequisites for the feat.

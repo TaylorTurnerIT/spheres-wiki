@@ -6,7 +6,6 @@ system: power
 sphere: telekinesis
 tier: basic
 tags: []
-
 ---
 
 Once per turn when lifting a creature or object with telekinesis (referred to as a Bludgeon), you can spend its remaining movement to strike a creature or object within its reach.

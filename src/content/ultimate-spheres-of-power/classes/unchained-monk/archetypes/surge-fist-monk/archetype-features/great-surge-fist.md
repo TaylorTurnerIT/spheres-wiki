@@ -3,7 +3,6 @@ id: great-surge-fist
 name: "Great Surge Fist"
 level: 10
 tags: []
-
 ---
 
 At 10th level, the surge fist monk selects an element, as per the kineticist's expanded element. If it is different from their primary element, they gain one of that element's simple blasts; if it is the same element and has multiple associated simple blasts, they learn whichever they did not know beforehand. They also gain the composite blast for which their two simple blasts are prerequisites, or if they chose the same element, gain the composite blast for which elemental focus and expanded element of that element are prerequisites (for example, a surge fist monk who takes earth twice will gain metal blast).

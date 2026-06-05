@@ -6,7 +6,6 @@ type: talent
 sphere: dark
 tier: basic
 tags: ["blot", "darkness"]
-
 ---
 
 You may create a darkness or blot effect that erodes the mental capacity of those inside. Any creature inside the darkness must succeed at a Fortitude save or suffer 1 point of Wisdom damage, +1 per 10 caster levels. Creatures who remain within this area of darkness must save at the end of your subsequent turns or suffer another point of Wisdom damage.

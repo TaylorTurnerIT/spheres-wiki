@@ -6,7 +6,6 @@ type: talent
 sphere: war
 tier: basic
 tags: ["totem"]
-
 ---
 
 You create a totem that interferes with charm and compulsion magic as well as other powers that let a caster enforce their will on others. Whenever a creature attempts to exert or maintain mental control over another creature inside your totem, they must attempt a magic skill check against your magic skill defense or else their attempt fails, and their control is suspended for as long as the target remains within the totem. During the intervening time, the controlled creature is free. A mindless creature may do nothing, or continue in their previous activity, while a creature with their own mind may act normally. They are still under the effects of any ability that controlled them, they simply are not receiving new orders. The controlling caster may attempt to resume control on their next turn.

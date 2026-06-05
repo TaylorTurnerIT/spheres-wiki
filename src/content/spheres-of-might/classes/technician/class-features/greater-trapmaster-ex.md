@@ -3,7 +3,6 @@ id: greater-trapmaster-ex
 name: "Greater Trapmaster (Ex)"
 level: 11
 tags: []
-
 ---
 
 At 11th level, all uses of the Disable Device skill have their required time decreased by 3 steps instead of 2, to a minimum of a swift action.

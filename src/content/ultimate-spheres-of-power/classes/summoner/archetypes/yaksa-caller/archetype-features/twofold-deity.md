@@ -3,7 +3,6 @@ id: twofold-deity
 name: "Twofold Deity"
 level: 20
 tags: []
-
 ---
 
 At 20th level the caller and his yaksa are truly one in purpose and power and the yaksa's strength flows freely through the caller's physical form.

@@ -7,7 +7,6 @@ sphere: illusion
 dualSphere: creation
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Creation sphere; Illusion sphere (Shadow Infusion) or create reality class feature.

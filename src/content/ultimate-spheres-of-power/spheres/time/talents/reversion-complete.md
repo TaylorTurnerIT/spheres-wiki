@@ -6,7 +6,6 @@ type: talent
 sphere: time
 tier: advanced
 tags: ["utility"]
-
 ---
 
 **Prerequisites:** Time sphere (Reversion (advanced)), caster level 15th.

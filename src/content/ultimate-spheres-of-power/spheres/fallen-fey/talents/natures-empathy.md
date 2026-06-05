@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing", "utility"]
-
 ---
 
 You may activate the following abilities as fey-blessings:

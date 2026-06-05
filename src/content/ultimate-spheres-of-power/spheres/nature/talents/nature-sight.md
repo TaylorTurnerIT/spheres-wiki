@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["spirit"]
-
 ---
 
 You may gain a supernatural sense depending on what Nature packages you possess for as long as you concentrate, or you may spend a spell point to gain the sense for 1 minute per caster level. This sense has a range equal to your geomancing range. Each sense must be gained as a separate effect.

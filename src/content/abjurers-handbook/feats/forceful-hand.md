@@ -7,7 +7,6 @@ sphere: telekinesis
 dualSphere: protection
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 **Prerequisites:** Protection sphere, Telekinesis sphere.
 

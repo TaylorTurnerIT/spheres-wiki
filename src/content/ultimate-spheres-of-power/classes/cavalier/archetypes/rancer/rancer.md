@@ -2,7 +2,6 @@
 id: rancer
 name: "Rancer"
 tags: []
-
 ---
 
 The Rancers are knights of the oldest orders who sit astride their magical motorcycles and do battle with the whatever social injustice faces the land. Their rumbling, magical, mechanical, mounts spit fire from their tailpipes as they race across the land, bringing swift justice along with the roar of their engine.

@@ -7,7 +7,6 @@ sphere: illusion
 dualSphere: divination
 tags: ["dual-sphere", "sm"]
 tier: feat
-
 ---
 
 **Prerequisites:** Divination Sphere (Viewing), Illusion Sphere

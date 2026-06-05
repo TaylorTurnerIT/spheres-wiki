@@ -3,7 +3,6 @@ id: shadow-boxing
 name: "Shadow Boxing"
 level: 1
 tags: []
-
 ---
 
 At 1st level the shadow boxer may manipulate her shadow as an extension of her body, delivering blows as if from her own fists. Her shadow can retrieve stored items, wield and attack with weapons, accomplish delicate tasks like disabling a lock, and deliver touch attacks. A shadow boxer's shadow can not be used to gain additional attacks, nor does she gain extra magic item slots. Activating and dismissing shadow boxing are free actions.

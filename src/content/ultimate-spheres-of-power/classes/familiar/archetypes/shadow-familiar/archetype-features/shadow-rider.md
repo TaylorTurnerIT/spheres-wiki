@@ -4,7 +4,6 @@ name: "Shadow Rider"
 level: 7
 replaces: ["speak with animals of its own kind and scry on familiar"]
 tags: []
-
 ---
 
 At 7th level, a shadow familiar can make a single Stealth check to covertly merge with another creature's shadow. When merged, it it completely undetectable by non-magical means, and may safely travel through bright conditions beyond 100 ft. from its master so long as its target casts a shadow to hide in. A shadow familiar can merge with a willing target's shadow without need of a Stealth check.

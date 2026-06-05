@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: basic
 tags: []
-
 ---
 
 As a special application of restore, you may cause a creature damaged by positive energy to suffer 1d2 temporary negative levels for one hour per caster level (with no save instead of the usual Will save to negate), even if they are normally immune to negative levels. When used this way, this application of restore requires a touch attack or ranged touch attack, and is considered a ray.

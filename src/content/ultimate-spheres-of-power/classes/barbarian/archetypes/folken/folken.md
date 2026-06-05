@@ -2,7 +2,6 @@
 id: folken
 name: "Folken"
 tags: []
-
 ---
 
 Folken are souls who travel the world, living as expats in foreign lands.They bring with them, by choice or by necessity, their culture and their superstitions. They enjoy exotic strange foods, wear different styles of clothing, speak with thick accents, and wield previously unencountered weapons.

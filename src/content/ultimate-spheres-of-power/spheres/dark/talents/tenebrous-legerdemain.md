@@ -6,7 +6,6 @@ type: talent
 sphere: dark
 tier: basic
 tags: ["blot", "darkness", "meld"]
-
 ---
 
 You create an area of darkness or blot which you may manipulate to perform minor feats of legerdemain. Once per round as a free action you may make a pickpocket attempt or a Steal combat maneuver against a target that is within your darkness or blot. You may use your own Sleight of Hand modifier or Steal CMB or your caster level + your casting ability modifier, whichever is higher.

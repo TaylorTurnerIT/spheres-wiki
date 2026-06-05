@@ -6,7 +6,6 @@ type: talent
 sphere: creation
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Creation sphere (Duplicate (advanced), Fleshcraft (advanced, material)), caster level 10th.

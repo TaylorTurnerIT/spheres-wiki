@@ -6,7 +6,6 @@ system: power
 sphere: life
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Life sphere; bardic performance or raging song class feature.

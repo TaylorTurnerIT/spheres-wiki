@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["type"]
-
 ---
 
 Your companion is mechanical in its nature, whether it is a full construct or a modified biological creature. The companion gains the construct creature type. The companion gains moderate fortification and DR 2/adamantine +1 per 3 Hit Dice.

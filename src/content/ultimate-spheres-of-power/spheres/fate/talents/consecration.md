@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: base
 tags: []
-
 ---
 
 As a standard action, you may affect a 20-foot radius + 5 feet per 5 caster levels area centered on you with a consecration. This aura moves as you do. The effects of consecrations are subject to spell resistance. When you gain the Fate sphere, you gain the following consecration:

@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: basic
 tags: []
-
 ---
 
 You may teleport objects independent of people. The object cannot weigh more than 10 pounds per caster level, and it cannot be in the possession of another creature (in their hand or on their person). If a creature is willing, you may teleport the object directly into their hand or onto their person.

@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Death sphere (Haunting Apparition), caster level 5th.

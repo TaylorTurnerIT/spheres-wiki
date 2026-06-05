@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "magic"
 label: "Magic"
 sphere: "illusion"
-
 ---

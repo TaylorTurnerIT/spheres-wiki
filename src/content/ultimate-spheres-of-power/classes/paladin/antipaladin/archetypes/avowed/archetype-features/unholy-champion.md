@@ -3,7 +3,6 @@ id: unholy-champion
 name: "Unholy Champion"
 level: 20
 tags: []
-
 ---
 
 At 20th level, whenever the avowed would use a spell, spell-like ability, or sphere effect that deals negative energy damage, the damage dealt is maximized.

@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Illusion sphere (Suppression (glamer) (invisibility)), caster level 10th.

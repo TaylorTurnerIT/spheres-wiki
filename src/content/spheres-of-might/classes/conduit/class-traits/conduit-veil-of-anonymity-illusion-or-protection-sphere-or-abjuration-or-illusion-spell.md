@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: imagination
-
 ---
 
 - The conduit produces a Protection sphere Inner Peace, Obscurity, or Slippery aegis, which can be augmented with the following talents: Shared Aegis, Status. 

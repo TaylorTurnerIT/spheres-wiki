@@ -6,7 +6,6 @@ system: power
 sphere: fallen-fey
 tier: basic
 tags: []
-
 ---
 
 Fairy rings can be found in any wilderness. They are never present in any developed area unless deliberately created. A ring is usually within 1d6 miles of any given wilderness location. If using a 6 mile hex map, each hex that lacks a settlement of city size or larger will have 1d2 natural fairy rings. Hexes with cities or larger settlements will have only 1 natural fairy ring. The fairy ring consists of a circle 5 to 10 ft. in diameter, consisting of coral (salt water oceans only), mushrooms, small stones, or wildflowers. Noticing the formation requires a DC 10 Perception check (modified for distance) and identifying it requires a DC 15 Knowledge (nature) or DC 20 Knowledge (planes) check. If exploring a hex, any fairy rings in that hex can be located with a DC 10 perception or Knowledge (nature) check as part of the normal exploration.

@@ -3,7 +3,6 @@ id: dark-ki
 name: "Dark Ki"
 level: 3
 tags: []
-
 ---
 
 At 3rd level, a shadow boxer gains a pool of dark ki points, supernatural energy supplemented with the subtle influence of her shadow self. The number of points in a shadow boxer's dark ki pool is equal to 1/2 her level + her Charisma modifier.

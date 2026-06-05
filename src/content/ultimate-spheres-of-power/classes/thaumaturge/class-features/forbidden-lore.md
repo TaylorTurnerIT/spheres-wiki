@@ -3,7 +3,6 @@ id: forbidden-lore
 name: "Forbidden Lore"
 level: 1
 tags: []
-
 ---
 
 Thaumaturges use bargains, secrets, and dangerous magical practices to push their casting to greater heights than their more careful contemporaries achieve. A thaumaturge may, as part of the action required to use a spell or sphere effect, increase his caster level by 2 for that effect.

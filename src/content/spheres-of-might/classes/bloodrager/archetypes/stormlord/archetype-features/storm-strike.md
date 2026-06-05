@@ -3,7 +3,6 @@ id: storm-strike
 name: "Storm Strike"
 level: 4
 tags: []
-
 ---
 
 At 4th level, whenever a stormlord casts a spell with a range of touch from the bloodrager spell list, he can deliver the spell through any weapon he is wielding.

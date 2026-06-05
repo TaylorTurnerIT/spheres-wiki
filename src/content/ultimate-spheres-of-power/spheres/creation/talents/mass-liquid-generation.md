@@ -6,7 +6,6 @@ type: talent
 sphere: creation
 tier: basic
 tags: []
-
 ---
 
 You may create water even if you do not possess Expanded Materials.

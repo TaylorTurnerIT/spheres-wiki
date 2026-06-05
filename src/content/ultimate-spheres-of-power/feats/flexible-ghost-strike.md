@@ -7,7 +7,6 @@ sphere: destruction
 dualSphere: death
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 You can make ghost strikes in a variety of configurations.

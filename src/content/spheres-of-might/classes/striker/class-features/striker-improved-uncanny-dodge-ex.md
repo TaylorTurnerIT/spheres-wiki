@@ -3,7 +3,6 @@ id: striker-improved-uncanny-dodge-ex
 name: Improved Uncanny Dodge (Ex)
 level: 12
 tags: []
-
 ---
 
 At 12th level and higher, a striker can no longer be flanked. This defense denies a rogue the ability to sneak attack the striker by flanking her, unless the attacker has at least four more rogue levels than the target has striker levels.

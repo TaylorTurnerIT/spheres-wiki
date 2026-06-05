@@ -6,7 +6,6 @@ type: talent
 sphere: light
 tier: base
 tags: []
-
 ---
 
 (Lens) effects allow a user of the Light sphere to bend or alter light and its properties. The caster may place a lens as a standard action on any target (or sometimes a space) within the same range as their glow. This requires a melee or ranged touch attack when used on unwilling targets, and is subject to spell resistance. A lens lasts as long as you concentrate, but you may spend a spell point to allow a lens to remain for 1 hour per caster level without concentration.

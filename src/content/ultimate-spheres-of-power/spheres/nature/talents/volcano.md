@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: advanced
 tags: ["fire", "geomancing"]
-
 ---
 
 **Prerequisites:** Nature sphere ((fire) package, Manipulate Nature (geomancing)), caster level 15th.

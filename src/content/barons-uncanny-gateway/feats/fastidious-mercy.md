@@ -6,7 +6,6 @@ system: power
 sphere: fate
 tags: ["sm"]
 tier: feat
-
 ---
 
 **Prerequisites:** Fate Sphere (Mercy)

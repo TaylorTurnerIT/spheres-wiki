@@ -5,5 +5,4 @@ label: "Mandate"
 priority: 5
 description: "Provides abilities related to the Mandate tag."
 sphere: "war"
-
 ---

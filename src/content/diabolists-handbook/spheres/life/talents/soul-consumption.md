@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Death sphere (Create Soul Gem (advanced)), Life sphere (Revitalize), caster level 5th.

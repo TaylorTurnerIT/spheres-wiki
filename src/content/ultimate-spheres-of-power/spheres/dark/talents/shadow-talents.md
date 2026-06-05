@@ -6,7 +6,6 @@ system: power
 sphere: dark
 tier: basic
 tags: []
-
 ---
 
 Talents with the (shadow) tag manipulate a target’s own shadow directly, without manifesting an area of darkness at all. Unless otherwise indicated, a (shadow) talent may be applied to a target within medium range as a standard action. Only one (shadow) talent may be applied to any one target at a time, and an unwilling target is allowed a Will save to negate a shadow. The duration of each shadow is specified in its description. If a shadow can be maintained through concentration, you must remain within your shadow range of the target to do so.

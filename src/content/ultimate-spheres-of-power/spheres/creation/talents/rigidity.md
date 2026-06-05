@@ -6,7 +6,6 @@ type: talent
 sphere: creation
 tier: basic
 tags: ["alter"]
-
 ---
 
 You can spend one spell point to manipulate how rigid an object is. You cannot alter an object that is larger than you can create and the normal restrictions apply. This talent has no effect on gases or liquids, or creatures without hardness as a defensive ability.

@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: physicality
-
 ---
 
 At 10th level, the conduit increases any enhancement bonus the object possesses by 1 (maximum +6), and the conduit may alter the object's enhancement bonuses and special qualities when they first thaumically charge the object, as the Shift Enchantment Spellhacking talent.

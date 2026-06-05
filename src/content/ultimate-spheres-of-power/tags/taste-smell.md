@@ -6,5 +6,4 @@ color: "#117A65"
 id: "taste-smell"
 label: "Taste & Smell"
 sphere: "illusion"
-
 ---

@@ -3,7 +3,6 @@ id: prophecys-anathema
 name: "Prophecy's Anathema"
 level: 20
 tags: []
-
 ---
 
 At 20th level, any attempts to divine information about the avowed, any creature within 10 feet of them, or their location through effects such as augury have a 0% chance to yield meaningful or accurate results. In addition, as long as the avowed has a smite active, any enemies within their aura of annulled fate are affected by detaching smite.

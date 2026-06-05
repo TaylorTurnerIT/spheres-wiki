@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Divination sphere (Detect Scrying (sense)).

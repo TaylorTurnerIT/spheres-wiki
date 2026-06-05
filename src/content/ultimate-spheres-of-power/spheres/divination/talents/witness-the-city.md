@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: basic
 tags: ["utility", "divine"]
-
 ---
 
 You may spend a spell point to see, hear, smell, feel, and even taste a torrent of past scenes and pieces of conversations related to anything in a settlement you are currently in. At the end of each of your turns for the duration of this divination, attempt a single Diplomacy check to gather information as though you had spent 1d4 hours talking to local people, without having to use an action to do so. Multiple Diplomacy checks made to gather information on the same topic always grants the same information as the first check. You can use your Perception bonus in place of your Diplomacy bonus if you so wish, but with a -5 penalty.

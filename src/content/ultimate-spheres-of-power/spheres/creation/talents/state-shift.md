@@ -6,7 +6,6 @@ type: talent
 sphere: creation
 tier: advanced
 tags: ["alter"]
-
 ---
 
 **Prerequisites:** Creation sphere (Change Material (alter)), caster level 10th.

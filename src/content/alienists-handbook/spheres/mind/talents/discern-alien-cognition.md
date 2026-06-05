@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: advanced
 tags: []
-
 ---
 **Prerequisite:** Mind sphere.
 

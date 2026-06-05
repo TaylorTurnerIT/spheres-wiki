@@ -3,7 +3,6 @@ id: wood-blast
 name: "Wood blast"
 level: 1
 tags: []
-
 ---
 
 - earth subtype

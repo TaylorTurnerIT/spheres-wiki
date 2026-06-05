@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: basic
 tags: []
-
 ---
 
 When you use your Life sphere abilities, you may choose for them to not be positive energy effects. Used this way, your Life sphere abilities can affect non-living creatures such as constructs or undead, though they do not work on inanimate objects. This does not allow you to harm creatures you could not harm before with positive energy.

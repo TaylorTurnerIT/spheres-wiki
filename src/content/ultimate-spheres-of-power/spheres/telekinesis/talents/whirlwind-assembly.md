@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: basic
 tags: []
-
 ---
 
 You can use your telekinesis to ready yourself for any given situation. You may perform any of the following actions as a swift action:

@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: basic
 tags: ["dominion"]
-
 ---
 You can telepathically order and communicate with undead creatures you control within your dominion range. You do not need line of sight or effect to maintain this connection. Only targets completely under your control are valid; charmed undead are not truly under your control, and as such do not qualify.
 

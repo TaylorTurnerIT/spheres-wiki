@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Illusion sphere (Ranged Illusion [range] x2), caster level 5th.

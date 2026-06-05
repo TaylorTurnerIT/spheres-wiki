@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: base
 tags: []
-
 ---
 
 As a standard action, you can use telekinesis to lift one willing creature or unattended object within close range and move it up to 20 feet + 5 feet per 5 caster levels (its telekinesis speed). The creature or object levitates as long as you concentrate, have line of effect, and the object remains within close range. The objects and creatures you may lift are restricted by size; the largest creature or object you can lift is given in the chart below. This assumes the creature or object is made from a dense material, such as flesh creatures or stone objects.

@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "apply"
 label: "Apply"
 sphere: "mind"
-
 ---

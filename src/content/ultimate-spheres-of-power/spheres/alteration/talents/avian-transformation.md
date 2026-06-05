@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: basic
 tags: ["transformation"]
-
 ---
 
 You grant the form of a flying animal or magical beast with your shapeshift.

@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: ["space"]
-
 ---
 
 **Prerequisites:** Warp sphere (Plane Manipulator (space)), caster level 15th.

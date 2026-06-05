@@ -6,7 +6,6 @@ system: power
 sphere: death
 tags: ["channeling"]
 tier: feat
-
 ---
 
 You can overcharge your connection with your undead using your channel energy ability.

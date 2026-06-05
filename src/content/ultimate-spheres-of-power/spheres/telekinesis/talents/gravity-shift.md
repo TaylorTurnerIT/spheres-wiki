@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: basic
 tags: []
-
 ---
 
 By concentrating your telekinetic powers on an area you may effectively increase or decrease the area's gravity. As a standard action you may alter the gravity of a 10-foot radius + 5 feet per five caster levels sphere anywhere within range of your telekinesis. As long as you concentrate, the area becomes either an area of heavy gravity or an area of light gravity. You may also change the type of gravity in the area as a move action. This talent can be used to alter areas that are already heavy or light gravity, either altering them to normal gravity or doubling their effects, but cannot be used in areas of no gravity or subjective gravity. You may spend a spell point to sustain this effect with Sustained Force.

@@ -6,7 +6,6 @@ system: power
 tags: []
 className: soul-weaver
 featureId: blessingblight
-
 ---
 
 At 2nd level, the soul weaver may touch a target and expend a use of Channel Energy to place a blight on them. The target is allowed a Fortitude save, and on a failure, grows a patch of festering undead flesh where he was touched (this patch may be hidden under the skin if the soul weaver chooses, so a target might not even know he's been infected). Blight is considered a magical disease and is permanent until removed by magic or with the Heal skill. A blessing counters and dispels a blight, leaving neither blessing nor blight in place.

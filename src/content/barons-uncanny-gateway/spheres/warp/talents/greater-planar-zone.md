@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: ["sm"]
-
 ---
 
 **Prerequisites:** Warp Sphere (Manifest Planar Zone (advanced)), caster level 5th

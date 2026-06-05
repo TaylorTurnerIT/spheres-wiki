@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Enhancement sphere (Bestow Intelligence (enhance)), caster level 10th.

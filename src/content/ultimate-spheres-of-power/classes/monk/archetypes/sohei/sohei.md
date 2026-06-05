@@ -2,7 +2,6 @@
 id: sohei
 name: "Sohei"
 tags: []
-
 ---
 
 Sohei are warrior monks and practitioners of a monastic faith. Unlike the solitary yamabushi, sohei organize into large groups, mobs, and even armies. Sohei do not pursue the path to enlightenment as individuals, or consider themselves a part of any single, smaller temple. Instead, they are a part of a larger, extended brotherhood, monastic order, or sub-sect of their faith. They draw their strength from being one part of a whole.

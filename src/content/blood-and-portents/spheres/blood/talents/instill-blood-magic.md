@@ -6,7 +6,6 @@ type: talent
 sphere: blood
 tier: basic
 tags: ["instill"]
-
 ---
 
 As a standard action you may touch a container of liquid and instill either a blood art or your blood control, including one (quicken) or (still) talent you possess, which functions as a potion or oil. If instilling a blood art, you must suffer blood loss as part of instilling the effect, and a creature who consumes the instilled liquid is treated as the target of that blood art, suffering blood loss as appropriate. You must spend a spell point to allow the blood control to endure without concentration.

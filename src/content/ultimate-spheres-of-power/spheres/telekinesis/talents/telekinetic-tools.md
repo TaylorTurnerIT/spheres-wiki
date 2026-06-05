@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: basic
 tags: []
-
 ---
 
 You may use your telekinesis to mimic simple tools, such as shovels, hammers, or scissors by using your telekinesis as if manipulating an item of the appropriate size.

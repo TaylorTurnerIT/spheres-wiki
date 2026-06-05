@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: advanced
 tags: []
-
 ---
 **Prerequisites:** Divination sphere, caster level 1st.
 

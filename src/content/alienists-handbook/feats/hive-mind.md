@@ -6,7 +6,6 @@ system: power
 sphere: war
 tags: ["squadron"]
 tier: feat
-
 ---
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander; caster level 5th or 5 ranks in Diplomacy.
 

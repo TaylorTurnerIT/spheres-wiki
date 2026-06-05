@@ -6,7 +6,6 @@ system: power
 sphere: fate
 tags: ["sm"]
 tier: feat
-
 ---
 
 **Prerequisites:** Death or Fate sphere

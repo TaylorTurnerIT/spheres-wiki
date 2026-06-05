@@ -4,7 +4,6 @@ name: "List of Sphere Specializations"
 level: 3
 tags: []
 isTraitContainer: true
-
 ---
 
 ### Alteration

@@ -6,7 +6,6 @@ system: power
 sphere: fate
 tier: basic
 tags: []
-
 ---
 
 You may spend a spell point to hallow a target for 1 minute per caster level. Choose an end of the alignment spectrum (good, evil, lawful, chaotic); you must choose an alignment that you possess. The target of this word gains a +1 sacred bonus (profane bonus if you are evil; if you are neither good nor evil you must choose whether you grant sacred or profane bonuses with this sphere) to attack rolls, AC, and saving throws made against targets of your opposed alignment (evil for good, lawful for chaotic, etc.). This bonus increases by 1 for every 10 caster levels possessed.

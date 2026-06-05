@@ -4,7 +4,6 @@ name: "Brawler's Pummel"
 level: 1
 replaces: ["all instances of brawler’s flurry"]
 tags: []
-
 ---
 
 From 2nd level on, whenever the brutal pummeler uses the attack action to attack with an unarmed strike, a weapon from the close fighter weapon group, or a weapon with the monk special feature, she may make one additional attack with an unarmed strike, a weapon from the close fighter weapon group, or a weapon with the monk special feature as a free action, but both attacks take a -2 penalty.

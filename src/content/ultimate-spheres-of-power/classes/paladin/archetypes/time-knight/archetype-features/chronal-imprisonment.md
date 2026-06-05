@@ -4,7 +4,6 @@ name: "Chronal Imprisonment"
 level: 20
 replaces: ["holy champion"]
 tags: []
-
 ---
 
 At 20th level, a time knight gains the ability to permanently remove temporal threats from the timeline. Whenever she uses smite evil and successfully strikes an evil creature who possess the Time sphere or any of its talents, an evil creature that knows time magic spells such as haste, slow, or time stop, or an evil creature with abilities that allow them to manipulate time, that creature must succeed at a Will saving throw or be instantly erased from the timeline.

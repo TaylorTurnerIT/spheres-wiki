@@ -6,7 +6,6 @@ type: talent
 sphere: destruction
 tier: basic
 tags: ["blast-type", "crystal"]
-
 ---
 
 You may spend a spell point to create a living crystal blast, covering the target and their space in a mass of ever shifting and clinging crystals. Your destructive blast deals piercing damage. Any creature struck by the attack or that failed their Reflex saving throw if one was required must succeed at a Reflex save or be entangled and unable to move.

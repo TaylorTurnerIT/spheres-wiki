@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance), Bestow Intelligence (enhance)), caster level 10th.

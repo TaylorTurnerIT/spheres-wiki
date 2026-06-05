@@ -6,7 +6,6 @@ system: power
 sphere: nature
 tags: ["drawback"]
 tier: feat
-
 ---
 
 **Prerequisites:** Nature sphere, Terrain Casting drawback.

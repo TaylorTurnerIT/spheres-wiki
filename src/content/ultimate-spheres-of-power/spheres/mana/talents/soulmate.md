@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["manabond"]
-
 ---
 
 As a manabond, you can create a warm bond between yourself and a willing creature. Whenever you (but not the recipient) are targeted by a harmless magical effect that lasts for at least 2 rounds and does not require concentration, you may clone the effect and grant it to the recipient for 2 rounds, plus 1 round for every 10 caster levels you possess, or a number of rounds equal to half the original effect's duration, whichever is fewer.

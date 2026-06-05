@@ -7,7 +7,6 @@ sphere: illusion
 dualSphere: dark
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow)), Illusion sphere, ability to create glamers.

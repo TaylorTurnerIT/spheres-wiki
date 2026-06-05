@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: basic
 tags: ["instill"]
-
 ---
 
 As a standard action you may touch a small container of liquid and instill a sense inside it, or spend a spell point to instill a divine ability inside it. This liquid functions as a potion or oil.

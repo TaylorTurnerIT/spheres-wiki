@@ -3,7 +3,6 @@ id: river-cuts-through-the-mountain
 name: "River Cuts Through the Mountain"
 level: 15
 tags: []
-
 ---
 
 At 15th level, the huashan, using a full attack action and expending his ki focus, can make a single attack roll against a single creature. With a successful strike the huashan inflicts damage as normal, but the creature must make a Fortitude saving throw (DC 10 + half the huashan's class level + the huashan's Wisdom modifier). If the target creature fails the saving throw, it receives damage on subsequent rounds as if the huashan had successfully struck it again with the same attack. This subsequent damage lasts for 1 round per four class levels plus 1 additional round per point of ki expended. If this ability is used twice on the same target, the effects are not cumulative unless the first usage has run its course. The use of this ability must be declared before the huashan's first attack of the round.

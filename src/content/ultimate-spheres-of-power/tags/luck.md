@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "luck"
 label: "Luck"
 sphere: "conjuration"
-
 ---

@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Alteration sphere (any talent granting energy resistance as a trait option), caster level 10th.

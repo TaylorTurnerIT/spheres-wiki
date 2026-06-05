@@ -7,7 +7,6 @@ sphere: telekinesis
 dualSphere: light
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 
 **Prerequisites:** Light sphere, Telekinesis sphere.

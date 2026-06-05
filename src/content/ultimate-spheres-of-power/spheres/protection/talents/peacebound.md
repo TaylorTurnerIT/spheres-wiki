@@ -6,7 +6,6 @@ type: talent
 sphere: protection
 tier: basic
 tags: ["aegis", "ward"]
-
 ---
 
 You may create a ward that renders all creatures within incapable of causing violence. Any violent action or targeted offensive magical effect created within the ward fails and the target's action is wasted (Will negates). If any target succeeds at this Will save, the ward's effect immediately ends for all. When a Peacebound ward is broken in this fashion, all creatures within become immune to that caster's Peacebound ward for 24 hours.

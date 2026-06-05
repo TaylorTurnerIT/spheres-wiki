@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["spirit"]
-
 ---
 
 You may spend a standard action to gain one of the following benefits for 1 round. You may spend a spell point to gain one of the following benefits for 1 minute per caster level. You may move up to your speed with the granted move type as part of activating this sphere effect, so long as the action used was at least a move action. The movements you can choose are determined by the packages you possess.

@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: basic
 tags: ["consecration"]
-
 ---
 
 You may fill an area with the influence of an alignment type you are connected to (good, evil, lawful, or chaotic). You must possess this alignment type. Creatures of that alignment's opposite (good for evil, lawful for chaotic, etc.) within this area suffer one of the following detriments, chosen at random (Fortitude negates):

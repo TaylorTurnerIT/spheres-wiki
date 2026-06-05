@@ -6,7 +6,6 @@ system: power
 sphere: time
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Spell Capacitor

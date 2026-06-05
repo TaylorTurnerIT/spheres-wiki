@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["cognition", "utility"]
-
 ---
 
 You construct a magical mental system to perfectly memorize information. By concentrating as long it requires to perceive something (such as the duration of a speech or while reading a book), you can archive it. Once a memory is archived you can concentrate to remember it. This can allow you to notice new details by attempting Perception checks. This does not allow you to use senses or similar abilities that you did not use or possess at the time of memorization (such as a Divination sphere effect, or blindsight).

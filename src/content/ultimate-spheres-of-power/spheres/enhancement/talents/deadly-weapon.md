@@ -6,7 +6,6 @@ type: talent
 sphere: enhancement
 tier: basic
 tags: ["enhance"]
-
 ---
 
 You may enhance a weapon, granting it the keen special ability if it does not already possess it and a +1 bonus to critical hit confirmation rolls for every 3 caster levels possessed (minimum 0).

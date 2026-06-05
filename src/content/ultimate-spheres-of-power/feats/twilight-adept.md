@@ -6,7 +6,6 @@ system: power
 sphere: light
 tags: ["teamwork"]
 tier: feat
-
 ---
 
 **Prerequisite:** Dark sphere or Light sphere.

@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: basic
 tags: []
-
 ---
 
 You may restore others by taking on their injuries yourself. Doing so reduces the cost of the Life sphere effect by 1 spell point to a minimum of 0 spell points.

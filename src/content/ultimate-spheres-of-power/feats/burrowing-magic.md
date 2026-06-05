@@ -6,7 +6,6 @@ system: power
 sphere: warp
 tags: ["metamagic"]
 tier: feat
-
 ---
 
 **Prerequisite:** Warp sphere.

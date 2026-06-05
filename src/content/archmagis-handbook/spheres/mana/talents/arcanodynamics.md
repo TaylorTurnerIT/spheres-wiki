@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: basic
 tags: ["amp", "manipulation"]
-
 ---
 By stretching and reshaping magic, you can reconfigure how magical effects take shape.
 

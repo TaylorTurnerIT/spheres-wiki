@@ -6,5 +6,4 @@ color: "#4A235A"
 id: "succor"
 label: "Succor"
 sphere: "protection"
-
 ---

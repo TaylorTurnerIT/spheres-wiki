@@ -6,7 +6,6 @@ type: talent
 sphere: protection
 tier: advanced
 tags: []
-
 ---
 **Prerequisites:** Protection sphere (Spell Selectivity, Spell Ward (aegis, ward)), caster level 10th.
 

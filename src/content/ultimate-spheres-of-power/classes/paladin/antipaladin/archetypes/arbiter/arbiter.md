@@ -2,7 +2,6 @@
 id: arbiter
 name: "Arbiter"
 tags: []
-
 ---
 
 Whereas most paladins are known as the blades of their deities, arbiters are the ever-watchful eyes of their deities. Well-connected and perceptive, arbiters try to discover secret crimes and insurrection where it festers, so that they may be excised swiftly from society.

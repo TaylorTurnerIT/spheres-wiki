@@ -6,7 +6,6 @@ type: talent
 sphere: dark
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Dark sphere (Hide In Darkness (meld)), caster level 5th

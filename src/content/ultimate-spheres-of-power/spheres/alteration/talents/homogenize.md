@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Alteration sphere (Twisted Shapeshift), caster level 15th.

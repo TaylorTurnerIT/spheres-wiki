@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: basic
 tags: []
-
 ---
 
 You can make a melee touch attack against a living creature up to your size to attempt to absorb it into your body, similar to the swallow whole ability (Reflex negates).

@@ -6,7 +6,6 @@ system: power
 sphere: life
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Life Sphere (Affliction), Vampiric Disruption

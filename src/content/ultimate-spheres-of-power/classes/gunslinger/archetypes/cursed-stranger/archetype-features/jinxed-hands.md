@@ -4,7 +4,6 @@ name: "Jinxed Hands"
 level: 1
 alters: ["the grit and gunsmith class features"]
 tags: []
-
 ---
 
 As a subject of a powerful curse, a cursed stranger must learn to feed off of misfortune and shift the worst effects of the affliction to her foes.

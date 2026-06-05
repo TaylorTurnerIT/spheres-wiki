@@ -2,7 +2,6 @@
 id: void-conduit
 name: "Void Conduit"
 tags: []
-
 ---
 
 This archetype requires sphere summoner or champion summoner.

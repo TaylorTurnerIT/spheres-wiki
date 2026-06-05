@@ -6,7 +6,6 @@ type: talent
 sphere: warp
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Time sphere, Warp sphere (Distant Teleport, True Teleport (advanced), Unseeing Teleport), caster level 20th.

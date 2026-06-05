@@ -3,7 +3,6 @@ id: greater-elemental-bond-sp-or-su
 name: "Greater Elemental Bond (Sp or Su)"
 level: 15
 tags: []
-
 ---
 
 At 15th level, a hex kineticist's familiar gains an additional infusion up to 2nd level and infusion specialization 2.

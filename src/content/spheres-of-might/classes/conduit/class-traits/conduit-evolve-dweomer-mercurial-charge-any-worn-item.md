@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: imagination
-
 ---
 
 At 10th level, the conduit is protected against divination, and requires the caster of any divination effect that would locate or see the conduit to succeed a magic skill check against their magic skill defense to function. On a failed check, the conduit is aware of the attempt and can spend 1 use of skill leverage as an immediate action to provide a false answer or experience instead.

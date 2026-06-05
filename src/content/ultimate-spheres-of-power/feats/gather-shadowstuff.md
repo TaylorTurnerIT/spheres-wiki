@@ -6,7 +6,6 @@ system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat
-
 ---
 
 **Prerequisite:** Shadowmark class feature.

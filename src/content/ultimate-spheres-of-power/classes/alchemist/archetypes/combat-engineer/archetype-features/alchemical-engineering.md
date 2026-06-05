@@ -3,7 +3,6 @@ id: alchemical-engineering
 name: "Alchemical Engineering"
 level: 1
 tags: []
-
 ---
 
 The combat engineer has the ability to create a unique alchemical item called a device. A device is a small item, easily held in palm of the hand, which combines several ampules of magically enhanced chemicals with spring-loaded gears and spark-generating switches. Each is a single use alchemical item which the combat engineer can use to enhance his sphere abilities that create a non-moving area of effect. By default, this only works with totems, but some discoveries allow the combat engineer to use this devices with other spheres. Using a device expends one of the engineers bombs, but unlike bombs, creating a device does not take any time, and using a device is part of the action to use the sphere ability implanted in it. A device can be used with a sphere ability that attaches an effect to a creature, but the engineer must make a touch attack with the device to do so. This does not draw an attack of opportunity.

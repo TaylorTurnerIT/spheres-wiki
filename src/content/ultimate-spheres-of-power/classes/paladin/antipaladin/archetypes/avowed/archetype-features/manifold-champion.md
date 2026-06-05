@@ -3,7 +3,6 @@ id: manifold-champion
 name: "Manifold Champion"
 level: 20
 tags: []
-
 ---
 
 At 20th level, the damage reduction from the avowed's paladin or antipaladin class features is replaced with DR 10/-. In addition, the avowed's damage bonus from smite is no longer halved against targets not opposite to her pledge alignment.

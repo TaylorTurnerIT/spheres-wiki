@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["form"]
-
 ---
 
 Your companion gains the ability to use webs to support itself and up to one additional creature of the same size. In addition, it can throw a web up to once per minute as a standard action. This is similar to an attack with a net but has a maximum range of 50 feet, with a range increment of 10 feet, and is effective against targets up to one size category larger than the companion. An entangled creature can escape with a successful Escape Artist check or burst the web with a Strength check. Both are standard actions with a DC equal to 10 + 1/2 the companion's Hit Dice + the companion's Constitution modifier. Attempts to burst a web by those caught in it take a –4 penalty.

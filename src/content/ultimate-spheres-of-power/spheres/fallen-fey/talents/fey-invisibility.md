@@ -6,7 +6,6 @@ type: talent
 sphere: fallen-fey
 tier: advanced
 tags: ["fey-blessing"]
-
 ---
 
 **Prerequisites:** Fallen Fey sphere (Fade (fey-blessing)), caster level 5th.

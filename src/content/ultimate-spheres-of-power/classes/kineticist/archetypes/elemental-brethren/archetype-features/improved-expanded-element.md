@@ -3,7 +3,6 @@ id: improved-expanded-element
 name: "Improved Expanded Element"
 level: 10
 tags: []
-
 ---
 
 At 10th level, an elemental brethren gains the expanded element class feature, although they may only select air, earth, fire, or water for their expanded elements. Unlike normal kineticists, they treat their kineticist level as two levels lower instead of four for the purpose of determining which wild talents they can select from their expanded element.

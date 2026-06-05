@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["apply", "charm"]
-
 ---
 
 You can make it harder for a target to concentrate on using their magic.

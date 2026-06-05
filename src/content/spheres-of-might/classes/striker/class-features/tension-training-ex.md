@@ -3,7 +3,6 @@ id: tension-training-ex
 name: "Tension Training (Ex)"
 level: 5
 tags: []
-
 ---
 
 At 5th level and every six levels thereafter, a striker learns new ways to gain tension; she can select one of the following new methods through which to gain tension (a striker cannot gain tension from any of these more than once per round); a striker cannot regain tension if any of these tension training abilities are used against a helpless or unaware creature, or on a creature that has fewer Hit Dice than half the striker's character level:

@@ -6,7 +6,6 @@ type: talent
 sphere: life
 tier: basic
 tags: []
-
 ---
 
 Whenever you remove a condition completely from a creature using your restore ability, they are completely immune to that condition for 2 rounds. Being immune to a condition does not provide any additional defense against more severe versions of a condition, and they can not be made immune to a condition they did not have. This may not provide immunity to ability damage, ability drain, death, or negative levels.

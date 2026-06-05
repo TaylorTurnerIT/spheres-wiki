@@ -4,7 +4,6 @@ name: "Tag Team"
 level: 1
 replaces: ["seamless guise and specialization and modifies dual identity and vigilante talents"]
 tags: ["slam"]
-
 ---
 
 At 1st level, the alter-ego does not gain a vigilante identity. Instead, the alter-ego trades places with an extra-planar ally until it is time to resume social activity.

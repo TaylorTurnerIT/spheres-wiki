@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: base
 tags: []
-
 ---
 
 You learn to bend the rules of magic to your advantage. As a standard action, you may use any (manipulation) that you possess, up to a range of close. You must remain within this range when maintaining a (manipulation) through concentration. When you gain the Mana sphere, you gain the Shuffle manipulation.

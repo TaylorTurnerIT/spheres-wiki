@@ -6,7 +6,6 @@ type: talent
 sphere: protection
 tier: basic
 tags: []
-
 ---
 
 You may repair any barrier you created (including those created using Greater Barrier) causing it to regain a number of hit points equal to twice your caster level. This is a move action, or you may spend a spell point to do this as a swift action. You must have line of sight to the barrier to use this talent.

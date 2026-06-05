@@ -6,7 +6,6 @@ type: talent
 sphere: weather
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Destruction sphere, Weather sphere, caster level 10th.

@@ -6,7 +6,6 @@ system: power
 sphere: war
 tags: []
 tier: feat
-
 ---
 
 **Prerequisite:** Grit, luck pool or panache class feature.

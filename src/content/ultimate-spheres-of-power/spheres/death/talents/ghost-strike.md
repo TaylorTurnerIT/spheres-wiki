@@ -6,7 +6,6 @@ type: talent
 sphere: death
 tier: base
 tags: []
-
 ---
 
 As a standard action, you may make a ghost strike, summoning negative energy as a melee touch attack or a ranged touch attack within medium range. A ghost strike is considered a negative energy death effect, and as such has no effect on undead, constructs, and other creatures immune to such things (although some talents provide exceptions). Ghost strike effects do not stack with themselves, and are subject to spell resistance.

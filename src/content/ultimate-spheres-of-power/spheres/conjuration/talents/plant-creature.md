@@ -6,7 +6,6 @@ type: talent
 sphere: conjuration
 tier: basic
 tags: ["type"]
-
 ---
 
 Your companion mimics the properties of plants. The companion gains the plant creature type. The companion gains lowlight vision and a +2 bonus on saves against paralysis, poison, polymorph, sleep, and stunning effects. This bonus increases by +1 per 2 Hit Dice.

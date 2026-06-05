@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: scholars-knack-ex
-
 ---
 
 The scholar has learned how to construct a basic nautical apparatus that can be quickly assembled and disassembled for easy use. It takes the scholar 1 hour to assemble or disassemble the nautical apparatus, and it has a number of hit points equal to the scholar's class level and hardness equal to twice her Intelligence bonus (minimum 2), and weighs a total of 40 lbs. The nautical apparatus is capable of transporting up to 2 + the scholar's Intelligence bonus Medium creatures underwater with a swim speed of 60 ft., and contains enough air to allow up to the maximum number of passengers to breathe for 1 hour per class level. Small creatures take up half the space and air of a Medium creature, while Large creatures take up twice the amount of space and air.

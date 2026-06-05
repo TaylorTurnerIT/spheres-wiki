@@ -6,7 +6,6 @@ system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat
-
 ---
 
 Your body is sustained by necromantic power.

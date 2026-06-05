@@ -6,7 +6,6 @@ system: power
 sphere: death
 tags: ["teamwork"]
 tier: feat
-
 ---
 
 Undead you and your allies create resonate with each of your souls.

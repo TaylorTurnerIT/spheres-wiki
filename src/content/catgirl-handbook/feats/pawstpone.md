@@ -6,7 +6,6 @@ system: power
 sphere: time
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Time sphere, caster level 5th.

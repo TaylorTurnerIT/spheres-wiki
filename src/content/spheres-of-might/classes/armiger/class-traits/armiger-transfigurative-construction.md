@@ -6,7 +6,6 @@ system: might
 tags: []
 className: armiger
 featureId: prowess
-
 ---
 
 By studying ancient magic and crafting techniques, the armiger learns to customize his arsenal in more fantastic and unusual ways. The armiger gains the ability to apply modifications to his customized weapons. Applying a modification can be done in the same time it takes the armiger to customize a weapon, and each customized weapon can only have one modification applied to it at any given time. The armiger can apply any modification he meets the minimum level for. A modification applied to a custom weapon with the double weapon quality applies to both ends. The armiger must have the customized weapons class feature to gain this prowess.

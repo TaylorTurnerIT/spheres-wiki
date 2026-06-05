@@ -6,7 +6,6 @@ system: power
 sphere: life
 tags: ["warden"]
 tier: feat
-
 ---
 
 **Prerequisite:** Life sphere (at least one (vitality) talent), lay on hands class feature.

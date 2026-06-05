@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
-
 ---
 
 Brimstone, also known as sulfur, has effects that can ward off illness and disease when used in small and controlled amounts. The scholar may activate this imposition by snapping a small piece of brimstone in two and placing it in a vest pocket or pouch resting between the nose and heart of a target creature within reach, granting a +1 competence bonus to Fortitude saves, +1 per 5 class levels she possesses. This bonus lasts for a number of minutes equal to 1 + her Intelligence modifier. While a creature is benefiting from this imposition, any time a creature attempts a bite or swallow whole against them, that creature must succeed at a Fortitude saving throw or be nauseated for 1 round.

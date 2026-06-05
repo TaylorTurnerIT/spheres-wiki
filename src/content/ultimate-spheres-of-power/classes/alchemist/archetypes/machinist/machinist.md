@@ -2,7 +2,6 @@
 id: machinist
 name: "Machinist"
 tags: []
-
 ---
 
 The discoveries of a typical alchemist involve complex biological equations and considerations, but a machinist eschews most of this in favor of a more mechanical outlook on things. A machinist has an intimate understanding of machinery and its functions, especially when determining whether a piece of technology is redundant, in need of improving, or requires countless hours of research for an incredibly small increase in efficiency; it is all the same.

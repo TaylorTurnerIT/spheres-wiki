@@ -6,7 +6,6 @@ type: talent
 sphere: telekinesis
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Telekinesis sphere (Acceleration, Greater Speed), caster level 10th.

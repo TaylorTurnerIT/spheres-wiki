@@ -6,7 +6,6 @@ system: power
 sphere: time
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Conjuration Sphere, Time Sphere, Spell Capacitor

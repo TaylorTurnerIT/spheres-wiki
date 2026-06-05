@@ -6,7 +6,6 @@ type: talent
 sphere: fate
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Fate sphere (any one (motif), any one (arcana)), caster level 10th.

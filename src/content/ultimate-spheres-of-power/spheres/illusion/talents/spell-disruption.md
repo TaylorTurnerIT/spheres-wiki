@@ -6,7 +6,6 @@ type: talent
 sphere: illusion
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Illusion sphere (Blur (glamer), Manipulate Aura (sensory, magic)), caster level 5th.

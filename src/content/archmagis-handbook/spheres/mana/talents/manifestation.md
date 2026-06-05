@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: advanced
 tags: ["companion"]
-
 ---
 **Prerequisites:** Mana sphere (Gift Of Knowledge, Limited Manifestation), at least 3 other spheres known, caster level 20th.
 

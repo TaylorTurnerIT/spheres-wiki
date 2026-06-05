@@ -7,7 +7,6 @@ sphere: protection
 dualSphere: mana
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 **Prerequisites:** Mana sphere, Protection sphere.
 

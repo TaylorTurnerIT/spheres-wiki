@@ -2,7 +2,6 @@
 id: reality-striker
 name: "Reality Striker"
 tags: []
-
 ---
 
 These enigmatic ravelers have turned their ability to weave and unweave the fabric of magic outwards, directing their energies towards unweaving the very fabric of their target's physical reality.

@@ -7,7 +7,6 @@ sphere: war
 dualSphere: divination
 tags: ["dual-sphere"]
 tier: feat
-
 ---
 **Prerequisites:** Divination sphere, War sphere
 

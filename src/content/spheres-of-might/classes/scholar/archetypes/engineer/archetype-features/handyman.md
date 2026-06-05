@@ -4,7 +4,6 @@ name: "Handyman"
 level: 1
 alters: ["medical training, advanced medical training, and expert medical training"]
 tags: []
-
 ---
 
 At 1st level, the engineer may use their Tinker sphere associated skill in place of the Heal skill when using the medical training class feature. The engineer's medical training class feature restores half as many hit points when used on a living creature.

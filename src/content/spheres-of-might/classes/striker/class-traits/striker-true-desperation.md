@@ -7,7 +7,6 @@ tags: []
 className: striker
 featureId: striker-art-ex
 requires: "Striker 8"
-
 ---
 
 The striker gains an additional tension from her desperate tension class feature. A striker must be 8th level or higher to select this striker art.

@@ -6,7 +6,6 @@ system: might
 tags: []
 className: conduit
 featureId: concordance
-
 ---
 
 At 10th level, the ring does not count towards the maximum number of rings the conduit can have equipped at one time.

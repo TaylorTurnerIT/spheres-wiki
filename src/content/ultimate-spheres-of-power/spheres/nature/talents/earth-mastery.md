@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["earth", "geomancing"]
-
 ---
 
 Increase the maximum radius of your Bury and Tremor by an additional 5 feet per 5 caster levels. Additionally, you gain the following geomancing abilities:

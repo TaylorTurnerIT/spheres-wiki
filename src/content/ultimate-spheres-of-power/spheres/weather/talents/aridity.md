@@ -6,7 +6,6 @@ system: power
 sphere: weather
 tier: basic
 tags: []
-
 ---
 
 As Heat is the opposite of Cold, Aridity is the opposite of Precipitation. If the Precipitation is lowered below step 1 of Precipitation, it becomes step 2 of Aridity. If the Aridity is lowered below step 1 of Aridity, it becomes step 2 of Precipitation. Water left in open air loses about an inch of height per day for every level of combined severity between Heat and Aridity

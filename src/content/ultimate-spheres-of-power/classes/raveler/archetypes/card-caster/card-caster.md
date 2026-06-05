@@ -2,7 +2,6 @@
 id: card-caster
 name: "Card Caster"
 tags: []
-
 ---
 
 Utilizing the powers of ensorcelled cards, these ravelers utilize their ravels to modify their deck and to perform explosive plays that dramatically alter the battle.

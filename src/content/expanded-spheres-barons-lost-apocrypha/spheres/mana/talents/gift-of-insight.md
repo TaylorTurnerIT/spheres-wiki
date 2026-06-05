@@ -6,7 +6,6 @@ type: talent
 sphere: mana
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Mana Sphere (Gift of Knowledge (manipulation)), caster level 5th

@@ -6,7 +6,6 @@ type: talent
 sphere: nature
 tier: basic
 tags: ["metal", "geomancing"]
-
 ---
 
 As a concentration effect, you may use a limited form of Reforge that can even affect attended objects. When targeting an attended object, you may apply one of the following effects.

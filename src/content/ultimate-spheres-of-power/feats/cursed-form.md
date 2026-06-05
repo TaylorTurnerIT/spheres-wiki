@@ -6,7 +6,6 @@ system: power
 sphere: alteration
 tags: []
 tier: feat
-
 ---
 
 **Prerequisites:** Alteration sphere, caster level 5th.

@@ -6,7 +6,6 @@ type: talent
 sphere: time
 tier: basic
 tags: ["time"]
-
 ---
 
 You may spend a spell point and make a melee or ranged touch attack against a target within range, causing them to experience a massive amount of time in a single instant, rendering them exhausted unless they succeed at a Fortitude saving throw. Targets who are already fatigued or exhausted fall asleep.

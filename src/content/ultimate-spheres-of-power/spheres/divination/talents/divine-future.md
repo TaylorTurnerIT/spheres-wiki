@@ -6,7 +6,6 @@ type: talent
 sphere: divination
 tier: basic
 tags: ["divine"]
-
 ---
 
 You may divine for a glimpse of the future, giving yourself insight into the happenings of that day. At any time during that day, you may add an insight bonus equal to 1d4 + 1 per 5 caster levels to one attack roll, skill check, saving throw, ability check, initiative roll, or combat maneuver roll you are about to make.

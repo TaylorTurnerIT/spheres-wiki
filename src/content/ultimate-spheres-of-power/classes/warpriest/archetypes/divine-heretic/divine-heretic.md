@@ -2,7 +2,6 @@
 id: divine-heretic
 name: "Divine Heretic"
 tags: []
-
 ---
 
 The divine heretic is considered a villain by some, but knows his way is the true way if others can simply be brought to bear.

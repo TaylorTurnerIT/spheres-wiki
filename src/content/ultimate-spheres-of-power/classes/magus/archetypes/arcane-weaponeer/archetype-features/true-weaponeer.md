@@ -4,7 +4,6 @@ name: "True Weaponeer"
 level: 20
 replaces: ["true magus"]
 tags: []
-
 ---
 
 At 20th level, whenever the arcane weaponeer uses spell combat, he may elect to not take his iterative attacks or use his spell advancing ability. This decision is made when spell combat is declared.

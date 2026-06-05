@@ -6,7 +6,6 @@ system: power
 sphere: blood
 tags: []
 tier: feat
-
 ---
 
 Sometimes the bloodied battlefield looks tame compared to the surgeons' tents.

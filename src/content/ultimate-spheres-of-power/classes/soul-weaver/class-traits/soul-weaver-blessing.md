@@ -6,7 +6,6 @@ system: power
 tags: []
 className: soul-weaver
 featureId: blessingblight
-
 ---
 
 At 2nd level, the soul weaver may touch a target and expend a use of Channel Energy to place a blessing on them (unwilling targets may make a Will save to resist). A blessing lasts for 24 hours and grants a +1 luck bonus to all saving throws.

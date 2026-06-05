@@ -6,7 +6,6 @@ system: might
 tags: []
 className: scholar
 featureId: material-imposition
-
 ---
 
 Through delicate research into iron and aluminum interactions, the scholar learns of a particularly volatile reaction, allowing great explosive potential. The scholar can create and apply an incredibly potent mixture to a 5-foot square within her natural reach. Creating and applying this mixture takes 1 round, which provokes attacks of opportunity. The scholar may create a number of 5-foot squares equal to 1/2 her class level per day. The mixture can be set alight as part of applying the mixture (or if it is dealt at least 1 point of fire damage), dealing 1d8 points of fire damage per two class levels she possesses to the object, ignoring hardness equal to half her class level.

@@ -5,5 +5,4 @@ priority: 0
 color: "#4A235A"
 id: "counterspell"
 label: "Counterspell"
-
 ---

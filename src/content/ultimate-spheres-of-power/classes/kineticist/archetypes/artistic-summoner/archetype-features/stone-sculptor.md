@@ -3,7 +3,6 @@ id: stone-sculptor
 name: "Stone Sculptor"
 level: 1
 tags: []
-
 ---
 
 This sculpture gains DR 5/adamantine and the [earth] subtype.

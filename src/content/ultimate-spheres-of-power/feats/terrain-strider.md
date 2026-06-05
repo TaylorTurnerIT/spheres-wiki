@@ -6,7 +6,6 @@ system: power
 sphere: nature
 tags: []
 tier: feat
-
 ---
 
 **Prerequisite:** Nature sphere.

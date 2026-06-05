@@ -6,7 +6,6 @@ type: talent
 sphere: alteration
 tier: advanced
 tags: []
-
 ---
 
 **Prerequisites:** Alteration sphere (Size Change), caster level 15th.

@@ -6,7 +6,6 @@ system: power
 sphere: mana
 tags: []
 tier: feat
-
 ---
 **Prerequisites:** Mana sphere (at least one (amp) talent), caster level 9th.
 

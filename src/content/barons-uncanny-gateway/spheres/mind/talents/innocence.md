@@ -6,7 +6,6 @@ type: talent
 sphere: mind
 tier: basic
 tags: ["charm", "sm"]
-
 ---
 
 You protect the target's mind from heavier thoughts and connections.

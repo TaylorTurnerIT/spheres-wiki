@@ -2,7 +2,6 @@
 id: ordained-hunter
 name: "Ordained Hunter"
 tags: []
-
 ---
 
 No one expects to be chased by the inquisition, but the news that one is pursued by an ordained hunter is usually enough to bring even the most heretical apostate back to the true faith. Blessed by her god and endowed with extraordinary ability to follow her prey, the ordained hunter's pursuit is unstoppable.

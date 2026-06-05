@@ -3,7 +3,6 @@ id: awaken-soul-chakra
 name: "Awaken Soul Chakra"
 level: 20
 tags: []
-
 ---
 
 At 20th level, the sadhu awakens the last of the major chakra, the soul chakra.

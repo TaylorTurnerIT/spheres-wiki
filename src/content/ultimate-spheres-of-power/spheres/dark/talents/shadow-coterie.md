@@ -6,7 +6,6 @@ type: talent
 sphere: dark
 tier: basic
 tags: []
-
 ---
 
 You have learned to manipulate a target's shadow more efficiently, allowing you to apply one additional (shadow) talent to a target for every 5 caster levels, up to 5 at 20th caster level.

@@ -6,7 +6,6 @@ system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat
-
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Fallen Fey Sphere (Share Link).
