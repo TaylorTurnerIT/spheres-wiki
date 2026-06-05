@@ -180,9 +180,12 @@ const prestigeClasses = [...classMap.values()]
 
   .sphere-badge-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 8px;
-    margin-bottom: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--clr-border);
+    border-left: 1px solid var(--clr-border);
+    margin-bottom: 40px;
+    background: var(--clr-bg);
   }
 
   .sphere-badge {
@@ -190,45 +193,43 @@ const prestigeClasses = [...classMap.values()]
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 6px 2px;
-    background: var(--clr-bg);
-    border: 1px solid var(--clr-border);
-    border-radius: 8px;
+    padding: 12px 4px;
+    border-right: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
     text-decoration: none;
     transition: all 0.2s ease;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1.1;
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
   .sphere-badge:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(23, 75, 147, 0.12);
-    border-color: var(--clr-power);
+    z-index: 2;
     background: var(--clr-surface);
+    box-shadow: inset 0 0 0 2px var(--clr-power);
+    transform: scale(1.02);
   }
 
   .sphere-badge-icon {
     width: 72px;
     height: 72px;
-    background: color-mix(in srgb, var(--clr-power) 10%, var(--clr-surface));
-    border: 1px solid var(--clr-border);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     color: var(--clr-power);
     transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .sphere-badge:hover .sphere-badge-icon {
     transform: scale(1.1);
-    border-color: var(--clr-power);
   }
 
   .sphere-badge-icon .si {
-    width: 64px;
-    height: 68px;
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
   }
 
   .sphere-badge-name {
@@ -238,11 +239,8 @@ const prestigeClasses = [...classMap.values()]
     color: var(--clr-power);
     line-height: 1.1;
     letter-spacing: 0.01em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     width: 100%;
-    padding: 0 2px;
+    padding: 0 4px;
   }
 
   @media (min-width: 1280px) {
