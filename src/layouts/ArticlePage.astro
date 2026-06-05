@@ -1,0 +1,190 @@
+---
+import { url } from "@/lib/url";
+import WikiPage from "@/layouts/WikiPage.astro";
+import BookCard from "@/components/BookCard.astro";
+import { SYSTEMS } from "@/config/site";
+import type { ArticleEntry, BookMeta } from "@/lib/types";
+
+interface Props {
+  article: ArticleEntry;
+  book?: BookMeta;
+  description?: string;
+}
+
+const { article, book, description } = Astro.props;
+
+const sys = SYSTEMS[article.system];
+const sysLabel = sys?.label ?? article.system;
+const sysRoute = sys?.route ?? "/";
+const cssKey = sys?.cssKey ?? "";
+const metaDescription = description ?? `${article.name}: a rules guide for ${sysLabel}.`;
+---
+<WikiPage
+  title={`${article.name} — ${sysLabel} Wiki`}
+  description={metaDescription}
+  activeNamespace={article.system}
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url(sysRoute)} data-astro-prefetch="hover">{sysLabel}</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>{article.name}</span>
+  </nav>
+
+  <span data-pagefind-filter="type:guide" hidden></span>
+  <span data-pagefind-filter={`system:${sysLabel}`} hidden></span>
+  <h1 class={`page-title ${cssKey}`} id="overview" data-pagefind-weight="10">
+    {article.name}
+  </h1>
+  <span data-pagefind-meta={`title:${article.name}`} hidden></span>
+  <span data-pagefind-meta="type:guide" hidden></span>
+  <span data-pagefind-meta={`system:${sysLabel}`} hidden></span>
+  <hr class="page-title-rule" />
+
+  <div class="article-content entry-description">
+    {book && (
+      <div class="book-sidebar">
+        <BookCard book={book} />
+      </div>
+    )}
+    <slot />
+  </div>
+</WikiPage>
+
+<style is:global>
+  /* The article body is injected from rendered markdown (<Content />), which is
+     not subject to Astro scoped styles — so these are global, scoped by the
+     .article-content wrapper class to limit their blast radius. */
+
+  .article-content .book-sidebar {
+    float: right;
+    width: 160px;
+    margin: 0 0 1rem 1.5rem;
+  }
+
+  /* ── Note boxes ──────────────────────────────────────────── */
+  .article-content .wiki-note {
+    background: color-mix(in srgb, var(--clr-active) 8%, transparent);
+    border-left: 3px solid var(--clr-active);
+    border-radius: 0 4px 4px 0;
+    padding: 0.6rem 0.85rem;
+    margin: 1rem 0;
+    font-size: var(--fs-md);
+  }
+
+  .article-content .author-note {
+    background: color-mix(in srgb, var(--clr-muted) 8%, transparent);
+    border-left: 3px solid var(--clr-muted);
+    border-radius: 0 4px 4px 0;
+    padding: 0.6rem 0.85rem;
+    margin: 1rem 0;
+    font-size: var(--fs-md);
+  }
+
+  .article-content .author-note p { margin: 0.4rem 0 0; }
+  .article-content .author-note ol,
+  .article-content .author-note ul { margin: 0.4rem 0 0 1.25rem; }
+
+  .article-content .example-box {
+    background: color-mix(in srgb, var(--clr-border) 40%, transparent);
+    border-radius: 4px;
+    padding: 0.5rem 0.85rem;
+    margin: 0.75rem 0;
+    font-size: var(--fs-md);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────── */
+  .article-content .wiki-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.25rem;
+    font-size: var(--fs-md);
+  }
+
+  .article-content .wiki-table caption {
+    text-align: left;
+    margin-bottom: 0.35rem;
+    font-size: var(--fs-sm);
+  }
+
+  .article-content .wiki-table th,
+  .article-content .wiki-table td {
+    border: 1px solid var(--clr-border);
+    padding: 0.3rem 0.6rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .article-content .wiki-table thead th {
+    background: color-mix(in srgb, var(--clr-active) 12%, transparent);
+    color: var(--clr-active);
+    font-weight: 600;
+  }
+
+  .article-content .wiki-table--center td,
+  .article-content .wiki-table--center th {
+    text-align: center;
+  }
+
+  .article-content .wiki-table--center {
+    width: auto;
+    min-width: 200px;
+  }
+
+  .article-content .table-footnote {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    margin-top: 0.25rem;
+  }
+
+  /* ── Source tags ─────────────────────────────────────────── */
+  .article-content .source-tag {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  /* ── Headings ────────────────────────────────────────────── */
+  .article-content h2 {
+    font-family: var(--font-display);
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--clr-active);
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  .article-content h3 {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    margin: 1.5rem 0 0.4rem;
+  }
+
+  .article-content h4 {
+    font-family: var(--font-display);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--clr-fg);
+    margin: 1.2rem 0 0.3rem;
+  }
+
+  .article-content h5 {
+    font-family: var(--font-display);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--clr-muted);
+    margin: 1.2rem 0 0.3rem;
+  }
+
+  .article-content p { margin: 0.5rem 0; }
+  .article-content ul,
+  .article-content ol { margin: 0.5rem 0 0.5rem 1.5rem; }
+  .article-content li { margin-bottom: 0.25rem; }
+</style>

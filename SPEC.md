@@ -165,7 +165,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 | T12 | .      | Wire might/guile index card descriptions (currently "wired in R1-6" stubs) | V3 |
 | T13 | .      | Add ErrataNotice to sphere/talent detail pages           | V1            |
 | T14 | .      | Create using-spheres intro pages for might, guile, champions | V1,I.pages |
-| T15 | .      | Create article page route (ArticleEntry has no renderer) | V3,I.content  |
+| T15 | x      | Create article page route — `ArticlePage.astro` renderer + thin per-article page pattern (first entry: USoP `using-spheres-of-power`) | V3,I.content  |
 | T16 | x      | Consolidate `site.ts` into single `SYSTEMS` record; delete NAMESPACE_COLORS, NAMESPACE_LABELS, TAB_ORDER | V4,V5,I.config |
 | T17 | x      | Refactor `global.css` accent rules to use `--clr-ns` custom property via `data-system` attribute | V4,V10 |
 | T18 | x      | Drive TabNav from SYSTEMS config; derive currentTab() from route field | V5,I.config |
