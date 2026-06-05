@@ -73,7 +73,7 @@ If you're playing with the fractional base bonus rules, treat low-casting as 1/2
 
 Not every caster in the Spheres of Power system uses the same mental ability score when determining their magical potency. Just as with the core Pathfinder magic system, some casters use Intelligence, some use Wisdom, and others use Charisma. In Spheres of Power, this is called their casting ability modifier (CAM). Casting ability modifiers are used to determine the difficulty class of sphere abilities, as well as the caster's total number of spell points.
 
-Casting ability modifier is determined by the caster's tradition, which is explained on the **Casting Traditions** page.
+Casting ability modifier is determined by the caster's tradition, which is explained on the [Casting Traditions](/power/casting-traditions/) page.
 
 ### Spell Points
 

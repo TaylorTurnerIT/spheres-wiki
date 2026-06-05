@@ -1,0 +1,27 @@
+---
+import { getCollection, render } from "astro:content";
+import ArticlePage from "@/layouts/ArticlePage.astro";
+import { resolveEntries } from "@/lib/resolveEntries";
+import type { ArticleEntry } from "@/lib/types";
+
+const entries = await getCollection("ultimate-spheres-of-power");
+const entry = entries.find(
+  (e: any) => e.data.type === "article" && e.data.id === "casting-traditions",
+);
+if (!entry) {
+  throw new Error(
+    "Missing article entry: ultimate-spheres-of-power/articles/casting-traditions.md",
+  );
+}
+const { Content } = await render(entry);
+const article = entry.data as ArticleEntry;
+
+const { bookMetaMap } = await resolveEntries();
+const book = bookMetaMap.get("ultimate-spheres-of-power");
+
+const description =
+  "Define how your magic works in Ultimate Spheres of Power with casting traditions, drawbacks, and boons.";
+---
+<ArticlePage article={article} book={book} description={description}>
+  <Content />
+</ArticlePage>

@@ -69,6 +69,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 /power/classes/[class]/[arch]/ archetype detail
 /power/classes/[class]/traits/[trait]/  trait detail
 /power/using-spheres-of-power/ intro article (exists)
+/power/casting-traditions/      rules article (exists)
 /might/                        might index
 /might/[sphere]/               sphere detail
 /might/[sphere]/[talent]/      talent detail
