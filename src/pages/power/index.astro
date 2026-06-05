@@ -181,7 +181,7 @@ const prestigeClasses = [...classMap.values()]
 
   .sphere-badge-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 0;
     border-top: 1px solid var(--clr-border);
     border-left: 1px solid var(--clr-border);
@@ -194,7 +194,7 @@ const prestigeClasses = [...classMap.values()]
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4px 0px;
+    padding: 8px 2px;
     border-right: 1px solid var(--clr-border);
     border-bottom: 1px solid var(--clr-border);
     text-decoration: none;
@@ -213,24 +213,25 @@ const prestigeClasses = [...classMap.values()]
   }
 
   .sphere-badge-icon {
-    width: 72px;
-    height: 72px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
     color: var(--clr-power);
     transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    flex-shrink: 0;
   }
 
   .sphere-badge:hover .sphere-badge-icon {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
-  .sphere-badge-icon .si {
+  .si {
     width: 74px;
     height: 74px;
-    filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
   }
 
   .sphere-badge-name {
@@ -238,10 +239,14 @@ const prestigeClasses = [...classMap.values()]
     font-size: 11px;
     font-weight: 700;
     color: var(--clr-power);
-    line-height: 1.1;
+    line-height: 1;
     letter-spacing: 0.01em;
     width: 100%;
     padding: 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
   }
 
   @media (min-width: 1280px) {
