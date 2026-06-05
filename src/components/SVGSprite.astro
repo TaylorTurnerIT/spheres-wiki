@@ -1,4 +1,15 @@
 ---
+const icons = import.meta.glob('../assets/spheres-icons/*.{webp,png}', { eager: true });
+const iconMap = Object.fromEntries(
+  Object.entries(icons).map(([path, mod]) => [
+    path.split('/').pop().split('.')[0],
+    (mod as any).default.src
+  ])
+);
+function getIcon(name) {
+  return iconMap[name] || iconMap[name.replace('_', '-')] || '';
+}
+
 // Usage: <svg class="si"><use href="#si-alteration"/></svg>
 ---
 <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -6,103 +17,103 @@
 
 <!-- MAGIC SPHERES -->
 <symbol id="si-alteration" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/alteration.webp" xlink:href="/spheres-wiki/spheres-icons/alteration.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("alteration")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-blood" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/blood.webp" xlink:href="/spheres-wiki/spheres-icons/blood.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("blood")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-conjuration" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/conjuration.webp" xlink:href="/spheres-wiki/spheres-icons/conjuration.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("conjuration")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-creation" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/creation.webp" xlink:href="/spheres-wiki/spheres-icons/creation.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("creation")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-dark" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/dark.webp" xlink:href="/spheres-wiki/spheres-icons/dark.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("dark")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-death" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/death.webp" xlink:href="/spheres-wiki/spheres-icons/death.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("death")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-destruction" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/destruction.webp" xlink:href="/spheres-wiki/spheres-icons/destruction.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("destruction")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-divination" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/divination.webp" xlink:href="/spheres-wiki/spheres-icons/divination.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("divination")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-enhancement" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/enhancement.webp" xlink:href="/spheres-wiki/spheres-icons/enhancement.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("enhancement")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-fallen-fey" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/fallen_fey.webp" xlink:href="/spheres-wiki/spheres-icons/fallen_fey.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("fallen_fey")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-fate" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/fate.webp" xlink:href="/spheres-wiki/spheres-icons/fate.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("fate")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-illusion" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/illusion.webp" xlink:href="/spheres-wiki/spheres-icons/illusion.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("illusion")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-life" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/life.webp" xlink:href="/spheres-wiki/spheres-icons/life.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("life")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-light" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/light.webp" xlink:href="/spheres-wiki/spheres-icons/light.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("light")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-mana" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/mana.png" xlink:href="/spheres-wiki/spheres-icons/mana.png" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("mana")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-mind" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/mind.webp" xlink:href="/spheres-wiki/spheres-icons/mind.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("mind")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-nature" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/nature.webp" xlink:href="/spheres-wiki/spheres-icons/nature.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("nature")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-protection" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/protection.webp" xlink:href="/spheres-wiki/spheres-icons/protection.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("protection")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-telekinesis" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/telekinesis.webp" xlink:href="/spheres-wiki/spheres-icons/telekinesis.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("telekinesis")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-time" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/time.webp" xlink:href="/spheres-wiki/spheres-icons/time.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("time")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-war" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/war.webp" xlink:href="/spheres-wiki/spheres-icons/war.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("war")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-warp" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/warp.webp" xlink:href="/spheres-wiki/spheres-icons/warp.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("warp")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-weather" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/weather.webp" xlink:href="/spheres-wiki/spheres-icons/weather.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("weather")} width="16" height="16" x="0" y="0" />
 </symbol>
 
-<symbol id="si-bear" viewBox="-1 -1 18 18"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <ellipse cx="8" cy="11.5" rx="4.5" ry="3"/>
-  <circle cx="4.5" cy="7" r="1.5"/><circle cx="8" cy="6" r="1.5"/><circle cx="11.5" cy="7" r="1.5"/>
+<symbol id="si-bear" viewBox="-1 -1 18 18"><g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <ellipse cx="8" cy="10.5" rx="4.5" ry="3"/>
+  <circle cx="4.0" cy="5.5" r="1.5"/><circle cx="8" cy="4" r="1.5"/><circle cx="12" cy="5.5" r="1.5"/>
 </g></symbol>
 
-<symbol id="si-technomancy" viewBox="-1 -1 18 18"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<symbol id="si-technomancy" viewBox="-1 -1 18 18"><g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
   <rect x="4" y="4" width="8" height="8" rx="1"/>
   <path d="M6 4V2M8 4V2M10 4V2M6 12v2M8 12v2M10 12v2M4 6H2M4 8H2M4 10H2M12 6h2M12 8h2M12 10h2"/>
 </g></symbol>
@@ -115,103 +126,103 @@
 
 <!-- COMBAT SPHERES -->
 <symbol id="si-alchemy" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/alchemy.webp" xlink:href="/spheres-wiki/spheres-icons/alchemy.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("alchemy")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-athletics" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/athletics.webp" xlink:href="/spheres-wiki/spheres-icons/athletics.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("athletics")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-barrage" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/barrage.webp" xlink:href="/spheres-wiki/spheres-icons/barrage.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("barrage")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-barroom" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/barroom.webp" xlink:href="/spheres-wiki/spheres-icons/barroom.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("barroom")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-beastmastery" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/beastmastery.webp" xlink:href="/spheres-wiki/spheres-icons/beastmastery.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("beastmastery")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-berserker" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/berserker.webp" xlink:href="/spheres-wiki/spheres-icons/berserker.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("berserker")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-boxing" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/boxing.webp" xlink:href="/spheres-wiki/spheres-icons/boxing.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("boxing")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-brute" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/brute.webp" xlink:href="/spheres-wiki/spheres-icons/brute.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("brute")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-dual-wielding" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/dual_wielding.webp" xlink:href="/spheres-wiki/spheres-icons/dual_wielding.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("dual_wielding")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-duelist" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/duelist.webp" xlink:href="/spheres-wiki/spheres-icons/duelist.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("duelist")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-equipment" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/equipment.webp" xlink:href="/spheres-wiki/spheres-icons/equipment.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("equipment")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-fencing" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/fencing.webp" xlink:href="/spheres-wiki/spheres-icons/fencing.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("fencing")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-gladiator" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/gladiator.webp" xlink:href="/spheres-wiki/spheres-icons/gladiator.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("gladiator")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-guardian" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/guardian.webp" xlink:href="/spheres-wiki/spheres-icons/guardian.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("guardian")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-lancer" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/lancer.webp" xlink:href="/spheres-wiki/spheres-icons/lancer.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("lancer")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-open-hand" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/open_hand.webp" xlink:href="/spheres-wiki/spheres-icons/open_hand.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("open_hand")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-scoundrel" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/scoundrel.webp" xlink:href="/spheres-wiki/spheres-icons/scoundrel.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("scoundrel")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-scout" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/scout.webp" xlink:href="/spheres-wiki/spheres-icons/scout.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("scout")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-shield" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/shield.webp" xlink:href="/spheres-wiki/spheres-icons/shield.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("shield")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-sniper" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/sniper.webp" xlink:href="/spheres-wiki/spheres-icons/sniper.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("sniper")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-trap" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/trap.webp" xlink:href="/spheres-wiki/spheres-icons/trap.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("trap")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-warleader" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/warleader.webp" xlink:href="/spheres-wiki/spheres-icons/warleader.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("warleader")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-wrestling" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/wrestling.webp" xlink:href="/spheres-wiki/spheres-icons/wrestling.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("wrestling")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-leadership" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/leadership.webp" xlink:href="/spheres-wiki/spheres-icons/leadership.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("leadership")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-tech" viewBox="-1 -1 18 18">
-  <image href="/spheres-wiki/spheres-icons/tech.webp" xlink:href="/spheres-wiki/spheres-icons/tech.webp" width="16" height="16" / x="0" y="0">
+  <image href={getIcon("tech")} width="16" height="16" x="0" y="0" />
 </symbol>
 
 <symbol id="si-tinker" viewBox="-1 -1 18 18"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">

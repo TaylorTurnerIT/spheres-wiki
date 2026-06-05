@@ -40,31 +40,6 @@ const prestigeClasses = [...classMap.values()]
   <hr class="page-title-rule" />
 
   <div class="section-heading">
-    <span class="section-heading-text">Getting Started</span>
-    <div class="section-heading-rule"></div>
-  </div>
-  <div class="power-intro">
-    <ResourceCard
-      name="Using Spheres of Power"
-      description="Fundamental rules for casting, spell points, and caster levels."
-      href={url("/power/using-spheres-of-power/")}
-    >
-      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 14.5h8M8 1v11M4.5 5.5l3.5-3.5 3.5 3.5"/>
-      </svg>
-    </ResourceCard>
-    <ResourceCard
-      name="How to Build a Spherecaster"
-      description="A step-by-step guide to creating your first magical character."
-      href={url("/power/how-to-build-spherecaster/")}
-    >
-      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14.5 3.5v9a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1zM4 6.5h8M4 9.5h5"/>
-      </svg>
-    </ResourceCard>
-  </div>
-
-  <div class="section-heading">
     <span class="section-heading-text">Magic Spheres</span>
     <div class="section-heading-rule"></div>
   </div>
@@ -96,6 +71,32 @@ const prestigeClasses = [...classMap.values()]
       </div>
       <span class="sphere-badge-name">Technomancy</span>
     </a>
+  </div>
+
+  <div class="section-heading">
+    <span class="section-heading-text">Getting Started</span>
+    <div class="section-heading-rule"></div>
+  </div>
+
+  <div class="power-intro">
+    <ResourceCard
+      name="Using Spheres of Power"
+      description="Fundamental rules for casting, spell points, and caster levels."
+      href={url("/power/using-spheres-of-power/")}
+    >
+      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 14.5h8M8 1v11M4.5 5.5l3.5-3.5 3.5 3.5"/>
+      </svg>
+    </ResourceCard>
+    <ResourceCard
+      name="How to Build a Spherecaster"
+      description="A step-by-step guide to creating your first magical character."
+      href={url("/power/how-to-build-spherecaster/")}
+    >
+      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.5 3.5v9a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1zM4 6.5h8M4 9.5h5"/>
+      </svg>
+    </ResourceCard>
   </div>
 
   <div class="section-heading">
@@ -184,7 +185,7 @@ const prestigeClasses = [...classMap.values()]
     gap: 0;
     border-top: 1px solid var(--clr-border);
     border-left: 1px solid var(--clr-border);
-    margin-bottom: 40px;
+    margin-bottom: 12px;
     background: var(--clr-bg);
   }
 
@@ -193,7 +194,7 @@ const prestigeClasses = [...classMap.values()]
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 12px 4px;
+    padding: 4px 0px;
     border-right: 1px solid var(--clr-border);
     border-bottom: 1px solid var(--clr-border);
     text-decoration: none;
@@ -217,7 +218,7 @@ const prestigeClasses = [...classMap.values()]
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     color: var(--clr-power);
     transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
@@ -227,9 +228,9 @@ const prestigeClasses = [...classMap.values()]
   }
 
   .sphere-badge-icon .si {
-    width: 80px;
-    height: 80px;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    width: 74px;
+    height: 74px;
+    filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.1));
   }
 
   .sphere-badge-name {
