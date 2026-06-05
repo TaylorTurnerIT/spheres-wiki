@@ -107,13 +107,13 @@ svg {
   /* Tag semantic color buckets — ≤5 hues
      Bucket 1: entry-type  → borrows --clr-power / --clr-might / --clr-brand
      Bucket 2: tier/level  → amber family */
-  --clr-tag-tier-base:  #6b3c00;   /* deep amber: Base Ability */
-  --clr-tag-tier-basic: #9a6200;   /* golden amber: Basic talent */
-  --clr-tag-tier-adv:   #1a3a5a;   /* dark navy: Advanced talent */
+  --clr-tag-tier-base: #6b3c00; /* deep amber: Base Ability */
+  --clr-tag-tier-basic: #9a6200; /* golden amber: Basic talent */
+  --clr-tag-tier-adv: #1a3a5a; /* dark navy: Advanced talent */
   /* Bucket 3: provenance */
-  --clr-tag-prov:       #474540;   /* warm gray: 3PP content */
+  --clr-tag-prov: #474540; /* warm gray: 3PP content */
   /* Bucket 4: PF1e rules descriptor */
-  --clr-tag-rules:      #8c1d40;   /* crimson: Ex / Su / Sp */
+  --clr-tag-rules: #8c1d40; /* crimson: Ex / Su / Sp */
   /* Bucket 5: sphere cross-reference → auto-gen uses var(--clr-{system}) */
 
   /* Spacing scale */
@@ -1284,25 +1284,30 @@ h6 {
 }
 .resource-card:hover {
   background: var(--clr-surface);
-  border-color: var(--clr-brand);
-  transform: translateY(-1px);
+  border-color: var(--clr-active, var(--clr-brand));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   text-decoration: none;
 }
 .resource-icon {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3px;
-  background: var(--clr-surface);
-  border: 0.5px solid var(--clr-border);
-  color: var(--clr-brand);
+  border-radius: 6px;
+  background: color-mix(
+    in srgb,
+    var(--clr-active, var(--clr-brand)) 10%,
+    var(--clr-bg)
+  );
+  border: 1px solid var(--clr-border);
+  color: var(--clr-active, var(--clr-brand));
 }
 .resource-icon svg {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
 }
 .resource-text {
   min-width: 0;
@@ -1310,18 +1315,17 @@ h6 {
 }
 .resource-name {
   font-family: var(--font-display);
-  font-size: var(--fs-3xs);
+  font-size: var(--fs-base);
   font-weight: 700;
-  letter-spacing: 0.03em;
-  color: var(--clr-brand);
+  letter-spacing: 0.02em;
+  color: var(--clr-active, var(--clr-brand));
   line-height: 1.25;
   margin-bottom: 2px;
 }
 .resource-desc {
-  font-size: var(--fs-2xs);
+  font-size: var(--fs-xs);
   color: var(--clr-muted);
   line-height: 1.3;
-  font-style: italic;
 }
 
 /* ── Breadcrumb ─────────────────────────────────────────── */
