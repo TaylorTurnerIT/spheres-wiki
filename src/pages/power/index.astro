@@ -178,17 +178,17 @@ const classById = new Map(
       <div class="sphere-badge-icon">
         <svg class="si" aria-hidden="true"><use href="#si-technomancy" /></svg>
       </div>
-      <span class="sphere-badge-name">Technomancy</span>
+      <span class="sphere-badge-name" style="font-size: 11px; height: 11px; line-height: 11px;">Technomancy</span>
     </a>
   </div>
 
-  <div class="section-heading">
-    <span class="section-heading-text">Spherecaster Classes</span>
-    <div class="section-heading-rule"></div>
-  </div>
-
   <div class="classes-and-links">
-    <div class="class-lists">
+    <div class="class-column">
+      <div class="section-heading" style="margin-top: 0;">
+        <span class="section-heading-text">Spherecaster Classes</span>
+        <div class="section-heading-rule"></div>
+      </div>
+      <div class="class-lists">
       {classTiers.map(tier => {
         const tierClasses = tier.ids.map(id => classById.get(id)).filter(Boolean);
         return tierClasses.length > 0 && (
@@ -199,7 +199,6 @@ const classById = new Map(
                 <a href={url(`/power/classes/${c!.id}/`)} class="class-item" data-astro-prefetch="hover">
                   <div class="class-item-header">
                     <span class="class-item-name">{c!.name}</span>
-                    <span class="class-item-arrow" aria-hidden="true">→</span>
                   </div>
                   {classDescs[c!.id] && <p class="class-item-desc">{classDescs[c!.id]}</p>}
                 </a>
@@ -210,27 +209,29 @@ const classById = new Map(
       })}
 
       {prestigeClasses.length > 0 && (
-        <>
-          <div class="section-heading prestige-heading">
-            <span class="section-heading-text">Prestige Classes</span>
-            <div class="section-heading-rule"></div>
-          </div>
+        <div class="class-tier-group">
+          <div class="class-tier-label">Prestige Classes</div>
           <div class="class-roster">
             {prestigeClasses.map(c => (
               <a href={url(`/power/classes/${c.id}/`)} class="class-item" data-astro-prefetch="hover">
                 <div class="class-item-header">
                   <span class="class-item-name">{c.name}</span>
-                  <span class="class-item-arrow" aria-hidden="true">→</span>
                 </div>
                 {classDescs[c.id] && <p class="class-item-desc">{classDescs[c.id]}</p>}
               </a>
             ))}
           </div>
-        </>
+        </div>
       )}
+      </div>
     </div>
 
-    <div class="quick-links-grid">
+    <div class="quick-links-column">
+      <div class="section-heading" style="margin-top: 0;">
+        <span class="section-heading-text">Quick Links</span>
+        <div class="section-heading-rule"></div>
+      </div>
+      <div class="quick-links-grid">
       <div class="quick-links-group">
         <h3 class="quick-links-heading">Feats</h3>
         <ul class="quick-links-list">
@@ -255,6 +256,7 @@ const classById = new Map(
           <li><a href={url("/power/wild-magic/")}>Wild Magic</a></li>
         </ul>
       </div>
+    </div>
     </div>
   </div>
 
@@ -472,55 +474,63 @@ const classById = new Map(
   /* ── Classes + links layout ─────────────────────────── */
   .classes-and-links {
     display: grid;
-    grid-template-columns: 1fr 200px;
-    gap: 32px;
+    grid-template-columns: 1fr 240px;
+    gap: 24px;
     align-items: start;
     margin-bottom: 48px;
   }
 
   .class-lists {
+    border: 1px solid var(--clr-border);
+    border-radius: 6px;
+    background: var(--clr-bg);
+    padding: 16px 20px;
     min-width: 0;
-  }
-
-  .prestige-heading {
-    margin-top: 24px;
   }
 
   /* ── Class tier groups ───────────────────────────────── */
   .class-tier-group + .class-tier-group {
-    margin-top: 18px;
+    margin-top: 6px;
+    padding-top: 12px;
+    border-top: 1px solid color-mix(in srgb, var(--clr-border) 80%, transparent);
   }
 
   .class-tier-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-family: var(--font-display);
-    font-size: var(--fs-2xs);
+    font-size: var(--fs-xs);
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--clr-muted);
-    opacity: 0.75;
-    padding-bottom: 5px;
+    margin-bottom: 12px;
   }
 
-  /* ── Class roster (editorial list) ──────────────────── */
+  .class-tier-label::before {
+    display: none;
+  }
+
+
+
+  /* ── Class roster (2-column card list) ──────────────── */
   .class-roster {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 16px;
   }
 
   .class-item {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    padding: 7px 0;
-    border-bottom: 0.5px solid var(--clr-border);
+    padding: 8px 10px;
     text-decoration: none;
     color: var(--clr-text);
-    transition: color 0.12s ease;
-  }
-
-  .class-item:first-child {
-    border-top: 0.5px solid var(--clr-border);
+    border-radius: 6px;
+    transition: background 0.15s ease, padding-left 0.15s ease;
+    background: transparent;
   }
 
   .class-item-header {
@@ -531,11 +541,10 @@ const classById = new Map(
   }
 
   .class-item-name {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: var(--fs-md);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--clr-power);
-    letter-spacing: 0.02em;
     line-height: 1.2;
     transition: text-decoration-color 0.12s ease;
     text-decoration: underline;
@@ -543,33 +552,30 @@ const classById = new Map(
     text-underline-offset: 3px;
   }
 
-  .class-item-arrow {
-    font-family: var(--font-body);
-    font-size: var(--fs-md);
-    color: var(--clr-muted);
-    opacity: 0;
-    flex-shrink: 0;
-    transition: opacity 0.12s ease, transform 0.12s ease;
-  }
+
 
   .class-item-desc {
     font-family: var(--font-body);
     font-size: var(--fs-sm);
     color: var(--clr-muted);
     font-style: italic;
-    line-height: 1.4;
+    line-height: 1.45;
     margin: 0;
+    white-space: normal; /* Allow natural text wrapping */
   }
 
   @media (hover: hover) and (pointer: fine) {
+    .class-item:hover {
+      background: color-mix(in srgb, var(--clr-power) 8%, transparent);
+      padding-left: 14px;
+      text-decoration: none;
+    }
+
     .class-item:hover .class-item-name {
       text-decoration-color: color-mix(in srgb, var(--clr-power) 35%, transparent);
     }
 
-    .class-item:hover .class-item-arrow {
-      opacity: 0.6;
-      transform: translateX(3px);
-    }
+
   }
 
   /* ── Quick links (vertical sidebar) ─────────────────── */
@@ -579,14 +585,14 @@ const classById = new Map(
     border: 1px solid var(--clr-border);
     border-radius: 6px;
     overflow: hidden;
-    background: color-mix(in srgb, var(--clr-power) 4%, var(--clr-surface));
+    background: var(--clr-bg);
     position: sticky;
     top: 16px;
   }
 
   .quick-links-group {
-    padding: 16px 16px 14px;
-    border-bottom: 1px solid var(--clr-border);
+    padding: 12px 14px 10px;
+    border-bottom: 1px solid color-mix(in srgb, var(--clr-border) 80%, transparent);
   }
 
   .quick-links-group:last-child {
@@ -594,15 +600,20 @@ const classById = new Map(
   }
 
   .quick-links-heading {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-family: var(--font-display);
-    font-size: var(--fs-2xs);
+    font-size: var(--fs-xs);
     font-weight: 700;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--clr-power);
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--clr-border);
+    color: var(--clr-muted);
+    margin-bottom: 8px;
+  }
+
+  .quick-links-heading::before {
+    display: none;
   }
 
   .quick-links-list {
@@ -618,23 +629,23 @@ const classById = new Map(
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 6px 6px;
+    padding: 4px 6px;
     font-family: var(--font-body);
     font-size: var(--fs-md);
     font-weight: 600;
     color: var(--clr-power);
     text-decoration: none;
-    border-radius: 3px;
-    transition: background 0.12s ease, padding-left 0.12s ease;
+    border-radius: 4px;
+    transition: background 0.15s ease, padding-left 0.15s ease;
   }
 
   .quick-links-list a::before {
     content: '›';
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1;
     opacity: 0.4;
     flex-shrink: 0;
-    transition: opacity 0.12s ease;
+    transition: opacity 0.15s ease, transform 0.15s ease;
   }
 
   .quick-links-list a:hover {
@@ -645,25 +656,22 @@ const classById = new Map(
 
   .quick-links-list a:hover::before {
     opacity: 1;
+    transform: translateX(2px);
   }
 
-  @media (max-width: 640px) {
-    .quick-links-grid {
+  @media (max-width: 1024px) {
+    .classes-and-links {
       grid-template-columns: 1fr;
-      border-radius: 4px;
     }
-
-    .quick-links-group {
-      border-right: none;
-      border-bottom: 1px solid var(--clr-border);
+    .quick-links-grid {
+      position: static;
+      margin-top: 0;
     }
+  }
 
-    .quick-links-group:last-child {
-      border-bottom: none;
-    }
-
+  @media (max-width: 768px) {
     .class-roster {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
     }
   }
 </style>

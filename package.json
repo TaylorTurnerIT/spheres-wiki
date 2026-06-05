@@ -24,7 +24,8 @@
     "accessibility": "^6.1.0",
     "astro": "^6.3.3",
     "rehype-raw": "^7.0.0",
-    "tom-select": "^2.6.1"
+    "tom-select": "^2.6.1",
+    "uipro-cli": "^2.2.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
