@@ -91,13 +91,14 @@ const prestigeClasses = [...classMap.values()]
   </nav>
 
   <h1 class="page-title power">Spheres of Power</h1>
-  <p>Spheres of Power is a unique magic system created by Drop Dead Studios for use with the Pathfinder Roleplaying Game. In this variant system, players choose their magical abilities from among twenty different spheres, spending Magic Talents to create a uniquely customized character. Spheres of Power is more about what you can do than what you can't — it gives you the tools you need to create a character, then lets you decide how to flavor it. For more information about the mechanics, see 'Using Spheres of Power' below.</p>
-  <hr class="page-title-rule" />
+  <p>Spheres of Power is a unique magic system created by Drop Dead Studios for use with the Pathfinder Roleplaying Game. In this variant system, players choose their magical abilities from among twenty different spheres, spending Magic Talents to create a uniquely customized character. Spheres of Power is more about what you can do than what you can't — it gives you the tools you need to create a character, then lets you decide how to flavor it.</p>
+
 
   <!-- <div class="section-heading">
     <span class="section-heading-text">Getting Started</span>
     <div class="section-heading-rule"></div>
   </div> -->
+  <hr class="page-title-rule" />
   <div class="gs-grid">
     <a href={url("/power/using-spheres-of-power/")} class="gs-card" data-astro-prefetch="hover">
       <div class="gs-card-icon">
@@ -124,6 +125,7 @@ const prestigeClasses = [...classMap.values()]
       <span class="gs-card-arrow" aria-hidden="true">→</span>
     </a>
   </div>
+  <hr class="page-title-rule" />
 
   <div class="section-heading">
     <span class="section-heading-text">Magic Spheres</span>
@@ -241,6 +243,10 @@ const prestigeClasses = [...classMap.values()]
   }
 
   /* ── Page header ─────────────────────────────────────── */
+  .page-title-rule {
+    width: 100%;
+  }
+
   .page-subtitle {
     font-family: var(--font-body);
     font-size: var(--fs-md);
@@ -250,89 +256,72 @@ const prestigeClasses = [...classMap.values()]
     line-height: 1.55;
   }
 
-  /* ── Getting Started cards (compact horizontal) ──────── */
+  /* ── Getting Started links ───────────────────────────── */
   .gs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 6px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
     margin-bottom: 20px;
   }
 
   .gs-card {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    padding: 9px 14px;
-    background: var(--clr-bg);
-    border: 0.5px solid var(--clr-border);
-    border-left: 3px solid var(--clr-power);
-    border-radius: 0 4px 4px 0;
+    align-items: flex-start;
+    gap: 7px;
+    padding: 3px 0;
     text-decoration: none;
     color: var(--clr-text);
-    transition: background 0.14s ease, transform 0.14s ease;
+    transition: color 0.12s ease;
+  }
+
+  .gs-card::before {
+    content: '›';
+    font-size: 1.1em;
+    color: var(--clr-muted);
+    opacity: 0.55;
+    flex-shrink: 0;
+    line-height: 1.4;
+    transition: color 0.12s ease, opacity 0.12s ease;
   }
 
   .gs-card:hover {
-    background: color-mix(in srgb, var(--clr-power) 5%, var(--clr-surface));
-    transform: translateX(2px);
+    color: var(--clr-power);
     text-decoration: none;
   }
 
-  .gs-card-icon {
-    width: 26px;
-    height: 26px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .gs-card:hover::before {
     color: var(--clr-power);
-    opacity: 0.8;
+    opacity: 1;
   }
 
-  .gs-card-icon svg {
-    width: 16px;
-    height: 16px;
+  .gs-card-icon {
+    display: none;
   }
 
   .gs-card-body {
-    flex: 1;
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
   }
 
   .gs-card-title {
-    font-family: var(--font-display);
-    font-size: var(--fs-sm);
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
     font-weight: 700;
-    color: var(--clr-power);
-    letter-spacing: 0.02em;
-    line-height: 1.2;
+    color: inherit;
+    line-height: 1.4;
   }
 
   .gs-card-desc {
     font-family: var(--font-body);
-    font-size: var(--fs-xs);
+    font-size: var(--fs-sm);
     color: var(--clr-muted);
-    line-height: 1.3;
     font-style: italic;
-    margin-top: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.35;
   }
 
   .gs-card-arrow {
-    font-family: var(--font-body);
-    font-size: var(--fs-md);
-    color: var(--clr-power);
-    opacity: 0.35;
-    flex-shrink: 0;
-    transition: opacity 0.14s ease, transform 0.14s ease;
-  }
-
-  .gs-card:hover .gs-card-arrow {
-    opacity: 0.8;
-    transform: translateX(3px);
+    display: none;
   }
 
   /* ── Sphere badge grid ───────────────────────────────── */
