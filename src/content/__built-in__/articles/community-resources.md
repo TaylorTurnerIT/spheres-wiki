@@ -1,0 +1,51 @@
+---
+id: community-resources
+name: "Community Resources"
+type: article
+tags: []
+---
+
+<div class="article-content">
+
+Discords, forums, tools, and community links for Spheres of Power and related systems.
+
+<div class="resource-link-block">
+
+  <a href="/spheres-wiki/contact/" class="resource-card">
+    <svg class="resource-card-icon discord-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.384 8.384 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+    </svg>
+    <div class="resource-card-body">
+      <span class="resource-card-name">Drop Dead Studios Discord</span>
+      <span class="resource-card-desc">Official DDS server — rules questions, announcements, community discussion</span>
+      <span class="resource-card-cta">Get invite link on Contact page →</span>
+    </div>
+  </a>
+
+  <a href="/spheres-wiki/contact/" class="resource-card">
+    <svg class="resource-card-icon discord-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.384 8.384 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+    </svg>
+    <div class="resource-card-body">
+      <span class="resource-card-name">Diamond Recreational Studios Discord</span>
+      <span class="resource-card-desc">Newer server run by the official successors to Drop Dead Studios — worth joining both</span>
+      <span class="resource-card-cta">Get invite link on Contact page →</span>
+    </div>
+  </a>
+
+  <a href="https://docs.google.com/document/d/11IQVVrpyEypUCodmvYqQ_4I_SooDKGXOZZxk8Ic3buY/edit?tab=t.0" class="resource-primary-link" target="_blank" rel="noopener noreferrer">
+    <svg class="resource-card-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M3 2h7l3 3v9H3z"/><path d="M10 2v3h3"/><path d="M5 8h6M5 10.5h6M5 6h3"/>
+    </svg>
+    <div class="resource-card-body">
+      <span class="resource-card-name">Community Resources Document</span>
+      <span class="resource-card-desc">More Discords, forums, tools, and links — maintained by the community</span>
+    </div>
+    <svg class="resource-card-external" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M6 3H3v10h10v-3M13 3H9m4 0v4M7 9l6-6"/>
+    </svg>
+  </a>
+
+</div>
+
+</div>

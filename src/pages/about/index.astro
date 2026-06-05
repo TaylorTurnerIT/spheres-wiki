@@ -1,28 +1,27 @@
 ---
-import { url } from "@/lib/url";
-import WikiPage from '@/layouts/WikiPage.astro';
+import { getCollection, render } from "astro:content";
+import ArticlePage from "@/layouts/ArticlePage.astro";
+import { resolveEntries } from "@/lib/resolveEntries";
+import type { ArticleEntry } from "@/lib/types";
+
+const entries = await getCollection("__built-in__");
+const entry = entries.find(
+  (e: any) => e.data.type === "article" && e.data.id === "about",
+);
+if (!entry) {
+  throw new Error(
+    "Missing article entry: __built-in__/articles/about.md",
+  );
+}
+const { Content } = await render(entry);
+const article = entry.data as ArticleEntry;
+
+const { bookMetaMap } = await resolveEntries();
+const book = bookMetaMap.get("__built-in__");
+
+const description =
+  "About the Spheres of Power Wiki — a quick-reference site for the Spheres system.";
 ---
-<WikiPage title="About — Spheres Wiki" pagefindIgnore={true}>
-
-  <h1 class="page-title">About</h1>
-  <hr class="page-title-rule" />
-
-  <div class="entry-description">
-    The Spheres of Power Wiki is a quick-reference site for the Spheres system by Drop Dead Studios,
-    covering Spheres of Power, Spheres of Might, Spheres of Guile, and Champions of the Spheres.
-    It replaces the existing Wikidot site with a fast, searchable static site.
-  </div>
-
-  <div class="section-heading" style="margin-top: 20px;">
-    <span class="section-heading-text">Systems Covered</span>
-    <div class="section-heading-rule"></div>
-  </div>
-
-  <div class="sphere-list single" style="max-width: 400px;">
-    <a href={url("/power/")} class="power" data-astro-prefetch="hover">Spheres of Power</a>
-    <a href={url("/might/")} class="might" data-astro-prefetch="hover">Spheres of Might</a>
-    <a href={url("/guile/")} class="guile" data-astro-prefetch="hover">Spheres of Guile</a>
-    <a href={url("/champions/")} class="champ" data-astro-prefetch="hover">Champions of the Spheres</a>
-  </div>
-
-</WikiPage>
+<ArticlePage article={article} book={book} description={description}>
+  <Content />
+</ArticlePage>

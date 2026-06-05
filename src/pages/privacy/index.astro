@@ -1,166 +1,27 @@
 ---
-import WikiPage from '@/layouts/WikiPage.astro';
+import { getCollection, render } from "astro:content";
+import ArticlePage from "@/layouts/ArticlePage.astro";
+import { resolveEntries } from "@/lib/resolveEntries";
+import type { ArticleEntry } from "@/lib/types";
 
-const UPDATED = '2026-05-27';
-const CONTACT = 'sphereswiki1@gmail.com';
+const entries = await getCollection("__built-in__");
+const entry = entries.find(
+  (e: any) => e.data.type === "article" && e.data.id === "privacy",
+);
+if (!entry) {
+  throw new Error(
+    "Missing article entry: __built-in__/articles/privacy.md",
+  );
+}
+const { Content } = await render(entry);
+const article = entry.data as ArticleEntry;
+
+const { bookMetaMap } = await resolveEntries();
+const book = bookMetaMap.get("__built-in__");
+
+const description =
+  "How Spheres Wiki collects and handles data.";
 ---
-
-<WikiPage title="Privacy Policy — Spheres Wiki" description="How Spheres Wiki collects and handles data." pagefindIgnore={true}>
-
-  <h1 class="page-title">Privacy Policy</h1>
-  <hr class="page-title-rule" />
-
-  <div class="entry-description">
-    Spheres Wiki is a free, non-commercial reference site. We collect no analytics, use no
-    tracking cookies, and require no accounts. Last updated: {UPDATED}.
-  </div>
-
-  <div class="section-heading" style="margin-top: 28px;">
-    <span class="section-heading-text">Browser Storage</span>
-    <div class="section-heading-rule"></div>
-  </div>
-
-  <div class="prose">
-    <p>
-      This site writes small values to your browser's local and session storage to remember
-      UI preferences. No storage is used for tracking or analytics.
-    </p>
-    <table class="privacy-table">
-      <thead>
-        <tr>
-          <th>Key</th>
-          <th>Storage</th>
-          <th>Purpose</th>
-          <th>Retention</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>beta-toast-dismissed</code></td>
-          <td>localStorage</td>
-          <td>Hides the beta notice after dismissal</td>
-          <td>Until browser data is cleared</td>
-        </tr>
-        <tr>
-          <td><code>scroll-y</code></td>
-          <td>sessionStorage</td>
-          <td>Restores scroll position on page transitions</td>
-          <td>Current browser session only</td>
-        </tr>
-        <tr>
-          <td><code>*-animated</code></td>
-          <td>sessionStorage</td>
-          <td>Prevents toast slide-in animation replaying within a session</td>
-          <td>Current browser session only</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      You can clear all stored values via your browser's developer tools
-      (Application → Storage → Clear site data) or by clearing browser data for this site.
-    </p>
-  </div>
-
-  <div class="section-heading" style="margin-top: 28px;">
-    <span class="section-heading-text">Hosting</span>
-    <div class="section-heading-rule"></div>
-  </div>
-
-  <div class="prose">
-    <p>
-      This site is hosted on <strong>GitHub Pages</strong> (GitHub, Inc. / Microsoft).
-      GitHub automatically collects server access logs including IP addresses for security
-      and operational purposes. This is outside our control. GitHub's privacy statement:
-      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">docs.github.com</a>.
-    </p>
-  </div>
-
-  <div class="section-heading" style="margin-top: 28px;">
-    <span class="section-heading-text">Third-Party Links</span>
-    <div class="section-heading-rule"></div>
-  </div>
-
-  <div class="prose">
-    <p>
-      This site links to external services including GitHub, Discord, Google Docs, and Drop Dead Studios.
-      Those services have their own privacy policies independent of this site.
-      Following an external link means you are subject to that service's terms, not ours.
-    </p>
-  </div>
-
-  <div class="section-heading" style="margin-top: 28px;">
-    <span class="section-heading-text">Contact</span>
-    <div class="section-heading-rule"></div>
-  </div>
-
-  <div class="prose">
-    <p>
-      Questions or concerns about data handling: <a href={`mailto:${CONTACT}`}>{CONTACT}</a>.
-    </p>
-  </div>
-
-</WikiPage>
-
-<style>
-  .prose {
-    max-width: 72ch;
-    margin-top: 12px;
-  }
-
-  .prose p {
-    font-family: var(--font-body);
-    font-size: var(--fs-sm);
-    line-height: 1.7;
-    color: var(--clr-text);
-    margin-bottom: 12px;
-  }
-
-  .prose a {
-    color: var(--clr-power);
-    font-weight: 600;
-    text-decoration: underline;
-  }
-
-  .prose code {
-    font-size: 0.85em;
-    background: var(--clr-surface-alt, var(--clr-surface));
-    border: 1px solid var(--clr-border);
-    border-radius: 3px;
-    padding: 1px 5px;
-  }
-
-  .privacy-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: var(--font-body);
-    font-size: var(--fs-xs);
-    margin-bottom: 12px;
-  }
-
-  .privacy-table th {
-    text-align: left;
-    font-family: var(--font-display);
-    font-size: var(--fs-3xs);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    color: var(--clr-muted);
-    border-bottom: 2px solid var(--clr-border);
-    padding: 6px 10px 6px 0;
-  }
-
-  .privacy-table td {
-    vertical-align: top;
-    padding: 7px 10px 7px 0;
-    border-bottom: 1px solid var(--clr-border);
-    color: var(--clr-text);
-    line-height: 1.5;
-  }
-
-  .privacy-table td code {
-    font-size: 0.85em;
-    background: var(--clr-surface-alt, var(--clr-surface));
-    border: 1px solid var(--clr-border);
-    border-radius: 3px;
-    padding: 1px 5px;
-  }
-</style>
+<ArticlePage article={article} book={book} description={description}>
+  <Content />
+</ArticlePage>
