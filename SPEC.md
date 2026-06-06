@@ -19,8 +19,9 @@ Fast static wiki for the Spheres tabletop RPG (Power/Might/Guile/Champions) by D
 - C6. New sphere in existing system must appear site-wide with only content files added (no component edits) — except icon SVG which requires one `<symbol>` addition to SVGSprite.astro
 - C7. New game system requires coordinated changes across config, CSS, nav, pages — this is acceptable but must be documented in §I
 - C8. Toolchain pinned — Astro 6.x SSG + TypeScript, Node.js ≥ 22.12.0
-- C9. Entry metadata is path-encoded — `src/content/<book>/<type>/*.md`; `type` (and sphere/feats nesting) inferred from path by `inferFromPath` (see I.content), so frontmatter stays minimal
+- C9. Entry metadata path-encoded — `src/content/<book>/<system>/<type>/*.md`; `type`+`sphere` inferred from path by `inferFromPath` (I.content); `system` derived from directory, not frontmatter
 - C10. All entry `id`s are lowercase kebab-case (`^[a-z0-9-]+$`), enforced by `entrySchema`
+- C11. `system:` field ⊥ in entry frontmatter — always derived from `{book}/{system}` directory prefix; ∃ only in `_system.yaml` at `{book}/{system}/`
 
 ---
 
@@ -29,8 +30,15 @@ Fast static wiki for the Spheres tabletop RPG (Power/Might/Guile/Champions) by D
 ### I.content — book folder contract
 ```
 src/content/<book-slug>/
-  _book.yaml          # title, publisher, publishedDate, price?, buyUrl?, coverImage?
-  **/*.md             # frontmatter validated by entrySchema (content.config.ts)
+  _book.yaml              # title, publisher, publishedDate, price?, buyUrl?, coverImage?
+  <system>/               # power | might | guile | champions (1 dir per authored system)
+    _system.yaml          # id, name — only for books that define a system (core books)
+    spheres/<sphere>.md   # sphere-type entry (id = sphere slug)
+    spheres/<sphere>/talents/<talent>.md  # talent entry
+    feats/*.md            # feat entries
+    classes/**/*.md       # class entries (also holds archetypes under classes/)
+    articles/*.md         # article entries
+    tags/*.md             # tag entries
 ```
 Entry types: `sphere | talent | feat | class | class-feature | class-trait | article | archetype | archetype-feature | tag`
 
@@ -145,6 +153,11 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 - V23. Errata patches do not leak `modifies` field onto resolved entry
 - V24. Each entry claimed by first matching category definition. Entries sorted by `id` ascending
 - V25. Interactive component initializations and event listeners must run on `astro:page-load` to support Astro View Transitions
+- V26. `system:` frontmatter field ⊥ in entry `.md` files — must be derived from path `{book}/{system}` directory prefix
+- V27. Core system book ! have `_system.yaml` at `{book}/{system}/` defining system metadata (id, name). Companion books (apocrypha, handbooks) ! NOT have `_system.yaml` — they contribute to the same system without redefining it.
+- V28. `content.config.ts` auto-discovers `_system.yaml` to register systems in collection map
+- V29. `inferFromPath` handles `{system}/spheres/{sphere}` 3-seg paths → `{type:sphere, id:sphere}`
+- V30. Might export writes to `{content_root}/{source_book}/might/spheres/{sphere_id}/...` — system `might` in path, not frontmatter
 
 ---
 
@@ -202,6 +215,13 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 | T48 | x      | Add validation script for V16 consistency check          | V16           |
 | T49 | x      | Fix mismatch between test expectation ('feats') and implementation ('general-feats') in categorize.test.ts | I.categorize |
 | T50 | x      | Wrap search bar initialization in SiteHeader.astro in an `astro:page-load` event listener | V25 |
+| T51 | .      | Create `_system.yaml` at `src/content/spheres-of-might/might/_system.yaml` — id:might, name:Spheres of Might | V27,V30 |
+| T52 | .      | Remove `system:` frontmatter from all Might Alchemy entries (93 files) — system derived from `might/` dir prefix | V26,V30 |
+| T53 | .      | Refactor `export_might.rs` to write paths `{content_root}/{source_book}/might/spheres/{sphere_id}/...`; remove `MightEntry.system`; add `ensure_system_def` | V26,V27,V30 |
+| T54 | .      | Migrate Power `ultimate-spheres-of-power` content to `power/` subdirectory; strip `system: power` from all entries | V26 |
+| T55 | .      | Migrate companion-book Power content to `{book}/power/` subdirs; strip `system: power` | V26 |
+| T56 | .      | Update `content.config.ts` to auto-discover `_system.yaml` — register systems in collection map; remove `system` from entry `baseFields` (now optional path-derived) | V27,V28 |
+| T57 | .      | Might Alchemy validation — force-write to correct dirs + `--validate` compare pass (0 diffs); verify `inferFromPath` 3-seg sphere paths | V29,V30 |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
