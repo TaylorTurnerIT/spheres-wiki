@@ -160,7 +160,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 | T6  | -      | ~~Create `/citations-guide/` page~~ — removed            | V1,I.pages    |
 | T7  | x      | Create `/contact/` page                                  | V1,I.pages    |
 | T8  | ~      | Create `/power/how-to-build-*` guide pages (Spherecaster done; 2 remaining) | V1,I.pages    |
-| T9  | .      | Remove/fix all dead sidebar links (Other Systems block, subsection stubs) | V1,V9 |
+| T9  | x      | Remove/fix all dead sidebar links (Other Systems block, subsection stubs) | V1,V9 |
 | T10 | .      | Implement `/recent-changes/` with real content (git-log or manual changelog) | V1,I.pages |
 | T11 | .      | Wire champion class body + features into `/champions/[slug]` | V1,I.pages |
 | T12 | .      | Wire might/guile index card descriptions (currently "wired in R1-6" stubs) | V3 |

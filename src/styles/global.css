@@ -781,10 +781,12 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 .sidebar-heading::after {
   content: "";
   flex: 1;
+  min-width: 16px;
   height: 0.5px;
   background: currentColor;
   opacity: 0.4;
