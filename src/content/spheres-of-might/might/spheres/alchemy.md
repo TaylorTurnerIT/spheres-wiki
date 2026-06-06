@@ -10,6 +10,7 @@ sectionDefinitions:
     categories:
       - label: "Alchemy Talents"
         tiers: ["basic"]
+        excludeTags: ["formulae", "toxin"]
       - label: "Formulae Talents"
         tiers: ["basic"]
         tags: ["formulae"]
