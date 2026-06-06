@@ -6,22 +6,18 @@ sourceBook: "spheres-of-might"
 icon: "alchemy"
 tags: []
 sectionDefinitions:
-  - label: "Alchemy Talents"
+  - label: "Talents"
     categories:
+      - label: "Base Abilities"
+        tiers: ["base"]
       - label: "Alchemy Talents"
         tiers: ["basic"]
-  - label: "Formulae Talents"
-    categories:
       - label: "Formulae Talents"
         tiers: ["basic"]
         tags: ["formulae"]
-  - label: "Toxin Talents"
-    categories:
       - label: "Toxin Talents"
         tiers: ["basic"]
         tags: ["toxin"]
-  - label: "Legendary Talents"
-    categories:
       - label: "Legendary Talents"
         tiers: ["advanced"]
 ---
