@@ -106,10 +106,18 @@ svg {
 
   /* Tag semantic color buckets — ≤5 hues
      Bucket 1: entry-type  → borrows --clr-power / --clr-might / --clr-brand
-     Bucket 2: tier/level  → amber family */
-  --clr-tag-tier-base: #6b3c00; /* deep amber: Base Ability */
-  --clr-tag-tier-basic: #9a6200; /* golden amber: Basic talent */
-  --clr-tag-tier-adv: #1a3a5a; /* dark navy: Advanced talent */
+     Bucket 2: tier/level  → derived from active system color (--clr-ns) */
+  --clr-tag-tier-base: color-mix(
+    in srgb,
+    var(--clr-ns) 55%,
+    #000 45%
+  ); /* Base Ability — dark system */
+  --clr-tag-tier-basic: var(--clr-ns); /* Basic talent — system color */
+  --clr-tag-tier-adv: color-mix(
+    in srgb,
+    var(--clr-ns) 60%,
+    #152 40%
+  ); /* Advanced talent — muted system */
   /* Bucket 3: provenance */
   --clr-tag-prov: #474540; /* warm gray: 3PP content */
   /* Bucket 4: PF1e rules descriptor */
