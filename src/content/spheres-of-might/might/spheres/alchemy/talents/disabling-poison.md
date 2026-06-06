@@ -1,0 +1,11 @@
+---
+id: "disabling-poison"
+name: "Disabling Poison"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "alchemy"
+tier: "basic"
+tags: []
+---
+
+Whenever a creature fails a non-harmless saving throw against a special poison which you have created, they gain the battered condition for 1 round. For every 5 ranks in Craft (alchemy) you possess, the creature is battered for an additional round.

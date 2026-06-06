@@ -1,0 +1,12 @@
+---
+id: "mind-venom"
+name: "Mind Venom"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "alchemy"
+tier: "basic"
+tags:
+  - "toxin"
+---
+
+You may choose for your poison to make the creature confused instead of fatigued. This is a mind-affecting effect.

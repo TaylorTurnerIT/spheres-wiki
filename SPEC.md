@@ -215,7 +215,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 | T48 | x      | Add validation script for V16 consistency check          | V16           |
 | T49 | x      | Fix mismatch between test expectation ('feats') and implementation ('general-feats') in categorize.test.ts | I.categorize |
 | T50 | x      | Wrap search bar initialization in SiteHeader.astro in an `astro:page-load` event listener | V25 |
-| T51 | .      | Create `_system.yaml` at `src/content/spheres-of-might/might/_system.yaml` — id:might, name:Spheres of Might | V27,V30 |
+| T51 | ~      | Create `_system.yaml` at `src/content/spheres-of-might/might/_system.yaml` — id:might, name:Spheres of Might | V27,V30 |
 | T52 | .      | Remove `system:` frontmatter from all Might Alchemy entries (93 files) — system derived from `might/` dir prefix | V26,V30 |
 | T53 | .      | Refactor `export_might.rs` to write paths `{content_root}/{source_book}/might/spheres/{sphere_id}/...`; remove `MightEntry.system`; add `ensure_system_def` | V26,V27,V30 |
 | T54 | .      | Migrate Power `ultimate-spheres-of-power` content to `power/` subdirectory; strip `system: power` from all entries | V26 |
