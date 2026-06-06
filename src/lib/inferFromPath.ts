@@ -93,6 +93,10 @@ export function inferFromPath(fileId: string): InferredFields {
   }
 
   if (parts.length >= 3) {
+    // {system}/spheres/{sphere-id}: three-segment system-prefixed sphere path
+    if (prev === "spheres") {
+      return { type: "sphere", id: last };
+    }
     // Class Features: .../[cid]/class-features/[id] or features/[id]
     if (prev === "class-features" || prev === "features") {
       const cid = parts[parts.length - 3];
