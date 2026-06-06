@@ -19,7 +19,11 @@ export type InferredFields = {
   className?: string;
   featureId?: string;
   archetypeId?: string;
+  system?: string;
 };
+
+/** System ids that appear as the first directory segment in content paths. */
+const KNOWN_SYSTEMS = new Set(["power", "might", "guile", "champions"]);
 
 /**
  * Infers structural metadata from an Astro content entry's file id.
@@ -30,37 +34,49 @@ export type InferredFields = {
  * frontmatter data — frontmatter always wins, enabling per-file overrides.
  */
 export function inferFromPath(fileId: string): InferredFields {
-  const parts = fileId.replace(/\.mdx?$/, "").split("/");
+  let parts = fileId.replace(/\.mdx?$/, "").split("/");
+
+  // Detect system prefix: {system}/spheres/{id} or {system}/feats/{id} etc.
+  let system: string | undefined;
+  if (KNOWN_SYSTEMS.has(parts[0])) {
+    system = parts[0];
+    parts = parts.slice(1); // strip system prefix for type/sphere inference
+  }
+
   const [s0, s1, s2, s3, s4, s5] = parts;
+
+  // Helper: attach system if detected from path prefix.
+  const withSystem = (fields: InferredFields): InferredFields =>
+    system !== undefined ? { ...fields, system } : fields;
 
   // ── 2-segment paths (legacy flat) ─────────────────────────────────────────
   if (parts.length === 2) {
     switch (s0) {
       case "talents":
-        return { type: "talent", id: s1 };
+        return withSystem({ type: "talent", id: s1 });
       case "feats":
-        return { type: "feat", id: s1 };
+        return withSystem({ type: "feat", id: s1 });
       case "spheres":
-        return { type: "sphere", id: s1 };
+        return withSystem({ type: "sphere", id: s1 });
       case "classes":
-        return { type: "class", id: s1 };
+        return withSystem({ type: "class", id: s1 });
       case "archetypes":
-        return { type: "archetype", id: s1 };
+        return withSystem({ type: "archetype", id: s1 });
       case "archetype-features":
-        return { type: "archetype-feature", id: s1 };
+        return withSystem({ type: "archetype-feature", id: s1 });
       case "articles":
-        return { type: "article", id: s1 };
+        return withSystem({ type: "article", id: s1 });
       case "tags":
-        return { type: "tag", id: s1 };
+        return withSystem({ type: "tag", id: s1 });
     }
   }
 
   // ── 3-segment legacy paths ──────────────────────────────────────────────────
   if (parts.length === 3) {
     if (s0 === "class-features")
-      return { type: "class-feature", className: s1, id: s2 };
+      return withSystem({ type: "class-feature", className: s1, id: s2 });
     if (s0 === "class-traits")
-      return { type: "class-trait", className: s1, id: s2 };
+      return withSystem({ type: "class-trait", className: s1, id: s2 });
   }
 
   const last = parts[parts.length - 1];
@@ -77,7 +93,11 @@ export function inferFromPath(fileId: string): InferredFields {
         parts[parts.length - 4].toLowerCase() === "archetypes")
     ) {
       const aid = parts[parts.length - 3];
-      return { type: "archetype-feature", archetypeId: aid, id: last };
+      return withSystem({
+        type: "archetype-feature",
+        archetypeId: aid,
+        id: last,
+      });
     }
     // Class Traits: .../[cid]/class-features/[fid]/class-traits/[id] or features/traits
     if (
@@ -88,19 +108,20 @@ export function inferFromPath(fileId: string): InferredFields {
       const fid = parts[parts.length - 3];
       // cid is two levels above fid: .../[cid]/class-features/[fid]
       const cid = parts[parts.length - 5] || parts[1]; // fallback if nesting is weird
-      return { type: "class-trait", className: cid, featureId: fid, id: last };
+      return withSystem({
+        type: "class-trait",
+        className: cid,
+        featureId: fid,
+        id: last,
+      });
     }
   }
 
   if (parts.length >= 3) {
-    // {system}/spheres/{sphere-id}: three-segment system-prefixed sphere path
-    if (prev === "spheres") {
-      return { type: "sphere", id: last };
-    }
     // Class Features: .../[cid]/class-features/[id] or features/[id]
     if (prev === "class-features" || prev === "features") {
       const cid = parts[parts.length - 3];
-      return { type: "class-feature", className: cid, id: last };
+      return withSystem({ type: "class-feature", className: cid, id: last });
     }
     // Archetypes: .../[cid]/Archetypes/[aid]/[aid] or index or ends with [aid]
     if (
@@ -112,16 +133,16 @@ export function inferFromPath(fileId: string): InferredFields {
     ) {
       const aid = prev;
       const cid = parts[parts.length - 4];
-      return { type: "archetype", className: cid, id: aid };
+      return withSystem({ type: "archetype", className: cid, id: aid });
     }
     // Sphere talents and feats
     if (prev === "talents") {
       const sid = parts[parts.length - 3];
-      return { type: "talent", sphere: sid, id: last };
+      return withSystem({ type: "talent", sphere: sid, id: last });
     }
     if (prev === "feats") {
       const sid = parts[parts.length - 3];
-      return { type: "feat", sphere: sid, id: last };
+      return withSystem({ type: "feat", sphere: sid, id: last });
     }
     // Spheres root
     if (
@@ -129,15 +150,15 @@ export function inferFromPath(fileId: string): InferredFields {
       parts[parts.length - 3] === "spheres" &&
       (last === prev || last === "index")
     ) {
-      return { type: "sphere", id: prev };
+      return withSystem({ type: "sphere", id: prev });
     }
   }
 
   if (s0.toLowerCase() === "classes") {
     if (last === prev || last === "index") {
-      return { type: "class", id: prev };
+      return withSystem({ type: "class", id: prev });
     }
   }
 
-  return {};
+  return withSystem({});
 }
