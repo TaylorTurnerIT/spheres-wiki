@@ -4,10 +4,12 @@ name: "Casting Traditions"
 type: article
 system: power
 tags: []
+
 ---
 
 **Ultimate Spheres of Power**
 $29.99
+
 ---
 
 Casting traditions are the method by which a caster creates magic. In the core magic system for the Pathfinder Roleplaying Game a wizard, a cleric, and a druid can often create very similar magical effects, but one does so through arcane materials and signs, the other through a holy symbol and a prayer, and the other through invoking a connection to nature. Each of these and other magic-using classes possess restrictions on how they invoke magic, an ability score that governs their magic, as well as specific information regarding what magic spells they have access to, and whether their magic is arcane in origin, divine in origin, or comes from another source entirely.
@@ -1332,6 +1334,7 @@ You cannot place your mantle on other creatures. When you take this drawback, yo
 ##### Small Weather
 The size of your weather is very limited; the maximum size area you can control weather has a close range-sized radius. You must select Focused Weather with the talent gained from this drawback.
 **Incompatible:** Atmospheric Brew, Localized Weather
+
 ---
 ## Dual Sphere Drawbacks [3PP]
 <div class="source-tag">Source: Expanded Spheres: Baron's Lost Apocrypha</div>
@@ -1734,6 +1737,7 @@ Unless the GM says otherwise, it is reasonable to assume that a game set in a tr
 **Casting Ability Modifier:** Intelligence
 **Drawbacks:** Material Casting, Prepared Caster, Somatic Casting x2, Verbal Casting
 **Boon:** +1 spell point per level in casting classes.
+
 ---
 ## Custom Traditions
 By combining drawbacks and boons, a truly unique casting tradition can be created and used to breathe life into a setting or concept. It is also entirely possible for a player to ask a GM if he can create his own custom tradition to reflect a particular character concept; however, it must be remembered that custom casting traditions are a GM tool first and a player tool second.

@@ -22,4 +22,5 @@ You cannot gain a (formulae) talent unless you possess the (formulae) package, n
 
 ### Note: The Alchemy Sphere and Other Poisons
 Unless stated otherwise within the talent, Alchemy talents that involve poisons only work for poisons created with the Alchemy sphere itself. They do not improve poisons created through other means, such as traditional crafting or class features from outside the Spheres system.
+
 ---

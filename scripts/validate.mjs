@@ -90,6 +90,26 @@ for (const filePath of allFiles) {
     continue;
   }
 
+  // Body setext heading check: "text\n---" (no blank line before ---)
+  // renders the preceding text as an <h2>. Intentional <hr> has blank lines
+  // above and below. YAML frontmatter already stripped — this is body-only.
+  const fmEnd = match.index + match[0].length;
+  const bodyText = content.substring(fmEnd);
+  const lines = bodyText.split(/\r?\n/);
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i].trim();
+    const prev = lines[i - 1].trim();
+    // A setext heading: previous line has text, this line is exactly --- or ===
+    if (prev.length > 0 && (line === "---" || line === "===")) {
+      const relPath = path.relative(contentDir, filePath);
+      console.error(
+        `Body setext: "${prev}" followed by "${line}" in ${relPath} — renders as accidental <h2>/<h1>. Insert blank line if <hr> intended.`,
+      );
+      hasError = true;
+      break; // one violation per file is enough
+    }
+  }
+
   const tags = frontmatter.tags;
   if (!Array.isArray(tags)) continue;
 
