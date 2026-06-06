@@ -215,13 +215,13 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 | T48 | x      | Add validation script for V16 consistency check          | V16           |
 | T49 | x      | Fix mismatch between test expectation ('feats') and implementation ('general-feats') in categorize.test.ts | I.categorize |
 | T50 | x      | Wrap search bar initialization in SiteHeader.astro in an `astro:page-load` event listener | V25 |
-| T51 | ~      | Create `_system.yaml` at `src/content/spheres-of-might/might/_system.yaml` — id:might, name:Spheres of Might | V27,V30 |
-| T52 | .      | Remove `system:` frontmatter from all Might Alchemy entries (93 files) — system derived from `might/` dir prefix | V26,V30 |
-| T53 | .      | Refactor `export_might.rs` to write paths `{content_root}/{source_book}/might/spheres/{sphere_id}/...`; remove `MightEntry.system`; add `ensure_system_def` | V26,V27,V30 |
+| T51 | x      | Create `_system.yaml` at `src/content/spheres-of-might/might/_system.yaml` — id:might, name:Spheres of Might | V27,V30 |
+| T52 | x      | Remove `system:` frontmatter from all Might Alchemy entries (93 files) — system derived from `might/` dir prefix | V26,V30 |
+| T53 | x      | Refactor `export_might.rs` to write paths `{content_root}/{source_book}/might/spheres/{sphere_id}/...`; remove `MightEntry.system`; add `ensure_system_def` | V26,V27,V30 |
 | T54 | .      | Migrate Power `ultimate-spheres-of-power` content to `power/` subdirectory; strip `system: power` from all entries | V26 |
 | T55 | .      | Migrate companion-book Power content to `{book}/power/` subdirs; strip `system: power` | V26 |
 | T56 | .      | Update `content.config.ts` to auto-discover `_system.yaml` — register systems in collection map; remove `system` from entry `baseFields` (now optional path-derived) | V27,V28 |
-| T57 | .      | Might Alchemy validation — force-write to correct dirs + `--validate` compare pass (0 diffs); verify `inferFromPath` 3-seg sphere paths | V29,V30 |
+| T57 | x      | Might Alchemy validation — force-write to correct dirs + `--validate` compare pass (0 diffs); verify `inferFromPath` 3-seg sphere paths | V29,V30 |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
