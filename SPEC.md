@@ -158,6 +158,8 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 - V28. `content.config.ts` auto-discovers `_system.yaml` to register systems in collection map
 - V29. `inferFromPath` handles `{system}/spheres/{sphere}` 3-seg paths → `{type:sphere, id:sphere}`
 - V30. Might export writes to `{content_root}/{source_book}/might/spheres/{sphere_id}/...` — system `might` in path, not frontmatter
+- V31. Base abilities rendered via `[TalentName]` markers in sphere body — marker ID must match `tier:"base"` talent entry slug (lowercase kebab). `splitBodyOnMarkers()` extracts segments; page template matches against talentMap.
+- V32. `sectionDefinitions` category with `tiers:["base"]` always empty — page template filters base talents before `buildSections()`. Base abilities render exclusively via V31 markers.
 
 ---
 
@@ -222,6 +224,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 | T55 | .      | Migrate companion-book Power content to `{book}/power/` subdirs; strip `system: power` | V26 |
 | T56 | .      | Update `content.config.ts` to auto-discover `_system.yaml` — register systems in collection map; remove `system` from entry `baseFields` (now optional path-derived) | V27,V28 |
 | T57 | x      | Might Alchemy validation — force-write to correct dirs + `--validate` compare pass (0 diffs); verify `inferFromPath` 3-seg sphere paths | V29,V30 |
+| T58 | .      | Upgrade `export_might.rs` — auto-generate `[TalentName]` markers in sphere body for tier:base entries; derive marker names from base-ability slugs | V31,V32 |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
@@ -246,3 +249,6 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: T45–T50 done; **T44 (F
 | B4 | 2026-05-29 | `parseSectionContext` used `includes('feat')` — matched "features" in "+++ Companion Features", premature-flushed base ability and reset section context | Changed to `/\bfeats?\b/` |
 | B5 | 2026-06-03 | "SM-" tag needs to be removed from codebase | Resolved |
 | B6 | 2026-06-03 | z-index issue on tags page: tags appear on top of search bar results/dropdown | Added `position: relative` and `z-index: 9999` to `.site-header-wrap` |
+| B7 | 2026-06-06 | `sectionDefinitions` duplicated section label as category label → duplicate HTML `id` attrs → TOC scroll broken, sections empty | V31 — unique labels; one "Talents" section groups categories |
+| B8 | 2026-06-06 | Base abilities not rendering — `[TalentName]` markers missing from sphere body; `tier:"base"` `sectionDefinitions` category always empty (filtered before `buildSections`) | V31,V32 — markers in body + remove useless base category |
+| B9 | 2026-06-06 | `export_might.rs` body converter: `----` → `---` without blank line → setext heading `<h2>` rendering | fix: `wikidot_lines_to_markdown` inserts blank line before `---` |
