@@ -32,6 +32,11 @@ pnpm-debug.log*
 # Playwright
 playwright-report/
 test-results/
+.playwright-browsers/
+
+# Nix / direnv
+.direnv/
+result/
 
 # Claw Code local artifacts
 .claw/settings.local.json

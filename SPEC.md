@@ -22,6 +22,7 @@ Fast static wiki for the Spheres tabletop RPG (Power/Might/Guile/Champions) by D
 - C9. Entry metadata path-encoded — `src/content/<book>/<system>/<type>/*.md`; `type`+`sphere` inferred from path by `inferFromPath` (I.content); `system` derived from directory, not frontmatter
 - C10. All entry `id`s are lowercase kebab-case (`^[a-z0-9-]+$`), enforced by `entrySchema`
 - C11. `system:` field ⊥ in entry frontmatter — always derived from `{book}/{system}` directory prefix; ∃ only in `_system.yaml` at `{book}/{system}/`
+- C12. Large assets (images/book covers) managed via Git LFS — local development requires `git-lfs` to prevent build failures due to missing image metadata
 
 ---
 
