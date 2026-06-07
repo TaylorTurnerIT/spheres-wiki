@@ -1,7 +1,12 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 import { parse as parseYaml } from "yaml";
 import { inferFromPath } from "./inferFromPath";
+
+// Resolved relative to this module file so it works regardless of process.cwd()
+const _moduleDir = path.dirname(fileURLToPath(import.meta.url));
+const DEFAULT_CONTENT_DIR = path.resolve(_moduleDir, "../content");
 
 let dbCache: Map<string, any> | null = null;
 let nameIndex: Map<string, any> | null = null;
@@ -25,7 +30,7 @@ function ensureCache() {
   dbCache = new Map();
   nameIndex = new Map();
 
-  const contentDir = path.resolve(process.cwd(), "src/content");
+  const contentDir = DEFAULT_CONTENT_DIR;
   if (!fs.existsSync(contentDir)) return;
 
   const allFiles = getFilesRecursively(contentDir);

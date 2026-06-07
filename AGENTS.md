@@ -67,7 +67,8 @@ Books are **auto-discovered**: a folder under `src/content/` is registered as a 
 
 ```
 src/content/<book-slug>/
-  _book.yaml          # title, publisher, publishedDate, system?, price?, buyUrl?, coverImage?
+  _book.yaml          # title, publisher, publishedDate, price?, buyUrl?, coverImage?
+                    # system? is a legacy field (pre-T54/T55 migration); do NOT add to new books
   spheres/<id>.md
   feats/<id>.md
   classes/<id>.md
@@ -76,19 +77,20 @@ src/content/<book-slug>/
 
 Entry types (discriminated union on `type` in `entrySchema`): `sphere`, `talent`, `feat`, `class`, `class-feature`, `class-trait`, `article`, `archetype`, `archetype-feature`, `tag`.
 
-Frontmatter is intentionally minimal because `inferFromPath` fills in `type`/`sphere`/`system` from the file's location. Example talent:
+Frontmatter is intentionally minimal because `inferFromPath` fills in `type`/`sphere`/`system` from the file's location. **Do not add `system:` to entry frontmatter** — it is derived from the `{book}/{system}/` directory prefix (SPEC V26, C11). Example talent at `src/content/ultimate-spheres-of-power/power/spheres/alteration/talents/my-talent.md`:
 
 ```yaml
 ---
 id: my-talent          # lowercase kebab-case, must equal the filename (SPEC V16)
 name: My Talent
-system: power
-sphere: alteration
+# system and sphere inferred from path — do not add them here
 tier: basic
 tags: ["transformation", "utility"]
 ---
 Talent body in markdown. Internal links resolve via the remarkEntryLinks plugin.
 ```
+
+> **Migration note**: Power entries under `ultimate-spheres-of-power/` still carry legacy `system: power` frontmatter (T54/T55 not done). That frontmatter is honoured as an explicit override but must not be added to new content.
 
 Special cases:
 - **`__built-in__/`** — house book holding cross-sphere / system tags (`type: tag`).
