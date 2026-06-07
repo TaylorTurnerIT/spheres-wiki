@@ -160,6 +160,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 - V30. Might export writes to `{content_root}/{source_book}/might/spheres/{sphere_id}/...` — system `might` in path, not frontmatter
 - V31. Base abilities rendered via `[TalentName]` markers in sphere body — marker ID must match `tier:"base"` talent entry slug (lowercase kebab). `splitBodyOnMarkers()` extracts segments; page template matches against talentMap.
 - V32. `sectionDefinitions` category with `tiers:["base"]` always empty — page template filters base talents before `buildSections()`. Base abilities render exclusively via V31 markers.
+- V33. Prerequisites text auto-linked at build time: `**Prerequisites:**` block parsed; `<Name> Sphere|sphere` → sphere page link; parenthetical talent refs `(TalentName)` → talent page link iff talent exists in talentMap; non-talent parens (e.g. `(Any)`, `(formulae)`, `(toxin)`) left unlinked. Comma/"or"-separated multi-refs handled. Bare talent names (no sphere prefix) linked when found in talentMap. Case-insensitive matching of display names.
 
 ---
 
@@ -225,6 +226,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 | T56 | .      | Update `content.config.ts` to auto-discover `_system.yaml` — register systems in collection map; remove `system` from entry `baseFields` (now optional path-derived) | V27,V28 |
 | T57 | x      | Might Alchemy validation — force-write to correct dirs + `--validate` compare pass (0 diffs); verify `inferFromPath` 3-seg sphere paths | V29,V30 |
 | T58 | .      | Upgrade `export_might.rs` — auto-generate `[TalentName]` markers in sphere body for tier:base entries; derive marker names from base-ability slugs | V31,V32 |
+| T59 | x      | Auto-link prerequisites text — parse `**Prerequisites:**` blocks in body markdown (remark plugin), link sphere names + parenthetical talent refs, skip non-talent qualifiers like `(Any)` | V33,I.resolveEntries |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
