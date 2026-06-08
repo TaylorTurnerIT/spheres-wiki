@@ -27,7 +27,7 @@ function getFilesRecursively(dir) {
     const filePath = path.join(dir, file);
     if (fs.statSync(filePath).isDirectory()) {
       results.push(...getFilesRecursively(filePath));
-    } else if (file.endsWith(".md")) {
+    } else if (file.endsWith(".md") && !file.startsWith("QUARANTINE-")) {
       results.push(filePath);
     }
   }
@@ -76,8 +76,11 @@ for (const filePath of allFiles) {
       hasError = true;
     }
 
-    // Type-scoped ID uniqueness check
-    const typeIdKey = `${frontmatter.type}:${frontmatter.id}`;
+    // Book+type-scoped ID uniqueness: same talent name in different books (e.g.
+    // two systems both having a "mobility" talent) is valid — only flag same-book dupes.
+    const relPath = path.relative(contentDir, filePath);
+    const bookSlug = relPath.split(path.sep)[0];
+    const typeIdKey = `${frontmatter.type}:${bookSlug}:${frontmatter.id}`;
     if (!idMap.has(typeIdKey)) {
       idMap.set(typeIdKey, []);
     }

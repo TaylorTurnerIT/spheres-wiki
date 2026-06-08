@@ -1,0 +1,19 @@
+---
+id: "wall-stunt"
+name: "Wall Stunt"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "athletics"
+tier: "basic"
+tags:
+  - "leap"
+  - "run"
+---
+
+If you possess the (leap) package, when jumping or falling, you may make an Acrobatics check to jump as a swift action, provided there is a solid surface other than a ceiling (wall, floor, etc.) adjacent to you at that point. You may treat spaces occupied by creatures of your size or larger as containing such an object but your movement provokes attacks of opportunity as normal. Any fall damage that would be incurred is calculated after removing the height of the swift action jump.
+
+If you possess the (run) package, as long as there is a wall adjacent to you, you may run along the wall for all or part of your movement, including vertically. A square of vertical movement costs two squares of movement. You may treat spaces occupied by creatures of your size or larger as containing a wall, but your movement provokes attacks of opportunity as normal. Doing so bypasses any obstacle on the ground. You must end your movement on the ground as normal; if there is no ground present, you fall.
+
+If you also possess the (climb) package, you may attempt to cling to the wall at the end of your movement. If you possess the (leap) package, you may make Acrobatics checks to jump as part of this movement as normal. If you possess the Mobile Striker talent, you can kick off of a wall for the rest of your movement, gaining a +1 circumstance bonus to your damage roll if you make an attack while airborne. For every 5 ranks in Acrobatics you possess, this bonus increases by +1.
+
+-----
