@@ -1,0 +1,11 @@
+---
+id: "headfake"
+name: "Headfake"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "boxing"
+tier: "basic"
+tags: []
+---
+
+As long as you have martial focus, whenever a creature attempts to make an attack of opportunity against you, they must roll their attack roll twice, taking the worse result. Creatures capable of making multiple attacks of opportunity per round may instead expend two attacks of opportunity instead of one to make an attack of opportunity as normal.
