@@ -35,6 +35,11 @@ const STANDARD_TOGGLES = [
   <p class="page-subtitle">Configure site-wide content filters and options.</p>
   <hr class="page-title-rule" />
 
+  <div class="wip-notice">
+    <strong>Work in Progress</strong>
+    <p>These toggles do not yet actively filter site content. However, feedback on the visual design and user experience is highly appreciated!</p>
+  </div>
+
   <div class="master-toggles-bar">
     <div class="master-toggles-title">Toggle All:</div>
     <div class="master-toggles-switches">
@@ -128,6 +133,29 @@ const STANDARD_TOGGLES = [
     display: flex;
     align-items: center;
     gap: 6px;
+  }
+
+  .wip-notice {
+    background: color-mix(in srgb, var(--clr-brand) 10%, var(--clr-bg));
+    border-left: 4px solid var(--clr-brand);
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    color: var(--clr-text);
+  }
+  .wip-notice strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--clr-brand);
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .wip-notice p {
+    margin: 0;
+    font-size: var(--fs-sm);
+    opacity: 0.9;
+    line-height: 1.5;
   }
 
   .info-icon {
