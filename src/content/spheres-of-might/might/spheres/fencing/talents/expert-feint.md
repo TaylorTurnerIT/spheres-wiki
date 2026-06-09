@@ -1,0 +1,11 @@
+---
+id: "expert-feint"
+name: "Expert Feint"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "fencing"
+tier: "basic"
+tags: []
+---
+
+When you succeed at a feint check against a target, that target also loses its Dexterity bonus to its armor class against all attacks until the beginning of your next turn, in addition to your next attack. **Associated Feat:** Greater Feint.

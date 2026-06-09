@@ -1,0 +1,11 @@
+---
+id: "verbal-feint"
+name: "Verbal Feint"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "fencing"
+tier: "basic"
+tags: []
+---
+
+You may throw people off their guard with simple motions and well-placed words. You do not need a weapon in order to attempt a feint check, and can feint targets within 30 ft. Only targets that can hear you may be targeted with a verbal feint.
