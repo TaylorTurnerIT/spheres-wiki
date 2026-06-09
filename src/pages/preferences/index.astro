@@ -1,6 +1,27 @@
 ---
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
+
+const TOOLTIPS = {
+  originalPower: "Legacy content published prior to Ultimate Spheres of Power.",
+  ultimate: "Content introduced or updated in Ultimate Spheres of Power.",
+  originalStatic: "There hasn't been an \"ultimate\" remaster for these systems, so their original content is always enabled.",
+  polished: "Diamond Recreational Studios content that improves and balances older mechanics.",
+  thirdParty: "Content created by publishers other than Drop Dead Studios or Diamond Recreational Studios.",
+  aprilFools: "Joke or non-serious content, typically published on April 1st.",
+};
+
+const SYSTEMS = [
+  { id: 'might', name: 'Spheres of Might' },
+  { id: 'guile', name: 'Spheres of Guile' },
+  { id: 'champ', name: 'Champions' }
+];
+
+const STANDARD_TOGGLES = [
+  { type: 'polished', label: 'Polished', tip: TOOLTIPS.polished },
+  { type: 'third-party', label: '3rd-Party', tip: TOOLTIPS.thirdParty },
+  { type: 'april-fools', label: 'April Fools', tip: TOOLTIPS.aprilFools }
+];
 ---
 <WikiPage title="Preferences — Spheres Wiki" activeNamespace="" pagefindIgnore={true}>
 
@@ -14,25 +35,17 @@ import WikiPage from '@/layouts/WikiPage.astro';
   <p class="page-subtitle">Configure site-wide content filters and options.</p>
   <hr class="page-title-rule" />
 
-
-
-  
   <div class="master-toggles-bar">
     <div class="master-toggles-title">Toggle All:</div>
     <div class="master-toggles-switches">
-      <button class="pref-toggle compact" data-master="polished" role="switch" aria-checked="true">
-        <span class="pref-toggle-label">Polished</span>
-        <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-      </button>
-      <button class="pref-toggle compact" data-master="third-party" role="switch" aria-checked="true">
-        <span class="pref-toggle-label">3rd-Party</span>
-        <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-      </button>
-      <button class="pref-toggle compact" data-master="april-fools" role="switch" aria-checked="true">
-        <span class="pref-toggle-label">April Fools</span>
-        <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-      </button>
+      {STANDARD_TOGGLES.map(t => (
+        <button class="pref-toggle compact" data-master={t.type} role="switch" aria-checked="true">
+          <span class="pref-toggle-label">{t.label}</span>
+          <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+        </button>
+      ))}
     </div>
+    <button class="reset-btn" id="resetPrefsBtn">Restore Defaults</button>
   </div>
 
   <div class="intro-cards pref-grid">
@@ -40,212 +53,70 @@ import WikiPage from '@/layouts/WikiPage.astro';
       <div class="intro-card-body">
         <div class="intro-card-name">Spheres of Power</div>
         <div class="pref-toggles">
-          <button class="pref-toggle" data-pref="power-original" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-  <span class="pref-toggle-label">Original</span>
-  <div class="tooltip-wrapper">
-    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <div class="tooltip-content">Legacy content published prior to Ultimate Spheres of Power.</div>
-  </div>
-</div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="power-ultimate" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-  <span class="pref-toggle-label">Ultimate</span>
-  <div class="tooltip-wrapper">
-    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <div class="tooltip-content">Content introduced or updated in Ultimate Spheres of Power.</div>
-  </div>
-</div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="power-polished" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-  <span class="pref-toggle-label">Polished</span>
-  <div class="tooltip-wrapper">
-    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <div class="tooltip-content">Diamond Recreational Studios content that improves and balances older mechanics.</div>
-  </div>
-</div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="power-third-party" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-              <span class="pref-toggle-label">3rd-Party</span>
+          <div class="segmented-control" id="powerVersionControl" data-state="ultimate">
+            <div class="segmented-slider"></div>
+            <button class="segment-btn" data-val="power-original">
+              Original
               <div class="tooltip-wrapper">
-                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <div class="tooltip-content">Content created by publishers other than Drop Dead Studios or Diamond Recreational Studios.</div>
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <div class="tooltip-content">{TOOLTIPS.originalPower}</div>
               </div>
-            </div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="power-april-fools" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-              <span class="pref-toggle-label">April Fools</span>
+            </button>
+            <button class="segment-btn active" data-val="power-ultimate">
+              Ultimate
               <div class="tooltip-wrapper">
-                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <div class="tooltip-content">Joke or non-serious content, typically published on April 1st.</div>
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <div class="tooltip-content">{TOOLTIPS.ultimate}</div>
               </div>
-            </div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-        </div>
-        <div style="margin-top: 12px; font-size: var(--fs-2xs); color: var(--clr-muted); opacity: 0.8; line-height: 1.4;">
-          * Requires Original or Ultimate enabled.
+            </button>
+          </div>
+          {STANDARD_TOGGLES.map(t => (
+            <button class="pref-toggle" data-pref={`power-${t.type}`} role="switch" aria-checked="true">
+              <div class="pref-toggle-label-wrap">
+                <span class="pref-toggle-label">{t.label}</span>
+                <div class="tooltip-wrapper">
+                  <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                  <div class="tooltip-content">{t.tip}</div>
+                </div>
+              </div>
+              <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+            </button>
+          ))}
         </div>
       </div>
     </div>
 
-    <div class="intro-card might">
-      <div class="intro-card-body">
-        <div class="intro-card-name">Spheres of Might</div>
-        <div class="pref-toggles">
-          <button class="pref-toggle disabled-action active" role="switch" aria-checked="true" aria-disabled="true" tabindex="-1">
-            <div class="pref-toggle-label-wrap">
-  <span class="pref-toggle-label">Original</span>
-  <div class="tooltip-wrapper">
-    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <div class="tooltip-content">There hasn't been an "ultimate" remaster for these systems, so their original content is always enabled.</div>
-  </div>
-</div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="might-polished" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-  <span class="pref-toggle-label">Polished</span>
-  <div class="tooltip-wrapper">
-    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <div class="tooltip-content">Diamond Recreational Studios content that improves and balances older mechanics.</div>
-  </div>
-</div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="might-third-party" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-              <span class="pref-toggle-label">3rd-Party</span>
-              <div class="tooltip-wrapper">
-                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <div class="tooltip-content">Content created by publishers other than Drop Dead Studios or Diamond Recreational Studios.</div>
+    {SYSTEMS.map(sys => (
+      <div class={`intro-card ${sys.id}`}>
+        <div class="intro-card-body">
+          <div class="intro-card-name">{sys.name}</div>
+          <div class="pref-toggles">
+            <button class="pref-toggle disabled-action active" role="switch" aria-checked="true" aria-disabled="true" tabindex="-1">
+              <div class="pref-toggle-label-wrap">
+                <span class="pref-toggle-label">Original</span>
+                <div class="tooltip-wrapper">
+                  <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                  <div class="tooltip-content">{TOOLTIPS.originalStatic}</div>
+                </div>
               </div>
-            </div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="might-april-fools" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-              <span class="pref-toggle-label">April Fools</span>
-              <div class="tooltip-wrapper">
-                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <div class="tooltip-content">Joke or non-serious content, typically published on April 1st.</div>
-              </div>
-            </div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
+              <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+            </button>
+            {STANDARD_TOGGLES.map(t => (
+              <button class="pref-toggle" data-pref={`${sys.id}-${t.type}`} role="switch" aria-checked="true">
+                <div class="pref-toggle-label-wrap">
+                  <span class="pref-toggle-label">{t.label}</span>
+                  <div class="tooltip-wrapper">
+                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    <div class="tooltip-content">{t.tip}</div>
+                  </div>
+                </div>
+                <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="intro-card guile">
-      <div class="intro-card-body">
-        <div class="intro-card-name">Spheres of Guile</div>
-        <div class="pref-toggles">
-          <button class="pref-toggle disabled-action active" role="switch" aria-checked="true" aria-disabled="true" tabindex="-1">
-            <div class="pref-toggle-label-wrap">
-  <span class="pref-toggle-label">Original</span>
-  <div class="tooltip-wrapper">
-    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <div class="tooltip-content">There hasn't been an "ultimate" remaster for these systems, so their original content is always enabled.</div>
-  </div>
-</div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="guile-polished" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-  <span class="pref-toggle-label">Polished</span>
-  <div class="tooltip-wrapper">
-    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <div class="tooltip-content">Diamond Recreational Studios content that improves and balances older mechanics.</div>
-  </div>
-</div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="guile-third-party" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-              <span class="pref-toggle-label">3rd-Party</span>
-              <div class="tooltip-wrapper">
-                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <div class="tooltip-content">Content created by publishers other than Drop Dead Studios or Diamond Recreational Studios.</div>
-              </div>
-            </div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="guile-april-fools" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-              <span class="pref-toggle-label">April Fools</span>
-              <div class="tooltip-wrapper">
-                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <div class="tooltip-content">Joke or non-serious content, typically published on April 1st.</div>
-              </div>
-            </div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="intro-card champ">
-      <div class="intro-card-body">
-        <div class="intro-card-name">Champions</div>
-        <div class="pref-toggles">
-          <button class="pref-toggle disabled-action active" role="switch" aria-checked="true" aria-disabled="true" tabindex="-1">
-            <div class="pref-toggle-label-wrap">
-  <span class="pref-toggle-label">Original</span>
-  <div class="tooltip-wrapper">
-    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <div class="tooltip-content">There hasn't been an "ultimate" remaster for these systems, so their original content is always enabled.</div>
-  </div>
-</div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="champ-polished" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-  <span class="pref-toggle-label">Polished</span>
-  <div class="tooltip-wrapper">
-    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-    <div class="tooltip-content">Diamond Recreational Studios content that improves and balances older mechanics.</div>
-  </div>
-</div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="champ-third-party" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-              <span class="pref-toggle-label">3rd-Party</span>
-              <div class="tooltip-wrapper">
-                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <div class="tooltip-content">Content created by publishers other than Drop Dead Studios or Diamond Recreational Studios.</div>
-              </div>
-            </div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-          <button class="pref-toggle" data-pref="champ-april-fools" role="switch" aria-checked="true">
-            <div class="pref-toggle-label-wrap">
-              <span class="pref-toggle-label">April Fools</span>
-              <div class="tooltip-wrapper">
-                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <div class="tooltip-content">Joke or non-serious content, typically published on April 1st.</div>
-              </div>
-            </div>
-            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-
-  <div style="margin-top: 24px; text-align: right;">
-    <button class="reset-btn" id="resetPrefsBtn">Restore Defaults</button>
+    ))}
   </div>
 
 </WikiPage>
@@ -290,7 +161,7 @@ import WikiPage from '@/layouts/WikiPage.astro';
     background: var(--clr-surface);
     border: 1px solid var(--clr-border);
     padding: 8px 12px;
-    border-radius: var(--radius);
+    border-radius: 10px;
     font-family: var(--font-body);
     font-size: var(--fs-2xs);
     color: var(--clr-text);
@@ -406,6 +277,71 @@ import WikiPage from '@/layouts/WikiPage.astro';
     flex-direction: column;
     gap: 8px;
   }
+
+  
+  .segmented-control {
+    display: flex;
+    background: color-mix(in srgb, var(--clr-text) 10%, var(--clr-surface));
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 4px;
+    position: relative;
+    width: 100%;
+  }
+  .segment-btn {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--clr-text);
+    opacity: 0.6;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    z-index: 1;
+    outline: none;
+  }
+  .segment-btn:focus-visible {
+    outline: 2px solid var(--clr-ns);
+  }
+  .segment-btn.active {
+    color: #fff;
+    opacity: 1;
+  }
+  .segment-btn.active .info-icon {
+    color: #fff;
+    opacity: 0.8;
+  }
+  .segment-btn.active .tooltip-wrapper:hover .info-icon {
+    color: #fff;
+    opacity: 1;
+  }
+  .segmented-slider {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    background: var(--clr-ns);
+    border-radius: 8px;
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 0;
+    box-shadow: 0 2px 6px color-mix(in srgb, var(--clr-ns) 30%, transparent);
+  }
+  .segmented-control[data-state="ultimate"] .segmented-slider {
+    transform: translateX(100%);
+  }
+
 
   .pref-toggle {
     display: flex;
@@ -530,7 +466,7 @@ import WikiPage from '@/layouts/WikiPage.astro';
    */
   document.addEventListener('astro:page-load', () => {
     const defaultPrefs = {
-      'power-original': true,
+      'power-original': false,
       'power-ultimate': true,
       'power-polished': true,
       'might-polished': true,
@@ -573,16 +509,26 @@ import WikiPage from '@/layouts/WikiPage.astro';
           btn.setAttribute('aria-checked', 'false');
         }
 
-        // Logic locks for Original/Ultimate
-        btn.classList.remove('disabled-action');
-        if (pref === 'power-original' && currentPrefs['power-original'] && !currentPrefs['power-ultimate']) {
-          btn.classList.add('disabled-action');
-        }
+        
         if (pref === 'power-ultimate' && currentPrefs['power-ultimate'] && !currentPrefs['power-original']) {
           btn.classList.add('disabled-action');
         }
       });
       updateMasterStates();
+      const powerSegControl = document.getElementById('powerVersionControl');
+      if (powerSegControl) {
+        const powerSegBtns = powerSegControl.querySelectorAll('.segment-btn');
+        if (currentPrefs['power-ultimate']) {
+          powerSegControl.setAttribute('data-state', 'ultimate');
+          powerSegBtns[0].classList.remove('active');
+          powerSegBtns[1].classList.add('active');
+        } else {
+          powerSegControl.setAttribute('data-state', 'original');
+          powerSegBtns[0].classList.add('active');
+          powerSegBtns[1].classList.remove('active');
+        }
+      }
+
     }
 
     function updateMasterStates() {
@@ -607,15 +553,7 @@ import WikiPage from '@/layouts/WikiPage.astro';
         const pref = btn.getAttribute('data-pref');
         if (!pref) return;
 
-        // Constraints check
-        if (pref === 'power-original' && currentPrefs['power-original'] && !currentPrefs['power-ultimate']) {
-          e.preventDefault();
-          return;
-        }
-        if (pref === 'power-ultimate' && currentPrefs['power-ultimate'] && !currentPrefs['power-original']) {
-          e.preventDefault();
-          return;
-        }
+        
 
         // Toggle state
         currentPrefs[pref] = !currentPrefs[pref];
@@ -651,6 +589,28 @@ import WikiPage from '@/layouts/WikiPage.astro';
         renderState();
       });
     });
+
+    
+    const powerSegControl = document.getElementById('powerVersionControl');
+    if (powerSegControl) {
+      const powerSegBtns = powerSegControl.querySelectorAll('.segment-btn');
+      powerSegBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = btn.getAttribute('data-val');
+          if (val === 'power-original') {
+            currentPrefs['power-original'] = true;
+            currentPrefs['power-ultimate'] = false;
+          } else {
+            currentPrefs['power-original'] = false;
+            currentPrefs['power-ultimate'] = true;
+          }
+          localStorage.setItem('pref:power-original', currentPrefs['power-original']);
+          localStorage.setItem('pref:power-ultimate', currentPrefs['power-ultimate']);
+          renderState();
+        });
+      });
+    }
+
 
     // Initial render
     renderState();
