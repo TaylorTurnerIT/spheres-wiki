@@ -109,6 +109,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 /power/how-to-build-champion/      guide (MISSING — T8)
 /power/how-to-build-practitioner/    guide (MISSING — T8)
 /guile/how-to-build-operative/       guide (MISSING — T8)
+/preferences/                  preferences config page (stub — T40)
 404                            custom 404 page (MISSING — T18)
 ```
 

@@ -8,6 +8,7 @@ function currentTab(): string {
   const match = Object.entries(SYSTEMS).find(([, sys]) => pathname.startsWith(url(sys.route)));
   if (match) return match[0];
   if (pathname.startsWith(url('/store'))) return 'store';
+  if (pathname.startsWith(url('/preferences'))) return 'preferences';
   return 'home';
 }
 
@@ -22,6 +23,7 @@ const tabs = [
     cls: sys.cssKey,
   })),
   { slug: 'store', label: 'Store', href: url('/store/'), cls: '' },
+  { slug: 'preferences', label: 'Preferences', href: url('/preferences/'), cls: 'preferences-tab' },
 ];
 ---
 <nav class="tab-nav" aria-label="System navigation">
@@ -36,3 +38,9 @@ const tabs = [
     </a>
   ))}
 </nav>
+
+<style>
+  .preferences-tab {
+    margin-left: auto;
+  }
+</style>

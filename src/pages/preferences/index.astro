@@ -1,0 +1,348 @@
+---
+import { url } from "@/lib/url";
+import WikiPage from '@/layouts/WikiPage.astro';
+---
+<WikiPage title="Preferences — Spheres Wiki" activeNamespace="" pagefindIgnore={true}>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Preferences</span>
+  </nav>
+
+  <h1 class="page-title">Preferences</h1>
+  <p class="page-subtitle">Configure site-wide content filters and options.</p>
+  <hr class="page-title-rule" />
+
+
+
+  <div class="intro-cards pref-grid">
+    <div class="intro-card power">
+      <div class="intro-card-body">
+        <div class="intro-card-name">Spheres of Power</div>
+        <div class="pref-toggles">
+          <button class="pref-toggle" data-pref="power-original" role="switch" aria-checked="true">
+            <span class="pref-toggle-label">Original</span>
+            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+          </button>
+          <button class="pref-toggle" data-pref="power-ultimate" role="switch" aria-checked="true">
+            <span class="pref-toggle-label">Ultimate</span>
+            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+          </button>
+          <button class="pref-toggle" data-pref="power-polished" role="switch" aria-checked="true">
+            <span class="pref-toggle-label">Polished</span>
+            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-card might">
+      <div class="intro-card-body">
+        <div class="intro-card-name">Spheres of Might</div>
+        <div class="pref-toggles">
+          <button class="pref-toggle" data-pref="might-polished" role="switch" aria-checked="true">
+            <span class="pref-toggle-label">Polished</span>
+            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-card guile">
+      <div class="intro-card-body">
+        <div class="intro-card-name">Spheres of Guile</div>
+        <div class="pref-toggles">
+          <button class="pref-toggle" data-pref="guile-polished" role="switch" aria-checked="true">
+            <span class="pref-toggle-label">Polished</span>
+            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-card champ">
+      <div class="intro-card-body">
+        <div class="intro-card-name">Champions</div>
+        <div class="pref-toggles">
+          <button class="pref-toggle" data-pref="champ-polished" role="switch" aria-checked="true">
+            <span class="pref-toggle-label">Polished</span>
+            <div class="pref-toggle-track"><div class="pref-toggle-thumb"></div></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="global-pref-desc">
+    <strong>Original:</strong> Includes all legacy content that came before Ultimate Spheres of Power.<br>
+    <strong>Ultimate:</strong> Includes content introduced in or updated by Ultimate Spheres of Power.<br>
+    <strong>Polished:</strong> Includes "Diamond Recreational Studios" content that improves and balances older mechanics.<br>
+    <em>Note: Spheres of Power requires either Original or Ultimate to be enabled.</em>
+  </div>
+
+  <div style="margin-top: 24px; text-align: right;">
+    <button class="reset-btn" id="resetPrefsBtn">Restore Defaults</button>
+  </div>
+
+</WikiPage>
+
+<style>
+  .global-pref-desc {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    line-height: 1.6;
+    background: var(--clr-surface);
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--clr-border);
+    margin-bottom: 16px;
+  }
+
+  .global-pref-desc strong {
+    color: var(--clr-text);
+  }
+
+  .global-pref-desc em {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: var(--fs-xs);
+    opacity: 0.8;
+  }
+
+  .pref-grid {
+    margin-bottom: 16px;
+  }
+
+  .pref-grid .intro-card {
+    transition: none; /* disable lift effect since they are not links */
+  }
+  
+  .pref-grid .intro-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .pref-grid .intro-card-body {
+    padding: 10px 10px 12px;
+  }
+
+  .pref-grid .intro-card-name {
+    font-size: var(--fs-sm);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--clr-border);
+    padding-bottom: 6px;
+  }
+
+  .pref-toggles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pref-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    user-select: none;
+    font-family: inherit;
+    color: var(--clr-text);
+    appearance: none;
+    outline: none;
+  }
+
+  .pref-toggle:hover:not(.disabled-action) {
+    border-color: color-mix(in srgb, var(--clr-ns) 40%, var(--clr-border));
+    background: color-mix(in srgb, var(--clr-ns) 5%, var(--clr-surface));
+  }
+
+  .pref-toggle:focus-visible {
+    outline: 2px solid var(--clr-ns);
+    outline-offset: 2px;
+  }
+
+  .pref-toggle-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .pref-toggle-track {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    background: var(--clr-border);
+    border-radius: 20px;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .pref-toggle-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .pref-toggle.active .pref-toggle-track {
+    background: var(--clr-ns);
+  }
+
+  .pref-toggle.active .pref-toggle-thumb {
+    transform: translateX(16px);
+  }
+
+  .pref-toggle.disabled-action {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .pref-toggle.disabled-action:hover {
+    background: var(--clr-surface);
+    border-color: var(--clr-border);
+  }
+
+  .reset-btn {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    background: transparent;
+    color: var(--clr-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+  }
+
+  .reset-btn:hover {
+    color: var(--clr-brand);
+    border-color: var(--clr-brand);
+    background: color-mix(in srgb, var(--clr-brand) 5%, transparent);
+  }
+</style>
+
+<script>
+  /**
+   * LOCALSTORAGE INVENTORY
+   * Key: pref:power-original
+   * Purpose: Tracks whether "Original" power content is enabled.
+   * Retention: Indefinite
+   * Deletion Path: "Restore Defaults" button on this page.
+   *
+   * Key: pref:power-ultimate
+   * Purpose: Tracks whether "Ultimate" power content is enabled.
+   * Retention: Indefinite
+   * Deletion Path: "Restore Defaults" button on this page.
+   *
+   * Key: pref:power-polished, pref:might-polished, pref:guile-polished, pref:champ-polished
+   * Purpose: Tracks whether "Polished" (DRS) content is enabled for the respective system.
+   * Retention: Indefinite
+   * Deletion Path: "Restore Defaults" button on this page.
+   */
+  document.addEventListener('astro:page-load', () => {
+    const defaultPrefs = {
+      'power-original': true,
+      'power-ultimate': true,
+      'power-polished': true,
+      'might-polished': true,
+      'guile-polished': true,
+      'champ-polished': true,
+    };
+
+    let currentPrefs = { ...defaultPrefs };
+
+    // Load from localStorage
+    Object.keys(currentPrefs).forEach(key => {
+      const stored = localStorage.getItem('pref:' + key);
+      if (stored !== null) {
+        currentPrefs[key] = stored === 'true';
+      }
+    });
+
+    const buttons = document.querySelectorAll('.pref-toggle');
+    if (!buttons.length) return; // Exit if not on the preferences page
+
+    function renderState() {
+      buttons.forEach(btn => {
+        const pref = btn.getAttribute('data-pref');
+        if (!pref) return;
+
+        // Visual state
+        if (currentPrefs[pref]) {
+          btn.classList.add('active');
+          btn.setAttribute('aria-checked', 'true');
+        } else {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-checked', 'false');
+        }
+
+        // Logic locks for Original/Ultimate
+        btn.classList.remove('disabled-action');
+        if (pref === 'power-original' && currentPrefs['power-original'] && !currentPrefs['power-ultimate']) {
+          btn.classList.add('disabled-action');
+        }
+        if (pref === 'power-ultimate' && currentPrefs['power-ultimate'] && !currentPrefs['power-original']) {
+          btn.classList.add('disabled-action');
+        }
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const pref = btn.getAttribute('data-pref');
+        if (!pref) return;
+
+        // Constraints check
+        if (pref === 'power-original' && currentPrefs['power-original'] && !currentPrefs['power-ultimate']) {
+          e.preventDefault();
+          return;
+        }
+        if (pref === 'power-ultimate' && currentPrefs['power-ultimate'] && !currentPrefs['power-original']) {
+          e.preventDefault();
+          return;
+        }
+
+        // Toggle state
+        currentPrefs[pref] = !currentPrefs[pref];
+        localStorage.setItem('pref:' + pref, currentPrefs[pref]);
+
+        renderState();
+      });
+    });
+
+    // Reset button logic
+    const resetBtn = document.getElementById('resetPrefsBtn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        Object.keys(defaultPrefs).forEach(key => {
+          localStorage.removeItem('pref:' + key);
+        });
+        currentPrefs = { ...defaultPrefs };
+        renderState();
+      });
+    }
+
+    // Initial render
+    renderState();
+  });
+</script>

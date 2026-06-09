@@ -24,6 +24,18 @@ This site writes small values to your browser's local and session storage to rem
   </thead>
   <tbody>
     <tr>
+      <td><code>pref:power-original</code><br><code>pref:power-ultimate</code></td>
+      <td>localStorage</td>
+      <td>Tracks whether Original/Ultimate Spheres of Power content is enabled</td>
+      <td>Indefinite (cleared via Preferences reset)</td>
+    </tr>
+    <tr>
+      <td><code>pref:*-polished</code></td>
+      <td>localStorage</td>
+      <td>Tracks whether Polished (Diamond Recreational Studios) content is enabled for a given system</td>
+      <td>Indefinite (cleared via Preferences reset)</td>
+    </tr>
+    <tr>
       <td><code>beta-toast-dismissed</code></td>
       <td>localStorage</td>
       <td>Hides the beta notice after dismissal</td>
