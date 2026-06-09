@@ -1,0 +1,13 @@
+---
+id: "shielded-focus"
+name: "Shielded Focus"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "shield"
+tier: "basic"
+tags: []
+---
+
+While wielding a buckler, shield, or tower shield, you may spend a move action to regain your martial focus whenever you choose to fight defensively as part of an attack action.
+
+Additionally, whenever an attack misses a creature benefiting from your active defense, you may regain your martial focus as an immediate action.

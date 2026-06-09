@@ -1,0 +1,12 @@
+---
+id: "ranged-trickery"
+name: "Ranged Trickery"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "scoundrel"
+tier: "basic"
+tags:
+  - "trick"
+---
+
+As long as you have martial focus, you may attempt a dirty trick combat maneuver against a creature within 15 ft. of yourself, +5 ft. per 4 ranks in Sleight of Hand you possess. For every 10 ft. you are from a creature, you take a -2 penalty on your combat maneuver check.
