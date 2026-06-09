@@ -162,6 +162,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 - V32. `sectionDefinitions` category with `tiers:["base"]` always empty — page template filters base talents before `buildSections()`. Base abilities render exclusively via V31 markers.
 - V33. Prerequisites text auto-linked at build time: `**Prerequisites:**` block parsed; `<Name> Sphere|sphere` → sphere page link; parenthetical talent refs `(TalentName)` → talent page link iff talent exists in talentMap; non-talent parens (e.g. `(Any)`, `(formulae)`, `(toxin)`) left unlinked. Comma/"or"-separated multi-refs handled. Bare talent names (no sphere prefix) linked when found in talentMap. Case-insensitive matching of display names.
 - V34. ∀ changes → npm run build ! pass. No change is considered complete unless the Astro site builds successfully without data or schema errors.
+- V35. `coverImage` in `_book.yaml` must point to an existing local file in `src/assets/covers/` and cannot be a hotlink (URL).
 
 ---
 

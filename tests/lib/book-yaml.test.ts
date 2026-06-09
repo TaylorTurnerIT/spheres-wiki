@@ -9,7 +9,6 @@ const REQUIRED_FIELDS = [
   "publishedDate",
   "price",
   "buyUrl",
-  "coverImage",
 ] as const;
 const EPOCH_DATE = "1970-01-01";
 // Price must match $_.__ format (dollar + digits + dot + two digits). PLACEHOLDER is not acceptable.
@@ -97,6 +96,35 @@ describe("_book.yaml validation", () => {
     }
     if (violations.length > 0) {
       expect.fail(`Invalid price in:\n  ${violations.join("\n  ")}`);
+    }
+  });
+
+  it("coverImage must be a local file and must exist in src/assets/covers/", () => {
+    const violations: string[] = [];
+    const coversDir = path.resolve(__dirname, "../../src/assets/covers");
+    for (const book of sourceBooks) {
+      const data = loadBookYaml(book);
+      if (!data) continue;
+      const cover = String(data["coverImage"] ?? "").trim();
+      if (!cover || cover === "undefined") continue;
+
+      if (
+        cover.startsWith("http://") ||
+        cover.startsWith("https://") ||
+        cover.startsWith("//")
+      ) {
+        violations.push(`${book}: coverImage="${cover}" (cannot be a hotlink)`);
+        continue;
+      }
+
+      if (!fs.existsSync(path.join(coversDir, cover))) {
+        violations.push(
+          `${book}: coverImage="${cover}" (file does not exist in src/assets/covers/)`,
+        );
+      }
+    }
+    if (violations.length > 0) {
+      expect.fail(`Invalid coverImage in:\n  ${violations.join("\n  ")}`);
     }
   });
 });
