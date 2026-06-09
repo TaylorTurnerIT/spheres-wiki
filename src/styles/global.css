@@ -371,8 +371,8 @@ a:hover {
 
 /* ── Sphere icon ────────────────────────────────────────── */
 .si {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
   opacity: 0.95;
   overflow: visible;
@@ -1174,7 +1174,7 @@ h6 {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 3px;
+  gap: 1px;
   padding: 0 8px;
 }
 .sphere-col + .sphere-col {
@@ -1199,7 +1199,7 @@ h6 {
   font-family: var(--font-body);
   font-weight: 600;
   line-height: 1;
-  padding: 4px 6px;
+  padding: 2px 6px;
   white-space: nowrap;
   border-radius: 4px;
   transition:
@@ -1208,7 +1208,7 @@ h6 {
   text-decoration: none;
 }
 .sphere-list a {
-  margin-bottom: 3px;
+  margin-bottom: 1px;
   break-inside: avoid;
 }
 .sphere-list a,
@@ -1235,6 +1235,13 @@ h6 {
 .might-list a:hover {
   background: rgba(143, 45, 0, 0.06);
 }
+
+.ref-card.might .si {
+  filter: saturate(1.25) contrast(1.15) brightness(1.1)
+    drop-shadow(0px 1.5px 2px rgba(0, 0, 0, 0.4))
+    drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.3));
+}
+
 .guile-list a:hover {
   background: rgba(90, 45, 150, 0.06);
 }
