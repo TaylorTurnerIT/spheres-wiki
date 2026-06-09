@@ -283,7 +283,6 @@ If you have the Charged Spells drawback, you may apply one or both of the follow
 
 **Divided Power:** No two charges you prepare may have the same combination of spell point cost and use of talents, feats, class abilities, and any other modifiers or variables. This does not stop you from preparing charges that use all of the same talents and feats but have different total spell point costs or preparing charges that use the same spell point cost but different talents and feats among them.
 
-
 ##### Clarke Compliance [SUE]
 *Your magic is created or assisted through an external advanced mechanism, and as such is subject to many of the same limitations.*
 
@@ -437,7 +436,7 @@ You must prepare your magic before you can use it. After resting to regain spell
 
 **Author's Note:** Temporary spell points interact poorly with prepared casting. A caster with prepared casting assigns how many spell points they can spend on each sphere when they rest and regain spell points. Notably, temporary spell points would generally be spent towards this daily limit. Consult your GM if looking to make temporary spell points work with the Prepared Casting drawback.
 
-++++  Planebound Magic [LG]
+#### Planebound Magic [LG]
 <div class="source-tag">Source: Arcforge Players Compendium</div>
 
 Your magical power is restricted to a realm outside of normal reality, typically in an extraplanar or virtual existence. Choose a plane other than the Material Plane or your native plane. When you attempt to use a magic sphere effect on any other plane, you must succeed at a Knowledge (planes) check to use any sphere ability. The DC of this skill check is 15 + the ability’s caster level. On a failure, the sphere effect fails. 
@@ -1161,7 +1160,6 @@ Your ability to interfere with magical equipment does not extend to technologica
 ##### Volatile Sprites
 Your sprites cause machines to act erratically. You gain Glitch-Prone Sprites as a bonus talent, but all of your sprite hosts are always considered timeworn for the purpose of triggering glitches. This drawback does not grant any additional bonus talents.
 
-
 #### [Telekinesis](@sphere:telekinesis)
 ##### Directional Control
 Choose either directly towards you or directly away from you. When you affect targets with telekinesis, you can only move them in the selected direction. You cannot affect yourself and you cannot perform actions such as lifting targets or creating sustained forces unless the movement is entirely in the selected direction. You must choose Acceleration as the talent gained from this drawback.
@@ -1491,7 +1489,6 @@ You can only use the weather sphere to affect the weather within the area of you
 
 Your teleport effects do not function outside of your ward (you cannot teleport out of your ward or into your ward from the outside).
 
-
 ---
 ## Boons
 Boons are the opposite of drawbacks: instead of adding limitations and requirements to a caster’s magic, they add bonuses and benefits.
@@ -1587,7 +1584,6 @@ As a variant rule, a GM may permit a player to follow two traditions (similar to
 They gain an entirely separate set of spheres, talents (including the +2 bonus talents gained from a character’s first  level in casting classes), caster level, spell points, drawbacks, and boons, which are determined similarly to but completely separate from the first set. When creating a magical effect, they must choose which of these traditions (and its associated spheres, talents, spell points, etc.) they will use; they cannot use aspects of one tradition to empower the other.
 
 Whenever the caster gains a level in casting classes, they must decide which of their traditions that casting class level will be applied to for gaining spell points, casting level, and talents.
-
 
 ## Standard Traditions
 Every core magic-using class in Pathfinder has its own casting tradition: wizards cannot use armor and must be able to speak and gesture, while clerics can wear armor but must often handle a holy symbol. When using Spheres of Power, some players and GMs may wish to keep these classical traditions, especially when using a pre-published campaign setting that assumes them.
@@ -2243,8 +2239,6 @@ You have studied the planes to construct a powerful arsenal of abilities, gather
 
 [[tab Original]]
 [[include old-casting-traditions]]
-
-
 
 ---
 

@@ -1,0 +1,11 @@
+---
+id: "rapid-handle"
+name: "Rapid Handle"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "beastmastery"
+tier: "basic"
+tags: []
+---
+
+You may reduce the time required to handle or push an animal ally by 1 step (usually move to swift for handle and full-round to standard for push).
