@@ -1111,6 +1111,11 @@ h6 {
   font-size: var(--fs-2xs);
   font-weight: 700;
   letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.ref-card-title:hover {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
 }
 .ref-card .ref-card-title {
   color: var(--clr-ns, inherit);

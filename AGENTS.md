@@ -132,6 +132,48 @@ Adding content the supported way:
 - parsers/generators: `parse-wiki.mjs`, `class-parser.mjs`, `archetype-parser.mjs`, `generate-tags.mjs`, `generate-bestial-traits.mjs`, `catalog.mjs`, `migrate-to-nested.mjs`, `download_covers.py`
 - See `scripts/PARSE-WIKI.md` for the parsing workflow.
 
+## Might sphere migration (Wikidot → Markdown)
+
+The Spheres of Might content is migrated from Wikidot source files via a Rust parser in the sibling `ftml/` crate. The workflow is documented in `ftml/examples/CLAUDE.md` and the project spec at SPEC.md §M.
+
+### Adding a new sphere
+
+1. Read raw source at `../spheresofpower-wikidot-archive/pages/<sphere>.txt`
+2. Inventory headings (H1 `+`, H2 `++`, H4 `++++`), bracket citation keys `[Key]`, paren tags `(tag)`
+3. Add new keys to `../ftml/conf/might-lexicon.toml` — never guess book slugs; use the legal page (`legal:start.txt`) or DriveThruRPG to verify
+4. Add `*_section_defs()` + `*_sphere_entry()` to `../ftml/examples/export_might.rs` and wire in `main()`
+5. Build: `LIBGIT2_NO_PKG_CONFIG=1 ... cargo build --example export_might`
+6. Validate: `cargo run --example export_might -- <source> --sphere <id> --lexicon ... --validate`
+7. Resolve quarantine: add missing lexicon entries OR acknowledge for manual creation
+8. Force-write: `--force` generates `.md` files under `src/content/<book>/might/spheres/<sphere>/`
+9. Create tag definitions: `src/content/spheres-of-might/might/tags/<tag>.md` (unless tag exists in Power)
+10. Run `npm run build` — must pass with 0 errors
+
+### Post-write cleanup
+
+- Delete `QUARANTINE-<sphere>.md` from `src/content/spheres-of-might/` (blocks Astro build)
+- Delete non-talent H4 entries (e.g. `unarmed-combatants.md`, `table-practitioner-unarmed-damage.md` from unarmed spheres; `note-shields-and-shield-bonuses.md` from Shield)
+- Fix auto-generated `_book.yaml` titles — auto-generator drops colons from Apocrypha titles
+- Fix duplicate IDs across spheres (e.g. `smash` → `smash-brute`) — rename file and update `id` frontmatter
+- Run `python3 sweep_formatting.py` and `python3 strip_html_blocks.py` against output dir
+
+### Content routing
+
+The parser writes entries to `{book}/might/spheres/{sphere}/` based on the resolved citation key:
+- `[Key] = "book-slug"` → `src/content/book-slug/might/...`
+- `[Apoc]` with body `Source:` → specific apoc book folder
+- `[3PP]` (`__SKIP__`) → entry discarded (handled by live wiki)
+- No citation key → `spheres-of-might/might/...` (primary book)
+
+### Quarantine
+
+Quarantined entries are those the parser cannot route to a book:
+- `[Apoc]`/`[DRS]`/`[SM—]` without body `Source:` line
+- Unknown bracket tokens not in `citation_keys` or `bracket_ability_tags`
+- Unknown paren tags not in `paren_tags`
+
+Quarantined entries are NOT auto-generated. They must be manually created in the correct book folder, or acknowledged and skipped.
+
 ## Testing
 
 - **Unit** (`tests/lib/`, Vitest): schema/resolution/categorize/tags/url/search/etc. Run with `npm test`.

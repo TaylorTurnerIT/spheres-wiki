@@ -27,7 +27,7 @@ const isChampions = system === 'champions';
 ---
 <div class:list={['ref-card', nsClass]}>
   <div class="ref-card-header">
-    <span class="ref-card-title">{cfg.title}</span>
+    <a href={url(`/${cfg.nsRoute}/`)} class="ref-card-title" data-astro-prefetch="hover">{cfg.title}</a>
     <span class="ref-card-subtitle">{cfg.subtitle}</span>
   </div>
   <div class="ref-card-body">

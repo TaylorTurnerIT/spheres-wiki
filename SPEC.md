@@ -163,6 +163,74 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 - V33. Prerequisites text auto-linked at build time: `**Prerequisites:**` block parsed; `<Name> Sphere|sphere` → sphere page link; parenthetical talent refs `(TalentName)` → talent page link iff talent exists in talentMap; non-talent parens (e.g. `(Any)`, `(formulae)`, `(toxin)`) left unlinked. Comma/"or"-separated multi-refs handled. Bare talent names (no sphere prefix) linked when found in talentMap. Case-insensitive matching of display names.
 - V34. ∀ changes → npm run build ! pass. No change is considered complete unless the Astro site builds successfully without data or schema errors.
 - V35. `coverImage` in `_book.yaml` must point to an existing local file in `src/assets/covers/` and cannot be a hotlink (URL).
+- V36. All Might sphere conversions must pass `npm run build` — V34 applies to each sphere individually before marking COMPLETE.
+- V37. Duplicate talent IDs (`type:sourceBook:id`) across different spheres must be manually disambiguated (e.g. `smash` → `smash-brute`). Original file path and display name stay unchanged.
+- V38. Tags that exist in `ultimate-spheres-of-power` must NOT be redefined in Might — use the existing Power definition. Only create new Might tag files when no Power equivalent exists.
+
+---
+
+## §M Might Sphere Migration (Wikidot → Markdown)
+
+### Pipeline
+
+```
+spheresofpower-wikidot-archive/pages/<sphere>.txt  (raw Wikidot source)
+         │
+         ▼
+    ftml AST parser  (Rust crate: ftml/)
+         │
+         ▼
+  export_might.rs   (per-sphere section_defs + sphere_entry functions)
+         │
+         ▼
+  might-lexicon.toml  (citation_keys, apoc_body_sources, paren_tags, bracket_ability_tags)
+         │
+         ▼
+spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
+```
+
+### Key files
+
+| File | Purpose |
+|------|---------|
+| `ftml/examples/export_might.rs` | Parser: `*_section_defs()` + `*_sphere_entry()` per sphere, wired in `main()` |
+| `ftml/conf/might-lexicon.toml` | Ground-truth data dictionary: citation keys → book slugs, body-source titles → apoc slugs, paren tags, bracket ability tags |
+| `ftml/examples/CLAUDE.md` | Workflow doc: 13-step per-sphere process, parser quirks, status table |
+| `spheresofpower-wikidot-archive/pages/<sphere>.txt` | Raw Wikidot source per sphere |
+| `spheresofpower-wikidot-archive/pages/pages/legal:start.txt` | Legal/OGL page — use to infer unknown citation keys (lists all published products) |
+
+### Citation key resolution
+
+| Sentinel | Behavior |
+|----------|----------|
+| `__DEFERRED__` | Two-step: check body `^^Source:^^` line against `[apoc_body_sources]`. No match → quarantine. Used for `[Apoc]`, `[DRS]`, `[SM—]`. |
+| `__SKIP__` | Silently discard entry. Used for `[3PP]` (3rd-party, handled by live wiki). |
+| `<book-slug>` | Direct mapping to source book folder. |
+
+### Publisher indicators (deferred keys)
+
+| Key | Publisher | Resolution |
+|-----|-----------|------------|
+| `[Apoc]` | Spheres Apocrypha (various) | Body source → specific apoc book slug |
+| `[DRS]` | Diamond Recreational Studios | Body source → specific DRS book slug |
+| `[SM—]` | Studio M— (em dash U+2014) | Body source → Baron's book slug |
+
+### Known collision fixes
+
+| Original ID | Disambiguated | Spheres |
+|-------------|---------------|---------|
+| `smash` | `smash-brute` | Barroom + Brute |
+| `essence-manipulation` | `essence-manipulation-duelist` | Blood (Power) + Duelist |
+| `turbo-sweep` | `turbo-sweep-guardian` | Athletics + Guardian |
+| `turbo-knockdown` | `turbo-knockdown-lancer` | Athletics + Lancer |
+
+### Tags shared with Power (DO NOT redefine in Might)
+
+`utility`, `bleed`, `boast`, `exploit`, `slam` — defined in `ultimate-spheres-of-power`, reused by Might entries. Only create new Might tag files when no Power equivalent exists.
+
+### Accent normalization
+
+`slugify()` in `export_might.rs` maps common accented Latin chars to ASCII: `á→a`, `é→e`, `í→i`, `ñ→n`, `ç→c`, `ý→y`. Required because Astro schema enforces `^[a-z0-9-]+$` for IDs.
 
 ---
 
