@@ -1613,6 +1613,10 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
+.talent-tag[data-tag="talent"],
+.talent-tag[data-tag="basic"] {
+  --tag-clr: var(--clr-ns) !important;
+}
 .tag-wrapper {
   position: relative;
   display: inline-block;
