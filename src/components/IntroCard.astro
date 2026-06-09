@@ -15,8 +15,9 @@ const description = sys?.description ?? '';
 const linkText = sys?.introLinkText ?? 'Browse →';
 const href = sys?.route ?? `/${system}/`;
 ---
-<a href={url(href)} class:list={['intro-card', cssClass]} data-astro-prefetch="hover">
-  <div class="intro-card-art" aria-hidden="true">
+<div class:list={['intro-card', cssClass]}>
+  <a href={url(href)} class="intro-card-main-link" data-astro-prefetch="hover">
+    <div class="intro-card-art" aria-hidden="true">
     {system === 'power' && (
       <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="overflow: visible;" aria-hidden="true">
         <rect width="200" height="80" fill="#0D2850"/>
@@ -136,6 +137,9 @@ const href = sys?.route ?? `/${system}/`;
   <div class="intro-card-body">
     <div class="intro-card-name">{name}</div>
     <div class="intro-card-desc">{description}</div>
-    <span class="intro-card-link">{linkText}</span>
+    </div>
+  </a>
+  <div class="intro-card-footer">
+    <a href={url(sys?.buildHref ?? href)} class="intro-card-link" data-astro-prefetch="hover">{linkText}</a>
   </div>
-</a>
+</div>
