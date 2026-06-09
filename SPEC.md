@@ -108,6 +108,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 /power/how-to-build-spherecaster/ guide (exists)
 /power/how-to-build-champion/      guide (MISSING — T8)
 /power/how-to-build-practitioner/    guide (MISSING — T8)
+/guile/how-to-build-operative/       guide (MISSING — T8)
 404                            custom 404 page (MISSING — T18)
 ```
 
@@ -297,7 +298,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T57 | x      | Might Alchemy validation — force-write to correct dirs + `--validate` compare pass (0 diffs); verify `inferFromPath` 3-seg sphere paths | V29,V30 |
 | T58 | .      | Upgrade `export_might.rs` — auto-generate `[TalentName]` markers in sphere body for tier:base entries; derive marker names from base-ability slugs | V31,V32 |
 | T59 | x      | Auto-link prerequisites text — parse `**Prerequisites:**` blocks in body markdown (remark plugin), link sphere names + parenthetical talent refs, skip non-talent qualifiers like `(Any)` | V33,I.resolveEntries |
-| T60 | .      | Generalize `/power/` index page design to `/might/`, `/guile/`, and `/champions/`. Retain individual section designs where needed, but reuse the general layout without regressions. | I.pages |
+| T60 | x      | Generalize `/power/` index page design to `/might/`, `/guile/`, and `/champions/`. Retain individual section designs where needed, but reuse the general layout without regressions. | I.pages |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.

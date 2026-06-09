@@ -18,23 +18,76 @@ const classes = [...classMap.values()]
   </nav>
 
   <h1 class="page-title champ">Champions of the Spheres</h1>
+  <p>Champions of the Spheres bridges the gap between magic and martial combat, providing classes and options that seamlessly integrate Spheres of Power and Spheres of Might.</p>
+  <hr class="page-title-rule" />
+  <div class="gs-grid">
+    <a href={url("/champions/using-champions/")} class="gs-card" data-astro-prefetch="hover">
+      <div class="gs-card-icon">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 3h5a1 1 0 0 1 1 1v9H2V3zM14 3H9a1 1 0 0 0-1 1v9h6V3z"/>
+        </svg>
+      </div>
+      <div class="gs-card-body">
+        <div class="gs-card-title">Using Champions of the Spheres</div>
+        <div class="gs-card-desc">Rules for combining magic and martial prowess in combat.</div>
+      </div>
+      <span class="gs-card-arrow" aria-hidden="true">→</span>
+    </a>
+    <a href={url("/power/how-to-build-champion/")} class="gs-card" data-astro-prefetch="hover">
+      <div class="gs-card-icon">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14.5 3.5v9a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1zM4 6.5h8M4 9.5h5"/>
+        </svg>
+      </div>
+      <div class="gs-card-body">
+        <div class="gs-card-title">How to Build a Champion</div>
+        <div class="gs-card-desc">A step-by-step guide to creating your first hybrid character.</div>
+      </div>
+      <span class="gs-card-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
   <hr class="page-title-rule" />
 
-  <div class="section-heading">
-    <span class="section-heading-text">Champion Classes</span>
-    <div class="section-heading-rule"></div>
-  </div>
+  <div class="classes-and-links">
+    <div class="class-column">
+      {classes.length > 0 && (
+        <>
+          <div class="section-heading" style="margin-top: 0;">
+            <span class="section-heading-text">Champion Classes</span>
+            <div class="section-heading-rule"></div>
+          </div>
+          <div class="class-lists">
+            <div class="class-tier-group">
+              <div class="class-tier-label">Classes</div>
+              <div class="class-roster">
+                {classes.map(c => (
+                  <a href={url(`/champions/${c.id}/`)} class="class-item" data-astro-prefetch="hover">
+                    <div class="class-item-header">
+                      <span class="class-item-name">{c.name}</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
 
-  <div class="entry-grid">
-    {classes.map(c => (
-      <a href={url(`/champions/${c.id}/`)} class="entry-card champ" data-astro-prefetch="hover">
-        <div class="entry-card-header">
-          <svg class="si entry-card-icon" aria-hidden="true"><use href="#si-champ-star" /></svg>
-          <span class="entry-card-name">{c.name}</span>
+    <div class="quick-links-column">
+      <div class="section-heading" style="margin-top: 0;">
+        <span class="section-heading-text">Quick Links</span>
+        <div class="section-heading-rule"></div>
+      </div>
+      <div class="quick-links-grid">
+        <div class="quick-links-group">
+          <h3 class="quick-links-heading">Rules</h3>
+          <ul class="quick-links-list">
+            <li><a href={url("/champions/using-champions/")}>Using Champions of the Spheres</a></li>
+          </ul>
         </div>
-        {/* description from GFM body — wired in R1-6 */}
-      </a>
-    ))}
+      </div>
+    </div>
   </div>
 
 </WikiPage>
