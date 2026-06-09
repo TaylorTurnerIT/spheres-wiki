@@ -25,6 +25,11 @@ const STANDARD_TOGGLES = [
 ---
 <WikiPage title="Preferences — Spheres Wiki" activeNamespace="" pagefindIgnore={true}>
 
+  <div class="wip-notice">
+    <strong>Work in Progress</strong>
+    <p>These toggles do not yet actively filter site content. However, feedback on the visual design and user experience is highly appreciated!</p>
+  </div>
+
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
@@ -35,14 +40,9 @@ const STANDARD_TOGGLES = [
   <p class="page-subtitle">Configure site-wide options and viewing preferences.</p>
   <hr class="page-title-rule" />
 
-  <div class="pref-section-header">
-    <h2>Content Filters</h2>
+  <div class="entry-description" style="margin-bottom: 24px;">
+    <h3>Content Filters</h3>
     <p>Choose which types of rules, talents, and classes you want to see. Content that is toggled off will be completely hidden from searches and lists.</p>
-  </div>
-
-  <div class="wip-notice">
-    <strong>Work in Progress</strong>
-    <p>These toggles do not yet actively filter site content. However, feedback on the visual design and user experience is highly appreciated!</p>
   </div>
 
   <div class="master-toggles-bar">
@@ -132,32 +132,13 @@ const STANDARD_TOGGLES = [
 </WikiPage>
 
 <style>
-  
 
-  .pref-section-header {
-    margin-bottom: 24px;
-  }
-  .pref-section-header h2 {
-    font-family: var(--font-display);
-    font-size: var(--fs-lg);
-    color: var(--clr-text);
-    margin-bottom: 8px;
-    letter-spacing: 0.02em;
-  }
-  .pref-section-header p {
-    color: var(--clr-muted);
-    font-size: var(--fs-sm);
-    max-width: 65ch;
-    line-height: 1.5;
-  }
-
-  .pref-toggle-label-wrap {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
 
   .wip-notice {
+    position: sticky;
+    top: 60px; /* Below the standard site header */
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     background: color-mix(in srgb, var(--clr-brand) 10%, var(--clr-bg));
     border-left: 4px solid var(--clr-brand);
     padding: 16px;
@@ -178,6 +159,12 @@ const STANDARD_TOGGLES = [
     font-size: var(--fs-sm);
     opacity: 0.9;
     line-height: 1.5;
+  }
+
+  .pref-toggle-label-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .info-icon {
@@ -258,7 +245,7 @@ const STANDARD_TOGGLES = [
     margin-top: 1px;
   }
 
-  
+
   .master-toggles-bar {
     --clr-ns: var(--clr-brand);
     background: var(--clr-bg);
@@ -300,7 +287,7 @@ const STANDARD_TOGGLES = [
     transition: none; /* disable lift effect since they are not links */
     overflow: visible;
   }
-  
+
   .pref-grid .power { --clr-ns: var(--clr-power); border-top-color: var(--clr-power); }
   .pref-grid .might { --clr-ns: var(--clr-might); border-top-color: var(--clr-might); }
   .pref-grid .guile { --clr-ns: var(--clr-guile); border-top-color: var(--clr-guile); }
@@ -330,7 +317,7 @@ const STANDARD_TOGGLES = [
     gap: 8px;
   }
 
-  
+
   .segmented-control {
     display: flex;
     background: color-mix(in srgb, var(--clr-text) 10%, var(--clr-surface));
@@ -567,7 +554,7 @@ const STANDARD_TOGGLES = [
           btn.setAttribute('aria-checked', 'false');
         }
 
-        
+
         if (pref === 'power-ultimate' && currentPrefs['power-ultimate'] && !currentPrefs['power-original']) {
           btn.classList.add('disabled-action');
         }
@@ -611,7 +598,7 @@ const STANDARD_TOGGLES = [
         const pref = btn.getAttribute('data-pref');
         if (!pref) return;
 
-        
+
 
         // Toggle state
         currentPrefs[pref] = !currentPrefs[pref];
@@ -648,7 +635,7 @@ const STANDARD_TOGGLES = [
       });
     });
 
-    
+
     const powerSegControl = document.getElementById('powerVersionControl');
     if (powerSegControl) {
       const powerSegBtns = powerSegControl.querySelectorAll('.segment-btn');
@@ -673,7 +660,7 @@ const STANDARD_TOGGLES = [
     // Initial render
     document.body.classList.add('preload-transitions');
     renderState();
-    
+
     // Force a reflow, then remove the class to re-enable transitions
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
