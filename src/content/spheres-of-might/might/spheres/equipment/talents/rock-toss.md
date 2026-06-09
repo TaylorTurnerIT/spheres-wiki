@@ -1,0 +1,16 @@
+---
+id: "rock-toss"
+name: "Rock Toss"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "equipment"
+tier: "basic"
+tags:
+  - "discipline"
+---
+
+As long as you have martial focus, you can catch thrown or falling rocks (or projectiles of similar shape) that are no larger than your current size. Once per round, when you would normally be hit by a rock, you can make a Reflex save to catch it as a free action. The DC is 25 for a rock of your current size, -5 for each size category it is smaller than you. If the projectile has a magical bonus on attack rolls, the DC increases by that amount. You must be aware of the attack in order to make a rock catching attempt.
+
+Additionally, you are considered proficient with thrown rocks. You can hurl rocks of up to two size categories smaller than you. A “rock” is any large, bulky, and relatively regularly shaped object made of any material with a hardness of at least 5.
+
+You can hurl the rock as a thrown weapon with a range increment of 10 ft. +10 per size category it is smaller than you. Tiny rocks deal 1d6 bludgeoning damage, Small 1d8, Medium 2d6, and Large 3d6. As long as you have martial focus and a suitable rock is within your reach, you may pick them up as part of your attack. At +7 and +14 base attack bonus, increase the maximum size rock you may throw by one size category, to a maximum equal to your current size.

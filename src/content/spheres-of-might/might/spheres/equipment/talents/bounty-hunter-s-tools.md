@@ -1,0 +1,12 @@
+---
+id: "bounty-hunter-s-tools"
+name: "Bounty Hunter’s Tools"
+type: "talent"
+sourceBook: "spheres-of-might"
+sphere: "equipment"
+tier: "basic"
+tags:
+  - "discipline"
+---
+
+You gain proficiency with the bola, garrote, grappling hook, harpoon, kyoketsu shoge, lasso, mancatcher, net, net launcher, sap, and whip. You may deal nonlethal damage with any of these weapons at no penalty and treat them all as having the grapple special feature.

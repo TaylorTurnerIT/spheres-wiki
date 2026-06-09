@@ -1,0 +1,15 @@
+---
+id: "skin-of-steel"
+name: "Skin of Steel"
+type: "talent"
+sourceBook: "spheres-apocrypha-armor-talents-2"
+sphere: "equipment"
+tier: "basic"
+tags: []
+---
+
+While wearing heavy armor and fighting defensively, you gain DR/bludgeoning equal to 1/2 your base attack bonus. This stacks with any DR/- you may possess.
+
+**Normal:** Typed damage reduction does not stack with untyped damage reduction.
+
+**Note:** This was previously known as the Steel Body talent.
