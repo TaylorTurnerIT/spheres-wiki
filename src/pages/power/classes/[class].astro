@@ -453,8 +453,10 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
               {traits.map(({ trait, Content: TraitContent, sourceBookTitle, featureName }) => (
                 <div class="trait-catalog-entry" id={trait.id}>
                   <h3 class="trait-catalog-name">
-                    <a href={url(`/power/classes/${cls.id}/traits/${trait.id}/`)} class="trait-catalog-link" data-astro-prefetch="hover">{trait.name}</a>
-                    <span class="trait-feature-label">{featureName}</span>
+                    <span class="trait-catalog-name-group">
+                      <a href={url(`/power/classes/${cls.id}/traits/${trait.id}/`)} class="trait-catalog-link" data-astro-prefetch="hover">{trait.name}</a>
+                      <span class="trait-feature-label">{featureName}</span>
+                    </span>
                     {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
                   </h3>
                   {trait.requires && (
@@ -472,8 +474,10 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
             traits.map(({ trait, Content: TraitContent, sourceBookTitle, featureName }) => (
               <div class="class-trait" id={trait.id}>
                 <h3 class="class-trait-name">
-                  {trait.name}
-                  <span class="trait-feature-label">{featureName}</span>
+                  <span class="trait-catalog-name-group">
+                    {trait.name}
+                    <span class="trait-feature-label">{featureName}</span>
+                  </span>
                   {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
                 </h3>
                 {trait.requires && (
@@ -1463,6 +1467,7 @@ document.addEventListener('astro:page-load', () => {
   }
 
   .trait-feature-label {
+    font-family: var(--font-display);
     font-size: 0.65em;
     font-weight: 500;
     color: var(--clr-muted);
