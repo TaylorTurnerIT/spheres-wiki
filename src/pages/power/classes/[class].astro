@@ -139,8 +139,11 @@ const ClassContent = classCollEntry ? (await render(classCollEntry)).Content : n
 	  return bookMetaMap.get(sourceBook)?.title ?? null;
 	}
 
-	type RenderedTrait = { trait: ClassTraitEntry; Content: any; sourceBookTitle: string | null };
+	type RenderedTrait = { trait: ClassTraitEntry; Content: any; sourceBookTitle: string | null; featureName: string };
 type RenderedFeature = { feature: ClassFeatureEntry; Content: any; traits: RenderedTrait[]; sourceBookTitle: string | null };
+
+// Lookup: featureId → feature name
+const featureNameById = new Map(featureEntries.map(f => [f.id, f.name]));
 
 const featureRendered: RenderedFeature[] = [];
 for (const feature of featureEntries) {
@@ -154,7 +157,7 @@ for (const feature of featureEntries) {
     const traitCollEntry = traitCollEntries.get(trait.id);
     const traitCleanBody = traitCollEntry ? stripBodySource(traitCollEntry.body || '') : null;
     const { Content: TraitContent } = (traitCollEntry && traitCleanBody !== null) ? await render({ ...traitCollEntry, body: traitCleanBody }) : { Content: null };
-    traits.push({ trait, Content: TraitContent, sourceBookTitle: sourceTitle(trait.sourceBook) });
+    traits.push({ trait, Content: TraitContent, sourceBookTitle: sourceTitle(trait.sourceBook), featureName: featureNameById.get(trait.featureId) || trait.featureId });
   }
 
   featureRendered.push({ feature, Content, traits, sourceBookTitle: sourceTitle(feature.sourceBook) });
@@ -447,10 +450,11 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
           {feature.isTraitContainer ? (
             <div class="trait-catalog-wrapper" id={`${feature.id}-traits`} aria-hidden="true">
               <div class="trait-catalog">
-              {traits.map(({ trait, Content: TraitContent, sourceBookTitle }) => (
+              {traits.map(({ trait, Content: TraitContent, sourceBookTitle, featureName }) => (
                 <div class="trait-catalog-entry" id={trait.id}>
                   <h3 class="trait-catalog-name">
                     <a href={url(`/power/classes/${cls.id}/traits/${trait.id}/`)} class="trait-catalog-link" data-astro-prefetch="hover">{trait.name}</a>
+                    <span class="trait-feature-label">{featureName}</span>
                     {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
                   </h3>
                   {trait.requires && (
@@ -465,10 +469,11 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
               </div>
             </div>
           ) : (
-            traits.map(({ trait, Content: TraitContent, sourceBookTitle }) => (
+            traits.map(({ trait, Content: TraitContent, sourceBookTitle, featureName }) => (
               <div class="class-trait" id={trait.id}>
                 <h3 class="class-trait-name">
                   {trait.name}
+                  <span class="trait-feature-label">{featureName}</span>
                   {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
                 </h3>
                 {trait.requires && (
@@ -1339,8 +1344,10 @@ document.addEventListener('astro:page-load', () => {
 
   .class-trait {
     margin-top: 1rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--clr-active);
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--clr-active);
+    background: color-mix(in srgb, var(--clr-active) 3%, transparent);
+    border-radius: 0 6px 6px 0;
   }
 
   .class-trait-name {
@@ -1432,20 +1439,19 @@ document.addEventListener('astro:page-load', () => {
     overflow: hidden;
   }
 
-  .trait-catalog-entry {
-    padding: 0.75rem 0 0.75rem 1rem;
-    border-left: 2px solid var(--clr-active);
-    margin-bottom: 0.25rem;
+  .trait-catalog-wrapper.is-open .trait-catalog {
+    background: color-mix(in srgb, var(--clr-active) 4%, var(--clr-surface));
   }
 
-  .trait-catalog-entry + .trait-catalog-entry {
-    border-top: 1px solid color-mix(in srgb, var(--clr-active) 20%, transparent);
-    margin-left: 0;
+  .trait-catalog-entry {
+    padding: 0.75rem 1rem 0.75rem 0.75rem;
+    border-left: 3px solid var(--clr-active);
+    border-top: 1px solid color-mix(in srgb, var(--clr-active) 15%, transparent);
   }
 
   .trait-catalog-name {
     font-family: var(--font-display);
-    font-size: var(--fs-lg);
+    font-size: var(--fs-md);
     font-weight: 600;
     color: var(--clr-active);
     margin: 0 0 0.35rem;
@@ -1454,6 +1460,14 @@ document.addEventListener('astro:page-load', () => {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 0.5rem;
+  }
+
+  .trait-feature-label {
+    font-size: 0.65em;
+    font-weight: 500;
+    color: var(--clr-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 
   .trait-catalog-link {
