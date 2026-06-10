@@ -524,10 +524,10 @@ a:hover {
 .logo-orb-might { transition-delay: 55ms; }
 .logo-orb-guile { transition-delay: 110ms; }
 .logo-orb-champ { transition-delay: 165ms; }
-.site-title:hover .logo-orb-power { transform: translate(-5px, -5px) scale(1.22); }
-.site-title:hover .logo-orb-might { transform: translate(5px,  -5px) scale(1.22); }
-.site-title:hover .logo-orb-guile { transform: translate(-5px,  5px) scale(1.22); }
-.site-title:hover .logo-orb-champ { transform: translate(5px,   5px) scale(1.22); }
+.site-title:hover .logo-orb-power { transform: translate(4px,  4px)  scale(1.2); }
+.site-title:hover .logo-orb-might { transform: translate(-4px, 4px)  scale(1.2); }
+.site-title:hover .logo-orb-guile { transform: translate(4px,  -4px) scale(1.2); }
+.site-title:hover .logo-orb-champ { transform: translate(-4px, -4px) scale(1.2); }
 .site-title-text {
   display: flex;
   flex-direction: column;
