@@ -142,6 +142,7 @@ export type ArchetypeFeatureEntry = {
   alters?: string[];
   mutuallyExclusive?: boolean;
   classOverrides?: Record<string, string>;
+  isAlternateClassFeature?: boolean;
 };
 
 export type TagEntry = {

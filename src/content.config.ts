@@ -144,6 +144,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     alters: z.array(z.string()).optional(),
     mutuallyExclusive: z.boolean().default(true),
     classOverrides: z.record(z.string(), z.string()).optional(),
+    isAlternateClassFeature: z.boolean().optional(),
   }),
   z.object({
     type: z.literal("tag"),

@@ -76,8 +76,24 @@ export async function getStaticPaths() {
     const classArchetypes = [...archetypeMap.values()]
       .filter(a => a.className === cls.id);
 
+    // Auto-inject virtual "Alternate Class Features" archetype if any ACFs exist
+    const acfFeatures = [...archetypeFeatureMap.values()]
+      .filter(f => f.isAlternateClassFeature && f.archetypeId === `${cls.id}-alternate-class-features`);
+    const hasAcfs = acfFeatures.length > 0;
+    const acfArchetype: (typeof classArchetypes)[number] | null = hasAcfs ? {
+      id: `${cls.id}-alternate-class-features`,
+      name: "Alternate Class Features",
+      className: cls.id,
+      system: cls.system,
+      sourceBook: cls.sourceBook,
+      tags: [],
+      type: "archetype" as const,
+    } : null;
+
+    const allArchetypes = [...classArchetypes, ...(acfArchetype ? [acfArchetype] : [])];
+
     const classArchetypeFeatures = [...archetypeFeatureMap.values()]
-      .filter(f => classArchetypes.some(a => a.id === f.archetypeId))
+      .filter(f => allArchetypes.some(a => a.id === f.archetypeId))
       .sort((a, b) => {
         const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
         const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
@@ -108,7 +124,7 @@ export async function getStaticPaths() {
         sourceBook: bookMetaMap.get(cls.sourceBook),
         bookMetaMap,
         tagMap,
-        archetypes: classArchetypes,
+        archetypes: allArchetypes,
         archetypeCollEntries,
         archetypeFeatures: classArchetypeFeatures,
         archetypeFeatureCollEntries,
