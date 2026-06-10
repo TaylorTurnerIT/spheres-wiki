@@ -1,5 +1,8 @@
 ---
 import { url } from '@/lib/url';
+import { Image } from 'astro:assets';
+import ddsLogo from '@/assets/publisher-logos/drop-dead-studios.webp';
+import drsLogo from '@/assets/publisher-logos/diamond-recreational-studios.webp';
 ---
 <aside
   class="sidebar"
@@ -13,14 +16,32 @@ import { url } from '@/lib/url';
     <button class="sidebar-close" id="sidebar-close" aria-label="Close navigation">✕</button>
 
     <div class="sidebar-section">
+      <h2 class="sidebar-heading nav">Join Discord</h2>
+      <div class="publisher-buttons" style="margin-top: 0;">
+        <a href={url("/contact/")} class="pub-btn" data-astro-prefetch="hover">
+          <Image src={ddsLogo} alt="Drop Dead Studios" class="pub-logo" />
+          <div class="pub-info">
+            <span class="pub-name">Drop Dead Studios</span>
+          </div>
+          <div class="tooltip-content">Official DDS server — rules questions, announcements, community discussion</div>
+        </a>
+        <a href={url("/contact/")} class="pub-btn" data-astro-prefetch="hover">
+          <Image src={drsLogo} alt="Diamond Recreational Studios" class="pub-logo" />
+          <div class="pub-info">
+            <span class="pub-name">Diamond Recreational Studios</span>
+          </div>
+          <div class="tooltip-content">Newer server run by the official successors to Drop Dead Studios — worth joining both</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
       <h2 class="sidebar-heading nav">Navigation</h2>
       <div class="sidebar-links">
         <a href={url("/about/")} data-astro-prefetch="hover" class="nav">About</a>
         <a href={url("/legal/")} data-astro-prefetch="hover" class="nav">Legal &amp; OGL</a>
         <a href={url("/recent-changes/")} data-astro-prefetch="hover" class="nav">Recent Changes</a>
         <a href={url("/contact/")} data-astro-prefetch="hover" class="nav">Contact</a>
-        <a href={url("/contact/")} data-astro-prefetch="hover" class="nav">DDS Discord</a>
-        <a href={url("/contact/")} data-astro-prefetch="hover" class="nav">DRS Discord</a>
       </div>
     </div>
 
@@ -83,3 +104,103 @@ import { url } from '@/lib/url';
   </div>
 </aside>
 
+<style>
+  .publisher-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 3px;
+    padding: 0 2px;
+  }
+  .pub-btn {
+    display: flex !important;
+    align-items: center;
+    gap: 5px;
+    padding: 4px !important;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    background: var(--clr-surface);
+    color: var(--clr-text) !important;
+    text-decoration: none;
+    position: relative;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .pub-btn:hover {
+    border-color: var(--clr-brand);
+    background: color-mix(in srgb, var(--clr-brand) 5%, var(--clr-surface));
+  }
+  .pub-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 4px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+  }
+  .pub-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    overflow: hidden;
+  }
+  .pub-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: normal;
+  }
+
+
+  /* Tooltip logic */
+  .tooltip-content {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    color: var(--clr-text);
+    line-height: 1.4;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: normal;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
+    white-space: normal;
+  }
+
+  .pub-btn:hover .tooltip-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-4px);
+  }
+
+  /* Arrow */
+  .tooltip-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--clr-surface) transparent transparent transparent;
+    z-index: 2;
+  }
+  .tooltip-content::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 19px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--clr-border) transparent transparent transparent;
+    z-index: 1;
+  }
+</style>
