@@ -46,7 +46,7 @@ export async function getStaticPaths() {
       props: {
         trait,
         cls,
-        collEntry: allCollEntries.get(trait.id),
+        collEntry: allCollEntries.get(`class-trait:${trait.id}`),
         sourceBook: bookMetaMap.get(trait.sourceBook),
         tagMap,
         bookMetaMap,
@@ -86,8 +86,8 @@ const orderedTagIds = buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {});
         class="page-title power"
         id="overview"
         data-pagefind-weight="2.0"
-        
-        
+
+
       >
         {trait.name}
       </h1>
