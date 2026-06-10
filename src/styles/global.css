@@ -507,8 +507,8 @@ a:hover {
   text-decoration: none;
 }
 .site-logo-svg {
-  width: 44px;
-  height: 44px;
+  width: 49px;
+  height: 49px;
   flex-shrink: 0;
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }

@@ -39,3 +39,4 @@ test-results/
 .clawhip/
 docs/superpowers/
 .dockerignore
+.superpowers/brainstorm/
