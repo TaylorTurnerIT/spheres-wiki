@@ -567,10 +567,7 @@ function parseTraitChunk(chunk, featureId) {
 
   let body = cleanBody(bodyLines.join("\n"));
 
-  // Add source annotation if present
-  if (sourceKey) {
-    body = `${body}\n\n*Source: ${sourceKey}*`;
-  }
+  // Source is now handled by the template via frontmatter sourceBook metadata
 
   const tags = abilityType ? [abilityType] : [];
   const slug = kebab(name);
