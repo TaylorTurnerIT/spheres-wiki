@@ -19,14 +19,14 @@ import drsLogo from '@/assets/publisher-logos/diamond-recreational-studios.webp'
       <h2 class="sidebar-heading nav">Join Discord</h2>
       <div class="publisher-buttons" style="margin-top: 0;">
         <a href={url("/contact/")} class="pub-btn" data-astro-prefetch="hover">
-          <Image src={ddsLogo} alt="Drop Dead Studios" class="pub-logo" loading="eager" />
+          <Image src={ddsLogo} alt="Drop Dead Studios" class="pub-logo" />
           <div class="pub-info">
             <span class="pub-name">Drop Dead Studios</span>
           </div>
           <div class="tooltip-content">Official DDS server — rules questions, announcements, community discussion</div>
         </a>
         <a href={url("/contact/")} class="pub-btn" data-astro-prefetch="hover">
-          <Image src={drsLogo} alt="Diamond Recreational Studios" class="pub-logo" loading="eager" />
+          <Image src={drsLogo} alt="Diamond Recreational Studios" class="pub-logo" />
           <div class="pub-info">
             <span class="pub-name">Diamond Recreational Studios</span>
           </div>
@@ -34,6 +34,8 @@ import drsLogo from '@/assets/publisher-logos/diamond-recreational-studios.webp'
         </a>
       </div>
     </div>
+
+    <hr class="sidebar-divider" />
 
     <div class="sidebar-section">
       <h2 class="sidebar-heading nav">Navigation</h2>
@@ -48,10 +50,10 @@ import drsLogo from '@/assets/publisher-logos/diamond-recreational-studios.webp'
     <hr class="sidebar-divider" />
 
     <div class="sidebar-section">
-      <h2 class="sidebar-heading power">Spheres of Power</h2>
+      <a href={url("/power/")} class="sidebar-heading power" data-astro-prefetch="hover">Spheres of Power</a>
       <div class="sidebar-links">
-        <a href={url("/power/")} data-astro-prefetch="hover" class="power">Spheres of Power Index</a>
         <a href={url("/power/using-spheres-of-power/")} data-astro-prefetch="hover" class="power">Using Spheres of Power</a>
+        <a href={url("/power/how-to-build-spherecaster/")} data-astro-prefetch="hover" class="power">How to Build a Spherecaster</a>
         <a href={url("/power/casting-traditions/")} data-astro-prefetch="hover" class="power">Casting Traditions</a>
       </div>
     </div>
@@ -59,27 +61,24 @@ import drsLogo from '@/assets/publisher-logos/diamond-recreational-studios.webp'
     <hr class="sidebar-divider" />
 
     <div class="sidebar-section">
-      <h2 class="sidebar-heading might">Spheres of Might</h2>
+      <a href={url("/might/")} class="sidebar-heading might" data-astro-prefetch="hover">Spheres of Might</a>
       <div class="sidebar-links">
-        <a href={url("/might/")} data-astro-prefetch="hover" class="might">Spheres of Might Index</a>
       </div>
     </div>
 
     <hr class="sidebar-divider" />
 
     <div class="sidebar-section">
-      <h2 class="sidebar-heading guile">Spheres of Guile</h2>
+      <a href={url("/guile/")} class="sidebar-heading guile" data-astro-prefetch="hover">Spheres of Guile</a>
       <div class="sidebar-links">
-        <a href={url("/guile/")} data-astro-prefetch="hover" class="guile">Spheres of Guile Index</a>
       </div>
     </div>
 
     <hr class="sidebar-divider" />
 
     <div class="sidebar-section">
-      <h2 class="sidebar-heading champ">Champions</h2>
+      <a href={url("/champions/")} class="sidebar-heading champ" data-astro-prefetch="hover">Champions</a>
       <div class="sidebar-links">
-        <a href={url("/champions/")} data-astro-prefetch="hover" class="champ">Champions Index</a>
       </div>
     </div>
 
