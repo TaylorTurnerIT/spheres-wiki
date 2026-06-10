@@ -18,4 +18,3 @@ An antimagic field suppresses any spell or magical effect used within, brought i
 
 This trap is a spell-like ability, using your ranks in Craft (trap) as your caster level.
 
-<INCLUDED-PAGE som-template {}>

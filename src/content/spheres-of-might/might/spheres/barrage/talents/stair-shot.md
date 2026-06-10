@@ -17,4 +17,3 @@ This only functions with weapons that fire arrows, bolts, or other appropriate a
 
 ----- 
 
-<INCLUDED-PAGE som-template {}>

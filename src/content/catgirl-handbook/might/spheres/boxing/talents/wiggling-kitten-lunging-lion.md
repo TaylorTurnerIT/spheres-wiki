@@ -17,4 +17,3 @@ In addition, while in this stance, the effective reach granted by the Gazelle Pu
 
 **Example:** While in this stance, you ready a counterpunch and roll an Acrobatics check to jump. With a result of 31, you jump up to 20 feet; this jump does not count against your normal movement, and you could have moved normally before readying the counterpunch and making this jump.
 
-<INCLUDED-PAGE som-template {}>

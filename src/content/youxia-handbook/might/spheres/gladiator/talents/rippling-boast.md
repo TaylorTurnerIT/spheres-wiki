@@ -14,4 +14,3 @@ Whenever you perform a boast, you may target a creature within boast range with 
 
 Additionally, you may raise the volume of your voice at any time to that of a creature one size larger than you are.
 
-<INCLUDED-PAGE som-template {}>

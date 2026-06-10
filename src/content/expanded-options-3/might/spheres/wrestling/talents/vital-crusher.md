@@ -16,4 +16,3 @@ If you attempt to destroy the creature’s vitals a second time while the creatu
 
 If the creature has a CR less than half your base attack bonus, the creature instead dies if they fail their first saving throw against this effect.
 
-<INCLUDED-PAGE som-template {}>

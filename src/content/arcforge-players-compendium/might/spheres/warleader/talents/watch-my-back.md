@@ -13,4 +13,3 @@ tags:
 
 Any ally affected by this tactic may share any AC bonuses granted from fighting defensively or taking the total defense action with allies within their reach.
 
-<INCLUDED-PAGE som-template {}>
