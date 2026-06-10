@@ -89,9 +89,9 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 - **Templates**: Each archetype feature generates an HTML5 `<template>` with compiled markdown body, `data-replaces`, `data-alters`, `data-level`, `data-class-overrides`. These are parsed into JS and applied on selection.
 - **Class info overrides**: `classOverrides: Record<string, string>` on archetype features hot-swaps class header fields (Alignment, Hit Die, etc.) via the `class-val-*` span IDs.
 
-**Alternate Class Features (ACFs):** Standalone class-feature swaps treated as a virtual archetype:
+**Alternate Class Features (ACFs):** Standalone class-feature swaps treated as individual virtual archetypes:
 - ACFs are `type: archetype-feature` with `isAlternateClassFeature: true` and `archetypeId: {class}-alternate-class-features`.
-- The class template auto-injects a virtual `ArchetypeEntry` named "Alternate Class Features" when ACFs exist for the class. No content file needed for the parent.
+- The class template auto-injects one virtual `ArchetypeEntry` per ACF — name prefixed "Alternate Class Feature:", description derived from `replaces` via feature name lookup. No content file needed for the parent.
 - ACFs use `replaces` to specify the swapped feature. They plug into the same compatibility, hot-swap, and table/ToC update logic as regular archetypes.
 
 ### I.pages — route map (current + target)
