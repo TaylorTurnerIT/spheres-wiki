@@ -235,6 +235,23 @@ function parseClassTable(raw: string | undefined): { extraHeaders: string[]; spe
 
 const classTable = parseClassTable(cls.classTable as string | undefined);
 
+// ── Casting Tier Tables ───────────────────────────────────────────────────────
+const CL_MID = [0,1,2,3,3,4,5,6,6,7,8,9,9,10,11,12,12,13,14,15];
+const CL_LOW = [0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10];
+
+function computeCasterLevel(level: number, tier: string): number {
+  if (tier === "high") return level;
+  if (tier === "mid") return CL_MID[level - 1];
+  if (tier === "low") return CL_LOW[level - 1];
+  return 0;
+}
+
+function computeMagicTalents(level: number, tier: string): number {
+  if (tier === "high") return level + 2;
+  if (tier === "mid") return Math.floor(3 * level / 4) + 2;
+  return Math.floor(level / 2) + 2;
+}
+
 // Build feature lookup: level → feature names
 const featuresByLevel: Record<number, string[]> = {};
 for (const f of featureEntries) {
@@ -245,6 +262,8 @@ for (const f of featureEntries) {
   }
 }
 
+const hasCasting = cls.casterTier && cls.casterTier !== "none";
+
 // Generate table headers
 const allHeaders: string[] = [
   "Level",
@@ -253,8 +272,10 @@ const allHeaders: string[] = [
   "Ref Save",
   "Will Save",
   "Special",
+  ...(hasCasting ? ["Caster Level", "Magic Talents", "Spell Pool"] : []),
   ...(classTable?.extraHeaders || []),
 ];
+const spellPoolColIdx = hasCasting ? allHeaders.indexOf("Spell Pool") : -1;
 
 // Generate table rows (levels 1-20)
 interface TableRow {
@@ -278,6 +299,12 @@ for (let lvl = 1; lvl <= 20; lvl++) {
   const extraVals = classTable?.extraRowData?.[lvl] || [];
   const paddedExtras = (classTable?.extraHeaders || []).map((_, i) => extraVals[i] || "—");
 
+  const castingCells = hasCasting ? [
+    String(computeCasterLevel(lvl, cls.casterTier!)),
+    String(computeMagicTalents(lvl, cls.casterTier!)),
+    `${lvl} + CAM`,
+  ] : [];
+
   const cells = [
     levelOrdinal(lvl),
     formatBAB(bab),
@@ -285,6 +312,7 @@ for (let lvl = 1; lvl <= 20; lvl++) {
     formatSave(ref),
     formatSave(will),
     special,
+    ...castingCells,
     ...paddedExtras,
   ];
 
@@ -312,8 +340,8 @@ for (let lvl = 1; lvl <= 20; lvl++) {
           class="page-title power"
           id="overview"
           data-pagefind-weight="10"
-          
-          
+
+
         >
           {cls.name}
         </h1>
@@ -337,6 +365,14 @@ for (let lvl = 1; lvl <= 20; lvl++) {
         )}
       </div>
       <hr class="page-title-rule" />
+
+      <div class="class-info-block" style="margin-bottom: 1.5rem; padding: 1rem; background: var(--clr-bg-elevated, #1e1e2e); border-radius: 8px; border: 1px solid var(--clr-border);">
+        <p style="margin: 0.25rem 0;"><strong>Alignment:</strong> <span id="class-val-alignment">{cls.alignment}</span></p>
+        <p style="margin: 0.25rem 0;"><strong>Hit Die:</strong> d<span id="class-val-hitDie">{cls.hitDie}</span></p>
+        <p style="margin: 0.25rem 0;"><strong>Starting Wealth:</strong> <span id="class-val-startingWealth">{cls.startingWealth}</span></p>
+        <p style="margin: 0.25rem 0;"><strong>Class Skills:</strong> <span id="class-val-classSkills">{cls.classSkills.join(", ")}</span></p>
+        <p style="margin: 0.25rem 0;"><strong>Skill Ranks per Level:</strong> <span id="class-val-skillRanks">{cls.skillRanks}</span> + Int modifier</p>
+      </div>
 
       <div class="archetype-warning-banner" style="display: none;"></div>
 
@@ -432,7 +468,7 @@ for (let lvl = 1; lvl <= 20; lvl++) {
         const collEntry = archetypeFeatureCollEntries.get(feature.id);
         const { Content } = collEntry ? await render(collEntry) : { Content: null };
         return (
-          <template class="archetype-feature-template" data-feature-id={feature.id} data-name={feature.name} data-archetype-id={feature.archetypeId} data-level={JSON.stringify(feature.level)} data-replaces={JSON.stringify(feature.replaces || [])} data-alters={JSON.stringify(feature.alters || [])} data-mutually-exclusive={JSON.stringify(feature.mutuallyExclusive !== false)}>
+          <template class="archetype-feature-template" data-feature-id={feature.id} data-name={feature.name} data-archetype-id={feature.archetypeId} data-level={JSON.stringify(feature.level)} data-replaces={JSON.stringify(feature.replaces || [])} data-alters={JSON.stringify(feature.alters || [])} data-mutually-exclusive={JSON.stringify(feature.mutuallyExclusive !== false)} data-class-overrides={JSON.stringify(feature.classOverrides || {})}>
             <div class="archetype-feature-rendered-content">
               {Content ? <Content /> : null}
             </div>
@@ -590,6 +626,7 @@ document.addEventListener('astro:page-load', () => {
       replaces: JSON.parse(t.dataset.replaces!) as string[],
       alters: JSON.parse(t.dataset.alters!) as string[],
       mutuallyExclusive: JSON.parse(t.dataset.mutuallyExclusive!),
+      classOverrides: JSON.parse(t.dataset.classOverrides || '{}') as Record<string, string>,
       html: contentEl ? contentEl.innerHTML : t.innerHTML
     };
   });
@@ -642,6 +679,15 @@ document.addEventListener('astro:page-load', () => {
       card.className = 'class-feature' + (card.dataset.originalHtml!.includes('trait-catalog-toggle') ? ' class-feature--container' : '');
     });
 
+    // Reset Class Info Block Overrides
+    document.querySelectorAll('[id^="class-val-"]').forEach(el => {
+      const htmlEl = el as HTMLElement;
+      if (htmlEl.dataset.originalHtml === undefined) {
+        htmlEl.dataset.originalHtml = htmlEl.innerHTML;
+      }
+      htmlEl.innerHTML = htmlEl.dataset.originalHtml;
+    });
+
     // Remove any purely dynamic features (like Protean Aura)
     document.querySelectorAll('.dynamic-archetype-feature').forEach(c => c.remove());
 
@@ -672,6 +718,7 @@ document.addEventListener('astro:page-load', () => {
     // 3. Conflict Checking Logic
     const replacedBy: Record<string, Array<{ af: typeof templates[0], arcName: string }>> = {};
     const alteredBy: Record<string, Array<{ af: typeof templates[0], arcName: string }>> = {};
+    const overridesBy: Record<string, Array<{ af: typeof templates[0], arcName: string }>> = {};
 
     activeFeatures.forEach(af => {
       const cb = document.querySelector<HTMLInputElement>(`.archetype-checkbox[data-archetype-id="${af.archetypeId}"]`);
@@ -685,6 +732,11 @@ document.addEventListener('astro:page-load', () => {
       af.alters.forEach(baseId => {
         if (!alteredBy[baseId]) alteredBy[baseId] = [];
         alteredBy[baseId].push({ af, arcName });
+      });
+
+      Object.keys(af.classOverrides || {}).forEach(key => {
+        if (!overridesBy[key]) overridesBy[key] = [];
+        overridesBy[key].push({ af, arcName });
       });
     });
 
@@ -721,6 +773,19 @@ document.addEventListener('astro:page-load', () => {
       }
     }
 
+    if (!conflictMsg) {
+      for (const key in overridesBy) {
+        const ovrs = overridesBy[key];
+        if (ovrs.length > 1) {
+          const isAnyExclusive = ovrs.some(o => o.af.mutuallyExclusive);
+          if (isAnyExclusive) {
+            conflictMsg = `Conflict detected: Archetypes ${ovrs.map(o => o.arcName).join(' and ')} both attempt to override the same class property (${key}).`;
+            break;
+          }
+        }
+      }
+    }
+
     if (conflictMsg) {
       if (warningBanner) {
         warningBanner.innerHTML = `<span class="warning-icon">⚠️</span> <span class="warning-text">${conflictMsg}</span>`;
@@ -733,6 +798,13 @@ document.addEventListener('astro:page-load', () => {
     activeFeatures.forEach(af => {
       const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
       const arcName = option ? option.dataset.name! : af.archetypeId;
+
+      Object.entries(af.classOverrides || {}).forEach(([key, val]) => {
+        const el = document.getElementById(`class-val-${key}`);
+        if (el) {
+          el.innerHTML = `<span class="override-text" style="color: var(--clr-brand); font-weight: bold;" title="Overridden by ${arcName}">${val}</span>`;
+        }
+      });
 
       if (af.replaces.length > 0) {
         // Replacement: Swap in-place inside primary base feature node to preserve Scrollspy intersections
