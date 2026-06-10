@@ -2,6 +2,8 @@
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import SphereBadgeGrid from '@/components/SphereBadgeGrid.astro';
+import SphereBadge from '@/components/SphereBadge.astro';
 
 const { sphereMap, classMap } = await resolveEntries();
 
@@ -156,31 +158,12 @@ const classById = new Map(
     <span class="section-heading-text">Magic Spheres</span>
     <div class="section-heading-rule"></div>
   </div>
-  <div class="entry-grid sphere-badge-grid">
-    {spheres.map(s => (
-      <a href={url(`/power/${s.id}/`)} class="sphere-badge power" data-astro-prefetch="hover">
-        <div class="sphere-badge-icon">
-          <svg class="si" aria-hidden="true"><use href={`#si-${s.icon}`} /></svg>
-        </div>
-        <span class="sphere-badge-name">{s.name}</span>
-      </a>
-    ))}
-  </div>
+  <SphereBadgeGrid spheres={spheres} system="power" />
 
-  <div class="entry-grid sphere-badge-grid other-badge-grid">
-    <a href={url("/power/bear/")} class="sphere-badge power" data-astro-prefetch="hover">
-      <div class="sphere-badge-icon">
-        <svg class="si" aria-hidden="true"><use href="#si-bear" /></svg>
-      </div>
-      <span class="sphere-badge-name">Bear</span>
-    </a>
-    <a href={url("/power/technomancy/")} class="sphere-badge power" data-astro-prefetch="hover">
-      <div class="sphere-badge-icon">
-        <svg class="si" aria-hidden="true"><use href="#si-technomancy" /></svg>
-      </div>
-      <span class="sphere-badge-name" style="font-size: 11px; height: 11px; line-height: 11px;">Technomancy</span>
-    </a>
-  </div>
+  <SphereBadgeGrid className="other-badge-grid">
+    <SphereBadge id="bear" name="Bear" icon="bear" system="power" />
+    <SphereBadge id="technomancy" name="Technomancy" icon="technomancy" system="power" />
+  </SphereBadgeGrid>
 
   <div class="classes-and-links">
     <div class="class-column">

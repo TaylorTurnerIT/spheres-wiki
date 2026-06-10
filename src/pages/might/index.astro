@@ -2,6 +2,7 @@
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import SphereBadgeGrid from '@/components/SphereBadgeGrid.astro';
 
 const { sphereMap, classMap } = await resolveEntries();
 
@@ -89,16 +90,7 @@ const classes = [...classMap.values()]
     <div class="section-heading-rule"></div>
   </div>
 
-  <div class="sphere-badge-grid" style="margin-bottom: 24px;">
-    {spheres.map(s => (
-      <a href={url(`/might/${s.id}/`)} class="sphere-badge might" data-astro-prefetch="hover">
-        <div class="sphere-badge-icon">
-          <svg class="si" aria-hidden="true"><use href={`#si-${s.icon}`} /></svg>
-        </div>
-        <span class="sphere-badge-name">{s.name}</span>
-      </a>
-    ))}
-  </div>
+  <SphereBadgeGrid spheres={spheres} system="might" style="margin-bottom: 24px;" />
 
   <div class="classes-and-links">
     <div class="class-column">

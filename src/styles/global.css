@@ -2210,6 +2210,7 @@ h6 {
   position: relative;
   z-index: 1;
   align-self: start;
+  min-width: 0;
 }
 .sphere-badge:hover {
   z-index: 2;
@@ -2241,14 +2242,18 @@ h6 {
   font-size: 11px;
   font-weight: 700;
   color: var(--clr-ns);
-  line-height: 1;
+  line-height: 1.1;
   letter-spacing: 0.01em;
   width: 100%;
   padding: 0 4px;
-  white-space: nowrap;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
   flex-shrink: 0;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 @media (min-width: 1280px) {
   .sphere-badge-grid { grid-template-columns: repeat(12, 1fr); }
