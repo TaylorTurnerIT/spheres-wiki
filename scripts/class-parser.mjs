@@ -22,7 +22,7 @@ import { kebab, fmArray, writeEntries } from "./lib/render.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
-const REPO = "../spheresofpower-latest/pages";
+const REPO = "../spheresofpower-wikidot-archive/pages";
 
 // ─── Class Configurations ─────────────────────────────────────────────────────
 
@@ -32,61 +32,73 @@ const CLASS_CONFIGS = {
     file: `${REPO}/armorist.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "low",
   },
   elementalist: {
     file: `${REPO}/elementalist.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "mid",
   },
   eliciter: {
     file: `${REPO}/eliciter.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "mid",
   },
   "fey-adept": {
     file: `${REPO}/fey-adept.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "high",
   },
   hedgewitch: {
     file: `${REPO}/hedgewitch.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "mid",
   },
   incanter: {
     file: `${REPO}/incanter.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "high",
   },
   mageknight: {
     file: `${REPO}/mageknight.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "low",
   },
   shifter: {
     file: `${REPO}/shifter.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "mid",
   },
   "soul-weaver": {
     file: `${REPO}/soul-weaver.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "high",
   },
   symbiat: {
     file: `${REPO}/symbiat.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "mid",
   },
   thaumaturge: {
     file: `${REPO}/thaumaturge.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "high",
   },
   wraith: {
     file: `${REPO}/wraith.txt`,
     system: "power",
     primaryBook: "ultimate-spheres-of-power",
+    casterTier: "mid",
   },
   // ── Might classes ──────────────────────────────────────────────────────
   armiger: {
@@ -230,6 +242,8 @@ function parseClassFile(text, config) {
       const refIdx = colIndex(/Ref/i);
       const willIdx = colIndex(/Will/i);
       const specialIdx = colIndex(/Special/i);
+      const clIdx = colIndex(/Caster Level/i);
+      const mtIdx = colIndex(/Magic Talents/i);
 
       // Identify extra (class-specific) columns: everything beyond the 6 standard ones
       const standardIndices = new Set([
@@ -239,6 +253,8 @@ function parseClassFile(text, config) {
         refIdx,
         willIdx,
         specialIdx,
+        clIdx,
+        mtIdx,
       ]);
       const extraIdxs = headerCells
         .map((_, i) => i)
@@ -346,12 +362,16 @@ function parseClassFile(text, config) {
   );
   let bodyText = "";
   if (bodyEnd > bodyStart && bodyEnd < Infinity) {
-    bodyText = cleanBody(clean.substring(bodyStart, bodyEnd));
+    bodyText = cleanBody(clean.substring(bodyStart, bodyEnd)).replace(
+      /([^\n])\n---/g,
+      "$1\n\n---",
+    );
   }
 
   return {
     name,
     system: config.system,
+    casterTier: config.casterTier,
     hitDie: fields.hitDie ? parseInt(fields.hitDie) : null,
     alignment: fields.alignment || "",
     startingWealth: fields.startingWealth || "",
@@ -487,7 +507,10 @@ function parseTraitChunk(chunk, featureId) {
 
   // --- Extract (Ex), (Su), (Sp) type marker ---
   const typeMatch = head.match(/\((Ex|Su|Sp)\)/i);
-  const abilityType = typeMatch ? typeMatch[1].toLowerCase() : null;
+  let abilityType = typeMatch ? typeMatch[1].toLowerCase() : null;
+  if (abilityType === "ex") abilityType = "extraordinary";
+  else if (abilityType === "su") abilityType = "supernatural";
+  else if (abilityType === "sp") abilityType = "spell-like";
   head = head.replace(/\((Ex|Su|Sp)\)/i, "").trim();
 
   // --- Extract inline (requires ...) ---
@@ -511,7 +534,18 @@ function parseTraitChunk(chunk, featureId) {
   if (!name) return null;
 
   // --- Clean up body lines ---
-  // Strip Wikidot ^^...^^ superscript source lines
+  // Strip Wikidot ^^...^^ superscript source lines, but capture the source
+  let bodySource = null;
+  const sourceLineIdx = bodyLines.findIndex((l) =>
+    /^\^\^\*\*Source:\*\*/i.test(l.trim()),
+  );
+  if (sourceLineIdx !== -1) {
+    bodySource = bodyLines[sourceLineIdx]
+      .trim()
+      .replace(/^\^\^\*\*Source:\*\*\s*/i, "")
+      .replace(/\^\^$/, "")
+      .trim();
+  }
   bodyLines = bodyLines.filter((l) => !l.trim().startsWith("^^"));
 
   // Extract **Requires:** lines from body
@@ -541,7 +575,7 @@ function parseTraitChunk(chunk, featureId) {
   const tags = abilityType ? [abilityType] : [];
   const slug = kebab(name);
 
-  return { name, slug, requires, tags, body, featureId };
+  return { name, slug, requires, tags, body, featureId, sourceKey, bodySource };
 }
 
 // ─── Class feature extraction ─────────────────────────────────────────────────
@@ -601,7 +635,7 @@ function parseClassFeatures(text) {
     const traitChunks = bodyRaw.split(/\n(?=\+\+\+\+ )/);
     const hasTraits = traitChunks.length > 1;
 
-    let body = cleanBody(traitChunks[0]);
+    let body = cleanBody(traitChunks[0]).replace(/([^\n])\n---/g, "$1\n\n---");
     let isTraitContainer = false;
     const featureTraits = [];
 
@@ -647,6 +681,7 @@ function renderClassPage(parsed, config) {
     `alignment: ${JSON.stringify(parsed.alignment)}`,
     `startingWealth: ${JSON.stringify(parsed.startingWealth)}`,
     `skillRanks: ${parsed.skillRanks ?? 2}`,
+    ...(parsed.casterTier ? [`casterTier: "${parsed.casterTier}"`] : []),
     `classSkills:`,
     ...parsed.classSkills.map((s) => `  - ${s.includes(",") ? `"${s}"` : s}`),
     `babProgression: "${parsed.babProgression}"`,
@@ -778,12 +813,39 @@ if (isMain) {
   );
 
   // Write class traits
+  // Function to resolve trait book slug based on source
+  function resolveTraitBookSlug(trait, primaryBook) {
+    if (!trait.sourceKey) return primaryBook;
+
+    if (trait.sourceKey === "Origin") return "spheres-of-origin";
+    if (trait.sourceKey === "Alienist HB") return "alienists-handbook";
+
+    if (trait.sourceKey === "Apoc") {
+      const src = (trait.bodySource || "").toLowerCase();
+      if (src.includes("apex shifter")) return "spheres-apocrypha-apex-shifter";
+      // Add other known shifer Apocrypha here, fallback to a quarantine state if needed.
+    }
+
+    if (trait.sourceKey === "DRS" || trait.sourceKey === "SM—") {
+      const src = (trait.bodySource || "").toLowerCase();
+      if (src.includes("polished dark")) return "diamond-spheres-polished-dark";
+    }
+
+    // Add Arcforge handling
+    if (trait.sourceKey === "Arcforge") return "arcforge-players-compendium";
+    if (trait.sourceKey === "CotS") return "champions-of-the-spheres";
+    if (trait.sourceKey === "BTH") return "beast-tamers-handbook";
+
+    // Unresolved
+    return "QUARANTINE-" + trait.sourceKey;
+  }
+
   if (traits.length > 0) {
     const traitEntries = traits.map((t) => ({
       id: `${className}-${t.slug}`,
       name: t.name,
       slug: t.slug,
-      bookSlug: config.primaryBook,
+      bookSlug: resolveTraitBookSlug(t, config.primaryBook),
       type: "class-trait",
       subdir: `class-traits/${className}`,
       body: t.body || "",
