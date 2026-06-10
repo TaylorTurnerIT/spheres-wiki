@@ -76,6 +76,9 @@ export async function getStaticPaths() {
     const classArchetypes = [...archetypeMap.values()]
       .filter(a => a.className === cls.id);
 
+    // Feature ID → display name lookup (for ACF descriptions)
+    const featureNameById = new Map(featureEntries.map(f => [f.id, f.name]));
+
     // Auto-inject virtual ACF archetypes — one per alternate class feature
     const acfFeatures = [...archetypeFeatureMap.values()]
       .filter(f => f.isAlternateClassFeature && f.archetypeId === `${cls.id}-alternate-class-features`);
@@ -87,7 +90,7 @@ export async function getStaticPaths() {
       sourceBook: cls.sourceBook,
       tags: [],
       type: "archetype" as const,
-      _acfReplaces: af.replaces || [],  // for description rendering
+      _acfReplacesDesc: (af.replaces || []).map(id => featureNameById.get(id) || id.replace(/-/g, ' ')).join(', '),
     }));
 
     const allArchetypes = [...classArchetypes, ...acfArchetypes];
@@ -397,9 +400,9 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
               {archetypes.map(arc => {
                 const collEntry = archetypeCollEntries.get(arc.id);
                 const rawText = collEntry?.body || '';
-                const acfReplaces = (arc as any)._acfReplaces as string[] | undefined;
-                const desc = acfReplaces?.length
-                  ? `Replaces: ${acfReplaces.map(id => id.startsWith(cls.id + '-') ? id.slice(cls.id.length + 1).replace(/-/g, ' ') : id.replace(/-/g, ' ')).join(', ')}`
+                const acfReplacesDesc = (arc as any)._acfReplacesDesc as string | undefined;
+                const desc = acfReplacesDesc
+                  ? `Replaces: ${acfReplacesDesc}`
                   : (rawText.trim().split('\n')[0].replace(/<[^>]+>/g, '').substring(0, 150) + (rawText.length > 150 ? '...' : ''));
                 return (
                   <option value={arc.id} data-name={arc.name} data-desc={desc || arc.name}>{arc.name}</option>
