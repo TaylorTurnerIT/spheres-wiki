@@ -83,8 +83,8 @@ export async function getStaticPaths() {
     const acfFeatures = [...archetypeFeatureMap.values()]
       .filter(f => f.isAlternateClassFeature && f.archetypeId === `${cls.id}-alternate-class-features`);
     const acfArchetypes = acfFeatures.map(af => ({
-      id: af.id,  // each ACF is its own virtual archetype
-      name: af.name,
+      id: af.id,
+      name: `Alternate Class Feature: ${af.name}`,
       className: cls.id,
       system: cls.system,
       sourceBook: cls.sourceBook,
