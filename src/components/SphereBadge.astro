@@ -1,0 +1,20 @@
+---
+import { url } from "@/lib/url";
+
+interface Props {
+  id?: string;
+  name: string;
+  icon: string;
+  system: "power" | "might" | "guile" | "champions";
+  href?: string;
+}
+
+const { id, name, icon, system, href } = Astro.props;
+const linkUrl = href || (id ? url(`/${system}/${id}/`) : "#");
+---
+<a href={linkUrl} class={`sphere-badge ${system}`} data-astro-prefetch="hover">
+  <div class="sphere-badge-icon">
+    <svg class="si" aria-hidden="true"><use href={`#si-${icon}`} /></svg>
+  </div>
+  <span class="sphere-badge-name">{name}</span>
+</a>
