@@ -4,10 +4,12 @@ import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
+import TagBadge from '@/components/TagBadge.astro';
 import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content.config';
-import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, ArchetypeEntry, ArchetypeFeatureEntry, BookMeta } from '@/lib/types';
+import { buildOrderedTagIds } from '@/lib/tags';
+import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, ArchetypeEntry, ArchetypeFeatureEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
   cls: ClassEntry;
@@ -21,11 +23,13 @@ interface Props {
   archetypeFeatures: ArchetypeFeatureEntry[];
   archetypeFeatureCollEntries: Map<string, any>;
   archetypeCollEntries: Map<string, any>;
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
 }
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const { classMap, classFeatureMap, classTraitMap, archetypeMap, archetypeFeatureMap, bookMetaMap } = await resolveEntries();
+  const { classMap, classFeatureMap, classTraitMap, archetypeMap, archetypeFeatureMap, bookMetaMap, tagMap } = await resolveEntries();
 
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
@@ -103,6 +107,7 @@ export async function getStaticPaths() {
         traitCollEntries,
         sourceBook: bookMetaMap.get(cls.sourceBook),
         bookMetaMap,
+        tagMap,
         archetypes: classArchetypes,
         archetypeCollEntries,
         archetypeFeatures: classArchetypeFeatures,
@@ -123,6 +128,7 @@ const {
   traitCollEntries,
   sourceBook,
   bookMetaMap,
+  tagMap,
   archetypes = [],
   archetypeCollEntries = new Map(),
   archetypeFeatures = [],
@@ -452,13 +458,15 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
               <div class="trait-catalog">
               {traits.map(({ trait, Content: TraitContent, sourceBookTitle, featureName }) => (
                 <div class="trait-catalog-entry" id={trait.id}>
-                  <h3 class="trait-catalog-name">
-                    <span class="trait-catalog-name-group">
-                      <a href={url(`/power/classes/${cls.id}/traits/${trait.id}/`)} class="trait-catalog-link" data-astro-prefetch="hover">{trait.name}</a>
-                      <span class="trait-feature-label">{featureName}</span>
-                    </span>
-                    {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
-                  </h3>
+                  <div class="talent-header">
+                    <div class="talent-header-top">
+                      <a href={url(`/power/classes/${cls.id}/traits/${trait.id}/`)} class="talent-name" data-astro-prefetch="hover">{trait.name}</a>
+                      {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
+                    </div>
+                    <div class="talent-header-bottom">
+                      {buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {}).map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)}
+                    </div>
+                  </div>
                   {trait.requires && (
                     <p class="trait-catalog-requires"><strong>Prerequisites:</strong> {trait.requires}</p>
                   )}
@@ -473,13 +481,15 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
           ) : (
             traits.map(({ trait, Content: TraitContent, sourceBookTitle, featureName }) => (
               <div class="class-trait" id={trait.id}>
-                <h3 class="class-trait-name">
-                  <span class="trait-catalog-name-group">
-                    {trait.name}
-                    <span class="trait-feature-label">{featureName}</span>
-                  </span>
-                  {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
-                </h3>
+                <div class="talent-header">
+                  <div class="talent-header-top">
+                    <span class="talent-name">{trait.name}</span>
+                    {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
+                  </div>
+                  <div class="talent-header-bottom">
+                    {buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {}).map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)}
+                  </div>
+                </div>
                 {trait.requires && (
                   <p class="trait-prerequisites"><strong>Prerequisites:</strong> {trait.requires}</p>
                 )}
@@ -1354,30 +1364,15 @@ document.addEventListener('astro:page-load', () => {
     border-radius: 0 6px 6px 0;
   }
 
-  .class-trait-name {
-    font-family: var(--font-display);
-    font-size: var(--fs-md);
-    font-weight: 700;
-    color: var(--clr-active);
-    margin: 0 0 0.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
   .trait-prerequisites {
     font-size: 0.9em;
     font-style: italic;
-    color: var(--clr-muted);
     margin: 0 0 0.5rem;
   }
 
   .trait-catalog-requires {
     font-size: 0.9em;
     font-style: italic;
-    color: var(--clr-muted);
     margin: 0 0 0.35rem;
   }
 
@@ -1451,37 +1446,6 @@ document.addEventListener('astro:page-load', () => {
     padding: 0.75rem 1rem 0.75rem 0.75rem;
     border-left: 3px solid var(--clr-active);
     border-top: 1px solid color-mix(in srgb, var(--clr-active) 15%, transparent);
-  }
-
-  .trait-catalog-name {
-    font-family: var(--font-display);
-    font-size: var(--fs-md);
-    font-weight: 600;
-    color: var(--clr-active);
-    margin: 0 0 0.35rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .trait-feature-label {
-    font-family: var(--font-display);
-    font-size: 0.65em;
-    font-weight: 500;
-    color: var(--clr-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-
-  .trait-catalog-link {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .trait-catalog-link:hover {
-    text-decoration: underline;
   }
 
   .trait-catalog-requires {

@@ -15,6 +15,7 @@ export function buildOrderedTagIds(
   if (entry.type === "talent") tags.add("talent");
   if (entry.type === "feat") tags.add("feat");
   if (entry.type === "sphere") tags.add("sphere");
+  if (entry.type === "class-trait") tags.add("class-trait");
 
   if (entry.type === "talent" && entry.tier) {
     if (entry.tier === "base") tags.add("base");
