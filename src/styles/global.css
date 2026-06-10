@@ -506,14 +506,28 @@ a:hover {
 .site-title:hover {
   text-decoration: none;
 }
-.site-logo {
+.site-logo-svg {
   width: 44px;
   height: 44px;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.site-title:hover .site-logo-svg {
+  transform: scale(1.06);
+}
+.logo-orb {
+  transform-box: fill-box;
+  transform-origin: center;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.site-title:hover .site-logo {
-  transform: rotate(-15deg) scale(1.1);
-}
+.logo-orb-power { transition-delay: 0ms; }
+.logo-orb-might { transition-delay: 55ms; }
+.logo-orb-guile { transition-delay: 110ms; }
+.logo-orb-champ { transition-delay: 165ms; }
+.site-title:hover .logo-orb-power { transform: translate(-3px, -3px) scale(1.22); }
+.site-title:hover .logo-orb-might { transform: translate(3px,  -3px) scale(1.22); }
+.site-title:hover .logo-orb-guile { transform: translate(-3px,  3px) scale(1.22); }
+.site-title:hover .logo-orb-champ { transform: translate(3px,   3px) scale(1.22); }
 .site-title-text {
   display: flex;
   flex-direction: column;
