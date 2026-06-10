@@ -402,6 +402,7 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
       {tableRows.length > 0 && (
         <div class="class-table-wrapper">
           <h2 id="class-table" class="class-table-heading">Table: The {cls.name}</h2>
+          <div class="class-table-outline">
           <table class="class-progression-table">
             <thead>
               <tr>
@@ -420,6 +421,7 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       )}
 
@@ -1551,9 +1553,12 @@ document.addEventListener('astro:page-load', () => {
     font-size: var(--fs-sm);
     line-height: 1.5;
     background: var(--clr-surface);
+  }
+
+  .class-table-outline {
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 0 0 1px var(--clr-border);
+    border: 1px solid var(--clr-border);
   }
 
   .class-progression-table thead {
