@@ -24,9 +24,7 @@ export default defineConfig({
     defaultStrategy: "hover",
   },
   markdown: {
-    remarkPlugins: [
-      [remarkEntryLinks, { base: "/spheres-wiki/" }]
-    ],
+    remarkPlugins: [[remarkEntryLinks, { base: "/spheres-wiki/" }]],
   },
   vite: {
     plugins: [yamlPlugin],

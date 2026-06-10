@@ -277,45 +277,50 @@ for (const f of featureEntries) {
 const hasCasting = cls.casterTier && cls.casterTier !== "none";
 
 // Generate table headers
-const allHeaders: string[] = [
-  "Level",
-  "Base Attack Bonus",
-  "Fort Save",
-  "Ref Save",
-  "Will Save",
-  "Special",
-  ...(hasCasting ? ["Caster Level", "Magic Talents", "Spell Pool"] : []),
-  ...(classTable?.extraHeaders || []),
-];
-const spellPoolColIdx = hasCasting ? allHeaders.indexOf("Spell Pool") : -1;
+	const allHeaders: string[] = [
+	  "Level",
+	  "Base Attack Bonus",
+	  "Fort Save",
+	  "Ref Save",
+	  "Will Save",
+	  "Special",
+	  ...(hasCasting ? ["Caster Level", "Magic Talents", "Spell Pool"] : []),
+	  ...(classTable?.extraHeaders || []),
+	];
+	const spellPoolColIdx = hasCasting ? allHeaders.indexOf("Spell Pool") : -1;
 
-// Generate table rows (levels 1-20)
-interface TableRow {
-  cells: string[];
-  level: number;
-}
-const tableRows: TableRow[] = [];
-for (let lvl = 1; lvl <= 20; lvl++) {
-  const bab = computeBAB(lvl, cls.babProgression);
-  const fort = computeSave(lvl, cls.fortSaveProgression);
-  const ref = computeSave(lvl, cls.refSaveProgression);
-  const will = computeSave(lvl, cls.willSaveProgression);
+	// Generate table rows (levels 1-20)
+	interface TableRow {
+	  cells: string[];
+	  level: number;
+	}
+	const tableRows: TableRow[] = [];
+	for (let lvl = 1; lvl <= 20; lvl++) {
+	  const bab = computeBAB(lvl, cls.babProgression);
+	  const fort = computeSave(lvl, cls.fortSaveProgression);
+	  const ref = computeSave(lvl, cls.refSaveProgression);
+	  const will = computeSave(lvl, cls.willSaveProgression);
 
-  // Build Special column text from features gained at this level
-  const featsAtLevel = featuresByLevel[lvl] || [];
-  const special = featsAtLevel.length > 0
-    ? featsAtLevel.map(f => `<a href="#${f.id}" class="table-feature-link">${f.name}</a>`).join(", ")
-    : (classTable?.specialSource?.[lvl] || "—");
+	  // Build Special column text from features gained at this level
+	  const featsAtLevel = featuresByLevel[lvl] || [];
+	  const special = featsAtLevel.length > 0
+	    ? featsAtLevel.map(f => `<a href="#${f.id}" class="table-feature-link">${f.name}</a>`).join(", ")
+	    : (classTable?.specialSource?.[lvl] || "—");
 
-  // Extra column values from source table
-  const extraVals = classTable?.extraRowData?.[lvl] || [];
-  const paddedExtras = (classTable?.extraHeaders || []).map((_, i) => extraVals[i] || "—");
+	  // Extra column values from source table
+	  const extraVals = classTable?.extraRowData?.[lvl] || [];
+	  const paddedExtras = (classTable?.extraHeaders || []).map((_, i) => extraVals[i] || "—");
 
-  const castingCells = hasCasting ? [
-    String(computeCasterLevel(lvl, cls.casterTier!)),
-    String(computeMagicTalents(lvl, cls.casterTier!)),
-    `${lvl} + CAM`,
-  ] : [];
+	  const rawMt = computeMagicTalents(lvl, cls.casterTier!);
+	  const mtDisplay = lvl === 1
+	    ? `${rawMt - 2} <span class="tt" data-tooltip="All characters gain two bonus magic talents the first time they gain a level in a class with the casting class feature, regardless of which class is chosen.">(+2)</span>`
+	    : String(rawMt - 2);
+
+	  const castingCells = hasCasting ? [
+	    String(computeCasterLevel(lvl, cls.casterTier!)),
+	    mtDisplay,
+	    `${lvl} + <span class="tt" data-tooltip="Casting Ability Modifier">CAM</span>`,
+	  ] : [];
 
   const cells = [
     levelOrdinal(lvl),
@@ -1479,13 +1484,13 @@ document.addEventListener('astro:page-load', () => {
 
   /* ── Tooltip popup ── */
   .tt {
-    color: var(--clr-active);
+    color: var(--clr-muted);
     text-decoration: none;
-    border-bottom: 1px dotted var(--clr-active);
+    border-bottom: 1px dotted var(--clr-muted);
     cursor: help;
     position: relative;
   }
-  .tt:hover { color: var(--clr-active-hover, var(--clr-active)); }
+  .tt:hover { color: var(--clr-active); }
   .tt::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -1560,18 +1565,25 @@ document.addEventListener('astro:page-load', () => {
     text-align: left;
     padding: 0.6rem 0.75rem;
     border-bottom: 2px solid var(--clr-border);
+    border-right: 1px solid color-mix(in srgb, var(--clr-border) 80%, transparent);
     color: var(--clr-active);
     white-space: normal;
-    word-break: break-word;
     overflow-wrap: break-word;
     font-size: 0.85em;
     letter-spacing: 0.02em;
   }
+  .class-progression-table th:last-child {
+    border-right: none;
+  }
 
   .class-progression-table td {
     padding: 0.4rem 0.75rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--clr-border) 60%, transparent);
+    border-bottom: 1px solid var(--clr-border);
+    border-right: 1px solid color-mix(in srgb, var(--clr-border) 60%, transparent);
     white-space: nowrap;
+  }
+  .class-progression-table td:last-child {
+    border-right: none;
   }
 
   .class-progression-table tbody tr:nth-child(even) {
