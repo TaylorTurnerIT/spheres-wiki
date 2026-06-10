@@ -101,8 +101,8 @@ const orderedTagIds = buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {});
       <hr class="page-title-rule" />
 
       {trait.requires && (
-        <p class="trait-requires-note">
-          <strong>Requires:</strong> {trait.requires}
+        <p class="trait-prerequisites-note">
+          <strong>Prerequisites:</strong> {trait.requires}
         </p>
       )}
 
@@ -127,10 +127,10 @@ const orderedTagIds = buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {});
     margin-top: 0.5rem;
   }
 
-  .trait-requires-note {
-    font-size: var(--fs-sm);
-    color: var(--clr-muted);
+  .trait-prerequisites-note {
+    font-size: 0.9em;
     font-style: italic;
-    margin-bottom: 1rem;
+    color: var(--clr-muted);
+    margin: 0 0 1rem;
   }
 </style>
