@@ -77,6 +77,8 @@ export function inferFromPath(fileId: string): InferredFields {
       return withSystem({ type: "class-feature", className: s1, id: s2 });
     if (s0 === "class-traits")
       return withSystem({ type: "class-trait", className: s1, id: s2 });
+    if (s0 === "archetype-features")
+      return withSystem({ type: "archetype-feature", archetypeId: s1, id: s2 });
   }
 
   const last = parts[parts.length - 1];
