@@ -5,7 +5,7 @@ export type BookMeta = {
   title: string;
   publisher: string;
   publishedDate: string;
-  system?: 'power' | 'might' | 'guile' | 'champions';
+  system?: "power" | "might" | "guile" | "champions";
   price?: string;
   buyUrl?: string;
   coverImage?: string;
@@ -77,6 +77,7 @@ export type ClassEntry = {
   willSaveProgression: "good" | "poor";
   /** Parsed class progression table data (may be a JSON string in frontmatter) */
   classTable?: ClassTableData | string;
+  casterTier?: "high" | "mid" | "low" | "none";
 };
 
 export type ClassFeatureEntry = {
@@ -124,6 +125,7 @@ export type ArchetypeEntry = {
   tags: string[];
   modifies?: string;
   className: string;
+  spheres?: string[];
 };
 
 export type ArchetypeFeatureEntry = {
@@ -139,6 +141,7 @@ export type ArchetypeFeatureEntry = {
   replaces?: string[];
   alters?: string[];
   mutuallyExclusive?: boolean;
+  classOverrides?: Record<string, string>;
 };
 
 export type TagEntry = {

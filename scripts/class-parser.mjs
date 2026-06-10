@@ -831,29 +831,39 @@ if (isMain) {
       if (src.includes("polished dark")) return "diamond-spheres-polished-dark";
     }
 
-    // Add Arcforge handling
     if (trait.sourceKey === "Arcforge") return "arcforge-players-compendium";
     if (trait.sourceKey === "CotS") return "champions-of-the-spheres";
     if (trait.sourceKey === "BTH") return "beast-tamers-handbook";
+    if (trait.sourceKey === "3PP") return "__SKIP__";
+    if (trait.sourceKey === "BaP") return "blood-and-portents";
+    if (trait.sourceKey === "EO2") return "expanded-options-2";
+    if (trait.sourceKey === "EO3") return "expanded-options-3";
+    if (trait.sourceKey === "Gen. HB") return "generals-handbook";
+    if (trait.sourceKey === "Gravecaller's HB") return "gravecallers-handbook";
+    if (trait.sourceKey === "LG") return "arcforge-players-compendium";
+    if (trait.sourceKey === "LotS") return "legends-of-the-spheres";
+    if (trait.sourceKey === "WM") return "expanded-spheres-weaves-of-war";
 
     // Unresolved
     return "QUARANTINE-" + trait.sourceKey;
   }
 
   if (traits.length > 0) {
-    const traitEntries = traits.map((t) => ({
-      id: `${className}-${t.slug}`,
-      name: t.name,
-      slug: t.slug,
-      bookSlug: resolveTraitBookSlug(t, config.primaryBook),
-      type: "class-trait",
-      subdir: `class-traits/${className}`,
-      body: t.body || "",
-      tags: t.tags || [],
-      className,
-      featureId: t.featureId,
-      requires: t.requires || null,
-    }));
+    const traitEntries = traits
+      .map((t) => ({
+        id: `${className}-${t.slug}`,
+        name: t.name,
+        slug: t.slug,
+        bookSlug: resolveTraitBookSlug(t, config.primaryBook),
+        type: "class-trait",
+        subdir: `class-traits/${className}`,
+        body: t.body || "",
+        tags: t.tags || [],
+        className,
+        featureId: t.featureId,
+        requires: t.requires || null,
+      }))
+      .filter((t) => t.bookSlug !== "__SKIP__");
 
     const traitRenderFn = (entry) => {
       const lines = [

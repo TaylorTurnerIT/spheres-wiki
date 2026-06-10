@@ -15,10 +15,10 @@ function spheresLoader(options: Parameters<typeof glob>[0] & { base: string }) {
       const originalParseData = context.parseData;
       context.parseData = async (args: any) => {
         // options.base is like "./src/content/spheres-of-might"
-        const slug = options.base.split('/').pop() || '';
+        const slug = options.base.split("/").pop() || "";
         const pathPrefix = `/src/content/${slug}/`;
         const idx = args.filePath.indexOf(pathPrefix);
-        
+
         if (idx !== -1) {
           const relativePath = args.filePath.substring(idx + pathPrefix.length);
           const inferred = inferFromPath(relativePath);
@@ -28,7 +28,7 @@ function spheresLoader(options: Parameters<typeof glob>[0] & { base: string }) {
           const inferred = inferFromPath(args.id);
           args.data = { ...inferred, ...args.data };
         }
-        
+
         return originalParseData(args);
       };
       return baseLoader.load(context);
@@ -103,7 +103,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     refSaveProgression: z.enum(["good", "poor"]),
     willSaveProgression: z.enum(["good", "poor"]),
     classTable: z.string().optional(),
-    casterTier: z.enum(["high", "mid", "low"]).optional(),
+    casterTier: z.enum(["high", "mid", "low", "none"]).optional(),
   }),
   z.object({
     type: z.literal("class-feature"),
@@ -173,7 +173,10 @@ export const collections = Object.fromEntries(
   discoveredSlugs.map((slug) => [
     slug,
     defineCollection({
-      loader: spheresLoader({ pattern: "**/*.md", base: `./src/content/${slug}` }),
+      loader: spheresLoader({
+        pattern: "**/*.md",
+        base: `./src/content/${slug}`,
+      }),
       schema: entrySchema,
     }),
   ]),
