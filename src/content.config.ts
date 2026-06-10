@@ -103,6 +103,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     refSaveProgression: z.enum(["good", "poor"]),
     willSaveProgression: z.enum(["good", "poor"]),
     classTable: z.string().optional(),
+    casterTier: z.enum(["high", "mid", "low"]).optional(),
   }),
   z.object({
     type: z.literal("class-feature"),
@@ -132,6 +133,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     type: z.literal("archetype"),
     ...baseFields,
     className: z.string(),
+    spheres: z.array(z.string()).optional(),
   }),
   z.object({
     type: z.literal("archetype-feature"),
@@ -141,6 +143,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     replaces: z.array(z.string()).optional(),
     alters: z.array(z.string()).optional(),
     mutuallyExclusive: z.boolean().default(true),
+    classOverrides: z.record(z.string(), z.string()).optional(),
   }),
   z.object({
     type: z.literal("tag"),
