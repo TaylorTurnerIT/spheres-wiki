@@ -36,7 +36,11 @@ src/content/<book-slug>/
     spheres/<sphere>.md   # sphere-type entry (id = sphere slug)
     spheres/<sphere>/talents/<talent>.md  # talent entry
     feats/*.md            # feat entries
-    classes/**/*.md       # class entries (also holds archetypes under classes/)
+    classes/<class>.md    # class entry
+    class-features/<feature>.md  # class feature entry
+    class-traits/<class>/<trait>.md  # class trait entry (per-class subdir)
+    archetypes/<archetype>.md       # archetype entry
+    archetype-features/<class>/<feature>.md  # archetype feature entry (per-class subdir, also holds ACFs)
     articles/*.md         # article entries
     tags/*.md             # tag entries
 ```
@@ -66,6 +70,30 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 ### I.layout — page shell
 `WikiPage.astro`: header + sidebar + tab nav + content slot; sets Pagefind indexing scope/weight per page. `Base.astro`: html shell, meta/OG tags, footer, self-hosted fonts + `global.css` load.
 
+### I.class-family — class pages, features, traits
+Class pages (`[class].astro`) render:
+- **Class info block**: Alignment, Hit Die, Starting Wealth, Class Skills, Skill Ranks — each wrapped in `<span id="class-val-{key}">` for archetype override hot-swapping.
+- **Progression table**: Dynamically generated level 1–20 grid. Columns: Level, BAB, Fort, Ref, Will, Special, Caster Level (computed from `casterTier`), Magic Talents (computed; level 1 shows `(+2)` bonus with tooltip), Spell Pool (`{level} + CAM` with tooltip). Extra class-specific columns from `classTable` JSON. CAM has a muted dotted-underline tooltip: "Casting Ability Modifier".
+- **Class features**: `<h2>` heading with name, level badge, `|` separator, source-book label (`.talent-source`). Content rendered from markdown.
+- **Class traits**: Rendered per-feature inside or outside a trait catalog toggle. Each trait uses `.talent-header` / `.talent-header-top` / `.talent-header-bottom` pattern matching talent page design: name + source on top row, tags (`TagBadge`) on bottom row. `class-trait` tag auto-injected by `buildOrderedTagIds()`.
+- **Trait catalog**: For `isTraitContainer` features (e.g. Bestial Trait), a collapsible grid with toggle button. Open state adds a subtle background. Traits have a 3px `var(--clr-active)` left border. Prerequisites render as `**Prerequisites:**` line below the heading.
+- **Trait detail pages** (`[trait].astro`): Full-page view for individual traits with breadcrumb, tag badges, source-book sidebar callout.
+
+**Source attribution:** `*Source: Book*` lines in markdown bodies are stripped before rendering (`stripBodySource()`). Source is shown via metadata: `.talent-source` label on headings + `SourceBookCallout` in sidebar.
+
+### I.archetype — inline archetype selector + ACFs
+The archetype system runs entirely inline on the class page via TomSelect multi-select:
+- **Selector**: Dropdown lists all archetypes for the class. Options show name + description excerpt. Selected archetypes are persisted in URL query params (`?archetypes=...`).
+- **Compatibility**: `isCompatible()` checks replaces/alters/mutuallyExclusive fields. Incompatible selections are greyed out in the dropdown. Hard conflicts show a warning banner.
+- **Hot-swap**: `updateArchetypes()` replaces feature cards, appends alteration blocks, inserts new features in level order, updates the progression table Special column (feature name → archetype feature name), and updates the ToC links — all client-side. Base state is stashed in `dataset.originalHtml` for clean restore.
+- **Templates**: Each archetype feature generates an HTML5 `<template>` with compiled markdown body, `data-replaces`, `data-alters`, `data-level`, `data-class-overrides`. These are parsed into JS and applied on selection.
+- **Class info overrides**: `classOverrides: Record<string, string>` on archetype features hot-swaps class header fields (Alignment, Hit Die, etc.) via the `class-val-*` span IDs.
+
+**Alternate Class Features (ACFs):** Standalone class-feature swaps treated as a virtual archetype:
+- ACFs are `type: archetype-feature` with `isAlternateClassFeature: true` and `archetypeId: {class}-alternate-class-features`.
+- The class template auto-injects a virtual `ArchetypeEntry` named "Alternate Class Features" when ACFs exist for the class. No content file needed for the parent.
+- ACFs use `replaces` to specify the swapped feature. They plug into the same compatibility, hot-swap, and table/ToC update logic as regular archetypes.
+
 ### I.pages — route map (current + target)
 ```
 /                              home
@@ -73,9 +101,8 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 /power/[sphere]/               sphere detail
 /power/[sphere]/[talent]/      talent detail
 /power/[sphere]/feats/[feat]/  feat detail
-/power/classes/[class]/        class detail (full — features, traits, archetypes)
-/power/classes/[class]/[arch]/ archetype detail
-/power/classes/[class]/traits/[trait]/  trait detail
+/power/classes/[class]/        class detail (full — features, traits, progression table, inline archetype selector)
+/power/classes/[class]/traits/[trait]/  trait detail (exists)
 /power/using-spheres-of-power/ intro article (exists)
 /power/casting-traditions/      rules article (exists)
 /might/                        might index
@@ -168,6 +195,21 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 - V36. All Might sphere conversions must pass `npm run build` — V34 applies to each sphere individually before marking COMPLETE.
 - V37. Duplicate talent IDs (`type:sourceBook:id`) across different spheres must be manually disambiguated (e.g. `smash` → `smash-brute`). Original file path and display name stay unchanged.
 - V38. Tags that exist in `ultimate-spheres-of-power` must NOT be redefined in Might — use the existing Power definition. Only create new Might tag files when no Power equivalent exists.
+
+**Class family (V39–V44)**
+
+- V39. `casterTier` on `ClassEntry` must be one of `"high" | "mid" | "low" | "none"` — drives computed Caster Level, Magic Talents, and Spell Pool columns in the progression table.
+- V40. `class-trait` tag must be auto-injected by `buildOrderedTagIds()` for all `ClassTraitEntry` entries — no hardcoded label spans.
+- V41. Class trait rendering must follow the talent design pattern: `.talent-header` > `.talent-header-top` (name + source) + `.talent-header-bottom` (TagBadge components).
+- V42. `*Source: Book*` lines must be stripped from markdown bodies before rendering (`stripBodySource()`) — source attribution is shown via metadata labels and sidebar callouts, never inline in body text.
+- V43. Prerequisites must render as `**Prerequisites:** {req}` on a separate line below the trait heading — never inline `(requires ...)` next to the name.
+- V44. Class progression table headers must use `white-space: normal` + `overflow-wrap: break-word` for responsive wrapping. Table wrapper must have a slim custom scrollbar.
+
+**Archetype system (V45–V47)**
+
+- V45. Archetype features use `replaces` (string array of base feature IDs) and `alters` (string array) to specify what they modify. `mutuallyExclusive: true` (default) blocks stacking with other features that replace/alter the same base.
+- V46. Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. They belong to a virtual archetype created at build time — no content file for the parent.
+- V47. The archetype selector must persist selections in URL query params (`?archetypes=id1,id2`) and restore them on page load.
 
 ---
 
@@ -319,8 +361,8 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: T45–T50 done; **T44 (F
 | id | date       | cause | fix |
 |----|------------|-------|-----|
 | B1 | 2026-05-25 | Search listeners lost on back/forward navigation due to View Transitions swapped DOM | V25 / T50 — init moved to `astro:page-load` |
-| B2 | 2026-05-25 | Archetype selector visuals are unfinished | _(open)_ |
-| B3 | 2026-05-25 | Bestial traits dropdown logic completely broken due to CSS grid refactor | _(open)_ |
+| B2 | 2026-05-25 | Archetype selector visuals are unfinished | Resolved — TomSelect integrated with custom styling, archetype badges, warning banner, table/ToC updates |
+| B3 | 2026-05-25 | Bestial traits dropdown logic completely broken due to CSS grid refactor | Resolved — grid-template-rows animation, toggle rebinding on archetype swap, visual distinction from features |
 | B4 | 2026-05-29 | `parseSectionContext` used `includes('feat')` — matched "features" in "+++ Companion Features", premature-flushed base ability and reset section context | Changed to `/\bfeats?\b/` |
 | B5 | 2026-06-03 | "SM-" tag needs to be removed from codebase | Resolved |
 | B6 | 2026-06-03 | z-index issue on tags page: tags appear on top of search bar results/dropdown | Added `position: relative` and `z-index: 9999` to `.site-header-wrap` |

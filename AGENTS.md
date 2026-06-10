@@ -72,6 +72,12 @@ src/content/<book-slug>/
   spheres/<id>.md
   feats/<id>.md
   classes/<id>.md
+  class-features/<id>.md
+  class-traits/<class>/<id>.md
+  archetypes/<id>.md
+  archetype-features/<class>/<id>.md
+  articles/<id>.md
+  tags/<id>.md
   ...                 # entry type is inferred from the path by lib/inferFromPath.ts
 ```
 
@@ -91,6 +97,18 @@ Talent body in markdown. Internal links resolve via the remarkEntryLinks plugin.
 ```
 
 > **Migration note**: Power entries under `ultimate-spheres-of-power/` still carry legacy `system: power` frontmatter (T54/T55 not done). That frontmatter is honoured as an explicit override but must not be added to new content.
+
+**Class-family entry fields:**
+
+| Entry type | Key fields beyond base |
+|---|---|
+| `class` | `hitDie`, `alignment`, `startingWealth`, `skillRanks`, `classSkills`, `babProgression`, `fortSaveProgression`, `refSaveProgression`, `willSaveProgression`, `classTable` (JSON), `casterTier` (high\|mid\|low\|none) |
+| `class-feature` | `className`, `level` (number or number[]), `isTraitContainer?` |
+| `class-trait` | `className`, `featureId`, `requires?`, `tags` (e.g. `["extraordinary"]`) |
+| `archetype` | `className`, `spheres?` (string[] for cross-referencing) |
+| `archetype-feature` | `archetypeId`, `level`, `replaces?`, `alters?`, `mutuallyExclusive?` (default true), `classOverrides?`, `isAlternateClassFeature?` |
+
+`class-traits/` files are organized per-class (e.g. `class-traits/shifter/shifter-bestial-rage.md`) and use `featureId` to link to their parent feature. `archetype-features/` follow the same per-class convention.
 
 Special cases:
 - **`__built-in__/`** — house book holding cross-sphere / system tags (`type: tag`).
@@ -113,8 +131,12 @@ Adding content the supported way:
 | `src/lib/url.ts` | base-path-aware link helper — **use `url()` for every internal link** (SPEC C2) |
 | `src/lib/remarkEntryLinks.ts` | remark plugin turning entry references into links during markdown build |
 | `src/lib/types.ts` | entry + `ResolvedMaps` TypeScript types |
+| `src/lib/tags.ts` | `buildOrderedTagIds()` — auto-injects system tags (talent, feat, sphere, class-trait, tiers) and sorts by tag priority |
+| `src/lib/renderBody.ts` | Markdown rendering pipeline (unified) + `splitBodyOnMarkers()` for base-ability extraction |
 | `src/config/site.ts` | `SYSTEMS` registry: label, color, route, subtitle, etc. (single source — SPEC V4/V5) |
 | `src/components/SVGSprite.astro` | every sphere icon `<symbol>` (+ `si-fallback`) |
+| `scripts/class-parser.mjs` | Parses Wikidot class source → class/feature/trait `.md` files |
+| `scripts/generate-bestial-traits.mjs` | Parses Shifter Bestial Trait Wikidot source → trait `.md` files |
 
 ## Conventions & gotchas
 
@@ -124,6 +146,10 @@ Adding content the supported way:
 - **Placeholders**: stub dates must be `1970-01-01` and stub strings conspicuously fake (`"PLACEHOLDER"`/`"TBD"`) — never plausible-but-wrong values (SPEC §P).
 - **Privacy**: no external requests, analytics, or tracking; document any `localStorage` key (name, purpose, retention, deletion path) and keep `/privacy/` accurate (SPEC V11–V14).
 - **IDs** are lowercase kebab-case and must equal the filename (SPEC C10/V16).
+- **Source attribution**: Never write `*Source: Book*` into markdown bodies. Source is shown via `.talent-source` label on headings (from `sourceBook` + `bookMetaMap`) and `SourceBookCallout` in sidebar. Existing `*Source:*` lines are stripped by `stripBodySource()` at render time.
+- **Class trait rendering**: Traits use the `.talent-header` pattern (top row: name + source; bottom row: `TagBadge` components via `buildOrderedTagIds()`). The `class-trait` tag is auto-injected — never hardcode a label span.
+- **Prerequisites**: On trait entries, `requires` frontmatter renders as `**Prerequisites:** {req}` below the heading — never inline `(requires ...)`.
+- **ACFs**: Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. They use `archetypeId: {class}-alternate-class-features` (virtual — no content file).
 
 ## Scripts & content pipeline
 
