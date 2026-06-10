@@ -76,24 +76,24 @@ export async function getStaticPaths() {
     const classArchetypes = [...archetypeMap.values()]
       .filter(a => a.className === cls.id);
 
-    // Auto-inject virtual "Alternate Class Features" archetype if any ACFs exist
+    // Auto-inject virtual ACF archetypes — one per alternate class feature
     const acfFeatures = [...archetypeFeatureMap.values()]
       .filter(f => f.isAlternateClassFeature && f.archetypeId === `${cls.id}-alternate-class-features`);
-    const hasAcfs = acfFeatures.length > 0;
-    const acfArchetype: (typeof classArchetypes)[number] | null = hasAcfs ? {
-      id: `${cls.id}-alternate-class-features`,
-      name: "Alternate Class Features",
+    const acfArchetypes = acfFeatures.map(af => ({
+      id: af.id,  // each ACF is its own virtual archetype
+      name: af.name,
       className: cls.id,
       system: cls.system,
       sourceBook: cls.sourceBook,
       tags: [],
       type: "archetype" as const,
-    } : null;
+      _acfReplaces: af.replaces || [],  // for description rendering
+    }));
 
-    const allArchetypes = [...classArchetypes, ...(acfArchetype ? [acfArchetype] : [])];
+    const allArchetypes = [...classArchetypes, ...acfArchetypes];
 
     const classArchetypeFeatures = [...archetypeFeatureMap.values()]
-      .filter(f => allArchetypes.some(a => a.id === f.archetypeId))
+      .filter(f => allArchetypes.some(a => a.id === f.archetypeId) || f.isAlternateClassFeature)
       .sort((a, b) => {
         const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
         const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
@@ -397,7 +397,10 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
               {archetypes.map(arc => {
                 const collEntry = archetypeCollEntries.get(arc.id);
                 const rawText = collEntry?.body || '';
-                const desc = rawText.trim().split('\n')[0].replace(/<[^>]+>/g, '').substring(0, 150) + (rawText.length > 150 ? '...' : '');
+                const acfReplaces = (arc as any)._acfReplaces as string[] | undefined;
+                const desc = acfReplaces?.length
+                  ? `Replaces: ${acfReplaces.map(id => id.startsWith(cls.id + '-') ? id.slice(cls.id.length + 1).replace(/-/g, ' ') : id.replace(/-/g, ' ')).join(', ')}`
+                  : (rawText.trim().split('\n')[0].replace(/<[^>]+>/g, '').substring(0, 150) + (rawText.length > 150 ? '...' : ''));
                 return (
                   <option value={arc.id} data-name={arc.name} data-desc={desc || arc.name}>{arc.name}</option>
                 );
@@ -523,8 +526,9 @@ const hasCasting = cls.casterTier && cls.casterTier !== "none";
       {archetypeFeatures.map(async (feature) => {
         const collEntry = archetypeFeatureCollEntries.get(feature.id);
         const { Content } = collEntry ? await render(collEntry) : { Content: null };
+        const templateArchId = feature.isAlternateClassFeature ? feature.id : feature.archetypeId;
         return (
-          <template class="archetype-feature-template" data-feature-id={feature.id} data-name={feature.name} data-archetype-id={feature.archetypeId} data-level={JSON.stringify(feature.level)} data-replaces={JSON.stringify(feature.replaces || [])} data-alters={JSON.stringify(feature.alters || [])} data-mutually-exclusive={JSON.stringify(feature.mutuallyExclusive !== false)} data-class-overrides={JSON.stringify(feature.classOverrides || {})}>
+          <template class="archetype-feature-template" data-feature-id={feature.id} data-name={feature.name} data-archetype-id={templateArchId} data-level={JSON.stringify(feature.level)} data-replaces={JSON.stringify(feature.replaces || [])} data-alters={JSON.stringify(feature.alters || [])} data-mutually-exclusive={JSON.stringify(feature.mutuallyExclusive !== false)} data-class-overrides={JSON.stringify(feature.classOverrides || {})}>
             <div class="archetype-feature-rendered-content">
               {Content ? <Content /> : null}
             </div>
