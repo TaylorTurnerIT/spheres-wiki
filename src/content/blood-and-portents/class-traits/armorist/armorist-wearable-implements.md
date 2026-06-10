@@ -15,4 +15,3 @@ Wearable implements grant all their normal benefits as an implement while worn a
 
 **Example:** An armorist binds a pair of boots, which serves as a Time sphere implement and grants the armorist a bonus on Acrobatics checks due to her increased alacrity while wearing them. The chosen skill does not impact a wearable implement's normal effects but is a good roleplay tool to justify why a wearable implement grants this bonus.
 
-*Source: BaP*

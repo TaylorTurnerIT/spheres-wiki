@@ -16,4 +16,3 @@ The following abilities replace animal companion, empower companion, and life co
 
 **Blessing of the Zephyr (Ex):** At 20th level, the incanter may choose to make one instance of a geomancing or spirit ability from the air package that he casts be permanent. Any spell point costs must be paid as normal, and if the effect requires concentration, its duration instead changes to permanent (until changed). The incanter can have no more than one effect made permanent with this ability at one time. If the incanter designates another geomancing or spirit ability as permanent, the previous permanent effect ends.
 
-*Source: EO3*

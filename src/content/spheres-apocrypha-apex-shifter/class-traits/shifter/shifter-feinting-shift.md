@@ -10,4 +10,3 @@ featureId: bestial-trait
 
 When the shifter applies a shapeshift to herself, she may make a feint check as part of that same action.
 
-*Source: Apoc*

@@ -24,4 +24,3 @@ The incanter also gains the following metal spirit ability:
 - **Recover Ore:** The incanter may choose to make one instance of their Recover Ore ability permanent. If the incanter designates another instance of the Recover Ore ability as permanent, the previous permanent effect ends.
 - **Reforge:** The incanter may reshape metal objects into forms with complex moving parts (making a Craft check against the object's Craft DC). The incanter gains a bonus to Craft checks made this way equal to 1/2 their caster level.
 
-*Source: EO3*

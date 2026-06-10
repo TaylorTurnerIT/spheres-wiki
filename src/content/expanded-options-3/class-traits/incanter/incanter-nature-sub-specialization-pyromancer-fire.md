@@ -18,4 +18,3 @@ The following abilities replace animal companion, empower companion, and life co
 
 - **Flesh of the Inferno (spirit):** You can spend a standard action and 2 spell points to have your body give off an intense heat for 1 round per caster level. Creatures within 60 feet who observe you (functioning as a gaze attack) and do not avert their gaze from you are dazzled and treat all creatures as if they had concealment (20% miss chance) for 1 round). Additionally, whenever you would be reduced to 0 or fewer hit points, you immediately stabilize. Finally, your body gives off such intense heat that any enemy that ends their turn within 10 feet of you suffers fire damage equal to the largest sized fire you can create, and is set on fire; a successful Reflex save halves this damage and negates catching fire. A creature can only be affected by this spirit talent once per round.
 
-*Source: EO3*

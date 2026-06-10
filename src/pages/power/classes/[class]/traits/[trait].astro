@@ -59,7 +59,12 @@ export async function getStaticPaths() {
 
 const { trait, cls, collEntry, sourceBook, tagMap, bookMetaMap } = Astro.props;
 
-const TraitContent = collEntry ? (await render(collEntry)).Content : null;
+function stripBodySource(body: string): string {
+  return body.replace(/\n\*Source:.+$/m, '').trimEnd();
+}
+
+const cleanBody = collEntry ? stripBodySource(collEntry.body || '') : null;
+const TraitContent = (collEntry && cleanBody !== null) ? (await render({ ...collEntry, body: cleanBody })).Content : null;
 
 const orderedTagIds = buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {});
 ---

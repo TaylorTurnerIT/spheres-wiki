@@ -12,4 +12,3 @@ At 4th level, the shifter gains DR/magic equal to 1/3 their shifter level. If th
 
 *Note:* An alternate class feature is similar to a modular archetype. By swapping out a single class feature for another similar class feature, a player is able to more customize and finetune their character through their chosen classes. An alternate class feature is treated as the original class feature for the purposes of exchanging it with an archetype and cannot be selected if an archetype would replace the original class feature.
 
-*Source: Origin*

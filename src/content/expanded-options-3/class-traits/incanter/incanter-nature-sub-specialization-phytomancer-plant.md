@@ -16,4 +16,3 @@ The following abilities replace animal companion, empower companion, and life co
 
 **Natural Soul (Ex):** At 20th level, the incanter is treated as either his original creature type or a plant for the purposes of spells and abilities, whichever is most beneficial to him. Additionally, he gains immunity to mind-affecting and poison effects; the incanter may choose to be affected by such effects if they wish (such as being subject to a beneficial mind-affecting effect).
 
-*Source: EO3*

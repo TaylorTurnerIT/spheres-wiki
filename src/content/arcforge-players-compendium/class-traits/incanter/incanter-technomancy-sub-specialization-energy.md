@@ -30,4 +30,3 @@ The following abilities replace extended sprite, warning sprite and permanent sp
 
 **Twist Time (Su):** At 20th level, the incanter gains two swift actions per turn instead of one.
 
-*Source: LG*

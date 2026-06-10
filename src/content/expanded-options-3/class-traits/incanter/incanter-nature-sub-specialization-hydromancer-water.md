@@ -26,4 +26,3 @@ Maintaining this effect is a free action, and the incanter can use this ability 
 
 Additionally, whenever the incanter uses his grace of the marid spirit ability, he can spend an additional spell point to also grant the target the following benefits: The target gains DR 10/slashing, increases their reach by +10 feet, and impose a -4 penalty to attempts made to confirm a critical hit against them. The target (and their equipment) can also pass through small holes or narrow openings and cracks (except other creatures). Finally, they can spend a standard action to extinguish a non-magical fire by touching it; they can attempt to extinguish magical fires this way as well, but it requires a successful magic skill check against the caster's magic skill defense (the MSD of a supernatural effect is 11 + the CR of the effect's source). Even if they fail to extinguish a fire, they are not harmed by it.
 
-*Source: EO3*

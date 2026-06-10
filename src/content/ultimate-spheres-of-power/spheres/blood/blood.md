@@ -49,7 +49,6 @@ A creature who cannot suffer blood loss cannot be the target of a blood art. Tar
 ----
 
 ### Blood Arts 
-*Source: Blood and Portents*
 
 The Blood and Portents handbook introduces a new set of Blood sphere talents marked (blood art). These talents grant a Blood sphere caster the ability to cast blood arts, which briefly manipulate or transfigure blood.
 

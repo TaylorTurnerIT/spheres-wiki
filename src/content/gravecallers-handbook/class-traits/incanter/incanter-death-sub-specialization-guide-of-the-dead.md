@@ -49,4 +49,3 @@ When GMing for a character with the ability to raise housed souls, giving the sp
 
 **Perfect Knowledge:** At 20th level, anytime the incanter would roll for initiative or a Knowledge check, instead assume the roll would have resulted in a natural 20.
 
-*Source: Gravecaller's HB*

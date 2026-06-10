@@ -76,4 +76,3 @@ A slain blood construct may be replaced with an 8 hour ritual and sufficient blo
 
 **Spirit Touch (Sp):** At 20th level, the incanter can touch incorporeal creatures as if his body, natural weapons, and wielded weapons were all under the effects of the ghost touch weapon special ability. He may activate or suppress this ability as a free action, and while this ability is active, he is immune to the touch attacks of shadows, ghosts, and other incorporeal creatures.
 
-*Source: EO3*

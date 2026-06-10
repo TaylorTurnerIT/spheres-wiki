@@ -27,4 +27,3 @@ At 20th level, the incanter may spend an additional spell point when using this 
 
 **Protected Life (Su):** At 20th level, the first time each day that the incanter would be reduced to 0 or fewer hit points by damage, he is instead reduced to 1.
 
-*Source: EO3*
