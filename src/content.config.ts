@@ -1,6 +1,10 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 import { inferFromPath } from "./lib/inferFromPath";
+import { EventEmitter } from "node:events";
+
+// Increase listener limit because Astro creates a watcher per book collection
+EventEmitter.defaultMaxListeners = 150;
 
 function spheresLoader(options: Parameters<typeof glob>[0] & { base: string }) {
   const baseLoader = glob(options);
