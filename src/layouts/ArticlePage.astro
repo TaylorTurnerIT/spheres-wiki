@@ -187,10 +187,99 @@ const metaDescription = description ?? `${article.name}: a rules guide for ${sys
     margin: 1.2rem 0 0.3rem;
   }
 
-  .article-content p { margin: 0.5rem 0; }
+  /* ── Line length & Typography ────────────────────────────── */
+  .article-content {
+    line-height: 1.6;
+  }
+
+  .article-content p { margin: 1rem 0; }
   .article-content ul,
-  .article-content ol { margin: 0.5rem 0 0.5rem 1.5rem; }
-  .article-content li { margin-bottom: 0.25rem; }
+  .article-content ol { margin: 1rem 0 1rem 1.5rem; }
+  .article-content li { margin-bottom: 0.4rem; }
+
+  /* ── Blockquotes & Pull quotes ───────────────────────────── */
+  .article-content blockquote {
+    font-size: var(--fs-lg);
+    font-family: var(--font-body);
+    color: var(--clr-text);
+    border-left: 4px solid var(--clr-active);
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.5rem;
+    background: color-mix(in srgb, var(--clr-active) 3%, transparent);
+    font-style: italic;
+  }
+
+  .article-content blockquote > *:first-child {
+    margin-top: 0;
+  }
+
+  .article-content blockquote > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .article-content .pull-quote {
+    float: right;
+    width: clamp(250px, 30%, 350px);
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    font-size: var(--fs-xl);
+    font-family: var(--font-display);
+    color: var(--clr-active);
+    text-align: center;
+    border-top: 2px solid var(--clr-active);
+    border-bottom: 2px solid var(--clr-active);
+    padding: 1.5rem 0;
+    font-style: italic;
+  }
+
+  /* ── Figures & Captions ──────────────────────────────────── */
+  .article-content figure {
+    margin: 2.5rem 0;
+    max-width: 100%;
+  }
+
+  .article-content figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+  }
+
+  .article-content figcaption,
+  .article-content .caption {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    text-align: center;
+    margin-top: 0.75rem;
+    font-style: italic;
+  }
+
+  /* ── Sidebars / Asides ───────────────────────────────────── */
+  .article-content aside,
+  .article-content .article-sidebar {
+    float: right;
+    width: clamp(250px, 30%, 350px);
+    margin: 0 0 1.5rem 1.5rem;
+    padding: 1.25rem;
+    background: color-mix(in srgb, var(--clr-surface) 60%, transparent);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    font-size: var(--fs-sm);
+  }
+
+  .article-content aside h3,
+  .article-content .article-sidebar h3 {
+    margin-top: 0;
+    font-size: var(--fs-md);
+  }
+
+  /* ── Section breaks ──────────────────────────────────────── */
+  .article-content hr {
+    border: none;
+    height: 1px;
+    background: var(--clr-border);
+    margin: 3rem auto;
+    width: 25%;
+    max-width: 200px;
+  }
 
   /* ── Resource Cards ──────────────────────────────────────── */
   .article-content .resource-link-block {

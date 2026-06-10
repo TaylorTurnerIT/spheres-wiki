@@ -6,9 +6,7 @@ system: power
 tags: []
 ---
 
-<div class="wiki-note">
-  <strong>Wiki Note:</strong> This wiki focuses on the <strong>Ultimate Spheres of Power</strong> edition of the rules. If you are looking for the original (legacy) Spheres of Power content, it remains available on the <a href="http://spheresofpower.wikidot.com/" target="_blank" rel="noopener noreferrer">original Spheres of Power Wikidot wiki</a>. If you're new to Spheres of Power, we recommend reading everything on this page. For more help, see [How to Build a Spherecaster](/power/how-to-build-spherecaster/).
-</div>
+> **Wiki Note:** This wiki focuses on the <strong>Ultimate Spheres of Power</strong> edition of the rules. If you are looking for the original (legacy) Spheres of Power content, it remains available on the [original Spheres of Power Wikidot wiki](http://spheresofpower.wikidot.com/). If you're new to Spheres of Power, we recommend reading everything on this page. For more help, see [How to Build a Spherecaster](/power/how-to-build-spherecaster/).
 
 ## Using The Spheres
 
@@ -42,32 +40,31 @@ All casting classes fall into one of three categories: High-Casters (wizards, so
 
 If you're playing with the fractional base bonus rules, treat low-casting as 1/2 progression, mid-casting as 3/4ths progression, and high-casting as full progression.
 
-<table class="wiki-table">
-  <caption><strong>Table: Caster Level</strong></caption>
-  <thead><tr><th>Level</th><th>High Caster</th><th>Mid-Caster</th><th>Low Caster</th></tr></thead>
-  <tbody>
-    <tr><td>1</td><td>+1</td><td>0</td><td>0</td></tr>
-    <tr><td>2</td><td>+2</td><td>+1</td><td>+1</td></tr>
-    <tr><td>3</td><td>+3</td><td>+2</td><td>+1</td></tr>
-    <tr><td>4</td><td>+4</td><td>+3</td><td>+2</td></tr>
-    <tr><td>5</td><td>+5</td><td>+3</td><td>+2</td></tr>
-    <tr><td>6</td><td>+6</td><td>+4</td><td>+3</td></tr>
-    <tr><td>7</td><td>+7</td><td>+5</td><td>+3</td></tr>
-    <tr><td>8</td><td>+8</td><td>+6</td><td>+4</td></tr>
-    <tr><td>9</td><td>+9</td><td>+6</td><td>+4</td></tr>
-    <tr><td>10</td><td>+10</td><td>+7</td><td>+5</td></tr>
-    <tr><td>11</td><td>+11</td><td>+8</td><td>+5</td></tr>
-    <tr><td>12</td><td>+12</td><td>+9</td><td>+6</td></tr>
-    <tr><td>13</td><td>+13</td><td>+9</td><td>+6</td></tr>
-    <tr><td>14</td><td>+14</td><td>+10</td><td>+7</td></tr>
-    <tr><td>15</td><td>+15</td><td>+11</td><td>+7</td></tr>
-    <tr><td>16</td><td>+16</td><td>+12</td><td>+8</td></tr>
-    <tr><td>17</td><td>+17</td><td>+12</td><td>+8</td></tr>
-    <tr><td>18</td><td>+18</td><td>+13</td><td>+9</td></tr>
-    <tr><td>19</td><td>+19</td><td>+14</td><td>+9</td></tr>
-    <tr><td>20</td><td>+20</td><td>+15</td><td>+10</td></tr>
-  </tbody>
-</table>
+**Table: Caster Level**
+| Level | High Caster | Mid-Caster | Low Caster |
+|---|---|---|---|
+| 1 | +1 | 0 | 0 |
+| 2 | +2 | +1 | +1 |
+| 3 | +3 | +2 | +1 |
+| 4 | +4 | +3 | +2 |
+| 5 | +5 | +3 | +2 |
+| 6 | +6 | +4 | +3 |
+| 7 | +7 | +5 | +3 |
+| 8 | +8 | +6 | +4 |
+| 9 | +9 | +6 | +4 |
+| 10 | +10 | +7 | +5 |
+| 11 | +11 | +8 | +5 |
+| 12 | +12 | +9 | +6 |
+| 13 | +13 | +9 | +6 |
+| 14 | +14 | +10 | +7 |
+| 15 | +15 | +11 | +7 |
+| 16 | +16 | +12 | +8 |
+| 17 | +17 | +12 | +8 |
+| 18 | +18 | +13 | +9 |
+| 19 | +19 | +14 | +9 |
+| 20 | +20 | +15 | +10 |
+
+
 
 ### Casting Ability Modifier
 
@@ -93,9 +90,7 @@ Sometimes, a power or circumstance will call for a magic skill check. At this po
 
 When a spherecaster attempts a concentration check (as called for by the Pathfinder Core Rulebook), instead of rolling a d20 and adding his caster level + his casting ability modifier, he rolls a d20 and adds his MSB + his casting ability modifier to the roll. Treat an effect's caster level/2 as the effective spell level for this purpose. A spellcaster may always choose to manifest a magical effect at a lower caster level than his total in order to attempt a concentration check easier.
 
-<div class="example-box">
-  <strong>Example:</strong> When casting defensively, a spellcaster must attempt a concentration check (1d20 + caster level + Int, Wis, or Cha modifier) against a DC equal to 15 + double the spell level. In Spheres of Power, this would instead require a check equal to 1d20 + MSB + casting ability modifier, and would be against a DC equal to 15 + the caster level of the ability.
-</div>
+> **Example:** When casting defensively, a spellcaster must attempt a concentration check (1d20 + caster level + Int, Wis, or Cha modifier) against a DC equal to 15 + double the spell level. In Spheres of Power, this would instead require a check equal to 1d20 + MSB + casting ability modifier, and would be against a DC equal to 15 + the caster level of the ability.
 
 When attempting to penetrate a creature's spell resistance, she rolls a d20 and adds her MSB to the roll. An MSB is also used when attempting to counter another caster's magic, such as when using the Counterspell feat.
 
@@ -103,26 +98,25 @@ Any feat or ability that would normally call for a caster level check instead ca
 
 ##### Table: Spherecasting and Equivalent Spell Level
 
-<table class="wiki-table">
-  <thead><tr><th>Sphere Caster Level</th><th>Equivalent Spell Level</th><th>Sphere Caster Level</th><th>Equivalent Spell Level</th></tr></thead>
-  <tbody>
-    <tr><td>1</td><td>0th</td><td>16</td><td>8th</td></tr>
-    <tr><td>2</td><td>1st</td><td>17</td><td>8th</td></tr>
-    <tr><td>3</td><td>1st</td><td>18</td><td>9th</td></tr>
-    <tr><td>4</td><td>2nd</td><td>19</td><td>9th</td></tr>
-    <tr><td>5</td><td>2nd</td><td>20</td><td>10th</td></tr>
-    <tr><td>6</td><td>3rd</td><td>21</td><td>10th</td></tr>
-    <tr><td>7</td><td>3rd</td><td>22</td><td>11th</td></tr>
-    <tr><td>8</td><td>4th</td><td>23</td><td>11th</td></tr>
-    <tr><td>9</td><td>4th</td><td>24</td><td>12th</td></tr>
-    <tr><td>10</td><td>5th</td><td>25</td><td>12th</td></tr>
-    <tr><td>11</td><td>5th</td><td>26</td><td>13th</td></tr>
-    <tr><td>12</td><td>6th</td><td>27</td><td>13th</td></tr>
-    <tr><td>13</td><td>6th</td><td>28</td><td>14th</td></tr>
-    <tr><td>14</td><td>7th</td><td>29</td><td>14th</td></tr>
-    <tr><td>15</td><td>7th</td><td>30</td><td>15th</td></tr>
-  </tbody>
-</table>
+| Sphere Caster Level | Equivalent Spell Level | Sphere Caster Level | Equivalent Spell Level |
+|---|---|---|---|
+| 1 | 0th | 16 | 8th |
+| 2 | 1st | 17 | 8th |
+| 3 | 1st | 18 | 9th |
+| 4 | 2nd | 19 | 9th |
+| 5 | 2nd | 20 | 10th |
+| 6 | 3rd | 21 | 10th |
+| 7 | 3rd | 22 | 11th |
+| 8 | 4th | 23 | 11th |
+| 9 | 4th | 24 | 12th |
+| 10 | 5th | 25 | 12th |
+| 11 | 5th | 26 | 13th |
+| 12 | 6th | 27 | 13th |
+| 13 | 6th | 28 | 14th |
+| 14 | 7th | 29 | 14th |
+| 15 | 7th | 30 | 15th |
+
+
 
 If a creature gains magic or a magic-like effect from a source other than casting, their MSB and MSD are determined by their Hit Dice associated with that source (for example, their class level if the effect comes from a class, or their character level if it comes from a feat or another class-neutral source).
 
@@ -134,19 +128,18 @@ Most sphere abilities require a standard action to use, but there are exceptions
 
 **Note:** Unless otherwise specified, a sphere ability cannot have a shorter casting time than a swift action, nor a longer casting time than 1 hour. Sphere effects with a casting time of a swift or immediate action do not provoke attacks of opportunity.
 
-<table class="wiki-table wiki-table--center">
-  <caption><strong>Chart: Casting Times</strong></caption>
-  <tbody>
-    <tr><td>1 Hour</td></tr>
-    <tr><td>10 Minutes</td></tr>
-    <tr><td>1 Minute</td></tr>
-    <tr><td>1 Round</td></tr>
-    <tr><td>Full-Round Action</td></tr>
-    <tr><td>Standard Action</td></tr>
-    <tr><td>Move Action</td></tr>
-    <tr><td>Swift Action</td></tr>
-  </tbody>
-</table>
+**Chart: Casting Times**
+| 1 Hour |
+|---|
+| 10 Minutes |
+| 1 Minute |
+| 1 Round |
+| Full-Round Action |
+| Standard Action |
+| Move Action |
+| Swift Action |
+
+
 
 ### Distances
 
@@ -156,19 +149,18 @@ Many sphere abilities and class powers use close, medium, and long as indicators
 
 Just as with casting times and distances, durations also can increase or decrease by steps, according to Chart: Durations:
 
-<table class="wiki-table wiki-table--center">
-  <caption><strong>Chart: Durations</strong></caption>
-  <thead><tr><th>Durations</th></tr></thead>
-  <tbody>
-    <tr><td>Permanent</td></tr>
-    <tr><td>1 day per caster level</td></tr>
-    <tr><td>1 hour per caster level</td></tr>
-    <tr><td>10 minutes per caster level</td></tr>
-    <tr><td>1 minute per caster level</td></tr>
-    <tr><td>1 round per caster level</td></tr>
-    <tr><td>concentration/1 round</td></tr>
-  </tbody>
-</table>
+**Chart: Durations**
+| Durations |
+|---|
+| Permanent |
+| 1 day per caster level |
+| 1 hour per caster level |
+| 10 minutes per caster level |
+| 1 minute per caster level |
+| 1 round per caster level |
+| concentration/1 round |
+
+
 
 Generally speaking, a duration of 'instantaneous' means that the effect is no longer considered magical after it is made; it cannot be dispelled after it has taken effect. Durations of instantaneous are generally considered not part of the progression of durations.
 
@@ -178,20 +170,16 @@ Unlike the core Pathfinder RPG magic system, it is possible to cast a sphere abi
 
 You may not resume concentrating on an effect once you have stopped concentrating on it, even if the effect lingers or had its duration maintained through the expenditure of spell points.
 
-<div class="author-note">
-  <strong>Author's Note – When Does Concentration Happen?</strong>
-  <p>Pathfinder and prior editions have left "how" concentration works vague. We recommend choosing one of the two options:</p>
-  <ol>
-    <li>When concentrating on a spell or sphere effect, the caster must spend the action to concentrate on their spell or sphere effect at the start of each turn before other actions are taken. If the caster does not spend the required action, concentration on that spell or sphere effect ends.</li>
-    <li>When concentrating on a spell or sphere effect, the caster must spend the action to concentrate on their spell or sphere effect before the end of their turn. The caster may take other actions before spending the action, and may choose to not spend the action and allow concentration to end. This may allow casters to benefit from spells or sphere effects they created in the previous turn without spending an action during their turn (such as using Time sphere's haste during a previous turn, and then benefitting normally from haste the next, which then ends at the end of their turn).</li>
-  </ol>
-</div>
+> **Author's Note – When Does Concentration Happen?**
+> Pathfinder and prior editions have left "how" concentration works vague. We recommend choosing one of the two options:
+> 1. When concentrating on a spell or sphere effect, the caster must spend the action to concentrate on their spell or sphere effect at the start of each turn before other actions are taken. If the caster does not spend the required action, concentration on that spell or sphere effect ends.
+> 1. When concentrating on a spell or sphere effect, the caster must spend the action to concentrate on their spell or sphere effect before the end of their turn. The caster may take other actions before spending the action, and may choose to not spend the action and allow concentration to end. This may allow casters to benefit from spells or sphere effects they created in the previous turn without spending an action during their turn (such as using Time sphere's haste during a previous turn, and then benefitting normally from haste the next, which then ends at the end of their turn).
 
-<div class="author-note">
-  <strong>Author's Note – When Do I Spend a Spell Point to Maintain Duration Without Concentration?</strong>
-  <p>Many sphere effects have the option to spend spell points to maintain their duration without requiring concentration. The caster may spend the spell point cost to maintain a sphere effect's duration without concentration as a free action during their turn. A caster cannot spend spell points to maintain an effect's duration when it is not their turn.</p>
-  <p>If using the above concentration timing that concentration must be done at the start of the caster's turn, the caster may spend spell points to maintain the effect's duration at that time.</p>
-</div>
+
+> **Author's Note – When Do I Spend a Spell Point to Maintain Duration Without Concentration?**
+> Many sphere effects have the option to spend spell points to maintain their duration without requiring concentration. The caster may spend the spell point cost to maintain a sphere effect's duration without concentration as a free action during their turn. A caster cannot spend spell points to maintain an effect's duration when it is not their turn.
+> If using the above concentration timing that concentration must be done at the start of the caster's turn, the caster may spend spell points to maintain the effect's duration at that time.
+
 
 ### Line of Sight and Line of Effect
 
@@ -375,9 +363,8 @@ You may cast sphere effects at less than your maximum caster level (to a minimum
 
 Often, when utilizing the Spheres of Power system of magic with the base Pathfinder Roleplaying Game magic system or other magic system, questions arise as to how they interact, and often a GM is required to make many rulings off-the-cuff to allow them to interact, or otherwise rule they do not. This section will attempt to collect and outline rulings for how to allow the two magic systems to blend together, and serve as a guideline for rulings relating to interactions between the systems.
 
-<div class="author-note">
-  <strong>Author's Note:</strong> Where a guideline for transparency is not recommended, GM discretion is advised. Sphere effects, spherecasting, and similar should be treated similarly to normal spellcasting when and where appropriate. e.g. We do not feel it is necessary to specify that a sphere effect qualifies for a familiar's "deliver touch spells" because a sphere effect, as a singular "casted" effect with any of its relevant talents and modifiers is a "spell".
-</div>
+> **Author's Note:** Where a guideline for transparency is not recommended, GM discretion is advised. Sphere effects, spherecasting, and similar should be treated similarly to normal spellcasting when and where appropriate. e.g. We do not feel it is necessary to specify that a sphere effect qualifies for a familiar's "deliver touch spells" because a sphere effect, as a singular "casted" effect with any of its relevant talents and modifiers is a "spell".
+
 
 ### Caster Levels and Magic Skill Bonus
 
@@ -401,27 +388,26 @@ Temporary increases to caster levels, as well as increases gained from items, ne
 
 As the Spheres of Power system of magic does not utilize spell schools, and instead utilizes spheres as a distinction, many effects do not properly translate over. Many sphere effects could easily be considered to be part of multiple schools, and the GM should decide if this is fine for certain effects that enhance a player's sphere effects, or if the effect should only be treated as if they have one school. Effects that increase the caster level of spells from a certain school of magic instead increase the caster level of spheres related to that school of magic, and effects that require a certain spell slot of a school of magic to be cast or otherwise spent instead require a sphere effect to be cast from a related sphere.
 
-<table class="wiki-table">
-  <caption><strong>Table: School/Sphere Equivalents</strong></caption>
-  <thead><tr><th>Spell School</th><th>Sphere Equivalent</th></tr></thead>
-  <tbody>
-    <tr><td>Abjuration</td><td>Protection</td></tr>
-    <tr><td>Abjuration (good, evil, lawful, chaotic)</td><td>Effects with an alignment descriptor that protect others, Fate sphere</td></tr>
-    <tr><td>Conjuration (creation)</td><td>Effects that create something from nothing, Creation sphere</td></tr>
-    <tr><td>Conjuration (healing)</td><td>Effects that heal others directly, Life sphere</td></tr>
-    <tr><td>Conjuration (teleportation)</td><td>Effects that instantly relocate creatures or objects, Warp</td></tr>
-    <tr><td>Conjuration (calling, summoning)</td><td>Conjuration (and the Calling advanced talent)</td></tr>
-    <tr><td>Divination</td><td>Divination</td></tr>
-    <tr><td>Evocation<sup>1</sup></td><td>Various<sup>1</sup></td></tr>
-    <tr><td>Enchantment</td><td>Mind</td></tr>
-    <tr><td>Illusion</td><td>Illusion</td></tr>
-    <tr><td>Necromancy</td><td>Death, Blood</td></tr>
-    <tr><td>Transmutation</td><td>Enhancement, Fallen Fey<sup>2</sup>, Weather</td></tr>
-    <tr><td>Transmutation (polymorph)</td><td>Alteration</td></tr>
-    <tr><td>Transmutation (earth, air, fire, water)</td><td>Nature's specific packages</td></tr>
-    <tr><td>Universal</td><td>Mana</td></tr>
-  </tbody>
-</table>
+**Table: School/Sphere Equivalents**
+| Spell School | Sphere Equivalent |
+|---|---|
+| Abjuration | Protection |
+| Abjuration (good, evil, lawful, chaotic) | Effects with an alignment descriptor that protect others, Fate sphere |
+| Conjuration (creation) | Effects that create something from nothing, Creation sphere |
+| Conjuration (healing) | Effects that heal others directly, Life sphere |
+| Conjuration (teleportation) | Effects that instantly relocate creatures or objects, Warp |
+| Conjuration (calling, summoning) | Conjuration (and the Calling advanced talent) |
+| Divination | Divination |
+| Evocation<sup>1</sup> | Various<sup>1</sup> |
+| Enchantment | Mind |
+| Illusion | Illusion |
+| Necromancy | Death, Blood |
+| Transmutation | Enhancement, Fallen Fey<sup>2</sup>, Weather |
+| Transmutation (polymorph) | Alteration |
+| Transmutation (earth, air, fire, water) | Nature's specific packages |
+| Universal | Mana |
+
+
 
 <p class="table-footnote"><sup>1</sup> Evocation includes many different types of spells. Light spells would fall under the Light sphere, as well as most sphere effects with the light descriptor. Darkness spells would fall under the Dark sphere and most sphere effects with the dark descriptor. Many other sphere effects could qualify as evocation as well; generally, any spell or effect that conjures a magical effect that deals damage temporarily should fall under evocation (notably, most of the Destruction sphere, but even the Weather, Mind or Creation sphere could as well). GMs should use their own good judgement to determine which sphere effect would qualify as an evocation school effect.</p>
 
@@ -439,7 +425,8 @@ Certain classes, feats and other features require a spellcaster to know a certai
 
 Ability burn functions similarly to ability score damage, but may not be removed by any means other than 8 hours of resting, which removes all burn.
 
-<div class="author-note"><strong>Author's Note:</strong> Ability burn is not actually ability score damage. Immunity or the ability to ignore or reduce ability score damage does not apply to ability burn.</div>
+> **Author's Note:** Ability burn is not actually ability score damage. Immunity or the ability to ignore or reduce ability score damage does not apply to ability burn.
+
 
 ### Advanced Talents and Qualifications
 
@@ -455,7 +442,7 @@ Battered is a condition introduced in Spheres of Might. Certain options included
 
 **Battered (condition):** Heavy blows have left a creature with this condition vulnerable to further attacks, imposing a -2 penalty to the creature's CMD and preventing them from taking attacks of opportunity provoked by a creature performing a combat maneuver. Some talents have different effects or activation times against battered creatures. The battered condition can be removed by taking the total defense action, or through the restore ability of the Life sphere, the lesser restoration spell, or similar effects. When inflicting the battered condition on a target that is already battered, the rounds stack when determining duration.
 
-### Buying Casting Services <span class="source-tag">[TS]</span>
+### Buying Casting Services *(Source: TS)*
 
 Sometimes, you may want to buy spellcasting services from NPCs, either as one-time transactions (such as for curing otherwise-permanent ailments) or repeated support (for item crafting or other long-term projects). The price for casting services is 10 gp × the caster level of the effect × the effective spell level. The effective spell level of an ability starts at 0 for caster level 1, then goes up by one at every even caster level. For example, getting an NPC to cast a caster level 6 effect costs 10 × 6 × 3, or 180 gp. Payments per-day for crafting include all of the talents an NPC knows, so player characters do not have to purchase them separately if only hiring one NPC.
 
@@ -473,19 +460,18 @@ If using the hero points optional system from the Advanced Player's Guide, add t
 
 **Recover:** You may spend a hero point to regain a spent spell point, kismet point, shadow point, or hypnotism use.
 
-### Identifying Spherecasters <span class="source-tag">[WtD]</span>
+### Identifying Spherecasters *(Source: WtD)*
 
 Prior to attempting the Knowledge check, attempt a free Spellcraft check DC 10. Succeeding at this check will allow you to determine the casting tradition category, as well as the necessary Knowledge skill required to identify the specific casting tradition of the creature (DC is equal to 10 + the challenge rating of the target).
 
-<table class="wiki-table">
-  <thead><tr><th>Casting Tradition Category (Specific Tradition)<sup>1</sup></th><th>Knowledge Skill<sup>2</sup></th></tr></thead>
-  <tbody>
-    <tr><td>Arcane (Apothecary, Artificery, Bardic Magic, Blood Magic, Chomic Traditionalist, Contaminated, Defiler, Demonology, Dragon Magic, Fey Magic, Flame-Blooded, Pact Magic, Sin Wizard, Song Wielder, Shadow Tapper, Sorcerous Blood, Traditional Magic, Water-Magi, Wild-Born, and Wizardry)</td><td>Knowledge (arcana)</td></tr>
-    <tr><td>Divine (Blighter, Bloodletting, Corrupted Apostle, Divine Petitioner, Druidic, Elemental Shaman, Inherent Divinity, Keeper, Mysticism, Nomad Shaman, Runist, Spiritual, Ur-Priest, and Void Priest)</td><td>Knowledge (religion)</td></tr>
-    <tr><td>Natural (Lycanthrope or None)</td><td>According to creature type</td></tr>
-    <tr><td>Psychic (Addled, Battle Lord, Beast Charming, Bonneteur, Cartomancy, Chi Tracer, Dream Casting, Gadgeteer, Hypnotism, Ley-Line Tapper, Material Transmuter, Mind, Monastic, Scion Of The Crown, Strange Mentalist, Sword-Bound, Vitalist, and Wilder)</td><td>Knowledge (planes)</td></tr>
-  </tbody>
-</table>
+| Casting Tradition Category (Specific Tradition)<sup>1</sup> | Knowledge Skill<sup>2</sup> |
+|---|---|
+| Arcane (Apothecary, Artificery, Bardic Magic, Blood Magic, Chomic Traditionalist, Contaminated, Defiler, Demonology, Dragon Magic, Fey Magic, Flame-Blooded, Pact Magic, Sin Wizard, Song Wielder, Shadow Tapper, Sorcerous Blood, Traditional Magic, Water-Magi, Wild-Born, and Wizardry) | Knowledge (arcana) |
+| Divine (Blighter, Bloodletting, Corrupted Apostle, Divine Petitioner, Druidic, Elemental Shaman, Inherent Divinity, Keeper, Mysticism, Nomad Shaman, Runist, Spiritual, Ur-Priest, and Void Priest) | Knowledge (religion) |
+| Natural (Lycanthrope or None) | According to creature type |
+| Psychic (Addled, Battle Lord, Beast Charming, Bonneteur, Cartomancy, Chi Tracer, Dream Casting, Gadgeteer, Hypnotism, Ley-Line Tapper, Material Transmuter, Mind, Monastic, Scion Of The Crown, Strange Mentalist, Sword-Bound, Vitalist, and Wilder) | Knowledge (planes) |
+
+
 
 <p class="table-footnote"><sup>1</sup> These are merely recommendations on how to categorize specific casting traditions in the Skybourne campaign setting. If a player is using a casting tradition not listed above, GMs should work with them to determine what type of magic their casting tradition uses and why.</p>
 
@@ -495,33 +481,31 @@ Prior to attempting the Knowledge check, attempt a free Spellcraft check DC 10. 
 
 In the Pathfinder Roleplaying Game, sizes are measured from Fine (which is far smaller than a single space) to Colossal (which takes up a 30-foot square). In Spheres of Power, certain abilities or effects scale differently and have scaling effects that reach far beyond 30-foot squares, and as such require sizes beyond Colossal. In Spheres of Power, a creature or object that fills a 45-foot square is considered Colossal+, a creature or object that fills a 70-foot square is considered Colossal++, and so on.
 
-<table class="wiki-table">
-  <caption><strong>Table: Creature &amp; Object Size beyond Colossal</strong></caption>
-  <thead><tr><th>Space</th><th>Size</th></tr></thead>
-  <tbody>
-    <tr><td>45-ft. cube</td><td>Colossal+</td></tr>
-    <tr><td>70-ft. cube</td><td>Colossal++</td></tr>
-    <tr><td>100-ft. cube</td><td>Colossal+++</td></tr>
-    <tr><td>150-ft. cube</td><td>Colossal++++</td></tr>
-    <tr><td>225-ft. cube</td><td>Colossal+++++</td></tr>
-    <tr><td>340-ft. cube</td><td>Colossal++++++</td></tr>
-    <tr><td>500-ft. cube</td><td>Colossal+++++++</td></tr>
-  </tbody>
-</table>
+**Table: Creature &amp; Object Size beyond Colossal**
+| Space | Size |
+|---|---|
+| 45-ft. cube | Colossal+ |
+| 70-ft. cube | Colossal++ |
+| 100-ft. cube | Colossal+++ |
+| 150-ft. cube | Colossal++++ |
+| 225-ft. cube | Colossal+++++ |
+| 340-ft. cube | Colossal++++++ |
+| 500-ft. cube | Colossal+++++++ |
+
+
 
 Equipment is sized for the person wearing it, and does not reflect its actual size. When dealing with equipment sizes such as with the Creation or Telekinesis spheres, a two-handed weapon or tower shield counts as its size, one-handed weapons and heavy shields count as one size smaller, while light weapons and light shields count as two sizes smaller. Daggers and ammunition count as 3 sizes smaller, while shuriken count as 4 sizes smaller.
 
-<table class="wiki-table">
-  <caption><strong>Table: Weapon/Shield Sizes</strong></caption>
-  <thead><tr><th>Object Type</th><th>Size Adjustment</th></tr></thead>
-  <tbody>
-    <tr><td>Shuriken</td><td>Four sizes smaller</td></tr>
-    <tr><td>Daggers and ammunition</td><td>Three sizes smaller</td></tr>
-    <tr><td>Light weapons, light shields</td><td>Two sizes smaller</td></tr>
-    <tr><td>One-handed weapons, heavy shields</td><td>One size smaller</td></tr>
-    <tr><td>Two-handed weapons, tower shields</td><td>Same size</td></tr>
-  </tbody>
-</table>
+**Table: Weapon/Shield Sizes**
+| Object Type | Size Adjustment |
+|---|---|
+| Shuriken | Four sizes smaller |
+| Daggers and ammunition | Three sizes smaller |
+| Light weapons, light shields | Two sizes smaller |
+| One-handed weapons, heavy shields | One size smaller |
+| Two-handed weapons, tower shields | Same size |
+
+
 
 ### Spell Resistance and Sphere Effects
 
@@ -547,7 +531,7 @@ Damage added by [strike] talents is extra damage, not part of a weapon's damage 
 
 A [strike] talent is (intended to be) delivered through a successful, damaging weapon attack, much like a magus's spellstrike. Replacing the granted attack of a [strike] talent with a combat maneuver, or other action, is generally no longer able to deliver the spell effect, subject to GM discretion. In other cases, non-damaging maneuvers cannot deliver a [strike] talent's effects (either normally, using the Spell Attack feat, etc.). Speak with your GM otherwise regarding this interaction.
 
-### Subordinates <span class="source-tag">[BTH]</span>
+### Subordinates *(Source: BTH)*
 
 A subordinate is any controlled character gained by class features, talents, feats, or other effects. This is a specific term to be used for when an ability or effect applies to all creatures under an individual character's control, rather than all allies or a specific type of controlled character.
 
@@ -583,10 +567,10 @@ In addition to these considerations, GMs are encouraged to consider the effect o
 
 Some older products were not part of USoP and may have slight differences, such as referring to talents that got renamed. These older products are still generally compatible, and if there are small issues like that, the GM should simply substitute the new option(s) as needed.
 
-### Wish to Duplicate Sphere Effects <span class="source-tag">[FotC]</span>
+### Wish to Duplicate Sphere Effects *(Source: FotC)*
 
 The wish, miracle, and limited wish spells may be used to replicate magic sphere effects. The limited wish spell allows the character to create a single sphere effect they could create as if they possessed three additional magic talents for which they meet the prerequisites. The wish and miracle spells operate the same way, save that they effectively grant 5 talents rather than 3. Limited wish may not be used to gain advanced talents, although wish or miracle may at GM discretion.
 
 When using the mythic version of any of these spells, you gain a single mythic sphere mastery of your choice that you may use with the sphere effect.
 
-<div class="wiki-note"><strong>Wiki Note:</strong> If you are spending mythic power for this spell, you do not need to spend additional mythic power to use the mythic sphere mastery for that effect. Duplicating a sphere effect with wish, miracle, or limited wish does not require spending additional spell points.</div>
+> **Wiki Note:** If you are spending mythic power for this spell, you do not need to spend additional mythic power to use the mythic sphere mastery for that effect. Duplicating a sphere effect with wish, miracle, or limited wish does not require spending additional spell points.

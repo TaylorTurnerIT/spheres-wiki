@@ -520,14 +520,30 @@ a:hover {
   transform-origin: center;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.logo-orb-power { transition-delay: 0ms; }
-.logo-orb-might { transition-delay: 55ms; }
-.logo-orb-guile { transition-delay: 110ms; }
-.logo-orb-champ { transition-delay: 165ms; }
-.site-title:hover .logo-orb-power { transform: translate(4px,  4px)  scale(1.2); }
-.site-title:hover .logo-orb-might { transform: translate(-4px, 4px)  scale(1.2); }
-.site-title:hover .logo-orb-guile { transform: translate(4px,  -4px) scale(1.2); }
-.site-title:hover .logo-orb-champ { transform: translate(-4px, -4px) scale(1.2); }
+.logo-orb-power {
+  transition-delay: 0ms;
+}
+.logo-orb-might {
+  transition-delay: 55ms;
+}
+.logo-orb-guile {
+  transition-delay: 110ms;
+}
+.logo-orb-champ {
+  transition-delay: 165ms;
+}
+.site-title:hover .logo-orb-power {
+  transform: translate(4px, 4px) scale(1.2);
+}
+.site-title:hover .logo-orb-might {
+  transform: translate(-4px, 4px) scale(1.2);
+}
+.site-title:hover .logo-orb-guile {
+  transform: translate(4px, -4px) scale(1.2);
+}
+.site-title:hover .logo-orb-champ {
+  transform: translate(-4px, -4px) scale(1.2);
+}
 .site-title-text {
   display: flex;
   flex-direction: column;
@@ -804,15 +820,21 @@ a:hover {
   align-items: center;
   gap: 6px;
   white-space: nowrap;
+  text-decoration: none;
 }
-.sidebar-heading::after {
+a.sidebar-heading:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+/*.sidebar-heading::after {
   content: "";
   flex: 1;
   min-width: 16px;
   height: 0.5px;
   background: currentColor;
   opacity: 0.4;
-}
+}*/
 .sidebar-heading.nav {
   color: var(--clr-brand);
 }
@@ -2251,7 +2273,7 @@ h6 {
   z-index: 2;
   pointer-events: none;
   line-height: 1;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .sphere-badge-icon {
   width: 90px;
