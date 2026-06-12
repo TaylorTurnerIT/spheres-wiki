@@ -35,6 +35,23 @@ Build site: context/plans/build-site-dedup.md
 - T-003: TraitCatalogSection — DONE. Files: src/components/TraitCatalogSection.astro. Build P. Next: T-005
 - T-004: ClassFeatureBlock — DONE. Files: src/components/ClassFeatureBlock.astro. Build P. Next: T-005
 
+### Iteration 3 — 2026-06-12
+- T-005: ArchetypeSwapper selector — DONE. Files: src/components/ArchetypeSwapper.astro. Build P. Next: T-006
+- T-006: isCompatible + warning banner — DONE (same file, sequential). Build P. Next: T-007
+- T-007: updateArchetypes full logic — DONE (same file). Build P. Next: T-009–T-015
+
+### Iteration 4 — 2026-06-12
+- T-009: [system]/index.astro — DONE. Deleted power/might/guile index.astro. Commit 4e8ce7c3. Build P (4269 pages). Next: T-010–T-014
+- T-010: [system]/[sphere]/index.astro — DONE. Deleted per-system sphere index. Commit 1ce81eba.
+- T-011: [system]/[sphere]/[talent].astro — DONE. Deleted per-system talent routes. Commit 1ce81eba.
+- T-012: [system]/[sphere]/feats/[feat].astro — DONE. Deleted per-system feat routes. Commit 1ce81eba.
+- T-013: [system]/classes/[class]/[archetype].astro — DONE. Fixed collEntry key prefix bugs. Commit d22f5b93.
+- T-014: [system]/classes/[class]/traits/[trait].astro — DONE. Commit d22f5b93.
+- T-015: [system]/classes/[class].astro — DONE. Uses all 4 components; ArchetypeSwapper in flex header row. Commit c5b4c88c. Build P.
+
+### Iteration 5 — 2026-06-12
+- Fix tests: scrollspy.test.ts updated (classPath→ArchetypeSwapper.astro, spherePath→[system]/[sphere]/index.astro). 5 failures remain (all pre-existing: 3 book-yaml + 2 content-audit). Build P, Tests 5 pre-existing fails only.
+
 ---
 # Loop Log: Venator Archetype
 

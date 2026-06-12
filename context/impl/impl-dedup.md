@@ -16,10 +16,10 @@ Build site: context/plans/build-site-dedup.md
 | T-006 | DONE | isCompatible() + warning banner (in ArchetypeSwapper.astro — sequential pass on same file) |
 | T-007 | DONE | Full updateArchetypes() — reset/replace/alter/new, table+ToC text-node mutations, class-info overrides, rebindTraitToggles (in ArchetypeSwapper.astro) |
 | T-008 | DONE | Created `src/lib/systems.ts` — exports getSystemPaths(), resolveSystem(), getSystemSearchFilter(); consumes SYSTEMS from @/config/site; getSystemSearchFilter returns "system:" + label (e.g. "system:Spheres of Power") |
-| T-009 | TODO | System index route — blocked by T-008 |
-| T-010 | TODO | Sphere index route — blocked by T-008 |
-| T-011 | TODO | Talent route — blocked by T-008 |
-| T-012 | TODO | Feat route — blocked by T-008 |
-| T-013 | TODO | Archetype route — blocked by T-008 |
-| T-014 | TODO | Class trait route — blocked by T-008 |
-| T-015 | TODO | Unified class route — blocked by T-001, T-003, T-004, T-005, T-006, T-007, T-008 |
+| T-009 | DONE | Created `src/pages/[system]/index.astro`; deleted power/might/guile index.astro; champions excluded; system-specific SVG banners + class lists + quick links via conditionals |
+| T-010 | DONE | Created `src/pages/[system]/[sphere]/index.astro`; deleted power/might/guile sphere index; inline class-feature-collapse event retained |
+| T-011 | DONE | Created `src/pages/[system]/[sphere]/[talent].astro`; deleted per-system talent routes; dual-sphere paths supported |
+| T-012 | DONE | Created `src/pages/[system]/[sphere]/feats/[feat].astro`; deleted per-system feat routes; dual-sphere paths supported |
+| T-013 | DONE | Created `src/pages/[system]/classes/[class]/[archetype].astro`; deleted per-system archetype routes; collEntry key prefix bugs fixed |
+| T-014 | DONE | Created `src/pages/[system]/classes/[class]/traits/[trait].astro`; deleted per-system class-trait routes |
+| T-015 | DONE | Created `src/pages/[system]/classes/[class].astro`; deleted per-system class routes; uses all 4 components; ArchetypeSwapper in flex `.class-header-row` |
