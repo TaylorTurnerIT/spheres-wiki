@@ -1,9 +1,9 @@
 ---
 type: tag
-description: "A mechanical descriptor identifying this as a trade effect or talent."
-priority: 0
-color: "#4A235A"
 id: "trade"
 label: "Trade"
-sphere: "war"
+priority: 20
+description: "Grants groups of class skills united by the theme of a single profession, lifestyle, or hobby."
+sourceBook: spheres-of-guile
+sphere: vocation
 ---
