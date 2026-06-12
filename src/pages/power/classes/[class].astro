@@ -882,14 +882,53 @@ document.addEventListener('astro:page-load', () => {
             ? af.level.map(l => `${l}${ordinal(l)}`).join(', ')
             : `${af.level}${ordinal(af.level)}`;
 
-          primaryCard.innerHTML = `
-            <h2 class="class-feature-heading" title="Replaces: ${primaryBaseId.replace('shifter-', '').replace(/-/g, ' ')}">
-              ${af.name}
-              <span class="class-feature-level"> (${displayLevel})</span>
-              <span class="badge badge--archetype" title="Replaces ${primaryBaseId.replace('shifter-', '').replace(/-/g, ' ')}">${arcName}</span>
-            </h2>
-            <div class="entry-description">${af.html}</div>
-          `;
+          const replacedName = primaryBaseId.replace(/^[a-z0-9]+-/, '').replace(/-/g, ' ')
+            .split(' ').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+          // Mutate heading in-place to preserve Astro scoped CSS attributes on the element
+          const existingHeading = primaryCard.querySelector<HTMLElement>('.class-feature-heading');
+          if (existingHeading) {
+            const outerSpan = existingHeading.querySelector<HTMLElement>(':scope > span:not(.talent-source)');
+            if (outerSpan) {
+              for (const node of Array.from(outerSpan.childNodes)) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                  node.textContent = af.name + ' ';
+                  break;
+                }
+              }
+              const levelSpan = outerSpan.querySelector<HTMLElement>('.class-feature-level');
+              if (levelSpan) levelSpan.textContent = ` ${displayLevel}`;
+            }
+            const sourceSpan = existingHeading.querySelector<HTMLElement>('.talent-source');
+            if (sourceSpan) {
+              sourceSpan.className = 'badge badge--archetype';
+              sourceSpan.textContent = arcName;
+            } else {
+              const badge = document.createElement('span');
+              badge.className = 'badge badge--archetype';
+              badge.textContent = arcName;
+              existingHeading.appendChild(badge);
+            }
+          }
+
+          // Remove any previous annotations
+          primaryCard.querySelectorAll('.archetype-annotation, .archetype-modification-block').forEach(el => el.remove());
+
+          // Update content in-place (preserve element for scoped CSS), insert annotation before it
+          const entryDesc = primaryCard.querySelector<HTMLElement>('.entry-description');
+          const annotation = document.createElement('p');
+          annotation.className = 'archetype-annotation archetype-annotation--replaces';
+          annotation.textContent = `${arcName} Replaces: ${replacedName}`;
+          if (entryDesc) {
+            entryDesc.innerHTML = af.html;
+            primaryCard.insertBefore(annotation, entryDesc);
+          } else {
+            const newDesc = document.createElement('div');
+            newDesc.className = 'entry-description';
+            newDesc.innerHTML = af.html;
+            primaryCard.appendChild(annotation);
+            primaryCard.appendChild(newDesc);
+          }
         }
 
         // Hide other replaced base features (if many-to-one replacement)
@@ -909,9 +948,7 @@ document.addEventListener('astro:page-load', () => {
             const modBlock = document.createElement('div');
             modBlock.className = 'archetype-modification-block';
             modBlock.innerHTML = `
-              <div class="archetype-mod-header">
-                <span class="archetype-mod-badge">${arcName} Modification</span>
-              </div>
+              <p class="archetype-annotation archetype-annotation--alters">${arcName} Modifies </p>
               <div class="archetype-mod-body">
                 ${af.html}
               </div>
@@ -1246,18 +1283,10 @@ document.addEventListener('astro:page-load', () => {
   }
 
   .class-feature.is-altered {
-    border-left: 3px dashed var(--clr-brand);
-    padding-left: 1rem;
-    background: color-mix(in srgb, var(--clr-brand) 2%, transparent);
-    border-radius: 0 8px 8px 0;
+    /* no card — alteration shown inline via mod block */
   }
 
   .class-feature.class-feature--archetype {
-    background: color-mix(in srgb, var(--clr-active) 3%, transparent); /* Restore a bit more contrast so they aren't completely invisible */
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 2px solid var(--clr-active); /* A much thinner, subtle indicator */
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
     animation: fadeIn 0.4s ease forwards;
   }
 
@@ -1291,46 +1320,45 @@ document.addEventListener('astro:page-load', () => {
     font-weight: 400;
   }
 
-  .badge--archetype {
+  :global(.badge--archetype) {
     font-size: 0.65em;
     font-family: var(--font-display);
-    background-color: color-mix(in srgb, var(--clr-active) 12%, transparent);
+    background-color: color-mix(in srgb, var(--clr-active) 15%, transparent);
     color: var(--clr-active);
     padding: 0.15rem 0.5rem;
-    border-radius: 99px; /* Chip style */
+    border-radius: 4px;
+    border: 1px solid color-mix(in srgb, var(--clr-active) 35%, transparent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 700;
+  }
+
+  :global(.archetype-annotation) {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.02em;
+    margin: 0.15em 0 0.65rem;
+    line-height: 1.3;
+  }
+
+  :global(.archetype-annotation--replaces) {
+    color: var(--clr-active);
+  }
+
+  :global(.archetype-annotation--alters) {
+    color: var(--clr-brand);
   }
 
   /* Modification Blocks */
-  .archetype-modification-block {
-    margin-top: 1.25rem;
-    background: color-mix(in srgb, var(--clr-brand) 5%, #ffffff);
-    border: 1px solid color-mix(in srgb, var(--clr-brand) 20%, transparent);
-    border-radius: 6px;
-    overflow: hidden;
+  :global(.archetype-modification-block) {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--clr-border);
     animation: slideDown 0.3s ease forwards;
   }
 
-  .archetype-mod-header {
-    background: color-mix(in srgb, var(--clr-brand) 10%, transparent);
-    padding: 0.4rem 1rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--clr-brand) 15%, transparent);
-  }
-
-  .archetype-mod-badge {
-    font-family: var(--font-display);
-    font-size: var(--fs-xxs);
-    font-weight: 700;
-    color: var(--clr-brand);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .archetype-mod-body {
-    padding: 1rem;
-    font-size: var(--fs-sm);
+  :global(.archetype-mod-body) {
+    font-size: var(--fs-md);
   }
 
   /* Table styling enhancements for active features */
@@ -1347,9 +1375,10 @@ document.addEventListener('astro:page-load', () => {
   :global(.table-altered-badge) {
     font-size: 0.75em;
     color: var(--clr-brand);
-    font-style: italic;
-    opacity: 0.85;
-    font-weight: bold;
+    background: color-mix(in srgb, var(--clr-brand) 10%, transparent);
+    padding: 0 3px;
+    border-radius: 3px;
+    font-weight: 600;
   }
 
   /* Right rail ToC badges */
@@ -1363,10 +1392,10 @@ document.addEventListener('astro:page-load', () => {
   }
 
   :global(.toc-altered-badge) {
-    font-size: 0.75em;
+    font-size: 0.7em;
     color: var(--clr-brand);
     font-style: italic;
-    opacity: 0.8;
+    opacity: 0.85;
   }
 
   @keyframes fadeIn {

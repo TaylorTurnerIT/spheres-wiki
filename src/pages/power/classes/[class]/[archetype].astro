@@ -56,7 +56,7 @@ export async function getStaticPaths() {
 
     const featureCollEntries = new Map<string, any>();
     for (const f of features) {
-      const entry = allCollEntries.get(`feat:${f.id}`);
+      const entry = allCollEntries.get(`archetype-feature:${f.id}`);
       if (entry) featureCollEntries.set(f.id, entry);
     }
 
@@ -262,11 +262,6 @@ const formatBaseFeatureName = (id: string) => {
             <span class="class-feature-level"> ({levelLabel(feature.level)})</span>
           </h3>
 
-          {FeatureContent
-            ? <div class="entry-description"><FeatureContent /></div>
-            : null
-          }
-
           {((feature.replaces && feature.replaces.length > 0) || (feature.alters && feature.alters.length > 0)) && (
             <div class="archetype-mod-info">
               {feature.replaces && feature.replaces.length > 0 && (
@@ -277,6 +272,11 @@ const formatBaseFeatureName = (id: string) => {
               )}
             </div>
           )}
+
+          {FeatureContent
+            ? <div class="entry-description"><FeatureContent /></div>
+            : null
+          }
         </div>
       ))}
 
@@ -345,11 +345,7 @@ const formatBaseFeatureName = (id: string) => {
 
   .class-feature {
     margin-top: 2rem;
-    background: color-mix(in srgb, var(--clr-active) 3%, transparent);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--clr-active);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
   }
 
   .class-feature-heading {
@@ -358,37 +354,48 @@ const formatBaseFeatureName = (id: string) => {
     font-weight: 700;
     color: var(--clr-active);
     letter-spacing: 0.02em;
-    margin: 0 0 0.5em 0;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--clr-border);
     line-height: 1.2;
   }
 
   .class-feature-level {
     font-size: 0.75em;
-    font-weight: normal;
-    opacity: 0.65;
+    font-weight: 600;
+    opacity: 0.75;
     letter-spacing: 0;
   }
 
   .archetype-mod-info {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1rem;
-    padding-top: 0.75rem;
-    border-top: 1px dashed var(--clr-border);
-    font-size: 0.75rem;
-    color: var(--clr-muted);
+    flex-direction: column;
+    gap: 0.15rem;
+    margin: 0 0 0.65rem;
+    font-size: var(--fs-xs);
+    font-family: var(--font-display);
   }
 
-  .info-replace, .info-alter {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
+  .info-replace {
+    color: var(--clr-active);
+    letter-spacing: 0.02em;
+  }
+
+  .info-replace::before {
+    content: "▸ ";
+  }
+
+  .info-alter {
+    color: var(--clr-brand);
+    letter-spacing: 0.02em;
+  }
+
+  .info-alter::before {
+    content: "▸ ";
   }
 
   .info-replace strong, .info-alter strong {
-    font-weight: 600;
-    color: var(--clr-brand);
+    font-weight: 700;
   }
 
   .associated-section {
