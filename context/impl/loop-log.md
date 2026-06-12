@@ -20,3 +20,11 @@ Build site: context/plans/build-site.md
 
 ### Iteration 5 — 2026-06-11
 - T-012: Final build validation — DONE. validate P (4064 files), build P (no new errors). All 53 output files present and valid.
+
+---
+# Loop Log: Venator Archetype
+
+Build site: context/plans/build-site-venator.md
+
+### Iteration 1 — 2026-06-11
+- T-001–T-007: All Venator content (1 archetype + 5 archetype-features) — DONE. Files: diamond-spheres-invention-and-ingenuity/guile/archetypes/venator.md + archetype-features/venator/*.md (5). Build P, Validate P (4070 files). Commit 6e1de8f1. Violent Herding prose folded into herding-rush.md body as designed.
