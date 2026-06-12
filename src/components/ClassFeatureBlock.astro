@@ -1,0 +1,156 @@
+---
+import TagBadge from "@/components/TagBadge.astro";
+import TraitCatalogSection from "@/components/TraitCatalogSection.astro";
+import { buildOrderedTagIds } from "@/lib/tags";
+import type { ClassFeatureEntry, ClassTraitEntry, TagEntry, BookMeta } from "@/lib/types";
+
+interface RenderedTrait {
+  trait: ClassTraitEntry;
+  Content: any;
+  sourceBookTitle: string | null;
+}
+
+interface Props {
+  feature: ClassFeatureEntry;
+  /** Pre-rendered markdown content for the feature body */
+  Content: any;
+  sourceBookTitle: string | null;
+  /** All traits attached to this feature (container and non-container) */
+  traits: RenderedTrait[];
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
+  /** System id (e.g. "power") — passed through to TraitCatalogSection for link generation */
+  systemId: string;
+  /** Class id (e.g. "shifter") — passed through to TraitCatalogSection */
+  className: string;
+}
+
+const { feature, Content, sourceBookTitle, traits, tagMap, bookMetaMap, systemId, className } = Astro.props;
+
+function levelLabel(level: number | number[]): string {
+  if (Array.isArray(level)) return level.map(l => `${l}${ordinal(l)}`).join(', ');
+  return `${level}${ordinal(level)}`;
+}
+
+function ordinal(n: number): string {
+  if (n % 100 >= 11 && n % 100 <= 13) return 'th';
+  switch (n % 10) {
+    case 1: return 'st';
+    case 2: return 'nd';
+    case 3: return 'rd';
+    default: return 'th';
+  }
+}
+---
+
+<div
+  class={`class-feature${feature.isTraitContainer ? ' class-feature--container' : ''}`}
+  id={feature.id}
+  data-level={JSON.stringify(feature.level)}
+>
+  <h2 class="class-feature-heading">
+    <span>{feature.name} <span class="class-feature-sep">|</span><span class="class-feature-level"> {levelLabel(feature.level)}</span></span>
+    {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
+  </h2>
+
+  {Content
+    ? <div class="entry-description"><Content /></div>
+    : null
+  }
+
+  {feature.isTraitContainer ? (
+    <TraitCatalogSection
+      featureId={feature.id}
+      featureName={feature.name}
+      entries={traits.map(t => ({ trait: t.trait, Content: t.Content, sourceBookTitle: t.sourceBookTitle }))}
+      systemId={systemId}
+      className={className}
+      tagMap={tagMap}
+      bookMetaMap={bookMetaMap}
+    />
+  ) : (
+    traits.map(({ trait, Content: TraitContent, sourceBookTitle: traitSourceTitle }) => (
+      <div class="class-trait" id={trait.id}>
+        <div class="talent-header">
+          <div class="talent-header-top">
+            <span class="talent-name">{trait.name}</span>
+            {traitSourceTitle && <span class="talent-source">{traitSourceTitle}</span>}
+          </div>
+          <div class="talent-header-bottom">
+            {buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {}).map(tagId => (
+              <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+            ))}
+          </div>
+        </div>
+        {trait.requires && (
+          <p class="trait-prerequisites"><strong>Prerequisites:</strong> {trait.requires}</p>
+        )}
+        {TraitContent
+          ? <div class="entry-description"><TraitContent /></div>
+          : null
+        }
+      </div>
+    ))
+  )}
+</div>
+
+<style>
+  .class-feature {
+    margin-top: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .class-feature.class-feature--archetype {
+    animation: fadeIn 0.4s ease forwards;
+  }
+
+  .class-feature-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--clr-border);
+    line-height: 1.2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .class-feature-level {
+    font-size: 0.75em;
+    font-weight: 600;
+    opacity: 0.75;
+    letter-spacing: 0;
+  }
+
+  .class-feature-sep {
+    color: var(--clr-muted);
+    opacity: 1;
+    font-weight: 400;
+  }
+
+  .class-trait {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--clr-active);
+    background: color-mix(in srgb, var(--clr-active) 3%, transparent);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .trait-prerequisites {
+    font-size: 0.9em;
+    font-style: italic;
+    margin: 0 0 0.5rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

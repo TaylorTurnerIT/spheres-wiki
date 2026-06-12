@@ -1,0 +1,149 @@
+---
+import TagBadge from "@/components/TagBadge.astro";
+import { url } from "@/lib/url";
+import { buildOrderedTagIds } from "@/lib/tags";
+import type { ClassTraitEntry, TagEntry, BookMeta } from "@/lib/types";
+
+interface CatalogEntry {
+  trait: ClassTraitEntry;
+  Content: any;
+  sourceBookTitle: string | null;
+}
+
+interface Props {
+  featureId: string;
+  featureName: string;
+  entries: CatalogEntry[];
+  /** System id (e.g. "power") — used to build trait detail links */
+  systemId: string;
+  /** Class id (e.g. "shifter") — used to build trait detail links */
+  className: string;
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
+}
+
+const { featureId, featureName, entries, systemId, className, tagMap, bookMetaMap } = Astro.props;
+---
+
+<button
+  class="trait-catalog-toggle is-collapsed"
+  data-feature-id={featureId}
+  aria-expanded="false"
+  aria-controls={`${featureId}-traits`}
+>
+  {featureName}
+  <span class="trait-catalog-toggle-chevron" aria-hidden="true">▾</span>
+</button>
+
+<div class="trait-catalog-wrapper" id={`${featureId}-traits`} aria-hidden="true">
+  <div class="trait-catalog">
+    {entries.map(({ trait, Content: TraitContent, sourceBookTitle }) => (
+      <div class="trait-catalog-entry" id={trait.id}>
+        <div class="talent-header">
+          <div class="talent-header-top">
+            <a
+              href={url(`/${systemId}/classes/${className}/traits/${trait.id}/`)}
+              class="talent-name"
+              data-astro-prefetch="hover"
+            >{trait.name}</a>
+            {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
+          </div>
+          <div class="talent-header-bottom">
+            {buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {}).map(tagId => (
+              <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+            ))}
+          </div>
+        </div>
+        {trait.requires && (
+          <p class="trait-catalog-requires"><strong>Prerequisites:</strong> {trait.requires}</p>
+        )}
+        {TraitContent
+          ? <div class="entry-description"><TraitContent /></div>
+          : null
+        }
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .trait-catalog-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 0;
+    color: var(--clr-muted);
+    font-size: var(--fs-xs);
+    font-family: var(--font-display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+
+  .trait-catalog-toggle::before,
+  .trait-catalog-toggle::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--clr-border);
+    transition: background 0.15s ease;
+  }
+
+  .trait-catalog-toggle:hover {
+    color: var(--clr-brand);
+  }
+
+  .trait-catalog-toggle:hover::before,
+  .trait-catalog-toggle:hover::after {
+    background: var(--clr-brand);
+  }
+
+  .trait-catalog-toggle-chevron {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .trait-catalog-toggle.is-collapsed .trait-catalog-toggle-chevron {
+    transform: rotate(-90deg);
+  }
+
+  .trait-catalog-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+  }
+
+  .trait-catalog-wrapper.is-open {
+    grid-template-rows: 1fr;
+  }
+
+  .trait-catalog {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .trait-catalog-wrapper.is-open .trait-catalog {
+    background: color-mix(in srgb, var(--clr-active) 4%, var(--clr-surface));
+  }
+
+  .trait-catalog-entry {
+    padding: 0.75rem 1rem 0.75rem 0.75rem;
+    border-left: 3px solid var(--clr-active);
+    border-top: 1px solid color-mix(in srgb, var(--clr-active) 15%, transparent);
+  }
+
+  .trait-catalog-requires {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    opacity: 1;
+    margin-bottom: 0.5em;
+  }
+</style>
