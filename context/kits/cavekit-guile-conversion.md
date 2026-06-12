@@ -199,7 +199,8 @@ src/content/spheres-of-guile/guile/spheres/navigation/talents/
 11. ASTRO_BUILD → npm run build in spheres-wiki → must pass with 0 errors
 12. CHECK → review output: 0 quarantine, correct names, tags, tiers, sourceBook
 13. COUNT → compare H4 talent count on original page (minus sentinels) against parser output. Must match exactly. Mismatch = sentinel H4 misclassified as talent or vice versa.
-14. MERGE → mark sphere COMPLETE in status table
+14. BODY_DIFF → diff original sphere description text (between H1 end and first H2) against generated sphere body. Must match verbatim (excluding Wikidot markup stripped by parser). Mismatch = parser truncation or wikidot artifact.
+15. MERGE → mark sphere COMPLETE in status table
 ```
 
 **Package detection:** Guile spheres use packages (choose-one bundles with associated skills). Packages are H4 entries under a "Sphere Packages" H2 section. To auto-tag: `section_tags: vec!["package".to_string()]` on the packages `SectionDef`. Package section heading excluded from base-entry creation via `exclude_base` guard.
@@ -225,6 +226,7 @@ src/content/spheres-of-guile/guile/spheres/navigation/talents/
 - VG13. ∀ writing mode → default is dry-run (no files written) — `--force` required to write
 - VG14. Quarantine entries ! auto-generated → manual resolution or acknowledged skip (per Might pipeline)
 - VG15. Base abilities render via `[TalentName]` markers in sphere body — marker ID matches `tier:base` talent slug (V31, V32)
+- VG16. Sphere description body must match original source text verbatim — no missing paragraphs, no extra text. Diff original (between H1 end and first H2) against generated sphere body. Mismatch = parser truncation or wikidot artifact bleeding through.
 
 **Cross-system invariants (from existing SPEC.md)**
 
