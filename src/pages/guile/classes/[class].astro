@@ -4,10 +4,12 @@ import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
+import TagBadge from '@/components/TagBadge.astro';
 import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content.config';
-import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, BookMeta } from '@/lib/types';
+import { buildOrderedTagIds } from '@/lib/tags';
+import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, ArchetypeEntry, ArchetypeFeatureEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
   cls: ClassEntry;
@@ -17,11 +19,17 @@ interface Props {
   traitEntries: ClassTraitEntry[];
   traitCollEntries: Map<string, any>;
   sourceBook: BookMeta | undefined;
+  archetypes: ArchetypeEntry[];
+  archetypeFeatures: ArchetypeFeatureEntry[];
+  archetypeFeatureCollEntries: Map<string, any>;
+  archetypeCollEntries: Map<string, any>;
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
 }
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const { classMap, classFeatureMap, classTraitMap, bookMetaMap } = await resolveEntries();
+  const { classMap, classFeatureMap, classTraitMap, archetypeMap, archetypeFeatureMap, bookMetaMap, tagMap } = await resolveEntries();
 
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
@@ -29,7 +37,7 @@ export async function getStaticPaths() {
       const entries = await getCollection(slug as any);
       for (const e of entries) {
         const t = (e.data as any).type;
-        if (['class', 'class-feature', 'class-trait'].includes(t)) {
+        if (['class', 'class-feature', 'class-trait', 'archetype', 'archetype-feature'].includes(t)) {
           allCollEntries.set(`${(e.data as any).type}:${(e.data as any).id}`, e);
         }
       }
@@ -55,14 +63,56 @@ export async function getStaticPaths() {
 
     const featureCollEntries = new Map<string, any>();
     for (const f of featureEntries) {
-      const entry = allCollEntries.get(`feat:${f.id}`);
+      const entry = allCollEntries.get(`class-feature:${f.id}`);
       if (entry) featureCollEntries.set(f.id, entry);
     }
 
     const traitCollEntries = new Map<string, any>();
     for (const t of traitEntries) {
-      const entry = allCollEntries.get(`talent:${t.id}`);
+      const entry = allCollEntries.get(`class-trait:${t.id}`);
       if (entry) traitCollEntries.set(t.id, entry);
+    }
+
+    const classArchetypes = [...archetypeMap.values()]
+      .filter(a => a.className === cls.id);
+
+    // Feature ID → display name lookup (for ACF descriptions)
+    const featureNameById = new Map(featureEntries.map(f => [f.id, f.name]));
+
+    // Auto-inject virtual ACF archetypes — one per alternate class feature
+    const acfFeatures = [...archetypeFeatureMap.values()]
+      .filter(f => f.isAlternateClassFeature && f.archetypeId === `${cls.id}-alternate-class-features`);
+    const acfArchetypes = acfFeatures.map(af => ({
+      id: af.id,
+      name: `Alternate Class Feature: ${af.name}`,
+      className: cls.id,
+      system: cls.system,
+      sourceBook: cls.sourceBook,
+      tags: [],
+      type: "archetype" as const,
+      _acfReplacesDesc: (af.replaces || []).map(id => featureNameById.get(id) || id.replace(/-/g, ' ')).join(', '),
+    }));
+
+    const allArchetypes = [...classArchetypes, ...acfArchetypes];
+
+    const classArchetypeFeatures = [...archetypeFeatureMap.values()]
+      .filter(f => allArchetypes.some(a => a.id === f.archetypeId) || f.isAlternateClassFeature)
+      .sort((a, b) => {
+        const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
+        const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
+        return aMin - bMin;
+      });
+
+    const archetypeFeatureCollEntries = new Map<string, any>();
+    for (const f of classArchetypeFeatures) {
+      const entry = allCollEntries.get(`archetype-feature:${f.id}`);
+      if (entry) archetypeFeatureCollEntries.set(f.id, entry);
+    }
+
+    const archetypeCollEntries = new Map<string, any>();
+    for (const a of classArchetypes) {
+      const entry = allCollEntries.get(`archetype:${a.id}`);
+      if (entry) archetypeCollEntries.set(a.id, entry);
     }
 
     paths.push({
@@ -75,6 +125,12 @@ export async function getStaticPaths() {
         traitEntries,
         traitCollEntries,
         sourceBook: bookMetaMap.get(cls.sourceBook),
+        bookMetaMap,
+        tagMap,
+        archetypes: allArchetypes,
+        archetypeCollEntries,
+        archetypeFeatures: classArchetypeFeatures,
+        archetypeFeatureCollEntries,
       },
     });
   }
@@ -90,27 +146,46 @@ const {
   traitEntries,
   traitCollEntries,
   sourceBook,
+  bookMetaMap,
+  tagMap,
+  archetypes = [],
+  archetypeCollEntries = new Map(),
+  archetypeFeatures = [],
+  archetypeFeatureCollEntries = new Map(),
 } = Astro.props;
 
 const ClassContent = classCollEntry ? (await render(classCollEntry)).Content : null;
 
-type RenderedTrait = { trait: ClassTraitEntry; Content: any };
-type RenderedFeature = { feature: ClassFeatureEntry; Content: any; traits: RenderedTrait[] };
+	function stripBodySource(body: string): string {
+	  return body.replace(/\n\*Source:.+$/m, '').trimEnd();
+	}
+
+	function sourceTitle(sourceBook: string): string | null {
+	  return bookMetaMap.get(sourceBook)?.title ?? null;
+	}
+
+	type RenderedTrait = { trait: ClassTraitEntry; Content: any; sourceBookTitle: string | null; featureName: string };
+type RenderedFeature = { feature: ClassFeatureEntry; Content: any; traits: RenderedTrait[]; sourceBookTitle: string | null };
+
+// Lookup: featureId → feature name
+const featureNameById = new Map(featureEntries.map(f => [f.id, f.name]));
 
 const featureRendered: RenderedFeature[] = [];
 for (const feature of featureEntries) {
   const collEntry = featureCollEntries.get(feature.id);
-  const { Content } = collEntry ? await render(collEntry) : { Content: null };
+  const cleanBody = collEntry ? stripBodySource(collEntry.body || '') : null;
+  const { Content } = (collEntry && cleanBody !== null) ? await render({ ...collEntry, body: cleanBody }) : { Content: null };
 
   const featureTraits = traitEntries.filter(t => t.featureId === feature.id);
   const traits: RenderedTrait[] = [];
   for (const trait of featureTraits) {
     const traitCollEntry = traitCollEntries.get(trait.id);
-    const { Content: TraitContent } = traitCollEntry ? await render(traitCollEntry) : { Content: null };
-    traits.push({ trait, Content: TraitContent });
+    const traitCleanBody = traitCollEntry ? stripBodySource(traitCollEntry.body || '') : null;
+    const { Content: TraitContent } = (traitCollEntry && traitCleanBody !== null) ? await render({ ...traitCollEntry, body: traitCleanBody }) : { Content: null };
+    traits.push({ trait, Content: TraitContent, sourceBookTitle: sourceTitle(trait.sourceBook), featureName: featureNameById.get(trait.featureId) || trait.featureId });
   }
 
-  featureRendered.push({ feature, Content, traits });
+  featureRendered.push({ feature, Content, traits, sourceBookTitle: sourceTitle(feature.sourceBook) });
 }
 
 const tocOverview: TocItem = { id: 'overview', label: 'Overview' };
@@ -146,6 +221,7 @@ function ordinal(n: number): string {
 
 // ── Dynamic Class Table Generation ───────────────────────────────────────────
 
+/** Compute BAB for a given level and progression type */
 function computeBAB(level: number, progression: string): number {
   switch (progression) {
     case "full": return level;
@@ -155,6 +231,7 @@ function computeBAB(level: number, progression: string): number {
   }
 }
 
+/** Compute save bonus for a given level and progression type */
 function computeSave(level: number, progression: string): number {
   switch (progression) {
     case "good": return 2 + Math.floor(level / 2);
@@ -163,6 +240,7 @@ function computeSave(level: number, progression: string): number {
   }
 }
 
+/** Format BAB with iterative attacks (e.g., "+6/+1", "+11/+6/+1") */
 function formatBAB(bab: number): string {
   const attacks: string[] = [];
   let val = bab;
@@ -182,10 +260,12 @@ function levelOrdinal(level: number): string {
   return `${level}${ordinal(level)}`;
 }
 
+// Parse classTable from JSON (it's double-stringified in frontmatter)
 function parseClassTable(raw: string | undefined): { extraHeaders: string[]; specialSource: Record<number, string>; extraRowData: Record<number, string[]> } | null {
   if (!raw) return null;
   try {
     const parsed = JSON.parse(raw);
+    // Handle double-stringification (frontmatter stores it as a JSON string)
     if (typeof parsed === "string") return JSON.parse(parsed);
     return parsed;
   } catch {
@@ -195,43 +275,80 @@ function parseClassTable(raw: string | undefined): { extraHeaders: string[]; spe
 
 const classTable = parseClassTable(cls.classTable as string | undefined);
 
-const featuresByLevel: Record<number, string[]> = {};
+// ── Casting Tier Tables ───────────────────────────────────────────────────────
+const CL_MID = [0,1,2,3,3,4,5,6,6,7,8,9,9,10,11,12,12,13,14,15];
+const CL_LOW = [0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10];
+
+function computeCasterLevel(level: number, tier: string): number {
+  if (tier === "high") return level;
+  if (tier === "mid") return CL_MID[level - 1];
+  if (tier === "low") return CL_LOW[level - 1];
+  return 0;
+}
+
+function computeMagicTalents(level: number, tier: string): number {
+  if (tier === "high") return level + 2;
+  if (tier === "mid") return Math.floor(3 * level / 4) + 2;
+  return Math.floor(level / 2) + 2;
+}
+
+// Build feature lookup: level → feature objects
+const featuresByLevel: Record<number, { name: string; id: string }[]> = {};
 for (const f of featureEntries) {
   const levels = Array.isArray(f.level) ? f.level : [f.level];
   for (const lvl of levels) {
     if (!featuresByLevel[lvl]) featuresByLevel[lvl] = [];
-    featuresByLevel[lvl].push(f.name);
+    featuresByLevel[lvl].push({ name: f.name, id: f.id });
   }
 }
 
-const allHeaders: string[] = [
-  "Level",
-  "Base Attack Bonus",
-  "Fort Save",
-  "Ref Save",
-  "Will Save",
-  "Special",
-  ...(classTable?.extraHeaders || []),
-];
+const hasCasting = cls.casterTier && cls.casterTier !== "none";
 
-interface TableRow {
-  cells: string[];
-  level: number;
-}
-const tableRows: TableRow[] = [];
-for (let lvl = 1; lvl <= 20; lvl++) {
-  const bab = computeBAB(lvl, cls.babProgression);
-  const fort = computeSave(lvl, cls.fortSaveProgression);
-  const ref = computeSave(lvl, cls.refSaveProgression);
-  const will = computeSave(lvl, cls.willSaveProgression);
+// Generate table headers
+	const allHeaders: string[] = [
+	  "Level",
+	  "Base Attack Bonus",
+	  "Fort Save",
+	  "Ref Save",
+	  "Will Save",
+	  "Special",
+	  ...(hasCasting ? ["Caster Level", "Magic Talents", "Spell Pool"] : []),
+	  ...(classTable?.extraHeaders || []),
+	];
+	const spellPoolColIdx = hasCasting ? allHeaders.indexOf("Spell Pool") : -1;
 
-  const featNames = featuresByLevel[lvl] || [];
-  const special = featNames.length > 0
-    ? featNames.join(", ")
-    : (classTable?.specialSource?.[lvl] || "—");
+	// Generate table rows (levels 1-20)
+	interface TableRow {
+	  cells: string[];
+	  level: number;
+	}
+	const tableRows: TableRow[] = [];
+	for (let lvl = 1; lvl <= 20; lvl++) {
+	  const bab = computeBAB(lvl, cls.babProgression);
+	  const fort = computeSave(lvl, cls.fortSaveProgression);
+	  const ref = computeSave(lvl, cls.refSaveProgression);
+	  const will = computeSave(lvl, cls.willSaveProgression);
 
-  const extraVals = classTable?.extraRowData?.[lvl] || [];
-  const paddedExtras = (classTable?.extraHeaders || []).map((_, i) => extraVals[i] || "—");
+	  // Build Special column text from features gained at this level
+	  const featsAtLevel = featuresByLevel[lvl] || [];
+	  const special = featsAtLevel.length > 0
+	    ? featsAtLevel.map(f => `<a href="#${f.id}" class="table-feature-link">${f.name}</a>`).join(", ")
+	    : (classTable?.specialSource?.[lvl] || "—");
+
+	  // Extra column values from source table
+	  const extraVals = classTable?.extraRowData?.[lvl] || [];
+	  const paddedExtras = (classTable?.extraHeaders || []).map((_, i) => extraVals[i] || "—");
+
+	  const rawMt = computeMagicTalents(lvl, cls.casterTier!);
+	  const mtDisplay = lvl === 1
+	    ? `${rawMt - 2} <span class="tt" data-tooltip="All characters gain two bonus magic talents the first time they gain a level in a class with the casting class feature, regardless of which class is chosen.">(+2)</span>`
+	    : String(rawMt - 2);
+
+	  const castingCells = hasCasting ? [
+	    String(computeCasterLevel(lvl, cls.casterTier!)),
+	    mtDisplay,
+	    `${lvl} + <span class="tt" data-tooltip="Casting Ability Modifier">CAM</span>`,
+	  ] : [];
 
   const cells = [
     levelOrdinal(lvl),
@@ -240,6 +357,7 @@ for (let lvl = 1; lvl <= 20; lvl++) {
     formatSave(ref),
     formatSave(will),
     special,
+    ...castingCells,
     ...paddedExtras,
   ];
 
@@ -251,7 +369,7 @@ for (let lvl = 1; lvl <= 20; lvl++) {
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href={url("/guile/")} data-astro-prefetch="hover">Spheres of Might</a>
+    <a href={url("/guile/")} data-astro-prefetch="hover">Spheres of Guile</a>
     <span class="breadcrumb-sep">›</span>
     <span>{cls.name}</span>
   </nav>
@@ -259,20 +377,41 @@ for (let lvl = 1; lvl <= 20; lvl++) {
   <div class="content-columns">
     <div class="content-main">
 
-            <span data-pagefind-meta={`title:${cls.name}`} hidden></span>
+      <div class="class-header-row">
+              <span data-pagefind-meta={`title:${cls.name}`} hidden></span>
       <span data-pagefind-filter="type:class" hidden></span>
       <span data-pagefind-filter="system:Spheres of Guile" hidden></span>
 <h1
-        class="page-title guile"
-        id="overview"
-        data-pagefind-weight="10"
-        
-        
-      >
-        {cls.name}
-      </h1>
+          class="page-title guile"
+          id="overview"
+          data-pagefind-weight="10"
+
+
+        >
+          {cls.name}
+        </h1>
       <span data-pagefind-meta="type:class" hidden></span>
         <span data-pagefind-meta="system:Spheres of Guile" hidden></span>
+
+        {archetypes.length > 0 && (
+          <div class="archetypes-selector-group" style="min-width: 250px; flex: 1; max-width: 400px; z-index: 10;">
+            <label for="archetype-select" class="archetypes-selector-label">Archetypes:</label>
+            <select id="archetype-select" class="ts-hidden-select" multiple autocomplete="off">
+              {archetypes.map(arc => {
+                const collEntry = archetypeCollEntries.get(arc.id);
+                const rawText = collEntry?.body || '';
+                const acfReplacesDesc = (arc as any)._acfReplacesDesc as string | undefined;
+                const desc = acfReplacesDesc
+                  ? `Replaces: ${acfReplacesDesc}`
+                  : (rawText.trim().split('\n')[0].replace(/<[^>]+>/g, '').substring(0, 150) + (rawText.length > 150 ? '...' : ''));
+                return (
+                  <option value={arc.id} data-name={arc.name} data-desc={desc || arc.name}>{arc.name}</option>
+                );
+              })}
+            </select>
+          </div>
+        )}
+      </div>
       <hr class="page-title-rule" />
 
       {ClassContent
@@ -280,10 +419,21 @@ for (let lvl = 1; lvl <= 20; lvl++) {
         : <p class="entry-description"><em>Description coming soon.</em></p>
       }
 
+      <div class="class-info-block" style="margin-bottom: 1.5rem; padding: 1rem; background: var(--clr-surface); border-radius: 8px; border: 1px solid var(--clr-border);">
+        <p style="margin: 0.25rem 0;"><strong>Alignment:</strong> <span id="class-val-alignment">{cls.alignment}</span></p>
+        <p style="margin: 0.25rem 0;"><strong>Hit Die:</strong> d<span id="class-val-hitDie">{cls.hitDie}</span></p>
+        <p style="margin: 0.25rem 0;"><strong>Starting Wealth:</strong> <span id="class-val-startingWealth">{cls.startingWealth}</span></p>
+        <p style="margin: 0.25rem 0;"><strong>Class Skills:</strong> <span id="class-val-classSkills">{cls.classSkills.join(", ")}</span></p>
+        <p style="margin: 0.25rem 0;"><strong>Skill Ranks per Level:</strong> <span id="class-val-skillRanks">{cls.skillRanks}</span> + Int modifier</p>
+      </div>
+
+      <div class="archetype-warning-banner" style="display: none;"></div>
+
       {/* ── Class Progression Table (dynamic) ── */}
       {tableRows.length > 0 && (
         <div class="class-table-wrapper">
           <h2 id="class-table" class="class-table-heading">Table: The {cls.name}</h2>
+          <div class="class-table-outline">
           <table class="class-progression-table">
             <thead>
               <tr>
@@ -296,20 +446,21 @@ for (let lvl = 1; lvl <= 20; lvl++) {
               {tableRows.map(row => (
                 <tr>
                   {row.cells.map((cell, ci) => (
-                    <td data-col={ci}>{cell}</td>
+                    <td data-col={ci} set:html={cell} />
                   ))}
                 </tr>
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       )}
 
-      {featureRendered.map(({ feature, Content: FeatureContent, traits }) => (
+      {featureRendered.map(({ feature, Content: FeatureContent, traits, sourceBookTitle }) => (
         <div class={`class-feature${feature.isTraitContainer ? ' class-feature--container' : ''}`} id={feature.id} data-level={JSON.stringify(feature.level)}>
           <h2 class="class-feature-heading">
-            {feature.name}
-            <span class="class-feature-level"> ({levelLabel(feature.level)})</span>
+            <span>{feature.name} <span class="class-feature-sep">|</span><span class="class-feature-level"> {levelLabel(feature.level)}</span></span>
+            {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
           </h2>
 
           {FeatureContent
@@ -327,14 +478,20 @@ for (let lvl = 1; lvl <= 20; lvl++) {
           {feature.isTraitContainer ? (
             <div class="trait-catalog-wrapper" id={`${feature.id}-traits`} aria-hidden="true">
               <div class="trait-catalog">
-              {traits.map(({ trait, Content: TraitContent }) => (
+              {traits.map(({ trait, Content: TraitContent, sourceBookTitle, featureName }) => (
                 <div class="trait-catalog-entry" id={trait.id}>
-                  <h3 class="trait-catalog-name">
-                    {trait.name}
-                    {trait.requires && (
-                      <span class="trait-catalog-requires"> (requires {trait.requires})</span>
-                    )}
-                  </h3>
+                  <div class="talent-header">
+                    <div class="talent-header-top">
+                      <a href={url(`/guile/classes/${cls.id}/traits/${trait.id}/`)} class="talent-name" data-astro-prefetch="hover">{trait.name}</a>
+                      {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
+                    </div>
+                    <div class="talent-header-bottom">
+                      {buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {}).map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)}
+                    </div>
+                  </div>
+                  {trait.requires && (
+                    <p class="trait-catalog-requires"><strong>Prerequisites:</strong> {trait.requires}</p>
+                  )}
                   {TraitContent
                     ? <div class="entry-description"><TraitContent /></div>
                     : null
@@ -344,14 +501,20 @@ for (let lvl = 1; lvl <= 20; lvl++) {
               </div>
             </div>
           ) : (
-            traits.map(({ trait, Content: TraitContent }) => (
+            traits.map(({ trait, Content: TraitContent, sourceBookTitle, featureName }) => (
               <div class="class-trait" id={trait.id}>
-                <h3 class="class-trait-name">
-                  {trait.name}
-                  {trait.requires && (
-                    <span class="class-trait-requires"> (requires {trait.requires})</span>
-                  )}
-                </h3>
+                <div class="talent-header">
+                  <div class="talent-header-top">
+                    <span class="talent-name">{trait.name}</span>
+                    {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
+                  </div>
+                  <div class="talent-header-bottom">
+                    {buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {}).map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)}
+                  </div>
+                </div>
+                {trait.requires && (
+                  <p class="trait-prerequisites"><strong>Prerequisites:</strong> {trait.requires}</p>
+                )}
                 {TraitContent
                   ? <div class="entry-description"><TraitContent /></div>
                   : null
@@ -361,6 +524,20 @@ for (let lvl = 1; lvl <= 20; lvl++) {
           )}
         </div>
       ))}
+
+      {/* Hidden Templates for Archetype Features to Avoid DOM Bloat */}
+      {archetypeFeatures.map(async (feature) => {
+        const collEntry = archetypeFeatureCollEntries.get(feature.id);
+        const { Content } = collEntry ? await render(collEntry) : { Content: null };
+        const templateArchId = feature.isAlternateClassFeature ? feature.id : feature.archetypeId;
+        return (
+          <template class="archetype-feature-template" data-feature-id={feature.id} data-name={feature.name} data-archetype-id={templateArchId} data-level={JSON.stringify(feature.level)} data-replaces={JSON.stringify(feature.replaces || [])} data-alters={JSON.stringify(feature.alters || [])} data-mutually-exclusive={JSON.stringify(feature.mutuallyExclusive !== false)} data-class-overrides={JSON.stringify(feature.classOverrides || {})}>
+            <div class="archetype-feature-rendered-content">
+              {Content ? <Content /> : null}
+            </div>
+          </template>
+        );
+      })}
 
     </div>
 
@@ -373,7 +550,53 @@ for (let lvl = 1; lvl <= 20; lvl++) {
 </WikiPage>
 
 <script>
+import TomSelect from 'tom-select';
+import 'tom-select/dist/css/tom-select.css';
+
+// Module-scoped so astro:before-swap can destroy it before the DOM swaps.
+let activeTomSelect: any = null;
+
+document.addEventListener('astro:before-swap', () => {
+  if (activeTomSelect) {
+    activeTomSelect.destroy();
+    activeTomSelect = null;
+  }
+});
+
+// Replaces matched text only inside text nodes — never touches attribute values.
+function replaceInTextNodes(
+  root: HTMLElement,
+  regex: RegExp,
+  makeNode: (match: string) => Node,
+): void {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+  const nodes: Text[] = [];
+  let n: Node | null;
+  while ((n = walker.nextNode())) nodes.push(n as Text);
+
+  for (const textNode of nodes) {
+    const text = textNode.textContent ?? '';
+    regex.lastIndex = 0;
+    if (!regex.test(text)) continue;
+
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    regex.lastIndex = 0;
+    let m: RegExpExecArray | null;
+    while ((m = regex.exec(text))) {
+      if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      frag.appendChild(makeNode(m[0]));
+      last = m.index + m[0].length;
+    }
+    if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    textNode.replaceWith(frag);
+    regex.lastIndex = 0;
+  }
+}
+
 document.addEventListener('astro:page-load', () => {
+
+  // ──── TRAIT CATALOG TOGGLE ──────────────────────────────────────────────
   document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
     const featureId = btn.dataset.featureId!;
     const wrapper = document.getElementById(`${featureId}-traits`);
@@ -387,14 +610,655 @@ document.addEventListener('astro:page-load', () => {
       btn.classList.toggle('is-collapsed', willCollapse);
       wrapper.setAttribute('aria-hidden', willCollapse.toString());
       wrapper.classList.toggle('is-open', !willCollapse);
+      document.dispatchEvent(new CustomEvent('class-feature-collapse', {
+        detail: { id: featureId, collapsed: willCollapse },
+      }));
     });
   });
+
+  function rebindTraitToggles() {
+    document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
+      const newBtn = btn.cloneNode(true) as HTMLButtonElement;
+      btn.parentNode!.replaceChild(newBtn, btn);
+
+      const featureId = newBtn.dataset.featureId!;
+      const wrapper = document.getElementById(`${featureId}-traits`);
+      if (!wrapper) return;
+
+      newBtn.addEventListener('click', () => {
+        const isExpanded = newBtn.getAttribute('aria-expanded') === 'true';
+        const willCollapse = isExpanded;
+
+        newBtn.setAttribute('aria-expanded', (!willCollapse).toString());
+        newBtn.classList.toggle('is-collapsed', willCollapse);
+        wrapper.setAttribute('aria-hidden', willCollapse.toString());
+        wrapper.classList.toggle('is-open', !willCollapse);
+        document.dispatchEvent(new CustomEvent('class-feature-collapse', {
+          detail: { id: featureId, collapsed: willCollapse },
+        }));
+      });
+    });
+  }
+
+  // ──── DYNAMIC ARCHETYPE SWAPPER ─────────────────────────────────────────
+  const warningBanner = document.querySelector<HTMLElement>('.archetype-warning-banner');
+  const table = document.querySelector<HTMLElement>('.class-progression-table');
+  const tocGroupContainer = document.querySelector<HTMLElement>('.toc-list');
+  const selectEl = document.getElementById('archetype-select') as HTMLSelectElement | null;
+
+  // Find the Special column index from the table header (robust fallback to 5)
+  let specialColIdx = 5;
+  if (table) {
+    const headerCells = table.querySelectorAll('thead th');
+    for (let i = 0; i < headerCells.length; i++) {
+      if (/special/i.test(headerCells[i].textContent || '')) {
+        specialColIdx = i;
+        break;
+      }
+    }
+  }
+
+  // Stash original HTML of base features to enable clean hot-swapping/restoring
+  const baseCards = Array.from(document.querySelectorAll<HTMLElement>('.class-feature:not(.dynamic-archetype-feature)'));
+  baseCards.forEach(card => {
+    if (!card.dataset.originalHtml) {
+      card.dataset.originalHtml = card.innerHTML;
+      card.dataset.originalDisplay = card.style.display || '';
+      card.dataset.originalId = card.id;
+    }
+  });
+
+  // Stash original Table HTML
+  if (table && !table.dataset.originalHtml) {
+    table.dataset.originalHtml = table.innerHTML;
+  }
+
+  // Stash original ToC HTML
+  if (tocGroupContainer && !tocGroupContainer.dataset.originalHtml) {
+    tocGroupContainer.dataset.originalHtml = tocGroupContainer.innerHTML;
+  }
+
+  // Parse HTML5 template strings containing compiled markdown features
+  const templates = Array.from(document.querySelectorAll<HTMLTemplateElement>('.archetype-feature-template')).map(t => {
+    const contentEl = t.content ? t.content.querySelector('.archetype-feature-rendered-content') : t.querySelector('.archetype-feature-rendered-content');
+    return {
+      featureId: t.dataset.featureId!,
+      name: t.dataset.name!,
+      archetypeId: t.dataset.archetypeId!,
+      level: JSON.parse(t.dataset.level!),
+      replaces: JSON.parse(t.dataset.replaces!) as string[],
+      alters: JSON.parse(t.dataset.alters!) as string[],
+      mutuallyExclusive: JSON.parse(t.dataset.mutuallyExclusive!),
+      classOverrides: JSON.parse(t.dataset.classOverrides || '{}') as Record<string, string>,
+      html: contentEl ? contentEl.innerHTML : t.innerHTML
+    };
+  });
+
+  function isCompatible(candidateArcId: string, selectedArcIds: string[]): boolean {
+    if (selectedArcIds.length === 0) return true;
+
+    const candidateFeatures = templates.filter(f => f.archetypeId === candidateArcId);
+
+    for (const selectedArcId of selectedArcIds) {
+      if (selectedArcId === candidateArcId) continue;
+      const selectedFeatures = templates.filter(f => f.archetypeId === selectedArcId);
+
+      for (const cf of candidateFeatures) {
+        for (const sf of selectedFeatures) {
+          // Rule 1: Both replace the same feature and at least one is mutuallyExclusive
+          const replacedIntersection = cf.replaces.filter(r => sf.replaces.includes(r));
+          if (replacedIntersection.length > 0) {
+            if (cf.mutuallyExclusive || sf.mutuallyExclusive) return false;
+          }
+
+          // Rule 2: One alters and one replaces the same feature and at least one is mutuallyExclusive
+          const alterReplaceIntersection1 = cf.replaces.filter(r => sf.alters.includes(r));
+          if (alterReplaceIntersection1.length > 0) {
+            if (cf.mutuallyExclusive || sf.mutuallyExclusive) return false;
+          }
+
+          const alterReplaceIntersection2 = cf.alters.filter(a => sf.replaces.includes(a));
+          if (alterReplaceIntersection2.length > 0) {
+            if (cf.mutuallyExclusive || sf.mutuallyExclusive) return false;
+          }
+
+          // Rule 3: Both alter the same feature and at least one is mutuallyExclusive
+          const altersIntersection = cf.alters.filter(a => sf.alters.includes(a));
+          if (altersIntersection.length > 0) {
+            if (cf.mutuallyExclusive || sf.mutuallyExclusive) return false;
+          }
+        }
+      }
+    }
+    return true;
+  }
+
+  function updateArchetypes(selectedArcIds: string[]) {
+    // 1. Reset all cards to baseline
+    baseCards.forEach(card => {
+      card.innerHTML = card.dataset.originalHtml!;
+      card.style.display = card.dataset.originalDisplay!;
+      card.id = card.dataset.originalId!; // Restore original ID if altered
+      card.className = 'class-feature' + (card.dataset.originalHtml!.includes('trait-catalog-toggle') ? ' class-feature--container' : '');
+    });
+
+    // Reset Class Info Block Overrides
+    document.querySelectorAll('[id^="class-val-"]').forEach(el => {
+      const htmlEl = el as HTMLElement;
+      if (htmlEl.dataset.originalHtml === undefined) {
+        htmlEl.dataset.originalHtml = htmlEl.innerHTML;
+      }
+      htmlEl.innerHTML = htmlEl.dataset.originalHtml;
+    });
+
+    // Remove any purely dynamic features (like Protean Aura)
+    document.querySelectorAll('.dynamic-archetype-feature').forEach(c => c.remove());
+
+    // Reset Table
+    if (table) {
+      table.innerHTML = table.dataset.originalHtml!;
+    }
+
+    // Reset ToC
+    if (tocGroupContainer) {
+      tocGroupContainer.innerHTML = tocGroupContainer.dataset.originalHtml!;
+    }
+
+    // Reset banner
+    if (warningBanner) {
+      warningBanner.style.display = 'none';
+      warningBanner.innerHTML = '';
+    }
+
+    if (selectedArcIds.length === 0) {
+      rebindTraitToggles();
+      return;
+    }
+
+    // 2. Filter active archetype features
+    const activeFeatures = templates.filter(f => selectedArcIds.includes(f.archetypeId));
+
+    // 3. Conflict Checking Logic
+    const replacedBy: Record<string, Array<{ af: typeof templates[0], arcName: string }>> = {};
+    const alteredBy: Record<string, Array<{ af: typeof templates[0], arcName: string }>> = {};
+    const overridesBy: Record<string, Array<{ af: typeof templates[0], arcName: string }>> = {};
+
+    activeFeatures.forEach(af => {
+      const cb = document.querySelector<HTMLInputElement>(`.archetype-checkbox[data-archetype-id="${af.archetypeId}"]`);
+      const arcName = cb ? cb.dataset.archetypeName! : af.archetypeId;
+
+      af.replaces.forEach(baseId => {
+        if (!replacedBy[baseId]) replacedBy[baseId] = [];
+        replacedBy[baseId].push({ af, arcName });
+      });
+
+      af.alters.forEach(baseId => {
+        if (!alteredBy[baseId]) alteredBy[baseId] = [];
+        alteredBy[baseId].push({ af, arcName });
+      });
+
+      Object.keys(af.classOverrides || {}).forEach(key => {
+        if (!overridesBy[key]) overridesBy[key] = [];
+        overridesBy[key].push({ af, arcName });
+      });
+    });
+
+    let conflictMsg = "";
+    for (const baseId in replacedBy) {
+      const repls = replacedBy[baseId];
+      if (repls.length > 1) {
+        const isAnyExclusive = repls.some(r => r.af.mutuallyExclusive);
+        if (isAnyExclusive) {
+          conflictMsg = `Conflict detected: Archetypes ${repls.map(r => r.arcName).join(' and ')} both attempt to replace the same feature (${baseId.replace('shifter-', '').replace(/-/g, ' ')}).`;
+          break;
+        }
+      }
+      const alts = alteredBy[baseId] || [];
+      if (repls.length > 0 && alts.length > 0) {
+        const isAnyExclusive = repls.some(r => r.af.mutuallyExclusive) || alts.some(a => a.af.mutuallyExclusive);
+        if (isAnyExclusive) {
+          conflictMsg = `Conflict detected: Archetype ${repls[0].arcName} replaces and ${alts[0].arcName} alters the same feature (${baseId.replace('shifter-', '').replace(/-/g, ' ')}).`;
+          break;
+        }
+      }
+    }
+
+    if (!conflictMsg) {
+      for (const baseId in alteredBy) {
+        const alts = alteredBy[baseId];
+        if (alts.length > 1) {
+          const isAnyExclusive = alts.some(a => a.af.mutuallyExclusive);
+          if (isAnyExclusive) {
+            conflictMsg = `Conflict detected: Archetypes ${alts.map(a => a.arcName).join(' and ')} both attempt to alter the same feature (${baseId.replace('shifter-', '').replace(/-/g, ' ')}).`;
+            break;
+          }
+        }
+      }
+    }
+
+    if (!conflictMsg) {
+      for (const key in overridesBy) {
+        const ovrs = overridesBy[key];
+        if (ovrs.length > 1) {
+          const isAnyExclusive = ovrs.some(o => o.af.mutuallyExclusive);
+          if (isAnyExclusive) {
+            conflictMsg = `Conflict detected: Archetypes ${ovrs.map(o => o.arcName).join(' and ')} both attempt to override the same class property (${key}).`;
+            break;
+          }
+        }
+      }
+    }
+
+    if (conflictMsg) {
+      if (warningBanner) {
+        warningBanner.innerHTML = `<span class="warning-icon">⚠️</span> <span class="warning-text">${conflictMsg}</span>`;
+        warningBanner.style.display = 'block';
+      }
+      return;
+    }
+
+    // 4. Hot-swap active features!
+    activeFeatures.forEach(af => {
+      const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+      const arcName = option ? option.dataset.name! : af.archetypeId;
+
+      Object.entries(af.classOverrides || {}).forEach(([key, val]) => {
+        const el = document.getElementById(`class-val-${key}`);
+        if (el) {
+          el.innerHTML = `<span class="override-text" style="color: var(--clr-brand); font-weight: bold;" title="Overridden by ${arcName}">${val}</span>`;
+        }
+      });
+
+      if (af.replaces.length > 0) {
+        // Replacement: Swap in-place inside primary base feature node to preserve Scrollspy intersections
+        const primaryBaseId = af.replaces[0];
+        const primaryCard = document.getElementById(primaryBaseId);
+
+        if (primaryCard) {
+          primaryCard.id = af.featureId;
+          primaryCard.className = 'class-feature class-feature--archetype';
+
+          const displayLevel = Array.isArray(af.level)
+            ? af.level.map(l => `${l}${ordinal(l)}`).join(', ')
+            : `${af.level}${ordinal(af.level)}`;
+
+          primaryCard.innerHTML = `
+            <h2 class="class-feature-heading" title="Replaces: ${primaryBaseId.replace('shifter-', '').replace(/-/g, ' ')}">
+              ${af.name}
+              <span class="class-feature-level"> (${displayLevel})</span>
+              <span class="badge badge--archetype" title="Replaces ${primaryBaseId.replace('shifter-', '').replace(/-/g, ' ')}">${arcName}</span>
+            </h2>
+            <div class="entry-description">${af.html}</div>
+          `;
+        }
+
+        // Hide other replaced base features (if many-to-one replacement)
+        for (let i = 1; i < af.replaces.length; i++) {
+          const extraCard = document.getElementById(af.replaces[i]);
+          if (extraCard) {
+            extraCard.style.display = 'none';
+          }
+        }
+      } else if (af.alters.length > 0) {
+        // Alteration: Retain original card but append premium modification section
+        af.alters.forEach(baseId => {
+          const baseCard = document.getElementById(baseId);
+          if (baseCard) {
+            baseCard.classList.add('is-altered');
+
+            const modBlock = document.createElement('div');
+            modBlock.className = 'archetype-modification-block';
+            modBlock.innerHTML = `
+              <div class="archetype-mod-header">
+                <span class="archetype-mod-badge">${arcName} Modification</span>
+              </div>
+              <div class="archetype-mod-body">
+                ${af.html}
+              </div>
+            `;
+            baseCard.appendChild(modBlock);
+          }
+        });
+      } else {
+        // Purely new feature: Render dynamic element chronologically
+        const displayLevel = Array.isArray(af.level)
+          ? af.level.map(l => `${l}${ordinal(l)}`).join(', ')
+          : `${af.level}${ordinal(af.level)}`;
+
+        const newCard = document.createElement('div');
+        newCard.className = 'class-feature dynamic-archetype-feature class-feature--archetype';
+        newCard.id = af.featureId;
+        newCard.innerHTML = `
+          <h2 class="class-feature-heading">
+            ${af.name}
+            <span class="class-feature-level"> (${displayLevel})</span>
+            <span class="badge badge--archetype">${arcName}</span>
+          </h2>
+          <div class="entry-description">${af.html}</div>
+        `;
+
+        const baseFeaturesList = Array.from(document.querySelectorAll<HTMLElement>('.class-feature:not(.dynamic-archetype-feature)'));
+        const afMinLevel = Array.isArray(af.level) ? Math.min(...af.level) : af.level;
+        let inserted = false;
+
+        for (const baseCard of baseFeaturesList) {
+          const baseLevelRaw = JSON.parse(baseCard.dataset.level || '0');
+          const baseMinLevel = Array.isArray(baseLevelRaw) ? Math.min(...baseLevelRaw) : baseLevelRaw;
+
+          if (baseMinLevel > afMinLevel) {
+            baseCard.parentNode!.insertBefore(newCard, baseCard);
+            inserted = true;
+            break;
+          }
+        }
+
+        if (!inserted && baseFeaturesList.length > 0) {
+          const lastCard = baseFeaturesList[baseFeaturesList.length - 1];
+          lastCard.parentNode!.appendChild(newCard);
+        }
+      }
+    });
+
+    // 5. Update Class Features Table Rows
+    if (table) {
+      const rows = Array.from(table.querySelectorAll('tr'));
+      rows.forEach(row => {
+        const cells = Array.from(row.querySelectorAll('td'));
+        if (cells.length <= specialColIdx) return;
+        const cell = cells[specialColIdx];
+        if (!cell) return;
+
+        activeFeatures.forEach(af => {
+          const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+          const arcName = option ? option.dataset.name! : af.archetypeId;
+
+          af.replaces.forEach(baseId => {
+            const baseName = (templates.find(t => t.featureId === baseId) ?? { name: baseId.replace(/^[a-z]+-/, '').replace(/-/g, ' ') }).name;
+            replaceInTextNodes(cell, new RegExp(`\\b${baseName}\\b`, 'gi'), (match) => {
+              const span = document.createElement('span');
+              span.className = 'table-archetype-feature';
+              span.title = `${arcName} replaces ${match}`;
+              span.textContent = af.name;
+              return span;
+            });
+          });
+
+          af.alters.forEach(baseId => {
+            const baseName = (templates.find(t => t.featureId === baseId) ?? { name: baseId.replace(/^[a-z]+-/, '').replace(/-/g, ' ') }).name;
+            replaceInTextNodes(cell, new RegExp(`\\b${baseName}\\b`, 'gi'), (match) => {
+              const frag = document.createDocumentFragment();
+              frag.appendChild(document.createTextNode(match));
+              const badge = document.createElement('span');
+              badge.className = 'table-altered-badge';
+              badge.title = `Altered by ${arcName}`;
+              badge.textContent = ` (${arcName} Altered)`;
+              frag.appendChild(badge);
+              return frag;
+            });
+          });
+        });
+      });
+    }
+
+    // 6. Update ToC List Items
+    if (tocGroupContainer) {
+      activeFeatures.forEach(af => {
+        const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+        const arcName = option ? option.dataset.name! : af.archetypeId;
+
+        af.replaces.forEach(baseId => {
+          const tocItem = tocGroupContainer.querySelector<HTMLElement>(`[data-toc-section="${baseId}"]`);
+          if (tocItem) {
+            const link = tocItem.querySelector<HTMLAnchorElement>('.toc-cat-link')!;
+            const span = link.querySelector<HTMLElement>('span')!;
+            span.innerHTML = `<span class="toc-archetype-text" title="Replaces ${span.textContent}">${af.name}</span>`;
+            link.setAttribute('href', `#${af.featureId}`);
+            tocItem.setAttribute('data-toc-section', af.featureId);
+          }
+        });
+
+        af.alters.forEach(baseId => {
+          const tocItem = tocGroupContainer.querySelector<HTMLElement>(`[data-toc-section="${baseId}"]`);
+          if (tocItem) {
+            const link = tocItem.querySelector<HTMLAnchorElement>('.toc-cat-link')!;
+            const span = link.querySelector<HTMLElement>('span')!;
+            if (!span.innerHTML.includes('toc-altered-badge')) {
+              span.innerHTML = `${span.textContent} <span class="toc-altered-badge">(Altered)</span>`;
+            }
+          }
+        });
+      });
+    }
+
+    // Rebind toggles for trait catalogs (in case DOM elements were overwritten)
+    rebindTraitToggles();
+  }
+
+  // Initialize TomSelect if present
+  if (selectEl) {
+    selectEl.classList.remove('ts-hidden-select');
+    activeTomSelect = new TomSelect(selectEl, {
+      placeholder: 'Select Archetypes...',
+      plugins: ['remove_button'],
+      closeAfterSelect: true,
+      maxOptions: null,
+      render: {
+        option: function(data: any, escape: any) {
+          return '<div class="ts-custom-option">' +
+            '<span class="title">' + escape(data.text) + '</span>' +
+            '<div class="description" style="font-size: 0.8em; opacity: 0.7; margin-top: 2px;">' + escape(data.desc || '') + '</div>' +
+          '</div>';
+        }
+      },
+      onChange: function(values: string[]) {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (values && values.length > 0) {
+          urlParams.set('archetypes', values.join(','));
+        } else {
+          urlParams.delete('archetypes');
+        }
+        const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+        window.history.pushState({ path: newUrl }, '', newUrl);
+
+        updateArchetypes(values || []);
+
+        // Apply compatibility logic to disable invalid options
+        const currentSelected = values || [];
+        Object.keys(activeTomSelect.options).forEach(optValue => {
+          const isSelected = currentSelected.includes(optValue);
+          const opt = activeTomSelect.options[optValue];
+          if (!isSelected) {
+            const comp = isCompatible(optValue, currentSelected);
+            if (opt.disabled !== !comp) {
+              opt.disabled = !comp;
+              activeTomSelect.updateOption(optValue, opt);
+            }
+          } else {
+            if (opt.disabled) {
+              opt.disabled = false;
+              activeTomSelect.updateOption(optValue, opt);
+            }
+          }
+        });
+      }
+    });
+
+    // Read initial archetypes from query params on load
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialArchetypes = urlParams.get('archetypes');
+    if (initialArchetypes && activeTomSelect) {
+      const activeIds = initialArchetypes.split(',');
+      activeTomSelect.setValue(activeIds); // this triggers onChange which calls updateArchetypes
+    }
+  }
+
+
+
+  function ordinal(n: number): string {
+    if (n % 100 >= 11 && n % 100 <= 13) return 'th';
+    switch (n % 10) {
+      case 1: return 'st';
+      case 2: return 'nd';
+      case 3: return 'rd';
+      default: return 'th';
+    }
+  }
 });
 </script>
 
 <style>
+  /* Class Heading Row & Premium Dropdown Selector */
+  .class-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .class-header-row .page-title {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .archetypes-selector-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .archetypes-selector-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--clr-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  :global(.archetypes-selector-group .ts-wrapper) {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* TomSelect CSS overrides to match our design */
+  :global(.ts-hidden-select) {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  :global(.ts-control) {
+    border-radius: 8px !important;
+    border-color: var(--clr-border) !important;
+    background-color: var(--clr-bg) !important;
+    font-family: var(--font-body) !important;
+    padding: 0.5rem 0.75rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Prevent the input box from resizing vertically when many archetypes are selected */
+  :global(.ts-wrapper.multi .ts-control) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+  :global(.ts-wrapper.multi .ts-control::-webkit-scrollbar) {
+    display: none;
+  }
+
+  :global(.ts-control.focus) {
+    border-color: var(--clr-active) !important;
+    box-shadow: 0 0 0 1px var(--clr-active), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  :global(.ts-dropdown) {
+    border-radius: 8px !important;
+    border-color: var(--clr-border) !important;
+    background-color: var(--clr-bg) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    font-family: var(--font-body) !important;
+  }
+
+  :global(.ts-dropdown .option) {
+    padding: 0.6rem 1rem !important;
+  }
+
+  :global(.ts-dropdown .option.active) {
+    background-color: color-mix(in srgb, var(--clr-active) 8%, transparent) !important;
+    color: var(--clr-body) !important;
+  }
+
+  :global(.ts-dropdown .option[aria-disabled="true"]) {
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+    background-color: transparent !important;
+    pointer-events: none !important;
+  }
+
+  :global(.ts-wrapper.multi .ts-control > div) {
+    background-color: color-mix(in srgb, var(--clr-active) 12%, transparent) !important;
+    color: var(--clr-active) !important;
+    border: none !important;
+    border-radius: 99px !important;
+    font-family: var(--font-display) !important;
+    font-weight: 600;
+    padding: 2px 6px 2px 10px !important;
+  }
+
+  :global(.ts-wrapper.multi .ts-control > div .remove) {
+    border-left: none !important;
+    color: currentColor !important;
+    opacity: 0.6;
+  }
+
+  :global(.ts-wrapper.multi .ts-control > div .remove:hover) {
+    background: transparent !important;
+    opacity: 1;
+  }
+
+  /* Conflict warning banner */
+  .archetype-warning-banner {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    color: #ef4444;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: var(--fs-sm);
+    font-family: var(--font-display);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Visual changes for modified class features */
   .class-feature {
     margin-top: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .class-feature.is-altered {
+    border-left: 3px dashed var(--clr-brand);
+    padding-left: 1rem;
+    background: color-mix(in srgb, var(--clr-brand) 2%, transparent);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .class-feature.class-feature--archetype {
+    background: color-mix(in srgb, var(--clr-active) 3%, transparent); /* Restore a bit more contrast so they aren't completely invisible */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 2px solid var(--clr-active); /* A much thinner, subtle indicator */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+    animation: fadeIn 0.4s ease forwards;
   }
 
   .class-feature-heading {
@@ -416,30 +1280,123 @@ document.addEventListener('astro:page-load', () => {
 
   .class-feature-level {
     font-size: 0.75em;
-    font-weight: normal;
-    opacity: 0.65;
+    font-weight: 600;
+    opacity: 0.75;
     letter-spacing: 0;
+  }
+
+  .class-feature-sep {
+    color: var(--clr-muted);
+    opacity: 1;
+    font-weight: 400;
+  }
+
+  .badge--archetype {
+    font-size: 0.65em;
+    font-family: var(--font-display);
+    background-color: color-mix(in srgb, var(--clr-active) 12%, transparent);
+    color: var(--clr-active);
+    padding: 0.15rem 0.5rem;
+    border-radius: 99px; /* Chip style */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+  }
+
+  /* Modification Blocks */
+  .archetype-modification-block {
+    margin-top: 1.25rem;
+    background: color-mix(in srgb, var(--clr-brand) 5%, #ffffff);
+    border: 1px solid color-mix(in srgb, var(--clr-brand) 20%, transparent);
+    border-radius: 6px;
+    overflow: hidden;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .archetype-mod-header {
+    background: color-mix(in srgb, var(--clr-brand) 10%, transparent);
+    padding: 0.4rem 1rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--clr-brand) 15%, transparent);
+  }
+
+  .archetype-mod-badge {
+    font-family: var(--font-display);
+    font-size: var(--fs-xxs);
+    font-weight: 700;
+    color: var(--clr-brand);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .archetype-mod-body {
+    padding: 1rem;
+    font-size: var(--fs-sm);
+  }
+
+  /* Table styling enhancements for active features */
+  :global(.table-archetype-feature) {
+    background-color: color-mix(in srgb, var(--clr-active) 15%, transparent);
+    color: var(--clr-active);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.9em;
+    border-bottom: 1px solid var(--clr-active);
+  }
+
+  :global(.table-altered-badge) {
+    font-size: 0.75em;
+    color: var(--clr-brand);
+    font-style: italic;
+    opacity: 0.85;
+    font-weight: bold;
+  }
+
+  /* Right rail ToC badges */
+  :global(.toc-archetype-text) {
+    color: var(--clr-active);
+    font-weight: bold;
+    font-size: 0.95em;
+    background-color: color-mix(in srgb, var(--clr-active) 12%, transparent);
+    padding: 1px 4px;
+    border-radius: 4px;
+  }
+
+  :global(.toc-altered-badge) {
+    font-size: 0.75em;
+    color: var(--clr-brand);
+    font-style: italic;
+    opacity: 0.8;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .class-trait {
     margin-top: 1rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--clr-active);
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--clr-active);
+    background: color-mix(in srgb, var(--clr-active) 3%, transparent);
+    border-radius: 0 6px 6px 0;
   }
 
-  .class-trait-name {
-    font-family: var(--font-display);
-    font-size: var(--fs-md);
-    font-weight: 700;
-    color: var(--clr-active);
-    margin: 0 0 0.25rem;
-  }
-
-  .class-trait-requires {
-    font-size: 0.85em;
-    font-weight: normal;
+  .trait-prerequisites {
+    font-size: 0.9em;
     font-style: italic;
-    opacity: 0.75;
+    margin: 0 0 0.5rem;
+  }
+
+  .trait-catalog-requires {
+    font-size: 0.9em;
+    font-style: italic;
+    margin: 0 0 0.35rem;
   }
 
   .trait-catalog-toggle {
@@ -486,12 +1443,12 @@ document.addEventListener('astro:page-load', () => {
     transform: rotate(-90deg);
   }
 
+  /* Wrapper/container features — catalog style for many traits */
   .trait-catalog-wrapper {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.25s ease;
   }
-
   .trait-catalog-wrapper.is-open {
     grid-template-rows: 1fr;
   }
@@ -504,36 +1461,86 @@ document.addEventListener('astro:page-load', () => {
     overflow: hidden;
   }
 
+  .trait-catalog-wrapper.is-open .trait-catalog {
+    background: color-mix(in srgb, var(--clr-active) 4%, var(--clr-surface));
+  }
+
   .trait-catalog-entry {
-    padding: 0.75rem 0 0.75rem 1rem;
-    border-left: 2px solid var(--clr-active);
-    margin-bottom: 0.25rem;
-  }
-
-  .trait-catalog-entry + .trait-catalog-entry {
-    border-top: 1px solid color-mix(in srgb, var(--clr-active) 20%, transparent);
-    margin-left: 0;
-  }
-
-  .trait-catalog-name {
-    font-family: var(--font-display);
-    font-size: var(--fs-md);
-    font-weight: 700;
-    color: var(--clr-active);
-    margin: 0 0 0.35rem;
+    padding: 0.75rem 1rem 0.75rem 0.75rem;
+    border-left: 3px solid var(--clr-active);
+    border-top: 1px solid color-mix(in srgb, var(--clr-active) 15%, transparent);
   }
 
   .trait-catalog-requires {
-    font-size: 0.85em;
+    font-size: 1em;
     font-weight: normal;
-    font-style: italic;
-    opacity: 0.75;
+    font-style: normal;
+    opacity: 1;
+    margin-bottom: 0.5em;
   }
+
+
+  /* ── Table column dividers (Bound Equipment) ── */
+  :global(#bound-equipment-su table td:nth-child(2)),
+  :global(#bound-equipment-su table td:nth-child(4)),
+  :global(#bound-equipment-su table td:nth-child(6)),
+  :global(#bound-equipment-su table th:nth-child(2)),
+  :global(#bound-equipment-su table th:nth-child(4)),
+  :global(#bound-equipment-su table th:nth-child(6)) {
+    border-right: 2px solid var(--clr-border);
+  }
+
+  /* ── Tooltip popup ── */
+  .tt {
+    color: var(--clr-muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--clr-muted);
+    cursor: help;
+    position: relative;
+  }
+  .tt:hover { color: var(--clr-active); }
+  .tt::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--clr-surface);
+    color: var(--clr-body);
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    max-width: 360px;
+    width: max-content;
+    white-space: normal;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 100;
+  }
+  .tt:hover::after { opacity: 1; }
 
   /* ── Class Progression Table ── */
   .class-table-wrapper {
     margin: 2rem 0;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .class-table-wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .class-table-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .class-table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--clr-border);
+    border-radius: 3px;
   }
 
   .class-table-heading {
@@ -551,13 +1558,17 @@ document.addEventListener('astro:page-load', () => {
     border-collapse: collapse;
     font-size: var(--fs-sm);
     line-height: 1.5;
-    background: var(--clr-bg-elevated, #1e1e2e);
+    background: var(--clr-surface);
+  }
+
+  .class-table-outline {
     border-radius: 8px;
     overflow: hidden;
+    border: 1px solid var(--clr-border);
   }
 
   .class-progression-table thead {
-    background: color-mix(in srgb, var(--clr-active) 15%, var(--clr-bg-elevated, #1e1e2e));
+    background: color-mix(in srgb, var(--clr-active) 15%, var(--clr-surface));
   }
 
   .class-progression-table th {
@@ -566,16 +1577,25 @@ document.addEventListener('astro:page-load', () => {
     text-align: left;
     padding: 0.6rem 0.75rem;
     border-bottom: 2px solid var(--clr-border);
+    border-right: 1px solid color-mix(in srgb, var(--clr-border) 80%, transparent);
     color: var(--clr-active);
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: break-word;
     font-size: 0.85em;
     letter-spacing: 0.02em;
+  }
+  .class-progression-table th:last-child {
+    border-right: none;
   }
 
   .class-progression-table td {
     padding: 0.4rem 0.75rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--clr-border) 60%, transparent);
+    border-bottom: 1px solid var(--clr-border);
+    border-right: 1px solid color-mix(in srgb, var(--clr-border) 60%, transparent);
     white-space: nowrap;
+  }
+  .class-progression-table td:last-child {
+    border-right: none;
   }
 
   .class-progression-table tbody tr:nth-child(even) {
@@ -586,17 +1606,20 @@ document.addEventListener('astro:page-load', () => {
     background: color-mix(in srgb, var(--clr-active) 12%, transparent);
   }
 
+  /* Highlight the level column */
   .class-progression-table td:first-child {
     font-weight: 700;
     color: var(--clr-active);
   }
 
+  /* Special column gets more breathing room */
   .class-progression-table td:nth-child(6) {
     white-space: normal;
     min-width: 200px;
     max-width: 400px;
   }
 
+  /* Archetype-altered table cells */
   :global(.table-archetype-feature) {
     color: var(--clr-brand);
     font-weight: 600;

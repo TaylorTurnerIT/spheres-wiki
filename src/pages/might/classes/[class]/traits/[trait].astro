@@ -1,0 +1,139 @@
+---
+import { render } from 'astro:content';
+import { url } from "@/lib/url";
+import WikiPage from '@/layouts/WikiPage.astro';
+import SourceBookCallout from '@/components/SourceBookCallout.astro';
+import TagBadge from '@/components/TagBadge.astro';
+import { resolveEntries } from '@/lib/resolveEntries';
+import { BOOK_COLLECTIONS } from '@/content.config';
+import { buildOrderedTagIds } from '@/lib/tags';
+import type { ClassTraitEntry, ClassEntry, BookMeta, TagEntry } from '@/lib/types';
+
+interface Props {
+  trait: ClassTraitEntry;
+  cls: ClassEntry;
+  collEntry: any;
+  sourceBook: BookMeta | undefined;
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
+}
+
+export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
+  const { classTraitMap, classMap, bookMetaMap, tagMap } = await resolveEntries();
+
+  const allCollEntries = new Map<string, any>();
+  for (const slug of BOOK_COLLECTIONS) {
+    try {
+      const entries = await getCollection(slug as any);
+      for (const e of entries) {
+        if ((e.data as any).type !== 'tag') {
+          allCollEntries.set(`${(e.data as any).type}:${(e.data as any).id}`, e);
+        }
+      }
+    } catch {}
+  }
+
+  const paths = [];
+  for (const [, trait] of classTraitMap) {
+    if (trait.system !== 'might') continue;
+
+    const cls = [...classMap.values()].find(c => c.id === trait.className && c.system === 'might');
+    if (!cls) continue;
+
+    paths.push({
+      params: { class: cls.id, trait: trait.id },
+      props: {
+        trait,
+        cls,
+        collEntry: allCollEntries.get(`class-trait:${trait.id}`),
+        sourceBook: bookMetaMap.get(trait.sourceBook),
+        tagMap,
+        bookMetaMap,
+      },
+    });
+  }
+
+  return paths;
+}
+
+const { trait, cls, collEntry, sourceBook, tagMap, bookMetaMap } = Astro.props;
+
+function stripBodySource(body: string): string {
+  return body.replace(/\n\*Source:.+$/m, '').trimEnd();
+}
+
+const cleanBody = collEntry ? stripBodySource(collEntry.body || '') : null;
+const TraitContent = (collEntry && cleanBody !== null) ? (await render({ ...collEntry, body: cleanBody })).Content : null;
+
+const orderedTagIds = buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {});
+---
+<WikiPage title={`${trait.name} — ${cls.name} — Spheres of Might Wiki`} activeNamespace="might">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url("/might/")} data-astro-prefetch="hover">Spheres of Might</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href={url(`/might/classes/${cls.id}/`)} data-astro-prefetch="hover">{cls.name}</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>{trait.name}</span>
+  </nav>
+
+  <div class="content-columns">
+    <div class="content-main">
+            <span data-pagefind-meta={`title:${trait.name}`} hidden></span>
+      <span data-pagefind-filter="type:class-trait" hidden></span>
+      <span data-pagefind-filter="system:Spheres of Might" hidden></span>
+      <span data-pagefind-meta={`class:${cls.name}`} hidden></span>
+      <span data-pagefind-meta={`tags:${trait.tags.join(', ')}`} hidden></span>
+<h1
+        class="page-title might"
+        id="overview"
+        data-pagefind-weight="2.0"
+
+
+      >
+        {trait.name}
+      </h1>
+      <span data-pagefind-meta="type:class-trait" hidden></span>
+        <span data-pagefind-meta="system:Spheres of Might" hidden></span>
+      <div class="trait-page-meta">
+        {orderedTagIds.map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)}
+      </div>
+
+      {trait.requires && (
+        <p class="trait-prerequisites-note">
+          <strong>Prerequisites:</strong> {trait.requires}
+        </p>
+      )}
+
+      {TraitContent
+        ? <div class="entry-description"><TraitContent /></div>
+        : <p class="entry-description"><em>Description coming soon.</em></p>
+      }
+    </div>
+
+    <aside class="right-rail" aria-label="Page contents">
+      <SourceBookCallout book={sourceBook} />
+    </aside>
+  </div>
+
+</WikiPage>
+
+<style>
+  .trait-page-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+
+  .trait-prerequisites-note {
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--clr-muted);
+    margin: 0 0 1rem;
+  }
+</style>
