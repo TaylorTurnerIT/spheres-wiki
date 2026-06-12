@@ -188,15 +188,58 @@ The Spheres of Might content is migrated from Wikidot source files via a Rust pa
 The parser writes entries to `{book}/might/spheres/{sphere}/` based on the resolved citation key:
 - `[Key] = "book-slug"` → `src/content/book-slug/might/...`
 - `[Apoc]` with body `Source:` → specific apoc book folder
-- `[3PP]` (`__SKIP__`) → entry discarded (handled by live wiki)
+- `[3PP]` (`__DEFERRED__`, changed from `__SKIP__` 2026-06-11) → resolved via body source if available; quarantined otherwise
 - No citation key → `spheres-of-might/might/...` (primary book)
 
 ### Quarantine
 
 Quarantined entries are those the parser cannot route to a book:
-- `[Apoc]`/`[DRS]`/`[SM—]` without body `Source:` line
+- `[Apoc]`/`[DRS]`/`[SM—]`/`[3PP]` without body `Source:` line
 - Unknown bracket tokens not in `citation_keys` or `bracket_ability_tags`
 - Unknown paren tags not in `paren_tags`
+
+## Guile sphere migration (Wikidot → Markdown)
+
+The Spheres of Guile content uses the same pipeline as Might: Rust parser `../ftml/examples/export_guile.rs` + `../ftml/conf/guile-lexicon.toml`. Detailed spec at `context/kits/cavekit-guile-conversion.md`.
+
+### Adding a new sphere
+
+1. Read raw source at `../spheresofpower-wikidot-archive/pages/<sphere>.txt`
+2. Inventory headings: `grep '^++ ' source.txt` (H2 sections), `grep '^++++ ' source.txt` (H4 entries), `grep '\[.*\]'` (bracket keys), `grep '\('` (paren tags)
+3. Add new keys to `../ftml/conf/guile-lexicon.toml` — citation_keys, apoc_body_sources, paren_tags, bracket_ability_tags
+4. Add `<sphere>_section_defs()` + `<sphere>_sphere_entry()` to `../ftml/examples/export_guile.rs` and wire in `main()`
+5. Build: `LIBGIT2_NO_PKG_CONFIG=1 ... cargo build --example export_guile`
+6. Validate: `cargo run --example export_guile -- <source> --sphere <id> --lexicon ... --validate`
+7. Resolve quarantine: add missing lexicon entries OR (for no-body-source 3PP) search Library of Metzofitz
+8. Force-write: `--force` generates `.md` files to temp; copy to `src/content/<book>/guile/spheres/<sphere>/`
+9. Create tag definitions: `src/content/spheres-of-guile/guile/tags/<tag>.md` (unless tag exists in Power/Might)
+10. Run `npm run validate` → `npm run build` — must pass with 0 errors
+
+### Critical rules (universal — applies to Might and Power too)
+
+**Section def heading matching:** `parse_heading_line()` strips parenthetical text like `(Ex)` from parsed heading names. Section def headings must match the stripped version. Use `"##4B0092|Acclimate ##"` not `"##4B0092|Acclimate (Ex)##"`.
+
+**Sentinel H2 sections:** Sections like "Sphere Packages" or "Drawbacks" should be sentinel H2 entries whose H4 children are the actual entries. The section heading itself must not produce an entry. Use `exclude_base` guard in `convert_sphere()`.
+
+**Body source extraction:** `extract_body_source_title()` now searches 10 lines after heading (not 1). Some entries have prereq/benefit text before the `^^Source:` line.
+
+**Count-match rule:** `grep -c '^++++ ' source.txt` = total H4 count. Subtract sentinel H4 entries (descriptive headings under sentinel sections). Result must equal parser's `Parsed:` count minus 1 (sphere entry). Documented at `context/kits/cavekit-guile-conversion.md` §V.
+
+**Body-diff rule:** Original sphere intro text (between end of Wikidot boilerplate and first H2) must match generated sphere body verbatim. Excludes Wikidot markup that the parser strips.
+
+**Tags across systems:** Tags existing in Power or Might must NOT be redefined in Guile (V37/V38). Check before creating. If a tag needs a better definition, update the existing one instead.
+
+**Quarantine files:** `QUARANTINE-*.md` files anywhere in `src/content/` block Astro builds. Delete after resolution.
+
+**3PP entries:** Changed from `__SKIP__` to `__DEFERRED__` in all three lexicons (2026-06-11). Entries with body sources resolve; those without need Library of Metzofitz lookup.
+
+### Post-write cleanup
+
+- Verify sphere `.md` entry was copied (sometimes missed due to nested path from force-write)
+- Delete `QUARANTINE-<sphere>.md` from `src/content/` (blocks Astro build)
+- Delete non-talent H4 entries (sentinel headings that produced entries)
+- Delete nested book directories under `spheres-of-guile/guile/spheres/` (parser path quirk)
+- Check for duplicate tags across systems — use existing definitions where possible
 
 Quarantined entries are NOT auto-generated. They must be manually created in the correct book folder, or acknowledged and skipped.
 
