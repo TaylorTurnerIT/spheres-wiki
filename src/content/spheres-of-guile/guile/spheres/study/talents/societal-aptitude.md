@@ -1,12 +1,10 @@
 ---
 id: "societal-aptitude"
 name: "Societal Aptitude"
-type: "talent"
+type: "feat"
 sourceBook: "spheres-of-guile"
 sphere: "study"
-tier: "base"
-tags:
-  - "package"
+tags: []
 ---
 
 You have an intimate understanding of the many ways society can take shape, the ways that communities function, and the - sometimes unreliable - importance of history.

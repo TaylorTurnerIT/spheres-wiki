@@ -1,12 +1,10 @@
 ---
 id: "mystical-aptitude"
 name: "Mystical Aptitude"
-type: "talent"
+type: "feat"
 sourceBook: "spheres-of-guile"
 sphere: "study"
-tier: "base"
-tags:
-  - "package"
+tags: []
 ---
 
 You are well-informed on many phenomena, the essence and functions of the planes, and the foundations of arcana.

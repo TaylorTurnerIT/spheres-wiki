@@ -1,12 +1,10 @@
 ---
 id: "prepared-hacking"
 name: "Prepared Hacking"
-type: "talent"
+type: "feat"
 sourceBook: "spheres-of-guile"
 sphere: "spellhacking"
-tier: "base"
-tags:
-  - "package"
+tags: []
 ---
 
 **Prerequisite:** Spellhacking sphere.

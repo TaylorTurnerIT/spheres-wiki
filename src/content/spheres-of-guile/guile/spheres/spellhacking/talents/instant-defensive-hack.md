@@ -1,12 +1,10 @@
 ---
 id: "instant-defensive-hack"
 name: "Instant Defensive Hack"
-type: "talent"
+type: "feat"
 sourceBook: "spheres-of-guile"
 sphere: "spellhacking"
-tier: "base"
-tags:
-  - "package"
+tags: []
 ---
 
 **Prerequisites:** Associated skill 7 ranks, Spellhacking sphere, Prepared Hacking.

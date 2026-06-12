@@ -1,6 +1,6 @@
 ---
-id: "one-person-show-or-package"
-name: "One-Person Show  or  package)"
+id: "one-person-show"
+name: "One-Person Show"
 type: "talent"
 sourceBook: "spheres-of-guile"
 sphere: "performance"

@@ -1,6 +1,6 @@
 ---
-id: "instrumental-acoustics-or-package"
-name: "Instrumental Acoustics , , or  package)"
+id: "instrumental-acoustics"
+name: "Instrumental Acoustics"
 type: "talent"
 sourceBook: "spheres-of-guile"
 sphere: "performance"

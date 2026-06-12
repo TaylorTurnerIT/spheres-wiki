@@ -1,12 +1,10 @@
 ---
 id: "earthly-aptitude"
 name: "Earthly Aptitude"
-type: "talent"
+type: "feat"
 sourceBook: "spheres-of-guile"
 sphere: "study"
-tier: "base"
-tags:
-  - "package"
+tags: []
 ---
 
 You possess a deep understanding of the natural world, and how it can be shaped, refined, and corrupted.

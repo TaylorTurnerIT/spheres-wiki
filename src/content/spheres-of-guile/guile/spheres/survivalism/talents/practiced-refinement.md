@@ -1,12 +1,10 @@
 ---
 id: "practiced-refinement"
 name: "Practiced Refinement"
-type: "talent"
+type: "feat"
 sourceBook: "spheres-of-guile"
 sphere: "survivalism"
-tier: "base"
-tags:
-  - "package"
+tags: []
 ---
 
 **Prerequisites:** Associated skill 5 ranks, Survivalism sphere ((harvest) package), favored enemy class feature.
