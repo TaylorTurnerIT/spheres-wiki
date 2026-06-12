@@ -7,6 +7,7 @@ import TagBadge from '@/components/TagBadge.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content.config';
 import { buildOrderedTagIds } from '@/lib/tags';
+import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { FeatEntry, SphereEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -35,26 +36,27 @@ export async function getStaticPaths() {
   }
 
   const paths = [];
-  for (const [, feat] of featMap) {
-    if (feat.system !== 'power') continue;
 
-    // Primary path
-    const sphere = [...sphereMap.values()].find(s => s.id === feat.sphere && s.system === 'power');
-    if (sphere) {
-      paths.push({
-        params: { sphere: sphere.id, feat: feat.id },
-        props: { feat, sphere, collEntry: allCollEntries.get(`feat:${feat.id}`), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
-      });
-    }
+  for (const { params: { system } } of getSystemPaths()) {
+    for (const [, feat] of featMap) {
+      if (feat.system !== system) continue;
 
-    // Dual sphere path
-    if (feat.dualSphere) {
-      const dualSphere = [...sphereMap.values()].find(s => s.id === feat.dualSphere && s.system === 'power');
-      if (dualSphere) {
+      const sphere = [...sphereMap.values()].find(s => s.id === feat.sphere && s.system === system);
+      if (sphere) {
         paths.push({
-          params: { sphere: dualSphere.id, feat: feat.id },
-          props: { feat, sphere: dualSphere, collEntry: allCollEntries.get(`feat:${feat.id}`), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
+          params: { system, sphere: sphere.id, feat: feat.id },
+          props: { feat, sphere, collEntry: allCollEntries.get(`feat:${feat.id}`), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
         });
+      }
+
+      if (feat.dualSphere) {
+        const dualSphere = [...sphereMap.values()].find(s => s.id === feat.dualSphere && s.system === system);
+        if (dualSphere) {
+          paths.push({
+            params: { system, sphere: dualSphere.id, feat: feat.id },
+            props: { feat, sphere: dualSphere, collEntry: allCollEntries.get(`feat:${feat.id}`), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
+          });
+        }
       }
     }
   }
@@ -62,41 +64,43 @@ export async function getStaticPaths() {
   return paths;
 }
 
+const { system } = Astro.params;
 const { feat, sphere, collEntry, sourceBook, tagMap, bookMetaMap } = Astro.props;
+
+const sysConfig = resolveSystem(system)!;
+const searchFilter = getSystemSearchFilter(system);
 
 const FeatContent = collEntry ? (await render(collEntry)).Content : null;
 ---
-<WikiPage title={`${feat.name} — ${sphere.name} — Spheres of Power Wiki`} activeNamespace="power">
+<WikiPage title={`${feat.name} — ${sphere.name} — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href={url("/power/")} data-astro-prefetch="hover">Spheres of Power</a>
+    <a href={url(`/${system}/`)} data-astro-prefetch="hover">{sysConfig.label}</a>
     <span class="breadcrumb-sep">›</span>
-    <a href={url(`/power/${sphere.id}/`)} data-astro-prefetch="hover">{sphere.name}</a>
+    <a href={url(`/${system}/${sphere.id}/`)} data-astro-prefetch="hover">{sphere.name}</a>
     <span class="breadcrumb-sep">›</span>
     <span>{feat.name}</span>
   </nav>
 
   <div class="content-columns">
     <div class="content-main">
-            <span data-pagefind-meta={`title:${feat.name}`} hidden></span>
+      <span data-pagefind-meta={`title:${feat.name}`} hidden></span>
       <span data-pagefind-meta={`sphere:${sphere.name}`} hidden></span>
-      <span data-pagefind-filter="system:Spheres of Power" hidden></span>
+      <span data-pagefind-filter={searchFilter} hidden></span>
       <span data-pagefind-filter="type:feat" hidden></span>
       <span data-pagefind-meta={`tags:${feat.tags.join(', ')}`} hidden></span>
-<h1
-        class="page-title power"
+      <h1
+        class={`page-title ${sysConfig.cssKey}`}
         id="overview"
         transition:name={`entry-title-${feat.id}`}
         data-pagefind-weight="2.0"
-        
-        
       >
         {feat.name}
       </h1>
-      <span data-pagefind-meta="system:Spheres of Power" hidden></span>
-        <span data-pagefind-meta="type:feat" hidden></span>
+      <span data-pagefind-meta="type:feat" hidden></span>
+      <span data-pagefind-meta={searchFilter} hidden></span>
       <div class="talent-page-meta">
         {buildOrderedTagIds(feat, bookMetaMap, tagMap, { includeSphere: true, currentSphereId: sphere.id })
           .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)

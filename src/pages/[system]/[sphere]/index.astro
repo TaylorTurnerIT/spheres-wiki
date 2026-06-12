@@ -12,6 +12,7 @@ import { BOOK_COLLECTIONS } from '@/content.config';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
 import TagBadge from '@/components/TagBadge.astro';
+import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { SphereEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -46,48 +47,55 @@ export async function getStaticPaths() {
 
   const paths = [];
 
-  for (const [, sphere] of sphereMap) {
-    if (sphere.system !== 'power') continue;
-    const allTalents = [...talentMap.values()].filter(t => (t.sphere === sphere.id || t.dualSphere === sphere.id) && t.system === 'power');
-    const base       = allTalents.filter(t => t.tier === 'base').sort((a, b) => a.name.localeCompare(b.name));
-    const feats      = [...featMap.values()].filter(f => (f.sphere === sphere.id || f.dualSphere === sphere.id) && f.system === 'power').sort((a, b) => a.name.localeCompare(b.name));
+  for (const { params: { system } } of getSystemPaths()) {
+    for (const [, sphere] of sphereMap) {
+      if (sphere.system !== system) continue;
 
-    const sections = buildSections(sphere, allTalents.filter(t => t.tier !== 'base'), feats);
+      const allTalents = [...talentMap.values()].filter(t => (t.sphere === sphere.id || t.dualSphere === sphere.id) && t.system === system);
+      const base       = allTalents.filter(t => t.tier === 'base').sort((a, b) => a.name.localeCompare(b.name));
+      const feats      = [...featMap.values()].filter(f => (f.sphere === sphere.id || f.dualSphere === sphere.id) && f.system === system).sort((a, b) => a.name.localeCompare(b.name));
 
-    const talentCollEntries = new Map<string, any>();
-    for (const t of allTalents) {
-      const entry = allCollEntries.get(`talent:${t.id}`);
-      if (entry) talentCollEntries.set(t.id, entry);
+      const sections = buildSections(sphere, allTalents.filter(t => t.tier !== 'base'), feats);
+
+      const talentCollEntries = new Map<string, any>();
+      for (const t of allTalents) {
+        const entry = allCollEntries.get(`talent:${t.id}`);
+        if (entry) talentCollEntries.set(t.id, entry);
+      }
+
+      const featCollEntries = new Map<string, any>();
+      for (const f of feats) {
+        const entry = allCollEntries.get(`feat:${f.id}`);
+        if (entry) featCollEntries.set(f.id, entry);
+      }
+
+      paths.push({
+        params: { system, sphere: sphere.id },
+        props: {
+          sphere,
+          base,
+          allTalents,
+          feats,
+          sections,
+          mainCollEntry: allCollEntries.get(`sphere:${sphere.id}`),
+          talentCollEntries,
+          featCollEntries,
+          sourceBook: bookMetaMap.get(sphere.sourceBook),
+          bookMetaMap,
+          tagMap,
+        },
+      });
     }
-
-    const featCollEntries = new Map<string, any>();
-    for (const f of feats) {
-      const entry = allCollEntries.get(`feat:${f.id}`);
-      if (entry) featCollEntries.set(f.id, entry);
-    }
-
-    paths.push({
-      params: { sphere: sphere.id },
-      props: {
-        sphere,
-        base,
-        allTalents,
-        feats,
-        sections,
-        mainCollEntry: allCollEntries.get(`sphere:${sphere.id}`),
-        talentCollEntries,
-        featCollEntries,
-        sourceBook: bookMetaMap.get(sphere.sourceBook),
-        bookMetaMap,
-        tagMap,
-      },
-    });
   }
 
   return paths;
 }
 
+const { system } = Astro.params;
 const { sphere, base, allTalents, feats, sections, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap, tagMap } = Astro.props;
+
+const sysConfig = resolveSystem(system)!;
+const searchFilter = getSystemSearchFilter(system);
 
 const talentById = new Map(allTalents.map(t => [t.id, t]));
 const featById = new Map(feats.map(f => [f.id, f]));
@@ -151,12 +159,12 @@ const groups: TocGroup[] = sections.map(sec => ({
   })),
 }));
 ---
-<WikiPage title={`${sphere.name} — Spheres of Power Wiki`} activeNamespace="power">
+<WikiPage title={`${sphere.name} — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href={url("/power/")} data-astro-prefetch="hover">Spheres of Power</a>
+    <a href={url(`/${system}/`)} data-astro-prefetch="hover">{sysConfig.label}</a>
     <span class="breadcrumb-sep">›</span>
     <span>{sphere.name}</span>
   </nav>
@@ -164,21 +172,19 @@ const groups: TocGroup[] = sections.map(sec => ({
   <div class="content-columns">
     <div class="content-main">
 
-            <span data-pagefind-meta={`title:${sphere.name}`} hidden></span>
+      <span data-pagefind-meta={`title:${sphere.name}`} hidden></span>
       <span data-pagefind-filter="type:sphere" hidden></span>
-      <span data-pagefind-filter="system:Spheres of Power" hidden></span>
-<h1
-        class="page-title power"
+      <span data-pagefind-filter={searchFilter} hidden></span>
+      <h1
+        class={`page-title ${sysConfig.cssKey}`}
         id="overview"
         data-pagefind-weight="10"
-        
-        
       >
         <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
         {sphere.name}
       </h1>
       <span data-pagefind-meta="type:sphere" hidden></span>
-        <span data-pagefind-meta="system:Spheres of Power" hidden></span>
+      <span data-pagefind-meta={searchFilter} hidden></span>
       <hr class="page-title-rule" />
 
       {mainCollEntry?.data?.description && (
@@ -196,7 +202,7 @@ const groups: TocGroup[] = sections.map(sec => ({
           <div class="base-ability-block" id={t.id} data-pagefind-weight="0.5">
             <div class="base-ability-header">
               <div class="base-ability-header-top">
-                <a href={url(`/power/${sphere.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
+                <a href={url(`/${system}/${sphere.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
                 {tBook && <span class="talent-source">{tBook.title}</span>}
               </div>
               <div class="base-ability-header-bottom">
@@ -246,7 +252,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                           <div class="talent-header">
                             <div class="talent-header-top">
                               <a
-                                href={url(`/power/${sphere.id}/${talent ? '' : 'feats/'}${entry.id}/`)}
+                                href={url(`/${system}/${sphere.id}/${talent ? '' : 'feats/'}${entry.id}/`)}
                                 class="talent-name"
                                 data-astro-prefetch="hover"
                                 transition:name={`entry-title-${entry.id}`}
@@ -280,7 +286,7 @@ const groups: TocGroup[] = sections.map(sec => ({
     </div>
 
     <aside class="right-rail" aria-label="Page contents">
-      <TableOfContents overview={overview} groups={groups} system="power" />
+      <TableOfContents overview={overview} groups={groups} system={system} />
       <SourceBookCallout book={sourceBook} />
     </aside>
   </div>
