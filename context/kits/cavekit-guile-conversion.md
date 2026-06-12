@@ -135,7 +135,7 @@ spheres-wiki/src/content/<book>/guile/spheres/<sphere>/*.md  (output)
 | # | Sphere | Associated Skills | Status | Notes |
 |---|--------|-------------------|--------|-------|
 | 1 | Navigation | Perception, Sense Motive | **COMPLETE** | 64 entries, 0 quarantine, build passes |
-| 2 | Alchemy (Guile) | Craft (alchemy) | `.` | |
+| 2 | Vocation | Profession, Craft, Knowledge | **COMPLETE** | 135 entries, 0 quarantine, count-match verified |
 | 3 | Athletics (Guile) | Acrobatics, Climb, Swim | `.` | |
 | 4 | Communication | Diplomacy, Linguistics | `.` | |
 | 5 | Deception | Bluff, Disguise | `.` | |
@@ -198,10 +198,13 @@ src/content/spheres-of-guile/guile/spheres/navigation/talents/
 10. TAG_DEFS → create tag .md files in guile/tags/ (unless shared with Power/Might)
 11. ASTRO_BUILD → npm run build in spheres-wiki → must pass with 0 errors
 12. CHECK → review output: 0 quarantine, correct names, tags, tiers, sourceBook
-13. MERGE → mark sphere COMPLETE in status table
+13. COUNT → compare H4 talent count on original page (minus sentinels) against parser output. Must match exactly. Mismatch = sentinel H4 misclassified as talent or vice versa.
+14. MERGE → mark sphere COMPLETE in status table
 ```
 
 **Package detection:** Guile spheres use packages (choose-one bundles with associated skills). Packages are H4 entries under a "Sphere Packages" H2 section. To auto-tag: `section_tags: vec!["package".to_string()]` on the packages `SectionDef`. Package section heading excluded from base-entry creation via `exclude_base` guard.
+
+**Count-matching rule:** After parsing, count H4 headings on original page (`grep -c '^++++ ' source.txt`). Subtract sentinel H4 entries (descriptive headings under sentinel sections like "Talent Types"). Compare against `Parsed:` in parser audit minus sphere entry. Must match exactly. Vocation: 136 H4 - 2 sentinels = 134 talents. Parser: 135 total - 1 sphere = 134. ✓
 
 ## §V Invariants
 
@@ -482,6 +485,7 @@ npm run test:e2e -- navigation
 
 ## Changelog
 
+- 2026-06-11: Vocation sphere conversion COMPLETE — 135 entries, 0 quarantine, count-match verified, trade tag updated
 - 2026-06-11: Navigation sphere conversion COMPLETE — 0 quarantine, build passes, 3849 pages indexed
 - 2026-06-11: 3PP gap discovered — 564 entries silenced across Power/Might; Guile fixed (3PP→DEFERRED); Power/Might pending
 - 2026-06-11: Initial spec — pipeline design, Navigation sphere target, task breakdown
