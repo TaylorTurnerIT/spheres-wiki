@@ -1,0 +1,28 @@
+---
+id: "herbal-lore"
+name: "Herbal Lore"
+type: "talent"
+sourceBook: "spheres-of-guile"
+sphere: "herbalism"
+tier: "base"
+tags:
+  - "package"
+  - "extraordinary"
+---
+
+Choose three of the following herb types. You learn the practical applications of these herbs, and where they can be found in the wild. Gathering a batch of herbs requires 1 hour, and may be done during the same period of time required to prepare spells or other daily abilities. You may gather an additional batch of herbs at any time by spending 1 hour gathering herbs. Herbs may be gathered anywhere that plants or fungi grow, including caves or densely packed cities but not a lifeless demiplane.
+
+A single batch of herbs contains a number of herbs equal to your ranks in the associated skill + your operative ability modifier, and contains any combination of herbs you can gather. A gathered herb loses its potency after 24 hours. You may only gather a number of batches per day equal to your operative ability modifier.
+
+Unless otherwise specified, consuming a herb is a standard action, and grants its benefits for a number of rounds equal to 1/2 your ranks in the associated skill + your operative ability modifier, or until the user benefits from the herb, whichever comes first, unless otherwise indicated.
+
+- **Bitter Herbs:** Known for their restorative properties, a bitter herb can be consumed to heal 1 point of ability damage after 10 minutes has elapsed.
+- **Bland Herbs:** Used to slow or hasten natural bodily processes, a bland herb can be consumed to reduce the next instance of weapon damage received by an amount equal to your operative ability modifier. Alternatively you may reduce the value of the next instance of bleed damage you would suffer by an equal amount.
+- **Cool Herbs:** Used to boost cognitive functions, a cool herb can be consumed to gain a +2 competence bonus to the next Intelligence-, Wisdom-, or Charisma-based ability check or skill check the user attempts within the herb’s duration.
+- **Dry Herbs:** Utilized to protect the body and mind, a dry herb can be consumed to allow the user to reroll one saving throw they attempt within a number of rounds equal to your operative modifier. The user decides whether to reroll the saving throw after the results are revealed and must take the second result even if it is worse.
+- **Intense Herbs:** Used to elicit a short-term benefit or one that alters the user’s energy, an intense herb can be consumed to gain a +5-foot alchemical bonus to all of the user’s speeds for the herb’s duration. *Special:* If you possess the Double Dose talent, the numerical increase instead applies to the herb’s duration.
+- **Savory Herbs [DRS]:** Known for its salty and earthy taste, a savory herb can be consumed to gain temporary hit points equal to 2 + your operative modifier (minimum 1) for the herb’s duration. A savory herb can be added to a concoction as a twist, granting the imbiber (or the creature it is applied to in the case of an aroma) a number of temporary hit points equal to twice the number of herbs spent on the concoction. These temporary hit points last for the duration of the concoction. If a tainted herb is added to such a concoction, it loses all benefits granted by the savory herb.
+- **Sour Herbs:** Used to rapidly ferment or sour a concoction to enhance its effects–although typically with unfortunate side effects–a sour herb can be consumed to gain a +2 competence bonus to saving throws against disease and poison effects. At any point during the herb’s duration, the user can spend a swift action to retch, making them sickened for 1 round and granting them a new saving throw against any poisons they are suffering from (a failed attempt does not further the poisons effects).
+- **Spicy Herbs:** Used to enhance and alter physical abilities, a spicy herb can be consumed to gain a +2 competence bonus to the next Strength-, Dexterity-, or Constitution-based ability check or skill check the user attempts within the herb’s duration.
+- **Sweet Herbs:** Known to encourage natural healing processes, a sweet herb can be consumed to gain fast healing 1 for the herb’s duration.
+- **Tainted Herbs [DRS]:** Used to harm as opposed to heal, a tainted herb can be used as a contact or ingested poison that deals 1 Constitution damage (immediate onset, Fortitude negates). A tainted herb can be added to a concoction as a twist, making it tainted. A tainted concoction changes any bonuses that it grants to an equivalent penalty, as well as reversing any other effects of the concoction. Some twists may not be able to be cleanly ‘reversed’ (such as the Energizer bitter herb twist), and may be incompatible. In these instances, the twist instead increases the saving throw DC of the tainted concoction by 1. A tainted concoction is considered an injury or ingested poison (chosen upon creation) for abilities that rely on it, and when exposed to it, grants a Fortitude save to negate its effects.

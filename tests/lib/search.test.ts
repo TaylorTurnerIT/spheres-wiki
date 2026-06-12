@@ -7,9 +7,7 @@ describe('Search Weight Verification', () => {
 
   it('verifies that talent pages have data-pagefind-weight="2.0"', () => {
     const talentFiles = [
-      'guile/[sphere]/[talent].astro',
-      'might/[sphere]/[talent].astro',
-      'power/[sphere]/[talent].astro',
+      '[system]/[sphere]/[talent].astro',
     ];
     for (const f of talentFiles) {
       const p = path.join(pagesDir, f);
@@ -20,9 +18,7 @@ describe('Search Weight Verification', () => {
 
   it('verifies that feat pages have data-pagefind-weight="2.0"', () => {
     const featFiles = [
-      'guile/[sphere]/feats/[feat].astro',
-      'might/[sphere]/feats/[feat].astro',
-      'power/[sphere]/feats/[feat].astro',
+      '[system]/[sphere]/feats/[feat].astro',
     ];
     for (const f of featFiles) {
       const p = path.join(pagesDir, f);
@@ -33,10 +29,8 @@ describe('Search Weight Verification', () => {
 
   it('verifies that primary sphere and class pages retain weight="10"', () => {
     const primaryFiles = [
-      'guile/[sphere]/index.astro',
-      'might/[sphere]/index.astro',
-      'power/[sphere]/index.astro',
-      'power/classes/[class].astro',
+      '[system]/[sphere]/index.astro',
+      '[system]/classes/[class].astro',
       'champions/[slug].astro',
     ];
     for (const f of primaryFiles) {
@@ -60,9 +54,7 @@ describe('Search Weight Verification', () => {
 
   it('verifies that system index pages are ignored by pagefind', () => {
     const systemIndexFiles = [
-      'power/index.astro',
-      'might/index.astro',
-      'guile/index.astro',
+      '[system]/index.astro',
       'champions/index.astro',
     ];
     for (const f of systemIndexFiles) {

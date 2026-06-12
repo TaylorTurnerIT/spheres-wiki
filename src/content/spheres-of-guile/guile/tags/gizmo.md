@@ -1,0 +1,9 @@
+---
+id: gizmo
+type: tag
+label: "Gizmo"
+priority: 30
+description: "Relates to technological gizmos from the Tinker sphere. Gizmo-tagged abilities interact with or modify gizmo functions."
+sourceBook: spheres-of-guile
+sphere: performance
+---

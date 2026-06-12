@@ -27,9 +27,13 @@ Build site: context/plans/build-site.md
 Build site: context/plans/build-site-dedup.md
 
 ### Iteration 1 — 2026-06-12
-- T-001: ClassProgressionTable component — DONE. Files: src/components/ClassProgressionTable.astro. Build P, Tests P (4 pre-existing failures unchanged). Next: T-003, T-004 (parallel)
-- T-002: TagBadge audit — DONE (no code changes). Grep confirmed zero inline reimplementations across 17 pages. All use TagBadge via buildOrderedTagIds(). Next: T-003, T-004
-- T-008: systems.ts utility — DONE. Files: src/lib/systems.ts (getSystemPaths, resolveSystem, getSystemSearchFilter). Build P. Next: T-009–T-014 (parallel)
+- T-001: ClassProgressionTable — DONE. Files: src/components/ClassProgressionTable.astro. Build P, Tests P (4 pre-existing). Next: T-003, T-004
+- T-002: TagBadge audit — DONE (no changes). Zero inline reimplementations. Next: T-003, T-004
+- T-008: systems.ts — DONE. Files: src/lib/systems.ts. Build P. Next: T-009–T-014
+
+### Iteration 2 — 2026-06-12
+- T-003: TraitCatalogSection — DONE. Files: src/components/TraitCatalogSection.astro. Build P. Next: T-005
+- T-004: ClassFeatureBlock — DONE. Files: src/components/ClassFeatureBlock.astro. Build P. Next: T-005
 
 ---
 # Loop Log: Venator Archetype

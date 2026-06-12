@@ -137,7 +137,11 @@ spheres-wiki/src/content/<book>/guile/spheres/<sphere>/*.md  (output)
 | 1 | Navigation | Perception, Sense Motive | **COMPLETE** | 64 entries, 0 quarantine, build passes |
 | 2 | Vocation | Profession, Craft, Knowledge | **COMPLETE** | 135 entries, 0 quarantine, count-match verified |
 | 3 | Athletics (Guile) | Acrobatics, Climb, Swim | `.` | |
-| 4 | Communication | Diplomacy, Linguistics | `.` | |
+| 4 | Communication | Diplomacy, Linguistics | **COMPLETE** | 64 entries, 0 quarantine, count-match verified, 5 books |
+| 5 | Infiltration | Disable Device, Stealth | **COMPLETE** | 45 entries, 0 quarantine, count-match verified, 4 books |
+| 6 | Investigation | Sense Motive | **COMPLETE** | 49 entries, 0 quarantine, count-match verified, 3 books |
+| 7 | Performance | Perform | **COMPLETE** | 84 entries, 0 quarantine, count-match verified, 4 books |
+| — | ~~Leadership~~ | ~~Diplomacy~~ | **MIGHT** | Moved — this is a Spheres of Might sphere, not Guile |
 | 5 | Deception | Bluff, Disguise | `.` | |
 | 6 | Education | Knowledge skills | `.` | |
 | 7 | Engineering | Craft, Disable Device | `.` | |
@@ -487,6 +491,10 @@ npm run test:e2e -- navigation
 
 ## Changelog
 
+- 2026-06-12: Performance sphere conversion COMPLETE — 84 entries, 0 quarantine, count-match verified, 4 books, build passes. **CORRECTION:** Leadership.txt removed from Guile — it is a Spheres of Might sphere (The General's Handbook).
+- 2026-06-12: Investigation sphere conversion COMPLETE — 49 entries, 0 quarantine, count-match verified, 3 books, 1 duplicate feat skipped (Detailed Charting shared with Navigation)
+- 2026-06-12: Infiltration sphere conversion COMPLETE — 45 entries, 0 quarantine, count-match verified, 4 books, build passes
+- 2026-06-12: Communication sphere conversion COMPLETE — 64 entries (2 base + 63 talents), 0 quarantine, count-match verified, 5 books, build passes
 - 2026-06-11: Vocation sphere conversion COMPLETE — 135 entries, 0 quarantine, count-match verified, trade tag updated
 - 2026-06-11: Navigation sphere conversion COMPLETE — 0 quarantine, build passes, 3849 pages indexed
 - 2026-06-11: 3PP gap discovered — 564 entries silenced across Power/Might; Guile fixed (3PP→DEFERRED); Power/Might pending

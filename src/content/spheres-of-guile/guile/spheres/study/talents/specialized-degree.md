@@ -1,0 +1,12 @@
+---
+id: "specialized-degree"
+name: "Specialized Degree"
+type: "talent"
+sourceBook: "spheres-of-guile"
+sphere: "study"
+tier: "base"
+tags:
+  - "package"
+---
+
+Choose a single Knowledge skill. You can only use your theorize ability on pieces of information you have recalled using that Knowledge skill (for example, only being able to theorize about a dragon or magical beast if you chose Knowledge (arcana)). You gain the Earthly Aptitude, Mystical Aptitude, or Societal Aptitude feat as a bonus feat (even if you do not meet its prerequisites).
