@@ -1,0 +1,829 @@
+---
+import { render } from 'astro:content';
+import type { ArchetypeFeatureEntry } from '@/lib/types';
+
+interface ArchetypeOption {
+  id: string;
+  name: string;
+  desc: string;
+}
+
+interface Props {
+  /** Pre-computed selector options (name + desc) to avoid needing raw collEntries */
+  options: ArchetypeOption[];
+  /** Archetype features rendered as hidden <template> elements for the swap engine */
+  archetypeFeatures: ArchetypeFeatureEntry[];
+  archetypeFeatureCollEntries: Map<string, any>;
+}
+
+const { options, archetypeFeatures, archetypeFeatureCollEntries } = Astro.props;
+---
+
+{options.length > 0 && (
+  <div class="archetypes-selector-group" style="min-width: 250px; flex: 1; max-width: 400px; z-index: 10;">
+    <label for="archetype-select" class="archetypes-selector-label">Archetypes:</label>
+    <select id="archetype-select" class="ts-hidden-select" multiple autocomplete="off">
+      {options.map(opt => (
+        <option value={opt.id} data-name={opt.name} data-desc={opt.desc}>{opt.name}</option>
+      ))}
+    </select>
+  </div>
+)}
+
+<div class="archetype-warning-banner" style="display: none;"></div>
+
+{archetypeFeatures.map(async (feature) => {
+  const collEntry = archetypeFeatureCollEntries.get(feature.id);
+  const { Content } = collEntry ? await render(collEntry) : { Content: null };
+  const templateArchId = feature.isAlternateClassFeature ? feature.id : feature.archetypeId;
+  return (
+    <template
+      class="archetype-feature-template"
+      data-feature-id={feature.id}
+      data-name={feature.name}
+      data-archetype-id={templateArchId}
+      data-level={JSON.stringify(feature.level)}
+      data-replaces={JSON.stringify(feature.replaces || [])}
+      data-alters={JSON.stringify(feature.alters || [])}
+      data-mutually-exclusive={JSON.stringify(feature.mutuallyExclusive !== false)}
+      data-class-overrides={JSON.stringify(feature.classOverrides || {})}
+    >
+      <div class="archetype-feature-rendered-content">
+        {Content ? <Content /> : null}
+      </div>
+    </template>
+  );
+})}
+
+<script>
+import TomSelect from 'tom-select';
+import 'tom-select/dist/css/tom-select.css';
+
+let activeTomSelect: any = null;
+
+document.addEventListener('astro:before-swap', () => {
+  if (activeTomSelect) {
+    activeTomSelect.destroy();
+    activeTomSelect = null;
+  }
+});
+
+function replaceInTextNodes(
+  root: HTMLElement,
+  regex: RegExp,
+  makeNode: (match: string) => Node,
+): void {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+  const nodes: Text[] = [];
+  let n: Node | null;
+  while ((n = walker.nextNode())) nodes.push(n as Text);
+
+  for (const textNode of nodes) {
+    const text = textNode.textContent ?? '';
+    regex.lastIndex = 0;
+    if (!regex.test(text)) continue;
+
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    regex.lastIndex = 0;
+    let m: RegExpExecArray | null;
+    while ((m = regex.exec(text))) {
+      if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      frag.appendChild(makeNode(m[0]));
+      last = m.index + m[0].length;
+    }
+    if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    textNode.replaceWith(frag);
+    regex.lastIndex = 0;
+  }
+}
+
+document.addEventListener('astro:page-load', () => {
+
+  // ──── TRAIT CATALOG TOGGLE ──────────────────────────────────────────────
+  document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
+    const featureId = btn.dataset.featureId!;
+    const wrapper = document.getElementById(`${featureId}-traits`);
+    if (!wrapper) return;
+
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      const willCollapse = isExpanded;
+
+      btn.setAttribute('aria-expanded', (!willCollapse).toString());
+      btn.classList.toggle('is-collapsed', willCollapse);
+      wrapper.setAttribute('aria-hidden', willCollapse.toString());
+      wrapper.classList.toggle('is-open', !willCollapse);
+      document.dispatchEvent(new CustomEvent('class-feature-collapse', {
+        detail: { id: featureId, collapsed: willCollapse },
+      }));
+    });
+  });
+
+  function rebindTraitToggles() {
+    document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
+      const newBtn = btn.cloneNode(true) as HTMLButtonElement;
+      btn.parentNode!.replaceChild(newBtn, btn);
+
+      const featureId = newBtn.dataset.featureId!;
+      const wrapper = document.getElementById(`${featureId}-traits`);
+      if (!wrapper) return;
+
+      newBtn.addEventListener('click', () => {
+        const isExpanded = newBtn.getAttribute('aria-expanded') === 'true';
+        const willCollapse = isExpanded;
+
+        newBtn.setAttribute('aria-expanded', (!willCollapse).toString());
+        newBtn.classList.toggle('is-collapsed', willCollapse);
+        wrapper.setAttribute('aria-hidden', willCollapse.toString());
+        wrapper.classList.toggle('is-open', !willCollapse);
+        document.dispatchEvent(new CustomEvent('class-feature-collapse', {
+          detail: { id: featureId, collapsed: willCollapse },
+        }));
+      });
+    });
+  }
+
+  // ──── DYNAMIC ARCHETYPE SWAPPER ─────────────────────────────────────────
+  const warningBanner = document.querySelector<HTMLElement>('.archetype-warning-banner');
+  const table = document.querySelector<HTMLElement>('.class-progression-table');
+  const tocGroupContainer = document.querySelector<HTMLElement>('.toc-list');
+  const selectEl = document.getElementById('archetype-select') as HTMLSelectElement | null;
+
+  let specialColIdx = 5;
+  if (table) {
+    const headerCells = table.querySelectorAll('thead th');
+    for (let i = 0; i < headerCells.length; i++) {
+      if (/special/i.test(headerCells[i].textContent || '')) {
+        specialColIdx = i;
+        break;
+      }
+    }
+  }
+
+  const baseCards = Array.from(document.querySelectorAll<HTMLElement>('.class-feature:not(.dynamic-archetype-feature)'));
+  baseCards.forEach(card => {
+    if (!card.dataset.originalHtml) {
+      card.dataset.originalHtml = card.innerHTML;
+      card.dataset.originalDisplay = card.style.display || '';
+      card.dataset.originalId = card.id;
+    }
+  });
+
+  if (table && !table.dataset.originalHtml) {
+    table.dataset.originalHtml = table.innerHTML;
+  }
+
+  if (tocGroupContainer && !tocGroupContainer.dataset.originalHtml) {
+    tocGroupContainer.dataset.originalHtml = tocGroupContainer.innerHTML;
+  }
+
+  const templates = Array.from(document.querySelectorAll<HTMLTemplateElement>('.archetype-feature-template')).map(t => {
+    const contentEl = t.content ? t.content.querySelector('.archetype-feature-rendered-content') : t.querySelector('.archetype-feature-rendered-content');
+    return {
+      featureId: t.dataset.featureId!,
+      name: t.dataset.name!,
+      archetypeId: t.dataset.archetypeId!,
+      level: JSON.parse(t.dataset.level!),
+      replaces: JSON.parse(t.dataset.replaces!) as string[],
+      alters: JSON.parse(t.dataset.alters!) as string[],
+      mutuallyExclusive: JSON.parse(t.dataset.mutuallyExclusive!),
+      classOverrides: JSON.parse(t.dataset.classOverrides || '{}') as Record<string, string>,
+      html: contentEl ? contentEl.innerHTML : t.innerHTML
+    };
+  });
+
+  // ── Compatibility engine (T-006) ─────────────────────────────────────────
+
+  function isCompatible(candidateArcId: string, selectedArcIds: string[]): boolean {
+    if (selectedArcIds.length === 0) return true;
+
+    const candidateFeatures = templates.filter(f => f.archetypeId === candidateArcId);
+
+    for (const selectedArcId of selectedArcIds) {
+      if (selectedArcId === candidateArcId) continue;
+      const selectedFeatures = templates.filter(f => f.archetypeId === selectedArcId);
+
+      for (const cf of candidateFeatures) {
+        for (const sf of selectedFeatures) {
+          const replacedIntersection = cf.replaces.filter(r => sf.replaces.includes(r));
+          if (replacedIntersection.length > 0) {
+            if (cf.mutuallyExclusive || sf.mutuallyExclusive) return false;
+          }
+
+          const alterReplaceIntersection1 = cf.replaces.filter(r => sf.alters.includes(r));
+          if (alterReplaceIntersection1.length > 0) {
+            if (cf.mutuallyExclusive || sf.mutuallyExclusive) return false;
+          }
+
+          const alterReplaceIntersection2 = cf.alters.filter(a => sf.replaces.includes(a));
+          if (alterReplaceIntersection2.length > 0) {
+            if (cf.mutuallyExclusive || sf.mutuallyExclusive) return false;
+          }
+
+          const altersIntersection = cf.alters.filter(a => sf.alters.includes(a));
+          if (altersIntersection.length > 0) {
+            if (cf.mutuallyExclusive || sf.mutuallyExclusive) return false;
+          }
+        }
+      }
+    }
+    return true;
+  }
+
+  // ── Full update flow (T-007) ──────────────────────────────────────────────
+
+  function ordinal(n: number): string {
+    if (n % 100 >= 11 && n % 100 <= 13) return 'th';
+    switch (n % 10) {
+      case 1: return 'st';
+      case 2: return 'nd';
+      case 3: return 'rd';
+      default: return 'th';
+    }
+  }
+
+  function updateArchetypes(selectedArcIds: string[]) {
+    // 1. Reset all base cards
+    baseCards.forEach(card => {
+      card.innerHTML = card.dataset.originalHtml!;
+      card.style.display = card.dataset.originalDisplay!;
+      card.id = card.dataset.originalId!;
+      card.className = 'class-feature' + (card.dataset.originalHtml!.includes('trait-catalog-toggle') ? ' class-feature--container' : '');
+    });
+
+    // 2. Reset class-info overrides
+    document.querySelectorAll('[id^="class-val-"]').forEach(el => {
+      const htmlEl = el as HTMLElement;
+      if (htmlEl.dataset.originalHtml === undefined) {
+        htmlEl.dataset.originalHtml = htmlEl.innerHTML;
+      }
+      htmlEl.innerHTML = htmlEl.dataset.originalHtml;
+    });
+
+    // 3. Remove dynamically-inserted archetype features
+    document.querySelectorAll('.dynamic-archetype-feature').forEach(c => c.remove());
+
+    // 4. Reset table
+    if (table) table.innerHTML = table.dataset.originalHtml!;
+
+    // 5. Reset ToC
+    if (tocGroupContainer) tocGroupContainer.innerHTML = tocGroupContainer.dataset.originalHtml!;
+
+    // 6. Reset warning banner
+    if (warningBanner) {
+      warningBanner.style.display = 'none';
+      warningBanner.innerHTML = '';
+    }
+
+    if (selectedArcIds.length === 0) {
+      rebindTraitToggles();
+      return;
+    }
+
+    // 7. Filter active features
+    const activeFeatures = templates.filter(f => selectedArcIds.includes(f.archetypeId));
+
+    // 8. Build conflict maps
+    const replacedBy: Record<string, Array<{ af: typeof templates[0], arcName: string }>> = {};
+    const alteredBy: Record<string, Array<{ af: typeof templates[0], arcName: string }>> = {};
+    const overridesBy: Record<string, Array<{ af: typeof templates[0], arcName: string }>> = {};
+
+    activeFeatures.forEach(af => {
+      const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+      const arcName = option ? option.dataset.name! : af.archetypeId;
+
+      af.replaces.forEach(baseId => {
+        if (!replacedBy[baseId]) replacedBy[baseId] = [];
+        replacedBy[baseId].push({ af, arcName });
+      });
+
+      af.alters.forEach(baseId => {
+        if (!alteredBy[baseId]) alteredBy[baseId] = [];
+        alteredBy[baseId].push({ af, arcName });
+      });
+
+      Object.keys(af.classOverrides || {}).forEach(key => {
+        if (!overridesBy[key]) overridesBy[key] = [];
+        overridesBy[key].push({ af, arcName });
+      });
+    });
+
+    // 9. Conflict detection
+    let conflictMsg = '';
+    for (const baseId in replacedBy) {
+      const repls = replacedBy[baseId];
+      if (repls.length > 1) {
+        const isAnyExclusive = repls.some(r => r.af.mutuallyExclusive);
+        if (isAnyExclusive) {
+          conflictMsg = `Conflict detected: Archetypes ${repls.map(r => r.arcName).join(' and ')} both attempt to replace the same feature (${baseId.replace(/^[a-z0-9]+-/, '').replace(/-/g, ' ')}).`;
+          break;
+        }
+      }
+      const alts = alteredBy[baseId] || [];
+      if (repls.length > 0 && alts.length > 0) {
+        const isAnyExclusive = repls.some(r => r.af.mutuallyExclusive) || alts.some(a => a.af.mutuallyExclusive);
+        if (isAnyExclusive) {
+          conflictMsg = `Conflict detected: Archetype ${repls[0].arcName} replaces and ${alts[0].arcName} alters the same feature (${baseId.replace(/^[a-z0-9]+-/, '').replace(/-/g, ' ')}).`;
+          break;
+        }
+      }
+    }
+
+    if (!conflictMsg) {
+      for (const baseId in alteredBy) {
+        const alts = alteredBy[baseId];
+        if (alts.length > 1) {
+          const isAnyExclusive = alts.some(a => a.af.mutuallyExclusive);
+          if (isAnyExclusive) {
+            conflictMsg = `Conflict detected: Archetypes ${alts.map(a => a.arcName).join(' and ')} both attempt to alter the same feature (${baseId.replace(/^[a-z0-9]+-/, '').replace(/-/g, ' ')}).`;
+            break;
+          }
+        }
+      }
+    }
+
+    if (!conflictMsg) {
+      for (const key in overridesBy) {
+        const ovrs = overridesBy[key];
+        if (ovrs.length > 1) {
+          const isAnyExclusive = ovrs.some(o => o.af.mutuallyExclusive);
+          if (isAnyExclusive) {
+            conflictMsg = `Conflict detected: Archetypes ${ovrs.map(o => o.arcName).join(' and ')} both attempt to override the same class property (${key}).`;
+            break;
+          }
+        }
+      }
+    }
+
+    if (conflictMsg) {
+      if (warningBanner) {
+        warningBanner.innerHTML = `<span class="warning-icon">⚠️</span> <span class="warning-text">${conflictMsg}</span>`;
+        warningBanner.style.display = 'block';
+      }
+      return;
+    }
+
+    // 10. Apply active features
+    activeFeatures.forEach(af => {
+      const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+      const arcName = option ? option.dataset.name! : af.archetypeId;
+
+      Object.entries(af.classOverrides || {}).forEach(([key, val]) => {
+        const el = document.getElementById(`class-val-${key}`);
+        if (el) {
+          el.innerHTML = `<span class="override-text" style="color: var(--clr-brand); font-weight: bold;" title="Overridden by ${arcName}">${val}</span>`;
+        }
+      });
+
+      if (af.replaces.length > 0) {
+        const primaryBaseId = af.replaces[0];
+        const primaryCard = document.getElementById(primaryBaseId);
+
+        if (primaryCard) {
+          primaryCard.id = af.featureId;
+          primaryCard.className = 'class-feature class-feature--archetype';
+
+          const displayLevel = Array.isArray(af.level)
+            ? af.level.map(l => `${l}${ordinal(l)}`).join(', ')
+            : `${af.level}${ordinal(af.level)}`;
+
+          const replacedName = primaryBaseId.replace(/^[a-z0-9]+-/, '').replace(/-/g, ' ')
+            .split(' ').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+          const existingHeading = primaryCard.querySelector<HTMLElement>('.class-feature-heading');
+          if (existingHeading) {
+            const outerSpan = existingHeading.querySelector<HTMLElement>(':scope > span:not(.talent-source)');
+            if (outerSpan) {
+              for (const node of Array.from(outerSpan.childNodes)) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                  node.textContent = af.name + ' ';
+                  break;
+                }
+              }
+              const levelSpan = outerSpan.querySelector<HTMLElement>('.class-feature-level');
+              if (levelSpan) levelSpan.textContent = ` ${displayLevel}`;
+            }
+            const sourceSpan = existingHeading.querySelector<HTMLElement>('.talent-source');
+            if (sourceSpan) {
+              sourceSpan.className = 'badge badge--archetype';
+              sourceSpan.textContent = arcName;
+            } else {
+              const badge = document.createElement('span');
+              badge.className = 'badge badge--archetype';
+              badge.textContent = arcName;
+              existingHeading.appendChild(badge);
+            }
+          }
+
+          primaryCard.querySelectorAll('.archetype-annotation, .archetype-modification-block').forEach(el => el.remove());
+
+          const entryDesc = primaryCard.querySelector<HTMLElement>('.entry-description');
+          const annotation = document.createElement('p');
+          annotation.className = 'archetype-annotation archetype-annotation--replaces';
+          annotation.textContent = `${arcName} Replaces: ${replacedName}`;
+          if (entryDesc) {
+            entryDesc.innerHTML = af.html;
+            primaryCard.insertBefore(annotation, entryDesc);
+          } else {
+            const newDesc = document.createElement('div');
+            newDesc.className = 'entry-description';
+            newDesc.innerHTML = af.html;
+            primaryCard.appendChild(annotation);
+            primaryCard.appendChild(newDesc);
+          }
+        }
+
+        for (let i = 1; i < af.replaces.length; i++) {
+          const extraCard = document.getElementById(af.replaces[i]);
+          if (extraCard) extraCard.style.display = 'none';
+        }
+
+      } else if (af.alters.length > 0) {
+        af.alters.forEach(baseId => {
+          const baseCard = document.getElementById(baseId);
+          if (baseCard) {
+            baseCard.classList.add('is-altered');
+            const modBlock = document.createElement('div');
+            modBlock.className = 'archetype-modification-block';
+            modBlock.innerHTML = `
+              <p class="archetype-annotation archetype-annotation--alters">${arcName} Modifies </p>
+              <div class="archetype-mod-body">
+                ${af.html}
+              </div>
+            `;
+            baseCard.appendChild(modBlock);
+          }
+        });
+
+      } else {
+        const displayLevel = Array.isArray(af.level)
+          ? af.level.map(l => `${l}${ordinal(l)}`).join(', ')
+          : `${af.level}${ordinal(af.level)}`;
+
+        const newCard = document.createElement('div');
+        newCard.className = 'class-feature dynamic-archetype-feature class-feature--archetype';
+        newCard.id = af.featureId;
+        newCard.innerHTML = `
+          <h2 class="class-feature-heading">
+            ${af.name}
+            <span class="class-feature-level"> (${displayLevel})</span>
+            <span class="badge badge--archetype">${arcName}</span>
+          </h2>
+          <div class="entry-description">${af.html}</div>
+        `;
+
+        const baseFeaturesList = Array.from(document.querySelectorAll<HTMLElement>('.class-feature:not(.dynamic-archetype-feature)'));
+        const afMinLevel = Array.isArray(af.level) ? Math.min(...af.level) : af.level;
+        let inserted = false;
+
+        for (const baseCard of baseFeaturesList) {
+          const baseLevelRaw = JSON.parse(baseCard.dataset.level || '0');
+          const baseMinLevel = Array.isArray(baseLevelRaw) ? Math.min(...baseLevelRaw) : baseLevelRaw;
+          if (baseMinLevel > afMinLevel) {
+            baseCard.parentNode!.insertBefore(newCard, baseCard);
+            inserted = true;
+            break;
+          }
+        }
+        if (!inserted) {
+          const lastCard = baseFeaturesList[baseFeaturesList.length - 1];
+          if (lastCard) lastCard.parentNode!.insertBefore(newCard, lastCard.nextSibling);
+        }
+      }
+    });
+
+    // 11. Update progression table Special column
+    if (table) {
+      const rows = Array.from(table.querySelectorAll('tr'));
+      rows.forEach(row => {
+        const cells = Array.from(row.querySelectorAll('td'));
+        if (cells.length <= specialColIdx) return;
+        const cell = cells[specialColIdx];
+        if (!cell) return;
+
+        activeFeatures.forEach(af => {
+          const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+          const arcName = option ? option.dataset.name! : af.archetypeId;
+
+          af.replaces.forEach(baseId => {
+            const baseName = (templates.find(t => t.featureId === baseId) ?? { name: baseId.replace(/^[a-z]+-/, '').replace(/-/g, ' ') }).name;
+            replaceInTextNodes(cell, new RegExp(`\\b${baseName}\\b`, 'gi'), (match) => {
+              const span = document.createElement('span');
+              span.className = 'table-archetype-feature';
+              span.title = `${arcName} replaces ${match}`;
+              span.textContent = af.name;
+              return span;
+            });
+          });
+
+          af.alters.forEach(baseId => {
+            const baseName = (templates.find(t => t.featureId === baseId) ?? { name: baseId.replace(/^[a-z]+-/, '').replace(/-/g, ' ') }).name;
+            replaceInTextNodes(cell, new RegExp(`\\b${baseName}\\b`, 'gi'), (match) => {
+              const frag = document.createDocumentFragment();
+              frag.appendChild(document.createTextNode(match));
+              const badge = document.createElement('span');
+              badge.className = 'table-altered-badge';
+              badge.title = `Altered by ${arcName}`;
+              badge.textContent = ` (${arcName} Altered)`;
+              frag.appendChild(badge);
+              return frag;
+            });
+          });
+        });
+      });
+    }
+
+    // 12. Update ToC
+    if (tocGroupContainer) {
+      activeFeatures.forEach(af => {
+        const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
+        const arcName = option ? option.dataset.name! : af.archetypeId;
+
+        af.replaces.forEach(baseId => {
+          const tocItem = tocGroupContainer.querySelector<HTMLElement>(`[data-toc-section="${baseId}"]`);
+          if (tocItem) {
+            const link = tocItem.querySelector<HTMLAnchorElement>('.toc-cat-link')!;
+            const span = link.querySelector<HTMLElement>('span')!;
+            span.innerHTML = `<span class="toc-archetype-text" title="Replaces ${span.textContent}">${af.name}</span>`;
+            link.setAttribute('href', `#${af.featureId}`);
+            tocItem.setAttribute('data-toc-section', af.featureId);
+          }
+        });
+
+        af.alters.forEach(baseId => {
+          const tocItem = tocGroupContainer.querySelector<HTMLElement>(`[data-toc-section="${baseId}"]`);
+          if (tocItem) {
+            const link = tocItem.querySelector<HTMLAnchorElement>('.toc-cat-link')!;
+            const span = link.querySelector<HTMLElement>('span')!;
+            if (!span.innerHTML.includes('toc-altered-badge')) {
+              span.innerHTML = `${span.textContent} <span class="toc-altered-badge">(Altered)</span>`;
+            }
+          }
+        });
+      });
+    }
+
+    rebindTraitToggles();
+  }
+
+  // ── TomSelect initialization (T-005) ──────────────────────────────────────
+
+  if (selectEl) {
+    selectEl.classList.remove('ts-hidden-select');
+    activeTomSelect = new TomSelect(selectEl, {
+      placeholder: 'Select Archetypes...',
+      plugins: ['remove_button'],
+      closeAfterSelect: true,
+      maxOptions: null,
+      render: {
+        option: function(data: any, escape: any) {
+          return '<div class="ts-custom-option">' +
+            '<span class="title">' + escape(data.text) + '</span>' +
+            '<div class="description" style="font-size: 0.8em; opacity: 0.7; margin-top: 2px;">' + escape(data.desc || '') + '</div>' +
+          '</div>';
+        }
+      },
+      onChange: function(values: string[]) {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (values && values.length > 0) {
+          urlParams.set('archetypes', values.join(','));
+        } else {
+          urlParams.delete('archetypes');
+        }
+        const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+        window.history.pushState({ path: newUrl }, '', newUrl);
+
+        updateArchetypes(values || []);
+
+        const currentSelected = values || [];
+        Object.keys(activeTomSelect.options).forEach(optValue => {
+          const isSelected = currentSelected.includes(optValue);
+          const opt = activeTomSelect.options[optValue];
+          if (!isSelected) {
+            const comp = isCompatible(optValue, currentSelected);
+            if (opt.disabled !== !comp) {
+              opt.disabled = !comp;
+              activeTomSelect.updateOption(optValue, opt);
+            }
+          } else {
+            if (opt.disabled) {
+              opt.disabled = false;
+              activeTomSelect.updateOption(optValue, opt);
+            }
+          }
+        });
+      }
+    });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialArchetypes = urlParams.get('archetypes');
+    if (initialArchetypes && activeTomSelect) {
+      const activeIds = initialArchetypes.split(',');
+      activeTomSelect.setValue(activeIds);
+    }
+  }
+});
+</script>
+
+<style>
+  .archetypes-selector-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .archetypes-selector-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--clr-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  :global(.archetypes-selector-group .ts-wrapper) {
+    flex: 1;
+    min-width: 0;
+  }
+
+  :global(.ts-hidden-select) {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  :global(.ts-control) {
+    border-radius: 8px !important;
+    border-color: var(--clr-border) !important;
+    background-color: var(--clr-bg) !important;
+    font-family: var(--font-body) !important;
+    padding: 0.5rem 0.75rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  :global(.ts-wrapper.multi .ts-control) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+
+  :global(.ts-wrapper.multi .ts-control::-webkit-scrollbar) {
+    display: none;
+  }
+
+  :global(.ts-control.focus) {
+    border-color: var(--clr-active) !important;
+    box-shadow: 0 0 0 1px var(--clr-active), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  :global(.ts-dropdown) {
+    border-radius: 8px !important;
+    border-color: var(--clr-border) !important;
+    background-color: var(--clr-bg) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    font-family: var(--font-body) !important;
+  }
+
+  :global(.ts-dropdown .option) {
+    padding: 0.6rem 1rem !important;
+  }
+
+  :global(.ts-dropdown .option.active) {
+    background-color: color-mix(in srgb, var(--clr-active) 8%, transparent) !important;
+    color: var(--clr-body) !important;
+  }
+
+  :global(.ts-dropdown .option[aria-disabled="true"]) {
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+    background-color: transparent !important;
+    pointer-events: none !important;
+  }
+
+  :global(.ts-wrapper.multi .ts-control > div) {
+    background-color: color-mix(in srgb, var(--clr-active) 12%, transparent) !important;
+    color: var(--clr-active) !important;
+    border: none !important;
+    border-radius: 99px !important;
+    font-family: var(--font-display) !important;
+    font-weight: 600;
+    padding: 2px 6px 2px 10px !important;
+  }
+
+  :global(.ts-wrapper.multi .ts-control > div .remove) {
+    border-left: none !important;
+    color: currentColor !important;
+    opacity: 0.6;
+  }
+
+  :global(.ts-wrapper.multi .ts-control > div .remove:hover) {
+    background: transparent !important;
+    opacity: 1;
+  }
+
+  /* ── Conflict warning banner ── */
+  .archetype-warning-banner {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    color: #ef4444;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: var(--fs-sm);
+    font-family: var(--font-display);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* ── JS-injected global classes (SPEC V50) ── */
+  :global(.badge--archetype) {
+    font-size: 0.65em;
+    font-family: var(--font-display);
+    background-color: color-mix(in srgb, var(--clr-active) 15%, transparent);
+    color: var(--clr-active);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid color-mix(in srgb, var(--clr-active) 35%, transparent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+  }
+
+  :global(.archetype-annotation) {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.02em;
+    margin: 0.15em 0 0.65rem;
+    line-height: 1.3;
+  }
+
+  :global(.archetype-annotation--replaces) {
+    color: var(--clr-active);
+  }
+
+  :global(.archetype-annotation--alters) {
+    color: var(--clr-brand);
+  }
+
+  :global(.archetype-modification-block) {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--clr-border);
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  :global(.archetype-mod-body) {
+    font-size: var(--fs-md);
+  }
+
+  :global(.table-archetype-feature) {
+    background-color: color-mix(in srgb, var(--clr-active) 15%, transparent);
+    color: var(--clr-active);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.9em;
+    border-bottom: 1px solid var(--clr-active);
+  }
+
+  :global(.table-altered-badge) {
+    font-size: 0.75em;
+    color: var(--clr-brand);
+    background: color-mix(in srgb, var(--clr-brand) 10%, transparent);
+    padding: 0 3px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  :global(.toc-archetype-text) {
+    color: var(--clr-active);
+    font-weight: bold;
+    font-size: 0.95em;
+    background-color: color-mix(in srgb, var(--clr-active) 12%, transparent);
+    padding: 1px 4px;
+    border-radius: 4px;
+  }
+
+  :global(.toc-altered-badge) {
+    font-size: 0.7em;
+    color: var(--clr-brand);
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
