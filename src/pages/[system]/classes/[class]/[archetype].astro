@@ -7,6 +7,7 @@ import TableOfContents from '@/components/TableOfContents.astro';
 import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { BOOK_COLLECTIONS } from '@/content.config';
+import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { ClassEntry, ArchetypeEntry, ArchetypeFeatureEntry, ClassTraitEntry, FeatEntry, BookMeta } from '@/lib/types';
 
 interface Props {
@@ -26,7 +27,6 @@ export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
   const { classMap, archetypeMap, archetypeFeatureMap, classTraitMap, featMap, bookMetaMap } = await resolveEntries();
 
-  // Load all collection entries for rendering
   const allCollEntries = new Map<string, any>();
   for (const slug of BOOK_COLLECTIONS) {
     try {
@@ -37,86 +37,90 @@ export async function getStaticPaths() {
           allCollEntries.set(`${(e.data as any).type}:${(e.data as any).id}`, e);
         }
       }
-    } catch { /* empty collection */ }
+    } catch {}
   }
 
   const paths = [];
 
-  for (const [, archetype] of archetypeMap) {
-    const cls = classMap.get(`class:${archetype.className}`);
-    if (!cls) continue;
+  for (const { params: { system } } of getSystemPaths()) {
+    for (const [, archetype] of archetypeMap) {
+      if (archetype.system !== system) continue;
 
-    const features = [...archetypeFeatureMap.values()]
-      .filter(f => f.archetypeId === archetype.id)
-      .sort((a, b) => {
-        const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
-        const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
-        return aMin - bMin;
+      const cls = classMap.get(`class:${archetype.className}`);
+      if (!cls) continue;
+
+      const features = [...archetypeFeatureMap.values()]
+        .filter(f => f.archetypeId === archetype.id)
+        .sort((a, b) => {
+          const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
+          const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
+          return aMin - bMin;
+        });
+
+      const featureCollEntries = new Map<string, any>();
+      for (const f of features) {
+        const entry = allCollEntries.get(`archetype-feature:${f.id}`);
+        if (entry) featureCollEntries.set(f.id, entry);
+      }
+
+      const associatedTraits = [...classTraitMap.values()]
+        .filter(t => {
+          if (archetype.id === 'apex-shifter') {
+            return [
+              'shifter-accommodating-form',
+              'shifter-defensive-shift',
+              'shifter-feinting-shift',
+              'shifter-resistant-shift',
+              'shifter-shifting-style'
+            ].includes(t.id);
+          }
+          return false;
+        })
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      const associatedTraitsColl = new Map<string, any>();
+      for (const t of associatedTraits) {
+        const entry = allCollEntries.get(`class-trait:${t.id}`);
+        if (entry) associatedTraitsColl.set(t.id, entry);
+      }
+
+      const associatedFeats = [...featMap.values()]
+        .filter(f => {
+          if (archetype.id === 'protean') {
+            return f.id === 'extra-breadth-of-form';
+          }
+          return false;
+        })
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      const associatedFeatsColl = new Map<string, any>();
+      for (const f of associatedFeats) {
+        const entry = allCollEntries.get(`feat:${f.id}`);
+        if (entry) associatedFeatsColl.set(f.id, entry);
+      }
+
+      paths.push({
+        params: { system, class: cls.id, archetype: archetype.id },
+        props: {
+          archetype,
+          archetypeCollEntry: allCollEntries.get(`archetype:${archetype.id}`),
+          cls,
+          features,
+          featureCollEntries,
+          associatedTraits,
+          associatedTraitsColl,
+          associatedFeats,
+          associatedFeatsColl,
+          sourceBook: bookMetaMap.get(archetype.sourceBook),
+        },
       });
-
-    const featureCollEntries = new Map<string, any>();
-    for (const f of features) {
-      const entry = allCollEntries.get(`archetype-feature:${f.id}`);
-      if (entry) featureCollEntries.set(f.id, entry);
     }
-
-    // Find associated traits or feats published alongside the archetype
-    const associatedTraits = [...classTraitMap.values()]
-      .filter(t => {
-        if (archetype.id === 'apex-shifter') {
-          return [
-            'shifter-accommodating-form',
-            'shifter-defensive-shift',
-            'shifter-feinting-shift',
-            'shifter-resistant-shift',
-            'shifter-shifting-style'
-          ].includes(t.id);
-        }
-        return false;
-      })
-      .sort((a, b) => a.name.localeCompare(b.name));
-
-    const associatedTraitsColl = new Map<string, any>();
-    for (const t of associatedTraits) {
-      const entry = allCollEntries.get(`talent:${t.id}`);
-      if (entry) associatedTraitsColl.set(t.id, entry);
-    }
-
-    const associatedFeats = [...featMap.values()]
-      .filter(f => {
-        if (archetype.id === 'protean') {
-          return f.id === 'extra-breadth-of-form';
-        }
-        return false;
-      })
-      .sort((a, b) => a.name.localeCompare(b.name));
-
-    const associatedFeatsColl = new Map<string, any>();
-    for (const f of associatedFeats) {
-      const entry = allCollEntries.get(`feat:${f.id}`);
-      if (entry) associatedFeatsColl.set(f.id, entry);
-    }
-
-    paths.push({
-      params: { class: cls.id, archetype: archetype.id },
-      props: {
-        archetype,
-        archetypeCollEntry: allCollEntries.get(archetype.id),
-        cls,
-        features,
-        featureCollEntries,
-        associatedTraits,
-        associatedTraitsColl,
-        associatedFeats,
-        associatedFeatsColl,
-        sourceBook: bookMetaMap.get(archetype.sourceBook),
-      },
-    });
   }
 
   return paths;
 }
 
+const { system } = Astro.params;
 const {
   archetype,
   archetypeCollEntry,
@@ -129,6 +133,9 @@ const {
   associatedFeatsColl,
   sourceBook,
 } = Astro.props;
+
+const sysConfig = resolveSystem(system)!;
+const searchFilter = getSystemSearchFilter(system);
 
 const ArchetypeContent = archetypeCollEntry ? (await render(archetypeCollEntry)).Content : null;
 
@@ -194,9 +201,7 @@ if (featsRendered.length > 0) {
 }
 
 function levelLabel(level: number | number[]): string {
-  if (Array.isArray(level)) {
-    return level.map(l => `${l}${ordinal(l)}`).join(', ');
-  }
+  if (Array.isArray(level)) return level.map(l => `${l}${ordinal(l)}`).join(', ');
   return `${level}${ordinal(level)}`;
 }
 
@@ -215,14 +220,14 @@ const formatBaseFeatureName = (id: string) => {
   return clean.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 };
 ---
-<WikiPage title={`${archetype.name} — ${cls.name} Archetype — Spheres of Power Wiki`} activeNamespace="power">
+<WikiPage title={`${archetype.name} — ${cls.name} Archetype — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href={url("/")} data-astro-prefetch="hover">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href={url("/power/")} data-astro-prefetch="hover">Spheres of Power</a>
+    <a href={url(`/${system}/`)} data-astro-prefetch="hover">{sysConfig.label}</a>
     <span class="breadcrumb-sep">›</span>
-    <a href={url(`/power/classes/${cls.id}/`)} data-astro-prefetch="hover">{cls.name}</a>
+    <a href={url(`/${system}/classes/${cls.id}/`)} data-astro-prefetch="hover">{cls.name}</a>
     <span class="breadcrumb-sep">›</span>
     <span>{archetype.name}</span>
   </nav>
@@ -230,20 +235,18 @@ const formatBaseFeatureName = (id: string) => {
   <div class="content-columns">
     <div class="content-main">
 
-            <span data-pagefind-meta={`title:${archetype.name}`} hidden></span>
+      <span data-pagefind-meta={`title:${archetype.name}`} hidden></span>
       <span data-pagefind-filter="type:archetype" hidden></span>
-      <span data-pagefind-filter="system:Spheres of Power" hidden></span>
-<h1
-        class="page-title power"
+      <span data-pagefind-filter={searchFilter} hidden></span>
+      <h1
+        class={`page-title ${sysConfig.cssKey}`}
         id="overview"
         data-pagefind-weight="10"
-        
-        
       >
         {archetype.name}
       </h1>
       <span data-pagefind-meta="type:archetype" hidden></span>
-        <span data-pagefind-meta="system:Spheres of Power" hidden></span>
+      <span data-pagefind-meta={searchFilter} hidden></span>
       <hr class="page-title-rule" />
 
       {ArchetypeContent
@@ -324,7 +327,7 @@ const formatBaseFeatureName = (id: string) => {
     </div>
 
     <aside class="right-rail" aria-label="Page contents">
-      <TableOfContents overview={tocOverview} groups={tocGroups} system="power" />
+      <TableOfContents overview={tocOverview} groups={tocGroups} system={system} />
       <SourceBookCallout book={sourceBook} />
     </aside>
   </div>
@@ -381,22 +384,16 @@ const formatBaseFeatureName = (id: string) => {
     letter-spacing: 0.02em;
   }
 
-  .info-replace::before {
-    content: "▸ ";
-  }
+  .info-replace::before { content: "▸ "; }
 
   .info-alter {
     color: var(--clr-brand);
     letter-spacing: 0.02em;
   }
 
-  .info-alter::before {
-    content: "▸ ";
-  }
+  .info-alter::before { content: "▸ "; }
 
-  .info-replace strong, .info-alter strong {
-    font-weight: 700;
-  }
+  .info-replace strong, .info-alter strong { font-weight: 700; }
 
   .associated-section {
     display: flex;
