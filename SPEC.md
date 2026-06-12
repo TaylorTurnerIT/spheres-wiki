@@ -211,6 +211,15 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 - V46. Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. They belong to a virtual archetype created at build time — no content file for the parent.
 - V47. The archetype selector must persist selections in URL query params (`?archetypes=id1,id2`) and restore them on page load.
 
+**Code architecture (V48–V53)**
+
+- V48. Each route pattern must have exactly one source file — per-system pages use `[system]` dynamic routing, not separate `might/`, `power/`, `guile/` copies. No logical route may exist in triplicate.
+- V49. Any rendering pattern shared across two or more pages must be extracted into a shared Astro component — inline duplication is prohibited once the pattern is identified.
+- V50. CSS classes applied exclusively by client-side JavaScript must use `:global()` in Astro component styles — JS-injected DOM has no `data-astro-cid-*` attribute; component-scoped rules silently do not apply to it.
+- V51. Class trait tag rendering must use the `TagBadge` component — no inline reimplementation of tag display logic on any page.
+- V52. Archetype hot-swap must mutate existing DOM elements in-place rather than replacing container `innerHTML` on elements with Astro-scoped CSS class names — preserves `data-astro-cid-*` required for scoped styles to apply.
+- V53. The `SYSTEMS` record in `src/config/site.ts` is the sole source of system metadata (id, label, color, route, cssKey, etc.) consumed by all routes and components — no parallel system label/color/route lists elsewhere in source.
+
 ---
 
 ## §M Might Sphere Migration (Wikidot → Markdown)
@@ -342,6 +351,18 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T58 | .      | Upgrade `export_might.rs` — auto-generate `[TalentName]` markers in sphere body for tier:base entries; derive marker names from base-ability slugs | V31,V32 |
 | T59 | x      | Auto-link prerequisites text — parse `**Prerequisites:**` blocks in body markdown (remark plugin), link sphere names + parenthetical talent refs, skip non-talent qualifiers like `(Any)` | V33,I.resolveEntries |
 | T60 | x      | Generalize `/power/` index page design to `/might/`, `/guile/`, and `/champions/`. Retain individual section designs where needed, but reuse the general layout without regressions. | I.pages |
+| T61 | .      | Extract `ClassProgressionTable` component — 80-line level-grid table + CSS out of `[class].astro` into shared component; accepts `cls`, `featuresByLevel`, and `tableRows` props | V48,V49,I.class-family |
+| T62 | .      | Extract `TraitCatalogSection` component — collapsible trait toggle + catalog grid out of `[class].astro` into shared component | V48,V49,I.class-family |
+| T63 | .      | Extract `ClassFeatureBlock` component — h2 heading with name/level/sep/sourcebook + entry-description into shared component; must receive and propagate Astro scoped CSS | V48,V49,I.class-family |
+| T64 | .      | Extract `ArchetypeSwapper` as standalone component — TomSelect multi-select, conflict detection, replaced/altered hot-swap, table + ToC updates, all archetype-injection CSS; exposes data via props + script slot | V48,V49,V50,I.archetype |
+| T65 | .      | Unify `[system]/classes/[class].astro` — collapse might/power/guile copies into single `src/pages/[system]/classes/[class].astro`; use SYSTEMS registry for all system-specific strings | V48,V53,T61,T62,T63,T64 |
+| T66 | .      | Unify `[system]/classes/[class]/[archetype].astro` — collapse 3 copies into single dynamic route | V48,V53,T63 |
+| T67 | .      | Unify `[system]/classes/[class]/traits/[trait].astro` — collapse 3 copies | V48,V53 |
+| T68 | .      | Unify `[system]/[sphere]/index.astro` — collapse 3 copies | V48,V53 |
+| T69 | .      | Unify `[system]/[sphere]/[talent].astro` — collapse 3 copies | V48,V53 |
+| T70 | .      | Unify `[system]/[sphere]/feats/[feat].astro` — collapse 3 copies | V48,V53 |
+| T71 | .      | Unify `[system]/index.astro` — collapse 3 copies | V48,V53 |
+| T72 | .      | Audit all pages for inline TagBadge reimplementation — replace with TagBadge component | V49,V51 |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
