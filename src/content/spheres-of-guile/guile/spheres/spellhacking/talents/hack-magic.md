@@ -21,5 +21,3 @@ A (hack) talent that does not produce an obvious change can only be noticed with
 The alteration from hack magic ends after 1 hour per rank in the associated skill you possess. To remove your (hack) talent by hacking magic, an opponent must succeed at a dispel check against DC 11 + your associated skill ranks; if they possess the (hack) talent they want to remove, it is automatically removed and they may add a (hack) talent to the effect as part of the same action. The caster of a magical effect can undo your alteration as a standard action if they are within the effect’s range and succeed at a caster level check against the same DC.
 
 You can always outwit any creature who has an item or effect on them that you hacked if you remove your hack as the cost to outwit them. You must be within hack magic range.
-## Spellhacking Talent Types
-Some Spellhacking talents have the (hack) or (mishap) tags, unlocking options with the corresponding base sphere ability.

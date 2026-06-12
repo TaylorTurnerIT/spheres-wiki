@@ -17,7 +17,3 @@ A trinket’s size must be at least two size categories smaller than you, but yo
 The necessary materials for creating a trinket are gathered over the course of a given day—there is no monetary cost to creating a trinket, and has no monetary value (DC 0 Appraise check to determine).
 
 **Note:** You cannot create a trinket that replicates an item from another sphere talent (even if you possess that sphere), such as an Alchemy sphere formulae, Trap sphere trap, etc.
-
-## Cobbled Creation [approach] (Ex)
-You can adopt this approach as a swift action. While maintaining this approach, you can create a trinket as a full-round action, even if you do not have access to an artisan’s kit. When you create a trinket this way, it only lasts for 1 round per associated skill rank you possess. You can create a larger trinket this way by spending 1 round (not a full-round action) for each minute normally required.
-## Artifice Sphere Packages

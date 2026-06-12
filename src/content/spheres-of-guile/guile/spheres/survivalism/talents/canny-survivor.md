@@ -15,14 +15,3 @@ When attempting to light a fire without flint and steel (or similar fire-making 
 You immediately succeed at any checks attempted to identify poisonous foods found in nature, in addition to recognizing poisonous creatures and tainted water.
 
 If you possess the (harvest) package, whenever you harvest from a Tiny or larger creature you may produce enough food to feed a single Medium creature for a day. For every size category above Tiny the creature is, you can feed twice as many Medium creatures. This ability can be used to gain sustenance from unconventional creatures, such as oozes or undead that still possess flesh (such as zombies); but cannot be used with creatures incapable of providing sustenance (such as most constructs or fleshless undead).
-
-## Survivalism Packages
-
-### Dredge Package
-You can spend 10 minutes to dredge up to an amount of 5-foot squares equal to 5 + twice the number of ranks in the associated skill you possess, applying the effects of one (ground) talent to the area. The chosen squares must be contiguous, and a square must be within your natural reach for you to dredge it. This dredged area lasts for 1 hour per rank in the associated skill you possess.
-
-Alternatively, you may spend a full-round action to instead move up to your base speed (provoking attacks of opportunity as normal), dredging up to an amount of 5-foot squares equal to 2 + 2 per 5 ranks in the associated skill you possess, and reducing its duration to 1 round per rank in the associated skill you possess.
-
-A dredged area can be noticed with a successful DC 15 Perception check (although a creature that sees you dredging an area automatically succeeds this check).
-
-When you first gain this package, you gain the following (ground) option:

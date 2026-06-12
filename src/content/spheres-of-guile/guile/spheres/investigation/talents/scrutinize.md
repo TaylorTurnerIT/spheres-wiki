@@ -13,4 +13,3 @@ You may adopt this approach as a swift action, designating either a 10-foot squa
 Additionally, if you scrutinize a target for at least 3 consecutive rounds, you also treat any roll of a 4 or lower on such checks as if you had rolled a 5 instead.
 
 If you can no longer see the designated target or area, you abandon the approach.
-## Investigation Talent Types

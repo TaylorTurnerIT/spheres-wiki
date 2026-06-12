@@ -17,10 +17,3 @@ Until it becomes relevant, the sabotage can generally only be noticed with an ac
 Each sabotage indicates how it can be ended; if it requires an opposed skill check to end, use either Disable Device at a penalty or Craft unless noted otherwise.
 
 The standard action allowed by this ability is fast enough to sabotage an item held or carried by a creature with a successful dirty trick combat maneuver check (a new Disable Device skill use. Sabotaging an item a creature wears or carries is not a hostile action for magical effects like invisibility if you give the sabotage a trigger (rather than applying the effect immediately).
-
-## Light Step [approach] (Ex)
-You adopt this approach as a swift action while you are using Stealth. You reduce by 5 the penalty to Stealth for moving up to your full speed, for skulking in the open, as part of creating a diversion to hide, or for relying on positional concealment. The penalty is reduced by the number of ranks in Stealth you possess instead if that is higher. You abandon the approach when you break Stealth.
-
-## Startle (Ex)
-You can outwit any creature unaware of your location because you are using Stealth. Outwitting them breaks Stealth.
-## Infiltration Talent Types

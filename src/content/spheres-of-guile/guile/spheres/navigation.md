@@ -19,7 +19,7 @@ sectionDefinitions:
         tags: ["pathing"]
       - label: "Exceptional Talents"
         tiers: ["advanced"]
-      - label: "Feats"
+      - label: "Navigation Sphere Feats"
         tiers: ["feat"]
 ---
 
@@ -41,10 +41,6 @@ You also acquire the Acclimate and Pathing abilities.
 
 [Pathing]
 
-[Clear Shot]
-
-# Navigation Sphere Packages
-
 [Aerial]
 
 [Nautical]
@@ -52,3 +48,5 @@ You also acquire the Acclimate and Pathing abilities.
 [Urban]
 
 [Wilderness]
+
+[Clear Shot]

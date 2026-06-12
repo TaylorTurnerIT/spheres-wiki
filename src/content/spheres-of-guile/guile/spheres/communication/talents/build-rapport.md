@@ -17,5 +17,3 @@ Each creature that shares a rapport with you (including you) automatically succe
 You can choose one or two (rapport) talents you have when you form a rapport and apply the effect to creatures sharing your rapport (including you). You can only choose two (rapport) talents to apply at once if one or both of them have the [utility] tag.
 
 If you target a creature who already shares a rapport with someone else, you can join the existing rapport without counting against its maximum number of targets, and you can add one of your own (rapport) talents for all members to benefit from. You cannot add a talent the rapport already has. This replaces build rapport’s usual effect.
-## Communication Talent Types
-Some Communication talents have the (rapport) tag described below.
