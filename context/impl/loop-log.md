@@ -22,6 +22,16 @@ Build site: context/plans/build-site.md
 - T-012: Final build validation — DONE. validate P (4064 files), build P (no new errors). All 53 output files present and valid.
 
 ---
+# Loop Log: Dedup Campaign
+
+Build site: context/plans/build-site-dedup.md
+
+### Iteration 1 — 2026-06-12
+- T-001: ClassProgressionTable component — DONE. Files: src/components/ClassProgressionTable.astro. Build P, Tests P (4 pre-existing failures unchanged). Next: T-003, T-004 (parallel)
+- T-002: TagBadge audit — DONE (no code changes). Grep confirmed zero inline reimplementations across 17 pages. All use TagBadge via buildOrderedTagIds(). Next: T-003, T-004
+- T-008: systems.ts utility — DONE. Files: src/lib/systems.ts (getSystemPaths, resolveSystem, getSystemSearchFilter). Build P. Next: T-009–T-014 (parallel)
+
+---
 # Loop Log: Venator Archetype
 
 Build site: context/plans/build-site-venator.md

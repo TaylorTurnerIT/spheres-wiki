@@ -1,0 +1,185 @@
+---
+interface TableRow {
+  cells: string[];
+  level: number;
+}
+
+interface Props {
+  /** Display name of the class, used in the table heading */
+  clsName: string;
+  /** Ordered column headers (Level, BAB, Fort Save, …, Special, …caster cols, …extra cols) */
+  allHeaders: string[];
+  /** Precomputed rows — cells are HTML strings rendered via set:html */
+  tableRows: TableRow[];
+}
+
+const { clsName, allHeaders, tableRows } = Astro.props;
+---
+
+<div class="class-table-wrapper">
+  <h2 id="class-table" class="class-table-heading">Table: The {clsName}</h2>
+  <div class="class-table-outline">
+    <table class="class-progression-table">
+      <thead>
+        <tr>
+          {allHeaders.map(h => <th>{h}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {tableRows.map(row => (
+          <tr>
+            {row.cells.map((cell, ci) => (
+              <td data-col={ci} set:html={cell} />
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  /* ── Tooltip popup ── */
+  :global(.tt) {
+    color: var(--clr-muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--clr-muted);
+    cursor: help;
+    position: relative;
+  }
+  :global(.tt:hover) { color: var(--clr-active); }
+  :global(.tt::after) {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--clr-surface);
+    color: var(--clr-body);
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    max-width: 360px;
+    width: max-content;
+    white-space: normal;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 100;
+  }
+  :global(.tt:hover::after) { opacity: 1; }
+
+  /* ── Class Progression Table ── */
+  .class-table-wrapper {
+    margin: 2rem 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .class-table-wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .class-table-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .class-table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--clr-border);
+    border-radius: 3px;
+  }
+
+  .class-table-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  .class-progression-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    background: var(--clr-surface);
+  }
+
+  .class-table-outline {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--clr-border);
+  }
+
+  .class-progression-table thead {
+    background: color-mix(in srgb, var(--clr-active) 15%, var(--clr-surface));
+  }
+
+  .class-progression-table th {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid var(--clr-border);
+    border-right: 1px solid color-mix(in srgb, var(--clr-border) 80%, transparent);
+    color: var(--clr-active);
+    white-space: normal;
+    overflow-wrap: break-word;
+    font-size: 0.85em;
+    letter-spacing: 0.02em;
+  }
+  .class-progression-table th:last-child {
+    border-right: none;
+  }
+
+  .class-progression-table td {
+    padding: 0.4rem 0.75rem;
+    border-bottom: 1px solid var(--clr-border);
+    border-right: 1px solid color-mix(in srgb, var(--clr-border) 60%, transparent);
+    white-space: nowrap;
+  }
+  .class-progression-table td:last-child {
+    border-right: none;
+  }
+
+  .class-progression-table tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--clr-active) 5%, transparent);
+  }
+
+  .class-progression-table tbody tr:hover {
+    background: color-mix(in srgb, var(--clr-active) 12%, transparent);
+  }
+
+  /* Level column */
+  .class-progression-table td:first-child {
+    font-weight: 700;
+    color: var(--clr-active);
+  }
+
+  /* Special column (6th) gets more breathing room */
+  .class-progression-table td:nth-child(6) {
+    white-space: normal;
+    min-width: 200px;
+    max-width: 400px;
+  }
+
+  /* Archetype-altered table cells (injected by JS — must be global) */
+  :global(.table-archetype-feature) {
+    color: var(--clr-brand);
+    font-weight: 600;
+    cursor: help;
+    border-bottom: 1px dotted var(--clr-brand);
+  }
+
+  :global(.table-altered-badge) {
+    font-size: 0.8em;
+    font-style: italic;
+    opacity: 0.7;
+    color: var(--clr-brand);
+  }
+</style>
