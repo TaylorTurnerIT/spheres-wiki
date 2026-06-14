@@ -1,0 +1,6 @@
+media: src/assets
+content:
+  - name: content
+    label: Content
+    type: collection
+    path: src/content
