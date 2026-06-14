@@ -143,7 +143,7 @@ function renderFields(fieldNames, indent) {
     const fieldLines = renderFieldItem(name);
     lines.push(`${p2}${fieldLines[0]}`);
     for (const l of fieldLines.slice(1)) {
-      lines.push(`${p2}  ${l}`);
+      lines.push(`${p2}${l}`);
     }
   }
   return lines.join("\n");
