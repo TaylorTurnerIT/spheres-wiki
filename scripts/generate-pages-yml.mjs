@@ -124,123 +124,119 @@ const SOURCEBOOKS_COLLECTION = `\
         label: Cover Image
         required: true`;
 
+// 8-space indent so `fields:` sits at the same level as `label:`, `type:`, etc.
+// inside a group's items sequence (where `-` is at column 6).
 const BOOK_FIELDS = `\
-      fields:
-        # ── Core ──────────────────────────────────────────────────────────────
-        - name: name
-          type: string
-          label: Name
-          required: true
-        - name: tags
-          type: string
-          label: Tags
-          list: true
-        - name: body
-          type: rich-text
-          label: Body
-        # ── Talent / Feat ──────────────────────────────────────────────────────
-        - name: tier
-          type: select
-          label: Tier
-          options:
-            values:
-              - {name: base, label: Base}
-              - {name: basic, label: Basic}
-              - {name: advanced, label: Advanced}
-        - name: dualSphere
-          type: string
-          label: Dual Sphere
-        - name: modifies
-          type: string
-          label: Modifies
-        # ── Sphere ────────────────────────────────────────────────────────────
-        - name: icon
-          type: string
-          label: Icon
-        # ── Class ─────────────────────────────────────────────────────────────
-        - name: hitDie
-          type: number
-          label: Hit Die
-        - name: alignment
-          type: string
-          label: Alignment
-        - name: startingWealth
-          type: string
-          label: Starting Wealth
-        - name: skillRanks
-          type: number
-          label: Skill Ranks
-        - name: classSkills
-          type: string
-          label: Class Skills
-          list: true
-        - name: babProgression
-          type: select
-          label: BAB Progression
-          options:
-            values:
-              - {name: full, label: Full}
-              - {name: "3/4", label: "3/4"}
-              - {name: half, label: Half}
-        - name: fortSaveProgression
-          type: select
-          label: Fort Save
-          options:
-            values:
-              - {name: good, label: Good}
-              - {name: poor, label: Poor}
-        - name: refSaveProgression
-          type: select
-          label: Ref Save
-          options:
-            values:
-              - {name: good, label: Good}
-              - {name: poor, label: Poor}
-        - name: willSaveProgression
-          type: select
-          label: Will Save
-          options:
-            values:
-              - {name: good, label: Good}
-              - {name: poor, label: Poor}
-        - name: casterTier
-          type: select
-          label: Caster Tier
-          options:
-            values:
-              - {name: high, label: High}
-              - {name: mid, label: Mid}
-              - {name: low, label: Low}
-              - {name: none, label: None}
-        - name: spheres
-          type: string
-          label: Spheres
-          list: true
-        # ── Archetype-feature ─────────────────────────────────────────────────
-        - name: level
-          type: number
-          label: Level
-        - name: replaces
-          type: string
-          label: Replaces
-          list: true
-        - name: alters
-          type: string
-          label: Alters
-          list: true
-        - name: mutuallyExclusive
-          type: boolean
-          label: Mutually Exclusive
-        # ── Class-feature / Class-trait ───────────────────────────────────────
-        - name: isTraitContainer
-          type: boolean
-          label: Is Trait Container
-        - name: requires
-          type: string
-          label: Requires
-        - name: isAlternateClassFeature
-          type: boolean
-          label: Is Alternate Class Feature`;
+        fields:
+          - name: name
+            type: string
+            label: Name
+            required: true
+          - name: tags
+            type: string
+            label: Tags
+            list: true
+          - name: body
+            type: rich-text
+            label: Body
+          - name: tier
+            type: select
+            label: Tier
+            options:
+              values:
+                - {name: base, label: Base}
+                - {name: basic, label: Basic}
+                - {name: advanced, label: Advanced}
+          - name: dualSphere
+            type: string
+            label: Dual Sphere
+          - name: modifies
+            type: string
+            label: Modifies
+          - name: icon
+            type: string
+            label: Icon
+          - name: hitDie
+            type: number
+            label: Hit Die
+          - name: alignment
+            type: string
+            label: Alignment
+          - name: startingWealth
+            type: string
+            label: Starting Wealth
+          - name: skillRanks
+            type: number
+            label: Skill Ranks
+          - name: classSkills
+            type: string
+            label: Class Skills
+            list: true
+          - name: babProgression
+            type: select
+            label: BAB Progression
+            options:
+              values:
+                - {name: full, label: Full}
+                - {name: "3/4", label: "3/4"}
+                - {name: half, label: Half}
+          - name: fortSaveProgression
+            type: select
+            label: Fort Save
+            options:
+              values:
+                - {name: good, label: Good}
+                - {name: poor, label: Poor}
+          - name: refSaveProgression
+            type: select
+            label: Ref Save
+            options:
+              values:
+                - {name: good, label: Good}
+                - {name: poor, label: Poor}
+          - name: willSaveProgression
+            type: select
+            label: Will Save
+            options:
+              values:
+                - {name: good, label: Good}
+                - {name: poor, label: Poor}
+          - name: casterTier
+            type: select
+            label: Caster Tier
+            options:
+              values:
+                - {name: high, label: High}
+                - {name: mid, label: Mid}
+                - {name: low, label: Low}
+                - {name: none, label: None}
+          - name: spheres
+            type: string
+            label: Spheres
+            list: true
+          - name: level
+            type: number
+            label: Level
+          - name: replaces
+            type: string
+            label: Replaces
+            list: true
+          - name: alters
+            type: string
+            label: Alters
+            list: true
+          - name: mutuallyExclusive
+            type: boolean
+            label: Mutually Exclusive
+          - name: isTraitContainer
+            type: boolean
+            label: Is Trait Container
+          - name: requires
+            type: string
+            label: Requires
+          - name: isAlternateClassFeature
+            type: boolean
+            label: Is Alternate Class Feature`;
 
 function shortenTitle(title) {
   return title.replace(/Spheres Apocrypha/g, "SA");
@@ -268,7 +264,7 @@ ${BOOK_FIELDS}`;
 function publisherGroup(publisher, publisherBooks) {
   const items = publisherBooks.map(bookItem).join("\n\n");
   return `\
-  # ── Books by ${publisher} ${"─".repeat(Math.max(0, 62 - publisher.length))}
+  # Books by ${publisher}
   - name: ${publisher.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+$/, "")}-books
     label: "Books by ${publisher}"
     type: group
