@@ -19,6 +19,10 @@ content:
       layout: tree
       primary: title
       fields: [title, publisher, price]
+      search: [title, publisher]
+      node:
+        filename: _book.yaml
+        hideDirs: others
       default:
         sort: title
         order: asc
@@ -56,9 +60,10 @@ content:
     exclude:
       - __built-in__
     view:
-      layout: tree
+      layout: list
       primary: name
-      fields: [name, type, sphere, tier]
+      fields: [name, type, sourceBook, sphere, tier]
+      search: [name, sphere, sourceBook, type]
       default:
         sort: name
         order: asc
