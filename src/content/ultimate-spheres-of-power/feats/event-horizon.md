@@ -1,11 +1,10 @@
 ---
 id: event-horizon
-name: "Event Horizon"
+name: Event Horizon
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: dark
-tags: ["dual-sphere"]
 tier: feat
 ---
 

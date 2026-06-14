@@ -1,11 +1,10 @@
 ---
 id: luminous-flame
-name: "Luminous Flame"
+name: Luminous Flame
 type: feat
 system: power
 sphere: nature
 dualSphere: light
-tags: ["dual-sphere"]
 tier: feat
 ---
 

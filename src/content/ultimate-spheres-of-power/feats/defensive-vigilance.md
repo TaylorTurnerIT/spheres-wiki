@@ -1,11 +1,10 @@
 ---
 id: defensive-vigilance
-name: "Defensive Vigilance"
+name: Defensive Vigilance
 type: feat
 system: power
 sphere: war
 dualSphere: protection
-tags: ["dual-sphere"]
 tier: feat
 ---
 

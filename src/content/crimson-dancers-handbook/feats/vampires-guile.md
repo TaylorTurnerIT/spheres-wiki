@@ -1,11 +1,10 @@
 ---
 id: vampires-guile
-name: "Vampire's Guile"
+name: Vampire's Guile
 type: feat
 system: power
 sphere: mind
 dualSphere: blood
-tags: ["dual-sphere"]
 tier: feat
 ---
 

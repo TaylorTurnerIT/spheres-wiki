@@ -1,11 +1,10 @@
 ---
 id: plexing-boon
-name: "Plexing Boon"
+name: Plexing Boon
 type: feat
 system: power
 sphere: protection
 dualSphere: enhancement
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,14 +1,12 @@
 ---
-id: "whole-set-blast"
-name: "Whole-Set Blast"
-system: "power"
-sourceBook: "card-casting-3-volatile-variance"
-dualSphere: "destruction"
-type: "feat"
-sphere: "fate"
-tier: "feat"
-tags:
-- "dual-sphere"
+id: whole-set-blast
+name: Whole-Set Blast
+system: power
+sourceBook: card-casting-3-volatile-variance
+dualSphere: destruction
+type: feat
+sphere: fate
+tier: feat
 ---
 
 **Prerequisites:** Destruction Sphere (Conflagrant Cluster), Fate Sphere

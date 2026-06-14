@@ -1,11 +1,10 @@
 ---
 id: tactile-illusion
-name: "Tactile Illusion"
+name: Tactile Illusion
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: illusion
-tags: ["dual-sphere"]
 tier: feat
 ---
 

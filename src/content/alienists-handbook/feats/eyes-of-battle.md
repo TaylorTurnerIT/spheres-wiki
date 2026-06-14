@@ -1,11 +1,10 @@
 ---
 id: eyes-of-battle
-name: "Eyes Of Battle"
+name: Eyes Of Battle
 type: feat
 system: power
 sphere: war
 dualSphere: divination
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Divination sphere, War sphere

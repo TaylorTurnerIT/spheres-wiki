@@ -30,3 +30,15 @@ Practitioners of the Barroom sphere gain the following abilities:
 [Hard Drinker]
 
 [Smash]
+## Improvised Weapon Damage
+
+Improvised weapons generally follow this chart for determining their damage.
+
+| Improvised Weapon Size | Damage Die | Sample Item |
+|---|---|---|
+| Diminutive | 1d3 | toothpick |
+| Tiny | 1d4 | fork |
+| Small | 1d6 | fire poker |
+| Medium | 1d8 | chair |
+| Large | 2d6 | table |
+| Huge | 3d6 | wagon |

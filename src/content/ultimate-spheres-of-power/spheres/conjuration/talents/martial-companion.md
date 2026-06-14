@@ -1,10 +1,10 @@
 ---
-id: 993300martial-companion
+id: "martial-companion"
 name: "Martial Companion"
-type: talent
-system: power
-sphere: conjuration
-tier: basic
+type: "talent"
+system: "power"
+sphere: "conjuration"
+tier: "basic"
 tags: []
 ---
 

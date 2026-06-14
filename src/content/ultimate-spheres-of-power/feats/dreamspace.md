@@ -1,11 +1,10 @@
 ---
 id: dreamspace
-name: "Dreamspace"
+name: Dreamspace
 type: feat
 system: power
 sphere: warp
 dualSphere: mind
-tags: ["dual-sphere"]
 tier: feat
 ---
 

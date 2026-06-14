@@ -54,3 +54,4 @@ While attached to another motif, an (arcana) shares its duration with the attach
 Some talents are marked (motif). These grant you motifs you can grant to targets. Unless otherwise noted, a talent with the (motif) tag is cast as a standard action on a target with a range of touch and costs one spell point. A successful Will save negates a motif, and motifs are subject to spell resistance. While they normally have a duration of 1 hour per level, the target can also discharge a (motif) talent as an immediate action to gain an instantaneous or short-lived benefit, after which the effect ends.
 
 A given creature can never have more than one instance of a particular (motif) talent active on them at a time.
+[Rules Clarifications and Expansions]

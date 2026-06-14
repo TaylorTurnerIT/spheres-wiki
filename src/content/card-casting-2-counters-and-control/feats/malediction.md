@@ -1,11 +1,10 @@
 ---
 id: malediction
-name: "Malediction"
+name: Malediction
 type: feat
 system: power
 sphere: protection
 dualSphere: fate
-tags: ["dual-sphere"]
 tier: feat
 ---
 

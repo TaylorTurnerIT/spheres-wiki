@@ -1,11 +1,10 @@
 ---
 id: kinetic-creation
-name: "Kinetic Creation"
+name: Kinetic Creation
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

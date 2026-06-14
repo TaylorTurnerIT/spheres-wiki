@@ -1,11 +1,10 @@
 ---
 id: wave-particle-duality
-name: "Wave-Particle Duality"
+name: Wave-Particle Duality
 type: feat
 system: power
 sphere: light
 dualSphere: illusion
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: sanctified-vigilance
-name: "Sanctified Vigilance"
+name: Sanctified Vigilance
 type: feat
 system: power
 sphere: war
 dualSphere: fate
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: consecrated-affinity
-name: "Consecrated Affinity"
+name: Consecrated Affinity
 type: feat
 system: power
 sphere: mana
 dualSphere: fate
-tags: ["dual-sphere"]
 tier: feat
 ---
 

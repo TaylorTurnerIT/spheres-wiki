@@ -1,11 +1,10 @@
 ---
 id: vudu
-name: "Vudu"
+name: Vudu
 type: feat
 system: power
 sphere: illusion
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

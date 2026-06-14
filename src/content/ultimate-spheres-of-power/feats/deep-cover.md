@@ -1,11 +1,10 @@
 ---
 id: deep-cover
-name: "Deep Cover"
+name: Deep Cover
 type: feat
 system: power
 sphere: illusion
 dualSphere: alteration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

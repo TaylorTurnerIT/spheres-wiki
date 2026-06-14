@@ -1,11 +1,10 @@
 ---
 id: wound-manipulator
-name: "Wound Manipulator"
+name: Wound Manipulator
 type: feat
 system: power
 sphere: life
 dualSphere: alteration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

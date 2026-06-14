@@ -1,11 +1,10 @@
 ---
 id: tribal-mark
-name: "Tribal Mark"
+name: Tribal Mark
 type: feat
 system: power
 sphere: war
 dualSphere: enhancement
-tags: ["dual-sphere"]
 tier: feat
 ---
 

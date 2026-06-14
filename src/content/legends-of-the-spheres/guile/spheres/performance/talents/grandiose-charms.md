@@ -4,6 +4,7 @@ name: "Grandiose Charms"
 type: "feat"
 sourceBook: "legends-of-the-spheres"
 sphere: "performance"
+dualSphere: "bluster"
 tags:
   - "champion"
 ---

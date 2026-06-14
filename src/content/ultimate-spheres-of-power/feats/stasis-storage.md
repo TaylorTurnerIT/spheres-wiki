@@ -1,11 +1,10 @@
 ---
 id: stasis-storage
-name: "Stasis Storage"
+name: Stasis Storage
 type: feat
 system: power
 sphere: warp
 dualSphere: time
-tags: ["dual-sphere"]
 tier: feat
 ---
 

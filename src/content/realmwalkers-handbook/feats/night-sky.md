@@ -1,11 +1,10 @@
 ---
 id: night-sky
-name: "Night Sky"
+name: Night Sky
 type: feat
 system: power
 sphere: light
 dualSphere: dark
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: superpositioned
-name: "Superpositioned"
+name: Superpositioned
 type: feat
 system: power
 sphere: warp
 dualSphere: illusion
-tags: ["dual-sphere"]
 tier: feat
 ---
 

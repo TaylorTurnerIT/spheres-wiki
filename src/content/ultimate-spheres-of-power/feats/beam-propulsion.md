@@ -1,11 +1,10 @@
 ---
 id: beam-propulsion
-name: "Beam Propulsion"
+name: Beam Propulsion
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: light
-tags: ["dual-sphere"]
 tier: feat
 ---
 

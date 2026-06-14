@@ -36,3 +36,22 @@ You gain 5 ranks in the chosen associated skill, plus 5 ranks per additional tal
 You also acquire the Canny Survivor ability.
 
 [Canny Survivor]
+
+### Survivalism Packages
+
+When you gain the Survivalism sphere, you gain one of the following packages:
+
+- **(dredge):** You gain the ability to dredge an area, preparing the ground to your advantage. Dredging creates difficult or hazardous terrain that hinders enemies while providing benefits to you and your allies.
+- **(harvest):** You gain the ability to harvest components from creatures you defeat. These components can be refined into talismans that provide ongoing benefits.
+## Survivalism Talent Types
+
+Survivalism talents can have the (ground) or (harvest) tags.
+
+**Ground Talents:** Some talents are marked (ground), granting you additional ways to dredge an area to your advantage. A dredged area can only have the benefits of a single (ground) talent option applied to it at one time; applying a second (ground) talent overrides the first use.
+
+**Harvest Talents:** Some talents are marked (harvest), granting you new components that you can harvest from a creature. Some (harvest) talents allow you to expend that harvested component to grant the extra effect listed in its Talisman entry to one talisman you refine. A talisman can have no more than one extra component added this way, or two if one of them has the [utility] tag.
+[Talisman]
+[Resourceful Laborer]
+[Slow Dredger]
+[Disrupt Terrain]
+[Hunter]

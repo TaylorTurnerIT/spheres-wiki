@@ -1,11 +1,10 @@
 ---
 id: spirit-form
-name: "Spirit Form"
+name: Spirit Form
 type: feat
 system: power
 sphere: nature
 dualSphere: alteration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

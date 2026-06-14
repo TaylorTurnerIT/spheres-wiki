@@ -1,11 +1,10 @@
 ---
 id: warded-bones
-name: "Warded Bones"
+name: Warded Bones
 type: feat
 system: power
 sphere: protection
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

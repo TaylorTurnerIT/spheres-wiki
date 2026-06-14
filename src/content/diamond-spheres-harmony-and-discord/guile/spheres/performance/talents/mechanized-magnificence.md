@@ -1,13 +1,13 @@
 ---
-id: "mechanized-magnificence"
-name: "Mechanized Magnificence"
-type: "feat"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
+id: mechanized-magnificence
+name: Mechanized Magnificence
+type: feat
+sourceBook: diamond-spheres-harmony-and-discord
+sphere: performance
+dualSphere: tinker
 tags:
-  - "champion"
-  - "dual-sphere"
-  - "gizmo"
+  - champion
+  - gizmo
 ---
 
 You blend metal and music into one another.

@@ -1,11 +1,10 @@
 ---
 id: primal-blast
-name: "Primal Blast"
+name: Primal Blast
 type: feat
 system: power
 sphere: nature
 dualSphere: destruction
-tags: ["dual-sphere"]
 tier: feat
 ---
 

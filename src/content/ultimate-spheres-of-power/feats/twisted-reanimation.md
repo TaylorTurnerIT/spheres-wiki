@@ -1,11 +1,10 @@
 ---
 id: twisted-reanimation
-name: "Twisted Reanimation"
+name: Twisted Reanimation
 type: feat
 system: power
 sphere: death
 dualSphere: alteration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

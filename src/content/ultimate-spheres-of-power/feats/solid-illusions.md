@@ -1,11 +1,10 @@
 ---
 id: solid-illusions
-name: "Solid Illusions"
+name: Solid Illusions
 type: feat
 system: power
 sphere: illusion
 dualSphere: enhancement
-tags: ["dual-sphere"]
 tier: feat
 ---
 

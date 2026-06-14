@@ -1,11 +1,10 @@
 ---
 id: exceptional-ally
-name: "Exceptional Ally"
+name: Exceptional Ally
 type: feat
 system: power
 sphere: enhancement
 dualSphere: conjuration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

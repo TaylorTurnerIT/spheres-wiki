@@ -1,11 +1,10 @@
 ---
 id: animating-possession
-name: "Animating Possession"
+name: Animating Possession
 type: feat
 system: power
 sphere: enhancement
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

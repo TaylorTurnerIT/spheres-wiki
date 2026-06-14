@@ -4,6 +4,7 @@ name: "Detailed Charting"
 type: "feat"
 sourceBook: "spheres-of-guile"
 sphere: "navigation"
+dualSphere: "investigation"
 tags: []
 ---
 

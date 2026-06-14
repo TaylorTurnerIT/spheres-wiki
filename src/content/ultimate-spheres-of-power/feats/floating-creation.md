@@ -1,11 +1,10 @@
 ---
 id: floating-creation
-name: "Floating Creation"
+name: Floating Creation
 type: feat
 system: power
 sphere: enhancement
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

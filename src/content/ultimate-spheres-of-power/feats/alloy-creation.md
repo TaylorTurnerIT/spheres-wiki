@@ -1,11 +1,10 @@
 ---
 id: alloy-creation
-name: "Alloy Creation"
+name: Alloy Creation
 type: feat
 system: power
 sphere: nature
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

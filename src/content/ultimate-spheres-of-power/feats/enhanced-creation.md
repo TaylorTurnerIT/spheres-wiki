@@ -1,11 +1,10 @@
 ---
 id: enhanced-creation
-name: "Enhanced Creation"
+name: Enhanced Creation
 type: feat
 system: power
 sphere: enhancement
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

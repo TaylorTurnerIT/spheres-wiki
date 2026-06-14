@@ -1,11 +1,10 @@
 ---
 id: never-really-there
-name: "Never Really There"
+name: Never Really There
 type: feat
 system: power
 sphere: warp
 dualSphere: mind
-tags: ["dual-sphere"]
 tier: feat
 ---
 

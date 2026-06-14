@@ -1,11 +1,10 @@
 ---
 id: body-double
-name: "Body Double"
+name: Body Double
 type: feat
 system: power
 sphere: illusion
 dualSphere: dark
-tags: ["dual-sphere"]
 tier: feat
 ---
 

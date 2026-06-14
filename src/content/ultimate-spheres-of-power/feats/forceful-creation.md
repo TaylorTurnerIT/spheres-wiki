@@ -1,11 +1,10 @@
 ---
 id: forceful-creation
-name: "Forceful Creation"
+name: Forceful Creation
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,13 +1,13 @@
 ---
-id: "animist"
-name: "Animist"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "survivalism"
-tier: "advanced"
+id: animist
+name: Animist
+type: talent
+sourceBook: diamond-spheres-invention-and-ingenuity
+sphere: survivalism
+dualSphere: nature
+tier: advanced
 tags:
-  - "champion"
-  - "dual-sphere"
+  - champion
 ---
 
 **Prerequisite:** Survival 3 ranks, Survivalism sphere; Nature sphere or Trap sphere.

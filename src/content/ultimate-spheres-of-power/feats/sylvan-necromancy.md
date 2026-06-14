@@ -1,11 +1,10 @@
 ---
 id: sylvan-necromancy
-name: "Sylvan Necromancy"
+name: Sylvan Necromancy
 type: feat
 system: power
 sphere: nature
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

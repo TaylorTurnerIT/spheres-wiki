@@ -1,11 +1,10 @@
 ---
 id: fated-summons
-name: "Fated Summons"
+name: Fated Summons
 type: feat
 system: power
 sphere: fate
 dualSphere: conjuration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

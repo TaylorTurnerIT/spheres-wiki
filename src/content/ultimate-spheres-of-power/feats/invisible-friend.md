@@ -1,11 +1,10 @@
 ---
 id: invisible-friend
-name: "Invisible Friend"
+name: Invisible Friend
 type: feat
 system: power
 sphere: illusion
 dualSphere: conjuration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

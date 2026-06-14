@@ -1,11 +1,10 @@
 ---
 id: reforge-object
-name: "Reforge Object"
+name: Reforge Object
 type: feat
 system: power
 sphere: enhancement
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

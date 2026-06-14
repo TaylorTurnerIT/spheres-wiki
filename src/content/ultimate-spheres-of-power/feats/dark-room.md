@@ -1,11 +1,10 @@
 ---
 id: dark-room
-name: "Dark Room"
+name: Dark Room
 type: feat
 system: power
 sphere: warp
 dualSphere: dark
-tags: ["dual-sphere"]
 tier: feat
 ---
 

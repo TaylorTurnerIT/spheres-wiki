@@ -38,3 +38,12 @@ You also acquire the Knowledgeable, Prescient Study, and Theorize abilities.
 [Prescient Study]
 
 [Theorize]
+## Study Talent Types
+
+**Complication:** Some talents have the (complication) tag, which allows you to modify your plans by accepting a certain level of risk. You apply a (complication) talent to a plan when you reveal it. Some (complication) talents only apply to certain types of plans, as noted in the description.
+
+**Research:** While most theories are rapidly established over the course of several moments, there are some that require a lot more time and resources dedicated to them before they are fully realized. (Research) talents are unique (theory) talents that are started as part of researching a topic at a library or similar repository of information, which usually takes 1d4 hours. Research does not count towards the normal maximum number of theories you can have active at one time, but you can only have one research active at one time. Notions gained from current theories cannot be used for breakthroughs of (research) talents, and vice versa.
+
+**Theory:** Talents with the (theory) tag grant you additional options when attempting to theorize.
+[Incredible Memory]
+[Specialized Degree]

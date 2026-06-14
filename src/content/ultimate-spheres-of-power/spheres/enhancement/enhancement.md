@@ -38,3 +38,4 @@ sectionDefinitions:
 ### Enhancement Talent Types
 
 Some talents are marked (enhance). These talents grant you new enhancements you may bestow.
+[Special Abilities]

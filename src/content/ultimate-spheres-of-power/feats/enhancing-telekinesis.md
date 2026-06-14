@@ -1,11 +1,10 @@
 ---
 id: enhancing-telekinesis
-name: "Enhancing Telekinesis"
+name: Enhancing Telekinesis
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: enhancement
-tags: ["dual-sphere"]
 tier: feat
 ---
 

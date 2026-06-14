@@ -1,11 +1,10 @@
 ---
 id: dimensional-aegis
-name: "Dimensional Aegis"
+name: Dimensional Aegis
 type: feat
 system: power
 sphere: warp
 dualSphere: protection
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Protection sphere, Warp sphere.

@@ -1,11 +1,10 @@
 ---
 id: formed-construct
-name: "Formed Construct"
+name: Formed Construct
 type: feat
 system: power
 sphere: conjuration
 dualSphere: blood
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: poltergeists-malice
-name: "Poltergeist's Malice"
+name: Poltergeist's Malice
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

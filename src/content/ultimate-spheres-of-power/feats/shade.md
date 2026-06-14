@@ -1,11 +1,10 @@
 ---
 id: shade
-name: "Shade"
+name: Shade
 type: feat
 system: power
 sphere: illusion
 dualSphere: dark
-tags: ["dual-sphere"]
 tier: feat
 ---
 

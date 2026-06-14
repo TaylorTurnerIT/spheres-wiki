@@ -1,11 +1,10 @@
 ---
 id: invigorating-rally
-name: "Invigorating Rally"
+name: Invigorating Rally
 type: feat
 system: power
 sphere: war
 dualSphere: life
-tags: ["dual-sphere"]
 tier: feat
 ---
 

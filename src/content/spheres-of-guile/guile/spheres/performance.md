@@ -47,3 +47,12 @@ When you gain a package, you choose one of the package's associated skills to de
 [Instrumental Package]
 
 [Lyric Package]
+## Performance Talent Types
+
+**Act, Dance, Lyric, and Instrumental:** Some Performance talents are marked (act), (dance), (lyric), or (instrumental), granting you additional options when performing with the corresponding package.
+
+> **Sidebar: Performance Sphere and Ally Coordination** — Some Performance sphere abilities assume there is a level of coordination or planning between you and your allies (mainly the (act) and (dance) packages). You can coordinate with your allies as part of your daily preparations as to the style and actions needed with your talents. Certain styles of act or dance may not require this level of prior preparation.
+[One-Person Show]
+[Instrumental Acoustics]
+[Emotional Performance]
+[Dramaturge]

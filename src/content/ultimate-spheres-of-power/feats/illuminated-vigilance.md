@@ -1,11 +1,10 @@
 ---
 id: illuminated-vigilance
-name: "Illuminated Vigilance"
+name: Illuminated Vigilance
 type: feat
 system: power
 sphere: war
 dualSphere: light
-tags: ["dual-sphere"]
 tier: feat
 ---
 

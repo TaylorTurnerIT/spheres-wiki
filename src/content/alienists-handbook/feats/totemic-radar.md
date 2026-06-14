@@ -1,11 +1,10 @@
 ---
 id: totemic-radar
-name: "Totemic Radar"
+name: Totemic Radar
 type: feat
 system: power
 sphere: war
 dualSphere: divination
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Divination sphere (Blindfolded Oracle (sense)), War sphere.

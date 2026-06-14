@@ -1,12 +1,12 @@
 ---
-id: "primal-dancer"
-name: "Primal Dancer"
-type: "feat"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
+id: primal-dancer
+name: Primal Dancer
+type: feat
+sourceBook: diamond-spheres-harmony-and-discord
+sphere: performance
+dualSphere: destruction
 tags:
-  - "champion"
-  - "dual-sphere"
+  - champion
 ---
 
 **Prerequisite:** Perform (dance) 3 ranks, Performance sphere ((dance) package); either the Berserker sphere or Destruction sphere (one (blast type) talent that deals energy damage or Energy Aura talent).

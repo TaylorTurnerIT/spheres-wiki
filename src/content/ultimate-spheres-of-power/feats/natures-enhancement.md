@@ -1,11 +1,10 @@
 ---
 id: natures-enhancement
-name: "Nature's Enhancement"
+name: Nature's Enhancement
 type: feat
 system: power
 sphere: nature
 dualSphere: enhancement
-tags: ["dual-sphere"]
 tier: feat
 ---
 

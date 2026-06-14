@@ -1,12 +1,12 @@
 ---
-id: "fey-melodies"
-name: "Fey Melodies"
-type: "feat"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
+id: fey-melodies
+name: Fey Melodies
+type: feat
+sourceBook: diamond-spheres-harmony-and-discord
+sphere: performance
+dualSphere: fallen-fey
 tags:
-  - "champion"
-  - "dual-sphere"
+  - champion
 ---
 
 **Prerequisite:** Fallen Fey sphere (Enchanting Music (fey-blessing)), Performance sphere (instrumental) package.

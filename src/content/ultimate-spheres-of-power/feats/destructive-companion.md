@@ -1,11 +1,10 @@
 ---
 id: destructive-companion
-name: "Destructive Companion"
+name: Destructive Companion
 type: feat
 system: power
 sphere: destruction
 dualSphere: conjuration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: animate-tornado
-name: "Animate Tornado"
+name: Animate Tornado
 type: feat
 system: power
 sphere: weather
 dualSphere: enhancement
-tags: ["dual-sphere"]
 tier: feat
 ---
 

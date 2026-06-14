@@ -40,3 +40,30 @@ You also acquire the Trinket and Cobbled Creation abilities.
 [Trinket]
 
 [Cobbled Creation]
+
+### Artifice Sphere Packages
+
+When you gain the Artifice sphere, you gain one of the following packages:
+
+- **(artwork):** You gain the Artwork ability. You gain the ability to create artworks that convey effects through observation.
+- **(fabrication):** You gain the Fabrication ability. You can craft and modify objects with enhanced capability, gaining access to (fabrication) talents.
+- **(gear):** You gain the Gear ability. You can create and maintain specialized equipment, gaining access to (gear) talents.
+
+You gain skill leverage with the associated skill of your chosen package.
+## Artifice Talent Types
+
+Some talents are marked (artwork), (fabrication) or (gear), granting you unique ways of altering and creating things; you must possess at least one relevant package to gain such a talent.
+
+**Artwork:** An artwork is a unique flourish that confers its effects through observation instead of use — such a flourish does not require maintenance, and can also be added to a creature or surface. A creature gains the effects of an artwork by intentionally observing it for 1 minute (which is done once per round as a nonaction), known as engaging with an artwork — a creature cannot engage with more than one artwork at a time. The benefits of — and engaging with — an artwork is a visual mind-affecting emotion effect, although some forms of artwork (such as a play or musical composition) may be auditory. Unless otherwise specified, an artwork's effects last for 1 hour.
+
+**Fabrication:** (Fabrication) talents have an effect that requires the (fabrication) package.
+
+**Flourish:** Some Artifice talents are designated (flourish), granting you ways of modifying objects.
+[Fixer]
+[Expensive Parts]
+[Rapid Crafter]
+[Fabrication Package]
+[Writer]
+[Careful Engineer]
+[Artwork Package]
+[Gear Package]

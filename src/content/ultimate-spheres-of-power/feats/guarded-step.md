@@ -1,11 +1,10 @@
 ---
 id: guarded-step
-name: "Guarded Step"
+name: Guarded Step
 type: feat
 system: power
 sphere: warp
 dualSphere: protection
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Protection sphere, Warp sphere.

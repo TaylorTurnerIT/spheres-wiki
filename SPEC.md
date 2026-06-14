@@ -221,6 +221,14 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 - V52. Archetype hot-swap must mutate existing DOM elements in-place rather than replacing container `innerHTML` on elements with Astro-scoped CSS class names — preserves `data-astro-cid-*` required for scoped styles to apply.
 - V53. The `SYSTEMS` record in `src/config/site.ts` is the sole source of system metadata (id, label, color, route, cssKey, etc.) consumed by all routes and components — no parallel system label/color/route lists elsewhere in source.
 
+**Content parity (V55–V59)**
+
+- V55. Content parity — ∀ sphere page, old wiki talents+feats ⊆ new wiki talents+feats. Audit reports at `docs/audit-report-{power,might,guile}.md` are ground truth for gaps.
+- V56. Base abilities + section headers + rules text ! render as talent-entry cards. `tier:"base"` items render via V31 markers; others as overview prose or rule blocks.
+- V57. ∀ heading with valid `id` attr in page body → `data-toc-item` entry in sidebar TOC. No orphaned content.
+- V58. Cross-sphere feats ! appear on ALL referenced sphere pages, not just one.
+- V59. Entry slug IDs ! contain format artifacts (`993300`, hex color prefixes, etc.). Schema must reject at build time.
+
 ---
 
 ## §M Might Sphere Migration (Wikidot → Markdown)
@@ -364,6 +372,37 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T70 | .      | Unify `[system]/[sphere]/feats/[feat].astro` — collapse 3 copies | V48,V53 |
 | T71 | .      | Unify `[system]/index.astro` — collapse 3 copies | V48,V53 |
 | T72 | .      | Audit all pages for inline TagBadge reimplementation — replace with TagBadge component | V49,V51 |
+| T73 | .      | Author 2 missing Power sphere pages from old wiki source: Bear, Technomancy | V1,V55,I.pages |
+| T74 | .      | Author 7 missing Power talents: Death/Curse, Mana/Bulwark, Mind/Disrupt Focus+Polyglot, Telekinesis/Flight, War/Commander, Fallen Fey/Ventriloquism | V55 |
+| T75 | .      | Author 20 missing Power feats — see `docs/audit-report-power.md` §Missing Feats | V55,V58 |
+| T76 | .      | Fix 73 Power categorization errors — re-tag items as base abilities/section headers/rules text; remove talent-entry card rendering | V56 |
+| T77 | .      | Fix Martial Companion slug: `993300martial-companion` → `martial-companion` | V59 |
+| T78 | .      | Add About Dreamscapes appendix text to Mind sphere page | V55 |
+| T79 | .      | Add Grimalkin Shade to Fallen Fey TOC sidebar (present in body, missing data-toc-item) | V57 |
+| T80 | .      | Shield: author 9 missing talents + Note: Shields and Shield Bonuses overview from old wiki source | V55 |
+| T81 | .      | Equipment: author 8 missing talents from old wiki source | V55 |
+| T82 | .      | Leadership: author 9 missing overview sections (Wealth, Building Cohort, Dividing Followers, Re-Recruiting, Roleplaying Cohorts, Roleplaying Followers, Followers And Statistics, Party Followers, Toolbox) | V55 |
+| T83 | .      | Wrestling: author 4 missing talents + Practitioner Unarmed Damage table | V55 |
+| T84 | .      | Gladiator: author 4 missing demoralization talents (Booming Roar, Dullahan's Call, Hear Their Screams, Ominous Presence) | V55 |
+| T85 | .      | Trap: author 3 missing talents (Scatter Trap, Trap Door, Well-Planned Surprise) | V55 |
+| T86 | .      | Brute: author 2 missing talents (Momentous Force, Underfoot Trample) | V55 |
+| T87 | .      | Single-talent gaps — author 1 talent each for Athletics/Mobility, Berserker/Deathless, Dual Wielding/Underhanded Blades, Duelist/Ruthless Opportunist, Fencing/Shadow Strike, Open Hand/Rapid Sweep, Scoundrel/Snatching Dash, Scout/Honed Sense, Warleader/Dispiriting Roar | V55 |
+| T88 | .      | Author missing Might overview sections: Athletics Packages+Types, Barroom Improvised Weapon Damage, Beastmastery Packages, Scoundrel Swift Hands | V55 |
+| T89 | .      | Add 8 TOC-invisible items to sidebar: Alchemy/Note: Crafting Alchemical Items, Guardian/Punishment, Open Hand/Sweep, Scoundrel/Marked Target, Shield/Active Defense, Sniper/Deadly Shot, Navigation/Cartographer+Pointer | V57 |
+| T90 | .      | Add Unarmed Combatants overview sections to Boxing, Brute, Open Hand, Wrestling sphere pages | V55 |
+| T91 | .      | Add Practitioner Unarmed Damage table to Wrestling sphere page | V55 |
+| T92 | .      | Author 5 missing Guile talents: Navigation/Focused Wayfaring+Heedless Advance+Tracker, Subterfuge/Veil of Mystery, Vocation/Crowd Pleaser | V55 |
+| T93 | .      | Copy 3 cross-sphere feats to secondary pages: Grandiose Charms→Bluster, Detailed Charting→Investigation, Speculative Analysis→Study | V58 |
+| T94 | .      | Author 25 missing Guile overview sections: Talent Types for 12 spheres + package descriptions for Artifice, Faction, Herbalism, Performance, Survivalism | V55 |
+| T95 | .      | Fix 3 Guile categorization errors: re-tag Authoritative (Bluster) + Exceptional Discipline (Body Control) as base abilities, not talent cards | V56 |
+| T96 | .      | Add 5 TOC-invisible items to sidebar: Navigation/Cartographer+Pointer, Artifice/Tug The Heartstrings+Drawbacks, Faction/Resource Budgets+Retainer Statistics | V57 |
+| T97 | .      | Add Optional Detailed Statistics table to Faction sphere page | V55 |
+| T98 | .      | Add 5 missing rule notes/sidebars: Spellhacking/Dispel Checks+Hacking Instrument, Faction/New and Old Factions+Authority and Responsibility, Performance/Ally Coordination | V55 |
+| T99 | .      | Cross-system completeness verification — re-run full audit after T73-T98; confirm 0 genuine gaps across all 64 spheres | V55 |
+| T100 | .      | Add slug validation script — reject hex-prefix slugs (`^993300`, color codes) at schema or build-check level | V59 |
+| T101 | .      | Add TOC audit script — detect page-body headings with `id` attr missing from `data-toc-item` sidebar entries | V57 |
+| T102 | .      | Add cross-sphere feat audit script — detect feats present on 1 sphere page but absent from another that references them | V58 |
+| T103 | .      | Normalize `tier:"base"` → `[TalentName]` marker generation in Might export pipeline; verify all base abilities render via V31 markers | V31,V32,V56 |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
@@ -373,6 +412,14 @@ Then infra (T23→T24→T26→T27→T28→T29→T30→T31→T32).
 **Privacy/compliance batch (do before any significant traffic):** T35→T36→T37→T38.
   - T33+T34 already done
   - T35 (footer) links to /privacy/ which exists; build first
+
+**Content parity remediation (T73–T103) — see `docs/audit-report-*.md`:**
+1. Systemic safeguards: T100→T101→T102→T103 (prevent recurrence)
+2. Guile (smallest gap, fastest win): T92→T93→T94→T95→T96→T97→T98
+3. Power categorization (needs 0 new content): T76→T77
+4. Power content: T73→T74→T75→T78→T79
+5. Might (largest — sphere-by-sphere worst→best): T80→T81→T82→T83→T84→T85→T86→T87→T88→T89→T90→T91
+6. Verification: T99 (re-audit all 64 spheres → confirm 0 gaps)
 
 Tasks T44–T50 carried from the legacy AGENTS.md spec: T45–T50 done; **T44 (FOUC audit) still open.**
 
@@ -391,3 +438,9 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: T45–T50 done; **T44 (F
 | B7 | 2026-06-06 | `sectionDefinitions` duplicated section label as category label → duplicate HTML `id` attrs → TOC scroll broken, sections empty | V31 — unique labels; one "Talents" section groups categories |
 | B8 | 2026-06-06 | Base abilities not rendering — `[TalentName]` markers missing from sphere body; `tier:"base"` `sectionDefinitions` category always empty (filtered before `buildSections`) | V31,V32 — markers in body + remove useless base category |
 | B9 | 2026-06-06 | `export_might.rs` body converter: `----` → `---` without blank line → setext heading `<h2>` rendering | fix: `wikidot_lines_to_markdown` inserts blank line before `---` |
+| B10 | 2026-06-14 | Martial Companion slug corrupted: hex color `993300` leaked from parser into `id` | V59 / T77 |
+| B11 | 2026-06-14 | Cross-sphere feats present on 1 page, missing from other sphere pages they belong to | V58 / T75,T93,T102 |
+| B12 | 2026-06-14 | 73 Power entries miscategorized as talent cards — should be base abilities, section headers, or rules text | V56 / T76 |
+| B13 | 2026-06-14 | 18 items across 3 systems present in page body but invisible in TOC sidebar (no data-toc-item) | V57 / T79,T89,T96,T101 |
+| B14 | 2026-06-14 | Parser `data-toc-section` mismatch: combat feats in `combat-feats` section undetected by diff tool | parser fix / low-priority |
+| B15 | 2026-06-14 | Old wiki `<h5>` sub-sections auto-flagged as missing standalone talents by diff tool | parser fix / low-priority |

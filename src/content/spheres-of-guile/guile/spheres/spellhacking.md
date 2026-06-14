@@ -36,3 +36,21 @@ You also acquire the Control Mishap and Hack Magic abilities.
 [Control Mishap]
 
 [Hack Magic]
+
+> **Rule Note: Dispel Checks** — When determining the DC for a dispel check to counter or dispel a magical effect, the standard formula is 11 + the effect's caster level.
+>
+> **Rule Note: Your Hacking Instrument** — A hacking instrument is an object you use to visualize or manipulate the magical energy you are interacting with. It could be a literal tool (such as a tuning fork or wand), an esoteric focus (such as a crystal or tome), or simply a practiced gesture. Without a hacking instrument, you cannot use your hack magic or hack item abilities.
+## Spellhacking Talent Types
+
+Some Spellhacking talents have the (hack) or (mishap) tags, unlocking options with the corresponding base sphere ability.
+
+**Hack:** Talents with the (hack) tag allow you to change the rules of magical effects, most often effects produced by spells and magic items. Each hack can only be applied to an effect that matches its Target entry. An effect may only be altered by one (hack) talent at a time, or two if at least one has the [utility] tag. You cannot apply the same hack to one effect multiple times simultaneously.
+
+**Mishap:** Talents with the (mishap) tag allow you to intentionally create mishaps with magic items or other spellhacking instruments and control the effects of your mishaps. All mishaps are supernatural effects.
+[Dual Hack]
+[Destabilized Focus]
+[Personal Hacking]
+[Stable Instrument]
+[Magical Resonance]
+[Truenamer]
+[Mundane Hacker]

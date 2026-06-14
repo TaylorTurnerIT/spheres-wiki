@@ -1,11 +1,10 @@
 ---
 id: imbue-with-nature
-name: "Imbue With Nature"
+name: Imbue With Nature
 type: feat
 system: power
 sphere: nature
 dualSphere: destruction
-tags: ["dual-sphere"]
 tier: feat
 ---
 

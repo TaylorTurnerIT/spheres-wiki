@@ -1,12 +1,12 @@
 ---
-id: "graveborn-expression"
-name: "Graveborn Expression"
-type: "feat"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
+id: graveborn-expression
+name: Graveborn Expression
+type: feat
+sourceBook: diamond-spheres-harmony-and-discord
+sphere: performance
+dualSphere: death
 tags:
-  - "champion"
-  - "dual-sphere"
+  - champion
 ---
 
 **Prerequisite:** Death sphere, Performance sphere.

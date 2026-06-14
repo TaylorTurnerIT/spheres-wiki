@@ -37,3 +37,9 @@ You also acquire the Fast Sabotage, Light Step, and Startle abilities.
 [Light Step]
 
 [Startle]
+## Infiltration Talent Types
+
+**Sabotage:** Some talents are designated (sabotage), giving you more options for the effect of your fast sabotage ability. Each (sabotage) talent lists the Disable Device DC to apply it with fast sabotage. A sabotage can only be applied to an effect that matches its Target entry.
+[Careful Saboteur]
+[Vandal]
+[Ghost]

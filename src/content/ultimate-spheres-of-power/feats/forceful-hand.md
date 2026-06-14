@@ -1,11 +1,10 @@
 ---
 id: forceful-hand
-name: "Forceful Hand"
+name: Forceful Hand
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: protection
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Protection sphere, Telekinesis sphere.

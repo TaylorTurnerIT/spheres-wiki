@@ -59,3 +59,4 @@ This handbook has added the (dominion) descriptor to the following talents and a
 - Corpse Forge (advanced talent) (Ultimate Spheres of Power pg. 393)
 
 Some Death talents are designated (dominion), which grant you new ways to interact with your raised and controlled undead. (Dominion) talents have a range of close.
+[Necromancy and Morality]

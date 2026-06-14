@@ -1,11 +1,10 @@
 ---
 id: backdoor-control
-name: "Backdoor Control"
+name: Backdoor Control
 type: feat
 system: power
 sphere: mind
 dualSphere: enhancement
-tags: ["dual-sphere"]
 tier: feat
 ---
 

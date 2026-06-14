@@ -1,11 +1,10 @@
 ---
 id: warning-sign
-name: "Warning Sign"
+name: Warning Sign
 type: feat
 system: power
 sphere: war
 dualSphere: protection
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Protection sphere, War sphere.

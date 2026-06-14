@@ -1,11 +1,10 @@
 ---
 id: fount-of-stolen-life
-name: "Fount Of Stolen Life"
+name: Fount Of Stolen Life
 type: feat
 system: power
 sphere: life
 dualSphere: blood
-tags: ["dual-sphere"]
 tier: feat
 ---
 

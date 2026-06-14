@@ -1,11 +1,10 @@
 ---
 id: whole-set-blast
-name: "Whole-Set Blast"
+name: Whole-Set Blast
 type: feat
 system: power
 sphere: fate
 dualSphere: destruction
-tags: ["dual-sphere"]
 tier: feat
 ---
 

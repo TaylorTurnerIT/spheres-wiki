@@ -1,11 +1,10 @@
 ---
 id: survey-of-your-realm
-name: "Survey of your Realm"
+name: Survey of your Realm
 type: feat
 system: power
 sphere: warp
 dualSphere: divination
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: atmospheric-imbuement
-name: "Atmospheric Imbuement"
+name: Atmospheric Imbuement
 type: feat
 system: power
 sphere: weather
 dualSphere: destruction
-tags: ["dual-sphere"]
 tier: feat
 ---
 

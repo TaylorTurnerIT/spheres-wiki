@@ -4,7 +4,7 @@ name: "Shadow Strike"
 type: "talent"
 sourceBook: "spheres-of-might"
 sphere: "fencing"
-tier: "advanced"
+tier: "basic"
 tags:
   - "exploit"
 ---

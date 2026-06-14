@@ -1,11 +1,10 @@
 ---
 id: shadow-cage
-name: "Shadow Cage"
+name: Shadow Cage
 type: feat
 system: power
 sphere: protection
 dualSphere: dark
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Dark sphere, Protection sphere.

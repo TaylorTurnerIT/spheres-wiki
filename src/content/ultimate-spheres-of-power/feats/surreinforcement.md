@@ -1,11 +1,10 @@
 ---
 id: surreinforcement
-name: "Surreinforcement"
+name: Surreinforcement
 type: feat
 system: power
 sphere: illusion
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

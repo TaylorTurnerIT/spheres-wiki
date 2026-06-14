@@ -1,11 +1,10 @@
 ---
 id: supernatural-elements
-name: "Supernatural Elements"
+name: Supernatural Elements
 type: feat
 system: power
 sphere: nature
 dualSphere: destruction
-tags: ["dual-sphere"]
 tier: feat
 ---
 

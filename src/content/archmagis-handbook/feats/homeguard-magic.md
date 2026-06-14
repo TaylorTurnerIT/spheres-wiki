@@ -1,11 +1,10 @@
 ---
 id: homeguard-magic
-name: "Homeguard Magic"
+name: Homeguard Magic
 type: feat
 system: power
 sphere: protection
 dualSphere: mana
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Mana sphere, Protection sphere.

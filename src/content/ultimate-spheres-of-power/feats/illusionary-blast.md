@@ -1,11 +1,10 @@
 ---
 id: illusionary-blast
-name: "Illusionary Blast"
+name: Illusionary Blast
 type: feat
 system: power
 sphere: illusion
 dualSphere: destruction
-tags: ["dual-sphere"]
 tier: feat
 ---
 

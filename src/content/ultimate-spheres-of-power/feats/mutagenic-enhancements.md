@@ -1,11 +1,10 @@
 ---
 id: mutagenic-enhancements
-name: "Mutagenic Enhancements"
+name: Mutagenic Enhancements
 type: feat
 system: power
 sphere: enhancement
 dualSphere: alteration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

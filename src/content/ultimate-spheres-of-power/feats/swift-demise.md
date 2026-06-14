@@ -1,11 +1,10 @@
 ---
 id: swift-demise
-name: "Swift Demise"
+name: Swift Demise
 type: feat
 system: power
 sphere: time
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

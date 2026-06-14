@@ -1,11 +1,10 @@
 ---
 id: flexible-ghost-strike
-name: "Flexible Ghost Strike"
+name: Flexible Ghost Strike
 type: feat
 system: power
 sphere: destruction
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

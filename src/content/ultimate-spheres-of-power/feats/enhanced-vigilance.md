@@ -1,11 +1,10 @@
 ---
 id: enhanced-vigilance
-name: "Enhanced Vigilance"
+name: Enhanced Vigilance
 type: feat
 system: power
 sphere: war
 dualSphere: enhancement
-tags: ["dual-sphere"]
 tier: feat
 ---
 

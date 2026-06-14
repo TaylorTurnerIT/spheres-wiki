@@ -1,0 +1,23 @@
+---
+id: "trap-door"
+name: "Trap Door"
+type: "talent"
+sourceBook: "spheres-apocrypha-monster-traditions"
+sphere: "trap"
+tier: "basic"
+---
+
+You can create a hidden trap door instead of a (dart) or (snare) trap. This door can be placed horizontally or vertically with a maximum area of 10 by 10 feet. This increases to 15 by 15 feet at 5 ranks in Craft (traps) and by an additional 5 feet for every 5 ranks thereafter.
+
+This door depends on its surroundings and cannot be created freestanding. It is between 1 and 3 inches thick (chosen at the time of creation), with the AC and hardness of a normal trap you can create but possesses double the hit points. The door can be plainly visible or disguised within its environment requiring a Perception check to spot (with the DC of a normal trap). The door can be forced open with a Strength check opposed by your Craft (traps) DC +5.
+
+The door is strong enough to support a large object or creature and increases the maximum size category it can support by 1 for every 3 ranks in Craft (trap) you possess. Objects made of stone or heavier substances count as one size category heavier, while soft objects such as cloth count as one size category lighter.
+
+In addition when you create the door you can give it any of the traits from the list below. Unless otherwise stated a trait can be deactivated or reactivated as a standard action by you, or it can be disabled as if a Trap sphere trap by others.
+* **Lock:** The door can be locked or unlocked by you as an immediate action. It can also be set to lock automatically after being closed.
+* **One Way:** The door only allows one way movement. Going through it the other way requires forcing it open and cannot be deactivated or disabled.
+* **Reset:** The door closes automatically after being moved through.
+* **Trigger:** You can set the door to trigger an adjacent Trap sphere trap you created if opened (or closed).
+* **Triggered:** The door can be set to open automatically depending on the size of the creature leaning or stepping on it (this can be finetuned to any range of specific size categories). Alternatively it can be set to open if a Trap sphere trap you created within close range is triggered.
+
+A trap door requires 1 minute to craft and lasts for 1 hour. If you possess the Persistent Trap talent its crafting period can be increased to 10 minutes to last for 24 hours (and does not count towards the limit of the amount of traps you can have with the Persistent Trap talent).

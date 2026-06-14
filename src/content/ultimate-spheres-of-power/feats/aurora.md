@@ -1,11 +1,10 @@
 ---
 id: aurora
-name: "Aurora"
+name: Aurora
 type: feat
 system: power
 sphere: weather
 dualSphere: light
-tags: ["dual-sphere"]
 tier: feat
 ---
 

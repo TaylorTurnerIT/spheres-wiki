@@ -35,3 +35,14 @@ You also gain the Betray and Build Rapport abilities.
 [Betray]
 
 [Build Rapport]
+## Communication Talent Types
+
+Some Communication talents have the (rapport) tag described below.
+
+**Assist:** Some talents possess the (assist) tag, granting you expanded options when you use the aid another action. Whenever you use the aid another action as a standard, move, swift, or immediate action, you can apply any amount of applicable (assist) talents to the action. Such talents may have greater benefits if used on a creature that shares your rapport.
+
+**Rapport:** (Rapport) talents grant additional benefits to creatures you form a rapport with. You may only apply the effects of a single (rapport) talent when forming a rapport, or two talents if one of them has the [utility] tag. These talents provide a benefit to all creatures that share your rapport, which always includes you (unless noted otherwise).
+[Animal Whisperer]
+[Apprentice]
+[Aggressive]
+[Bleeding Heart]

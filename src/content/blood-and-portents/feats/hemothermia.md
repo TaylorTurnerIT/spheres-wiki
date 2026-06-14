@@ -1,11 +1,10 @@
 ---
 id: hemothermia
-name: "Hemothermia"
+name: Hemothermia
 type: feat
 system: power
 sphere: nature
 dualSphere: blood
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: destructive-radiance
-name: "Destructive Radiance"
+name: Destructive Radiance
 type: feat
 system: power
 sphere: light
 dualSphere: destruction
-tags: ["dual-sphere"]
 tier: feat
 ---
 

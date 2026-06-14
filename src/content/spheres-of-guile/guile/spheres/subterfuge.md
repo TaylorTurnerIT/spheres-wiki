@@ -35,3 +35,10 @@ You also acquire the Baffling Revelation, Confident Subtlety, and Fast Disguise 
 [Confident Subtlety]
 
 [Fast Disguise]
+## Disguise Talent Types
+
+**Disguise:** Some talents have the (disguise) tag. They are used when donning a disguise using the fast disguise ability. You may only apply the effects of a single (disguise) talent when you don a disguise.
+[Morphic Disguise]
+[Fashionista]
+[Deft]
+[Impressionist]

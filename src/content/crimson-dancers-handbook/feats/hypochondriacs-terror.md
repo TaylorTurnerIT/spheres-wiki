@@ -1,11 +1,10 @@
 ---
 id: hypochondriacs-terror
-name: "Hypochondriac's Terror"
+name: Hypochondriac's Terror
 type: feat
 system: power
 sphere: mind
 dualSphere: blood
-tags: ["dual-sphere"]
 tier: feat
 ---
 

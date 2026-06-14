@@ -1,11 +1,10 @@
 ---
 id: cooperative-destruction
-name: "Cooperative Destruction"
+name: Cooperative Destruction
 type: feat
 system: power
 sphere: destruction
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

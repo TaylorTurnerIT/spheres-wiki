@@ -1,11 +1,10 @@
 ---
 id: blessed-necromancy
-name: "Blessed Necromancy"
+name: Blessed Necromancy
 type: feat
 system: power
 sphere: fate
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: illustrious-light
-name: "Illustrious Light"
+name: Illustrious Light
 type: feat
 system: power
 sphere: light
 dualSphere: illusion
-tags: ["dual-sphere"]
 tier: feat
 ---
 

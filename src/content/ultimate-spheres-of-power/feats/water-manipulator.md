@@ -1,11 +1,10 @@
 ---
 id: water-manipulator
-name: "Water Manipulator"
+name: Water Manipulator
 type: feat
 system: power
 sphere: nature
 dualSphere: fallen-fey
-tags: ["dual-sphere"]
 tier: feat
 ---
 

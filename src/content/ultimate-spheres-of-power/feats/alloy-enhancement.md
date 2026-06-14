@@ -1,11 +1,10 @@
 ---
 id: alloy-enhancement
-name: "Alloy Enhancement"
+name: Alloy Enhancement
 type: feat
 system: power
 sphere: nature
 dualSphere: enhancement
-tags: ["dual-sphere"]
 tier: feat
 ---
 

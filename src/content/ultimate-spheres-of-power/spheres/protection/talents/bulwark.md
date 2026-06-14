@@ -4,6 +4,7 @@ name: "Bulwark"
 system: power
 type: talent
 sphere: protection
+dualSphere: mana
 tier: basic
 tags: ["manipulation", "succor"]
 ---

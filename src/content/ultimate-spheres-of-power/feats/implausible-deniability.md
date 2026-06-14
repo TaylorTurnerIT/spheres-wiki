@@ -1,11 +1,10 @@
 ---
 id: implausible-deniability
-name: "Implausible Deniability"
+name: Implausible Deniability
 type: feat
 system: power
 sphere: mind
 dualSphere: illusion
-tags: ["dual-sphere"]
 tier: feat
 ---
 

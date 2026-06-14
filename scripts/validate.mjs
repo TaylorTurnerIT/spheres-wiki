@@ -69,6 +69,16 @@ for (const filePath of allFiles) {
   // v2 check: frontmatter id must match filename
   const fileSlug = path.basename(filePath, ".md");
   if (frontmatter.id) {
+    // V59: reject hex-prefix slugs (Wikidot color code artifacts like 993300).
+    // Require at least one digit in the first 6 chars to avoid false positives on
+    // a-f-only words like "deadcaller" or "beefsteak".
+    const prefix6 = frontmatter.id.slice(0, 6);
+    if (prefix6.length === 6 && /^[0-9a-fA-F]+$/.test(prefix6) && /[0-9]/.test(prefix6)) {
+      console.error(
+        `V59 Violation: ${filePath} has hex-prefixed ID "${frontmatter.id}"`,
+      );
+      hasError = true;
+    }
     if (frontmatter.id !== fileSlug) {
       console.error(
         `V2 Violation: ${filePath} has frontmatter ID "${frontmatter.id}" but filename is "${fileSlug}.md"`,

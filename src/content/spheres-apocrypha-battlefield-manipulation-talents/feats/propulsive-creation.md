@@ -1,11 +1,10 @@
 ---
 id: propulsive-creation
-name: "Propulsive Creation"
+name: Propulsive Creation
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

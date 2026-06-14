@@ -1,11 +1,10 @@
 ---
 id: warp-burst
-name: "Warp Burst"
+name: Warp Burst
 type: feat
 system: power
 sphere: warp
 dualSphere: destruction
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: transpatial-reconstitution
-name: "Transpatial Reconstitution"
+name: Transpatial Reconstitution
 type: feat
 system: power
 sphere: warp
 dualSphere: life
-tags: ["dual-sphere"]
 tier: feat
 ---
 

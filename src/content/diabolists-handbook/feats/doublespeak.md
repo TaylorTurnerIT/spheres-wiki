@@ -1,11 +1,10 @@
 ---
 id: doublespeak
-name: "Doublespeak"
+name: Doublespeak
 type: feat
 system: power
 sphere: mind
 dualSphere: fate
-tags: ["dual-sphere"]
 tier: feat
 ---
 

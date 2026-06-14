@@ -1,11 +1,10 @@
 ---
 id: merged-summons
-name: "Merged Summons"
+name: Merged Summons
 type: feat
 system: power
 sphere: conjuration
 dualSphere: alteration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

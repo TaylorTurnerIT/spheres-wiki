@@ -4,6 +4,7 @@ name: "Speculative Analysis"
 type: "feat"
 sourceBook: "spheres-of-guile"
 sphere: "investigation"
+dualSphere: "study"
 tags: []
 ---
 

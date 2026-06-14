@@ -1,11 +1,10 @@
 ---
 id: warlord-of-the-damned
-name: "Warlord Of The Damned"
+name: Warlord Of The Damned
 type: feat
 system: power
 sphere: war
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

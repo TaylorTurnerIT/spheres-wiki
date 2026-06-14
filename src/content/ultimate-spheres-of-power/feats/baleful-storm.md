@@ -1,11 +1,10 @@
 ---
 id: baleful-storm
-name: "Baleful Storm"
+name: Baleful Storm
 type: feat
 system: power
 sphere: weather
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

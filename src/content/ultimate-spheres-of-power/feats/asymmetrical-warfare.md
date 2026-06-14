@@ -1,11 +1,10 @@
 ---
 id: asymmetrical-warfare
-name: "Asymmetrical Warfare"
+name: Asymmetrical Warfare
 type: feat
 system: power
 sphere: war
 dualSphere: illusion
-tags: ["dual-sphere"]
 tier: feat
 ---
 

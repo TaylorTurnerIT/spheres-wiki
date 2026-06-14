@@ -1,11 +1,10 @@
 ---
 id: luminous-aegis
-name: "Luminous Aegis"
+name: Luminous Aegis
 type: feat
 system: power
 sphere: protection
 dualSphere: light
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Light sphere, Protection sphere.

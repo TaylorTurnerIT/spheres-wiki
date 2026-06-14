@@ -1,11 +1,10 @@
 ---
 id: hypnotic-darkness
-name: "Hypnotic Darkness"
+name: Hypnotic Darkness
 type: feat
 system: power
 sphere: mind
 dualSphere: dark
-tags: ["dual-sphere"]
 tier: feat
 ---
 

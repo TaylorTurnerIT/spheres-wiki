@@ -1,11 +1,10 @@
 ---
 id: tribal-fortification
-name: "Tribal Fortification"
+name: Tribal Fortification
 type: feat
 system: power
 sphere: war
 dualSphere: protection
-tags: ["dual-sphere"]
 tier: feat
 ---
 **Prerequisites:** Protection sphere, War sphere.

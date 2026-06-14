@@ -50,3 +50,10 @@ You also acquire the Acclimate and Pathing abilities.
 [Wilderness]
 
 [Clear Shot]
+## Navigation Talent Types
+
+**Acclimation:** Some talents have the (acclimation) tag, granting you one or more new acclimations to apply with your acclimate ability.
+
+**Pathing:** Some talents have the (pathing) tag, allowing you to grant differing benefits to allies dealing with the specific area you designate.
+[Heedless Advance]
+[Pointer]

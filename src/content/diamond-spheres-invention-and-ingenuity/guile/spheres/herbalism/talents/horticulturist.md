@@ -1,14 +1,14 @@
 ---
-id: "horticulturist"
-name: "Horticulturist"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
-tier: "base"
+id: horticulturist
+name: Horticulturist
+type: talent
+sourceBook: diamond-spheres-invention-and-ingenuity
+sphere: herbalism
+dualSphere: creation
+tier: base
 tags:
-  - "package"
-  - "champion"
-  - "dual-sphere"
+  - package
+  - champion
 ---
 
 **Prerequisite:** Associated ranks 3, Herbalism sphere ((herbal) package); either the Alchemy sphere ((poison) package) or Creation sphere.

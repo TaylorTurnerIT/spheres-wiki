@@ -1,11 +1,10 @@
 ---
 id: flash-warp
-name: "Flash Warp"
+name: Flash Warp
 type: feat
 system: power
 sphere: warp
 dualSphere: light
-tags: ["dual-sphere"]
 tier: feat
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: shadow-doppelganger
-name: "Shadow Doppelganger"
+name: Shadow Doppelganger
 type: feat
 system: power
 sphere: dark
 dualSphere: illusion
-tags: ["dual-sphere"]
 tier: feat
 ---
 

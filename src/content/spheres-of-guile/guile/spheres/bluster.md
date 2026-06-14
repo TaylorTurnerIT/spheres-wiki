@@ -33,3 +33,11 @@ You also acquire the Flaunt Secrets and Quip abilities.
 [Flaunt Secrets]
 
 [Quip]
+## Bluster Talent Types
+
+**Quip:** Talents with the (quip) tag apply an effect to a creature using your quip ability. You can only choose one talent's effects to apply each time you quip.
+[Heckler]
+[Friendly Banter]
+[Instigator]
+[Deadly Presence]
+[Boundless Wit]

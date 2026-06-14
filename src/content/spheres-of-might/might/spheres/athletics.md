@@ -58,3 +58,9 @@ Choose one of the following packages:
 Talents possessing a tag matching one of the packages cannot be taken unless you possess that package.
 
 [Motion]
+## Athletic Talent Types
+
+Talents possessing a tag matching one of the packages cannot be taken unless you possess that package.
+
+### Motion
+Some talents have the (motion) tag. You cannot apply more than one talent with the (motion) tag to a given movement.

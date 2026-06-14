@@ -1,11 +1,10 @@
 ---
 id: crimson-theurgy
-name: "Crimson Theurgy"
+name: Crimson Theurgy
 type: feat
 system: power
 sphere: death
 dualSphere: blood
-tags: ["dual-sphere"]
 tier: feat
 ---
 

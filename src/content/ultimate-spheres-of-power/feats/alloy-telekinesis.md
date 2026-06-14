@@ -1,11 +1,10 @@
 ---
 id: alloy-telekinesis
-name: "Alloy Telekinesis"
+name: Alloy Telekinesis
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: nature
-tags: ["dual-sphere"]
 tier: feat
 ---
 

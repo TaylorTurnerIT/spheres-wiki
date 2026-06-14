@@ -1,12 +1,12 @@
 ---
-id: "vicious-performer"
-name: "Vicious Performer"
-type: "feat"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
+id: vicious-performer
+name: Vicious Performer
+type: feat
+sourceBook: diamond-spheres-harmony-and-discord
+sphere: performance
+dualSphere: war
 tags:
-  - "champion"
-  - "dual-sphere"
+  - champion
 ---
 
 **Prerequisite:** Performance sphere; either the Gladiator sphere or War sphere.

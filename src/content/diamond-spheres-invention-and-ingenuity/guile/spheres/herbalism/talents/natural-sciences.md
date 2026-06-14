@@ -1,14 +1,14 @@
 ---
-id: "natural-sciences"
-name: "Natural Sciences"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
-tier: "base"
+id: natural-sciences
+name: Natural Sciences
+type: talent
+sourceBook: diamond-spheres-invention-and-ingenuity
+sphere: herbalism
+dualSphere: nature
+tier: base
 tags:
-  - "package"
-  - "champion"
-  - "dual-sphere"
+  - package
+  - champion
 ---
 
 **Prerequisite:** Associated ranks 3, Herbalism sphere ((herbal) package); either the Alchemy sphere ((formulae) package) or Nature sphere.

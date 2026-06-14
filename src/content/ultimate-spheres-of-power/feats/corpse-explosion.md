@@ -1,11 +1,10 @@
 ---
 id: corpse-explosion
-name: "Corpse Explosion"
+name: Corpse Explosion
 type: feat
 system: power
 sphere: destruction
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

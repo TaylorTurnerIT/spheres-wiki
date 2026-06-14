@@ -1,11 +1,10 @@
 ---
 id: fissile-creation
-name: "Fissile Creation"
+name: Fissile Creation
 type: feat
 system: power
 sphere: destruction
 dualSphere: creation
-tags: ["dual-sphere"]
 tier: feat
 ---
 

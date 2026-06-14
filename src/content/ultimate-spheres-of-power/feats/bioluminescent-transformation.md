@@ -1,11 +1,10 @@
 ---
 id: bioluminescent-transformation
-name: "Bioluminescent Transformation"
+name: Bioluminescent Transformation
 type: feat
 system: power
 sphere: light
 dualSphere: alteration
-tags: ["dual-sphere"]
 tier: feat
 ---
 

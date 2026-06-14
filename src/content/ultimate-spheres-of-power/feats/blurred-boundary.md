@@ -1,11 +1,10 @@
 ---
 id: blurred-boundary
-name: "Blurred Boundary"
+name: Blurred Boundary
 type: feat
 system: power
 sphere: protection
 dualSphere: illusion
-tags: ["dual-sphere"]
 tier: feat
 ---
 

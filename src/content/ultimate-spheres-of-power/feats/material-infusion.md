@@ -1,11 +1,10 @@
 ---
 id: material-infusion
-name: "Material Infusion"
+name: Material Infusion
 type: feat
 system: power
 sphere: nature
 dualSphere: destruction
-tags: ["dual-sphere"]
 tier: feat
 ---
 

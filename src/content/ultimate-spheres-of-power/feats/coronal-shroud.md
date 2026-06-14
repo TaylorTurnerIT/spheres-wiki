@@ -1,11 +1,10 @@
 ---
 id: coronal-shroud
-name: "Coronal Shroud"
+name: Coronal Shroud
 type: feat
 system: power
 sphere: weather
 dualSphere: light
-tags: ["dual-sphere"]
 tier: feat
 ---
 

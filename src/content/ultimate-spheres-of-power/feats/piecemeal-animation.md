@@ -1,11 +1,10 @@
 ---
 id: piecemeal-animation
-name: "Piecemeal Animation"
+name: Piecemeal Animation
 type: feat
 system: power
 sphere: telekinesis
 dualSphere: death
-tags: ["dual-sphere"]
 tier: feat
 ---
 

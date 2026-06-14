@@ -1,11 +1,10 @@
 ---
 id: explanatory-illusion
-name: "Explanatory Illusion"
+name: Explanatory Illusion
 type: feat
 system: power
 sphere: illusion
 dualSphere: divination
-tags: ["dual-sphere"]
 tier: feat
 ---
 

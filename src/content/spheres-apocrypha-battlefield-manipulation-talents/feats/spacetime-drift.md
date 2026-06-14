@@ -1,11 +1,10 @@
 ---
 id: spacetime-drift
-name: "Spacetime Drift"
+name: Spacetime Drift
 type: feat
 system: power
 sphere: warp
 dualSphere: time
-tags: ["dual-sphere"]
 tier: feat
 ---
 
