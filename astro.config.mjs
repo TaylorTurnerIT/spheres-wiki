@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import { parse as parseYaml } from "yaml";
 import remarkEntryLinks from "./src/lib/remarkEntryLinks.ts";
+import sitemap from "@astrojs/sitemap";
 
 /** Vite plugin: transform *.yaml / *.yml imports into ES modules */
 const yamlPlugin = {
@@ -26,6 +27,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [[remarkEntryLinks, { base: "/spheres-wiki/" }]],
   },
+  integrations: [sitemap()],
   vite: {
     plugins: [yamlPlugin],
     server: {
