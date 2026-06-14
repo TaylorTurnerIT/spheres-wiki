@@ -34,18 +34,64 @@ content:
       - name: publisher
         type: string
         label: Publisher
+        required: true
       - name: publishedDate
         type: date
         label: Published Date
+        required: true
       - name: price
         type: string
         label: Price
+        required: true
       - name: buyUrl
         type: string
         label: Buy URL
+        required: true
       - name: coverImage
         type: image
         label: Cover Image
+        required: true
+
+  # ── Articles ───────────────────────────────────────────────────────────────
+  # src/cms/articles/ contains symlinks: one per book that has articles.
+  # Add a new symlink when a new book gains articles — no slug list here.
+  - name: articles
+    label: Articles
+    type: collection
+    path: src/cms/articles
+    subfolders: true
+    format: yaml-frontmatter
+    filename: "{id}.md"
+    exclude:
+      - __built-in__
+    view:
+      layout: list
+      primary: name
+      fields: [name, sourceBook]
+      search: [name, sourceBook]
+      default:
+        sort: name
+        order: asc
+    fields:
+      - name: id
+        type: string
+        label: ID
+        required: true
+      - name: name
+        type: string
+        label: Name
+        required: true
+      - name: type
+        type: string
+        label: Type
+        hidden: true
+      - name: sourceBook
+        type: string
+        label: Source Book
+        hidden: true
+      - name: body
+        type: rich-text
+        label: Body
 
   # ── Content entries ────────────────────────────────────────────────────────
   # format: yaml-frontmatter → all .md files across every book.
