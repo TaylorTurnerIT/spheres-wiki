@@ -446,3 +446,4 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: T45–T50 done; **T44 (F
 | B13 | 2026-06-14 | 18 items across 3 systems present in page body but invisible in TOC sidebar (no data-toc-item) | V57 / T79,T89,T96,T101 |
 | B14 | 2026-06-14 | Parser `data-toc-section` mismatch: combat feats in `combat-feats` section undetected by diff tool | parser fix / low-priority |
 | B15 | 2026-06-14 | Old wiki `<h5>` sub-sections auto-flagged as missing standalone talents by diff tool | parser fix / low-priority |
+| B16 | 2026-06-14 | Duplicate `type:id` entries in different books silently overwrite by `publishedDate` order in `resolveEntries.ts` — stale copies in older books could overwrite correct entries if date ordering reversed | Delete stale duplicates (done for 4 gladiator talents in `spheres-of-might/`); `check-dir-truth.mjs` prevents re-introduction |
