@@ -19,7 +19,7 @@ const { latestFirstParty, latestThirdParty, coreBooks } = Astro.props;
 
   <div class="home-store-body">
     {latestFirstParty && (
-      <div class="home-store-group">
+      <div class="home-store-item">
         <div class="home-store-group-label">Latest First Party</div>
         <BookCard book={latestFirstParty} />
       </div>
@@ -28,7 +28,7 @@ const { latestFirstParty, latestThirdParty, coreBooks } = Astro.props;
     {latestThirdParty && (
       <>
         <div class="home-store-divider" aria-hidden="true"></div>
-        <div class="home-store-group">
+        <div class="home-store-item">
           <div class="home-store-group-label">Latest Third Party</div>
           <BookCard book={latestThirdParty} />
         </div>
@@ -38,7 +38,7 @@ const { latestFirstParty, latestThirdParty, coreBooks } = Astro.props;
     {coreBooks.length > 0 && (
       <>
         <div class="home-store-divider" aria-hidden="true"></div>
-        <div class="home-store-group home-store-group--core">
+        <div class="home-store-item">
           <div class="home-store-group-label">Core Books</div>
           <div class="home-store-core-row">
             {coreBooks.map(book => <BookCard book={book} />)}
