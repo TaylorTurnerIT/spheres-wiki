@@ -1881,7 +1881,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-alchemical-formulae
-        label: "Spheres Apocrypha: Alchemical Formulae"
+        label: "SA: Alchemical Formulae"
         type: collection
         path: src/content/spheres-apocrypha-alchemical-formulae
         subfolders: true
@@ -2011,7 +2011,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-alchemical-poisons
-        label: "Spheres Apocrypha: Alchemical Poisons"
+        label: "SA: Alchemical Poisons"
         type: collection
         path: src/content/spheres-apocrypha-alchemical-poisons
         subfolders: true
@@ -2141,7 +2141,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-alchemy-poisons-2
-        label: "Spheres Apocrypha: Alchemy Poisons 2"
+        label: "SA: Alchemy Poisons 2"
         type: collection
         path: src/content/spheres-apocrypha-alchemy-poisons-2
         subfolders: true
@@ -2271,7 +2271,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-apex-shifter
-        label: "Spheres Apocrypha: Apex Shifter"
+        label: "SA: Apex Shifter"
         type: collection
         path: src/content/spheres-apocrypha-apex-shifter
         subfolders: true
@@ -2401,7 +2401,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-armor-talents
-        label: "Spheres Apocrypha: Armor Talents"
+        label: "SA: Armor Talents"
         type: collection
         path: src/content/spheres-apocrypha-armor-talents
         subfolders: true
@@ -2531,7 +2531,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-armor-talents-2
-        label: "Spheres Apocrypha: Armor Talents 2"
+        label: "SA: Armor Talents 2"
         type: collection
         path: src/content/spheres-apocrypha-armor-talents-2
         subfolders: true
@@ -2661,7 +2661,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-banshees-gasp
-        label: "Spheres Apocrypha: Banshee's Gasp"
+        label: "SA: Banshee's Gasp"
         type: collection
         path: src/content/spheres-apocrypha-banshees-gasp
         subfolders: true
@@ -2791,7 +2791,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-battlefield-manipulation-talents
-        label: "Spheres Apocrypha: Battlefield Manipulation Talents"
+        label: "SA: Battlefield Manipulation Talents"
         type: collection
         path: src/content/spheres-apocrypha-battlefield-manipulation-talents
         subfolders: true
@@ -2921,7 +2921,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-beastfolk-race-variants
-        label: "Spheres Apocrypha: Beastfolk Race Variants"
+        label: "SA: Beastfolk Race Variants"
         type: collection
         path: src/content/spheres-apocrypha-beastfolk-race-variants
         subfolders: true
@@ -3051,7 +3051,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-cognition-talents
-        label: "Spheres Apocrypha: Cognition Talents"
+        label: "SA: Cognition Talents"
         type: collection
         path: src/content/spheres-apocrypha-cognition-talents
         subfolders: true
@@ -3181,7 +3181,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-cohorts-and-companions
-        label: "Spheres Apocrypha: Cohorts and Companions"
+        label: "SA: Cohorts and Companions"
         type: collection
         path: src/content/spheres-apocrypha-cohorts-and-companions
         subfolders: true
@@ -3311,7 +3311,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-debilitating-talents
-        label: "Spheres Apocrypha: Debilitating Talents"
+        label: "SA: Debilitating Talents"
         type: collection
         path: src/content/spheres-apocrypha-debilitating-talents
         subfolders: true
@@ -3441,7 +3441,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-debilitating-talents-2
-        label: "Spheres Apocrypha: Debilitating Talents 2"
+        label: "SA: Debilitating Talents 2"
         type: collection
         path: src/content/spheres-apocrypha-debilitating-talents-2
         subfolders: true
@@ -3571,7 +3571,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-dipsomania
-        label: "Spheres Apocrypha: Dipsomania"
+        label: "SA: Dipsomania"
         type: collection
         path: src/content/spheres-apocrypha-dipsomania
         subfolders: true
@@ -3701,7 +3701,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-martial-drawbacks
-        label: "Spheres Apocrypha: Martial Drawbacks"
+        label: "SA: Martial Drawbacks"
         type: collection
         path: src/content/spheres-apocrypha-martial-drawbacks
         subfolders: true
@@ -3831,7 +3831,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-martial-talents-ranged
-        label: "Spheres Apocrypha: Martial Talents: Ranged"
+        label: "SA: Martial Talents: Ranged"
         type: collection
         path: src/content/spheres-apocrypha-martial-talents-ranged
         subfolders: true
@@ -3961,7 +3961,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-monster-traditions
-        label: "Spheres Apocrypha: Monster Traditions"
+        label: "SA: Monster Traditions"
         type: collection
         path: src/content/spheres-apocrypha-monster-traditions
         subfolders: true
@@ -4091,7 +4091,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-monster-traditions-2
-        label: "Spheres Apocrypha: Monster Traditions 2"
+        label: "SA: Monster Traditions 2"
         type: collection
         path: src/content/spheres-apocrypha-monster-traditions-2
         subfolders: true
@@ -4221,7 +4221,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-protokinesis-feats
-        label: "Spheres Apocrypha: Protokinesis Feats"
+        label: "SA: Protokinesis Feats"
         type: collection
         path: src/content/spheres-apocrypha-protokinesis-feats
         subfolders: true
@@ -4351,7 +4351,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-pugilists
-        label: "Spheres Apocrypha: Pugilists"
+        label: "SA: Pugilists"
         type: collection
         path: src/content/spheres-apocrypha-pugilists
         subfolders: true
@@ -4481,7 +4481,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-racial-martial-talents
-        label: "Spheres Apocrypha: Racial Martial Talents"
+        label: "SA: Racial Martial Talents"
         type: collection
         path: src/content/spheres-apocrypha-racial-martial-talents
         subfolders: true
@@ -4611,7 +4611,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-radiant-and-righteous
-        label: "Spheres Apocrypha: Radiant and Righteousness"
+        label: "SA: Radiant and Righteousness"
         type: collection
         path: src/content/spheres-apocrypha-radiant-and-righteous
         subfolders: true
@@ -4741,7 +4741,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-swashbucklers
-        label: "Spheres Apocrypha: Swashbucklers!"
+        label: "SA: Swashbucklers!"
         type: collection
         path: src/content/spheres-apocrypha-swashbucklers
         subfolders: true
@@ -4871,7 +4871,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-tandem-talents
-        label: "Spheres Apocrypha: Tandem Talents"
+        label: "SA: Tandem Talents"
         type: collection
         path: src/content/spheres-apocrypha-tandem-talents
         subfolders: true
@@ -5001,7 +5001,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-the-inheritor-and-improved-atavism-heritages
-        label: "Spheres Apocrypha: The Inheritor and Improved Atavism Heritages"
+        label: "SA: The Inheritor and Improved Atavism Heritages"
         type: collection
         path: src/content/spheres-apocrypha-the-inheritor-and-improved-atavism-heritages
         subfolders: true
@@ -5131,7 +5131,7 @@ content:
           label: Is Alternate Class Feature
 
       - name: spheres-apocrypha-tricks-and-traps
-        label: "Spheres Apocrypha: Tricks and Traps"
+        label: "SA: Tricks and Traps"
         type: collection
         path: src/content/spheres-apocrypha-tricks-and-traps
         subfolders: true

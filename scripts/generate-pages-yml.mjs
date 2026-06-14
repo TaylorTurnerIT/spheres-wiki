@@ -242,10 +242,15 @@ const BOOK_FIELDS = `\
           type: boolean
           label: Is Alternate Class Feature`;
 
+function shortenTitle(title) {
+  return title.replace(/Spheres Apocrypha/g, "SA");
+}
+
 function bookItem({ slug, title }) {
+  const label = shortenTitle(title);
   return `\
       - name: ${slug}
-        label: "${title}"
+        label: "${label}"
         type: collection
         path: src/content/${slug}
         subfolders: true
