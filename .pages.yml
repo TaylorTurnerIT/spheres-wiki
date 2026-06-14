@@ -10,7 +10,7 @@ content:
     label: Books
     type: collection
     path: src/content
-    subfolders: false
+    subfolders: true
     format: yaml
     filename: _book.yaml
     exclude:
