@@ -3,122 +3,126 @@ media:
   output: /assets/covers
 
 content:
-  # ── Books ──────────────────────────────────────────────────────────────────
-  # format: yaml picks up *.yaml files only, so every _book.yaml is found
-  # automatically. Add a new book folder — it appears here. No slug list.
-  - name: books
-    label: Books
-    type: collection
-    path: src/content
-    subfolders: true
-    format: yaml
-    filename: _book.yaml
-    exclude:
-      - __built-in__
-    view:
-      layout: tree
-      primary: title
-      fields: [title, publisher, price]
-      default:
-        sort: title
-        order: asc
-    fields:
-      - name: title
-        type: string
-        label: Title
-        required: true
-      - name: publisher
-        type: string
-        label: Publisher
-      - name: publishedDate
-        type: date
-        label: Published Date
-      - name: price
-        type: string
-        label: Price
-      - name: buyUrl
-        type: string
-        label: Buy URL
-      - name: coverImage
-        type: image
-        label: Cover Image
+  - name: wiki
+    label: Spheres Wiki
+    type: group
+    items:
+      # ── Books ──────────────────────────────────────────────────────────────
+      # format: yaml picks up *.yaml files only → every _book.yaml found
+      # automatically. New book folder = appears here. No slug list.
+      - name: books
+        label: Books
+        type: collection
+        path: src/content
+        subfolders: true
+        format: yaml
+        filename: _book.yaml
+        exclude:
+          - __built-in__
+        view:
+          layout: tree
+          primary: title
+          fields: [title, publisher, price]
+          default:
+            sort: title
+            order: asc
+        fields:
+          - name: title
+            type: string
+            label: Title
+            required: true
+          - name: publisher
+            type: string
+            label: Publisher
+          - name: publishedDate
+            type: date
+            label: Published Date
+          - name: price
+            type: string
+            label: Price
+          - name: buyUrl
+            type: string
+            label: Buy URL
+          - name: coverImage
+            type: image
+            label: Cover Image
 
-  # ── Content entries ────────────────────────────────────────────────────────
-  # format: yaml-frontmatter picks up *.md files only — all talents, spheres,
-  # feats, etc. across every book. Tree view: book → system → sphere → entry.
-  - name: entries
-    label: Content Entries
-    type: collection
-    path: src/content
-    subfolders: true
-    format: yaml-frontmatter
-    filename: "{id}.md"
-    exclude:
-      - __built-in__
-    view:
-      layout: tree
-      primary: name
-      fields: [name, type, sphere, tier]
-      default:
-        sort: name
-        order: asc
-    fields:
-      - name: id
-        type: string
-        label: ID
-        required: true
-      - name: name
-        type: string
-        label: Name
-        required: true
-      - name: type
-        type: select
-        label: Type
-        required: true
-        options:
-          values:
-            - sphere
-            - talent
-            - feat
-            - class
-            - class-feature
-            - class-trait
-            - article
-            - archetype
-            - archetype-feature
-            - tag
-      - name: system
-        type: string
-        label: System
-        hidden: true
-      - name: sourceBook
-        type: string
-        label: Source Book
-        hidden: true
-      - name: sphere
-        type: string
-        label: Sphere
-      - name: dualSphere
-        type: string
-        label: Dual Sphere
-      - name: tier
-        type: select
-        label: Tier
-        options:
-          values:
-            - {name: base, label: Base}
-            - {name: basic, label: Basic}
-            - {name: advanced, label: Advanced}
-      - name: icon
-        type: string
-        label: Icon
-      - name: tags
-        type: string
-        label: Tags
-        list: true
-      - name: modifies
-        type: string
-        label: Modifies
-      - name: body
-        type: rich-text
-        label: Body
+      # ── Content entries ────────────────────────────────────────────────────
+      # format: yaml-frontmatter → all .md files across every book.
+      # Tree view: book → system → sphere → entry.
+      - name: entries
+        label: Content Entries
+        type: collection
+        path: src/content
+        subfolders: true
+        format: yaml-frontmatter
+        filename: "{id}.md"
+        exclude:
+          - __built-in__
+        view:
+          layout: tree
+          primary: name
+          fields: [name, type, sphere, tier]
+          default:
+            sort: name
+            order: asc
+        fields:
+          - name: id
+            type: string
+            label: ID
+            required: true
+          - name: name
+            type: string
+            label: Name
+            required: true
+          - name: type
+            type: select
+            label: Type
+            required: true
+            options:
+              values:
+                - sphere
+                - talent
+                - feat
+                - class
+                - class-feature
+                - class-trait
+                - article
+                - archetype
+                - archetype-feature
+                - tag
+          - name: system
+            type: string
+            label: System
+            hidden: true
+          - name: sourceBook
+            type: string
+            label: Source Book
+            hidden: true
+          - name: sphere
+            type: string
+            label: Sphere
+          - name: dualSphere
+            type: string
+            label: Dual Sphere
+          - name: tier
+            type: select
+            label: Tier
+            options:
+              values:
+                - {name: base, label: Base}
+                - {name: basic, label: Basic}
+                - {name: advanced, label: Advanced}
+          - name: icon
+            type: string
+            label: Icon
+          - name: tags
+            type: string
+            label: Tags
+            list: true
+          - name: modifies
+            type: string
+            label: Modifies
+          - name: body
+            type: rich-text
+            label: Body
