@@ -46,3 +46,4 @@ docs/superpowers/
 .dockerignore
 .superpowers/brainstorm/
 .claude/skills/ui-ux-pro-max/scripts/__pycache__/
+.antigravitycli/
