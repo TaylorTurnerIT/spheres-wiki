@@ -112,7 +112,7 @@ const TalentContent = collEntry ? (await render(collEntry)).Content : null;
       <span data-pagefind-meta="type:talent" hidden></span>
       <span data-pagefind-meta={searchFilter} hidden></span>
       <div class="talent-page-meta">
-        {buildOrderedTagIds(talent, bookMetaMap, tagMap, { includeSphere: true, currentSphereId: sphere.id })
+        {buildOrderedTagIds(talent, bookMetaMap, tagMap, { currentSphereId: sphere.id })
           .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
         }
       </div>

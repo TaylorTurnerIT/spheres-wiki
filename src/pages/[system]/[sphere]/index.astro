@@ -206,7 +206,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                 {tBook && <span class="talent-source">{tBook.title}</span>}
               </div>
               <div class="base-ability-header-bottom">
-                {buildOrderedTagIds(t, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere.id })
+                {buildOrderedTagIds(t, bookMetaMap, tagMap, { currentSphereId: sphere.id })
                   .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
                 }
               </div>
@@ -262,7 +262,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                               {entryBook && <span class="talent-source">{entryBook.title}</span>}
                             </div>
                             <div class="talent-header-bottom">
-                              {buildOrderedTagIds(entry, bookMetaMap, tagMap, { includeSphere: false, currentSphereId: sphere.id })
+                              {buildOrderedTagIds(entry, bookMetaMap, tagMap, { currentSphereId: sphere.id })
                                 .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
                               }
                             </div>

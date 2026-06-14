@@ -111,7 +111,7 @@ const FeatContent = collEntry ? (await render(collEntry)).Content : null;
       <span data-pagefind-meta="type:feat" hidden></span>
       <span data-pagefind-meta={searchFilter} hidden></span>
       <div class="talent-page-meta">
-        {buildOrderedTagIds(feat, bookMetaMap, tagMap, { includeSphere: true, currentSphereId: sphere.id })
+        {buildOrderedTagIds(feat, bookMetaMap, tagMap, { showHidden: !!(feat.dualSphere && feat.dualSphere !== "any"), currentSphereId: sphere.id })
           .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
         }
       </div>

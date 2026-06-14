@@ -68,7 +68,7 @@ export async function getStaticPaths() {
       for (const [, talent] of talentMap) {
         if (talent.system !== system) continue;
         const entryTags = buildOrderedTagIds(talent, bookMetaMap, tagMap, {
-          includeSphere: true,
+          showHidden: true,
         });
         if (!entryTags.includes(tag.id)) continue;
 
@@ -91,7 +91,7 @@ export async function getStaticPaths() {
       for (const [, feat] of featMap) {
         if (feat.system !== system) continue;
         const entryTags = buildOrderedTagIds(feat, bookMetaMap, tagMap, {
-          includeSphere: true,
+          showHidden: true,
         });
         if (!entryTags.includes(tag.id)) continue;
 
@@ -113,7 +113,7 @@ export async function getStaticPaths() {
       for (const [, sphere] of sphereMap) {
         if (sphere.system !== system) continue;
         const entryTags = buildOrderedTagIds(sphere, bookMetaMap, tagMap, {
-          includeSphere: true,
+          showHidden: true,
         });
         if (!entryTags.includes(tag.id)) continue;
 
@@ -240,7 +240,7 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
                   } as any,
                   bookMetaMap,
                   tagMap,
-                  { includeSphere: false },
+                  {},
                 ).map((tagId) => (
                   <TagBadge
                     tagId={tagId}

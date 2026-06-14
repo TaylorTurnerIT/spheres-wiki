@@ -154,6 +154,7 @@ export type TagEntry = {
   description: string;
   sourceBook: string;
   sphere?: string;
+  hidden?: boolean;
 };
 
 export type FeatEntry = {
