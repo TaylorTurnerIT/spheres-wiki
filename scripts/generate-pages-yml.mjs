@@ -2,7 +2,7 @@
 // Regenerate .pages.yml from discovered book slugs.
 // Run after adding a new book, then commit the result.
 
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -10,21 +10,8 @@ const REPO_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const CONTENT_DIR = join(REPO_ROOT, "src", "content");
 const OUT_FILE = join(REPO_ROOT, ".pages.yml");
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+const SYSTEMS = ["power", "might", "guile", "champions"];
 
-function parseYamlField(text, field) {
-  const m = text.match(new RegExp(`^${field}:\\s*["']?(.+?)["']?\\s*$`, "m"));
-  return m ? m[1] : null;
-}
-
-function slugToLabel(slug) {
-  return slug
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
-}
-
-// Publisher display order (most content first, then alpha)
 const PUBLISHER_ORDER = [
   "Drop Dead Studios",
   "Diamond Recreational Studios",
@@ -34,33 +21,205 @@ const PUBLISHER_ORDER = [
   "Legendary Games",
 ];
 
-// ── Discover books ────────────────────────────────────────────────────────────
+// ── Helpers ───────────────────────────────────────────────────────────────────
+
+function parseYamlField(text, field) {
+  const m = text.match(new RegExp(`^${field}:\\s*["']?(.+?)["']?\\s*$`, "m"));
+  return m ? m[1] : null;
+}
+
+function slugToLabel(slug) {
+  return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
+
+function shortenTitle(title) {
+  return title.replace(/Spheres Apocrypha/g, "SA");
+}
+
+function dirs(path) {
+  try {
+    return readdirSync(path, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name);
+  } catch {
+    return [];
+  }
+}
+
+function pad(n) {
+  return " ".repeat(n);
+}
+
+// ── Field rendering ───────────────────────────────────────────────────────────
+
+// Each field spec: [name, type, label, extras]
+// extras: { required, list, options }
+const ALL_FIELDS = {
+  name:                   ["string",  "Name",                    { required: true }],
+  tags:                   ["string",  "Tags",                    { list: true }],
+  body:                   ["rich-text","Body",                   {}],
+  tier:                   ["select",  "Tier",                    { options: ["base","basic","advanced"] }],
+  dualSphere:             ["string",  "Dual Sphere",             {}],
+  modifies:               ["string",  "Modifies",                {}],
+  icon:                   ["string",  "Icon",                    {}],
+  hitDie:                 ["number",  "Hit Die",                 {}],
+  alignment:              ["string",  "Alignment",               {}],
+  startingWealth:         ["string",  "Starting Wealth",         {}],
+  skillRanks:             ["number",  "Skill Ranks",             {}],
+  classSkills:            ["string",  "Class Skills",            { list: true }],
+  babProgression:         ["select",  "BAB Progression",         { options: ["full","3/4","half"] }],
+  fortSaveProgression:    ["select",  "Fort Save",               { options: ["good","poor"] }],
+  refSaveProgression:     ["select",  "Ref Save",                { options: ["good","poor"] }],
+  willSaveProgression:    ["select",  "Will Save",               { options: ["good","poor"] }],
+  casterTier:             ["select",  "Caster Tier",             { options: ["high","mid","low","none"] }],
+  spheres:                ["string",  "Spheres",                 { list: true }],
+  level:                  ["number",  "Level",                   {}],
+  replaces:               ["string",  "Replaces",                { list: true }],
+  alters:                 ["string",  "Alters",                  { list: true }],
+  mutuallyExclusive:      ["boolean", "Mutually Exclusive",      {}],
+  isTraitContainer:       ["boolean", "Is Trait Container",      {}],
+  requires:               ["string",  "Requires",                {}],
+  isAlternateClassFeature:["boolean", "Is Alternate Class Feature", {}],
+};
+
+// Per type-dir field sets (narrow — only what that dir's content actually uses)
+const DIR_FIELD_SETS = {
+  spheres:            ["name","tags","body","icon","tier","dualSphere","modifies"],
+  talents:            ["name","tags","body","tier","dualSphere","modifies"],
+  feats:              ["name","tags","body","dualSphere","modifies"],
+  classes:            ["name","tags","body","hitDie","alignment","startingWealth","skillRanks","classSkills","babProgression","fortSaveProgression","refSaveProgression","willSaveProgression","casterTier","spheres"],
+  "class-features":   ["name","tags","body","isTraitContainer"],
+  "class-traits":     ["name","tags","body","requires"],
+  archetypes:         ["name","tags","body","isAlternateClassFeature"],
+  "archetype-features":["name","tags","body","level","replaces","alters","mutuallyExclusive"],
+  articles:           ["name","body"],
+  tags:               ["name","tags","body"],
+};
+
+const DIR_LABELS = {
+  spheres:             "Spheres & Talents",
+  talents:             "Talents",
+  feats:               "Feats",
+  classes:             "Classes",
+  "class-features":    "Class Features",
+  "class-traits":      "Class Traits",
+  archetypes:          "Archetypes",
+  "archetype-features":"Archetype Features",
+  articles:            "Articles",
+  tags:                "Tags",
+};
+
+const SYSTEM_LABELS = {
+  power: "Power",
+  might: "Might",
+  guile: "Guile",
+  champions: "Champions",
+};
+
+function renderFieldItem(fieldName, i) {
+  const [type, label, extras] = ALL_FIELDS[fieldName];
+  const lines = [
+    `- name: ${fieldName}`,
+    `  type: ${type}`,
+    `  label: ${label}`,
+  ];
+  if (extras.required) lines.push(`  required: true`);
+  if (extras.list) lines.push(`  list: true`);
+  if (extras.options) {
+    lines.push(`  options:`);
+    lines.push(`    values:`);
+    for (const opt of extras.options) {
+      lines.push(`      - {name: "${opt}", label: "${opt}"}`);
+    }
+  }
+  return lines;
+}
+
+function renderFields(fieldNames, indent) {
+  const p = pad(indent);
+  const p2 = pad(indent + 2);
+  const lines = [`${p}fields:`];
+  for (const name of fieldNames) {
+    const fieldLines = renderFieldItem(name);
+    lines.push(`${p2}${fieldLines[0]}`);
+    for (const l of fieldLines.slice(1)) {
+      lines.push(`${p2}  ${l}`);
+    }
+  }
+  return lines.join("\n");
+}
+
+// ── Collection rendering ──────────────────────────────────────────────────────
+
+function renderCollection({ name, label, path, fieldNames }, indent) {
+  const p = pad(indent);
+  const p2 = pad(indent + 2);
+  return [
+    `${p}- name: ${name}`,
+    `${p2}label: "${label}"`,
+    `${p2}type: collection`,
+    `${p2}path: ${path}`,
+    `${p2}subfolders: true`,
+    `${p2}format: yaml-frontmatter`,
+    `${p2}filename: "*.md"`,
+    `${p2}view:`,
+    `${p2}  layout: tree`,
+    `${p2}  primary: name`,
+    `${p2}  default:`,
+    `${p2}    sort: name`,
+    `${p2}    order: asc`,
+    renderFields(fieldNames, indent + 2),
+  ].join("\n");
+}
+
+function renderGroup({ name, label, items }, indent) {
+  const p = pad(indent);
+  const p2 = pad(indent + 2);
+  const renderedItems = items.join("\n\n");
+  return [
+    `${p}- name: ${name}`,
+    `${p2}label: "${label}"`,
+    `${p2}type: group`,
+    `${p2}items:`,
+    renderedItems,
+  ].join("\n");
+}
+
+// ── Book discovery ────────────────────────────────────────────────────────────
+
+function getBookTypeDirs(bookSlug) {
+  const result = [];
+  for (const system of SYSTEMS) {
+    const systemPath = join(CONTENT_DIR, bookSlug, system);
+    const typeDirs = dirs(systemPath).filter((d) => d in DIR_FIELD_SETS);
+    for (const typeDir of typeDirs) {
+      result.push({ system, typeDir });
+    }
+  }
+  return result;
+}
 
 const books = readdirSync(CONTENT_DIR, { withFileTypes: true })
   .filter((d) => d.isDirectory() && !d.name.startsWith("__"))
   .map((d) => {
     const bookFile = join(CONTENT_DIR, d.name, "_book.yaml");
-    let raw = null;
-    try {
-      raw = readFileSync(bookFile, "utf8");
-    } catch {
-      return null;
-    }
+    let raw;
+    try { raw = readFileSync(bookFile, "utf8"); } catch { return null; }
     const title = parseYamlField(raw, "title") ?? slugToLabel(d.name);
     const publisher = parseYamlField(raw, "publisher") ?? "Unknown";
-    return { slug: d.name, title, publisher };
+    const typeDirs = getBookTypeDirs(d.name);
+    if (typeDirs.length === 0) return null;
+    return { slug: d.name, title, publisher, typeDirs };
   })
   .filter(Boolean)
   .sort((a, b) => a.title.localeCompare(b.title));
 
-// Group by publisher
 const byPublisher = new Map();
 for (const book of books) {
   if (!byPublisher.has(book.publisher)) byPublisher.set(book.publisher, []);
   byPublisher.get(book.publisher).push(book);
 }
 
-// Sort publishers by PUBLISHER_ORDER, then alpha for unknowns
 const sortedPublishers = [...byPublisher.keys()].sort((a, b) => {
   const ia = PUBLISHER_ORDER.indexOf(a);
   const ib = PUBLISHER_ORDER.indexOf(b);
@@ -72,13 +231,9 @@ const sortedPublishers = [...byPublisher.keys()].sort((a, b) => {
 
 console.log(`Found ${books.length} books across ${sortedPublishers.length} publishers.`);
 
-// ── YAML builders ─────────────────────────────────────────────────────────────
+// ── YAML assembly ─────────────────────────────────────────────────────────────
 
-const SOURCEBOOKS_COLLECTION = `\
-  # ── Configure Sourcebooks ─────────────────────────────────────────────────
-  # format: yaml picks up *.yaml files only → every _book.yaml found
-  # automatically. New book folder = appears here. No slug list.
-  - name: books
+const SOURCEBOOKS_COLLECTION = `  - name: books
     label: Configure Sourcebooks
     type: collection
     path: src/content
@@ -124,173 +279,66 @@ const SOURCEBOOKS_COLLECTION = `\
         label: Cover Image
         required: true`;
 
-// 8-space indent so `fields:` sits at the same level as `label:`, `type:`, etc.
-// inside a group's items sequence (where `-` is at column 6).
-const BOOK_FIELDS = `\
-        fields:
-          - name: name
-            type: string
-            label: Name
-            required: true
-          - name: tags
-            type: string
-            label: Tags
-            list: true
-          - name: body
-            type: rich-text
-            label: Body
-          - name: tier
-            type: select
-            label: Tier
-            options:
-              values:
-                - {name: base, label: Base}
-                - {name: basic, label: Basic}
-                - {name: advanced, label: Advanced}
-          - name: dualSphere
-            type: string
-            label: Dual Sphere
-          - name: modifies
-            type: string
-            label: Modifies
-          - name: icon
-            type: string
-            label: Icon
-          - name: hitDie
-            type: number
-            label: Hit Die
-          - name: alignment
-            type: string
-            label: Alignment
-          - name: startingWealth
-            type: string
-            label: Starting Wealth
-          - name: skillRanks
-            type: number
-            label: Skill Ranks
-          - name: classSkills
-            type: string
-            label: Class Skills
-            list: true
-          - name: babProgression
-            type: select
-            label: BAB Progression
-            options:
-              values:
-                - {name: full, label: Full}
-                - {name: "3/4", label: "3/4"}
-                - {name: half, label: Half}
-          - name: fortSaveProgression
-            type: select
-            label: Fort Save
-            options:
-              values:
-                - {name: good, label: Good}
-                - {name: poor, label: Poor}
-          - name: refSaveProgression
-            type: select
-            label: Ref Save
-            options:
-              values:
-                - {name: good, label: Good}
-                - {name: poor, label: Poor}
-          - name: willSaveProgression
-            type: select
-            label: Will Save
-            options:
-              values:
-                - {name: good, label: Good}
-                - {name: poor, label: Poor}
-          - name: casterTier
-            type: select
-            label: Caster Tier
-            options:
-              values:
-                - {name: high, label: High}
-                - {name: mid, label: Mid}
-                - {name: low, label: Low}
-                - {name: none, label: None}
-          - name: spheres
-            type: string
-            label: Spheres
-            list: true
-          - name: level
-            type: number
-            label: Level
-          - name: replaces
-            type: string
-            label: Replaces
-            list: true
-          - name: alters
-            type: string
-            label: Alters
-            list: true
-          - name: mutuallyExclusive
-            type: boolean
-            label: Mutually Exclusive
-          - name: isTraitContainer
-            type: boolean
-            label: Is Trait Container
-          - name: requires
-            type: string
-            label: Requires
-          - name: isAlternateClassFeature
-            type: boolean
-            label: Is Alternate Class Feature`;
+function renderBookGroup(book, indent) {
+  const bookLabel = shortenTitle(book.title);
+  const typeCollections = book.typeDirs.map(({ system, typeDir }) => {
+    const collectionName = `${book.slug}-${system}-${typeDir}`;
+    const sysLabel = SYSTEM_LABELS[system] ?? system;
+    const typeLabel = DIR_LABELS[typeDir] ?? typeDir;
+    const label = book.typeDirs.filter((d) => d.typeDir === typeDir).length > 1 || true
+      ? `${sysLabel}: ${typeLabel}`
+      : typeLabel;
+    return renderCollection(
+      {
+        name: collectionName,
+        label,
+        path: `src/content/${book.slug}/${system}/${typeDir}`,
+        fieldNames: DIR_FIELD_SETS[typeDir],
+      },
+      indent + 2,
+    );
+  });
 
-function shortenTitle(title) {
-  return title.replace(/Spheres Apocrypha/g, "SA");
+  return renderGroup(
+    {
+      name: `${book.slug}-content`,
+      label: bookLabel,
+      items: typeCollections,
+    },
+    indent,
+  );
 }
 
-function bookItem({ slug, title }) {
-  const label = shortenTitle(title);
-  return `\
-      - name: ${slug}
-        label: "${label}"
-        type: collection
-        path: src/content/${slug}
-        subfolders: true
-        format: yaml-frontmatter
-        filename: "*.md"
-        view:
-          layout: tree
-          primary: name
-          default:
-            sort: name
-            order: asc
-${BOOK_FIELDS}`;
+function renderPublisherGroup(publisher, publisherBooks) {
+  const pubSlug = publisher.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+$/, "");
+  const bookGroups = publisherBooks.map((book) => renderBookGroup(book, 6));
+  return renderGroup(
+    {
+      name: `${pubSlug}-books`,
+      label: `Books by ${publisher}`,
+      items: bookGroups,
+    },
+    2,
+  );
 }
-
-function publisherGroup(publisher, publisherBooks) {
-  const items = publisherBooks.map(bookItem).join("\n\n");
-  return `\
-  # Books by ${publisher}
-  - name: ${publisher.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+$/, "")}-books
-    label: "Books by ${publisher}"
-    type: group
-    items:
-${items}`;
-}
-
-// ── Assemble output ───────────────────────────────────────────────────────────
-
-const header = `\
-# .pages.yml — generated by scripts/generate-pages-yml.mjs
-# Do not hand-edit. Run the script and commit the result.
-
-media:
-  input: src/assets/covers
-  output: /assets/covers
-
-content:
-`;
 
 const sections = [
   SOURCEBOOKS_COLLECTION,
-  ...sortedPublishers.map((pub) => publisherGroup(pub, byPublisher.get(pub))),
+  ...sortedPublishers.map((pub) => renderPublisherGroup(pub, byPublisher.get(pub))),
 ];
 
-const output = header + sections.join("\n\n") + "\n";
+const output = [
+  "# .pages.yml — generated by scripts/generate-pages-yml.mjs",
+  "# Do not hand-edit. Run the script and commit the result.",
+  "",
+  "media:",
+  "  input: src/assets/covers",
+  "  output: /assets/covers",
+  "",
+  "content:",
+  sections.join("\n\n"),
+  "",
+].join("\n");
 
 writeFileSync(OUT_FILE, output, "utf8");
-console.log(`Wrote .pages.yml with ${books.length} books in ${sortedPublishers.length} publisher groups.`);
+console.log(`Wrote .pages.yml — ${books.length} books, ${sortedPublishers.length} publishers.`);
