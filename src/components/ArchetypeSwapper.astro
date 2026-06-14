@@ -404,16 +404,6 @@ document.addEventListener('astro:page-load', () => {
               const levelSpan = outerSpan.querySelector<HTMLElement>('.class-feature-level');
               if (levelSpan) levelSpan.textContent = ` ${displayLevel}`;
             }
-            const sourceSpan = existingHeading.querySelector<HTMLElement>('.talent-source');
-            if (sourceSpan) {
-              sourceSpan.className = 'badge badge--archetype';
-              sourceSpan.textContent = arcName;
-            } else {
-              const badge = document.createElement('span');
-              badge.className = 'badge badge--archetype';
-              badge.textContent = arcName;
-              existingHeading.appendChild(badge);
-            }
           }
 
           primaryCard.querySelectorAll('.archetype-annotation, .archetype-modification-block').forEach(el => el.remove());
@@ -421,7 +411,7 @@ document.addEventListener('astro:page-load', () => {
           const entryDesc = primaryCard.querySelector<HTMLElement>('.entry-description');
           const annotation = document.createElement('p');
           annotation.className = 'archetype-annotation archetype-annotation--replaces';
-          annotation.textContent = `${arcName} Replaces: ${replacedName}`;
+          annotation.innerHTML = `<span class="archetype-tag-word">${arcName}</span> Replaces: ${replacedName}`;
           if (entryDesc) {
             entryDesc.innerHTML = af.html;
             primaryCard.insertBefore(annotation, entryDesc);
@@ -444,14 +434,20 @@ document.addEventListener('astro:page-load', () => {
           const baseCard = document.getElementById(baseId);
           if (baseCard) {
             baseCard.classList.add('is-altered');
+
+            const headingEl = baseCard.querySelector<HTMLElement>('.class-feature-heading');
+            const annotation = document.createElement('p');
+            annotation.className = 'archetype-annotation archetype-annotation--alters';
+            annotation.innerHTML = `<span class="archetype-tag-word">${arcName}</span> Modification:`;
+            if (headingEl) {
+              headingEl.insertAdjacentElement('afterend', annotation);
+            } else {
+              baseCard.prepend(annotation);
+            }
+
             const modBlock = document.createElement('div');
             modBlock.className = 'archetype-modification-block';
-            modBlock.innerHTML = `
-              <p class="archetype-annotation archetype-annotation--alters">${arcName} Modifies </p>
-              <div class="archetype-mod-body">
-                ${af.html}
-              </div>
-            `;
+            modBlock.innerHTML = `<div class="archetype-mod-body">${af.html}</div>`;
             baseCard.appendChild(modBlock);
           }
         });
@@ -769,6 +765,21 @@ document.addEventListener('astro:page-load', () => {
 
   :global(.archetype-annotation--alters) {
     color: var(--clr-brand);
+  }
+
+  :global(.archetype-tag-word) {
+    font-family: var(--font-display);
+    background-color: color-mix(in srgb, currentColor 12%, transparent);
+    border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.4;
   }
 
   :global(.archetype-modification-block) {

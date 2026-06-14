@@ -28,5 +28,10 @@ export default defineConfig({
   },
   vite: {
     plugins: [yamlPlugin],
+    server: {
+      watch: {
+        ignored: ['**/.cave/**', '**/node_modules/**'],
+      },
+    },
   },
 });
