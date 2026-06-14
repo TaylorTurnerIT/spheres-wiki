@@ -64,6 +64,8 @@ export function inferFromPath(fileId: string): InferredFields {
         return withSystem({ type: "archetype", id: s1 });
       case "archetype-features":
         return withSystem({ type: "archetype-feature", id: s1 });
+      case "class-features":
+        return withSystem({ type: "class-feature", id: s1 });
       case "articles":
         return withSystem({ type: "article", id: s1 });
       case "tags":
