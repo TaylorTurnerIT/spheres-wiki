@@ -74,5 +74,6 @@ the directory is the only source of structural truth.
 
 | Kit | References |
 |-----|-----------|
-| cavekit-dir-validation | overview, cavekit-tag-system |
+| cavekit-dir-validation | overview, cavekit-tag-system, cavekit-pages-cms-overhaul |
 | cavekit-tag-system | overview, cavekit-dir-validation |
+| cavekit-pages-cms-overhaul | overview, cavekit-dir-validation |
