@@ -76,7 +76,7 @@ Bipeds are usually humanoids, and begin with 2 legs, 2 arms, and a head.
 **Ooze**
 **Size** Medium; **Speed** 20 ft.; **AC** +4 natural armor; **Saves** Fort (good), Ref (bad), Will (bad); **Attack** slam (primary, 1d6 Medium, 1d4 Small); **Str** 16, **Dex** 8, **Con** 16, **Int** 7, **Wis** 12, **Cha** 11.
 
-Ooze creatures are usually oozes, puddings, or other amorphous creatures and lack discernable limbs. An ooze companion may not be tripped unless gaining legs from another source.
+Ooze creatures are usually oozes, puddings, or other amorphous creatures and lack discernible limbs. An ooze companion may not be tripped unless gaining legs from another source.
 **Orb**
 **Size** Medium; **Speed** 5 ft. Hover, 30 ft. (average); **AC** +2 natural armor; **Saves** Fort (bad), Ref (good), Will (good); **Attack** bite or slam (choose 1) (1d6); **Str** 7, **Dex** 16, **Con** 13, **Int** 10,**Wis** 12, **Cha** 11.
 

@@ -8,4 +8,4 @@ You grant a creature that you have caused to glow brightly a weapon of light the
 
 The weapon can not harm invisible or translucent enemies or structures, and passes through them harmlessly, possibly damaging things on the other side. Targets that are reflective such as a mirror have a 50% miss chance against attacks with this weapon. If the creature deliberately lets go of the weapon, it disappears, but otherwise the creature can not be disarmed.
 
-You may target a weapon to grant it this additional fire damage, as if it were a weapon of light. This extra damage is subject to the same restrictions as a weapon of light (does not affect invisibile or translucent targets, 50% chance of not affecting reflective creatures).
+You may target a weapon to grant it this additional fire damage, as if it were a weapon of light. This extra damage is subject to the same restrictions as a weapon of light (does not affect invisible or translucent targets, 50% chance of not affecting reflective creatures).

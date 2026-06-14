@@ -9,7 +9,7 @@ tags:
 
 **Prerequisites:** Associated ranks 5, Subterfuge sphere (Mimic Style).
 
-When you use Mimic Style, you can spend 1 use of skill leverage to attempt to mimic the touched creature even moreso. The creature must succeed at a Will saving throw or have their entire identity become a unique (disguise) talent you have access to. Regardless of the saving throw result, the creature is unaware of the attempt, but increases the skill leverage cost by 1 on any subsequent attempts made during the next 24 hours. You can only have a single sequestered identity at one time, but it otherwise lasts indefinitely until you sequester another identity.
+When you use Mimic Style, you can spend 1 use of skill leverage to attempt to mimic the touched creature even more. The creature must succeed at a Will saving throw or have their entire identity become a unique (disguise) talent you have access to. Regardless of the saving throw result, the creature is unaware of the attempt, but increases the skill leverage cost by 1 on any subsequent attempts made during the next 24 hours. You can only have a single sequestered identity at one time, but it otherwise lasts indefinitely until you sequester another identity.
 The disguise is a flawless imitation of the touched creature, –including their facial features, vocal cues and mannerisms, and identifying features– granting a +10 bonus to Disguise checks to impersonate the touched creature, and you take no penalties to the check due to the creature being a different race, age, size, or gender.
 Due to its supernatural nature, this disguise does not require using a disguise kit to apply (although it is a supernatural polymorph effect).
 

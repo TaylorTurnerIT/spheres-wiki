@@ -8,7 +8,7 @@ tags:
 
 **Benefit:** You can manipulate extradimensional spaces in small ways, allowing you to improve your containers. You can provide special maintenance to the following flourishes, except that you must spend 1 spell point instead of 1 use of skill leverage when doing so:
 
-**Compactible (requires Convenient Designs talent):** While folded, the object is considered an additional size category smaller than its original size, and weighs a quarter of its usual weight. While folded this way, it is kept within an extradimensional space.
+**Compactable (requires Convenient Designs talent):** While folded, the object is considered an additional size category smaller than its original size, and weighs a quarter of its usual weight. While folded this way, it is kept within an extradimensional space.
 
 **Commodious:** The amount of ounces or cubic feet that the object can hold within it is multiplied by 100 (this is applied after the initial increase of this flourish). For example, a backpack benefiting from this flourish would be able to hold 400 cubic feet of material. The storage space within the object becomes an extradimensional space. If a living creature enters the space, they can breathe for up to 10 minutes, after which they begin to suffocate as normal. Additionally, the object and its contents’ weight is halved.
 

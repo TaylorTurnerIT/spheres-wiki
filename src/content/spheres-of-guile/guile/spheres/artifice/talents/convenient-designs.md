@@ -10,7 +10,7 @@ You gain the following flourishes:
 
 **Applicator:** This flourish can only be applied to objects that hold weapons (such as a sheath, or a compartment flourish within a weapon). A single use of an oil, blanch, poison, or similar liquid can be applied to the flourish as a full-round action (which still runs the risk of exposing themselves to the poison). The next time a weapon is drawn from the object, the applied liquid is applied to the weapon, consuming it in the process. The flourish can only hold one use of a specific liquid at one time, plus an additional dose per 4 ranks in the associated skill you possess.
 
-**Compactible:** You can alter an object so that it can be folded up to occupy a smaller amount of space. While folded, the item is considered to be one size category smaller than its normal size, but cannot be used for its original purpose. A compactible object can be folded or unfolded as a swift action.  For every 5 ranks in the associated skill you possess, the item is considered to be an additional size category smaller than its normal size while folded.
+**Compactable:** You can alter an object so that it can be folded up to occupy a smaller amount of space. While folded, the item is considered to be one size category smaller than its normal size, but cannot be used for its original purpose. A compactable object can be folded or unfolded as a swift action.  For every 5 ranks in the associated skill you possess, the item is considered to be an additional size category smaller than its normal size while folded.
 
 **Launcher:** The object gains a mechanism that can store a single object (which is done as a swift action) that is at least one size category smaller than the object the flourish is attached to.
 

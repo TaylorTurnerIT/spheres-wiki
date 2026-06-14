@@ -1152,7 +1152,7 @@ Covenant Magic: Further Covenants. © 2015, Purple Duck Games; Author: Julian Ne
 
 Creature Collection © 2000, Clark Peterson.
 
-Creature Collection 2: Dark Menagerie Copyrght 2001, WhneWolf Publishing
+Creature Collection 2: Dark Menagerie Copyrght 2001, WhenWolf Publishing
 
 Creature Collection III: Savage Bestiary © 2003, White Wolf Publishing, Inc.
 
@@ -1604,9 +1604,9 @@ Mythic Spell Compendium © 2015, Legendary Games and Kobold Press; Lead Designer
 
 Necromancers of the Northwest Presents: Knights of the Crucible © 2012 Necromancers of the Northwest, LLC; Authors Alex Riggs
 
-Necromancers of the Northwest Presents: The Blackshire Mercenary Company © 2011 Necromancers of the Norhtwest, LLC; Authors Alex Riggs, Joshua Zaback, Justin Holloway
+Necromancers of the Northwest Presents: The Blackshire Mercenary Company © 2011 Necromancers of the Northwest, LLC; Authors Alex Riggs, Joshua Zaback, Justin Holloway
 
-Necropolis, © 2002, Necromancer Games, Inc; Authors Gary Gygax, Scott Greene, Clark Peterson and Bill Webb; based on oiginal material by Gary Gygax.
+Necropolis, © 2002, Necromancer Games, Inc; Authors Gary Gygax, Scott Greene, Clark Peterson and Bill Webb; based on original material by Gary Gygax.
 
 New Paths 2: The Expanded Shaman or New Paths Compendium by Kobold Press/Open Design
 
@@ -2032,7 +2032,7 @@ The Genius Guide to: The War Master © 2010, Super Genius Games. Author: Owen K.
 
 The Genius Guide to: The Witch Hunter © 2010, Super Genius Games. Author: Owen K.C. Stephens
 
-The Genius Guide to the Talented Bestiary, © 2017, Rogue Genius Games; Authors: Stephen Rowe, Steve Helt, Dan Dillo, Clay Clouser, Victora Jaczko, Daniel Marshall
+The Genius Guide to the Talented Bestiary, © 2017, Rogue Genius Games; Authors: Stephen Rowe, Steve Helt, Dan Dillo, Clay Clouser, Victoria Jaczko, Daniel Marshall
 
 The Grand OGL Wiki, http://grandwiki.wikidot.com © 2008-2009 Purple Duck Creations; Authors: Mark Gedak, Alex Schroeder, Joel Arellano, George Fields, Yair Rezek, Mike Whalen, Shane O’Connor, Mike Rickard, John Whamond, Bill Browne, Eric Williamson, Slatz Grubnik, Charles R. Wenzler Jr, John Fraser.
 

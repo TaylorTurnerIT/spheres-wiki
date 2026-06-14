@@ -13,7 +13,7 @@ Additionally, whenever you come within 10 feet of a weakened or dangerous struct
 
 You add the following methods of gaining a notion to your theories:
 
-- The subject of your theory suffers damage from or fails a saving throw against a hazard that is naturally occuring (brambles, mundane weather), including any natural feature that is used as a hazard (such as cutting down a tree to collapse onto a creature, creating a makeshift trap out of nature, etc.).
+- The subject of your theory suffers damage from or fails a saving throw against a hazard that is naturally occurring (brambles, mundane weather), including any natural feature that is used as a hazard (such as cutting down a tree to collapse onto a creature, creating a makeshift trap out of nature, etc.).
 - Whenever an attack originating from the subject of your theory misses you while you are benefiting from cover or improved cover. This cover cannot be something that is suddenly created, used or placed, such as using a tower shield, the cover function from the Artifice sphere, or some spells.
 - You may only apply this notion to an active research topic. You identify a natural phenomenon or structure of incredible significance or power.
 

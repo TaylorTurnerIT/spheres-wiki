@@ -1770,7 +1770,7 @@ Artificers construct magical implements (known as an artificer’s focus) to dir
 ##### Bardic Magic
 Bardic magic is a holistic style of magic that transforms the natural magic of music into powerful magical force. While rather physically demanding, those who have trained in bardic magic often have more power at their call than others.
 
-**Masterpieces:** A practioner of bardic magic using the Spheres of Power system may spend magic talents instead of feats to gain bardic masterpieces.
+**Masterpieces:** A practitioner of bardic magic using the Spheres of Power system may spend magic talents instead of feats to gain bardic masterpieces.
 
 **Casting Ability Modifier:** Charisma
 **Drawbacks:** Skilled Casting (Perform (any)), Somatic Casting, Verbal Casting
