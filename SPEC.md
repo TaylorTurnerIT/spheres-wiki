@@ -403,6 +403,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T101 | .      | Add TOC audit script — detect page-body headings with `id` attr missing from `data-toc-item` sidebar entries | V57 |
 | T102 | .      | Add cross-sphere feat audit script — detect feats present on 1 sphere page but absent from another that references them | V58 |
 | T103 | .      | Normalize `tier:"base"` → `[TalentName]` marker generation in Might export pipeline; verify all base abilities render via V31 markers | V31,V32,V56 |
+| T104 | .      | Unify dual-sphere: eliminate `dual-sphere` tag/`dualSphere` duplication. `dualSphere` field = single source of truth. Tag auto-derived by tags.ts. Support `dualSphere:"any"` for universal pairing (Manabond Versatility). See `docs/cavekit-dual-sphere-refactor.md` | V58 |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
@@ -420,6 +421,7 @@ Then infra (T23→T24→T26→T27→T28→T29→T30→T31→T32).
 4. Power content: T73→T74→T75→T78→T79
 5. Might (largest — sphere-by-sphere worst→best): T80→T81→T82→T83→T84→T85→T86→T87→T88→T89→T90→T91
 6. Verification: T99 (re-audit all 64 spheres → confirm 0 gaps)
+7. Refactor: T104 (unify dual-sphere into dualSphere field)
 
 Tasks T44–T50 carried from the legacy AGENTS.md spec: T45–T50 done; **T44 (FOUC audit) still open.**
 
