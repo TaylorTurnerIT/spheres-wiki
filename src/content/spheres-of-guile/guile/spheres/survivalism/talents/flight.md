@@ -1,9 +1,5 @@
 ---
-id: "flight"
 name: "Flight"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "harvest"

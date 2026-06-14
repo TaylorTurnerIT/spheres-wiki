@@ -1,8 +1,5 @@
 ---
-id: forceful-hand
 name: Forceful Hand
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: protection
 tier: feat

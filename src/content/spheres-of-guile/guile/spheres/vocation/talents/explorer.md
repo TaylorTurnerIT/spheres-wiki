@@ -1,9 +1,5 @@
 ---
-id: "explorer"
 name: "Explorer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

@@ -1,9 +1,5 @@
 ---
-id: "brief-help"
 name: "Brief Help"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

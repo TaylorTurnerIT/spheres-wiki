@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-channel-mastery
 name: "Channel Mastery"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

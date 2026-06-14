@@ -1,9 +1,5 @@
 ---
-id: "accomplice"
 name: "Accomplice"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

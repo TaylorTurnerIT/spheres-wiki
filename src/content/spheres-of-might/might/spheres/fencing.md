@@ -1,8 +1,5 @@
 ---
-id: "fencing"
 name: "Fencing"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "fencing"
 tags: []
 sectionDefinitions:

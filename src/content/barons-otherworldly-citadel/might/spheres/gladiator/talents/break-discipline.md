@@ -1,9 +1,5 @@
 ---
-id: "break-discipline"
 name: "Break Discipline"
-type: "talent"
-sourceBook: "barons-otherworldly-citadel"
-sphere: "gladiator"
 tier: "advanced"
 tags:
   - "demoralization"

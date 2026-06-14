@@ -1,8 +1,5 @@
 ---
-id: mutagenic-enhancements
 name: Mutagenic Enhancements
-type: feat
-system: power
 sphere: enhancement
 dualSphere: alteration
 tier: feat

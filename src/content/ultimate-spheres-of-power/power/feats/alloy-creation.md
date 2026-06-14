@@ -1,8 +1,5 @@
 ---
-id: alloy-creation
 name: Alloy Creation
-type: feat
-system: power
 sphere: nature
 dualSphere: creation
 tier: feat

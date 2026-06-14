@@ -1,9 +1,5 @@
 ---
-id: "inkeye-elixir"
 name: "Inkeye Elixir"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

@@ -1,9 +1,5 @@
 ---
-id: "unstoppable-force"
 name: "Unstoppable Force"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: incanter-technomancy-sub-specialization-energy
 name: "Technomancy Sub-Specialization: Energy"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: list-of-sphere-specializations
 ---
 

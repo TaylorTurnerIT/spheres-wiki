@@ -1,9 +1,5 @@
 ---
-id: inspire-doubt
 name: "Inspire Doubt"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

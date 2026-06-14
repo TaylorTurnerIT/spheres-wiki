@@ -1,10 +1,6 @@
 ---
-id: mageknight-curse-of-chaos
 name: "Curse of Chaos"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

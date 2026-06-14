@@ -1,9 +1,5 @@
 ---
-id: resurrection-greater
 name: "Resurrection, Greater"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: []
 ---

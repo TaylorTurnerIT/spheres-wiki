@@ -1,9 +1,5 @@
 ---
-id: "vaulting-flank"
 name: "Vaulting Flank"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "ride"

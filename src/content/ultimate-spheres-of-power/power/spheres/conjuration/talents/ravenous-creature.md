@@ -1,9 +1,5 @@
 ---
-id: ravenous-creature
 name: "Ravenous Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

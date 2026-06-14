@@ -1,9 +1,5 @@
 ---
-id: "stable-instrument"
 name: "Stable Instrument"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "base"
 tags:
   - "package"

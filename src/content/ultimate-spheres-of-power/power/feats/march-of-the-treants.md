@@ -1,8 +1,5 @@
 ---
-id: march-of-the-treants
 name: March Of The Treants
-type: feat
-system: power
 sphere: nature
 dualSphere: enhancement
 tier: feat

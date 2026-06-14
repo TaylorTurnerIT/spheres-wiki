@@ -1,10 +1,6 @@
 ---
-id: fey-adept-companion
 name: "Companion"
-type: class-trait
-system: power
 tags: []
-className: fey-adept
 featureId: shadowstuff
 ---
 

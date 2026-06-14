@@ -1,9 +1,5 @@
 ---
-id: vortex
 name: "Vortex"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["manabond"]
 ---

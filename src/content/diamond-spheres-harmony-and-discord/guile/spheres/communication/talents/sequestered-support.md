@@ -1,9 +1,5 @@
 ---
-id: "sequestered-support"
 name: "Sequestered Support"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "advanced"
 tags:
   - "supernatural"

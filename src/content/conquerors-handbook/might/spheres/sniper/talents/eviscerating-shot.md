@@ -1,9 +1,5 @@
 ---
-id: "eviscerating-shot"
 name: "Eviscerating Shot"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "sniper"
 tier: "advanced"
 tags:
   - "snipe"

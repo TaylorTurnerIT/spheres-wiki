@@ -1,8 +1,6 @@
 ---
-id: quick-summons
 name: "Quick Summons"
 type: class-feature
-system: power
 className: armorist
 level: 15
 tags: []

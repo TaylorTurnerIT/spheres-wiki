@@ -1,9 +1,5 @@
 ---
-id: "nice-and-loose"
 name: "Nice And Loose"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "drunk"

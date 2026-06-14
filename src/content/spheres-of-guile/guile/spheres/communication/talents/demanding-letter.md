@@ -1,9 +1,5 @@
 ---
-id: "demanding-letter"
 name: "Demanding Letter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "advanced"
 tags:
   - "utility"

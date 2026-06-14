@@ -1,8 +1,5 @@
 ---
-id: night-sky
 name: Night Sky
-type: feat
-system: power
 sphere: light
 dualSphere: dark
 tier: feat

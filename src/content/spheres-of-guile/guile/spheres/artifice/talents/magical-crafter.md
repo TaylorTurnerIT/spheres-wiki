@@ -1,9 +1,5 @@
 ---
-id: "magical-crafter"
 name: "Magical Crafter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "utility"

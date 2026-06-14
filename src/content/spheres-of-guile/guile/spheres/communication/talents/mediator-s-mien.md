@@ -1,9 +1,5 @@
 ---
-id: "mediator-s-mien"
 name: "Mediator’s Mien"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "approach"

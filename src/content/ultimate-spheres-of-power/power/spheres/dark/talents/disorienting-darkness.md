@@ -1,9 +1,5 @@
 ---
-id: disorienting-darkness
 name: "Disorienting Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["darkness"]
 ---

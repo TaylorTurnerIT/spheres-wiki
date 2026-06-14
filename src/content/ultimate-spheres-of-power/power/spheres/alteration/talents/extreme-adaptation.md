@@ -1,9 +1,5 @@
 ---
-id: extreme-adaptation
 name: "Extreme Adaptation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

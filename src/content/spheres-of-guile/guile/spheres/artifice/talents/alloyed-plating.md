@@ -1,9 +1,5 @@
 ---
-id: "alloyed-plating"
 name: "Alloyed Plating"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

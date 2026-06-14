@@ -1,9 +1,5 @@
 ---
-id: warp-manipulator
 name: "Warp Manipulator"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

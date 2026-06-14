@@ -1,9 +1,5 @@
 ---
-id: stability-bottleneck
 name: "Stability Bottleneck"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: ["sm"]
 ---

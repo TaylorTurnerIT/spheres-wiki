@@ -1,9 +1,5 @@
 ---
-id: "animal-whisperer"
 name: "Animal Whisperer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "base"
 tags:
   - "package"

@@ -1,9 +1,5 @@
 ---
-id: "able-aim"
 name: "Able Aim"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

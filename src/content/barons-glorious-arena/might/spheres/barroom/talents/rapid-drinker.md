@@ -1,9 +1,5 @@
 ---
-id: "rapid-drinker"
 name: "Rapid Drinker"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

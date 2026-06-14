@@ -1,9 +1,5 @@
 ---
-id: "titanic-maneuver"
 name: "Titanic Maneuver"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

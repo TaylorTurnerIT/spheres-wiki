@@ -1,9 +1,5 @@
 ---
-id: "hidden-blade"
 name: "Hidden Blade"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "utility"

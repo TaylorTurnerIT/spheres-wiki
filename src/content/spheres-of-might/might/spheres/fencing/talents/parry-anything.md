@@ -1,9 +1,5 @@
 ---
-id: "parry-anything"
 name: "Parry Anything"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "advanced"
 tags: []
 ---

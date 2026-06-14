@@ -1,9 +1,5 @@
 ---
-id: smiting-blast
 name: "Smiting Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "holy"]
 ---

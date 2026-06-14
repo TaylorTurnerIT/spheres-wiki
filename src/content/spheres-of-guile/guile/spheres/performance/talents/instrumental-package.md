@@ -1,9 +1,5 @@
 ---
-id: "instrumental-package"
 name: "Instrumental Package"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "base"
 tags:
   - "package"

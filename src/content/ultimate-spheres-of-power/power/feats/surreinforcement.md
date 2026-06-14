@@ -1,8 +1,5 @@
 ---
-id: surreinforcement
 name: Surreinforcement
-type: feat
-system: power
 sphere: illusion
 dualSphere: creation
 tier: feat

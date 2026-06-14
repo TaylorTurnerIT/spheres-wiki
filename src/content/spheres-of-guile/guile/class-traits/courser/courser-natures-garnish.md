@@ -1,7 +1,5 @@
 ---
-id: courser-natures-garnish
 name: Nature's Garnish
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 6, Herbalism sphere"

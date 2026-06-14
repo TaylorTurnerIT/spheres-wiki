@@ -1,9 +1,5 @@
 ---
-id: "parry-intent"
 name: "Parry Intent"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "fencing"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "jarring-block"
 name: "Jarring Block"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags:
   - "deflect"

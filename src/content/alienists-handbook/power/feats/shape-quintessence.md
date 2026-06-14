@@ -1,8 +1,5 @@
 ---
-id: shape-quintessence
 name: Shape Quintessence
-type: feat
-system: power
 sphere: time
 dualSphere: creation
 tier: feat

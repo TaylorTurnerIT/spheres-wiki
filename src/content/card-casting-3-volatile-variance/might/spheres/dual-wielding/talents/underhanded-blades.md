@@ -1,9 +1,5 @@
 ---
-id: "underhanded-blades"
 name: "Underhanded Blades"
-type: "talent"
-sourceBook: "card-casting-3-volatile-variance"
-sphere: "dual-wielding"
 tier: "basic"
 ---
 

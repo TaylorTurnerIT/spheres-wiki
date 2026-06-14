@@ -1,9 +1,5 @@
 ---
-id: "dullahans-call"
 name: "Dullahan's Call"
-type: "talent"
-sourceBook: "gravecallers-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

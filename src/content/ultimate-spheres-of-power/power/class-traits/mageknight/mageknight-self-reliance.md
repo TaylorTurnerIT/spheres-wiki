@@ -1,10 +1,6 @@
 ---
-id: mageknight-self-reliance
 name: "Self-Reliance"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: mageknight
 featureId: mystic-combat-su
 requires: "Life sphere"
 ---

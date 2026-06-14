@@ -1,9 +1,5 @@
 ---
-id: "quick-force"
 name: "Quick Force"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

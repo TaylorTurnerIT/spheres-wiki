@@ -1,9 +1,5 @@
 ---
-id: recondite-stimuli
 name: "Recondite Stimuli"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: []
 ---

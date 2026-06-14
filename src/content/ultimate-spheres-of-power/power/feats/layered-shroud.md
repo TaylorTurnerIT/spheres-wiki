@@ -1,8 +1,5 @@
 ---
-id: layered-shroud
 name: "Layered Shroud"
-type: feat
-system: power
 sphere: weather
 tags: []
 tier: feat

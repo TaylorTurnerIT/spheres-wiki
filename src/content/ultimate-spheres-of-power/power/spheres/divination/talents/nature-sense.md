@@ -1,9 +1,5 @@
 ---
-id: nature-sense
 name: "Nature Sense"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

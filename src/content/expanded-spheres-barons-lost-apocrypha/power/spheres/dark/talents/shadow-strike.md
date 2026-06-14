@@ -1,9 +1,5 @@
 ---
-id: shadow-strike
 name: "Shadow Strike"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["combat", "exploit", "mythic", "strike"]
 ---

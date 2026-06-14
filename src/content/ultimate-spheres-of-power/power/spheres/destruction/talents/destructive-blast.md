@@ -1,9 +1,5 @@
 ---
-id: destructive-blast
 name: "Destructive Blast"
-system: power
-type: talent
-sphere: destruction
 tier: base
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "clever-contextualization"
 name: "Clever Contextualization"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "impromptu-stealth"
 name: "Impromptu Stealth"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "infiltration"
 tier: "basic"
 tags: []
 ---

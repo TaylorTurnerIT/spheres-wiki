@@ -1,9 +1,5 @@
 ---
-id: "smothering-vestments"
 name: "Smothering Vestments"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "sabotage"

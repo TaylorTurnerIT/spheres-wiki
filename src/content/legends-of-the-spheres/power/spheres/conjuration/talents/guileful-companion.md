@@ -1,9 +1,5 @@
 ---
-id: guileful-companion
 name: "Guileful Companion"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

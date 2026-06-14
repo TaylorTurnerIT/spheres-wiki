@@ -1,9 +1,5 @@
 ---
-id: "steel-hide"
 name: "Steel Hide"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

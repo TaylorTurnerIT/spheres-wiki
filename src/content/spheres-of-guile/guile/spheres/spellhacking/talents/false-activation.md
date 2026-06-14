@@ -1,9 +1,5 @@
 ---
-id: "false-activation"
 name: "False Activation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "mishap"

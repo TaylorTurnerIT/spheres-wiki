@@ -1,9 +1,5 @@
 ---
-id: "stabilizing-reinforcements"
 name: "Stabilizing Reinforcements"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

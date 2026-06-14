@@ -1,9 +1,5 @@
 ---
-id: water-mastery
 name: "Water Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["water", "geomancing"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: mana-siphon
 name: "Mana Siphon"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "force"]
 ---

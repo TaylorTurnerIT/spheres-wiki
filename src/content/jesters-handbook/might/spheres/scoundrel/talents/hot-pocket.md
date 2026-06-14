@@ -1,9 +1,5 @@
 ---
-id: "hot-pocket"
 name: "Hot Pocket"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "scoundrel"
 tier: "advanced"
 tags:
   - "trick"

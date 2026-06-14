@@ -1,9 +1,5 @@
 ---
-id: temporal-projection
 name: "Temporal Projection"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

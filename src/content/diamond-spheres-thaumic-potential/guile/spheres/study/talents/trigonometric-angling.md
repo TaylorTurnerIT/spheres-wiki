@@ -1,9 +1,5 @@
 ---
-id: "trigonometric-angling"
 name: "Trigonometric Angling"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "study"
 tier: "basic"
 tags:
   - "theory"

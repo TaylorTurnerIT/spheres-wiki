@@ -1,9 +1,5 @@
 ---
-id: illuminating-shaft
 name: "Illuminating Shaft"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["aridity", "shroud"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: nimbus
 name: Nimbus
-type: talent
-system: power
-sphere: light
 tier: basic
 tags: []
 ---

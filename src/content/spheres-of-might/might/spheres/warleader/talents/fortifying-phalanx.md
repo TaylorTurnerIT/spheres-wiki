@@ -1,9 +1,5 @@
 ---
-id: "fortifying-phalanx"
 name: "Fortifying Phalanx"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

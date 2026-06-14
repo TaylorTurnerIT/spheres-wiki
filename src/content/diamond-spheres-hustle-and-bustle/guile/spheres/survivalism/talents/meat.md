@@ -1,9 +1,5 @@
 ---
-id: "meat"
 name: "Meat"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "harvest"

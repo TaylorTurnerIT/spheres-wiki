@@ -1,9 +1,5 @@
 ---
-id: "ranged-mark"
 name: "Ranged Mark"
-type: "talent"
-sourceBook: "lost-champions-mountebank"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

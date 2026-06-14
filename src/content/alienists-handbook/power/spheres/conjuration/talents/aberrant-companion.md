@@ -1,9 +1,5 @@
 ---
-id: aberrant-companion
 name: "Aberrant Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["type"]
 ---

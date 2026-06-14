@@ -1,9 +1,5 @@
 ---
-id: stygian-immersion
 name: "Stygian Immersion"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot"]
 ---

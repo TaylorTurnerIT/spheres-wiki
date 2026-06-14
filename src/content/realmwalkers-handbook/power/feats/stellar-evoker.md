@@ -1,8 +1,5 @@
 ---
-id: stellar-evoker
 name: "Stellar Evoker"
-type: feat
-system: power
 sphere: destruction
 tags: []
 tier: feat

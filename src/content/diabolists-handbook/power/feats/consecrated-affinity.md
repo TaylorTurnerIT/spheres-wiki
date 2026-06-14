@@ -1,8 +1,5 @@
 ---
-id: consecrated-affinity
 name: Consecrated Affinity
-type: feat
-system: power
 sphere: mana
 dualSphere: fate
 tier: feat

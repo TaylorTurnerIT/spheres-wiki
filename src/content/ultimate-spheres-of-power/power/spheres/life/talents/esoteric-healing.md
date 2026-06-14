@@ -1,9 +1,5 @@
 ---
-id: esoteric-healing
 name: "Esoteric Healing"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

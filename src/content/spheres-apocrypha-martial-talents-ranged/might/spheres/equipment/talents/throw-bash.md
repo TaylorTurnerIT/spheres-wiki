@@ -1,9 +1,5 @@
 ---
-id: "throw-bash"
 name: "Throw Bash"
-type: "talent"
-sourceBook: "spheres-apocrypha-martial-talents-ranged"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

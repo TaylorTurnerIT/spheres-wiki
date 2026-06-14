@@ -1,9 +1,5 @@
 ---
-id: exsanguinating-strike
 name: "Exsanguinating Strike"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["strike"]
 ---

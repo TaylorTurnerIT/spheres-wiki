@@ -1,8 +1,5 @@
 ---
-id: coronal-shroud
 name: Coronal Shroud
-type: feat
-system: power
 sphere: weather
 dualSphere: light
 tier: feat

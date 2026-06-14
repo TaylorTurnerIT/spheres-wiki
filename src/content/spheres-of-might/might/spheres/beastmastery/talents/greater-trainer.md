@@ -1,9 +1,5 @@
 ---
-id: "greater-trainer"
 name: "Greater Trainer"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "handle-animal"

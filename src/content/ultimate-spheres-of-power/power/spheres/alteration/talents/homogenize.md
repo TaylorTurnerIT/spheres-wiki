@@ -1,9 +1,5 @@
 ---
-id: homogenize
 name: "Homogenize"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

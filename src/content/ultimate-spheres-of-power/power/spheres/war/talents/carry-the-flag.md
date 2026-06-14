@@ -1,9 +1,5 @@
 ---
-id: carry-the-flag
 name: "Carry The Flag"
-system: power
-type: talent
-sphere: war
 tier: advanced
 tags: []
 ---

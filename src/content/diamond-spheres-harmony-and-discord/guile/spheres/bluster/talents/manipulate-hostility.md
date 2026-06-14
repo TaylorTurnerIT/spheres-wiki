@@ -1,9 +1,5 @@
 ---
-id: "manipulate-hostility"
 name: "Manipulate Hostility"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "bluster"
 tier: "basic"
 tags: []
 ---

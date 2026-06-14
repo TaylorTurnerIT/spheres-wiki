@@ -1,10 +1,6 @@
 ---
-id: fey-adept-weather
 name: "Weather"
-type: class-trait
-system: power
 tags: []
-className: fey-adept
 featureId: shadowstuff
 ---
 

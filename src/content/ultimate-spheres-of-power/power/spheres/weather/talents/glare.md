@@ -1,9 +1,5 @@
 ---
-id: glare
 name: "Glare"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["heat", "shroud"]
 ---

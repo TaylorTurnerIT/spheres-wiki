@@ -1,9 +1,5 @@
 ---
-id: "gauge-deception"
 name: "Gauge Deception"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "utility"

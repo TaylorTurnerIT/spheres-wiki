@@ -1,9 +1,5 @@
 ---
-id: "range-tuning"
 name: "Range Tuning"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

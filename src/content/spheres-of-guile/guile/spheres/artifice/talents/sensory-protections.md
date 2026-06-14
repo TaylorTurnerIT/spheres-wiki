@@ -1,9 +1,5 @@
 ---
-id: "sensory-protections"
 name: "Sensory Protections"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

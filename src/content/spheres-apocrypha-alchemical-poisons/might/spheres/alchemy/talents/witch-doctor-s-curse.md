@@ -1,9 +1,5 @@
 ---
-id: "witch-doctor-s-curse"
 name: "Witch Doctor’s Curse"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-poisons"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "curse"

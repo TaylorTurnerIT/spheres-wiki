@@ -1,9 +1,5 @@
 ---
-id: "bounty-hunter-s-tools"
 name: "Bounty Hunter’s Tools"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

@@ -1,9 +1,5 @@
 ---
-id: create-minds-think-alike
 name: "Create Minds Think Alike"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: []
 ---

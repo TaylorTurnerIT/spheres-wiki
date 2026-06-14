@@ -1,9 +1,5 @@
 ---
-id: empowered-reanimate
 name: "Empowered Reanimate"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

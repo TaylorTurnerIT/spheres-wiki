@@ -1,8 +1,5 @@
 ---
-id: destructive-radiance
 name: Destructive Radiance
-type: feat
-system: power
 sphere: light
 dualSphere: destruction
 tier: feat

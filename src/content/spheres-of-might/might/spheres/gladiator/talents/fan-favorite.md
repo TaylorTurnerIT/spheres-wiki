@@ -1,9 +1,5 @@
 ---
-id: "fan-favorite"
 name: "Fan Favorite"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

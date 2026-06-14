@@ -1,9 +1,5 @@
 ---
-id: "two-handed-combat"
 name: "Two-Handed Combat"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "equipment"
 tier: "basic"
 ---
 

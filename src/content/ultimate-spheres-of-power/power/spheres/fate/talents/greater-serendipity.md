@@ -1,9 +1,5 @@
 ---
-id: greater-serendipity
 name: "Greater Serendipity"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: []
 ---

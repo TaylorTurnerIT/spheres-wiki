@@ -1,9 +1,5 @@
 ---
-id: radiotherapy
 name: "Radiotherapy"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: ["mantle", "radiation"]
 ---

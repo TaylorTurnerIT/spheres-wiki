@@ -1,9 +1,5 @@
 ---
-id: focused-weather
 name: "Focused Weather"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: []
 ---

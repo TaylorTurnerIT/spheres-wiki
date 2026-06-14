@@ -1,9 +1,5 @@
 ---
-id: "run"
 name: "Run"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "base"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "corrective-advice"
 name: "Corrective Advice"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

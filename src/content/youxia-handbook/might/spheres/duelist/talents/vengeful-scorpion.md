@@ -1,9 +1,5 @@
 ---
-id: "vengeful-scorpion"
 name: "Vengeful Scorpion"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "stance"

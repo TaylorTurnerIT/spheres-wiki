@@ -1,10 +1,6 @@
 ---
-id: incanter-nature-sub-specialization-aeromancer-air
 name: "Nature Sub-Specialization: Aeromancer (air)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: list-of-sphere-specializations
 ---
 

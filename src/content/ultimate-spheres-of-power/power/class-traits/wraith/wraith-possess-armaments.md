@@ -1,10 +1,6 @@
 ---
-id: wraith-possess-armaments
 name: "Possess Armaments"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 requires: "Enhancement sphere; object ride or path of the poltergeist"
 ---

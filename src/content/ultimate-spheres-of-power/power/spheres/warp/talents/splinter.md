@@ -1,9 +1,5 @@
 ---
-id: splinter
 name: "Splinter"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

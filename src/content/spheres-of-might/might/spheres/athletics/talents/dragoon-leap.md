@@ -1,9 +1,5 @@
 ---
-id: "dragoon-leap"
 name: "Dragoon Leap"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "leap"

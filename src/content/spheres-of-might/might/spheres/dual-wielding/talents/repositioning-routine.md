@@ -1,9 +1,5 @@
 ---
-id: "repositioning-routine"
 name: "Repositioning Routine"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

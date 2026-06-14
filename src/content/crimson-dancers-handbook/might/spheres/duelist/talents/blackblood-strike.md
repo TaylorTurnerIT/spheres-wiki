@@ -1,9 +1,5 @@
 ---
-id: "blackblood-strike"
 name: "Blackblood Strike"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "advanced"
 tags:
   - "bleed"

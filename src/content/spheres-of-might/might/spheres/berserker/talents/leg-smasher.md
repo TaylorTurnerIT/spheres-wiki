@@ -1,9 +1,5 @@
 ---
-id: "leg-smasher"
 name: "Leg-Smasher"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

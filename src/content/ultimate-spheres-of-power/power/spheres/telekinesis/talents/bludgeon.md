@@ -1,9 +1,5 @@
 ---
-id: bludgeon
 name: "Bludgeon"
-type: talent
-system: power
-sphere: telekinesis
 tier: basic
 tags: []
 ---

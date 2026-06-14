@@ -1,9 +1,5 @@
 ---
-id: telekinetic-tools
 name: "Telekinetic Tools"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

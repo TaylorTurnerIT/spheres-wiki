@@ -1,9 +1,5 @@
 ---
-id: "dynamic-crafting-aptitude"
 name: "Dynamic Crafting Aptitude"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "utility"

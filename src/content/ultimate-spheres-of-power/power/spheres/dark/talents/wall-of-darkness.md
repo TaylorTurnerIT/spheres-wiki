@@ -1,9 +1,5 @@
 ---
-id: wall-of-darkness
 name: "Wall Of Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

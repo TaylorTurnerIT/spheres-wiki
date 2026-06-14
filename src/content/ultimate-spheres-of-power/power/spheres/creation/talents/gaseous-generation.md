@@ -1,9 +1,5 @@
 ---
-id: gaseous-generation
 name: "Gaseous Generation"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["material"]
 ---

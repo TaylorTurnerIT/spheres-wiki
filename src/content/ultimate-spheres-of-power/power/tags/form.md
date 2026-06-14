@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "form"
 label: "Form"
 color: "#2E4057"
 priority: 8

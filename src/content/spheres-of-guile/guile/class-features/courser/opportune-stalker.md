@@ -1,7 +1,5 @@
 ---
-id: opportune-stalker
 name: Opportune Stalker
-className: courser
 level: 13
 tags: []
 ---

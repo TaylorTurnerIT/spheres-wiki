@@ -1,9 +1,5 @@
 ---
-id: hear-name
 name: "Hear Name"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["utility", "sense"]
 ---

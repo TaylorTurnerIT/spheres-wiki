@@ -1,10 +1,6 @@
 ---
-id: mageknight-combat-talent-cs
 name: "Combat Talent [CS]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

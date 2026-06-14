@@ -1,9 +1,5 @@
 ---
-id: rush-to-the-head
 name: "Rush To The Head"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["blood-art"]
 ---

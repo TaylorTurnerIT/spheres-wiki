@@ -1,9 +1,5 @@
 ---
-id: "preserve-remnants"
 name: "Preserve Remnants"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "advanced"
 tags: []
 ---

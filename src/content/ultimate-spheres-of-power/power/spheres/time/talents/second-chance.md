@@ -1,9 +1,5 @@
 ---
-id: second-chance
 name: "Second Chance"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["combat", "mythic"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: fearful-darkness
 name: "Fearful Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "darkness"]
 ---

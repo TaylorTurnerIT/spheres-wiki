@@ -1,9 +1,5 @@
 ---
-id: randomized-planeshift
 name: "Randomized Planeshift"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["sm"]
 ---

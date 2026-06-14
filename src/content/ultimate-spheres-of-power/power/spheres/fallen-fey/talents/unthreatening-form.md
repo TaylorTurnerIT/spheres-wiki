@@ -1,9 +1,5 @@
 ---
-id: unthreatening-form
 name: "Unthreatening Form"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

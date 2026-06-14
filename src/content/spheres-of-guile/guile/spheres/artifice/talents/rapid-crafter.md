@@ -1,9 +1,5 @@
 ---
-id: "rapid-crafter"
 name: "Rapid Crafter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "base"
 tags:
   - "package"

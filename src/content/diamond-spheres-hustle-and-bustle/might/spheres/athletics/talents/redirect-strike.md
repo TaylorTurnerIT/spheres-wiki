@@ -1,9 +1,5 @@
 ---
-id: "redirect-strike"
 name: "Redirect Strike"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

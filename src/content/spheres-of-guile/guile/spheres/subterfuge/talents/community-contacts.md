@@ -1,9 +1,5 @@
 ---
-id: "community-contacts"
 name: "Community Contacts"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "utility"

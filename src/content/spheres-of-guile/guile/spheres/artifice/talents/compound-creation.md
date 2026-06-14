@@ -1,9 +1,5 @@
 ---
-id: "compound-creation"
 name: "Compound Creation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

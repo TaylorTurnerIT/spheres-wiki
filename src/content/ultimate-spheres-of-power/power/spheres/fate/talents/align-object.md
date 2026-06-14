@@ -1,9 +1,5 @@
 ---
-id: align-object
 name: "Align Object"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["word"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: imperfect-recreation
 name: "Imperfect Recreation"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: []
 ---

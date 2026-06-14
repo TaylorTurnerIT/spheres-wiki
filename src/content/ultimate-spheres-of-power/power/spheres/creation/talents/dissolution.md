@@ -1,9 +1,5 @@
 ---
-id: dissolution
 name: "Dissolution"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: ["alter"]
 ---

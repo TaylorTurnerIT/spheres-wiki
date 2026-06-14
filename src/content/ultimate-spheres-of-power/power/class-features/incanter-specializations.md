@@ -1,8 +1,6 @@
 ---
-id: incanter-specializations
 name: "Incanter Specializations"
 type: class-feature
-system: power
 className: incanter
 level: 1
 tags: []

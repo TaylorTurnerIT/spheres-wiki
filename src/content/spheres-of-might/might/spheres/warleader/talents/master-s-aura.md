@@ -1,9 +1,5 @@
 ---
-id: "master-s-aura"
 name: "Master’s Aura"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "advanced"
 tags:
   - "tactic"

@@ -1,9 +1,5 @@
 ---
-id: "energizer"
 name: "Energizer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

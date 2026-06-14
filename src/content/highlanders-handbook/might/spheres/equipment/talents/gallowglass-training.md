@@ -1,9 +1,5 @@
 ---
-id: "gallowglass-training"
 name: "Gallowglass Training"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

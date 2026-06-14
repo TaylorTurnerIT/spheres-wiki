@@ -1,9 +1,5 @@
 ---
-id: greater-altered-size
 name: "Greater Altered Size"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: ["form"]
 ---

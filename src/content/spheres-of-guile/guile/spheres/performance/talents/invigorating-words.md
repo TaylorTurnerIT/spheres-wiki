@@ -1,9 +1,5 @@
 ---
-id: "invigorating-words"
 name: "Invigorating Words"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "supernatural"

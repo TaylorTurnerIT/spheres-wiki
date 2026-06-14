@@ -1,9 +1,5 @@
 ---
-id: "deadly-strike"
 name: "Deadly Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

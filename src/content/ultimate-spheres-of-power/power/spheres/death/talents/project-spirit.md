@@ -1,9 +1,5 @@
 ---
-id: project-spirit
 name: "Project Spirit"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

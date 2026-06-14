@@ -1,9 +1,5 @@
 ---
-id: "incredible-flexibility"
 name: "Incredible Flexibility"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags:
   - "utility"

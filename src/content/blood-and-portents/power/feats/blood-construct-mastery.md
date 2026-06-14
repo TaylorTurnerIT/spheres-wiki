@@ -1,8 +1,5 @@
 ---
-id: blood-construct-mastery
 name: "Blood Construct Mastery"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

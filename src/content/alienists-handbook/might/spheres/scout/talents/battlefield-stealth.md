@@ -1,9 +1,5 @@
 ---
-id: "battlefield-stealth"
 name: "Battlefield Stealth"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

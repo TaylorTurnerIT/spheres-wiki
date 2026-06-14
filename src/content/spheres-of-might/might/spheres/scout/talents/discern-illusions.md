@@ -1,9 +1,5 @@
 ---
-id: "discern-illusions"
 name: "Discern Illusions"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "flaming-riastrad"
 name: "Flaming Ríastrad"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "berserker"
 tier: "advanced"
 tags: []
 ---

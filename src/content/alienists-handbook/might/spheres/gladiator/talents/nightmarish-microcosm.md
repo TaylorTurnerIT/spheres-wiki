@@ -1,9 +1,5 @@
 ---
-id: "nightmarish-microcosm"
 name: "Nightmarish Microcosm"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

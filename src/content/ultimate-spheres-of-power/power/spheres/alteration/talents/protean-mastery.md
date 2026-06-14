@@ -1,9 +1,5 @@
 ---
-id: protean-mastery
 name: "Protean Mastery"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["body"]
 ---

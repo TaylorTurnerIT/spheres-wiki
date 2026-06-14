@@ -1,9 +1,5 @@
 ---
-id: animist
 name: Animist
-type: talent
-sourceBook: diamond-spheres-invention-and-ingenuity
-sphere: survivalism
 dualSphere: nature
 tier: advanced
 tags:

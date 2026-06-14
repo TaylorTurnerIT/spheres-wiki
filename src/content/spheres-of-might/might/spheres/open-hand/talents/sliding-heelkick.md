@@ -1,9 +1,5 @@
 ---
-id: "sliding-heelkick"
 name: "Sliding Heelkick"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "influential-artistry"
 name: "Influential Artistry"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

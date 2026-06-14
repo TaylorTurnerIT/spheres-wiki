@@ -1,8 +1,5 @@
 ---
-id: telepathic-knell
 name: "Telepathic Knell"
-type: feat
-system: power
 sphere: mind
 tags: ["combat", "sm"]
 tier: feat

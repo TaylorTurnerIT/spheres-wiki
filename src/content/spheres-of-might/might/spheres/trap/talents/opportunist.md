@@ -1,9 +1,5 @@
 ---
-id: "opportunist"
 name: "Opportunist"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

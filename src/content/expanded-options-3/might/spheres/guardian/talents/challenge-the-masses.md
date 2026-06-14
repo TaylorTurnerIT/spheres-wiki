@@ -1,9 +1,5 @@
 ---
-id: "challenge-the-masses"
 name: "Challenge The Masses"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "guardian"
 tier: "advanced"
 tags: []
 ---

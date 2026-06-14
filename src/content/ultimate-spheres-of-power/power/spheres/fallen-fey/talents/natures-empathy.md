@@ -1,9 +1,5 @@
 ---
-id: natures-empathy
 name: "Nature's Empathy"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing", "utility"]
 ---

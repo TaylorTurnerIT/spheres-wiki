@@ -1,8 +1,5 @@
 ---
-id: illuminated-vigilance
 name: Illuminated Vigilance
-type: feat
-system: power
 sphere: war
 dualSphere: light
 tier: feat

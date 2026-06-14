@@ -1,9 +1,5 @@
 ---
-id: "two-in-the-hand"
 name: "Two In The Hand"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

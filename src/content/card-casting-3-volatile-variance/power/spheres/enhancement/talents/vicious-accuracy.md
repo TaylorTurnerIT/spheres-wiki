@@ -1,9 +1,5 @@
 ---
-id: vicious-accuracy
 name: "Vicious Accuracy"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: ["enhance"]
 ---

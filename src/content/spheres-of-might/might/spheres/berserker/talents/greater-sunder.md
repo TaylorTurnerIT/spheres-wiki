@@ -1,9 +1,5 @@
 ---
-id: "greater-sunder"
 name: "Greater Sunder"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: mageknight-banishing-strike
 name: "Banishing Strike"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: mageknight
 featureId: mystic-combat-su
 ---
 

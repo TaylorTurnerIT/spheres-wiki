@@ -1,9 +1,5 @@
 ---
-id: "for-a-drop-of-blood"
 name: "For a Drop of Blood"
-type: "talent"
-sourceBook: "barons-otherworldly-citadel"
-sphere: "gladiator"
 tier: "advanced"
 tags: []
 ---

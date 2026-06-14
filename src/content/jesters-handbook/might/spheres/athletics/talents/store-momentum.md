@@ -1,9 +1,5 @@
 ---
-id: "store-momentum"
 name: "Store Momentum"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "leap"

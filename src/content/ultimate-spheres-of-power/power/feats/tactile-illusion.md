@@ -1,8 +1,5 @@
 ---
-id: tactile-illusion
 name: Tactile Illusion
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: illusion
 tier: feat

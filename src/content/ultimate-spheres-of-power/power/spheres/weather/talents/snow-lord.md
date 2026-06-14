@@ -1,9 +1,5 @@
 ---
-id: snow-lord
 name: "Snow Lord"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: []
 ---

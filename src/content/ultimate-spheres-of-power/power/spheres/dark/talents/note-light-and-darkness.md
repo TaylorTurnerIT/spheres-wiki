@@ -1,9 +1,5 @@
 ---
-id: note-light-and-darkness
 name: "Note: Light And Darkness"
-type: talent
-system: power
-sphere: dark
 tier: basic
 tags: []
 ---

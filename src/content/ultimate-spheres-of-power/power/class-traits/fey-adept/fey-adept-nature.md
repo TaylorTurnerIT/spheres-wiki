@@ -1,10 +1,6 @@
 ---
-id: fey-adept-nature
 name: "Nature"
-type: class-trait
-system: power
 tags: []
-className: fey-adept
 featureId: shadowstuff
 ---
 

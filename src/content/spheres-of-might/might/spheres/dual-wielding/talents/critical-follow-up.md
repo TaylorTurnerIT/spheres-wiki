@@ -1,9 +1,5 @@
 ---
-id: "critical-follow-up"
 name: "Critical Follow Up"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

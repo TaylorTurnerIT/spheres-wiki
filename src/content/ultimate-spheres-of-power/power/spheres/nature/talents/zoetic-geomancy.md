@@ -1,9 +1,5 @@
 ---
-id: zoetic-geomancy
 name: "Zoetic Geomancy"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: complex-control
 name: "Complex Control"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

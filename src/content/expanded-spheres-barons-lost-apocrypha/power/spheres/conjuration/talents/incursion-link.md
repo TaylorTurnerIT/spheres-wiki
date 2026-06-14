@@ -1,9 +1,5 @@
 ---
-id: incursion-link
 name: "Incursion Link"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: []
 ---

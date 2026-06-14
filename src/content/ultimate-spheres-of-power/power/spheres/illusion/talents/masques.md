@@ -1,9 +1,5 @@
 ---
-id: masques
 name: "Masques"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["utility", "glamer"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "improved-alchemist-fire"
 name: "Improved Alchemist Fire"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

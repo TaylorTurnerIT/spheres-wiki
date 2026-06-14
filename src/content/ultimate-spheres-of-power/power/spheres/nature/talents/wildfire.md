@@ -1,9 +1,5 @@
 ---
-id: wildfire
 name: "Wildfire"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["fire", "supernatural"]
 ---

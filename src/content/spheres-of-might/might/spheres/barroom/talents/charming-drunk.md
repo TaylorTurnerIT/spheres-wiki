@@ -1,9 +1,5 @@
 ---
-id: "charming-drunk"
 name: "Charming Drunk"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "utility"

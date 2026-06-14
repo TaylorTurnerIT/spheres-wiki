@@ -1,9 +1,5 @@
 ---
-id: "improved-tanglefoot-bag"
 name: "Improved Tanglefoot Bag"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

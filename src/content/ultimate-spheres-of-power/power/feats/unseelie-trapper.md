@@ -1,8 +1,5 @@
 ---
-id: unseelie-trapper
 name: "Unseelie Trapper"
-type: feat
-system: power
 sphere: fallen-fey
 tags: ["champion"]
 tier: feat

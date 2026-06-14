@@ -1,9 +1,5 @@
 ---
-id: implement-bearer
 name: "Implement Bearer"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

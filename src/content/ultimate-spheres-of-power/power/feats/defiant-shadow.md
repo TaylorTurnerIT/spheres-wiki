@@ -1,8 +1,5 @@
 ---
-id: defiant-shadow
 name: "Defiant Shadow"
-type: feat
-system: power
 sphere: dark
 tags: []
 tier: feat

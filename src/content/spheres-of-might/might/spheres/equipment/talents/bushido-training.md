@@ -1,9 +1,5 @@
 ---
-id: "bushido-training"
 name: "Bushido Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

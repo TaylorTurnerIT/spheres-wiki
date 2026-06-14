@@ -1,9 +1,5 @@
 ---
-id: resounding-word
 name: "Resounding Word"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["range"]
 ---

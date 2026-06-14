@@ -1,9 +1,5 @@
 ---
-id: "subtle-coaxing"
 name: "Subtle Coaxing"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

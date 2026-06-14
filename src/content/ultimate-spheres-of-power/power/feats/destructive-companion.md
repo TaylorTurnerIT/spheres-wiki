@@ -1,8 +1,5 @@
 ---
-id: destructive-companion
 name: Destructive Companion
-type: feat
-system: power
 sphere: destruction
 dualSphere: conjuration
 tier: feat

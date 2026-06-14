@@ -1,9 +1,5 @@
 ---
-id: "expanded-wayfarer"
 name: "Expanded Wayfarer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags: []
 ---

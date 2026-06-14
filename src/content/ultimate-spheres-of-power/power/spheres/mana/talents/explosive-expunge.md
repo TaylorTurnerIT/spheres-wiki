@@ -1,9 +1,5 @@
 ---
-id: explosive-expunge
 name: "Explosive Expunge"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

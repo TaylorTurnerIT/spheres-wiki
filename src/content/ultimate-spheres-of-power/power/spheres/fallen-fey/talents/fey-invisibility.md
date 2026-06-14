@@ -1,9 +1,5 @@
 ---
-id: fey-invisibility
 name: "Fey Invisibility"
-system: power
-type: talent
-sphere: fallen-fey
 tier: advanced
 tags: ["fey-blessing"]
 ---

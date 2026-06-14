@@ -1,9 +1,5 @@
 ---
-id: volcano-lord
 name: "Volcano Lord"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

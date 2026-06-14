@@ -1,9 +1,5 @@
 ---
-id: commanding-aid
 name: "Commanding Aid"
-type: talent
-system: power
-sphere: war
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: curse
 name: Curse
-system: power
-type: talent
-sphere: fate
 dualSphere: death
 tier: basic
 tags:

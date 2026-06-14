@@ -1,9 +1,5 @@
 ---
-id: "break-defenses"
 name: "Break Defenses"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

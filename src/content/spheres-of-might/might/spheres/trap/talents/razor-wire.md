@@ -1,9 +1,5 @@
 ---
-id: "razor-wire"
 name: "Razor Wire"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

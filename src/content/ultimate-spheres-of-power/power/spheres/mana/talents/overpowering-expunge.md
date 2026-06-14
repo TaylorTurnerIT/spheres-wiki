@@ -1,9 +1,5 @@
 ---
-id: overpowering-expunge
 name: "Overpowering Expunge"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

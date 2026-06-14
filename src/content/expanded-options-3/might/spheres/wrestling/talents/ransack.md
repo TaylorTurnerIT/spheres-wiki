@@ -1,9 +1,5 @@
 ---
-id: "ransack"
 name: "Ransack"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "wrestling"
 tier: "basic"
 tags:
   - "slam"

@@ -1,9 +1,5 @@
 ---
-id: "shielded-focus"
 name: "Shielded Focus"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

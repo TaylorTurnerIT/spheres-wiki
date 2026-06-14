@@ -1,9 +1,5 @@
 ---
-id: "battlefield-scavenger"
 name: "Battlefield Scavenger"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: forceful-creation
 name: Forceful Creation
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: creation
 tier: feat

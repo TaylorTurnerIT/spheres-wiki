@@ -1,10 +1,6 @@
 ---
-id: armorist-heroic-equipment
 name: "Heroic Equipment"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

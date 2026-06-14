@@ -1,9 +1,5 @@
 ---
-id: "soul-link"
 name: "Soul Link"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "advanced"
 tags: []
 ---

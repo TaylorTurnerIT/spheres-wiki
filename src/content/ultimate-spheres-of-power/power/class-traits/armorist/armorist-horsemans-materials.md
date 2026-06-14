@@ -1,10 +1,6 @@
 ---
-id: armorist-horsemans-materials
 name: "Horseman's Materials"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

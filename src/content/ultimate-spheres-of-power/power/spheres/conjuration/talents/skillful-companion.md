@@ -1,9 +1,5 @@
 ---
-id: skillful-companion
 name: "Skillful Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["utility", "form"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: the-devil
 name: "The Devil"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

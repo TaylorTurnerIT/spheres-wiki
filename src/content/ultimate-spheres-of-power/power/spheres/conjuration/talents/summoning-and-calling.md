@@ -1,9 +1,5 @@
 ---
-id: summoning-and-calling
 name: "Summoning and Calling"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

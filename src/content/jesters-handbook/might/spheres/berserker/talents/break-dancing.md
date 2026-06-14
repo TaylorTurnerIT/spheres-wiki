@@ -1,9 +1,5 @@
 ---
-id: "break-dancing"
 name: "Break Dancing"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "berserker"
 tier: "basic"
 tags: []
 ---

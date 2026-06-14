@@ -1,9 +1,5 @@
 ---
-id: "bob-and-weave"
 name: "Bob And Weave"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: fairy-mounds
 name: "Fairy Mounds"
-type: talent
-system: power
-sphere: fallen-fey
 tier: basic
 tags: []
 ---

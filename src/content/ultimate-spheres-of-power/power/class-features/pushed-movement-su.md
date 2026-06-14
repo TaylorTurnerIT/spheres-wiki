@@ -1,8 +1,6 @@
 ---
-id: pushed-movement-su
 name: "Pushed Movement (Su)"
 type: class-feature
-system: power
 className: symbiat
 level: 3
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: "resonating-chorus"
 name: "Resonating Chorus"
-type: "talent"
-sourceBook: "the-warden"
-sphere: "warleader"
 tier: "advanced"
 tags:
   - "shout"

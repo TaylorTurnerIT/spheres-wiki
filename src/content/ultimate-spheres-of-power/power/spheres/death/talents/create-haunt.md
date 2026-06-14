@@ -1,9 +1,5 @@
 ---
-id: create-haunt
 name: "Create Haunt"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

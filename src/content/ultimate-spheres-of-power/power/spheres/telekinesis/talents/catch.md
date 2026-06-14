@@ -1,9 +1,5 @@
 ---
-id: catch
 name: "Catch"
-type: talent
-system: power
-sphere: telekinesis
 tier: basic
 tags: []
 ---

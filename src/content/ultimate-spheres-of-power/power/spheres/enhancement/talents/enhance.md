@@ -1,9 +1,5 @@
 ---
-id: enhance
 name: Enhance
-system: power
-type: talent
-sphere: enhancement
 tier: base
 tags: []
 ---

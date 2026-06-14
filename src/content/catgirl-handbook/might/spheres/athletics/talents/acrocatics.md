@@ -1,9 +1,5 @@
 ---
-id: "acrocatics"
 name: "Acrocatics"
-type: "talent"
-sourceBook: "catgirl-handbook"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

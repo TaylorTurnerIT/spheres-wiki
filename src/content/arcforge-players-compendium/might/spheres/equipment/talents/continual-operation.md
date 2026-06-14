@@ -1,9 +1,5 @@
 ---
-id: "continual-operation"
 name: "Continual Operation"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

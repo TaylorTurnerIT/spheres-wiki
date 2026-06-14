@@ -1,9 +1,5 @@
 ---
-id: "nebulous-functionality"
 name: "Nebulous Functionality"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "plan"

@@ -1,9 +1,5 @@
 ---
-id: metal-mastery
 name: "Metal Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["metal", "geomancing"]
 ---

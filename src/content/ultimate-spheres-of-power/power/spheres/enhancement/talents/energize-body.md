@@ -1,9 +1,5 @@
 ---
-id: energize-body
 name: "Energize Body"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

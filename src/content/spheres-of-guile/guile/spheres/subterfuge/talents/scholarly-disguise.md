@@ -1,9 +1,5 @@
 ---
-id: "scholarly-disguise"
 name: "Scholarly Disguise"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "disguise"

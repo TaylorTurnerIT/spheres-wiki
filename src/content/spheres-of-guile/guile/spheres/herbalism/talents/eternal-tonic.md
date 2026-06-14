@@ -1,9 +1,5 @@
 ---
-id: "eternal-tonic"
 name: "Eternal Tonic"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "advanced"
 tags: []
 ---

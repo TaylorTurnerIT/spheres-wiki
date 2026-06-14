@@ -1,9 +1,5 @@
 ---
-id: "trinket"
 name: "Trinket"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "base"
 tags: []
 ---

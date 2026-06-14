@@ -1,9 +1,5 @@
 ---
-id: enlarged-shuffle
 name: "Enlarged Shuffle"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

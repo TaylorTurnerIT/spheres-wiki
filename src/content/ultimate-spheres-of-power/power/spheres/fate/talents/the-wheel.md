@@ -1,9 +1,5 @@
 ---
-id: the-wheel
 name: "The Wheel"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: friend-to-wildlife
 name: "Friend To Wildlife"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["utility", "spirit"]
 ---

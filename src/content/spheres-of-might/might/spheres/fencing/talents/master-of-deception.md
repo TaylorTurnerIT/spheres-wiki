@@ -1,9 +1,5 @@
 ---
-id: "master-of-deception"
 name: "Master Of Deception"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "advanced"
 tags: []
 ---

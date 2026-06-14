@@ -1,9 +1,5 @@
 ---
-id: deceive-dweomer
 name: "Deceive Dweomer"
-system: power
-type: talent
-sphere: illusion
 tier: advanced
 tags: []
 ---

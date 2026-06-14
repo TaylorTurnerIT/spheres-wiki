@@ -1,8 +1,5 @@
 ---
-id: ranged-command
 name: "Ranged Command"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

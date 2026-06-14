@@ -1,9 +1,5 @@
 ---
-id: high-energy
 name: "High Energy"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["heat", "mantle"]
 ---

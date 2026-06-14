@@ -1,9 +1,5 @@
 ---
-id: "cloth-snake-puppetry"
 name: "Cloth Snake Puppetry"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "stance"

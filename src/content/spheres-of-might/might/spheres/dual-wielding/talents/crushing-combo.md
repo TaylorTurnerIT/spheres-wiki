@@ -1,9 +1,5 @@
 ---
-id: "crushing-combo"
 name: "Crushing Combo"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

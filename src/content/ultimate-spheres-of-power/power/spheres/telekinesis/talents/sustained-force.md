@@ -1,9 +1,5 @@
 ---
-id: sustained-force
 name: "Sustained Force"
-type: talent
-system: power
-sphere: telekinesis
 tier: basic
 tags: []
 ---

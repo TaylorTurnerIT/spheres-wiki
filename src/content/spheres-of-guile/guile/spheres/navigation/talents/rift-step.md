@@ -1,9 +1,5 @@
 ---
-id: "rift-step"
 name: "Rift Step"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "pathing"

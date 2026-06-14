@@ -1,9 +1,5 @@
 ---
-id: "force-redirection-technique"
 name: "Force Redirection Technique"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

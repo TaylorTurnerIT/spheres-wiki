@@ -1,8 +1,5 @@
 ---
-id: kinetic-drift
 name: "Kinetic Drift"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: unwilling
 name: "Unwilling"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

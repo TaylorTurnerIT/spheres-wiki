@@ -1,9 +1,5 @@
 ---
-id: "subtle-trick"
 name: "Subtle Trick"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags: []
 ---

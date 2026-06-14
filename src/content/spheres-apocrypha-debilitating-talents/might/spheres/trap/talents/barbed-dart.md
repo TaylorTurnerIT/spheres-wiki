@@ -1,9 +1,5 @@
 ---
-id: "barbed-dart"
 name: "Barbed Dart"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents"
-sphere: "trap"
 tier: "basic"
 tags:
   - "dart"

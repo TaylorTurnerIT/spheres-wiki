@@ -1,9 +1,5 @@
 ---
-id: "restraining-vestments"
 name: "Restraining Vestments"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "sabotage"

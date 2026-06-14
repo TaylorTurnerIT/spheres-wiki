@@ -1,9 +1,5 @@
 ---
-id: "get-over-here"
 name: "Get Over Here!"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

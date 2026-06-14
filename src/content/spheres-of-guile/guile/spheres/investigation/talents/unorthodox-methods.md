@@ -1,9 +1,5 @@
 ---
-id: "unorthodox-methods"
 name: "Unorthodox Methods"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "base"
 tags:
   - "package"

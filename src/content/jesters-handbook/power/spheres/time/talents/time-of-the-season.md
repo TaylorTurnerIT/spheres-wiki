@@ -1,9 +1,5 @@
 ---
-id: time-of-the-season
 name: "Time Of The Season"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: shining-stars
 name: "Shining Stars"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

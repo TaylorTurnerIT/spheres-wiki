@@ -1,8 +1,5 @@
 ---
-id: immutable-protection
 name: "Immutable Protection"
-type: feat
-system: power
 sphere: protection
 tags: []
 tier: feat

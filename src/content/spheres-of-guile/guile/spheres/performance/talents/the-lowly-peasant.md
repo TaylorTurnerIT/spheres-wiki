@@ -1,9 +1,5 @@
 ---
-id: "the-lowly-peasant"
 name: "The Lowly Peasant"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "act"

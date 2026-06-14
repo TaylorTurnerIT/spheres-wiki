@@ -1,9 +1,5 @@
 ---
-id: perseverance
 name: "Perseverance"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mandate"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: thundertongue
 name: "Thundertongue"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "storm"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "scar-tissue"
 name: "Scar Tissue"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

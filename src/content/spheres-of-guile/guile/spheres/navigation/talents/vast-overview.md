@@ -1,9 +1,5 @@
 ---
-id: "vast-overview"
 name: "Vast Overview"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "utility"

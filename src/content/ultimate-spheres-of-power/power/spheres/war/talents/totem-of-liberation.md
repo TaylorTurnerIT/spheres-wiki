@@ -1,9 +1,5 @@
 ---
-id: totem-of-liberation
 name: "Totem Of Liberation"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

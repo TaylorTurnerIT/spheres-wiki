@@ -1,9 +1,5 @@
 ---
-id: "flowing-theatrics"
 name: "Flowing Theatrics"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags: []
 ---

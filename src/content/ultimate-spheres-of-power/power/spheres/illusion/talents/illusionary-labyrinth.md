@@ -1,9 +1,5 @@
 ---
-id: illusionary-labyrinth
 name: "Illusionary Labyrinth"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

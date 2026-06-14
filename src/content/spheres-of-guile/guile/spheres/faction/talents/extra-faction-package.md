@@ -1,9 +1,5 @@
 ---
-id: "extra-faction-package"
 name: "Extra Faction Package"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags: []
 ---

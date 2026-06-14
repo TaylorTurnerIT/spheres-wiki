@@ -1,8 +1,5 @@
 ---
-id: shade
 name: Shade
-type: feat
-system: power
 sphere: illusion
 dualSphere: dark
 tier: feat

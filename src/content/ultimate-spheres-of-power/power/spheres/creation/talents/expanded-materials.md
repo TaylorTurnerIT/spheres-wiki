@@ -1,9 +1,5 @@
 ---
-id: expanded-materials
 name: "Expanded Materials"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["material"]
 ---

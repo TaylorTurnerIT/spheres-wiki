@@ -1,8 +1,5 @@
 ---
-id: venomous-blood
 name: "Venomous Blood"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

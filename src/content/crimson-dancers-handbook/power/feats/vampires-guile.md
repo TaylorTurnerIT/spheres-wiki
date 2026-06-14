@@ -1,8 +1,5 @@
 ---
-id: vampires-guile
 name: Vampire's Guile
-type: feat
-system: power
 sphere: mind
 dualSphere: blood
 tier: feat

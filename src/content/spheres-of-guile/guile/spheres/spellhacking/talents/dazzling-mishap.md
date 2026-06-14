@@ -1,9 +1,5 @@
 ---
-id: "dazzling-mishap"
 name: "Dazzling Mishap"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "mishap"

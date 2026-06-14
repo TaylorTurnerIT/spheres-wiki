@@ -1,9 +1,5 @@
 ---
-id: "expert-eye"
 name: "Expert Eye"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags:
   - "utility"

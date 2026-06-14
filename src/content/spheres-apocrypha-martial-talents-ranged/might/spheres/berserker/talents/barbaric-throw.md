@@ -1,9 +1,5 @@
 ---
-id: "barbaric-throw"
 name: "Barbaric Throw"
-type: "talent"
-sourceBook: "spheres-apocrypha-martial-talents-ranged"
-sphere: "berserker"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "machine-hacker"
 name: "Machine Hacker"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "spellhacking"
 tier: "basic"
 tags: []
 ---

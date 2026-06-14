@@ -1,9 +1,5 @@
 ---
-id: "triangulate-teleportation"
 name: "Triangulate Teleportation"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "study"
 tier: "basic"
 tags:
   - "theory"

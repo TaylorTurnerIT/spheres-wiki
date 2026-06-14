@@ -1,10 +1,6 @@
 ---
-id: symbiat-telekinetic-edge
 name: "Telekinetic Edge"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

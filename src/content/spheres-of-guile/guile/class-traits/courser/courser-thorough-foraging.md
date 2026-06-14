@@ -1,7 +1,5 @@
 ---
-id: courser-thorough-foraging
 name: Thorough Foraging
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 8"

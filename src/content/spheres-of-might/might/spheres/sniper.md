@@ -1,8 +1,5 @@
 ---
-id: "sniper"
 name: "Sniper"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "sniper"
 tags: []
 sectionDefinitions:

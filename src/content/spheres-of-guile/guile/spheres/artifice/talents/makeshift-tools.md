@@ -1,9 +1,5 @@
 ---
-id: "makeshift-tools"
 name: "Makeshift Tools"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "function"

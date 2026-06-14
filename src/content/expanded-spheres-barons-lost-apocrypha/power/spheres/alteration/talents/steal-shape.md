@@ -1,9 +1,5 @@
 ---
-id: steal-shape
 name: "Steal Shape"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

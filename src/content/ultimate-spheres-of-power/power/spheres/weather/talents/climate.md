@@ -1,9 +1,5 @@
 ---
-id: climate
 name: "Climate"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

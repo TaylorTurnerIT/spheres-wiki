@@ -1,9 +1,5 @@
 ---
-id: "rising-leverage"
 name: "Rising Leverage"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

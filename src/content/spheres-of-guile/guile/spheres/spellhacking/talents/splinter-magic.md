@@ -1,9 +1,5 @@
 ---
-id: "splinter-magic"
 name: "Splinter Magic"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

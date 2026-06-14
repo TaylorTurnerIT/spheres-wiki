@@ -1,9 +1,5 @@
 ---
-id: "masterful-coordination"
 name: "Masterful Coordination"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

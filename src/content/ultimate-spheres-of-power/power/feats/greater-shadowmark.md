@@ -1,8 +1,5 @@
 ---
-id: greater-shadowmark
 name: "Greater Shadowmark"
-type: feat
-system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat

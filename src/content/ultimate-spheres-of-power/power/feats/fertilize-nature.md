@@ -1,8 +1,5 @@
 ---
-id: fertilize-nature
 name: "Fertilize Nature"
-type: feat
-system: power
 sphere: nature
 tags: []
 tier: feat

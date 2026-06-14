@@ -1,9 +1,5 @@
 ---
-id: "physician-s-efficacy"
 name: "Physician’s Efficacy"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "base"
 tags:
   - "package"

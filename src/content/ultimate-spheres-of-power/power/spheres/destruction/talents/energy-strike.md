@@ -1,9 +1,5 @@
 ---
-id: energy-strike
 name: "Energy Strike"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape", "strike"]
 ---

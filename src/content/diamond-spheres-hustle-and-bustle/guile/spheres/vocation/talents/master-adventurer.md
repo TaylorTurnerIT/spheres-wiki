@@ -1,9 +1,5 @@
 ---
-id: "master-adventurer"
 name: "Master Adventurer"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags: []
 ---

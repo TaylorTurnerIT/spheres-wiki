@@ -1,8 +1,5 @@
 ---
-id: "survivalism"
 name: "Survivalism"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "survivalism"
 tags: []
 sectionDefinitions:

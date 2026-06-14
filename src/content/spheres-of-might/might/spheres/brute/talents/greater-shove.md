@@ -1,9 +1,5 @@
 ---
-id: "greater-shove"
 name: "Greater Shove"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

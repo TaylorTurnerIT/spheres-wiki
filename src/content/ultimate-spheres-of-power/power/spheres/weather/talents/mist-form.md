@@ -1,9 +1,5 @@
 ---
-id: mist-form
 name: "Mist Form"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "precipitation"]
 ---

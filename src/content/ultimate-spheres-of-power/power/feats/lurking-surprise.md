@@ -1,8 +1,5 @@
 ---
-id: lurking-surprise
 name: "Lurking Surprise"
-type: feat
-system: power
 sphere: dark
 tags: []
 tier: feat

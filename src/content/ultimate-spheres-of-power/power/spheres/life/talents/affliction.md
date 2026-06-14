@@ -1,9 +1,5 @@
 ---
-id: affliction
 name: "Affliction"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

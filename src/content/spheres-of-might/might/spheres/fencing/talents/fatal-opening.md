@@ -1,9 +1,5 @@
 ---
-id: "fatal-opening"
 name: "Fatal Opening"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

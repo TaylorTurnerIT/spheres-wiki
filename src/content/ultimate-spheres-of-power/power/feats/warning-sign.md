@@ -1,8 +1,5 @@
 ---
-id: warning-sign
 name: Warning Sign
-type: feat
-system: power
 sphere: war
 dualSphere: protection
 tier: feat

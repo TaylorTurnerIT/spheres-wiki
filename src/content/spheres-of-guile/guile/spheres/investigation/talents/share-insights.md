@@ -1,9 +1,5 @@
 ---
-id: "share-insights"
 name: "Share Insights"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags: []
 ---

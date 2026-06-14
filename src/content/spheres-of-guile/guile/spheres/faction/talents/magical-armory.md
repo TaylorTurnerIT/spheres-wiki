@@ -1,9 +1,5 @@
 ---
-id: "magical-armory"
 name: "Magical Armory"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

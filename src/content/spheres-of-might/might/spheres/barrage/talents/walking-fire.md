@@ -1,9 +1,5 @@
 ---
-id: "walking-fire"
 name: "Walking Fire"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags: []
 ---

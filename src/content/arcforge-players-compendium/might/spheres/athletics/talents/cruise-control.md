@@ -1,9 +1,5 @@
 ---
-id: "cruise-control"
 name: "Cruise Control"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

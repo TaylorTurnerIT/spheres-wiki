@@ -1,9 +1,5 @@
 ---
-id: "persistent-trap"
 name: "Persistent Trap"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

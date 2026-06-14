@@ -1,9 +1,5 @@
 ---
-id: "profound-gaze"
 name: "Profound Gaze"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "advanced"
 tags: []
 ---

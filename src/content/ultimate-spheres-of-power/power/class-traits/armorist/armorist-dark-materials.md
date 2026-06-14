@@ -1,10 +1,6 @@
 ---
-id: armorist-dark-materials
 name: "Dark Materials"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

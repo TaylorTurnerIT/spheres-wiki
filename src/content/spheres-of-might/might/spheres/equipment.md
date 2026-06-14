@@ -1,8 +1,5 @@
 ---
-id: "equipment"
 name: "Equipment"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "equipment"
 tags: []
 sectionDefinitions:

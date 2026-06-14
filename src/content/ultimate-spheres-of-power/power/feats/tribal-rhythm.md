@@ -1,8 +1,5 @@
 ---
-id: tribal-rhythm
 name: "Tribal Rhythm"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

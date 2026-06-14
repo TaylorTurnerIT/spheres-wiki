@@ -1,9 +1,5 @@
 ---
-id: "extended-guard"
 name: "Extended Guard"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

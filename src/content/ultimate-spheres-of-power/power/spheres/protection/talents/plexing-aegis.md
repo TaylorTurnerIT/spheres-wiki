@@ -1,9 +1,5 @@
 ---
-id: plexing-aegis
 name: "Plexing Aegis"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis"]
 ---

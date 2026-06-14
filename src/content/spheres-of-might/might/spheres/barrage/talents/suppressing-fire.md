@@ -1,9 +1,5 @@
 ---
-id: "suppressing-fire"
 name: "Suppressing Fire"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags:
   - "blitz"

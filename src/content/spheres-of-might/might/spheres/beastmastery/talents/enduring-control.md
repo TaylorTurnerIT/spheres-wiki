@@ -1,9 +1,5 @@
 ---
-id: "enduring-control"
 name: "Enduring Control"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "handle-animal"

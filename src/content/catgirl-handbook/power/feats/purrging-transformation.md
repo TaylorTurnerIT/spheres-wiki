@@ -1,8 +1,5 @@
 ---
-id: purrging-transformation
 name: Purrging Transformation
-type: feat
-system: power
 sphere: life
 dualSphere: alteration
 tier: feat

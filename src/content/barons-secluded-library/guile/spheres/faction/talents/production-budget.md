@@ -1,9 +1,5 @@
 ---
-id: "production-budget"
 name: "Production Budget"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "retainer"

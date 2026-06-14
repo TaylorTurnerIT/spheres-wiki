@@ -1,8 +1,5 @@
 ---
-id: tribal-mark
 name: Tribal Mark
-type: feat
-system: power
 sphere: war
 dualSphere: enhancement
 tier: feat

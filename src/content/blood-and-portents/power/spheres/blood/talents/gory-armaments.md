@@ -1,9 +1,5 @@
 ---
-id: gory-armaments
 name: "Gory Armaments"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["blood-art"]
 ---

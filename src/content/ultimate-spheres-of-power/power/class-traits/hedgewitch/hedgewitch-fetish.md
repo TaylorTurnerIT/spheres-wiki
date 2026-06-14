@@ -1,10 +1,6 @@
 ---
-id: hedgewitch-fetish
 name: "Fetish"
-type: class-trait
-system: power
 tags: []
-className: hedgewitch
 featureId: secret
 ---
 

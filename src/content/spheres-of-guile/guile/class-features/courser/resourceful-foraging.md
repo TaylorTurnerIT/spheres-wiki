@@ -1,7 +1,5 @@
 ---
-id: resourceful-foraging
 name: Resourceful Foraging
-className: courser
 level: 7
 tags: []
 ---

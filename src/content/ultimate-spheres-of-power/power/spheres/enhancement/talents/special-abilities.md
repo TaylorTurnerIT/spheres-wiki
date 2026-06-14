@@ -1,9 +1,5 @@
 ---
-id: special-abilities
 name: "Special Abilities"
-system: power
-type: talent
-sphere: enhancement
 tier: base
 tags: []
 ---

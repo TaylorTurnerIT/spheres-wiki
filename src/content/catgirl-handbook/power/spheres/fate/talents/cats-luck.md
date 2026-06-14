@@ -1,9 +1,5 @@
 ---
-id: cats-luck
 name: "Cat's Luck"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["consecration", "word"]
 ---

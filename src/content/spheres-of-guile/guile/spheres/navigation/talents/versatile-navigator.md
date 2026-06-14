@@ -1,9 +1,5 @@
 ---
-id: "versatile-navigator"
 name: "Versatile Navigator"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags: []
 ---

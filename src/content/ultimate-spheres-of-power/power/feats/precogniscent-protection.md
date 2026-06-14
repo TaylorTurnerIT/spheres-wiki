@@ -1,8 +1,5 @@
 ---
-id: precogniscent-protection
 name: "Precogniscent Protection"
-type: feat
-system: power
 sphere: divination
 tags: ["combat"]
 tier: feat

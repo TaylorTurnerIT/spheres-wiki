@@ -1,9 +1,5 @@
 ---
-id: muensterous-traits
 name: "Muensterous Traits"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["body"]
 ---

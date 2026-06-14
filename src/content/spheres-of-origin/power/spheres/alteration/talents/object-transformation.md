@@ -1,9 +1,5 @@
 ---
-id: object-transformation
 name: "Object Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["transformation"]
 ---

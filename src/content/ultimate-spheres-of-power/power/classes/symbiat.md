@@ -1,8 +1,5 @@
 ---
-id: symbiat
 name: "Symbiat"
-type: class
-system: power
 tags: []
 hitDie: 8
 alignment: "Any"

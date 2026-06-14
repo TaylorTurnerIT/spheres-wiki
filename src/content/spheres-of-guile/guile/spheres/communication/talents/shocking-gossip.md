@@ -1,9 +1,5 @@
 ---
-id: "shocking-gossip"
 name: "Shocking Gossip"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

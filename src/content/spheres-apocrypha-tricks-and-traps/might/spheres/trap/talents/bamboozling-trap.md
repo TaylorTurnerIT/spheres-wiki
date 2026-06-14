@@ -1,9 +1,5 @@
 ---
-id: "bamboozling-trap"
 name: "Bamboozling Trap"
-type: "talent"
-sourceBook: "spheres-apocrypha-tricks-and-traps"
-sphere: "trap"
 tier: "basic"
 tags: ["snare"]
 ---

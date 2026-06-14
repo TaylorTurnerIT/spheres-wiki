@@ -1,9 +1,5 @@
 ---
-id: "stampede"
 name: "Stampede"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

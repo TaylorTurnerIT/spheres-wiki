@@ -1,8 +1,6 @@
 ---
-id: permanent-illusion
 name: "Permanent Illusion"
 type: class-feature
-system: power
 className: fey-adept
 level: 3
 tags: []

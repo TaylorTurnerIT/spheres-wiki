@@ -1,8 +1,5 @@
 ---
-id: energy-reflection
 name: "Energy Reflection"
-type: feat
-system: power
 sphere: protection
 tags: []
 tier: feat

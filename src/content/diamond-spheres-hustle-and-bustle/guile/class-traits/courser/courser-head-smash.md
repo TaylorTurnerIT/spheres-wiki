@@ -1,7 +1,5 @@
 ---
-id: courser-head-smash
 name: Head Smash
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 6"

@@ -1,9 +1,5 @@
 ---
-id: "burglar"
 name: "Burglar"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

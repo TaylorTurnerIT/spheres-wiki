@@ -1,9 +1,5 @@
 ---
-id: dampen-light
 name: "Dampen Light"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["darkness"]
 ---

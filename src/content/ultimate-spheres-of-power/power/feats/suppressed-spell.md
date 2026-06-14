@@ -1,8 +1,5 @@
 ---
-id: suppressed-spell
 name: "Suppressed Spell"
-type: feat
-system: power
 sphere: illusion
 tags: ["metamagic"]
 tier: feat

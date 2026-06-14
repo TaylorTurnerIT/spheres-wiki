@@ -1,9 +1,5 @@
 ---
-id: "dual-blade-savant"
 name: "Dual Blade Savant"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

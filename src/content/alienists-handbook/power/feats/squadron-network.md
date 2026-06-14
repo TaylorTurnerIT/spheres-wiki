@@ -1,8 +1,5 @@
 ---
-id: squadron-network
 name: "Squadron Network"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: blood-bond
 name: "Blood Bond"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

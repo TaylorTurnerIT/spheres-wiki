@@ -1,8 +1,5 @@
 ---
-id: fools-counterspell
 name: "Fool's Counterspell"
-type: feat
-system: power
 sphere: mind
 tags: ["counterspell"]
 tier: feat

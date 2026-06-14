@@ -1,9 +1,5 @@
 ---
-id: "mindless-mastery"
 name: "Mindless Mastery"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "handle-animal"

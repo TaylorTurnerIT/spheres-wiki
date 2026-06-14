@@ -1,9 +1,5 @@
 ---
-id: selective-illusions
 name: "Selective Illusions"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

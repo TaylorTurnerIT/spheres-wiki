@@ -1,9 +1,5 @@
 ---
-id: "improved-bottled-lightning"
 name: "Improved Bottled Lightning"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

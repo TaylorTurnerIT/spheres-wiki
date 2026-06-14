@@ -1,9 +1,5 @@
 ---
-id: "headfake"
 name: "Headfake"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

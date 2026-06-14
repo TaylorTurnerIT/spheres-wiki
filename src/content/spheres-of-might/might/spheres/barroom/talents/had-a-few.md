@@ -1,9 +1,5 @@
 ---
-id: "had-a-few"
 name: "Had A Few"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "drunk"

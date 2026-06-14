@@ -1,8 +1,5 @@
 ---
-id: burrowing-magic
 name: "Burrowing Magic"
-type: feat
-system: power
 sphere: warp
 tags: ["metamagic"]
 tier: feat

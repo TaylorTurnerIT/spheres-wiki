@@ -1,9 +1,5 @@
 ---
-id: "survival-instinct"
 name: "Survival Instinct"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "plan"

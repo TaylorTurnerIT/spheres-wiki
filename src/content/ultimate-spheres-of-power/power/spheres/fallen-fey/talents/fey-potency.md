@@ -1,9 +1,5 @@
 ---
-id: fey-potency
 name: "Fey Potency"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

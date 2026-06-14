@@ -1,9 +1,5 @@
 ---
-id: "defensive-leverage"
 name: "Defensive Leverage"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "lancer"
 tier: "basic"
 tags:
   - "stance"

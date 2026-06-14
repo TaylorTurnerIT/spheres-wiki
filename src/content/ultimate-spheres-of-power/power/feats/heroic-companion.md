@@ -1,8 +1,5 @@
 ---
-id: heroic-companion
 name: "Heroic Companion"
-type: feat
-system: power
 sphere: conjuration
 tags: ["luck"]
 tier: feat

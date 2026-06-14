@@ -1,9 +1,5 @@
 ---
-id: heart-of-hope-and-fear
 name: "Heart of Hope and Fear"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: ["sm"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "incredible-inspiration"
 name: "Incredible Inspiration"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "gladiator"
 tier: "advanced"
 tags: []
 ---

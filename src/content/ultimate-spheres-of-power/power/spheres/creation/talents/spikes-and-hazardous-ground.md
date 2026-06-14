@@ -1,9 +1,5 @@
 ---
-id: spikes-and-hazardous-ground
 name: "Spikes and Hazardous Ground"
-type: talent
-system: power
-sphere: creation
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: blood-puppet
 name: "Blood Puppet"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["quicken"]
 ---

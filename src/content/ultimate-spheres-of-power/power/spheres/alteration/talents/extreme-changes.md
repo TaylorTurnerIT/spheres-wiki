@@ -1,9 +1,5 @@
 ---
-id: extreme-changes
 name: "Extreme Changes"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

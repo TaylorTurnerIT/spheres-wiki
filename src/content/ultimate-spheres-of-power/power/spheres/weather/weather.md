@@ -1,8 +1,5 @@
 ---
-id: weather
 name: "Weather"
-system: power
-type: sphere
 icon: weather
 description: "You can command the weather to do your bidding."
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: "hasty-retreat"
 name: "Hasty Retreat"
-type: "talent"
-sourceBook: "expanded-spheres-barons-lost-apocrypha"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

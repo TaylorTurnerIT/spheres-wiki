@@ -1,9 +1,5 @@
 ---
-id: complex-glyph
 name: "Complex Glyph"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

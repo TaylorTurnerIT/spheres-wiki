@@ -1,9 +1,5 @@
 ---
-id: "sight-beyond-sight"
 name: "Sight Beyond Sight"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

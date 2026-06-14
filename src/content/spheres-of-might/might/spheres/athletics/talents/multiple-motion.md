@@ -1,9 +1,5 @@
 ---
-id: "multiple-motion"
 name: "Multiple Motion"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

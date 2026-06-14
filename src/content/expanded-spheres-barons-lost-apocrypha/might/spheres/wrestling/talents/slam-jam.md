@@ -1,9 +1,5 @@
 ---
-id: "slam-jam"
 name: "Slam-Jam"
-type: "talent"
-sourceBook: "expanded-spheres-barons-lost-apocrypha"
-sphere: "wrestling"
 tier: "basic"
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "intense-conditioning"
 name: "Intense Conditioning"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "advanced"
 tags:
   - "counter"

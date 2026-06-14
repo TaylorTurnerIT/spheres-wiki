@@ -1,9 +1,5 @@
 ---
-id: "form-army"
 name: "Form Army"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "advanced"
 tags: []
 ---

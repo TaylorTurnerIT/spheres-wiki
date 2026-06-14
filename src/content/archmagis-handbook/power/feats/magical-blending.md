@@ -1,8 +1,5 @@
 ---
-id: magical-blending
 name: "Magical Blending"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

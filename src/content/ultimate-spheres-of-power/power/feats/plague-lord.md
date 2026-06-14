@@ -1,8 +1,5 @@
 ---
-id: plague-lord
 name: "Plague Lord"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

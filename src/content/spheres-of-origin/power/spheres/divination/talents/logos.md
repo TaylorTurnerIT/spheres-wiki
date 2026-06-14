@@ -1,9 +1,5 @@
 ---
-id: logos
 name: "Logos"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

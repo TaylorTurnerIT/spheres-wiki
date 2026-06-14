@@ -1,9 +1,5 @@
 ---
-id: "magical-resonance"
 name: "Magical Resonance"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "base"
 tags:
   - "mishap"

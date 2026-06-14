@@ -1,9 +1,5 @@
 ---
-id: material-body
 name: "Material Body"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: ["alter"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "forgettable-theft"
 name: "Forgettable Theft"
-type: "talent"
-sourceBook: "lost-champions-mountebank"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

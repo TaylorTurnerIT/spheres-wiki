@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-channel-punishment
 name: "Channel Punishment"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

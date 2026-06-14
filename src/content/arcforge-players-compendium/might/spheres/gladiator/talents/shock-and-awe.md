@@ -1,9 +1,5 @@
 ---
-id: "shock-and-awe"
 name: "Shock And Awe"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "gladiator"
 tier: "advanced"
 tags: []
 ---

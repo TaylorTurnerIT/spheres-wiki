@@ -1,9 +1,5 @@
 ---
-id: restore
 name: "Restore"
-system: power
-type: talent
-sphere: life
 tier: base
 tags: []
 ---

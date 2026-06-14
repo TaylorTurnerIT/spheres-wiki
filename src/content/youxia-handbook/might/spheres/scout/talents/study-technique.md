@@ -1,9 +1,5 @@
 ---
-id: "study-technique"
 name: "Study Technique"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

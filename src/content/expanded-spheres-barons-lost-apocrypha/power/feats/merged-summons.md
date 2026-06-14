@@ -1,8 +1,5 @@
 ---
-id: merged-summons
 name: Merged Summons
-type: feat
-system: power
 sphere: conjuration
 dualSphere: alteration
 tier: feat

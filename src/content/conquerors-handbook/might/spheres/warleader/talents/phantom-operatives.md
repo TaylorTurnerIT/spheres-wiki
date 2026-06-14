@@ -1,9 +1,5 @@
 ---
-id: "phantom-operatives"
 name: "Phantom Operatives"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "advanced"
 tags: []
 ---

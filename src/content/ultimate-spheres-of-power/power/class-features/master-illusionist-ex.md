@@ -1,8 +1,6 @@
 ---
-id: master-illusionist-ex
 name: "Master Illusionist (Ex)"
 type: class-feature
-system: power
 className: fey-adept
 level: 1
 tags: []

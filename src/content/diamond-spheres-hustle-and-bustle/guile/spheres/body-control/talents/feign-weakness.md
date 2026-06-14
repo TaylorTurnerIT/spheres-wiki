@@ -1,9 +1,5 @@
 ---
-id: "feign-weakness"
 name: "Feign Weakness"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "body-control"
 tier: "basic"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: addictive-power
 name: "Addictive Power"
-type: feat
-system: power
 sphere: enhancement
 tags: ["drawback"]
 tier: feat

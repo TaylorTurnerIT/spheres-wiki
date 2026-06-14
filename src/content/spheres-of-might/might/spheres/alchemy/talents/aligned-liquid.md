@@ -1,9 +1,5 @@
 ---
-id: "aligned-liquid"
 name: "Aligned Liquid"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

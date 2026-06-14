@@ -1,8 +1,6 @@
 ---
-id: quick-transformation
 name: "Quick Transformation"
 type: class-feature
-system: power
 className: shifter
 level: 1
 tags: []

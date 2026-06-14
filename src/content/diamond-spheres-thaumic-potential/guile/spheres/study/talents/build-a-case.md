@@ -1,9 +1,5 @@
 ---
-id: "build-a-case"
 name: "Build a Case"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "study"
 tier: "basic"
 tags:
   - "theory"

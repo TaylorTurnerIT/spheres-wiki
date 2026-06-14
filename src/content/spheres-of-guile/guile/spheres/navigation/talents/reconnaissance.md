@@ -1,9 +1,5 @@
 ---
-id: "reconnaissance"
 name: "Reconnaissance"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "approach"

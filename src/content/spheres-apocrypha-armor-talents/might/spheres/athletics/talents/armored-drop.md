@@ -1,9 +1,5 @@
 ---
-id: "armored-drop"
 name: "Armored Drop"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "leap"

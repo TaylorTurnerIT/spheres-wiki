@@ -1,8 +1,5 @@
 ---
-id: beam-propulsion
 name: Beam Propulsion
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: light
 tier: feat

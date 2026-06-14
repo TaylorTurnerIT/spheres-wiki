@@ -1,9 +1,5 @@
 ---
-id: "energetic-touch"
 name: "Energetic Touch"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags: []
 ---

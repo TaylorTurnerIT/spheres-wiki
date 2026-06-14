@@ -1,9 +1,5 @@
 ---
-id: necrotic-feeding
 name: "Necrotic Feeding"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike"]
 ---

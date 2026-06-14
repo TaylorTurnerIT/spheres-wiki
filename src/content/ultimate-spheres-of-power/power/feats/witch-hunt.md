@@ -1,8 +1,5 @@
 ---
-id: witch-hunt
 name: "Witch Hunt"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

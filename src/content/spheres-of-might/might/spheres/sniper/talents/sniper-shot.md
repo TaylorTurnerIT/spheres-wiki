@@ -1,9 +1,5 @@
 ---
-id: "sniper-shot"
 name: "Sniper Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags: []
 ---

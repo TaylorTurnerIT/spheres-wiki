@@ -1,9 +1,5 @@
 ---
-id: "expert-gatherer"
 name: "Expert Gatherer"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: blast-salvo
 name: "Blast Salvo"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "automatic-pilot"
 name: "Automatic Pilot"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "athletics"
 tier: "advanced"
 tags: []
 ---

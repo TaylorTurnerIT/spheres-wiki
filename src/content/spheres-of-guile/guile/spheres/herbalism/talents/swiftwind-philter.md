@@ -1,9 +1,5 @@
 ---
-id: "swiftwind-philter"
 name: "Swiftwind Philter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

@@ -1,9 +1,5 @@
 ---
-id: referential-enhancements
 name: "Referential Enhancements"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: []
 ---

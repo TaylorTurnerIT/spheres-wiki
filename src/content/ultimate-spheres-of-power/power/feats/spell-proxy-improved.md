@@ -1,8 +1,5 @@
 ---
-id: spell-proxy-improved
 name: "Spell Proxy, Improved"
-type: feat
-system: power
 sphere: enhancement
 tags: ["proxy"]
 tier: feat

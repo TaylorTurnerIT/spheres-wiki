@@ -1,9 +1,5 @@
 ---
-id: attracting-blast
 name: "Attracting Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "electricity"]
 ---

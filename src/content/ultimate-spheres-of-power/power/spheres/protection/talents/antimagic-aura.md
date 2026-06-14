@@ -1,9 +1,5 @@
 ---
-id: antimagic-aura
 name: "Antimagic Aura [Original]"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

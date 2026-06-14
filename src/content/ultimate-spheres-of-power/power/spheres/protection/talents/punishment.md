@@ -1,9 +1,5 @@
 ---
-id: punishment
 name: "Punishment"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["succor"]
 ---

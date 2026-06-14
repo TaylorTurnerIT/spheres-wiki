@@ -1,9 +1,5 @@
 ---
-id: vassalize
 name: "Vassalize"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

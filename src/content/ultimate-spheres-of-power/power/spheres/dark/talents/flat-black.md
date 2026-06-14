@@ -1,9 +1,5 @@
 ---
-id: flat-black
 name: "Flat Black"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot"]
 ---

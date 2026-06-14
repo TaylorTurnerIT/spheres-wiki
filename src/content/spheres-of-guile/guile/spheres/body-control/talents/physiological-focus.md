@@ -1,9 +1,5 @@
 ---
-id: "physiological-focus"
 name: "Physiological Focus"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "base"
 tags:
   - "package"

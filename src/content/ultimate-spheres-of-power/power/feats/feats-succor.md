@@ -1,8 +1,5 @@
 ---
-id: feats-succor
 name: Succor
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

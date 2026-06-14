@@ -1,9 +1,5 @@
 ---
-id: "lightning-escapist"
 name: "Lightning Escapist"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags: []
 ---

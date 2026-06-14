@@ -1,9 +1,5 @@
 ---
-id: summon
 name: "Summon"
-system: power
-type: talent
-sphere: conjuration
 tier: base
 tags: []
 ---

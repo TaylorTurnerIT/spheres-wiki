@@ -1,9 +1,5 @@
 ---
-id: "swinging-swap"
 name: "Swinging Swap"
-type: "talent"
-sourceBook: "lost-champions-necros"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

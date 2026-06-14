@@ -1,9 +1,5 @@
 ---
-id: extinguish
 name: "Extinguish"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["utility"]
 ---

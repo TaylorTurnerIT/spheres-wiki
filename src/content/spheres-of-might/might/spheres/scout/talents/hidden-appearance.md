@@ -1,9 +1,5 @@
 ---
-id: "hidden-appearance"
 name: "Hidden Appearance"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags:
   - "utility"

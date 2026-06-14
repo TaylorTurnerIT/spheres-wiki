@@ -1,9 +1,5 @@
 ---
-id: "defensive-rider"
 name: "Defensive Rider"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "base"
 tags: []
 ---

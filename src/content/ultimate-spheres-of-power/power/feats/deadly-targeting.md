@@ -1,8 +1,5 @@
 ---
-id: deadly-targeting
 name: "Deadly Targeting"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: animating-possession
 name: Animating Possession
-type: feat
-system: power
 sphere: enhancement
 dualSphere: death
 tier: feat

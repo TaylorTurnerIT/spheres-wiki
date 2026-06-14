@@ -1,9 +1,5 @@
 ---
-id: precise-destruction
 name: "Precise Destruction"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["utility"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: dark-room
 name: Dark Room
-type: feat
-system: power
 sphere: warp
 dualSphere: dark
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: hungry
 name: "Hungry"
-type: feat
-system: power
 sphere: conjuration
 tags: ["combat", "companion"]
 tier: feat

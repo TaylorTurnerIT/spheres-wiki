@@ -1,9 +1,5 @@
 ---
-id: animal-creature
 name: "Animal Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

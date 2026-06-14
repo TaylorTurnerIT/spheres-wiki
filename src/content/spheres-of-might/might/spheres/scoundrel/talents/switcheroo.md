@@ -1,9 +1,5 @@
 ---
-id: "switcheroo"
 name: "Switcheroo"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

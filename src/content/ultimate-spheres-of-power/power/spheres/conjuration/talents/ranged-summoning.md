@@ -1,9 +1,5 @@
 ---
-id: ranged-summoning
 name: "Ranged Summoning"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["range"]
 ---

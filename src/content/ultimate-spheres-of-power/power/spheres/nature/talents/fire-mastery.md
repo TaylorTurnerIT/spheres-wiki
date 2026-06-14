@@ -1,9 +1,5 @@
 ---
-id: fire-mastery
 name: "Fire Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["fire", "geomancing"]
 ---

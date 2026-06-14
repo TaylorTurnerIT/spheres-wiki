@@ -1,9 +1,5 @@
 ---
-id: "intercepting-shot"
 name: "Intercepting Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "vaporous-concoctions"
 name: "Vaporous Concoctions"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "basic"
 tags: []
 ---

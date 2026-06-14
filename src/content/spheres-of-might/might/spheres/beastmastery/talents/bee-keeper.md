@@ -1,9 +1,5 @@
 ---
-id: "bee-keeper"
 name: "Bee Keeper"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "handle-animal"

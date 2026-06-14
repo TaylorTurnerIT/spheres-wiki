@@ -1,7 +1,5 @@
 ---
-id: courser-improved-astral-tracking
 name: Improved Astral Tracking
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 12, astral tracking"

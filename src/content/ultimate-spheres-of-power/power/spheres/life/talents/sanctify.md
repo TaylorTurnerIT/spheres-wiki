@@ -1,9 +1,5 @@
 ---
-id: sanctify
 name: "Sanctify"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: excise-triumph
 name: "Excise Triumph"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["curse", "word"]
 ---

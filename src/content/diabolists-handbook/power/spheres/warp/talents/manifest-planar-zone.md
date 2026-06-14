@@ -1,9 +1,5 @@
 ---
-id: manifest-planar-zone
 name: "Manifest Planar Zone"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["space"]
 ---

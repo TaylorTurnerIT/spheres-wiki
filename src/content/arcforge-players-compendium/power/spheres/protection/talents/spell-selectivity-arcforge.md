@@ -1,9 +1,5 @@
 ---
-id: spell-selectivity-arcforge
 name: "Spell Selectivity [Arcforge Addendum]"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: barrier
 name: "Barrier"
-type: talent
-system: power
-sphere: protection
 tier: basic
 tags: ["program"]
 ---

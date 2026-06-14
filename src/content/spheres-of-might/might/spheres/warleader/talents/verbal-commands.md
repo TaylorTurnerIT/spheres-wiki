@@ -1,9 +1,5 @@
 ---
-id: "verbal-commands"
 name: "Verbal Commands"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

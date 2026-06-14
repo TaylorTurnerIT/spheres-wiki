@@ -1,9 +1,5 @@
 ---
-id: "revelation-of-infinite-possibility"
 name: "Revelation Of Infinite Possibility"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "advanced"
 tags:
   - "quip"

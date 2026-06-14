@@ -1,9 +1,5 @@
 ---
-id: "universal-alcohol"
 name: "Universal Alcohol"
-type: "talent"
-sourceBook: "spheres-apocrypha-dipsomania"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

@@ -1,9 +1,5 @@
 ---
-id: "coordinated-reflexes"
 name: "Coordinated Reflexes"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

@@ -1,8 +1,5 @@
 ---
-id: "infiltration"
 name: "Infiltration"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "infiltration"
 tags: []
 sectionDefinitions:

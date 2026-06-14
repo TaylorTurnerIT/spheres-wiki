@@ -1,9 +1,5 @@
 ---
-id: "false-sense-of-security"
 name: "False Sense Of Security"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "approach"

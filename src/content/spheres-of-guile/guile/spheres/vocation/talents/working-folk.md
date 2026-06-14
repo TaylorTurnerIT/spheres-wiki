@@ -1,9 +1,5 @@
 ---
-id: "working-folk"
 name: "Working Folk"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "utility"

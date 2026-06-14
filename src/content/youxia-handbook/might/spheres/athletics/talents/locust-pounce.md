@@ -1,9 +1,5 @@
 ---
-id: "locust-pounce"
 name: "Locust Pounce"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "leap"

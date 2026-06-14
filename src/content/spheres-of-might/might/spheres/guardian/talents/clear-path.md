@@ -1,9 +1,5 @@
 ---
-id: "clear-path"
 name: "Clear Path"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags:
   - "zone"

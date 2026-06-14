@@ -1,9 +1,5 @@
 ---
-id: mental-enhancement
 name: "Mental Enhancement"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: battering-blast
 name: "Battering Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "stone"]
 ---

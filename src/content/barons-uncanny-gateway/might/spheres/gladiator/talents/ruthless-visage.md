@@ -1,9 +1,5 @@
 ---
-id: "ruthless-visage"
 name: "Ruthless Visage"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

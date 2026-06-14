@@ -1,9 +1,5 @@
 ---
-id: "dumbfounding-crack"
 name: "Dumbfounding Crack"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "advanced"
 tags:
   - "smash"

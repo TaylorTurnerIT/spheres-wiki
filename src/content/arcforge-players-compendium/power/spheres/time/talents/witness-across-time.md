@@ -1,9 +1,5 @@
 ---
-id: witness-across-time
 name: "Witness Across Time"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: snagging-darkness
 name: "Snagging Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot"]
 ---

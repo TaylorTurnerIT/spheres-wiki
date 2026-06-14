@@ -1,9 +1,5 @@
 ---
-id: "determine-defenses"
 name: "Determine Defenses"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

@@ -1,9 +1,5 @@
 ---
-id: "wilderness"
 name: "Wilderness"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "base"
 tags:
   - "package"

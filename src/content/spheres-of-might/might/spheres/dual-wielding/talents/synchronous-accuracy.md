@@ -1,9 +1,5 @@
 ---
-id: "synchronous-accuracy"
 name: "Synchronous Accuracy"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

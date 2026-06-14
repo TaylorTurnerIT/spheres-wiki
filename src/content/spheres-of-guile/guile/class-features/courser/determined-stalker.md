@@ -1,7 +1,5 @@
 ---
-id: determined-stalker
 name: Determined Stalker
-className: courser
 level: 3
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "plane-walker"
 name: "Plane-walker"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

@@ -1,9 +1,5 @@
 ---
-id: "artwork-package"
 name: "Artwork Package"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "base"
 tags:
   - "package"

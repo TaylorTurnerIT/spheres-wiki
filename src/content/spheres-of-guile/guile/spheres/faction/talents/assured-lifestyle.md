@@ -1,9 +1,5 @@
 ---
-id: "assured-lifestyle"
 name: "Assured Lifestyle"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

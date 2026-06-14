@@ -1,9 +1,5 @@
 ---
-id: star-spawn-body
 name: "Star-Spawn Body"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: ["body"]
 ---

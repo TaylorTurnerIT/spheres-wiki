@@ -1,9 +1,5 @@
 ---
-id: "one-person-show"
 name: "One-Person Show"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "base"
 tags:
   - "package"

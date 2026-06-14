@@ -1,9 +1,5 @@
 ---
-id: "tackle"
 name: "Tackle"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

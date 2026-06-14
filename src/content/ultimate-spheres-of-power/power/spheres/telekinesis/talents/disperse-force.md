@@ -1,9 +1,5 @@
 ---
-id: disperse-force
 name: "Disperse Force"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

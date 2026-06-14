@@ -1,9 +1,5 @@
 ---
-id: "counterargument"
 name: "Counterargument"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "approach"

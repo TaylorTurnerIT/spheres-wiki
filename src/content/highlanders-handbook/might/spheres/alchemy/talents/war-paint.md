@@ -1,9 +1,5 @@
 ---
-id: "war-paint"
 name: "War Paint"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

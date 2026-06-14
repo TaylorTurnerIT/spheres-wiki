@@ -1,9 +1,5 @@
 ---
-id: "favorite-tools"
 name: "Favorite Tools"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "approach"

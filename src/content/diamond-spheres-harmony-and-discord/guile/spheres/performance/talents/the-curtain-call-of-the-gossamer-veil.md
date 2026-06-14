@@ -1,9 +1,5 @@
 ---
-id: "the-curtain-call-of-the-gossamer-veil"
 name: "The Curtain Call of the Gossamer Veil"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "act"

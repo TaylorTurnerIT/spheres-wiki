@@ -1,9 +1,5 @@
 ---
-id: "booming-roar"
 name: "Booming Roar"
-type: "talent"
-sourceBook: "expanded-spheres-barons-lost-apocrypha"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

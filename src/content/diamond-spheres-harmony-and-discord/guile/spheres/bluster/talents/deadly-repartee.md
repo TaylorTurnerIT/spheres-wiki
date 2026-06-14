@@ -1,9 +1,5 @@
 ---
-id: "deadly-repartee"
 name: "Deadly Repartee"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "bluster"
 tier: "basic"
 tags: []
 ---

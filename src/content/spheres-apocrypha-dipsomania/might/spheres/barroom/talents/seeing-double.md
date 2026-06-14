@@ -1,9 +1,5 @@
 ---
-id: "seeing-double"
 name: "Seeing Double"
-type: "talent"
-sourceBook: "spheres-apocrypha-dipsomania"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "drunk"

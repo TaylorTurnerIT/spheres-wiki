@@ -1,9 +1,5 @@
 ---
-id: everglow
 name: "Everglow"
-system: power
-type: talent
-sphere: light
 tier: advanced
 tags: []
 ---

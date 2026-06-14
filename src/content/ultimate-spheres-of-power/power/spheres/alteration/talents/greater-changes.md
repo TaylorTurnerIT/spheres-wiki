@@ -1,9 +1,5 @@
 ---
-id: greater-changes
 name: "Greater Changes"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

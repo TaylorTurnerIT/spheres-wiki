@@ -1,9 +1,5 @@
 ---
-id: "iron-wall"
 name: "Iron Wall"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

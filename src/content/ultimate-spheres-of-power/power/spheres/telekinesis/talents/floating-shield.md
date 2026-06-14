@@ -1,9 +1,5 @@
 ---
-id: floating-shield
 name: "Floating Shield"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

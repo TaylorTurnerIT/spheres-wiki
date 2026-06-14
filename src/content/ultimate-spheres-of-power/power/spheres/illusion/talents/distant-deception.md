@@ -1,9 +1,5 @@
 ---
-id: distant-deception
 name: "Distant Deception"
-system: power
-type: talent
-sphere: illusion
 tier: advanced
 tags: []
 ---

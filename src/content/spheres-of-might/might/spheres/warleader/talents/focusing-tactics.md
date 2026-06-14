@@ -1,9 +1,5 @@
 ---
-id: "focusing-tactics"
 name: "Focusing Tactics"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

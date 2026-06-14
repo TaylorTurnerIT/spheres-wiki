@@ -1,10 +1,6 @@
 ---
-id: incanter-familiar-1-2-specialization-points
 name: "Familiar (1-2 specialization points)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: incanter-specializations
 ---
 

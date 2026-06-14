@@ -1,9 +1,5 @@
 ---
-id: "careful-saboteur"
 name: "Careful Saboteur"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "base"
 tags:
   - "package"

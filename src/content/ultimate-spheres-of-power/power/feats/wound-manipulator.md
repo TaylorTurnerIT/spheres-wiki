@@ -1,8 +1,5 @@
 ---
-id: wound-manipulator
 name: Wound Manipulator
-type: feat
-system: power
 sphere: life
 dualSphere: alteration
 tier: feat

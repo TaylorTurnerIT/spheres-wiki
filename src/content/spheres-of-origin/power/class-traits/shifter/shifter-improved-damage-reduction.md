@@ -1,10 +1,6 @@
 ---
-id: shifter-improved-damage-reduction
 name: "Improved Damage Reduction"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 requires: "shifter level 4"
 ---

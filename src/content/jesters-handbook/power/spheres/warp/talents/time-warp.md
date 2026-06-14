@@ -1,9 +1,5 @@
 ---
-id: time-warp
 name: "Time Warp"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

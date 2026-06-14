@@ -1,10 +1,6 @@
 ---
-id: mageknight-mystic-aegis
 name: "Mystic Aegis"
-type: class-trait
-system: power
 tags: ["spell-like"]
-className: mageknight
 featureId: mystic-combat-su
 requires: "Protection sphere"
 ---

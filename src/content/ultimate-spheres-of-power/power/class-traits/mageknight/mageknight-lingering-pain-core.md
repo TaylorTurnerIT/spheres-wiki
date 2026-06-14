@@ -1,10 +1,6 @@
 ---
-id: mageknight-lingering-pain-core
 name: "Lingering Pain [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: entrapping-circle
 name: "Entrapping Circle"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: []
 ---

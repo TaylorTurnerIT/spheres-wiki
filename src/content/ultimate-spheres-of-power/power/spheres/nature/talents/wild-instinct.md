@@ -1,9 +1,5 @@
 ---
-id: wild-instinct
 name: "Wild Instinct"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: []
 ---

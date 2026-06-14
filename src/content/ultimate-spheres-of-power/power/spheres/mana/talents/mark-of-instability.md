@@ -1,9 +1,5 @@
 ---
-id: mark-of-instability
 name: "Mark Of Instability"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["expunge"]
 ---

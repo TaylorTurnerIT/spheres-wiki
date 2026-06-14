@@ -1,9 +1,5 @@
 ---
-id: "climb"
 name: "Climb"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "base"
 tags: []
 ---

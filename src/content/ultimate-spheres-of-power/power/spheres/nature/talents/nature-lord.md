@@ -1,9 +1,5 @@
 ---
-id: nature-lord
 name: "Nature Lord"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["geomancing"]
 ---

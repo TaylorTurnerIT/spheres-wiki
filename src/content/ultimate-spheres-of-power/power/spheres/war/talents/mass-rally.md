@@ -1,9 +1,5 @@
 ---
-id: mass-rally
 name: "Mass Rally"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mass"]
 ---

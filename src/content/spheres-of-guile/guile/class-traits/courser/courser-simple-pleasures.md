@@ -1,7 +1,5 @@
 ---
-id: courser-simple-pleasures
 name: Simple Pleasures
-className: courser
 featureId: courser-ventures
 tags: []
 ---

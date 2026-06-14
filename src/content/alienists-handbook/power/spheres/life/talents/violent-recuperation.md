@@ -1,9 +1,5 @@
 ---
-id: violent-recuperation
 name: "Violent Recuperation"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

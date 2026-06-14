@@ -1,9 +1,5 @@
 ---
-id: "hunter"
 name: "Hunter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "base"
 tags:
   - "package"

@@ -1,10 +1,6 @@
 ---
-id: mageknight-imbued-weapon
 name: "Imbued Weapon"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: mageknight
 featureId: mystic-combat-su
 ---
 

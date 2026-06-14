@@ -1,9 +1,5 @@
 ---
-id: lethal-teleport
 name: "Lethal Teleport"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

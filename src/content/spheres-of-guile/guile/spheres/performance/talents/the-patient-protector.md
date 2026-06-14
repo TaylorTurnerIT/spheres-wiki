@@ -1,9 +1,5 @@
 ---
-id: "the-patient-protector"
 name: "The Patient Protector"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "act"

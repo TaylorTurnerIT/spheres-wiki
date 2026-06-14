@@ -1,9 +1,5 @@
 ---
-id: swarm-companion
 name: "Swarm Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: ["form"]
 ---

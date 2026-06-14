@@ -1,9 +1,5 @@
 ---
-id: flash-of-excellence
 name: "Flash of Excellence"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["sm"]
 ---

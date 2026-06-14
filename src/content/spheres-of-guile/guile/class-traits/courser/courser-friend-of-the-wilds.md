@@ -1,7 +1,5 @@
 ---
-id: courser-friend-of-the-wilds
 name: Friend of the Wilds
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 4"

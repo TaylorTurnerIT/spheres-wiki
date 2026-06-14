@@ -1,9 +1,5 @@
 ---
-id: "defensive-equipment"
 name: "Defensive Equipment"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "function"

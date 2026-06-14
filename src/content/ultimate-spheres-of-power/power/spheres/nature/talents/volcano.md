@@ -1,9 +1,5 @@
 ---
-id: volcano
 name: "Volcano"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["fire", "geomancing"]
 ---

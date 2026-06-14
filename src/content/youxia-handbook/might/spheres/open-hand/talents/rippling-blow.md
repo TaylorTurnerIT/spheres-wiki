@@ -1,9 +1,5 @@
 ---
-id: "rippling-blow"
 name: "Rippling Blow"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

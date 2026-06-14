@@ -1,9 +1,5 @@
 ---
-id: "pattern"
 name: "Pattern"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "harvest"

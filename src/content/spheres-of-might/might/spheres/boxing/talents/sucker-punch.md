@@ -1,9 +1,5 @@
 ---
-id: "sucker-punch"
 name: "Sucker Punch"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

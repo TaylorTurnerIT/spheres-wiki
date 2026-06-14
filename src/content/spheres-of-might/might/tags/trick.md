@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "trick"
 label: "Trick"
 sphere: "scoundrel"
 priority: 0

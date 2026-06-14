@@ -1,9 +1,5 @@
 ---
-id: "travel-papers"
 name: "Travel Papers"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "retainer"

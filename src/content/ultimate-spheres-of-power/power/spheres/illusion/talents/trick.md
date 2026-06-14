@@ -1,9 +1,5 @@
 ---
-id: trick
 name: "Trick"
-system: power
-type: talent
-sphere: illusion
 tier: base
 tags: []
 ---

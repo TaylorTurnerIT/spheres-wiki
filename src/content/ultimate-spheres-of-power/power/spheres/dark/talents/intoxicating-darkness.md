@@ -1,9 +1,5 @@
 ---
-id: intoxicating-darkness
 name: "Intoxicating Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "darkness"]
 ---

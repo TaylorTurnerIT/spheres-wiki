@@ -1,9 +1,5 @@
 ---
-id: pressuring-divinations
 name: "Pressuring Divinations"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sm", "utility"]
 ---

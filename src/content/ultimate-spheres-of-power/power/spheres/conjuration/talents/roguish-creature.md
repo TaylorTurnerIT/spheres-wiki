@@ -1,9 +1,5 @@
 ---
-id: roguish-creature
 name: "Roguish Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

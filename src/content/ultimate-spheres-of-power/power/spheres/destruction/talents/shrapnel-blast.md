@@ -1,9 +1,5 @@
 ---
-id: shrapnel-blast
 name: "Shrapnel Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "stone"]
 ---

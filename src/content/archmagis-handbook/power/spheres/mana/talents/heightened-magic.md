@@ -1,9 +1,5 @@
 ---
-id: heightened-magic
 name: "Heightened Magic"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["amp", "manipulation"]
 ---

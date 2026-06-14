@@ -1,8 +1,5 @@
 ---
-id: bloodrunner
 name: "Bloodrunner"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

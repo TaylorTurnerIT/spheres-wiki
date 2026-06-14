@@ -1,8 +1,5 @@
 ---
-id: aura-engineering
 name: Aura Engineering
-type: feat
-system: power
 sphere: illusion
 dualSphere: divination
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "stability-exercise"
 name: "Stability Exercise"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "acclimation"

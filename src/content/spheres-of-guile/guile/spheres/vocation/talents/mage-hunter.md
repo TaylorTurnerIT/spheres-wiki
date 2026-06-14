@@ -1,9 +1,5 @@
 ---
-id: "mage-hunter"
 name: "Mage Hunter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

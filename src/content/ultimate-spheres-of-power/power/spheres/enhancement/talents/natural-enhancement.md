@@ -1,9 +1,5 @@
 ---
-id: natural-enhancement
 name: Natural Enhancement
-system: power
-type: talent
-sphere: enhancement
 dualSphere: nature
 tier: basic
 ---

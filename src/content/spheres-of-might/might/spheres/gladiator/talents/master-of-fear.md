@@ -1,9 +1,5 @@
 ---
-id: "master-of-fear"
 name: "Master Of Fear"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

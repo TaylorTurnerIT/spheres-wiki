@@ -1,9 +1,5 @@
 ---
-id: "veiled-dialogue"
 name: "Veiled Dialogue"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

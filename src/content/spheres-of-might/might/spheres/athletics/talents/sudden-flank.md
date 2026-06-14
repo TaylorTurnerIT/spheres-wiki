@@ -1,9 +1,5 @@
 ---
-id: "sudden-flank"
 name: "Sudden Flank"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "motion"

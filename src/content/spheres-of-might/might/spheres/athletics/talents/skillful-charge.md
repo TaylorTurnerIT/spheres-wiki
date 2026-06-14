@@ -1,9 +1,5 @@
 ---
-id: "skillful-charge"
 name: "Skillful Charge"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

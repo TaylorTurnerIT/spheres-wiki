@@ -1,9 +1,5 @@
 ---
-id: "unconventional-practices"
 name: "Unconventional Practices"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "base"
 tags:
   - "package"

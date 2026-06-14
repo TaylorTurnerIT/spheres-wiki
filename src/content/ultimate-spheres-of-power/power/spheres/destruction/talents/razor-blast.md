@@ -1,9 +1,5 @@
 ---
-id: razor-blast
 name: "Razor Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "crystal"]
 ---

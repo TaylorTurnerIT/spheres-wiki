@@ -1,9 +1,5 @@
 ---
-id: "master-trader"
 name: "Master Trader"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags: []
 ---

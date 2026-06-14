@@ -1,9 +1,5 @@
 ---
-id: "clarifying-incense"
 name: "Clarifying Incense"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

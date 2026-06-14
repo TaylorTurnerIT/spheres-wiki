@@ -1,9 +1,5 @@
 ---
-id: avasculation
 name: "Avasculation"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: ["ghost-strike"]
 ---

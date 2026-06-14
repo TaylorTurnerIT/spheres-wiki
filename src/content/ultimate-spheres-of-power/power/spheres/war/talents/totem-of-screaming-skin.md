@@ -1,9 +1,5 @@
 ---
-id: totem-of-screaming-skin
 name: "Totem Of Screaming Skin"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

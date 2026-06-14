@@ -1,9 +1,5 @@
 ---
-id: portal
 name: "Portal"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

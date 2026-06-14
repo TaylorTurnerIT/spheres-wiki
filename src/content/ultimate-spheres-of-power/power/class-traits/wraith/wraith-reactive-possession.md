@@ -1,10 +1,6 @@
 ---
-id: wraith-reactive-possession
 name: "Reactive Possession"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 requires: "possess armaments or path of the poltergeist improved path possession"
 ---

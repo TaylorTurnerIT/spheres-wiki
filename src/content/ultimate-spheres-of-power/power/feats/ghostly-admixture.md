@@ -1,8 +1,5 @@
 ---
-id: ghostly-admixture
 name: "Ghostly Admixture"
-type: feat
-system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat

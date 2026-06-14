@@ -1,9 +1,5 @@
 ---
-id: "pace-setter"
 name: "Pace Setter"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

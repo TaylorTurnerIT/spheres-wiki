@@ -1,9 +1,5 @@
 ---
-id: sensory
 name: Sensory
-type: talent
-system: power
-sphere: illusion
 tier: basic
 tags: []
 ---

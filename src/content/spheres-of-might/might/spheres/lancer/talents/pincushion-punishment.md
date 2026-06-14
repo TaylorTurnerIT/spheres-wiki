@@ -1,9 +1,5 @@
 ---
-id: "pincushion-punishment"
 name: "Pincushion Punishment"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: nether-blast
 name: "Nether Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "negative"]
 ---

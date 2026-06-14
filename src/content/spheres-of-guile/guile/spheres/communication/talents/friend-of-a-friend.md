@@ -1,9 +1,5 @@
 ---
-id: "friend-of-a-friend"
 name: "Friend Of A Friend"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-empowered-resistance
 name: "Empowered Resistance"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

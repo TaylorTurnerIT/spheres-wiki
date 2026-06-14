@@ -1,9 +1,5 @@
 ---
-id: replenish
 name: "Replenish"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

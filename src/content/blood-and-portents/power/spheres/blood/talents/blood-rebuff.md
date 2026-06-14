@@ -1,9 +1,5 @@
 ---
-id: blood-rebuff
 name: "Blood Rebuff"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["blood-art"]
 ---

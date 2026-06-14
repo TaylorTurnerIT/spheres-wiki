@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-lovelorn-soul
 name: "Lovelorn Soul"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

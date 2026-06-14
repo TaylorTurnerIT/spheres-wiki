@@ -1,9 +1,5 @@
 ---
-id: "herbal-lore"
 name: "Herbal Lore"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "base"
 tags:
   - "package"

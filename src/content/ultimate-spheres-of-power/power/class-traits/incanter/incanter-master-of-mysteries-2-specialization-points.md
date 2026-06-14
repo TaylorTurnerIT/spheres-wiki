@@ -1,10 +1,6 @@
 ---
-id: incanter-master-of-mysteries-2-specialization-points
 name: "Master of Mysteries (2 specialization points)"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: incanter
 featureId: incanter-specializations
 ---
 

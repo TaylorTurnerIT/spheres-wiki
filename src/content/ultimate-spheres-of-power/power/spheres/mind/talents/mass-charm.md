@@ -1,9 +1,5 @@
 ---
-id: mass-charm
 name: "Mass Charm"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["mass"]
 ---

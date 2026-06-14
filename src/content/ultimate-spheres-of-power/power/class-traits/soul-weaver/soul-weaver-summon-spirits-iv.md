@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-summon-spirits-iv
 name: "Summon Spirits IV"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

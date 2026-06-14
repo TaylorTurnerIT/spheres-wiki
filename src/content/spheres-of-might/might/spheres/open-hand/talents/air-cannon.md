@@ -1,9 +1,5 @@
 ---
-id: "air-cannon"
 name: "Air Cannon"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "advanced"
 tags: []
 ---

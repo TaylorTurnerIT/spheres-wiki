@@ -1,9 +1,5 @@
 ---
-id: "stop-drop-and-control"
 name: "Stop Drop And Control"
-type: "talent"
-sourceBook: "spheres-apocrypha-tricks-and-traps"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

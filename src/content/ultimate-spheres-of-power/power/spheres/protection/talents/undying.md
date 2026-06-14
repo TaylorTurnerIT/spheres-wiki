@@ -1,9 +1,5 @@
 ---
-id: undying
 name: "Undying"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: ["aegis"]
 ---

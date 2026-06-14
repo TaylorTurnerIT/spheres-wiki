@@ -1,9 +1,5 @@
 ---
-id: climbing-companion
 name: "Climbing Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

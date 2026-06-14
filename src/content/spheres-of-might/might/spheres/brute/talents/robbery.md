@@ -1,9 +1,5 @@
 ---
-id: "robbery"
 name: "Robbery"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags:
   - "manhandle"

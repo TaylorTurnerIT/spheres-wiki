@@ -1,9 +1,5 @@
 ---
-id: "thaumic-sink"
 name: "Thaumic Sink"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "advanced"
 tags:
   - "dart"

@@ -1,8 +1,5 @@
 ---
-id: improved-retributive-blast
 name: "Improved Retributive Blast"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat", "sm"]
 tier: feat

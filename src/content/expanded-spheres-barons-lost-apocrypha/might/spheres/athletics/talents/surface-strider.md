@@ -1,9 +1,5 @@
 ---
-id: "surface-strider"
 name: "Surface Strider"
-type: "talent"
-sourceBook: "expanded-spheres-barons-lost-apocrypha"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "run"

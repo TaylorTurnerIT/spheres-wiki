@@ -1,9 +1,5 @@
 ---
-id: cold-resolve
 name: "Cold Resolve"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["cold", "mantle", "utility"]
 ---

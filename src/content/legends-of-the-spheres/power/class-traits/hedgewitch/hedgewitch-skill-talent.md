@@ -1,10 +1,6 @@
 ---
-id: hedgewitch-skill-talent
 name: "Skill Talent"
-type: class-trait
-system: power
 tags: []
-className: hedgewitch
 featureId: secret
 ---
 

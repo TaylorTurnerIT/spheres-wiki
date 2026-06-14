@@ -1,9 +1,5 @@
 ---
-id: control-oxygenation
 name: "Control Oxygenation"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["quicken", "still"]
 ---

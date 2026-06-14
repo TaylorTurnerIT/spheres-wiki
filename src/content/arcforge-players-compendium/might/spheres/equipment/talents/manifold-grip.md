@@ -1,9 +1,5 @@
 ---
-id: "manifold-grip"
 name: "Manifold Grip"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

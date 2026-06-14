@@ -1,9 +1,5 @@
 ---
-id: ventriloquism
 name: "Ventriloquism"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing", "utility"]
 ---

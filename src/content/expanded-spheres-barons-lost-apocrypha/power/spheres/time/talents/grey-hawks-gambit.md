@@ -1,9 +1,5 @@
 ---
-id: grey-hawks-gambit
 name: "Grey Hawk's Gambit"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: []
 ---

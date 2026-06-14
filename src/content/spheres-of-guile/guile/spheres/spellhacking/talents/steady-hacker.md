@@ -1,9 +1,5 @@
 ---
-id: "steady-hacker"
 name: "Steady Hacker"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "approach"

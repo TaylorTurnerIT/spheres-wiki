@@ -1,9 +1,5 @@
 ---
-id: karakaze
 name: "Karakaze"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["cold", "shroud"]
 ---

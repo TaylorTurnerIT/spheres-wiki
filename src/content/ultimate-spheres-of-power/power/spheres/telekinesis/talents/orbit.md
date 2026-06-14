@@ -1,9 +1,5 @@
 ---
-id: orbit
 name: "Orbit"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

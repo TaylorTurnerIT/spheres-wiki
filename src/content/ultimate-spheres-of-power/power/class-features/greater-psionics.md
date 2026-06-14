@@ -1,8 +1,6 @@
 ---
-id: greater-psionics
 name: "Greater Psionics"
 type: class-feature
-system: power
 className: symbiat
 level: 20
 tags: []

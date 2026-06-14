@@ -1,10 +1,6 @@
 ---
-id: wraith-expanded-path-possession-improved
 name: "Expanded Path Possession, Improved"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 requires: "expanded path possession, wraith 12"
 ---

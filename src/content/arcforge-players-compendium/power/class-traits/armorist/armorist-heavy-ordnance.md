@@ -1,10 +1,6 @@
 ---
-id: armorist-heavy-ordnance
 name: "Heavy Ordnance"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "armor-squirm"
 name: "Armor Squirm"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "advanced"
 tags: []
 ---

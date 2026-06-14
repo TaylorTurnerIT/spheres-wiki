@@ -1,9 +1,5 @@
 ---
-id: "risky-business"
 name: "Risky Business"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

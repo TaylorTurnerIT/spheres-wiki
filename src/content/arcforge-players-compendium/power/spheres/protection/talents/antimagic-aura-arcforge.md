@@ -1,9 +1,5 @@
 ---
-id: antimagic-aura-arcforge
 name: "Antimagic Aura [Arcforge Addendum]"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "limitless-preparation"
 name: "Limitless Preparation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "advanced"
 tags: []
 ---

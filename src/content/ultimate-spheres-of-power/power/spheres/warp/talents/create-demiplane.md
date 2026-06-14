@@ -1,9 +1,5 @@
 ---
-id: create-demiplane
 name: "Create Demiplane"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["all", "utility"]
 ---

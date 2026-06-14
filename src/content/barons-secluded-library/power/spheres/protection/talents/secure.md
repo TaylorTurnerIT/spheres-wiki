@@ -1,9 +1,5 @@
 ---
-id: secure
 name: "Secure"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["sm", "succor"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "the-bonds-forged-in-war"
 name: "The Bonds Forged In War"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "act"

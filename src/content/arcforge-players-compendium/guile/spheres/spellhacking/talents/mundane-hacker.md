@@ -1,9 +1,5 @@
 ---
-id: "mundane-hacker"
 name: "Mundane Hacker"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "spellhacking"
 tier: "base"
 tags:
   - "package"

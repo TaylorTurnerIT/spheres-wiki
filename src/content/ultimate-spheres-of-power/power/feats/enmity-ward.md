@@ -1,8 +1,5 @@
 ---
-id: enmity-ward
 name: "Enmity Ward"
-type: feat
-system: power
 sphere: protection
 tags: []
 tier: feat

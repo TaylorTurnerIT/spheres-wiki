@@ -1,9 +1,5 @@
 ---
-id: "promethean"
 name: "Promethean"
-type: "talent"
-sourceBook: "realmwalkers-handbook"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "adrenaline"

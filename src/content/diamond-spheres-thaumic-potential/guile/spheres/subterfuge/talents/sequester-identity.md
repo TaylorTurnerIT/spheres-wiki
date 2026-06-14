@@ -1,9 +1,5 @@
 ---
-id: "sequester-identity"
 name: "Sequester Identity"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "subterfuge"
 tier: "advanced"
 tags:
   - "disguise"

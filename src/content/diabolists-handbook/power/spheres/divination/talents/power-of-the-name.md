@@ -1,9 +1,5 @@
 ---
-id: power-of-the-name
 name: "Power Of The Name"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["utility"]
 ---

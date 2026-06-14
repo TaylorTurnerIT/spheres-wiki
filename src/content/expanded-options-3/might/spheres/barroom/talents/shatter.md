@@ -1,9 +1,5 @@
 ---
-id: "shatter"
 name: "Shatter"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "smash"

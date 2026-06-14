@@ -1,10 +1,6 @@
 ---
-id: incanter-merciful-healer-2-specialization-points
 name: "Merciful Healer (2 Specialization Points)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: incanter-specializations
 ---
 

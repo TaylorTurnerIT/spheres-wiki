@@ -1,9 +1,5 @@
 ---
-id: "teleportation"
 name: "Teleportation"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "advanced"
 tags:
   - "utility"

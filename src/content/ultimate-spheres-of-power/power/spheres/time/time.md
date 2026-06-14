@@ -1,8 +1,5 @@
 ---
-id: time
 name: Time
-system: power
-type: sphere
 icon: time
 description: You can alter the flow of time itself.
 tags: []

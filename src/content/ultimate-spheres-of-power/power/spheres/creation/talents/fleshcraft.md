@@ -1,9 +1,5 @@
 ---
-id: fleshcraft
 name: "Fleshcraft"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: ["material"]
 ---

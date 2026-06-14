@@ -1,9 +1,5 @@
 ---
-id: "heavy-swing"
 name: "Heavy Swing"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

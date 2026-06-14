@@ -1,9 +1,5 @@
 ---
-id: utterances
 name: "Utterances"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

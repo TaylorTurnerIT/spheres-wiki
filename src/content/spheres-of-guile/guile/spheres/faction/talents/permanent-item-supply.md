@@ -1,9 +1,5 @@
 ---
-id: "permanent-item-supply"
 name: "Permanent Item Supply"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

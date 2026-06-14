@@ -1,9 +1,5 @@
 ---
-id: create-soul-gem
 name: "Create Soul Gem"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

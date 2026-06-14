@@ -1,9 +1,5 @@
 ---
-id: "conflict-of-wits"
 name: "Conflict Of Wits"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "advanced"
 tags:
   - "theory"

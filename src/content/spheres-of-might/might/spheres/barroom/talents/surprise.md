@@ -1,9 +1,5 @@
 ---
-id: "surprise"
 name: "Surprise"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

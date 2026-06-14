@@ -1,9 +1,5 @@
 ---
-id: lingering-illusion
 name: "Lingering Illusion"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

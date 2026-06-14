@@ -1,8 +1,6 @@
 ---
-id: greater-possession
 name: "Greater Possession"
 type: class-feature
-system: power
 className: wraith
 level: 10
 tags: []

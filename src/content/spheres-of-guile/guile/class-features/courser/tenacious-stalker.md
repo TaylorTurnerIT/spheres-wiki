@@ -1,7 +1,5 @@
 ---
-id: tenacious-stalker
 name: Tenacious Stalker
-className: courser
 level: 17
 tags: []
 ---

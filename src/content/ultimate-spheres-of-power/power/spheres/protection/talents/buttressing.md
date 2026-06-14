@@ -1,9 +1,5 @@
 ---
-id: buttressing
 name: "Buttressing"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: []
 ---

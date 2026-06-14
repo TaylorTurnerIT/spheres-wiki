@@ -1,9 +1,5 @@
 ---
-id: "spectacle"
 name: "Spectacle"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

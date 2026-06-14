@@ -1,9 +1,5 @@
 ---
-id: "toolkit-training"
 name: "Toolkit Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

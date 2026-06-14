@@ -1,10 +1,6 @@
 ---
-id: armorist-rigorous-equipment
 name: "Rigorous Equipment"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

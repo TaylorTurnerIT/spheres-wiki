@@ -1,9 +1,5 @@
 ---
-id: read-omens
 name: "Read Omens"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["utility", "divine"]
 ---

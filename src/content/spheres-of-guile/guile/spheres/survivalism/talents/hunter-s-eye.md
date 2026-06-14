@@ -1,9 +1,5 @@
 ---
-id: "hunter-s-eye"
 name: "Hunter’s Eye"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "approach"

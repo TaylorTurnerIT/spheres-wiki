@@ -1,7 +1,5 @@
 ---
-id: herding-rush
 name: Herding Rush
-archetypeId: venator
 level: 3
 tags: []
 replaces:

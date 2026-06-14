@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "body"
 label: "Body"
 color: "#1a6622"
 priority: 3

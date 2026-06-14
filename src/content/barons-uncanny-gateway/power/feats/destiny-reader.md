@@ -1,8 +1,5 @@
 ---
-id: destiny-reader
 name: "Destiny Reader"
-type: feat
-system: power
 sphere: fate
 dualSphere: divination
 tags: ["sm"]

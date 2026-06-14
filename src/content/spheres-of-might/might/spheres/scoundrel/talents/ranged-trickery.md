@@ -1,9 +1,5 @@
 ---
-id: "ranged-trickery"
 name: "Ranged Trickery"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "trick"

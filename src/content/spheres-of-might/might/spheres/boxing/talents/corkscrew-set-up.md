@@ -1,9 +1,5 @@
 ---
-id: "corkscrew-set-up"
 name: "Corkscrew Set Up"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

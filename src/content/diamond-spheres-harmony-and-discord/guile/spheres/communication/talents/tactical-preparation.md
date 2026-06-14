@@ -1,9 +1,5 @@
 ---
-id: "tactical-preparation"
 name: "Tactical Preparation"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

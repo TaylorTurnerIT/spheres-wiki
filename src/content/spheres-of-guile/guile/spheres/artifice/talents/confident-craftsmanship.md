@@ -1,9 +1,5 @@
 ---
-id: "confident-craftsmanship"
 name: "Confident Craftsmanship"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "utility"

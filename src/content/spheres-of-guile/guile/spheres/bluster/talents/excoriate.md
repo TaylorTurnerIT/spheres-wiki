@@ -1,9 +1,5 @@
 ---
-id: "excoriate"
 name: "Excoriate"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

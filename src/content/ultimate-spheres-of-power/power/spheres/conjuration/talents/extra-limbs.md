@@ -1,9 +1,5 @@
 ---
-id: extra-limbs
 name: "Extra Limbs"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

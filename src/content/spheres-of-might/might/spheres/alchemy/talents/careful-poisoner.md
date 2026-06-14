@@ -1,9 +1,5 @@
 ---
-id: "careful-poisoner"
 name: "Careful Poisoner"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

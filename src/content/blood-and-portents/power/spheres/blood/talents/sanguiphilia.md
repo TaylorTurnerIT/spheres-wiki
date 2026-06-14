@@ -1,9 +1,5 @@
 ---
-id: sanguiphilia
 name: "Sanguiphilia"
-system: power
-type: talent
-sphere: blood
 tier: advanced
 tags: []
 ---

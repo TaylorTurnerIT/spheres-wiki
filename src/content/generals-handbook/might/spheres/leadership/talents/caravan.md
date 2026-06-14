@@ -1,9 +1,5 @@
 ---
-id: "caravan"
 name: "Caravan"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "base"
 tags: []
 ---

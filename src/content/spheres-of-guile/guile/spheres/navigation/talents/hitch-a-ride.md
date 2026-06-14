@@ -1,9 +1,5 @@
 ---
-id: "hitch-a-ride"
 name: "Hitch A Ride"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "plan"

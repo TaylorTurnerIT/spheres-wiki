@@ -1,9 +1,5 @@
 ---
-id: "flaunt-secrets"
 name: "Flaunt Secrets"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "base"
 tags: []
 ---

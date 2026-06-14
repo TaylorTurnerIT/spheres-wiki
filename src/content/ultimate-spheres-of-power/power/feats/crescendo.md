@@ -1,8 +1,5 @@
 ---
-id: crescendo
 name: "Crescendo"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

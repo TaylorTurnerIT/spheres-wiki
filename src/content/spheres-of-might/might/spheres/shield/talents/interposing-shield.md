@@ -1,9 +1,5 @@
 ---
-id: "interposing-shield"
 name: "Interposing Shield"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

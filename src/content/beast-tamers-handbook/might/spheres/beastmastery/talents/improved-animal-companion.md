@@ -1,9 +1,5 @@
 ---
-id: "improved-animal-companion"
 name: "Improved Animal Companion"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "beastmastery"
 tier: "advanced"
 tags: []
 ---

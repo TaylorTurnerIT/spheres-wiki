@@ -1,9 +1,5 @@
 ---
-id: improved-negation
 name: "Improved Negation"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

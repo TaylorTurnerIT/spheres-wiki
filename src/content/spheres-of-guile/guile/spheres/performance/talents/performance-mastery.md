@@ -1,9 +1,5 @@
 ---
-id: "performance-mastery"
 name: "Performance Mastery"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags: []
 ---

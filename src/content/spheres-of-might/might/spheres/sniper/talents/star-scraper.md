@@ -1,9 +1,5 @@
 ---
-id: "star-scraper"
 name: "Star Scraper"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "advanced"
 tags:
   - "snipe"

@@ -1,8 +1,6 @@
 ---
-id: bound-nexus
 name: "Bound Nexus"
 type: class-feature
-system: power
 className: soul-weaver
 level: 4
 tags: []

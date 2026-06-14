@@ -1,10 +1,6 @@
 ---
-id: incanter-channel-energy-2-specialization-points
 name: "Channel Energy (2 specialization points)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: incanter-specializations
 ---
 

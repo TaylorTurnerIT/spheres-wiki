@@ -1,9 +1,5 @@
 ---
-id: "courageous-chorus"
 name: "Courageous Chorus"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

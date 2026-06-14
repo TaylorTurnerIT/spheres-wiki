@@ -1,9 +1,5 @@
 ---
-id: "performance-enhancer"
 name: "Performance Enhancer"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

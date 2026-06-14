@@ -1,9 +1,5 @@
 ---
-id: "animate-earth"
 name: "Animate Earth"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "ground"

@@ -1,9 +1,5 @@
 ---
-id: whispering-winds
 name: "Whispering Winds"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "utility", "wind"]
 ---

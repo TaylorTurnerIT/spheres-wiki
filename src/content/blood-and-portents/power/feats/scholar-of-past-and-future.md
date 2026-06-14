@@ -1,8 +1,5 @@
 ---
-id: scholar-of-past-and-future
 name: "Scholar Of Past And Future"
-type: feat
-system: power
 sphere: divination
 tags: []
 tier: feat

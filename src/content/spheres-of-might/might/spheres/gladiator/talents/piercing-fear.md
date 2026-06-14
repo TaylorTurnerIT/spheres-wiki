@@ -1,9 +1,5 @@
 ---
-id: "piercing-fear"
 name: "Piercing Fear"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

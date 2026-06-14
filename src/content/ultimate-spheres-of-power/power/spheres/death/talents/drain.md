@@ -1,9 +1,5 @@
 ---
-id: drain
 name: "Drain"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike", "program"]
 ---

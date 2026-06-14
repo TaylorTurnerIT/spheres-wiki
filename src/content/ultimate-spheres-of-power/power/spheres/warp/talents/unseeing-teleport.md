@@ -1,9 +1,5 @@
 ---
-id: unseeing-teleport
 name: "Unseeing Teleport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

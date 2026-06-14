@@ -1,9 +1,5 @@
 ---
-id: steal-skin
 name: "Steal Skin"
-system: power
-type: talent
-sphere: fallen-fey
 tier: advanced
 tags: ["fey-blessing"]
 ---

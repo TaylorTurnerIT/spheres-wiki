@@ -1,9 +1,5 @@
 ---
-id: the-courts
 name: "The Courts"
-type: talent
-system: power
-sphere: fallen-fey
 tier: basic
 tags: []
 ---

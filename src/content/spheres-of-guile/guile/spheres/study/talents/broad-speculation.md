@@ -1,9 +1,5 @@
 ---
-id: "broad-speculation"
 name: "Broad Speculation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "retrospection"
 name: "Retrospection"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "utility"

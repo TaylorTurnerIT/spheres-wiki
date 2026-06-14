@@ -1,8 +1,5 @@
 ---
-id: casting-traditions
 name: "Casting Traditions"
-type: article
-system: power
 tags: []
 
 ---

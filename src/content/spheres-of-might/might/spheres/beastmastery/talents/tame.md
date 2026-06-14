@@ -1,9 +1,5 @@
 ---
-id: "tame"
 name: "Tame"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "base"
 tags: []
 ---

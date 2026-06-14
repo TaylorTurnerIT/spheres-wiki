@@ -1,9 +1,5 @@
 ---
-id: "devastating-burst"
 name: "Devastating Burst"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "advanced"
 tags:
   - "smash"

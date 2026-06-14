@@ -1,9 +1,5 @@
 ---
-id: "sweeping-defense"
 name: "Sweeping Defense"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

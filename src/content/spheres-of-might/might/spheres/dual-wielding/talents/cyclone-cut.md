@@ -1,9 +1,5 @@
 ---
-id: "cyclone-cut"
 name: "Cyclone Cut"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "advanced"
 tags: []
 ---

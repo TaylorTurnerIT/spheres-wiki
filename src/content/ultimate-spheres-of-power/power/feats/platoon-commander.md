@@ -1,8 +1,5 @@
 ---
-id: platoon-commander
 name: "Platoon Commander"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

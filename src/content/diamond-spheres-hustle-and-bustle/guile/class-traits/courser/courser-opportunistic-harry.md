@@ -1,7 +1,5 @@
 ---
-id: courser-opportunistic-harry
 name: Opportunistic Harry
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 6"

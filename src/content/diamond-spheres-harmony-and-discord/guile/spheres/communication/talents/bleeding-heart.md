@@ -1,9 +1,5 @@
 ---
-id: "bleeding-heart"
 name: "Bleeding Heart"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "base"
 tags:
   - "package"

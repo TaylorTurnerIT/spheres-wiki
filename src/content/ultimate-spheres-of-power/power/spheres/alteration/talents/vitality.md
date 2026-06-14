@@ -1,9 +1,5 @@
 ---
-id: vitality
 name: Vitality
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

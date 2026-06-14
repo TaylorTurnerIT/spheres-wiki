@@ -1,9 +1,5 @@
 ---
-id: "reactive-disarm"
 name: "Reactive Disarm"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "subterfuge"
 tier: "basic"
 tags: []
 ---

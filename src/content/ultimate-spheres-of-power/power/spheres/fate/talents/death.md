@@ -1,9 +1,5 @@
 ---
-id: death
 name: Death
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags:
   - motif

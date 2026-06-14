@@ -1,9 +1,5 @@
 ---
-id: alter-movement
 name: "Alter Movement"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: contaminated-blows
 name: "Contaminated Blows"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: ["mantle", "radiation"]
 ---

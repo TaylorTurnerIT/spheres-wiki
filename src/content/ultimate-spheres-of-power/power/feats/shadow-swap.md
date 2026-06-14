@@ -1,8 +1,5 @@
 ---
-id: shadow-swap
 name: "Shadow Swap"
-type: feat
-system: power
 sphere: dark
 tags: []
 tier: feat

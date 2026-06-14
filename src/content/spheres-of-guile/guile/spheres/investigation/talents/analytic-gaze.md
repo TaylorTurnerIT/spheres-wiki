@@ -1,9 +1,5 @@
 ---
-id: "analytic-gaze"
 name: "Analytic Gaze"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "advanced"
 tags:
   - "approach"

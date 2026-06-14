@@ -1,9 +1,5 @@
 ---
-id: troop-companion
 name: "Troop Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: ["form"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "wind-up-brace"
 name: "Wind-Up Brace"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "motion"

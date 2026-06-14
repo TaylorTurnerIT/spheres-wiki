@@ -1,9 +1,5 @@
 ---
-id: obscure-passage
 name: "Obscure Passage"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot"]
 ---

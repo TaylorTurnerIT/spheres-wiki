@@ -1,8 +1,5 @@
 ---
-id: telekinetic-trigger
 name: "Telekinetic Trigger"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat

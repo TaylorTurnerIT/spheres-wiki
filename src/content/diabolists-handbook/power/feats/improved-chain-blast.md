@@ -1,8 +1,5 @@
 ---
-id: improved-chain-blast
 name: "Improved Chain Blast"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "careful-engineer"
 name: "Careful Engineer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "base"
 tags:
   - "package"

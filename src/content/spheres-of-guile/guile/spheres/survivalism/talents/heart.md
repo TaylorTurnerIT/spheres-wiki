@@ -1,9 +1,5 @@
 ---
-id: "heart"
 name: "Heart"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "harvest"

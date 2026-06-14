@@ -1,9 +1,5 @@
 ---
-id: "darkland-s-cry"
 name: "Darkland’s Cry"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "advanced"
 tags:
   - "shout"

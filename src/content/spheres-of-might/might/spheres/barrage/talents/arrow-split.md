@@ -1,9 +1,5 @@
 ---
-id: "arrow-split"
 name: "Arrow Split"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags:
   - "blitz"

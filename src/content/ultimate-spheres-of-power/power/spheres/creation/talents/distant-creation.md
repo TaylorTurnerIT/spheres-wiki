@@ -1,9 +1,5 @@
 ---
-id: distant-creation
 name: "Distant Creation"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["range"]
 ---

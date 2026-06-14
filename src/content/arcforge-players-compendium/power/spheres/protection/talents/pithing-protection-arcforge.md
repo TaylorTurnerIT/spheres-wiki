@@ -1,9 +1,5 @@
 ---
-id: pithing-protection-arcforge
 name: "Pithing Protection [Arcforge Addendum]"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

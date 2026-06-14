@@ -1,9 +1,5 @@
 ---
-id: totem-of-agility
 name: "Totem Of Agility"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

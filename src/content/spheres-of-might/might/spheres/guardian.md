@@ -1,8 +1,5 @@
 ---
-id: "guardian"
 name: "Guardian"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "guardian"
 tags: []
 sectionDefinitions:

@@ -1,9 +1,5 @@
 ---
-id: enhance-equipment
 name: "Enhance Equipment"
-type: talent
-system: power
-sphere: enhancement
 tier: basic
 tags: []
 ---

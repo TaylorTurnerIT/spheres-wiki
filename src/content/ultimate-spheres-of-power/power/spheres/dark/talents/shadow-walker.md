@@ -1,9 +1,5 @@
 ---
-id: shadow-walker
 name: "Shadow Walker"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: ["meld", "mythic"]
 ---

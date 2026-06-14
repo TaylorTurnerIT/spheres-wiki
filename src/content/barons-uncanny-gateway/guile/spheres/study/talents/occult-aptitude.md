@@ -1,9 +1,5 @@
 ---
-id: "occult-aptitude"
 name: "Occult Aptitude"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "study"
 tier: "advanced"
 tags: []
 ---

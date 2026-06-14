@@ -1,9 +1,5 @@
 ---
-id: cripple
 name: "Cripple"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

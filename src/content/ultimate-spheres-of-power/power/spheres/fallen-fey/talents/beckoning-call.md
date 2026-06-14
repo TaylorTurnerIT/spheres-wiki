@@ -1,9 +1,5 @@
 ---
-id: beckoning-call
 name: "Beckoning Call"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing", "utility"]
 ---

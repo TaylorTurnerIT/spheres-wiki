@@ -1,9 +1,5 @@
 ---
-id: "perturbing-fable"
 name: "Perturbing Fable"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

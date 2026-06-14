@@ -1,10 +1,6 @@
 ---
-id: incanter-divination-sub-specialization-tactician
 name: "Divination Sub-Specialization: Tactician"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: list-of-sphere-specializations
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "labyrinth-lord"
 name: "Labyrinth Lord"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "utility"

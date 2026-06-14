@@ -1,9 +1,5 @@
 ---
-id: "temporal-snare"
 name: "Temporal Snare"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "advanced"
 tags:
   - "snare"

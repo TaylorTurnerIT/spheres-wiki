@@ -1,9 +1,5 @@
 ---
-id: tornado-lord
 name: "Tornado Lord"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

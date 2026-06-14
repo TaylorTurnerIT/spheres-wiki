@@ -1,9 +1,5 @@
 ---
-id: "assess-physicality"
 name: "Assess Physicality"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

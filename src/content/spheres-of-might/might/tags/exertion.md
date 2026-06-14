@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "exertion"
 label: "Exertion"
 sphere: "berserker"
 priority: 0

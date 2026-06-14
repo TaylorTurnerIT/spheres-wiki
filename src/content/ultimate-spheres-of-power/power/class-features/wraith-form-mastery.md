@@ -1,8 +1,6 @@
 ---
-id: wraith-form-mastery
 name: "Wraith Form Mastery"
 type: class-feature
-system: power
 className: wraith
 level: 20
 tags: []

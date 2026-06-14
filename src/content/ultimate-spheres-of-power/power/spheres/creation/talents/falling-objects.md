@@ -1,9 +1,5 @@
 ---
-id: falling-objects
 name: "Falling Objects"
-type: talent
-system: power
-sphere: creation
 tier: basic
 tags: []
 ---

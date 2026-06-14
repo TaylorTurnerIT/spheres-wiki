@@ -1,9 +1,5 @@
 ---
-id: mass-time
 name: "Mass Time"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["mass"]
 ---

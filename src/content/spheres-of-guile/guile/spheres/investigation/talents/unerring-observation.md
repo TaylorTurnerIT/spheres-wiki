@@ -1,9 +1,5 @@
 ---
-id: "unerring-observation"
 name: "Unerring Observation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "advanced"
 tags:
   - "utility"

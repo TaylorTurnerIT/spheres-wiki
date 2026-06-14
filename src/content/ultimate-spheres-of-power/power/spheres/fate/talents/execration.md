@@ -1,9 +1,5 @@
 ---
-id: execration
 name: "Execration"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: command-undead
 name: "Command Undead"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike"]
 ---

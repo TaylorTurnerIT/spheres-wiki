@@ -1,9 +1,5 @@
 ---
-id: gift-of-insight
 name: "Gift of Insight"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "forlorn-knell"
 name: "Forlorn Knell"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

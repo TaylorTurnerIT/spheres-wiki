@@ -1,9 +1,5 @@
 ---
-id: "warning"
 name: "Warning"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

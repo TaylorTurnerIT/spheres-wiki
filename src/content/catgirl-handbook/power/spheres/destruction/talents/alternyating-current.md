@@ -1,9 +1,5 @@
 ---
-id: alternyating-current
 name: "Alternyating Current"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "electricity"]
 ---

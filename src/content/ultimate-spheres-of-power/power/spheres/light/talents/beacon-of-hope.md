@@ -1,9 +1,5 @@
 ---
-id: beacon-of-hope
 name: "Beacon Of Hope"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

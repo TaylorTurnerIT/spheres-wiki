@@ -1,8 +1,5 @@
 ---
-id: hypnotic-darkness
 name: Hypnotic Darkness
-type: feat
-system: power
 sphere: mind
 dualSphere: dark
 tier: feat

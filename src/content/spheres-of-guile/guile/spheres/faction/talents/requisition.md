@@ -1,9 +1,5 @@
 ---
-id: "requisition"
 name: "Requisition"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "base"
 tags: []
 ---

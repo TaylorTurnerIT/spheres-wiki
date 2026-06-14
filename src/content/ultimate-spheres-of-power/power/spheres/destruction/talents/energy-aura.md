@@ -1,9 +1,5 @@
 ---
-id: energy-aura
 name: "Energy Aura"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "palm-block"
 name: "Palm Block"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

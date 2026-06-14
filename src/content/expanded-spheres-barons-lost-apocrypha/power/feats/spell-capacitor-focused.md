@@ -1,8 +1,5 @@
 ---
-id: spell-capacitor-focused
 name: "Spell Capacitor, Focused"
-type: feat
-system: power
 sphere: time
 tags: []
 tier: feat

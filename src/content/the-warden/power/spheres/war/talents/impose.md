@@ -1,9 +1,5 @@
 ---
-id: impose
 name: "Impose"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mandate", "warden"]
 ---

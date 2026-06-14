@@ -1,9 +1,5 @@
 ---
-id: "speculate-affairs"
 name: "Speculate Affairs"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "theory"

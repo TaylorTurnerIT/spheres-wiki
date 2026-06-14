@@ -1,9 +1,5 @@
 ---
-id: "net"
 name: "Net"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags:
   - "dart"

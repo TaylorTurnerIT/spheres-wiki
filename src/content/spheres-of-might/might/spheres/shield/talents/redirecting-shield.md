@@ -1,9 +1,5 @@
 ---
-id: "redirecting-shield"
 name: "Redirecting Shield"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags:
   - "deflect"

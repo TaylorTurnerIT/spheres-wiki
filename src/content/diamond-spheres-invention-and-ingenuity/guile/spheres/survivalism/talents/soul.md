@@ -1,9 +1,5 @@
 ---
-id: "soul"
 name: "Soul"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "harvest"

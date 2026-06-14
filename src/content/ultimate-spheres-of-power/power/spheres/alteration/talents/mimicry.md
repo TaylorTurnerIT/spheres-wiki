@@ -1,9 +1,5 @@
 ---
-id: mimicry
 name: "Mimicry"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "ground-game"
 name: "Ground Game"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

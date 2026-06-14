@@ -1,9 +1,5 @@
 ---
-id: "concentrated-burst"
 name: "Concentrated Burst"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "sniper"
 tier: "basic"
 tags: []
 ---

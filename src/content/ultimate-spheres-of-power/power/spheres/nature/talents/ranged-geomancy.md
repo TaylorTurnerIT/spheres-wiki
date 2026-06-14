@@ -1,9 +1,5 @@
 ---
-id: ranged-geomancy
 name: "Ranged Geomancy"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["range"]
 ---

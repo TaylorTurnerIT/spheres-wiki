@@ -1,9 +1,5 @@
 ---
-id: portal-interstice
 name: "Portal Interstice"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["sm"]
 ---

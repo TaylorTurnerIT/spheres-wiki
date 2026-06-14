@@ -1,10 +1,6 @@
 ---
-id: shifter-combat-talent
 name: "Combat Talent"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 ---
 

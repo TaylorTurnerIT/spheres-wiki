@@ -1,9 +1,5 @@
 ---
-id: "weaponmaster"
 name: "Weaponmaster"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

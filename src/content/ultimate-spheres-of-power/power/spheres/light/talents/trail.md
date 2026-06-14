@@ -1,9 +1,5 @@
 ---
-id: trail
 name: "Trail"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["nimbus"]
 ---

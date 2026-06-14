@@ -1,8 +1,5 @@
 ---
-id: defensive-proxies
 name: "Defensive Proxies"
-type: feat
-system: power
 sphere: enhancement
 tags: ["proxy"]
 tier: feat

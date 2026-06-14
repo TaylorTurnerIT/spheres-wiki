@@ -1,9 +1,5 @@
 ---
-id: "slip-and-strike"
 name: "Slip And Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

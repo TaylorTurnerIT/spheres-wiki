@@ -1,9 +1,5 @@
 ---
-id: armored-companion
 name: "Armored Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

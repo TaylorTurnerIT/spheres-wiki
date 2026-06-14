@@ -1,9 +1,5 @@
 ---
-id: "palm-throw"
 name: "Palm Throw"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

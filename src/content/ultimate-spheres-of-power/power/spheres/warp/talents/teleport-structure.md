@@ -1,9 +1,5 @@
 ---
-id: teleport-structure
 name: "Teleport Structure"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

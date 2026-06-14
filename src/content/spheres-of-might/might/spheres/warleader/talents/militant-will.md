@@ -1,9 +1,5 @@
 ---
-id: "militant-will"
 name: "Militant Will"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

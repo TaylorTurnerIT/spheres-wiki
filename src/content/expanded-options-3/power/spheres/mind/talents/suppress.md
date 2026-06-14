@@ -1,9 +1,5 @@
 ---
-id: suppress
 name: "Suppress"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["cloud"]
 ---

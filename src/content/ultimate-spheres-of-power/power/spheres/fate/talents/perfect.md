@@ -1,9 +1,5 @@
 ---
-id: perfect
 name: "Perfect"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["word"]
 ---

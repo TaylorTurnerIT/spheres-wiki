@@ -1,9 +1,5 @@
 ---
-id: "rhapsodic-trance"
 name: "Rhapsodic Trance"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: subterranean-transformation
 name: "Subterranean Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["transformation"]
 ---

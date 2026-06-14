@@ -1,9 +1,5 @@
 ---
-id: phantom-pain
 name: "Phantom Pain"
-system: power
-type: talent
-sphere: illusion
 tier: advanced
 tags: []
 ---

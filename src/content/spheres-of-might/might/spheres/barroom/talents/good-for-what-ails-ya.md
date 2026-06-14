@@ -1,9 +1,5 @@
 ---
-id: "good-for-what-ails-ya"
 name: "Good For What Ails Ya"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "advanced"
 tags: []
 ---

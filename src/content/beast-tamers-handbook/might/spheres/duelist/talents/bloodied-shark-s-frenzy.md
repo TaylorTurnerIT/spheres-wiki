@@ -1,9 +1,5 @@
 ---
-id: "bloodied-shark-s-frenzy"
 name: "Bloodied Shark’s Frenzy"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

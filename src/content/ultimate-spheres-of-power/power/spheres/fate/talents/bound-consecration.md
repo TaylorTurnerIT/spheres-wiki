@@ -1,9 +1,5 @@
 ---
-id: bound-consecration
 name: "Bound Consecration"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: []
 ---

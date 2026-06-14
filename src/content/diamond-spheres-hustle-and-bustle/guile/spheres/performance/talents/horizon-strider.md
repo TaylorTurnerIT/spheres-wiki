@@ -1,9 +1,5 @@
 ---
-id: "horizon-strider"
 name: "Horizon Strider"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "dance"

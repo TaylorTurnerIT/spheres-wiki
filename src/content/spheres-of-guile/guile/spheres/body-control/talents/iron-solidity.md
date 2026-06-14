@@ -1,9 +1,5 @@
 ---
-id: "iron-solidity"
 name: "Iron Solidity"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags:
   - "supernatural"

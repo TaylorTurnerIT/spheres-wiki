@@ -1,9 +1,5 @@
 ---
-id: "avoid-hazard"
 name: "Avoid Hazard"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "theory"

@@ -1,9 +1,5 @@
 ---
-id: divine-future
 name: "Divine Future"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["divine"]
 ---

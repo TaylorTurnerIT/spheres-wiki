@@ -1,7 +1,5 @@
 ---
-id: master-courser
 name: Master Courser
-className: courser
 level: 20
 tags: []
 ---

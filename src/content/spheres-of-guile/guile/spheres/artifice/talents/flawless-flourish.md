@@ -1,9 +1,5 @@
 ---
-id: "flawless-flourish"
 name: "Flawless Flourish"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags: []
 ---

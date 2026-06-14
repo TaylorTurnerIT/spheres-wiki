@@ -1,9 +1,5 @@
 ---
-id: "steal-skill"
 name: "Steal Skill"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "advanced"
 tags:
   - "trick"

@@ -1,9 +1,5 @@
 ---
-id: adhesive-blast
 name: "Adhesive Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["acid", "blast-type"]
 ---

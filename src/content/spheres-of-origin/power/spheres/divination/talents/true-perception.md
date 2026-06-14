@@ -1,9 +1,5 @@
 ---
-id: true-perception
 name: "True Perception"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["sense"]
 ---

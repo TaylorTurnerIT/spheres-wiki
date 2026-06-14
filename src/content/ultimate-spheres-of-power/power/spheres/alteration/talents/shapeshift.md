@@ -1,9 +1,5 @@
 ---
-id: shapeshift
 name: "Shapeshift"
-system: power
-type: talent
-sphere: alteration
 tier: base
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: jump-scare
 name: "Jump Scare"
-type: feat
-system: power
 sphere: warp
 tags: []
 tier: feat

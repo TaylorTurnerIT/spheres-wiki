@@ -1,9 +1,5 @@
 ---
-id: "call-attention"
 name: "Call Attention"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

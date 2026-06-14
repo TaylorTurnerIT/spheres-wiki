@@ -1,9 +1,5 @@
 ---
-id: thick-darkness
 name: "Thick Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["darkness"]
 ---

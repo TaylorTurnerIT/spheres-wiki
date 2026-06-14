@@ -1,8 +1,5 @@
 ---
-id: aurora
 name: Aurora
-type: feat
-system: power
 sphere: weather
 dualSphere: light
 tier: feat

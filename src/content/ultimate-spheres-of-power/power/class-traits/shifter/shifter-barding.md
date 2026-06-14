@@ -1,10 +1,6 @@
 ---
-id: shifter-barding
 name: "Barding"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: shifter
 featureId: bestial-trait
 requires: "shifter 6"
 ---

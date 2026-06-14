@@ -1,9 +1,5 @@
 ---
-id: extended-command
 name: "Extended Command"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

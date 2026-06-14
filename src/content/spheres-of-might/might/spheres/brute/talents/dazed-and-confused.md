@@ -1,9 +1,5 @@
 ---
-id: "dazed-and-confused"
 name: "Dazed And Confused"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags:
   - "manhandle"

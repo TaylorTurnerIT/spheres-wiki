@@ -1,9 +1,5 @@
 ---
-id: ruin-into-resurgence
 name: "Ruin into Resurgence"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["vitality"]
 ---

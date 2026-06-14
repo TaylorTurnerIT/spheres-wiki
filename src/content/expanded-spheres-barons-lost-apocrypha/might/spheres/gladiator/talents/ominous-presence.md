@@ -1,9 +1,5 @@
 ---
-id: "ominous-presence"
 name: "Ominous Presence"
-type: "talent"
-sourceBook: "expanded-spheres-barons-lost-apocrypha"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

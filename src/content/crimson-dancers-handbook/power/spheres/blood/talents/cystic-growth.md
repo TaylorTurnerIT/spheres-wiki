@@ -1,9 +1,5 @@
 ---
-id: cystic-growth
 name: "Cystic Growth"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["blood-art", "still"]
 ---

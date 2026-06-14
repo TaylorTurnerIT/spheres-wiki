@@ -1,9 +1,5 @@
 ---
-id: totem-of-allegiance
 name: "Totem Of Allegiance"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: homeguard-magic
 name: Homeguard Magic
-type: feat
-system: power
 sphere: protection
 dualSphere: mana
 tier: feat

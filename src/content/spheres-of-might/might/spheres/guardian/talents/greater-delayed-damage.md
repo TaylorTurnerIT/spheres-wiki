@@ -1,9 +1,5 @@
 ---
-id: "greater-delayed-damage"
 name: "Greater Delayed Damage"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

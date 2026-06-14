@@ -1,9 +1,5 @@
 ---
-id: written-out-of-history
 name: "Written Out Of History"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: extradimensional-gullet
 name: "Extradimensional Gullet"
-type: feat
-system: power
 sphere: warp
 tags: ["combat"]
 tier: feat

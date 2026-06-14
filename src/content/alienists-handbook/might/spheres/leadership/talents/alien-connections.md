@@ -1,9 +1,5 @@
 ---
-id: "alien-connections"
 name: "Alien Connections"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "leadership"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "steady-gunner"
 name: "Steady Gunner"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

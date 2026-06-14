@@ -1,9 +1,5 @@
 ---
-id: totemic-emblem
 name: "Totemic Emblem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: thrown-pummel
 name: "Thrown Pummel"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["plant", "geomancing"]
 ---

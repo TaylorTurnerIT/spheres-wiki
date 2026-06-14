@@ -1,8 +1,5 @@
 ---
-id: wandering-spirit
 name: "Wandering Spirit"
-type: feat
-system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat

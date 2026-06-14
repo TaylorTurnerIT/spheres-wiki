@@ -1,9 +1,5 @@
 ---
-id: pair-of-myths
 name: "Pair Of Myths"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: []
 ---

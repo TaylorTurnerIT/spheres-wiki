@@ -1,9 +1,5 @@
 ---
-id: "anthropologist"
 name: "Anthropologist"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

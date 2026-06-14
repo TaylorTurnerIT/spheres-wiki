@@ -1,9 +1,5 @@
 ---
-id: lengthened-control
 name: "Lengthened Control"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: numb-mind
 name: "Numb Mind"
-type: feat
-system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat

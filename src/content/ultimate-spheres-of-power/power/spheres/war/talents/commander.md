@@ -1,9 +1,5 @@
 ---
-id: commander
 name: Commander
-system: power
-type: talent
-sphere: war
 tier: advanced
 tags:
   - trade

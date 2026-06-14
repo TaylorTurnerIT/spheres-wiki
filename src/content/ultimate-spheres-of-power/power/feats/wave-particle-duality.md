@@ -1,8 +1,5 @@
 ---
-id: wave-particle-duality
 name: Wave-Particle Duality
-type: feat
-system: power
 sphere: light
 dualSphere: illusion
 tier: feat

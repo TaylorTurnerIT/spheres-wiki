@@ -1,9 +1,5 @@
 ---
-id: "isolating-repartee"
 name: "Isolating Repartee"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "fencing"
 tier: "basic"
 tags:
   - "utility"

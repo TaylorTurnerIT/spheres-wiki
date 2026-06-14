@@ -1,9 +1,5 @@
 ---
-id: costly-creation
 name: "Costly Creation"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: []
 ---

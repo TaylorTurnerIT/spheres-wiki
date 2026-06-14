@@ -1,8 +1,5 @@
 ---
-id: time-thiefs-admixture
 name: "Time-Thief's Admixture"
-type: feat
-system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat

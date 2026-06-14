@@ -1,9 +1,5 @@
 ---
-id: "thunderous-clap"
 name: "Thunderous Clap"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "advanced"
 tags: []
 ---

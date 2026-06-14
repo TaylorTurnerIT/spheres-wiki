@@ -1,9 +1,5 @@
 ---
-id: admixture
 name: Admixture
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: []
 ---

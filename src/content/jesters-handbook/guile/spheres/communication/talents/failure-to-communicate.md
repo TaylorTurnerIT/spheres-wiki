@@ -1,9 +1,5 @@
 ---
-id: "failure-to-communicate"
 name: "Failure To Communicate"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "communication"
 tier: "advanced"
 tags:
   - "approach"

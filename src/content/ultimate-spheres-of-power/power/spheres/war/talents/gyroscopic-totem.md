@@ -1,9 +1,5 @@
 ---
-id: gyroscopic-totem
 name: "Gyroscopic Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: enmity
 name: "Enmity"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["curse", "word"]
 ---

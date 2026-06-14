@@ -1,9 +1,5 @@
 ---
-id: star-genesis
 name: "Star Genesis"
-system: power
-type: talent
-sphere: light
 tier: advanced
 tags: []
 ---

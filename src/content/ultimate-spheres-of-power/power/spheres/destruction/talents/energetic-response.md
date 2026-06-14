@@ -1,9 +1,5 @@
 ---
-id: energetic-response
 name: "Energetic Response"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: []
 ---

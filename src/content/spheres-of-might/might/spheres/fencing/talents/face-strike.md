@@ -1,9 +1,5 @@
 ---
-id: "face-strike"
 name: "Face Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags:
   - "exploit"

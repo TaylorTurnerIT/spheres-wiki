@@ -1,9 +1,5 @@
 ---
-id: "control-mishap"
 name: "Control Mishap"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "base"
 tags: []
 ---

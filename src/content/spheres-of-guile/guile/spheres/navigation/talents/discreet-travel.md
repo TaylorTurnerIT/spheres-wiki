@@ -1,9 +1,5 @@
 ---
-id: "discreet-travel"
 name: "Discreet Travel"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "acclimation"

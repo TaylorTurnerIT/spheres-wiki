@@ -1,10 +1,6 @@
 ---
-id: armorist-disruptive-defenses
 name: "Disruptive Defenses"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

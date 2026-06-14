@@ -1,8 +1,5 @@
 ---
-id: skillful-disappearance
 name: "Skillful Disappearance"
-type: feat
-system: power
 sphere: warp
 tags: []
 tier: feat

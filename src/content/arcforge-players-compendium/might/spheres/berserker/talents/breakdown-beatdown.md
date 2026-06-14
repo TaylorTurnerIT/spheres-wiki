@@ -1,9 +1,5 @@
 ---
-id: "breakdown-beatdown"
 name: "Breakdown Beatdown"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

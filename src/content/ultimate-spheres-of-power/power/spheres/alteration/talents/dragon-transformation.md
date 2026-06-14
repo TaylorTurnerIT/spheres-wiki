@@ -1,9 +1,5 @@
 ---
-id: dragon-transformation
 name: "Dragon Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["transformation"]
 ---

@@ -1,8 +1,6 @@
 ---
-id: convincing-ex
 name: "Convincing (Ex)"
 type: class-feature
-system: power
 className: eliciter
 level: 9
 tags: []

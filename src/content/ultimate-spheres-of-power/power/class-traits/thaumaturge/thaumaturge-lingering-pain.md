@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-lingering-pain
 name: "Lingering Pain"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

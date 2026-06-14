@@ -1,9 +1,5 @@
 ---
-id: brutalizing-shunt
 name: "Brutalizing Shunt"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

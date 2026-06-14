@@ -1,9 +1,5 @@
 ---
-id: divine-relationships
 name: "Divine Relationships"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["utility", "divine"]
 ---

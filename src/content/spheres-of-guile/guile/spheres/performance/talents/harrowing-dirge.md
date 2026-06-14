@@ -1,9 +1,5 @@
 ---
-id: "harrowing-dirge"
 name: "Harrowing Dirge"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

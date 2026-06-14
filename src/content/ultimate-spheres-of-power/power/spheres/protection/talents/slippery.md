@@ -1,9 +1,5 @@
 ---
-id: slippery
 name: "Slippery"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis"]
 ---

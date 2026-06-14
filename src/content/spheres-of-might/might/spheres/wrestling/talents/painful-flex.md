@@ -1,9 +1,5 @@
 ---
-id: "painful-flex"
 name: "Painful Flex"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

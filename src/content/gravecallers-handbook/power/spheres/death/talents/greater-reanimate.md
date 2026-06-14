@@ -1,9 +1,5 @@
 ---
-id: greater-reanimate
 name: "Greater Reanimate"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

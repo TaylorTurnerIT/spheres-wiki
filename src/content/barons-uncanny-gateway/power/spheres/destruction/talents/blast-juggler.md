@@ -1,9 +1,5 @@
 ---
-id: blast-juggler
 name: "Blast Juggler"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["sm"]
 ---

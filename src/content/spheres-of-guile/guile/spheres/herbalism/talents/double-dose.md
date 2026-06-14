@@ -1,9 +1,5 @@
 ---
-id: "double-dose"
 name: "Double Dose"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags: []
 ---

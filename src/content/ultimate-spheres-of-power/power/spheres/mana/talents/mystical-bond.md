@@ -1,9 +1,5 @@
 ---
-id: mystical-bond
 name: "Mystical Bond"
-type: talent
-system: power
-sphere: mana
 tier: basic
 tags: ["manabond"]
 ---

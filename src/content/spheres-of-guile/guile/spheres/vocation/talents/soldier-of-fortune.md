@@ -1,9 +1,5 @@
 ---
-id: "soldier-of-fortune"
 name: "Soldier Of Fortune"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

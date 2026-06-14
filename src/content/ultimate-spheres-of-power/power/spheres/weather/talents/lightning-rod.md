@@ -1,9 +1,5 @@
 ---
-id: lightning-rod
 name: "Lightning Rod"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "storm"]
 ---

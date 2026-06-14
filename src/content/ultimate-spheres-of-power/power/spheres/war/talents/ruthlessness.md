@@ -1,9 +1,5 @@
 ---
-id: ruthlessness
 name: "Ruthlessness"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mandate"]
 ---

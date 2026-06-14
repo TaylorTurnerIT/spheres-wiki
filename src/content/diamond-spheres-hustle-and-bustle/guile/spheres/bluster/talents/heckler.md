@@ -1,9 +1,5 @@
 ---
-id: "heckler"
 name: "Heckler"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "bluster"
 tier: "base"
 tags:
   - "package"

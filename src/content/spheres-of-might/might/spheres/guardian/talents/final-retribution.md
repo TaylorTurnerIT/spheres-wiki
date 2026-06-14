@@ -1,9 +1,5 @@
 ---
-id: "final-retribution"
 name: "Final Retribution"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "advanced"
 tags: []
 ---

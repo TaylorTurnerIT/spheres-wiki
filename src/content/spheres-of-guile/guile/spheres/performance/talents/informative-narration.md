@@ -1,9 +1,5 @@
 ---
-id: "informative-narration"
 name: "Informative Narration"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

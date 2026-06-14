@@ -1,8 +1,5 @@
 ---
-id: creation
 name: "Creation"
-system: power
-type: sphere
 icon: creation
 description: "You may alter and create physical materials."
 tags: []

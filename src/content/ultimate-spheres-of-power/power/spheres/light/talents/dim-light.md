@@ -1,9 +1,5 @@
 ---
-id: dim-light
 name: "Dim Light"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["lens"]
 ---

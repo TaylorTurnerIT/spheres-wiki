@@ -1,8 +1,5 @@
 ---
-id: floating-panoply
 name: "Floating Panoply"
-type: feat
-system: power
 sphere: telekinesis
 tags: []
 tier: feat

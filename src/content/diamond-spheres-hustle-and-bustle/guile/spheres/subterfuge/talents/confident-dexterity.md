@@ -1,9 +1,5 @@
 ---
-id: "confident-dexterity"
 name: "Confident Dexterity"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "utility"

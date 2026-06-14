@@ -1,9 +1,5 @@
 ---
-id: warping-strike
 name: "Warping Strike"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["strike"]
 ---

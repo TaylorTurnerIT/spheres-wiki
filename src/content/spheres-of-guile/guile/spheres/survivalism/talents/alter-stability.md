@@ -1,9 +1,5 @@
 ---
-id: "alter-stability"
 name: "Alter Stability"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "ground"

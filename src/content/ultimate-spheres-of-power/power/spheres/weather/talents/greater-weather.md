@@ -1,9 +1,5 @@
 ---
-id: greater-weather
 name: "Greater Weather"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: []
 ---

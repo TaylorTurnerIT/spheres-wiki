@@ -1,9 +1,5 @@
 ---
-id: parry
 name: "Parry"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: ["extraordinary"]
 ---

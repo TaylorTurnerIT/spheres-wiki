@@ -1,9 +1,5 @@
 ---
-id: shadowed-mien
 name: "Shadowed Mien"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["shadow"]
 ---

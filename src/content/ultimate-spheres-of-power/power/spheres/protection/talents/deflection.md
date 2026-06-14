@@ -1,9 +1,5 @@
 ---
-id: deflection
 name: "Deflection"
-type: talent
-system: power
-sphere: protection
 tier: basic
 tags: []
 ---

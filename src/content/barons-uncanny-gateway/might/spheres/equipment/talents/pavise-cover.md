@@ -1,9 +1,5 @@
 ---
-id: "pavise-cover"
 name: "Pavise Cover"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

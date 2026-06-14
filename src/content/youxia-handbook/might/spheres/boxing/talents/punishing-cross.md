@@ -1,9 +1,5 @@
 ---
-id: "punishing-cross"
 name: "Punishing Cross"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

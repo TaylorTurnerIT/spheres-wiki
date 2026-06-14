@@ -1,9 +1,5 @@
 ---
-id: "tunnel-vision"
 name: "Tunnel Vision"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "trick"

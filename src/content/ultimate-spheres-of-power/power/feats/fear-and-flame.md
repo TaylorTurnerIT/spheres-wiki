@@ -1,8 +1,5 @@
 ---
-id: fear-and-flame
 name: "Fear And Flame"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

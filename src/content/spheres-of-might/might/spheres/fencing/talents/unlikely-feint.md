@@ -1,9 +1,5 @@
 ---
-id: "unlikely-feint"
 name: "Unlikely Feint"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

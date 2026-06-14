@@ -1,9 +1,5 @@
 ---
-id: delay-pain
 name: "Delay Pain"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

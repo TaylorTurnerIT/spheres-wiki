@@ -1,9 +1,5 @@
 ---
-id: "soporific-nocturne"
 name: "Soporific Nocturne"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "instrumental"

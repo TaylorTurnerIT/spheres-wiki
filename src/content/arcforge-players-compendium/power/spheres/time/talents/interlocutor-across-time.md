@@ -1,9 +1,5 @@
 ---
-id: interlocutor-across-time
 name: "Interlocutor Across Time"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: []
 ---

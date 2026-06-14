@@ -1,9 +1,5 @@
 ---
-id: "catalyze-lost-magic"
 name: "Catalyze Lost Magic"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "advanced"
 tags:
   - "hack"

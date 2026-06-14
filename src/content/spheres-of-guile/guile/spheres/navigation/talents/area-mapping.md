@@ -1,9 +1,5 @@
 ---
-id: "area-mapping"
 name: "Area Mapping"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "plan"

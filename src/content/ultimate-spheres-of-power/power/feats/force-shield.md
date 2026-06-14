@@ -1,8 +1,5 @@
 ---
-id: force-shield
 name: "Force Shield"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat

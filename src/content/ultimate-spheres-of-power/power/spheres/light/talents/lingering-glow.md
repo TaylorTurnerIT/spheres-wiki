@@ -1,9 +1,5 @@
 ---
-id: lingering-glow
 name: "Lingering Glow"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "purposeful-training"
 name: "Purposeful Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "handle-animal"

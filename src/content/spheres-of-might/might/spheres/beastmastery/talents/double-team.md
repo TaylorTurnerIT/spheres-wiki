@@ -1,9 +1,5 @@
 ---
-id: "double-team"
 name: "Double Team"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

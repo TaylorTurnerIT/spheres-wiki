@@ -1,9 +1,5 @@
 ---
-id: reset-duration
 name: "Reset Duration"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["manipulate"]
 ---

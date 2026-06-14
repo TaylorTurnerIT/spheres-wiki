@@ -1,9 +1,5 @@
 ---
-id: "blitz-tactics"
 name: "Blitz Tactics"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "mass-handle"
 name: "Mass Handle"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "handle-animal"

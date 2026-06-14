@@ -1,10 +1,6 @@
 ---
-id: mageknight-penetrating-blow-core
 name: "Penetrating Blow [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

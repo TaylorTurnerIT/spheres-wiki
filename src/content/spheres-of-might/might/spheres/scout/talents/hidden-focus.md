@@ -1,9 +1,5 @@
 ---
-id: "hidden-focus"
 name: "Hidden Focus"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

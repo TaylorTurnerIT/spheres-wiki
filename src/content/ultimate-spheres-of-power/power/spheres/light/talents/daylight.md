@@ -1,9 +1,5 @@
 ---
-id: daylight
 name: "Daylight"
-system: power
-type: talent
-sphere: light
 tier: advanced
 tags: ["light"]
 ---

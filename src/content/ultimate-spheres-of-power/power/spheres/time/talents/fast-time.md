@@ -1,9 +1,5 @@
 ---
-id: fast-time
 name: "Fast Time"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

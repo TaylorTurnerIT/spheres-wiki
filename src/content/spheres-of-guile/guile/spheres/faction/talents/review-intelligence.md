@@ -1,9 +1,5 @@
 ---
-id: "review-intelligence"
 name: "Review Intelligence"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "approach"

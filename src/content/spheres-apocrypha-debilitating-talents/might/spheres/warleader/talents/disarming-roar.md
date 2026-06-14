@@ -1,9 +1,5 @@
 ---
-id: "disarming-roar"
 name: "Disarming Roar"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

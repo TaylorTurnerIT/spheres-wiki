@@ -1,9 +1,5 @@
 ---
-id: "misdirected-attack"
 name: "Misdirected Attack"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

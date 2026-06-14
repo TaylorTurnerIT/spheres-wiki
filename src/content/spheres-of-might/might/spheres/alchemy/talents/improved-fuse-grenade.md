@@ -1,9 +1,5 @@
 ---
-id: "improved-fuse-grenade"
 name: "Improved Fuse Grenade"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

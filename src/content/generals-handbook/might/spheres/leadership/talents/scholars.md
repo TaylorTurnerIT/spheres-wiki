@@ -1,9 +1,5 @@
 ---
-id: "scholars"
 name: "Scholars"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

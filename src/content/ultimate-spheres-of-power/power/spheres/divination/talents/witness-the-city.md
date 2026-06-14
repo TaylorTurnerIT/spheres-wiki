@@ -1,9 +1,5 @@
 ---
-id: witness-the-city
 name: "Witness The City"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["utility", "divine"]
 ---

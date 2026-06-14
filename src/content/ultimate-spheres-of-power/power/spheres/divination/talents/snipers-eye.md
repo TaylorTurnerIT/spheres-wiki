@@ -1,9 +1,5 @@
 ---
-id: snipers-eye
 name: "Sniper's Eye"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

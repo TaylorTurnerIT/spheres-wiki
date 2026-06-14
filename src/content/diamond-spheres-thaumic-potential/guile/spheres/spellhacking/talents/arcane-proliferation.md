@@ -1,9 +1,5 @@
 ---
-id: "arcane-proliferation"
 name: "Arcane Proliferation"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

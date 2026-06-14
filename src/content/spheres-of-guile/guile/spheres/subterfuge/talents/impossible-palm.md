@@ -1,9 +1,5 @@
 ---
-id: "impossible-palm"
 name: "Impossible Palm"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "advanced"
 tags:
   - "supernatural"

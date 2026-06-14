@@ -1,9 +1,5 @@
 ---
-id: totem-of-iron
 name: "Totem Of Iron"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

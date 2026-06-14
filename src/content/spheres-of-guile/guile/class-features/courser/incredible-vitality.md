@@ -1,7 +1,5 @@
 ---
-id: incredible-vitality
 name: Incredible Vitality
-className: courser
 level: 18
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "adept-hunter"
 name: "Adept Hunter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

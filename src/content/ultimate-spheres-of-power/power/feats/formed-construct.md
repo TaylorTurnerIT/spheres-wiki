@@ -1,8 +1,5 @@
 ---
-id: formed-construct
 name: Formed Construct
-type: feat
-system: power
 sphere: conjuration
 dualSphere: blood
 tier: feat

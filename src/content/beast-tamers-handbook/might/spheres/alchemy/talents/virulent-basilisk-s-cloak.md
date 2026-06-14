@@ -1,9 +1,5 @@
 ---
-id: "virulent-basilisk-s-cloak"
 name: "Virulent Basilisk’s Cloak"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "stance"

@@ -1,8 +1,5 @@
 ---
-id: careful-magic
 name: "Careful Magic"
-type: feat
-system: power
 sphere: enhancement
 tags: ["drawback"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "slipstream"
 name: "Slipstream"
-type: "talent"
-sourceBook: "the-warden"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "fly"

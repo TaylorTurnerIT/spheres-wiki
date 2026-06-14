@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "curse"
 label: "Curse"
 color: "#b91c1c"
 priority: 15

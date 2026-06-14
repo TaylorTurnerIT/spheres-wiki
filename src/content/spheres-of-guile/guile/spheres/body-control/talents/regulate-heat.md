@@ -1,9 +1,5 @@
 ---
-id: "regulate-heat"
 name: "Regulate Heat"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

@@ -1,8 +1,5 @@
 ---
-id: dimensional-athlete
 name: "Dimensional Athlete"
-type: feat
-system: power
 sphere: warp
 tags: ["champion"]
 tier: feat

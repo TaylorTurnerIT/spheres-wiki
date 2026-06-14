@@ -1,9 +1,5 @@
 ---
-id: "phasic-shot"
 name: "Phasic Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "advanced"
 tags: []
 ---

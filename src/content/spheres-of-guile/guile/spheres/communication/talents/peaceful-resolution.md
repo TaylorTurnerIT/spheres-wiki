@@ -1,9 +1,5 @@
 ---
-id: "peaceful-resolution"
 name: "Peaceful Resolution"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags: []
 ---

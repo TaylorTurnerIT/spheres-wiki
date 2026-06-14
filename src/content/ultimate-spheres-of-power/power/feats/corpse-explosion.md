@@ -1,8 +1,5 @@
 ---
-id: corpse-explosion
 name: Corpse Explosion
-type: feat
-system: power
 sphere: destruction
 dualSphere: death
 tier: feat

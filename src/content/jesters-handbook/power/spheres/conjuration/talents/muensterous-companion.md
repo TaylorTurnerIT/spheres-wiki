@@ -1,9 +1,5 @@
 ---
-id: muensterous-companion
 name: "Muensterous Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

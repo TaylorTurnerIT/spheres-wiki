@@ -1,9 +1,5 @@
 ---
-id: impact-burst
 name: "Impact Burst"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["sm"]
 ---

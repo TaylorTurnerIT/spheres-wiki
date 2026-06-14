@@ -1,9 +1,5 @@
 ---
-id: "skin-of-steel"
 name: "Skin of Steel"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents-2"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

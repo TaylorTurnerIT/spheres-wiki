@@ -1,9 +1,5 @@
 ---
-id: novel-deception
 name: "Novel Deception"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

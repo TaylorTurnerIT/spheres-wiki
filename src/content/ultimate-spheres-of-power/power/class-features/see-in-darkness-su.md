@@ -1,8 +1,6 @@
 ---
-id: see-in-darkness-su
 name: "See in Darkness (Su)"
 type: class-feature
-system: power
 className: fey-adept
 level: 14
 tags: []

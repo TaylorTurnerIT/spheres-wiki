@@ -1,9 +1,5 @@
 ---
-id: "impossible-escape"
 name: "Impossible Escape"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags:
   - "control"

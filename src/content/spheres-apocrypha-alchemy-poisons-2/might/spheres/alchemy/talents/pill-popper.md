@@ -1,9 +1,5 @@
 ---
-id: "pill-popper"
 name: "Pill Popper"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemy-poisons-2"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: snare-setter
 name: "Snare Setter"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

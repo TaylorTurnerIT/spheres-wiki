@@ -1,9 +1,5 @@
 ---
-id: "slowing-poison"
 name: "Slowing Poison"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-poisons"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

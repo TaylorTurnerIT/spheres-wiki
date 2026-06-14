@@ -1,9 +1,5 @@
 ---
-id: flexible-knowledge
 name: "Flexible Knowledge"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["manipulation"]
 ---

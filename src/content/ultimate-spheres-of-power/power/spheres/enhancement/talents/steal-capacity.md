@@ -1,9 +1,5 @@
 ---
-id: steal-capacity
 name: "Steal Capacity"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

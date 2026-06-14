@@ -1,8 +1,5 @@
 ---
-id: mind-over-matter
 name: "Mind Over Matter"
-type: feat
-system: power
 sphere: mind
 tags: ["combat"]
 tier: feat

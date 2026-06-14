@@ -1,9 +1,5 @@
 ---
-id: "noose"
 name: "Noose"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags:
   - "snare"

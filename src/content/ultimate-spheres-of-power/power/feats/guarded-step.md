@@ -1,8 +1,5 @@
 ---
-id: guarded-step
 name: Guarded Step
-type: feat
-system: power
 sphere: warp
 dualSphere: protection
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: precogniscent-resistance
 name: "Precogniscent Resistance"
-type: feat
-system: power
 sphere: divination
 tags: ["combat"]
 tier: feat

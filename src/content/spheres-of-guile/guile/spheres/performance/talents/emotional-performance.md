@@ -1,9 +1,5 @@
 ---
-id: "emotional-performance"
 name: "Emotional Performance"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "base"
 tags:
   - "package"

@@ -1,9 +1,5 @@
 ---
-id: hemokinesis
 name: "Hemokinesis"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

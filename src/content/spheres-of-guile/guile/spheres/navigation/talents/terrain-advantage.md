@@ -1,9 +1,5 @@
 ---
-id: "terrain-advantage"
 name: "Terrain Advantage"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "pathing"

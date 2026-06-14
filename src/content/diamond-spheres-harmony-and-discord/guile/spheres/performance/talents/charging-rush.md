@@ -1,9 +1,5 @@
 ---
-id: "charging-rush"
 name: "Charging Rush"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

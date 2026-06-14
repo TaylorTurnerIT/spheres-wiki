@@ -1,10 +1,6 @@
 ---
-id: armorist-shattering-armaments
 name: "Shattering Armaments"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

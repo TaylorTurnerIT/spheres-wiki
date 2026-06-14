@@ -1,9 +1,5 @@
 ---
-id: "toppling-dive"
 name: "Toppling Dive"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

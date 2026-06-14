@@ -1,9 +1,5 @@
 ---
-id: "improved-smoke-bomb"
 name: "Improved Smoke Bomb"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-formulae"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

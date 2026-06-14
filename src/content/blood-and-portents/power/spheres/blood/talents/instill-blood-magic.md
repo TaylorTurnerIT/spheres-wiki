@@ -1,9 +1,5 @@
 ---
-id: instill-blood-magic
 name: "Instill Blood Magic"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["instill"]
 ---

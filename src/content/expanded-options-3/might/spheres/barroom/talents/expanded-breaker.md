@@ -1,9 +1,5 @@
 ---
-id: "expanded-breaker"
 name: "Expanded Breaker"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: mind-shield
 name: "Mind Shield"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

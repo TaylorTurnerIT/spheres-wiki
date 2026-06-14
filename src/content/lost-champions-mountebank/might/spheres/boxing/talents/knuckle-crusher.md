@@ -1,9 +1,5 @@
 ---
-id: "knuckle-crusher"
 name: "Knuckle Crusher (counter)"
-type: "talent"
-sourceBook: "lost-champions-mountebank"
-sphere: "boxing"
 tier: "basic"
 tags: ["counter"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "worked-match"
 name: "Worked Match"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags:
   - "utility"

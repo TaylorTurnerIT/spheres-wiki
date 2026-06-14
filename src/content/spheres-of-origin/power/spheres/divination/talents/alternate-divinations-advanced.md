@@ -1,9 +1,5 @@
 ---
-id: alternate-divinations-advanced
 name: "Alternate Divinations, Advanced"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["sense"]
 ---

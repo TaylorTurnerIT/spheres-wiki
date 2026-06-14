@@ -1,9 +1,5 @@
 ---
-id: lethargy
 name: "Lethargy"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

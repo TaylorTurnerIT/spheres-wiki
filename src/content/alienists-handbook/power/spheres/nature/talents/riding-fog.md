@@ -1,9 +1,5 @@
 ---
-id: riding-fog
 name: "Riding Fog"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["geomancing", "water"]
 ---

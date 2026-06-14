@@ -1,9 +1,5 @@
 ---
-id: climatic-shift
 name: "Climatic Shift"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

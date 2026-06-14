@@ -1,9 +1,5 @@
 ---
-id: "moving-target"
 name: "Moving Target"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "motion"

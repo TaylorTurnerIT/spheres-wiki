@@ -1,8 +1,6 @@
 ---
-id: blessingblight
 name: "Blessing/Blight"
 type: class-feature
-system: power
 className: soul-weaver
 level: 2
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: "paired-proficiency"
 name: "Paired Proficiency"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

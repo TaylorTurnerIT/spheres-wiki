@@ -1,9 +1,5 @@
 ---
-id: gravity-wardwell
 name: "Gravity Ward/Well"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: banshees-sotto-voce
 name: "Banshee's Sotto Voce"
-type: feat
-system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat

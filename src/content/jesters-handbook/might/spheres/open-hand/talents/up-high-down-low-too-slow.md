@@ -1,9 +1,5 @@
 ---
-id: "up-high-down-low-too-slow"
 name: "Up High, Down Low, Too Slow"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

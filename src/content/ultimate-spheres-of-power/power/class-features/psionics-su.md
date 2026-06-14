@@ -1,8 +1,6 @@
 ---
-id: psionics-su
 name: "Psionics (Su)"
 type: class-feature
-system: power
 className: symbiat
 level: 7
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: "cone-of-death"
 name: "Cone Of Death"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "advanced"
 tags: []
 ---

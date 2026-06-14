@@ -1,10 +1,6 @@
 ---
-id: shifter-bite
 name: "Bite"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

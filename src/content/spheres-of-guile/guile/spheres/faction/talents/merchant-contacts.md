@@ -1,9 +1,5 @@
 ---
-id: "merchant-contacts"
 name: "Merchant Contacts"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

@@ -1,9 +1,5 @@
 ---
-id: "conditional-hack"
 name: "Conditional Hack"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "advanced"
 tags: []
 ---

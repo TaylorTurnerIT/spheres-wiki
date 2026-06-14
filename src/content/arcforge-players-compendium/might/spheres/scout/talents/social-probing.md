@@ -1,9 +1,5 @@
 ---
-id: "social-probing"
 name: "Social Probing"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

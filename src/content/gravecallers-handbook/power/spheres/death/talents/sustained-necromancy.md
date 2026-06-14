@@ -1,9 +1,5 @@
 ---
-id: sustained-necromancy
 name: "Sustained Necromancy"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

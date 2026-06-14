@@ -1,9 +1,5 @@
 ---
-id: manipulate-nature
 name: "Manipulate Nature"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["geomancing"]
 ---

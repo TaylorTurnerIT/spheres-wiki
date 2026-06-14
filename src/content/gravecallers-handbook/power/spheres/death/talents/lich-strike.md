@@ -1,9 +1,5 @@
 ---
-id: lich-strike
 name: "Lich Strike"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike"]
 ---

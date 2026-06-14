@@ -1,9 +1,5 @@
 ---
-id: "convenient-designs"
 name: "Convenient Designs"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

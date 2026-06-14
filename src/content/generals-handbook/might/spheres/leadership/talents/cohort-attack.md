@@ -1,9 +1,5 @@
 ---
-id: "cohort-attack"
 name: "Cohort Attack"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

@@ -1,9 +1,5 @@
 ---
-id: "a-gilded-tower"
 name: "A Gilded Tower"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "act"

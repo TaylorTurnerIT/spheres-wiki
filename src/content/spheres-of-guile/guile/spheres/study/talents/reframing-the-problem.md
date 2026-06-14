@@ -1,9 +1,5 @@
 ---
-id: "reframing-the-problem"
 name: "Reframing The Problem"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "complication"

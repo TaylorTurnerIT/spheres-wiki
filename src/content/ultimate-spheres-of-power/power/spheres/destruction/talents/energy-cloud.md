@@ -1,9 +1,5 @@
 ---
-id: energy-cloud
 name: "Energy Cloud"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["blast-shape"]
 ---

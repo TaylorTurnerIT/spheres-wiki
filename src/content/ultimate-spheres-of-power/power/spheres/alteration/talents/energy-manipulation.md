@@ -1,9 +1,5 @@
 ---
-id: energy-manipulation
 name: "Energy Manipulation"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

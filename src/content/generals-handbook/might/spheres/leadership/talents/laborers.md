@@ -1,9 +1,5 @@
 ---
-id: "laborers"
 name: "Laborers"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

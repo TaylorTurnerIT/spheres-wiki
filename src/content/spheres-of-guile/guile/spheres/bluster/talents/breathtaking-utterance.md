@@ -1,9 +1,5 @@
 ---
-id: "breathtaking-utterance"
 name: "Breathtaking Utterance"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "advanced"
 tags: []
 ---

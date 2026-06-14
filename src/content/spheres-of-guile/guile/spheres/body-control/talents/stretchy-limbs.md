@@ -1,9 +1,5 @@
 ---
-id: "stretchy-limbs"
 name: "Stretchy Limbs"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags: []
 ---

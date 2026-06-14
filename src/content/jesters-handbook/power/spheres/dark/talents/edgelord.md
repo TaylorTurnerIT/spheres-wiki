@@ -1,9 +1,5 @@
 ---
-id: edgelord
 name: "Edgelord"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["meld"]
 ---

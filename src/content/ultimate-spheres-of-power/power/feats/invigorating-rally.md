@@ -1,8 +1,5 @@
 ---
-id: invigorating-rally
 name: Invigorating Rally
-type: feat
-system: power
 sphere: war
 dualSphere: life
 tier: feat

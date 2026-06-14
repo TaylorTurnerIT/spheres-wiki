@@ -1,8 +1,5 @@
 ---
-id: superior-reanimation
 name: "Superior Reanimation"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

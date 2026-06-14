@@ -1,9 +1,5 @@
 ---
-id: intrinsic-shuffle
 name: "Intrinsic Shuffle"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

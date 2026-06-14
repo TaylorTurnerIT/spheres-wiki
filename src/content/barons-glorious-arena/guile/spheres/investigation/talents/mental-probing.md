@@ -1,9 +1,5 @@
 ---
-id: "mental-probing"
 name: "Mental Probing"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "investigation"
 tier: "base"
 tags:
   - "package"

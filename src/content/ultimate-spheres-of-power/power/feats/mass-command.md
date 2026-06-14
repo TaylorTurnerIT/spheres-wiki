@@ -1,8 +1,5 @@
 ---
-id: mass-command
 name: "Mass Command"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

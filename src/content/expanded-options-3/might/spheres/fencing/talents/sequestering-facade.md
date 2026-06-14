@@ -1,9 +1,5 @@
 ---
-id: "sequestering-facade"
 name: "Sequestering Facade"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "fencing"
 tier: "advanced"
 tags:
   - "stance"

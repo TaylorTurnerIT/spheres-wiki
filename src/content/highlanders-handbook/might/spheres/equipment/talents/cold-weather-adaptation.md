@@ -1,9 +1,5 @@
 ---
-id: "cold-weather-adaptation"
 name: "Cold-Weather Adaptation"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

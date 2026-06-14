@@ -1,9 +1,5 @@
 ---
-id: "improved-sneezing-powder"
 name: "Improved Sneezing Powder"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

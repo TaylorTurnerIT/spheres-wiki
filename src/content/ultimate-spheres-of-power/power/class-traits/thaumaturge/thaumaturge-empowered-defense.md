@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-empowered-defense
 name: "Empowered Defense"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

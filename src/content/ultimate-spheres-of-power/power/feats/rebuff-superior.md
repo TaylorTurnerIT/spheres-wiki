@@ -1,8 +1,5 @@
 ---
-id: rebuff-superior
 name: "Rebuff, Superior"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: gravetongue
 name: "Gravetongue"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["utility"]
 ---

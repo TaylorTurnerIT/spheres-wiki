@@ -1,8 +1,5 @@
 ---
-id: weird-assault
 name: "Weird Assault"
-type: feat
-system: power
 sphere: illusion
 tags: ["combat"]
 tier: feat

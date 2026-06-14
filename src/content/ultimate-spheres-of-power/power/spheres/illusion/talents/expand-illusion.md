@@ -1,9 +1,5 @@
 ---
-id: expand-illusion
 name: "Expand Illusion"
-system: power
-type: talent
-sphere: illusion
 tier: advanced
 tags: []
 ---

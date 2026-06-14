@@ -1,9 +1,5 @@
 ---
-id: "silent-activation"
 name: "Silent Activation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "utility"

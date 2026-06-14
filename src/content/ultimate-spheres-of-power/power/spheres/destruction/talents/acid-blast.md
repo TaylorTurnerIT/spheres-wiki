@@ -1,9 +1,5 @@
 ---
-id: acid-blast
 name: "Acid Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["acid", "blast-type"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "athlete"
 name: "Athlete"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

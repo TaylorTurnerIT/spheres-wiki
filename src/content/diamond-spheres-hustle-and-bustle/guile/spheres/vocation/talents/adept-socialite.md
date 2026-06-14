@@ -1,9 +1,5 @@
 ---
-id: "adept-socialite"
 name: "Adept Socialite"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

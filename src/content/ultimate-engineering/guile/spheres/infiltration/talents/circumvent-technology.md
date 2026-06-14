@@ -1,9 +1,5 @@
 ---
-id: "circumvent-technology"
 name: "Circumvent Technology"
-type: "talent"
-sourceBook: "ultimate-engineering"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "approach"

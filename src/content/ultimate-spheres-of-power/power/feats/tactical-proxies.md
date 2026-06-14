@@ -1,8 +1,5 @@
 ---
-id: tactical-proxies
 name: "Tactical Proxies"
-type: feat
-system: power
 sphere: enhancement
 tags: ["proxy"]
 tier: feat

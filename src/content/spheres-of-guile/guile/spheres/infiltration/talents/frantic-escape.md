@@ -1,9 +1,5 @@
 ---
-id: "frantic-escape"
 name: "Frantic Escape"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "utility"

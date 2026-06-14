@@ -1,9 +1,5 @@
 ---
-id: "belt-cutter"
 name: "Belt Cutter"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags:
   - "exploit"

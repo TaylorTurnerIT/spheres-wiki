@@ -1,9 +1,5 @@
 ---
-id: "long-cuts"
 name: "Long Cuts"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

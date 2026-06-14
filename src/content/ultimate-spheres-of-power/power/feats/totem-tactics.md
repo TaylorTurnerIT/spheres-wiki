@@ -1,8 +1,5 @@
 ---
-id: totem-tactics
 name: "Totem Tactics"
-type: feat
-system: power
 sphere: war
 tags: ["combat"]
 tier: feat

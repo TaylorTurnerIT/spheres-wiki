@@ -1,9 +1,5 @@
 ---
-id: elemental-creature
 name: "Elemental Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

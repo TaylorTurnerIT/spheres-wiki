@@ -1,10 +1,6 @@
 ---
-id: shifter-track-master
 name: "Track Master"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

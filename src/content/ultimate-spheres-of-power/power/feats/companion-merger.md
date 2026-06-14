@@ -1,8 +1,5 @@
 ---
-id: companion-merger
 name: "Companion Merger"
-type: feat
-system: power
 sphere: alteration
 tags: []
 tier: feat

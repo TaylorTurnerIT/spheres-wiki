@@ -1,9 +1,5 @@
 ---
-id: blinding-beauty
 name: "Blinding Beauty"
-system: power
-type: talent
-sphere: fallen-fey
 tier: advanced
 tags: ["fey-blessing"]
 ---

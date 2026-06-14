@@ -1,9 +1,5 @@
 ---
-id: give-magic-life
 name: "Give Magic Life"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: []
 ---

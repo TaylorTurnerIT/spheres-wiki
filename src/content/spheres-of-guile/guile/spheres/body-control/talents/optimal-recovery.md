@@ -1,9 +1,5 @@
 ---
-id: "optimal-recovery"
 name: "Optimal Recovery"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags: []
 ---

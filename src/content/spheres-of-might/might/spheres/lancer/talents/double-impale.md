@@ -1,9 +1,5 @@
 ---
-id: "double-impale"
 name: "Double Impale"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: dark-slaughter
 name: "Dark Slaughter"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["meld"]
 ---

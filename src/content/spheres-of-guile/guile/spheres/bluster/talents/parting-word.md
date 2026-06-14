@@ -1,9 +1,5 @@
 ---
-id: "parting-word"
 name: "Parting Word"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags: []
 ---

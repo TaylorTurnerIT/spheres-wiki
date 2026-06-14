@@ -1,9 +1,5 @@
 ---
-id: rapid-glyph
 name: "Rapid Glyph"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

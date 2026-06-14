@@ -1,9 +1,5 @@
 ---
-id: "shattering-resonance"
 name: "Shattering Resonance"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "supernatural"

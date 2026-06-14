@@ -1,9 +1,5 @@
 ---
-id: cardiovascular-mastery
 name: "Cardiovascular Mastery"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["quicken", "still"]
 ---

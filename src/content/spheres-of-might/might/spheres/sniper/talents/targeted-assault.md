@@ -1,9 +1,5 @@
 ---
-id: "targeted-assault"
 name: "Targeted Assault"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags: []
 ---

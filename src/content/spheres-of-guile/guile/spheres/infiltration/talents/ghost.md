@@ -1,9 +1,5 @@
 ---
-id: "ghost"
 name: "Ghost"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "base"
 tags:
   - "package"

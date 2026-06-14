@@ -1,9 +1,5 @@
 ---
-id: mantle-of-spring
 name: "Mantle Of Spring"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

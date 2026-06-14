@@ -1,9 +1,5 @@
 ---
-id: alkali-blast
 name: "Alkali Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["acid", "blast-type"]
 ---

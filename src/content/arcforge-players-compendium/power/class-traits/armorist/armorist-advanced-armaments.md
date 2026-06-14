@@ -1,10 +1,6 @@
 ---
-id: armorist-advanced-armaments
 name: "Advanced Armaments"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

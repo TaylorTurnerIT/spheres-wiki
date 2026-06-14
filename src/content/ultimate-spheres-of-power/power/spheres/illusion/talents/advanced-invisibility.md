@@ -1,9 +1,5 @@
 ---
-id: advanced-invisibility
 name: "Advanced Invisibility"
-system: power
-type: talent
-sphere: illusion
 tier: advanced
 tags: []
 ---

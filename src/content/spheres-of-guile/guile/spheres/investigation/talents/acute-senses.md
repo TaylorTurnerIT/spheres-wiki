@@ -1,9 +1,5 @@
 ---
-id: "acute-senses"
 name: "Acute Senses"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "utility"

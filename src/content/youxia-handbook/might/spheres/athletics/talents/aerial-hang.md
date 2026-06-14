@@ -1,9 +1,5 @@
 ---
-id: "aerial-hang"
 name: "Aerial Hang"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "leap"

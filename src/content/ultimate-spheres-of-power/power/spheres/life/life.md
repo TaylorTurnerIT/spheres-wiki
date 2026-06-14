@@ -1,8 +1,5 @@
 ---
-id: life
 name: "Life"
-system: power
-type: sphere
 icon: life
 description: "You wield the powers of life. All Life sphere effects are subject to spell resistance."
 tags: []

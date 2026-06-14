@@ -1,9 +1,5 @@
 ---
-id: divine-knowledge
 name: "Divine Knowledge"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["utility", "divine"]
 ---

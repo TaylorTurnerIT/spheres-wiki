@@ -1,9 +1,5 @@
 ---
-id: sense-magic
 name: "Sense Magic"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

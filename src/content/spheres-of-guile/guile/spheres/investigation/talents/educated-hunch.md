@@ -1,9 +1,5 @@
 ---
-id: "educated-hunch"
 name: "Educated Hunch"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "base"
 tags:
   - "analyze"

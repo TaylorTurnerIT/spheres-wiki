@@ -1,10 +1,6 @@
 ---
-id: mageknight-ward-against-magic
 name: "Ward Against Magic"
-type: class-trait
-system: power
 tags: ["spell-like"]
-className: mageknight
 featureId: mystic-combat-su
 requires: "Protection sphere, Resist Magic class feature"
 ---

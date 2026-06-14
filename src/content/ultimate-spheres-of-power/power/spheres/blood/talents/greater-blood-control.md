@@ -1,9 +1,5 @@
 ---
-id: greater-blood-control
 name: "Greater Blood Control"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

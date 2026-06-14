@@ -1,9 +1,5 @@
 ---
-id: "philosopher"
 name: "Philosopher"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

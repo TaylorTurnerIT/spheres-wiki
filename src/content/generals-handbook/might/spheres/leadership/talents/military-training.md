@@ -1,9 +1,5 @@
 ---
-id: "military-training"
 name: "Military Training"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "utility"

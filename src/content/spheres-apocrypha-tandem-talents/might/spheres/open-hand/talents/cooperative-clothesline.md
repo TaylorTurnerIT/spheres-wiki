@@ -1,9 +1,5 @@
 ---
-id: "cooperative-clothesline"
 name: "Cooperative Clothesline"
-type: "talent"
-sourceBook: "spheres-apocrypha-tandem-talents"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

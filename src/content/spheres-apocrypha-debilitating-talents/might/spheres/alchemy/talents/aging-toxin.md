@@ -1,9 +1,5 @@
 ---
-id: "aging-toxin"
 name: "Aging Toxin"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "toxin"

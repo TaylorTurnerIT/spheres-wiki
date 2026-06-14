@@ -1,9 +1,5 @@
 ---
-id: "broad-scrutiny"
 name: "Broad Scrutiny"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "utility"

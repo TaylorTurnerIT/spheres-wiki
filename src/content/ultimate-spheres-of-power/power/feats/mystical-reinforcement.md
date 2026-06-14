@@ -1,8 +1,5 @@
 ---
-id: mystical-reinforcement
 name: "Mystical Reinforcement"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

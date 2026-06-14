@@ -1,9 +1,5 @@
 ---
-id: cruel-king
 name: "Cruel King"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

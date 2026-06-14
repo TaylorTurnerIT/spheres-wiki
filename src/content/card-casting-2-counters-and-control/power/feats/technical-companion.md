@@ -1,8 +1,5 @@
 ---
-id: technical-companion
 name: "Technical Companion"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

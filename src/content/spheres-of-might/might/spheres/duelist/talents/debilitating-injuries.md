@@ -1,9 +1,5 @@
 ---
-id: "debilitating-injuries"
 name: "Debilitating Injuries"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "bleed"

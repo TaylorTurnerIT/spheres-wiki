@@ -1,9 +1,5 @@
 ---
-id: "technician"
 name: "Technician"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

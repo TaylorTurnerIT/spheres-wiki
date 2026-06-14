@@ -1,9 +1,5 @@
 ---
-id: "piercing-wit"
 name: "Piercing Wit"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags: []
 ---

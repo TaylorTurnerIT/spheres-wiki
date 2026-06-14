@@ -1,8 +1,5 @@
 ---
-id: tides-of-war
 name: Tides Of War
-type: feat
-system: power
 sphere: war
 dualSphere: mana
 tier: feat

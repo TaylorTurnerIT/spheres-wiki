@@ -1,8 +1,5 @@
 ---
-id: gather-shadowstuff
 name: "Gather Shadowstuff"
-type: feat
-system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat

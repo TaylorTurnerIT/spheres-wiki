@@ -1,8 +1,5 @@
 ---
-id: "wrestling"
 name: "Wrestling"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "wrestling"
 tags: []
 sectionDefinitions:

@@ -1,9 +1,5 @@
 ---
-id: greater-invigorate
 name: "Greater Invigorate"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

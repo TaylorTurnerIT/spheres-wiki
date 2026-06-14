@@ -1,8 +1,6 @@
 ---
-id: master-invoker
 name: "Master Invoker"
 type: class-feature
-system: power
 className: thaumaturge
 level: 20
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: "domestic-botany"
 name: "Domestic Botany"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "utility"

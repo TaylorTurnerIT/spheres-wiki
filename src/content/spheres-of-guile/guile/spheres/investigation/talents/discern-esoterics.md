@@ -1,9 +1,5 @@
 ---
-id: "discern-esoterics"
 name: "Discern Esoterics"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

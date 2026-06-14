@@ -1,9 +1,5 @@
 ---
-id: fey-beauty
 name: "Fey Beauty"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing", "utility"]
 ---

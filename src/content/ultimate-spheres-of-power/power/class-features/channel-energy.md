@@ -1,8 +1,6 @@
 ---
-id: channel-energy
 name: "Channel Energy"
 type: class-feature
-system: power
 className: soul-weaver
 level: 1
 tags: []

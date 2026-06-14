@@ -1,9 +1,5 @@
 ---
-id: "marvelous-material-refinement"
 name: "Marvelous Material Refinement"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "artifice"
 tier: "advanced"
 tags: []
 ---

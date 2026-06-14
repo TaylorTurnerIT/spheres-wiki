@@ -1,9 +1,5 @@
 ---
-id: invigorating-blast
 name: "Invigorating Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "force"]
 ---

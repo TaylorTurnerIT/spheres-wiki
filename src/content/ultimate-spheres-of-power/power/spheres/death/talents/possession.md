@@ -1,9 +1,5 @@
 ---
-id: possession
 name: "Possession"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: ["spell-like"]
 ---

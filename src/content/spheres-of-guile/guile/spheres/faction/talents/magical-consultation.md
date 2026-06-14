@@ -1,9 +1,5 @@
 ---
-id: "magical-consultation"
 name: "Magical Consultation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

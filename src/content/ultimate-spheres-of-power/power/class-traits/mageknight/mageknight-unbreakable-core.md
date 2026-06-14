@@ -1,10 +1,6 @@
 ---
-id: mageknight-unbreakable-core
 name: "Unbreakable [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

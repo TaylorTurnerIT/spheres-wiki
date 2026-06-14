@@ -1,8 +1,5 @@
 ---
-id: forged-arcana
 name: "Forged Arcana"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

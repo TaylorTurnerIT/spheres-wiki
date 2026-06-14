@@ -1,9 +1,5 @@
 ---
-id: repress-element
 name: "Repress Element"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["geomancing"]
 ---

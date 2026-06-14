@@ -1,9 +1,5 @@
 ---
-id: "powerful-wings"
 name: "Powerful Wings"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "fly"

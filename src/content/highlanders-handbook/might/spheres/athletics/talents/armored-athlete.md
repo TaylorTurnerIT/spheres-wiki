@@ -1,9 +1,5 @@
 ---
-id: "armored-athlete"
 name: "Armored Athlete"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

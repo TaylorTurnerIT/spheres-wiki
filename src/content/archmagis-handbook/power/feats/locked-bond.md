@@ -1,8 +1,5 @@
 ---
-id: locked-bond
 name: Locked Bond
-type: feat
-system: power
 sphere: warp
 dualSphere: mana
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "sure-grip"
 name: "Sure Grip"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "climb"

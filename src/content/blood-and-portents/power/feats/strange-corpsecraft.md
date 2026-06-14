@@ -1,8 +1,5 @@
 ---
-id: strange-corpsecraft
 name: "Strange Corpsecraft"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

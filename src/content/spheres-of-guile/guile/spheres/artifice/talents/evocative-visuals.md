@@ -1,9 +1,5 @@
 ---
-id: "evocative-visuals"
 name: "Evocative Visuals"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

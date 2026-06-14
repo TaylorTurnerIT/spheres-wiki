@@ -1,9 +1,5 @@
 ---
-id: "field-repair"
 name: "Field Repair"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags: []
 ---

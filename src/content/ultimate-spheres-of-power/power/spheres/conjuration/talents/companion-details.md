@@ -1,9 +1,5 @@
 ---
-id: companion-details
 name: "Companion Details"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

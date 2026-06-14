@@ -1,9 +1,5 @@
 ---
-id: shadow-stash
 name: "Shadow Stash"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["utility"]
 ---

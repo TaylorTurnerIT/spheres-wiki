@@ -1,9 +1,5 @@
 ---
-id: barometric-mantle
 name: "Barometric Mantle"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["all", "mantle"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: mystic-generosity
 name: "Mystic Generosity"
-type: feat
-system: power
 sphere: enhancement
 tags: ["proxy"]
 tier: feat

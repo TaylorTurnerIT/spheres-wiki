@@ -1,9 +1,5 @@
 ---
-id: mark-of-judgment
 name: "Mark Of Judgment"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["curse"]
 ---

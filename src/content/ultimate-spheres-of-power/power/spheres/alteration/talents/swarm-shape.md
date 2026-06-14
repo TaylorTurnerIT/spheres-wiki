@@ -1,9 +1,5 @@
 ---
-id: swarm-shape
 name: "Swarm Shape"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

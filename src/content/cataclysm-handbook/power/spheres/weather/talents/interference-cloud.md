@@ -1,9 +1,5 @@
 ---
-id: interference-cloud
 name: "Interference Cloud"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: ["radiation", "shroud"]
 ---

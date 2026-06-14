@@ -1,9 +1,5 @@
 ---
-id: distort-size
 name: "Distort Size"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

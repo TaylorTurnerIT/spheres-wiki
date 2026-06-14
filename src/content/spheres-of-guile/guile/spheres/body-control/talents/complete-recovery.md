@@ -1,9 +1,5 @@
 ---
-id: "complete-recovery"
 name: "Complete Recovery"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags: []
 ---

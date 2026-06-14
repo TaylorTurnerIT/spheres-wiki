@@ -1,10 +1,6 @@
 ---
-id: mageknight-chronomantic-strike
 name: "Chronomantic Strike"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

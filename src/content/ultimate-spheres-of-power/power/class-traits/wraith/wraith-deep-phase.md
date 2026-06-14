@@ -1,10 +1,6 @@
 ---
-id: wraith-deep-phase
 name: "Deep Phase"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

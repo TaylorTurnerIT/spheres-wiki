@@ -1,9 +1,5 @@
 ---
-id: "endure-pain"
 name: "Endure Pain"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

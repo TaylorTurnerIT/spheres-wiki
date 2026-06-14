@@ -1,9 +1,5 @@
 ---
-id: "not-even-winded"
 name: "Not Even Winded"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "acclimation"

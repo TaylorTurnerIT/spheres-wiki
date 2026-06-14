@@ -1,9 +1,5 @@
 ---
-id: "featherlight-positioning"
 name: "Featherlight Positioning"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags:
   - "stance"

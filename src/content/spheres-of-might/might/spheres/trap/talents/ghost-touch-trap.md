@@ -1,9 +1,5 @@
 ---
-id: "ghost-touch-trap"
 name: "Ghost-Touch Trap"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "advanced"
 tags: []
 ---

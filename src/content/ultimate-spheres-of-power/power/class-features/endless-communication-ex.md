@@ -1,8 +1,6 @@
 ---
-id: endless-communication-ex
 name: "Endless Communication (Ex)"
 type: class-feature
-system: power
 className: shifter
 level: 15
 tags: []

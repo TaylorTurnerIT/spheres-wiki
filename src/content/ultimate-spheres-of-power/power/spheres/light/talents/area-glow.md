@@ -1,9 +1,5 @@
 ---
-id: area-glow
 name: "Area Glow"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

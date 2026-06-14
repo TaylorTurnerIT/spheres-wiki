@@ -1,9 +1,5 @@
 ---
-id: "restful-refuge"
 name: "Restful Refuge"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags: []
 ---

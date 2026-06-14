@@ -1,9 +1,5 @@
 ---
-id: faerie
 name: "Faerie?"
-type: talent
-system: power
-sphere: fallen-fey
 tier: basic
 tags: []
 ---

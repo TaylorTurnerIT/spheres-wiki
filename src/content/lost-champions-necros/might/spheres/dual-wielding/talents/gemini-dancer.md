@@ -1,9 +1,5 @@
 ---
-id: "gemini-dancer"
 name: "Gemini Dancer (stance)"
-type: "talent"
-sourceBook: "lost-champions-necros"
-sphere: "dual-wielding"
 tier: "basic"
 tags: ["stance"]
 ---

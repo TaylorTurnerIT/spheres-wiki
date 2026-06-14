@@ -1,9 +1,5 @@
 ---
-id: "astral-preparation"
 name: "Astral Preparation"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "supernatural"

@@ -1,8 +1,5 @@
 ---
-id: durable-objects
 name: "Durable Objects"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

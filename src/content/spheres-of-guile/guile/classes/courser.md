@@ -1,5 +1,4 @@
 ---
-id: courser
 name: "Courser"
 hitDie: 10
 alignment: "Any"

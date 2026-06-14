@@ -1,9 +1,5 @@
 ---
-id: "improved-liquid-ice"
 name: "Improved Liquid Ice"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-formulae"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

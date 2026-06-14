@@ -1,9 +1,5 @@
 ---
-id: "spinning-heel-kick"
 name: "Spinning Heel Kick"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

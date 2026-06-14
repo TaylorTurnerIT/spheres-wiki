@@ -1,10 +1,6 @@
 ---
-id: shifter-breath-weapon
 name: "Breath Weapon"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: shifter
 featureId: bestial-trait
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: extradimensional-capacity
 name: "Extradimensional Capacity"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["utility"]
 ---

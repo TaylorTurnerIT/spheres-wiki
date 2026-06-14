@@ -1,9 +1,5 @@
 ---
-id: divine-biohazard
 name: "Divine Biohazard"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["divine"]
 ---

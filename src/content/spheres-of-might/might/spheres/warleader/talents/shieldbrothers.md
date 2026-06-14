@@ -1,9 +1,5 @@
 ---
-id: "shieldbrothers"
 name: "Shieldbrothers"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

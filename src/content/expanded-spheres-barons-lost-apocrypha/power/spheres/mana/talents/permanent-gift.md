@@ -1,9 +1,5 @@
 ---
-id: permanent-gift
 name: "Permanent Gift"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

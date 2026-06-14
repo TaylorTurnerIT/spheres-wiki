@@ -1,9 +1,5 @@
 ---
-id: "tactical-hypothesis"
 name: "Tactical Hypothesis"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "study"
 tier: "advanced"
 tags:
   - "champion"

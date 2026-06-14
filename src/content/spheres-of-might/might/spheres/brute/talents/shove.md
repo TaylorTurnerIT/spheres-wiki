@@ -1,9 +1,6 @@
 ---
-id: "shove"
 name: "Shove"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

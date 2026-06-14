@@ -1,9 +1,5 @@
 ---
-id: heavy-expunge
 name: "Heavy Expunge"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

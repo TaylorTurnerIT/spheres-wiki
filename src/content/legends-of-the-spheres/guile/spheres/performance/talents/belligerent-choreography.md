@@ -1,9 +1,5 @@
 ---
-id: "belligerent-choreography"
 name: "Belligerent Choreography"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

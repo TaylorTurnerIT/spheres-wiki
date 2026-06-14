@@ -1,8 +1,5 @@
 ---
-id: web-mastery
 name: "Web Mastery"
-type: feat
-system: power
 sphere: alteration
 tags: ["combat", "combat", "companion"]
 tier: feat

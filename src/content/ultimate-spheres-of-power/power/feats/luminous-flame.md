@@ -1,8 +1,5 @@
 ---
-id: luminous-flame
 name: Luminous Flame
-type: feat
-system: power
 sphere: nature
 dualSphere: light
 tier: feat

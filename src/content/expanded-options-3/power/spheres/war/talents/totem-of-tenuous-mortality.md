@@ -1,9 +1,5 @@
 ---
-id: totem-of-tenuous-mortality
 name: "Totem Of Tenuous Mortality"
-system: power
-type: talent
-sphere: war
 tier: advanced
 tags: ["totem"]
 ---

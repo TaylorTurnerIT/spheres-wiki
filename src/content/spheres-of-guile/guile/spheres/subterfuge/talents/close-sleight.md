@@ -1,9 +1,5 @@
 ---
-id: "close-sleight"
 name: "Close Sleight"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags: []
 ---

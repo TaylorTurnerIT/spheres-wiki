@@ -1,9 +1,5 @@
 ---
-id: nothing-shall-bear-your-name
 name: "Nothing Shall Bear Your Name"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: age
 name: "Age"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

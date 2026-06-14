@@ -1,9 +1,5 @@
 ---
-id: "daunting"
 name: "Daunting"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

@@ -1,9 +1,5 @@
 ---
-id: outsider-body
 name: "Outsider Body"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["body"]
 ---

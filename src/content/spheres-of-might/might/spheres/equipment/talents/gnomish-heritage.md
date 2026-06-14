@@ -1,9 +1,5 @@
 ---
-id: "gnomish-heritage"
 name: "Gnomish Heritage"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

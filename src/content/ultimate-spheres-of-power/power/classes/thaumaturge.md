@@ -1,8 +1,5 @@
 ---
-id: thaumaturge
 name: "Thaumaturge"
-type: class
-system: power
 tags: []
 hitDie: 8
 alignment: "Any"

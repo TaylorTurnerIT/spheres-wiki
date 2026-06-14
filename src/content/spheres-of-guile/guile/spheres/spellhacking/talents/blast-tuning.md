@@ -1,9 +1,5 @@
 ---
-id: "blast-tuning"
 name: "Blast Tuning"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

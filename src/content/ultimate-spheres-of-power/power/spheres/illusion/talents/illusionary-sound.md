@@ -1,9 +1,5 @@
 ---
-id: illusionary-sound
 name: "Illusionary Sound"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["sensory", "sound"]
 ---

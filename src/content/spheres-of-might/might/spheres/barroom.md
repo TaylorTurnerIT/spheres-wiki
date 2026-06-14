@@ -1,8 +1,5 @@
 ---
-id: "barroom"
 name: "Barroom"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "barroom"
 tags: []
 sectionDefinitions:

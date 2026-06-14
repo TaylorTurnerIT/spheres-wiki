@@ -1,9 +1,5 @@
 ---
-id: idle-concentration
 name: "Idle Concentration"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

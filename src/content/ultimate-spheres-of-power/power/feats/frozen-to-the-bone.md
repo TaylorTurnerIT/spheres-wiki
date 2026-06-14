@@ -1,8 +1,5 @@
 ---
-id: frozen-to-the-bone
 name: "Frozen To The Bone"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

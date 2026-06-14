@@ -1,9 +1,5 @@
 ---
-id: "healing-poultice"
 name: "Healing Poultice"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

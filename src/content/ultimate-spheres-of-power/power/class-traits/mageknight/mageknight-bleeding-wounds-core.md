@@ -1,10 +1,6 @@
 ---
-id: mageknight-bleeding-wounds-core
 name: "Bleeding Wounds [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

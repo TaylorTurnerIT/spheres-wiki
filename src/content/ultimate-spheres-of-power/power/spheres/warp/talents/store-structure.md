@@ -1,9 +1,5 @@
 ---
-id: store-structure
 name: "Store Structure"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

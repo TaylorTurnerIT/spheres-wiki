@@ -1,9 +1,5 @@
 ---
-id: "survey-surroundings"
 name: "Survey Surroundings"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

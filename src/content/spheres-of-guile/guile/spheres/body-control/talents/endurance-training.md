@@ -1,9 +1,5 @@
 ---
-id: "endurance-training"
 name: "Endurance Training"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "utility"

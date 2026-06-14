@@ -1,8 +1,6 @@
 ---
-id: bonus-feats
 name: "Bonus Feats"
 type: class-feature
-system: power
 className: thaumaturge
 level: 4
 tags: []

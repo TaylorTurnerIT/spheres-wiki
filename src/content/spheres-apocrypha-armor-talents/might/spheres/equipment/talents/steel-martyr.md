@@ -1,9 +1,5 @@
 ---
-id: "steel-martyr"
 name: "Steel Martyr"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: skillful-force
 name: "Skillful Force"
-type: feat
-system: power
 sphere: telekinesis
 tags: []
 tier: feat

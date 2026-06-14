@@ -1,9 +1,5 @@
 ---
-id: blindfolded-oracle
 name: "Blindfolded Oracle"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

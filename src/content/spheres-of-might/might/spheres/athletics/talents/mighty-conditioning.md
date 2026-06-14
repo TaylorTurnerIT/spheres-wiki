@@ -1,9 +1,5 @@
 ---
-id: "mighty-conditioning"
 name: "Mighty Conditioning"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "utility"

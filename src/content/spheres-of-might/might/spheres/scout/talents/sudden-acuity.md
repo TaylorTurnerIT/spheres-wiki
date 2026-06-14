@@ -1,9 +1,5 @@
 ---
-id: "sudden-acuity"
 name: "Sudden Acuity"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

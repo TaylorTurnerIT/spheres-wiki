@@ -1,9 +1,5 @@
 ---
-id: cerebral-strike
 name: "Cerebral Strike"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

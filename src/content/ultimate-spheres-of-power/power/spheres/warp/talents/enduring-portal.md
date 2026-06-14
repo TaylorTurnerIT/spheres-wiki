@@ -1,9 +1,5 @@
 ---
-id: enduring-portal
 name: "Enduring Portal"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

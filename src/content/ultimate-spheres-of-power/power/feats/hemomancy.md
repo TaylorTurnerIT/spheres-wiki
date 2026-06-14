@@ -1,8 +1,5 @@
 ---
-id: hemomancy
 name: "Hemomancy"
-type: feat
-system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: tabulated-mind
 name: "Tabulated Mind"
-type: feat
-system: power
 sphere: divination
 tags: []
 tier: feat

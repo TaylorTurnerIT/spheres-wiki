@@ -1,9 +1,5 @@
 ---
-id: "expert-socialite"
 name: "Expert Socialite"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags:
   - "utility"

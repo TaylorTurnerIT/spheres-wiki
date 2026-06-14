@@ -1,9 +1,5 @@
 ---
-id: fairy-dust
 name: "Fairy Dust"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

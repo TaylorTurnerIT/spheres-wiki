@@ -1,8 +1,5 @@
 ---
-id: vampiric-disruption
 name: "Vampiric Disruption"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

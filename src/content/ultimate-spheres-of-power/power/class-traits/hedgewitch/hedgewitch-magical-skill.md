@@ -1,10 +1,6 @@
 ---
-id: hedgewitch-magical-skill
 name: "Magical Skill"
-type: class-trait
-system: power
 tags: []
-className: hedgewitch
 featureId: secret
 ---
 

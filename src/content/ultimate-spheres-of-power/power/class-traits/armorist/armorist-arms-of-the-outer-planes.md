@@ -1,10 +1,6 @@
 ---
-id: armorist-arms-of-the-outer-planes
 name: "Arms of the Outer Planes"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

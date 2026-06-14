@@ -1,9 +1,5 @@
 ---
-id: strategic-terrain
 name: Strategic Terrain
-type: talent
-sourceBook: diamond-spheres-harmony-and-discord
-sphere: survivalism
 dualSphere: warleader
 tier: advanced
 tags:

@@ -1,9 +1,5 @@
 ---
-id: ranged-blood-magic
 name: "Ranged Blood Magic"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["range"]
 ---

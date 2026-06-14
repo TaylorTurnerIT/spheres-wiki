@@ -1,9 +1,5 @@
 ---
-id: archmagis-methods
 name: "Archmagi's Methods"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["amp", "manipulation"]
 ---

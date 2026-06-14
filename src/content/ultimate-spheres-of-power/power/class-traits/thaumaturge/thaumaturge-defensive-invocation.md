@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-defensive-invocation
 name: "Defensive Invocation"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

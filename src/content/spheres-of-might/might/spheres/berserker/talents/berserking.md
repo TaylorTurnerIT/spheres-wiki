@@ -1,9 +1,6 @@
 ---
-id: "berserking"
 name: "Berserking"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

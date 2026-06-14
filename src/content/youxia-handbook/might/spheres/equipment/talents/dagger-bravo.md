@@ -1,9 +1,5 @@
 ---
-id: "dagger-bravo"
 name: "Dagger Bravo"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: bend-space
 name: "Bend Space"
-type: talent
-system: power
-sphere: warp
 tier: basic
 tags: []
 ---

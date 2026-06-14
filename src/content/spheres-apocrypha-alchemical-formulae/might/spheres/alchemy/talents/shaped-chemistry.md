@@ -1,9 +1,5 @@
 ---
-id: "shaped-chemistry"
 name: "Shaped Chemistry"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-formulae"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

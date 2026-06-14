@@ -1,9 +1,5 @@
 ---
-id: plane-manipulator
 name: "Plane Manipulator"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

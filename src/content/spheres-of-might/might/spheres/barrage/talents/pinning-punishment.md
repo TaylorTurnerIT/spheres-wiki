@@ -1,9 +1,5 @@
 ---
-id: "pinning-punishment"
 name: "Pinning Punishment"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags:
   - "blitz"

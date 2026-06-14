@@ -1,9 +1,5 @@
 ---
-id: charm
 name: Charm
-system: power
-type: talent
-sphere: mind
 tier: base
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "improved-flash-powder"
 name: "Improved Flash Powder"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

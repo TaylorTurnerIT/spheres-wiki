@@ -1,9 +1,5 @@
 ---
-id: "pack-attack"
 name: "Pack Attack"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

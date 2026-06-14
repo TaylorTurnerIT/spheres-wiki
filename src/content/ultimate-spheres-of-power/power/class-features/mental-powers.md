@@ -1,8 +1,6 @@
 ---
-id: mental-powers
 name: "Mental Powers"
 type: class-feature
-system: power
 className: symbiat
 level: 1
 tags: []

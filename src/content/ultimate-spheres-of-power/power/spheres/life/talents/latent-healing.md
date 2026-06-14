@@ -1,9 +1,5 @@
 ---
-id: latent-healing
 name: "Latent Healing"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

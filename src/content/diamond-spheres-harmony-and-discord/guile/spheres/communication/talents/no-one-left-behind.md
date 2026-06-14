@@ -1,9 +1,5 @@
 ---
-id: "no-one-left-behind"
 name: "No One Left Behind"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

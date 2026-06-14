@@ -1,9 +1,5 @@
 ---
-id: "explosive-fragility"
 name: "Explosive Fragility"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "sabotage"

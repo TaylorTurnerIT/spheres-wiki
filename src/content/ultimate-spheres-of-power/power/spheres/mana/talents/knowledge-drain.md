@@ -1,9 +1,5 @@
 ---
-id: knowledge-drain
 name: "Knowledge Drain"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: reincarnation
 name: "Reincarnation"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: ["utility"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "death-blossom"
 name: "Death Blossom"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "barrage"
 tier: "advanced"
 tags: []
 ---

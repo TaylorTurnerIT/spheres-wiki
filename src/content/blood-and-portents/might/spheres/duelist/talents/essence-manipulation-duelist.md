@@ -1,9 +1,5 @@
 ---
-id: "essence-manipulation-duelist"
 name: "Essence Manipulation"
-type: "talent"
-sourceBook: "blood-and-portents"
-sphere: "duelist"
 tier: "advanced"
 tags: []
 ---

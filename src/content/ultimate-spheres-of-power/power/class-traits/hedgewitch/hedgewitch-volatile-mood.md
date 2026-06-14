@@ -1,10 +1,6 @@
 ---
-id: hedgewitch-volatile-mood
 name: "Volatile Mood"
-type: class-trait
-system: power
 tags: []
-className: hedgewitch
 featureId: secret
 ---
 

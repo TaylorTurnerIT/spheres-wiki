@@ -1,9 +1,5 @@
 ---
-id: "shrapnel"
 name: "Shrapnel"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

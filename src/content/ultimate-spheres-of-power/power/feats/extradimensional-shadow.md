@@ -1,8 +1,5 @@
 ---
-id: extradimensional-shadow
 name: "Extradimensional Shadow"
-type: feat
-system: power
 sphere: warp
 tags: []
 tier: feat

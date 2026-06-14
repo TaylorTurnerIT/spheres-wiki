@@ -1,8 +1,5 @@
 ---
-id: martial-presence
 name: "Martial Presence"
-type: feat
-system: power
 sphere: war
 tags: ["combat"]
 tier: feat

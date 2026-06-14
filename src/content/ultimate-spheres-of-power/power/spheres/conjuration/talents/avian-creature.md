@@ -1,9 +1,5 @@
 ---
-id: avian-creature
 name: "Avian Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

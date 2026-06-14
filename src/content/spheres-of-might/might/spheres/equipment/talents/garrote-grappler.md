@@ -1,9 +1,5 @@
 ---
-id: "garrote-grappler"
 name: "Garrote Grappler"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: fog-mastery
 name: "Fog Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["water", "geomancing"]
 ---

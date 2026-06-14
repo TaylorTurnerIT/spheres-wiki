@@ -1,8 +1,6 @@
 ---
-id: domination-su
 name: "Domination (Su)"
 type: class-feature
-system: power
 className: eliciter
 level: 20
 tags: []

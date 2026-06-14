@@ -1,9 +1,5 @@
 ---
-id: "splitshot"
 name: "Splitshot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

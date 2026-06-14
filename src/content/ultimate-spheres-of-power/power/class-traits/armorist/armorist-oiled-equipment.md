@@ -1,10 +1,6 @@
 ---
-id: armorist-oiled-equipment
 name: "Oiled Equipment"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

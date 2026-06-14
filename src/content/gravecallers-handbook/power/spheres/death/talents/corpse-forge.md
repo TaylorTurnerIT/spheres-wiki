@@ -1,9 +1,5 @@
 ---
-id: corpse-forge
 name: "Corpse Forge"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: ["dominion"]
 ---

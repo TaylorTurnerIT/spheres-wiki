@@ -1,9 +1,5 @@
 ---
-id: "soul-sunder"
 name: "Soul Sunder"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "advanced"
 tags: []
 ---

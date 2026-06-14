@@ -1,9 +1,5 @@
 ---
-id: "enthusiastic-cheer"
 name: "Enthusiastic Cheer"
-type: "talent"
-sourceBook: "the-warden"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

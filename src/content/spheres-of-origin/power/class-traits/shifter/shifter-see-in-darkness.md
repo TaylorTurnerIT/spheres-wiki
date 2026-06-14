@@ -1,10 +1,6 @@
 ---
-id: shifter-see-in-darkness
 name: "See in Darkness"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: shifter
 featureId: bestial-trait
 requires: "darkvision, shifter 10"
 ---

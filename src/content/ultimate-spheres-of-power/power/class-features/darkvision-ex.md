@@ -1,8 +1,6 @@
 ---
-id: darkvision-ex
 name: "Darkvision (Ex)"
 type: class-feature
-system: power
 className: fey-adept
 level: 2
 tags: []

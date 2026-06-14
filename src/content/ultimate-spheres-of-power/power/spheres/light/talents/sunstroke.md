@@ -1,9 +1,5 @@
 ---
-id: sunstroke
 name: "Sunstroke"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

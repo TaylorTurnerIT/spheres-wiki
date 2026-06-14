@@ -1,9 +1,5 @@
 ---
-id: stabilizing-invigoration
 name: "Stabilizing Invigoration"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["warden"]
 ---

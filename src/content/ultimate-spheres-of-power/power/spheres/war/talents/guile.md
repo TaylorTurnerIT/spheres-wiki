@@ -1,9 +1,5 @@
 ---
-id: guile
 name: "Guile"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mandate"]
 ---

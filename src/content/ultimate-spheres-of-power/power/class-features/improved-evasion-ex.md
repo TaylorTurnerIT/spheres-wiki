@@ -1,8 +1,6 @@
 ---
-id: improved-evasion-ex
 name: "Improved Evasion (Ex)"
 type: class-feature
-system: power
 className: symbiat
 level: 9
 tags: []

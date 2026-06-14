@@ -1,9 +1,5 @@
 ---
-id: "immovable-object"
 name: "Immovable Object"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

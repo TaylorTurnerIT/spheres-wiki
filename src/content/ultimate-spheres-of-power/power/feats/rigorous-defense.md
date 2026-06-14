@@ -1,8 +1,5 @@
 ---
-id: rigorous-defense
 name: "Rigorous Defense"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

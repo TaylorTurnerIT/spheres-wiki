@@ -1,7 +1,5 @@
 ---
-id: courser-deep-wounds
 name: Deep Wounds
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 4"

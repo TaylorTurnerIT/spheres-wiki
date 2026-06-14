@@ -1,9 +1,5 @@
 ---
-id: "expert-saboteur"
 name: "Expert Saboteur"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags: []
 ---

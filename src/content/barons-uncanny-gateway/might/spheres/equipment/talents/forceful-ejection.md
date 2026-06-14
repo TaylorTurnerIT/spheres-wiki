@@ -1,9 +1,5 @@
 ---
-id: "forceful-ejection"
 name: "Forceful Ejection"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

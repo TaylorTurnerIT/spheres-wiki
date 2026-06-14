@@ -1,9 +1,5 @@
 ---
-id: "stubborn-serpent-s-coils"
 name: "Stubborn Serpent’s Coils"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

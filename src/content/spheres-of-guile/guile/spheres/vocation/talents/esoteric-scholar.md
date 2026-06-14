@@ -1,9 +1,5 @@
 ---
-id: "esoteric-scholar"
 name: "Esoteric Scholar"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

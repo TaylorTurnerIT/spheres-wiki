@@ -1,9 +1,5 @@
 ---
-id: bleeding-wounds
 name: "Bleeding Wounds"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike"]
 ---

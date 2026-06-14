@@ -1,9 +1,5 @@
 ---
-id: "unimpeded-positioning"
 name: "Unimpeded Positioning"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "food-poisoning"
 name: "Food Poisoning"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-poisons"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

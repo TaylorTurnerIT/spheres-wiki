@@ -1,9 +1,5 @@
 ---
-id: "hold-onto-life"
 name: "Hold Onto Life"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

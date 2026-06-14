@@ -1,9 +1,5 @@
 ---
-id: "hammerlock"
 name: "Hammerlock"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

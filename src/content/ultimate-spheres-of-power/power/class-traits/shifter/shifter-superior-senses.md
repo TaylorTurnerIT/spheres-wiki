@@ -1,10 +1,6 @@
 ---
-id: shifter-superior-senses
 name: "Superior Senses"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 requires: "shifter 10"
 ---

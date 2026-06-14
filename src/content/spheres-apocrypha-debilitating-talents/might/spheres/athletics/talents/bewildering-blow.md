@@ -1,9 +1,5 @@
 ---
-id: "bewildering-blow"
 name: "Bewildering Blow"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "motion"

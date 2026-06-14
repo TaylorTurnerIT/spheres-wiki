@@ -1,9 +1,5 @@
 ---
-id: "bell-ringer"
 name: "Bell-Ringer"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

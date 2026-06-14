@@ -1,9 +1,5 @@
 ---
-id: "judo-throw"
 name: "Judo Throw"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

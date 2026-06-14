@@ -1,9 +1,5 @@
 ---
-id: "innate-spellhacking"
 name: "Innate Spellhacking"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "utility"

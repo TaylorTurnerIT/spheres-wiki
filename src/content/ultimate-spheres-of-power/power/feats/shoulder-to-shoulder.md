@@ -1,8 +1,5 @@
 ---
-id: shoulder-to-shoulder
 name: "Shoulder To Shoulder"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

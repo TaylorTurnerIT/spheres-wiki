@@ -1,9 +1,5 @@
 ---
-id: "wind-reader"
 name: "Wind Reader"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

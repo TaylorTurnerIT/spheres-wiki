@@ -1,9 +1,5 @@
 ---
-id: morphic-weapon
 name: "Morphic Weapon"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["supernatural"]
 ---

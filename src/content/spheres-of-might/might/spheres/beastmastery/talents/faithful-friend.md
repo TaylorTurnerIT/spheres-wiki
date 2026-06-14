@@ -1,9 +1,5 @@
 ---
-id: "faithful-friend"
 name: "Faithful Friend"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

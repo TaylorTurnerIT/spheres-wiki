@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-divine-soul
 name: "Divine Soul"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

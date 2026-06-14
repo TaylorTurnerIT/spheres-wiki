@@ -1,9 +1,5 @@
 ---
-id: echoing-word
 name: "Echoing Word"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["mass"]
 ---

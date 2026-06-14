@@ -1,9 +1,5 @@
 ---
-id: "rattling-memory"
 name: "Rattling Memory"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "plan"

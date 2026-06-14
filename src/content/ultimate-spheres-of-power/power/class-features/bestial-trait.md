@@ -1,8 +1,6 @@
 ---
-id: bestial-trait
 name: "Bestial Trait"
 type: class-feature
-system: power
 className: shifter
 level: 2
 tags: []

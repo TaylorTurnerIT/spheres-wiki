@@ -1,9 +1,5 @@
 ---
-id: shadow-slick
 name: "Shadow Slick"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "shadow"]
 ---

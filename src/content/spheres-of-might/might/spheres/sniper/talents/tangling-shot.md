@@ -1,9 +1,5 @@
 ---
-id: "tangling-shot"
 name: "Tangling Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags:
   - "snipe"

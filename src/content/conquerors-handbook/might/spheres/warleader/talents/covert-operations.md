@@ -1,9 +1,5 @@
 ---
-id: "covert-operations"
 name: "Covert Operations"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

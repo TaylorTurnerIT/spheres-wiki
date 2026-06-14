@@ -1,9 +1,5 @@
 ---
-id: cascade-failure
 name: "Cascade Failure"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: []
 ---

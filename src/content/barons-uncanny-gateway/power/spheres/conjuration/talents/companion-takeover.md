@@ -1,9 +1,5 @@
 ---
-id: companion-takeover
 name: "Companion Takeover"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: ["sm"]
 ---

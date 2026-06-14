@@ -1,9 +1,5 @@
 ---
-id: "drop"
 name: "Drop"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags:
   - "manhandle"

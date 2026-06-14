@@ -1,9 +1,5 @@
 ---
-id: "subordinate-schemers"
 name: "Subordinate Schemers"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "plan"

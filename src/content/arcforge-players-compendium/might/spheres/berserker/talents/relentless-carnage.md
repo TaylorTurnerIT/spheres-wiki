@@ -1,9 +1,5 @@
 ---
-id: "relentless-carnage"
 name: "Relentless Carnage"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "berserker"
 tier: "advanced"
 tags: []
 ---

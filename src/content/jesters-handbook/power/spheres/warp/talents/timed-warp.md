@@ -1,9 +1,5 @@
 ---
-id: timed-warp
 name: "Timed Warp"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

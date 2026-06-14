@@ -1,8 +1,5 @@
 ---
-id: maintain-proxy
 name: "Maintain Proxy"
-type: feat
-system: power
 sphere: enhancement
 tags: ["proxy"]
 tier: feat

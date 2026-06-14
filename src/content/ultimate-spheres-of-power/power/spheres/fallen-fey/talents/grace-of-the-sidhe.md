@@ -1,9 +1,5 @@
 ---
-id: grace-of-the-sidhe
 name: "Grace Of The Sidhe"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

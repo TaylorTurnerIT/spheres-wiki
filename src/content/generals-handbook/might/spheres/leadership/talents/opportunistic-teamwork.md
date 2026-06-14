@@ -1,9 +1,5 @@
 ---
-id: "opportunistic-teamwork"
 name: "Opportunistic Teamwork"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

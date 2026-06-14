@@ -1,9 +1,5 @@
 ---
-id: blot-talents
 name: "Blot Talents"
-type: talent
-system: power
-sphere: dark
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: keep-it-moving
 name: "Keep It Moving"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "piercing-eye"
 name: "Piercing Eye"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

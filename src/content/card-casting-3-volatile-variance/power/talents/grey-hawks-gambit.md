@@ -1,9 +1,5 @@
 ---
-id: "grey-hawks-gambit"
 name: "Grey Hawk's Gambit"
-system: "power"
-sourceBook: "card-casting-3-volatile-variance"
-type: "talent"
 sphere: "time"
 tier: "advanced"
 tags: []

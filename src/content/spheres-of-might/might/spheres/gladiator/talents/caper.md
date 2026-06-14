@@ -1,9 +1,5 @@
 ---
-id: "caper"
 name: "Caper"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

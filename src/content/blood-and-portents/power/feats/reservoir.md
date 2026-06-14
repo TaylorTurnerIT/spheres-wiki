@@ -1,8 +1,5 @@
 ---
-id: reservoir
 name: "Reservoir"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

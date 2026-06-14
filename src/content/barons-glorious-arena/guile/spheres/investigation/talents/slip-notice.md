@@ -1,9 +1,5 @@
 ---
-id: "slip-notice"
 name: "Slip Notice"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "apply"

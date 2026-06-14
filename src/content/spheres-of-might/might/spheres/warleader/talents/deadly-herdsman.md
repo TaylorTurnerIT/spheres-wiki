@@ -1,9 +1,5 @@
 ---
-id: "deadly-herdsman"
 name: "Deadly Herdsman"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

@@ -1,9 +1,5 @@
 ---
-id: bleeding-battlefield
 name: "Bleeding Battlefield"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

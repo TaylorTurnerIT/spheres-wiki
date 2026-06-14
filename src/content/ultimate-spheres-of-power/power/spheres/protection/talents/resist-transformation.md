@@ -1,9 +1,5 @@
 ---
-id: resist-transformation
 name: "Resist Transformation"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis"]
 ---

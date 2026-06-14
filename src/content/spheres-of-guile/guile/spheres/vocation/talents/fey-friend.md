@@ -1,9 +1,5 @@
 ---
-id: "fey-friend"
 name: "Fey Friend"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

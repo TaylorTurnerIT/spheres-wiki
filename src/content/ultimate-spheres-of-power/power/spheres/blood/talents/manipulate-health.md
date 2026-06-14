@@ -1,9 +1,5 @@
 ---
-id: manipulate-health
 name: "Manipulate Health"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["quicken", "still"]
 ---

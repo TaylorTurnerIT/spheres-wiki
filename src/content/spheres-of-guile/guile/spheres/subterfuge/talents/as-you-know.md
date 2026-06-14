@@ -1,9 +1,5 @@
 ---
-id: "as-you-know"
 name: "As You Know"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "approach"

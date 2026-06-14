@@ -1,9 +1,5 @@
 ---
-id: "inimical-gaze"
 name: "Inimical Gaze"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "advanced"
 tags: []
 ---

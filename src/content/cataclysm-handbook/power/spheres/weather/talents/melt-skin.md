@@ -1,9 +1,5 @@
 ---
-id: melt-skin
 name: "Melt Skin"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: ["radiation", "shroud"]
 ---

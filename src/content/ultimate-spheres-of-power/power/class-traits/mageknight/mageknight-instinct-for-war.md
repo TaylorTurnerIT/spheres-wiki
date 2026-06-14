@@ -1,10 +1,6 @@
 ---
-id: mageknight-instinct-for-war
 name: "Instinct for War"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 requires: "War sphere"
 ---

@@ -1,9 +1,5 @@
 ---
-id: spell-linked-companions
 name: "Spell-Linked Companions"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: []
 ---

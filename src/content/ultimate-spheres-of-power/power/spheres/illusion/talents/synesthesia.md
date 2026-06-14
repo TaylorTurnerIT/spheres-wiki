@@ -1,9 +1,5 @@
 ---
-id: synesthesia
 name: "Synesthesia"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

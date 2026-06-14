@@ -1,9 +1,5 @@
 ---
-id: "entrails"
 name: "Entrails"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "harvest"

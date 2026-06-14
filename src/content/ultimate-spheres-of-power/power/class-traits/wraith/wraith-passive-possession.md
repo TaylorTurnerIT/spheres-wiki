@@ -1,10 +1,6 @@
 ---
-id: wraith-passive-possession
 name: "Passive Possession"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: possession-su
 ---
 

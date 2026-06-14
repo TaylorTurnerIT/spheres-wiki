@@ -1,8 +1,5 @@
 ---
-id: "scoundrel"
 name: "Scoundrel"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "scoundrel"
 tags: []
 sectionDefinitions:

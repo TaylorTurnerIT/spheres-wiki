@@ -1,9 +1,5 @@
 ---
-id: gift-of-knowledge
 name: "Gift Of Knowledge"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["manipulation"]
 ---

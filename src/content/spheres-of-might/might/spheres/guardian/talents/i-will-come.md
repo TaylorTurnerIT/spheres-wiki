@@ -1,9 +1,5 @@
 ---
-id: "i-will-come"
 name: "I Will Come"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "advanced"
 tags: []
 ---

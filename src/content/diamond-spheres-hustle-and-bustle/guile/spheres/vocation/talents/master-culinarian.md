@@ -1,9 +1,5 @@
 ---
-id: "master-culinarian"
 name: "Master Culinarian"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags: []
 ---

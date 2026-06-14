@@ -1,9 +1,5 @@
 ---
-id: "frightful-roar"
 name: "Frightful Roar"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

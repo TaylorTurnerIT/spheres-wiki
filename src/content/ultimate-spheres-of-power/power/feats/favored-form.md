@@ -1,8 +1,5 @@
 ---
-id: favored-form
 name: "Favored Form"
-type: feat
-system: power
 sphere: alteration
 tags: []
 tier: feat

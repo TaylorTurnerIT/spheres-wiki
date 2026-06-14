@@ -1,8 +1,5 @@
 ---
-id: swift-warrior
 name: "Swift Warrior"
-type: feat
-system: power
 sphere: time
 tags: ["combat"]
 tier: feat

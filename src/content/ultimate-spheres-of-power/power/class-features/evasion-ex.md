@@ -1,8 +1,6 @@
 ---
-id: evasion-ex
 name: "Evasion (Ex)"
 type: class-feature
-system: power
 className: symbiat
 level: 2
 tags: []

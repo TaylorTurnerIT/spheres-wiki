@@ -1,9 +1,5 @@
 ---
-id: reincarnation-manipulated
 name: "Reincarnation, Manipulated"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: ["utility"]
 ---

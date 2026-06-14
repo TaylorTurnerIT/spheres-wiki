@@ -1,9 +1,5 @@
 ---
-id: "dust-to-dust"
 name: "Dust To Dust"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "scout"
 tier: "advanced"
 tags: []
 ---

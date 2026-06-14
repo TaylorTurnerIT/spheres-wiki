@@ -1,9 +1,5 @@
 ---
-id: "sever"
 name: "Sever"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "advanced"
 tags:
   - "disarm"

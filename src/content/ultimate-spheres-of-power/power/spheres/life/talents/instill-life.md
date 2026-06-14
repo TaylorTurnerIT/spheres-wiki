@@ -1,9 +1,5 @@
 ---
-id: instill-life
 name: "Instill Life"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["instill"]
 ---

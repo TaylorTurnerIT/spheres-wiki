@@ -1,8 +1,5 @@
 ---
-id: "alchemy"
 name: "Alchemy"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "alchemy"
 tags: []
 sectionDefinitions:

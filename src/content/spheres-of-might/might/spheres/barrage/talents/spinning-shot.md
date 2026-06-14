@@ -1,9 +1,5 @@
 ---
-id: "spinning-shot"
 name: "Spinning Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags: []
 ---

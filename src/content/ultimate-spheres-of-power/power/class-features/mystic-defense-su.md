@@ -1,8 +1,6 @@
 ---
-id: mystic-defense-su
 name: "Mystic Defense (Su)"
 type: class-feature
-system: power
 className: mageknight
 level: 11
 tags: []

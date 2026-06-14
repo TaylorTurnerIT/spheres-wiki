@@ -1,7 +1,5 @@
 ---
-id: harrying-assault
 name: Harrying Assault
-className: courser
 level: 4
 tags: []
 ---

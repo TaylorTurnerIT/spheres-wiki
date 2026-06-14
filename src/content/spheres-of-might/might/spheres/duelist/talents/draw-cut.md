@@ -1,9 +1,5 @@
 ---
-id: "draw-cut"
 name: "Draw Cut"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

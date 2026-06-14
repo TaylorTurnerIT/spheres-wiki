@@ -1,9 +1,5 @@
 ---
-id: fey-initiation
 name: "Fey Initiation"
-system: power
-type: talent
-sphere: fallen-fey
 tier: advanced
 tags: []
 ---

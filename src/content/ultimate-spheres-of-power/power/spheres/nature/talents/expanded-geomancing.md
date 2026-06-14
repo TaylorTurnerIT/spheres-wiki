@@ -1,9 +1,5 @@
 ---
-id: expanded-geomancing
 name: "Expanded Geomancing"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: []
 ---

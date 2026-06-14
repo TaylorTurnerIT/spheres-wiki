@@ -1,9 +1,5 @@
 ---
-id: "pinning-shot"
 name: "Pinning Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags:
   - "snipe"

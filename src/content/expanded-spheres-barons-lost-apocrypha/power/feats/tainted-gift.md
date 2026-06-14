@@ -1,8 +1,5 @@
 ---
-id: tainted-gift
 name: "Tainted Gift"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

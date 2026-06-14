@@ -1,9 +1,5 @@
 ---
-id: bleed
 name: Bleed
-type: talent
-system: power
-sphere: blood
 tier: base
 tags:
   - quicken

@@ -1,9 +1,5 @@
 ---
-id: "ruthless-opportunist"
 name: "Ruthless Opportunist"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "duelist"
 tier: "basic"
 ---
 

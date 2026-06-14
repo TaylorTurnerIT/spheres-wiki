@@ -1,9 +1,5 @@
 ---
-id: sense-observation
 name: "Sense Observation"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["sense"]
 ---

@@ -1,8 +1,6 @@
 ---
-id: elemental-defense-su
 name: "Elemental Defense (Su)"
 type: class-feature
-system: power
 className: elementalist
 level: 5
 tags: []

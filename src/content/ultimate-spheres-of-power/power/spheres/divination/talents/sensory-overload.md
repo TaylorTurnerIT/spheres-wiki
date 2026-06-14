@@ -1,9 +1,5 @@
 ---
-id: sensory-overload
 name: "Sensory Overload"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["divine"]
 ---

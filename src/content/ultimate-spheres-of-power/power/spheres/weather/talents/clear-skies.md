@@ -1,9 +1,5 @@
 ---
-id: clear-skies
 name: "Clear Skies"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["all", "mantle"]
 ---

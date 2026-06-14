@@ -1,9 +1,5 @@
 ---
-id: "traitorous-blade"
 name: "Traitorous Blade"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "disarm"

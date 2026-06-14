@@ -1,9 +1,5 @@
 ---
-id: "necrotic-suffusion"
 name: "Necrotic Suffusion"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "advanced"
 tags:
   - "tonic"

@@ -1,8 +1,5 @@
 ---
-id: deathknights-purchase
 name: "Deathknight's Purchase"
-type: feat
-system: power
 sphere: death
 tags: ["combat", "necrosis"]
 tier: feat

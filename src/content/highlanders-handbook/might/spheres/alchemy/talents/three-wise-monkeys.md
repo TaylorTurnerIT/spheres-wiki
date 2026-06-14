@@ -1,9 +1,5 @@
 ---
-id: "three-wise-monkeys"
 name: "Three Wise Monkeys"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

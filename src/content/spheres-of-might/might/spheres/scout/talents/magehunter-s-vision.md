@@ -1,9 +1,5 @@
 ---
-id: "magehunter-s-vision"
 name: "Magehunter’s Vision"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "advanced"
 tags:
   - "utility"

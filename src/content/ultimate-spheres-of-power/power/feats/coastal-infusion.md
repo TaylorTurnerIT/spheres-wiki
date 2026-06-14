@@ -1,8 +1,5 @@
 ---
-id: coastal-infusion
 name: "Coastal Infusion"
-type: feat
-system: power
 sphere: nature
 tags: []
 tier: feat

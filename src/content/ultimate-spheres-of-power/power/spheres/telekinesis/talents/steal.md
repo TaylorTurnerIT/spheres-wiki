@@ -1,9 +1,5 @@
 ---
-id: steal
 name: "Steal"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

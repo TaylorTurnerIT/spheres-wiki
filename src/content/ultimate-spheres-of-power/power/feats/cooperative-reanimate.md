@@ -1,8 +1,5 @@
 ---
-id: cooperative-reanimate
 name: "Cooperative Reanimate"
-type: feat
-system: power
 sphere: death
 tags: ["teamwork"]
 tier: feat

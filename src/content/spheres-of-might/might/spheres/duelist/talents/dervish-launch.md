@@ -1,9 +1,5 @@
 ---
-id: "dervish-launch"
 name: "Dervish Launch"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "advanced"
 tags:
   - "disarm"

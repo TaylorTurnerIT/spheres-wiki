@@ -1,9 +1,5 @@
 ---
-id: gestures
 name: "Gestures"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

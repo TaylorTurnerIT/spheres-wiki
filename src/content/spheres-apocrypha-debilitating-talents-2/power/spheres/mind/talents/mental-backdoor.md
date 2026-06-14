@@ -1,9 +1,5 @@
 ---
-id: mental-backdoor
 name: "Mental Backdoor"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: []
 ---

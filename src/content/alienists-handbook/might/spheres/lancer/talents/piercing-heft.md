@@ -1,9 +1,5 @@
 ---
-id: "piercing-heft"
 name: "Piercing Heft"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "lancer"
 tier: "basic"
 tags:
   - "impale"

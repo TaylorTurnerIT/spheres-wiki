@@ -1,9 +1,5 @@
 ---
-id: mage-feint
 name: "Mage Feint"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

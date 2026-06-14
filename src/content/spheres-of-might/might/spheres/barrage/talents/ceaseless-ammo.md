@@ -1,9 +1,5 @@
 ---
-id: "ceaseless-ammo"
 name: "Ceaseless Ammo"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "advanced"
 tags: []
 ---

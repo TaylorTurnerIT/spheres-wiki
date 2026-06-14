@@ -1,9 +1,5 @@
 ---
-id: mercy-killing
 name: "Mercy Killing"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

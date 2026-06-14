@@ -1,9 +1,5 @@
 ---
-id: "improved-grifting"
 name: "Improved Grifting"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

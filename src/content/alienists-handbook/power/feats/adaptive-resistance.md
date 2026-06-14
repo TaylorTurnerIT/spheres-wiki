@@ -1,8 +1,5 @@
 ---
-id: adaptive-resistance
 name: "Adaptive Resistance"
-type: feat
-system: power
 sphere: alteration
 tags: []
 tier: feat

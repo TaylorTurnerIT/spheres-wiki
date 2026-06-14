@@ -1,10 +1,6 @@
 ---
-id: shifter-improved-evasion
 name: "Improved Evasion"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 requires: "evasion, shifter 10"
 ---

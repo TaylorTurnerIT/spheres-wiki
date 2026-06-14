@@ -1,9 +1,5 @@
 ---
-id: "rejuvenating-poultice"
 name: "Rejuvenating Poultice"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "advanced"
 tags: []
 ---

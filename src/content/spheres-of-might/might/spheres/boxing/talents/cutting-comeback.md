@@ -1,9 +1,5 @@
 ---
-id: "cutting-comeback"
 name: "Cutting Comeback"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "advanced"
 tags:
   - "counter"

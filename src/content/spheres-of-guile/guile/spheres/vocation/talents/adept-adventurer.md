@@ -1,9 +1,5 @@
 ---
-id: "adept-adventurer"
 name: "Adept Adventurer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

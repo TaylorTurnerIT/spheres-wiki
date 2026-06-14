@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "sensory"
 label: "Sensory"
 color: "#6ab04c"
 priority: 15

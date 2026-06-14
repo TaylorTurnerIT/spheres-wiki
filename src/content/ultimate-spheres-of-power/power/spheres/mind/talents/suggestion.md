@@ -1,9 +1,5 @@
 ---
-id: suggestion
 name: "Suggestion"
-type: talent
-system: power
-sphere: mind
 tier: basic
 tags: ["spell-like"]
 ---

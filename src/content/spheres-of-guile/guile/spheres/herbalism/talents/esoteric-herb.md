@@ -1,9 +1,5 @@
 ---
-id: "esoteric-herb"
 name: "Esoteric Herb"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "advanced"
 tags: []
 ---

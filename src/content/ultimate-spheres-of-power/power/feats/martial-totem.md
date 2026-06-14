@@ -1,8 +1,5 @@
 ---
-id: martial-totem
 name: "Martial Totem"
-type: feat
-system: power
 sphere: war
 tags: ["combat"]
 tier: feat

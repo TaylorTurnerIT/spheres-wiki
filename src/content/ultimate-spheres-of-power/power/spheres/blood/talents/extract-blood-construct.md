@@ -1,9 +1,5 @@
 ---
-id: extract-blood-construct
 name: "Extract Blood Construct"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

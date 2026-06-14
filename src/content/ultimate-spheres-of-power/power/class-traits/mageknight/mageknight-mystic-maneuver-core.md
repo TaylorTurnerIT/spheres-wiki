@@ -1,10 +1,6 @@
 ---
-id: mageknight-mystic-maneuver-core
 name: "Mystic Maneuver [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "encouraging-jaunt"
 name: "Encouraging Jaunt"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

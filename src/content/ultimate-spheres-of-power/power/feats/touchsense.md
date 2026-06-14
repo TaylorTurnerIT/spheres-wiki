@@ -1,8 +1,5 @@
 ---
-id: touchsense
 name: "Touchsense"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: repel-the-unnatural
 name: "Repel The Unnatural"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

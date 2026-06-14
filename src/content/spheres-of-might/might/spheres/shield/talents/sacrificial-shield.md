@@ -1,9 +1,5 @@
 ---
-id: "sacrificial-shield"
 name: "Sacrificial Shield"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags:
   - "deflect"

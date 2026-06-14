@@ -1,9 +1,5 @@
 ---
-id: stone-blast
 name: "Stone Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "stone"]
 ---

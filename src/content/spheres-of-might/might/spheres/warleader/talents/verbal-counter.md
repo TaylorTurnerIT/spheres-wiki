@@ -1,9 +1,5 @@
 ---
-id: "verbal-counter"
 name: "Verbal Counter"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: heat-stroke
 name: "Heat Stroke"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["heat", "shroud"]
 ---

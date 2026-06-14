@@ -1,9 +1,5 @@
 ---
-id: "techno-trigger"
 name: "Techno Trigger"
-type: "talent"
-sourceBook: "inventors-handbook"
-sphere: "trap"
 tier: "basic"
 tags:
   - "snare"

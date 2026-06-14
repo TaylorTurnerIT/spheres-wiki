@@ -1,9 +1,5 @@
 ---
-id: "mage-masher"
 name: "Mage Masher"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

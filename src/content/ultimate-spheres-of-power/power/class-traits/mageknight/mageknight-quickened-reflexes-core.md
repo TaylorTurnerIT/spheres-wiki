@@ -1,10 +1,6 @@
 ---
-id: mageknight-quickened-reflexes-core
 name: "Quickened Reflexes [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

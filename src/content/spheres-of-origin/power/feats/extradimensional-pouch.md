@@ -1,8 +1,5 @@
 ---
-id: extradimensional-pouch
 name: "Extradimensional Pouch"
-type: feat
-system: power
 sphere: warp
 tags: []
 tier: feat

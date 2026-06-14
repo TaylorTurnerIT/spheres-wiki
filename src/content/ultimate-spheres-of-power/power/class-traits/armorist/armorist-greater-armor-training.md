@@ -1,10 +1,6 @@
 ---
-id: armorist-greater-armor-training
 name: "Greater Armor Training"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 requires: "armorist 3"
 ---

@@ -1,9 +1,5 @@
 ---
-id: totem-of-mobility
 name: "Totem Of Mobility"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

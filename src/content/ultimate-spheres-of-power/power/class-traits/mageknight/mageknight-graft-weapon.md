@@ -1,10 +1,6 @@
 ---
-id: mageknight-graft-weapon
 name: "Graft Weapon"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: mageknight
 featureId: mystic-combat-su
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: solar-strike
 name: "Solar Strike"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["strike"]
 ---

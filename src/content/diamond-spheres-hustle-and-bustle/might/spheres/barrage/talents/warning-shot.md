@@ -1,9 +1,5 @@
 ---
-id: "warning-shot"
 name: "Warning Shot"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "barrage"
 tier: "basic"
 tags:
   - "blitz"

@@ -1,9 +1,5 @@
 ---
-id: "anesthetic-dosage"
 name: "Anesthetic Dosage"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

@@ -1,9 +1,5 @@
 ---
-id: bestow-intelligence
 name: "Bestow Intelligence"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

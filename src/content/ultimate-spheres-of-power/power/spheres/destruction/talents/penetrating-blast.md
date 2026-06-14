@@ -1,9 +1,5 @@
 ---
-id: penetrating-blast
 name: "Penetrating Blast"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: []
 ---

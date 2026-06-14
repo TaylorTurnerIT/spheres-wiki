@@ -1,8 +1,5 @@
 ---
-id: shuffling-array
 name: "Shuffling Array"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

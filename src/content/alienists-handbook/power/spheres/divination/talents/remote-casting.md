@@ -1,9 +1,5 @@
 ---
-id: remote-casting
 name: "Remote Casting"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["divine"]
 ---

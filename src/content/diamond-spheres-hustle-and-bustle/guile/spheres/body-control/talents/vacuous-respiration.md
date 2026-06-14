@@ -1,9 +1,5 @@
 ---
-id: "vacuous-respiration"
 name: "Vacuous Respiration"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "body-control"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "asynchronous-swing"
 name: "Asynchronous Swing"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

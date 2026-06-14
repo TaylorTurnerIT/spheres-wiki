@@ -1,9 +1,5 @@
 ---
-id: "warp-spasm"
 name: "Warp Spasm"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "berserker"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,6 @@
 ---
-id: "boast"
 name: "Boast"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

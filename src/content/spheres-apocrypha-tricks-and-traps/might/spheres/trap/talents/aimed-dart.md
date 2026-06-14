@@ -1,9 +1,5 @@
 ---
-id: "aimed-dart"
 name: "Aimed Dart"
-type: "talent"
-sourceBook: "spheres-apocrypha-tricks-and-traps"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: hemo-goblin
 name: "Hemo Goblin"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

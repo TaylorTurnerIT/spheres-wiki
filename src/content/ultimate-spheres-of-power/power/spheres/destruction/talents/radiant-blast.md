@@ -1,9 +1,5 @@
 ---
-id: radiant-blast
 name: "Radiant Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "light"]
 ---

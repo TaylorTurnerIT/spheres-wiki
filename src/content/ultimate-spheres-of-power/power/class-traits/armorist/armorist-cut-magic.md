@@ -1,10 +1,6 @@
 ---
-id: armorist-cut-magic
 name: "Cut Magic"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "information-broker"
 name: "Information Broker"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "utility"

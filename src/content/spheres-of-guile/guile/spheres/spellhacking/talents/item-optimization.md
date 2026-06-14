@@ -1,9 +1,5 @@
 ---
-id: "item-optimization"
 name: "Item Optimization"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "advanced"
 tags: []
 ---

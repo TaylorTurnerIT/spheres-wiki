@@ -1,9 +1,5 @@
 ---
-id: "cheat-death"
 name: "Cheat Death"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "advanced"
 tags:
   - "plan"

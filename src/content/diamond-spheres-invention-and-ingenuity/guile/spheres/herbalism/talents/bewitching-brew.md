@@ -1,9 +1,5 @@
 ---
-id: "bewitching-brew"
 name: "Bewitching Brew"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

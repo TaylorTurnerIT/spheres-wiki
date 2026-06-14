@@ -1,8 +1,5 @@
 ---
-id: implausible-deniability
 name: Implausible Deniability
-type: feat
-system: power
 sphere: mind
 dualSphere: illusion
 tier: feat

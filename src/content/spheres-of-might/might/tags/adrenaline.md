@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "adrenaline"
 label: "Adrenaline"
 sphere: "berserker"
 priority: 0

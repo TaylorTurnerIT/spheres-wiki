@@ -1,8 +1,5 @@
 ---
-id: elemental-blood
 name: "Elemental Blood"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

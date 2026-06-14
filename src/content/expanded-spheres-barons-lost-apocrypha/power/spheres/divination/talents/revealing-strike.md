@@ -1,9 +1,5 @@
 ---
-id: revealing-strike
 name: "Revealing Strike"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["strike"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: advanced-circles
 name: "Advanced Circles"
-type: feat
-system: power
 sphere: conjuration
 tags: []
 tier: feat

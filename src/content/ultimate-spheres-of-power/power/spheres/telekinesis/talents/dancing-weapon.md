@@ -1,9 +1,5 @@
 ---
-id: dancing-weapon
 name: "Dancing Weapon"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

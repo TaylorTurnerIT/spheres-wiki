@@ -1,9 +1,5 @@
 ---
-id: "improved-itching-powder"
 name: "Improved Itching Powder"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

@@ -1,10 +1,6 @@
 ---
-id: incanter-lay-on-hands-2-specialization-points
 name: "Lay on Hands (2 Specialization Points)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: incanter-specializations
 ---
 

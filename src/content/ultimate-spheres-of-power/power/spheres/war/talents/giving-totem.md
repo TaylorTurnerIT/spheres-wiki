@@ -1,9 +1,5 @@
 ---
-id: giving-totem
 name: "Giving Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

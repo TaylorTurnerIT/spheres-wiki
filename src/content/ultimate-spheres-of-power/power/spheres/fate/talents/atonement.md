@@ -1,9 +1,5 @@
 ---
-id: atonement
 name: "Atonement"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["utility", "word"]
 ---

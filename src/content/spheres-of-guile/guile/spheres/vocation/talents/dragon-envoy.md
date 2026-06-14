@@ -1,9 +1,5 @@
 ---
-id: "dragon-envoy"
 name: "Dragon Envoy"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

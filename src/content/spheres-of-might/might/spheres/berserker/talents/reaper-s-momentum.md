@@ -1,9 +1,5 @@
 ---
-id: "reaper-s-momentum"
 name: "Reaper’s Momentum"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags: []
 ---

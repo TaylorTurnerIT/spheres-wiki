@@ -1,9 +1,5 @@
 ---
-id: totem-of-expulsion
 name: "Totem Of Expulsion"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

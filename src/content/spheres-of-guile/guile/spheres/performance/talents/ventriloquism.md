@@ -1,9 +1,5 @@
 ---
-id: "ventriloquism"
 name: "Ventriloquism"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "utility"

@@ -1,10 +1,6 @@
 ---
-id: armorist-windborne-equipment
 name: "Windborne Equipment"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: armorist
 featureId: arsenal-trick
 requires: "armorist 6"
 ---

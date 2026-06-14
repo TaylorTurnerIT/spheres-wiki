@@ -1,9 +1,5 @@
 ---
-id: shadow-creature
 name: "Shadow Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

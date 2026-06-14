@@ -1,8 +1,5 @@
 ---
-id: conjuration
 name: "Conjuration"
-system: power
-type: sphere
 icon: conjuration
 description: "You have made contracts with outsiders, calling them to your side when you are in need."
 tags: []

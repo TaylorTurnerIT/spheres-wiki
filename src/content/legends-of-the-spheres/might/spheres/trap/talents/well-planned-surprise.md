@@ -1,9 +1,5 @@
 ---
-id: "well-planned-surprise"
 name: "Well-Planned Surprise"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "trap"
 tier: "basic"
 tags:
   - "plan"

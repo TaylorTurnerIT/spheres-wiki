@@ -1,9 +1,5 @@
 ---
-id: "arsenal-of-upgrades"
 name: "Arsenal Of Upgrades"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "supply"

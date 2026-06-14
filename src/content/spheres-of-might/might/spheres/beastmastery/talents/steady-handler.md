@@ -1,9 +1,5 @@
 ---
-id: "steady-handler"
 name: "Steady Handler"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

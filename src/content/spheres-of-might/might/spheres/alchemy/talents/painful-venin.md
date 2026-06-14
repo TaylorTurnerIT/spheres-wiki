@@ -1,9 +1,5 @@
 ---
-id: "painful-venin"
 name: "Painful Venin"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

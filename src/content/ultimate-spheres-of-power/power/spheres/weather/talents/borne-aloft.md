@@ -1,9 +1,5 @@
 ---
-id: borne-aloft
 name: "Borne Aloft"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "wind"]
 ---

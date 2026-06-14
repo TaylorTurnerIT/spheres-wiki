@@ -1,9 +1,5 @@
 ---
-id: altering-burst
 name: "Altering Burst"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: []
 ---

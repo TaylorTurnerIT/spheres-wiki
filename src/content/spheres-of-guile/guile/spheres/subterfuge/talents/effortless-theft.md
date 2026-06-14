@@ -1,9 +1,5 @@
 ---
-id: "effortless-theft"
 name: "Effortless Theft"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "utility"

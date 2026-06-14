@@ -1,9 +1,5 @@
 ---
-id: manipulate-aura
 name: "Manipulate Aura"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["magic", "sensory"]
 ---

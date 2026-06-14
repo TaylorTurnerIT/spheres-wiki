@@ -1,9 +1,5 @@
 ---
-id: "aerial"
 name: "Aerial"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "base"
 tags:
   - "package"

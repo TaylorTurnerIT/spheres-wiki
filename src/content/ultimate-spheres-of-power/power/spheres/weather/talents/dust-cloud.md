@@ -1,9 +1,5 @@
 ---
-id: dust-cloud
 name: "Dust Cloud"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["aridity", "shroud"]
 ---

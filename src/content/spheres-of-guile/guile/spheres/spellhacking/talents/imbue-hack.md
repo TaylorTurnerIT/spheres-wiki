@@ -1,9 +1,5 @@
 ---
-id: "imbue-hack"
 name: "Imbue Hack"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

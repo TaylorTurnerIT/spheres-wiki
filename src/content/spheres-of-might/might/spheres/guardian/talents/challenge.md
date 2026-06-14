@@ -1,9 +1,6 @@
 ---
-id: "challenge"
 name: "Challenge"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

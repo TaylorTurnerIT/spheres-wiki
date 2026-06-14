@@ -1,9 +1,5 @@
 ---
-id: "macerating-remark"
 name: "Macerating Remark"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

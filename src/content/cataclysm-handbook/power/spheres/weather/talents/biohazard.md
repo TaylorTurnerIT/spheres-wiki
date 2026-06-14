@@ -1,9 +1,5 @@
 ---
-id: biohazard
 name: "Biohazard"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

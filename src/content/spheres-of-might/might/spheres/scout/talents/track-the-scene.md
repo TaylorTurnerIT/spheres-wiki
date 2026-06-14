@@ -1,9 +1,5 @@
 ---
-id: "track-the-scene"
 name: "Track The Scene"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags:
   - "utility"

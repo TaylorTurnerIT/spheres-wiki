@@ -1,9 +1,5 @@
 ---
-id: "scatter-trap"
 name: "Scatter Trap"
-type: "talent"
-sourceBook: "spheres-apocrypha-monster-traditions"
-sphere: "trap"
 tier: "basic"
 ---
 

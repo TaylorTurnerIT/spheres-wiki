@@ -1,9 +1,5 @@
 ---
-id: "roaring-reservoir"
 name: "Roaring Reservoir"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

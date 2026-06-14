@@ -1,9 +1,5 @@
 ---
-id: linear-acceleration
 name: "Linear Acceleration"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

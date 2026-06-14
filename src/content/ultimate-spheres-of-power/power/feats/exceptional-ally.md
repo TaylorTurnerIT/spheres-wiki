@@ -1,8 +1,5 @@
 ---
-id: exceptional-ally
 name: Exceptional Ally
-type: feat
-system: power
 sphere: enhancement
 dualSphere: conjuration
 tier: feat

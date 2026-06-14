@@ -1,9 +1,5 @@
 ---
-id: lure
 name: "Lure"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["cloud"]
 ---

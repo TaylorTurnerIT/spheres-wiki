@@ -1,9 +1,5 @@
 ---
-id: "deduce-positioning"
 name: "Deduce Positioning"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "theory"

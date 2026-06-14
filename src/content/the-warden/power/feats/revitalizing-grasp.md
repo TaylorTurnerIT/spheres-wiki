@@ -1,8 +1,5 @@
 ---
-id: revitalizing-grasp
 name: "Revitalizing Grasp"
-type: feat
-system: power
 sphere: life
 tags: ["warden"]
 tier: feat

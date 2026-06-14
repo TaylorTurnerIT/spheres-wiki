@@ -1,9 +1,5 @@
 ---
-id: overclock
 name: "Overclock"
-system: power
-type: talent
-sphere: blood
 tier: advanced
 tags: ["spell-like"]
 ---

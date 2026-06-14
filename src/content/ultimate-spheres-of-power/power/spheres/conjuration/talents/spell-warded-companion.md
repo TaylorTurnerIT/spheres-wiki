@@ -1,9 +1,5 @@
 ---
-id: spell-warded-companion
 name: "Spell-Warded Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

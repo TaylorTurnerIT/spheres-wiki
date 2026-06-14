@@ -1,9 +1,5 @@
 ---
-id: "snagging-steel"
 name: "Snagging Steel"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "wrestling"
 tier: "basic"
 ---
 

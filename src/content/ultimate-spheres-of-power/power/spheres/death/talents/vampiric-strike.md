@@ -1,9 +1,5 @@
 ---
-id: vampiric-strike
 name: "Vampiric Strike"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike"]
 ---

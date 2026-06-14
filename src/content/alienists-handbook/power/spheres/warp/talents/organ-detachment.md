@@ -1,9 +1,5 @@
 ---
-id: organ-detachment
 name: "Organ Detachment"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["space"]
 ---

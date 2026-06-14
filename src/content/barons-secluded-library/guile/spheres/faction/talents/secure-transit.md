@@ -1,9 +1,5 @@
 ---
-id: "secure-transit"
 name: "Secure Transit"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "supply"

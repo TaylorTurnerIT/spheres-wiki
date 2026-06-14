@@ -1,9 +1,5 @@
 ---
-id: "large-batch"
 name: "Large Batch"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags: []
 ---

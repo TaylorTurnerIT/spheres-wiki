@@ -1,9 +1,5 @@
 ---
-id: dappled-shadows
 name: "Dappled Shadows"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["mass"]
 ---

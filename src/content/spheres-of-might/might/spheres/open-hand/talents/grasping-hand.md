@@ -1,9 +1,5 @@
 ---
-id: "grasping-hand"
 name: "Grasping Hand"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

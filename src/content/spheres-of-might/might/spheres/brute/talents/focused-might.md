@@ -1,9 +1,5 @@
 ---
-id: "focused-might"
 name: "Focused Might"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

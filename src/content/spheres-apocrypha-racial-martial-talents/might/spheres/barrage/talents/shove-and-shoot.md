@@ -1,9 +1,5 @@
 ---
-id: "shove-and-shoot"
 name: "Shove And Shoot"
-type: "talent"
-sourceBook: "spheres-apocrypha-racial-martial-talents"
-sphere: "barrage"
 tier: "basic"
 tags: []
 ---

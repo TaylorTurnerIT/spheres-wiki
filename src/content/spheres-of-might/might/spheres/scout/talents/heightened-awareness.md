@@ -1,9 +1,5 @@
 ---
-id: "heightened-awareness"
 name: "Heightened Awareness"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

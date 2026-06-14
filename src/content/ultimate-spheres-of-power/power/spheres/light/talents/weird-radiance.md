@@ -1,9 +1,5 @@
 ---
-id: weird-radiance
 name: "Weird Radiance"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["nimbus"]
 ---

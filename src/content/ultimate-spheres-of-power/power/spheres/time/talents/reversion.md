@@ -1,9 +1,5 @@
 ---
-id: reversion
 name: "Reversion"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["utility"]
 ---

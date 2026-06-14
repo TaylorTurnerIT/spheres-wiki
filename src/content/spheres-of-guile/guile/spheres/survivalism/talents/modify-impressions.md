@@ -1,9 +1,5 @@
 ---
-id: "modify-impressions"
 name: "Modify Impressions"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "ground"

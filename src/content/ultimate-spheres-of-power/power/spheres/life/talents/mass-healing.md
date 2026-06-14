@@ -1,9 +1,5 @@
 ---
-id: mass-healing
 name: "Mass Healing"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["mass"]
 ---

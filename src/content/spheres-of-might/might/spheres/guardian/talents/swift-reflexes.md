@@ -1,9 +1,5 @@
 ---
-id: "swift-reflexes"
 name: "Swift Reflexes"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "mass-challenge"
 name: "Mass Challenge"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

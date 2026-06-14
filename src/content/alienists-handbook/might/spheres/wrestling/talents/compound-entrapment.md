@@ -1,9 +1,5 @@
 ---
-id: "compound-entrapment"
 name: "Compound Entrapment"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

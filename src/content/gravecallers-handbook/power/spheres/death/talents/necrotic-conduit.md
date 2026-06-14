@@ -1,9 +1,5 @@
 ---
-id: necrotic-conduit
 name: "Necrotic Conduit"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["dominion"]
 ---

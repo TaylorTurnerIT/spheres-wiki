@@ -1,9 +1,5 @@
 ---
-id: "occult-countermeasures"
 name: "Occult Countermeasures"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "acclimation"

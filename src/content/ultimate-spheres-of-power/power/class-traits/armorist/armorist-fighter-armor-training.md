@@ -1,10 +1,6 @@
 ---
-id: armorist-fighter-armor-training
 name: "Fighter Armor Training"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 requires: "armor training or greater armor training, armorist 3"
 ---

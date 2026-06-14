@@ -1,10 +1,6 @@
 ---
-id: shifter-impaling-charge
 name: "Impaling Charge"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 requires: "powerful charge"
 ---

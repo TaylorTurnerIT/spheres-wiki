@@ -1,9 +1,5 @@
 ---
-id: deadly-weapon
 name: "Deadly Weapon"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

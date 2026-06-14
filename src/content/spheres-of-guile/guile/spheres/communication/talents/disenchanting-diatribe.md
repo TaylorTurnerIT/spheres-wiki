@@ -1,9 +1,5 @@
 ---
-id: "disenchanting-diatribe"
 name: "Disenchanting Diatribe"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "advanced"
 tags: []
 ---

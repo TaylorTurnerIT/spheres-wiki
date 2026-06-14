@@ -1,9 +1,5 @@
 ---
-id: seasons
 name: "Seasons"
-type: talent
-system: power
-sphere: fallen-fey
 tier: basic
 tags: []
 ---

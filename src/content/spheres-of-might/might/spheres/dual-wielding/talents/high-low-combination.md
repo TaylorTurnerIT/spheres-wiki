@@ -1,9 +1,5 @@
 ---
-id: "high-low-combination"
 name: "High-Low Combination"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

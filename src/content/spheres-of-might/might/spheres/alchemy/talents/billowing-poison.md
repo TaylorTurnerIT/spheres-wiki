@@ -1,9 +1,5 @@
 ---
-id: "billowing-poison"
 name: "Billowing Poison"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

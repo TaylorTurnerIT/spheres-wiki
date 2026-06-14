@@ -1,9 +1,5 @@
 ---
-id: battle-creature
 name: "Battle Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

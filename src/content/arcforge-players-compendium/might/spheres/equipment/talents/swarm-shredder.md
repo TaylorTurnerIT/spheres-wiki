@@ -1,9 +1,5 @@
 ---
-id: "swarm-shredder"
 name: "Swarm Shredder"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "prison-of-depiction"
 name: "Prison Of Depiction"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "artwork"

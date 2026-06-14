@@ -1,9 +1,5 @@
 ---
-id: close-cooperation
 name: "Close Cooperation"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

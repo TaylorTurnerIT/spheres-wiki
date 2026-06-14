@@ -1,9 +1,5 @@
 ---
-id: "barrage"
 name: "Barrage"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "base"
 tags: []
 ---

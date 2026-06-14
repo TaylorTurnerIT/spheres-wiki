@@ -1,9 +1,5 @@
 ---
-id: aggrandizing-strike
 name: "Aggrandizing Strike"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["strike"]
 ---

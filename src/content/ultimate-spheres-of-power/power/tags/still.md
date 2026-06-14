@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "still"
 label: "Still"
 color: "#4B1C1C"
 priority: 8

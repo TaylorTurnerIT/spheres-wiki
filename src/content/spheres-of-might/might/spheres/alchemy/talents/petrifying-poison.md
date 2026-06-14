@@ -1,9 +1,5 @@
 ---
-id: "petrifying-poison"
 name: "Petrifying Poison"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "toxin"

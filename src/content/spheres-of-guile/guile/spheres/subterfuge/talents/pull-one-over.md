@@ -1,9 +1,5 @@
 ---
-id: "pull-one-over"
 name: "Pull One Over"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "humiliating-trick"
 name: "Humiliating Trick"
-type: "talent"
-sourceBook: "lost-champions-mountebank"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

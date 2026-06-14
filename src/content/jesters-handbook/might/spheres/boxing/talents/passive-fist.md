@@ -1,9 +1,5 @@
 ---
-id: "passive-fist"
 name: "Passive Fist"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "light-step"
 name: "Light Step"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "base"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: mechanical-customization
 name: "Mechanical Customization"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

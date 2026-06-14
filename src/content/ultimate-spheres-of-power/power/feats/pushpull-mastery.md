@@ -1,8 +1,5 @@
 ---
-id: pushpull-mastery
 name: "Push/Pull Mastery"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["drawback"]
 tier: feat

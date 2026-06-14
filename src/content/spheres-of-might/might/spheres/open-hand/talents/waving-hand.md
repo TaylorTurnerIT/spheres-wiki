@@ -1,9 +1,5 @@
 ---
-id: "waving-hand"
 name: "Waving Hand"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

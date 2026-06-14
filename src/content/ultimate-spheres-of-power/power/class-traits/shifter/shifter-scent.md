@@ -1,10 +1,6 @@
 ---
-id: shifter-scent
 name: "Scent"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

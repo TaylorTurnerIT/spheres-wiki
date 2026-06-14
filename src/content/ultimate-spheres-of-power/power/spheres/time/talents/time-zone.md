@@ -1,9 +1,5 @@
 ---
-id: time-zone
 name: "Time Zone"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: []
 ---

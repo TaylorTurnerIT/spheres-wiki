@@ -1,10 +1,6 @@
 ---
-id: incanter-nature-sub-specialization-phytomancer-plant
 name: "Nature Sub-Specialization: Phytomancer (plant)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: list-of-sphere-specializations
 ---
 

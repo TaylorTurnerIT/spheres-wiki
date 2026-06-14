@@ -1,9 +1,5 @@
 ---
-id: telekinetic-crush
 name: "Telekinetic Crush"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

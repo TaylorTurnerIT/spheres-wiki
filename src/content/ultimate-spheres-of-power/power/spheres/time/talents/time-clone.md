@@ -1,9 +1,5 @@
 ---
-id: time-clone
 name: "Time Clone"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["time"]
 ---

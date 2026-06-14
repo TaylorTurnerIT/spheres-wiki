@@ -1,9 +1,5 @@
 ---
-id: seizing-strike
 name: "Seizing Strike"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: ["strike"]
 ---

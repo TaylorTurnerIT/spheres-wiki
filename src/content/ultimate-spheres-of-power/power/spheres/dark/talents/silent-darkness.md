@@ -1,9 +1,5 @@
 ---
-id: silent-darkness
 name: "Silent Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["darkness"]
 ---

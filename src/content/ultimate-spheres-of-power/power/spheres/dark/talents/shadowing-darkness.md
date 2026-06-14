@@ -1,9 +1,5 @@
 ---
-id: shadowing-darkness
 name: "Shadowing Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

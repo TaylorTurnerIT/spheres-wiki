@@ -1,8 +1,5 @@
 ---
-id: tainted-manabond
 name: "Tainted Manabond"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

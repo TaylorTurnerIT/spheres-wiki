@@ -1,9 +1,5 @@
 ---
-id: engage
 name: "Engage"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: the-emperor
 name: "The Emperor"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

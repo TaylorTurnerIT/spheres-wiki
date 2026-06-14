@@ -1,9 +1,5 @@
 ---
-id: true-protection
 name: "True Protection"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "defiant-focus"
 name: "Defiant Focus"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

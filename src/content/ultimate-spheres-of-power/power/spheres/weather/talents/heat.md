@@ -1,9 +1,5 @@
 ---
-id: heat
 name: Heat
-type: talent
-system: power
-sphere: weather
 tier: basic
 tags: []
 ---

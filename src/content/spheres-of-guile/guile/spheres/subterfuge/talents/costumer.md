@@ -1,9 +1,5 @@
 ---
-id: "costumer"
 name: "Costumer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "utility"

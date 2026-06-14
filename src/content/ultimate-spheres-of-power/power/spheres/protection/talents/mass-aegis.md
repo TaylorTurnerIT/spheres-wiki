@@ -1,9 +1,5 @@
 ---
-id: mass-aegis
 name: "Mass Aegis"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["mass"]
 ---

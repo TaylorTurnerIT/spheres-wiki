@@ -1,9 +1,5 @@
 ---
-id: "shaken-defense"
 name: "Shaken Defense"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

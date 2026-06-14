@@ -1,8 +1,5 @@
 ---
-id: "communication"
 name: "Communication"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "communication"
 tags: []
 sectionDefinitions:

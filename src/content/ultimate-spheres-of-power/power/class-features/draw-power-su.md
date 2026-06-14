@@ -1,8 +1,6 @@
 ---
-id: draw-power-su
 name: "Draw Power (Su)"
 type: class-feature
-system: power
 className: mageknight
 level: 15
 tags: []

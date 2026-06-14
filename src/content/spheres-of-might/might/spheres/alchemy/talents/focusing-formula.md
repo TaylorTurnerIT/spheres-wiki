@@ -1,9 +1,5 @@
 ---
-id: "focusing-formula"
 name: "Focusing Formula"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

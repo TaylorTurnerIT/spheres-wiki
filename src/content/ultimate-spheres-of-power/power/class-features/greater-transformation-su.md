@@ -1,8 +1,6 @@
 ---
-id: greater-transformation-su
 name: "Greater Transformation (Su)"
 type: class-feature
-system: power
 className: shifter
 level: 17
 tags: []

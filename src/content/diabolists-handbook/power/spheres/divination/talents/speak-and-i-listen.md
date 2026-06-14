@@ -1,9 +1,5 @@
 ---
-id: speak-and-i-listen
 name: "Speak And I Listen"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: []
 ---

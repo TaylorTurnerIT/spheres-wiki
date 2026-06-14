@@ -1,9 +1,5 @@
 ---
-id: energy-resistance
 name: "Energy Resistance"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis", "auxiliary", "ward"]
 ---

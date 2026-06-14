@@ -1,9 +1,5 @@
 ---
-id: instill-glow
 name: "Instill Glow"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["instill"]
 ---

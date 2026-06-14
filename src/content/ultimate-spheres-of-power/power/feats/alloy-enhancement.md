@@ -1,8 +1,5 @@
 ---
-id: alloy-enhancement
 name: Alloy Enhancement
-type: feat
-system: power
 sphere: nature
 dualSphere: enhancement
 tier: feat

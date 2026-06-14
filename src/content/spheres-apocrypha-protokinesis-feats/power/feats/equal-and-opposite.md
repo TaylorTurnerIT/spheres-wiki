@@ -1,8 +1,5 @@
 ---
-id: equal-and-opposite
 name: "Equal and Opposite"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["combat", "protokinesis"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: elemental-strike
 name: "Elemental Strike"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["strike"]
 ---

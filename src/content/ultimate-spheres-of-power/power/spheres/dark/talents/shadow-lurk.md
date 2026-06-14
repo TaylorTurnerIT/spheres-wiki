@@ -1,9 +1,5 @@
 ---
-id: shadow-lurk
 name: "Shadow Lurk"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["shadow"]
 ---

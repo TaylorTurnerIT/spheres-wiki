@@ -1,8 +1,5 @@
 ---
-id: magical-focus
 name: "Magical Focus"
-type: feat
-system: power
 sphere: enhancement
 tags: ["drawback"]
 tier: feat

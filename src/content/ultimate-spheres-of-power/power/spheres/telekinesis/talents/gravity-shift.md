@@ -1,9 +1,5 @@
 ---
-id: gravity-shift
 name: "Gravity Shift"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

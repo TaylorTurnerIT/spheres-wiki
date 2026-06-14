@@ -1,9 +1,5 @@
 ---
-id: "debilitating-blow"
 name: "Debilitating Blow"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "apply"

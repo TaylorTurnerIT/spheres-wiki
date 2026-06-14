@@ -1,7 +1,5 @@
 ---
-id: harrying-traps
 name: Harrying Traps
-archetypeId: venator
 level: 4
 tags: []
 alters:

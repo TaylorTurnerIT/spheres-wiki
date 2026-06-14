@@ -1,10 +1,6 @@
 ---
-id: shifter-learned-behavior
 name: "Learned Behavior"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 ---
 

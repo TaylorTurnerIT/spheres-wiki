@@ -1,9 +1,5 @@
 ---
-id: "greater-disarm"
 name: "Greater Disarm"
-type: "talent"
-sourceBook: "spheres-apocrypha-pugilists"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

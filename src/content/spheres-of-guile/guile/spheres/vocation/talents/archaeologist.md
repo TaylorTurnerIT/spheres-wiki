@@ -1,9 +1,5 @@
 ---
-id: "archaeologist"
 name: "Archaeologist"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

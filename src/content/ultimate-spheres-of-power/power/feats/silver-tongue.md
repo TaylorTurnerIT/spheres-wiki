@@ -1,8 +1,5 @@
 ---
-id: silver-tongue
 name: "Silver Tongue"
-type: feat
-system: power
 sphere: mind
 tags: []
 tier: feat

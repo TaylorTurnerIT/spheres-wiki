@@ -1,9 +1,5 @@
 ---
-id: "punishing-challenge"
 name: "Punishing Challenge"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "advanced"
 tags: []
 ---

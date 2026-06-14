@@ -1,9 +1,5 @@
 ---
-id: "go-limp"
 name: "Go Limp"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "advanced"
 tags: []
 ---

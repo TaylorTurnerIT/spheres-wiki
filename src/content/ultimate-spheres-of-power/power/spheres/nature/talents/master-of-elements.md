@@ -1,9 +1,5 @@
 ---
-id: master-of-elements
 name: "Master Of Elements"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

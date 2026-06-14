@@ -1,9 +1,5 @@
 ---
-id: "focusing-cry"
 name: "Focusing Cry"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

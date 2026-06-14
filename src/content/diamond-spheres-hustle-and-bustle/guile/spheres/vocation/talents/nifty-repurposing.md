@@ -1,9 +1,5 @@
 ---
-id: "nifty-repurposing"
 name: "Nifty Repurposing"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "utility"

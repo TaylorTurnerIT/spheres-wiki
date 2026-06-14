@@ -1,9 +1,5 @@
 ---
-id: "lexical-obfuscation"
 name: "Lexical Obfuscation"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "study"
 tier: "advanced"
 tags:
   - "supernatural"

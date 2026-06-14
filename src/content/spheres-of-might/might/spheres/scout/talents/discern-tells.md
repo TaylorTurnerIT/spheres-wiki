@@ -1,9 +1,5 @@
 ---
-id: "discern-tells"
 name: "Discern Tells"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags:
   - "utility"

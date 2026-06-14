@@ -1,10 +1,6 @@
 ---
-id: shifter-bestial-rage
 name: "Bestial Rage"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

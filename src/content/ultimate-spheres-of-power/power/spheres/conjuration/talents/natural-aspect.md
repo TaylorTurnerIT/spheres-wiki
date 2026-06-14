@@ -1,9 +1,5 @@
 ---
-id: natural-aspect
 name: "Natural Aspect"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: darkness
 name: Darkness
-system: power
-type: talent
-sphere: dark
 tier: base
 tags: []
 ---

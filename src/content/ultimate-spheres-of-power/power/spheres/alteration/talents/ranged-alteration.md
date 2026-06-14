@@ -1,9 +1,5 @@
 ---
-id: ranged-alteration
 name: "Ranged Alteration"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["range"]
 ---

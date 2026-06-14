@@ -1,9 +1,5 @@
 ---
-id: rejuvenation
 name: "Rejuvenation"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

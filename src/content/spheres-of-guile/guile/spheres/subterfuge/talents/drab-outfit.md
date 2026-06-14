@@ -1,9 +1,5 @@
 ---
-id: "drab-outfit"
 name: "Drab Outfit"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "disguise"

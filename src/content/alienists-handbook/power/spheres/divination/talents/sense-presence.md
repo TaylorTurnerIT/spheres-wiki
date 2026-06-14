@@ -1,9 +1,5 @@
 ---
-id: sense-presence
 name: "Sense Presence"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

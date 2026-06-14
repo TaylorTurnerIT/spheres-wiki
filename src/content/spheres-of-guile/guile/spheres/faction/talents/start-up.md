@@ -1,9 +1,5 @@
 ---
-id: "start-up"
 name: "Start-Up"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "base"
 tags:
   - "package"

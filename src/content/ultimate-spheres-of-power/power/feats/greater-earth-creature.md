@@ -1,8 +1,5 @@
 ---
-id: greater-earth-creature
 name: "Greater Earth Creature"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

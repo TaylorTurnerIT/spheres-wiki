@@ -1,9 +1,5 @@
 ---
-id: insistent-illusions
 name: "Insistent Illusions"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

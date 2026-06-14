@@ -1,8 +1,6 @@
 ---
-id: combat-feat
 name: "Combat Feat"
 type: class-feature
-system: power
 className: mageknight
 level: 4
 tags: []

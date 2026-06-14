@@ -1,8 +1,5 @@
 ---
-id: companion-concentration
 name: "Companion Concentration"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "salve"
 name: "Salve"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

@@ -1,9 +1,5 @@
 ---
-id: "utilitarian-retainers"
 name: "Utilitarian Retainers"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "retainer"

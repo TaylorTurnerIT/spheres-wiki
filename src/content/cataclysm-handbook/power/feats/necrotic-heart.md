@@ -1,8 +1,5 @@
 ---
-id: necrotic-heart
 name: "Necrotic Heart"
-type: feat
-system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: power-parasitism
 name: "Power Parasitism"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: []
 ---

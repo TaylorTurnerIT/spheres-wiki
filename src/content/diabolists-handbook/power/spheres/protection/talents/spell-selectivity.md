@@ -1,9 +1,5 @@
 ---
-id: spell-selectivity
 name: "Spell Selectivity [Original]"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

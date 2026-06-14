@@ -1,9 +1,5 @@
 ---
-id: "emergency-triage"
 name: "Emergency Triage"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "remedy"

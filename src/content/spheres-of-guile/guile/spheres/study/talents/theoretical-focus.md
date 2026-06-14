@@ -1,9 +1,5 @@
 ---
-id: "theoretical-focus"
 name: "Theoretical Focus"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags: []
 ---

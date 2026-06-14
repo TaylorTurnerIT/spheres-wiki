@@ -1,9 +1,5 @@
 ---
-id: fae-light
 name: "Fae Light"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing", "utility"]
 ---

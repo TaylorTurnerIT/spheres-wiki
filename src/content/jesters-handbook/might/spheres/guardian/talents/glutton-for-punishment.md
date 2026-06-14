@@ -1,9 +1,5 @@
 ---
-id: "glutton-for-punishment"
 name: "Glutton For Punishment"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "savage"
 name: "Savage"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags: []
 ---

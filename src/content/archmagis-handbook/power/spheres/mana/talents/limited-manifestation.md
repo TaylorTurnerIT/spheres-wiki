@@ -1,9 +1,5 @@
 ---
-id: limited-manifestation
 name: "Limited Manifestation"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

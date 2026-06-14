@@ -1,9 +1,5 @@
 ---
-id: mass-lens
 name: "Mass Lens"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["mass"]
 ---

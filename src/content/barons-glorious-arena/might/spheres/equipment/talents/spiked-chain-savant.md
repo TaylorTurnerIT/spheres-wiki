@@ -1,9 +1,5 @@
 ---
-id: "spiked-chain-savant"
 name: "Spiked Chain Savant"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "equipment"
 tier: "basic"
 ---
 

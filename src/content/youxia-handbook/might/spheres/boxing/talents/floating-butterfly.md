@@ -1,9 +1,5 @@
 ---
-id: "floating-butterfly"
 name: "Floating Butterfly"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "stance"

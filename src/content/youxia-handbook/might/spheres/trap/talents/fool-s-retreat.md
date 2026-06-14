@@ -1,9 +1,5 @@
 ---
-id: "fool-s-retreat"
 name: "Fool’s Retreat"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "trap"
 tier: "basic"
 tags:
   - "stance"

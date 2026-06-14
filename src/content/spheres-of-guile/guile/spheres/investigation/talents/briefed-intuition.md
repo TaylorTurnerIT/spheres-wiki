@@ -1,9 +1,5 @@
 ---
-id: "briefed-intuition"
 name: "Briefed Intuition"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "plan"

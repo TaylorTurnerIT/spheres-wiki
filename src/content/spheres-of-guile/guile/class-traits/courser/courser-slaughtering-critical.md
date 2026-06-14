@@ -1,7 +1,5 @@
 ---
-id: courser-slaughtering-critical
 name: Slaughtering Critical
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 8"

@@ -1,8 +1,5 @@
 ---
-id: deceptive-advisor
 name: "Deceptive Advisor"
-type: feat
-system: power
 sphere: mind
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "swift-repair"
 name: "Swift Repair"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: "counter-theft"
 name: "Counter Theft"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

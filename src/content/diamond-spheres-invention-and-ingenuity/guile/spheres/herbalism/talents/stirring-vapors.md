@@ -1,9 +1,5 @@
 ---
-id: "stirring-vapors"
 name: "Stirring Vapors"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

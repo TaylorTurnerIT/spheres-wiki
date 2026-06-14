@@ -1,9 +1,5 @@
 ---
-id: "drunken-insight"
 name: "Drunken Insight"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "drunk"

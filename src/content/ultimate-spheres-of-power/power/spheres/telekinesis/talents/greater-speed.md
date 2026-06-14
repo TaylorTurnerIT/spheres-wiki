@@ -1,9 +1,5 @@
 ---
-id: greater-speed
 name: "Greater Speed"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

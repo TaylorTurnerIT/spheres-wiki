@@ -1,9 +1,5 @@
 ---
-id: plant-mastery
 name: "Plant Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["plant", "geomancing"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: horticulturist
 name: Horticulturist
-type: talent
-sourceBook: diamond-spheres-invention-and-ingenuity
-sphere: herbalism
 dualSphere: creation
 tier: base
 tags:

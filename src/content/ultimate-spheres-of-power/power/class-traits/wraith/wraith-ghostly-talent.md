@@ -1,10 +1,6 @@
 ---
-id: wraith-ghostly-talent
 name: "Ghostly Talent"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

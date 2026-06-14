@@ -1,9 +1,5 @@
 ---
-id: "and-stay-down"
 name: "...And Stay Down!"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

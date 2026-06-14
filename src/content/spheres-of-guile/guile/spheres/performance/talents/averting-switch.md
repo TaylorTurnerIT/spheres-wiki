@@ -1,9 +1,5 @@
 ---
-id: "averting-switch"
 name: "Averting Switch"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

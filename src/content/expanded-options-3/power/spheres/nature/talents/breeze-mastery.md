@@ -1,9 +1,5 @@
 ---
-id: breeze-mastery
 name: "Breeze Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["air", "geomancing"]
 ---

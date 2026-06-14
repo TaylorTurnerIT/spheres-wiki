@@ -1,8 +1,5 @@
 ---
-id: improved-energy-leap
 name: "Improved Energy Leap"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

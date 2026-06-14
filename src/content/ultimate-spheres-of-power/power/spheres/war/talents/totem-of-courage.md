@@ -1,9 +1,5 @@
 ---
-id: totem-of-courage
 name: "Totem Of Courage"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

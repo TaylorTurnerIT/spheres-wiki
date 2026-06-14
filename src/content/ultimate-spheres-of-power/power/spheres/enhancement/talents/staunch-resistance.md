@@ -1,9 +1,5 @@
 ---
-id: staunch-resistance
 name: "Staunch Resistance"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

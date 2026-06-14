@@ -1,9 +1,5 @@
 ---
-id: "alter-terrain"
 name: "Alter Terrain"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "advanced"
 tags: []
 ---

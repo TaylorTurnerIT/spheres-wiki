@@ -1,9 +1,5 @@
 ---
-id: "reflexive-twist"
 name: "Reflexive Twist"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

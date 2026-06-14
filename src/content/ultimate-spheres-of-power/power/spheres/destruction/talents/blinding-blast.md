@@ -1,9 +1,5 @@
 ---
-id: blinding-blast
 name: "Blinding Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "light"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "swift-guardian"
 name: "Swift Guardian"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

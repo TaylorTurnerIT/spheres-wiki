@@ -1,9 +1,5 @@
 ---
-id: "laugh-it-off"
 name: "Laugh It Off"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "utility"

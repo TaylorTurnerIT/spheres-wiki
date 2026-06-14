@@ -1,9 +1,5 @@
 ---
-id: "advanced-notice"
 name: "Advanced Notice"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

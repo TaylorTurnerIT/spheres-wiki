@@ -1,9 +1,5 @@
 ---
-id: flash
 name: "Flash"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

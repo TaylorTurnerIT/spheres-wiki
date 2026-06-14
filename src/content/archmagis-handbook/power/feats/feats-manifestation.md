@@ -1,8 +1,5 @@
 ---
-id: feats-manifestation
 name: Manifestation
-type: feat
-system: power
 sphere: conjuration
 tags:
   - companion

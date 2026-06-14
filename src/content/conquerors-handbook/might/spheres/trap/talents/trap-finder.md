@@ -1,9 +1,5 @@
 ---
-id: "trap-finder"
 name: "Trap Finder"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "trap"
 tier: "basic"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: "ankle-strike"
 name: "Ankle Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags:
   - "exploit"

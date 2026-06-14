@@ -1,9 +1,5 @@
 ---
-id: union-of-blood
 name: "Union Of Blood"
-system: power
-type: talent
-sphere: blood
 tier: advanced
 tags: []
 ---

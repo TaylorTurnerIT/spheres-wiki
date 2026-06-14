@@ -1,9 +1,5 @@
 ---
-id: "clear-shot"
 name: "Clear Shot"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "base"
 tags:
   - "pathing"

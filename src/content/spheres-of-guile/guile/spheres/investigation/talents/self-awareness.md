@@ -1,9 +1,5 @@
 ---
-id: "self-awareness"
 name: "Self Awareness"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "utility"

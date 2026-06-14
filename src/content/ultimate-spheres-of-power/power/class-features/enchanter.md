@@ -1,8 +1,6 @@
 ---
-id: enchanter
 name: "Enchanter"
 type: class-feature
-system: power
 className: eliciter
 level: 1
 tags: []

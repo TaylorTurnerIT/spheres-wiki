@@ -1,8 +1,5 @@
 ---
-id: enhancing-telekinesis
 name: Enhancing Telekinesis
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: enhancement
 tier: feat

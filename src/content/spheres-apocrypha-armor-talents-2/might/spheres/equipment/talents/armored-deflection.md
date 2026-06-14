@@ -1,9 +1,5 @@
 ---
-id: "armored-deflection"
 name: "Armored Deflection"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents-2"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

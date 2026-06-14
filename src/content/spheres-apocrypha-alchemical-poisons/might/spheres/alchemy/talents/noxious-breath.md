@@ -1,9 +1,5 @@
 ---
-id: "noxious-breath"
 name: "Noxious Breath"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-poisons"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

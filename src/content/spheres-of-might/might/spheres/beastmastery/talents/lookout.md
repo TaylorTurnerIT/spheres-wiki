@@ -1,9 +1,5 @@
 ---
-id: "lookout"
 name: "Lookout"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "utility"

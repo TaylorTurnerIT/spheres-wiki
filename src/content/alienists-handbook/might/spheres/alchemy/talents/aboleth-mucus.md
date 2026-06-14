@@ -1,9 +1,5 @@
 ---
-id: "aboleth-mucus"
 name: "Aboleth Mucus"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "toxin"

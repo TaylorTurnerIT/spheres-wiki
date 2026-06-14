@@ -1,9 +1,5 @@
 ---
-id: "compact-frame"
 name: "Compact Frame"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

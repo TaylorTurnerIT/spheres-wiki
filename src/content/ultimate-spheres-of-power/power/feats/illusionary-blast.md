@@ -1,8 +1,5 @@
 ---
-id: illusionary-blast
 name: Illusionary Blast
-type: feat
-system: power
 sphere: illusion
 dualSphere: destruction
 tier: feat

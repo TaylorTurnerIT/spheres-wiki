@@ -1,9 +1,5 @@
 ---
-id: "expert-hunter"
 name: "Expert Hunter"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "chargethrough"
 name: "Chargethrough"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "run"

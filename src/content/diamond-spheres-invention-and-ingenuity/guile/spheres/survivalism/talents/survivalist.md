@@ -1,9 +1,5 @@
 ---
-id: "survivalist"
 name: "Survivalist"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "survivalism"
 tier: "advanced"
 tags: []
 ---

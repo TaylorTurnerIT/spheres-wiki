@@ -1,9 +1,5 @@
 ---
-id: discern-location
 name: "Discern Location"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["utility", "divine"]
 ---

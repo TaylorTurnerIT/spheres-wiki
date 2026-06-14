@@ -1,9 +1,5 @@
 ---
-id: "manipulate-cover"
 name: "Manipulate Cover"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "ground"

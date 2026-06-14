@@ -1,8 +1,5 @@
 ---
-id: first-response
 name: "First Response"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

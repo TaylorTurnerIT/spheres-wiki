@@ -1,9 +1,5 @@
 ---
-id: mark-of-lifeburn
 name: "Mark Of Lifeburn"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["expunge"]
 ---

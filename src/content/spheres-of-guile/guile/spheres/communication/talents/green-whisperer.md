@@ -1,9 +1,5 @@
 ---
-id: "green-whisperer"
 name: "Green Whisperer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "advanced"
 tags:
   - "rapport"

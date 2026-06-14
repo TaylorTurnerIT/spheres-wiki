@@ -1,9 +1,5 @@
 ---
-id: marauding-momentum
 name: "Marauding Momentum"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["momentum"]
 ---

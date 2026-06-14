@@ -1,9 +1,5 @@
 ---
-id: "artisan"
 name: "Artisan"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

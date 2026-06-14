@@ -1,9 +1,5 @@
 ---
-id: midnight
 name: "Midnight"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: ["darkness"]
 ---

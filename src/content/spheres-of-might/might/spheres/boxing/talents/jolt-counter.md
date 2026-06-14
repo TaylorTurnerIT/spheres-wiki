@@ -1,9 +1,5 @@
 ---
-id: "jolt-counter"
 name: "Jolt Counter"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "counter"

@@ -1,9 +1,5 @@
 ---
-id: "malfunction-dweomer"
 name: "Malfunction Dweomer"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

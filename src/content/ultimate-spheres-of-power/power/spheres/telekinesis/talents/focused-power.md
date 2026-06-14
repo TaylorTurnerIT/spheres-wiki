@@ -1,9 +1,5 @@
 ---
-id: focused-power
 name: "Focused Power"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

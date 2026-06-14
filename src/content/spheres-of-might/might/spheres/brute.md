@@ -1,8 +1,5 @@
 ---
-id: "brute"
 name: "Brute"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "brute"
 tags: []
 sectionDefinitions:

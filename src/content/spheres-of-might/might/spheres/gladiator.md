@@ -1,8 +1,5 @@
 ---
-id: "gladiator"
 name: "Gladiator"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "gladiator"
 tags: []
 sectionDefinitions:

@@ -1,9 +1,5 @@
 ---
-id: "anamnesis"
 name: "Anamnesis"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "advanced"
 tags:
   - "utility"

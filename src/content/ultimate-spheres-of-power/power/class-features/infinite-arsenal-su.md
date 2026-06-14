@@ -1,8 +1,6 @@
 ---
-id: infinite-arsenal-su
 name: "Infinite Arsenal (Su)"
 type: class-feature
-system: power
 className: armorist
 level: 20
 tags: []

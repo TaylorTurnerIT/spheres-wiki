@@ -1,9 +1,5 @@
 ---
-id: ties-that-bind
 name: "Ties That Bind"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: magnifying-blast
 name: "Magnifying Blast"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["blast-type"]
 ---

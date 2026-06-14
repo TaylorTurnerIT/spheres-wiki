@@ -1,9 +1,5 @@
 ---
-id: "rugged-brutality"
 name: "Rugged Brutality"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

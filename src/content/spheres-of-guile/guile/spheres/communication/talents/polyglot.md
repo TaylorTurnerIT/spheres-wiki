@@ -1,9 +1,5 @@
 ---
-id: "polyglot"
 name: "Polyglot"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

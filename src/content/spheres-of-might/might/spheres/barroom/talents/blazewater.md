@@ -1,9 +1,5 @@
 ---
-id: "blazewater"
 name: "Blazewater"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "advanced"
 tags: []
 ---

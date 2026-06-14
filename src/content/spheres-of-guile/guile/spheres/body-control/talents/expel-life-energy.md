@@ -1,9 +1,5 @@
 ---
-id: "expel-life-energy"
 name: "Expel Life Energy"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags:
   - "clarity"

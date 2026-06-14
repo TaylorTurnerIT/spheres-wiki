@@ -1,8 +1,5 @@
 ---
-id: enhanced-contingency
 name: "Enhanced Contingency"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

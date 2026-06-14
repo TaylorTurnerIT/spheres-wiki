@@ -1,9 +1,5 @@
 ---
-id: permanent-image
 name: "Permanent Image"
-system: power
-type: talent
-sphere: illusion
 tier: advanced
 tags: []
 ---

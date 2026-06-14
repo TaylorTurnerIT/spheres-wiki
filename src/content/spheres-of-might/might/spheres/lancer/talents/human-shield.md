@@ -1,9 +1,5 @@
 ---
-id: "human-shield"
 name: "Human Shield"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags:
   - "impale"

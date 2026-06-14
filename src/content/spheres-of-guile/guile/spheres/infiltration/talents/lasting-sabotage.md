@@ -1,9 +1,5 @@
 ---
-id: "lasting-sabotage"
 name: "Lasting Sabotage"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "advanced"
 tags: []
 ---

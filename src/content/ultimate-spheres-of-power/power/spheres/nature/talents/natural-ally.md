@@ -1,9 +1,5 @@
 ---
-id: natural-ally
 name: "Natural Ally"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["spirit"]
 ---

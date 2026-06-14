@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "swim"
 label: "Swim"
 sphere: "athletics"
 priority: 0

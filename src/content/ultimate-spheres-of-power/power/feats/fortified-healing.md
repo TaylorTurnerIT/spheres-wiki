@@ -1,8 +1,5 @@
 ---
-id: fortified-healing
 name: "Fortified Healing"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: cyclone
 name: "Cyclone"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["air", "geomancing"]
 ---

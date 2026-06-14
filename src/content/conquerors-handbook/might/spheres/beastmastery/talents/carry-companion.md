@@ -1,9 +1,5 @@
 ---
-id: "carry-companion"
 name: "Carry Companion"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "utility"

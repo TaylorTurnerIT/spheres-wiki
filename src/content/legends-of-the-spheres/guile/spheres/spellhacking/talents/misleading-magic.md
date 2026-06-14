@@ -1,9 +1,5 @@
 ---
-id: "misleading-magic"
 name: "Misleading Magic"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "utility"

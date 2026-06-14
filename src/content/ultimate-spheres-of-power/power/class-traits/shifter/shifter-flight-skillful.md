@@ -1,10 +1,6 @@
 ---
-id: shifter-flight-skillful
 name: "Flight, Skillful"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

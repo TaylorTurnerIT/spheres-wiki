@@ -1,9 +1,5 @@
 ---
-id: instill-divination
 name: "Instill Divination"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["instill"]
 ---

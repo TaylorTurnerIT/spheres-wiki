@@ -1,9 +1,5 @@
 ---
-id: "monster-breaker"
 name: "Monster Breaker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "ride"

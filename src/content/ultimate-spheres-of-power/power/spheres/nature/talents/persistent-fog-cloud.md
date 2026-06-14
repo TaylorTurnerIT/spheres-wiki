@@ -1,9 +1,5 @@
 ---
-id: persistent-fog-cloud
 name: "Persistent Fog Cloud"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["water", "spirit"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: conquer
 name: "Conquer"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["manipulation"]
 ---

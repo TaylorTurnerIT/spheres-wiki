@@ -1,8 +1,5 @@
 ---
-id: "herbalism"
 name: "Herbalism"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "herbalism"
 tags: []
 sectionDefinitions:

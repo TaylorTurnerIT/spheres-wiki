@@ -1,8 +1,5 @@
 ---
-id: mind-joggle
 name: "Mind Joggle"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

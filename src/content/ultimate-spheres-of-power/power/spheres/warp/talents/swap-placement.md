@@ -1,9 +1,5 @@
 ---
-id: swap-placement
 name: "Swap Placement"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

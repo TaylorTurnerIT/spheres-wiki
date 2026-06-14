@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-empowered-attack
 name: "Empowered Attack"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

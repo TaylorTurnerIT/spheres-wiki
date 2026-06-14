@@ -1,9 +1,5 @@
 ---
-id: black-and-black-morality
 name: "Black And Black Morality"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: ["blot", "darkness", "shadow"]
 ---

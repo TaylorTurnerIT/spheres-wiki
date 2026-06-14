@@ -1,9 +1,5 @@
 ---
-id: "trapped-shield"
 name: "Trapped Shield"
-type: "talent"
-sourceBook: "spheres-apocrypha-tricks-and-traps"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: hedgewitch-familiar
 name: "Familiar"
-type: class-trait
-system: power
 tags: []
-className: hedgewitch
 featureId: secret
 ---
 

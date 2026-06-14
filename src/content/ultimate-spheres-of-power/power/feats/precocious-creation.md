@@ -1,8 +1,5 @@
 ---
-id: precocious-creation
 name: "Precocious Creation"
-type: feat
-system: power
 sphere: creation
 tags: []
 tier: feat

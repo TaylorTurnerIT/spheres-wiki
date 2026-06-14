@@ -1,9 +1,5 @@
 ---
-id: mantle
 name: Mantle
-type: talent
-system: power
-sphere: weather
 tier: basic
 tags: []
 ---

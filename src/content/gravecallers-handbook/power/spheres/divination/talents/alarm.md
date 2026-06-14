@@ -1,9 +1,5 @@
 ---
-id: alarm
 name: "Alarm"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["spell-like", "utility"]
 ---

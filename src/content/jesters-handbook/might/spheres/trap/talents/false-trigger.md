@@ -1,9 +1,5 @@
 ---
-id: "false-trigger"
 name: "False Trigger"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

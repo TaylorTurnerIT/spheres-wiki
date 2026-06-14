@@ -1,9 +1,5 @@
 ---
-id: "subvert-information"
 name: "Subvert Information"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

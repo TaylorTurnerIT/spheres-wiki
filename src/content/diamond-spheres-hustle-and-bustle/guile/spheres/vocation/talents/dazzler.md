@@ -1,9 +1,5 @@
 ---
-id: "dazzler"
 name: "Dazzler"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

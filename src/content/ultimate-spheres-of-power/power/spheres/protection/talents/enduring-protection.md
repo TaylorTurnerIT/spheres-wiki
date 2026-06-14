@@ -1,9 +1,5 @@
 ---
-id: enduring-protection
 name: "Enduring Protection"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: []
 ---

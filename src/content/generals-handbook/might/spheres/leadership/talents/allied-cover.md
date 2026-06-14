@@ -1,9 +1,5 @@
 ---
-id: "allied-cover"
 name: "Allied Cover"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

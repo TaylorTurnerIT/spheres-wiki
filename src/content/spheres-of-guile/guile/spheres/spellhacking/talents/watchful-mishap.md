@@ -1,9 +1,5 @@
 ---
-id: "watchful-mishap"
 name: "Watchful Mishap"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "mishap"

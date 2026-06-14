@@ -1,9 +1,5 @@
 ---
-id: "diverse-faction-magic"
 name: "Diverse Faction Magic"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

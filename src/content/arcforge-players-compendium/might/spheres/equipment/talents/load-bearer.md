@@ -1,9 +1,5 @@
 ---
-id: "load-bearer"
 name: "Load Bearer"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

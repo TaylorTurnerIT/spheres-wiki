@@ -1,9 +1,5 @@
 ---
-id: energy-sphere
 name: "Energy Sphere"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape"]
 ---

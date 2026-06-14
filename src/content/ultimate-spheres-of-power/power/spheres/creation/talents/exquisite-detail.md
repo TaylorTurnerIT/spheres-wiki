@@ -1,9 +1,5 @@
 ---
-id: exquisite-detail
 name: "Exquisite Detail"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["utility"]
 ---

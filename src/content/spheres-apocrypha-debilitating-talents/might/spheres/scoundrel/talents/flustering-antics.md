@@ -1,9 +1,5 @@
 ---
-id: "flustering-antics"
 name: "Flustering Antics"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "trick"

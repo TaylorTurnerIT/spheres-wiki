@@ -1,9 +1,5 @@
 ---
-id: focused-imagination
 name: "Focused Imagination"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "fashionista"
 name: "Fashionista"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "base"
 tags:
   - "package"

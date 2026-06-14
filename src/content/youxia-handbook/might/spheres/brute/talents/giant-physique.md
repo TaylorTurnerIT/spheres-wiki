@@ -1,9 +1,5 @@
 ---
-id: "giant-physique"
 name: "Giant Physique"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "brute"
 tier: "basic"
 tags:
   - "stance"

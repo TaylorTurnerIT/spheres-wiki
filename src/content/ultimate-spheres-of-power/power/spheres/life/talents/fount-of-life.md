@@ -1,9 +1,5 @@
 ---
-id: fount-of-life
 name: "Fount Of Life"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

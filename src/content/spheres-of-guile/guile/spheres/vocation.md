@@ -1,8 +1,5 @@
 ---
-id: "vocation"
 name: "Vocation"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "vocation"
 tags: []
 sectionDefinitions:

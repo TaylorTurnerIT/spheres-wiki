@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-ghostpoint
 name: "Ghostpoint"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

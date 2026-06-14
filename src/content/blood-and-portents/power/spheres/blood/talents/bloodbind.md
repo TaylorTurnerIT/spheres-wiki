@@ -1,9 +1,5 @@
 ---
-id: bloodbind
 name: "Bloodbind"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["blood-art"]
 ---

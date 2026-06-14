@@ -1,9 +1,5 @@
 ---
-id: "fierce-shout"
 name: "Fierce Shout"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "base"
 tags: []
 ---

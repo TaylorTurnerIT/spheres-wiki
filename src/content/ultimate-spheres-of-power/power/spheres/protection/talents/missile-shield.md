@@ -1,9 +1,5 @@
 ---
-id: missile-shield
 name: "Missile Shield"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["ward"]
 ---

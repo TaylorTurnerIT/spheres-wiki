@@ -1,9 +1,5 @@
 ---
-id: "bowling-bolas"
 name: "Bowling Bolas"
-type: "talent"
-sourceBook: "spheres-apocrypha-martial-talents-ranged"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

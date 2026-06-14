@@ -1,8 +1,5 @@
 ---
-id: localized-changes
 name: Localized Changes
-type: feat
-system: power
 sphere: weather
 dualSphere: time
 tier: feat

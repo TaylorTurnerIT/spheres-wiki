@@ -1,8 +1,5 @@
 ---
-id: plexing-boon
 name: Plexing Boon
-type: feat
-system: power
 sphere: protection
 dualSphere: enhancement
 tier: feat

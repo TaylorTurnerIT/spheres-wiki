@@ -1,9 +1,5 @@
 ---
-id: "nightmare-stalker"
 name: "Nightmare Stalker"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "gladiator"
 tier: "advanced"
 tags:
   - "demoralization"

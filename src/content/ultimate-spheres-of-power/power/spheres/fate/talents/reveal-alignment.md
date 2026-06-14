@@ -1,9 +1,5 @@
 ---
-id: reveal-alignment
 name: "Reveal Alignment"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["utility", "consecration"]
 ---

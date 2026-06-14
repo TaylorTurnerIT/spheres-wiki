@@ -1,9 +1,5 @@
 ---
-id: shift-time
 name: "Shift Time"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

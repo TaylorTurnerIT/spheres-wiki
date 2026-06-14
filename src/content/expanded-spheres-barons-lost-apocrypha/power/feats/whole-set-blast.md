@@ -1,8 +1,5 @@
 ---
-id: whole-set-blast
 name: Whole-Set Blast
-type: feat
-system: power
 sphere: fate
 dualSphere: destruction
 tier: feat

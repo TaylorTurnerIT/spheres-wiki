@@ -1,8 +1,5 @@
 ---
-id: expanding-presence
 name: "Expanding Presence"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

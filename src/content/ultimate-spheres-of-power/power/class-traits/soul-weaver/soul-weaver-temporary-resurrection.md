@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-temporary-resurrection
 name: "Temporary Resurrection"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

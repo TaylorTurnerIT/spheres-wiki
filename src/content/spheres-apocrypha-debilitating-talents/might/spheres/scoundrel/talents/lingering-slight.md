@@ -1,9 +1,5 @@
 ---
-id: "lingering-slight"
 name: "Lingering Slight"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

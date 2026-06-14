@@ -1,9 +1,5 @@
 ---
-id: "chokepoint"
 name: "Chokepoint"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "pathing"

@@ -1,9 +1,5 @@
 ---
-id: instill-charm
 name: "Instill Charm"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["instill"]
 ---

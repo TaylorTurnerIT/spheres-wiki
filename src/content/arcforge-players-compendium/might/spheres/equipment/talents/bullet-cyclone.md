@@ -1,9 +1,5 @@
 ---
-id: "bullet-cyclone"
 name: "Bullet Cyclone"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

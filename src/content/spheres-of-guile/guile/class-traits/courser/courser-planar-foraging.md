@@ -1,7 +1,5 @@
 ---
-id: courser-planar-foraging
 name: Planar Foraging
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 6"

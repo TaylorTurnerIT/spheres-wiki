@@ -1,8 +1,5 @@
 ---
-id: aggressive-mind-limb
 name: "Aggressive Mind Limb"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["combat", "protokinesis"]
 tier: feat

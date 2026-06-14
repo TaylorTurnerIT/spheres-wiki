@@ -1,9 +1,5 @@
 ---
-id: "lunge"
 name: "Lunge"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "fly"
 label: "Fly"
 sphere: "athletics"
 priority: 0

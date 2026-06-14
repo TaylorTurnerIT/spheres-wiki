@@ -1,9 +1,5 @@
 ---
-id: "masterful-defense"
 name: "Masterful Defense"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

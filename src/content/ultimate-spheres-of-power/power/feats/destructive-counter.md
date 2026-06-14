@@ -1,8 +1,5 @@
 ---
-id: destructive-counter
 name: "Destructive Counter"
-type: feat
-system: power
 sphere: creation
 tags: ["combat"]
 tier: feat

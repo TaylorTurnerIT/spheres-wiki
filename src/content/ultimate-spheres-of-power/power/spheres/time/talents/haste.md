@@ -1,9 +1,5 @@
 ---
-id: haste
 name: "Haste"
-type: talent
-system: power
-sphere: time
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "hindering-projectiles"
 name: "Hindering Projectiles"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags:
   - "snipe"

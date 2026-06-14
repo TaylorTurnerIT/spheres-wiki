@@ -1,9 +1,5 @@
 ---
-id: mirage-sight
 name: "Mirage Sight"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["heat", "mantle"]
 ---

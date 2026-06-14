@@ -1,9 +1,5 @@
 ---
-id: "soothing-draught"
 name: "Soothing Draught"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

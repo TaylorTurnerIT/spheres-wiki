@@ -1,9 +1,5 @@
 ---
-id: migraine
 name: "Migraine"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["quicken"]
 ---

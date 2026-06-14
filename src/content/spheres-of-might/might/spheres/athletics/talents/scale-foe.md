@@ -1,9 +1,5 @@
 ---
-id: "scale-foe"
 name: "Scale Foe"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "climb"

@@ -1,9 +1,5 @@
 ---
-id: "extra-beastmastery-package"
 name: "Extra Beastmastery Package"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

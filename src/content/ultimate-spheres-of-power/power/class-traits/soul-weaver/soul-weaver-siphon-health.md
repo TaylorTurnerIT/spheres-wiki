@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-siphon-health
 name: "Siphon Health"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: fusion
 name: "Fusion"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

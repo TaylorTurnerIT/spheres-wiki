@@ -1,9 +1,5 @@
 ---
-id: blast-trap
 name: "Blast Trap"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape"]
 ---

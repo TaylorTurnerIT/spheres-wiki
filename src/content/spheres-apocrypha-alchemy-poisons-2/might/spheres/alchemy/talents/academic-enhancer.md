@@ -1,9 +1,5 @@
 ---
-id: "academic-enhancer"
 name: "Academic Enhancer"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemy-poisons-2"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

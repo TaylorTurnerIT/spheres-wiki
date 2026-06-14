@@ -1,9 +1,5 @@
 ---
-id: "clockwork-coordination"
 name: "Clockwork Coordination"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

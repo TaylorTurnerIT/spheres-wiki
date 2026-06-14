@@ -1,10 +1,6 @@
 ---
-id: shifter-undead-kin
 name: "Undead Kin"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: shifter
 featureId: bestial-trait
 ---
 

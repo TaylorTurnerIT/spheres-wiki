@@ -1,9 +1,5 @@
 ---
-id: courage
 name: "Courage"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

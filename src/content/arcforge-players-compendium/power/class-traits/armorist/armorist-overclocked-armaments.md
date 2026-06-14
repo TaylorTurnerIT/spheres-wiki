@@ -1,10 +1,6 @@
 ---
-id: armorist-overclocked-armaments
 name: "Overclocked Armaments"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 requires: "advanced armaments, armorist 10"
 ---

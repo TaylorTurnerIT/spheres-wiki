@@ -1,8 +1,6 @@
 ---
-id: favored-element-su
 name: "Favored Element (Su)"
 type: class-feature
-system: power
 className: elementalist
 level: 3
 tags: []

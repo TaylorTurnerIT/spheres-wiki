@@ -1,9 +1,5 @@
 ---
-id: "armored-armaments"
 name: "Armored Armaments"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents-2"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

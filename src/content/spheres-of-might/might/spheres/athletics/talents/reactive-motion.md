@@ -1,9 +1,5 @@
 ---
-id: "reactive-motion"
 name: "Reactive Motion"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

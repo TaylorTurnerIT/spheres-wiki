@@ -1,9 +1,5 @@
 ---
-id: twist-essence
 name: "Twist Essence"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

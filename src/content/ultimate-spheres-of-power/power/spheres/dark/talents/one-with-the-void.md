@@ -1,9 +1,5 @@
 ---
-id: one-with-the-void
 name: "One With The Void"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: []
 ---

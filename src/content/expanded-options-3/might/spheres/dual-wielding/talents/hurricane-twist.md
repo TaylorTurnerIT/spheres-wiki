@@ -1,9 +1,5 @@
 ---
-id: "hurricane-twist"
 name: "Hurricane Twist"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "dual-wielding"
 tier: "advanced"
 tags: []
 ---

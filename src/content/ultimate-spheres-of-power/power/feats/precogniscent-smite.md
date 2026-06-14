@@ -1,8 +1,5 @@
 ---
-id: precogniscent-smite
 name: "Precogniscent Smite"
-type: feat
-system: power
 sphere: divination
 tags: ["combat"]
 tier: feat

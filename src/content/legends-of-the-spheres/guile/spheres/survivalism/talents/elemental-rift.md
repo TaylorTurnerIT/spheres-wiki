@@ -1,9 +1,5 @@
 ---
-id: "elemental-rift"
 name: "Elemental Rift"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "champion"

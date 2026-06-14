@@ -1,8 +1,6 @@
 ---
-id: esp-ex
 name: "ESP (Ex)"
 type: class-feature
-system: power
 className: symbiat
 level: 2
 tags: []

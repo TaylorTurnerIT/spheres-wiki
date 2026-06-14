@@ -1,9 +1,5 @@
 ---
-id: sleep
 name: "Sleep"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

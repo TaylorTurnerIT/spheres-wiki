@@ -1,9 +1,5 @@
 ---
-id: "forced-rebound"
 name: "Forced Rebound"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags:
   - "deflect"

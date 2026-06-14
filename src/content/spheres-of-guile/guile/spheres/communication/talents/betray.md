@@ -1,9 +1,5 @@
 ---
-id: "betray"
 name: "Betray"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "base"
 tags: []
 ---

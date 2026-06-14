@@ -1,9 +1,5 @@
 ---
-id: "bully"
 name: "Bully"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "utility"

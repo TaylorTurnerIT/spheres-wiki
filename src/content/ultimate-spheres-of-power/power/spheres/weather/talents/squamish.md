@@ -1,9 +1,5 @@
 ---
-id: squamish
 name: "Squamish"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["shroud", "wind"]
 ---

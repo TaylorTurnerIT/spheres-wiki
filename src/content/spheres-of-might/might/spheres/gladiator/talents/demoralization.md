@@ -1,9 +1,6 @@
 ---
-id: "demoralization"
 name: "Demoralization"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

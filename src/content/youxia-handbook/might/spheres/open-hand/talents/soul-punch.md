@@ -1,9 +1,5 @@
 ---
-id: "soul-punch"
 name: "Soul Punch"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "advanced"
 tags: []
 ---

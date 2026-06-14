@@ -1,10 +1,6 @@
 ---
-id: wraith-expanded-path-possession
 name: "Expanded Path Possession"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 requires: "haunt path, path sphere of the selected path"
 ---

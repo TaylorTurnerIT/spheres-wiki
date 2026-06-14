@@ -1,9 +1,5 @@
 ---
-id: "hurricane-kick"
 name: "Hurricane Kick"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

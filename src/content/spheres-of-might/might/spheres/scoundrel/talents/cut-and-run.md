@@ -1,9 +1,5 @@
 ---
-id: "cut-and-run"
 name: "Cut And Run"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

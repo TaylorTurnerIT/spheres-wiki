@@ -1,9 +1,5 @@
 ---
-id: elude-fate
 name: "Elude Fate"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["word"]
 ---

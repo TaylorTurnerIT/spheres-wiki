@@ -1,7 +1,5 @@
 ---
-id: stalwart
 name: Stalwart
-className: courser
 level: 5
 tags: []
 ---

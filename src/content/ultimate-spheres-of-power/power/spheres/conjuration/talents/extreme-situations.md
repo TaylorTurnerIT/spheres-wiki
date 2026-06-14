@@ -1,9 +1,5 @@
 ---
-id: extreme-situations
 name: "Extreme Situations"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

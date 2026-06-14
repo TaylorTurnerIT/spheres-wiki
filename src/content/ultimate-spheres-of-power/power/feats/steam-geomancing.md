@@ -1,8 +1,5 @@
 ---
-id: steam-geomancing
 name: "Steam Geomancing"
-type: feat
-system: power
 sphere: nature
 tags: []
 tier: feat

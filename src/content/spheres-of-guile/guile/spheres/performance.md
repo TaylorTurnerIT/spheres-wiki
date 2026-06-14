@@ -1,8 +1,5 @@
 ---
-id: "performance"
 name: "Performance"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "performance"
 tags: []
 sectionDefinitions:

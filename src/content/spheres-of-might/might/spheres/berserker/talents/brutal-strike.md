@@ -1,9 +1,6 @@
 ---
-id: "brutal-strike"
 name: "Brutal Strike"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

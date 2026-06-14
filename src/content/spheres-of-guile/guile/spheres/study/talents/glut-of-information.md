@@ -1,9 +1,5 @@
 ---
-id: "glut-of-information"
 name: "Glut Of Information"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "complication"

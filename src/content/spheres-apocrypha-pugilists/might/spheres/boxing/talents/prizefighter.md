@@ -1,9 +1,5 @@
 ---
-id: "prizefighter"
 name: "Prizefighter"
-type: "talent"
-sourceBook: "spheres-apocrypha-pugilists"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

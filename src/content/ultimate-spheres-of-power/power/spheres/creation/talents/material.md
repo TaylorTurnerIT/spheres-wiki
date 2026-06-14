@@ -1,9 +1,5 @@
 ---
-id: material
 name: Material
-type: talent
-system: power
-sphere: creation
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "rapid-handle"
 name: "Rapid Handle"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

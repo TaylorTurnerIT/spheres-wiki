@@ -1,9 +1,5 @@
 ---
-id: radiation-blast
 name: "Radiation Blast"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["blast-type", "fire", "light"]
 ---

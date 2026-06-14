@@ -1,9 +1,5 @@
 ---
-id: "defiant-boar"
 name: "Defiant Boar"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "guardian"
 tier: "basic"
 tags:
   - "stance"

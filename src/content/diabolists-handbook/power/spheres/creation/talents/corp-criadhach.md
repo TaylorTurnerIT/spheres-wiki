@@ -1,9 +1,5 @@
 ---
-id: corp-criadhach
 name: "Corp Criadhach"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: rules-clarifications-and-expansions
 name: "Rules Clarifications and Expansions"
-system: power
-type: talent
-sphere: fate
 tier: base
 tags: []
 ---

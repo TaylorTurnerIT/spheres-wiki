@@ -1,9 +1,5 @@
 ---
-id: "reactive-defense"
 name: "Reactive Defense"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

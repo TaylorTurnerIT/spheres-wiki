@@ -1,10 +1,6 @@
 ---
-id: wraith-lingering-incorporeality
 name: "Lingering Incorporeality"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

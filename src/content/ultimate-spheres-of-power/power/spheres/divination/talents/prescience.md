@@ -1,9 +1,5 @@
 ---
-id: prescience
 name: "Prescience"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

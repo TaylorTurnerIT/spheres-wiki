@@ -1,9 +1,5 @@
 ---
-id: "keep-em-talking"
 name: "Keep ‘Em Talking"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags: []
 ---

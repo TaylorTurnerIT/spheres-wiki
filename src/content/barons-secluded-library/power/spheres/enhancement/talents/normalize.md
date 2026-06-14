@@ -1,9 +1,5 @@
 ---
-id: normalize
 name: "Normalize"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: ["enhance", "sm"]
 ---

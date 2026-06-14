@@ -1,9 +1,5 @@
 ---
-id: aggressive-vitality
 name: "Aggressive Vitality"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["vitality"]
 ---

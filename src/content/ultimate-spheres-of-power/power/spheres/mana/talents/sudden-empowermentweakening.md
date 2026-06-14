@@ -1,9 +1,5 @@
 ---
-id: sudden-empowermentweakening
 name: "Sudden Empowerment/Weakening"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

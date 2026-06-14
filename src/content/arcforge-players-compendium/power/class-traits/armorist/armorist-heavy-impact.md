@@ -1,10 +1,6 @@
 ---
-id: armorist-heavy-impact
 name: "Heavy Impact"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: aggressive-momentum
 name: "Aggressive Momentum"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["momentum"]
 ---

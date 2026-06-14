@@ -1,9 +1,5 @@
 ---
-id: "sequester-memories"
 name: "Sequester Memories"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "advanced"
 tags:
   - "utility"

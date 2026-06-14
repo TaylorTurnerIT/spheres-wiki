@@ -1,9 +1,5 @@
 ---
-id: impawsible-perspective
 name: "Impawsible Perspective"
-system: power
-type: talent
-sphere: illusion
 tier: advanced
 tags: []
 ---

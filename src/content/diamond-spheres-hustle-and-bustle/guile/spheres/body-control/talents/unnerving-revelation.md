@@ -1,9 +1,5 @@
 ---
-id: "unnerving-revelation"
 name: "Unnerving Revelation"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

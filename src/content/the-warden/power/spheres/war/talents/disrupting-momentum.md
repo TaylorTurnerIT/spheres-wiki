@@ -1,9 +1,5 @@
 ---
-id: disrupting-momentum
 name: "Disrupting Momentum"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["momentum", "warden"]
 ---

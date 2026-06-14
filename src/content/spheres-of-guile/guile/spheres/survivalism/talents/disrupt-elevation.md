@@ -1,9 +1,5 @@
 ---
-id: "disrupt-elevation"
 name: "Disrupt Elevation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "ground"

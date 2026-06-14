@@ -1,9 +1,6 @@
 ---
-id: "fatal-thrust"
 name: "Fatal Thrust"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

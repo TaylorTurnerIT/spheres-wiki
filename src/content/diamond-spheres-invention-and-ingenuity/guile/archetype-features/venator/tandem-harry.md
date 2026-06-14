@@ -1,7 +1,5 @@
 ---
-id: tandem-harry
 name: Tandem Harry
-archetypeId: venator
 level: 9
 tags: []
 replaces:

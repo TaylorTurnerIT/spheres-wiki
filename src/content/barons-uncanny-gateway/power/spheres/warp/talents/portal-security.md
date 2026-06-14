@@ -1,9 +1,5 @@
 ---
-id: portal-security
 name: "Portal Security"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["sm", "space"]
 ---

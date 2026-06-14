@@ -1,9 +1,5 @@
 ---
-id: air-blast
 name: "Air Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["air", "blast-type"]
 ---

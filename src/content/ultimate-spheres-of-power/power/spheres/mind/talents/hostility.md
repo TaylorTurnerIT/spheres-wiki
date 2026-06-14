@@ -1,9 +1,5 @@
 ---
-id: hostility
 name: "Hostility"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

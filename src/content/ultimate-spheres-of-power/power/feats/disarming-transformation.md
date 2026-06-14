@@ -1,8 +1,5 @@
 ---
-id: disarming-transformation
 name: "Disarming Transformation"
-type: feat
-system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat

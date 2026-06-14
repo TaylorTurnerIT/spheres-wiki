@@ -1,8 +1,5 @@
 ---
-id: how-to-build-spherecaster
 name: "How to Build a Spherecaster"
-type: article
-system: power
 tags: []
 ---
 

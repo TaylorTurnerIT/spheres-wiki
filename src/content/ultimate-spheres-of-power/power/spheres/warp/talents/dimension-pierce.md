@@ -1,9 +1,5 @@
 ---
-id: dimension-pierce
 name: "Dimension Pierce"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

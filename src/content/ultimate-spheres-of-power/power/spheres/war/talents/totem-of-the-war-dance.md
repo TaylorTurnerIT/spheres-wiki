@@ -1,9 +1,5 @@
 ---
-id: totem-of-the-war-dance
 name: "Totem Of The War Dance"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

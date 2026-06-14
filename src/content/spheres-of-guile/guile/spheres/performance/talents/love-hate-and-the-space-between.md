@@ -1,9 +1,5 @@
 ---
-id: "love-hate-and-the-space-between"
 name: "Love, Hate, And The Space Between"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "act"

@@ -1,9 +1,5 @@
 ---
-id: "lightning-disguise"
 name: "Lightning Disguise"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "advanced"
 tags: []
 ---

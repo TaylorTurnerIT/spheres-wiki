@@ -1,9 +1,5 @@
 ---
-id: "deceptive-movement"
 name: "Deceptive Movement"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "motion"

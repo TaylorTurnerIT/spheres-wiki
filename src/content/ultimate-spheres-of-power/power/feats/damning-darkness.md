@@ -1,8 +1,5 @@
 ---
-id: damning-darkness
 name: "Damning Darkness"
-type: feat
-system: power
 sphere: dark
 tags: []
 tier: feat

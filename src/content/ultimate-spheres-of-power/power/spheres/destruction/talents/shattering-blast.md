@@ -1,9 +1,5 @@
 ---
-id: shattering-blast
 name: "Shattering Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "sonic"]
 ---

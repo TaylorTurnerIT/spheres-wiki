@@ -1,9 +1,5 @@
 ---
-id: "underwater-basketweaving"
 name: "Underwater Basketweaving"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "utility"

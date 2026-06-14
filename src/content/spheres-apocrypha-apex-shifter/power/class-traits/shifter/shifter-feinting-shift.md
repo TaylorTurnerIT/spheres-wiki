@@ -1,10 +1,6 @@
 ---
-id: shifter-feinting-shift
 name: "Feinting Shift"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 ---
 

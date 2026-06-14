@@ -1,9 +1,5 @@
 ---
-id: "augmented-grip"
 name: "Augmented Grip"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags: []
 ---

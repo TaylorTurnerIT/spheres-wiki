@@ -1,8 +1,5 @@
 ---
-id: destruction
 name: "Destruction"
-system: power
-type: sphere
 icon: destruction
 description: "You can use destructive power."
 tags: []

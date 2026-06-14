@@ -1,9 +1,5 @@
 ---
-id: "turbo-knockdown"
 name: "Turbo Knockdown"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "advanced"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: lightshow
 name: "Lightshow"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

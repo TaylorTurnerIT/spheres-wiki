@@ -1,9 +1,5 @@
 ---
-id: "firearm-proficiency"
 name: "Firearm Proficiency"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

@@ -1,9 +1,5 @@
 ---
-id: greater-size
 name: "Greater Size"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["range"]
 ---

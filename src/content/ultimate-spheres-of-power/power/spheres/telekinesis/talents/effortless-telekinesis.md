@@ -1,9 +1,5 @@
 ---
-id: effortless-telekinesis
 name: "Effortless Telekinesis"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

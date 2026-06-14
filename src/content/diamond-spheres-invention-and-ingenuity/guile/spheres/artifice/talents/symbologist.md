@@ -1,9 +1,5 @@
 ---
-id: "symbologist"
 name: "Symbologist"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "artwork"

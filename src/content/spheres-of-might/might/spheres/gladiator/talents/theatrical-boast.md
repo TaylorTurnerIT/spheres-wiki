@@ -1,9 +1,5 @@
 ---
-id: "theatrical-boast"
 name: "Theatrical Boast"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

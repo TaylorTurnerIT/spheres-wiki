@@ -1,9 +1,5 @@
 ---
-id: focused-blast
 name: "Focused Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: []
 ---

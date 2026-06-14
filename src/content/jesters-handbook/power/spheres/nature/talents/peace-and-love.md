@@ -1,9 +1,5 @@
 ---
-id: peace-and-love
 name: "Peace And Love"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["spirit"]
 ---

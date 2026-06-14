@@ -1,8 +1,5 @@
 ---
-id: blood-thirst
 name: "Blood Thirst"
-type: feat
-system: power
 sphere: blood
 tags: ["extraordinary"]
 tier: feat

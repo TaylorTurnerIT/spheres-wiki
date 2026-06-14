@@ -1,9 +1,5 @@
 ---
-id: shadow-tag
 name: "Shadow Tag"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "darkness", "shadow", "utility"]
 ---

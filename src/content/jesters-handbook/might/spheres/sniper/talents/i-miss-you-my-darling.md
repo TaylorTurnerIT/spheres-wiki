@@ -1,9 +1,5 @@
 ---
-id: "i-miss-you-my-darling"
 name: "I Miss You My Darling"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "sniper"
 tier: "advanced"
 tags: []
 ---

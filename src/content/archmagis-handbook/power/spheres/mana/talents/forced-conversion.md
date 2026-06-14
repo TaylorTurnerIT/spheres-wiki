@@ -1,9 +1,5 @@
 ---
-id: forced-conversion
 name: "Forced Conversion"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["expunge"]
 ---

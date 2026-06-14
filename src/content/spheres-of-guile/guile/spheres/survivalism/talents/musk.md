@@ -1,9 +1,5 @@
 ---
-id: "musk"
 name: "Musk"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "harvest"

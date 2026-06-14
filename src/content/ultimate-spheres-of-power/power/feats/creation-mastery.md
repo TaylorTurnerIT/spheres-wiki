@@ -1,8 +1,5 @@
 ---
-id: creation-mastery
 name: "Creation Mastery"
-type: feat
-system: power
 sphere: creation
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "deep-fighter-training"
 name: "Deep Fighter Training"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

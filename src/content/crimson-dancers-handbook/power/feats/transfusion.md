@@ -1,8 +1,5 @@
 ---
-id: transfusion
 name: "Transfusion"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: ghost-sight
 name: "Ghost Sight"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

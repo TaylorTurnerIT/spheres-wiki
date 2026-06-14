@@ -1,9 +1,5 @@
 ---
-id: lingering-resentment
 name: "Lingering Resentment"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

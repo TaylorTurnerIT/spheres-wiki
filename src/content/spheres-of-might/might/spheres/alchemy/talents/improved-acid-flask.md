@@ -1,9 +1,5 @@
 ---
-id: "improved-acid-flask"
 name: "Improved Acid Flask"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

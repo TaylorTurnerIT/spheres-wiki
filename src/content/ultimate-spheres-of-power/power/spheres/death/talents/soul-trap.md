@@ -1,9 +1,5 @@
 ---
-id: soul-trap
 name: "Soul Trap"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

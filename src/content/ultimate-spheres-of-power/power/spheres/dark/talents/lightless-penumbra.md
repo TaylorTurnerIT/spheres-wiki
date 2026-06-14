@@ -1,9 +1,5 @@
 ---
-id: lightless-penumbra
 name: "Lightless Penumbra"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: ["shadow"]
 ---

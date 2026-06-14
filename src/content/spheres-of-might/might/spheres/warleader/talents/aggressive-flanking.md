@@ -1,9 +1,5 @@
 ---
-id: "aggressive-flanking"
 name: "Aggressive Flanking"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "base"
 tags: []
 ---

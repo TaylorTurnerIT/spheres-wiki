@@ -1,9 +1,5 @@
 ---
-id: "leopard-s-gambit"
 name: "Leopard’s Gambit"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags:
   - "stance"

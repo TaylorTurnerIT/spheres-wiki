@@ -1,9 +1,5 @@
 ---
-id: "direct-path"
 name: "Direct Path"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "plan"

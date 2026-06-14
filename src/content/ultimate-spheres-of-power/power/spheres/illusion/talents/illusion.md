@@ -1,9 +1,5 @@
 ---
-id: illusion
 name: Illusion
-system: power
-type: talent
-sphere: illusion
 tier: base
 tags: []
 ---

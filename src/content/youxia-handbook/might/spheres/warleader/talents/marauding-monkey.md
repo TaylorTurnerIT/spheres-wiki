@@ -1,9 +1,5 @@
 ---
-id: "marauding-monkey"
 name: "Marauding Monkey"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "stance"

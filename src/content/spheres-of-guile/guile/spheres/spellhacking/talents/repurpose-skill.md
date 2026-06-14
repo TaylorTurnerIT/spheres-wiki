@@ -1,9 +1,5 @@
 ---
-id: "repurpose-skill"
 name: "Repurpose Skill"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

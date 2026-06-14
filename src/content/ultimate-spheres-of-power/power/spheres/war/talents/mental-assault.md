@@ -1,9 +1,5 @@
 ---
-id: mental-assault
 name: "Mental Assault"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

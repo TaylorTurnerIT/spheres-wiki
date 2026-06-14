@@ -1,9 +1,5 @@
 ---
-id: "sweeping-kick"
 name: "Sweeping Kick"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "group-cover"
 name: "Group Cover"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

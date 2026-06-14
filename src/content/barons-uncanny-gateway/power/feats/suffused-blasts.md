@@ -1,8 +1,5 @@
 ---
-id: suffused-blasts
 name: "Suffused Blasts"
-type: feat
-system: power
 sphere: destruction
 tags: ["sm"]
 tier: feat

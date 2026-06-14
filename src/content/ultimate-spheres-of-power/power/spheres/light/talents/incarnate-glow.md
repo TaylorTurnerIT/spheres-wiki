@@ -1,9 +1,5 @@
 ---
-id: incarnate-glow
 name: "Incarnate Glow"
-system: power
-type: talent
-sphere: light
 tier: advanced
 tags: []
 ---

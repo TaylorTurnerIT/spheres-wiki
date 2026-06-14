@@ -1,10 +1,6 @@
 ---
-id: armorist-movement
 name: "Movement"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: pouncing-teleport
 name: "Pouncing Teleport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

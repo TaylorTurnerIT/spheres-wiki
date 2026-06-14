@@ -1,8 +1,5 @@
 ---
-id: mystic-choreography
 name: "Mystic Choreography"
-type: feat
-system: power
 sphere: enhancement
 tags: ["drawback", "proxy"]
 tier: feat

@@ -1,10 +1,6 @@
 ---
-id: mageknight-spell-mirror
 name: "Spell Mirror"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 requires: "Spell Shield, Mageknight 10"
 ---

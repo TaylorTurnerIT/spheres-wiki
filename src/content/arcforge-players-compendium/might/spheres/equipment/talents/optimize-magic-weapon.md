@@ -1,9 +1,5 @@
 ---
-id: "optimize-magic-weapon"
 name: "Optimize Magic Weapon"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

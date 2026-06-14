@@ -1,8 +1,5 @@
 ---
-id: mind
 name: "Mind"
-system: power
-type: sphere
 icon: mind
 description: "You gain the ability to alter the minds of others, causing them to act as you see fit."
 tags: []

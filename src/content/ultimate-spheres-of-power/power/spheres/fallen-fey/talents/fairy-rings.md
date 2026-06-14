@@ -1,9 +1,5 @@
 ---
-id: fairy-rings
 name: "Fairy Rings"
-type: talent
-system: power
-sphere: fallen-fey
 tier: basic
 tags: []
 ---

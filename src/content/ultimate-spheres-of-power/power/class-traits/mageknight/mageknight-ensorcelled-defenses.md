@@ -1,10 +1,6 @@
 ---
-id: mageknight-ensorcelled-defenses
 name: "Ensorcelled Defenses"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: mageknight
 featureId: mystic-combat-su
 ---
 

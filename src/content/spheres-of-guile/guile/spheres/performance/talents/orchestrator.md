@@ -1,9 +1,5 @@
 ---
-id: "orchestrator"
 name: "Orchestrator"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "utility"

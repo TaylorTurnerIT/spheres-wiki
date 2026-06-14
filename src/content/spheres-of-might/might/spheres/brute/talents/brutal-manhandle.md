@@ -1,9 +1,5 @@
 ---
-id: "brutal-manhandle"
 name: "Brutal Manhandle"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

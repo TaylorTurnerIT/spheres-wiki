@@ -1,9 +1,5 @@
 ---
-id: "retrocognition"
 name: "Retrocognition"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "study"
 tier: "advanced"
 tags:
   - "supernatural"

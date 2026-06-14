@@ -1,9 +1,5 @@
 ---
-id: segmented-warp
 name: "Segmented Warp"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

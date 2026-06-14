@@ -1,8 +1,5 @@
 ---
-id: "artifice"
 name: "Artifice"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "artifice"
 tags: []
 sectionDefinitions:

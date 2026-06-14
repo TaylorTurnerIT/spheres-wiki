@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-soulfire
 name: "Soulfire"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

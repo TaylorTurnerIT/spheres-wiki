@@ -1,8 +1,5 @@
 ---
-id: telekinetic-exoskeleton
 name: "Telekinetic Exoskeleton"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat

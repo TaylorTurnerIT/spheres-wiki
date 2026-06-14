@@ -1,8 +1,5 @@
 ---
-id: flash-warp
 name: Flash Warp
-type: feat
-system: power
 sphere: warp
 dualSphere: light
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "dread"
 name: "Dread"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

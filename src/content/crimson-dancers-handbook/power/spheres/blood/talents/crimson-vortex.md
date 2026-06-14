@@ -1,9 +1,5 @@
 ---
-id: crimson-vortex
 name: "Crimson Vortex"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

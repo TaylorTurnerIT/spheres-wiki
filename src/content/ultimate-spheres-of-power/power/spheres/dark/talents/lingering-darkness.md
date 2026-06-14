@@ -1,9 +1,5 @@
 ---
-id: lingering-darkness
 name: "Lingering Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["duration"]
 ---

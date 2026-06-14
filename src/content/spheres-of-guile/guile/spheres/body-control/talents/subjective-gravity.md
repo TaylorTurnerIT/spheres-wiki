@@ -1,9 +1,5 @@
 ---
-id: "subjective-gravity"
 name: "Subjective Gravity"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags:
   - "control"

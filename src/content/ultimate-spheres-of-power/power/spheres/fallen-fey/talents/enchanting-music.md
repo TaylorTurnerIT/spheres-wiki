@@ -1,9 +1,5 @@
 ---
-id: enchanting-music
 name: "Enchanting Music"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

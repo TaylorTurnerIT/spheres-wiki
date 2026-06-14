@@ -1,9 +1,5 @@
 ---
-id: poltergeist
 name: "Poltergeist"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike"]
 ---

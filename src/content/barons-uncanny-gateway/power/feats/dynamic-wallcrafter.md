@@ -1,8 +1,5 @@
 ---
-id: dynamic-wallcrafter
 name: "Dynamic Wallcrafter"
-type: feat
-system: power
 sphere: protection
 tags: ["sm"]
 tier: feat

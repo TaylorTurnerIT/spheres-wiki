@@ -1,9 +1,5 @@
 ---
-id: painkiller
 name: "Painkiller"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

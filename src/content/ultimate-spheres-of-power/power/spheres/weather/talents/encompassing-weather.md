@@ -1,9 +1,5 @@
 ---
-id: encompassing-weather
 name: "Encompassing Weather"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mass"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "rangers"
 name: "Rangers"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

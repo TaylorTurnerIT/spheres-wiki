@@ -1,9 +1,5 @@
 ---
-id: vindictiveness
 name: "Vindictiveness"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mandate"]
 ---

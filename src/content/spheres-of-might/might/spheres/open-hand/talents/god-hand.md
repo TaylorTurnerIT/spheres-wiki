@@ -1,9 +1,5 @@
 ---
-id: "god-hand"
 name: "God Hand"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "advanced"
 tags: []
 ---

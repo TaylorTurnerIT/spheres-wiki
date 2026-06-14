@@ -1,9 +1,5 @@
 ---
-id: hungry-darkness
 name: "Hungry Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "darkness"]
 ---

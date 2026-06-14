@@ -1,9 +1,5 @@
 ---
-id: bonerattle
 name: "Bonerattle"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike"]
 ---

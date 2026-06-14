@@ -1,8 +1,6 @@
 ---
-id: wraith-haunts
 name: "Wraith Haunts"
 type: class-feature
-system: power
 className: wraith
 level: 3
 tags: []

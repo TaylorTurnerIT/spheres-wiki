@@ -1,8 +1,5 @@
 ---
-id: surgeons-trade-secrets
 name: "Surgeon's Trade Secrets"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

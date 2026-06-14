@@ -1,8 +1,5 @@
 ---
-id: swarm-coordination
 name: "Swarm Coordination"
-type: feat
-system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat

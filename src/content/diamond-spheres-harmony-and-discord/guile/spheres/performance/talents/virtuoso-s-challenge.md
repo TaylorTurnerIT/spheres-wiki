@@ -1,9 +1,5 @@
 ---
-id: "virtuoso-s-challenge"
 name: "Virtuoso’s Challenge"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: wood-shape
 name: "Wood Shape"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

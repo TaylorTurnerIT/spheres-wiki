@@ -1,9 +1,5 @@
 ---
-id: flare
 name: "Flare"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

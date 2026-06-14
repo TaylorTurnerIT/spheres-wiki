@@ -1,9 +1,5 @@
 ---
-id: blinding-light
 name: "Blinding Light"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

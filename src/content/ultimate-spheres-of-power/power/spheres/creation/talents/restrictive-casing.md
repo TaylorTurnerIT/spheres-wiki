@@ -1,9 +1,5 @@
 ---
-id: restrictive-casing
 name: "Restrictive Casing"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: []
 ---

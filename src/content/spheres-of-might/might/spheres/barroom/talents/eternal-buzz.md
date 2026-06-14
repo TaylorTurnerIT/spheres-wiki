@@ -1,9 +1,5 @@
 ---
-id: "eternal-buzz"
 name: "Eternal Buzz"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: radiation
 name: Radiation
-system: power
-type: talent
-sphere: light
 tier: advanced
 tags:
   - light

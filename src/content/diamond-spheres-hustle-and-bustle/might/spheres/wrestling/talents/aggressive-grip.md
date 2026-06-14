@@ -1,9 +1,5 @@
 ---
-id: "aggressive-grip"
 name: "Aggressive Grip"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

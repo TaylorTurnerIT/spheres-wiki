@@ -1,9 +1,5 @@
 ---
-id: the-hierophant
 name: "The Hierophant"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

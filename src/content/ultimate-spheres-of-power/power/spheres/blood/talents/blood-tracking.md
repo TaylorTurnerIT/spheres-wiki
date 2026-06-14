@@ -1,9 +1,5 @@
 ---
-id: blood-tracking
 name: "Blood Tracking"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

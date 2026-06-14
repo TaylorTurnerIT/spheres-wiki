@@ -1,9 +1,5 @@
 ---
-id: "retarget-magic"
 name: "Retarget Magic"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "advanced"
 tags: []
 ---

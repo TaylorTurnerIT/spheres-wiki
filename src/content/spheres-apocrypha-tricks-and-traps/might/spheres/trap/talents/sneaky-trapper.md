@@ -1,9 +1,5 @@
 ---
-id: "sneaky-trapper"
 name: "Sneaky Trapper"
-type: "talent"
-sourceBook: "spheres-apocrypha-tricks-and-traps"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

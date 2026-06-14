@@ -1,8 +1,5 @@
 ---
-id: sense-light
 name: "Sense Light"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

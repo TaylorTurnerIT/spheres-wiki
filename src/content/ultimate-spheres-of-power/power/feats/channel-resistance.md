@@ -1,8 +1,5 @@
 ---
-id: channel-resistance
 name: "Channel Resistance"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

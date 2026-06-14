@@ -1,9 +1,5 @@
 ---
-id: "controlled-rupture"
 name: "Controlled Rupture"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

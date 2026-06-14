@@ -1,10 +1,6 @@
 ---
-id: wraith-lengthened-control
 name: "Lengthened Control"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

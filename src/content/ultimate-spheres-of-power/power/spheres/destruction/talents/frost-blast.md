@@ -1,9 +1,5 @@
 ---
-id: frost-blast
 name: "Frost Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "cold"]
 ---

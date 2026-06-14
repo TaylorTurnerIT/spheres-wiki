@@ -1,9 +1,5 @@
 ---
-id: diagnose
 name: "Diagnose"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["utility"]
 ---

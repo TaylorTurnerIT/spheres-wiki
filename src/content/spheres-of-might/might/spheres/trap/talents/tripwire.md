@@ -1,9 +1,5 @@
 ---
-id: "tripwire"
 name: "Tripwire"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "base"
 tags:
   - "snare"

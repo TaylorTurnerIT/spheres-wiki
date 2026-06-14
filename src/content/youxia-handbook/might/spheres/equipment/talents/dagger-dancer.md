@@ -1,9 +1,5 @@
 ---
-id: "dagger-dancer"
 name: "Dagger Dancer"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

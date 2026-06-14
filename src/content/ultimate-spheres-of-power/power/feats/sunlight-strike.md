@@ -1,8 +1,5 @@
 ---
-id: sunlight-strike
 name: "Sunlight Strike"
-type: feat
-system: power
 sphere: light
 tags: ["combat"]
 tier: feat

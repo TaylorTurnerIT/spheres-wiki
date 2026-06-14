@@ -1,9 +1,5 @@
 ---
-id: quick-reactions
 name: "Quick Reactions"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

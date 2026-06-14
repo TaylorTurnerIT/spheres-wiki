@@ -1,9 +1,5 @@
 ---
-id: flounder
 name: "Flounder"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["curse", "word"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: absorb
 name: "Absorb"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: spell-conduit
 name: "Spell Conduit"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: []
 ---

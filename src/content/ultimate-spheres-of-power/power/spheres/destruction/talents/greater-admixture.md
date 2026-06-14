@@ -1,9 +1,5 @@
 ---
-id: greater-admixture
 name: "Greater Admixture"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: []
 ---

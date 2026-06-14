@@ -1,9 +1,5 @@
 ---
-id: undead-whisperer
 name: "Undead Whisperer"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["dominion"]
 ---

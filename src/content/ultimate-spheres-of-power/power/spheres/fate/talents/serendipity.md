@@ -1,9 +1,5 @@
 ---
-id: serendipity
 name: "Serendipity"
-type: talent
-system: power
-sphere: fate
 tier: basic
 tags: []
 ---

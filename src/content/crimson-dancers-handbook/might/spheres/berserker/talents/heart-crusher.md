@@ -1,9 +1,5 @@
 ---
-id: "heart-crusher"
 name: "Heart Crusher"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

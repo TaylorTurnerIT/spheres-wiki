@@ -1,8 +1,5 @@
 ---
-id: sylvan-necromancy
 name: Sylvan Necromancy
-type: feat
-system: power
 sphere: nature
 dualSphere: death
 tier: feat

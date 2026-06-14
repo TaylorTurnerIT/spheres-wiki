@@ -1,9 +1,5 @@
 ---
-id: "bloody-hell"
 name: "Bloody Hell"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "duelist"
 tier: "advanced"
 tags:
   - "bleed"

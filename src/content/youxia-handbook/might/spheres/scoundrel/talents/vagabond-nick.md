@@ -1,9 +1,5 @@
 ---
-id: "vagabond-nick"
 name: "Vagabond Nick"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "stance"

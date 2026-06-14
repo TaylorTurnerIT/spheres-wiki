@@ -1,9 +1,5 @@
 ---
-id: the-hermit
 name: "The Hermit"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

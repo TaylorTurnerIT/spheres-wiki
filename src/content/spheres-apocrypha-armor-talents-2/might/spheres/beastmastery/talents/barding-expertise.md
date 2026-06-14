@@ -1,9 +1,5 @@
 ---
-id: "barding-expertise"
 name: "Barding Expertise"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents-2"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "ride"

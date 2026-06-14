@@ -1,9 +1,5 @@
 ---
-id: finish
 name: "Finish"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

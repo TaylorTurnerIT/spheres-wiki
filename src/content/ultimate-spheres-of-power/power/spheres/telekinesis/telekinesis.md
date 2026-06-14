@@ -1,8 +1,5 @@
 ---
-id: telekinesis
 name: "Telekinesis"
-system: power
-type: sphere
 icon: telekinesis
 description: "You can lift and move objects through magic."
 tags: []

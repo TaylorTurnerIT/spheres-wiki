@@ -1,8 +1,5 @@
 ---
-id: spirit-beacon
 name: "Spirit Beacon"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

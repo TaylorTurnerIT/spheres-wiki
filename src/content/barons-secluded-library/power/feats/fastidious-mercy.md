@@ -1,8 +1,5 @@
 ---
-id: fastidious-mercy
 name: "Fastidious Mercy"
-type: feat
-system: power
 sphere: fate
 tags: ["sm"]
 tier: feat

@@ -1,10 +1,6 @@
 ---
-id: mageknight-mounted-combatant-core
 name: "Mounted Combatant [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

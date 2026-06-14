@@ -1,9 +1,5 @@
 ---
-id: "inedible-source"
 name: "Inedible Source"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "base"
 tags:
   - "package"

@@ -1,9 +1,5 @@
 ---
-id: "tandem-positioning"
 name: "Tandem Positioning"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

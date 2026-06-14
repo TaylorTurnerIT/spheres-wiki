@@ -1,10 +1,6 @@
 ---
-id: shifter-flight-perfect
 name: "Flight, Perfect"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 requires: "shifter 6"
 ---

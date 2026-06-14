@@ -1,9 +1,5 @@
 ---
-id: "artificer-s-eye"
 name: "Artificer's Eye"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "approach"

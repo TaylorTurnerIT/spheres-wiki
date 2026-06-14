@@ -1,9 +1,5 @@
 ---
-id: instill-fate
 name: "Instill Fate"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["instill"]
 ---

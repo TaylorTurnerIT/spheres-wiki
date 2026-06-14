@@ -1,9 +1,5 @@
 ---
-id: "unending-loyalty"
 name: "Unending Loyalty"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "advanced"
 tags:
   - "shout"

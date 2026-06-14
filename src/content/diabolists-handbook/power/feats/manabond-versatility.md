@@ -1,8 +1,5 @@
 ---
-id: manabond-versatility
 name: Manabond Versatility
-type: feat
-system: power
 sphere: mana
 dualSphere: "any"
 tier: feat

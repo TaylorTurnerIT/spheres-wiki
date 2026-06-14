@@ -1,9 +1,5 @@
 ---
-id: eye-bleed
 name: "Eye Bleed"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-flexible-caster
 name: "Flexible Caster"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

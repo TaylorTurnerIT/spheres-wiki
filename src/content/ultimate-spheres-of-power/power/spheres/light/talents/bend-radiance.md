@@ -1,9 +1,5 @@
 ---
-id: bend-radiance
 name: "Bend Radiance"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

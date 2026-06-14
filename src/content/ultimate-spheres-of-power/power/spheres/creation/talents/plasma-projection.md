@@ -1,9 +1,5 @@
 ---
-id: plasma-projection
 name: "Plasma Projection"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: necromancy-and-morality
 name: "Necromancy and Morality"
-system: power
-type: talent
-sphere: death
 tier: base
 tags: []
 ---

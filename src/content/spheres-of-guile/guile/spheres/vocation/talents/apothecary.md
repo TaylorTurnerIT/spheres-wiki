@@ -1,9 +1,5 @@
 ---
-id: "apothecary"
 name: "Apothecary"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

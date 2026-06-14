@@ -1,10 +1,6 @@
 ---
-id: mageknight-black-dog-companion
 name: "Black Dog Companion"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 requires: "Level 4, 1 talent with the Curse descriptor"
 ---

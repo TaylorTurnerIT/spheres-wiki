@@ -1,8 +1,5 @@
 ---
-id: twisted-reanimation
 name: Twisted Reanimation
-type: feat
-system: power
 sphere: death
 dualSphere: alteration
 tier: feat

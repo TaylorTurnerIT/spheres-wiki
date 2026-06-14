@@ -1,9 +1,5 @@
 ---
-id: "prepare-atmosphere"
 name: "Prepare Atmosphere"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "ground"

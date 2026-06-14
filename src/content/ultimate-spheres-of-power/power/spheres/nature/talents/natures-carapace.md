@@ -1,9 +1,5 @@
 ---
-id: natures-carapace
 name: "Nature's Carapace"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: restore-capacity
 name: "Restore Capacity"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["cure"]
 ---

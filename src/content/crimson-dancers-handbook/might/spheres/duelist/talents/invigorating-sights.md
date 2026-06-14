@@ -1,9 +1,5 @@
 ---
-id: "invigorating-sights"
 name: "Invigorating Sights"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "bleed"

@@ -1,9 +1,5 @@
 ---
-id: magical-conduit
 name: "Magical Conduit"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["mass"]
 ---

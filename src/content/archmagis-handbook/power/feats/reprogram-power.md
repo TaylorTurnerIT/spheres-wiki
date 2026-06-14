@@ -1,8 +1,5 @@
 ---
-id: reprogram-power
 name: "Reprogram Power"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

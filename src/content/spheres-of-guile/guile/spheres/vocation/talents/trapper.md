@@ -1,9 +1,5 @@
 ---
-id: "trapper"
 name: "Trapper"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

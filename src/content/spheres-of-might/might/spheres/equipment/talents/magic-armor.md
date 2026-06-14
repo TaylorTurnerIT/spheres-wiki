@@ -1,9 +1,5 @@
 ---
-id: "magic-armor"
 name: "Magic Armor"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "not-the-face"
 name: "Not The Face"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags: []
 ---

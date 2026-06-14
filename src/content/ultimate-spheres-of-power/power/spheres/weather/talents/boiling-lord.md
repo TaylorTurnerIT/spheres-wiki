@@ -1,9 +1,5 @@
 ---
-id: boiling-lord
 name: "Boiling Lord"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

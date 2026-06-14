@@ -1,8 +1,6 @@
 ---
-id: list-of-paths
 name: "List of Paths"
 type: class-feature
-system: power
 className: hedgewitch
 level: 1
 tags: []

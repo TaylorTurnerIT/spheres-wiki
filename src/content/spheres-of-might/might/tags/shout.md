@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "shout"
 label: "Shout"
 sphere: "warleader"
 priority: 0

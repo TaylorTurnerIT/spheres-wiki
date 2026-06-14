@@ -1,8 +1,5 @@
 ---
-id: event-horizon
 name: Event Horizon
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: dark
 tier: feat

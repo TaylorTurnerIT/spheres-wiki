@@ -1,8 +1,5 @@
 ---
-id: rhythmic-chaos
 name: "Rhythmic Chaos"
-type: feat
-system: power
 sphere: mana
 tags: ["wild-magic"]
 tier: feat

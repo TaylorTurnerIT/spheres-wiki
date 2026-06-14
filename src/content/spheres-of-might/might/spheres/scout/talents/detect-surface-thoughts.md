@@ -1,9 +1,5 @@
 ---
-id: "detect-surface-thoughts"
 name: "Detect Surface Thoughts"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "advanced"
 tags:
   - "utility"

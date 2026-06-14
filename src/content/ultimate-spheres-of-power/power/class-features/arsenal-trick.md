@@ -1,8 +1,6 @@
 ---
-id: arsenal-trick
 name: "Arsenal Trick"
 type: class-feature
-system: power
 className: armorist
 level: 2
 tags: []

@@ -1,8 +1,5 @@
 ---
-id: battlefield-tactics
 name: "Battlefield Tactics"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

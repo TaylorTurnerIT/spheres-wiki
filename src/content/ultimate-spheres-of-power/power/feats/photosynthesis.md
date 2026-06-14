@@ -1,8 +1,5 @@
 ---
-id: photosynthesis
 name: "Photosynthesis"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

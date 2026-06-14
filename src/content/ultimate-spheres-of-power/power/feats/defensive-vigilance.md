@@ -1,8 +1,5 @@
 ---
-id: defensive-vigilance
 name: Defensive Vigilance
-type: feat
-system: power
 sphere: war
 dualSphere: protection
 tier: feat

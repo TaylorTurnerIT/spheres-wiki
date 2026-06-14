@@ -1,9 +1,5 @@
 ---
-id: "practiced-teamwork"
 name: "Practiced Teamwork"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

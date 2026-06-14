@@ -1,9 +1,5 @@
 ---
-id: "swaying-dodge"
 name: "Swaying Dodge"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "advanced"
 tags:
   - "drunk"

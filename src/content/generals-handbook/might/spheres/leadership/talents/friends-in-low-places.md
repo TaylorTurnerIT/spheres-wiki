@@ -1,9 +1,5 @@
 ---
-id: "friends-in-low-places"
 name: "Friends In Low Places"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

@@ -1,10 +1,6 @@
 ---
-id: armorist-ammunition-specialist
 name: "Ammunition Specialist"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: freezing-geyser
 name: "Freezing Geyser"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["fire", "water", "geomancing"]
 ---

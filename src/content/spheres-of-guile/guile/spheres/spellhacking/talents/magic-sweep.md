@@ -1,9 +1,5 @@
 ---
-id: "magic-sweep"
 name: "Magic Sweep"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "approach"

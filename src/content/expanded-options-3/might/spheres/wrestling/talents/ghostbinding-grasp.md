@@ -1,9 +1,5 @@
 ---
-id: "ghostbinding-grasp"
 name: "Ghostbinding Grasp"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "wrestling"
 tier: "advanced"
 tags: []
 ---

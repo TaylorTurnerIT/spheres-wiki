@@ -1,9 +1,5 @@
 ---
-id: listen-to-the-wind
 name: "Listen To The Wind"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing", "utility"]
 ---

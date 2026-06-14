@@ -1,8 +1,5 @@
 ---
-id: blessed-necromancy
 name: Blessed Necromancy
-type: feat
-system: power
 sphere: fate
 dualSphere: death
 tier: feat

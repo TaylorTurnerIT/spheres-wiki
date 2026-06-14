@@ -1,9 +1,5 @@
 ---
-id: "basic-analysis"
 name: "Basic Analysis"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "base"
 tags:
   - "package"

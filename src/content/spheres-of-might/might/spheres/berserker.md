@@ -1,8 +1,5 @@
 ---
-id: "berserker"
 name: "Berserker"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "berserker"
 tags: []
 sectionDefinitions:

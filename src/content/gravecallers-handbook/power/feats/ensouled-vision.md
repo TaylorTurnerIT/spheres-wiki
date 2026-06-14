@@ -1,8 +1,5 @@
 ---
-id: ensouled-vision
 name: "Ensouled Vision"
-type: feat
-system: power
 sphere: divination
 tags: []
 tier: feat

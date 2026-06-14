@@ -1,9 +1,5 @@
 ---
-id: "shatter-earth"
 name: "Shatter Earth"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags: []
 ---

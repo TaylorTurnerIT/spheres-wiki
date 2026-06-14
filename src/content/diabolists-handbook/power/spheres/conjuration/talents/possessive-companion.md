@@ -1,9 +1,5 @@
 ---
-id: possessive-companion
 name: "Possessive Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: []
 ---

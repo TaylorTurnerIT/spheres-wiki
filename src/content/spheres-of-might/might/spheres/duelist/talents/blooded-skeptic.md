@@ -1,9 +1,5 @@
 ---
-id: "blooded-skeptic"
 name: "Blooded Skeptic"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

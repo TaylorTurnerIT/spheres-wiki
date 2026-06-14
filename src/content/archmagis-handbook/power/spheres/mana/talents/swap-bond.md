@@ -1,9 +1,5 @@
 ---
-id: swap-bond
 name: "Swap Bond"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

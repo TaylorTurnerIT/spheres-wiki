@@ -1,9 +1,5 @@
 ---
-id: esteem
 name: "Esteem"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

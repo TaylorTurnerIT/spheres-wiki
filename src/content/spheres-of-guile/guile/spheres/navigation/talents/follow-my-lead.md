@@ -1,9 +1,5 @@
 ---
-id: "follow-my-lead"
 name: "Follow My Lead"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "approach"

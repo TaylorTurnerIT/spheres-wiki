@@ -1,9 +1,5 @@
 ---
-id: "analytical-linguist"
 name: "Analytical Linguist"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

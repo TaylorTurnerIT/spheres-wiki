@@ -1,9 +1,5 @@
 ---
-id: "speed-boost"
 name: "Speed Boost"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "run"

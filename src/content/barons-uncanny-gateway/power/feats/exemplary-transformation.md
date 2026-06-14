@@ -1,8 +1,5 @@
 ---
-id: exemplary-transformation
 name: "Exemplary Transformation"
-type: feat
-system: power
 sphere: enhancement
 dualSphere: alteration
 tags: ["sm"]

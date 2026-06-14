@@ -1,9 +1,5 @@
 ---
-id: "build-rapport"
 name: "Build Rapport"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "base"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: wise-to-the-fates
 name: "Wise to the Fates"
-type: feat
-system: power
 sphere: fate
 dualSphere: divination
 tags: ["sm"]

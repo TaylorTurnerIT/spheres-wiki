@@ -1,9 +1,5 @@
 ---
-id: inject
 name: "Inject"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

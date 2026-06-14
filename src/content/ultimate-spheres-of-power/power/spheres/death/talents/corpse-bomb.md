@@ -1,9 +1,5 @@
 ---
-id: corpse-bomb
 name: "Corpse Bomb"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

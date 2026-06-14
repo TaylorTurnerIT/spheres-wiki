@@ -1,8 +1,5 @@
 ---
-id: hemothermia
 name: Hemothermia
-type: feat
-system: power
 sphere: nature
 dualSphere: blood
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: illusionary-touch
 name: "Illusionary Touch"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["sensory", "touch"]
 ---

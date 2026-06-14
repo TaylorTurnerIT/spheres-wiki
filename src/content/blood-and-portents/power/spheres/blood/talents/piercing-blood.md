@@ -1,9 +1,5 @@
 ---
-id: piercing-blood
 name: "Piercing Blood"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["blood-art"]
 ---

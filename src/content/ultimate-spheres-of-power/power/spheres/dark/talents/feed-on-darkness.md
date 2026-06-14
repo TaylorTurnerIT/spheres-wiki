@@ -1,9 +1,5 @@
 ---
-id: feed-on-darkness
 name: "Feed On Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["meld"]
 ---

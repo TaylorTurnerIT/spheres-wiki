@@ -1,9 +1,6 @@
 ---
-id: "impale"
 name: "Impale"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

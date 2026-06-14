@@ -1,9 +1,5 @@
 ---
-id: "disarm-natural-ferocity"
 name: "Disarm Natural Ferocity"
-type: "talent"
-sourceBook: "spheres-apocrypha-pugilists"
-sphere: "duelist"
 tier: "advanced"
 tags: []
 ---

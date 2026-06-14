@@ -1,9 +1,5 @@
 ---
-id: "adept-culinarian"
 name: "Adept Culinarian"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

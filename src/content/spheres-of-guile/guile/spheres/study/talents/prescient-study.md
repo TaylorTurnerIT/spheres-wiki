@@ -1,9 +1,5 @@
 ---
-id: "prescient-study"
 name: "Prescient Study"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "base"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: cryptic-strike
 name: "Cryptic Strike"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["strike"]
 ---

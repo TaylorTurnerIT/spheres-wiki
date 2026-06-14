@@ -1,9 +1,5 @@
 ---
-id: declare-fate
 name: "Declare Fate"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["curse", "word"]
 ---

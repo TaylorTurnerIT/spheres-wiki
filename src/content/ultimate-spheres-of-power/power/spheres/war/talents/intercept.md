@@ -1,9 +1,5 @@
 ---
-id: intercept
 name: "Intercept"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

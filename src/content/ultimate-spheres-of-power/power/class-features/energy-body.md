@@ -1,8 +1,6 @@
 ---
-id: energy-body
 name: "Energy Body"
 type: class-feature
-system: power
 className: elementalist
 level: 20
 tags: []

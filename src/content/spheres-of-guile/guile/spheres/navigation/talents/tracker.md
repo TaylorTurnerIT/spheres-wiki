@@ -1,9 +1,5 @@
 ---
-id: "tracker"
 name: "Tracker"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "harangue"
 name: "Harangue"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

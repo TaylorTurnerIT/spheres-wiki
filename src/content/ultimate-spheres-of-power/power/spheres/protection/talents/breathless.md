@@ -1,9 +1,5 @@
 ---
-id: breathless
 name: "Breathless"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis"]
 ---

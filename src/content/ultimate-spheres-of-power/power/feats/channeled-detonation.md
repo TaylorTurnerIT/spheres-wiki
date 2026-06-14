@@ -1,8 +1,5 @@
 ---
-id: channeled-detonation
 name: "Channeled Detonation"
-type: feat
-system: power
 sphere: death
 tags: ["channeling"]
 tier: feat

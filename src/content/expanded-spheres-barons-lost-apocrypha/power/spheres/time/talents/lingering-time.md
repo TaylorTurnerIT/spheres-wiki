@@ -1,9 +1,5 @@
 ---
-id: lingering-time
 name: "Lingering Time"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: []
 ---

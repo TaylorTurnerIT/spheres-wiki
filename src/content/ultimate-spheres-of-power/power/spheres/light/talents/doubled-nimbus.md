@@ -1,9 +1,5 @@
 ---
-id: doubled-nimbus
 name: "Doubled Nimbus"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

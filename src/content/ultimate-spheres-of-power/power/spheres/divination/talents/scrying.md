@@ -1,9 +1,5 @@
 ---
-id: scrying
 name: "Scrying"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["utility"]
 ---

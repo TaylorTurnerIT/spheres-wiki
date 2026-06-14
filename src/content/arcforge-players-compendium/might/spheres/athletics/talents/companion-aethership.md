@@ -1,9 +1,5 @@
 ---
-id: "companion-aethership"
 name: "Companion Aethership"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "athletics"
 tier: "advanced"
 tags: []
 ---

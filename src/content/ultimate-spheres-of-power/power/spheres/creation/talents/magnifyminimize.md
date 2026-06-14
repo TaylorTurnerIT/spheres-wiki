@@ -1,9 +1,5 @@
 ---
-id: magnifyminimize
 name: "Magnify/Minimize"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["alter"]
 ---

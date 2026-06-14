@@ -1,9 +1,5 @@
 ---
-id: "terrain-trasher"
 name: "Terrain Trasher"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "advanced"
 tags: []
 ---

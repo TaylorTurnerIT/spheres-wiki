@@ -1,9 +1,5 @@
 ---
-id: "guide-function"
 name: "Guide Function"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

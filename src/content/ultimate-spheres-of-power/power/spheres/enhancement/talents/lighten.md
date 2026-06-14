@@ -1,9 +1,5 @@
 ---
-id: lighten
 name: "Lighten"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

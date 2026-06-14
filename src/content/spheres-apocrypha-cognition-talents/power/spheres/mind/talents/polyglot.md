@@ -1,9 +1,5 @@
 ---
-id: polyglot
 name: "Polyglot"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["cognition", "utility"]
 ---

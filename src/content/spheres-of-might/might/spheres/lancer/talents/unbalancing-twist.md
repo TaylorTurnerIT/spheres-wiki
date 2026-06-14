@@ -1,9 +1,5 @@
 ---
-id: "unbalancing-twist"
 name: "Unbalancing Twist"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags:
   - "impale"

@@ -1,8 +1,5 @@
 ---
-id: weird-defense
 name: "Weird Defense"
-type: feat
-system: power
 sphere: illusion
 tags: ["combat"]
 tier: feat

@@ -1,10 +1,6 @@
 ---
-id: symbiat-battlefield-relay
 name: "Battlefield Relay"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

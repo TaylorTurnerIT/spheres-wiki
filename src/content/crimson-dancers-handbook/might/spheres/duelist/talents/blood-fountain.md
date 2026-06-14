@@ -1,9 +1,5 @@
 ---
-id: "blood-fountain"
 name: "Blood Fountain"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "bleed"

@@ -1,8 +1,6 @@
 ---
-id: list-of-haunt-paths
 name: "List of Haunt Paths"
 type: class-feature
-system: power
 className: wraith
 level: 1
 tags: []

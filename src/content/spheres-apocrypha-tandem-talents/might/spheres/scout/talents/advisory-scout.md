@@ -1,9 +1,5 @@
 ---
-id: "advisory-scout"
 name: "Advisory Scout"
-type: "talent"
-sourceBook: "spheres-apocrypha-tandem-talents"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

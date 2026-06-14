@@ -1,8 +1,5 @@
 ---
-id: baleful-storm
 name: Baleful Storm
-type: feat
-system: power
 sphere: weather
 dualSphere: death
 tier: feat

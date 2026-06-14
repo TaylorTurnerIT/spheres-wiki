@@ -1,9 +1,5 @@
 ---
-id: "perfect-attunement"
 name: "Perfect Attunement"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "advanced"
 tags: []
 ---

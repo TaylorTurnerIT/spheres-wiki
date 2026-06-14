@@ -1,9 +1,5 @@
 ---
-id: "knowledgeable"
 name: "Knowledgeable"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "base"
 tags: []
 ---

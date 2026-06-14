@@ -1,9 +1,5 @@
 ---
-id: isoport
 name: "Isoport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

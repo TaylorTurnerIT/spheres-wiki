@@ -1,9 +1,5 @@
 ---
-id: "ascertain-activities"
 name: "Ascertain Activities"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

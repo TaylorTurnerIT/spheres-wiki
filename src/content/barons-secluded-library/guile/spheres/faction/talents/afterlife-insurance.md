@@ -1,9 +1,5 @@
 ---
-id: "afterlife-insurance"
 name: "Afterlife Insurance"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "utility"

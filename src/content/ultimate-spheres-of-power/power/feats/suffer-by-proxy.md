@@ -1,8 +1,5 @@
 ---
-id: suffer-by-proxy
 name: "Suffer By Proxy"
-type: feat
-system: power
 sphere: enhancement
 tags: ["drawback", "proxy"]
 tier: feat

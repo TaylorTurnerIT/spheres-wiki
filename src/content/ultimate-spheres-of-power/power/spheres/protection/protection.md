@@ -1,8 +1,5 @@
 ---
-id: protection
 name: "Protection"
-system: power
-type: sphere
 icon: protection
 description: "You are a user of the magics of preservation."
 tags: []

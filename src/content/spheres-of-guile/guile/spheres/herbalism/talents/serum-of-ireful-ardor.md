@@ -1,9 +1,5 @@
 ---
-id: "serum-of-ireful-ardor"
 name: "Serum Of Ireful Ardor"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

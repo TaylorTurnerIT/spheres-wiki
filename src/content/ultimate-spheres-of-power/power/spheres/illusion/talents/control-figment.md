@@ -1,9 +1,5 @@
 ---
-id: control-figment
 name: "Control Figment"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

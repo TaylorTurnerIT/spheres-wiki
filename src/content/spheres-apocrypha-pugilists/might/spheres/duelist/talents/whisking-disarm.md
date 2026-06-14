@@ -1,9 +1,5 @@
 ---
-id: "whisking-disarm"
 name: "Whisking Disarm"
-type: "talent"
-sourceBook: "spheres-apocrypha-pugilists"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "disarm"

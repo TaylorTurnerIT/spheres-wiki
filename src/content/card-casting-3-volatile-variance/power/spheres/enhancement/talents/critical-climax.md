@@ -1,9 +1,5 @@
 ---
-id: critical-climax
 name: "Critical Climax"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: crystal-cocoon
 name: "Crystal Cocoon"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: []
 ---

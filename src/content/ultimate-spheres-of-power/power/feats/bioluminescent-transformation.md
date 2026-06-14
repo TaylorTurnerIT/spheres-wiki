@@ -1,8 +1,5 @@
 ---
-id: bioluminescent-transformation
 name: Bioluminescent Transformation
-type: feat
-system: power
 sphere: light
 dualSphere: alteration
 tier: feat

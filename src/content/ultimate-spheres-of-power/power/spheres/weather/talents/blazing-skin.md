@@ -1,9 +1,5 @@
 ---
-id: blazing-skin
 name: "Blazing Skin"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["heat", "mantle"]
 ---

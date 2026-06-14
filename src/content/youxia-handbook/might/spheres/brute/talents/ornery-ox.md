@@ -1,9 +1,5 @@
 ---
-id: "ornery-ox"
 name: "Ornery Ox"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "brute"
 tier: "basic"
 tags:
   - "stance"

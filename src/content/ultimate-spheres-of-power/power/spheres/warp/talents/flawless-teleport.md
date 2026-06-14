@@ -1,9 +1,5 @@
 ---
-id: flawless-teleport
 name: "Flawless Teleport"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["utility"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: admixture-efficiency
 name: "Admixture Efficiency"
-type: feat
-system: power
 sphere: destruction
 tags: ["sm"]
 tier: feat

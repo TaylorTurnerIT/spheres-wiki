@@ -1,9 +1,5 @@
 ---
-id: gremlins-presence
 name: "Gremlin's Presence"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: materials-of-legend
 name: "Materials Of Legend"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["metal", "geomancing"]
 ---

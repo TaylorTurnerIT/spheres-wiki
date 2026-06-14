@@ -1,9 +1,5 @@
 ---
-id: "repurpose-resilience"
 name: "Repurpose Resilience"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

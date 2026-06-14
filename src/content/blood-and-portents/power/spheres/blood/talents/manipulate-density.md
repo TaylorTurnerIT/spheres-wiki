@@ -1,9 +1,5 @@
 ---
-id: manipulate-density
 name: "Manipulate Density"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["quicken", "still"]
 ---

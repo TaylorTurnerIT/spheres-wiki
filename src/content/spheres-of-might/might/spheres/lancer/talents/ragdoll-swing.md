@@ -1,9 +1,5 @@
 ---
-id: "ragdoll-swing"
 name: "Ragdoll Swing"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags:
   - "impale"

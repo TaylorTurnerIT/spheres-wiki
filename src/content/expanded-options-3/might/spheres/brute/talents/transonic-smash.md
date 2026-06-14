@@ -1,9 +1,5 @@
 ---
-id: "transonic-smash"
 name: "Transonic Smash"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "brute"
 tier: "advanced"
 tags:
   - "manhandle"

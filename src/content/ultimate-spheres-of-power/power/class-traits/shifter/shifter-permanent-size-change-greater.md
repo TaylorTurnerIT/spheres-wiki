@@ -1,10 +1,6 @@
 ---
-id: shifter-permanent-size-change-greater
 name: "Permanent Size Change, Greater"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 requires: "permanent size change, shifter 10"
 ---

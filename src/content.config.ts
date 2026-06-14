@@ -22,11 +22,11 @@ function spheresLoader(options: Parameters<typeof glob>[0] & { base: string }) {
         if (idx !== -1) {
           const relativePath = args.filePath.substring(idx + pathPrefix.length);
           const inferred = inferFromPath(relativePath);
-          args.data = { ...inferred, ...args.data };
+          args.data = { ...args.data, ...inferred };
         } else {
           // Fallback if somehow pathPrefix isn't found
           const inferred = inferFromPath(args.id);
-          args.data = { ...inferred, ...args.data };
+          args.data = { ...args.data, ...inferred };
         }
 
         return originalParseData(args);

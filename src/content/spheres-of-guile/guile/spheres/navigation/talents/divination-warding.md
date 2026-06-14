@@ -1,9 +1,5 @@
 ---
-id: "divination-warding"
 name: "Divination Warding"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "acclimation"

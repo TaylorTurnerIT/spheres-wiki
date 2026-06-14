@@ -1,9 +1,5 @@
 ---
-id: "mystic-fists"
 name: "Mystic Fists"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

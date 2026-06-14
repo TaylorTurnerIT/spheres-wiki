@@ -1,9 +1,5 @@
 ---
-id: "unrecognizable-mannerisms"
 name: "Unrecognizable Mannerisms"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "utility"

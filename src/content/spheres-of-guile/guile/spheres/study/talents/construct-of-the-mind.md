@@ -1,9 +1,5 @@
 ---
-id: "construct-of-the-mind"
 name: "Construct Of The Mind"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "advanced"
 tags:
   - "utility"

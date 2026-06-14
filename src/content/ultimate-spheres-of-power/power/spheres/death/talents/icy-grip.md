@@ -1,9 +1,5 @@
 ---
-id: icy-grip
 name: "Icy Grip"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

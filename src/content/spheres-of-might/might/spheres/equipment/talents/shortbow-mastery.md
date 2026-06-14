@@ -1,9 +1,5 @@
 ---
-id: "shortbow-mastery"
 name: "Shortbow Mastery"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

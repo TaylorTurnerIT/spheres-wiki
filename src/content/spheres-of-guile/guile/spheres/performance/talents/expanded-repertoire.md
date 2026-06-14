@@ -1,9 +1,5 @@
 ---
-id: "expanded-repertoire"
 name: "Expanded Repertoire"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags: []
 ---

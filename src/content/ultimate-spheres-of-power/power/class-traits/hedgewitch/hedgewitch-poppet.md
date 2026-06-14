@@ -1,10 +1,6 @@
 ---
-id: hedgewitch-poppet
 name: "Poppet"
-type: class-trait
-system: power
 tags: []
-className: hedgewitch
 featureId: secret
 ---
 

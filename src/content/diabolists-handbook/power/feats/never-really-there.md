@@ -1,8 +1,5 @@
 ---
-id: never-really-there
 name: Never Really There
-type: feat
-system: power
 sphere: warp
 dualSphere: mind
 tier: feat

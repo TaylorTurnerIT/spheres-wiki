@@ -1,9 +1,5 @@
 ---
-id: precipitation
 name: Precipitation
-type: talent
-system: power
-sphere: weather
 tier: basic
 tags: []
 ---

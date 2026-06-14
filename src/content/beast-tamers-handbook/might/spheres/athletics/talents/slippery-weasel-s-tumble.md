@@ -1,9 +1,5 @@
 ---
-id: "slippery-weasel-s-tumble"
 name: "Slippery Weasel’s Tumble"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

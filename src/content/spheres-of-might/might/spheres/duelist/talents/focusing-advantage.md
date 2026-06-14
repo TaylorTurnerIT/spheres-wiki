@@ -1,9 +1,5 @@
 ---
-id: "focusing-advantage"
 name: "Focusing Advantage"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: recall
 name: "Recall"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

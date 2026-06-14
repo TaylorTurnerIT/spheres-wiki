@@ -1,9 +1,5 @@
 ---
-id: "harrying-fire"
 name: "Harrying Fire"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "sniper"
 tier: "basic"
 tags: []
 ---

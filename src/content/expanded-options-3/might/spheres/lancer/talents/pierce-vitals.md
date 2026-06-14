@@ -1,9 +1,5 @@
 ---
-id: "pierce-vitals"
 name: "Pierce Vitals"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "lancer"
 tier: "advanced"
 tags:
   - "impale"

@@ -1,9 +1,5 @@
 ---
-id: distant-teleport
 name: "Distant Teleport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: planar-refuge
 name: "Planar Refuge"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: ["aegis", "ward"]
 ---

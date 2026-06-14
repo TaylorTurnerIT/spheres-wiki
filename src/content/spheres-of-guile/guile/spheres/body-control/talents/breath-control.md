@@ -1,9 +1,5 @@
 ---
-id: "breath-control"
 name: "Breath Control"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "utility"

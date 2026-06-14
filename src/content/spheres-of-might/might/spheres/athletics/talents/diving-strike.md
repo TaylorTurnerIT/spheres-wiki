@@ -1,9 +1,5 @@
 ---
-id: "diving-strike"
 name: "Diving Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "fly"

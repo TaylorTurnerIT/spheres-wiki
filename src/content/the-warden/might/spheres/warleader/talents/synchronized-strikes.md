@@ -1,9 +1,5 @@
 ---
-id: "synchronized-strikes"
 name: "Synchronized Strikes"
-type: "talent"
-sourceBook: "the-warden"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

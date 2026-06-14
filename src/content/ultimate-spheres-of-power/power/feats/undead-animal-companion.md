@@ -1,8 +1,5 @@
 ---
-id: undead-animal-companion
 name: "Undead Animal Companion"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

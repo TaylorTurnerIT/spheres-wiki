@@ -1,10 +1,6 @@
 ---
-id: armorist-cut-minds
 name: "Cut Minds"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

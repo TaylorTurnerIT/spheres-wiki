@@ -1,9 +1,5 @@
 ---
-id: "suave-performer"
 name: "Suave Performer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "approach"

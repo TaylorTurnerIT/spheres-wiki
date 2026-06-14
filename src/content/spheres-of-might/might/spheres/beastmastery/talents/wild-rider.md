@@ -1,9 +1,5 @@
 ---
-id: "wild-rider"
 name: "Wild Rider"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "ride"

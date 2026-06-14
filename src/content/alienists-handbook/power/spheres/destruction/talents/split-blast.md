@@ -1,9 +1,5 @@
 ---
-id: split-blast
 name: "Split Blast"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: []
 ---

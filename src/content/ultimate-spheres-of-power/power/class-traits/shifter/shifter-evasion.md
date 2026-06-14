@@ -1,10 +1,6 @@
 ---
-id: shifter-evasion
 name: "Evasion"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

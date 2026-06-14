@@ -1,9 +1,5 @@
 ---
-id: "medical-malpractice"
 name: "Medical Malpractice"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

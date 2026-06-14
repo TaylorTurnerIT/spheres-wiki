@@ -1,8 +1,5 @@
 ---
-id: totemic-channeling
 name: "Totemic Channeling"
-type: feat
-system: power
 sphere: war
 tags: ["channeling"]
 tier: feat

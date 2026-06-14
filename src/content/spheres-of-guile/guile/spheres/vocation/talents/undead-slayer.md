@@ -1,9 +1,5 @@
 ---
-id: "undead-slayer"
 name: "Undead Slayer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

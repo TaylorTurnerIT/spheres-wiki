@@ -1,9 +1,5 @@
 ---
-id: "goblin-heritage"
 name: "Goblin Heritage"
-type: "talent"
-sourceBook: "spheres-apocrypha-racial-martial-talents"
-sphere: "equipment"
 tier: "basic"
 tags: ["discipline"]
 ---

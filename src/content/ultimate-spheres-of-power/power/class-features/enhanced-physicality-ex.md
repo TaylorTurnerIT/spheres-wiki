@@ -1,8 +1,6 @@
 ---
-id: enhanced-physicality-ex
 name: "Enhanced Physicality (Ex)"
 type: class-feature
-system: power
 className: shifter
 level: 7
 tags: []

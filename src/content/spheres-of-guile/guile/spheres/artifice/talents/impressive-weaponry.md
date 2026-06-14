@@ -1,9 +1,5 @@
 ---
-id: "impressive-weaponry"
 name: "Impressive Weaponry"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "function"

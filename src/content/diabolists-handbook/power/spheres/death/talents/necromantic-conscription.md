@@ -1,9 +1,5 @@
 ---
-id: necromantic-conscription
 name: "Necromantic Conscription"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

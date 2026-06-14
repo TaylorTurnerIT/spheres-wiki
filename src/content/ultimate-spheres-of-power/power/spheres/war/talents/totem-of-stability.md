@@ -1,9 +1,5 @@
 ---
-id: totem-of-stability
 name: "Totem Of Stability"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

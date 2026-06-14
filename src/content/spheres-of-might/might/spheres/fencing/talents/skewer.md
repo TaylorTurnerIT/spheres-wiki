@@ -1,9 +1,5 @@
 ---
-id: "skewer"
 name: "Skewer"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

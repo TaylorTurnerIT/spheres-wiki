@@ -1,8 +1,5 @@
 ---
-id: ecumenicism
 name: "Ecumenicism"
-type: feat
-system: power
 sphere: fate
 tags: []
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: shadow-magic
 name: "Shadow Magic"
-type: feat
-system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat

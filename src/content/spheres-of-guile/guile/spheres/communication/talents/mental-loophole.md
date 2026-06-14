@@ -1,9 +1,5 @@
 ---
-id: "mental-loophole"
 name: "Mental Loophole"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags: []
 ---

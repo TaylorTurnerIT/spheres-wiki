@@ -1,9 +1,5 @@
 ---
-id: consecrated-ground
 name: "Consecrated Ground"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: []
 ---

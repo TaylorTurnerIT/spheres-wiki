@@ -1,9 +1,5 @@
 ---
-id: otherworldly-audience
 name: "Otherworldly Audience"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["utility"]
 ---

@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "discipline"
 label: "Discipline"
 sphere: "equipment"
 priority: 0

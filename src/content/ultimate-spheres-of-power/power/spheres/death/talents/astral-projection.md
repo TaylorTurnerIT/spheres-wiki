@@ -1,9 +1,5 @@
 ---
-id: astral-projection
 name: "Astral Projection"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: ["utility"]
 ---

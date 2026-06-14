@@ -1,9 +1,5 @@
 ---
-id: bounty-of-the-fey
 name: "Bounty of the Fey"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["mass"]
 ---

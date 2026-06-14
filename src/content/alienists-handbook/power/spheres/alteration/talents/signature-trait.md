@@ -1,9 +1,5 @@
 ---
-id: signature-trait
 name: "Signature Trait"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

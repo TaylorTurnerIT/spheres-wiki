@@ -1,9 +1,5 @@
 ---
-id: share-link
 name: "Share Link"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: []
 ---

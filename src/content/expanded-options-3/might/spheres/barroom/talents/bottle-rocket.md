@@ -1,9 +1,5 @@
 ---
-id: "bottle-rocket"
 name: "Bottle Rocket"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

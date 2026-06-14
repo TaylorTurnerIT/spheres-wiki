@@ -1,8 +1,5 @@
 ---
-id: mark-of-magical-ineptitude
 name: "Mark Of Magical Ineptitude"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

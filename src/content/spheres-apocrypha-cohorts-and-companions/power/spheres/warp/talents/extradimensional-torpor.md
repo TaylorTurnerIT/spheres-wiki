@@ -1,9 +1,5 @@
 ---
-id: extradimensional-torpor
 name: "Extradimensional Torpor"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["space"]
 ---

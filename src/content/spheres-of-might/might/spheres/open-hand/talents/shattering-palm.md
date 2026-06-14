@@ -1,9 +1,5 @@
 ---
-id: "shattering-palm"
 name: "Shattering Palm"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

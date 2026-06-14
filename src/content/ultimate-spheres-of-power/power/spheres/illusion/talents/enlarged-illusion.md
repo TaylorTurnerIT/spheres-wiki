@@ -1,9 +1,5 @@
 ---
-id: enlarged-illusion
 name: "Enlarged Illusion"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

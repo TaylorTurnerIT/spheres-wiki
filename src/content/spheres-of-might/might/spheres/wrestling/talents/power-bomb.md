@@ -1,9 +1,5 @@
 ---
-id: "power-bomb"
 name: "Power Bomb"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags:
   - "slam"

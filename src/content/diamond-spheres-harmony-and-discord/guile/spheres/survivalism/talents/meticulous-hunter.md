@@ -1,9 +1,5 @@
 ---
-id: "meticulous-hunter"
 name: "Meticulous Hunter"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "survivalism"
 tier: "basic"
 tags: []
 ---

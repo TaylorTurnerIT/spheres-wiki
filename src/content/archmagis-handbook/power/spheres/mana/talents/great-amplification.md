@@ -1,9 +1,5 @@
 ---
-id: great-amplification
 name: "Great Amplification"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

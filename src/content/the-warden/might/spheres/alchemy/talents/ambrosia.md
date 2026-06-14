@@ -1,9 +1,5 @@
 ---
-id: "ambrosia"
 name: "Ambrosia"
-type: "talent"
-sourceBook: "the-warden"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "formulae"

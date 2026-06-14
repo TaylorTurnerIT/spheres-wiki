@@ -1,9 +1,5 @@
 ---
-id: web-spinner
 name: "Web Spinner"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

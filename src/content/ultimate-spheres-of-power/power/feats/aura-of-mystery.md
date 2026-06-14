@@ -1,8 +1,5 @@
 ---
-id: aura-of-mystery
 name: "Aura Of Mystery"
-type: feat
-system: power
 sphere: dark
 tags: []
 tier: feat

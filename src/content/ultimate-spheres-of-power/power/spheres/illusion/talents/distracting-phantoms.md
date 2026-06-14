@@ -1,9 +1,5 @@
 ---
-id: distracting-phantoms
 name: "Distracting Phantoms"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "skilled-applicator"
 name: "Skilled Applicator"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

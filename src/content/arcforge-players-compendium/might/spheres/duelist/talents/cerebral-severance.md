@@ -1,9 +1,5 @@
 ---
-id: "cerebral-severance"
 name: "Cerebral Severance"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "duelist"
 tier: "advanced"
 tags:
   - "bleed"

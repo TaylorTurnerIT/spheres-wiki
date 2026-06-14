@@ -1,9 +1,5 @@
 ---
-id: battering-winds
 name: "Battering Winds"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["shroud", "wind"]
 ---

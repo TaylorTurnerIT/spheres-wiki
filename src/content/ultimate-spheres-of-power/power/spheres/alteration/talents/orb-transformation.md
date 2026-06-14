@@ -1,9 +1,5 @@
 ---
-id: orb-transformation
 name: "Orb Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["transformation"]
 ---

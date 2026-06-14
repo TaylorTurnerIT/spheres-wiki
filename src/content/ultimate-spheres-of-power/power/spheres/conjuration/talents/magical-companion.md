@@ -1,9 +1,5 @@
 ---
-id: magical-companion
 name: "Magical Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

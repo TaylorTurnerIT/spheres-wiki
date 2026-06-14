@@ -1,9 +1,5 @@
 ---
-id: "mobility"
 name: "Mobility"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 ---
 

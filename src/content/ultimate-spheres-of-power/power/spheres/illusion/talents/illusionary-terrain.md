@@ -1,9 +1,5 @@
 ---
-id: illusionary-terrain
 name: "Illusionary Terrain"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

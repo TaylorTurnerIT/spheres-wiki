@@ -1,9 +1,5 @@
 ---
-id: "roving-flanker"
 name: "Roving Flanker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags:
   - "zone"

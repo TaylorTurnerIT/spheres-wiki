@@ -1,9 +1,5 @@
 ---
-id: magma-mastery
 name: "Magma Mastery"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: ["material"]
 ---

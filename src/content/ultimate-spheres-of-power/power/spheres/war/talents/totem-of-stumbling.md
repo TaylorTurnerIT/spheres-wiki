@@ -1,9 +1,5 @@
 ---
-id: totem-of-stumbling
 name: "Totem Of Stumbling"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

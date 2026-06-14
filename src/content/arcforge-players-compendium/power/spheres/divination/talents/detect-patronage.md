@@ -1,9 +1,5 @@
 ---
-id: detect-patronage
 name: "Detect Patronage"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["utility"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "underfoot-trample"
 name: "Underfoot Trample"
-type: "talent"
-sourceBook: "expanded-spheres-barons-lost-apocrypha"
-sphere: "brute"
 tier: "basic"
 ---
 

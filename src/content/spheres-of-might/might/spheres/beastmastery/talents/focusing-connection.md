@@ -1,9 +1,5 @@
 ---
-id: "focusing-connection"
 name: "Focusing Connection"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

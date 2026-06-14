@@ -1,9 +1,5 @@
 ---
-id: "greenskeeper"
 name: "Greenskeeper"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

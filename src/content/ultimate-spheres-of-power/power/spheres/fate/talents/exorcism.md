@@ -1,9 +1,5 @@
 ---
-id: exorcism
 name: "Exorcism"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["supernatural", "word"]
 ---

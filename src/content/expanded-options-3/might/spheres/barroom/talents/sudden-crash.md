@@ -1,9 +1,5 @@
 ---
-id: "sudden-crash"
 name: "Sudden Crash"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "smash"

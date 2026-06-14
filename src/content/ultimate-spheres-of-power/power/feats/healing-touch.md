@@ -1,8 +1,5 @@
 ---
-id: healing-touch
 name: "Healing Touch"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

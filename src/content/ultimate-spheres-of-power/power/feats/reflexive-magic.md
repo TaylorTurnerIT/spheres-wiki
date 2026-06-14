@@ -1,8 +1,5 @@
 ---
-id: reflexive-magic
 name: "Reflexive Magic"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

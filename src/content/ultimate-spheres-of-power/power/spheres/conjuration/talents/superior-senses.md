@@ -1,9 +1,5 @@
 ---
-id: superior-senses
 name: "Superior Senses"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["extraordinary", "form"]
 ---

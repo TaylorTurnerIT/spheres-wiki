@@ -1,9 +1,5 @@
 ---
-id: "physiological-mastery"
 name: "Physiological Mastery"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "utility"

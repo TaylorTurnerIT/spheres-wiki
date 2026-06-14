@@ -1,9 +1,5 @@
 ---
-id: stinking-companion
 name: "Stinking Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

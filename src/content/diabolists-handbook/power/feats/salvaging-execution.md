@@ -1,8 +1,5 @@
 ---
-id: salvaging-execution
 name: "Salvaging Execution"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "tight-guard"
 name: "Tight Guard"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

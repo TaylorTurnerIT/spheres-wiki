@@ -1,8 +1,5 @@
 ---
-id: martial-aegis
 name: "Martial Aegis"
-type: feat
-system: power
 sphere: protection
 tags: ["combat"]
 tier: feat

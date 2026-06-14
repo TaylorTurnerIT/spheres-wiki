@@ -1,9 +1,5 @@
 ---
-id: "discern-condition"
 name: "Discern Condition"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

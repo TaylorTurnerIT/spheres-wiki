@@ -1,9 +1,5 @@
 ---
-id: harness-ambient-knowledge
 name: "Harness Ambient Knowledge"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

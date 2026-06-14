@@ -1,9 +1,5 @@
 ---
-id: blur
 name: "Blur"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["glamer"]
 ---

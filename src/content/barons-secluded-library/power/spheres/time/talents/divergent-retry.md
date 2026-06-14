@@ -1,9 +1,5 @@
 ---
-id: divergent-retry
 name: "Divergent Retry"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["sm"]
 ---

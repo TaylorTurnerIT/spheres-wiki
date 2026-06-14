@@ -1,9 +1,5 @@
 ---
-id: fey-link
 name: "Fey-Link"
-system: power
-type: talent
-sphere: fallen-fey
 tier: base
 tags: []
 ---

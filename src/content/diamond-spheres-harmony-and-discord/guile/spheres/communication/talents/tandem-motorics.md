@@ -1,9 +1,5 @@
 ---
-id: "tandem-motorics"
 name: "Tandem Motorics"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

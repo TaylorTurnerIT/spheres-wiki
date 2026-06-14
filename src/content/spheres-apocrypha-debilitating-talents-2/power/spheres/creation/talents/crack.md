@@ -1,9 +1,5 @@
 ---
-id: crack
 name: "Crack"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["alter", "extraordinary"]
 ---

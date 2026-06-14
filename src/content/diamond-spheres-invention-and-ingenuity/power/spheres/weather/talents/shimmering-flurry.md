@@ -1,9 +1,5 @@
 ---
-id: shimmering-flurry
 name: "Shimmering Flurry"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "snow", "utility"]
 ---

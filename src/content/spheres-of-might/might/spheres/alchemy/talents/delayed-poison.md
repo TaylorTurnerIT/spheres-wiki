@@ -1,9 +1,5 @@
 ---
-id: "delayed-poison"
 name: "Delayed Poison"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "utility"

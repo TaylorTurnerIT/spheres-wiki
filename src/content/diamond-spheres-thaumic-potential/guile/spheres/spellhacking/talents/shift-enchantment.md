@@ -1,9 +1,5 @@
 ---
-id: "shift-enchantment"
 name: "Shift Enchantment"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

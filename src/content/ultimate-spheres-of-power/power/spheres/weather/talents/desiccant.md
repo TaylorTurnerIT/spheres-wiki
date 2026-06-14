@@ -1,9 +1,5 @@
 ---
-id: desiccant
 name: "Desiccant"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["aridity", "mantle"]
 ---

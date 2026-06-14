@@ -1,10 +1,6 @@
 ---
-id: shifter-breath-weapon-improved
 name: "Breath Weapon, Improved"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 requires: "breath weapon bestial trait, shifter level 4"
 ---

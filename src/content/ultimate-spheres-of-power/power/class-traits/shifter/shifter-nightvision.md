@@ -1,10 +1,6 @@
 ---
-id: shifter-nightvision
 name: "Nightvision"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 ---
 

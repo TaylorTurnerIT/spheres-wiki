@@ -1,9 +1,5 @@
 ---
-id: "shieldbreaker"
 name: "Shieldbreaker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

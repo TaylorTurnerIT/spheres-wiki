@@ -1,9 +1,5 @@
 ---
-id: "hostile-movement"
 name: "Hostile Movement"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

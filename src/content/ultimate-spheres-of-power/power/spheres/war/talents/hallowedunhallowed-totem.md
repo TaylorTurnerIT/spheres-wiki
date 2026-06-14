@@ -1,9 +1,5 @@
 ---
-id: hallowedunhallowed-totem
 name: "Hallowed/Unhallowed Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

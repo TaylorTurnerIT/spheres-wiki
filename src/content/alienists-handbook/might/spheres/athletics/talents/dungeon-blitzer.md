@@ -1,9 +1,5 @@
 ---
-id: "dungeon-blitzer"
 name: "Dungeon Blitzer"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: lengthened-weather
 name: "Lengthened Weather"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: []
 ---

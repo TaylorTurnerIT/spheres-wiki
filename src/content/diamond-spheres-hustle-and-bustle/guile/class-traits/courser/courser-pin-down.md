@@ -1,7 +1,5 @@
 ---
-id: courser-pin-down
 name: Pin Down
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 12"

@@ -1,9 +1,5 @@
 ---
-id: securing-vitality
 name: "Securing Vitality"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["vitality", "warden"]
 ---

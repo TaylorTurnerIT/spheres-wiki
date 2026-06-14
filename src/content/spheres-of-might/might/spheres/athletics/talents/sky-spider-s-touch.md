@@ -1,9 +1,5 @@
 ---
-id: "sky-spider-s-touch"
 name: "Sky Spider’s Touch"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "climb"

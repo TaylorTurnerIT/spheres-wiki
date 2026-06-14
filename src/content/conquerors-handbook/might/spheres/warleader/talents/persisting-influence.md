@@ -1,9 +1,5 @@
 ---
-id: "persisting-influence"
 name: "Persisting Influence"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

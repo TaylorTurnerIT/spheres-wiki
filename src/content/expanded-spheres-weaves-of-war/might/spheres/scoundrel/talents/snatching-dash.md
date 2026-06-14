@@ -1,9 +1,5 @@
 ---
-id: "snatching-dash"
 name: "Snatching Dash"
-type: "talent"
-sourceBook: "expanded-spheres-weaves-of-war"
-sphere: "scoundrel"
 tier: "basic"
 ---
 

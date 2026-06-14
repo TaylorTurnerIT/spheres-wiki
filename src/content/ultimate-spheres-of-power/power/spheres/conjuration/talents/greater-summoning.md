@@ -1,9 +1,5 @@
 ---
-id: greater-summoning
 name: "Greater Summoning"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: []
 ---

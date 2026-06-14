@@ -1,9 +1,5 @@
 ---
-id: earth-mastery
 name: "Earth Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["earth", "geomancing"]
 ---

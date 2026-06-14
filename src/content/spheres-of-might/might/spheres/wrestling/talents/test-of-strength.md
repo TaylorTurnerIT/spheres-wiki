@@ -1,9 +1,5 @@
 ---
-id: "test-of-strength"
 name: "Test Of Strength"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

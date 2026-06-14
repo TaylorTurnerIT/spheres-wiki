@@ -1,7 +1,5 @@
 ---
-id: courser-rogue-talent
 name: Rogue Talent
-className: courser
 featureId: courser-ventures
 tags: []
 ---

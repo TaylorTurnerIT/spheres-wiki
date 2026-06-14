@@ -1,8 +1,6 @@
 ---
-id: wraith-form-su
 name: "Wraith Form (Su)"
 type: class-feature
-system: power
 className: wraith
 level: 1
 tags: []

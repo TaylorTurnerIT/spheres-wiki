@@ -1,9 +1,5 @@
 ---
-id: "crowd-pleaser"
 name: "Crowd Pleaser"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "plan"

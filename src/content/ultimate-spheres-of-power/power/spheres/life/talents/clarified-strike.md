@@ -1,9 +1,5 @@
 ---
-id: clarified-strike
 name: "Clarified Strike"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["strike"]
 ---

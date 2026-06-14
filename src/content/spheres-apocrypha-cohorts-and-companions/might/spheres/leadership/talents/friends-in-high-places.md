@@ -1,9 +1,5 @@
 ---
-id: "friends-in-high-places"
 name: "Friends In High Places"
-type: "talent"
-sourceBook: "spheres-apocrypha-cohorts-and-companions"
-sphere: "leadership"
 tier: "advanced"
 tags:
   - "cohort"

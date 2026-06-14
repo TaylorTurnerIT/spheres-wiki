@@ -1,9 +1,5 @@
 ---
-id: "appeal-to-normalcy"
 name: "Appeal to Normalcy"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "utility"

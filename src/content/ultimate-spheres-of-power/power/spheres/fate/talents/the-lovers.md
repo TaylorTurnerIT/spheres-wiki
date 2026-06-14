@@ -1,9 +1,5 @@
 ---
-id: the-lovers
 name: "The Lovers"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

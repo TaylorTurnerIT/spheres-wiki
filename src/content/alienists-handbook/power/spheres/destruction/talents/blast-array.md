@@ -1,9 +1,5 @@
 ---
-id: blast-array
 name: "Blast Array"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: []
 ---

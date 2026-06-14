@@ -1,9 +1,5 @@
 ---
-id: "caber-toss"
 name: "Caber Toss"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

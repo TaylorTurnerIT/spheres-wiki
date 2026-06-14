@@ -1,8 +1,5 @@
 ---
-id: fate
 name: "Fate"
-system: power
-type: sphere
 icon: fate
 description: "You command cosmic forces including luck, destiny, and alignment."
 tags: []

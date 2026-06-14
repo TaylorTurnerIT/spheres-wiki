@@ -1,9 +1,5 @@
 ---
-id: the-tower
 name: "The Tower"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

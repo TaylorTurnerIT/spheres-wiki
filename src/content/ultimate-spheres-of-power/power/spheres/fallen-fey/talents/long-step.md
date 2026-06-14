@@ -1,9 +1,5 @@
 ---
-id: long-step
 name: "Long Step"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

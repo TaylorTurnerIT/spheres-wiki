@@ -1,9 +1,5 @@
 ---
-id: "vengeful-boast"
 name: "Vengeful Boast"
-type: "talent"
-sourceBook: "spheres-apocrypha-racial-martial-talents"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

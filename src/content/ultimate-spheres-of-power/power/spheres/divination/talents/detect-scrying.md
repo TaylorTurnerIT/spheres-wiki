@@ -1,9 +1,5 @@
 ---
-id: detect-scrying
 name: "Detect Scrying"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

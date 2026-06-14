@@ -1,9 +1,5 @@
 ---
-id: "semaphore"
 name: "Semaphore"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

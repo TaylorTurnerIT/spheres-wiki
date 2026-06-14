@@ -1,9 +1,7 @@
 ---
-type: tag
 description: "A mechanical descriptor identifying this as a aegis effect or talent."
 priority: 0
 color: "#4A235A"
-id: "aegis"
 label: "Aegis"
 sphere: "protection"
 ---

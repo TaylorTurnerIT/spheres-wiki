@@ -1,9 +1,5 @@
 ---
-id: "gatecrasher"
 name: "Gatecrasher"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "spellhacking"
 tier: "advanced"
 tags:
   - "hack"

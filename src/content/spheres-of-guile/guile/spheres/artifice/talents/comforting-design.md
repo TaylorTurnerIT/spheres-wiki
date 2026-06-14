@@ -1,9 +1,5 @@
 ---
-id: "comforting-design"
 name: "Comforting Design"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

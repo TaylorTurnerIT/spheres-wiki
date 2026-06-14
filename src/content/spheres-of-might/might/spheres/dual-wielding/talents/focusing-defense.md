@@ -1,9 +1,5 @@
 ---
-id: "focusing-defense"
 name: "Focusing Defense"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

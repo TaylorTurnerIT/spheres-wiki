@@ -1,9 +1,5 @@
 ---
-id: complex-illusion
 name: "Complex Illusion"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["mass"]
 ---

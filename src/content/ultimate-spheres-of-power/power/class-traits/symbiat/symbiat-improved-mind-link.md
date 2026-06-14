@@ -1,10 +1,6 @@
 ---
-id: symbiat-improved-mind-link
 name: "Improved Mind Link"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

@@ -1,8 +1,5 @@
 ---
-id: floating-creation
 name: Floating Creation
-type: feat
-system: power
 sphere: enhancement
 dualSphere: creation
 tier: feat

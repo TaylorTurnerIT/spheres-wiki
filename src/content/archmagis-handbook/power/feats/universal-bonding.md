@@ -1,8 +1,5 @@
 ---
-id: universal-bonding
 name: "Universal Bonding"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

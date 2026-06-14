@@ -1,9 +1,5 @@
 ---
-id: focusing-momentum
 name: "Focusing Momentum"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["momentum", "warden"]
 ---

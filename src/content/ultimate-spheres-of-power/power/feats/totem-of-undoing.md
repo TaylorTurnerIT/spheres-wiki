@@ -1,8 +1,5 @@
 ---
-id: totem-of-undoing
 name: "Totem Of Undoing"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

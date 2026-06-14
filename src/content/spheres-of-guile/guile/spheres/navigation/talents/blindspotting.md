@@ -1,9 +1,5 @@
 ---
-id: "blindspotting"
 name: "Blindspotting"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "pathing"

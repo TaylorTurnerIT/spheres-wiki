@@ -1,9 +1,5 @@
 ---
-id: "lay-of-the-land"
 name: "Lay Of The Land"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "utility"

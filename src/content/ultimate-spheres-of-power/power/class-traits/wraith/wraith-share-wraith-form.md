@@ -1,10 +1,6 @@
 ---
-id: wraith-share-wraith-form
 name: "Share Wraith Form"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

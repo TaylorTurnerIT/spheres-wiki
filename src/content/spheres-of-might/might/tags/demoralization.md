@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "demoralization"
 label: "Demoralization"
 sphere: "gladiator"
 priority: 0

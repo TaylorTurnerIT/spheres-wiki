@@ -1,9 +1,5 @@
 ---
-id: beam
 name: "Beam"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["nimbus"]
 ---

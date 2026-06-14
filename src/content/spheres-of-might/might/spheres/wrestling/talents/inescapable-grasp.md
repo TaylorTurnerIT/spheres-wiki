@@ -1,9 +1,5 @@
 ---
-id: "inescapable-grasp"
 name: "Inescapable Grasp"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

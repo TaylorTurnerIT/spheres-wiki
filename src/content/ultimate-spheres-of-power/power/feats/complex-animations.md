@@ -1,8 +1,5 @@
 ---
-id: complex-animations
 name: "Complex Animations"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

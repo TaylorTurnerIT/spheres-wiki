@@ -1,9 +1,5 @@
 ---
-id: "pinning-impale"
 name: "Pinning Impale"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: spell-saga
 name: "Spell Saga"
-type: feat
-system: power
 sphere: time
 tags: []
 tier: feat

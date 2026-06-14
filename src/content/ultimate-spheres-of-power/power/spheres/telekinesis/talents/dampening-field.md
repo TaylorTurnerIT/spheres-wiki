@@ -1,9 +1,5 @@
 ---
-id: dampening-field
 name: "Dampening Field"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

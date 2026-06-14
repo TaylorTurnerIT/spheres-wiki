@@ -1,9 +1,5 @@
 ---
-id: retain-ability
 name: "Retain Ability"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

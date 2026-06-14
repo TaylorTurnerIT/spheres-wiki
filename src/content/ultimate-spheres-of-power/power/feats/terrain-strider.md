@@ -1,8 +1,5 @@
 ---
-id: terrain-strider
 name: "Terrain Strider"
-type: feat
-system: power
 sphere: nature
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: taste-of-victory
 name: "Taste Of Victory"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

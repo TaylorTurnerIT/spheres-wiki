@@ -1,9 +1,5 @@
 ---
-id: melt-into-shadow
 name: "Melt Into Shadow"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: []
 ---

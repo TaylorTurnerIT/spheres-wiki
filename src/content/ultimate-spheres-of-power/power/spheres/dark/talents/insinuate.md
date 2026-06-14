@@ -1,9 +1,5 @@
 ---
-id: insinuate
 name: "Insinuate"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["utility"]
 ---

@@ -1,10 +1,6 @@
 ---
-id: hedgewitch-extra-magic-item
 name: "Extra Magic Item"
-type: class-trait
-system: power
 tags: []
-className: hedgewitch
 featureId: grand-secrets
 ---
 

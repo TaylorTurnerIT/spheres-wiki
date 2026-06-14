@@ -1,9 +1,5 @@
 ---
-id: cloud
 name: Cloud
-type: talent
-system: power
-sphere: mind
 tier: basic
 tags: []
 ---

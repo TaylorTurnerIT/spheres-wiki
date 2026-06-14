@@ -1,9 +1,5 @@
 ---
-id: "focused-study"
 name: "Focused Study"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "utility"

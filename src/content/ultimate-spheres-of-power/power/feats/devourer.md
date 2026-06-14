@@ -1,8 +1,5 @@
 ---
-id: devourer
 name: "Devourer"
-type: feat
-system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat

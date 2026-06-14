@@ -1,8 +1,5 @@
 ---
-id: toxic-webs
 name: "Toxic Webs"
-type: feat
-system: power
 sphere: alteration
 tags: []
 tier: feat

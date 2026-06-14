@@ -1,8 +1,5 @@
 ---
-id: fey-adept
 name: "Fey Adept"
-type: class
-system: power
 tags: []
 hitDie: 6
 alignment: "Any"

@@ -1,9 +1,5 @@
 ---
-id: "enduring-terror"
 name: "Enduring Terror"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "advanced"
 tags:
   - "quip"

@@ -1,8 +1,5 @@
 ---
-id: fount-of-mercy
 name: "Fount Of Mercy"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

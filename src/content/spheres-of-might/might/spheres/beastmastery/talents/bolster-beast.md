@@ -1,9 +1,5 @@
 ---
-id: "bolster-beast"
 name: "Bolster Beast"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "handle-animal"

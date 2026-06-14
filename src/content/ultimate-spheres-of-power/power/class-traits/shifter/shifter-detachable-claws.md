@@ -1,10 +1,6 @@
 ---
-id: shifter-detachable-claws
 name: "Detachable Claws"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 requires: "claws"
 ---

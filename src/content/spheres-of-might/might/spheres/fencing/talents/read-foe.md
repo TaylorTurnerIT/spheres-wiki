@@ -1,9 +1,5 @@
 ---
-id: "read-foe"
 name: "Read Foe"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags:
   - "utility"

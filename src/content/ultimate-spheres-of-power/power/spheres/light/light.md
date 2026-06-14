@@ -1,8 +1,5 @@
 ---
-id: light
 name: Light
-system: power
-type: sphere
 icon: light
 description: You may create and manipulate light.
 tags: []

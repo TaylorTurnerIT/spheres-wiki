@@ -1,8 +1,5 @@
 ---
-id: venomous-ichor
 name: "Venomous Ichor"
-type: feat
-system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat

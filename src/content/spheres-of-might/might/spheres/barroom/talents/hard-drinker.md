@@ -1,9 +1,5 @@
 ---
-id: "hard-drinker"
 name: "Hard Drinker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "base"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "dancing-display"
 name: "Dancing Display"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

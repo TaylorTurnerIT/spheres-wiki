@@ -1,9 +1,5 @@
 ---
-id: "examine-damage"
 name: "Examine Damage"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

@@ -1,9 +1,5 @@
 ---
-id: "withdraw-discordance"
 name: "Withdraw Discordance"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "mishap"

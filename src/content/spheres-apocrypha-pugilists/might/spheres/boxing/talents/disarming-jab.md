@@ -1,9 +1,5 @@
 ---
-id: "disarming-jab"
 name: "Disarming Jab"
-type: "talent"
-sourceBook: "spheres-apocrypha-pugilists"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "counter"

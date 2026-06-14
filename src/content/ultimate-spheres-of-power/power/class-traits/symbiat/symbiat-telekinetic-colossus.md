@@ -1,10 +1,6 @@
 ---
-id: symbiat-telekinetic-colossus
 name: "Telekinetic Colossus"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

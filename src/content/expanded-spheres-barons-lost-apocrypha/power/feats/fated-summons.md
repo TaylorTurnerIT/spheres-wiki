@@ -1,8 +1,5 @@
 ---
-id: fated-summons
 name: Fated Summons
-type: feat
-system: power
 sphere: fate
 dualSphere: conjuration
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "armored-momentum"
 name: "Armored Momentum"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents-2"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: ensouled-illuminations
 name: "Ensouled Illuminations"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

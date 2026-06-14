@@ -1,9 +1,5 @@
 ---
-id: slick
 name: "Slick"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["quicken"]
 ---

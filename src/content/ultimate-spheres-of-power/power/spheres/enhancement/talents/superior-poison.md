@@ -1,9 +1,5 @@
 ---
-id: superior-poison
 name: "Superior Poison"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

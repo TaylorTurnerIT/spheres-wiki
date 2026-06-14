@@ -1,9 +1,5 @@
 ---
-id: "no-honor-among-thieves"
 name: "No Honor Among Thieves"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

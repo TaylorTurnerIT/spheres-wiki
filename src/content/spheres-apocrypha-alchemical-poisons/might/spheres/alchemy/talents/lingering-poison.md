@@ -1,9 +1,5 @@
 ---
-id: "lingering-poison"
 name: "Lingering Poison"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-poisons"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

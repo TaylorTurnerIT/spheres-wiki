@@ -1,9 +1,5 @@
 ---
-id: shining-arsenal
 name: "Shining Arsenal"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

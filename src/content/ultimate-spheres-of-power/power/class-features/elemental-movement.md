@@ -1,8 +1,6 @@
 ---
-id: elemental-movement
 name: "Elemental Movement"
 type: class-feature
-system: power
 className: elementalist
 level: 7
 tags: []

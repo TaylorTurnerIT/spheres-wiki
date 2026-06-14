@@ -1,8 +1,5 @@
 ---
-id: master-of-small-magics
 name: "Master Of Small Magics"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

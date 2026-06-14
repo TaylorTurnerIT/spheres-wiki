@@ -1,9 +1,5 @@
 ---
-id: "unsettling-visage"
 name: "Unsettling Visage"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

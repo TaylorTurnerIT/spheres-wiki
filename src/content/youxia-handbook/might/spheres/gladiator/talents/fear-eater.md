@@ -1,9 +1,5 @@
 ---
-id: "fear-eater"
 name: "Fear Eater"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

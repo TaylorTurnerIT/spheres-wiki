@@ -1,8 +1,5 @@
 ---
-id: enhancement
 name: "Enhancement"
-system: power
-type: sphere
 icon: enhancement
 description: "You may place enhancements on creatures and objects, altering their properties."
 tags: []

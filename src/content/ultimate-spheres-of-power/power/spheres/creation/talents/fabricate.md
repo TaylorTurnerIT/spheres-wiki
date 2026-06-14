@@ -1,9 +1,5 @@
 ---
-id: fabricate
 name: "Fabricate"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: []
 ---

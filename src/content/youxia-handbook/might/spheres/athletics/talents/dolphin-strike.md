@@ -1,9 +1,5 @@
 ---
-id: "dolphin-strike"
 name: "Dolphin Strike"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "leap"

@@ -1,9 +1,5 @@
 ---
-id: "collaborative-performance"
 name: "Collaborative Performance"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: obscure
 name: "Obscure"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["lens"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: ability-channel
 name: "Ability Channel"
-type: feat
-system: power
 sphere: conjuration
 tags: []
 tier: feat

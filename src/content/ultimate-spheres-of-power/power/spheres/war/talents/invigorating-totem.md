@@ -1,9 +1,5 @@
 ---
-id: invigorating-totem
 name: "Invigorating Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "intimidating-ability"
 name: "Intimidating Ability"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags: []
 ---

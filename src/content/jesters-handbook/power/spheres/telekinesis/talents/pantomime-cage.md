@@ -1,9 +1,5 @@
 ---
-id: pantomime-cage
 name: "Pantomime Cage"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

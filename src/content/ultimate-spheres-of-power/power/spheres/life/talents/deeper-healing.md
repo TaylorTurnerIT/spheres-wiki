@@ -1,9 +1,5 @@
 ---
-id: deeper-healing
 name: "Deeper Healing"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

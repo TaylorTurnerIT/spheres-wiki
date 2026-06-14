@@ -1,8 +1,5 @@
 ---
-id: proxy-counterspell
 name: "Proxy Counterspell"
-type: feat
-system: power
 sphere: enhancement
 tags: ["proxy"]
 tier: feat

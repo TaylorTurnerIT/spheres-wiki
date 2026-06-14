@@ -1,9 +1,5 @@
 ---
-id: "cavalry-ready"
 name: "Cavalry Ready"
-type: "talent"
-sourceBook: "spheres-apocrypha-racial-martial-talents"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

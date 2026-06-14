@@ -1,9 +1,5 @@
 ---
-id: choking-grasp
 name: "Choking Grasp"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

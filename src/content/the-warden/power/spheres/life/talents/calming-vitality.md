@@ -1,9 +1,5 @@
 ---
-id: calming-vitality
 name: "Calming Vitality"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["vitality", "warden"]
 ---

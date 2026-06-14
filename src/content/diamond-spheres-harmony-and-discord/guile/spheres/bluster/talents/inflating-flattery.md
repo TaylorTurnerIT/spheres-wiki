@@ -1,9 +1,5 @@
 ---
-id: "inflating-flattery"
 name: "Inflating Flattery"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

@@ -1,9 +1,5 @@
 ---
-id: planar-creature
 name: "Planar Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["type"]
 ---

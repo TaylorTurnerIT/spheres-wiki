@@ -1,9 +1,5 @@
 ---
-id: searing-blast
 name: "Searing Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "fire"]
 ---

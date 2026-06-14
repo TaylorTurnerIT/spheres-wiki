@@ -1,9 +1,5 @@
 ---
-id: permanent-change
 name: "Permanent Change"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: []
 ---

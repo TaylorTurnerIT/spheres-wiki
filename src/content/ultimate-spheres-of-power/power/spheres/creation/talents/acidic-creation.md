@@ -1,9 +1,5 @@
 ---
-id: acidic-creation
 name: "Acidic Creation"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["material"]
 ---

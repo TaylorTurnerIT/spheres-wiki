@@ -1,10 +1,6 @@
 ---
-id: mageknight-burgeoning-reflexes
 name: "Burgeoning Reflexes"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

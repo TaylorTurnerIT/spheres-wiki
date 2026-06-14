@@ -1,9 +1,5 @@
 ---
-id: epiphany
 name: "Epiphany"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: ["cognition", "utility"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "fortifying-mixture"
 name: "Fortifying Mixture"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

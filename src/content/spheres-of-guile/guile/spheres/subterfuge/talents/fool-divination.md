@@ -1,9 +1,5 @@
 ---
-id: "fool-divination"
 name: "Fool Divination"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "advanced"
 tags:
   - "approach"

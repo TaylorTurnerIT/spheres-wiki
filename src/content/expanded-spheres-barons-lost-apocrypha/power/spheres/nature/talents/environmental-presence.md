@@ -1,9 +1,5 @@
 ---
-id: environmental-presence
 name: "Environmental Presence"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["mass"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: shape-expert
 name: "Shape Expert"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

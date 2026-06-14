@@ -1,9 +1,5 @@
 ---
-id: "cold-iron-call"
 name: "Cold Iron Call"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

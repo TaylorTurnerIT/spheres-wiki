@@ -1,9 +1,5 @@
 ---
-id: eternal-vigilance
 name: "Eternal Vigilance"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

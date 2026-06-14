@@ -1,9 +1,5 @@
 ---
-id: call-to-arms
 name: "Call To Arms"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: blurred-boundary
 name: Blurred Boundary
-type: feat
-system: power
 sphere: protection
 dualSphere: illusion
 tier: feat

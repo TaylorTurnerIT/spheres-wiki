@@ -1,9 +1,5 @@
 ---
-id: "opening-maneuver"
 name: "Opening Maneuver"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

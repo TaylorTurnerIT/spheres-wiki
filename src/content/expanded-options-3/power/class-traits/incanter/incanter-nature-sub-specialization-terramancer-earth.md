@@ -1,10 +1,6 @@
 ---
-id: incanter-nature-sub-specialization-terramancer-earth
 name: "Nature Sub-Specialization: Terramancer (earth)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: list-of-sphere-specializations
 ---
 

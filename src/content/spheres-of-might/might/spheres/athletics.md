@@ -1,8 +1,5 @@
 ---
-id: "athletics"
 name: "Athletics"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "athletics"
 tags: []
 sectionDefinitions:

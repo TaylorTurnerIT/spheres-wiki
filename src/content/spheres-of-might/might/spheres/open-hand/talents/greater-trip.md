@@ -1,9 +1,5 @@
 ---
-id: "greater-trip"
 name: "Greater Trip"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

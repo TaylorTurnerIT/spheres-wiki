@@ -1,9 +1,5 @@
 ---
-id: "flesh-carver"
 name: "Flesh Carver"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

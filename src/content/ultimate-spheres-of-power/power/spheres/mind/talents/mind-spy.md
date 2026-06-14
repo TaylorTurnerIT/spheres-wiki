@@ -1,9 +1,5 @@
 ---
-id: mind-spy
 name: "Mind Spy"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

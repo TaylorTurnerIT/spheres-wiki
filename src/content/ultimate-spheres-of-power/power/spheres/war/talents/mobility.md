@@ -1,9 +1,5 @@
 ---
-id: mobility
 name: "Mobility"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mandate"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "pinching-joints"
 name: "Pinching Joints"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "sabotage"

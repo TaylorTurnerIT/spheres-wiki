@@ -1,9 +1,5 @@
 ---
-id: style
 name: "Style"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["utility"]
 ---

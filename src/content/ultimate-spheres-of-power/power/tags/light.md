@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "light"
 label: "Light"
 color: "#fde047"
 priority: 15

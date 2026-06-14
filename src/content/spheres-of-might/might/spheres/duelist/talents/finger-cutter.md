@@ -1,9 +1,5 @@
 ---
-id: "finger-cutter"
 name: "Finger Cutter"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "disarm"

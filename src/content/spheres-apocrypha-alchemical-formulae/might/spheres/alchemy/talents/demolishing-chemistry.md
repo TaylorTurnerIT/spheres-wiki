@@ -1,9 +1,5 @@
 ---
-id: "demolishing-chemistry"
 name: "Demolishing Chemistry"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-formulae"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

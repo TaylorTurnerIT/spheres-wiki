@@ -1,9 +1,5 @@
 ---
-id: "retainer-statistics"
 name: "Retainer Statistics"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "base"
 tags: []
 ---

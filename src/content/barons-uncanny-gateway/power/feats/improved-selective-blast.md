@@ -1,8 +1,5 @@
 ---
-id: improved-selective-blast
 name: "Improved Selective Blast"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat", "sm"]
 tier: feat

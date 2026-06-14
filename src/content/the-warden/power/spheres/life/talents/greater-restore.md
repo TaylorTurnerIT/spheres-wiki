@@ -1,9 +1,5 @@
 ---
-id: greater-restore
 name: "Greater Restore"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["warden"]
 ---

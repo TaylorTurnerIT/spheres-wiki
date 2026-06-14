@@ -1,8 +1,5 @@
 ---
-id: magicians-trade
 name: "Magician's Trade"
-type: feat
-system: power
 sphere: enhancement
 tags: ["counterspell"]
 tier: feat

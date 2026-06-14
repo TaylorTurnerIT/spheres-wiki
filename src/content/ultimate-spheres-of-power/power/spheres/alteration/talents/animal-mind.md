@@ -1,9 +1,5 @@
 ---
-id: animal-mind
 name: "Animal Mind"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

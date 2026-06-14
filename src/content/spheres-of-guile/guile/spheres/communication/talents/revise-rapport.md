@@ -1,9 +1,5 @@
 ---
-id: "revise-rapport"
 name: "Revise Rapport"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags: []
 ---

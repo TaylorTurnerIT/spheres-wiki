@@ -1,9 +1,5 @@
 ---
-id: "clouding-cut"
 name: "Clouding Cut"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "bleed"

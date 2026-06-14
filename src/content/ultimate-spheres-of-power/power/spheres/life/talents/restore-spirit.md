@@ -1,9 +1,5 @@
 ---
-id: restore-spirit
 name: "Restore Spirit"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["cure"]
 ---

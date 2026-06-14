@@ -1,9 +1,5 @@
 ---
-id: divided-mind
 name: "Divided Mind"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: ["mass"]
 ---

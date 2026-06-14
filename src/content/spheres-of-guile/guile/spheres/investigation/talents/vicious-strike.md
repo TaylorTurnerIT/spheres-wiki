@@ -1,9 +1,5 @@
 ---
-id: "vicious-strike"
 name: "Vicious Strike"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "apply"

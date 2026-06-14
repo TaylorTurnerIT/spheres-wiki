@@ -1,9 +1,5 @@
 ---
-id: distortion-aura
 name: "Distortion Aura"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

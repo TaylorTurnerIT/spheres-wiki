@@ -1,9 +1,5 @@
 ---
-id: "community-awareness"
 name: "Community Awareness"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "acclimation"

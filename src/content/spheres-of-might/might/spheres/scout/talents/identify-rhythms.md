@@ -1,9 +1,5 @@
 ---
-id: "identify-rhythms"
 name: "Identify Rhythms"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

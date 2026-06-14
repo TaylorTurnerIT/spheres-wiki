@@ -1,9 +1,5 @@
 ---
-id: "pertinacious-conditioning"
 name: "Pertinacious Conditioning"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "brute"
 tier: "advanced"
 tags:
   - "manhandle"

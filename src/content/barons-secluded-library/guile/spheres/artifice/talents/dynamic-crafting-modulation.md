@@ -1,9 +1,5 @@
 ---
-id: "dynamic-crafting-modulation"
 name: "Dynamic Crafting Modulation"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "utility"

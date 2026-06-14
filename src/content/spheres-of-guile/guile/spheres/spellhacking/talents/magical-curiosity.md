@@ -1,9 +1,5 @@
 ---
-id: "magical-curiosity"
 name: "Magical Curiosity"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags: []
 ---

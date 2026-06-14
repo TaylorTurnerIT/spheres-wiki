@@ -1,9 +1,5 @@
 ---
-id: return
 name: "Return"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

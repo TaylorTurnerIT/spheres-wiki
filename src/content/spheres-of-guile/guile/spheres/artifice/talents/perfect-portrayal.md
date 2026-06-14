@@ -1,9 +1,5 @@
 ---
-id: "perfect-portrayal"
 name: "Perfect Portrayal"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "artwork"

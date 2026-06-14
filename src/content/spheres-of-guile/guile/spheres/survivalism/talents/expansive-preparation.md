@@ -1,9 +1,5 @@
 ---
-id: "expansive-preparation"
 name: "Expansive Preparation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "supernatural"

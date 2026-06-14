@@ -1,8 +1,5 @@
 ---
-id: force-shield-improved
 name: "Force Shield, Improved"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["combat", "protokinesis"]
 tier: feat

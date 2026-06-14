@@ -1,9 +1,5 @@
 ---
-id: hemorrhage
 name: "Hemorrhage"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

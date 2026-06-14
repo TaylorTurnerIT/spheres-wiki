@@ -1,9 +1,5 @@
 ---
-id: "confident-sniper"
 name: "Confident Sniper"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "well-timed-distraction"
 name: "Well-Timed Distraction"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "plan"

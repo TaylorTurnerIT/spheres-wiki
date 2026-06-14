@@ -1,9 +1,5 @@
 ---
-id: "complex-preparation"
 name: "Complex Preparation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: excessive-force
 name: "Excessive Force"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

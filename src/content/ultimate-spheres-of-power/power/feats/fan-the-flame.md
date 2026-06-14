@@ -1,8 +1,5 @@
 ---
-id: fan-the-flame
 name: Fan The Flame
-type: feat
-system: power
 sphere: nature
 dualSphere: destruction
 tier: feat

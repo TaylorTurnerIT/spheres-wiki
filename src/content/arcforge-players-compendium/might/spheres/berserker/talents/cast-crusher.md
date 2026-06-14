@@ -1,9 +1,5 @@
 ---
-id: "cast-crusher"
 name: "Cast-Crusher"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

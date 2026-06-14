@@ -1,9 +1,5 @@
 ---
-id: "dizzying-tumble"
 name: "Dizzying Tumble"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "motion"

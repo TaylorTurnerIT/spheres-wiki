@@ -1,9 +1,5 @@
 ---
-id: "hallucinatory-miasma"
 name: "Hallucinatory Miasma"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "advanced"
 tags:
   - "aroma"

@@ -1,9 +1,5 @@
 ---
-id: "destabilizing-charge"
 name: "Destabilizing Charge"
-type: "talent"
-sourceBook: "spheres-apocrypha-tandem-talents"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

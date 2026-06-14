@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-curious-spirit
 name: "Curious Spirit"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

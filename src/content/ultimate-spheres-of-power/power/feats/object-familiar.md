@@ -1,8 +1,5 @@
 ---
-id: object-familiar
 name: "Object Familiar"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

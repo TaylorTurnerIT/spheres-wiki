@@ -1,9 +1,5 @@
 ---
-id: "captivating-spectacle"
 name: "Captivating Spectacle"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "basic"
 tags:
   - "utility"

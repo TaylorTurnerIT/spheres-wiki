@@ -1,9 +1,5 @@
 ---
-id: divine-force
 name: "Divine Force"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["consecration"]
 ---

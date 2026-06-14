@@ -1,10 +1,6 @@
 ---
-id: fey-adept-glamer
 name: "Glamer"
-type: class-trait
-system: power
 tags: []
-className: fey-adept
 featureId: shadowstuff
 ---
 

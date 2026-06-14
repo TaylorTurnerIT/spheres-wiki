@@ -1,9 +1,5 @@
 ---
-id: guiding-light
 name: "Guiding Light"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

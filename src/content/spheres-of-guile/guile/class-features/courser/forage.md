@@ -1,7 +1,5 @@
 ---
-id: forage
 name: Forage
-className: courser
 level: 1
 tags: []
 ---

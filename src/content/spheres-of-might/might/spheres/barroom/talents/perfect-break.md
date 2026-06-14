@@ -1,9 +1,5 @@
 ---
-id: "perfect-break"
 name: "Perfect Break"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

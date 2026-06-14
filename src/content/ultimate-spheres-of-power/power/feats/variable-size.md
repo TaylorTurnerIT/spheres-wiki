@@ -1,8 +1,5 @@
 ---
-id: variable-size
 name: "Variable Size"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

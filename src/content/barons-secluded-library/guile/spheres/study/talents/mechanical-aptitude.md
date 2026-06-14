@@ -1,9 +1,5 @@
 ---
-id: "mechanical-aptitude"
 name: "Mechanical Aptitude"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "study"
 tier: "advanced"
 tags: []
 ---

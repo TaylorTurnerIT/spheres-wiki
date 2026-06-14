@@ -1,8 +1,5 @@
 ---
-id: companionship
 name: "Companionship"
-type: feat
-system: power
 sphere: protection
 tags: ["warden"]
 tier: feat

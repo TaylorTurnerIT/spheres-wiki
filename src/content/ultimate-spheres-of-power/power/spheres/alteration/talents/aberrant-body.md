@@ -1,9 +1,5 @@
 ---
-id: aberrant-body
 name: "Aberrant Body"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["body"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: mana-bleed
 name: "Mana Bleed"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

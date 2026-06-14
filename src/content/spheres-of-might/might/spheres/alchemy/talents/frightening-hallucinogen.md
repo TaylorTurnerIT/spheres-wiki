@@ -1,9 +1,5 @@
 ---
-id: "frightening-hallucinogen"
 name: "Frightening Hallucinogen"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

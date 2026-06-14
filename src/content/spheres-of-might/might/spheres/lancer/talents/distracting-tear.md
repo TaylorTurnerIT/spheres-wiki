@@ -1,9 +1,5 @@
 ---
-id: "distracting-tear"
 name: "Distracting Tear"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags:
   - "impale"

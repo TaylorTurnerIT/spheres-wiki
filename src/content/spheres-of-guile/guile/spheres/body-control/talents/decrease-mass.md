@@ -1,9 +1,5 @@
 ---
-id: "decrease-mass"
 name: "Decrease Mass"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags:
   - "control"

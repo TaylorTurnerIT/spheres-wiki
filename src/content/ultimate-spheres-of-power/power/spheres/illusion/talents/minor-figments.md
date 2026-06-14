@@ -1,9 +1,5 @@
 ---
-id: minor-figments
 name: "Minor Figments"
-type: talent
-system: power
-sphere: illusion
 tier: basic
 tags: []
 ---

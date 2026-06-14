@@ -1,9 +1,5 @@
 ---
-id: "focusing-break"
 name: "Focusing Break"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

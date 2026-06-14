@@ -1,9 +1,5 @@
 ---
-id: sweeping-bludgeons
 name: "Sweeping Bludgeons"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

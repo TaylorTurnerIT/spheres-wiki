@@ -1,8 +1,5 @@
 ---
-id: bonds-of-blood-and-power
 name: Bonds Of Blood And Power
-type: feat
-system: power
 sphere: mana
 dualSphere: blood
 tier: feat

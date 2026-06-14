@@ -1,8 +1,5 @@
 ---
-id: enchanting-performance
 name: "Enchanting Performance"
-type: feat
-system: power
 sphere: fallen-fey
 tags: []
 tier: feat

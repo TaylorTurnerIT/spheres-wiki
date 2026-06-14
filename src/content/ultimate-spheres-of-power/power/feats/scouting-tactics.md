@@ -1,8 +1,5 @@
 ---
-id: scouting-tactics
 name: "Scouting Tactics"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

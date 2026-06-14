@@ -1,9 +1,5 @@
 ---
-id: "master-of-the-dead"
 name: "Master Of The Dead"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "advanced"
 tags:
   - "cohort"

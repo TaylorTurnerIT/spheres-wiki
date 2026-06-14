@@ -1,8 +1,6 @@
 ---
-id: shapeshifter
 name: "Shapeshifter"
 type: class-feature
-system: power
 className: shifter
 level: 1
 tags: []

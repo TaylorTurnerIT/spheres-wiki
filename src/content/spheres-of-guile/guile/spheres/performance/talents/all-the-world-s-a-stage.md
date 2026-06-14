@@ -1,9 +1,5 @@
 ---
-id: "all-the-world-s-a-stage"
 name: "All The World's A Stage"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags: []
 ---

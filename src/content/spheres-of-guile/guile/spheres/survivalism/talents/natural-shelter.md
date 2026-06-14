@@ -1,9 +1,5 @@
 ---
-id: "natural-shelter"
 name: "Natural Shelter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "utility"

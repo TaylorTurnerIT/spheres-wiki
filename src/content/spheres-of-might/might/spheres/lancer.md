@@ -1,8 +1,5 @@
 ---
-id: "lancer"
 name: "Lancer"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "lancer"
 tags: []
 sectionDefinitions:

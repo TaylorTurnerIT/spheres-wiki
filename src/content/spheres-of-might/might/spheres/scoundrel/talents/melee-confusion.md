@@ -1,9 +1,5 @@
 ---
-id: "melee-confusion"
 name: "Melee Confusion"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: hold-on-hope
 name: "Hold on Hope"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["sm", "word"]
 ---

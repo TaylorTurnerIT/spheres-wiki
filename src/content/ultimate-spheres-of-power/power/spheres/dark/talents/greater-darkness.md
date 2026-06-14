@@ -1,9 +1,5 @@
 ---
-id: greater-darkness
 name: "Greater Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "debris"
 name: "Debris"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents-2"
-sphere: "athletics"
 tier: "advanced"
 tags: []
 ---

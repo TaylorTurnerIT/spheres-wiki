@@ -1,9 +1,5 @@
 ---
-id: "frenzy-rider"
 name: "Frenzy Rider"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "ride"

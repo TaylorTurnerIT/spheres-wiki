@@ -1,9 +1,5 @@
 ---
-id: voidwatcher
 name: "Voidwatcher"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["meld"]
 ---

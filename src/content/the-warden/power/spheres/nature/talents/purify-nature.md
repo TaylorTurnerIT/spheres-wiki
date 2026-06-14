@@ -1,9 +1,5 @@
 ---
-id: purify-nature
 name: "Purify Nature"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["geomancing", "warden"]
 ---

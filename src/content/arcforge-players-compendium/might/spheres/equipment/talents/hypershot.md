@@ -1,9 +1,5 @@
 ---
-id: "hypershot"
 name: "Hypershot"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

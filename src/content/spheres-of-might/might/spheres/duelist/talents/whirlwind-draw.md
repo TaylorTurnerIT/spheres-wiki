@@ -1,9 +1,5 @@
 ---
-id: "whirlwind-draw"
 name: "Whirlwind Draw"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "disarm"

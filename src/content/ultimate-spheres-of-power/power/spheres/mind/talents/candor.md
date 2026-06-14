@@ -1,9 +1,5 @@
 ---
-id: candor
 name: "Candor"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["utility", "charm"]
 ---

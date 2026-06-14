@@ -1,7 +1,5 @@
 ---
-id: withstand-force
 name: Withstand Force
-className: courser
 level: 9
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "careful-liar"
 name: "Careful Liar"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

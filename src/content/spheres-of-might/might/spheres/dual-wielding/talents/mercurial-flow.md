@@ -1,9 +1,5 @@
 ---
-id: "mercurial-flow"
 name: "Mercurial Flow"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

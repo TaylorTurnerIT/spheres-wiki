@@ -1,8 +1,5 @@
 ---
-id: illustrious-light
 name: Illustrious Light
-type: feat
-system: power
 sphere: light
 dualSphere: illusion
 tier: feat

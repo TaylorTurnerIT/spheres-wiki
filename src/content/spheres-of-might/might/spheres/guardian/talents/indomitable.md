@@ -1,9 +1,5 @@
 ---
-id: "indomitable"
 name: "Indomitable"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "advanced"
 tags: []
 ---

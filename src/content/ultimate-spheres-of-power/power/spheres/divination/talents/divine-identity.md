@@ -1,9 +1,5 @@
 ---
-id: divine-identity
 name: "Divine Identity"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["utility", "divine"]
 ---

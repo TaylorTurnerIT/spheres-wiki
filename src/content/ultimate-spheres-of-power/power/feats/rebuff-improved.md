@@ -1,8 +1,5 @@
 ---
-id: rebuff-improved
 name: "Rebuff, Improved"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

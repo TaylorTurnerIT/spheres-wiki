@@ -1,9 +1,5 @@
 ---
-id: sudden-invigoration
 name: "Sudden Invigoration"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

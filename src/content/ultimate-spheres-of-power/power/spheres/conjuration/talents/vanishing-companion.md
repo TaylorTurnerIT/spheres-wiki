@@ -1,9 +1,5 @@
 ---
-id: vanishing-companion
 name: "Vanishing Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: ["form"]
 ---

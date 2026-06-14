@@ -1,9 +1,5 @@
 ---
-id: "death-valley-driver"
 name: "Death Valley Driver"
-type: "talent"
-sourceBook: "gravecallers-handbook"
-sphere: "wrestling"
 tier: "advanced"
 tags: ["slam"]
 ---

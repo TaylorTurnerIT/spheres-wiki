@@ -1,9 +1,5 @@
 ---
-id: "ace-pilot"
 name: "Ace Pilot"
-type: "talent"
-sourceBook: "expanded-options-2"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

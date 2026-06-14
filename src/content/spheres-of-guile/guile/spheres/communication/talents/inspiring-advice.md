@@ -1,9 +1,5 @@
 ---
-id: "inspiring-advice"
 name: "Inspiring Advice"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

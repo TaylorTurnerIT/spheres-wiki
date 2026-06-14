@@ -1,9 +1,5 @@
 ---
-id: exclusion
 name: "Exclusion"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["ward"]
 ---

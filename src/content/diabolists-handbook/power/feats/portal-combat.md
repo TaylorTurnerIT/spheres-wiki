@@ -1,8 +1,5 @@
 ---
-id: portal-combat
 name: "Portal Combat"
-type: feat
-system: power
 sphere: warp
 tags: ["combat"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "bushwhack"
 name: "Bushwhack"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "pathing"

@@ -1,9 +1,5 @@
 ---
-id: directional-darkness
 name: "Directional Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["darkness"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "cunning-combo"
 name: "Cunning Combo"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

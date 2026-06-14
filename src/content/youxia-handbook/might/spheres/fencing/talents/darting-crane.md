@@ -1,9 +1,5 @@
 ---
-id: "darting-crane"
 name: "Darting Crane"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "fencing"
 tier: "basic"
 tags:
   - "stance"

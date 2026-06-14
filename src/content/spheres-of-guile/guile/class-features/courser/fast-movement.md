@@ -1,7 +1,5 @@
 ---
-id: fast-movement
 name: Fast Movement
-className: courser
 level: 2
 tags: []
 ---

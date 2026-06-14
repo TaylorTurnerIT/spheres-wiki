@@ -1,9 +1,5 @@
 ---
-id: "defend-other"
 name: "Defend Other"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

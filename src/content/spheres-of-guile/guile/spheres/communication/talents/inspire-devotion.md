@@ -1,9 +1,5 @@
 ---
-id: "inspire-devotion"
 name: "Inspire Devotion"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "pointer"
 name: "Pointer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "base"
 tags:
   - "package"

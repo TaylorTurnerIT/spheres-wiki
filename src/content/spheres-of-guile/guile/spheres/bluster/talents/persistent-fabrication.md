@@ -1,9 +1,5 @@
 ---
-id: "persistent-fabrication"
 name: "Persistent Fabrication"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "advanced"
 tags:
   - "utility"

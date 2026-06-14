@@ -1,10 +1,6 @@
 ---
-id: armorist-ranged-summons
 name: "Ranged Summons"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

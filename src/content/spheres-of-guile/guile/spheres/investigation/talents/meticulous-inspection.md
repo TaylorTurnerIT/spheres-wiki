@@ -1,9 +1,5 @@
 ---
-id: "meticulous-inspection"
 name: "Meticulous Inspection"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "advanced"
 tags: []
 ---

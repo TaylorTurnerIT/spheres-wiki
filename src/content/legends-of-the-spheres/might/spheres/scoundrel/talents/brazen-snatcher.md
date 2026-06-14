@@ -1,9 +1,5 @@
 ---
-id: "brazen-snatcher"
 name: "Brazen Snatcher"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "utility"

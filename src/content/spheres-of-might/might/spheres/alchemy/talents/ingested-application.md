@@ -1,9 +1,5 @@
 ---
-id: "ingested-application"
 name: "Ingested Application"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

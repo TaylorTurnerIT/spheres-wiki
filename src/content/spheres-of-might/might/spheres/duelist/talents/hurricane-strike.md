@@ -1,9 +1,5 @@
 ---
-id: "hurricane-strike"
 name: "Hurricane Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "bleed"

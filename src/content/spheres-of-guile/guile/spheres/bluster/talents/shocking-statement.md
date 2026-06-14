@@ -1,9 +1,5 @@
 ---
-id: "shocking-statement"
 name: "Shocking Statement"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "advanced"
 tags:
   - "quip"

@@ -1,9 +1,5 @@
 ---
-id: "disrupt-focus"
 name: "Disrupt Focus"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "apply"

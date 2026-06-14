@@ -1,9 +1,5 @@
 ---
-id: parallel-cognition
 name: "Parallel Cognition"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["cognition", "utility"]
 ---

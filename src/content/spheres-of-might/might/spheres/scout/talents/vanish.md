@@ -1,9 +1,5 @@
 ---
-id: "vanish"
 name: "Vanish"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "advanced"
 tags: []
 ---

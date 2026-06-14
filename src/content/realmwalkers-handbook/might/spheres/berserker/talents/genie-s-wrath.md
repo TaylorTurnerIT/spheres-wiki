@@ -1,9 +1,5 @@
 ---
-id: "genie-s-wrath"
 name: "Genie’s Wrath"
-type: "talent"
-sourceBook: "realmwalkers-handbook"
-sphere: "berserker"
 tier: "advanced"
 tags:
   - "exertion"

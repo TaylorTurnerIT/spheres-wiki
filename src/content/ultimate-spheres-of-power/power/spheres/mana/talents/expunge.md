@@ -1,9 +1,5 @@
 ---
-id: expunge
 name: Expunge
-system: power
-type: talent
-sphere: mana
 tier: base
 tags: []
 ---

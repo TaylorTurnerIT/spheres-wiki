@@ -1,9 +1,5 @@
 ---
-id: "chasing-the-dragon"
 name: "Chasing the Dragon"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

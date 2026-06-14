@@ -1,9 +1,5 @@
 ---
-id: "strange-bedfellows"
 name: "Strange Bedfellows"
-type: "talent"
-sourceBook: "spheres-apocrypha-cohorts-and-companions"
-sphere: "leadership"
 tier: "advanced"
 tags:
   - "cohort"

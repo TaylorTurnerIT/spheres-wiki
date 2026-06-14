@@ -1,9 +1,5 @@
 ---
-id: greater-undead
 name: "Greater Undead"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

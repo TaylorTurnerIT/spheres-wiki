@@ -1,9 +1,5 @@
 ---
-id: "skilled-communicator"
 name: "Skilled Communicator"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

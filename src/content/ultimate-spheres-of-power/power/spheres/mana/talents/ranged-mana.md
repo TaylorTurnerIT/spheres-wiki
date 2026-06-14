@@ -1,9 +1,5 @@
 ---
-id: ranged-mana
 name: "Ranged Mana"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["range"]
 ---

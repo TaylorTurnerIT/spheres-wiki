@@ -1,9 +1,5 @@
 ---
-id: "sanguine-invigoration"
 name: "Sanguine Invigoration"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: summon-fairy
 name: "Summon Fairy"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

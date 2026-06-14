@@ -1,9 +1,5 @@
 ---
-id: absolute-totem
 name: "Absolute Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

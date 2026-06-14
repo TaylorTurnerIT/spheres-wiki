@@ -1,9 +1,5 @@
 ---
-id: create-nature
 name: "Create Nature"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["geomancing"]
 ---

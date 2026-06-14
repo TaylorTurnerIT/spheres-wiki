@@ -1,9 +1,5 @@
 ---
-id: "crouching-tiger"
 name: "Crouching Tiger"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "stance"

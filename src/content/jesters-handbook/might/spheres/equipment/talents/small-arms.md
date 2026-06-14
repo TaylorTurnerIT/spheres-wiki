@@ -1,9 +1,5 @@
 ---
-id: "small-arms"
 name: "Small Arms"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

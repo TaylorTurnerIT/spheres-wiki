@@ -1,8 +1,5 @@
 ---
-id: spell-capacitor
 name: "Spell Capacitor"
-type: feat
-system: power
 sphere: time
 tags: []
 tier: feat

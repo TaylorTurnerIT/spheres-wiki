@@ -1,9 +1,5 @@
 ---
-id: ooze-transformation
 name: "Ooze Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["transformation"]
 ---

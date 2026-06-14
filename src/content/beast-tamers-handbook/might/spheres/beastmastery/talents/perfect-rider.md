@@ -1,9 +1,5 @@
 ---
-id: "perfect-rider"
 name: "Perfect Rider"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "ride"

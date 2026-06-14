@@ -1,9 +1,5 @@
 ---
-id: sodden
 name: "Sodden"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "precipitation"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: arc-of-change
 name: "Arc of Change"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["sm", "utility"]
 ---

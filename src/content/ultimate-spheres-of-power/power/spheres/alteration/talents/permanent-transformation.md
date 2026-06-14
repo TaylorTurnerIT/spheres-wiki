@@ -1,9 +1,5 @@
 ---
-id: permanent-transformation
 name: "Permanent Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

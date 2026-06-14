@@ -1,8 +1,5 @@
 ---
-id: haboob-lord
 name: "Haboob Lord"
-type: feat
-system: power
 sphere: weather
 tags: []
 tier: feat

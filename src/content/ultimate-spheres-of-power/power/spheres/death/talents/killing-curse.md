@@ -1,9 +1,5 @@
 ---
-id: killing-curse
 name: "Killing Curse"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

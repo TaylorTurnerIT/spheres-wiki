@@ -1,9 +1,5 @@
 ---
-id: living-steel
 name: "Living Steel"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["geomancing", "metal-and-plant"]
 ---

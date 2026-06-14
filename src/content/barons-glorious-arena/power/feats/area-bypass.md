@@ -1,8 +1,5 @@
 ---
-id: area-bypass
 name: "Area Bypass"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

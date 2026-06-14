@@ -1,8 +1,5 @@
 ---
-id: catty-observer
 name: "Catty Observer"
-type: feat
-system: power
 sphere: protection
 tags: []
 tier: feat

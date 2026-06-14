@@ -1,9 +1,5 @@
 ---
-id: "spell-sunder"
 name: "Spell Sunder"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "advanced"
 tags:
   - "exertion"

@@ -1,9 +1,5 @@
 ---
-id: the-knight
 name: "The Knight"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

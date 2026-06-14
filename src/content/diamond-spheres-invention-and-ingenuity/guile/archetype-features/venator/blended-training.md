@@ -1,7 +1,5 @@
 ---
-id: blended-training
 name: Blended Training
-archetypeId: venator
 level: 1
 tags: []
 alters:

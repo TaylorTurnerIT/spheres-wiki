@@ -1,9 +1,5 @@
 ---
-id: "forceful-jaunt"
 name: "Forceful Jaunt"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "brute"
 tier: "advanced"
 tags: []
 ---

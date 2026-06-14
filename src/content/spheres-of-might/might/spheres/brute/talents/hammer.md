@@ -1,9 +1,5 @@
 ---
-id: "hammer"
 name: "Hammer"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

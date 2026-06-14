@@ -1,9 +1,5 @@
 ---
-id: kinetic-sense
 name: "Kinetic Sense"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

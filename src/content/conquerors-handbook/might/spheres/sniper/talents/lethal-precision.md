@@ -1,9 +1,5 @@
 ---
-id: "lethal-precision"
 name: "Lethal Precision"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "sniper"
 tier: "basic"
 tags: []
 ---

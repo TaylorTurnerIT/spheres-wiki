@@ -1,9 +1,5 @@
 ---
-id: "circumvent-magic"
 name: "Circumvent Magic"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "approach"

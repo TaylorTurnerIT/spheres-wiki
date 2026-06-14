@@ -1,9 +1,5 @@
 ---
-id: "catalyzed-poison"
 name: "Catalyzed Poison"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemy-poisons-2"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

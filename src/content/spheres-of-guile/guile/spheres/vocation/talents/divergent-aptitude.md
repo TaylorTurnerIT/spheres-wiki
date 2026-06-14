@@ -1,9 +1,5 @@
 ---
-id: "divergent-aptitude"
 name: "Divergent Aptitude"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "advanced"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: damage-control
 name: "Damage Control"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: []
 ---

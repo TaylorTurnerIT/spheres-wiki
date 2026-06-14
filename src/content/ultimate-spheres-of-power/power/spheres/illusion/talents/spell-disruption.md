@@ -1,9 +1,5 @@
 ---
-id: spell-disruption
 name: "Spell Disruption"
-system: power
-type: talent
-sphere: illusion
 tier: advanced
 tags: []
 ---

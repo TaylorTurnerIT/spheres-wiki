@@ -1,9 +1,5 @@
 ---
-id: powerful-charm
 name: "Powerful Charm"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: []
 ---

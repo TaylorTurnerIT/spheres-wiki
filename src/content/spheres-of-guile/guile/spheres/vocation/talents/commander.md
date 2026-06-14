@@ -1,9 +1,5 @@
 ---
-id: "commander"
 name: "Commander"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

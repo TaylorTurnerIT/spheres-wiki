@@ -1,9 +1,5 @@
 ---
-id: voiding-suppression
 name: "Voiding Suppression"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

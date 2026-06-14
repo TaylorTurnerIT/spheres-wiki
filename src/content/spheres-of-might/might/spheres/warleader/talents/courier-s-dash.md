@@ -1,9 +1,5 @@
 ---
-id: "courier-s-dash"
 name: "Courier’s Dash"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

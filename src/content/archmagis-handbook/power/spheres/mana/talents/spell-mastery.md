@@ -1,9 +1,5 @@
 ---
-id: spell-mastery
 name: "Spell Mastery"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["amp", "manipulation"]
 ---

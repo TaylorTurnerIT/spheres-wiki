@@ -1,9 +1,5 @@
 ---
-id: mindscape
 name: "Mindscape"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: ["charm"]
 ---

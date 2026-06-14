@@ -1,9 +1,5 @@
 ---
-id: empower-familiar
 name: "Empower Familiar"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "distort-reality"
 name: "Distort Reality"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "advanced"
 tags:
   - "research"

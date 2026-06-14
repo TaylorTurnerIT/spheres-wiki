@@ -1,9 +1,5 @@
 ---
-id: "rollercoaster"
 name: "Rollercoaster"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

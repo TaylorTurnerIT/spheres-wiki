@@ -1,9 +1,5 @@
 ---
-id: position
 name: "Position"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

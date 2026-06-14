@@ -1,9 +1,5 @@
 ---
-id: death-sphere-as-evil
 name: "Death Sphere as Evil"
-type: talent
-system: power
-sphere: death
 tier: basic
 tags: []
 ---

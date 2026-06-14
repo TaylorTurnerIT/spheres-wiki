@@ -1,9 +1,5 @@
 ---
-id: larger-creation
 name: "Larger Creation"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: []
 ---

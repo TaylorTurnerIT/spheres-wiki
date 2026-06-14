@@ -1,9 +1,5 @@
 ---
-id: sage-companion
 name: "Sage Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: retribution
 name: "Retribution"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

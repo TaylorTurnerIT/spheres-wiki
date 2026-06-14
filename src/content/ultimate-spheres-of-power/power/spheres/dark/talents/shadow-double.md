@@ -1,9 +1,5 @@
 ---
-id: shadow-double
 name: "Shadow Double"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: ["shadow"]
 ---

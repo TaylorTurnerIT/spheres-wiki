@@ -1,8 +1,5 @@
 ---
-id: luminous-aegis
 name: Luminous Aegis
-type: feat
-system: power
 sphere: protection
 dualSphere: light
 tier: feat

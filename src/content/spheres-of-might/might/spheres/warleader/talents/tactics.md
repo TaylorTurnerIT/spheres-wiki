@@ -1,9 +1,6 @@
 ---
-id: "tactics"
 name: "Tactics"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

@@ -1,8 +1,6 @@
 ---
-id: possession-su
 name: "Possession (Su)"
 type: class-feature
-system: power
 className: wraith
 level: 2
 tags: []

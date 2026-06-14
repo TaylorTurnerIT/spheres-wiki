@@ -1,9 +1,5 @@
 ---
-id: detect-thoughts
 name: "Detect Thoughts"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["divine", "spell-like", "utility"]
 ---

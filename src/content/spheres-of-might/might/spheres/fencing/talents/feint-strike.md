@@ -1,9 +1,5 @@
 ---
-id: "feint-strike"
 name: "Feint Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

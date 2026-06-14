@@ -1,9 +1,5 @@
 ---
-id: "swim"
 name: "Swim"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "base"
 tags: []
 ---

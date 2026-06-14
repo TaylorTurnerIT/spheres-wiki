@@ -1,8 +1,6 @@
 ---
-id: gravewalker-su
 name: "Gravewalker (Su)"
 type: class-feature
-system: power
 className: soul-weaver
 level: 20
 tags: []

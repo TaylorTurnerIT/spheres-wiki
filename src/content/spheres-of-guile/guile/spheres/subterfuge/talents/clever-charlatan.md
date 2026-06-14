@@ -1,9 +1,5 @@
 ---
-id: "clever-charlatan"
 name: "Clever Charlatan"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "plan"

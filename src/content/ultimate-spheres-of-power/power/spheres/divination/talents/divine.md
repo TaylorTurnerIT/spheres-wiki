@@ -1,9 +1,5 @@
 ---
-id: divine
 name: Divine
-system: power
-type: talent
-sphere: divination
 tier: base
 tags: []
 ---

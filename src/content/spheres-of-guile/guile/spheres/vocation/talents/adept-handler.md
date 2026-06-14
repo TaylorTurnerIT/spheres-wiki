@@ -1,9 +1,5 @@
 ---
-id: "adept-handler"
 name: "Adept Handler"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

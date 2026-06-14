@@ -1,9 +1,5 @@
 ---
-id: "cowing-nightmare"
 name: "Cowing Nightmare"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

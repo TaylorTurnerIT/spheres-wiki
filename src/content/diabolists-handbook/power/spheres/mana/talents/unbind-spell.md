@@ -1,9 +1,5 @@
 ---
-id: unbind-spell
 name: "Unbind Spell"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

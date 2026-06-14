@@ -1,9 +1,5 @@
 ---
-id: "aquatic-stalker"
 name: "Aquatic Stalker"
-type: "talent"
-sourceBook: "spheres-apocrypha-racial-martial-talents"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

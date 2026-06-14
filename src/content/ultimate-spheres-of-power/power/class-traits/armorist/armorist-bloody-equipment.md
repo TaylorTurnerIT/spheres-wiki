@@ -1,10 +1,6 @@
 ---
-id: armorist-bloody-equipment
 name: "Bloody Equipment"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: extradimensional-storage
 name: "Extradimensional Storage"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["spell-like", "space", "utility"]
 ---

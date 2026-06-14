@@ -1,9 +1,5 @@
 ---
-id: "disrupt-terrain"
 name: "Disrupt Terrain"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "base"
 tags:
   - "package"

@@ -1,9 +1,5 @@
 ---
-id: otherworldly-viewing
 name: "Otherworldly Viewing"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: []
 ---

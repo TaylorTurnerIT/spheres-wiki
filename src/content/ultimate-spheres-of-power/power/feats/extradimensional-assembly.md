@@ -1,8 +1,5 @@
 ---
-id: extradimensional-assembly
 name: "Extradimensional Assembly"
-type: feat
-system: power
 sphere: warp
 tags: []
 tier: feat

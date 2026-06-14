@@ -1,9 +1,5 @@
 ---
-id: "psychometric-analysis"
 name: "Psychometric Analysis"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "advanced"
 tags:
   - "analyze"

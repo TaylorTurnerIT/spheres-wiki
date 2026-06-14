@@ -1,9 +1,5 @@
 ---
-id: amorphous-creature
 name: "Amorphous Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "anticipate-hostility"
 name: "Anticipate Hostility"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "theory"

@@ -1,7 +1,5 @@
 ---
-id: survivalist
 name: Survivalist
-className: courser
 level: 1
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "limb-ripper"
 name: "Limb Ripper"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "advanced"
 tags:
   - "slam"

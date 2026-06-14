@@ -1,9 +1,5 @@
 ---
-id: "motivational-audience"
 name: "Motivational Audience"
-type: "talent"
-sourceBook: "spheres-apocrypha-tandem-talents"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

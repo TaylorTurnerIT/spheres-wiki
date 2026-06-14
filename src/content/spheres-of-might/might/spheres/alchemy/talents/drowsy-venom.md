@@ -1,9 +1,5 @@
 ---
-id: "drowsy-venom"
 name: "Drowsy Venom"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

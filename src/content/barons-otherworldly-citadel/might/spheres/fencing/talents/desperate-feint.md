@@ -1,9 +1,5 @@
 ---
-id: "desperate-feint"
 name: "Desperate Feint"
-type: "talent"
-sourceBook: "barons-otherworldly-citadel"
-sphere: "fencing"
 tier: "advanced"
 tags: []
 ---

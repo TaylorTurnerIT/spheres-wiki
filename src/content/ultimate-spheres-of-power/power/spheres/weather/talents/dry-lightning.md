@@ -1,9 +1,5 @@
 ---
-id: dry-lightning
 name: "Dry Lightning"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: []
 ---

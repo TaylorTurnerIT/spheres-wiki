@@ -1,9 +1,5 @@
 ---
-id: "alarm-trap"
 name: "Alarm Trap"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags:
   - "snare"

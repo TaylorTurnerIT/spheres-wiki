@@ -1,9 +1,5 @@
 ---
-id: totem-of-foresight
 name: "Totem Of Foresight"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

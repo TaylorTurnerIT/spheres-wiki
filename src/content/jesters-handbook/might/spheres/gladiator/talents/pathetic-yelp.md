@@ -1,9 +1,5 @@
 ---
-id: "pathetic-yelp"
 name: "Pathetic Yelp"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

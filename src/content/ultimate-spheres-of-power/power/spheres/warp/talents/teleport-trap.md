@@ -1,9 +1,5 @@
 ---
-id: teleport-trap
 name: "Teleport Trap"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

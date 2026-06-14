@@ -1,8 +1,6 @@
 ---
-id: shadowstuff
 name: "Shadowstuff"
 type: class-feature
-system: power
 className: fey-adept
 level: 6
 tags: []

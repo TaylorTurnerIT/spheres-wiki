@@ -1,9 +1,5 @@
 ---
-id: mobile-ward
 name: "Mobile Ward"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: subtle
 name: "Subtle"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: ["aegis"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "tethered-dart"
 name: "Tethered Dart"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "trap"
 tier: "basic"
 tags:
   - "dart"

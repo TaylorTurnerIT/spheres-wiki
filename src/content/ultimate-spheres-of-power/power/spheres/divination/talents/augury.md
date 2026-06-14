@@ -1,9 +1,5 @@
 ---
-id: augury
 name: "Augury"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["utility", "divine"]
 ---

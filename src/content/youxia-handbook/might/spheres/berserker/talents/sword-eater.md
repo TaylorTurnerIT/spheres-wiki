@@ -1,9 +1,5 @@
 ---
-id: "sword-eater"
 name: "Sword Eater"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "stance"

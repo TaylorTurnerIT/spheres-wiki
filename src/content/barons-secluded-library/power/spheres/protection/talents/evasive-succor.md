@@ -1,9 +1,5 @@
 ---
-id: evasive-succor
 name: "Evasive Succor"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["sm"]
 ---

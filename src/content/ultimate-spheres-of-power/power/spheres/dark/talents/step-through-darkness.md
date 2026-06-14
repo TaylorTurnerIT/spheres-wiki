@@ -1,9 +1,5 @@
 ---
-id: step-through-darkness
 name: "Step Through Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["meld"]
 ---

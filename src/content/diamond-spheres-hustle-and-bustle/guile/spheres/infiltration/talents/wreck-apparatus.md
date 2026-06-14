@@ -1,9 +1,5 @@
 ---
-id: "wreck-apparatus"
 name: "Wreck Apparatus"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "sabotage"

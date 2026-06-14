@@ -1,9 +1,5 @@
 ---
-id: deep-enhancement
 name: "Deep Enhancement"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: []
 ---

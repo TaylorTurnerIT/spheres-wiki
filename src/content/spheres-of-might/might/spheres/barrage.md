@@ -1,8 +1,5 @@
 ---
-id: "barrage"
 name: "Barrage"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "barrage"
 tags: []
 sectionDefinitions:

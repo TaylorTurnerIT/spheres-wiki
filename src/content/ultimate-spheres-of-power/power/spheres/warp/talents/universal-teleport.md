@@ -1,9 +1,5 @@
 ---
-id: universal-teleport
 name: "Universal Teleport"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: eternal-shackles
 name: "Eternal Shackles"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

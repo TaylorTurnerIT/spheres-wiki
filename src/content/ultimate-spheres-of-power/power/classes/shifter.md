@@ -1,8 +1,5 @@
 ---
-id: shifter
 name: "Shifter"
-type: class
-system: power
 tags: []
 hitDie: 8
 alignment: "Any non-lawful"

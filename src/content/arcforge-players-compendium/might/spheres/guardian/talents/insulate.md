@@ -1,9 +1,5 @@
 ---
-id: "insulate"
 name: "Insulate"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "guardian"
 tier: "basic"
 tags:
   - "zone"

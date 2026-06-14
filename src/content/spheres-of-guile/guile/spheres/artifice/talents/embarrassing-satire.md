@@ -1,9 +1,5 @@
 ---
-id: "embarrassing-satire"
 name: "Embarrassing Satire"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "function"

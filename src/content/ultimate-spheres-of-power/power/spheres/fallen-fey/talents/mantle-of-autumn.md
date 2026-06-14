@@ -1,9 +1,5 @@
 ---
-id: mantle-of-autumn
 name: "Mantle Of Autumn"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: web-exemplar
 name: "Web Exemplar"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

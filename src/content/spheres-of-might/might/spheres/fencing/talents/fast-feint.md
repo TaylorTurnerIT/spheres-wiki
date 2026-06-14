@@ -1,9 +1,5 @@
 ---
-id: "fast-feint"
 name: "Fast Feint"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

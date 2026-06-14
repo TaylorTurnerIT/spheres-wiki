@@ -1,9 +1,5 @@
 ---
-id: tsunami
 name: "Tsunami"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["water", "geomancing"]
 ---

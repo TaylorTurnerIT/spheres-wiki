@@ -1,9 +1,5 @@
 ---
-id: greater-communication
 name: "Greater Communication"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: ["utility"]
 ---

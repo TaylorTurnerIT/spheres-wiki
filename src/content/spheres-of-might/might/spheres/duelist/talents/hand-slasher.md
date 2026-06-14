@@ -1,9 +1,5 @@
 ---
-id: "hand-slasher"
 name: "Hand Slasher"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "distracting-blades"
 name: "Distracting Blades"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags:
   - "exploit"

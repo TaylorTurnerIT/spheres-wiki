@@ -1,9 +1,5 @@
 ---
-id: "prickle-of-perception"
 name: "Prickle Of Perception"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "advanced"
 tags:
   - "approach"

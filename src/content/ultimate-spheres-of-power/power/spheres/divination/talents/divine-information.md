@@ -1,9 +1,5 @@
 ---
-id: divine-information
 name: "Divine Information"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["utility", "divine"]
 ---

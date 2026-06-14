@@ -1,10 +1,6 @@
 ---
-id: shifter-earth-glide
 name: "Earth Glide"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: shifter
 featureId: bestial-trait
 requires: "home in the underground, shifter 10"
 ---

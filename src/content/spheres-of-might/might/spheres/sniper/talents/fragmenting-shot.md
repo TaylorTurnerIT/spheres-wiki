@@ -1,9 +1,5 @@
 ---
-id: "fragmenting-shot"
 name: "Fragmenting Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "advanced"
 tags: []
 ---

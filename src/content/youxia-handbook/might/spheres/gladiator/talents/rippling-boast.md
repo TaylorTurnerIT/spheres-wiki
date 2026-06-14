@@ -1,9 +1,5 @@
 ---
-id: "rippling-boast"
 name: "Rippling Boast"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "gladiator"
 tier: "advanced"
 tags: []
 ---

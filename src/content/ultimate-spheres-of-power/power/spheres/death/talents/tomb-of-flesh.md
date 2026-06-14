@@ -1,9 +1,5 @@
 ---
-id: tomb-of-flesh
 name: "Tomb Of Flesh"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

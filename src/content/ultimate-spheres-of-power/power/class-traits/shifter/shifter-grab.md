@@ -1,10 +1,6 @@
 ---
-id: shifter-grab
 name: "Grab"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

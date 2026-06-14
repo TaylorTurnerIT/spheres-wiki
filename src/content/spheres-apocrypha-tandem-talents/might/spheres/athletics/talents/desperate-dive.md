@@ -1,9 +1,5 @@
 ---
-id: "desperate-dive"
 name: "Desperate Dive"
-type: "talent"
-sourceBook: "spheres-apocrypha-tandem-talents"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

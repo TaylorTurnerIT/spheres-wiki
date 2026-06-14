@@ -1,9 +1,5 @@
 ---
-id: permanent-undead
 name: "Permanent Undead"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

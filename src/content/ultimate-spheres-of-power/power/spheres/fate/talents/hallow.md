@@ -1,9 +1,5 @@
 ---
-id: hallow
 name: "Hallow"
-type: talent
-system: power
-sphere: fate
 tier: basic
 tags: []
 ---

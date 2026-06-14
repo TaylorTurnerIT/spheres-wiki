@@ -1,10 +1,6 @@
 ---
-id: shifter-braineater-savant
 name: "Braineater Savant"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 requires: "braineater"
 ---

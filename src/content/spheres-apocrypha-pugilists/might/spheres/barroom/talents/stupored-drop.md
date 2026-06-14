@@ -1,9 +1,5 @@
 ---
-id: "stupored-drop"
 name: "Stupored Drop"
-type: "talent"
-sourceBook: "spheres-apocrypha-pugilists"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "drunk"

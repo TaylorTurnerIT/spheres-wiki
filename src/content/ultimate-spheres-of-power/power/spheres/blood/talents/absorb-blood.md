@@ -1,9 +1,5 @@
 ---
-id: absorb-blood
 name: "Absorb Blood"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

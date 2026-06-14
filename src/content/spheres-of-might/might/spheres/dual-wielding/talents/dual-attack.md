@@ -1,9 +1,5 @@
 ---
-id: "dual-attack"
 name: "Dual Attack"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "base"
 tags: []
 ---

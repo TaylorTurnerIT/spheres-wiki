@@ -1,9 +1,5 @@
 ---
-id: quantum-lock
 name: "Quantum Lock"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["ward"]
 ---

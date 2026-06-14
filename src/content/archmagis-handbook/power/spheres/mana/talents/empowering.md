@@ -1,9 +1,5 @@
 ---
-id: empowering
 name: "Empowering"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["manabond"]
 ---

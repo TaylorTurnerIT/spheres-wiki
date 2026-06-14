@@ -1,9 +1,5 @@
 ---
-id: greater-fey-link
 name: "Greater Fey-Link"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: ranged-time
 name: "Ranged Time"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["range"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "faith-healer"
 name: "Faith Healer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

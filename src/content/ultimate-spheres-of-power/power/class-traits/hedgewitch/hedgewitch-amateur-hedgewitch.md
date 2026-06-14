@@ -1,10 +1,6 @@
 ---
-id: hedgewitch-amateur-hedgewitch
 name: "Amateur Hedgewitch"
-type: class-trait
-system: power
 tags: []
-className: hedgewitch
 featureId: secret
 ---
 

@@ -1,8 +1,6 @@
 ---
-id: second-skin-ex
 name: "Second Skin (Ex)"
 type: class-feature
-system: power
 className: shifter
 level: 20
 tags: []

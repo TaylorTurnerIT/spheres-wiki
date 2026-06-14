@@ -1,9 +1,5 @@
 ---
-id: persistent-succor
 name: "Persistent Succor"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: []
 ---

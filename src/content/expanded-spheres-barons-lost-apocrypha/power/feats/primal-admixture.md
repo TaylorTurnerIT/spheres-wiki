@@ -1,8 +1,5 @@
 ---
-id: primal-admixture
 name: "Primal Admixture"
-type: feat
-system: power
 sphere: nature
 tags: ["admixture"]
 tier: feat

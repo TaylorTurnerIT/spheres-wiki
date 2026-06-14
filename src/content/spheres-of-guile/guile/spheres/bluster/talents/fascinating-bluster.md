@@ -1,9 +1,5 @@
 ---
-id: "fascinating-bluster"
 name: "Fascinating Bluster"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "utility"

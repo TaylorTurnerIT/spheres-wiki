@@ -1,9 +1,5 @@
 ---
-id: catches-nets-and-cages
 name: "Catches, Nets, and Cages"
-type: talent
-system: power
-sphere: creation
 tier: basic
 tags: []
 ---

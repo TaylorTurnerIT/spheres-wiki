@@ -1,9 +1,5 @@
 ---
-id: flabbergast
 name: "Flabbergast"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

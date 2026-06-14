@@ -1,9 +1,5 @@
 ---
-id: traveling-through-faerie
 name: "Traveling through Faerie"
-type: talent
-system: power
-sphere: fallen-fey
 tier: basic
 tags: []
 ---

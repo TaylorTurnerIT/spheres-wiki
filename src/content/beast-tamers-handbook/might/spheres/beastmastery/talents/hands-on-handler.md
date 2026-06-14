@@ -1,9 +1,5 @@
 ---
-id: "hands-on-handler"
 name: "Hands-On Handler"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "handle-animal"

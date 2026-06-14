@@ -1,9 +1,5 @@
 ---
-id: instill-death
 name: "Instill Death"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["instill"]
 ---

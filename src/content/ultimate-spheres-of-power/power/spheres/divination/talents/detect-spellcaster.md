@@ -1,9 +1,5 @@
 ---
-id: detect-spellcaster
 name: "Detect Spellcaster"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["divine"]
 ---

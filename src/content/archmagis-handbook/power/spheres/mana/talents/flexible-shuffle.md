@@ -1,9 +1,5 @@
 ---
-id: flexible-shuffle
 name: "Flexible Shuffle"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

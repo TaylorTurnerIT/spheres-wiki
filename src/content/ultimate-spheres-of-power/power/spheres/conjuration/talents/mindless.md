@@ -1,9 +1,5 @@
 ---
-id: mindless
 name: "Mindless"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

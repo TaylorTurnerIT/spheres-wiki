@@ -1,9 +1,5 @@
 ---
-id: "custom-training"
 name: "Custom Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

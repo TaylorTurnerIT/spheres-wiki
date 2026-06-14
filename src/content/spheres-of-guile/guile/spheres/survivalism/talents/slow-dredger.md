@@ -1,9 +1,5 @@
 ---
-id: "slow-dredger"
 name: "Slow Dredger"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "base"
 tags:
   - "package"

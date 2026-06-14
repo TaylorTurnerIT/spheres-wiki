@@ -1,8 +1,5 @@
 ---
-id: primal-blast
 name: Primal Blast
-type: feat
-system: power
 sphere: nature
 dualSphere: destruction
 tier: feat

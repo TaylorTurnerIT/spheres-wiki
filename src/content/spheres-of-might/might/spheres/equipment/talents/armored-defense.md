@@ -1,9 +1,5 @@
 ---
-id: "armored-defense"
 name: "Armored Defense"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

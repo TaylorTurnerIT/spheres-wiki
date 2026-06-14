@@ -1,9 +1,5 @@
 ---
-id: looming-darkness
 name: "Looming Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "darkness"]
 ---

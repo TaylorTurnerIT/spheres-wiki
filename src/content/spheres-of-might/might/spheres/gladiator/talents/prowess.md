@@ -1,9 +1,5 @@
 ---
-id: "prowess"
 name: "Prowess"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "base"
 tags:
   - "boast"

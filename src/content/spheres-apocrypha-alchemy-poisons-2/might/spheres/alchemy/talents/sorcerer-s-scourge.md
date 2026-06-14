@@ -1,9 +1,5 @@
 ---
-id: "sorcerer-s-scourge"
 name: "Sorcerer's Scourge"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemy-poisons-2"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "toxin"

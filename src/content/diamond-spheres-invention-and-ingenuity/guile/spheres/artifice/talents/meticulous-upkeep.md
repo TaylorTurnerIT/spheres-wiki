@@ -1,9 +1,5 @@
 ---
-id: "meticulous-upkeep"
 name: "Meticulous Upkeep"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "plan"

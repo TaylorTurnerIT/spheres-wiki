@@ -1,9 +1,5 @@
 ---
-id: "hemorrhaging-poison"
 name: "Hemorrhaging Poison"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "alchemy"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: revealing-light
 name: "Revealing Light"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

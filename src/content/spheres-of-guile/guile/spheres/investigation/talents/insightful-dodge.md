@@ -1,9 +1,5 @@
 ---
-id: "insightful-dodge"
 name: "Insightful Dodge"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "apply"

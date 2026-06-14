@@ -1,9 +1,5 @@
 ---
-id: bestial-spirit
 name: "Bestial Spirit"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

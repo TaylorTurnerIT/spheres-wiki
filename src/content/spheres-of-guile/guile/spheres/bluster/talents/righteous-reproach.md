@@ -1,9 +1,5 @@
 ---
-id: "righteous-reproach"
 name: "Righteous Reproach"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

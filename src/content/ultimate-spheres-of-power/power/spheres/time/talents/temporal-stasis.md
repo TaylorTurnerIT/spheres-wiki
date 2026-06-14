@@ -1,9 +1,5 @@
 ---
-id: temporal-stasis
 name: "Temporal Stasis"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: improved-energy-bomb
 name: "Improved Energy Bomb"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat", "sm"]
 tier: feat

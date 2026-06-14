@@ -1,9 +1,5 @@
 ---
-id: "diseased-venom"
 name: "Diseased Venom"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

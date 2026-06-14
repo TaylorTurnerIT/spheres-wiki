@@ -1,9 +1,5 @@
 ---
-id: "busy-hands"
 name: "Busy Hands"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags: []
 ---

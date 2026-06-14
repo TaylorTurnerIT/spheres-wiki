@@ -1,8 +1,5 @@
 ---
-id: cosmologist
 name: "Cosmologist"
-type: feat
-system: power
 sphere: warp
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: bound-light
 name: "Bound Light"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

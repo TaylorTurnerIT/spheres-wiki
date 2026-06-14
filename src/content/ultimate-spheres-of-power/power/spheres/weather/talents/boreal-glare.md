@@ -1,9 +1,5 @@
 ---
-id: boreal-glare
 name: "Boreal Glare"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["cold", "mantle"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "otherworldly-faction"
 name: "Otherworldly Faction"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "faction"
 tier: "base"
 tags:
   - "package"

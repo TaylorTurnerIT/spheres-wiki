@@ -1,9 +1,5 @@
 ---
-id: "shark-swim"
 name: "Shark Swim"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "swim"

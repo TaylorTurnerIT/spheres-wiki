@@ -1,8 +1,5 @@
 ---
-id: anemic-wounds
 name: "Anemic Wounds"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

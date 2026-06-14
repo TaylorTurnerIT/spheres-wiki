@@ -1,9 +1,5 @@
 ---
-id: "crimson-coagulant"
 name: "Crimson Coagulant"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

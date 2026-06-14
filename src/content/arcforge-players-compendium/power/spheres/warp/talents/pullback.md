@@ -1,9 +1,5 @@
 ---
-id: pullback
 name: "Pullback"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

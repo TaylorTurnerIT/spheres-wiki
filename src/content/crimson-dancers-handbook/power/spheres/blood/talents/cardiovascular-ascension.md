@@ -1,9 +1,5 @@
 ---
-id: cardiovascular-ascension
 name: "Cardiovascular Ascension"
-system: power
-type: talent
-sphere: blood
 tier: advanced
 tags: ["quicken", "still"]
 ---

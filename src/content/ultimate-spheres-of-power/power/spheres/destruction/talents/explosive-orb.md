@@ -1,9 +1,5 @@
 ---
-id: explosive-orb
 name: "Explosive Orb"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape"]
 ---

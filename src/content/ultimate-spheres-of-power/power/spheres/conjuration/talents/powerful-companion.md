@@ -1,9 +1,5 @@
 ---
-id: powerful-companion
 name: "Powerful Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

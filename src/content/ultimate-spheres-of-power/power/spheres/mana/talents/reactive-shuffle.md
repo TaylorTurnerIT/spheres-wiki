@@ -1,9 +1,5 @@
 ---
-id: reactive-shuffle
 name: "Reactive Shuffle"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

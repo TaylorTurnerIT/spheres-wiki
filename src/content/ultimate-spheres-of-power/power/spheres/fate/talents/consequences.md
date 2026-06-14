@@ -1,9 +1,5 @@
 ---
-id: consequences
 name: "Consequences"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["consecration"]
 ---

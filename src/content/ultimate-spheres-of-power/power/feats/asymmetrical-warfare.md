@@ -1,8 +1,5 @@
 ---
-id: asymmetrical-warfare
 name: Asymmetrical Warfare
-type: feat
-system: power
 sphere: war
 dualSphere: illusion
 tier: feat

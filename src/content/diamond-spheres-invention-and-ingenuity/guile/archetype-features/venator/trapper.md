@@ -1,7 +1,5 @@
 ---
-id: trapper
 name: Trapper
-archetypeId: venator
 level: 1
 tags: []
 replaces:

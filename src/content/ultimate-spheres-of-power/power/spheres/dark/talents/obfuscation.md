@@ -1,9 +1,5 @@
 ---
-id: obfuscation
 name: "Obfuscation"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

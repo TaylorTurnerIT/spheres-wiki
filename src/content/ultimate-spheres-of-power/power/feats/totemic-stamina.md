@@ -1,8 +1,5 @@
 ---
-id: totemic-stamina
 name: "Totemic Stamina"
-type: feat
-system: power
 sphere: war
 tags: ["combat"]
 tier: feat

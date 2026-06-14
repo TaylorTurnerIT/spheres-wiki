@@ -1,9 +1,5 @@
 ---
-id: "following-strike"
 name: "Following Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

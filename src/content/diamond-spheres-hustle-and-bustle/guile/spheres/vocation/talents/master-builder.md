@@ -1,9 +1,5 @@
 ---
-id: "master-builder"
 name: "Master Builder"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags: []
 ---

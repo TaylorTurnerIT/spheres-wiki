@@ -1,8 +1,5 @@
 ---
-id: graphomancy
 name: "Graphomancy"
-type: feat
-system: power
 sphere: protection
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: wormhole
 name: "Wormhole"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

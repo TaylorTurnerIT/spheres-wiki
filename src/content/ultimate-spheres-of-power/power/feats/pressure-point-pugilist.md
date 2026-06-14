@@ -1,8 +1,5 @@
 ---
-id: pressure-point-pugilist
 name: "Pressure Point Pugilist"
-type: feat
-system: power
 sphere: mind
 tags: ["combat"]
 tier: feat

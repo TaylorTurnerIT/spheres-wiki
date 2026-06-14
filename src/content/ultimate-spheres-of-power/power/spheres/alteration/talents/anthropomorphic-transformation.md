@@ -1,9 +1,5 @@
 ---
-id: anthropomorphic-transformation
 name: "Anthropomorphic Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["transformation"]
 ---

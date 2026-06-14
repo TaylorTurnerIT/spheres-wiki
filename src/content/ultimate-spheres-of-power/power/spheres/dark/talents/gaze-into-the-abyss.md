@@ -1,9 +1,5 @@
 ---
-id: gaze-into-the-abyss
 name: "Gaze Into The Abyss"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

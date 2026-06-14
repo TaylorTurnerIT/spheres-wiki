@@ -1,9 +1,5 @@
 ---
-id: brutalizing-bludgeon
 name: "Brutalizing Bludgeon"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

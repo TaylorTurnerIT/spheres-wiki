@@ -1,9 +1,5 @@
 ---
-id: "expensive-parts"
 name: "Expensive Parts"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "base"
 tags:
   - "package"

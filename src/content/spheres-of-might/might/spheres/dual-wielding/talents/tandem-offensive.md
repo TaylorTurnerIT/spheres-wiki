@@ -1,9 +1,5 @@
 ---
-id: "tandem-offensive"
 name: "Tandem Offensive"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

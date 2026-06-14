@@ -1,8 +1,5 @@
 ---
-id: analyze-caster
 name: Analyze Caster
-type: feat
-system: power
 sphere: mana
 dualSphere: divination
 tier: feat

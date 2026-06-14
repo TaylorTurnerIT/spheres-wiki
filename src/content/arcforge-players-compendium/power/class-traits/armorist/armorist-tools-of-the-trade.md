@@ -1,10 +1,6 @@
 ---
-id: armorist-tools-of-the-trade
 name: "Tools of the Trade"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

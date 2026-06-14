@@ -1,9 +1,5 @@
 ---
-id: "social-clout"
 name: "Social Clout"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "utility"

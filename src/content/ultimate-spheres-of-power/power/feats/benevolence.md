@@ -1,8 +1,5 @@
 ---
-id: benevolence
 name: Benevolence
-type: feat
-system: power
 sphere: protection
 dualSphere: life
 tier: feat

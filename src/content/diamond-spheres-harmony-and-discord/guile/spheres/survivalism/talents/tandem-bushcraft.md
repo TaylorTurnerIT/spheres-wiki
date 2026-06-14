@@ -1,9 +1,5 @@
 ---
-id: "tandem-bushcraft"
 name: "Tandem Bushcraft"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "survivalism"
 tier: "basic"
 tags: []
 ---

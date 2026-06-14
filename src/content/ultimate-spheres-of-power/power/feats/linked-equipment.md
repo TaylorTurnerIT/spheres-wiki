@@ -1,8 +1,5 @@
 ---
-id: linked-equipment
 name: "Linked Equipment"
-type: feat
-system: power
 sphere: conjuration
 tags: []
 tier: feat

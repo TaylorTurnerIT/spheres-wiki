@@ -1,9 +1,5 @@
 ---
-id: "spell-scent"
 name: "Spell Scent"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "scout"
 tier: "advanced"
 tags:
   - "utility"

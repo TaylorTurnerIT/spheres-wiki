@@ -1,9 +1,5 @@
 ---
-id: "covering-fire"
 name: "Covering Fire"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags: []
 ---

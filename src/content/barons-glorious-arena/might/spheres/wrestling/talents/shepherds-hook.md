@@ -1,9 +1,5 @@
 ---
-id: "shepherds-hook"
 name: "Shepherd's Hook"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "wrestling"
 tier: "basic"
 ---
 

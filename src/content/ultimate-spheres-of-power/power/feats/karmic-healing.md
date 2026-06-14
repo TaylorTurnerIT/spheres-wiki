@@ -1,8 +1,5 @@
 ---
-id: karmic-healing
 name: "Karmic Healing"
-type: feat
-system: power
 sphere: life
 tags: ["chance"]
 tier: feat

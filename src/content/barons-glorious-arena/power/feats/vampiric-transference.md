@@ -1,8 +1,5 @@
 ---
-id: vampiric-transference
 name: "Vampiric Transference"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

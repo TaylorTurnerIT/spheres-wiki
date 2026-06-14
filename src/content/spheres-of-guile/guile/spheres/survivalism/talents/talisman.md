@@ -1,9 +1,5 @@
 ---
-id: "talisman"
 name: "Talisman"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "base"
 tags:
   - "package"

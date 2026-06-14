@@ -1,10 +1,6 @@
 ---
-id: armorist-fully-loaded
 name: "Fully Loaded"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

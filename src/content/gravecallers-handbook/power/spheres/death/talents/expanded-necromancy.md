@@ -1,9 +1,5 @@
 ---
-id: expanded-necromancy
 name: "Expanded Necromancy"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

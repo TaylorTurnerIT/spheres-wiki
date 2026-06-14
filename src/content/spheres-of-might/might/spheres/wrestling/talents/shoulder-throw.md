@@ -1,9 +1,5 @@
 ---
-id: "shoulder-throw"
 name: "Shoulder Throw"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

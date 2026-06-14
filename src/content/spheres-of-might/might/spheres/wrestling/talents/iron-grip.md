@@ -1,9 +1,5 @@
 ---
-id: "iron-grip"
 name: "Iron Grip"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

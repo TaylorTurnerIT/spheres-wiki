@@ -1,8 +1,5 @@
 ---
-id: energy-snake
 name: "Energy Snake"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "calibrating-wiggle"
 name: "Calibrating Wiggle"
-type: "talent"
-sourceBook: "catgirl-handbook"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

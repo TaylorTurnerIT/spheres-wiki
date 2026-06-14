@@ -1,9 +1,5 @@
 ---
-id: "prestigious-disguise"
 name: "Prestigious Disguise"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "disguise"

@@ -1,9 +1,5 @@
 ---
-id: enhance-potency
 name: "Enhance Potency"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance", "sm"]
 ---

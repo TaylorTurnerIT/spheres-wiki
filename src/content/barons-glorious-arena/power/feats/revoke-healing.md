@@ -1,8 +1,5 @@
 ---
-id: revoke-healing
 name: "Revoke Healing"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

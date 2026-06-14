@@ -1,9 +1,5 @@
 ---
-id: "petrifying-pause"
 name: "Petrifying Pause"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "dance"

@@ -1,10 +1,6 @@
 ---
-id: mageknight-raging-combatant-core
 name: "Raging Combatant [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

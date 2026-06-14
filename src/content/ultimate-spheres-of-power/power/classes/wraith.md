@@ -1,8 +1,5 @@
 ---
-id: wraith
 name: "Wraith"
-type: class
-system: power
 tags: []
 hitDie: 8
 alignment: "Any"

@@ -1,9 +1,5 @@
 ---
-id: wreath-of-elements
 name: "Wreath Of Elements"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "apprentice"
 name: "Apprentice"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "base"
 tags:
   - "package"

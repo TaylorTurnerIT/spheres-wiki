@@ -1,9 +1,5 @@
 ---
-id: "guarding-weapon"
 name: "Guarding Weapon"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

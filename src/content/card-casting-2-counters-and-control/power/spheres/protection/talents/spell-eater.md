@@ -1,9 +1,5 @@
 ---
-id: spell-eater
 name: "Spell-Eater"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: ["aegis"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: runic-magic
 name: "Runic Magic"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["amp", "manipulation"]
 ---

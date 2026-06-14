@@ -1,9 +1,5 @@
 ---
-id: "triumph"
 name: "Triumph"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

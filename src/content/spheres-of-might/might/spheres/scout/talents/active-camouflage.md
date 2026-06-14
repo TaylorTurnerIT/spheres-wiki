@@ -1,9 +1,5 @@
 ---
-id: "active-camouflage"
 name: "Active Camouflage"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: familiar
 name: "Familiar"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: ["supernatural"]
 ---

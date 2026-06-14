@@ -1,8 +1,6 @@
 ---
-id: two-minds-ex
 name: "Two Minds (Ex)"
 type: class-feature
-system: power
 className: symbiat
 level: 5
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: "pleasant-serenade"
 name: "Pleasant Serenade"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

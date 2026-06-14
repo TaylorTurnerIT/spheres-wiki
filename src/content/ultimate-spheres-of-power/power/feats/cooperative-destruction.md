@@ -1,8 +1,5 @@
 ---
-id: cooperative-destruction
 name: Cooperative Destruction
-type: feat
-system: power
 sphere: destruction
 dualSphere: creation
 tier: feat

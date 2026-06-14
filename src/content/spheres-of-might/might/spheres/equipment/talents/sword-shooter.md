@@ -1,9 +1,5 @@
 ---
-id: "sword-shooter"
 name: "Sword Shooter"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

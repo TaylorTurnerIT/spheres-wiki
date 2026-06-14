@@ -1,9 +1,5 @@
 ---
-id: "recruit"
 name: "Recruit"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "base"
 tags: []
 ---

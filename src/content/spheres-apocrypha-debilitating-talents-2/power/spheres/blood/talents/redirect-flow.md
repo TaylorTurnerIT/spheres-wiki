@@ -1,9 +1,5 @@
 ---
-id: redirect-flow
 name: "Redirect Flow"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["quicken", "still"]
 ---

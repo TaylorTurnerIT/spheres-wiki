@@ -1,8 +1,6 @@
 ---
-id: secret
 name: "Secret"
 type: class-feature
-system: power
 className: hedgewitch
 level: 2
 tags: []

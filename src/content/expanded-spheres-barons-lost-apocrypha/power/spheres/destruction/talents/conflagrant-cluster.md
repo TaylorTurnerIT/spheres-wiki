@@ -1,9 +1,5 @@
 ---
-id: conflagrant-cluster
 name: "Conflagrant Cluster"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: []
 ---

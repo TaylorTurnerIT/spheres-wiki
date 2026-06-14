@@ -1,9 +1,5 @@
 ---
-id: "trapper-s-recovery"
 name: "Trapper’s Recovery"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

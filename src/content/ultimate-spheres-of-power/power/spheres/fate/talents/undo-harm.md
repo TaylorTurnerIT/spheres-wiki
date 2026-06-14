@@ -1,9 +1,5 @@
 ---
-id: undo-harm
 name: "Undo Harm"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["consecration"]
 ---

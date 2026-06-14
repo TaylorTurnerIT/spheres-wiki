@@ -1,9 +1,5 @@
 ---
-id: "rudimentary-training"
 name: "Rudimentary Training"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "utility"

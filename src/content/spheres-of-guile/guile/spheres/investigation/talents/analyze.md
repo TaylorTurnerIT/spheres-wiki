@@ -1,9 +1,5 @@
 ---
-id: "analyze"
 name: "Analyze"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "base"
 tags: []
 ---

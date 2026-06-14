@@ -1,9 +1,5 @@
 ---
-id: roleplaying-a-companion
 name: "Roleplaying a Companion"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

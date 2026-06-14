@@ -1,9 +1,5 @@
 ---
-id: "footwork"
 name: "Footwork"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

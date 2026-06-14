@@ -1,9 +1,5 @@
 ---
-id: this-sparks-joy
 name: "This Sparks Joy"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "storm"]
 ---

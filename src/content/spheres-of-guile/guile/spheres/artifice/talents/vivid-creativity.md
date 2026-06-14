@@ -1,9 +1,5 @@
 ---
-id: "vivid-creativity"
 name: "Vivid Creativity"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags: []
 ---

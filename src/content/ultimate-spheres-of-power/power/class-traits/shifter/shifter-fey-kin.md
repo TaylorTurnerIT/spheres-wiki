@@ -1,10 +1,6 @@
 ---
-id: shifter-fey-kin
 name: "Fey Kin"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: shifter
 featureId: bestial-trait
 ---
 

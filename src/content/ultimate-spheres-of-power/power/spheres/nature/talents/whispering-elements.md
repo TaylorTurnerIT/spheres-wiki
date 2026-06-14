@@ -1,9 +1,5 @@
 ---
-id: whispering-elements
 name: "Whispering Elements"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["utility", "geomancing"]
 ---

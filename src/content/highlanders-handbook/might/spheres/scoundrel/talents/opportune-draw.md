@@ -1,9 +1,5 @@
 ---
-id: "opportune-draw"
 name: "Opportune Draw"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

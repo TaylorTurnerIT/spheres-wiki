@@ -1,9 +1,5 @@
 ---
-id: hypervitalize
 name: "Hypervitalize"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: []
 ---

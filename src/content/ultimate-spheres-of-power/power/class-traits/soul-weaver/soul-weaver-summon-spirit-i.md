@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-summon-spirit-i
 name: "Summon Spirit I"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

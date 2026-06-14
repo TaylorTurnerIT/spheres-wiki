@@ -1,8 +1,5 @@
 ---
-id: soul-seer
 name: "Soul Seer"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

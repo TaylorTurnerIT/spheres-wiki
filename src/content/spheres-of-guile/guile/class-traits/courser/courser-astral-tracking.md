@@ -1,7 +1,5 @@
 ---
-id: courser-astral-tracking
 name: Astral Tracking
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 8"

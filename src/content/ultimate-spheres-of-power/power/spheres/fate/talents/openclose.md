@@ -1,9 +1,5 @@
 ---
-id: openclose
 name: "Open/Close"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["utility", "word"]
 ---

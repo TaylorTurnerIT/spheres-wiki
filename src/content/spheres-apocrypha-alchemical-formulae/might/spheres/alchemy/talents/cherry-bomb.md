@@ -1,9 +1,5 @@
 ---
-id: "cherry-bomb"
 name: "Cherry Bomb"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-formulae"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

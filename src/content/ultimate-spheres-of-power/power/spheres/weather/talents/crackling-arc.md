@@ -1,9 +1,5 @@
 ---
-id: crackling-arc
 name: "Crackling Arc"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["precipitation", "shroud"]
 ---

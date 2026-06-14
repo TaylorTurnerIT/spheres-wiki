@@ -1,9 +1,5 @@
 ---
-id: true-teleport
 name: "True Teleport"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

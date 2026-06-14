@@ -1,9 +1,5 @@
 ---
-id: "servant"
 name: "Servant"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

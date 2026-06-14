@@ -1,9 +1,5 @@
 ---
-id: "legion-unending"
 name: "Legion Unending"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "advanced"
 tags:
   - "tactic"

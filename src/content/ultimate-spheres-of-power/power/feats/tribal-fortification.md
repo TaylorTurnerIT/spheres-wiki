@@ -1,8 +1,5 @@
 ---
-id: tribal-fortification
 name: Tribal Fortification
-type: feat
-system: power
 sphere: war
 dualSphere: protection
 tier: feat

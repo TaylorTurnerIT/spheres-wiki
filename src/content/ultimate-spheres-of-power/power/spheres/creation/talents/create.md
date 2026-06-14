@@ -1,9 +1,5 @@
 ---
-id: create
 name: Create
-system: power
-type: talent
-sphere: creation
 tier: base
 tags: []
 ---

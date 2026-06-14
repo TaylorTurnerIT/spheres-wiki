@@ -1,9 +1,5 @@
 ---
-id: "concentrated-breakdown"
 name: "Concentrated Breakdown"
-type: "talent"
-sourceBook: "lost-champions-necros"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

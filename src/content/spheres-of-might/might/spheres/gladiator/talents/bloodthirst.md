@@ -1,9 +1,5 @@
 ---
-id: "bloodthirst"
 name: "Bloodthirst"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

@@ -1,9 +1,5 @@
 ---
-id: inner-sun
 name: "Inner Sun"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

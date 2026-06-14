@@ -1,10 +1,6 @@
 ---
-id: symbiat-share-capacity
 name: "Share Capacity"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

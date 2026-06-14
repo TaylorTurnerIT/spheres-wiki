@@ -1,9 +1,5 @@
 ---
-id: "rejuvenating-spirits"
 name: "Rejuvenating Spirits"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "advanced"
 tags: []
 ---

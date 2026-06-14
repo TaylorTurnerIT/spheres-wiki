@@ -1,9 +1,5 @@
 ---
-id: "master-thief"
 name: "Master Thief"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

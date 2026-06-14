@@ -1,9 +1,5 @@
 ---
-id: "bellowing-shanty"
 name: "Bellowing Shanty"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "drunk"

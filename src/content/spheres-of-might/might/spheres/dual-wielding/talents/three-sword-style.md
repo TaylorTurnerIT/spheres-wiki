@@ -1,9 +1,5 @@
 ---
-id: "three-sword-style"
 name: "Three-Sword Style"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "advanced"
 tags: []
 ---

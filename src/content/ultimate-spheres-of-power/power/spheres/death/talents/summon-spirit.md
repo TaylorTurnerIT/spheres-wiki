@@ -1,9 +1,5 @@
 ---
-id: summon-spirit
 name: "Summon Spirit"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

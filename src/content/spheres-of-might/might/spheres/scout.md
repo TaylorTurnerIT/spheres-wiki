@@ -1,8 +1,5 @@
 ---
-id: "scout"
 name: "Scout"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "scout"
 tags: []
 sectionDefinitions:

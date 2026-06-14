@@ -1,8 +1,5 @@
 ---
-id: defiant-radiance
 name: "Defiant Radiance"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

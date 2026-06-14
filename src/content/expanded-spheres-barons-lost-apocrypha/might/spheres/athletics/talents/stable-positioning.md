@@ -1,9 +1,5 @@
 ---
-id: "stable-positioning"
 name: "Stable Positioning"
-type: "talent"
-sourceBook: "expanded-spheres-barons-lost-apocrypha"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "stance"

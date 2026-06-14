@@ -1,8 +1,5 @@
 ---
-id: hail
 name: "Hail"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

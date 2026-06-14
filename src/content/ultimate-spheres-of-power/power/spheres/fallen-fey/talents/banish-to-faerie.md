@@ -1,9 +1,5 @@
 ---
-id: banish-to-faerie
 name: "Banish to Faerie"
-system: power
-type: talent
-sphere: fallen-fey
 tier: advanced
 tags: []
 ---

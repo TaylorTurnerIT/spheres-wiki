@@ -1,9 +1,5 @@
 ---
-id: "living-weapon"
 name: "Living Weapon"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags:
   - "slam"

@@ -1,9 +1,5 @@
 ---
-id: consecration
 name: Consecration
-system: power
-type: talent
-sphere: fate
 tier: base
 tags: []
 ---

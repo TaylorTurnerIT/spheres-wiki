@@ -1,9 +1,5 @@
 ---
-id: hammer-and-anvil
 name: "Hammer And Anvil"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

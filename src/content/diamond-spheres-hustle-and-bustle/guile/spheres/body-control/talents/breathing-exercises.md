@@ -1,9 +1,5 @@
 ---
-id: "breathing-exercises"
 name: "Breathing Exercises"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "body-control"
 tier: "base"
 tags:
   - "package"

@@ -1,9 +1,5 @@
 ---
-id: "briber"
 name: "Briber"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: superior-reflexes
 name: "Superior Reflexes"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

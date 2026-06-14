@@ -1,9 +1,5 @@
 ---
-id: "rousing-claxon"
 name: "Rousing Claxon"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

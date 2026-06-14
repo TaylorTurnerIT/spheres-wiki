@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-blessed-soul
 name: "Blessed Soul"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

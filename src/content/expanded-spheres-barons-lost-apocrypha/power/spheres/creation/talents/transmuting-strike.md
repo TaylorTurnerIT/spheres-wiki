@@ -1,9 +1,5 @@
 ---
-id: transmuting-strike
 name: "Transmuting Strike"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["strike"]
 ---

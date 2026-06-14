@@ -1,8 +1,5 @@
 ---
-id: mental-aura
 name: "Mental Aura"
-type: feat
-system: power
 sphere: mind
 tags: []
 tier: feat

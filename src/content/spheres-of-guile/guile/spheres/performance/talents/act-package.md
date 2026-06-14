@@ -1,9 +1,5 @@
 ---
-id: "act-package"
 name: "Act Package"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "base"
 tags:
   - "package"

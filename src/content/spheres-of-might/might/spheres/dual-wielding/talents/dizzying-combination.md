@@ -1,9 +1,5 @@
 ---
-id: "dizzying-combination"
 name: "Dizzying Combination"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

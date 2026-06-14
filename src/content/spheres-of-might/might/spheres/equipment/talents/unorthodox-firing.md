@@ -1,9 +1,5 @@
 ---
-id: "unorthodox-firing"
 name: "Unorthodox Firing"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

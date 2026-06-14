@@ -1,9 +1,5 @@
 ---
-id: "battering-defense"
 name: "Battering Defense"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

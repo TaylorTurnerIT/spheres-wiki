@@ -1,8 +1,6 @@
 ---
-id: summon-equipment-su
 name: "Summon Equipment (Su)"
 type: class-feature
-system: power
 className: armorist
 level: 1
 tags: []

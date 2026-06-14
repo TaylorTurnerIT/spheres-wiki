@@ -1,9 +1,5 @@
 ---
-id: flash-of-arcana
 name: "Flash of Arcana"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["sm"]
 ---

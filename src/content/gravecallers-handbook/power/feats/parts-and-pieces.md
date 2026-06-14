@@ -1,8 +1,5 @@
 ---
-id: parts-and-pieces
 name: Parts And Pieces
-type: feat
-system: power
 sphere: enhancement
 dualSphere: death
 tier: feat

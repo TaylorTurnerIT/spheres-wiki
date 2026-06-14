@@ -1,8 +1,5 @@
 ---
-id: warlord-of-the-damned
 name: Warlord Of The Damned
-type: feat
-system: power
 sphere: war
 dualSphere: death
 tier: feat

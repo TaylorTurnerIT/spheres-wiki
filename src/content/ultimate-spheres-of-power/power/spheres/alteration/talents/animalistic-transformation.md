@@ -1,9 +1,5 @@
 ---
-id: animalistic-transformation
 name: "Animalistic Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["transformation"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "wordmonger"
 name: "Wordmonger"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "plan"

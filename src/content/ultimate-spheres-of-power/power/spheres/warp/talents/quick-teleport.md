@@ -1,9 +1,5 @@
 ---
-id: quick-teleport
 name: "Quick Teleport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

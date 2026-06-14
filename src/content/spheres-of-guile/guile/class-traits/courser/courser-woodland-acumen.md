@@ -1,7 +1,5 @@
 ---
-id: courser-woodland-acumen
 name: Woodland Acumen
-className: courser
 featureId: courser-ventures
 tags: []
 ---

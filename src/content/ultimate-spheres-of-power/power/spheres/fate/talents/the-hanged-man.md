@@ -1,9 +1,5 @@
 ---
-id: the-hanged-man
 name: "The Hanged Man"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

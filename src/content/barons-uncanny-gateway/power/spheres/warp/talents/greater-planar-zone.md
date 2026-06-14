@@ -1,9 +1,5 @@
 ---
-id: greater-planar-zone
 name: "Greater Planar Zone"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: ["sm"]
 ---

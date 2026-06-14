@@ -1,9 +1,5 @@
 ---
-id: "titan"
 name: "Titan"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "advanced"
 tags: []
 ---

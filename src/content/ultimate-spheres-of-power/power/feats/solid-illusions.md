@@ -1,8 +1,5 @@
 ---
-id: solid-illusions
 name: Solid Illusions
-type: feat
-system: power
 sphere: illusion
 dualSphere: enhancement
 tier: feat

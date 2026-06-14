@@ -1,10 +1,6 @@
 ---
-id: armorist-ramping-assault
 name: "Ramping Assault"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

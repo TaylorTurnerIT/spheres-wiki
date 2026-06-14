@@ -1,10 +1,6 @@
 ---
-id: shifter-shifting-style
 name: "Shifting Style"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 requires: "At least 1 combat talent not from the Alchemy, Equipment, Tech, or Trap sphere; Knowledge of Many Shapes class feature"
 ---

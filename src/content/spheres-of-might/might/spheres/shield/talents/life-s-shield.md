@@ -1,9 +1,5 @@
 ---
-id: "life-s-shield"
 name: "Life’s Shield"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "advanced"
 tags: []
 ---

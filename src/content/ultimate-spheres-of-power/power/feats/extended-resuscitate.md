@@ -1,8 +1,5 @@
 ---
-id: extended-resuscitate
 name: "Extended Resuscitate"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

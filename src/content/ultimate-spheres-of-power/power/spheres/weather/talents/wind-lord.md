@@ -1,9 +1,5 @@
 ---
-id: wind-lord
 name: "Wind Lord"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

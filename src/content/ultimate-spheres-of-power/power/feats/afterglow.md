@@ -1,8 +1,5 @@
 ---
-id: afterglow
 name: "Afterglow"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

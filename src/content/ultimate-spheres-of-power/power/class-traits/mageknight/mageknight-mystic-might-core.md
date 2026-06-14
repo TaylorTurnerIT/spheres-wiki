@@ -1,10 +1,6 @@
 ---
-id: mageknight-mystic-might-core
 name: "Mystic Might [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

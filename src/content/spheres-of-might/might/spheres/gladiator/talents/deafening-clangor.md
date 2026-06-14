@@ -1,9 +1,5 @@
 ---
-id: "deafening-clangor"
 name: "Deafening Clangor"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "advanced"
 tags: []
 ---

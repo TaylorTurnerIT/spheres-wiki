@@ -1,9 +1,5 @@
 ---
-id: "formulae"
 name: "Formulae"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "base"
 tags: []
 ---

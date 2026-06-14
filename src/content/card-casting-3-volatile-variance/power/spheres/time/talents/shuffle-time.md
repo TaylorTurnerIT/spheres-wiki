@@ -1,9 +1,5 @@
 ---
-id: shuffle-time
 name: "Shuffle Time"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["time"]
 ---

@@ -1,7 +1,5 @@
 ---
-id: courser-stomach-punch
 name: Stomach Punch
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 4"

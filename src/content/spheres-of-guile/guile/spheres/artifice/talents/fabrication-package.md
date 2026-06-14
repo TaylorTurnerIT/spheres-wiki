@@ -1,9 +1,5 @@
 ---
-id: "fabrication-package"
 name: "Fabrication Package"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "base"
 tags:
   - "package"

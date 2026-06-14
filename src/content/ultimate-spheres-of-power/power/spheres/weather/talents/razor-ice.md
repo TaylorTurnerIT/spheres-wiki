@@ -1,9 +1,5 @@
 ---
-id: razor-ice
 name: "Razor Ice"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["cold", "mantle"]
 ---

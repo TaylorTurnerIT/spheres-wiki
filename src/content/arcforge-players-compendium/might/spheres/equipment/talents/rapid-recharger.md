@@ -1,9 +1,5 @@
 ---
-id: "rapid-recharger"
 name: "Rapid Recharger"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

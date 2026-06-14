@@ -1,9 +1,5 @@
 ---
-id: "disrupt-aura"
 name: "Disrupt Aura"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

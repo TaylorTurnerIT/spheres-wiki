@@ -1,9 +1,5 @@
 ---
-id: "broad-pathing"
 name: "Broad Pathing"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags: []
 ---

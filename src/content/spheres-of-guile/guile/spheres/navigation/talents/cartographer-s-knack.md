@@ -1,9 +1,5 @@
 ---
-id: "cartographer-s-knack"
 name: "Cartographer's Knack"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "utility"

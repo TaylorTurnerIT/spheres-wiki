@@ -1,9 +1,5 @@
 ---
-id: warp-link
 name: "Warp Link"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

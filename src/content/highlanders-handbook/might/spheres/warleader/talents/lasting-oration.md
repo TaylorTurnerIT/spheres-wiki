@@ -1,9 +1,5 @@
 ---
-id: "lasting-oration"
 name: "Lasting Oration"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

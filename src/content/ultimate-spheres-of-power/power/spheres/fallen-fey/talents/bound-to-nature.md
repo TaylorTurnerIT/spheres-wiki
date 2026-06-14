@@ -1,9 +1,5 @@
 ---
-id: bound-to-nature
 name: "Bound To Nature"
-system: power
-type: talent
-sphere: fallen-fey
 tier: advanced
 tags: ["fey-blessing"]
 ---

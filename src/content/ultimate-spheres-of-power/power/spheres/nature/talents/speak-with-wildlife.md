@@ -1,9 +1,5 @@
 ---
-id: speak-with-wildlife
 name: "Speak With Wildlife"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["utility", "spirit"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: illusionary-odor
 name: "Illusionary Odor"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["sensory", "taste-smell"]
 ---

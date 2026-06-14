@@ -1,10 +1,6 @@
 ---
-id: mageknight-enhanced-physicality-core
 name: "Enhanced Physicality [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

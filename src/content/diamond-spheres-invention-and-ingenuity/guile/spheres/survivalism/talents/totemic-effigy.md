@@ -1,9 +1,5 @@
 ---
-id: "totemic-effigy"
 name: "Totemic Effigy"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "supernatural"

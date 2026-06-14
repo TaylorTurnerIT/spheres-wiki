@@ -1,9 +1,5 @@
 ---
-id: "explosive-ululation"
 name: "Explosive Ululation"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "advanced"
 tags:
   - "shout"

@@ -1,9 +1,5 @@
 ---
-id: "lucky-thrust"
 name: "Lucky Thrust"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

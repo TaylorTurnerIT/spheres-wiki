@@ -1,9 +1,5 @@
 ---
-id: stunning-glance
 name: "Stunning Glance"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

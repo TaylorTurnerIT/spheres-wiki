@@ -1,9 +1,5 @@
 ---
-id: "gazelle-punch"
 name: "Gazelle Punch"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

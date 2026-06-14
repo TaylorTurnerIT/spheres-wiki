@@ -1,8 +1,5 @@
 ---
-id: deadcaller
 name: "Deadcaller"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

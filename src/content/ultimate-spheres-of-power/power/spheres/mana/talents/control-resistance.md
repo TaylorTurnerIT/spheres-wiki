@@ -1,9 +1,5 @@
 ---
-id: control-resistance
 name: "Control Resistance"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["manabond"]
 ---

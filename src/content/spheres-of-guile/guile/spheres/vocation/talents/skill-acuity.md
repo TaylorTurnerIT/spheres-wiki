@@ -1,9 +1,5 @@
 ---
-id: "skill-acuity"
 name: "Skill Acuity"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags: []
 ---

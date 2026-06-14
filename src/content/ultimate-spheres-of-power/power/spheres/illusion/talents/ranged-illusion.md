@@ -1,9 +1,5 @@
 ---
-id: ranged-illusion
 name: "Ranged Illusion"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["range"]
 ---

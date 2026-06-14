@@ -1,9 +1,5 @@
 ---
-id: "peasant-training"
 name: "Peasant Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

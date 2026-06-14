@@ -1,9 +1,5 @@
 ---
-id: "psychotropic-hallucinogen"
 name: "Psychotropic Hallucinogen"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

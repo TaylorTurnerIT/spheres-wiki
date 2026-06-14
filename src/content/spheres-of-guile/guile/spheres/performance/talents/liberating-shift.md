@@ -1,9 +1,5 @@
 ---
-id: "liberating-shift"
 name: "Liberating Shift"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

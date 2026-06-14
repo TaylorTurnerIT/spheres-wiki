@@ -1,8 +1,5 @@
 ---
-id: treat-injury
 name: "Treat Injury"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

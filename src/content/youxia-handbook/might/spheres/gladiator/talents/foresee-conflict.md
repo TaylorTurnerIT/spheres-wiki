@@ -1,9 +1,5 @@
 ---
-id: "foresee-conflict"
 name: "Foresee Conflict"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "gladiator"
 tier: "advanced"
 tags:
   - "demoralization"

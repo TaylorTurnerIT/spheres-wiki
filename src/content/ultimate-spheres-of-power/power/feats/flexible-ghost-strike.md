@@ -1,8 +1,5 @@
 ---
-id: flexible-ghost-strike
 name: Flexible Ghost Strike
-type: feat
-system: power
 sphere: destruction
 dualSphere: death
 tier: feat

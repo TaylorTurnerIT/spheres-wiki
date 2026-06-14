@@ -1,9 +1,5 @@
 ---
-id: spellburn
 name: "Spellburn"
-type: talent
-system: power
-sphere: mana
 tier: basic
 tags: []
 ---

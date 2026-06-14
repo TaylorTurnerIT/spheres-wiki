@@ -1,9 +1,5 @@
 ---
-id: draining-spellburn
 name: "Draining Spellburn"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

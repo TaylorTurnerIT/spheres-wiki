@@ -1,9 +1,5 @@
 ---
-id: "fast-disguise"
 name: "Fast Disguise"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "base"
 tags: []
 ---

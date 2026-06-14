@@ -1,9 +1,5 @@
 ---
-id: helping-hand
 name: "Helping Hand"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["succor"]
 ---

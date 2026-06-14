@@ -1,9 +1,5 @@
 ---
-id: foreshadow
 name: "Foreshadow"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

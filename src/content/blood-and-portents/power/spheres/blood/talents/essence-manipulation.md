@@ -1,9 +1,5 @@
 ---
-id: essence-manipulation
 name: "Essence Manipulation"
-system: power
-type: talent
-sphere: blood
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "bandmaster"
 name: "Bandmaster"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

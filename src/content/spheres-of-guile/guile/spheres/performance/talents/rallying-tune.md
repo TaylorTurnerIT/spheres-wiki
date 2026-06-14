@@ -1,9 +1,5 @@
 ---
-id: "rallying-tune"
 name: "Rallying Tune"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

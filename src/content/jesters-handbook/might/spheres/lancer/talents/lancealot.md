@@ -1,9 +1,5 @@
 ---
-id: "lancealot"
 name: "Lancealot"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "lancer"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "perfect-relaxation"
 name: "Perfect Relaxation"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "advanced"
 tags: []
 ---

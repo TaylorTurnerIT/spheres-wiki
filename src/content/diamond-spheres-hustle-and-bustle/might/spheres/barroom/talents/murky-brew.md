@@ -1,9 +1,5 @@
 ---
-id: "murky-brew"
 name: "Murky Brew"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "barroom"
 tier: "advanced"
 tags:
   - "drunk"

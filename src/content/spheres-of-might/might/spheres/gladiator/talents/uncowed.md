@@ -1,9 +1,5 @@
 ---
-id: "uncowed"
 name: "Uncowed"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

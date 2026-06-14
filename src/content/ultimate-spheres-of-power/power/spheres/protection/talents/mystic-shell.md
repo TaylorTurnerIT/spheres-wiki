@@ -1,9 +1,5 @@
 ---
-id: mystic-shell
 name: "Mystic Shell"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis"]
 ---

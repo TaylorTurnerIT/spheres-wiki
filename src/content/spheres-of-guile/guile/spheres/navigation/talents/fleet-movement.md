@@ -1,9 +1,5 @@
 ---
-id: "fleet-movement"
 name: "Fleet Movement"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "utility"

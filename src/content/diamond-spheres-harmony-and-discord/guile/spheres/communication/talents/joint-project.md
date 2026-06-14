@@ -1,9 +1,5 @@
 ---
-id: "joint-project"
 name: "Joint Project"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "advanced"
 tags:
   - "assist"

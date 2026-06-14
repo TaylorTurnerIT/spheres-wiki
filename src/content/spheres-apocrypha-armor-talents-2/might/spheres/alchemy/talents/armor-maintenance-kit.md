@@ -1,9 +1,5 @@
 ---
-id: "armor-maintenance-kit"
 name: "Armor Maintenance Kit"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents-2"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

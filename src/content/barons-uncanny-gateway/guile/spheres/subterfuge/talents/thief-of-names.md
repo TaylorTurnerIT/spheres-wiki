@@ -1,9 +1,5 @@
 ---
-id: "thief-of-names"
 name: "Thief of Names"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "subterfuge"
 tier: "advanced"
 tags: []
 ---

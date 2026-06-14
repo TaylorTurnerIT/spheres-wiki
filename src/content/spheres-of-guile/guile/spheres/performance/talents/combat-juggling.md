@@ -1,9 +1,5 @@
 ---
-id: "combat-juggling"
 name: "Combat Juggling"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags: []
 ---

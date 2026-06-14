@@ -1,9 +1,5 @@
 ---
-id: death-sphere-as-lawful
 name: "Death Sphere as Lawful"
-type: talent
-system: power
-sphere: death
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: power-dynamics
 name: "Power Dynamics"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["amp", "manipulation"]
 ---

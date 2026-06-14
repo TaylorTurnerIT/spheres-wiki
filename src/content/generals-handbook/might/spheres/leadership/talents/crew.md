@@ -1,9 +1,5 @@
 ---
-id: "crew"
 name: "Crew"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

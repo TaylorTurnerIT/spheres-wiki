@@ -1,9 +1,5 @@
 ---
-id: "inspiring-composition"
 name: "Inspiring Composition"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

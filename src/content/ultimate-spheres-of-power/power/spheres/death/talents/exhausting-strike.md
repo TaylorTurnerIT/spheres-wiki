@@ -1,9 +1,5 @@
 ---
-id: exhausting-strike
 name: "Exhausting Strike"
-type: talent
-system: power
-sphere: death
 tier: base
 tags: []
 ---

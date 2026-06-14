@@ -1,9 +1,5 @@
 ---
-id: "vibrating-impacts"
 name: "Vibrating Impacts"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

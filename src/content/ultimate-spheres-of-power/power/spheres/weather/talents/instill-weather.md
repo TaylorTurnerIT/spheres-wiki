@@ -1,9 +1,5 @@
 ---
-id: instill-weather
 name: "Instill Weather"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["instill"]
 ---

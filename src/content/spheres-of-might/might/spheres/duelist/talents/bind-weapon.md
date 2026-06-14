@@ -1,9 +1,5 @@
 ---
-id: "bind-weapon"
 name: "Bind Weapon"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

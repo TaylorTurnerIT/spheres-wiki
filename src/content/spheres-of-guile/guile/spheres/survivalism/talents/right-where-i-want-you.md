@@ -1,9 +1,5 @@
 ---
-id: "right-where-i-want-you"
 name: "Right Where I Want You"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "plan"

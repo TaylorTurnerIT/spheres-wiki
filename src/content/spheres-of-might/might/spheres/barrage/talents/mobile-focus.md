@@ -1,9 +1,5 @@
 ---
-id: "mobile-focus"
 name: "Mobile Focus"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags: []
 ---

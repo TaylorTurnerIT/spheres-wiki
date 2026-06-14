@@ -1,9 +1,5 @@
 ---
-id: "somnambulance"
 name: "Somnambulance"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags:
   - "utility"

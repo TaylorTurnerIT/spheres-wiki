@@ -1,9 +1,5 @@
 ---
-id: "tag-team"
 name: "Tag Team"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "wrestling"
 tier: "basic"
 tags:
   - "slam"

@@ -1,9 +1,5 @@
 ---
-id: tripped-glyph
 name: "Tripped Glyph"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

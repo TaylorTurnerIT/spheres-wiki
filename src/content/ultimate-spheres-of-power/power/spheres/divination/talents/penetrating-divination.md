@@ -1,9 +1,5 @@
 ---
-id: penetrating-divination
 name: "Penetrating Divination"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "shift-weight"
 name: "Shift Weight"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

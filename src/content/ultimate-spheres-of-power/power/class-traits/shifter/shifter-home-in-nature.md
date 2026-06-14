@@ -1,10 +1,6 @@
 ---
-id: shifter-home-in-nature
 name: "Home in Nature"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

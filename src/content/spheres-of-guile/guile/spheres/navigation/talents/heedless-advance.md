@@ -1,9 +1,5 @@
 ---
-id: "heedless-advance"
 name: "Heedless Advance"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "base"
 tags:
   - "utility-start"

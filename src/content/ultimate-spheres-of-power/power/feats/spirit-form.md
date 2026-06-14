@@ -1,8 +1,5 @@
 ---
-id: spirit-form
 name: Spirit Form
-type: feat
-system: power
 sphere: nature
 dualSphere: alteration
 tier: feat

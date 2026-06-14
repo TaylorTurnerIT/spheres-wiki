@@ -1,8 +1,5 @@
 ---
-id: animate-structural-features
 name: "Animate Structural Features"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

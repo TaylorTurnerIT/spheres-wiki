@@ -1,9 +1,5 @@
 ---
-id: time-freeze
 name: "Time Freeze"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

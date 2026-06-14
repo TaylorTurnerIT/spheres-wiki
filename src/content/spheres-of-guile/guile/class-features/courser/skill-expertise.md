@@ -1,7 +1,5 @@
 ---
-id: skill-expertise
 name: Skill Expertise
-className: courser
 level: 1
 tags: []
 ---

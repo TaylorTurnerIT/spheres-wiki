@@ -1,9 +1,5 @@
 ---
-id: weight-of-command
 name: "Weight of Command"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["word"]
 ---

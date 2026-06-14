@@ -1,8 +1,5 @@
 ---
-id: doublespeak
 name: Doublespeak
-type: feat
-system: power
 sphere: mind
 dualSphere: fate
 tier: feat

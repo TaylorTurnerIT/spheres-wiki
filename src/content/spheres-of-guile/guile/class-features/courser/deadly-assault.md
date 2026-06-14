@@ -1,7 +1,5 @@
 ---
-id: deadly-assault
 name: Deadly Assault
-className: courser
 level: 9
 tags: []
 ---

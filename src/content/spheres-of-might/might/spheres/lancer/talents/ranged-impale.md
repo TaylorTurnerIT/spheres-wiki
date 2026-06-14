@@ -1,9 +1,5 @@
 ---
-id: "ranged-impale"
 name: "Ranged Impale"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags: []
 ---

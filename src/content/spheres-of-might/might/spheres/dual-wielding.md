@@ -1,8 +1,5 @@
 ---
-id: "dual-wielding"
 name: "Dual Wielding"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "dual-wielding"
 tags: []
 sectionDefinitions:

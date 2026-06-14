@@ -1,9 +1,5 @@
 ---
-id: psychic-backlash
 name: "Psychic Backlash"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: ["supernatural"]
 ---

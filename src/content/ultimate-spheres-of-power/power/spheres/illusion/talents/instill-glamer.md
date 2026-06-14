@@ -1,9 +1,5 @@
 ---
-id: instill-glamer
 name: "Instill Glamer"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["instill"]
 ---

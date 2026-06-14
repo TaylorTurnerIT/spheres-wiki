@@ -1,9 +1,5 @@
 ---
-id: "scatter-mastery"
 name: "Scatter Mastery"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

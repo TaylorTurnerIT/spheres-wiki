@@ -1,9 +1,5 @@
 ---
-id: "skittering-steps"
 name: "Skittering Steps"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "dance"

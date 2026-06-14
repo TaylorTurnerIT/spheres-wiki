@@ -1,9 +1,5 @@
 ---
-id: natures-movement
 name: "Nature's Movement"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

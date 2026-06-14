@@ -1,9 +1,5 @@
 ---
-id: drowning-kiss
 name: "Drowning Kiss"
-system: power
-type: talent
-sphere: fallen-fey
 tier: advanced
 tags: ["fey-blessing"]
 ---

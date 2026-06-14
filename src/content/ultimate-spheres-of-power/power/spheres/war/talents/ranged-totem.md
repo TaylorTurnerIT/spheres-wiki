@@ -1,9 +1,5 @@
 ---
-id: ranged-totem
 name: "Ranged Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["range"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: gravity-manipulation
 name: "Gravity Manipulation"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

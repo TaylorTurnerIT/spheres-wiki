@@ -1,9 +1,5 @@
 ---
-id: shield-bearer
 name: "Shield Bearer"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

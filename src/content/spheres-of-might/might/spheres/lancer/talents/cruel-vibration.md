@@ -1,9 +1,5 @@
 ---
-id: "cruel-vibration"
 name: "Cruel Vibration"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags:
   - "impale"

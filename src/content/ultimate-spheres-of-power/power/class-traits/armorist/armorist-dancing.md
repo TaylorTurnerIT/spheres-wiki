@@ -1,10 +1,6 @@
 ---
-id: armorist-dancing
 name: "Dancing"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

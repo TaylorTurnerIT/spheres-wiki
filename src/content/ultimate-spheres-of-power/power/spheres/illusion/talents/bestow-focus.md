@@ -1,9 +1,5 @@
 ---
-id: bestow-focus
 name: "Bestow Focus"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

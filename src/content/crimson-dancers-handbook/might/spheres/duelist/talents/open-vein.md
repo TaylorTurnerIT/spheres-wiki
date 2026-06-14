@@ -1,9 +1,5 @@
 ---
-id: "open-vein"
 name: "Open Vein"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

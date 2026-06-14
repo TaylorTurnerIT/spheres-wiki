@@ -1,9 +1,5 @@
 ---
-id: shifting-shadows
 name: "Shifting Shadows"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["control"]
 ---

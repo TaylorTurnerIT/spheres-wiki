@@ -1,9 +1,5 @@
 ---
-id: ranged-healing
 name: "Ranged Healing"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["range"]
 ---

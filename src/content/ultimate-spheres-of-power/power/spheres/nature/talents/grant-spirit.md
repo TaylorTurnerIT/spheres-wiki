@@ -1,9 +1,5 @@
 ---
-id: grant-spirit
 name: "Grant Spirit"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: sand-swimmer
 name: "Sand Swimmer"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["aridity", "mantle"]
 ---

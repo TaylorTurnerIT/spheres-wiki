@@ -1,8 +1,5 @@
 ---
-id: hard-light
 name: Hard Light
-type: feat
-system: power
 sphere: light
 dualSphere: creation
 tier: feat

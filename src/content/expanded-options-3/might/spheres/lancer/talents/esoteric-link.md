@@ -1,9 +1,5 @@
 ---
-id: "esoteric-link"
 name: "Esoteric Link"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "lancer"
 tier: "advanced"
 tags:
   - "impale"

@@ -1,10 +1,6 @@
 ---
-id: armorist-trick-shooter
 name: "Trick Shooter"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

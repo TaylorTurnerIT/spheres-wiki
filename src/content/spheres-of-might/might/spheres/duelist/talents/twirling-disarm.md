@@ -1,9 +1,5 @@
 ---
-id: "twirling-disarm"
 name: "Twirling Disarm"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "disarm"

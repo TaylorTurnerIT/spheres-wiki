@@ -1,9 +1,5 @@
 ---
-id: "awesome-impression"
 name: "Awesome Impression"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "utility"

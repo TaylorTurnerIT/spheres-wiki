@@ -1,9 +1,5 @@
 ---
-id: "high-on-fumes"
 name: "High On Fumes"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

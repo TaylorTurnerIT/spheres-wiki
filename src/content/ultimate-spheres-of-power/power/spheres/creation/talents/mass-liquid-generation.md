@@ -1,9 +1,5 @@
 ---
-id: mass-liquid-generation
 name: "Mass Liquid Generation"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: []
 ---

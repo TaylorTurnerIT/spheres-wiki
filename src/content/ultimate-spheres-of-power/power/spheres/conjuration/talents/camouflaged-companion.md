@@ -1,9 +1,5 @@
 ---
-id: camouflaged-companion
 name: "Camouflaged Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

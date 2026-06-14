@@ -1,9 +1,5 @@
 ---
-id: glow
 name: "Glow"
-system: power
-type: talent
-sphere: light
 tier: base
 tags: []
 ---

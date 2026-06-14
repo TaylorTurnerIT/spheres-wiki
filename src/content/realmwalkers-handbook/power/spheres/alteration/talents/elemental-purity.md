@@ -1,9 +1,5 @@
 ---
-id: elemental-purity
 name: "Elemental Purity"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

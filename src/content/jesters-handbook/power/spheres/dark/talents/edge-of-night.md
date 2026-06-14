@@ -1,9 +1,5 @@
 ---
-id: edge-of-night
 name: "Edge Of Night"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "darkness"]
 ---

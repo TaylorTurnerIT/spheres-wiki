@@ -1,8 +1,5 @@
 ---
-id: hypochondriacs-terror
 name: Hypochondriac's Terror
-type: feat
-system: power
 sphere: mind
 dualSphere: blood
 tier: feat

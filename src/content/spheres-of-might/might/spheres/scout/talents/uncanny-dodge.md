@@ -1,9 +1,5 @@
 ---
-id: "uncanny-dodge"
 name: "Uncanny Dodge"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "dizzy-spin"
 name: "Dizzy Spin"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags:
   - "manhandle"

@@ -1,9 +1,5 @@
 ---
-id: corpse-manipulation
 name: "Corpse Manipulation"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

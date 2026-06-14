@@ -1,9 +1,5 @@
 ---
-id: transforming-strike
 name: "Transforming Strike"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["strike"]
 ---

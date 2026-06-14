@@ -1,9 +1,5 @@
 ---
-id: the-world
 name: "The World"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["utility", "motif"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "shoot-and-scoot"
 name: "Shoot And Scoot"
-type: "talent"
-sourceBook: "spheres-apocrypha-martial-talents-ranged"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "motion"

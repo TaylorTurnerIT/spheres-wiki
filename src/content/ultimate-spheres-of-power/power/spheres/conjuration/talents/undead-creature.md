@@ -1,9 +1,5 @@
 ---
-id: undead-creature
 name: "Undead Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["type"]
 ---

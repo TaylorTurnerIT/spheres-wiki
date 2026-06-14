@@ -1,9 +1,5 @@
 ---
-id: flawless-precision
 name: "Flawless Precision"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: ["cognition"]
 ---

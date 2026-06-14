@@ -1,9 +1,5 @@
 ---
-id: transfer
 name: "Transfer"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["manipulation", "program"]
 ---

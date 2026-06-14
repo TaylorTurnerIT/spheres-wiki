@@ -1,9 +1,5 @@
 ---
-id: numbing-blast
 name: "Numbing Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "cold"]
 ---

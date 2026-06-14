@@ -1,9 +1,5 @@
 ---
-id: "final-stand"
 name: "Final Stand"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "gladiator"
 tier: "advanced"
 tags:
   - "stance"

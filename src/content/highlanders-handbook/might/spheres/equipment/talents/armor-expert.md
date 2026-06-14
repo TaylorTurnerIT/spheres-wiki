@@ -1,9 +1,5 @@
 ---
-id: "armor-expert"
 name: "Armor Expert"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

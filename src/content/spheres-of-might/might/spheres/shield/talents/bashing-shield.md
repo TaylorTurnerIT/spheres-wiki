@@ -1,9 +1,5 @@
 ---
-id: "bashing-shield"
 name: "Bashing Shield"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

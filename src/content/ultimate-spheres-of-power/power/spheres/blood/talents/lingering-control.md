@@ -1,9 +1,5 @@
 ---
-id: lingering-control
 name: "Lingering Control"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "pathing"
 name: "Pathing"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "base"
 tags: []
 ---

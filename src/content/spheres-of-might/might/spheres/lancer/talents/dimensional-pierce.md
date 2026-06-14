@@ -1,9 +1,5 @@
 ---
-id: "dimensional-pierce"
 name: "Dimensional Pierce"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "advanced"
 tags: []
 ---

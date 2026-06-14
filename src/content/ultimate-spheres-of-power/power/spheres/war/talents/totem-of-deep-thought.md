@@ -1,9 +1,5 @@
 ---
-id: totem-of-deep-thought
 name: "Totem Of Deep Thought"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

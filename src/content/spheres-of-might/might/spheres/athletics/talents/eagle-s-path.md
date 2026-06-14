@@ -1,9 +1,5 @@
 ---
-id: "eagle-s-path"
 name: "Eagle’s Path"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "fly"

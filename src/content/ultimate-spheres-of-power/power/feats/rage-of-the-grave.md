@@ -1,8 +1,5 @@
 ---
-id: rage-of-the-grave
 name: "Rage Of The Grave"
-type: feat
-system: power
 sphere: death
 tags: ["combat"]
 tier: feat

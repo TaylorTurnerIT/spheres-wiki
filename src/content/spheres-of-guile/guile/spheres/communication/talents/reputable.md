@@ -1,9 +1,5 @@
 ---
-id: "reputable"
 name: "Reputable"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "plan"

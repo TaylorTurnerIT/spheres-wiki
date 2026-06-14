@@ -1,9 +1,5 @@
 ---
-id: "study-inclinations"
 name: "Study Inclinations"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "plan"

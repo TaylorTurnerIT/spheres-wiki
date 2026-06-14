@@ -1,9 +1,5 @@
 ---
-id: "devil-s-strikes"
 name: "Devil’s Strikes"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "advanced"
 tags: []
 ---

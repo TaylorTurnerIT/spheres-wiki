@@ -1,9 +1,5 @@
 ---
-id: reincarnation-instant
 name: "Reincarnation, Instant"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: []
 ---

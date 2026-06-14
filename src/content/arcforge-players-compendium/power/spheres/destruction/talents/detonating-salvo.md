@@ -1,9 +1,5 @@
 ---
-id: detonating-salvo
 name: "Detonating Salvo"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: []
 ---

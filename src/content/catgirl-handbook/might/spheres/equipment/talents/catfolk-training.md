@@ -1,9 +1,5 @@
 ---
-id: "catfolk-training"
 name: "Catfolk Training"
-type: "talent"
-sourceBook: "catgirl-handbook"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

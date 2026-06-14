@@ -1,9 +1,5 @@
 ---
-id: "you-want-some"
 name: "You Want Some?"
-type: "talent"
-sourceBook: "spheres-apocrypha-dipsomania"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

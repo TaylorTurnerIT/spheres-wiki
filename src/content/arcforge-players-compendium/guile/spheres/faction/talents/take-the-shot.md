@@ -1,9 +1,5 @@
 ---
-id: "take-the-shot"
 name: "Take The Shot"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "plan"

@@ -1,9 +1,5 @@
 ---
-id: "pack-tactics"
 name: "Pack Tactics"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

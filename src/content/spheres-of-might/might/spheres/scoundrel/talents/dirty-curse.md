@@ -1,9 +1,5 @@
 ---
-id: "dirty-curse"
 name: "Dirty Curse"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "advanced"
 tags:
   - "trick"

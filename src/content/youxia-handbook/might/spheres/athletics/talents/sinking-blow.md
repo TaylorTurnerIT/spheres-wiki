@@ -1,9 +1,5 @@
 ---
-id: "sinking-blow"
 name: "Sinking Blow"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "fly"

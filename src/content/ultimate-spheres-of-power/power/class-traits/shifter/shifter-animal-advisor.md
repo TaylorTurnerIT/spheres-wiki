@@ -1,10 +1,6 @@
 ---
-id: shifter-animal-advisor
 name: "Animal Advisor"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: shifter
 featureId: bestial-trait
 ---
 

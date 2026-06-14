@@ -1,9 +1,5 @@
 ---
-id: "withering-defense"
 name: "Withering Defense"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

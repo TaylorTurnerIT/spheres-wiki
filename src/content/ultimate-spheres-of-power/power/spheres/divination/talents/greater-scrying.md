@@ -1,9 +1,5 @@
 ---
-id: greater-scrying
 name: "Greater Scrying"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["utility", "divine"]
 ---

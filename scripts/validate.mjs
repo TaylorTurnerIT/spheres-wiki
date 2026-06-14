@@ -6,6 +6,49 @@ import { fileURLToPath } from "url";
 import { parse as parseYaml } from "yaml";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// ── Inline path inference (mirrors inferFromPath.ts) ──────────────────────
+
+const KNOWN_SYSTEMS = new Set(["power", "might", "guile", "champions"]);
+
+function inferFromPath(relPathFromBook) {
+  let parts = relPathFromBook.replace(/\.mdx?$/, "").split(path.sep);
+  const result = {};
+  if (KNOWN_SYSTEMS.has(parts[0])) { result.system = parts[0]; parts = parts.slice(1); }
+  result.id = parts[parts.length - 1];
+  const last = result.id;
+  const prev = parts.length > 1 ? parts[parts.length - 2] : "";
+  const prev2 = parts.length > 2 ? parts[parts.length - 3] : "";
+  if (parts.length === 2) {
+    const MAP = { talents:"talent", feats:"feat", spheres:"sphere", classes:"class",
+      archetypes:"archetype", "archetype-features":"archetype-feature", articles:"article", tags:"tag" };
+    if (MAP[parts[0]]) { result.type = MAP[parts[0]]; return result; }
+  }
+  if (parts.length === 3) {
+    if (parts[0]==="class-features") return {...result, type:"class-feature"};
+    if (parts[0]==="class-traits")   return {...result, type:"class-trait"};
+    if (parts[0]==="archetype-features") return {...result, type:"archetype-feature"};
+  }
+  if (parts.length >= 4) {
+    if (prev==="archetype-features" || (prev==="features" && parts[parts.length-4]?.toLowerCase()==="archetypes"))
+      return {...result, type:"archetype-feature"};
+    if (prev==="class-traits" || (prev==="traits" && parts[parts.length-4]?.toLowerCase()==="features"))
+      return {...result, type:"class-trait"};
+  }
+  if (parts.length >= 3) {
+    if (prev==="class-features"||prev==="features") return {...result, type:"class-feature"};
+    if ((prev2==="archetypes"||prev2==="Archetypes") &&
+        (last===prev||last==="index"||last.endsWith("-"+prev)||last.includes(prev)))
+      return {...result, type:"archetype", id:prev};
+    if (prev==="talents") return {...result, type:"talent"};
+    if (prev==="feats")   return {...result, type:"feat"};
+    if (parts[parts.length-3]==="spheres"&&(last===prev||last==="index"))
+      return {...result, type:"sphere", id:prev};
+  }
+  if (parts[0]?.toLowerCase()==="classes"&&(last===prev||last==="index"))
+    return {...result, type:"class", id:prev};
+  return result;
+}
 const contentDir = path.resolve(__dirname, "../src/content");
 
 const BUILTIN_TAGS = new Set([
@@ -66,40 +109,43 @@ for (const filePath of allFiles) {
 
   if (!frontmatter) continue;
 
-  // v2 check: frontmatter id must match filename
+  // Resolve type and id: prefer frontmatter (legacy), fall back to path inference.
+  const relPath = path.relative(contentDir, filePath);
+  const bookSlug = relPath.split(path.sep)[0];
+  const relPathFromBook = relPath.split(path.sep).slice(1).join(path.sep);
+  const inferred = inferFromPath(relPathFromBook);
+  const entryType = frontmatter.type ?? inferred.type;
+  const entryId   = frontmatter.id   ?? inferred.id;
+
+  // v2 check: resolved id must match filename
   const fileSlug = path.basename(filePath, ".md");
-  if (frontmatter.id) {
+  if (entryId) {
     // V59: reject hex-prefix slugs (Wikidot color code artifacts like 993300).
     // Require at least one digit in the first 6 chars to avoid false positives on
     // a-f-only words like "deadcaller" or "beefsteak".
-    const prefix6 = frontmatter.id.slice(0, 6);
+    const prefix6 = entryId.slice(0, 6);
     if (prefix6.length === 6 && /^[0-9a-fA-F]+$/.test(prefix6) && /[0-9]/.test(prefix6)) {
       console.error(
-        `V59 Violation: ${filePath} has hex-prefixed ID "${frontmatter.id}"`,
+        `V59 Violation: ${filePath} has hex-prefixed ID "${entryId}"`,
       );
       hasError = true;
     }
-    if (frontmatter.id !== fileSlug) {
+    if (entryId !== fileSlug) {
       console.error(
-        `V2 Violation: ${filePath} has frontmatter ID "${frontmatter.id}" but filename is "${fileSlug}.md"`,
+        `V2 Violation: ${filePath} has ID "${entryId}" but filename is "${fileSlug}.md"`,
       );
       hasError = true;
     }
 
-    // Book+type-scoped ID uniqueness: same talent name in different books (e.g.
-    // two systems both having a "mobility" talent) is valid — only flag same-book dupes.
-    const relPath = path.relative(contentDir, filePath);
-    const bookSlug = relPath.split(path.sep)[0];
-    const typeIdKey = `${frontmatter.type}:${bookSlug}:${frontmatter.id}`;
-    if (!idMap.has(typeIdKey)) {
-      idMap.set(typeIdKey, []);
-    }
+    // Book+type-scoped ID uniqueness: same talent name in different books is valid.
+    const typeIdKey = `${entryType}:${bookSlug}:${entryId}`;
+    if (!idMap.has(typeIdKey)) idMap.set(typeIdKey, []);
     idMap.get(typeIdKey).push(filePath);
   }
 
   // tag checks
-  if (frontmatter.type === "tag") {
-    definedTags.add(frontmatter.id);
+  if (entryType === "tag") {
+    definedTags.add(entryId);
     continue;
   }
 

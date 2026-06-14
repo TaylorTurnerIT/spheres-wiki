@@ -1,9 +1,5 @@
 ---
-id: martyrs-tithings
 name: "Martyr's Tithings"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["blood-art"]
 ---

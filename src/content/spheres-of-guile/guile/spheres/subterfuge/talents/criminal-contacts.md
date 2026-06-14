@@ -1,9 +1,5 @@
 ---
-id: "criminal-contacts"
 name: "Criminal Contacts"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "utility"

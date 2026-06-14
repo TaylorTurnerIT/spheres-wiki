@@ -1,9 +1,5 @@
 ---
-id: "naturalist-s-eye"
 name: "Naturalist’s Eye"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "base"
 tags:
   - "package"

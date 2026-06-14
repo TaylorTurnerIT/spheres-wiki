@@ -1,9 +1,5 @@
 ---
-id: "wide-open"
 name: "Wide Open"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags:
   - "exploit"

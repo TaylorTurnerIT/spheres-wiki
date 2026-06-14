@@ -1,9 +1,5 @@
 ---
-id: soul-drain
 name: "Soul Drain"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: ["extraordinary"]
 ---

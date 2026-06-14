@@ -1,9 +1,5 @@
 ---
-id: "spinning-reflection"
 name: "Spinning Reflection"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "dual-wielding"
 tier: "advanced"
 tags:
   - "stance"

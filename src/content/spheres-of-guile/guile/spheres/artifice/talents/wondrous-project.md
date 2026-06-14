@@ -1,9 +1,5 @@
 ---
-id: "wondrous-project"
 name: "Wondrous Project"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "plan"

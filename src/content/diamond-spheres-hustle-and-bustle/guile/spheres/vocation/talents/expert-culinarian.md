@@ -1,9 +1,5 @@
 ---
-id: "expert-culinarian"
 name: "Expert Culinarian"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

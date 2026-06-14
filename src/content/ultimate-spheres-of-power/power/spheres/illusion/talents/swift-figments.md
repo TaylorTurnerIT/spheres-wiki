@@ -1,9 +1,5 @@
 ---
-id: swift-figments
 name: "Swift Figments"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: shifter-braineating-connoisseur
 name: "Braineating Connoisseur"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 requires: "braineater savant, shifter level 12th"
 ---

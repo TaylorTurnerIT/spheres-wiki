@@ -1,9 +1,5 @@
 ---
-id: "flexible-item-repurposing"
 name: "Flexible Item Repurposing"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "spellhacking"
 tier: "basic"
 tags: []
 ---

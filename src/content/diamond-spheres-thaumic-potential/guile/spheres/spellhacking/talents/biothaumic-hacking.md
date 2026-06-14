@@ -1,9 +1,5 @@
 ---
-id: "biothaumic-hacking"
 name: "Biothaumic Hacking"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "advanced"
 tags: []
 ---

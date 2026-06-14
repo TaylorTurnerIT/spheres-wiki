@@ -1,9 +1,5 @@
 ---
-id: "traceless-presence"
 name: "Traceless Presence"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "advanced"
 tags:
   - "approach"

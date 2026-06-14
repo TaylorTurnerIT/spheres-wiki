@@ -1,9 +1,5 @@
 ---
-id: "haymaker"
 name: "Haymaker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "counter"

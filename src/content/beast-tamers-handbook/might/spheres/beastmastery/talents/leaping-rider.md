@@ -1,9 +1,5 @@
 ---
-id: "leaping-rider"
 name: "Leaping Rider"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "ride"

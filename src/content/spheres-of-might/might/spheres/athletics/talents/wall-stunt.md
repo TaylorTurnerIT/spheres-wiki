@@ -1,9 +1,5 @@
 ---
-id: "wall-stunt"
 name: "Wall Stunt"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "leap"

@@ -1,9 +1,5 @@
 ---
-id: "protective-warning"
 name: "Protective Warning"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

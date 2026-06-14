@@ -1,9 +1,5 @@
 ---
-id: clinging-darkness
 name: "Clinging Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

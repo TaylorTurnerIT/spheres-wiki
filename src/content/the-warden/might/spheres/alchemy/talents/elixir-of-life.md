@@ -1,9 +1,5 @@
 ---
-id: "elixir-of-life"
 name: "Elixir Of Life"
-type: "talent"
-sourceBook: "the-warden"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "formulae"

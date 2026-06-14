@@ -1,9 +1,5 @@
 ---
-id: "rift-strike"
 name: "Rift Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "advanced"
 tags: []
 ---

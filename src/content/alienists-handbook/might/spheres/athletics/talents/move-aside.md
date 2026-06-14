@@ -1,9 +1,5 @@
 ---
-id: "move-aside"
 name: "Move Aside"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

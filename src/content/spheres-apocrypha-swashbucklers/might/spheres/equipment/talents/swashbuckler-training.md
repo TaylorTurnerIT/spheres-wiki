@@ -1,9 +1,5 @@
 ---
-id: "swashbuckler-training"
 name: "Swashbuckler Training"
-type: "talent"
-sourceBook: "spheres-apocrypha-swashbucklers"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

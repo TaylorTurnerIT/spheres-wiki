@@ -1,9 +1,5 @@
 ---
-id: innocence
 name: "Innocence"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm", "sm"]
 ---

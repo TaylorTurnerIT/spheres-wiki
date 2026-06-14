@@ -1,8 +1,6 @@
 ---
-id: resist-magic-ex
 name: "Resist Magic (Ex)"
 type: class-feature
-system: power
 className: mageknight
 level: 1
 tags: []

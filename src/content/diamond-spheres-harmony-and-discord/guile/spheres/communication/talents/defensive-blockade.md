@@ -1,9 +1,5 @@
 ---
-id: "defensive-blockade"
 name: "Defensive Blockade"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

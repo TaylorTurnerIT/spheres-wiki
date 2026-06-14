@@ -1,9 +1,5 @@
 ---
-id: "case-the-joint"
 name: "Case The Joint"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "plan"

@@ -1,9 +1,5 @@
 ---
-id: "guillotine"
 name: "Guillotine"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "trap"
 tier: "advanced"
 tags:
   - "snare"

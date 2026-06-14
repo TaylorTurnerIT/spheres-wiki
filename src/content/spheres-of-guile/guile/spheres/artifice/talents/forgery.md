@@ -1,9 +1,5 @@
 ---
-id: "forgery"
 name: "Forgery"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "plan"

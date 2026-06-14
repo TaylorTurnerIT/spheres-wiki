@@ -1,9 +1,5 @@
 ---
-id: shared-perception
 name: "Shared Perception"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense", "supernatural"]
 ---

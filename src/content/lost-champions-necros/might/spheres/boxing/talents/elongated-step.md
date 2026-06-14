@@ -1,9 +1,5 @@
 ---
-id: "elongated-step"
 name: "Elongated Step (stance)"
-type: "talent"
-sourceBook: "lost-champions-necros"
-sphere: "boxing"
 tier: "basic"
 tags: ["stance"]
 ---

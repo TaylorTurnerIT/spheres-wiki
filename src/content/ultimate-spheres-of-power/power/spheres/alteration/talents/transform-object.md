@@ -1,9 +1,5 @@
 ---
-id: transform-object
 name: "Transform Object"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

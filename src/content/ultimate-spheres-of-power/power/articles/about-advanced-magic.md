@@ -1,8 +1,5 @@
 ---
-id: about-advanced-magic
 name: "About Advanced Magic"
-type: article
-system: power
 tags: []
 ---
 

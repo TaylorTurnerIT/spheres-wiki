@@ -1,9 +1,5 @@
 ---
-id: "lifekeeper"
 name: "Lifekeeper"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "remedy"

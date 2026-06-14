@@ -1,9 +1,5 @@
 ---
-id: "lions-and-wardrobes"
 name: "Lions And Wardrobes"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: "magic-cohort"
 name: "Magic Cohort"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "advanced"
 tags: []
 ---

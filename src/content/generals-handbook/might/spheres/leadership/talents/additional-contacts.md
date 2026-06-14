@@ -1,9 +1,5 @@
 ---
-id: "additional-contacts"
 name: "Additional Contacts"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

@@ -1,9 +1,5 @@
 ---
-id: masters-presence
 name: "Master's Presence"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["dominion"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "dungeon-delver"
 name: "Dungeon Delver"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

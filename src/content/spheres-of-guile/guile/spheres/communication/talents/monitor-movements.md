@@ -1,9 +1,5 @@
 ---
-id: "monitor-movements"
 name: "Monitor Movements"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

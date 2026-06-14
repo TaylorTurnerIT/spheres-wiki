@@ -1,8 +1,5 @@
 ---
-id: soft-admixture-specialty
 name: "Soft Admixture Specialty"
-type: feat
-system: power
 sphere: destruction
 tags: []
 tier: feat

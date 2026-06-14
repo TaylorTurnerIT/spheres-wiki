@@ -1,9 +1,5 @@
 ---
-id: "unified-morale"
 name: "Unified Morale"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

@@ -1,9 +1,5 @@
 ---
-id: dimensional-tracery
 name: "Dimensional Tracery"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

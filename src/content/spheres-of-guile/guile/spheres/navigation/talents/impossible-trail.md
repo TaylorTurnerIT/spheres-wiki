@@ -1,9 +1,5 @@
 ---
-id: "impossible-trail"
 name: "Impossible Trail"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "plan"

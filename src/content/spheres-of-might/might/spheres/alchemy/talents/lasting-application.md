@@ -1,9 +1,5 @@
 ---
-id: "lasting-application"
 name: "Lasting Application"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: storm-lord
 name: "Storm Lord"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: []
 ---

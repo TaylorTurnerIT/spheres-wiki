@@ -1,9 +1,5 @@
 ---
-id: word
 name: Word
-system: power
-type: talent
-sphere: fate
 tier: base
 tags: []
 ---

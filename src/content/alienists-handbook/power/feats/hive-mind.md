@@ -1,8 +1,5 @@
 ---
-id: hive-mind
 name: "Hive Mind"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

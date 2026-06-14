@@ -1,9 +1,5 @@
 ---
-id: "dance-package"
 name: "Dance Package"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "base"
 tags:
   - "package"

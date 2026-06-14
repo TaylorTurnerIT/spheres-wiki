@@ -1,9 +1,5 @@
 ---
-id: "grease"
 name: "Grease"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

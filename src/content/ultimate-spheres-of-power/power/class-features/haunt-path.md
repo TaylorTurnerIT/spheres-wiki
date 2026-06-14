@@ -1,8 +1,6 @@
 ---
-id: haunt-path
 name: "Haunt Path"
 type: class-feature
-system: power
 className: wraith
 level: 1
 tags: []

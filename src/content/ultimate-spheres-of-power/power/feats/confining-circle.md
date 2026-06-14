@@ -1,8 +1,5 @@
 ---
-id: confining-circle
 name: "Confining Circle"
-type: feat
-system: power
 sphere: protection
 tags: []
 tier: feat

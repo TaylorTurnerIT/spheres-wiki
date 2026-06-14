@@ -1,9 +1,5 @@
 ---
-id: "terror-below"
 name: "Terror Below"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "swim"

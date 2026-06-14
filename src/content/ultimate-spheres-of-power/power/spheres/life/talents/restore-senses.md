@@ -1,9 +1,5 @@
 ---
-id: restore-senses
 name: "Restore Senses"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["cure"]
 ---

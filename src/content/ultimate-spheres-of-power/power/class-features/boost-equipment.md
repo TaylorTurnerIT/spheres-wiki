@@ -1,8 +1,6 @@
 ---
-id: boost-equipment
 name: "Boost Equipment"
 type: class-feature
-system: power
 className: armorist
 level: 10
 tags: []

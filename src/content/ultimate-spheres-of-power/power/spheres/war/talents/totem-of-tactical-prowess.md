@@ -1,9 +1,5 @@
 ---
-id: totem-of-tactical-prowess
 name: "Totem Of Tactical Prowess"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

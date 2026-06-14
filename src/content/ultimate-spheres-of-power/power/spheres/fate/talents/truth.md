@@ -1,9 +1,5 @@
 ---
-id: truth
 name: "Truth"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["curse", "utility", "word"]
 ---

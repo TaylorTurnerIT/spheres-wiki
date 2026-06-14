@@ -1,9 +1,5 @@
 ---
-id: fairy-ring-traveler
 name: "Fairy Ring Traveler"
-system: power
-type: talent
-sphere: fallen-fey
 tier: advanced
 tags: ["utility"]
 ---

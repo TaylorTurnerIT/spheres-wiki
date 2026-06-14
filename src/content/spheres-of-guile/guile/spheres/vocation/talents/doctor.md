@@ -1,9 +1,5 @@
 ---
-id: "doctor"
 name: "Doctor"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

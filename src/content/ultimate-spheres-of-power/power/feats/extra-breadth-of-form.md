@@ -1,8 +1,5 @@
 ---
-id: extra-breadth-of-form
 name: "Extra Breadth of Form"
-type: feat
-system: power
 tags: []
 sphere: alteration
 tier: feat

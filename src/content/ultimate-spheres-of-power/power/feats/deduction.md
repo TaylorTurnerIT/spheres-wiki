@@ -1,8 +1,5 @@
 ---
-id: deduction
 name: "Deduction"
-type: feat
-system: power
 sphere: war
 tags: []
 tier: feat

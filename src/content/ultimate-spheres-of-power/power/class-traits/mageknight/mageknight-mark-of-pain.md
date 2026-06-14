@@ -1,10 +1,6 @@
 ---
-id: mageknight-mark-of-pain
 name: "Mark of Pain"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 requires: "Marked class feature"
 ---

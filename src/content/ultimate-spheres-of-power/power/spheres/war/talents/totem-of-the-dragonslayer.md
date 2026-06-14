@@ -1,9 +1,5 @@
 ---
-id: totem-of-the-dragonslayer
 name: "Totem Of The Dragonslayer"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

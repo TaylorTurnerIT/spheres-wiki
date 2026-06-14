@@ -1,9 +1,5 @@
 ---
-id: feline-good
 name: "Feline Good"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: []
 ---

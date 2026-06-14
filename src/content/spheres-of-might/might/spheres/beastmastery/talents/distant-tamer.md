@@ -1,9 +1,5 @@
 ---
-id: "distant-tamer"
 name: "Distant Tamer"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "handle-animal"

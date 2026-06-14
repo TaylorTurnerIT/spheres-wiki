@@ -1,9 +1,5 @@
 ---
-id: "sling-combatant"
 name: "Sling Combatant"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

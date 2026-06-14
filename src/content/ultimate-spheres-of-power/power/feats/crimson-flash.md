@@ -1,8 +1,5 @@
 ---
-id: crimson-flash
 name: "Crimson Flash"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

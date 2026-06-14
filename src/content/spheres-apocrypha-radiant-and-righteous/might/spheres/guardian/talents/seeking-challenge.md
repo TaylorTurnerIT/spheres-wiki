@@ -1,9 +1,5 @@
 ---
-id: "seeking-challenge"
 name: "Seeking Challenge"
-type: "talent"
-sourceBook: "spheres-apocrypha-radiant-and-righteous"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

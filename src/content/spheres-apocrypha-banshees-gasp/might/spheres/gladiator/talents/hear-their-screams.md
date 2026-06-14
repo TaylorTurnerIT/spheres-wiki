@@ -1,9 +1,5 @@
 ---
-id: "hear-their-screams"
 name: "Hear Their Screams"
-type: "talent"
-sourceBook: "spheres-apocrypha-banshees-gasp"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

@@ -1,9 +1,5 @@
 ---
-id: "dynamic-pace"
 name: "Dynamic Pace"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

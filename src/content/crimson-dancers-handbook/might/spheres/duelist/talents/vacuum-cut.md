@@ -1,9 +1,5 @@
 ---
-id: "vacuum-cut"
 name: "Vacuum Cut"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "advanced"
 tags: []
 ---

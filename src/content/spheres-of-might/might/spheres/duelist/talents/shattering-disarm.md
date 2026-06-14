@@ -1,9 +1,5 @@
 ---
-id: "shattering-disarm"
 name: "Shattering Disarm"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "disarm"

@@ -1,9 +1,5 @@
 ---
-id: "self-mounted"
 name: "Self-Mounted"
-type: "talent"
-sourceBook: "expanded-spheres-barons-lost-apocrypha"
-sphere: "equipment"
 tier: "basic"
 ---
 

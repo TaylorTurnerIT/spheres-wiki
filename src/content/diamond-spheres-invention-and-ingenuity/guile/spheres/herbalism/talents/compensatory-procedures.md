@@ -1,9 +1,5 @@
 ---
-id: "compensatory-procedures"
 name: "Compensatory Procedures"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "advanced"
 tags:
   - "remedy"

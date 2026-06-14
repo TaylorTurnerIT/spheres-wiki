@@ -1,9 +1,5 @@
 ---
-id: time-strike
 name: "Time Strike"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["strike"]
 ---

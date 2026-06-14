@@ -1,9 +1,5 @@
 ---
-id: "plummeting-traps"
 name: "Plummeting Traps"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "trap"
 tier: "advanced"
 tags:
   - "snare"

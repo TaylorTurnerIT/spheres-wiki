@@ -1,9 +1,5 @@
 ---
-id: "elevation-mastery"
 name: "Elevation Mastery"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

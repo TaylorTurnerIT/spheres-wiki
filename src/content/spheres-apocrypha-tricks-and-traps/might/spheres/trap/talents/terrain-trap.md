@@ -1,9 +1,5 @@
 ---
-id: "terrain-trap"
 name: "Terrain Trap"
-type: "talent"
-sourceBook: "spheres-apocrypha-tricks-and-traps"
-sphere: "trap"
 tier: "basic"
 tags: ["snare"]
 ---

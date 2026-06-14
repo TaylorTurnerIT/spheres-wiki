@@ -1,9 +1,5 @@
 ---
-id: "expel-kinetic-energy"
 name: "Expel Kinetic Energy"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags:
   - "clarity"

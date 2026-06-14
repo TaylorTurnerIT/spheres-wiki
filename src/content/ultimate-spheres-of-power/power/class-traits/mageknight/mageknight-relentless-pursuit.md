@@ -1,10 +1,6 @@
 ---
-id: mageknight-relentless-pursuit
 name: "Relentless Pursuit"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 requires: "Marked class feature"
 ---

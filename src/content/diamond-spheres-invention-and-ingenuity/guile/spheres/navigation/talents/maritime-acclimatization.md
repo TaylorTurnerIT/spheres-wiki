@@ -1,9 +1,5 @@
 ---
-id: "maritime-acclimatization"
 name: "Maritime Acclimatization"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "acclimation"

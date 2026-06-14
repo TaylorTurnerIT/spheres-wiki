@@ -1,9 +1,5 @@
 ---
-id: "launching-rush"
 name: "Launching Rush"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "brute"
 tier: "advanced"
 tags: []
 ---

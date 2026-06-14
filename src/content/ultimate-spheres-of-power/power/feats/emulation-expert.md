@@ -1,8 +1,5 @@
 ---
-id: emulation-expert
 name: "Emulation Expert"
-type: feat
-system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat

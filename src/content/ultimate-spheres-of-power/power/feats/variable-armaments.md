@@ -1,8 +1,5 @@
 ---
-id: variable-armaments
 name: "Variable Armaments"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

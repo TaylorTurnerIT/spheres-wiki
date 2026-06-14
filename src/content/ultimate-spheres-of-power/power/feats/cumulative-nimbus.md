@@ -1,8 +1,5 @@
 ---
-id: cumulative-nimbus
 name: "Cumulative Nimbus"
-type: feat
-system: power
 sphere: weather
 tags: ["teamwork"]
 tier: feat

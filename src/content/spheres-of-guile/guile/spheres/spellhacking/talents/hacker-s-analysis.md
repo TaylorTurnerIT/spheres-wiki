@@ -1,9 +1,5 @@
 ---
-id: "hacker-s-analysis"
 name: "Hacker’s Analysis"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "utility"

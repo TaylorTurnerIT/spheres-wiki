@@ -1,9 +1,5 @@
 ---
-id: puppet-master
 name: "Puppet Master"
-system: power
-type: talent
-sphere: blood
 tier: advanced
 tags: []
 ---

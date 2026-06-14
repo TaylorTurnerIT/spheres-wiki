@@ -1,9 +1,5 @@
 ---
-id: "rapid-assessment"
 name: "Rapid Assessment"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags: []
 ---

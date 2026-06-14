@@ -1,9 +1,5 @@
 ---
-id: empathic-healing
 name: "Empathic Healing"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

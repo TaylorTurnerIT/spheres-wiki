@@ -1,9 +1,5 @@
 ---
-id: "clear-trail"
 name: "Clear Trail"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "pathing"

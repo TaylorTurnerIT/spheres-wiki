@@ -1,8 +1,5 @@
 ---
-id: transpatial-reconstitution
 name: Transpatial Reconstitution
-type: feat
-system: power
 sphere: warp
 dualSphere: life
 tier: feat

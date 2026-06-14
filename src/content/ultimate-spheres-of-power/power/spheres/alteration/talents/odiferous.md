@@ -1,9 +1,5 @@
 ---
-id: odiferous
 name: "Odiferous"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

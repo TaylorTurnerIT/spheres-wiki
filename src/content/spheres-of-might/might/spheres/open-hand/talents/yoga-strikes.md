@@ -1,9 +1,5 @@
 ---
-id: "yoga-strikes"
 name: "Yoga Strikes"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "close-strike"
 name: "Close Strike"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "apply"

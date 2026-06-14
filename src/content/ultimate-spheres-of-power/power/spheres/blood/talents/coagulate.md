@@ -1,9 +1,5 @@
 ---
-id: coagulate
 name: "Coagulate"
-type: talent
-system: power
-sphere: blood
 tier: base
 tags: ["still"]
 ---

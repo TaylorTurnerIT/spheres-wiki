@@ -1,9 +1,5 @@
 ---
-id: "ground-team"
 name: "Ground Team"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

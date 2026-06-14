@@ -1,8 +1,5 @@
 ---
-id: might-of-the-grave
 name: Might Of The Grave
-type: feat
-system: power
 sphere: enhancement
 dualSphere: death
 tier: feat

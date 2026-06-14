@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-rebuke-death
 name: "Rebuke Death"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

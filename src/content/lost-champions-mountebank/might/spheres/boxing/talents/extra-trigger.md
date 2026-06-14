@@ -1,9 +1,5 @@
 ---
-id: "extra-trigger"
 name: "Extra Trigger"
-type: "talent"
-sourceBook: "lost-champions-mountebank"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: armorist-lightning-weapon
 name: "Lightning Weapon"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

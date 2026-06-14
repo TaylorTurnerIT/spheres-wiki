@@ -1,9 +1,5 @@
 ---
-id: "stand-still"
 name: "Stand Still"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags:
   - "zone"

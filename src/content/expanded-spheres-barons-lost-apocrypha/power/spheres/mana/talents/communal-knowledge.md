@@ -1,9 +1,5 @@
 ---
-id: communal-knowledge
 name: "Communal Knowledge"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

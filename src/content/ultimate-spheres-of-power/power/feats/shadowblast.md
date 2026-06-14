@@ -1,8 +1,5 @@
 ---
-id: shadowblast
 name: "Shadowblast"
-type: feat
-system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat

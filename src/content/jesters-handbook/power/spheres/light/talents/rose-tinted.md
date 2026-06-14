@@ -1,9 +1,5 @@
 ---
-id: rose-tinted
 name: "Rose-Tinted"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["lens"]
 ---

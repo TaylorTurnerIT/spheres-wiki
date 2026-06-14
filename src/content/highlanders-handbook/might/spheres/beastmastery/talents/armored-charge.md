@@ -1,9 +1,5 @@
 ---
-id: "armored-charge"
 name: "Armored Charge"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

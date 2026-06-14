@@ -1,9 +1,5 @@
 ---
-id: aridity
 name: Aridity
-type: talent
-system: power
-sphere: weather
 tier: basic
 tags: []
 ---

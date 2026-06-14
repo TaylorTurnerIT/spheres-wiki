@@ -1,9 +1,5 @@
 ---
-id: flowing-darkness
 name: "Flowing Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

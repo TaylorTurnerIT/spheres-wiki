@@ -1,9 +1,5 @@
 ---
-id: "contagion"
 name: "Contagion"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemy-poisons-2"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "utility"

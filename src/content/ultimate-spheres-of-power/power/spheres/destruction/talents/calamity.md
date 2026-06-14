@@ -1,9 +1,5 @@
 ---
-id: calamity
 name: "Calamity"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["blast-shape"]
 ---

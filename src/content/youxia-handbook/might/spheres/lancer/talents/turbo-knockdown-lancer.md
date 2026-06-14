@@ -1,9 +1,5 @@
 ---
-id: "turbo-knockdown-lancer"
 name: "Turbo Knockdown"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "lancer"
 tier: "advanced"
 tags: []
 ---

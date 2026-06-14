@@ -1,9 +1,5 @@
 ---
-id: automatic-fortification
 name: "Automatic Fortification"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

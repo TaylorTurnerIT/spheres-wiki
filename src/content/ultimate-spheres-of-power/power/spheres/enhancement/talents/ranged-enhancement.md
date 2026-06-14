@@ -1,9 +1,5 @@
 ---
-id: ranged-enhancement
 name: "Ranged Enhancement"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["range"]
 ---

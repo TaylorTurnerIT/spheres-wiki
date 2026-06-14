@@ -1,9 +1,5 @@
 ---
-id: "combat-hustle"
 name: "Combat Hustle"
-type: "talent"
-sourceBook: "spheres-apocrypha-tandem-talents"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

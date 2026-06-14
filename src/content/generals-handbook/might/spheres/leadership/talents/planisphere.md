@@ -1,9 +1,5 @@
 ---
-id: "planisphere"
 name: "Planisphere"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "advanced"
 tags:
   - "utility"

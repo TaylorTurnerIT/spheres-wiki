@@ -1,9 +1,5 @@
 ---
-id: "watch-my-back"
 name: "Watch My Back"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "warleader"
 tier: "advanced"
 tags:
   - "tactic"

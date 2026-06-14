@@ -1,9 +1,5 @@
 ---
-id: kinetic-field
 name: "Kinetic Field"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

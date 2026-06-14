@@ -1,8 +1,5 @@
 ---
-id: backdoor-control
 name: Backdoor Control
-type: feat
-system: power
 sphere: mind
 dualSphere: enhancement
 tier: feat

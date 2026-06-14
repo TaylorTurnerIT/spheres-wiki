@@ -1,9 +1,5 @@
 ---
-id: numb
 name: "Numb"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["still"]
 ---

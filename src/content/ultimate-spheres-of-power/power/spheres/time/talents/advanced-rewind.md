@@ -1,9 +1,5 @@
 ---
-id: advanced-rewind
 name: "Advanced Rewind"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: []
 ---

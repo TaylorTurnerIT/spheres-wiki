@@ -1,9 +1,5 @@
 ---
-id: restore-health
 name: "Restore Health"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["cure"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: the-moon
 name: "The Moon"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

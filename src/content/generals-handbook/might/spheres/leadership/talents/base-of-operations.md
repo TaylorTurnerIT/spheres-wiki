@@ -1,9 +1,5 @@
 ---
-id: "base-of-operations"
 name: "Base Of Operations"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

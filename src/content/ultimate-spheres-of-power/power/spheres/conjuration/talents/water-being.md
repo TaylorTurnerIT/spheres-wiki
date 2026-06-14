@@ -1,9 +1,5 @@
 ---
-id: water-being
 name: "Water Being"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

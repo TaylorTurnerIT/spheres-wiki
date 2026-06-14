@@ -1,9 +1,5 @@
 ---
-id: "drunken-boxer"
 name: "Drunken Boxer"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "focusing-thievery"
 name: "Focusing Thievery"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

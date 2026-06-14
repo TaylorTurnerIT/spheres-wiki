@@ -1,9 +1,5 @@
 ---
-id: "deft-motion"
 name: "Deft Motion"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "infiltration"
 tier: "basic"
 tags: []
 ---

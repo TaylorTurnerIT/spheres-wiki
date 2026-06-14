@@ -1,9 +1,5 @@
 ---
-id: "mimic-style"
 name: "Mimic Style"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "subterfuge"
 tier: "advanced"
 tags:
   - "supernatural"

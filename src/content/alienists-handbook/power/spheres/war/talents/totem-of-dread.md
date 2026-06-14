@@ -1,9 +1,5 @@
 ---
-id: totem-of-dread
 name: "Totem Of Dread"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "chair-thrower"
 name: "Chair Thrower"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

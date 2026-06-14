@@ -1,9 +1,5 @@
 ---
-id: "steady-shooting"
 name: "Steady Shooting"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

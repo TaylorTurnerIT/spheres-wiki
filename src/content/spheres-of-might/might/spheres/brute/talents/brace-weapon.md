@@ -1,9 +1,5 @@
 ---
-id: "brace-weapon"
 name: "Brace Weapon"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

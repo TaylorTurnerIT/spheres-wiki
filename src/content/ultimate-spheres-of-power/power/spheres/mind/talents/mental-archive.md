@@ -1,9 +1,5 @@
 ---
-id: mental-archive
 name: "Mental Archive"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["cognition", "utility"]
 ---

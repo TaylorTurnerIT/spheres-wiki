@@ -1,9 +1,5 @@
 ---
-id: lingering-divination
 name: "Lingering Divination"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: []
 ---

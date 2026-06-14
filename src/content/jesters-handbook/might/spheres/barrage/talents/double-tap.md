@@ -1,9 +1,5 @@
 ---
-id: "double-tap"
 name: "Double Tap"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "barrage"
 tier: "basic"
 tags:
   - "blitz"

@@ -1,9 +1,5 @@
 ---
-id: hardenweaken
 name: "Harden/Weaken"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

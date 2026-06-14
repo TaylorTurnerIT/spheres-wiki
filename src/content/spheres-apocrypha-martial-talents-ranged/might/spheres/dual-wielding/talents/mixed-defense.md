@@ -1,9 +1,5 @@
 ---
-id: "mixed-defense"
 name: "Mixed Defense"
-type: "talent"
-sourceBook: "spheres-apocrypha-martial-talents-ranged"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

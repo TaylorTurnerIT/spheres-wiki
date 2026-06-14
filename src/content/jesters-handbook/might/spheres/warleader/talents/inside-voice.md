@@ -1,9 +1,5 @@
 ---
-id: "inside-voice"
 name: "Inside Voice"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

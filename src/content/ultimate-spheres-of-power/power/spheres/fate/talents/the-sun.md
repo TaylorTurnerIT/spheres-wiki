@@ -1,9 +1,5 @@
 ---
-id: the-sun
 name: "The Sun"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

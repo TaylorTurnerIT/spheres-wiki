@@ -1,9 +1,5 @@
 ---
-id: "degenerating-poison"
 name: "Degenerating Poison"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-poisons"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

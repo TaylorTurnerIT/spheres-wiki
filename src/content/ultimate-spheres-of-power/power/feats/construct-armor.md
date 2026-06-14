@@ -1,8 +1,5 @@
 ---
-id: construct-armor
 name: "Construct Armor"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

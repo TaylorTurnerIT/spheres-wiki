@@ -1,9 +1,5 @@
 ---
-id: "tracking-expert"
 name: "Tracking Expert"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "utility"

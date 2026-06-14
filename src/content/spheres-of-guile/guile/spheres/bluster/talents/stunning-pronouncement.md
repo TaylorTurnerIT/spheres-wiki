@@ -1,9 +1,5 @@
 ---
-id: "stunning-pronouncement"
 name: "Stunning Pronouncement"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

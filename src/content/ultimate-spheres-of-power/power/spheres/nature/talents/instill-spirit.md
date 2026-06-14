@@ -1,9 +1,5 @@
 ---
-id: instill-spirit
 name: "Instill Spirit"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["instill"]
 ---

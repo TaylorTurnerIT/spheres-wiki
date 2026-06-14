@@ -1,9 +1,5 @@
 ---
-id: "strong-lungs"
 name: "Strong Lungs"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "run"

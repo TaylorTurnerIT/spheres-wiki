@@ -1,8 +1,5 @@
 ---
-id: surreal-strike
 name: "Surreal Strike"
-type: feat
-system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat

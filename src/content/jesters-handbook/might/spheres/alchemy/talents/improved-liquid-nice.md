@@ -1,9 +1,5 @@
 ---
-id: "improved-liquid-nice"
 name: "Improved Liquid Nice"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

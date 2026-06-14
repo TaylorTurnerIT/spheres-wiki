@@ -1,8 +1,6 @@
 ---
-id: hypnotism-su
 name: "Hypnotism (Su)"
 type: class-feature
-system: power
 className: eliciter
 level: 4
 tags: []

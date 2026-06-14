@@ -1,9 +1,5 @@
 ---
-id: metaphysical-cloak
 name: "Metaphysical Cloak"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["word"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: close-formation
 name: "Close Formation"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

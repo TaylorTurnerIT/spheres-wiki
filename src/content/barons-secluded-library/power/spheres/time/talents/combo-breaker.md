@@ -1,9 +1,5 @@
 ---
-id: combo-breaker
 name: "Combo Breaker"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["sm"]
 ---

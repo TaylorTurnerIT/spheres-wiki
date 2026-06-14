@@ -1,9 +1,5 @@
 ---
-id: redeployment
 name: "Redeployment"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

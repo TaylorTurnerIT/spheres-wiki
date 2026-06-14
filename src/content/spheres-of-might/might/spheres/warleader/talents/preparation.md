@@ -1,9 +1,5 @@
 ---
-id: "preparation"
 name: "Preparation"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "tactic"

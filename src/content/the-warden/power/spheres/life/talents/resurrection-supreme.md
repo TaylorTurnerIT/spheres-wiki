@@ -1,9 +1,5 @@
 ---
-id: resurrection-supreme
 name: "Resurrection, Supreme"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: ["warden"]
 ---

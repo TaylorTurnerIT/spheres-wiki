@@ -1,9 +1,5 @@
 ---
-id: "terrain-glide"
 name: "Terrain Glide"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "swim"

@@ -1,10 +1,6 @@
 ---
-id: mageknight-chivalry
 name: "Chivalry"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 requires: "Resist Magic class feature, War sphere"
 ---

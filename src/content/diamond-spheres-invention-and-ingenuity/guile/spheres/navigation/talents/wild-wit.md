@@ -1,9 +1,5 @@
 ---
-id: "wild-wit"
 name: "Wild Wit"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "acclimation"

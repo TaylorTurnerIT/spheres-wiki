@@ -1,9 +1,5 @@
 ---
-id: "soliloquy-of-rusted-masks"
 name: "Soliloquy Of Rusted Masks"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "act"

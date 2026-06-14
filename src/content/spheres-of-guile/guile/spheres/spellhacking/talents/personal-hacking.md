@@ -1,9 +1,5 @@
 ---
-id: "personal-hacking"
 name: "Personal Hacking"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "base"
 tags:
   - "package"

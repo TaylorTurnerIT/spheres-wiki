@@ -1,9 +1,5 @@
 ---
-id: tremorsense
 name: "Tremorsense"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

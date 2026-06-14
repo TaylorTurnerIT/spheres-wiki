@@ -1,9 +1,5 @@
 ---
-id: "roaming-patrol"
 name: "Roaming Patrol"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

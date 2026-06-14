@@ -1,9 +1,5 @@
 ---
-id: "energy-surge"
 name: "Energy Surge"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "mishap"

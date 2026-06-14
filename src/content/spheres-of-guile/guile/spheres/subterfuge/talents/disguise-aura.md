@@ -1,9 +1,5 @@
 ---
-id: "disguise-aura"
 name: "Disguise Aura"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "advanced"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: "wand-supply"
 name: "Wand Supply"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

@@ -1,9 +1,5 @@
 ---
-id: vog
 name: "Vog"
-type: talent
-system: power
-sphere: weather
 tier: basic
 tags: []
 ---

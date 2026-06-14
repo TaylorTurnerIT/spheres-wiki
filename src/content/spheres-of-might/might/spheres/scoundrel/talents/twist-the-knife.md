@@ -1,9 +1,5 @@
 ---
-id: "twist-the-knife"
 name: "Twist The Knife"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

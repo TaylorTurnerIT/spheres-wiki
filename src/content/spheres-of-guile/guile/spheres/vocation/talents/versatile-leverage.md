@@ -1,9 +1,5 @@
 ---
-id: "versatile-leverage"
 name: "Versatile Leverage"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: "follow-through"
 name: "Follow-Through"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

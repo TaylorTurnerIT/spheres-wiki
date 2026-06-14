@@ -1,9 +1,5 @@
 ---
-id: "baffling-revelation"
 name: "Baffling Revelation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "base"
 tags: []
 ---

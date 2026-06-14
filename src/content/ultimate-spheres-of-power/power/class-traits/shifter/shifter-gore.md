@@ -1,10 +1,6 @@
 ---
-id: shifter-gore
 name: "Gore"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

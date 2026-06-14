@@ -1,8 +1,5 @@
 ---
-id: venomous-focus
 name: "Venomous Focus"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

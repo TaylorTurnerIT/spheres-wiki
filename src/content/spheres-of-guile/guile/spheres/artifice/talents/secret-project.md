@@ -1,9 +1,5 @@
 ---
-id: "secret-project"
 name: "Secret Project"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "plan"

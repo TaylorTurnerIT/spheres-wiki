@@ -1,9 +1,5 @@
 ---
-id: "impassable-defense"
 name: "Impassable Defense"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

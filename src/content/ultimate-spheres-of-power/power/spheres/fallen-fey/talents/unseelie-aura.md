@@ -1,9 +1,5 @@
 ---
-id: unseelie-aura
 name: "Unseelie Aura"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

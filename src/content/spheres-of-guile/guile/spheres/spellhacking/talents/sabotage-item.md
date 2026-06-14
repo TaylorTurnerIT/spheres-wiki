@@ -1,9 +1,5 @@
 ---
-id: "sabotage-item"
 name: "Sabotage Item"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

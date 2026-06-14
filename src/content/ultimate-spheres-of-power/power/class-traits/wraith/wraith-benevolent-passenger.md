@@ -1,10 +1,6 @@
 ---
-id: wraith-benevolent-passenger
 name: "Benevolent Passenger"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

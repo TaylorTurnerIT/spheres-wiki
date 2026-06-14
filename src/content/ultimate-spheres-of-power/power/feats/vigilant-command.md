@@ -1,8 +1,5 @@
 ---
-id: vigilant-command
 name: "Vigilant Command"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

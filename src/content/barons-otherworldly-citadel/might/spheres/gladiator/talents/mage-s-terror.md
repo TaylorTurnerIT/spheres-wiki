@@ -1,9 +1,5 @@
 ---
-id: "mage-s-terror"
 name: "Mage’s Terror"
-type: "talent"
-sourceBook: "barons-otherworldly-citadel"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

@@ -1,9 +1,5 @@
 ---
-id: committed-deception
 name: "Committed Deception"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

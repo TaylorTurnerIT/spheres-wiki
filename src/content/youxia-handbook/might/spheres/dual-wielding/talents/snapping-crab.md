@@ -1,9 +1,5 @@
 ---
-id: "snapping-crab"
 name: "Snapping Crab"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "dual-wielding"
 tier: "basic"
 tags:
   - "stance"

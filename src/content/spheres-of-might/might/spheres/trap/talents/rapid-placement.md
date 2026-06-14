@@ -1,9 +1,5 @@
 ---
-id: "rapid-placement"
 name: "Rapid Placement"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

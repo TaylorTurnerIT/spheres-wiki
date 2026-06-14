@@ -1,8 +1,5 @@
 ---
-id: dark-portal
 name: "Dark Portal"
-type: feat
-system: power
 sphere: dark
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "reconstruct-dweomer"
 name: "Reconstruct Dweomer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags: []
 ---

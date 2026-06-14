@@ -1,8 +1,5 @@
 ---
-id: "bluster"
 name: "Bluster"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "bluster"
 tags: []
 sectionDefinitions:

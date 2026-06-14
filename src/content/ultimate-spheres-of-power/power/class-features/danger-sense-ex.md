@@ -1,8 +1,6 @@
 ---
-id: danger-sense-ex
 name: "Danger Sense (Ex)"
 type: class-feature
-system: power
 className: symbiat
 level: 3
 tags: []

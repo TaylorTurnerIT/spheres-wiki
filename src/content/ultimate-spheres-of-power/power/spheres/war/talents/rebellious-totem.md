@@ -1,9 +1,5 @@
 ---
-id: rebellious-totem
 name: "Rebellious Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

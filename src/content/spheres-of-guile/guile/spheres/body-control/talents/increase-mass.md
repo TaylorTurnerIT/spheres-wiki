@@ -1,9 +1,5 @@
 ---
-id: "increase-mass"
 name: "Increase Mass"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags:
   - "clarity"

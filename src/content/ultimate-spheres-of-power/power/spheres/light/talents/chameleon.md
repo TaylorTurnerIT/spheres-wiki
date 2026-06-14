@@ -1,9 +1,5 @@
 ---
-id: chameleon
 name: "Chameleon"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["extraordinary", "lens"]
 ---

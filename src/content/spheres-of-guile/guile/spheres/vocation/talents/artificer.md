@@ -1,9 +1,5 @@
 ---
-id: "artificer"
 name: "Artificer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

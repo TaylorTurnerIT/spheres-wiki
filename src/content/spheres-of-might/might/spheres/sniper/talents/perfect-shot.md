@@ -1,9 +1,5 @@
 ---
-id: "perfect-shot"
 name: "Perfect Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags: []
 ---

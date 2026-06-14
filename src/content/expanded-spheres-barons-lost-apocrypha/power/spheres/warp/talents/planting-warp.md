@@ -1,9 +1,5 @@
 ---
-id: planting-warp
 name: "Planting Warp"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

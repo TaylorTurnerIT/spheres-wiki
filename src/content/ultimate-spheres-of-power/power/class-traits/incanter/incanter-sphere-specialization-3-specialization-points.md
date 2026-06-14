@@ -1,10 +1,6 @@
 ---
-id: incanter-sphere-specialization-3-specialization-points
 name: "Sphere Specialization (3 specialization points)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: incanter-specializations
 ---
 

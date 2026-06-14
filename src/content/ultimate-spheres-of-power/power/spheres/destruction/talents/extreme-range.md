@@ -1,9 +1,5 @@
 ---
-id: extreme-range
 name: "Extreme Range"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: []
 ---

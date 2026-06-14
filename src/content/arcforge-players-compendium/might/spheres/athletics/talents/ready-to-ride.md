@@ -1,9 +1,5 @@
 ---
-id: "ready-to-ride"
 name: "Ready To Ride"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

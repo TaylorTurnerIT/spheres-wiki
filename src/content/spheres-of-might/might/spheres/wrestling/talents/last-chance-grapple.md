@@ -1,9 +1,5 @@
 ---
-id: "last-chance-grapple"
 name: "Last Chance Grapple"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

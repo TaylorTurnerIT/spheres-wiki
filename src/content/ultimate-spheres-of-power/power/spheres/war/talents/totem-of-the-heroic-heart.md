@@ -1,9 +1,5 @@
 ---
-id: totem-of-the-heroic-heart
 name: "Totem Of The Heroic Heart"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

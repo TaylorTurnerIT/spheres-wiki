@@ -1,9 +1,5 @@
 ---
-id: supply-vigor
 name: "Supply Vigor"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

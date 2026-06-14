@@ -1,8 +1,5 @@
 ---
-id: blood-potion
 name: "Blood Potion"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: distinct-kin
 name: "Distinct Kin"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

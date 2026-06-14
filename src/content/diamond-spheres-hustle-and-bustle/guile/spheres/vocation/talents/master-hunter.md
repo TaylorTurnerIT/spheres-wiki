@@ -1,9 +1,5 @@
 ---
-id: "master-hunter"
 name: "Master Hunter"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags: []
 ---

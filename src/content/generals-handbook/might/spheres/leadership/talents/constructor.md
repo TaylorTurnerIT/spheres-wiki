@@ -1,9 +1,5 @@
 ---
-id: "constructor"
 name: "Constructor"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "advanced"
 tags:
   - "cohort"

@@ -1,9 +1,5 @@
 ---
-id: "dabbler-retainer"
 name: "Dabbler Retainer"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "faction"
 tier: "basic"
 tags:
   - "retainer"

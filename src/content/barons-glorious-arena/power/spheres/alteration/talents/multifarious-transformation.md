@@ -1,9 +1,5 @@
 ---
-id: multifarious-transformation
 name: "Multifarious Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

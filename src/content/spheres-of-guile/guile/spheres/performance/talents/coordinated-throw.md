@@ -1,9 +1,5 @@
 ---
-id: "coordinated-throw"
 name: "Coordinated Throw"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

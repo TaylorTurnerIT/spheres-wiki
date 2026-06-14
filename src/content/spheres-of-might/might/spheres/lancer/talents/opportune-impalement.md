@@ -1,9 +1,5 @@
 ---
-id: "opportune-impalement"
 name: "Opportune Impalement"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: feast-and-famine
 name: "Feast And Famine"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

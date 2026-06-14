@@ -1,9 +1,5 @@
 ---
-id: "titan-s-shield"
 name: "Titan’s Shield"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

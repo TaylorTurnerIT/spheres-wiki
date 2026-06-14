@@ -1,9 +1,5 @@
 ---
-id: "coward-s-bane"
 name: "Coward’s Bane"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

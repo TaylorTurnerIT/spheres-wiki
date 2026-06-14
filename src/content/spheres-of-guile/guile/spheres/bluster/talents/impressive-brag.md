@@ -1,9 +1,5 @@
 ---
-id: "impressive-brag"
 name: "Impressive Brag"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

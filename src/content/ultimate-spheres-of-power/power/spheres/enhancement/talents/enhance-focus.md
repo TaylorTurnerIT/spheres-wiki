@@ -1,9 +1,5 @@
 ---
-id: enhance-focus
 name: "Enhance Focus"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

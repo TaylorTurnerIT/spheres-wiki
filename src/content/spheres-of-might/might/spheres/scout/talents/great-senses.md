@@ -1,9 +1,5 @@
 ---
-id: "great-senses"
 name: "Great Senses"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags:
   - "utility"

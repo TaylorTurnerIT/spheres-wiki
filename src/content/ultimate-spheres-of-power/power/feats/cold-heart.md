@@ -1,8 +1,5 @@
 ---
-id: cold-heart
 name: "Cold Heart"
-type: feat
-system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat

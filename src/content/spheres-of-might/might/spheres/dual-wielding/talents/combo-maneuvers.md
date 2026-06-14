@@ -1,9 +1,5 @@
 ---
-id: "combo-maneuvers"
 name: "Combo Maneuvers"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

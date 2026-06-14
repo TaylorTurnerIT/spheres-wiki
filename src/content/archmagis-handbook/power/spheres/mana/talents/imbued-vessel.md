@@ -1,9 +1,5 @@
 ---
-id: imbued-vessel
 name: "Imbued Vessel"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["manipulation"]
 ---

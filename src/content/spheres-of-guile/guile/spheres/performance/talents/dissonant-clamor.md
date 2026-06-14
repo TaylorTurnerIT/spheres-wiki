@@ -1,9 +1,5 @@
 ---
-id: "dissonant-clamor"
 name: "Dissonant Clamor"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

@@ -1,9 +1,5 @@
 ---
-id: "bound-retainer"
 name: "Bound Retainer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "retainer"

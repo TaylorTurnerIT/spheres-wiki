@@ -1,9 +1,5 @@
 ---
-id: internal-propulsion
 name: "Internal Propulsion"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["blood-art", "quicken"]
 ---

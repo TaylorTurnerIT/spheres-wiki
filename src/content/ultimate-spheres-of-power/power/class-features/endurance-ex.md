@@ -1,8 +1,6 @@
 ---
-id: endurance-ex
 name: "Endurance (Ex)"
 type: class-feature
-system: power
 className: shifter
 level: 3
 tags: []

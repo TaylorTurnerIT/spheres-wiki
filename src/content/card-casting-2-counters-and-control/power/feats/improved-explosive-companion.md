@@ -1,8 +1,5 @@
 ---
-id: improved-explosive-companion
 name: "Improved Explosive Companion"
-type: feat
-system: power
 sphere: conjuration
 tags: []
 tier: feat

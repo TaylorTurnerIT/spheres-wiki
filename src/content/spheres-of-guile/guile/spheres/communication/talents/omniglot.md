@@ -1,9 +1,5 @@
 ---
-id: "omniglot"
 name: "Omniglot"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "advanced"
 tags:
   - "utility"

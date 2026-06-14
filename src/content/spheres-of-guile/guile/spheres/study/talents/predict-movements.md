@@ -1,9 +1,5 @@
 ---
-id: "predict-movements"
 name: "Predict Movements"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "theory"

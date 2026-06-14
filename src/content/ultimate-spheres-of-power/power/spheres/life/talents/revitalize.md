@@ -1,9 +1,5 @@
 ---
-id: revitalize
 name: "Revitalize"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

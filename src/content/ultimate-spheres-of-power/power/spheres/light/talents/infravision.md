@@ -1,9 +1,5 @@
 ---
-id: infravision
 name: "Infravision"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["lens"]
 ---

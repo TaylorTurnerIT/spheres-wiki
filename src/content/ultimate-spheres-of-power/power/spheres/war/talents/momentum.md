@@ -1,9 +1,5 @@
 ---
-id: momentum
 name: Momentum
-type: talent
-system: power
-sphere: war
 tier: basic
 tags: []
 ---

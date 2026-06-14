@@ -1,9 +1,5 @@
 ---
-id: "planar-shortcut"
 name: "Planar Shortcut"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "supernatural"

@@ -1,9 +1,5 @@
 ---
-id: "suppressive-rush"
 name: "Suppressive Rush"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

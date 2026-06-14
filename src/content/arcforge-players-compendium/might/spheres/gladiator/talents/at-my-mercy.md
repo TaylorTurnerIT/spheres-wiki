@@ -1,9 +1,5 @@
 ---
-id: "at-my-mercy"
 name: "At My Mercy"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "fancy-footwork"
 name: "Fancy Footwork"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "trick"

@@ -1,9 +1,5 @@
 ---
-id: "philosopher-s-stone"
 name: "Philosopher’s Stone"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "formulae"

@@ -1,9 +1,5 @@
 ---
-id: crippling-strike
 name: "Crippling Strike"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["strike"]
 ---

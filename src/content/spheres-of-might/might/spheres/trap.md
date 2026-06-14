@@ -1,8 +1,5 @@
 ---
-id: "trap"
 name: "Trap"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "trap"
 tags: []
 sectionDefinitions:

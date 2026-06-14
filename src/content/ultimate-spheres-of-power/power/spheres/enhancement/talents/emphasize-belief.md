@@ -1,9 +1,5 @@
 ---
-id: emphasize-belief
 name: "Emphasize Belief"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

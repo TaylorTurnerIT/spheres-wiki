@@ -1,8 +1,5 @@
 ---
-id: constellation
 name: "Constellation"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

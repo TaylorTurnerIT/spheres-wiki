@@ -1,9 +1,5 @@
 ---
-id: "heart-to-heart"
 name: "Heart To Heart"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: "archery-bash"
 name: "Archery Bash"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

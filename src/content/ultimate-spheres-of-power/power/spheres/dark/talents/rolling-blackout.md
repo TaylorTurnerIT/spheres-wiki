@@ -1,9 +1,5 @@
 ---
-id: rolling-blackout
 name: "Rolling Blackout"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["control"]
 ---

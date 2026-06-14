@@ -1,9 +1,5 @@
 ---
-id: "steal-talent"
 name: "Steal Talent"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "armor-training"
 name: "Armor Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

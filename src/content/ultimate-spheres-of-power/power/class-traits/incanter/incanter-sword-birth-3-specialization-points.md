@@ -1,10 +1,6 @@
 ---
-id: incanter-sword-birth-3-specialization-points
 name: "Sword Birth (3 specialization points)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: incanter-specializations
 ---
 

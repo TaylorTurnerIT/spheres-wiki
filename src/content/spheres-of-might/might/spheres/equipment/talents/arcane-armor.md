@@ -1,9 +1,5 @@
 ---
-id: "arcane-armor"
 name: "Arcane Armor"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

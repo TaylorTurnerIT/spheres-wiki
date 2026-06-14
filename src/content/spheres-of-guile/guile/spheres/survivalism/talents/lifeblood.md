@@ -1,9 +1,5 @@
 ---
-id: "lifeblood"
 name: "Lifeblood"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "harvest"

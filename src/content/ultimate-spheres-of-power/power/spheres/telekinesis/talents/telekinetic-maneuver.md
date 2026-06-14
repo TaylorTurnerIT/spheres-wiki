@@ -1,9 +1,5 @@
 ---
-id: telekinetic-maneuver
 name: "Telekinetic Maneuver"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

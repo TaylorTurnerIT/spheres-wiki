@@ -1,9 +1,5 @@
 ---
-id: destructive-verticality
 name: "Destructive Verticality"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["sm"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: rain-lord
 name: "Rain Lord"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

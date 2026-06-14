@@ -1,9 +1,5 @@
 ---
-id: "improvised-martial-arts"
 name: "Improvised Martial Arts"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "stance"

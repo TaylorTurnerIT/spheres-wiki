@@ -1,9 +1,5 @@
 ---
-id: "speakeasy-special"
 name: "Speakeasy Special"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

@@ -1,9 +1,5 @@
 ---
-id: rapid-growth
 name: "Rapid Growth"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["plant", "geomancing"]
 ---

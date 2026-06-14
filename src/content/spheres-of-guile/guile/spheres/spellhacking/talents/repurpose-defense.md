@@ -1,9 +1,5 @@
 ---
-id: "repurpose-defense"
 name: "Repurpose Defense"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

@@ -1,9 +1,5 @@
 ---
-id: resurrection
 name: "Resurrection"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: []
 ---

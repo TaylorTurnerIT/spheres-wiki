@@ -1,9 +1,5 @@
 ---
-id: teleport
 name: "Teleport"
-system: power
-type: talent
-sphere: warp
 tier: base
 tags: []
 ---

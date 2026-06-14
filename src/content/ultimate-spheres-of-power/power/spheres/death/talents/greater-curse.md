@@ -1,9 +1,5 @@
 ---
-id: greater-curse
 name: "Greater Curse"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

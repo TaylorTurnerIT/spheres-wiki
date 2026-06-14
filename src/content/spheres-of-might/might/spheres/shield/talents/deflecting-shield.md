@@ -1,9 +1,5 @@
 ---
-id: "deflecting-shield"
 name: "Deflecting Shield"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

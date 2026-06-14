@@ -1,9 +1,5 @@
 ---
-id: tentacles
 name: "Tentacles"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

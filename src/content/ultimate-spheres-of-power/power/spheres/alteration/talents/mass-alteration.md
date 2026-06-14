@@ -1,9 +1,5 @@
 ---
-id: mass-alteration
 name: "Mass Alteration"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["mass"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "expanded-training"
 name: "Expanded Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "slapper"
 name: "Slapper"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

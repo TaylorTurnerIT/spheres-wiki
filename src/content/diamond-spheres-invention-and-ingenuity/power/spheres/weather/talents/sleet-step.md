@@ -1,9 +1,5 @@
 ---
-id: sleet-step
 name: "Sleet Step"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "snow"]
 ---

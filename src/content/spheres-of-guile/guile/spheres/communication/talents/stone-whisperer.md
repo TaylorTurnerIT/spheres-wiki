@@ -1,9 +1,5 @@
 ---
-id: "stone-whisperer"
 name: "Stone Whisperer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "advanced"
 tags:
   - "rapport"

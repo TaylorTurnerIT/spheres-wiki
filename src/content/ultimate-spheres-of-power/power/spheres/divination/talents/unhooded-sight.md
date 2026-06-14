@@ -1,9 +1,5 @@
 ---
-id: unhooded-sight
 name: "Unhooded Sight"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

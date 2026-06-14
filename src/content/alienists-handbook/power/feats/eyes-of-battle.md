@@ -1,8 +1,5 @@
 ---
-id: eyes-of-battle
 name: Eyes Of Battle
-type: feat
-system: power
 sphere: war
 dualSphere: divination
 tier: feat

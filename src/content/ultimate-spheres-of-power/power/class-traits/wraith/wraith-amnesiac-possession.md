@@ -1,10 +1,6 @@
 ---
-id: wraith-amnesiac-possession
 name: "Amnesiac Possession"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

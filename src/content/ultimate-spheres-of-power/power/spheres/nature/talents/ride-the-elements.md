@@ -1,9 +1,5 @@
 ---
-id: ride-the-elements
 name: "Ride The Elements"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

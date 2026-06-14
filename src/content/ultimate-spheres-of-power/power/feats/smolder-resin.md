@@ -1,8 +1,5 @@
 ---
-id: smolder-resin
 name: "Smolder Resin"
-type: feat
-system: power
 sphere: nature
 tags: []
 tier: feat

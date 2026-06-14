@@ -1,9 +1,5 @@
 ---
-id: animate-object
 name: "Animate Object"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

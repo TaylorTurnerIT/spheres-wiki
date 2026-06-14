@@ -1,9 +1,5 @@
 ---
-id: assurance-of-the-future
 name: "Assurance of the Future"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["sm"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "cautious-tread"
 name: "Cautious Tread"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "pathing"

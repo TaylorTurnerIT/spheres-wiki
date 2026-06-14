@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "motion"
 label: "Motion"
 sphere: "athletics"
 priority: 0

@@ -1,9 +1,5 @@
 ---
-id: penetrating-totems
 name: "Penetrating Totems"
-system: power
-type: talent
-sphere: war
 tier: advanced
 tags: []
 ---

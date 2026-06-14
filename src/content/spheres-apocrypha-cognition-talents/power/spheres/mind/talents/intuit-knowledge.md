@@ -1,9 +1,5 @@
 ---
-id: intuit-knowledge
 name: "Intuit Knowledge"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["cognition", "utility"]
 ---

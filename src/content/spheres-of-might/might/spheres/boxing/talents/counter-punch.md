@@ -1,9 +1,6 @@
 ---
-id: "counter-punch"
 name: "Counter Punch"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

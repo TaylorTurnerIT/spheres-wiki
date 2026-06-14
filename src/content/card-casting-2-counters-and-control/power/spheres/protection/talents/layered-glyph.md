@@ -1,9 +1,5 @@
 ---
-id: layered-glyph
 name: "Layered Glyph"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

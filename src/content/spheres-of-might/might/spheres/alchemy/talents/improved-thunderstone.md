@@ -1,9 +1,5 @@
 ---
-id: "improved-thunderstone"
 name: "Improved Thunderstone"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

@@ -1,9 +1,5 @@
 ---
-id: gale-blast
 name: "Gale Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["air", "blast-type"]
 ---

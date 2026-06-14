@@ -1,9 +1,5 @@
 ---
-id: "lashing-serpent"
 name: "Lashing Serpent"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "stance"

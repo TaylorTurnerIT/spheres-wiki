@@ -1,9 +1,5 @@
 ---
-id: "rift-strike-universal"
 name: "Rift Strike, Universal"
-type: "talent"
-sourceBook: "realmwalkers-handbook"
-sphere: "berserker"
 tier: "advanced"
 tags: []
 ---

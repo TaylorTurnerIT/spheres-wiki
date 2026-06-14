@@ -1,9 +1,5 @@
 ---
-id: hostile-lift
 name: "Hostile Lift"
-type: talent
-system: power
-sphere: telekinesis
 tier: basic
 tags: []
 ---

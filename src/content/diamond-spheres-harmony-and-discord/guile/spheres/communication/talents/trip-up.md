@@ -1,9 +1,5 @@
 ---
-id: "trip-up"
 name: "Trip Up"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

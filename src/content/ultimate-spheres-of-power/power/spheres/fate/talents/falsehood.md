@@ -1,9 +1,5 @@
 ---
-id: falsehood
 name: "Falsehood"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["curse", "utility", "word"]
 ---

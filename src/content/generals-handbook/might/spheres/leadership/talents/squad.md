@@ -1,9 +1,5 @@
 ---
-id: "squad"
 name: "Squad"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

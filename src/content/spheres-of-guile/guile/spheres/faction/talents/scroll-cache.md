@@ -1,9 +1,5 @@
 ---
-id: "scroll-cache"
 name: "Scroll Cache"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

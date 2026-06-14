@@ -1,9 +1,5 @@
 ---
-id: combat-inertia
 name: "Combat Inertia"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

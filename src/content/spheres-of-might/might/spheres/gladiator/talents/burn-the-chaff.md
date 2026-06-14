@@ -1,9 +1,5 @@
 ---
-id: "burn-the-chaff"
 name: "Burn The Chaff"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "advanced"
 tags: []
 ---

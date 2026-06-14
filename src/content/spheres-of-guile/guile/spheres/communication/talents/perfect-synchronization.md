@@ -1,9 +1,5 @@
 ---
-id: "perfect-synchronization"
 name: "Perfect Synchronization"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

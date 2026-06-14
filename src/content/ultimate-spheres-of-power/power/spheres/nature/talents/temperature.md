@@ -1,9 +1,5 @@
 ---
-id: temperature
 name: "Temperature"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["fire", "geomancing"]
 ---

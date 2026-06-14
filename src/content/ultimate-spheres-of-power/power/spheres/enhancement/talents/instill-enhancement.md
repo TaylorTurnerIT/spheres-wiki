@@ -1,9 +1,5 @@
 ---
-id: instill-enhancement
 name: "Instill Enhancement"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["instill"]
 ---

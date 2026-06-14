@@ -1,9 +1,5 @@
 ---
-id: "conflagrant-cluster"
 name: "Conflagrant Cluster"
-system: "power"
-sourceBook: "card-casting-3-volatile-variance"
-type: "talent"
 sphere: "destruction"
 tier: "advanced"
 tags: []

@@ -1,10 +1,6 @@
 ---
-id: symbiat-share-expertise
 name: "Share Expertise"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

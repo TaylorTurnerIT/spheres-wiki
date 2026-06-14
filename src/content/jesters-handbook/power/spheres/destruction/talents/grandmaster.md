@@ -1,9 +1,5 @@
 ---
-id: grandmaster
 name: "Grandmaster"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: []
 ---

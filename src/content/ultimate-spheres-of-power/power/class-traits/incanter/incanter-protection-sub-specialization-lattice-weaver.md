@@ -1,10 +1,6 @@
 ---
-id: incanter-protection-sub-specialization-lattice-weaver
 name: "Protection Sub-Specialization: Lattice Weaver"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: list-of-sphere-specializations
 ---
 

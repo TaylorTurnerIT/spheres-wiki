@@ -1,7 +1,5 @@
 ---
-id: relentless
 name: Relentless
-className: courser
 level: 5
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: crimson-theurgy
 name: Crimson Theurgy
-type: feat
-system: power
 sphere: death
 dualSphere: blood
 tier: feat

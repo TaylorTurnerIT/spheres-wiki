@@ -1,7 +1,5 @@
 ---
-id: courser-thaumic-disruption
 name: Thaumic Disruption
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 6"

@@ -1,9 +1,5 @@
 ---
-id: "heavy-counter"
 name: "Heavy Counter"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

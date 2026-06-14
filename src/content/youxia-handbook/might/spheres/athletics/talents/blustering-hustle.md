@@ -1,9 +1,5 @@
 ---
-id: "blustering-hustle"
 name: "Blustering Hustle"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "motion"

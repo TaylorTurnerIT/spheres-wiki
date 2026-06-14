@@ -1,8 +1,5 @@
 ---
-id: arcing-strike
 name: "Arcing Strike"
-type: feat
-system: power
 sphere: divination
 tags: ["combat"]
 tier: feat

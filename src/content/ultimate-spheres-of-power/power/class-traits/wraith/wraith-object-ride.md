@@ -1,10 +1,6 @@
 ---
-id: wraith-object-ride
 name: "Object Ride"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

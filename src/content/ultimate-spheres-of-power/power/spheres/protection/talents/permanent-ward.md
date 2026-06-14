@@ -1,9 +1,5 @@
 ---
-id: permanent-ward
 name: "Permanent Ward"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

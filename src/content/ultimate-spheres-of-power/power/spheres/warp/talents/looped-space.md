@@ -1,9 +1,5 @@
 ---
-id: looped-space
 name: "Looped Space"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

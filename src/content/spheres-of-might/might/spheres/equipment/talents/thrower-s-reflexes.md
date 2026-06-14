@@ -1,9 +1,5 @@
 ---
-id: "thrower-s-reflexes"
 name: "Thrower’s Reflexes"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

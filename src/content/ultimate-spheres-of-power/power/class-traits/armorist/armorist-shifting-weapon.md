@@ -1,10 +1,6 @@
 ---
-id: armorist-shifting-weapon
 name: "Shifting Weapon"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

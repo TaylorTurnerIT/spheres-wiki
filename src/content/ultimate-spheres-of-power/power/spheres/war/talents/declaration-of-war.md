@@ -1,9 +1,5 @@
 ---
-id: declaration-of-war
 name: "Declaration Of War"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

@@ -1,8 +1,6 @@
 ---
-id: link-su
 name: "Link (Su)"
 type: class-feature
-system: power
 className: eliciter
 level: 15
 tags: []

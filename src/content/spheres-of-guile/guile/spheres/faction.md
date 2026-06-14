@@ -1,8 +1,5 @@
 ---
-id: "faction"
 name: "Faction"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "faction"
 tags: []
 sectionDefinitions:

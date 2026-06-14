@@ -1,9 +1,5 @@
 ---
-id: temporal-trap
 name: "Temporal Trap"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: []
 ---

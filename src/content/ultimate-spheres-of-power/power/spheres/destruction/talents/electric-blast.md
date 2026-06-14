@@ -1,9 +1,5 @@
 ---
-id: electric-blast
 name: "Electric Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "electricity"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: avert
 name: "Avert"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: manifestation
 name: "Manifestation"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["companion"]
 ---

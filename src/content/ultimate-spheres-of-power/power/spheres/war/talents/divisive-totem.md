@@ -1,9 +1,5 @@
 ---
-id: divisive-totem
 name: "Divisive Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

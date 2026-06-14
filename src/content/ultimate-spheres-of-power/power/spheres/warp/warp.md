@@ -1,8 +1,5 @@
 ---
-id: warp
 name: "Warp"
-system: power
-type: sphere
 icon: warp
 description: "You can twist space to your whim."
 tags: []

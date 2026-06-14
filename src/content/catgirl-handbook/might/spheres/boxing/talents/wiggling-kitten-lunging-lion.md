@@ -1,9 +1,5 @@
 ---
-id: "wiggling-kitten-lunging-lion"
 name: "Wiggling Kitten, Lunging Lion"
-type: "talent"
-sourceBook: "catgirl-handbook"
-sphere: "boxing"
 tier: "advanced"
 tags:
   - "stance"

@@ -1,9 +1,5 @@
 ---
-id: "instant-loophole"
 name: "Instant Loophole"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

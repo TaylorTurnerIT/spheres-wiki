@@ -1,9 +1,5 @@
 ---
-id: "liver-shot"
 name: "Liver Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "counter"

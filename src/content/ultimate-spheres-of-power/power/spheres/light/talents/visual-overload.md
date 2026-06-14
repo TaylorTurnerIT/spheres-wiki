@@ -1,9 +1,5 @@
 ---
-id: visual-overload
 name: "Visual Overload"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

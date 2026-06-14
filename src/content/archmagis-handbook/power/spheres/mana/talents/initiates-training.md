@@ -1,9 +1,5 @@
 ---
-id: initiates-training
 name: "Initiate's Training"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["amp", "manipulation"]
 ---

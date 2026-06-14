@@ -1,8 +1,5 @@
 ---
-id: telekineticat
 name: "Telekineticat"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat

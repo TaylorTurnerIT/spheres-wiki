@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "boast"
 label: "Boast"
 color: "#4A235A"
 priority: 0

@@ -1,9 +1,5 @@
 ---
-id: "tandem-disarm"
 name: "Tandem Disarm"
-type: "talent"
-sourceBook: "spheres-apocrypha-tandem-talents"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

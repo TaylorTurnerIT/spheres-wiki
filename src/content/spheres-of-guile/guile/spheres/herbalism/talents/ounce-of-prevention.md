@@ -1,9 +1,5 @@
 ---
-id: "ounce-of-prevention"
 name: "Ounce Of Prevention"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags: []
 ---

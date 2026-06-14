@@ -1,9 +1,5 @@
 ---
-id: inflict-disease
 name: "Inflict Disease"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike"]
 ---

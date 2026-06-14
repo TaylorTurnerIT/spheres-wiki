@@ -1,9 +1,5 @@
 ---
-id: "wondrous-item-supply"
 name: "Wondrous Item Supply"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

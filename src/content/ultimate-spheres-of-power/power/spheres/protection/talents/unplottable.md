@@ -1,9 +1,5 @@
 ---
-id: unplottable
 name: "Unplottable"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: ["aegis"]
 ---

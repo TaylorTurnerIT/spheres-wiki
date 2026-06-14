@@ -1,7 +1,5 @@
 ---
-id: unyielding
 name: Unyielding
-className: courser
 level: 15
 tags: []
 ---

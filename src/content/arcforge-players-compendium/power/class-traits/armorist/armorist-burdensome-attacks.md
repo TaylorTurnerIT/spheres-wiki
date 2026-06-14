@@ -1,10 +1,6 @@
 ---
-id: armorist-burdensome-attacks
 name: "Burdensome Attacks"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

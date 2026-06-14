@@ -1,9 +1,5 @@
 ---
-id: intensity-control
 name: "Intensity Control"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

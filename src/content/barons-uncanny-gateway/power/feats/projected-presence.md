@@ -1,8 +1,5 @@
 ---
-id: projected-presence
 name: "Projected Presence"
-type: feat
-system: power
 sphere: illusion
 dualSphere: divination
 tags: ["sm"]

@@ -1,10 +1,6 @@
 ---
-id: shifter-spider-climb
 name: "Spider Climb"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: gift-that-keeps-on-giving
 name: "Gift That Keeps on Giving"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

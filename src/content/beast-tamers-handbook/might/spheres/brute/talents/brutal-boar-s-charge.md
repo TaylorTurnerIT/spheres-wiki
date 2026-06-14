@@ -1,9 +1,5 @@
 ---
-id: "brutal-boar-s-charge"
 name: "Brutal Boar’s Charge"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

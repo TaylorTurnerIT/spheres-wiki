@@ -1,9 +1,5 @@
 ---
-id: "winding-blow"
 name: "Winding Blow"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "counter"

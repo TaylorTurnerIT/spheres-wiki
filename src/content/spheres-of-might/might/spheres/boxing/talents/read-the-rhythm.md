@@ -1,9 +1,5 @@
 ---
-id: "read-the-rhythm"
 name: "Read the Rhythm"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "utility"

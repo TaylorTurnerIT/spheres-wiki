@@ -1,9 +1,5 @@
 ---
-id: what-is-it-good-for
 name: "What Is It Good For?"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

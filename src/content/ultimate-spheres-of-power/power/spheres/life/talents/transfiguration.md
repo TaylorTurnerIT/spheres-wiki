@@ -1,9 +1,5 @@
 ---
-id: transfiguration
 name: "Transfiguration"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: []
 ---

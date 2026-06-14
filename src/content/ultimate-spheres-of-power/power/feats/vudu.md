@@ -1,8 +1,5 @@
 ---
-id: vudu
 name: Vudu
-type: feat
-system: power
 sphere: illusion
 dualSphere: death
 tier: feat

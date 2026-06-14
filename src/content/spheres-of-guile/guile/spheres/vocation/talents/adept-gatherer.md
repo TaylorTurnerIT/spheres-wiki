@@ -1,9 +1,5 @@
 ---
-id: "adept-gatherer"
 name: "Adept Gatherer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

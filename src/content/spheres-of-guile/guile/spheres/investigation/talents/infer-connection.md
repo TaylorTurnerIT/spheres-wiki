@@ -1,9 +1,5 @@
 ---
-id: "infer-connection"
 name: "Infer Connection"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

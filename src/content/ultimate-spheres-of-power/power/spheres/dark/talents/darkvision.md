@@ -1,9 +1,5 @@
 ---
-id: darkvision
 name: "Darkvision"
-type: talent
-system: power
-sphere: dark
 tier: base
 tags: ["auxiliary", "extraordinary", "meld"]
 ---

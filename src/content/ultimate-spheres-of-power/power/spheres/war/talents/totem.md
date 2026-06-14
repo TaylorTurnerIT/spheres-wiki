@@ -1,9 +1,5 @@
 ---
-id: totem
 name: Totem
-system: power
-type: talent
-sphere: war
 tier: base
 tags: []
 ---

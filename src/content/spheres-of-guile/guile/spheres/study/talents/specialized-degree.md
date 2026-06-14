@@ -1,9 +1,5 @@
 ---
-id: "specialized-degree"
 name: "Specialized Degree"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "base"
 tags:
   - "package"

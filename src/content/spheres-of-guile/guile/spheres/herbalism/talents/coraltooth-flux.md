@@ -1,9 +1,5 @@
 ---
-id: "coraltooth-flux"
 name: "Coraltooth Flux"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "advanced"
 tags:
   - "tonic"

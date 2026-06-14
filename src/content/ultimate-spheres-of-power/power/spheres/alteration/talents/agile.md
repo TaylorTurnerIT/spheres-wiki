@@ -1,9 +1,5 @@
 ---
-id: agile
 name: "Agile"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

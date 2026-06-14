@@ -1,9 +1,5 @@
 ---
-id: telekinesis
 name: Telekinesis
-system: power
-type: talent
-sphere: telekinesis
 tier: base
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "snap-toss"
 name: "Snap Toss"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

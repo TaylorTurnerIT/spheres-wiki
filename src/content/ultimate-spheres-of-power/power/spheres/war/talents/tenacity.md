@@ -1,9 +1,5 @@
 ---
-id: tenacity
 name: "Tenacity"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mandate"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: increased-range
 name: "Increased Range"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: ["range"]
 ---

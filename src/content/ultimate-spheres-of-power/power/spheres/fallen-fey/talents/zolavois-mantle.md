@@ -1,9 +1,5 @@
 ---
-id: zolavois-mantle
 name: "Zolavoi's Mantle"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

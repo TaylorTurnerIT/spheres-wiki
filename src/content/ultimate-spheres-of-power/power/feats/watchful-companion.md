@@ -1,8 +1,5 @@
 ---
-id: watchful-companion
 name: "Watchful Companion"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

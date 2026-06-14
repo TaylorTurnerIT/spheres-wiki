@@ -1,9 +1,5 @@
 ---
-id: "disruptive-acoustics"
 name: "Disruptive Acoustics"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "instrumental"

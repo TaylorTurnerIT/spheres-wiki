@@ -1,9 +1,5 @@
 ---
-id: "bouncing-shot"
 name: "Bouncing Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags:
   - "snipe"

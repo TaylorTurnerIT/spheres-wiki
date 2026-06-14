@@ -1,9 +1,5 @@
 ---
-id: additional-limbs
 name: "Additional Limbs"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

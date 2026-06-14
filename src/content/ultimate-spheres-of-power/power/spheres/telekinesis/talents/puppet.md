@@ -1,9 +1,5 @@
 ---
-id: puppet
 name: "Puppet"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

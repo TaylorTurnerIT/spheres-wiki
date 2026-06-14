@@ -1,10 +1,5 @@
 ---
-id: magic-replication
 name: "Magic Replication"
-system: power
-type: talent
-sourceBook: "card-casting-2-counters-and-control"
-sphere: mana
 tier: advanced
 tags: ["amp", "manipulation"]
 ---

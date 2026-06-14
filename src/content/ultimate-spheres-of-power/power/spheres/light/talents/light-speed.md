@@ -1,9 +1,5 @@
 ---
-id: light-speed
 name: "Light Speed"
-system: power
-type: talent
-sphere: light
 tier: advanced
 tags: []
 ---

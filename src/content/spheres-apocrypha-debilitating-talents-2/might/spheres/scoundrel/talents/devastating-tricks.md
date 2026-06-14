@@ -1,9 +1,5 @@
 ---
-id: "devastating-tricks"
 name: "Devastating Tricks"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents-2"
-sphere: "scoundrel"
 tier: "basic"
 tags: ["trick"]
 ---

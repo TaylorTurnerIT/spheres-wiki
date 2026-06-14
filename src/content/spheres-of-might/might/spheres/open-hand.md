@@ -1,8 +1,5 @@
 ---
-id: "open-hand"
 name: "Open Hand"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "open-hand"
 tags: []
 sectionDefinitions:

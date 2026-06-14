@@ -1,9 +1,5 @@
 ---
-id: "still-form"
 name: "Still Form"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "utility"

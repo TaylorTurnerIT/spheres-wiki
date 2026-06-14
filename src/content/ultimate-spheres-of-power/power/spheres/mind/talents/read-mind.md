@@ -1,9 +1,5 @@
 ---
-id: read-mind
 name: "Read Mind"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["utility", "charm"]
 ---

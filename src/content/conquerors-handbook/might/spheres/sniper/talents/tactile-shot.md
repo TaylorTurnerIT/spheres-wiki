@@ -1,9 +1,5 @@
 ---
-id: "tactile-shot"
 name: "Tactile Shot"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "sniper"
 tier: "basic"
 tags:
   - "snipe"

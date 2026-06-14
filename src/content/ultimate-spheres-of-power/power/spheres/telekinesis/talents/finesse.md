@@ -1,9 +1,5 @@
 ---
-id: finesse
 name: "Finesse"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: ["utility"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "natural-materials"
 name: "Natural Materials"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

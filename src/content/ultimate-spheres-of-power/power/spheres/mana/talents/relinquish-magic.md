@@ -1,9 +1,5 @@
 ---
-id: relinquish-magic
 name: "Relinquish Magic"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["manipulation"]
 ---

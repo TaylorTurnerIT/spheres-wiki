@@ -1,10 +1,6 @@
 ---
-id: shifter-improved-natural-attack
 name: "Improved Natural Attack"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 requires: "shifter 6"
 ---

@@ -1,9 +1,5 @@
 ---
-id: bestial
 name: "Bestial"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["classification", "form"]
 ---

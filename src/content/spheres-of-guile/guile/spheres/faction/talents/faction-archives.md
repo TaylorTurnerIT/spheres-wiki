@@ -1,9 +1,5 @@
 ---
-id: "faction-archives"
 name: "Faction Archives"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "utility"

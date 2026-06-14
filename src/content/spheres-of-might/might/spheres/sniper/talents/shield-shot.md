@@ -1,9 +1,5 @@
 ---
-id: "shield-shot"
 name: "Shield Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags:
   - "snipe"

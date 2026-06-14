@@ -1,9 +1,5 @@
 ---
-id: "damnatio-ad-gladium"
 name: "Damnatio ad Gladium"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "gladiator"
 tier: "advanced"
 tags: []
 ---

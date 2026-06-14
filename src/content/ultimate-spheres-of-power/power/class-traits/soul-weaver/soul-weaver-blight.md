@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-blight
 name: "Blight"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: blessingblight
 ---
 

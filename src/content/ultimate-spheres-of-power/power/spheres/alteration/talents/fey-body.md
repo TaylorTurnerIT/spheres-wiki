@@ -1,9 +1,5 @@
 ---
-id: fey-body
 name: "Fey Body"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["body"]
 ---

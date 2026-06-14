@@ -1,9 +1,5 @@
 ---
-id: shrieking-strike
 name: "Shrieking Strike"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["strike"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: shadow-cage
 name: Shadow Cage
-type: feat
-system: power
 sphere: protection
 dualSphere: dark
 tier: feat

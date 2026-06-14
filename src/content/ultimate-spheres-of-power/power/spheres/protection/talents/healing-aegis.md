@@ -1,9 +1,5 @@
 ---
-id: healing-aegis
 name: "Healing Aegis"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["succor"]
 ---

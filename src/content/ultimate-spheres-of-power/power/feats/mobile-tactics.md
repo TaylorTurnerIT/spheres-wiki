@@ -1,8 +1,5 @@
 ---
-id: mobile-tactics
 name: "Mobile Tactics"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

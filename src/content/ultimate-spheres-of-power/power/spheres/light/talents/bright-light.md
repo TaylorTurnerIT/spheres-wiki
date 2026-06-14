@@ -1,9 +1,5 @@
 ---
-id: bright-light
 name: "Bright Light"
-type: talent
-system: power
-sphere: light
 tier: base
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "master-of-words"
 name: "Master Of Words"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "advanced"
 tags:
   - "utility"

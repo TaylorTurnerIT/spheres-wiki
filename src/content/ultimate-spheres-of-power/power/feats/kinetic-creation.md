@@ -1,8 +1,5 @@
 ---
-id: kinetic-creation
 name: Kinetic Creation
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: creation
 tier: feat

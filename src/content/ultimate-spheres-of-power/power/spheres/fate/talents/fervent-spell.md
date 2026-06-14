@@ -1,9 +1,5 @@
 ---
-id: fervent-spell
 name: "Fervent Spell"
-type: talent
-system: power
-sphere: fate
 tier: basic
 tags: ["metamagic"]
 ---

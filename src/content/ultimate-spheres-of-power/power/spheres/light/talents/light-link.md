@@ -1,9 +1,5 @@
 ---
-id: light-link
 name: "Light Link"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

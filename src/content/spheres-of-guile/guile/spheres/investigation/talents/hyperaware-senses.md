@@ -1,9 +1,5 @@
 ---
-id: "hyperaware-senses"
 name: "Hyperaware Senses"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "advanced"
 tags: []
 ---

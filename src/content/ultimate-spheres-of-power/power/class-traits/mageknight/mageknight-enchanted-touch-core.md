@@ -1,10 +1,6 @@
 ---
-id: mageknight-enchanted-touch-core
 name: "Enchanted Touch [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

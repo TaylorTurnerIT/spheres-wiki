@@ -1,9 +1,5 @@
 ---
-id: "skunk-smoke"
 name: "Skunk Smoke"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags:
   - "snare"

@@ -1,9 +1,5 @@
 ---
-id: "sense-and-resist-scrying"
 name: "Sense And Resist Scrying"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: empower
 name: "Empower"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

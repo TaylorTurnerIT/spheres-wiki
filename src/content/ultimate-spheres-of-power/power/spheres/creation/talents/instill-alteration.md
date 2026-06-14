@@ -1,9 +1,5 @@
 ---
-id: instill-alteration
 name: "Instill Alteration"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["instill"]
 ---

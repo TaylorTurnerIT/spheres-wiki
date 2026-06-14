@@ -1,9 +1,5 @@
 ---
-id: instill-teleport
 name: "Instill Teleport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["instill"]
 ---

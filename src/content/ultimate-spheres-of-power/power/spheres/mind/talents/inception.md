@@ -1,9 +1,5 @@
 ---
-id: inception
 name: "Inception"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["utility", "charm"]
 ---

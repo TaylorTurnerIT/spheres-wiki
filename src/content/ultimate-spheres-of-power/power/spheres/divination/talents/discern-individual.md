@@ -1,9 +1,5 @@
 ---
-id: discern-individual
 name: "Discern Individual"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

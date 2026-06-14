@@ -1,9 +1,5 @@
 ---
-id: "communal-pidgin"
 name: "Communal Pidgin"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

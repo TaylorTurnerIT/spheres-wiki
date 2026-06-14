@@ -1,9 +1,5 @@
 ---
-id: "concentration-aid"
 name: "Concentration Aid"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemy-poisons-2"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

@@ -1,9 +1,5 @@
 ---
-id: "projecting-voice"
 name: "Projecting Voice"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

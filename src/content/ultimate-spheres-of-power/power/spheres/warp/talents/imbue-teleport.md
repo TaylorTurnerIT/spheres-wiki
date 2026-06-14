@@ -1,9 +1,5 @@
 ---
-id: imbue-teleport
 name: "Imbue Teleport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

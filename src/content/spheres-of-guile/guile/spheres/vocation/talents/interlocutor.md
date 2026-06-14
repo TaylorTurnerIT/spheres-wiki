@@ -1,9 +1,5 @@
 ---
-id: "interlocutor"
 name: "Interlocutor"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

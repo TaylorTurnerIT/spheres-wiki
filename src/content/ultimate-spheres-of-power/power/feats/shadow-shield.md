@@ -1,8 +1,5 @@
 ---
-id: shadow-shield
 name: "Shadow Shield"
-type: feat
-system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: lingering-companion
 name: "Lingering Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

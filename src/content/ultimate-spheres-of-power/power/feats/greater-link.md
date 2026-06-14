@@ -1,8 +1,5 @@
 ---
-id: greater-link
 name: "Greater Link"
-type: feat
-system: power
 sphere: conjuration
 tags: []
 tier: feat

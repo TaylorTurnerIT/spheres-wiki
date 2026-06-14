@@ -1,9 +1,5 @@
 ---
-id: extradimensional-room
 name: "Extradimensional Room"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

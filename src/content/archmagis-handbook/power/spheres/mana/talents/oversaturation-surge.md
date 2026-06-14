@@ -1,9 +1,5 @@
 ---
-id: oversaturation-surge
 name: "Oversaturation Surge"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["expunge"]
 ---

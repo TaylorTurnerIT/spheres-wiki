@@ -1,9 +1,5 @@
 ---
-id: "prescient-hack"
 name: "Prescient Hack"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "plan"

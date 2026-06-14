@@ -1,9 +1,5 @@
 ---
-id: "cut-free"
 name: "Cut Free"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "bleed"

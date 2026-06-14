@@ -1,7 +1,5 @@
 ---
-id: courser-combat-trick
 name: Combat Trick
-className: courser
 featureId: courser-ventures
 tags: []
 ---

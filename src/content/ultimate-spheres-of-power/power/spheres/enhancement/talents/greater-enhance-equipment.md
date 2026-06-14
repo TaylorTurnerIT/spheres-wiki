@@ -1,9 +1,5 @@
 ---
-id: greater-enhance-equipment
 name: "Greater Enhance Equipment"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: []
 ---

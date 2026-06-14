@@ -1,9 +1,5 @@
 ---
-id: earthquake
 name: "Earthquake"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["earth", "geomancing"]
 ---

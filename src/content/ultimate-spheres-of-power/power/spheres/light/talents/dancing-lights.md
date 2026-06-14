@@ -1,9 +1,5 @@
 ---
-id: dancing-lights
 name: "Dancing Lights"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

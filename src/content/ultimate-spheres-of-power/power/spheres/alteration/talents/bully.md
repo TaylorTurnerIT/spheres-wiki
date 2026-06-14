@@ -1,9 +1,5 @@
 ---
-id: bully
 name: "Bully"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["utility"]
 ---

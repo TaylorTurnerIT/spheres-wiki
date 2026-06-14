@@ -1,9 +1,5 @@
 ---
-id: "throw"
 name: "Throw"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags:
   - "manhandle"

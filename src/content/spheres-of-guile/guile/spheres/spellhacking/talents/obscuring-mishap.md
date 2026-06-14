@@ -1,9 +1,5 @@
 ---
-id: "obscuring-mishap"
 name: "Obscuring Mishap"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "mishap"

@@ -1,9 +1,5 @@
 ---
-id: "inspector-retainer"
 name: "Inspector Retainer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "retainer"

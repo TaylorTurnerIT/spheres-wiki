@@ -1,9 +1,5 @@
 ---
-id: epicenter
 name: "Epicenter"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: []
 ---

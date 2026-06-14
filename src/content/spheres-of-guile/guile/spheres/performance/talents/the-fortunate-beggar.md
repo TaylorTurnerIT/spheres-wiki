@@ -1,9 +1,5 @@
 ---
-id: "the-fortunate-beggar"
 name: "The Fortunate Beggar"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "act"

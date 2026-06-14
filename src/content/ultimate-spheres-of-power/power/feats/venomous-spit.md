@@ -1,8 +1,5 @@
 ---
-id: venomous-spit
 name: "Venomous Spit"
-type: feat
-system: power
 sphere: conjuration
 tags: ["companion"]
 tier: feat

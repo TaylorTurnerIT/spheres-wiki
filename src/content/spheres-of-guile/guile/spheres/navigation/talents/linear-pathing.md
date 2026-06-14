@@ -1,9 +1,5 @@
 ---
-id: "linear-pathing"
 name: "Linear Pathing"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags: []
 ---

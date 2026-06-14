@@ -1,9 +1,5 @@
 ---
-id: "specialized-venom"
 name: "Specialized Venom"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

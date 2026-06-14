@@ -1,8 +1,5 @@
 ---
-id: mounted-magician
 name: "Mounted Magician"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

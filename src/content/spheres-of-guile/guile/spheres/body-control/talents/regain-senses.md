@@ -1,9 +1,5 @@
 ---
-id: "regain-senses"
 name: "Regain Senses"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

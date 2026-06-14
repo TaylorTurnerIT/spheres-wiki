@@ -1,8 +1,5 @@
 ---
-id: pressure-point-proficiency
 name: "Pressure Point Proficiency"
-type: feat
-system: power
 sphere: mind
 tags: ["combat"]
 tier: feat

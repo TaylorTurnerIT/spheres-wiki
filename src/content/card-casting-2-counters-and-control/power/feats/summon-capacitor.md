@@ -1,8 +1,5 @@
 ---
-id: summon-capacitor
 name: "Summon Capacitor"
-type: feat
-system: power
 sphere: time
 tags: []
 tier: feat

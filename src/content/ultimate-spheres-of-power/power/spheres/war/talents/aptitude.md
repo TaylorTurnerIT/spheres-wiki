@@ -1,9 +1,5 @@
 ---
-id: aptitude
 name: "Aptitude"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mandate"]
 ---

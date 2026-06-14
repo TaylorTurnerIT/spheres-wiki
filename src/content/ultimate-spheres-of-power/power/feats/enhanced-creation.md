@@ -1,8 +1,5 @@
 ---
-id: enhanced-creation
 name: Enhanced Creation
-type: feat
-system: power
 sphere: enhancement
 dualSphere: creation
 tier: feat

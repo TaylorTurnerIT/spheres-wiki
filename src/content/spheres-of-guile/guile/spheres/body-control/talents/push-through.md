@@ -1,9 +1,5 @@
 ---
-id: "push-through"
 name: "Push Through"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: diagram
 name: "Diagram"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: []
 ---

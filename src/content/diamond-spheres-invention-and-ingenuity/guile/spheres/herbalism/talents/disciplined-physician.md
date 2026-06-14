@@ -1,9 +1,5 @@
 ---
-id: "disciplined-physician"
 name: "Disciplined Physician"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "base"
 tags:
   - "package"

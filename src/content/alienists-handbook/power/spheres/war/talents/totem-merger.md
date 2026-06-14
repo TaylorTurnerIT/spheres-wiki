@@ -1,9 +1,5 @@
 ---
-id: totem-merger
 name: "Totem Merger"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: friction
 name: "Friction"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["manabond"]
 ---

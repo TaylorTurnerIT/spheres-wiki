@@ -1,9 +1,5 @@
 ---
-id: "cross-counter"
 name: "Cross Counter"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

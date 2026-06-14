@@ -1,9 +1,5 @@
 ---
-id: see-hazard
 name: "See Hazard"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

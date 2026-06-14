@@ -1,9 +1,5 @@
 ---
-id: "inspiring-speech"
 name: "Inspiring Speech"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

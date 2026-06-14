@@ -1,9 +1,5 @@
 ---
-id: "ducking-charge"
 name: "Ducking Charge"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

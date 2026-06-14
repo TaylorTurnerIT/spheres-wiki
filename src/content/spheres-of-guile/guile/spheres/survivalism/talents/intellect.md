@@ -1,9 +1,5 @@
 ---
-id: "intellect"
 name: "Intellect"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "harvest"

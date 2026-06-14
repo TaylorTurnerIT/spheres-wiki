@@ -1,9 +1,5 @@
 ---
-id: pitch-black
 name: "Pitch Black"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: greater-darkvision
 name: "Greater Darkvision"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

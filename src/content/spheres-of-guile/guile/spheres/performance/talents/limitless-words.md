@@ -1,9 +1,5 @@
 ---
-id: "limitless-words"
 name: "Limitless Words"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "supernatural"

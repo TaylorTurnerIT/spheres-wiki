@@ -1,9 +1,5 @@
 ---
-id: bestow-life
 name: "Bestow Life"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: []
 ---

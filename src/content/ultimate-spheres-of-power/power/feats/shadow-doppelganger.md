@@ -1,8 +1,5 @@
 ---
-id: shadow-doppelganger
 name: Shadow Doppelganger
-type: feat
-system: power
 sphere: dark
 dualSphere: illusion
 tier: feat

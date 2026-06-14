@@ -1,10 +1,6 @@
 ---
-id: mageknight-resilience-of-soul-core
 name: "Resilience of Soul [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

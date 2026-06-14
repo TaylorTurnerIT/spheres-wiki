@@ -1,9 +1,5 @@
 ---
-id: "reveal-evidence"
 name: "Reveal Evidence"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "base"
 tags: []
 ---

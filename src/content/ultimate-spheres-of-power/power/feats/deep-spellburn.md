@@ -1,8 +1,5 @@
 ---
-id: deep-spellburn
 name: "Deep Spellburn"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

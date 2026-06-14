@@ -1,9 +1,5 @@
 ---
-id: alter
 name: Alter
-system: power
-type: talent
-sphere: creation
 tier: base
 tags: []
 ---

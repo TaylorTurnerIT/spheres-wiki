@@ -1,9 +1,5 @@
 ---
-id: expanded-divinations
 name: "Expanded Divinations"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: mageknight-silvered-blade
 name: "Silvered Blade"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: mageknight
 featureId: mystic-combat-su
 ---
 

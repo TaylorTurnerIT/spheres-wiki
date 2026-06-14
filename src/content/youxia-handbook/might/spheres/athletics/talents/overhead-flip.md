@@ -1,9 +1,5 @@
 ---
-id: "overhead-flip"
 name: "Overhead Flip"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "leap"

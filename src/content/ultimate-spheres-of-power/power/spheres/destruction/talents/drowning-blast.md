@@ -1,9 +1,5 @@
 ---
-id: drowning-blast
 name: "Drowning Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "cold"]
 ---

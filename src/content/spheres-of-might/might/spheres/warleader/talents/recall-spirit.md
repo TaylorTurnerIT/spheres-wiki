@@ -1,9 +1,5 @@
 ---
-id: "recall-spirit"
 name: "Recall Spirit"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "advanced"
 tags:
   - "shout"

@@ -1,9 +1,5 @@
 ---
-id: charming-strike
 name: "Charming Strike"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["strike"]
 ---

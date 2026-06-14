@@ -1,9 +1,5 @@
 ---
-id: generating-manifestation-points
 name: "Generating Manifestation Points"
-type: talent
-system: power
-sphere: mind
 tier: basic
 tags: []
 ---

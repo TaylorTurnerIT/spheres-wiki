@@ -1,9 +1,5 @@
 ---
-id: "reactive-biology"
 name: "Reactive Biology"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "advanced"
 tags:
   - "remedy"

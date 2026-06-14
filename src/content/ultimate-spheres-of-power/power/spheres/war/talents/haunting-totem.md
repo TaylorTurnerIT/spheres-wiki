@@ -1,9 +1,5 @@
 ---
-id: haunting-totem
 name: "Haunting Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

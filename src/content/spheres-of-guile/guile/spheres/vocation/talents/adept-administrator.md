@@ -1,9 +1,5 @@
 ---
-id: "adept-administrator"
 name: "Adept Administrator"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

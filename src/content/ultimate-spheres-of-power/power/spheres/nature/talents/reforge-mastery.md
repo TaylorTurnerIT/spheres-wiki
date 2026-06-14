@@ -1,9 +1,5 @@
 ---
-id: reforge-mastery
 name: "Reforge Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["metal", "geomancing"]
 ---

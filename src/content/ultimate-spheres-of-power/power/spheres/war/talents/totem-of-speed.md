@@ -1,9 +1,5 @@
 ---
-id: totem-of-speed
 name: "Totem Of Speed"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

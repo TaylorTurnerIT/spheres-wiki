@@ -1,9 +1,5 @@
 ---
-id: sanguine-minion
 name: "Sanguine Minion"
-system: power
-type: talent
-sphere: blood
 tier: advanced
 tags: []
 ---

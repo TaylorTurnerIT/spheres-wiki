@@ -1,10 +1,6 @@
 ---
-id: wraith-into-thin-air
 name: "Into Thin Air"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

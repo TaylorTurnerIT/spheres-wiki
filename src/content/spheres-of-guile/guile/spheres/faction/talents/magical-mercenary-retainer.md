@@ -1,9 +1,5 @@
 ---
-id: "magical-mercenary-retainer"
 name: "Magical Mercenary Retainer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "retainer"

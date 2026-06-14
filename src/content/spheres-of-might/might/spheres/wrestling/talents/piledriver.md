@@ -1,9 +1,5 @@
 ---
-id: "piledriver"
 name: "Piledriver"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

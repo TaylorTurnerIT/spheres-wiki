@@ -1,9 +1,5 @@
 ---
-id: "drill-sergeant"
 name: "Drill Sergeant"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

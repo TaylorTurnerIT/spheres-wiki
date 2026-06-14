@@ -1,9 +1,5 @@
 ---
-id: defensive-bond
 name: "Defensive Bond"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

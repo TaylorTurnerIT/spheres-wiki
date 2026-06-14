@@ -1,9 +1,5 @@
 ---
-id: "commando-crawl"
 name: "Commando Crawl"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "infiltration"
 tier: "basic"
 tags: []
 ---

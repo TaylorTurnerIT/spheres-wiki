@@ -1,9 +1,5 @@
 ---
-id: greater-meld
 name: "Greater Meld"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

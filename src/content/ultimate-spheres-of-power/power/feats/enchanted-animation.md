@@ -1,8 +1,5 @@
 ---
-id: enchanted-animation
 name: "Enchanted Animation"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

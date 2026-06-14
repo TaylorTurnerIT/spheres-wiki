@@ -1,10 +1,6 @@
 ---
-id: symbiat-telekinetic-manipulation
 name: "Telekinetic Manipulation"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

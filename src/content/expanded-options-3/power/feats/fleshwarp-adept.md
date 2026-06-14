@@ -1,8 +1,5 @@
 ---
-id: fleshwarp-adept
 name: "Fleshwarp Adept"
-type: feat
-system: power
 sphere: alteration
 tags: []
 tier: feat

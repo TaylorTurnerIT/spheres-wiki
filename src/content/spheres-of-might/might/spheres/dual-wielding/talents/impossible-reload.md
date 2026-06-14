@@ -1,9 +1,5 @@
 ---
-id: "impossible-reload"
 name: "Impossible Reload"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

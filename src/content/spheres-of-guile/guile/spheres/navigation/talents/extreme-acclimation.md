@@ -1,9 +1,5 @@
 ---
-id: "extreme-acclimation"
 name: "Extreme Acclimation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "acclimation"

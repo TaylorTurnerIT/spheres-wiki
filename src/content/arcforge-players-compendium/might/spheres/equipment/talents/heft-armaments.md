@@ -1,9 +1,5 @@
 ---
-id: "heft-armaments"
 name: "Heft Armaments"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "stance"

@@ -1,9 +1,5 @@
 ---
-id: "resilience-training"
 name: "Resilience Training"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "acclimation"

@@ -1,7 +1,5 @@
 ---
-id: courser-deadly-hunter
 name: Deadly Hunter
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 4, Survivalism sphere"

@@ -1,9 +1,5 @@
 ---
-id: "pleasant-fragrance"
 name: "Pleasant Fragrance"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

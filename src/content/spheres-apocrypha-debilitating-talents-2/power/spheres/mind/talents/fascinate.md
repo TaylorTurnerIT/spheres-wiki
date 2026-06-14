@@ -1,9 +1,5 @@
 ---
-id: fascinate
 name: "Fascinate"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

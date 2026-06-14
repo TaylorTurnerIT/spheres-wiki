@@ -1,9 +1,5 @@
 ---
-id: "stair-shot"
 name: "Stair Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "advanced"
 tags:
   - "utility"

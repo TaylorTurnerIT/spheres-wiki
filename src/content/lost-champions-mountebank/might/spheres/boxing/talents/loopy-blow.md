@@ -1,9 +1,5 @@
 ---
-id: "loopy-blow"
 name: "Loopy Blow (counter)"
-type: "talent"
-sourceBook: "lost-champions-mountebank"
-sphere: "boxing"
 tier: "basic"
 tags: ["counter"]
 ---

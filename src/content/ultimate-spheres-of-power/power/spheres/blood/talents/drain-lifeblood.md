@@ -1,9 +1,5 @@
 ---
-id: drain-lifeblood
 name: "Drain Lifeblood"
-system: power
-type: talent
-sphere: blood
 tier: advanced
 tags: []
 ---

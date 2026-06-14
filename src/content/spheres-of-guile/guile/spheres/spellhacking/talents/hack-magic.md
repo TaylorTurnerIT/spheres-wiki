@@ -1,9 +1,5 @@
 ---
-id: "hack-magic"
 name: "Hack Magic"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "base"
 tags: []
 ---

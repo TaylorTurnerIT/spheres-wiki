@@ -1,9 +1,5 @@
 ---
-id: "communication-coach"
 name: "Communication Coach"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

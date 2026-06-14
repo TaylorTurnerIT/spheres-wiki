@@ -1,9 +1,5 @@
 ---
-id: "terrain-mishap"
 name: "Terrain Mishap"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "mishap"

@@ -1,9 +1,5 @@
 ---
-id: buried
 name: "Buried"
-type: talent
-system: power
-sphere: creation
 tier: basic
 tags: []
 ---

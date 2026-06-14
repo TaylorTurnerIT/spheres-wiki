@@ -1,9 +1,5 @@
 ---
-id: black-light
 name: "Black Light"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

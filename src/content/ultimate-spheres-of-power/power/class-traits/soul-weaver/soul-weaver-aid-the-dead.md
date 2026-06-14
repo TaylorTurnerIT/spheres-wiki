@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-aid-the-dead
 name: "Aid the Dead"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

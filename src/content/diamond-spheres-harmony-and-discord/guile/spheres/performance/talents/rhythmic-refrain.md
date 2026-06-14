@@ -1,9 +1,5 @@
 ---
-id: "rhythmic-refrain"
 name: "Rhythmic Refrain"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

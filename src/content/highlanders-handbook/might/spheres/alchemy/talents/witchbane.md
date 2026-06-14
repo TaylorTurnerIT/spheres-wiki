@@ -1,9 +1,5 @@
 ---
-id: "witchbane"
 name: "Witchbane"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "toxin"

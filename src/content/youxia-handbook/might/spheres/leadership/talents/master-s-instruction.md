@@ -1,9 +1,5 @@
 ---
-id: "master-s-instruction"
 name: "Master’s Instruction"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

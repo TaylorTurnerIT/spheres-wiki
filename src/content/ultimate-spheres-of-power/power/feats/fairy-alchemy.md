@@ -1,8 +1,5 @@
 ---
-id: fairy-alchemy
 name: "Fairy Alchemy"
-type: feat
-system: power
 sphere: fallen-fey
 tags: ["champion"]
 tier: feat

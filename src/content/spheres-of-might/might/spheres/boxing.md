@@ -1,8 +1,5 @@
 ---
-id: "boxing"
 name: "Boxing"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "boxing"
 tags: []
 sectionDefinitions:

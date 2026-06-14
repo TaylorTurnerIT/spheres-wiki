@@ -1,9 +1,5 @@
 ---
-id: meld
 name: Meld
-system: power
-type: talent
-sphere: dark
 tier: base
 tags: []
 ---

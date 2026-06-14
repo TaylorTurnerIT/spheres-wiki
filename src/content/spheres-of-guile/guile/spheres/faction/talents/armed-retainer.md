@@ -1,9 +1,5 @@
 ---
-id: "armed-retainer"
 name: "Armed Retainer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "retainer"

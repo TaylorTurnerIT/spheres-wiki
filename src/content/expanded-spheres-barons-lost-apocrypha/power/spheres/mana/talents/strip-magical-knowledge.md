@@ -1,9 +1,5 @@
 ---
-id: strip-magical-knowledge
 name: "Strip Magical Knowledge"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

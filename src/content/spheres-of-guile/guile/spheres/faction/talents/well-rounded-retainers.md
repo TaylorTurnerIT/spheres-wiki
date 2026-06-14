@@ -1,9 +1,5 @@
 ---
-id: "well-rounded-retainers"
 name: "Well-Rounded Retainers"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "retainer"

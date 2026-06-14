@@ -1,10 +1,6 @@
 ---
-id: mageknight-swift-combatant-core
 name: "Swift Combatant [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

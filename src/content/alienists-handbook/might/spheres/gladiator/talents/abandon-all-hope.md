@@ -1,9 +1,5 @@
 ---
-id: "abandon-all-hope"
 name: "Abandon All Hope"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "demoralization"

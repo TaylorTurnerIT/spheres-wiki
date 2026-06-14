@@ -1,9 +1,5 @@
 ---
-id: "safe-house"
 name: "Safe House"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

@@ -1,9 +1,5 @@
 ---
-id: radiation-lord
 name: "Radiation Lord"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

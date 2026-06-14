@@ -1,8 +1,5 @@
 ---
-id: black-totem
 name: Black Totem
-type: feat
-system: power
 sphere: war
 dualSphere: dark
 tier: feat

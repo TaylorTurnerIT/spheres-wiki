@@ -1,9 +1,5 @@
 ---
-id: fata-morgana
 name: "Fata Morgana"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["heat", "shroud"]
 ---

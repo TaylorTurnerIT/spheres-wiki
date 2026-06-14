@@ -1,9 +1,5 @@
 ---
-id: "hidden-dragon"
 name: "Hidden Dragon"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "scout"
 tier: "basic"
 tags:
   - "stance"

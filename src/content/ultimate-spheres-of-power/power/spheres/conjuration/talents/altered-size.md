@@ -1,9 +1,5 @@
 ---
-id: altered-size
 name: "Altered Size"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

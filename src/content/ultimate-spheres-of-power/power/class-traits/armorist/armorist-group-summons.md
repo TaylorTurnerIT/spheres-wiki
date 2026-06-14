@@ -1,10 +1,6 @@
 ---
-id: armorist-group-summons
 name: "Group Summons"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

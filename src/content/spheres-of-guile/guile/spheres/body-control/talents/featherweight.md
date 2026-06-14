@@ -1,9 +1,5 @@
 ---
-id: "featherweight"
 name: "Featherweight"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "advanced"
 tags:
   - "supernatural"

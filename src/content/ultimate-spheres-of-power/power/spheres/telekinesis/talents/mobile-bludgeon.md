@@ -1,9 +1,5 @@
 ---
-id: mobile-bludgeon
 name: "Mobile Bludgeon"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

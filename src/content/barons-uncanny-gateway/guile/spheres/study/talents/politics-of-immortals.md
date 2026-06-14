@@ -1,9 +1,5 @@
 ---
-id: "politics-of-immortals"
 name: "Politics of Immortals"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "study"
 tier: "advanced"
 tags:
   - "utility"

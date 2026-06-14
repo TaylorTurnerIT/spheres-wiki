@@ -1,9 +1,5 @@
 ---
-id: explosive-companion
 name: "Explosive Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

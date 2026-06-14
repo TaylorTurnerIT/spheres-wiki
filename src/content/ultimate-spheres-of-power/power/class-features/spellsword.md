@@ -1,8 +1,6 @@
 ---
-id: spellsword
 name: "Spellsword"
 type: class-feature
-system: power
 className: mageknight
 level: 20
 tags: []

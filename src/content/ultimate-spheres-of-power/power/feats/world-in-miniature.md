@@ -1,8 +1,5 @@
 ---
-id: world-in-miniature
 name: "World In Miniature"
-type: feat
-system: power
 sphere: warp
 tags: []
 tier: feat

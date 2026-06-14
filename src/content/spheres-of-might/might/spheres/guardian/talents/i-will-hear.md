@@ -1,9 +1,5 @@
 ---
-id: "i-will-hear"
 name: "I Will Hear"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "advanced"
 tags:
   - "utility"

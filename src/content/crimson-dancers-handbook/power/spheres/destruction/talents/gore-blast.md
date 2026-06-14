@@ -1,9 +1,5 @@
 ---
-id: gore-blast
 name: "Gore Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "negative"]
 ---

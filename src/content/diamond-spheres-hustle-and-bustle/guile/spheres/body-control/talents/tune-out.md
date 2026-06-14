@@ -1,9 +1,5 @@
 ---
-id: "tune-out"
 name: "Tune Out"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

@@ -1,9 +1,5 @@
 ---
-id: rally
 name: Rally
-system: power
-type: talent
-sphere: war
 tier: base
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "skirmish-rider"
 name: "Skirmish Rider"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "ride"

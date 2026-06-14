@@ -1,9 +1,5 @@
 ---
-id: "clever-fox-s-heist"
 name: "Clever Fox’s Heist"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

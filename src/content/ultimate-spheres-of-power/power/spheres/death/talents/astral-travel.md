@@ -1,9 +1,5 @@
 ---
-id: astral-travel
 name: "Astral Travel"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: ["utility"]
 ---

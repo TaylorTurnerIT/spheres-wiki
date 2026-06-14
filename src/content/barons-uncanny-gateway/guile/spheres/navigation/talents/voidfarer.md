@@ -1,9 +1,5 @@
 ---
-id: "voidfarer"
 name: "Voidfarer"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "navigation"
 tier: "advanced"
 tags: []
 ---

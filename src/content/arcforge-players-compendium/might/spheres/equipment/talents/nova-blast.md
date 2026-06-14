@@ -1,9 +1,5 @@
 ---
-id: "nova-blast"
 name: "Nova Blast"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: patterns
 name: "Patterns"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "dancer-training"
 name: "Dancer Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

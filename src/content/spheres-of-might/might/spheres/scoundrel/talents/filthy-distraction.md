@@ -1,9 +1,5 @@
 ---
-id: "filthy-distraction"
 name: "Filthy Distraction"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: shifter-animal-hide
 name: "Animal Hide"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

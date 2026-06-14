@@ -1,9 +1,5 @@
 ---
-id: "cluster-toss"
 name: "Cluster Toss"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

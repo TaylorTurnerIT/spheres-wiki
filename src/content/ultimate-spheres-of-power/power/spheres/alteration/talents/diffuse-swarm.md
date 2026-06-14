@@ -1,9 +1,5 @@
 ---
-id: diffuse-swarm
 name: "Diffuse Swarm"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

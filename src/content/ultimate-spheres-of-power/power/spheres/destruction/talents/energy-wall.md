@@ -1,9 +1,5 @@
 ---
-id: energy-wall
 name: "Energy Wall"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape"]
 ---

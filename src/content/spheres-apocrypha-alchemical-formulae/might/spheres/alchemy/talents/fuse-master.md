@@ -1,9 +1,5 @@
 ---
-id: "fuse-master"
 name: "Fuse Master"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-formulae"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: dispersion
 name: "Dispersion"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["cloud"]
 ---

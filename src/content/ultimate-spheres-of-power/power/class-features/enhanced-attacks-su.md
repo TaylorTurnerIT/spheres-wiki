@@ -1,8 +1,6 @@
 ---
-id: enhanced-attacks-su
 name: "Enhanced Attacks (Su)"
 type: class-feature
-system: power
 className: shifter
 level: 4
 tags: []

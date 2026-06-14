@@ -1,9 +1,5 @@
 ---
-id: blink
 name: "Blink"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

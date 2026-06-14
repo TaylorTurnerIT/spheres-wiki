@@ -1,8 +1,5 @@
 ---
-id: focusing-direction
 name: "Focusing Direction"
-type: feat
-system: power
 sphere: conjuration
 tags: []
 tier: feat

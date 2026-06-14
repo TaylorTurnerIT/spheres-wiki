@@ -1,8 +1,5 @@
 ---
-id: poltergeists-malice
 name: Poltergeist's Malice
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: death
 tier: feat

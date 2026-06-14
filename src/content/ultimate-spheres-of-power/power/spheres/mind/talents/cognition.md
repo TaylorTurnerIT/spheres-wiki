@@ -1,9 +1,5 @@
 ---
-id: cognition
 name: Cognition
-type: talent
-system: power
-sphere: mind
 tier: basic
 tags: []
 ---

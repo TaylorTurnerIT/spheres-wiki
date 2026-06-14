@@ -1,9 +1,5 @@
 ---
-id: "poison"
 name: "Poison"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "base"
 tags: []
 ---

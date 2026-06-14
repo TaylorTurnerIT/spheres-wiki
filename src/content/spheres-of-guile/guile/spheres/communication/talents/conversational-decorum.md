@@ -1,9 +1,5 @@
 ---
-id: "conversational-decorum"
 name: "Conversational Decorum"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "approach"

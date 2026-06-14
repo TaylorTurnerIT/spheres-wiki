@@ -1,8 +1,6 @@
 ---
-id: weapon-and-armor-proficiency
 name: "Weapon and Armor Proficiency"
 type: class-feature
-system: power
 className: symbiat
 level: 1
 tags: []

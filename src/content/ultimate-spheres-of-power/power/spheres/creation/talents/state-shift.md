@@ -1,9 +1,5 @@
 ---
-id: state-shift
 name: "State Shift"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: ["alter"]
 ---

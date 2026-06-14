@@ -1,9 +1,5 @@
 ---
-id: "critical-genius"
 name: "Critical Genius"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

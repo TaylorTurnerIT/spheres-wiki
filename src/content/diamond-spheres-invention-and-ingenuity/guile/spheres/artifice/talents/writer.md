@@ -1,9 +1,5 @@
 ---
-id: "writer"
 name: "Writer"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "artifice"
 tier: "base"
 tags:
   - "package"

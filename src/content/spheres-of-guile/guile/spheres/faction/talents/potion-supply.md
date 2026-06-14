@@ -1,9 +1,5 @@
 ---
-id: "potion-supply"
 name: "Potion Supply"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "supply"

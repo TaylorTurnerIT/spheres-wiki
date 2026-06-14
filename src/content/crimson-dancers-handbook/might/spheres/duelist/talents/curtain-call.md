@@ -1,9 +1,5 @@
 ---
-id: "curtain-call"
 name: "Curtain Call"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "advanced"
 tags: []
 ---

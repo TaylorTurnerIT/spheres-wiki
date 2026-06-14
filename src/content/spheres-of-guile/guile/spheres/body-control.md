@@ -1,8 +1,5 @@
 ---
-id: "body-control"
 name: "Body Control"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "body-control"
 tags: []
 sectionDefinitions:

@@ -1,10 +1,6 @@
 ---
-id: shifter-adaptation-greater
 name: "Adaptation, Greater"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 requires: "adaptation, improved adaptation, shifter 10"
 ---

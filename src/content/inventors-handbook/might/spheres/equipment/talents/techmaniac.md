@@ -1,9 +1,5 @@
 ---
-id: "techmaniac"
 name: "Techmaniac"
-type: "talent"
-sourceBook: "inventors-handbook"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

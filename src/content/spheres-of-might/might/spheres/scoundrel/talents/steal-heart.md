@@ -1,9 +1,5 @@
 ---
-id: "steal-heart"
 name: "Steal Heart"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "advanced"
 tags:
   - "trick"

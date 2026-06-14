@@ -1,9 +1,5 @@
 ---
-id: "parry-and-riposte"
 name: "Parry And Riposte"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: natures-weapon
 name: "Nature's Weapon"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

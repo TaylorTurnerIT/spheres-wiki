@@ -1,9 +1,5 @@
 ---
-id: "draining-despair"
 name: "Draining Despair"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "gladiator"
 tier: "advanced"
 tags:
   - "demoralization"

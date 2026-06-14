@@ -1,9 +1,5 @@
 ---
-id: "blustering-shenanigans"
 name: "Blustering Shenanigans"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "trick"

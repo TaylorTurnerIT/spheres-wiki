@@ -1,9 +1,5 @@
 ---
-id: "foam-spray"
 name: "Foam Spray"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags:
   - "snare"

@@ -1,8 +1,5 @@
 ---
-id: deep-cover
 name: Deep Cover
-type: feat
-system: power
 sphere: illusion
 dualSphere: alteration
 tier: feat

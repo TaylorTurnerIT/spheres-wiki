@@ -1,9 +1,5 @@
 ---
-id: "smashing-counter"
 name: "Smashing Counter"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags:
   - "deflect"

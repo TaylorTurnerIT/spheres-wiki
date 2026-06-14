@@ -1,9 +1,5 @@
 ---
-id: "falling-mountain"
 name: "Falling Mountain"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags: []
 ---

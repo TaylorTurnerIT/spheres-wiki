@@ -1,9 +1,5 @@
 ---
-id: this-does-not-spark-joy
 name: "This Does Not Spark Joy"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["precipitation", "shroud"]
 ---

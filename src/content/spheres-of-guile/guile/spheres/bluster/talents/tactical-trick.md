@@ -1,9 +1,5 @@
 ---
-id: "tactical-trick"
 name: "Tactical Trick"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags: []
 ---

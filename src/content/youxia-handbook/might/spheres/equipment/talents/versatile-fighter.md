@@ -1,9 +1,5 @@
 ---
-id: "versatile-fighter"
 name: "Versatile Fighter"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "stance"

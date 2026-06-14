@@ -1,9 +1,5 @@
 ---
-id: ragged-edges
 name: "Ragged Edges"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

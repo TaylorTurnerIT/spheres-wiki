@@ -1,9 +1,5 @@
 ---
-id: "alternate-methods"
 name: "Alternate Methods"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "utility"

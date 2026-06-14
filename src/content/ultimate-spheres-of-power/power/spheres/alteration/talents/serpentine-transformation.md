@@ -1,9 +1,5 @@
 ---
-id: serpentine-transformation
 name: "Serpentine Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["transformation"]
 ---

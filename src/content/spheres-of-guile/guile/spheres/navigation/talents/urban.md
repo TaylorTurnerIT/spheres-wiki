@@ -1,9 +1,5 @@
 ---
-id: "urban"
 name: "Urban"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "base"
 tags:
   - "package"

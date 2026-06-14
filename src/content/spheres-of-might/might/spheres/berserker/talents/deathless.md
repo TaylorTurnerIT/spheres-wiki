@@ -1,9 +1,5 @@
 ---
-id: "deathless"
 name: "Deathless"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 ---
 

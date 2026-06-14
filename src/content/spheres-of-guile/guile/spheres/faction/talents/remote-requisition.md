@@ -1,9 +1,5 @@
 ---
-id: "remote-requisition"
 name: "Remote Requisition"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "spell-like"

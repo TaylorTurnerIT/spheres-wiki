@@ -1,9 +1,5 @@
 ---
-id: divine-capability
 name: "Divine Capability"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["divine", "sm", "utility"]
 ---

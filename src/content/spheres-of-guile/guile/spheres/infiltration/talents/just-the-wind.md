@@ -1,9 +1,5 @@
 ---
-id: "just-the-wind"
 name: "Just The Wind"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "advanced"
 tags: []
 ---

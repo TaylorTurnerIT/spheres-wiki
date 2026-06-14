@@ -1,9 +1,5 @@
 ---
-id: "minor-thaumaturgy"
 name: "Minor Thaumaturgy"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

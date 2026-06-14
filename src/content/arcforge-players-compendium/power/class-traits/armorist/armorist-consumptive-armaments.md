@@ -1,10 +1,6 @@
 ---
-id: armorist-consumptive-armaments
 name: "Consumptive Armaments"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

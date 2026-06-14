@@ -1,9 +1,5 @@
 ---
-id: "exquisite-equipment"
 name: "Exquisite Equipment"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "flourish"

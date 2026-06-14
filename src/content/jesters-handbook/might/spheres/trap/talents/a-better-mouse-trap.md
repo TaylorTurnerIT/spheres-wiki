@@ -1,9 +1,5 @@
 ---
-id: "a-better-mouse-trap"
 name: "A Better Mouse Trap"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "trap"
 tier: "advanced"
 tags:
   - "snare"

@@ -1,9 +1,5 @@
 ---
-id: "rope-a-dope"
 name: "Rope A Dope"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

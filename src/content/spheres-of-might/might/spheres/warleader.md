@@ -1,8 +1,5 @@
 ---
-id: "warleader"
 name: "Warleader"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "warleader"
 tags: []
 sectionDefinitions:

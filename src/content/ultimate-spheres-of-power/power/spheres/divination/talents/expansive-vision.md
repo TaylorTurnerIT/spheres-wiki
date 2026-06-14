@@ -1,9 +1,5 @@
 ---
-id: expansive-vision
 name: "Expansive Vision"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: []
 ---

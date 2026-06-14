@@ -1,9 +1,5 @@
 ---
-id: "elemental-convergence"
 name: "Elemental Convergence"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

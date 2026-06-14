@@ -1,9 +1,5 @@
 ---
-id: "sizeable-trinkets"
 name: "Sizeable Trinkets"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags: []
 ---

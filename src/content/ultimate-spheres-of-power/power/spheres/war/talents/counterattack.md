@@ -1,9 +1,5 @@
 ---
-id: counterattack
 name: "Counterattack"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

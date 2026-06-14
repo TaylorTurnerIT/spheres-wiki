@@ -1,8 +1,6 @@
 ---
-id: hide-in-plain-sight-su
 name: "Hide in Plain Sight (Su)"
 type: class-feature
-system: power
 className: fey-adept
 level: 10
 tags: []

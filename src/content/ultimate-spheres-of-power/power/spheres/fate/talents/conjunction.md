@@ -1,9 +1,5 @@
 ---
-id: conjunction
 name: "Conjunction"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["word"]
 ---

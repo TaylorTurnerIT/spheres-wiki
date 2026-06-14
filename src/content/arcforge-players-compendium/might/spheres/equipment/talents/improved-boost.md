@@ -1,9 +1,5 @@
 ---
-id: "improved-boost"
 name: "Improved Boost"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

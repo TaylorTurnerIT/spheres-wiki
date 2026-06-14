@@ -1,9 +1,5 @@
 ---
-id: call-the-departed
 name: "Call The Departed"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: []
 ---

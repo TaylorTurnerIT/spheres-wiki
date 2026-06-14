@@ -1,9 +1,5 @@
 ---
-id: "air-stunt"
 name: "Air Stunt"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "leap"

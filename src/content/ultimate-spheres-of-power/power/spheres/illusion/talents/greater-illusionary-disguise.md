@@ -1,9 +1,5 @@
 ---
-id: greater-illusionary-disguise
 name: "Greater Illusionary Disguise"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["utility"]
 ---

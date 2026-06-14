@@ -1,9 +1,5 @@
 ---
-id: "reliquarian"
 name: "Reliquarian"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

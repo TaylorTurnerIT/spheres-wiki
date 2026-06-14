@@ -1,9 +1,5 @@
 ---
-id: "herbology-expert"
 name: "Herbology Expert"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "base"
 tags:
   - "package"

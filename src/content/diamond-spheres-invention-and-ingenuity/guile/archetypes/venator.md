@@ -1,5 +1,4 @@
 ---
-id: venator
 name: "Venator"
 className: courser
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: "whirlwind-knockdown"
 name: "Whirlwind Knockdown"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags: []
 ---

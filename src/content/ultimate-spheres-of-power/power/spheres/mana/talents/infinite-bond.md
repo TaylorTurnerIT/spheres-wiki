@@ -1,9 +1,5 @@
 ---
-id: infinite-bond
 name: "Infinite Bond"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

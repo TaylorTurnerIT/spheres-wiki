@@ -1,9 +1,5 @@
 ---
-id: "controlled-sleepwalking"
 name: "Controlled Sleepwalking"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

@@ -1,9 +1,5 @@
 ---
-id: "bracing-pierce"
 name: "Bracing Pierce"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags: []
 ---

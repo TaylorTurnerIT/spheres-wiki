@@ -1,9 +1,5 @@
 ---
-id: detect-secrets
 name: "Detect Secrets"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["utility", "divine"]
 ---

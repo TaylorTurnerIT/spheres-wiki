@@ -1,9 +1,5 @@
 ---
-id: "launching-uppercut"
 name: "Launching Uppercut"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "counter"

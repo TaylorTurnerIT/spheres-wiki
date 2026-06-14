@@ -1,8 +1,5 @@
 ---
-id: companion-teleport
 name: "Companion Teleport"
-type: feat
-system: power
 sphere: warp
 tags: []
 tier: feat

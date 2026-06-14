@@ -1,9 +1,5 @@
 ---
-id: ghost-strike
 name: Ghost Strike
-system: power
-type: talent
-sphere: death
 tier: base
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: wraith-disorienting-possession
 name: "Disorienting Possession"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

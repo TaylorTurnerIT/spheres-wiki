@@ -1,9 +1,5 @@
 ---
-id: "focusing-reload"
 name: "Focusing Reload"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags: []
 ---

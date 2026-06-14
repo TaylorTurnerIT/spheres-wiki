@@ -1,9 +1,5 @@
 ---
-id: disorienting-patterns
 name: "Disorienting Patterns"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "adept-trader"
 name: "Adept Trader"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

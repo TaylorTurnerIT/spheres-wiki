@@ -1,9 +1,5 @@
 ---
-id: speak-with-the-elements
 name: "Speak With The Elements"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["utility", "spirit"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: "investigation"
 name: "Investigation"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "investigation"
 tags: []
 sectionDefinitions:

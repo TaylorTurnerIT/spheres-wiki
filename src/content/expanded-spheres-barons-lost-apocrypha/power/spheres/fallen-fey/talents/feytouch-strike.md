@@ -1,9 +1,5 @@
 ---
-id: feytouch-strike
 name: "Feytouch Strike"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["strike"]
 ---

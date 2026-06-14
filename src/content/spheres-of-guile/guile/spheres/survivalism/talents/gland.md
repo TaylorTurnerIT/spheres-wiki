@@ -1,9 +1,5 @@
 ---
-id: "gland"
 name: "Gland"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "harvest"

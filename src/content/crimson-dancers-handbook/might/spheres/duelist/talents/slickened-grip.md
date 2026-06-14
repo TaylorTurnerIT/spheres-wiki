@@ -1,9 +1,5 @@
 ---
-id: "slickened-grip"
 name: "Slickened Grip"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "bleed"

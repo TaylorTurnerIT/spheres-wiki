@@ -1,10 +1,6 @@
 ---
-id: wraith-moan
 name: "Moan"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

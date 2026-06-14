@@ -1,9 +1,5 @@
 ---
-id: "meddling-mark"
 name: "Meddling Mark"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "utility"

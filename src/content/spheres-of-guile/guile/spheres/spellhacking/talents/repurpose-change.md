@@ -1,9 +1,5 @@
 ---
-id: "repurpose-change"
 name: "Repurpose Change"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

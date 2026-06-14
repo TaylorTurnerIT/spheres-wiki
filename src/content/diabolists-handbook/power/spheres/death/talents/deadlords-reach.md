@@ -1,9 +1,5 @@
 ---
-id: deadlords-reach
 name: "Deadlord's Reach"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: ["dominion"]
 ---

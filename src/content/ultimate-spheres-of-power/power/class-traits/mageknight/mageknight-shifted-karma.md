@@ -1,10 +1,6 @@
 ---
-id: mageknight-shifted-karma
 name: "Shifted Karma"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: mageknight
 featureId: mystic-combat-su
 requires: "Marked class feature"
 ---

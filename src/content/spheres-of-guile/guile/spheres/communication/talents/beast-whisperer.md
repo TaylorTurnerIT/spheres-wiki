@@ -1,9 +1,5 @@
 ---
-id: "beast-whisperer"
 name: "Beast Whisperer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

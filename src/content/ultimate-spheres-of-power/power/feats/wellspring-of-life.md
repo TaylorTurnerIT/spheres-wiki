@@ -1,8 +1,5 @@
 ---
-id: wellspring-of-life
 name: "Wellspring Of Life"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: master-of-remaking
 name: "Master Of Remaking"
-type: feat
-system: power
 sphere: creation
 tags: []
 tier: feat

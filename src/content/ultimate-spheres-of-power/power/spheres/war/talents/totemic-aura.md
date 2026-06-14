@@ -1,9 +1,5 @@
 ---
-id: totemic-aura
 name: "Totemic Aura"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

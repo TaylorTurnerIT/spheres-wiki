@@ -1,8 +1,5 @@
 ---
-id: illuminating-admixture
 name: "Illuminating Admixture"
-type: feat
-system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat

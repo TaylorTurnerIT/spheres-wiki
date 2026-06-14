@@ -1,9 +1,5 @@
 ---
-id: "dispiriting-lament"
 name: "Dispiriting Lament"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

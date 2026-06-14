@@ -1,9 +1,5 @@
 ---
-id: psionic-and-sphere-abilities-in-a-duel
 name: "Psionic and Sphere Abilities in a Duel"
-type: talent
-system: power
-sphere: mind
 tier: basic
 tags: []
 ---

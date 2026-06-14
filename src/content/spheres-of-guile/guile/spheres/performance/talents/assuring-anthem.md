@@ -1,9 +1,5 @@
 ---
-id: "assuring-anthem"
 name: "Assuring Anthem"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

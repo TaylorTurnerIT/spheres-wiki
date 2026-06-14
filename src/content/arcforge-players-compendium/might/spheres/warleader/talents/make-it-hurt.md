@@ -1,9 +1,5 @@
 ---
-id: "make-it-hurt"
 name: "Make It Hurt"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

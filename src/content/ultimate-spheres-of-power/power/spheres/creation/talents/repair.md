@@ -1,9 +1,5 @@
 ---
-id: repair
 name: "Repair"
-type: talent
-system: power
-sphere: creation
 tier: basic
 tags: []
 ---

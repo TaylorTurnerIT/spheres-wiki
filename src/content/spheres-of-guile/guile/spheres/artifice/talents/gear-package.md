@@ -1,9 +1,5 @@
 ---
-id: "gear-package"
 name: "Gear Package"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "base"
 tags:
   - "package"

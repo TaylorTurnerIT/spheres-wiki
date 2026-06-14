@@ -1,9 +1,5 @@
 ---
-id: overwhelming-sensations
 name: "Overwhelming Sensations"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

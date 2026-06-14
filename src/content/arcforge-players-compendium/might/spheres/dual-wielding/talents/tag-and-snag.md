@@ -1,9 +1,5 @@
 ---
-id: "tag-and-snag"
 name: "Tag And Snag"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

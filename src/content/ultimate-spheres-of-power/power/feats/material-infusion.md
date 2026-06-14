@@ -1,8 +1,5 @@
 ---
-id: material-infusion
 name: Material Infusion
-type: feat
-system: power
 sphere: nature
 dualSphere: destruction
 tier: feat

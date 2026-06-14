@@ -1,9 +1,5 @@
 ---
-id: "shortcut-mastery"
 name: "Shortcut Mastery"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "plan"

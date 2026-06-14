@@ -1,9 +1,5 @@
 ---
-id: "frightening-threat"
 name: "Frightening Threat"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

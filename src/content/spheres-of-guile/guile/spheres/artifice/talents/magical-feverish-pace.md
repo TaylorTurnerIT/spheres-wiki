@@ -1,9 +1,5 @@
 ---
-id: "magical-feverish-pace"
 name: "Magical Feverish Pace"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "utility"

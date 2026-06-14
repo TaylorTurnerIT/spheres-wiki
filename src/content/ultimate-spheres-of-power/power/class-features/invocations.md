@@ -1,8 +1,6 @@
 ---
-id: invocations
 name: "Invocations"
 type: class-feature
-system: power
 className: thaumaturge
 level: 1
 tags: []

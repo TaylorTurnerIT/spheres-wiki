@@ -1,8 +1,5 @@
 ---
-id: swift-demise
 name: Swift Demise
-type: feat
-system: power
 sphere: time
 dualSphere: death
 tier: feat

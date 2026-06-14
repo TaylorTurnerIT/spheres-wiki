@@ -1,9 +1,5 @@
 ---
-id: "chink-in-the-armor"
 name: "Chink In The Armor"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents"
-sphere: "wrestling"
 tier: "basic"
 tags:
   - "slam"

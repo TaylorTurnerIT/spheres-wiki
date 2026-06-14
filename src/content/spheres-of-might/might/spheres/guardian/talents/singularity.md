@@ -1,9 +1,5 @@
 ---
-id: "singularity"
 name: "Singularity"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "advanced"
 tags:
   - "zone"

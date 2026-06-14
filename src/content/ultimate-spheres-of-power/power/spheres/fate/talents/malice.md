@@ -1,9 +1,5 @@
 ---
-id: malice
 name: "Malice"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["curse", "word"]
 ---

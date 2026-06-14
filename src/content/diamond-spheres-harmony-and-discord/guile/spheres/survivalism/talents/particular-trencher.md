@@ -1,9 +1,5 @@
 ---
-id: "particular-trencher"
 name: "Particular Trencher"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "survivalism"
 tier: "advanced"
 tags: []
 ---

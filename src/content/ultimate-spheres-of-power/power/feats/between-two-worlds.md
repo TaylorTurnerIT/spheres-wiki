@@ -1,8 +1,5 @@
 ---
-id: between-two-worlds
 name: "Between Two Worlds"
-type: feat
-system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat

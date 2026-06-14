@@ -1,9 +1,5 @@
 ---
-id: preserve-integrity
 name: "Preserve Integrity"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: ["aegis"]
 ---

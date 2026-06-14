@@ -1,9 +1,5 @@
 ---
-id: "eye-spy"
 name: "Eye Spy"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "scout"
 tier: "advanced"
 tags:
   - "utility"

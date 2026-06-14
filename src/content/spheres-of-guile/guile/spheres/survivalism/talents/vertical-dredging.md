@@ -1,9 +1,5 @@
 ---
-id: "vertical-dredging"
 name: "Vertical Dredging"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags: []
 ---

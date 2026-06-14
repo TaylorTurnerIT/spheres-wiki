@@ -1,9 +1,5 @@
 ---
-id: drench
 name: "Drench"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["precipitation", "shroud"]
 ---

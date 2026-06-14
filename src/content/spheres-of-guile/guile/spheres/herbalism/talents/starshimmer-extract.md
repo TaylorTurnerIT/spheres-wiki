@@ -1,9 +1,5 @@
 ---
-id: "starshimmer-extract"
 name: "Starshimmer Extract"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "advanced"
 tags:
   - "tonic"

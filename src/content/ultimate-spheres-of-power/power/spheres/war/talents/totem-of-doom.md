@@ -1,9 +1,5 @@
 ---
-id: totem-of-doom
 name: "Totem Of Doom"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

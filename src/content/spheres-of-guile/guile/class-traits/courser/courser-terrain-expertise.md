@@ -1,7 +1,5 @@
 ---
-id: courser-terrain-expertise
 name: Terrain Expertise
-className: courser
 featureId: courser-ventures
 tags: []
 ---

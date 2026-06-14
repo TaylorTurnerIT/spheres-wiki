@@ -1,9 +1,5 @@
 ---
-id: "axe-kick"
 name: "Axe Kick"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: tactical-animation
 name: "Tactical Animation"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

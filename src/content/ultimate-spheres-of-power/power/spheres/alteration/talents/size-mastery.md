@@ -1,9 +1,5 @@
 ---
-id: size-mastery
 name: "Size Mastery"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

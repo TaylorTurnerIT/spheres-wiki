@@ -1,9 +1,5 @@
 ---
-id: "faction-trainers"
 name: "Faction Trainers"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "retainer"

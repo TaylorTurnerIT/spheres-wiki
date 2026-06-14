@@ -1,9 +1,5 @@
 ---
-id: "mass-tame"
 name: "Mass Tame"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "handle-animal"

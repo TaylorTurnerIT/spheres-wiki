@@ -1,9 +1,5 @@
 ---
-id: greater-healing
 name: "Greater Healing"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: ["form"]
 ---

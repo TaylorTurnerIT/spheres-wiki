@@ -1,9 +1,5 @@
 ---
-id: "alone-in-a-crowd"
 name: "Alone in a Crowd"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "basic"
 tags:
   - "act"

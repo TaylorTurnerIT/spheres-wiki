@@ -1,9 +1,5 @@
 ---
-id: "acclimate"
 name: "Acclimate"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "base"
 tags: []
 ---

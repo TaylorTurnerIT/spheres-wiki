@@ -1,9 +1,5 @@
 ---
-id: mass-teleport
 name: "Mass Teleport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["mass"]
 ---

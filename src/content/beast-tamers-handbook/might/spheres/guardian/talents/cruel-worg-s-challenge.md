@@ -1,9 +1,5 @@
 ---
-id: "cruel-worg-s-challenge"
 name: "Cruel Worg’s Challenge"
-type: "talent"
-sourceBook: "beast-tamers-handbook"
-sphere: "guardian"
 tier: "advanced"
 tags: []
 ---

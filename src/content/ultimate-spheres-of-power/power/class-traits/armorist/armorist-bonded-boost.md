@@ -1,10 +1,6 @@
 ---
-id: armorist-bonded-boost
 name: "Bonded Boost"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 requires: "armorist 10, boost equipment class feature"
 ---

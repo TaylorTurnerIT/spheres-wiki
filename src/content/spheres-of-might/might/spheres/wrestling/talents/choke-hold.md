@@ -1,9 +1,5 @@
 ---
-id: "choke-hold"
 name: "Choke Hold"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

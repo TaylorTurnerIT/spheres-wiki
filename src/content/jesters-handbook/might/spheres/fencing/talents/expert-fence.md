@@ -1,9 +1,5 @@
 ---
-id: "expert-fence"
 name: "Expert Fence"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

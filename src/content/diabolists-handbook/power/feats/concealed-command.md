@@ -1,8 +1,5 @@
 ---
-id: concealed-command
 name: "Concealed Command"
-type: feat
-system: power
 sphere: illusion
 tags: []
 tier: feat

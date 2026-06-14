@@ -1,8 +1,5 @@
 ---
-id: arcane-fetters
 name: "Arcane Fetters"
-type: feat
-system: power
 sphere: protection
 dualSphere: creation
 tags: ["sm"]

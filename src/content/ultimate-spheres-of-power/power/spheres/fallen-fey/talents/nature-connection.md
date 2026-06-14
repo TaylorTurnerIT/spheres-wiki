@@ -1,9 +1,5 @@
 ---
-id: nature-connection
 name: "Nature-Connection"
-type: talent
-system: power
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

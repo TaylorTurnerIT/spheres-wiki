@@ -1,8 +1,5 @@
 ---
-id: tethered-mana
 name: "Tethered Mana"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

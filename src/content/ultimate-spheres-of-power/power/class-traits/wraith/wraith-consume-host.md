@@ -1,10 +1,6 @@
 ---
-id: wraith-consume-host
 name: "Consume Host"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

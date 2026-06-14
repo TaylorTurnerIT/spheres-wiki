@@ -1,9 +1,5 @@
 ---
-id: dowsing
 name: "Dowsing"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["utility", "divine"]
 ---

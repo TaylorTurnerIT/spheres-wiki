@@ -1,9 +1,5 @@
 ---
-id: "connect-the-dots"
 name: "Connect The Dots"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "complication"

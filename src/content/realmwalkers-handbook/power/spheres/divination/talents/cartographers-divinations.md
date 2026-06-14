@@ -1,9 +1,5 @@
 ---
-id: cartographers-divinations
 name: "Cartographer's Divinations"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["divine", "utility"]
 ---

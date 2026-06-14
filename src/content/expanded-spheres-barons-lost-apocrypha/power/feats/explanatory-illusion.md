@@ -1,8 +1,5 @@
 ---
-id: explanatory-illusion
 name: Explanatory Illusion
-type: feat
-system: power
 sphere: illusion
 dualSphere: divination
 tier: feat

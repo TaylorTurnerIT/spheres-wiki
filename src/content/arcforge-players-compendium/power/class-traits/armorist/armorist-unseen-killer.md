@@ -1,10 +1,6 @@
 ---
-id: armorist-unseen-killer
 name: "Unseen Killer"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

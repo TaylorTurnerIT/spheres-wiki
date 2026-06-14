@@ -1,7 +1,5 @@
 ---
-id: vigilant
 name: Vigilant
-className: courser
 level: 3
 tags: []
 ---

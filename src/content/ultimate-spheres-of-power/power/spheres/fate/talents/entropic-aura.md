@@ -1,9 +1,5 @@
 ---
-id: entropic-aura
 name: "Entropic Aura"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["curse", "consecration"]
 ---

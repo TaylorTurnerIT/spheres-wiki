@@ -1,9 +1,5 @@
 ---
-id: reverse-gravity
 name: "Reverse Gravity"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: ["enhance"]
 ---

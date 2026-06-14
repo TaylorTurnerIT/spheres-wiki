@@ -1,9 +1,5 @@
 ---
-id: unwilling-teleport
 name: "Unwilling Teleport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "momentous-force"
 name: "Momentous Force"
-type: "talent"
-sourceBook: "expanded-spheres-weaves-of-war"
-sphere: "brute"
 tier: "basic"
 ---
 

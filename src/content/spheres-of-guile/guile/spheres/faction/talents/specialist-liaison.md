@@ -1,9 +1,5 @@
 ---
-id: "specialist-liaison"
 name: "Specialist Liaison"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "retainer"

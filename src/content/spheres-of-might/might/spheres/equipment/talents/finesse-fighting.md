@@ -1,9 +1,5 @@
 ---
-id: "finesse-fighting"
 name: "Finesse Fighting"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

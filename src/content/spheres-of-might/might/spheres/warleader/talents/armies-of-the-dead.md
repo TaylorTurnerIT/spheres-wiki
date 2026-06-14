@@ -1,9 +1,5 @@
 ---
-id: "armies-of-the-dead"
 name: "Armies Of The Dead"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "advanced"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: armorist-combat-talent
 name: "Combat Talent"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

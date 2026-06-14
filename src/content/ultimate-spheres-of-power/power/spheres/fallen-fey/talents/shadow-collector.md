@@ -1,9 +1,5 @@
 ---
-id: shadow-collector
 name: "Shadow Collector"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

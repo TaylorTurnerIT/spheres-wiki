@@ -1,9 +1,5 @@
 ---
-id: prickly
 name: "Prickly"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

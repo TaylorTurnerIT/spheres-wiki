@@ -1,9 +1,5 @@
 ---
-id: zephyrs-flight
 name: "Zephyr's Flight"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "wind"]
 ---

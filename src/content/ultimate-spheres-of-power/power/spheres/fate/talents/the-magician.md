@@ -1,9 +1,5 @@
 ---
-id: the-magician
 name: "The Magician"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

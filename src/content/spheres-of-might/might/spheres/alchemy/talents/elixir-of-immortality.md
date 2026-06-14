@@ -1,9 +1,5 @@
 ---
-id: "elixir-of-immortality"
 name: "Elixir Of Immortality"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "formulae"

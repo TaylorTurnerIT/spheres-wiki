@@ -1,9 +1,5 @@
 ---
-id: "tactical-sabotage"
 name: "Tactical Sabotage"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags: []
 ---

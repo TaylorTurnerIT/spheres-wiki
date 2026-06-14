@@ -1,9 +1,5 @@
 ---
-id: "bleed-air"
 name: "Bleed Air"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "advanced"
 tags:
   - "bleed"

@@ -1,10 +1,6 @@
 ---
-id: shifter-shape-weapon
 name: "Shape Weapon"
-type: class-trait
-system: power
 tags: ["supernatural"]
-className: shifter
 featureId: bestial-trait
 ---
 

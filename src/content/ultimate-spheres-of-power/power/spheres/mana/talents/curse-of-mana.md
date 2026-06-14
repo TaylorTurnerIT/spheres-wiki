@@ -1,9 +1,5 @@
 ---
-id: curse-of-mana
 name: "Curse Of Mana"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["curse"]
 ---

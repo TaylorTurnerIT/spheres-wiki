@@ -1,9 +1,5 @@
 ---
-id: permanent-bond
 name: "Permanent Bond"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

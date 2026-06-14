@@ -1,9 +1,5 @@
 ---
-id: augment-healing
 name: "Augment Healing"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: crown-of-the-courts
 name: "Crown Of The Courts"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

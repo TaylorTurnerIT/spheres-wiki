@@ -1,9 +1,5 @@
 ---
-id: improved-eject
 name: "Improved Eject"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["time"]
 ---

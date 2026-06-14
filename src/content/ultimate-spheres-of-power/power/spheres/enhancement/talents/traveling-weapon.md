@@ -1,9 +1,5 @@
 ---
-id: traveling-weapon
 name: "Traveling Weapon"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

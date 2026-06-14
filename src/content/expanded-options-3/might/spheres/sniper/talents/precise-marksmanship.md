@@ -1,9 +1,5 @@
 ---
-id: "precise-marksmanship"
 name: "Precise Marksmanship"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "sniper"
 tier: "advanced"
 tags:
   - "snipe"

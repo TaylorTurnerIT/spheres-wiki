@@ -1,8 +1,5 @@
 ---
-id: shadowy-slay
 name: "Shadowy Slay"
-type: feat
-system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat

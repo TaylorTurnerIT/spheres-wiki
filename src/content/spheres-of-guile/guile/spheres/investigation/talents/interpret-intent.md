@@ -1,9 +1,5 @@
 ---
-id: "interpret-intent"
 name: "Interpret Intent"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

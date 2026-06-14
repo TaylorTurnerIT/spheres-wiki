@@ -1,9 +1,5 @@
 ---
-id: "up-down-and"
 name: "Up, Down And…"
-type: "talent"
-sourceBook: "spheres-apocrypha-dipsomania"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

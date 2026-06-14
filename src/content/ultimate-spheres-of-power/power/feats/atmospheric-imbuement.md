@@ -1,8 +1,5 @@
 ---
-id: atmospheric-imbuement
 name: Atmospheric Imbuement
-type: feat
-system: power
 sphere: weather
 dualSphere: destruction
 tier: feat

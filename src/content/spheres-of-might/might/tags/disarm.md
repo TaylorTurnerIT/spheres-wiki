@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "disarm"
 label: "Disarm"
 sphere: "duelist"
 priority: 0

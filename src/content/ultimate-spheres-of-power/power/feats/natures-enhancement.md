@@ -1,8 +1,5 @@
 ---
-id: natures-enhancement
 name: Nature's Enhancement
-type: feat
-system: power
 sphere: nature
 dualSphere: enhancement
 tier: feat

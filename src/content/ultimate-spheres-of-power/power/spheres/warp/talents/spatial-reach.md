@@ -1,9 +1,5 @@
 ---
-id: spatial-reach
 name: "Spatial Reach"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

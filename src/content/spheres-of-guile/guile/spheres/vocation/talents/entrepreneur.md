@@ -1,9 +1,5 @@
 ---
-id: "entrepreneur"
 name: "Entrepreneur"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "advanced"
 tags:
   - "utility"

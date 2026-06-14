@@ -1,9 +1,5 @@
 ---
-id: ranged-mind
 name: "Ranged Mind"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["range"]
 ---

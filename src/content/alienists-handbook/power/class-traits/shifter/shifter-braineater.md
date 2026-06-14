@@ -1,10 +1,6 @@
 ---
-id: shifter-braineater
 name: "Braineater"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 ---
 

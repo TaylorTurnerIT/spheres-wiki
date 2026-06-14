@@ -1,9 +1,5 @@
 ---
-id: "duck-and-weave"
 name: "Duck And Weave"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "pathing"

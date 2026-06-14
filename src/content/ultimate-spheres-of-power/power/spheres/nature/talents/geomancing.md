@@ -1,9 +1,5 @@
 ---
-id: geomancing
 name: Geomancing
-system: power
-type: talent
-sphere: nature
 tier: base
 tags: []
 ---

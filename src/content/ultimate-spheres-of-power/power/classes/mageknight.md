@@ -1,8 +1,5 @@
 ---
-id: mageknight
 name: "Mageknight"
-type: class
-system: power
 tags: []
 hitDie: 10
 alignment: "Any"

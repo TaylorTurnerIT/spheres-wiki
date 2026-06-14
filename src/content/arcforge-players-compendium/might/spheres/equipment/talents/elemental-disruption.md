@@ -1,9 +1,5 @@
 ---
-id: "elemental-disruption"
 name: "Elemental Disruption"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "never-gets-old"
 name: "Never Gets Old"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags: []
 ---

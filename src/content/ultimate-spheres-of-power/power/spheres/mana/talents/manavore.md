@@ -1,9 +1,5 @@
 ---
-id: manavore
 name: "Manavore"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: spell-ward
 name: "Spell Ward"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis", "ward"]
 ---

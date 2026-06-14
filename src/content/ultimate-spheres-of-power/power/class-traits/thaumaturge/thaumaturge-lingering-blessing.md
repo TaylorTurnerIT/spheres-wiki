@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-lingering-blessing
 name: "Lingering Blessing"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

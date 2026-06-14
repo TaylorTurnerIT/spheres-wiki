@@ -1,8 +1,5 @@
 ---
-id: spreading-magic
 name: "Spreading Magic"
-type: feat
-system: power
 sphere: enhancement
 tags: ["proxy"]
 tier: feat

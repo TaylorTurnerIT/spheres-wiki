@@ -1,9 +1,5 @@
 ---
-id: improved-haste
 name: "Improved Haste"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: []
 ---

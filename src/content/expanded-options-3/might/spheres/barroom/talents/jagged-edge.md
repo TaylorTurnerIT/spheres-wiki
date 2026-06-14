@@ -1,9 +1,5 @@
 ---
-id: "jagged-edge"
 name: "Jagged Edge"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "smash"

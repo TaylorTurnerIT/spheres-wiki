@@ -1,9 +1,5 @@
 ---
-id: totem-of-whispers
 name: "Totem Of Whispers"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

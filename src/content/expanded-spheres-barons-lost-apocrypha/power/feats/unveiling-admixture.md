@@ -1,8 +1,5 @@
 ---
-id: unveiling-admixture
 name: "Unveiling Admixture"
-type: feat
-system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat

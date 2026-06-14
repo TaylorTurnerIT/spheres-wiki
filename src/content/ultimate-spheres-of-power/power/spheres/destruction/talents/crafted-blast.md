@@ -1,9 +1,5 @@
 ---
-id: crafted-blast
 name: "Crafted Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "bloody-rip"
 name: "Bloody Rip"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags:
   - "impale"

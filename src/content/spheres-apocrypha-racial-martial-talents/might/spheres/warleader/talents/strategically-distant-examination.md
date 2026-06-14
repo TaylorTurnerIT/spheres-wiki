@@ -1,9 +1,5 @@
 ---
-id: "strategically-distant-examination"
 name: "Strategically Distant Examination"
-type: "talent"
-sourceBook: "spheres-apocrypha-racial-martial-talents"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

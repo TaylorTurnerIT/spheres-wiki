@@ -1,9 +1,5 @@
 ---
-id: "tavernmonger"
 name: "Tavernmonger"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "utility"

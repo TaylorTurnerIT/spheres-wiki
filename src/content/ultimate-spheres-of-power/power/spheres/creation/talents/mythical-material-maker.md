@@ -1,9 +1,5 @@
 ---
-id: mythical-material-maker
 name: "Mythical Material Maker"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: ["material"]
 ---

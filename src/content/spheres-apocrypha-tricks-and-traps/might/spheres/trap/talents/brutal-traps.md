@@ -1,9 +1,5 @@
 ---
-id: "brutal-traps"
 name: "Brutal Traps"
-type: "talent"
-sourceBook: "spheres-apocrypha-tricks-and-traps"
-sphere: "trap"
 tier: "basic"
 tags: ["snare"]
 ---

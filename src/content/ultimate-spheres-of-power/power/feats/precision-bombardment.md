@@ -1,8 +1,5 @@
 ---
-id: precision-bombardment
 name: "Precision Bombardment"
-type: feat
-system: power
 sphere: creation
 tags: ["combat"]
 tier: feat

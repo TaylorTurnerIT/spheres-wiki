@@ -1,8 +1,5 @@
 ---
-id: heavy-hand
 name: "Heavy Hand"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "skilled-mercenary-retainer"
 name: "Skilled Mercenary Retainer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "retainer"

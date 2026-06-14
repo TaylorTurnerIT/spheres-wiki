@@ -1,9 +1,5 @@
 ---
-id: "swampslick-flux"
 name: "Swampslick Flux"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "advanced"
 tags:
   - "tonic"

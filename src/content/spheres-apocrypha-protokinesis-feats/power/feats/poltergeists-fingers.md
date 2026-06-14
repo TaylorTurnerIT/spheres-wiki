@@ -1,8 +1,5 @@
 ---
-id: poltergeists-fingers
 name: "Poltergeist's Fingers"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat

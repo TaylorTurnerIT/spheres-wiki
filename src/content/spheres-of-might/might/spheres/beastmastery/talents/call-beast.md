@@ -1,9 +1,5 @@
 ---
-id: "call-beast"
 name: "Call Beast"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "utility"

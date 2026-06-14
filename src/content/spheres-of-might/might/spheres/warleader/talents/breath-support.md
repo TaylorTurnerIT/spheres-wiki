@@ -1,9 +1,5 @@
 ---
-id: "breath-support"
 name: "Breath Support"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

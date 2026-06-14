@@ -1,9 +1,5 @@
 ---
-id: energizing-vitality
 name: "Energizing Vitality"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["vitality"]
 ---

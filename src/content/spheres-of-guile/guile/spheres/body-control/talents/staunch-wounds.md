@@ -1,9 +1,5 @@
 ---
-id: "staunch-wounds"
 name: "Staunch Wounds"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

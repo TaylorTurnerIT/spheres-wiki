@@ -1,9 +1,5 @@
 ---
-id: "adept-builder"
 name: "Adept Builder"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "specialty"

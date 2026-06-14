@@ -1,9 +1,5 @@
 ---
-id: "vacuum-slice"
 name: "Vacuum Slice"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "advanced"
 tags: []
 ---

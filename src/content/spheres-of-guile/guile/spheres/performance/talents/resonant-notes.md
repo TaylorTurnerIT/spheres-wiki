@@ -1,9 +1,5 @@
 ---
-id: "resonant-notes"
 name: "Resonant Notes"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "instrumental"

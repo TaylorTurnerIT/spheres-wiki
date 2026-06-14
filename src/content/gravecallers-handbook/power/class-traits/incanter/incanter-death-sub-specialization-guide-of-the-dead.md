@@ -1,10 +1,6 @@
 ---
-id: incanter-death-sub-specialization-guide-of-the-dead
 name: "Death Sub-Specialization: Guide of the Dead"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: list-of-sphere-specializations
 ---
 

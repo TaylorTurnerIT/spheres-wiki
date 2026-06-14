@@ -1,8 +1,6 @@
 ---
-id: steal-language-su
 name: "Steal Language (Su)"
 type: class-feature
-system: power
 className: shifter
 level: 5
 tags: []

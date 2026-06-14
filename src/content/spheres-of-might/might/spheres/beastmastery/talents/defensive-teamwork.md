@@ -1,9 +1,5 @@
 ---
-id: "defensive-teamwork"
 name: "Defensive Teamwork"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

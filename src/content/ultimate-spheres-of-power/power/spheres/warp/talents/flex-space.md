@@ -1,9 +1,5 @@
 ---
-id: flex-space
 name: "Flex Space"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["space"]
 ---

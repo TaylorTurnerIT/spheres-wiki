@@ -1,9 +1,5 @@
 ---
-id: "vanish-into-stillness"
 name: "Vanish Into Stillness"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "advanced"
 tags: []
 ---

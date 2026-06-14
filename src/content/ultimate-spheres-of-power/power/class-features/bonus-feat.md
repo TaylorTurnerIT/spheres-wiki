@@ -1,8 +1,6 @@
 ---
-id: bonus-feat
 name: "Bonus Feat"
 type: class-feature
-system: power
 className: incanter
 level: 1
 tags: []

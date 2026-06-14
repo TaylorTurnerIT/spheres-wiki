@@ -1,9 +1,5 @@
 ---
-id: "distracting-trickery"
 name: "Distracting Trickery"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "shift-brightness"
 name: "Shift Brightness"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "advanced"
 tags:
   - "ground"

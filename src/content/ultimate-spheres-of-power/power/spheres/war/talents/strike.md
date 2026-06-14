@@ -1,9 +1,5 @@
 ---
-id: strike
 name: Strike
-system: power
-type: talent
-sphere: war
 tier: basic
 tags:
   - rally

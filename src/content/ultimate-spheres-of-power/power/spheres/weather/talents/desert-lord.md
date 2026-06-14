@@ -1,9 +1,5 @@
 ---
-id: desert-lord
 name: "Desert Lord"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

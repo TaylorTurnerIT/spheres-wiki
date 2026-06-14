@@ -1,10 +1,6 @@
 ---
-id: armorist-overload-specialist
 name: "Overload Specialist:"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

@@ -1,8 +1,5 @@
 ---
-id: wall-master
 name: "Wall Master"
-type: feat
-system: power
 sphere: creation
 tags: []
 tier: feat

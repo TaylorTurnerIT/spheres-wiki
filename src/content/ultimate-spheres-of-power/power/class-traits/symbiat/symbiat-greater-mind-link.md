@@ -1,10 +1,6 @@
 ---
-id: symbiat-greater-mind-link
 name: "Greater Mind Link"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

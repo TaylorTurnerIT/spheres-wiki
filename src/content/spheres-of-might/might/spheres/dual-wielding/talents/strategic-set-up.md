@@ -1,9 +1,5 @@
 ---
-id: "strategic-set-up"
 name: "Strategic Set-Up"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "fey-retainer"
 name: "Fey Retainer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "retainer"

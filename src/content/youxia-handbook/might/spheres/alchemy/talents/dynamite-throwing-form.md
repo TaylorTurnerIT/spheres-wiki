@@ -1,9 +1,5 @@
 ---
-id: "dynamite-throwing-form"
 name: "Dynamite Throwing Form"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "stance"

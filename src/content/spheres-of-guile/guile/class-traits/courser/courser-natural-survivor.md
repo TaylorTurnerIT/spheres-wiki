@@ -1,7 +1,5 @@
 ---
-id: courser-natural-survivor
 name: Natural Survivor
-className: courser
 featureId: courser-ventures
 tags: []
 ---

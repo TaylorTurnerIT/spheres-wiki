@@ -1,9 +1,5 @@
 ---
-id: adaptive-physicality
 name: "Adaptive Physicality"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["utility"]
 ---

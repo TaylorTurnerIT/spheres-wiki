@@ -1,9 +1,5 @@
 ---
-id: wingbind
 name: "Wingbind"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: []
 ---

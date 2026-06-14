@@ -1,8 +1,5 @@
 ---
-id: attuned-dreamer
 name: "Attuned Dreamer"
-type: feat
-system: power
 sphere: mind
 tags: ["sm"]
 tier: feat

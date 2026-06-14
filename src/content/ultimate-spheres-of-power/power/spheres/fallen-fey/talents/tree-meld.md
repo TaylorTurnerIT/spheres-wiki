@@ -1,9 +1,5 @@
 ---
-id: tree-meld
 name: "Tree Meld"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

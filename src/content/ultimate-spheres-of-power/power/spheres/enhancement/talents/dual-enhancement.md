@@ -1,9 +1,5 @@
 ---
-id: dual-enhancement
 name: "Dual Enhancement"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: []
 ---

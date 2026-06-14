@@ -1,9 +1,5 @@
 ---
-id: "trap-technician"
 name: "Trap Technician"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags:
   - "snipe"

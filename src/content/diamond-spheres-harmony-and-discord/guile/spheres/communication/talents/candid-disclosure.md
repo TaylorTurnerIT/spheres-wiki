@@ -1,9 +1,5 @@
 ---
-id: "candid-disclosure"
 name: "Candid Disclosure"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: flight
 name: "Flight"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: ["extraordinary", "harvest"]
 ---

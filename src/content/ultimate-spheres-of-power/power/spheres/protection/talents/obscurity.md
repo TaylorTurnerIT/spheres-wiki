@@ -1,9 +1,5 @@
 ---
-id: obscurity
 name: "Obscurity"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis", "ward"]
 ---

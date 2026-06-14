@@ -1,9 +1,5 @@
 ---
-id: red-mist
 name: "Red Mist"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

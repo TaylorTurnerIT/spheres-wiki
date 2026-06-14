@@ -1,9 +1,5 @@
 ---
-id: alternative-energy
 name: "Alternative Energy"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: []
 ---

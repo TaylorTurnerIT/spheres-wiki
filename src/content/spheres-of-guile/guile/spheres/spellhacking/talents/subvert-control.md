@@ -1,9 +1,5 @@
 ---
-id: "subvert-control"
 name: "Subvert Control"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "advanced"
 tags:
   - "hack"

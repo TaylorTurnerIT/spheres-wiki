@@ -1,8 +1,5 @@
 ---
-id: rain-of-renewal
 name: "Rain Of Renewal"
-type: feat
-system: power
 sphere: weather
 dualSphere: life
 tags: ["warden"]

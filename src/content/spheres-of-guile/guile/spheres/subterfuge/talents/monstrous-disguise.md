@@ -1,9 +1,5 @@
 ---
-id: "monstrous-disguise"
 name: "Monstrous Disguise"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "disguise"

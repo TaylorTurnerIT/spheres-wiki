@@ -1,8 +1,5 @@
 ---
-id: dark
 name: "Dark"
-system: power
-type: sphere
 icon: dark
 description: "You may create and manipulate darkness."
 tags: []

@@ -1,10 +1,6 @@
 ---
-id: armorist-executioner
 name: "Executioner"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

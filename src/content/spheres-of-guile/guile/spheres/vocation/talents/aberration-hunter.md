@@ -1,9 +1,5 @@
 ---
-id: "aberration-hunter"
 name: "Aberration Hunter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

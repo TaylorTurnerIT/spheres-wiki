@@ -1,9 +1,5 @@
 ---
-id: "spur-violence"
 name: "Spur Violence"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

@@ -1,9 +1,5 @@
 ---
-id: "ko-focus"
 name: "KO Focus"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

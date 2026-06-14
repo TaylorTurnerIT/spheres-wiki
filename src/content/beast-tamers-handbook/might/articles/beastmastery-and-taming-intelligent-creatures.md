@@ -1,7 +1,5 @@
 ---
 name: "Sphere-Specific Variant Rule: Beastmastery and Taming Intelligent Creatures"
-type: article
-id: beastmastery-and-taming-intelligent-creatures
 source: beast-tamers-handbook
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "simultaneous-hacks"
 name: "Simultaneous Hacks"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags: []
 ---

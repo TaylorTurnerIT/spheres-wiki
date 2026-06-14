@@ -1,9 +1,5 @@
 ---
-id: "talented-retainers"
 name: "Talented Retainers"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "basic"
 tags:
   - "retainer"

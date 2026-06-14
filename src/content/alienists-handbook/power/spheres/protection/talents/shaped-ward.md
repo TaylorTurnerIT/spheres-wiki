@@ -1,9 +1,5 @@
 ---
-id: shaped-ward
 name: "Shaped Ward"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: []
 ---

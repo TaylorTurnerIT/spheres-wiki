@@ -1,9 +1,5 @@
 ---
-id: monument
 name: "Monument"
-system: power
-type: talent
-sphere: war
 tier: advanced
 tags: []
 ---

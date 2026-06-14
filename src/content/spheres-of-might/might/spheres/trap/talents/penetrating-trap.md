@@ -1,9 +1,5 @@
 ---
-id: "penetrating-trap"
 name: "Penetrating Trap"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "advanced"
 tags: []
 ---

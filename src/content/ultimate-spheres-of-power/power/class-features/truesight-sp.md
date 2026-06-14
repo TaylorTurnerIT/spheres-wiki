@@ -1,8 +1,6 @@
 ---
-id: truesight-sp
 name: "Truesight (Sp)"
 type: class-feature
-system: power
 className: fey-adept
 level: 1
 tags: []

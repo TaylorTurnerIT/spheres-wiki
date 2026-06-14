@@ -1,9 +1,5 @@
 ---
-id: resuscitate
 name: "Resuscitate"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

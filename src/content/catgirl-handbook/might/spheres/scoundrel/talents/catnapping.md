@@ -1,9 +1,5 @@
 ---
-id: "catnapping"
 name: "Catnapping"
-type: "talent"
-sourceBook: "catgirl-handbook"
-sphere: "scoundrel"
 tier: "advanced"
 tags:
   - "trick"

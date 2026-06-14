@@ -1,9 +1,5 @@
 ---
-id: "vehicle-improvements"
 name: "Vehicle Improvements"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

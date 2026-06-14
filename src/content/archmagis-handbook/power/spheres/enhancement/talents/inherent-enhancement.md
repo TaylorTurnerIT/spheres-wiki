@@ -1,9 +1,5 @@
 ---
-id: inherent-enhancement
 name: "Inherent Enhancement"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: ["enhance"]
 ---

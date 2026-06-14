@@ -1,9 +1,5 @@
 ---
-id: "unwilling-boost"
 name: "Unwilling Boost"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "leap"

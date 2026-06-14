@@ -1,9 +1,5 @@
 ---
-id: "reflecting-palm"
 name: "Reflecting Palm"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "boxing"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "wild-speaker"
 name: "Wild Speaker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "handle-animal"

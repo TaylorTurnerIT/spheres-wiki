@@ -1,9 +1,5 @@
 ---
-id: threatening-momentum
 name: "Threatening Momentum"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["momentum"]
 ---

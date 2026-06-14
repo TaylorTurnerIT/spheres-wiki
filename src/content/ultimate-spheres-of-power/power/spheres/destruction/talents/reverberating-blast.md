@@ -1,9 +1,5 @@
 ---
-id: reverberating-blast
 name: "Reverberating Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "sonic"]
 ---

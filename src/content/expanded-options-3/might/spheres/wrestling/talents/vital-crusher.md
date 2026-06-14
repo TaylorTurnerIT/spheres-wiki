@@ -1,9 +1,5 @@
 ---
-id: "vital-crusher"
 name: "Vital Crusher"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "wrestling"
 tier: "advanced"
 tags: []
 ---

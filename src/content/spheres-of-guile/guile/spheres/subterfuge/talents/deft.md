@@ -1,9 +1,5 @@
 ---
-id: "deft"
 name: "Deft"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "base"
 tags:
   - "package"

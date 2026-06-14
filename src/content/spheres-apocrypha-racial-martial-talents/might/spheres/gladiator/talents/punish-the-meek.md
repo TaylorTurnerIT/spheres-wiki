@@ -1,9 +1,5 @@
 ---
-id: "punish-the-meek"
 name: "Punish the Meek"
-type: "talent"
-sourceBook: "spheres-apocrypha-racial-martial-talents"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

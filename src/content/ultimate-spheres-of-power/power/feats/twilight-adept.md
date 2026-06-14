@@ -1,8 +1,5 @@
 ---
-id: twilight-adept
 name: "Twilight Adept"
-type: feat
-system: power
 sphere: light
 tags: ["teamwork"]
 tier: feat

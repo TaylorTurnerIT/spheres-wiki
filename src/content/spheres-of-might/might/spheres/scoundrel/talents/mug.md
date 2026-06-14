@@ -1,9 +1,5 @@
 ---
-id: "mug"
 name: "Mug"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "trick"

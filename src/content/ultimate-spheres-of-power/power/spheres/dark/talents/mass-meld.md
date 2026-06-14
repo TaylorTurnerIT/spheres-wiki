@@ -1,9 +1,5 @@
 ---
-id: mass-meld
 name: "Mass Meld"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["mass"]
 ---

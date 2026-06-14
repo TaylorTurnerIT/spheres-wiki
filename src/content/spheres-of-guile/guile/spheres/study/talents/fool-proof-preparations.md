@@ -1,9 +1,5 @@
 ---
-id: "fool-proof-preparations"
 name: "Fool-proof Preparations"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "basic"
 tags:
   - "complication"

@@ -1,9 +1,5 @@
 ---
-id: intensified-weather
 name: "Intensified Weather"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["shroud"]
 ---

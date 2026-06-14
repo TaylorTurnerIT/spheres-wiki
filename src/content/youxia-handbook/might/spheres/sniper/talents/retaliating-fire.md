@@ -1,9 +1,5 @@
 ---
-id: "retaliating-fire"
 name: "Retaliating Fire"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "sniper"
 tier: "basic"
 tags:
   - "stance"

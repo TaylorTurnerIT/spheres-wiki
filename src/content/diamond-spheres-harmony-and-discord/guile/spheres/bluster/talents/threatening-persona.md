@@ -1,9 +1,5 @@
 ---
-id: "threatening-persona"
 name: "Threatening Persona"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "approach"

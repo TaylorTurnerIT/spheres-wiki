@@ -1,9 +1,5 @@
 ---
-id: "retainer-detail"
 name: "Retainer Detail"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "retainer"

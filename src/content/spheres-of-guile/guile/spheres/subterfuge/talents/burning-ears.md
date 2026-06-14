@@ -1,9 +1,5 @@
 ---
-id: "burning-ears"
 name: "Burning Ears"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "advanced"
 tags:
   - "utility"

@@ -1,8 +1,5 @@
 ---
-id: spiteful-end
 name: "Spiteful End"
-type: feat
-system: power
 sphere: fate
 tags: ["sm"]
 tier: feat

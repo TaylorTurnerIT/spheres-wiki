@@ -1,9 +1,5 @@
 ---
-id: "salvage-splinter"
 name: "Salvage Splinter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "advanced"
 tags: []
 ---

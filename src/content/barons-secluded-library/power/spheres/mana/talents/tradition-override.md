@@ -1,9 +1,5 @@
 ---
-id: tradition-override
 name: "Tradition Override"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["sm"]
 ---

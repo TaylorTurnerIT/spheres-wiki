@@ -1,9 +1,5 @@
 ---
-id: mindscape-configuration
 name: "Mindscape Configuration"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: []
 ---

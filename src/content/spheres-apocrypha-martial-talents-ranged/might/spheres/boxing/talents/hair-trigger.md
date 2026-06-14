@@ -1,9 +1,5 @@
 ---
-id: "hair-trigger"
 name: "Hair Trigger"
-type: "talent"
-sourceBook: "spheres-apocrypha-martial-talents-ranged"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

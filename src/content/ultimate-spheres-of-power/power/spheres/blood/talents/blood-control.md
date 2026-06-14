@@ -1,9 +1,5 @@
 ---
-id: blood-control
 name: "Blood Control"
-system: power
-type: talent
-sphere: blood
 tier: base
 tags: []
 ---

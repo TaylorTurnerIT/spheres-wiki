@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "background"
 label: "Background"
 color: "#4A235A"
 priority: 0

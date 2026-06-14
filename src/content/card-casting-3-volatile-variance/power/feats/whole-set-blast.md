@@ -1,10 +1,6 @@
 ---
-id: whole-set-blast
 name: Whole-Set Blast
-system: power
-sourceBook: card-casting-3-volatile-variance
 dualSphere: destruction
-type: feat
 sphere: fate
 tier: feat
 ---

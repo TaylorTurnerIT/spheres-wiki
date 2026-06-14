@@ -1,8 +1,5 @@
 ---
-id: deadened-flesh
 name: "Deadened Flesh"
-type: feat
-system: power
 sphere: death
 tags: ["necrosis"]
 tier: feat

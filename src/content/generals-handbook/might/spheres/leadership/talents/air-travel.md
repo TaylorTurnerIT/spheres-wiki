@@ -1,9 +1,5 @@
 ---
-id: "air-travel"
 name: "Air Travel"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "advanced"
 tags:
   - "followers"

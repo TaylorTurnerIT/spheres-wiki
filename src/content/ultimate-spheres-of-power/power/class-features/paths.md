@@ -1,8 +1,6 @@
 ---
-id: paths
 name: "Paths"
 type: class-feature
-system: power
 className: hedgewitch
 level: 1
 tags: []

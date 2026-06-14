@@ -1,9 +1,5 @@
 ---
-id: "afterimage"
 name: "Afterimage"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "motion"

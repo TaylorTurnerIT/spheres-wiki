@@ -1,9 +1,5 @@
 ---
-id: "pirate"
 name: "Pirate"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

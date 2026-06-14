@@ -1,10 +1,6 @@
 ---
-id: armorist-extradimensional-storage
 name: "Extradimensional Storage"
-type: class-trait
-system: power
 tags: ["spell-like"]
-className: armorist
 featureId: arsenal-trick
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "reinforce-material"
 name: "Reinforce Material"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags: []
 ---

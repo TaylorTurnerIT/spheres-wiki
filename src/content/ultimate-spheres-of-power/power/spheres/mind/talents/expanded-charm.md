@@ -1,9 +1,5 @@
 ---
-id: expanded-charm
 name: "Expanded Charm"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "thunderous-punishment"
 name: "Thunderous Punishment"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

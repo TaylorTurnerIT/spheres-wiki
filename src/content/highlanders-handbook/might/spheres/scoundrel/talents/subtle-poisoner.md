@@ -1,9 +1,5 @@
 ---
-id: "subtle-poisoner"
 name: "Subtle Poisoner"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

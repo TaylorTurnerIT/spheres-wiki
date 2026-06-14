@@ -1,9 +1,5 @@
 ---
-id: time-bubble
 name: "Time Bubble"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

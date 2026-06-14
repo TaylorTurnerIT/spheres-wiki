@@ -1,9 +1,5 @@
 ---
-id: forceful-telekinesis
 name: "Forceful Telekinesis"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

@@ -1,8 +1,6 @@
 ---
-id: list-of-sphere-specializations
 name: "List of Sphere Specializations"
 type: class-feature
-system: power
 className: incanter
 level: 3
 tags: []

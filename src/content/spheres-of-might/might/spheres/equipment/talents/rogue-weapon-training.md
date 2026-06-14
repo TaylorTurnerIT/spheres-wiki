@@ -1,9 +1,5 @@
 ---
-id: "rogue-weapon-training"
 name: "Rogue Weapon Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

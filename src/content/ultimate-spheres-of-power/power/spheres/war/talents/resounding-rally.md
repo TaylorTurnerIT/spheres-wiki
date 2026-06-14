@@ -1,9 +1,5 @@
 ---
-id: resounding-rally
 name: "Resounding Rally"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

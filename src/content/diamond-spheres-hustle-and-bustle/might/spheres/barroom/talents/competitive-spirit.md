@@ -1,9 +1,5 @@
 ---
-id: "competitive-spirit"
 name: "Competitive Spirit"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "utility"

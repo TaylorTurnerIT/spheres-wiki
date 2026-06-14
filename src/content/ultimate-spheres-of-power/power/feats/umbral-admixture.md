@@ -1,8 +1,5 @@
 ---
-id: umbral-admixture
 name: "Umbral Admixture"
-type: feat
-system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "invigorating-call"
 name: "Invigorating Call"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

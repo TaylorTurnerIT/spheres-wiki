@@ -1,8 +1,5 @@
 ---
-id: squad-triangulation
 name: "Squad Triangulation"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

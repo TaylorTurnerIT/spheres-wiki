@@ -1,8 +1,5 @@
 ---
-id: "beastmastery"
 name: "Beastmastery"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "beastmastery"
 tags: []
 sectionDefinitions:

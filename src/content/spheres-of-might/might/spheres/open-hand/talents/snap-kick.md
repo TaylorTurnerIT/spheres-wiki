@@ -1,9 +1,5 @@
 ---
-id: "snap-kick"
 name: "Snap Kick"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

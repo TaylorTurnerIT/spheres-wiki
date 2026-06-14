@@ -1,9 +1,5 @@
 ---
-id: "acrobatic-mount"
 name: "Acrobatic Mount"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "ride"

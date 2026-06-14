@@ -1,9 +1,5 @@
 ---
-id: warping-frenzy
 name: "Warping Frenzy"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: phoenix-resurgence
 name: "Phoenix Resurgence"
-system: power
-type: talent
-sphere: nature
 tier: advanced
 tags: ["fire", "spirit"]
 ---

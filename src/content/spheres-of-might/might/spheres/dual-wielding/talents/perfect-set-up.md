@@ -1,9 +1,5 @@
 ---
-id: "perfect-set-up"
 name: "Perfect Set-Up"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

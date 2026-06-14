@@ -1,9 +1,5 @@
 ---
-id: melt-power
 name: "Melt Power"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["expunge"]
 ---

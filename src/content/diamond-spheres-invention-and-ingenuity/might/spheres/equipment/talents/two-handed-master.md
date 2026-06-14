@@ -1,9 +1,5 @@
 ---
-id: "two-handed-master"
 name: "Two-Handed Master"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "equipment"
 tier: "basic"
 ---
 

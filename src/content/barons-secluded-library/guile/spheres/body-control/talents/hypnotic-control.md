@@ -1,9 +1,5 @@
 ---
-id: "hypnotic-control"
 name: "Hypnotic Control"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "body-control"
 tier: "base"
 tags:
   - "package"

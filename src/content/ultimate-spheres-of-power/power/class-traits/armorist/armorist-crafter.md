@@ -1,10 +1,6 @@
 ---
-id: armorist-crafter
 name: "Crafter"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

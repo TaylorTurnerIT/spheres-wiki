@@ -1,9 +1,5 @@
 ---
-id: "trap-wielder"
 name: "Trap Wielder"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

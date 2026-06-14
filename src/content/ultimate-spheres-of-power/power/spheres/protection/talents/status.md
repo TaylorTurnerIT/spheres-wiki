@@ -1,9 +1,5 @@
 ---
-id: status
 name: "Status"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["utility"]
 ---

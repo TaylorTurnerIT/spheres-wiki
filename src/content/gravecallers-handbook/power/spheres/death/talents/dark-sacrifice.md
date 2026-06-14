@@ -1,9 +1,5 @@
 ---
-id: dark-sacrifice
 name: "Dark Sacrifice"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["dominion"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "punch-block"
 name: "Punch Block"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

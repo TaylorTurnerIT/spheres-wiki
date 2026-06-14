@@ -1,8 +1,5 @@
 ---
-id: "study"
 name: "Study"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "study"
 tags: []
 sectionDefinitions:

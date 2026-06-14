@@ -1,9 +1,5 @@
 ---
-id: creeping-lethargy
 name: "Creeping Lethargy"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "darkness"]
 ---

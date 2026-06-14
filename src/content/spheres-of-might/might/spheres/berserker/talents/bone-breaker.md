@@ -1,9 +1,5 @@
 ---
-id: "bone-breaker"
 name: "Bone-Breaker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "exertion"

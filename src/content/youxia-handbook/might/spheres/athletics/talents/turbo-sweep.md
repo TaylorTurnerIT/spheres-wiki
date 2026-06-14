@@ -1,9 +1,5 @@
 ---
-id: "turbo-sweep"
 name: "Turbo Sweep"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "advanced"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: body-double
 name: Body Double
-type: feat
-system: power
 sphere: illusion
 dualSphere: dark
 tier: feat

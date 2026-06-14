@@ -1,9 +1,5 @@
 ---
-id: "magic-trigger"
 name: "Magic Trigger"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags:
   - "snare"

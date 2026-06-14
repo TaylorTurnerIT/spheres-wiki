@@ -1,9 +1,5 @@
 ---
-id: iron-shield
 name: "Iron Shield"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis"]
 ---

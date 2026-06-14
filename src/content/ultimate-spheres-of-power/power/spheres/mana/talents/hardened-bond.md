@@ -1,9 +1,5 @@
 ---
-id: hardened-bond
 name: "Hardened Bond"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: []
 ---

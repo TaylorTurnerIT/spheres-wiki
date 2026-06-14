@@ -1,9 +1,5 @@
 ---
-id: greater-divine
 name: "Greater Divine"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["range"]
 ---

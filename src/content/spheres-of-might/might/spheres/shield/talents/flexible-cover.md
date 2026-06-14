@@ -1,9 +1,5 @@
 ---
-id: "flexible-cover"
 name: "Flexible Cover"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

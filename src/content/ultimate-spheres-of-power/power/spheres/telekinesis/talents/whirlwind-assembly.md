@@ -1,9 +1,5 @@
 ---
-id: whirlwind-assembly
 name: "Whirlwind Assembly"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

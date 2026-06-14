@@ -1,9 +1,5 @@
 ---
-id: "fabulist"
 name: "Fabulist"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

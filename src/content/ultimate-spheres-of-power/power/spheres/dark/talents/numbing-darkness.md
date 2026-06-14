@@ -1,9 +1,5 @@
 ---
-id: numbing-darkness
 name: "Numbing Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "darkness"]
 ---

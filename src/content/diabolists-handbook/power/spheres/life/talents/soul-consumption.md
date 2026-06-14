@@ -1,9 +1,5 @@
 ---
-id: soul-consumption
 name: "Soul Consumption"
-system: power
-type: talent
-sphere: life
 tier: advanced
 tags: []
 ---

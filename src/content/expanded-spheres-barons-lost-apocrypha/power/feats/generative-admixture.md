@@ -1,8 +1,5 @@
 ---
-id: generative-admixture
 name: "Generative Admixture"
-type: feat
-system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: eyes-of-the-cabal
 name: "Eyes Of The Cabal"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: []
 ---

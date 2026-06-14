@@ -1,10 +1,6 @@
 ---
-id: armorist-improved-materials
 name: "Improved Materials"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 requires: "armorist 6"
 ---

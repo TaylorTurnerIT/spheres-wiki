@@ -1,9 +1,5 @@
 ---
-id: "melee-archer"
 name: "Melee Archer"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "base"
 tags: []
 ---

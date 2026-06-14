@@ -1,9 +1,5 @@
 ---
-id: "redirection"
 name: "Redirection"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags:
   - "blitz"

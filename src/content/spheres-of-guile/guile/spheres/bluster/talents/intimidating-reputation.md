@@ -1,9 +1,5 @@
 ---
-id: "intimidating-reputation"
 name: "Intimidating Reputation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "plan"

@@ -1,9 +1,5 @@
 ---
-id: discern-alien-cognition
 name: "Discern Alien Cognition"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: []
 ---

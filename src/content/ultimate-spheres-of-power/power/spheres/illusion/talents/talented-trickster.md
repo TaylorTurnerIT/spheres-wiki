@@ -1,9 +1,5 @@
 ---
-id: talented-trickster
 name: "Talented Trickster"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

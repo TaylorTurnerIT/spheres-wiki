@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "deflect"
 label: "Deflect"
 sphere: "shield"
 priority: 0

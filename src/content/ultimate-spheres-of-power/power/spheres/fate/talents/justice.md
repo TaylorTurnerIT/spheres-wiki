@@ -1,9 +1,5 @@
 ---
-id: justice
 name: "Justice"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

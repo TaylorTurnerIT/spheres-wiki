@@ -1,9 +1,5 @@
 ---
-id: "particle-blade-emulation"
 name: "Particle Blade Emulation"
-type: "talent"
-sourceBook: "inventors-handbook"
-sphere: "equipment"
 tier: "basic"
 ---
 

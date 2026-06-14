@@ -1,9 +1,5 @@
 ---
-id: lingering-transformation
 name: "Lingering Transformation"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

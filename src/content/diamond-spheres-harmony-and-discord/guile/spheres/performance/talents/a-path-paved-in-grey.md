@@ -1,9 +1,5 @@
 ---
-id: "a-path-paved-in-grey"
 name: "A Path Paved in Grey"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "basic"
 tags:
   - "act"

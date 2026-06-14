@@ -1,9 +1,5 @@
 ---
-id: telescope
 name: "Telescope"
-type: talent
-system: power
-sphere: light
 tier: base
 tags: ["lens"]
 ---

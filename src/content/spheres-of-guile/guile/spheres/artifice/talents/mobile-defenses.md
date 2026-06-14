@@ -1,9 +1,5 @@
 ---
-id: "mobile-defenses"
 name: "Mobile Defenses"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "function"

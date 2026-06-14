@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-meditation
 name: "Meditation"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

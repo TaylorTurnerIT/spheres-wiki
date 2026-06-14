@@ -1,9 +1,5 @@
 ---
-id: "mystic-craftsman"
 name: "Mystic Craftsman"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

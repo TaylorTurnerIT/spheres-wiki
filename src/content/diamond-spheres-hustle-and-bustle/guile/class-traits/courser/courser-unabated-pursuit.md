@@ -1,7 +1,5 @@
 ---
-id: courser-unabated-pursuit
 name: Unabated Pursuit
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 4"

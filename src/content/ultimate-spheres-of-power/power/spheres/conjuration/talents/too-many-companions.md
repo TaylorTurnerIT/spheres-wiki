@@ -1,9 +1,5 @@
 ---
-id: too-many-companions
 name: "Too Many Companions"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

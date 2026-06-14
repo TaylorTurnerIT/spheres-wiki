@@ -1,9 +1,5 @@
 ---
-id: "true-artist"
 name: "True Artist"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags: []
 ---

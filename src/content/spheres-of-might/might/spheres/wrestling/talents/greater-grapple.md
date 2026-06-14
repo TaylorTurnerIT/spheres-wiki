@@ -1,9 +1,5 @@
 ---
-id: "greater-grapple"
 name: "Greater Grapple"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

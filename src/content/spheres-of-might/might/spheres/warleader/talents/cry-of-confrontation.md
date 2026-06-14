@@ -1,9 +1,5 @@
 ---
-id: "cry-of-confrontation"
 name: "Cry Of Confrontation"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

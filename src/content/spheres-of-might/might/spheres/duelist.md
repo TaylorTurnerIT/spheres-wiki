@@ -1,8 +1,5 @@
 ---
-id: "duelist"
 name: "Duelist"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "duelist"
 tags: []
 sectionDefinitions:

@@ -1,9 +1,5 @@
 ---
-id: "synchronized-rhythm"
 name: "Synchronized Rhythm"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

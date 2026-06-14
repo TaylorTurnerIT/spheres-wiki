@@ -1,9 +1,5 @@
 ---
-id: mass-blood-magic
 name: "Mass Blood Magic"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["mass"]
 ---

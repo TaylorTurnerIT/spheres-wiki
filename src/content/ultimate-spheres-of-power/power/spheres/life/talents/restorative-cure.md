@@ -1,9 +1,5 @@
 ---
-id: restorative-cure
 name: "Restorative Cure"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

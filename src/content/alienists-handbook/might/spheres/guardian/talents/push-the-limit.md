@@ -1,9 +1,5 @@
 ---
-id: "push-the-limit"
 name: "Push The Limit"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "guardian"
 tier: "advanced"
 tags: []
 ---

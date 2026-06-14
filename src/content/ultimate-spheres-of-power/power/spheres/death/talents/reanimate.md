@@ -1,9 +1,5 @@
 ---
-id: reanimate
 name: "Reanimate"
-system: power
-type: talent
-sphere: death
 tier: base
 tags: []
 ---

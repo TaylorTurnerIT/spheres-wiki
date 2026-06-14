@@ -1,9 +1,5 @@
 ---
-id: "jellybone-mixture"
 name: "Jellybone Mixture"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "basic"
 tags:
   - "aroma"

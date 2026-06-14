@@ -1,9 +1,5 @@
 ---
-id: "affliction-manipulation"
 name: "Affliction Manipulation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

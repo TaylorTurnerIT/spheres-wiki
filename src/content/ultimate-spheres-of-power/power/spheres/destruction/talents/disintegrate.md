@@ -1,9 +1,5 @@
 ---
-id: disintegrate
 name: "Disintegrate"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["blast-type"]
 ---

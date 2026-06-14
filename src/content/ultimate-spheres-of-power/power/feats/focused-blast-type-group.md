@@ -1,8 +1,5 @@
 ---
-id: focused-blast-type-group
 name: "Focused Blast Type Group"
-type: feat
-system: power
 sphere: destruction
 tags: []
 tier: feat

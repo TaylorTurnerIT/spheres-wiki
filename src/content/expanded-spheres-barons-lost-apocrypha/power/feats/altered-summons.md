@@ -1,8 +1,5 @@
 ---
-id: altered-summons
 name: Altered Summons
-type: feat
-system: power
 sphere: conjuration
 dualSphere: alteration
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: improved-energy-wall
 name: "Improved Energy Wall"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

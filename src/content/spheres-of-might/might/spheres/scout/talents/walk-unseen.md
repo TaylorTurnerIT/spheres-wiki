@@ -1,9 +1,5 @@
 ---
-id: "walk-unseen"
 name: "Walk Unseen"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "advanced"
 tags: []
 ---

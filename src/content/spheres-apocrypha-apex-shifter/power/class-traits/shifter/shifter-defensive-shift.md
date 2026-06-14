@@ -1,10 +1,6 @@
 ---
-id: shifter-defensive-shift
 name: "Defensive Shift"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 ---
 

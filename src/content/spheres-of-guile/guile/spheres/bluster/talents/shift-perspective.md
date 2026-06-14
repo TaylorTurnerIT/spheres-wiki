@@ -1,9 +1,5 @@
 ---
-id: "shift-perspective"
 name: "Shift Perspective"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "utility"

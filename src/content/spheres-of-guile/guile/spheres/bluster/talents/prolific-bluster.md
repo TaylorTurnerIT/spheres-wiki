@@ -1,9 +1,5 @@
 ---
-id: "prolific-bluster"
 name: "Prolific Bluster"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags: []
 ---

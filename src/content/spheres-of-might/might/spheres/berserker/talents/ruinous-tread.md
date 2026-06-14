@@ -1,9 +1,5 @@
 ---
-id: "ruinous-tread"
 name: "Ruinous Tread"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "advanced"
 tags: []
 ---

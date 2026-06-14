@@ -1,9 +1,5 @@
 ---
-id: "broke-and-broken"
 name: "Broke And Broken"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "trick"

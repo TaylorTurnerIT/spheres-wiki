@@ -1,9 +1,5 @@
 ---
-id: "cleaned-out"
 name: "Cleaned Out"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags:
   - "trick"

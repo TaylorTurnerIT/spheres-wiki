@@ -1,9 +1,5 @@
 ---
-id: "iron-roar"
 name: "Iron Roar"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

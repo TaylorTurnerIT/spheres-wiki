@@ -1,9 +1,5 @@
 ---
-id: "inciting-accusation"
 name: "Inciting Accusation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

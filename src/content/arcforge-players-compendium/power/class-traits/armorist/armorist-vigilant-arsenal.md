@@ -1,10 +1,6 @@
 ---
-id: armorist-vigilant-arsenal
 name: "Vigilant Arsenal"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "earthquake-stomp"
 name: "Earthquake Stomp"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

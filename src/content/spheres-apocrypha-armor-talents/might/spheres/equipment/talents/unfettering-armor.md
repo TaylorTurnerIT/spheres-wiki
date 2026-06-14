@@ -1,9 +1,5 @@
 ---
-id: "unfettering-armor"
 name: "Unfettering Armor"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

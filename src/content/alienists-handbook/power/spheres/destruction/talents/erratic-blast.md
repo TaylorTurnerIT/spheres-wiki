@@ -1,9 +1,5 @@
 ---
-id: erratic-blast
 name: "Erratic Blast"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["blast-type"]
 ---

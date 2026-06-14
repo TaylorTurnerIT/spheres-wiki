@@ -1,8 +1,6 @@
 ---
-id: uncanny-dodge-ex
 name: "Uncanny Dodge (Ex)"
 type: class-feature
-system: power
 className: symbiat
 level: 4
 tags: []

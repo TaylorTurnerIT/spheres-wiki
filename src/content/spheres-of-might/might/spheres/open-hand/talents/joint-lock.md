@@ -1,9 +1,5 @@
 ---
-id: "joint-lock"
 name: "Joint Lock"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

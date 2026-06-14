@@ -1,9 +1,5 @@
 ---
-id: flicker
 name: "Flicker"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

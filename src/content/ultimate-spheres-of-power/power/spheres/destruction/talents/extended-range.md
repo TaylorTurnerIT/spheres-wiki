@@ -1,9 +1,5 @@
 ---
-id: extended-range
 name: "Extended Range"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["range"]
 ---

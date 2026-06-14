@@ -1,9 +1,5 @@
 ---
-id: "expert-handler"
 name: "Expert Handler"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: hedgewitch-metamagic-master
 name: "Metamagic Master"
-type: class-trait
-system: power
 tags: []
-className: hedgewitch
 featureId: grand-secrets
 ---
 

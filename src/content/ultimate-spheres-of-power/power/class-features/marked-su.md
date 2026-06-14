@@ -1,8 +1,6 @@
 ---
-id: marked-su
 name: "Marked (Su)"
 type: class-feature
-system: power
 className: mageknight
 level: 7
 tags: []

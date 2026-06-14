@@ -1,8 +1,5 @@
 ---
-id: blood
 name: "Blood"
-system: power
-type: sphere
 icon: blood
 description: "You can manipulate blood and its properties."
 tags: []

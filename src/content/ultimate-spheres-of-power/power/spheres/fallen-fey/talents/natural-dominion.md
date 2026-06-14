@@ -1,9 +1,5 @@
 ---
-id: natural-dominion
 name: "Natural Dominion"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

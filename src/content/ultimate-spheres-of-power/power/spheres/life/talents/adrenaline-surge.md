@@ -1,9 +1,5 @@
 ---
-id: adrenaline-surge
 name: "Adrenaline Surge"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: ["tension"]
 ---

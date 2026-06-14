@@ -1,8 +1,6 @@
 ---
-id: spell-critical-su
 name: "Spell Critical (Su)"
 type: class-feature
-system: power
 className: mageknight
 level: 19
 tags: []

@@ -1,8 +1,5 @@
 ---
-id: alloy-telekinesis
 name: Alloy Telekinesis
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: nature
 tier: feat

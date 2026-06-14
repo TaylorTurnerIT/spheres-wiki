@@ -1,9 +1,5 @@
 ---
-id: "change-maneuverability"
 name: "Change Maneuverability"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "ground"

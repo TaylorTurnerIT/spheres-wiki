@@ -1,10 +1,6 @@
 ---
-id: armorist-piercing-specialist
 name: "Piercing Specialist"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

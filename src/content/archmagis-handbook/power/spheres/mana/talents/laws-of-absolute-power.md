@@ -1,9 +1,5 @@
 ---
-id: laws-of-absolute-power
 name: "Laws Of Absolute Power"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

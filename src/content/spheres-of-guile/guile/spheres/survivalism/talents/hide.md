@@ -1,9 +1,5 @@
 ---
-id: "hide"
 name: "Hide"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "harvest"

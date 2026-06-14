@@ -1,9 +1,5 @@
 ---
-id: cacophonic-clap
 name: "Cacophonic Clap"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

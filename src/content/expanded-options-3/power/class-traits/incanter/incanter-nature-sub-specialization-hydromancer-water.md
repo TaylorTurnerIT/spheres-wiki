@@ -1,10 +1,6 @@
 ---
-id: incanter-nature-sub-specialization-hydromancer-water
 name: "Nature Sub-Specialization: Hydromancer (water)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: list-of-sphere-specializations
 ---
 

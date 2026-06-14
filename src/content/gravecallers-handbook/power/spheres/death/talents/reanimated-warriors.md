@@ -1,9 +1,5 @@
 ---
-id: reanimated-warriors
 name: "Reanimated Warriors"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["dominion"]
 ---

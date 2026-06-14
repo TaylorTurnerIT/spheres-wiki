@@ -1,9 +1,5 @@
 ---
-id: wind-tunnel
 name: "Wind Tunnel"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["mantle", "wind"]
 ---

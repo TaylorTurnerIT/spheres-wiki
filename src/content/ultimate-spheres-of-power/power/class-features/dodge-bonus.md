@@ -1,8 +1,6 @@
 ---
-id: dodge-bonus
 name: "Dodge Bonus"
 type: class-feature
-system: power
 className: elementalist
 level: 4
 tags: []

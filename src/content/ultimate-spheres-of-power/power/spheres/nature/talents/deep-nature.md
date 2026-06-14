@@ -1,9 +1,5 @@
 ---
-id: deep-nature
 name: "Deep Nature"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: []
 ---

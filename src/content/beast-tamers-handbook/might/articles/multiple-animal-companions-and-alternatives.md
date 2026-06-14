@@ -1,7 +1,5 @@
 ---
 name: "Sphere-Specific Variant Rule: Multiple Animal Companions and Alternatives"
-type: article
-id: multiple-animal-companions-and-alternatives
 source: beast-tamers-handbook
 ---
 

@@ -1,9 +1,6 @@
 ---
-id: "patrol"
 name: "Patrol"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

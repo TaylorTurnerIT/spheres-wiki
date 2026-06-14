@@ -1,9 +1,5 @@
 ---
-id: shuffle
 name: "Shuffle"
-type: talent
-system: power
-sphere: mana
 tier: basic
 tags: ["extraordinary", "manipulation"]
 ---

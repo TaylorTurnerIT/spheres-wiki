@@ -1,9 +1,5 @@
 ---
-id: aquatic-adept
 name: "Aquatic Adept"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["geomancing", "spirit", "water"]
 ---

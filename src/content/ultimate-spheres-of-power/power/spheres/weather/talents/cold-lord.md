@@ -1,9 +1,5 @@
 ---
-id: cold-lord
 name: "Cold Lord"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: diffuse-body
 name: "Diffuse Body"
-system: power
-type: talent
-sphere: light
 tier: advanced
 tags: []
 ---

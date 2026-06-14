@@ -1,9 +1,5 @@
 ---
-id: "identify-structural-hazards"
 name: "Identify Structural Hazards"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags:
   - "utility"

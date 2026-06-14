@@ -1,9 +1,5 @@
 ---
-id: cooperative-momentum
 name: "Cooperative Momentum"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["momentum", "warden"]
 ---

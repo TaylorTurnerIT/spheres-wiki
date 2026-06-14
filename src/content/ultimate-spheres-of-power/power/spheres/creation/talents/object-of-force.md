@@ -1,9 +1,5 @@
 ---
-id: object-of-force
 name: "Object Of Force"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["material"]
 ---

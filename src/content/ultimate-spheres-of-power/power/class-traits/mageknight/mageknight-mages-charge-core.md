@@ -1,10 +1,6 @@
 ---
-id: mageknight-mages-charge-core
 name: "Mage's Charge [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

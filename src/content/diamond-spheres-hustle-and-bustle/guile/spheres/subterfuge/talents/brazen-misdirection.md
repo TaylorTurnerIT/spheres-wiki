@@ -1,9 +1,5 @@
 ---
-id: "brazen-misdirection"
 name: "Brazen Misdirection"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "subterfuge"
 tier: "basic"
 tags: []
 ---

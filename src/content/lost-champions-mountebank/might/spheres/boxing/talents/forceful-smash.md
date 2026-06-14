@@ -1,9 +1,5 @@
 ---
-id: "forceful-smash"
 name: "Forceful Smash (counter)"
-type: "talent"
-sourceBook: "lost-champions-mountebank"
-sphere: "boxing"
 tier: "basic"
 tags: ["counter"]
 ---

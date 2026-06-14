@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "tactic"
 label: "Tactic"
 sphere: "warleader"
 priority: 0

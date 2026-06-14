@@ -1,9 +1,5 @@
 ---
-id: "braggadocious-repartee"
 name: "Braggadocious Repartee"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "guardian"
 tier: "basic"
 tags:
   - "utility"

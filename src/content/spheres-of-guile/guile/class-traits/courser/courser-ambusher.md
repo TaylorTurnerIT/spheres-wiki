@@ -1,7 +1,5 @@
 ---
-id: courser-ambusher
 name: Ambusher
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 4"

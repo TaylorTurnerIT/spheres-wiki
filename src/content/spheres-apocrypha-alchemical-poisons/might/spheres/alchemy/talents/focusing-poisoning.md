@@ -1,9 +1,5 @@
 ---
-id: "focusing-poisoning"
 name: "Focusing Poisoning"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-poisons"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

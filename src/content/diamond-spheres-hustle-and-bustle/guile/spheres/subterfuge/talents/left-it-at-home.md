@@ -1,9 +1,5 @@
 ---
-id: "left-it-at-home"
 name: "Left It At Home"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "plan"

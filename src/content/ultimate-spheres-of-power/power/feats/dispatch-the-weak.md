@@ -1,8 +1,5 @@
 ---
-id: dispatch-the-weak
 name: "Dispatch The Weak"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

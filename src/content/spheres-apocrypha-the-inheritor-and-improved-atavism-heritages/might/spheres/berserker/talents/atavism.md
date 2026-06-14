@@ -1,9 +1,5 @@
 ---
-id: "atavism"
 name: "Atavism"
-type: "talent"
-sourceBook: "spheres-apocrypha-the-inheritor-and-improved-atavism-heritages"
-sphere: "berserker"
 tier: "advanced"
 tags:
   - "adrenaline"

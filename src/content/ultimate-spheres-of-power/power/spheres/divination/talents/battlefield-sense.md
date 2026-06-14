@@ -1,9 +1,5 @@
 ---
-id: battlefield-sense
 name: "Battlefield Sense"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["sense"]
 ---

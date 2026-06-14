@@ -1,9 +1,5 @@
 ---
-id: "greater-trinkets"
 name: "Greater Trinkets"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags: []
 ---

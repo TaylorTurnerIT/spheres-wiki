@@ -1,9 +1,5 @@
 ---
-id: "swift-toxicology"
 name: "Swift Toxicology"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-poisons"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: wraith-ghost-in-the-machine
 name: "Ghost in the Machine"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 requires: "object ride, Technologist feat"
 ---

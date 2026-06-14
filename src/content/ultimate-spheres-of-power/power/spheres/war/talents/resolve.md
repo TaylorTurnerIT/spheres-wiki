@@ -1,9 +1,5 @@
 ---
-id: resolve
 name: "Resolve"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["extraordinary", "mandate"]
 ---

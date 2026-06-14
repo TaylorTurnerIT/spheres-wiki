@@ -1,9 +1,5 @@
 ---
-id: shift-glamers
 name: "Shift Glamers"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

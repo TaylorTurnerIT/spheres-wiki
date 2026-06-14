@@ -1,9 +1,5 @@
 ---
-id: energy-satellite
 name: "Energy Satellite"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape"]
 ---

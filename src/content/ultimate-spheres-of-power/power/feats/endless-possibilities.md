@@ -1,8 +1,5 @@
 ---
-id: endless-possibilities
 name: Endless Possibilities
-type: feat
-system: power
 sphere: life
 dualSphere: fate
 tier: feat

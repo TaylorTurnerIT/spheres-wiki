@@ -1,9 +1,5 @@
 ---
-id: ranged-warp
 name: "Ranged Warp"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["range"]
 ---

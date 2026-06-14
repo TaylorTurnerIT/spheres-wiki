@@ -1,9 +1,5 @@
 ---
-id: "plunder-memory"
 name: "Plunder Memory"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "advanced"
 tags:
   - "utility"

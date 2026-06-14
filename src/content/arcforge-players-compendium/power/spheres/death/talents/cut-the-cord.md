@@ -1,9 +1,5 @@
 ---
-id: cut-the-cord
 name: "Cut The Cord"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

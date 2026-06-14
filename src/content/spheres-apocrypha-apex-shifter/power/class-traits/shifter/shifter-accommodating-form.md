@@ -1,10 +1,6 @@
 ---
-id: shifter-accommodating-form
 name: "Accommodating Form"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 ---
 

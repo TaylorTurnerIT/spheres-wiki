@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "potent"
 label: "Potent"
 color: "#4A235A"
 priority: 0

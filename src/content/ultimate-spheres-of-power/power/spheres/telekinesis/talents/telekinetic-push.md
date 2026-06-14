@@ -1,9 +1,5 @@
 ---
-id: telekinetic-push
 name: "Telekinetic Push"
-system: power
-type: talent
-sphere: telekinesis
 tier: basic
 tags: []
 ---

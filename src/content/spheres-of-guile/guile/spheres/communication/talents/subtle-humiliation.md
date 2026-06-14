@@ -1,9 +1,5 @@
 ---
-id: "subtle-humiliation"
 name: "Subtle Humiliation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "utility"

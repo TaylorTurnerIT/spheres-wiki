@@ -1,9 +1,5 @@
 ---
-id: "group-analysis"
 name: "Group Analysis"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags: []
 ---

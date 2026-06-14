@@ -1,9 +1,5 @@
 ---
-id: "bomb-jump"
 name: "Bomb Jump"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "leap"

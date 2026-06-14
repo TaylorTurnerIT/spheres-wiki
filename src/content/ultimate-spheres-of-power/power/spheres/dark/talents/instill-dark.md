@@ -1,9 +1,5 @@
 ---
-id: instill-dark
 name: "Instill Dark"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["instill"]
 ---

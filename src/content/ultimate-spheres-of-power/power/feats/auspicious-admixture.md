@@ -1,8 +1,5 @@
 ---
-id: auspicious-admixture
 name: "Auspicious Admixture"
-type: feat
-system: power
 sphere: destruction
 tags: ["admixture"]
 tier: feat

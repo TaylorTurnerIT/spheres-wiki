@@ -1,8 +1,5 @@
 ---
-id: selective-admixture
 name: "Selective Admixture"
-type: feat
-system: power
 sphere: destruction
 tags: []
 tier: feat

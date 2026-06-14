@@ -1,9 +1,5 @@
 ---
-id: "staggering-tear"
 name: "Staggering Tear"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags:
   - "impale"

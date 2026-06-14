@@ -1,9 +1,5 @@
 ---
-id: "vestigial-image"
 name: "Vestigial Image"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "utility"

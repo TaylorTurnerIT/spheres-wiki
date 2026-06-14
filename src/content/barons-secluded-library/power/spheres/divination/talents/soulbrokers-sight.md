@@ -1,9 +1,5 @@
 ---
-id: soulbrokers-sight
 name: "Soulbroker's Sight"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["sm", "utility"]
 ---

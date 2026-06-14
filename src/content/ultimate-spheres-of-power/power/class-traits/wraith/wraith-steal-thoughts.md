@@ -1,10 +1,6 @@
 ---
-id: wraith-steal-thoughts
 name: "Steal Thoughts"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

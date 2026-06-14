@@ -1,9 +1,5 @@
 ---
-id: "beast-tamer"
 name: "Beast Tamer"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "advanced"
 tags:
   - "handle-animal"

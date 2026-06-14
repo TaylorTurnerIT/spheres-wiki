@@ -1,9 +1,5 @@
 ---
-id: "aura-of-fear"
 name: "Aura Of Fear"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "advanced"
 tags:
   - "demoralization"

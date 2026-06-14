@@ -1,9 +1,5 @@
 ---
-id: oblivious
 name: "Oblivious"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: ["suppression"]
 ---

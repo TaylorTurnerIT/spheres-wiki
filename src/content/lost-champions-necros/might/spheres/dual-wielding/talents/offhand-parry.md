@@ -1,9 +1,5 @@
 ---
-id: "offhand-parry"
 name: "Offhand Parry"
-type: "talent"
-sourceBook: "lost-champions-necros"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

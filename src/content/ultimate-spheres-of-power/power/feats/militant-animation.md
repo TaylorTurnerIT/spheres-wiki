@@ -1,8 +1,5 @@
 ---
-id: militant-animation
 name: "Militant Animation"
-type: feat
-system: power
 sphere: enhancement
 tags: ["combat"]
 tier: feat

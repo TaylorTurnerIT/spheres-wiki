@@ -1,10 +1,6 @@
 ---
-id: incanter-alteration-sub-specialization-bioreaver
 name: "Alteration Sub-Specialization: Bioreaver"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: list-of-sphere-specializations
 ---
 

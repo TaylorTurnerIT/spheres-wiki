@@ -1,8 +1,5 @@
 ---
-id: supernatural-elements
 name: Supernatural Elements
-type: feat
-system: power
 sphere: nature
 dualSphere: destruction
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: ooze-originator
 name: "Ooze Originator"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: ["create"]
 ---

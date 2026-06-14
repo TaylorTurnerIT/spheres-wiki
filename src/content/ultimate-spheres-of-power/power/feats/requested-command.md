@@ -1,8 +1,5 @@
 ---
-id: requested-command
 name: "Requested Command"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

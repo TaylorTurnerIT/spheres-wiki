@@ -1,9 +1,5 @@
 ---
-id: "critical-parry"
 name: "Critical Parry"
-type: "talent"
-sourceBook: "barons-otherworldly-citadel"
-sphere: "duelist"
 tier: "advanced"
 tags: []
 ---

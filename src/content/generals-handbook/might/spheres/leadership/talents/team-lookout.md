@@ -1,9 +1,5 @@
 ---
-id: "team-lookout"
 name: "Team Lookout"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

@@ -1,9 +1,5 @@
 ---
-id: "stupendous-crafter"
 name: "Stupendous Crafter"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "advanced"
 tags: []
 ---

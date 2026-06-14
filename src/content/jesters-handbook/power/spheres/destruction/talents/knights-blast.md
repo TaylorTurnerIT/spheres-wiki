@@ -1,9 +1,5 @@
 ---
-id: knights-blast
 name: "Knight's Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape"]
 ---

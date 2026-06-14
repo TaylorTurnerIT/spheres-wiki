@@ -1,9 +1,5 @@
 ---
-id: mark-of-sudden-competence
 name: "Mark of Sudden Competence"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

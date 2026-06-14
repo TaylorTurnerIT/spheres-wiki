@@ -1,9 +1,5 @@
 ---
-id: "triangle-slash"
 name: "Triangle Slash"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "advanced"
 tags: []
 ---

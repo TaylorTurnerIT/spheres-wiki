@@ -1,9 +1,5 @@
 ---
-id: inspiration
 name: "Inspiration"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm", "extraordinary"]
 ---

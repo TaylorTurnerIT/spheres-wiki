@@ -1,8 +1,5 @@
 ---
-id: elemental-eye
 name: "Elemental Eye"
-type: feat
-system: power
 sphere: nature
 dualSphere: divination
 tags: ["sm"]

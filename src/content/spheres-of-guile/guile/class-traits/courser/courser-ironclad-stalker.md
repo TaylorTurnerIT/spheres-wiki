@@ -1,7 +1,5 @@
 ---
-id: courser-ironclad-stalker
 name: Ironclad Stalker
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 4"

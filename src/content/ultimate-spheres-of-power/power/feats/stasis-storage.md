@@ -1,8 +1,5 @@
 ---
-id: stasis-storage
 name: Stasis Storage
-type: feat
-system: power
 sphere: warp
 dualSphere: time
 tier: feat

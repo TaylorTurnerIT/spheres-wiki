@@ -1,9 +1,5 @@
 ---
-id: improved-flexibility
 name: "Improved Flexibility"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance"]
 ---

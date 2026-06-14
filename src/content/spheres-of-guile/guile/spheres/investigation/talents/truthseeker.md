@@ -1,9 +1,5 @@
 ---
-id: "truthseeker"
 name: "Truthseeker"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "advanced"
 tags:
   - "utility"

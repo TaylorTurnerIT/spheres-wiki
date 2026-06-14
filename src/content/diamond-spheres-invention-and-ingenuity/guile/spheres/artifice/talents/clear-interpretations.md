@@ -1,9 +1,5 @@
 ---
-id: "clear-interpretations"
 name: "Clear Interpretations"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "function"

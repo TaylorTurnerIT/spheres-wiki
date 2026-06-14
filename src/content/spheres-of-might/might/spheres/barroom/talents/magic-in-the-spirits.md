@@ -1,9 +1,5 @@
 ---
-id: "magic-in-the-spirits"
 name: "Magic In The Spirits"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "advanced"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: illusion
 name: "Illusion"
-system: power
-type: sphere
 icon: illusion
 description: "You may craft images and impressions of things that are not there."
 tags: []

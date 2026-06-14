@@ -1,9 +1,5 @@
 ---
-id: "instrumental-acoustics"
 name: "Instrumental Acoustics"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "base"
 tags:
   - "package"

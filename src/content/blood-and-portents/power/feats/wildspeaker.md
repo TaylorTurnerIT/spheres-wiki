@@ -1,8 +1,5 @@
 ---
-id: wildspeaker
 name: "Wildspeaker"
-type: feat
-system: power
 sphere: nature
 tags: []
 tier: feat

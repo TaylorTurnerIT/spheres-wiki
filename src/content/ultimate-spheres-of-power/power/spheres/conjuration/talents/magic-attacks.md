@@ -1,9 +1,5 @@
 ---
-id: magic-attacks
 name: "Magic Attacks"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

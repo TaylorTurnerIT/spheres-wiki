@@ -1,9 +1,5 @@
 ---
-id: dual-light
 name: "Dual Light"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: []
 ---

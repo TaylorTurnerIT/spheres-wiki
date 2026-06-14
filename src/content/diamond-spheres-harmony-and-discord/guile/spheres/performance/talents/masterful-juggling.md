@@ -1,9 +1,5 @@
 ---
-id: "masterful-juggling"
 name: "Masterful Juggling"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "advanced"
 tags: []
 ---

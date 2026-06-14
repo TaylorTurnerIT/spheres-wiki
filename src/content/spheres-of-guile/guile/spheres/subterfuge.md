@@ -1,8 +1,5 @@
 ---
-id: "subterfuge"
 name: "Subterfuge"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "subterfuge"
 tags: []
 sectionDefinitions:

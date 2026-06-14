@@ -1,9 +1,5 @@
 ---
-id: memetic-link
 name: "Memetic Link"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: []
 ---

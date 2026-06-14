@@ -1,8 +1,5 @@
 ---
-id: before-creation-comes-destruction
 name: "Before Creation Comes Destruction"
-type: feat
-system: power
 sphere: creation
 tags: []
 tier: feat

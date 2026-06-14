@@ -1,9 +1,5 @@
 ---
-id: "heraldry"
 name: "Heraldry"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags: []
 ---

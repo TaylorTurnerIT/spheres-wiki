@@ -1,9 +1,5 @@
 ---
-id: "track-caster"
 name: "Track Caster"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "utility"

@@ -1,8 +1,5 @@
 ---
-id: "spellhacking"
 name: "Spellhacking"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "spellhacking"
 tags: []
 sectionDefinitions:

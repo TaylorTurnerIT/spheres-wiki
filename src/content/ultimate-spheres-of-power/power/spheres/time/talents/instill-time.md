@@ -1,9 +1,5 @@
 ---
-id: instill-time
 name: "Instill Time"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["instill"]
 ---

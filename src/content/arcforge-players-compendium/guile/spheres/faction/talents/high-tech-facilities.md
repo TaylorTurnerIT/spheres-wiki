@@ -1,9 +1,5 @@
 ---
-id: "high-tech-facilities"
 name: "High-Tech Facilities"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "supply"

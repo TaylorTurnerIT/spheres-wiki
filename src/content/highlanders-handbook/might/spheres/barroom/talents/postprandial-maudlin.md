@@ -1,9 +1,5 @@
 ---
-id: "postprandial-maudlin"
 name: "Postprandial Maudlin"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

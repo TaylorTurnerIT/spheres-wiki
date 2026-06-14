@@ -1,9 +1,5 @@
 ---
-id: "craftsman"
 name: "Craftsman"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "utility"

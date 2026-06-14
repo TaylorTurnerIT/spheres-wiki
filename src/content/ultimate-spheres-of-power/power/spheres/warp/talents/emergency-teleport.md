@@ -1,9 +1,5 @@
 ---
-id: emergency-teleport
 name: "Emergency Teleport"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: ["spell-like"]
 ---

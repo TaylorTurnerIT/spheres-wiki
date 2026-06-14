@@ -1,9 +1,5 @@
 ---
-id: "flush-of-victory"
 name: "Flush Of Victory"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "unstoppable"
 name: "Unstoppable"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

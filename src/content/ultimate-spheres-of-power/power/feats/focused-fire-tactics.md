@@ -1,8 +1,5 @@
 ---
-id: focused-fire-tactics
 name: "Focused Fire Tactics"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

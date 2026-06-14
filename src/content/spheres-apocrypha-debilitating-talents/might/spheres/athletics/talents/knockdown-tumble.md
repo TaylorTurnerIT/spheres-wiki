@@ -1,9 +1,5 @@
 ---
-id: "knockdown-tumble"
 name: "Knockdown Tumble"
-type: "talent"
-sourceBook: "spheres-apocrypha-debilitating-talents"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "motion"

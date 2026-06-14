@@ -1,8 +1,5 @@
 ---
-id: "shield"
 name: "Shield"
-type: "sphere"
-sourceBook: "spheres-of-might"
 icon: "shield"
 tags: []
 sectionDefinitions:

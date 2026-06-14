@@ -1,9 +1,5 @@
 ---
-id: ranged-death
 name: "Ranged Death"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["range"]
 ---

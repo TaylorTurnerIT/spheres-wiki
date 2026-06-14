@@ -1,9 +1,5 @@
 ---
-id: "defensive-slice"
 name: "Defensive Slice"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

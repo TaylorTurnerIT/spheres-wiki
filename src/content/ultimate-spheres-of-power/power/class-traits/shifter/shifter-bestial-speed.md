@@ -1,10 +1,6 @@
 ---
-id: shifter-bestial-speed
 name: "Bestial Speed"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

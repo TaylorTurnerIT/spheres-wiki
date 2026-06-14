@@ -1,9 +1,5 @@
 ---
-id: resourcefulness
 name: "Resourcefulness"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: []
 ---

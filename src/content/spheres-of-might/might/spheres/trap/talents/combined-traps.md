@@ -1,9 +1,5 @@
 ---
-id: "combined-traps"
 name: "Combined Traps"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

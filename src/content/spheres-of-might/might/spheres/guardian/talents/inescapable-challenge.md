@@ -1,9 +1,5 @@
 ---
-id: "inescapable-challenge"
 name: "Inescapable Challenge"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "advanced"
 tags: []
 ---

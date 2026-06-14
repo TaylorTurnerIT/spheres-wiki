@@ -1,9 +1,5 @@
 ---
-id: "shadowboxing"
 name: "Shadowboxing"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "utility"

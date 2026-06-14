@@ -1,9 +1,5 @@
 ---
-id: "inspire"
 name: "Inspire"
-type: "talent"
-sourceBook: "the-warden"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

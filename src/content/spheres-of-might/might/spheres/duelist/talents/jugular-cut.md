@@ -1,9 +1,5 @@
 ---
-id: "jugular-cut"
 name: "Jugular Cut"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "advanced"
 tags:
   - "bleed"

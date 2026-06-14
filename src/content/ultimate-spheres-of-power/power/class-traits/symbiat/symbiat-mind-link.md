@@ -1,10 +1,6 @@
 ---
-id: symbiat-mind-link
 name: "Mind Link"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

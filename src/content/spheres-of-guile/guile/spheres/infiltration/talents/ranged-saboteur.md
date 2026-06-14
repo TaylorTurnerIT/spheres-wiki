@@ -1,9 +1,5 @@
 ---
-id: "ranged-saboteur"
 name: "Ranged Saboteur"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "advanced"
 tags: []
 ---

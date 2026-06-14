@@ -1,9 +1,5 @@
 ---
-id: "to-the-hilt"
 name: "To The Hilt"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags:
   - "exploit"

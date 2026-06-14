@@ -1,9 +1,5 @@
 ---
-id: astral-affixation
 name: "Astral Affixation"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

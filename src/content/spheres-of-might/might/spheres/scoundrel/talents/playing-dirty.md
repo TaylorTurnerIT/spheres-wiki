@@ -1,9 +1,5 @@
 ---
-id: "playing-dirty"
 name: "Playing Dirty"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

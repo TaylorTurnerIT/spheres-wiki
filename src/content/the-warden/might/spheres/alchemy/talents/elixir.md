@@ -1,9 +1,5 @@
 ---
-id: "elixir"
 name: "Elixir"
-type: "talent"
-sourceBook: "the-warden"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

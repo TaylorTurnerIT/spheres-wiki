@@ -1,9 +1,5 @@
 ---
-id: control-weather
 name: "Control Weather"
-system: power
-type: talent
-sphere: weather
 tier: base
 tags: ["spell-like"]
 ---

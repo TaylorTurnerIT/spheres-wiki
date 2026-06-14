@@ -1,8 +1,6 @@
 ---
-id: feytouched
 name: "Feytouched"
 type: class-feature
-system: power
 className: fey-adept
 level: 20
 tags: []

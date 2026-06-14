@@ -1,9 +1,5 @@
 ---
-id: sanguine-creature
 name: "Sanguine Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: transparency
 name: "Transparency"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["alter", "utility"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: whats-yours-is-ours
 name: "What's Yours Is Ours"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: []
 ---

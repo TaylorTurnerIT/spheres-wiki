@@ -1,8 +1,6 @@
 ---
-id: boundless-communication-ex
 name: "Boundless Communication (Ex)"
 type: class-feature
-system: power
 className: shifter
 level: 11
 tags: []

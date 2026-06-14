@@ -1,9 +1,5 @@
 ---
-id: sinister-surprise
 name: "Sinister Surprise"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

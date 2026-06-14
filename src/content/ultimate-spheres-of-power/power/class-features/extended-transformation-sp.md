@@ -1,8 +1,6 @@
 ---
-id: extended-transformation-sp
 name: "Extended Transformation (Sp)"
 type: class-feature
-system: power
 className: shifter
 level: 9
 tags: []

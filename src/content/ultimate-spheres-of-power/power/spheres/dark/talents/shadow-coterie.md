@@ -1,9 +1,5 @@
 ---
-id: shadow-coterie
 name: "Shadow Coterie"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

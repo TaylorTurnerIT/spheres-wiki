@@ -1,8 +1,5 @@
 ---
-id: mind-over-manners
 name: "Mind Over Manners"
-type: feat
-system: power
 sphere: conjuration
 tags: []
 tier: feat

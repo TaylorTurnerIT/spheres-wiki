@@ -1,9 +1,5 @@
 ---
-id: "adamant-stalker"
 name: "Adamant Stalker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "basic"
 tags: []
 ---

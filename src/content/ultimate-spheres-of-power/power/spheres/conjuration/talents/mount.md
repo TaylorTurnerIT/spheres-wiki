@@ -1,9 +1,5 @@
 ---
-id: mount
 name: "Mount"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["extraordinary", "form"]
 ---

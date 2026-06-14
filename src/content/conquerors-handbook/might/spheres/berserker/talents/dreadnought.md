@@ -1,9 +1,5 @@
 ---
-id: "dreadnought"
 name: "Dreadnought"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "adrenaline"

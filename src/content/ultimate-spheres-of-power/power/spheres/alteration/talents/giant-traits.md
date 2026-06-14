@@ -1,9 +1,5 @@
 ---
-id: giant-traits
 name: "Giant Traits"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

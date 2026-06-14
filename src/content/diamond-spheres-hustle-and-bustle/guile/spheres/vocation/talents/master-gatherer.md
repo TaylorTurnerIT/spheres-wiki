@@ -1,9 +1,5 @@
 ---
-id: "master-gatherer"
 name: "Master Gatherer"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: boosted-shuffle
 name: "Boosted Shuffle"
-system: power
-type: talent
-sphere: mana
 tier: advanced
 tags: ["amp", "manipulation"]
 ---

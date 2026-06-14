@@ -1,9 +1,5 @@
 ---
-id: fast-divinations
 name: "Fast Divinations"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: []
 ---

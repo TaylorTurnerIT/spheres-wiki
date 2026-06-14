@@ -1,9 +1,5 @@
 ---
-id: dragonlung
 name: "Dragonlung"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

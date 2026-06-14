@@ -1,9 +1,5 @@
 ---
-id: "strike-fear"
 name: "Strike Fear"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "base"
 tags:
   - "demoralization"

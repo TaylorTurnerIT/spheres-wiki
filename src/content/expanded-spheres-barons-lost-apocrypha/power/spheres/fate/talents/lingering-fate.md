@@ -1,9 +1,5 @@
 ---
-id: lingering-fate
 name: "Lingering Fate"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: []
 ---

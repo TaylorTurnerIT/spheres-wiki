@@ -1,9 +1,5 @@
 ---
-id: wild-walk
 name: "Wild Walk"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

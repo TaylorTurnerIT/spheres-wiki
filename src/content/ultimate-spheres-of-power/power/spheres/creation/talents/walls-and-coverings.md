@@ -1,9 +1,5 @@
 ---
-id: walls-and-coverings
 name: "Walls and Coverings"
-type: talent
-system: power
-sphere: creation
 tier: basic
 tags: []
 ---

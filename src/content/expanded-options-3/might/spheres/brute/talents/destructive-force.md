@@ -1,9 +1,5 @@
 ---
-id: "destructive-force"
 name: "Destructive Force"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "brute"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "layered-acclimation"
 name: "Layered Acclimation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "inspect-object"
 name: "Inspect Object"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

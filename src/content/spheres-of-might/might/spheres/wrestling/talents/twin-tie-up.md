@@ -1,9 +1,5 @@
 ---
-id: "twin-tie-up"
 name: "Twin Tie-Up"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

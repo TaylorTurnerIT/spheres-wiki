@@ -1,9 +1,5 @@
 ---
-id: hide-in-darkness
 name: "Hide In Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["meld"]
 ---

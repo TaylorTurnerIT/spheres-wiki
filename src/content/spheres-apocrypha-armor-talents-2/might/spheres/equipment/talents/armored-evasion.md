@@ -1,9 +1,5 @@
 ---
-id: "armored-evasion"
 name: "Armored Evasion"
-type: "talent"
-sourceBook: "spheres-apocrypha-armor-talents-2"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

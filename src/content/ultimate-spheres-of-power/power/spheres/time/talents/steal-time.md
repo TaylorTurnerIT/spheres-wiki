@@ -1,9 +1,5 @@
 ---
-id: steal-time
 name: "Steal Time"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

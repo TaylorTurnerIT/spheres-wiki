@@ -1,9 +1,5 @@
 ---
-id: eject
 name: "Eject"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

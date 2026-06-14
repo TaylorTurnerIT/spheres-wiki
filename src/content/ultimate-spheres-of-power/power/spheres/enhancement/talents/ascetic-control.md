@@ -1,9 +1,5 @@
 ---
-id: ascetic-control
 name: "Ascetic Control"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: []
 ---

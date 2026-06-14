@@ -1,9 +1,5 @@
 ---
-id: "ninjutsu-training"
 name: "Ninjutsu Training"
-type: "talent"
-sourceBook: "spheres-apocrypha-swashbucklers"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

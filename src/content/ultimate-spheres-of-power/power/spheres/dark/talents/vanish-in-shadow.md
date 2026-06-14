@@ -1,9 +1,5 @@
 ---
-id: vanish-in-shadow
 name: "Vanish In Shadow"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: []
 ---

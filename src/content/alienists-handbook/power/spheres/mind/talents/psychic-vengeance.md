@@ -1,9 +1,5 @@
 ---
-id: psychic-vengeance
 name: "Psychic Vengeance"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: []
 ---

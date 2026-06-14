@@ -1,8 +1,6 @@
 ---
-id: armor-training-ex
 name: "Armor Training (Ex)"
 type: class-feature
-system: power
 className: armorist
 level: 3
 tags: []

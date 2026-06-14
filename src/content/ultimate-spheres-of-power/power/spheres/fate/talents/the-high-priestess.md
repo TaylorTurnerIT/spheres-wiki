@@ -1,9 +1,5 @@
 ---
-id: the-high-priestess
 name: "The High Priestess"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["motif"]
 ---

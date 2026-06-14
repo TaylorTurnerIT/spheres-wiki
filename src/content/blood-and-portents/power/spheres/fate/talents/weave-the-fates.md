@@ -1,9 +1,5 @@
 ---
-id: weave-the-fates
 name: "Weave The Fates"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: []
 ---

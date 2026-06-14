@@ -1,9 +1,5 @@
 ---
-id: resist-elements
 name: "Resist Elements"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

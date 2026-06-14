@@ -1,9 +1,5 @@
 ---
-id: "final-judgement"
 name: "Final Judgement"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "advanced"
 tags: []
 ---

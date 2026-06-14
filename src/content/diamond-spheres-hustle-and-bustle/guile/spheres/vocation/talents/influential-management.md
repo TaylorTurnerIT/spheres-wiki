@@ -1,9 +1,5 @@
 ---
-id: "influential-management"
 name: "Influential Management"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "utility"

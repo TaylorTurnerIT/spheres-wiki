@@ -1,9 +1,5 @@
 ---
-id: "confident-subtlety"
 name: "Confident Subtlety"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "base"
 tags: []
 ---

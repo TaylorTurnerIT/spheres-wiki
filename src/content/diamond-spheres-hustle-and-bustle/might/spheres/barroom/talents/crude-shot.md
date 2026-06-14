@@ -1,9 +1,5 @@
 ---
-id: "crude-shot"
 name: "Crude Shot"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "smash"

@@ -1,10 +1,6 @@
 ---
-id: incanter-admixture-adept-2-specialization-points
 name: "Admixture Adept (2 specialization points)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: incanter-specializations
 ---
 

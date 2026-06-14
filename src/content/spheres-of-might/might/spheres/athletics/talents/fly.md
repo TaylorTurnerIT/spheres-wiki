@@ -1,9 +1,5 @@
 ---
-id: "fly"
 name: "Fly"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "base"
 tags: []
 ---

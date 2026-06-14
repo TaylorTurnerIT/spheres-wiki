@@ -1,8 +1,6 @@
 ---
-id: spell-pool
 name: "Spell Pool"
 type: class-feature
-system: power
 className: wraith
 level: 1
 tags: []

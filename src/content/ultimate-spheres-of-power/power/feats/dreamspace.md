@@ -1,8 +1,5 @@
 ---
-id: dreamspace
 name: Dreamspace
-type: feat
-system: power
 sphere: warp
 dualSphere: mind
 tier: feat

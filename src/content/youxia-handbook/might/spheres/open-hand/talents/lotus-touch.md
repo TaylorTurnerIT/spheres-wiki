@@ -1,9 +1,5 @@
 ---
-id: "lotus-touch"
 name: "Lotus Touch"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

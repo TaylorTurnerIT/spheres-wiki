@@ -1,9 +1,5 @@
 ---
-id: "flamboyant-movement"
 name: "Flamboyant Movement"
-type: "talent"
-sourceBook: "spheres-apocrypha-swashbucklers"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

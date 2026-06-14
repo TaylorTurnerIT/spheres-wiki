@@ -1,9 +1,5 @@
 ---
-id: "skilled-sneak"
 name: "Skilled Sneak"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "utility"

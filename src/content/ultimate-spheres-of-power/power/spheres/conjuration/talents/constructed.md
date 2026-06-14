@@ -1,9 +1,5 @@
 ---
-id: constructed
 name: "Constructed"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["type"]
 ---

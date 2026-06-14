@@ -1,9 +1,5 @@
 ---
-id: ravenous-weapon
 name: "Ravenous Weapon"
-system: power
-type: talent
-sphere: enhancement
 tier: basic
 tags: ["enhance", "sm"]
 ---

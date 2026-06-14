@@ -1,9 +1,5 @@
 ---
-id: "trap-door"
 name: "Trap Door"
-type: "talent"
-sourceBook: "spheres-apocrypha-monster-traditions"
-sphere: "trap"
 tier: "basic"
 ---
 

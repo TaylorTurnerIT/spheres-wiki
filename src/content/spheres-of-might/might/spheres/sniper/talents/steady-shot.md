@@ -1,9 +1,5 @@
 ---
-id: "steady-shot"
 name: "Steady Shot"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "sniper"
 tier: "basic"
 tags:
   - "snipe"

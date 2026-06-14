@@ -1,9 +1,5 @@
 ---
-id: "glitched-hack"
 name: "Glitched Hack"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "boozehound"
 name: "Boozehound"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "utility"

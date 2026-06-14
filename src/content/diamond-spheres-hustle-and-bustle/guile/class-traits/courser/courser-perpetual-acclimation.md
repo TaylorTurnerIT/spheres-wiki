@@ -1,7 +1,5 @@
 ---
-id: courser-perpetual-acclimation
 name: Perpetual Acclimation
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 8"

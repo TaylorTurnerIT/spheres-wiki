@@ -1,9 +1,5 @@
 ---
-id: retroactive-preparation
 name: "Retroactive Preparation"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: warded-bones
 name: Warded Bones
-type: feat
-system: power
 sphere: protection
 dualSphere: death
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "knock-down"
 name: "Knock Down"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "ride"

@@ -1,9 +1,5 @@
 ---
-id: "all-part-of-the-plan"
 name: "All Part of the Plan"
-type: "talent"
-sourceBook: "spheres-apocrypha-tricks-and-traps"
-sphere: "trap"
 tier: "advanced"
 tags: []
 ---

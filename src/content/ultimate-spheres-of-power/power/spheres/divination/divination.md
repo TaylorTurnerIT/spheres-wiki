@@ -1,8 +1,5 @@
 ---
-id: divination
 name: "Divination"
-system: power
-type: sphere
 icon: divination
 description: "You can predict the future and gain information not available to the usual 5 senses."
 tags: []

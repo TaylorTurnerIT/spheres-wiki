@@ -1,9 +1,5 @@
 ---
-id: "dimension-tuning"
 name: "Dimension Tuning"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

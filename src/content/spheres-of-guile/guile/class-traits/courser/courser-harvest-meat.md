@@ -1,7 +1,5 @@
 ---
-id: courser-harvest-meat
 name: Harvest Meat
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "Survivalism sphere (harvest) package"

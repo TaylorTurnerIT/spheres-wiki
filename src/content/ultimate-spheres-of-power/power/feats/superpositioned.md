@@ -1,8 +1,5 @@
 ---
-id: superpositioned
 name: Superpositioned
-type: feat
-system: power
 sphere: warp
 dualSphere: illusion
 tier: feat

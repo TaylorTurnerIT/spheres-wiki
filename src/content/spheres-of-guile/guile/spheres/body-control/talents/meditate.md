@@ -1,9 +1,5 @@
 ---
-id: "meditate"
 name: "Meditate"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "base"
 tags: []
 ---

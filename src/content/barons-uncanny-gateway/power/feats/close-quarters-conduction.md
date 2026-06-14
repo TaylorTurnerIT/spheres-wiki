@@ -1,8 +1,5 @@
 ---
-id: close-quarters-conduction
 name: "Close-Quarters Conduction"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat", "sm"]
 tier: feat

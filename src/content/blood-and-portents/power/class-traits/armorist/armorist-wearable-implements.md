@@ -1,10 +1,6 @@
 ---
-id: armorist-wearable-implements
 name: "Wearable Implements"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 requires: "armorist 6, bind implement class feature"
 ---

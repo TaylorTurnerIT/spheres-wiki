@@ -1,9 +1,5 @@
 ---
-id: "cobbled-creation"
 name: "Cobbled Creation"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "base"
 tags: []
 ---

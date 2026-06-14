@@ -1,9 +1,5 @@
 ---
-id: "survivalist-retainer"
 name: "Survivalist Retainer"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "advanced"
 tags:
   - "retainer"

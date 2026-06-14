@@ -1,8 +1,5 @@
 ---
-id: favorite-boost
 name: "Favorite Boost"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: sustaining-shapeshift
 name: "Sustaining Shapeshift"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: ["utility"]
 ---

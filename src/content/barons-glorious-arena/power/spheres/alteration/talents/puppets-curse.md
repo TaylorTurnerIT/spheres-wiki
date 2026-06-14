@@ -1,9 +1,5 @@
 ---
-id: puppets-curse
 name: "Puppet's Curse"
-system: power
-type: talent
-sphere: alteration
 tier: advanced
 tags: []
 ---

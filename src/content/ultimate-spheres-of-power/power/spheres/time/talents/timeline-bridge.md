@@ -1,9 +1,5 @@
 ---
-id: timeline-bridge
 name: "Timeline Bridge"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

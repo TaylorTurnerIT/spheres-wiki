@@ -1,9 +1,5 @@
 ---
-id: "mobile-striker"
 name: "Mobile Striker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

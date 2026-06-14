@@ -1,9 +1,5 @@
 ---
-id: "invasive-hacking"
 name: "Invasive Hacking"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "basic"
 tags: []
 ---

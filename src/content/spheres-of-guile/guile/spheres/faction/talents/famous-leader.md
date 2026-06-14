@@ -1,9 +1,5 @@
 ---
-id: "famous-leader"
 name: "Famous Leader"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "faction"
 tier: "base"
 tags:
   - "package"

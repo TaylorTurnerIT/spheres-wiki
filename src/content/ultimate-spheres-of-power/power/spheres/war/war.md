@@ -1,8 +1,5 @@
 ---
-id: war
 name: "War"
-system: power
-type: sphere
 icon: war
 description: "You can alter a battlefield, affecting both allies and enemies with your magic."
 tags: []

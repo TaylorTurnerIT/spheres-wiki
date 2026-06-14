@@ -1,9 +1,5 @@
 ---
-id: "smash"
 name: "Smash"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "base"
 tags: []
 ---

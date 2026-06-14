@@ -1,9 +1,5 @@
 ---
-id: piecemeal-reanimation
 name: "Piecemeal Reanimation"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["dominion"]
 ---

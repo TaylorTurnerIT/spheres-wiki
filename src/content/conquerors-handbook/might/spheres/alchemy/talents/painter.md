@@ -1,9 +1,5 @@
 ---
-id: "painter"
 name: "Painter"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

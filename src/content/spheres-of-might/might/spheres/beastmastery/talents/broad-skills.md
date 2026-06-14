@@ -1,9 +1,5 @@
 ---
-id: "broad-skills"
 name: "Broad Skills"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "handle-animal"

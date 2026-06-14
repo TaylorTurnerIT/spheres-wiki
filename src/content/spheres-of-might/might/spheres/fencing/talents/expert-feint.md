@@ -1,9 +1,5 @@
 ---
-id: "expert-feint"
 name: "Expert Feint"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

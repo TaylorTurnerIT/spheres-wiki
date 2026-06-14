@@ -1,9 +1,5 @@
 ---
-id: "brutal-breaker"
 name: "Brutal Breaker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "base"
 tags: []
 ---

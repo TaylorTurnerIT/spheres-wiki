@@ -1,9 +1,5 @@
 ---
-id: selective-barrier
 name: "Selective Barrier"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: []
 ---

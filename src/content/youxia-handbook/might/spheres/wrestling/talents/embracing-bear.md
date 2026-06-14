@@ -1,9 +1,5 @@
 ---
-id: "embracing-bear"
 name: "Embracing Bear"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "wrestling"
 tier: "basic"
 tags:
   - "stance"

@@ -1,9 +1,5 @@
 ---
-id: "emotive-styles"
 name: "Emotive Styles"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "artifice"
 tier: "basic"
 tags:
   - "flourish"

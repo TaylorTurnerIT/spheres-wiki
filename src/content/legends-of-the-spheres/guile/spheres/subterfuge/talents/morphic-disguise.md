@@ -1,9 +1,5 @@
 ---
-id: "morphic-disguise"
 name: "Morphic Disguise"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "subterfuge"
 tier: "base"
 tags:
   - "package"

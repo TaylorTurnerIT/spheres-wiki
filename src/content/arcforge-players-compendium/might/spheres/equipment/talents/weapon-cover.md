@@ -1,9 +1,5 @@
 ---
-id: "weapon-cover"
 name: "Weapon Cover"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

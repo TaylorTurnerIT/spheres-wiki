@@ -1,10 +1,6 @@
 ---
-id: incanter-cleric-domains-1-specialization-point
 name: "Cleric Domains (1 specialization point)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: incanter-specializations
 ---
 

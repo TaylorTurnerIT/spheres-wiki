@@ -1,9 +1,5 @@
 ---
-id: "alchemical-dragon"
 name: "Alchemical Dragon"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "advanced"
 tags: []
 ---

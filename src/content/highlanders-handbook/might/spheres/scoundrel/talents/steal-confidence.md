@@ -1,9 +1,5 @@
 ---
-id: "steal-confidence"
 name: "Steal Confidence"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "scoundrel"
 tier: "basic"
 tags: []
 ---

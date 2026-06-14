@@ -1,9 +1,5 @@
 ---
-id: invigorate
 name: "Invigorate"
-system: power
-type: talent
-sphere: life
 tier: base
 tags: []
 ---

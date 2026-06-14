@@ -1,8 +1,5 @@
 ---
-id: tribute-of-essence
 name: "Tribute of Essence"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

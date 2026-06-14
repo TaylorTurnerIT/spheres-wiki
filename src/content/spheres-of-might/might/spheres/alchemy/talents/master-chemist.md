@@ -1,9 +1,5 @@
 ---
-id: "master-chemist"
 name: "Master Chemist"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

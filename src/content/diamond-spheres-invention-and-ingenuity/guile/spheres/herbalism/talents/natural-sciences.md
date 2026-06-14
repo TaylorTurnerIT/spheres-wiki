@@ -1,9 +1,5 @@
 ---
-id: natural-sciences
 name: Natural Sciences
-type: talent
-sourceBook: diamond-spheres-invention-and-ingenuity
-sphere: herbalism
 dualSphere: nature
 tier: base
 tags:

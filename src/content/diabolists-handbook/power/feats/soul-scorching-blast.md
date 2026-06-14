@@ -1,8 +1,5 @@
 ---
-id: soul-scorching-blast
 name: "Soul-Scorching Blast"
-type: feat
-system: power
 sphere: destruction
 tags: []
 tier: feat

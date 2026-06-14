@@ -1,9 +1,5 @@
 ---
-id: lengthened-creation
 name: "Lengthened Creation"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: []
 ---

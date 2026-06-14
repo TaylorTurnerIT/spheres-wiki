@@ -1,9 +1,5 @@
 ---
-id: instill-shapeshift
 name: "Instill Shapeshift"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["instill"]
 ---

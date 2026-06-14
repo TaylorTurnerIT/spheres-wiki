@@ -1,9 +1,5 @@
 ---
-id: "lurker"
 name: "Lurker"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "basic"
 tags: []
 ---

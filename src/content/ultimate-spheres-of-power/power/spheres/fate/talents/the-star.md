@@ -1,9 +1,5 @@
 ---
-id: the-star
 name: "The Star"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif"]
 ---

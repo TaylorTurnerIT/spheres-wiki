@@ -1,9 +1,5 @@
 ---
-id: fenestrate
 name: "Fenestrate"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

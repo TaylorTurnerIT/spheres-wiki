@@ -1,10 +1,6 @@
 ---
-id: wraith-ranged-possession
 name: "Ranged Possession"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

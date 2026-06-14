@@ -1,9 +1,5 @@
 ---
-id: "earth-shattering-slam"
 name: "Earth-Shattering Slam"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "advanced"
 tags:
   - "slam"

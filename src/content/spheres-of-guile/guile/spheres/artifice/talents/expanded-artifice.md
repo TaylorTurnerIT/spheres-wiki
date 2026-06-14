@@ -1,9 +1,5 @@
 ---
-id: "expanded-artifice"
 name: "Expanded Artifice"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "artifice"
 tier: "basic"
 tags: []
 ---

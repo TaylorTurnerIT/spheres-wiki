@@ -1,9 +1,5 @@
 ---
-id: "coordinated-attack"
 name: "Coordinated Attack"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags: []
 ---

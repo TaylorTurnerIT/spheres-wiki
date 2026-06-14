@@ -1,9 +1,5 @@
 ---
-id: "distracting-display"
 name: "Distracting Display"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

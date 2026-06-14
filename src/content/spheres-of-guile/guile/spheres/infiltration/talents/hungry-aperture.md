@@ -1,9 +1,5 @@
 ---
-id: "hungry-aperture"
 name: "Hungry Aperture"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "sabotage"

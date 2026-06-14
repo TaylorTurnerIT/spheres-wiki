@@ -1,9 +1,5 @@
 ---
-id: tenebrous-legerdemain
 name: "Tenebrous Legerdemain"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["blot", "darkness", "meld"]
 ---

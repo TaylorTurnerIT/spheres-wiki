@@ -1,9 +1,5 @@
 ---
-id: stretch-time
 name: "Stretch Time"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

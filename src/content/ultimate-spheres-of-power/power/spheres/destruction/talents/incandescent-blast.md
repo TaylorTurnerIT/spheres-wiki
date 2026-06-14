@@ -1,9 +1,5 @@
 ---
-id: incandescent-blast
 name: "Incandescent Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-type", "light"]
 ---

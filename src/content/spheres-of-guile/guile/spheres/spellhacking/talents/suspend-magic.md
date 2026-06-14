@@ -1,9 +1,5 @@
 ---
-id: "suspend-magic"
 name: "Suspend Magic"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "advanced"
 tags:
   - "hack"

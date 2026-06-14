@@ -1,8 +1,5 @@
 ---
-id: water-manipulator
 name: Water Manipulator
-type: feat
-system: power
 sphere: nature
 dualSphere: fallen-fey
 tier: feat

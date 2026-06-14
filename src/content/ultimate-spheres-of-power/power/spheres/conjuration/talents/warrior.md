@@ -1,9 +1,5 @@
 ---
-id: warrior
 name: "Warrior"
-type: talent
-system: power
-sphere: conjuration
 tier: basic
 tags: []
 ---

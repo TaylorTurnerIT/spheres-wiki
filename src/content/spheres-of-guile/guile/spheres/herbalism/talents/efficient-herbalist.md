@@ -1,9 +1,5 @@
 ---
-id: "efficient-herbalist"
 name: "Efficient Herbalist"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "advanced"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: fey-adept-objects
 name: "Objects"
-type: class-trait
-system: power
 tags: []
-className: fey-adept
 featureId: shadowstuff
 ---
 

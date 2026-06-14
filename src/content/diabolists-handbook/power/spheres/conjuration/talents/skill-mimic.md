@@ -1,9 +1,5 @@
 ---
-id: skill-mimic
 name: "Skill Mimic"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["utility", "form"]
 ---

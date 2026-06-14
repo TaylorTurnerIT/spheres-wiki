@@ -1,9 +1,5 @@
 ---
-id: "whirlwind-flip"
 name: "Whirlwind Flip"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

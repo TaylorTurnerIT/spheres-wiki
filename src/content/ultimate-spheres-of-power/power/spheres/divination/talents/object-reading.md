@@ -1,9 +1,5 @@
 ---
-id: object-reading
 name: "Object Reading"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["divine", "ki", "mythic", "utility"]
 ---

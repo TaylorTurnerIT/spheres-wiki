@@ -1,7 +1,5 @@
 ---
-id: courser-ventures
 name: Courser Ventures
-className: courser
 level: 2
 tags: []
 isTraitContainer: true

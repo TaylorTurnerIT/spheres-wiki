@@ -1,9 +1,5 @@
 ---
-id: disrupt-focus
 name: "Disrupt Focus"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["apply", "charm"]
 ---

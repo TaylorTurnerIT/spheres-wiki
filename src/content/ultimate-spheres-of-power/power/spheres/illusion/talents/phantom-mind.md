@@ -1,9 +1,5 @@
 ---
-id: phantom-mind
 name: "Phantom Mind"
-system: power
-type: talent
-sphere: illusion
 tier: advanced
 tags: []
 ---

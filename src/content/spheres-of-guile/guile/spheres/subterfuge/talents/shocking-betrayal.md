@@ -1,9 +1,5 @@
 ---
-id: "shocking-betrayal"
 name: "Shocking Betrayal"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags: []
 ---

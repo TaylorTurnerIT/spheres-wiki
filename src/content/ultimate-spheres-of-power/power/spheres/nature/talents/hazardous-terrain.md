@@ -1,9 +1,5 @@
 ---
-id: hazardous-terrain
 name: "Hazardous Terrain"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["geomancing", "ground"]
 ---

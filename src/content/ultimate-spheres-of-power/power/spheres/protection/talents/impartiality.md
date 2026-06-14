@@ -1,9 +1,5 @@
 ---
-id: impartiality
 name: "Impartiality"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis", "ward"]
 ---

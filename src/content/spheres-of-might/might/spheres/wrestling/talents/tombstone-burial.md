@@ -1,9 +1,5 @@
 ---
-id: "tombstone-burial"
 name: "Tombstone Burial"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "advanced"
 tags: []
 ---

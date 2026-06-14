@@ -1,10 +1,6 @@
 ---
-id: wraith-hidden-possessor
 name: "Hidden Possessor"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

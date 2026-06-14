@@ -1,8 +1,5 @@
 ---
-id: inhuman-defiler
 name: "Inhuman Defiler"
-type: feat
-system: power
 sphere: death
 tags: ["defiler", "drawback", "necrosis"]
 tier: feat

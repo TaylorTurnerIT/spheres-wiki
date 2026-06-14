@@ -1,9 +1,5 @@
 ---
-id: "dizzying-maul"
 name: "Dizzying Maul"
-type: "talent"
-sourceBook: "spheres-apocrypha-pugilists"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "counter"

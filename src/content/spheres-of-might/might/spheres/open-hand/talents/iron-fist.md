@@ -1,9 +1,5 @@
 ---
-id: "iron-fist"
 name: "Iron Fist"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

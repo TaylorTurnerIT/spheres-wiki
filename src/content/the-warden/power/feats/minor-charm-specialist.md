@@ -1,8 +1,5 @@
 ---
-id: minor-charm-specialist
 name: "Minor Charm Specialist"
-type: feat
-system: power
 sphere: mind
 tags: ["warden"]
 tier: feat

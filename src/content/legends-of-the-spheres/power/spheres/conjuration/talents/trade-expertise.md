@@ -1,9 +1,5 @@
 ---
-id: trade-expertise
 name: "Trade Expertise"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

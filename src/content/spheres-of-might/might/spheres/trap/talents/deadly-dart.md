@@ -1,9 +1,5 @@
 ---
-id: "deadly-dart"
 name: "Deadly Dart"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "trap"
 tier: "basic"
 tags:
   - "dart"

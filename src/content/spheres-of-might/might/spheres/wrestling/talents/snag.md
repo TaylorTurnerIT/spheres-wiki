@@ -1,9 +1,6 @@
 ---
-id: "snag"
 name: "Snag"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

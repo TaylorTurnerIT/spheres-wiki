@@ -1,9 +1,5 @@
 ---
-id: "investigate-area"
 name: "Investigate Area"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "basic"
 tags:
   - "analyze"

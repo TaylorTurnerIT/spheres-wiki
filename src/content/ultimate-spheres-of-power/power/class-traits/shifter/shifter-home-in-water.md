@@ -1,10 +1,6 @@
 ---
-id: shifter-home-in-water
 name: "Home in Water"
-type: class-trait
-system: power
 tags: ["extraordinary"]
-className: shifter
 featureId: bestial-trait
 ---
 

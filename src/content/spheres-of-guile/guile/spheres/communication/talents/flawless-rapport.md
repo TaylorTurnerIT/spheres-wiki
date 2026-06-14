@@ -1,9 +1,5 @@
 ---
-id: "flawless-rapport"
 name: "Flawless Rapport"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "advanced"
 tags:
   - "rapport"

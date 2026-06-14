@@ -1,9 +1,5 @@
 ---
-id: death-sphere-as-neutral
 name: "Death Sphere as Neutral"
-type: talent
-system: power
-sphere: death
 tier: basic
 tags: []
 ---

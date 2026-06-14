@@ -1,9 +1,5 @@
 ---
-id: "canny-compression"
 name: "Canny Compression"
-type: "talent"
-sourceBook: "spheres-apocrypha-monster-traditions-2"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

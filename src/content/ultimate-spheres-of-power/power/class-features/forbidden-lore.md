@@ -1,8 +1,6 @@
 ---
-id: forbidden-lore
 name: "Forbidden Lore"
 type: class-feature
-system: power
 className: thaumaturge
 level: 1
 tags: []

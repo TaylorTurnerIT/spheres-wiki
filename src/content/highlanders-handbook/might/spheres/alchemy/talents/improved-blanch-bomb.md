@@ -1,9 +1,5 @@
 ---
-id: "improved-blanch-bomb"
 name: "Improved Blanch Bomb"
-type: "talent"
-sourceBook: "highlanders-handbook"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

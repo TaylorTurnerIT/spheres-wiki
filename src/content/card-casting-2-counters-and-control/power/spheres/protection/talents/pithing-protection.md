@@ -1,9 +1,5 @@
 ---
-id: pithing-protection
 name: "Pithing Protection [Original]"
-system: power
-type: talent
-sphere: protection
 tier: advanced
 tags: []
 ---

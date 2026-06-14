@@ -1,9 +1,5 @@
 ---
-id: greater-geas
 name: "Greater Geas"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["utility"]
 ---

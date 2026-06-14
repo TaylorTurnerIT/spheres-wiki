@@ -1,9 +1,5 @@
 ---
-id: "sensory-decoy"
 name: "Sensory Decoy"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags: []
 ---

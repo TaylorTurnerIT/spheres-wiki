@@ -1,9 +1,5 @@
 ---
-id: "improved-smelling-salts"
 name: "Improved Smelling Salts"
-type: "talent"
-sourceBook: "spheres-apocrypha-tandem-talents"
-sphere: "alchemy"
 tier: "basic"
 tags:
   - "formulae"

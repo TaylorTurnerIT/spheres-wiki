@@ -1,9 +1,5 @@
 ---
-id: "perpetual-motion"
 name: "Perpetual Motion"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags:
   - "manhandle"

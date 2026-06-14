@@ -1,9 +1,5 @@
 ---
-id: break-enchantment
 name: "Break Enchantment"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

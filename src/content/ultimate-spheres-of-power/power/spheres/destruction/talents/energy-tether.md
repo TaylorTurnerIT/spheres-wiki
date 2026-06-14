@@ -1,9 +1,5 @@
 ---
-id: energy-tether
 name: "Energy Tether"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["blast-shape"]
 ---

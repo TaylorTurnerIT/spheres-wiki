@@ -1,9 +1,5 @@
 ---
-id: "rewrite-memory"
 name: "Rewrite Memory"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "advanced"
 tags: []
 ---

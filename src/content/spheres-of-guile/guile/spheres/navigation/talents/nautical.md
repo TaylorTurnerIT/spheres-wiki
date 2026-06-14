@@ -1,9 +1,5 @@
 ---
-id: "nautical"
 name: "Nautical"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "base"
 tags:
   - "package"

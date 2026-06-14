@@ -1,9 +1,5 @@
 ---
-id: falling-weapons
 name: "Falling Weapons"
-type: talent
-system: power
-sphere: creation
 tier: basic
 tags: []
 ---

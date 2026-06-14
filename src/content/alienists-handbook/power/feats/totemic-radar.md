@@ -1,8 +1,5 @@
 ---
-id: totemic-radar
 name: Totemic Radar
-type: feat
-system: power
 sphere: war
 dualSphere: divination
 tier: feat

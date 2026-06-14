@@ -1,9 +1,5 @@
 ---
-id: "ooze-ichor"
 name: "Ooze Ichor"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

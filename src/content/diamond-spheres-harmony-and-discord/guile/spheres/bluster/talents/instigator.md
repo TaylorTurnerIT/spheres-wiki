@@ -1,9 +1,5 @@
 ---
-id: "instigator"
 name: "Instigator"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "bluster"
 tier: "base"
 tags:
   - "package"

@@ -1,8 +1,6 @@
 ---
-id: emotions
 name: "Emotions"
 type: class-feature
-system: power
 className: eliciter
 level: 2
 tags: []

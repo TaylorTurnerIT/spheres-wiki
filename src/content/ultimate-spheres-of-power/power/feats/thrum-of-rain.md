@@ -1,8 +1,5 @@
 ---
-id: thrum-of-rain
 name: "Thrum Of Rain"
-type: feat
-system: power
 sphere: weather
 tags: []
 tier: feat

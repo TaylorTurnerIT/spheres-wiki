@@ -1,9 +1,5 @@
 ---
-id: rapid-response
 name: "Rapid Response"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "solemn-requiem"
 name: "Solemn Requiem"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

@@ -1,9 +1,5 @@
 ---
-id: scent
 name: "Scent"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["auxiliary", "extraordinary", "sense"]
 ---

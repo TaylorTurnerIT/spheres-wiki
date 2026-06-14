@@ -1,8 +1,5 @@
 ---
-id: tether-adept
 name: "Tether Adept"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

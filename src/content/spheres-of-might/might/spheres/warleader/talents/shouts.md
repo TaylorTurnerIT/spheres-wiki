@@ -1,9 +1,6 @@
 ---
-id: "shouts"
 name: "Shouts"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

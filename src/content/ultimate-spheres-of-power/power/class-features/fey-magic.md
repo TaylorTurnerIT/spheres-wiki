@@ -1,8 +1,6 @@
 ---
-id: fey-magic
 name: "Fey Magic"
 type: class-feature
-system: power
 className: fey-adept
 level: 1
 tags: []

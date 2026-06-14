@@ -1,9 +1,5 @@
 ---
-id: extra-companion
 name: "Extra Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: lifebound-auspician
 name: "Lifebound Auspician"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

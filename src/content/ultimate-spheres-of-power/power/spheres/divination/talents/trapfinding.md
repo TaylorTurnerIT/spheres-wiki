@@ -1,9 +1,5 @@
 ---
-id: trapfinding
 name: "Trapfinding"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: ["extraordinary", "sense"]
 ---

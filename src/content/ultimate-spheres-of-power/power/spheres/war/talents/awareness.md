@@ -1,9 +1,5 @@
 ---
-id: awareness
 name: "Awareness"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["mandate"]
 ---

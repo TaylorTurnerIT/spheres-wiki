@@ -1,9 +1,5 @@
 ---
-id: "pound-of-cure"
 name: "Pound Of Cure"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "herbalism"
 tier: "advanced"
 tags: []
 ---

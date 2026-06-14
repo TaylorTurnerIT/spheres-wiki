@@ -1,9 +1,5 @@
 ---
-id: recommend
 name: "Recommend"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["charm"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: portal-network
 name: "Portal Network"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

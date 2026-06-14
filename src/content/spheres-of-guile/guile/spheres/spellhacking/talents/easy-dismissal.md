@@ -1,9 +1,5 @@
 ---
-id: "easy-dismissal"
 name: "Easy Dismissal"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: mass-summon
 name: "Mass Summon"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["mass"]
 ---

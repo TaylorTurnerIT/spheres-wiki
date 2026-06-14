@@ -1,9 +1,5 @@
 ---
-id: zeitgeist
 name: "Zeitgeist"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: ["cloud"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: fairy-flight
 name: "Fairy Flight"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

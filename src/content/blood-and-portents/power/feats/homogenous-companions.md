@@ -1,8 +1,5 @@
 ---
-id: homogenous-companions
 name: "Homogenous Companions"
-type: feat
-system: power
 sphere: conjuration
 tags: []
 tier: feat

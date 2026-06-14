@@ -1,9 +1,5 @@
 ---
-id: "muscular-surge"
 name: "Muscular Surge"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "brute"
 tier: "basic"
 tags:
   - "utility"

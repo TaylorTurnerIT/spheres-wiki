@@ -1,8 +1,5 @@
 ---
-id: "leadership"
 name: "Leadership"
-type: "sphere"
-sourceBook: "generals-handbook"
 icon: "leadership"
 tags: []
 sectionDefinitions:

@@ -1,8 +1,5 @@
 ---
-id: fissile-creation
 name: Fissile Creation
-type: feat
-system: power
 sphere: destruction
 dualSphere: creation
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "greater-deflect"
 name: "Greater Deflect"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

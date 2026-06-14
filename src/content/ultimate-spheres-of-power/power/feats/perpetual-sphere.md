@@ -1,8 +1,5 @@
 ---
-id: perpetual-sphere
 name: "Perpetual Sphere"
-type: feat
-system: power
 sphere: destruction
 tags: ["combat"]
 tier: feat

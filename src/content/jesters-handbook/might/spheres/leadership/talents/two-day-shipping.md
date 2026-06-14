@@ -1,9 +1,5 @@
 ---
-id: "two-day-shipping"
 name: "Two Day Shipping"
-type: "talent"
-sourceBook: "jesters-handbook"
-sphere: "leadership"
 tier: "advanced"
 tags:
   - "utility"

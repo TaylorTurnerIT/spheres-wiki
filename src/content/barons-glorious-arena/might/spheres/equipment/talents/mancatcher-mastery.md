@@ -1,9 +1,5 @@
 ---
-id: "mancatcher-mastery"
 name: "Mancatcher Mastery"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "equipment"
 tier: "basic"
 ---
 

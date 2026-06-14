@@ -1,9 +1,5 @@
 ---
-id: "iai-slash"
 name: "Iai Slash"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "bleed"

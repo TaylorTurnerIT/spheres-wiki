@@ -1,9 +1,5 @@
 ---
-id: "overhead-smash"
 name: "Overhead Smash"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

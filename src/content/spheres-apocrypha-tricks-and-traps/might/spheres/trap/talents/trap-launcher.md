@@ -1,9 +1,5 @@
 ---
-id: "trap-launcher"
 name: "Trap Launcher"
-type: "talent"
-sourceBook: "spheres-apocrypha-tricks-and-traps"
-sphere: "trap"
 tier: "basic"
 tags: []
 ---

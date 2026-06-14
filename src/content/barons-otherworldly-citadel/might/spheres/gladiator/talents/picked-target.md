@@ -1,9 +1,5 @@
 ---
-id: "picked-target"
 name: "Picked Target"
-type: "talent"
-sourceBook: "barons-otherworldly-citadel"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

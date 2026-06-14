@@ -1,9 +1,5 @@
 ---
-id: "the-joy-of-life"
 name: "The Joy Of Life"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "act"

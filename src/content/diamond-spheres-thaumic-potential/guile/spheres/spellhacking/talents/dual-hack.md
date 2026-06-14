@@ -1,9 +1,5 @@
 ---
-id: "dual-hack"
 name: "Dual Hack"
-type: "talent"
-sourceBook: "diamond-spheres-thaumic-potential"
-sphere: "spellhacking"
 tier: "base"
 tags:
   - "package"

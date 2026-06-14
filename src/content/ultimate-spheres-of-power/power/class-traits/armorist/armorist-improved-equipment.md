@@ -1,10 +1,6 @@
 ---
-id: armorist-improved-equipment
 name: "Improved Equipment"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

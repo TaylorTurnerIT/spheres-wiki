@@ -1,9 +1,5 @@
 ---
-id: clearsight
 name: "Clearsight"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["meld"]
 ---

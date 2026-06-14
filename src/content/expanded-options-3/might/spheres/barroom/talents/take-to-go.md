@@ -1,9 +1,5 @@
 ---
-id: "take-to-go"
 name: "Take To Go"
-type: "talent"
-sourceBook: "expanded-options-3"
-sphere: "barroom"
 tier: "basic"
 tags:
   - "smash"

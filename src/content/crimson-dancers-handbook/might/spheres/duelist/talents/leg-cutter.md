@@ -1,9 +1,5 @@
 ---
-id: "leg-cutter"
 name: "Leg Cutter"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "bleed"

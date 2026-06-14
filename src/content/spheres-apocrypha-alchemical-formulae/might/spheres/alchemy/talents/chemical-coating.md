@@ -1,9 +1,5 @@
 ---
-id: "chemical-coating"
 name: "Chemical Coating"
-type: "talent"
-sourceBook: "spheres-apocrypha-alchemical-formulae"
-sphere: "alchemy"
 tier: "basic"
 tags: []
 ---

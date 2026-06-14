@@ -1,9 +1,5 @@
 ---
-id: "specter"
 name: "Specter"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "adrenaline"

@@ -1,9 +1,5 @@
 ---
-id: taint-soul
 name: "Taint Soul"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

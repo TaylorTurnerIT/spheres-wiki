@@ -1,9 +1,5 @@
 ---
-id: improved-bleed
 name: "Improved Bleed"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "blaze-ahead"
 name: "Blaze Ahead"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "pathing"

@@ -1,9 +1,5 @@
 ---
-id: geas
 name: "Geas"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["curse", "utility", "word"]
 ---

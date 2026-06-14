@@ -1,9 +1,5 @@
 ---
-id: "overwhelming-suggestion"
 name: "Overwhelming Suggestion"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "steel-braggart"
 name: "Steel Braggart"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags:
   - "boast"

@@ -1,9 +1,5 @@
 ---
-id: "quip"
 name: "Quip"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "base"
 tags: []
 ---

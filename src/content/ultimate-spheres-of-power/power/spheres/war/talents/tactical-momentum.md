@@ -1,9 +1,5 @@
 ---
-id: tactical-momentum
 name: "Tactical Momentum"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["momentum"]
 ---

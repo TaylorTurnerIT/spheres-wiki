@@ -1,9 +1,5 @@
 ---
-id: undying-obstinance
 name: "Undying Obstinance"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: ["consecration"]
 ---

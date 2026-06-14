@@ -1,9 +1,5 @@
 ---
-id: "incredible-inference"
 name: "Incredible Inference"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "advanced"
 tags:
   - "utility"

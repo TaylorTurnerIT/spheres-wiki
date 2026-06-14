@@ -1,9 +1,5 @@
 ---
-id: teleport-object
 name: "Teleport Object"
-system: power
-type: talent
-sphere: warp
 tier: basic
 tags: []
 ---

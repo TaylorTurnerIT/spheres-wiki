@@ -1,9 +1,5 @@
 ---
-id: integrate-item
 name: "Integrate Item"
-system: power
-type: talent
-sphere: creation
 tier: advanced
 tags: ["alter", "sm"]
 ---

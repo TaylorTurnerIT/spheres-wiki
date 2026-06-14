@@ -1,9 +1,5 @@
 ---
-id: timeless-cranes-hourglass
 name: "Timeless Crane's Hourglass"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["time"]
 ---

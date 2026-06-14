@@ -1,9 +1,5 @@
 ---
-id: "advancing-carnage"
 name: "Advancing Carnage"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "berserker"
 tier: "basic"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: cursed-form
 name: "Cursed Form"
-type: feat
-system: power
 sphere: alteration
 tags: []
 tier: feat

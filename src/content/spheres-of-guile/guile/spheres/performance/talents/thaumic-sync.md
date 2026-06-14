@@ -1,9 +1,5 @@
 ---
-id: "thaumic-sync"
 name: "Thaumic Sync"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "advanced"
 tags:
   - "dance"

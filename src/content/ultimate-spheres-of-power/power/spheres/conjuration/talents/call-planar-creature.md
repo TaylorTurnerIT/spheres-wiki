@@ -1,9 +1,5 @@
 ---
-id: call-planar-creature
 name: "Call Planar Creature"
-system: power
-type: talent
-sphere: conjuration
 tier: advanced
 tags: []
 ---

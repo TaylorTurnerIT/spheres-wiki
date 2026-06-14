@@ -1,8 +1,5 @@
 ---
-id: venomous-soul
 name: "Venomous Soul"
-type: feat
-system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: pawstpone
 name: "Pawstpone"
-type: feat
-system: power
 sphere: time
 tags: []
 tier: feat

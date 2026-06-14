@@ -1,9 +1,5 @@
 ---
-id: safety
 name: "Safety"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["rally"]
 ---

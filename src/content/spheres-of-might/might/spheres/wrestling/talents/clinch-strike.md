@@ -1,9 +1,5 @@
 ---
-id: "clinch-strike"
 name: "Clinch Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags:
   - "slam"

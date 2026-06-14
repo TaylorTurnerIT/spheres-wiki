@@ -1,7 +1,5 @@
 ---
-id: tireless
 name: Tireless
-className: courser
 level: 14
 tags: []
 ---

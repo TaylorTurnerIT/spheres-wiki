@@ -1,9 +1,5 @@
 ---
-id: destroy-element
 name: "Destroy Element"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["spirit"]
 ---

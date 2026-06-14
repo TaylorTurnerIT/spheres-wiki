@@ -1,9 +1,5 @@
 ---
-id: rain-bomb
 name: "Rain Bomb"
-system: power
-type: talent
-sphere: weather
 tier: advanced
 tags: []
 ---

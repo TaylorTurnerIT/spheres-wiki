@@ -1,9 +1,5 @@
 ---
-id: "aggressive"
 name: "Aggressive"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "base"
 tags:
   - "package"

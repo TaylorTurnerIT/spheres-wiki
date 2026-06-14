@@ -1,10 +1,6 @@
 ---
-id: mageknight-strategic-planning
 name: "Strategic Planning"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 requires: "War sphere"
 ---

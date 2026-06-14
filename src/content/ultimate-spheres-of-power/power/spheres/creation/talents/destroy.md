@@ -1,9 +1,5 @@
 ---
-id: destroy
 name: "Destroy"
-type: talent
-system: power
-sphere: creation
 tier: basic
 tags: []
 ---

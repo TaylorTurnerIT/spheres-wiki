@@ -1,9 +1,5 @@
 ---
-id: "close-quarters-training"
 name: "Close Quarters Training"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: sickening
 name: "Sickening"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: ["ghost-strike"]
 ---

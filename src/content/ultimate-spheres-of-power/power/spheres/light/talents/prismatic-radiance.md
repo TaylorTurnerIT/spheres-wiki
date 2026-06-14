@@ -1,9 +1,5 @@
 ---
-id: prismatic-radiance
 name: "Prismatic Radiance"
-system: power
-type: talent
-sphere: light
 tier: advanced
 tags: ["light"]
 ---

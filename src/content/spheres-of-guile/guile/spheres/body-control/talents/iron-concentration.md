@@ -1,9 +1,5 @@
 ---
-id: "iron-concentration"
 name: "Iron Concentration"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

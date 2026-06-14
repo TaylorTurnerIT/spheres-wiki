@@ -1,9 +1,5 @@
 ---
-id: "complex-patrol"
 name: "Complex Patrol"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "guardian"
 tier: "basic"
 tags: []
 ---

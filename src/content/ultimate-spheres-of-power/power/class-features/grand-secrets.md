@@ -1,8 +1,6 @@
 ---
-id: grand-secrets
 name: "Grand Secrets"
 type: class-feature
-system: power
 className: hedgewitch
 level: 10
 tags: []

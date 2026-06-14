@@ -1,9 +1,5 @@
 ---
-id: "destabilized-focus"
 name: "Destabilized Focus"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "base"
 tags:
   - "package"

@@ -1,9 +1,5 @@
 ---
-id: affix
 name: "Affix"
-system: power
-type: talent
-sphere: telekinesis
 tier: advanced
 tags: []
 ---

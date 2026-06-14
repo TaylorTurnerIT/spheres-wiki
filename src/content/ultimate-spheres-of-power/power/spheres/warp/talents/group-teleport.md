@@ -1,9 +1,5 @@
 ---
-id: group-teleport
 name: "Group Teleport"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

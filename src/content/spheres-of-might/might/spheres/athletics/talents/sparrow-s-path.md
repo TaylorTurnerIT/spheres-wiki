@@ -1,9 +1,5 @@
 ---
-id: "sparrow-s-path"
 name: "Sparrow’s Path"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "fly"

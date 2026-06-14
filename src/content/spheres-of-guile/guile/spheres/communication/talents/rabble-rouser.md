@@ -1,9 +1,5 @@
 ---
-id: "rabble-rouser"
 name: "Rabble-Rouser"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags: []
 ---

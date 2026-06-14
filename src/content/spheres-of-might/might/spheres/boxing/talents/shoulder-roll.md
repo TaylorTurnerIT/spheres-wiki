@@ -1,9 +1,5 @@
 ---
-id: "shoulder-roll"
 name: "Shoulder Roll"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

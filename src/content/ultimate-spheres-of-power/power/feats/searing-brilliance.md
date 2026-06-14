@@ -1,8 +1,5 @@
 ---
-id: searing-brilliance
 name: "Searing Brilliance"
-type: feat
-system: power
 sphere: light
 tags: []
 tier: feat

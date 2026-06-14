@@ -1,9 +1,5 @@
 ---
-id: "dual-opportunity"
 name: "Dual Opportunity"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "soul-s-shield"
 name: "Soul’s Shield"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "advanced"
 tags: []
 ---

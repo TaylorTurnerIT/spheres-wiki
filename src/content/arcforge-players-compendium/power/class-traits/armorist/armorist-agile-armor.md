@@ -1,10 +1,6 @@
 ---
-id: armorist-agile-armor
 name: "Agile Armor"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

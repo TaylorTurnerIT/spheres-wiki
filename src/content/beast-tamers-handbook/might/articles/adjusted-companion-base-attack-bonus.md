@@ -1,7 +1,5 @@
 ---
 name: "Sphere-Specific Variant Rule: Adjusted Companion Base Attack Bonus"
-type: article
-id: adjusted-companion-base-attack-bonus
 source: beast-tamers-handbook
 ---
 

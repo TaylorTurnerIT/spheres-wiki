@@ -1,9 +1,5 @@
 ---
-id: cure
 name: Cure
-system: power
-type: talent
-sphere: life
 tier: base
 tags: []
 ---

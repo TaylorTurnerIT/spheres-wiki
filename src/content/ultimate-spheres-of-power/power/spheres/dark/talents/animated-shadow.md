@@ -1,9 +1,5 @@
 ---
-id: animated-shadow
 name: "Animated Shadow"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: ["shadow"]
 ---

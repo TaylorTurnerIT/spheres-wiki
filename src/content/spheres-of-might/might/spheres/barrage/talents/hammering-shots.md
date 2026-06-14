@@ -1,9 +1,5 @@
 ---
-id: "hammering-shots"
 name: "Hammering Shots"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags:
   - "blitz"

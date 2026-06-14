@@ -1,8 +1,5 @@
 ---
-id: two-headed-adept
 name: "Two-Headed Adept"
-type: feat
-system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat

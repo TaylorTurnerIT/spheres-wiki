@@ -1,9 +1,5 @@
 ---
-id: adaptive-admixture
 name: "Adaptive Admixture"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["sm"]
 ---

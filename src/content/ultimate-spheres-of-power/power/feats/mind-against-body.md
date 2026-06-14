@@ -1,8 +1,5 @@
 ---
-id: mind-against-body
 name: "Mind Against Body"
-type: feat
-system: power
 sphere: telekinesis
 tags: []
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: plasma-production
 name: "Plasma Production"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["material"]
 ---

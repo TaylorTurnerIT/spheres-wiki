@@ -1,9 +1,5 @@
 ---
-id: air-mastery
 name: "Air Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["air", "geomancing"]
 ---

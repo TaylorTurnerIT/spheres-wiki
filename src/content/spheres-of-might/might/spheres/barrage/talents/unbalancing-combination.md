@@ -1,9 +1,5 @@
 ---
-id: "unbalancing-combination"
 name: "Unbalancing Combination"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barrage"
 tier: "basic"
 tags: []
 ---

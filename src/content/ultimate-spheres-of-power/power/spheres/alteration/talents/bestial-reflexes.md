@@ -1,9 +1,5 @@
 ---
-id: bestial-reflexes
 name: "Bestial Reflexes"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

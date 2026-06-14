@@ -1,8 +1,5 @@
 ---
-id: lightning-tactics
 name: "Lightning Tactics"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: soul-weaver
 name: "Soul Weaver"
-type: class
-system: power
 tags: []
 hitDie: 6
 alignment: "Any"

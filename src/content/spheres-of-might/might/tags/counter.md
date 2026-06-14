@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "counter"
 label: "Counter"
 sphere: "boxing"
 priority: 0

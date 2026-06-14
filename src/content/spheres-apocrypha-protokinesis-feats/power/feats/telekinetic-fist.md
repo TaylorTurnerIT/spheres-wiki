@@ -1,8 +1,5 @@
 ---
-id: telekinetic-fist
 name: "Telekinetic Fist"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["combat", "protokinesis"]
 tier: feat

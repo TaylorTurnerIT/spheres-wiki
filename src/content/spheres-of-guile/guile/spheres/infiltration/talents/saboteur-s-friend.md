@@ -1,9 +1,5 @@
 ---
-id: "saboteur-s-friend"
 name: "Saboteur’s Friend"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "sabotage"

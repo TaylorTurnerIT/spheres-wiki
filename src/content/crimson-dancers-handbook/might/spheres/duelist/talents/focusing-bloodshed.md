@@ -1,9 +1,5 @@
 ---
-id: "focusing-bloodshed"
 name: "Focusing Bloodshed"
-type: "talent"
-sourceBook: "crimson-dancers-handbook"
-sphere: "duelist"
 tier: "basic"
 tags: []
 ---

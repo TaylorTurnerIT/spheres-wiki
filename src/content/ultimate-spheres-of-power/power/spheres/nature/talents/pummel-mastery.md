@@ -1,9 +1,5 @@
 ---
-id: pummel-mastery
 name: "Pummel Mastery"
-system: power
-type: talent
-sphere: nature
 tier: basic
 tags: ["plant", "geomancing"]
 ---

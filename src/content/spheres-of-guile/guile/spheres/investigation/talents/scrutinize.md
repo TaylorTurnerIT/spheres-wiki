@@ -1,9 +1,5 @@
 ---
-id: "scrutinize"
 name: "Scrutinize"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "base"
 tags: []
 ---

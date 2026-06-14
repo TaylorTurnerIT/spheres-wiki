@@ -1,8 +1,5 @@
 ---
-id: gravitic-anomaly
 name: "Gravitic Anomaly"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat

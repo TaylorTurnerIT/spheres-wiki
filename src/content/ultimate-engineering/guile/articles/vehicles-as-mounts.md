@@ -1,7 +1,5 @@
 ---
 name: "Optional Rule: Vehicles as Mounts"
-type: article
-id: vehicles-as-mounts
 source: ultimate-engineering
 ---
 

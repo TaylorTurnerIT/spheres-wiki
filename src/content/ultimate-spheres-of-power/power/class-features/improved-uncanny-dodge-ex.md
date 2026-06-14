@@ -1,8 +1,6 @@
 ---
-id: improved-uncanny-dodge-ex
 name: "Improved Uncanny Dodge (Ex)"
 type: class-feature
-system: power
 className: symbiat
 level: 1
 tags: []

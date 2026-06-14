@@ -1,9 +1,5 @@
 ---
-id: get-a-word-in
 name: "Get a Word In"
-system: power
-type: talent
-sphere: fate
 tier: advanced
 tags: []
 ---

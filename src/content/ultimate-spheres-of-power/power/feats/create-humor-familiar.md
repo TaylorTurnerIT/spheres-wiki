@@ -1,8 +1,5 @@
 ---
-id: create-humor-familiar
 name: "Create Humor Familiar"
-type: feat
-system: power
 sphere: blood
 tags: []
 tier: feat

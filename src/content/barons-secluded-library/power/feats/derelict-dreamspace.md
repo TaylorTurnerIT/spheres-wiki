@@ -1,8 +1,5 @@
 ---
-id: derelict-dreamspace
 name: "Derelict Dreamspace"
-type: feat
-system: power
 sphere: mind
 tags: ["sm"]
 tier: feat

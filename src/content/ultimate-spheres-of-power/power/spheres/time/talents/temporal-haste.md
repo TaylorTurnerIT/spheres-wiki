@@ -1,9 +1,5 @@
 ---
-id: temporal-haste
 name: "Temporal Haste"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "repurpose-activated-item"
 name: "Repurpose Activated Item"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

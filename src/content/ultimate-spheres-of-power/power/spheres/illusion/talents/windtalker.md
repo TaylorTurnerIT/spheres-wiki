@@ -1,9 +1,5 @@
 ---
-id: windtalker
 name: "Windtalker"
-system: power
-type: talent
-sphere: illusion
 tier: basic
 tags: []
 ---

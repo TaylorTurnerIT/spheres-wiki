@@ -1,9 +1,5 @@
 ---
-id: catatonia
 name: "Catatonia"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: []
 ---

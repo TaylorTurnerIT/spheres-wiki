@@ -1,9 +1,5 @@
 ---
-id: "whip-fiend"
 name: "Whip Fiend"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

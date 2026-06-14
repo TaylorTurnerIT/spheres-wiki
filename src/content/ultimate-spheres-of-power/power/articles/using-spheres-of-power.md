@@ -1,8 +1,5 @@
 ---
-id: using-spheres-of-power
 name: "Using Spheres of Power"
-type: article
-system: power
 tags: []
 ---
 

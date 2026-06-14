@@ -1,10 +1,6 @@
 ---
-id: wraith-ghost-glide
 name: "Ghost Glide"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 requires: "wraith 7"
 ---

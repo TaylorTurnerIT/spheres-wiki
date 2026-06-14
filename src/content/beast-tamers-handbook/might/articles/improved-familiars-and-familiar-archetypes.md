@@ -1,7 +1,5 @@
 ---
 name: "Sphere-Specific Variant Rule: Improved Familiars and Familiar Archetypes"
-type: article
-id: improved-familiars-and-familiar-archetypes
 source: beast-tamers-handbook
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "defensive-cover"
 name: "Defensive Cover"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "cohort"

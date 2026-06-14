@@ -1,8 +1,5 @@
 ---
-id: squadron-commander
 name: "Squadron Commander"
-type: feat
-system: power
 sphere: war
 tags: ["extraordinary", "squadron"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "bolstering-rapport"
 name: "Bolstering Rapport"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

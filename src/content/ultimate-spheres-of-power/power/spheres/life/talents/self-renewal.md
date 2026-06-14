@@ -1,9 +1,5 @@
 ---
-id: self-renewal
 name: "Self-Renewal"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

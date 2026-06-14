@@ -1,8 +1,5 @@
 ---
-id: propulsive-creation
 name: Propulsive Creation
-type: feat
-system: power
 sphere: telekinesis
 dualSphere: creation
 tier: feat

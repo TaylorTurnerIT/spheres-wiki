@@ -1,8 +1,5 @@
 ---
-id: formulae-geomancing
 name: "Formulae Geomancing"
-type: feat
-system: power
 sphere: nature
 tags: []
 tier: feat

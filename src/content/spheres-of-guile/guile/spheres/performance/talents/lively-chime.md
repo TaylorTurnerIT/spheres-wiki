@@ -1,9 +1,5 @@
 ---
-id: "lively-chime"
 name: "Lively Chime"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "basic"
 tags:
   - "instrumental"

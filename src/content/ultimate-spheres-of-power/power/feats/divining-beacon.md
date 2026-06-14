@@ -1,8 +1,5 @@
 ---
-id: divining-beacon
 name: Divining Beacon
-type: feat
-system: power
 sphere: warp
 dualSphere: divination
 tier: feat

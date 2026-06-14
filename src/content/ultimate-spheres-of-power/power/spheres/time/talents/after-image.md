@@ -1,9 +1,5 @@
 ---
-id: after-image
 name: "After Image"
-system: power
-type: talent
-sphere: time
 tier: basic
 tags: ["time"]
 ---

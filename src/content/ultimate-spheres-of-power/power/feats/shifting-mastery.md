@@ -1,8 +1,5 @@
 ---
-id: shifting-mastery
 name: "Shifting Mastery"
-type: feat
-system: power
 sphere: alteration
 tags: []
 tier: feat

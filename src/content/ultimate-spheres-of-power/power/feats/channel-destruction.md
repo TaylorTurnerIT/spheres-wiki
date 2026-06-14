@@ -1,8 +1,5 @@
 ---
-id: channel-destruction
 name: "Channel Destruction"
-type: feat
-system: power
 sphere: destruction
 tags: ["channeling"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "slip-past"
 name: "Slip Past"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "base"
 tags: []
 ---

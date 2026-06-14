@@ -1,9 +1,5 @@
 ---
-id: lens
 name: Lens
-system: power
-type: talent
-sphere: light
 tier: base
 tags: []
 ---

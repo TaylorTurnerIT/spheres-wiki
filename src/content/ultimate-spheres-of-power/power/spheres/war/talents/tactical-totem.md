@@ -1,9 +1,5 @@
 ---
-id: tactical-totem
 name: "Tactical Totem"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

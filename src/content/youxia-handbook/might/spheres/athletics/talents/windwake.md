@@ -1,9 +1,5 @@
 ---
-id: "windwake"
 name: "Windwake"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "motion"

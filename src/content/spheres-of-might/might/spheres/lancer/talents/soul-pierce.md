@@ -1,9 +1,5 @@
 ---
-id: "soul-pierce"
 name: "Soul Pierce"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "lancer"
 tier: "advanced"
 tags: []
 ---

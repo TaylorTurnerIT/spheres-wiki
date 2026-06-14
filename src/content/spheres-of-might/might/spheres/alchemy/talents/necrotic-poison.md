@@ -1,9 +1,5 @@
 ---
-id: "necrotic-poison"
 name: "Necrotic Poison"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "alchemy"
 tier: "advanced"
 tags:
   - "toxin"

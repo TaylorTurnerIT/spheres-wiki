@@ -1,9 +1,5 @@
 ---
-id: "extensive-defense"
 name: "Extensive Defense"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

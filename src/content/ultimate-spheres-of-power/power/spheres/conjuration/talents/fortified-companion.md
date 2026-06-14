@@ -1,9 +1,5 @@
 ---
-id: fortified-companion
 name: "Fortified Companion"
-system: power
-type: talent
-sphere: conjuration
 tier: basic
 tags: ["form"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: "incredible-memory"
 name: "Incredible Memory"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "study"
 tier: "base"
 tags:
   - "package"

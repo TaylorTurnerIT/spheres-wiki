@@ -1,9 +1,5 @@
 ---
-id: "controlled-descent"
 name: "Controlled Descent"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags:
   - "pathing"

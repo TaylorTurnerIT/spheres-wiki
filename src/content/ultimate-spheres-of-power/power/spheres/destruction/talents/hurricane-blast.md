@@ -1,9 +1,5 @@
 ---
-id: hurricane-blast
 name: "Hurricane Blast"
-system: power
-type: talent
-sphere: destruction
 tier: basic
 tags: ["air", "blast-type"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: terrain-focus
 name: "Terrain Focus"
-type: feat
-system: power
 sphere: nature
 tags: ["drawback"]
 tier: feat

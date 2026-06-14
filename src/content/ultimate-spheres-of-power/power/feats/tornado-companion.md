@@ -1,8 +1,5 @@
 ---
-id: tornado-companion
 name: "Tornado Companion"
-type: feat
-system: power
 sphere: weather
 tags: []
 tier: feat

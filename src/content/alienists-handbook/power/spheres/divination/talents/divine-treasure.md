@@ -1,9 +1,5 @@
 ---
-id: divine-treasure
 name: "Divine Treasure"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: ["divine", "utility"]
 ---

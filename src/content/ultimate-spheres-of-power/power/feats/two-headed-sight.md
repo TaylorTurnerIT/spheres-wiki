@@ -1,8 +1,5 @@
 ---
-id: two-headed-sight
 name: "Two-Headed Sight"
-type: feat
-system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat

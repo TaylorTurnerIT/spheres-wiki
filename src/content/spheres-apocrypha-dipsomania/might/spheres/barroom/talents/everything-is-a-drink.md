@@ -1,9 +1,5 @@
 ---
-id: "everything-is-a-drink"
 name: "Everything Is A Drink"
-type: "talent"
-sourceBook: "spheres-apocrypha-dipsomania"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

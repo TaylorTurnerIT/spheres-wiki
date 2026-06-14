@@ -1,9 +1,5 @@
 ---
-id: "absolute-determination"
 name: "Absolute Determination"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "adrenaline"

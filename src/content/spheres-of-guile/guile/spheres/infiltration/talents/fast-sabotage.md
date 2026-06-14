@@ -1,9 +1,5 @@
 ---
-id: "fast-sabotage"
 name: "Fast Sabotage"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "base"
 tags: []
 ---

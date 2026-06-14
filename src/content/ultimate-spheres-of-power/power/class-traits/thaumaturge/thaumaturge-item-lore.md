@@ -1,10 +1,6 @@
 ---
-id: thaumaturge-item-lore
 name: "Item Lore"
-type: class-trait
-system: power
 tags: []
-className: thaumaturge
 featureId: invocations
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: twisted-shapeshift
 name: "Twisted Shapeshift"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: cosmic-body
 name: "Cosmic Body"
-system: power
-type: talent
-sphere: alteration
 tier: basic
 tags: ["body"]
 ---

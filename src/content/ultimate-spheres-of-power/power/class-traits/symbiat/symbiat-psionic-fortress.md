@@ -1,10 +1,6 @@
 ---
-id: symbiat-psionic-fortress
 name: "Psionic Fortress"
-type: class-trait
-system: power
 tags: []
-className: symbiat
 featureId: psionics-su
 ---
 

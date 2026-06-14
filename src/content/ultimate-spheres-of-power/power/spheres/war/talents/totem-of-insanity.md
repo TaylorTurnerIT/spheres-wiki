@@ -1,9 +1,5 @@
 ---
-id: totem-of-insanity
 name: "Totem Of Insanity"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

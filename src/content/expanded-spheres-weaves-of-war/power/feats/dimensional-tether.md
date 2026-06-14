@@ -1,8 +1,5 @@
 ---
-id: dimensional-tether
 name: "Dimensional Tether"
-type: feat
-system: power
 sphere: mana
 tags: []
 tier: feat

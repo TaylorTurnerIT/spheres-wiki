@@ -1,8 +1,5 @@
 ---
-id: "navigation"
 name: "Navigation"
-type: "sphere"
-sourceBook: "spheres-of-guile"
 icon: "navigation"
 tags: []
 sectionDefinitions:

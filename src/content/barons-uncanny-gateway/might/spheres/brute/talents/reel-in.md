@@ -1,9 +1,5 @@
 ---
-id: "reel-in"
 name: "Reel In"
-type: "talent"
-sourceBook: "barons-uncanny-gateway"
-sphere: "brute"
 tier: "basic"
 tags: []
 ---

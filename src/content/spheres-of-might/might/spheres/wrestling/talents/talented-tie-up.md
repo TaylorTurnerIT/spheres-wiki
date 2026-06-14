@@ -1,9 +1,5 @@
 ---
-id: "talented-tie-up"
 name: "Talented Tie-Up"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "wrestling"
 tier: "basic"
 tags: []
 ---

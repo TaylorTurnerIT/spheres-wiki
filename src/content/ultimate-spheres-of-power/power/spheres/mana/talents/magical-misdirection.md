@@ -1,9 +1,5 @@
 ---
-id: magical-misdirection
 name: "Magical Misdirection"
-system: power
-type: talent
-sphere: mana
 tier: basic
 tags: ["manabond"]
 ---

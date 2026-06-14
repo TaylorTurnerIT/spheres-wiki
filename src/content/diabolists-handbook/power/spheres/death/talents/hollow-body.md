@@ -1,9 +1,5 @@
 ---
-id: hollow-body
 name: "Hollow Body"
-system: power
-type: talent
-sphere: death
 tier: advanced
 tags: []
 ---

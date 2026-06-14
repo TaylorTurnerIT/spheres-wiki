@@ -1,9 +1,5 @@
 ---
-id: "bullet-flood"
 name: "Bullet Flood"
-type: "talent"
-sourceBook: "arcforge-players-compendium"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

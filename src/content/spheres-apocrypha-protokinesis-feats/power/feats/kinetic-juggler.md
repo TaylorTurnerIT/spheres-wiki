@@ -1,8 +1,5 @@
 ---
-id: kinetic-juggler
 name: "Kinetic Juggler"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["protokinesis"]
 tier: feat

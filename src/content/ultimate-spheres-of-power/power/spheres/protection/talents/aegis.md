@@ -1,9 +1,5 @@
 ---
-id: aegis
 name: Aegis
-system: power
-type: talent
-sphere: protection
 tier: base
 tags: []
 ---

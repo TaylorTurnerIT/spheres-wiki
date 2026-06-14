@@ -1,9 +1,5 @@
 ---
-id: eternal-darkness
 name: "Eternal Darkness"
-system: power
-type: talent
-sphere: dark
 tier: advanced
 tags: []
 ---

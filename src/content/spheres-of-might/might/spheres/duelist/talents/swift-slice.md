@@ -1,9 +1,5 @@
 ---
-id: "swift-slice"
 name: "Swift Slice"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "duelist"
 tier: "basic"
 tags:
   - "disarm"

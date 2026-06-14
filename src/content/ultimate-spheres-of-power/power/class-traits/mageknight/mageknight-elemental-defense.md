@@ -1,10 +1,6 @@
 ---
-id: mageknight-elemental-defense
 name: "Elemental Defense"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 requires: "Mystic Defense class feature"
 ---

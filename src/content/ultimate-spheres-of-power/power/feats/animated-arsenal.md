@@ -1,8 +1,5 @@
 ---
-id: animated-arsenal
 name: "Animated Arsenal"
-type: feat
-system: power
 sphere: enhancement
 tags: []
 tier: feat

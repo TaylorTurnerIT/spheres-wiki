@@ -1,9 +1,5 @@
 ---
-id: "clinch"
 name: "Clinch"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags:
   - "counter"

@@ -1,9 +1,5 @@
 ---
-id: "focused-wayfaring"
 name: "Focused Wayfaring"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "basic"
 tags: []
 ---

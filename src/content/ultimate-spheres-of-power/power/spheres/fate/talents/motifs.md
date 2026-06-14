@@ -1,9 +1,5 @@
 ---
-id: motifs
 name: "Motifs"
-type: talent
-system: power
-sphere: fate
 tier: basic
 tags: []
 ---

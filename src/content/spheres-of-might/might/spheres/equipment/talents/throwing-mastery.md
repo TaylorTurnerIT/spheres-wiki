@@ -1,9 +1,5 @@
 ---
-id: "throwing-mastery"
 name: "Throwing Mastery"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "basic"
 tags: []
 ---

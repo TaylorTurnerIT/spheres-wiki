@@ -1,9 +1,5 @@
 ---
-id: "armed-smith"
 name: "Armed Smith"
-type: "talent"
-sourceBook: "expanded-spheres-barons-lost-apocrypha"
-sphere: "equipment"
 tier: "basic"
 tags:
   - "discipline"

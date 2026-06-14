@@ -1,8 +1,5 @@
 ---
-id: two-minds
 name: "Two Minds"
-type: feat
-system: power
 sphere: alteration
 tags: []
 tier: feat

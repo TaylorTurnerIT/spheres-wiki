@@ -1,8 +1,5 @@
 ---
-id: alteration
 name: "Alteration"
-system: power
-type: sphere
 icon: alteration
 description: "You have the ability to change the physical makeup of creatures."
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: "capoeira-spin"
 name: "Capoeira Spin"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "open-hand"
 tier: "basic"
 tags: []
 ---

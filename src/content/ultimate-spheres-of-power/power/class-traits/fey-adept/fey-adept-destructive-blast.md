@@ -1,10 +1,6 @@
 ---
-id: fey-adept-destructive-blast
 name: "Destructive Blast"
-type: class-trait
-system: power
 tags: []
-className: fey-adept
 featureId: shadowstuff
 ---
 

@@ -1,9 +1,5 @@
 ---
-id: "nocturnal-operations"
 name: "Nocturnal Operations"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "navigation"
 tier: "advanced"
 tags:
   - "acclimation"

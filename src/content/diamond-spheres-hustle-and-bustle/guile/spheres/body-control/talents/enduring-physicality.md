@@ -1,9 +1,5 @@
 ---
-id: "enduring-physicality"
 name: "Enduring Physicality"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "body-control"
 tier: "base"
 tags:
   - "package"

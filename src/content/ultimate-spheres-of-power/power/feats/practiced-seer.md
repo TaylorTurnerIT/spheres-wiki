@@ -1,8 +1,5 @@
 ---
-id: practiced-seer
 name: "Practiced Seer"
-type: feat
-system: power
 sphere: divination
 tags: []
 tier: feat

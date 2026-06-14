@@ -1,9 +1,5 @@
 ---
-id: "confusion-in-the-ranks"
 name: "Confusion In The Ranks"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "disguise"

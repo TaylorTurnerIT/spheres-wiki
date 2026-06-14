@@ -1,9 +1,5 @@
 ---
-id: "oversized-weapons"
 name: "Oversized Weapons"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "equipment"
 tier: "advanced"
 tags: []
 ---

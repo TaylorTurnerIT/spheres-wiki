@@ -1,8 +1,5 @@
 ---
-id: flesh-absorption-master
 name: "Flesh Absorption Master"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

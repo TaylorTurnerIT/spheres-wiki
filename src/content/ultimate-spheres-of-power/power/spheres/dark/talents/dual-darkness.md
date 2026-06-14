@@ -1,9 +1,5 @@
 ---
-id: dual-darkness
 name: "Dual Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

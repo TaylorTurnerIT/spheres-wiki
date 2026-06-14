@@ -1,8 +1,5 @@
 ---
-id: shifting-disguise
 name: "Shifting Disguise"
-type: feat
-system: power
 sphere: alteration
 tags: []
 tier: feat

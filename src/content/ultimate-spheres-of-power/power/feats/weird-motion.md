@@ -1,8 +1,5 @@
 ---
-id: weird-motion
 name: "Weird Motion"
-type: feat
-system: power
 sphere: illusion
 tags: ["combat"]
 tier: feat

@@ -1,9 +1,5 @@
 ---
-id: "iron-liver"
 name: "Iron Liver"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "barroom"
 tier: "basic"
 tags: []
 ---

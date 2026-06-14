@@ -1,7 +1,5 @@
 ---
-id: courser-slaughter
 name: Slaughter
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 6"

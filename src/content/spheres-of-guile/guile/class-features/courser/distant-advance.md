@@ -1,7 +1,5 @@
 ---
-id: distant-advance
 name: Distant Advance
-className: courser
 level: 6
 tags: []
 ---

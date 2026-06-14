@@ -1,10 +1,6 @@
 ---
-id: mageknight-arcane-strike-core
 name: "Arcane Strike [Core]"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

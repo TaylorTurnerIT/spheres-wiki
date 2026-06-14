@@ -1,10 +1,6 @@
 ---
-id: mageknight-sunder-the-veil
 name: "Sunder the Veil"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

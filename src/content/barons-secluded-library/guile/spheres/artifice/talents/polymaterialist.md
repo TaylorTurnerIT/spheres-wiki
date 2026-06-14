@@ -1,9 +1,5 @@
 ---
-id: "polymaterialist"
 name: "Polymaterialist"
-type: "talent"
-sourceBook: "barons-secluded-library"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "utility"

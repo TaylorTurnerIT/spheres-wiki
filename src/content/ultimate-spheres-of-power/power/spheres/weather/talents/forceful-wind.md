@@ -1,9 +1,5 @@
 ---
-id: forceful-wind
 name: "Forceful Wind"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: []
 ---

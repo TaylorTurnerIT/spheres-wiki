@@ -1,7 +1,5 @@
 ---
-id: weapon-and-armor-proficiency
 name: Weapon and Armor Proficiencies
-className: courser
 level: 1
 tags: []
 ---

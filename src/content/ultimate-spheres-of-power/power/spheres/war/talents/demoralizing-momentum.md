@@ -1,9 +1,5 @@
 ---
-id: demoralizing-momentum
 name: "Demoralizing Momentum"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["momentum"]
 ---

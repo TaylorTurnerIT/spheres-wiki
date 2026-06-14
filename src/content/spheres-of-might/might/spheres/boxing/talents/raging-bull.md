@@ -1,9 +1,5 @@
 ---
-id: "raging-bull"
 name: "Raging Bull"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "boxing"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "steel-skin"
 name: "Steel Skin"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "body-control"
 tier: "basic"
 tags:
   - "clarity"

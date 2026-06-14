@@ -1,9 +1,5 @@
 ---
-id: black-lung
 name: "Black Lung"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["darkness"]
 ---

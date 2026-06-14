@@ -1,9 +1,5 @@
 ---
-id: "two-as-one"
 name: "Two As One"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "stance"

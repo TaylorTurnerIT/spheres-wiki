@@ -1,10 +1,6 @@
 ---
-id: incanter-sorcerer-bloodline-2-specialization-points
 name: "Sorcerer Bloodline (2 specialization points)"
-type: class-trait
-system: power
 tags: []
-className: incanter
 featureId: incanter-specializations
 ---
 

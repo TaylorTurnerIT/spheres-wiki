@@ -1,8 +1,5 @@
 ---
-id: proxy-network
 name: "Proxy Network"
-type: feat
-system: power
 sphere: enhancement
 tags: ["proxy"]
 tier: feat

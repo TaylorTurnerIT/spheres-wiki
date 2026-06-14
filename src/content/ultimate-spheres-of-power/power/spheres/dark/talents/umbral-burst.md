@@ -1,9 +1,5 @@
 ---
-id: umbral-burst
 name: "Umbral Burst"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "perfect-redirection"
 name: "Perfect Redirection"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "advanced"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "bizarre-artistry"
 name: "Bizarre Artistry"
-type: "talent"
-sourceBook: "diamond-spheres-invention-and-ingenuity"
-sphere: "artifice"
 tier: "advanced"
 tags:
   - "artwork"

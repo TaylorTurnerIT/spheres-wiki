@@ -1,9 +1,5 @@
 ---
-id: "collaborative-research"
 name: "Collaborative Research"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "communication"
 tier: "basic"
 tags:
   - "assist"

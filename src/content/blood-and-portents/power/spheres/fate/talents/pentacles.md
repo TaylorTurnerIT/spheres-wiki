@@ -1,9 +1,5 @@
 ---
-id: pentacles
 name: "Pentacles"
-system: power
-type: talent
-sphere: fate
 tier: basic
 tags: ["motif", "arcana"]
 ---

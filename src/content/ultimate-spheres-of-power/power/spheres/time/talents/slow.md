@@ -1,9 +1,5 @@
 ---
-id: slow
 name: "Slow"
-type: talent
-system: power
-sphere: time
 tier: basic
 tags: []
 ---

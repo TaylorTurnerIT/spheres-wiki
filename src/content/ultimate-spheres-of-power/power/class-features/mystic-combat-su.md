@@ -1,8 +1,6 @@
 ---
-id: mystic-combat-su
 name: "Mystic Combat (Su)"
 type: class-feature
-system: power
 className: mageknight
 level: 2
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: imbue-shadow
 name: "Imbue Shadow"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["shadow"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: lingering-resilience
 name: "Lingering Resilience"
-system: power
-type: talent
-sphere: life
 tier: basic
 tags: []
 ---

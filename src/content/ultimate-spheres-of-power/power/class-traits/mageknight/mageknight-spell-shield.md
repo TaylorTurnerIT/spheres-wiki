@@ -1,10 +1,6 @@
 ---
-id: mageknight-spell-shield
 name: "Spell Shield"
-type: class-trait
-system: power
 tags: []
-className: mageknight
 featureId: mystic-combat-su
 ---
 

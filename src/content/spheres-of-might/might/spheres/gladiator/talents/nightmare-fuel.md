@@ -1,9 +1,5 @@
 ---
-id: "nightmare-fuel"
 name: "Nightmare Fuel"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "advanced"
 tags: []
 ---

@@ -1,10 +1,6 @@
 ---
-id: shifter-champion
 name: "Champion"
-type: class-trait
-system: power
 tags: []
-className: shifter
 featureId: bestial-trait
 ---
 

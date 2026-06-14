@@ -1,7 +1,5 @@
 ---
-id: courser-vicious-strikes
 name: Vicious Strikes
-className: courser
 featureId: courser-ventures
 tags: []
 requires: "courser 6"

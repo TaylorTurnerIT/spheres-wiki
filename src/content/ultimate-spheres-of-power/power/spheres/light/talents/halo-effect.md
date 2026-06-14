@@ -1,9 +1,5 @@
 ---
-id: halo-effect
 name: "Halo Effect"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["utility", "lens"]
 ---

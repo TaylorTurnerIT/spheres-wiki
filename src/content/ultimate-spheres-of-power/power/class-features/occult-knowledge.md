@@ -1,8 +1,6 @@
 ---
-id: occult-knowledge
 name: "Occult Knowledge"
 type: class-feature
-system: power
 className: thaumaturge
 level: 2
 tags: []

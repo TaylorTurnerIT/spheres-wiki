@@ -1,8 +1,5 @@
 ---
-id: studied-healing
 name: "Studied Healing"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

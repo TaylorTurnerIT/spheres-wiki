@@ -1,9 +1,5 @@
 ---
-id: reversion-complete
 name: "Reversion, Complete"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["utility"]
 ---

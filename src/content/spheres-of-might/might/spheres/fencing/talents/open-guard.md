@@ -1,9 +1,5 @@
 ---
-id: "open-guard"
 name: "Open Guard"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: venom-spitter
 name: "Venom Spitter"
-type: feat
-system: power
 sphere: alteration
 tags: ["combat"]
 tier: feat

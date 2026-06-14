@@ -1,8 +1,5 @@
 ---
-id: channel-life
 name: "Channel Life"
-type: feat
-system: power
 sphere: life
 tags: ["channeling"]
 tier: feat

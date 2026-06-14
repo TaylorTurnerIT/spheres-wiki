@@ -1,9 +1,5 @@
 ---
-id: "manager"
 name: "Manager"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

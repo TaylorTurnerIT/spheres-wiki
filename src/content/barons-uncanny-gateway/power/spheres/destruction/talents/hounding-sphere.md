@@ -1,9 +1,5 @@
 ---
-id: hounding-sphere
 name: "Hounding Sphere"
-system: power
-type: talent
-sphere: destruction
 tier: advanced
 tags: ["sm"]
 ---

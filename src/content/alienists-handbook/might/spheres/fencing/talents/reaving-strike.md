@@ -1,9 +1,5 @@
 ---
-id: "reaving-strike"
 name: "Reaving Strike"
-type: "talent"
-sourceBook: "alienists-handbook"
-sphere: "fencing"
 tier: "advanced"
 tags: []
 ---

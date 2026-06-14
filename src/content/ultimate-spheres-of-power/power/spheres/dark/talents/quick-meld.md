@@ -1,9 +1,5 @@
 ---
-id: quick-meld
 name: "Quick Meld"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: []
 ---

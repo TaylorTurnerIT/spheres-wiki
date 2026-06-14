@@ -1,9 +1,5 @@
 ---
-id: "swift-dredging"
 name: "Swift Dredging"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "survivalism"
 tier: "basic"
 tags:
   - "approach"

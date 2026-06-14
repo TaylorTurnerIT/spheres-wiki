@@ -1,9 +1,6 @@
 ---
-id: "blooded-strike"
 name: "Blooded Strike"
-type: "talent"
 tier: "base"
-sourceBook: "spheres-of-might"
 tags: []
 ---
 

@@ -1,8 +1,5 @@
 ---
-id: wondrous-wardrobe
 name: "Wondrous Wardrobe"
-type: feat
-system: power
 sphere: creation
 tags: []
 tier: feat

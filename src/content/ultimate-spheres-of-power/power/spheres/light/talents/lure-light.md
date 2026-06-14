@@ -1,9 +1,5 @@
 ---
-id: lure-light
 name: "Lure Light"
-system: power
-type: talent
-sphere: light
 tier: basic
 tags: ["light"]
 ---

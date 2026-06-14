@@ -1,9 +1,5 @@
 ---
-id: "scratching-post"
 name: "Scratching Post"
-type: "talent"
-sourceBook: "catgirl-handbook"
-sphere: "trap"
 tier: "basic"
 tags:
   - "snare"

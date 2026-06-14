@@ -1,9 +1,5 @@
 ---
-id: "meat-shield"
 name: "Meat Shield"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "beastmastery"
 tier: "basic"
 tags:
   - "ride"

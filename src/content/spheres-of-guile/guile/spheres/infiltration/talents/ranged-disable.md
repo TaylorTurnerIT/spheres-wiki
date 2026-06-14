@@ -1,9 +1,5 @@
 ---
-id: "ranged-disable"
 name: "Ranged Disable"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "infiltration"
 tier: "basic"
 tags:
   - "utility"

@@ -1,9 +1,5 @@
 ---
-id: weapons-of-the-wild
 name: "Weapons Of The Wild"
-system: power
-type: talent
-sphere: fallen-fey
 tier: basic
 tags: ["fey-blessing"]
 ---

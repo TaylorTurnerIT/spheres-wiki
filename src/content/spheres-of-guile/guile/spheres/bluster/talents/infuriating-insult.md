@@ -1,9 +1,5 @@
 ---
-id: "infuriating-insult"
 name: "Infuriating Insult"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "quip"

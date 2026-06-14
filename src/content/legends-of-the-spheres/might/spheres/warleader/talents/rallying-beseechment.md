@@ -1,9 +1,5 @@
 ---
-id: "rallying-beseechment"
 name: "Rallying Beseechment"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "utility"

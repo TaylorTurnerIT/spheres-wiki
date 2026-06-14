@@ -1,9 +1,5 @@
 ---
-id: terrifying-mind
 name: "Terrifying Mind"
-system: power
-type: talent
-sphere: mind
 tier: basic
 tags: ["cognition"]
 ---

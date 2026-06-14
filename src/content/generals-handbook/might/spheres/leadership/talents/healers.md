@@ -1,9 +1,5 @@
 ---
-id: "healers"
 name: "Healers"
-type: "talent"
-sourceBook: "generals-handbook"
-sphere: "leadership"
 tier: "basic"
 tags:
   - "followers"

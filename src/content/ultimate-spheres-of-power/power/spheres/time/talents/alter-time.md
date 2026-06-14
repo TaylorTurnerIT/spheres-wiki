@@ -1,9 +1,5 @@
 ---
-id: alter-time
 name: "Alter Time"
-system: power
-type: talent
-sphere: time
 tier: base
 tags: []
 ---

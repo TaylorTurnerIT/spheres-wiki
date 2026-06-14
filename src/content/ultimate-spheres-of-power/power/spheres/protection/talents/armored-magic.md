@@ -1,9 +1,5 @@
 ---
-id: armored-magic
 name: "Armored Magic"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["aegis"]
 ---

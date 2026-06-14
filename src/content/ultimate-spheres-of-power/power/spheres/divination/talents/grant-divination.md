@@ -1,9 +1,5 @@
 ---
-id: grant-divination
 name: "Grant Divination"
-system: power
-type: talent
-sphere: divination
 tier: basic
 tags: []
 ---

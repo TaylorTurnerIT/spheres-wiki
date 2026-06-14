@@ -1,9 +1,5 @@
 ---
-id: "defensive-whirl"
 name: "Defensive Whirl"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "dual-wielding"
 tier: "basic"
 tags: []
 ---

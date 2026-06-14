@@ -1,8 +1,5 @@
 ---
-id: mantled-caster
 name: "Mantled Caster"
-type: feat
-system: power
 sphere: weather
 tags: []
 tier: feat

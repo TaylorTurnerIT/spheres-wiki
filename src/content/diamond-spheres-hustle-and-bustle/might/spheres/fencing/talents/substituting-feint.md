@@ -1,9 +1,5 @@
 ---
-id: "substituting-feint"
 name: "Substituting Feint"
-type: "talent"
-sourceBook: "diamond-spheres-hustle-and-bustle"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

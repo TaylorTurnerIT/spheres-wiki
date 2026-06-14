@@ -1,9 +1,5 @@
 ---
-id: "nebulous-threat"
 name: "Nebulous Threat"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "basic"
 tags:
   - "approach"

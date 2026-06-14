@@ -1,8 +1,6 @@
 ---
-id: stalwart-ex
 name: "Stalwart (Ex)"
 type: class-feature
-system: power
 className: mageknight
 level: 3
 tags: []

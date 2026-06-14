@@ -1,9 +1,5 @@
 ---
-id: head-in-the-clouds
 name: "Head In The Clouds"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: []
 ---

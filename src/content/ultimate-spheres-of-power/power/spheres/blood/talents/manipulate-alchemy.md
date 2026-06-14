@@ -1,9 +1,5 @@
 ---
-id: manipulate-alchemy
 name: "Manipulate Alchemy"
-system: power
-type: talent
-sphere: blood
 tier: basic
 tags: ["quicken", "still"]
 ---

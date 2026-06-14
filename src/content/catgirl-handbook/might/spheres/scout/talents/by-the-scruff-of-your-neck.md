@@ -1,9 +1,5 @@
 ---
-id: "by-the-scruff-of-your-neck"
 name: "By The Scruff Of Your Neck"
-type: "talent"
-sourceBook: "catgirl-handbook"
-sphere: "scout"
 tier: "advanced"
 tags: []
 ---

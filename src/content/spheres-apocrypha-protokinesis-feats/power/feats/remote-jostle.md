@@ -1,8 +1,5 @@
 ---
-id: remote-jostle
 name: "Remote Jostle"
-type: feat
-system: power
 sphere: telekinesis
 tags: ["combat", "protokinesis"]
 tier: feat

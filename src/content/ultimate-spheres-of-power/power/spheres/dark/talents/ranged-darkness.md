@@ -1,9 +1,5 @@
 ---
-id: ranged-darkness
 name: "Ranged Darkness"
-system: power
-type: talent
-sphere: dark
 tier: basic
 tags: ["range"]
 ---

@@ -1,8 +1,5 @@
 ---
-id: versatile-feeding
 name: "Versatile Feeding"
-type: feat
-system: power
 sphere: death
 tags: []
 tier: feat

@@ -1,8 +1,5 @@
 ---
-id: shadowstuff-armament
 name: "Shadowstuff Armament"
-type: feat
-system: power
 sphere: illusion
 tags: ["surreal"]
 tier: feat

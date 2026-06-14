@@ -1,9 +1,5 @@
 ---
-id: "friction-manipulation"
 name: "Friction Manipulation"
-type: "talent"
-sourceBook: "youxia-handbook"
-sphere: "athletics"
 tier: "advanced"
 tags:
   - "climb"

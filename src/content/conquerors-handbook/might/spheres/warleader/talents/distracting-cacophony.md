@@ -1,9 +1,5 @@
 ---
-id: "distracting-cacophony"
 name: "Distracting Cacophony"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "warleader"
 tier: "basic"
 tags:
   - "shout"

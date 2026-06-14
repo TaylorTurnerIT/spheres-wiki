@@ -1,9 +1,5 @@
 ---
-id: haunting-apparition
 name: "Haunting Apparition"
-system: power
-type: talent
-sphere: death
 tier: basic
 tags: []
 ---

@@ -1,8 +1,5 @@
 ---
-id: pincer-formation
 name: "Pincer Formation"
-type: feat
-system: power
 sphere: war
 tags: ["squadron"]
 tier: feat

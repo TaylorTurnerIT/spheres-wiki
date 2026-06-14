@@ -1,6 +1,4 @@
 ---
-type: tag
-id: "water"
 label: "Water"
 color: "#1d4ed8"
 priority: 15

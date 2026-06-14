@@ -1,8 +1,5 @@
 ---
-id: siphoning-invigoration
 name: "Siphoning Invigoration"
-type: feat
-system: power
 sphere: life
 tags: []
 tier: feat

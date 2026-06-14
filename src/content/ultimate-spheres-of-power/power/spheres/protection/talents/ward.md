@@ -1,9 +1,5 @@
 ---
-id: ward
 name: Ward
-system: power
-type: talent
-sphere: protection
 tier: base
 tags: []
 ---

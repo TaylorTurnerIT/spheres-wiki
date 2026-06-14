@@ -1,9 +1,5 @@
 ---
-id: query-self
 name: "Query Self"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["utility"]
 ---

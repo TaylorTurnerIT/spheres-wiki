@@ -1,9 +1,5 @@
 ---
-id: "soul-strike"
 name: "Soul Strike"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "fencing"
 tier: "advanced"
 tags:
   - "exploit"

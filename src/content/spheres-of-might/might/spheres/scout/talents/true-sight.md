@@ -1,9 +1,5 @@
 ---
-id: "true-sight"
 name: "True Sight"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "scout"
 tier: "advanced"
 tags: []
 ---

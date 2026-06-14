@@ -1,9 +1,5 @@
 ---
-id: antimagic-aegis
 name: "Antimagic Aegis"
-system: power
-type: talent
-sphere: enhancement
 tier: advanced
 tags: []
 ---

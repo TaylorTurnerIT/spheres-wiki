@@ -1,9 +1,5 @@
 ---
-id: totem-of-shared-sight
 name: "Totem Of Shared Sight"
-system: power
-type: talent
-sphere: war
 tier: basic
 tags: ["totem"]
 ---

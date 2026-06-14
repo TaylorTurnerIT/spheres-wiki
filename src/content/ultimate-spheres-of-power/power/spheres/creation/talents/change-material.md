@@ -1,9 +1,5 @@
 ---
-id: change-material
 name: "Change Material"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: ["alter"]
 ---

@@ -1,9 +1,5 @@
 ---
-id: eye-in-the-sky
 name: "Eye in the Sky"
-system: power
-type: talent
-sphere: divination
 tier: advanced
 tags: []
 ---

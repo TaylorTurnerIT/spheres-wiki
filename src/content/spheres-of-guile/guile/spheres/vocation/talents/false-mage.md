@@ -1,9 +1,5 @@
 ---
-id: "false-mage"
 name: "False Mage"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "trade"

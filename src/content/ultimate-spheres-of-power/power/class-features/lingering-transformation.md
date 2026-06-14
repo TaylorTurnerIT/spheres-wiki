@@ -1,8 +1,6 @@
 ---
-id: lingering-transformation
 name: "Lingering Transformation"
 type: class-feature
-system: power
 className: shifter
 level: 4
 tags: []

@@ -1,9 +1,5 @@
 ---
-id: instant-guard
 name: "Instant Guard"
-system: power
-type: talent
-sphere: protection
 tier: basic
 tags: ["sm"]
 ---

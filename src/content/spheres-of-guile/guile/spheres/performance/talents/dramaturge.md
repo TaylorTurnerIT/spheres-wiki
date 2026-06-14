@@ -1,9 +1,5 @@
 ---
-id: "dramaturge"
 name: "Dramaturge"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "performance"
 tier: "base"
 tags:
   - "package"

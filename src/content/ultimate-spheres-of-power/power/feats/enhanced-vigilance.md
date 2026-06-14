@@ -1,8 +1,5 @@
 ---
-id: enhanced-vigilance
 name: Enhanced Vigilance
-type: feat
-system: power
 sphere: war
 dualSphere: enhancement
 tier: feat

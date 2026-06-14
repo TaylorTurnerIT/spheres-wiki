@@ -1,9 +1,5 @@
 ---
-id: "reflecting-spin"
 name: "Reflecting Spin"
-type: "talent"
-sourceBook: "diamond-spheres-harmony-and-discord"
-sphere: "performance"
 tier: "basic"
 tags:
   - "dance"

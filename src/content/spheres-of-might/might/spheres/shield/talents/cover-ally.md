@@ -1,9 +1,5 @@
 ---
-id: "cover-ally"
 name: "Cover Ally"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "shield"
 tier: "basic"
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "reposition-area"
 name: "Reposition Area"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "spellhacking"
 tier: "basic"
 tags:
   - "hack"

@@ -1,9 +1,5 @@
 ---
-id: mind-control
 name: "Mind Control"
-system: power
-type: talent
-sphere: mind
 tier: advanced
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "monumental-might"
 name: "Monumental Might"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "utility"

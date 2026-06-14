@@ -1,9 +1,5 @@
 ---
-id: weather-strike
 name: "Weather Strike"
-system: power
-type: talent
-sphere: weather
 tier: basic
 tags: ["strike"]
 ---

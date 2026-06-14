@@ -1,8 +1,5 @@
 ---
-id: incanter
 name: "Incanter"
-type: class
-system: power
 tags: []
 hitDie: 6
 alignment: "Any"

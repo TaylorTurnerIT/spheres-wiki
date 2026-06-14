@@ -1,8 +1,6 @@
 ---
-id: persuasive-su
 name: "Persuasive (Su)"
 type: class-feature
-system: power
 className: eliciter
 level: 1
 tags: []

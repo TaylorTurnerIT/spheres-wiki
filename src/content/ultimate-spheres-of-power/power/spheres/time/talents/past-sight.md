@@ -1,9 +1,5 @@
 ---
-id: past-sight
 name: "Past Sight"
-system: power
-type: talent
-sphere: time
 tier: advanced
 tags: ["utility"]
 ---

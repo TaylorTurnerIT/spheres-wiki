@@ -1,9 +1,5 @@
 ---
-id: shadow-talents
 name: "Shadow Talents"
-type: talent
-system: power
-sphere: dark
 tier: basic
 tags: []
 ---

@@ -1,9 +1,5 @@
 ---
-id: "marauder"
 name: "Marauder"
-type: "talent"
-sourceBook: "conquerors-handbook"
-sphere: "berserker"
 tier: "basic"
 tags:
   - "adrenaline"

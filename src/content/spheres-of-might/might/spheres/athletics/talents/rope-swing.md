@@ -1,9 +1,5 @@
 ---
-id: "rope-swing"
 name: "Rope Swing"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "climb"

@@ -1,9 +1,5 @@
 ---
-id: timeline-drift
 name: "Timeline Drift"
-system: power
-type: talent
-sphere: warp
 tier: advanced
 tags: []
 ---

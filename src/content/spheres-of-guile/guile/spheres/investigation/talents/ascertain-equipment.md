@@ -1,9 +1,5 @@
 ---
-id: "ascertain-equipment"
 name: "Ascertain Equipment"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "investigation"
 tier: "advanced"
 tags:
   - "analyze"

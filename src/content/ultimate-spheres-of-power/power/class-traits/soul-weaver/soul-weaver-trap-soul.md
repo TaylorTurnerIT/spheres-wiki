@@ -1,10 +1,6 @@
 ---
-id: soul-weaver-trap-soul
 name: "Trap Soul"
-type: class-trait
-system: power
 tags: []
-className: soul-weaver
 featureId: bound-nexus
 ---
 

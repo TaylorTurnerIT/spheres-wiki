@@ -1,9 +1,5 @@
 ---
-id: "fitness-instructor"
 name: "Fitness Instructor"
-type: "talent"
-sourceBook: "legends-of-the-spheres"
-sphere: "athletics"
 tier: "basic"
 tags:
   - "utility"

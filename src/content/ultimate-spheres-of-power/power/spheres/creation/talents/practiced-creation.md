@@ -1,9 +1,5 @@
 ---
-id: practiced-creation
 name: "Practiced Creation"
-system: power
-type: talent
-sphere: creation
 tier: basic
 tags: []
 ---

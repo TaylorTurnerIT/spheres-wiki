@@ -1,10 +1,6 @@
 ---
-id: wraith-dominate-ooze
 name: "Dominate Ooze"
-type: class-trait
-system: power
 tags: []
-className: wraith
 featureId: wraith-haunts
 ---
 

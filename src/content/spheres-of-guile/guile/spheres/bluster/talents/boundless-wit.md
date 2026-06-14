@@ -1,9 +1,5 @@
 ---
-id: "boundless-wit"
 name: "Boundless Wit"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "bluster"
 tier: "base"
 tags:
   - "package"

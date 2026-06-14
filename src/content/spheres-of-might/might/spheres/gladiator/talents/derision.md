@@ -1,9 +1,5 @@
 ---
-id: "derision"
 name: "Derision"
-type: "talent"
-sourceBook: "spheres-of-might"
-sphere: "gladiator"
 tier: "basic"
 tags: []
 ---

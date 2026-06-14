@@ -1,9 +1,5 @@
 ---
-id: "death-from-afar"
 name: "Death From Afar"
-type: "talent"
-sourceBook: "spheres-apocrypha-martial-talents-ranged"
-sphere: "fencing"
 tier: "basic"
 tags: []
 ---

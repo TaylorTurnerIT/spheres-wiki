@@ -1,10 +1,6 @@
 ---
-id: armorist-share-bond
 name: "Share Bond"
-type: class-trait
-system: power
 tags: []
-className: armorist
 featureId: arsenal-trick
 ---
 

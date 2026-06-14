@@ -1,9 +1,5 @@
 ---
-id: "veil-of-mystery"
 name: "Veil of Mystery"
-type: "talent"
-sourceBook: "barons-glorious-arena"
-sphere: "subterfuge"
 tier: "basic"
 tags:
   - "utility"

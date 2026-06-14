@@ -1,9 +1,5 @@
 ---
-id: "teacher"
 name: "Teacher"
-type: "talent"
-sourceBook: "spheres-of-guile"
-sphere: "vocation"
 tier: "basic"
 tags:
   - "utility"
