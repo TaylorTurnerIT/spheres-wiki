@@ -370,9 +370,9 @@ describe('parseHeading', () => {
     assert.equal(result.sourceKey, null);
   });
 
-  it('[Dual Sphere] → tags: dual-sphere, type: feat', () => {
+  it('[Dual Sphere] → type: feat, source correct', () => {
     const result = parseHeading('++++ Name [Dual Sphere] [BaP]', basicCtx, testConfig);
-    assert.ok(result.tags.includes('dual-sphere'));
+    // dual-sphere tag no longer pushed to tags — auto-derived from dualSphere field
     assert.equal(result.type, 'feat');
     assert.equal(result.sourceKey, 'BaP');
   });
@@ -569,11 +569,11 @@ Body text for second.
     assert.equal(second.bookSlug, 'blood-and-portents');
   });
 
-  it('third entry: feat with dual-sphere tag and dualSphere=death', () => {
+  it('third entry: feat, dualSphere=death', () => {
     const entries = parseWikiFile(minimalWiki, config);
     const third = entries[2];
     assert.equal(third.type, 'feat');
-    assert.ok(third.tags.includes('dual-sphere'));
+    // dual-sphere tag no longer in tags — auto-derived from dualSphere field
     assert.equal(third.dualSphere, 'death');
   });
 

@@ -415,6 +415,7 @@ function parseHeading(headingLine, sectionCtx, config) {
   head = head.replace(/##[^|#]+\|([^#]+)##/g, "$1");
 
   const tags = [...(sectionCtx.sectionTags ?? [])];
+  let isDualSphere = false;
   let sourceKey = null;
   let type = sectionCtx.type;
   let tier = sectionCtx.tier;
@@ -425,7 +426,8 @@ function parseHeading(headingLine, sectionCtx, config) {
     const lower = content.toLowerCase().replace(/[\s-]+/g, " ");
 
     if (lower === "dual sphere") {
-      if (!tags.includes("dual-sphere")) tags.push("dual-sphere");
+      // No longer push "dual-sphere" tag — auto-derived by tags.ts from dualSphere field.
+      isDualSphere = true;
       type = "feat";
     } else if (lower === "combat") {
       if (!tags.includes("combat")) tags.push("combat");
@@ -446,7 +448,8 @@ function parseHeading(headingLine, sectionCtx, config) {
         .toLowerCase()
         .replace(/[\s-]+/g, " ");
       if (lower === "dual sphere") {
-        if (!tags.includes("dual-sphere")) tags.push("dual-sphere");
+        // No longer push "dual-sphere" tag — auto-derived by tags.ts from dualSphere field.
+        isDualSphere = true;
         type = "feat";
       } else if (lower === "combat") {
         if (!tags.includes("combat")) tags.push("combat");
@@ -460,7 +463,7 @@ function parseHeading(headingLine, sectionCtx, config) {
   head = head.replace(/\s*\([^)]+\)/g, "").trim();
 
   const name = normalizeQuotes(head.replace(/\s+/g, " ").trim());
-  return { name, tags, sourceKey, type, tier };
+  return { name, tags, sourceKey, type, tier, isDualSphere };
 }
 
 // ─── Source resolution ────────────────────────────────────────────────────────
@@ -635,7 +638,7 @@ function parseEntryBlock(divContent, sectionCtx, config) {
   if (headingIdx === -1) return null;
 
   const headingLine = lines[headingIdx].trim();
-  const { name, tags, sourceKey, type, tier } = parseHeading(
+  const { name, tags, sourceKey, type, tier, isDualSphere } = parseHeading(
     headingLine,
     sectionCtx,
     config,
@@ -667,7 +670,7 @@ function parseEntryBlock(divContent, sectionCtx, config) {
   const bookSlug = resolveSourceBook(sourceKey, bodySource, config);
 
   let dualSphere = null;
-  if (tags.includes("dual-sphere")) {
+  if (isDualSphere) {
     dualSphere = extractDualSphere(body, config.sphere);
   }
 

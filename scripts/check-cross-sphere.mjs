@@ -119,10 +119,8 @@ for (const filePath of allFiles) {
   if (!dualSphereEntries.has(key)) continue;
 
   // This entry was tagged (Dual Sphere) on the old wiki — verify it has dualSphere.
-  // The "dual-sphere" tag is also acceptable (used for entries that can pair with any
-  // sphere, like Manabond Versatility).
-  const tags = fm.tags || [];
-  if (!fm.dualSphere && !tags.includes("dual-sphere")) {
+  // The dual-sphere tag is now auto-derived from the dualSphere field — never in frontmatter.
+  if (!fm.dualSphere) {
     const relPath = path.relative(contentDir, filePath);
     console.error(
       `Missing dualSphere: "${fm.name}" (${relPath}) — tagged (Dual Sphere) on old wiki but no dualSphere field`

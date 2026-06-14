@@ -4,8 +4,7 @@ name: Manabond Versatility
 type: feat
 system: power
 sphere: mana
-tags:
-  - "dual-sphere"
+dualSphere: "any"
 tier: feat
 ---
 

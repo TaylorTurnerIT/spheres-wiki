@@ -36,8 +36,13 @@ export function buildOrderedTagIds(
     tags.add(t);
   }
 
-  // Dual-sphere logic
-  const hasDualSphere = "dualSphere" in entry && entry.dualSphere;
+  // Dual-sphere logic — dualSphere field is single source of truth.
+  // Auto-inject "dual-sphere" tag for TOC grouping (sectionDefinitions filter on it).
+  // Skip injection for "any" (universal pairing — no TOC grouping needed).
+  const hasDualSphere = "dualSphere" in entry && entry.dualSphere && entry.dualSphere !== "any";
+  if (hasDualSphere) {
+    tags.add("dual-sphere");
+  }
 
   if (entry.type === "talent" || entry.type === "feat") {
     // Primary sphere

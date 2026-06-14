@@ -49,7 +49,16 @@ export async function getStaticPaths() {
         });
       }
 
-      if (talent.dualSphere) {
+      if (talent.dualSphere === "any") {
+        for (const s of sphereMap.values()) {
+          if (s.system === system && s.id !== talent.sphere) {
+            paths.push({
+              params: { system, sphere: s.id, talent: talent.id },
+              props: { talent, sphere: s, collEntry: allCollEntries.get(`talent:${talent.id}`), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+            });
+          }
+        }
+      } else if (talent.dualSphere) {
         const dualSphere = [...sphereMap.values()].find(s => s.id === talent.dualSphere && s.system === system);
         if (dualSphere) {
           paths.push({
