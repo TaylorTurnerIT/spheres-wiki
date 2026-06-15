@@ -90,32 +90,32 @@ export function inferFromPath(fileId: string): InferredFields {
   // ── Flexible nesting rules ──────────────────────────────────────────────────
 
   if (parts.length >= 4) {
-    // Archetype Features: .../archetypes/[aid]/archetype-features/[id] or features
+    // Archetype Features: classes/[cid]/archetypes/[aid]/archetype-features/[id]
     if (
       prev === "archetype-features" ||
       (prev === "features" &&
         parts[parts.length - 4].toLowerCase() === "archetypes")
     ) {
       const aid = parts[parts.length - 3];
+      // className lives two levels above archetypeId when fully nested
+      const className = parts.length >= 6 ? parts[parts.length - 5] : undefined;
       return withSystem({
         type: "archetype-feature",
+        ...(className ? { className } : {}),
         archetypeId: aid,
         id: last,
       });
     }
-    // Class Traits: .../[cid]/class-features/[fid]/class-traits/[id] or features/traits
+    // Class Traits: classes/[cid]/class-traits/[id]
     if (
       prev === "class-traits" ||
       (prev === "traits" &&
         parts[parts.length - 4].toLowerCase() === "features")
     ) {
-      const fid = parts[parts.length - 3];
-      // cid is two levels above fid: .../[cid]/class-features/[fid]
-      const cid = parts[parts.length - 5] || parts[1]; // fallback if nesting is weird
+      const cid = parts[parts.length - 3];
       return withSystem({
         type: "class-trait",
         className: cid,
-        featureId: fid,
         id: last,
       });
     }
