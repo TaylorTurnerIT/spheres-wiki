@@ -1229,7 +1229,6 @@ h6 {
 }
 .sphere-col {
   display: flex;
-  flex: 1;
   flex-direction: column;
   gap: 1px;
   padding: 0 8px;
