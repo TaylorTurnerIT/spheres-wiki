@@ -1,4 +1,5 @@
 ---
+id: "lingering-transformation"
 name: "Lingering Transformation"
 type: class-feature
 className: shifter

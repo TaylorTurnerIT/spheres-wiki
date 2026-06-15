@@ -1,4 +1,5 @@
 ---
+id: "warning"
 name: "Warning"
 tier: "basic"
 tags: []

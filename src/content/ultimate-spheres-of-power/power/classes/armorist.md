@@ -1,4 +1,5 @@
 ---
+id: "armorist"
 name: "Armorist"
 tags: []
 hitDie: 10

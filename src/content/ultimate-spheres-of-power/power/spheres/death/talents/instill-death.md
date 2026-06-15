@@ -1,4 +1,5 @@
 ---
+id: "instill-death"
 name: "Instill Death"
 tier: basic
 tags: ["instill"]

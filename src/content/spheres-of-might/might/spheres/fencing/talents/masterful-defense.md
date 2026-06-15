@@ -1,4 +1,5 @@
 ---
+id: "masterful-defense"
 name: "Masterful Defense"
 tier: "basic"
 tags: []

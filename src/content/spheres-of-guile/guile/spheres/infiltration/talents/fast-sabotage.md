@@ -1,4 +1,5 @@
 ---
+id: "fast-sabotage"
 name: "Fast Sabotage"
 tier: "base"
 tags: []

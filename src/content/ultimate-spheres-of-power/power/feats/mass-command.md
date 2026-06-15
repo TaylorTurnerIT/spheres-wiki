@@ -1,4 +1,5 @@
 ---
+id: "mass-command"
 name: "Mass Command"
 sphere: war
 tags: ["squadron"]

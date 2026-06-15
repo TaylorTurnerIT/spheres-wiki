@@ -1,4 +1,5 @@
 ---
+id: "armorist-easy-armor"
 name: "Easy Armor"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "contamination-lord"
 name: "Contamination Lord"
 tier: advanced
 tags: []

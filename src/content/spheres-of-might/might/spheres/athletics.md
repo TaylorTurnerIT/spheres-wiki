@@ -1,4 +1,5 @@
 ---
+id: "athletics"
 name: "Athletics"
 icon: "athletics"
 tags: []

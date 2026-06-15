@@ -1,4 +1,5 @@
 ---
+id: "steal-spells"
 name: "Steal Spells"
 tier: "advanced"
 tags:

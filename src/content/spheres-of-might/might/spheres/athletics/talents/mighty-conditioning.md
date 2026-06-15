@@ -1,4 +1,5 @@
 ---
+id: "mighty-conditioning"
 name: "Mighty Conditioning"
 tier: "basic"
 tags:

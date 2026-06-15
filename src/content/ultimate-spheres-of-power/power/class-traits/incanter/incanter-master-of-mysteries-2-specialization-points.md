@@ -1,4 +1,5 @@
 ---
+id: "incanter-master-of-mysteries-2-specialization-points"
 name: "Master of Mysteries (2 specialization points)"
 tags: ["supernatural"]
 featureId: incanter-specializations

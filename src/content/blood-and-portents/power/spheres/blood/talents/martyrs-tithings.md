@@ -1,4 +1,5 @@
 ---
+id: "martyrs-tithings"
 name: "Martyr's Tithings"
 tier: basic
 tags: ["blood-art"]

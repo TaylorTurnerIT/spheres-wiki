@@ -1,4 +1,5 @@
 ---
+id: "flexible-knowledge"
 name: "Flexible Knowledge"
 tier: advanced
 tags: ["manipulation"]

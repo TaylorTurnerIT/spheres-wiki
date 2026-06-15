@@ -1,4 +1,5 @@
 ---
+id: "imbue-with-nature"
 name: Imbue With Nature
 sphere: nature
 dualSphere: destruction

@@ -1,4 +1,5 @@
 ---
+id: "illusion"
 name: "Illusion"
 icon: illusion
 description: "You may craft images and impressions of things that are not there."

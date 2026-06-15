@@ -1,4 +1,5 @@
 ---
+id: "incanter-sorcerer-bloodline-2-specialization-points"
 name: "Sorcerer Bloodline (2 specialization points)"
 tags: []
 featureId: incanter-specializations

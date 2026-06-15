@@ -1,4 +1,5 @@
 ---
+id: "visual-overload"
 name: "Visual Overload"
 tier: basic
 tags: ["light"]

@@ -1,4 +1,5 @@
 ---
+id: "wraith-lingering-incorporeality"
 name: "Lingering Incorporeality"
 tags: []
 featureId: wraith-haunts

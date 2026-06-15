@@ -1,4 +1,5 @@
 ---
+id: "expand-illusion"
 name: "Expand Illusion"
 tier: advanced
 tags: []

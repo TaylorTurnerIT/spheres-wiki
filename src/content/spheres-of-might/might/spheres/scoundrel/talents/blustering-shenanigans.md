@@ -1,4 +1,5 @@
 ---
+id: "blustering-shenanigans"
 name: "Blustering Shenanigans"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "spirit-beacon"
 name: "Spirit Beacon"
 sphere: war
 tags: []

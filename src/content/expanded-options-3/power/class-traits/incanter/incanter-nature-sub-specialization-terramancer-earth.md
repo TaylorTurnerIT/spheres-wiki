@@ -1,4 +1,5 @@
 ---
+id: "incanter-nature-sub-specialization-terramancer-earth"
 name: "Nature Sub-Specialization: Terramancer (earth)"
 tags: []
 featureId: list-of-sphere-specializations

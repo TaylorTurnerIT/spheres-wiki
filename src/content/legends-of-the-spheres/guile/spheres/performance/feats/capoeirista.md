@@ -1,4 +1,5 @@
 ---
+id: "capoeirista"
 name: "Capoeirista"
 tags:
   - "champion"

@@ -1,4 +1,5 @@
 ---
+id: "tethered-mana"
 name: "Tethered Mana"
 sphere: mana
 tags: []

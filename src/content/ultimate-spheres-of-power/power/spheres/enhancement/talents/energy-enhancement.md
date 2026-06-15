@@ -1,4 +1,5 @@
 ---
+id: "energy-enhancement"
 name: "Energy Enhancement"
 tier: basic
 tags: ["enhance"]

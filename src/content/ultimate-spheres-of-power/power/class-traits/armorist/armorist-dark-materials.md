@@ -1,4 +1,5 @@
 ---
+id: "armorist-dark-materials"
 name: "Dark Materials"
 tags: []
 featureId: arsenal-trick

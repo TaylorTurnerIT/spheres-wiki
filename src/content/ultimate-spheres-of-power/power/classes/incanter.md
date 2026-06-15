@@ -1,4 +1,5 @@
 ---
+id: "incanter"
 name: "Incanter"
 tags: []
 hitDie: 6

@@ -1,4 +1,5 @@
 ---
+id: "mageknight-ensorcelled-defenses"
 name: "Ensorcelled Defenses"
 tags: ["supernatural"]
 featureId: mystic-combat-su

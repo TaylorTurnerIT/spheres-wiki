@@ -1,4 +1,5 @@
 ---
+id: "magnetic-shield"
 name: "Magnetic Shield"
 tier: basic
 tags: ["ward"]

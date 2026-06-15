@@ -1,4 +1,5 @@
 ---
+id: "emulation-expert"
 name: "Emulation Expert"
 sphere: illusion
 tags: ["surreal"]

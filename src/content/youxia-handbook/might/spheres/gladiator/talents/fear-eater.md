@@ -1,4 +1,5 @@
 ---
+id: "fear-eater"
 name: "Fear Eater"
 tier: "basic"
 tags:

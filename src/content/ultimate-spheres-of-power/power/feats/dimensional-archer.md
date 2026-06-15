@@ -1,4 +1,5 @@
 ---
+id: "dimensional-archer"
 name: "Dimensional Archer"
 sphere: warp
 tags: ["champion", "mythic"]

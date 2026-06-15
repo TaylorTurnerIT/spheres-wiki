@@ -1,4 +1,5 @@
 ---
+id: "wild-wit"
 name: "Wild Wit"
 tier: "basic"
 tags:

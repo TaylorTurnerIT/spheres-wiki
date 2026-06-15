@@ -1,4 +1,5 @@
 ---
+id: "challenge-the-masses"
 name: "Challenge The Masses"
 tier: "advanced"
 tags: []

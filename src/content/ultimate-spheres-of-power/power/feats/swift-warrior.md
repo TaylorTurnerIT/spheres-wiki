@@ -1,4 +1,5 @@
 ---
+id: "swift-warrior"
 name: "Swift Warrior"
 sphere: time
 tags: ["combat"]

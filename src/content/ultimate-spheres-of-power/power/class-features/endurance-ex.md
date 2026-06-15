@@ -1,4 +1,5 @@
 ---
+id: "endurance-ex"
 name: "Endurance (Ex)"
 type: class-feature
 className: shifter

@@ -1,4 +1,5 @@
 ---
+id: "savage-tricks"
 name: "Savage Tricks"
 tier: "basic"
 tags: ["trick"]

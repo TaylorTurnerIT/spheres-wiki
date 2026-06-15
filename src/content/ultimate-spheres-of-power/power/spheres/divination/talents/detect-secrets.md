@@ -1,4 +1,5 @@
 ---
+id: "detect-secrets"
 name: "Detect Secrets"
 tier: basic
 tags: ["utility", "divine"]

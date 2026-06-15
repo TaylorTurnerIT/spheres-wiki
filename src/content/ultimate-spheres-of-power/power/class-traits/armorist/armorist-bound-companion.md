@@ -1,4 +1,5 @@
 ---
+id: "armorist-bound-companion"
 name: "Bound Companion"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "undead-animal-companion"
 name: "Undead Animal Companion"
 sphere: death
 tags: []

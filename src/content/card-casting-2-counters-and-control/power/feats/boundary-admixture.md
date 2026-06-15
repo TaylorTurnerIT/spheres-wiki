@@ -1,4 +1,5 @@
 ---
+id: "boundary-admixture"
 name: "Boundary Admixture"
 sphere: destruction
 tags: ["admixture"]

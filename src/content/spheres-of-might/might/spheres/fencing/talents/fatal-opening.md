@@ -1,4 +1,5 @@
 ---
+id: "fatal-opening"
 name: "Fatal Opening"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "time-freeze"
 name: "Time Freeze"
 tier: basic
 tags: ["time"]

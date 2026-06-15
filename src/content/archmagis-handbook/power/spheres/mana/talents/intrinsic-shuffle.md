@@ -1,4 +1,5 @@
 ---
+id: "intrinsic-shuffle"
 name: "Intrinsic Shuffle"
 tier: advanced
 tags: []

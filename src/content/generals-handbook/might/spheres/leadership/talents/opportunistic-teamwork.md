@@ -1,4 +1,5 @@
 ---
+id: "opportunistic-teamwork"
 name: "Opportunistic Teamwork"
 tier: "basic"
 tags:

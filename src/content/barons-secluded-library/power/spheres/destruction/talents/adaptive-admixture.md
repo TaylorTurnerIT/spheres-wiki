@@ -1,4 +1,5 @@
 ---
+id: "adaptive-admixture"
 name: "Adaptive Admixture"
 tier: advanced
 tags: ["sm"]

@@ -1,4 +1,5 @@
 ---
+id: "nightmare-stalker"
 name: "Nightmare Stalker"
 tier: "advanced"
 tags:

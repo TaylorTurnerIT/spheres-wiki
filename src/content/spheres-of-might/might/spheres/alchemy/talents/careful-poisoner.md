@@ -1,4 +1,5 @@
 ---
+id: "careful-poisoner"
 name: "Careful Poisoner"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "the-hierophant"
 name: "The Hierophant"
 tier: basic
 tags: ["motif"]

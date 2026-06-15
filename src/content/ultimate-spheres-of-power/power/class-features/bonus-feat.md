@@ -1,4 +1,5 @@
 ---
+id: "bonus-feat"
 name: "Bonus Feat"
 type: class-feature
 className: incanter

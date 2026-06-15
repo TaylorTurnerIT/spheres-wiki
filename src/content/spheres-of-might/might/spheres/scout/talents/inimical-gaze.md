@@ -1,4 +1,5 @@
 ---
+id: "inimical-gaze"
 name: "Inimical Gaze"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "baffling-revelation"
 name: "Baffling Revelation"
 tier: "base"
 tags: []

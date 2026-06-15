@@ -1,4 +1,5 @@
 ---
+id: "warlord-of-the-damned"
 name: Warlord Of The Damned
 sphere: war
 dualSphere: death

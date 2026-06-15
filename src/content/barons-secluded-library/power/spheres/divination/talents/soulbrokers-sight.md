@@ -1,4 +1,5 @@
 ---
+id: "soulbrokers-sight"
 name: "Soulbroker's Sight"
 tier: advanced
 tags: ["sm", "utility"]

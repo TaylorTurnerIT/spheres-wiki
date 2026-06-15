@@ -1,4 +1,5 @@
 ---
+id: "hide"
 name: "Hide"
 tier: "basic"
 tags:

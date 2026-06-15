@@ -1,4 +1,5 @@
 ---
+id: "shifter-earth-glide"
 name: "Earth Glide"
 tags: ["supernatural"]
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "scoundrel"
 name: "Scoundrel"
 icon: "scoundrel"
 tags: []

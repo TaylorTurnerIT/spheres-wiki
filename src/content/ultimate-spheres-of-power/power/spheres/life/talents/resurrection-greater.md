@@ -1,4 +1,5 @@
 ---
+id: "resurrection-greater"
 name: "Resurrection, Greater"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "shadow-magic"
 name: "Shadow Magic"
 sphere: illusion
 tags: ["surreal"]

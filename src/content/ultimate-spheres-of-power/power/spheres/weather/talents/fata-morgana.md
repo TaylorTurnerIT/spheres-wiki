@@ -1,4 +1,5 @@
 ---
+id: "fata-morgana"
 name: "Fata Morgana"
 tier: basic
 tags: ["heat", "shroud"]

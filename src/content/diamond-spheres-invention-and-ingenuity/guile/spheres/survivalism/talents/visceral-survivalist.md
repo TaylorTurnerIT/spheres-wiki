@@ -1,4 +1,5 @@
 ---
+id: "visceral-survivalist"
 name: "Visceral Survivalist"
 tier: "advanced"
 tags:

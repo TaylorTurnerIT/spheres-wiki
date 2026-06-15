@@ -1,4 +1,5 @@
 ---
+id: "damaging-momentum"
 name: "Damaging Momentum"
 tier: basic
 tags: ["momentum"]

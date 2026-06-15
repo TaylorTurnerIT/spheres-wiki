@@ -1,4 +1,5 @@
 ---
+id: "improved-acid-flask"
 name: "Improved Acid Flask"
 tier: "basic"
 tags:

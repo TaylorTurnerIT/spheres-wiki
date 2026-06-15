@@ -1,4 +1,5 @@
 ---
+id: "accomplice"
 name: "Accomplice"
 tier: "basic"
 tags: []

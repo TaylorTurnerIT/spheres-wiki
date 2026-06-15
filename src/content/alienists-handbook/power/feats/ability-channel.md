@@ -1,4 +1,5 @@
 ---
+id: "ability-channel"
 name: "Ability Channel"
 sphere: conjuration
 tags: []

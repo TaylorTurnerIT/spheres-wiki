@@ -1,4 +1,5 @@
 ---
+id: "mental-aura"
 name: "Mental Aura"
 sphere: mind
 tags: []

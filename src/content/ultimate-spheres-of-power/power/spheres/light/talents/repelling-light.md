@@ -1,4 +1,5 @@
 ---
+id: "repelling-light"
 name: "Repelling Light"
 tier: basic
 tags: ["light"]

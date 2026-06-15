@@ -1,4 +1,5 @@
 ---
+id: "delayed-poison"
 name: "Delayed Poison"
 tier: "basic"
 tags:

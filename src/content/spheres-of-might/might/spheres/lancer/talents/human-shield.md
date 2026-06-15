@@ -1,4 +1,5 @@
 ---
+id: "human-shield"
 name: "Human Shield"
 tier: "basic"
 tags:

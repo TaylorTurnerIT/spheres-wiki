@@ -1,4 +1,5 @@
 ---
+id: "life-s-shield"
 name: "Life’s Shield"
 tier: "advanced"
 tags: []

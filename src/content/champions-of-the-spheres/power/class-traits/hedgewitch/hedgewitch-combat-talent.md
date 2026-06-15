@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-combat-talent"
 name: "Combat Talent"
 tags: []
 featureId: secret

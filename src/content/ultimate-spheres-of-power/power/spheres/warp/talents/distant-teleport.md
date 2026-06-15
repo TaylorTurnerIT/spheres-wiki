@@ -1,4 +1,5 @@
 ---
+id: "distant-teleport"
 name: "Distant Teleport"
 tier: basic
 tags: []

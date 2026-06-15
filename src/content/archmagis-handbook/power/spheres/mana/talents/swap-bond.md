@@ -1,4 +1,5 @@
 ---
+id: "swap-bond"
 name: "Swap Bond"
 tier: basic
 tags: []

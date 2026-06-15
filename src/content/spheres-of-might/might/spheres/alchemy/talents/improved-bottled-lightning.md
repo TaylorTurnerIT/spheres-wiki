@@ -1,4 +1,5 @@
 ---
+id: "improved-bottled-lightning"
 name: "Improved Bottled Lightning"
 tier: "basic"
 tags:

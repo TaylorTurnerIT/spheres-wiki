@@ -1,4 +1,5 @@
 ---
+id: "extradimensional-room"
 name: "Extradimensional Room"
 tier: basic
 tags: ["space"]

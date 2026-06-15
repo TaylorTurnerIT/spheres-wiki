@@ -1,4 +1,5 @@
 ---
+id: "natures-carapace"
 name: "Nature's Carapace"
 tier: basic
 tags: ["spirit"]

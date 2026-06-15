@@ -1,4 +1,5 @@
 ---
+id: "justice"
 name: "Justice"
 tier: basic
 tags: ["motif"]

@@ -1,4 +1,5 @@
 ---
+id: "shoulder-throw"
 name: "Shoulder Throw"
 tier: "basic"
 tags: []

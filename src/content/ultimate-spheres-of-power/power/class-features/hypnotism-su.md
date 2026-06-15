@@ -1,4 +1,5 @@
 ---
+id: "hypnotism-su"
 name: "Hypnotism (Su)"
 type: class-feature
 className: eliciter

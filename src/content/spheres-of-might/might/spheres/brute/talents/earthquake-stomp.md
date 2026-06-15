@@ -1,4 +1,5 @@
 ---
+id: "earthquake-stomp"
 name: "Earthquake Stomp"
 tier: "basic"
 tags: []

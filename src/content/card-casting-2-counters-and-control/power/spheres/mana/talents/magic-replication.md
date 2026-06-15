@@ -1,4 +1,5 @@
 ---
+id: "magic-replication"
 name: "Magic Replication"
 tier: advanced
 tags: ["amp", "manipulation"]

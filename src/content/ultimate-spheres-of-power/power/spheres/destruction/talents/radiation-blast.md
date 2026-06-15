@@ -1,4 +1,5 @@
 ---
+id: "radiation-blast"
 name: "Radiation Blast"
 tier: advanced
 tags: ["blast-type", "fire", "light"]

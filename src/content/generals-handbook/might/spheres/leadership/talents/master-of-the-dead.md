@@ -1,4 +1,5 @@
 ---
+id: "master-of-the-dead"
 name: "Master Of The Dead"
 tier: "advanced"
 tags:

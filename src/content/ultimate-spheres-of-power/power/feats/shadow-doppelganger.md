@@ -1,4 +1,5 @@
 ---
+id: "shadow-doppelganger"
 name: Shadow Doppelganger
 sphere: dark
 dualSphere: illusion

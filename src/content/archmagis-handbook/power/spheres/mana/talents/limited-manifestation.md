@@ -1,4 +1,5 @@
 ---
+id: "limited-manifestation"
 name: "Limited Manifestation"
 tier: advanced
 tags: []

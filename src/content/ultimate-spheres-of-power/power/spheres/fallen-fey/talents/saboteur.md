@@ -1,4 +1,5 @@
 ---
+id: "saboteur"
 name: "Saboteur"
 tier: basic
 tags: ["fey-blessing", "utility"]

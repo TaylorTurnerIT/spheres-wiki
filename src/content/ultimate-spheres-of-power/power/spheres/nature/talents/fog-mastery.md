@@ -1,4 +1,5 @@
 ---
+id: "fog-mastery"
 name: "Fog Mastery"
 tier: basic
 tags: ["water", "geomancing"]

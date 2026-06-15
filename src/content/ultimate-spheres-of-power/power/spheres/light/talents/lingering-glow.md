@@ -1,4 +1,5 @@
 ---
+id: "lingering-glow"
 name: "Lingering Glow"
 tier: basic
 tags: []

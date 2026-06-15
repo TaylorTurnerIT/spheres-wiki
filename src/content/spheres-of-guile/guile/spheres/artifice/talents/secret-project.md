@@ -1,4 +1,5 @@
 ---
+id: "secret-project"
 name: "Secret Project"
 tier: "basic"
 tags:

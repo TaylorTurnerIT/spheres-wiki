@@ -1,4 +1,5 @@
 ---
+id: "curse-of-mana"
 name: "Curse Of Mana"
 tier: advanced
 tags: ["curse"]

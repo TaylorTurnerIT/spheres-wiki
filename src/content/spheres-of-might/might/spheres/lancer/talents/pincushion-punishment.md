@@ -1,4 +1,5 @@
 ---
+id: "pincushion-punishment"
 name: "Pincushion Punishment"
 tier: "basic"
 tags: []

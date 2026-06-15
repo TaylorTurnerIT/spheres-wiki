@@ -1,4 +1,5 @@
 ---
+id: "eliciter"
 name: "Eliciter"
 tags: []
 hitDie: 8

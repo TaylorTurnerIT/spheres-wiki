@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-blessed-soul"
 name: "Blessed Soul"
 tags: []
 featureId: bound-nexus

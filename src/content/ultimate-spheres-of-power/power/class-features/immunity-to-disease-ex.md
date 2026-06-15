@@ -1,4 +1,5 @@
 ---
+id: "immunity-to-disease-ex"
 name: "Immunity to Disease (Ex)"
 type: class-feature
 className: shifter

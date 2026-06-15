@@ -1,4 +1,5 @@
 ---
+id: "hallow"
 name: "Hallow"
 tier: basic
 tags: []

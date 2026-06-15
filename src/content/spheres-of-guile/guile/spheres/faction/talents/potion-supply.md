@@ -1,4 +1,5 @@
 ---
+id: "potion-supply"
 name: "Potion Supply"
 tier: "basic"
 tags:

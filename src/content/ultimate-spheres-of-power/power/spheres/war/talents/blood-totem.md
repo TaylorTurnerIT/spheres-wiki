@@ -1,4 +1,5 @@
 ---
+id: "blood-totem"
 name: "Blood Totem"
 tier: basic
 tags: ["totem"]

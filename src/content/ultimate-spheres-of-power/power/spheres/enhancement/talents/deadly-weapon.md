@@ -1,4 +1,5 @@
 ---
+id: "deadly-weapon"
 name: "Deadly Weapon"
 tier: basic
 tags: ["enhance"]

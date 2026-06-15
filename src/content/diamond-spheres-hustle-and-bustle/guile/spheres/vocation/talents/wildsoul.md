@@ -1,4 +1,5 @@
 ---
+id: "wildsoul"
 name: "Wildsoul"
 tier: "basic"
 tags:

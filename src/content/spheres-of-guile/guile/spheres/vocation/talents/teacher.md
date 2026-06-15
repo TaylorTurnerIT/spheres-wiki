@@ -1,4 +1,5 @@
 ---
+id: "teacher"
 name: "Teacher"
 tier: "basic"
 tags:

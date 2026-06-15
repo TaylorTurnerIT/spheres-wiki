@@ -1,4 +1,5 @@
 ---
+id: "mind-joggle"
 name: "Mind Joggle"
 sphere: mana
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "heavy-hand"
 name: "Heavy Hand"
 sphere: destruction
 tags: ["combat"]

@@ -1,4 +1,5 @@
 ---
+id: "greater-transformation-su"
 name: "Greater Transformation (Su)"
 type: class-feature
 className: shifter

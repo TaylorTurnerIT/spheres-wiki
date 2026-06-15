@@ -1,4 +1,5 @@
 ---
+id: "necrotic-heart"
 name: "Necrotic Heart"
 sphere: death
 tags: ["necrosis"]

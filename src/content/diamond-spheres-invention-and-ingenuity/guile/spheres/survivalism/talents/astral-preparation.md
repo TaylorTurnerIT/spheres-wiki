@@ -1,4 +1,5 @@
 ---
+id: "astral-preparation"
 name: "Astral Preparation"
 tier: "advanced"
 tags:

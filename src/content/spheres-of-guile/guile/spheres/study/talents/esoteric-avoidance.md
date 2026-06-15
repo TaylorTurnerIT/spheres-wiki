@@ -1,4 +1,5 @@
 ---
+id: "esoteric-avoidance"
 name: "Esoteric Avoidance"
 tier: "basic"
 tags:

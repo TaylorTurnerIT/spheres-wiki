@@ -1,4 +1,5 @@
 ---
+id: "shadow-tag"
 name: "Shadow Tag"
 tier: basic
 tags: ["blot", "darkness", "shadow", "utility"]

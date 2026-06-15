@@ -1,4 +1,5 @@
 ---
+id: "edge-of-night"
 name: "Edge Of Night"
 tier: basic
 tags: ["blot", "darkness"]

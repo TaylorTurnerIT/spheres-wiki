@@ -1,4 +1,5 @@
 ---
+id: "energy-resistance"
 name: "Energy Resistance"
 tier: basic
 tags: ["aegis", "auxiliary", "ward"]

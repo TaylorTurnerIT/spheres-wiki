@@ -1,4 +1,5 @@
 ---
+id: "masques"
 name: "Masques"
 tier: basic
 tags: ["utility", "glamer"]

@@ -1,4 +1,5 @@
 ---
+id: "magical-consultation"
 name: "Magical Consultation"
 tier: "basic"
 tags:

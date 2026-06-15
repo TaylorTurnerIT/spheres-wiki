@@ -1,4 +1,5 @@
 ---
+id: "weight-of-command"
 name: "Weight of Command"
 tier: advanced
 tags: ["word"]

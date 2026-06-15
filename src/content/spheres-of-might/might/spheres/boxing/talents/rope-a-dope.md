@@ -1,4 +1,5 @@
 ---
+id: "rope-a-dope"
 name: "Rope A Dope"
 tier: "basic"
 tags: []

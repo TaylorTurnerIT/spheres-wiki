@@ -1,4 +1,5 @@
 ---
+id: "wraith-into-thin-air"
 name: "Into Thin Air"
 tags: []
 featureId: wraith-haunts

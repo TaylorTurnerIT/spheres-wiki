@@ -1,4 +1,5 @@
 ---
+id: "calming-vitality"
 name: "Calming Vitality"
 tier: basic
 tags: ["vitality", "warden"]

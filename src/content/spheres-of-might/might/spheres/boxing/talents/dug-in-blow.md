@@ -1,4 +1,5 @@
 ---
+id: "dug-in-blow"
 name: "Dug In Blow"
 tier: "basic"
 tags: []

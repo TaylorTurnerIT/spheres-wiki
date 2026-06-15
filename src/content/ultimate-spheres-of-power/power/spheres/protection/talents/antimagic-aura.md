@@ -1,4 +1,5 @@
 ---
+id: "antimagic-aura"
 name: "Antimagic Aura [Original]"
 tier: advanced
 tags: []

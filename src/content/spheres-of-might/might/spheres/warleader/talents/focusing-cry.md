@@ -1,4 +1,5 @@
 ---
+id: "focusing-cry"
 name: "Focusing Cry"
 tier: "basic"
 tags:

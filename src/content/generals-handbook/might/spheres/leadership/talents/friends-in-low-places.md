@@ -1,4 +1,5 @@
 ---
+id: "friends-in-low-places"
 name: "Friends In Low Places"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "ward"
 name: Ward
 tier: base
 tags: []

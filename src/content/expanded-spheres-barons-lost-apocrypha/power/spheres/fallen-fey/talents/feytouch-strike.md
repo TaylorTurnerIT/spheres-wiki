@@ -1,4 +1,5 @@
 ---
+id: "feytouch-strike"
 name: "Feytouch Strike"
 tier: basic
 tags: ["strike"]

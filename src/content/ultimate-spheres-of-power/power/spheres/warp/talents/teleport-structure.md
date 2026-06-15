@@ -1,4 +1,5 @@
 ---
+id: "teleport-structure"
 name: "Teleport Structure"
 tier: advanced
 tags: []

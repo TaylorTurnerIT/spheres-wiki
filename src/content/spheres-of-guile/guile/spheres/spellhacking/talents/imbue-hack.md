@@ -1,4 +1,5 @@
 ---
+id: "imbue-hack"
 name: "Imbue Hack"
 tier: "basic"
 tags:

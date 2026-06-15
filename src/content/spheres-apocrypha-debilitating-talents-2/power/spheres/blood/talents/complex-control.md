@@ -1,4 +1,5 @@
 ---
+id: "complex-control"
 name: "Complex Control"
 tier: basic
 tags: []

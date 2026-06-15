@@ -1,4 +1,5 @@
 ---
+id: "crowd-pleaser"
 name: "Crowd Pleaser"
 tier: "basic"
 tags: []

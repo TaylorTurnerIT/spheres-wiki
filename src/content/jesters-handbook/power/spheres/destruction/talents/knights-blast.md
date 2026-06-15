@@ -1,4 +1,5 @@
 ---
+id: "knights-blast"
 name: "Knight's Blast"
 tier: basic
 tags: ["blast-shape"]

@@ -1,4 +1,5 @@
 ---
+id: "transmuting-strike"
 name: "Transmuting Strike"
 tier: basic
 tags: ["strike"]

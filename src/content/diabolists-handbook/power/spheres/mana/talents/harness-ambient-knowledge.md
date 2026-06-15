@@ -1,4 +1,5 @@
 ---
+id: "harness-ambient-knowledge"
 name: "Harness Ambient Knowledge"
 tier: advanced
 tags: []

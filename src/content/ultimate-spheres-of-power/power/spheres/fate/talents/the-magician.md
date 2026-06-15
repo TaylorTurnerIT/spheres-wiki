@@ -1,4 +1,5 @@
 ---
+id: "the-magician"
 name: "The Magician"
 tier: basic
 tags: ["motif"]

@@ -1,4 +1,5 @@
 ---
+id: "impose"
 name: "Impose"
 tier: basic
 tags: ["mandate", "warden"]

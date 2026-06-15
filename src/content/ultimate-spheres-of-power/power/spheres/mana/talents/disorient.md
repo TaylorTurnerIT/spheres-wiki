@@ -1,4 +1,5 @@
 ---
+id: "disorient"
 name: "Disorient"
 tier: basic
 tags: ["expunge"]

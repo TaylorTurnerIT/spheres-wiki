@@ -1,4 +1,5 @@
 ---
+id: "permanent-gift"
 name: "Permanent Gift"
 tier: advanced
 tags: []

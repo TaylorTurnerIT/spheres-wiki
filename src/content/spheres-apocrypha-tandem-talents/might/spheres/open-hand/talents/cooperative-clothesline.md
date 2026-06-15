@@ -1,4 +1,5 @@
 ---
+id: "cooperative-clothesline"
 name: "Cooperative Clothesline"
 tier: "basic"
 tags: []

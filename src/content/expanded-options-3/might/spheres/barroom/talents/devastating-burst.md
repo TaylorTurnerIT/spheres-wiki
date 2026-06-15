@@ -1,4 +1,5 @@
 ---
+id: "devastating-burst"
 name: "Devastating Burst"
 tier: "advanced"
 tags:

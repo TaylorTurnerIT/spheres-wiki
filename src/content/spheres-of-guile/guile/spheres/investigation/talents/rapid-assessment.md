@@ -1,4 +1,5 @@
 ---
+id: "rapid-assessment"
 name: "Rapid Assessment"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "two-in-the-hand"
 name: "Two In The Hand"
 tier: "basic"
 tags: []

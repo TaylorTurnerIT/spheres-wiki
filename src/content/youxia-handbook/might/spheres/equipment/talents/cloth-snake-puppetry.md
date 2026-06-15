@@ -1,4 +1,5 @@
 ---
+id: "cloth-snake-puppetry"
 name: "Cloth Snake Puppetry"
 tier: "basic"
 tags:

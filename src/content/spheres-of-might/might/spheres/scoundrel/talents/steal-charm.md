@@ -1,4 +1,5 @@
 ---
+id: "steal-charm"
 name: "Steal Charm"
 tier: "advanced"
 tags:

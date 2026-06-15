@@ -1,4 +1,5 @@
 ---
+id: "mindscape"
 name: "Mindscape"
 tier: advanced
 tags: ["charm"]

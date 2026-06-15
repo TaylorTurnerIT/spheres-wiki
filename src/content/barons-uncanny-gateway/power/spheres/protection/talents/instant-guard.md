@@ -1,4 +1,5 @@
 ---
+id: "instant-guard"
 name: "Instant Guard"
 tier: basic
 tags: ["sm"]

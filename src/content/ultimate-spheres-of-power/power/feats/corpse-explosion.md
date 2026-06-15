@@ -1,4 +1,5 @@
 ---
+id: "corpse-explosion"
 name: Corpse Explosion
 sphere: destruction
 dualSphere: death

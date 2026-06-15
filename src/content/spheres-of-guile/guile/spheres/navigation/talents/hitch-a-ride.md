@@ -1,4 +1,5 @@
 ---
+id: "hitch-a-ride"
 name: "Hitch A Ride"
 tier: "basic"
 tags:

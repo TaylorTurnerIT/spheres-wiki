@@ -1,4 +1,5 @@
 ---
+id: "quick-flick"
 name: "Quick Flick"
 tier: "basic"
 tags: []

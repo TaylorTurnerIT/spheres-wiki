@@ -1,4 +1,5 @@
 ---
+id: "symbiat-mind-link"
 name: "Mind Link"
 tags: []
 featureId: psionics-su

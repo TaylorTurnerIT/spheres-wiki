@@ -1,4 +1,5 @@
 ---
+id: "pack-attack"
 name: "Pack Attack"
 tier: "basic"
 tags: []

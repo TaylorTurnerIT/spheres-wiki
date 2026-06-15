@@ -1,4 +1,5 @@
 ---
+id: "distant-deception"
 name: "Distant Deception"
 tier: advanced
 tags: []

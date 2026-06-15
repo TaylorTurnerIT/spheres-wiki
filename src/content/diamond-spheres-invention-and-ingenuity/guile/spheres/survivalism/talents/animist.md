@@ -1,4 +1,5 @@
 ---
+id: "animist"
 name: Animist
 dualSphere: nature
 tier: advanced

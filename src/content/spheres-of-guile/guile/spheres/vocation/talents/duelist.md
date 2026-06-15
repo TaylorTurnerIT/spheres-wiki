@@ -1,4 +1,5 @@
 ---
+id: "duelist"
 name: "Duelist"
 tier: "basic"
 tags:

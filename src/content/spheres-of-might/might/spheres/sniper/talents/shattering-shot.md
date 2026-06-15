@@ -1,4 +1,5 @@
 ---
+id: "shattering-shot"
 name: "Shattering Shot"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "failure-to-communicate"
 name: "Failure To Communicate"
 tier: "advanced"
 tags:

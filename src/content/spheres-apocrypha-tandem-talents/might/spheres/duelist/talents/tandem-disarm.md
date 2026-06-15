@@ -1,4 +1,5 @@
 ---
+id: "tandem-disarm"
 name: "Tandem Disarm"
 tier: "basic"
 tags: []

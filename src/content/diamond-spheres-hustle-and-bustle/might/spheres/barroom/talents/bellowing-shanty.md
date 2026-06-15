@@ -1,4 +1,5 @@
 ---
+id: "bellowing-shanty"
 name: "Bellowing Shanty"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "hasty-retreat"
 name: "Hasty Retreat"
 tier: "basic"
 tags: []

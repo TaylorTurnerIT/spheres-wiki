@@ -1,4 +1,5 @@
 ---
+id: "study"
 name: "Study"
 icon: "study"
 tags: []

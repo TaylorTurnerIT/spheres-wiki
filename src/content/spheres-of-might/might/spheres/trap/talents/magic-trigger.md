@@ -1,4 +1,5 @@
 ---
+id: "magic-trigger"
 name: "Magic Trigger"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "consecrated-affinity"
 name: Consecrated Affinity
 sphere: mana
 dualSphere: fate

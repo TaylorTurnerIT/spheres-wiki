@@ -1,4 +1,5 @@
 ---
+id: "esoteric-scholar"
 name: "Esoteric Scholar"
 tier: "basic"
 tags:

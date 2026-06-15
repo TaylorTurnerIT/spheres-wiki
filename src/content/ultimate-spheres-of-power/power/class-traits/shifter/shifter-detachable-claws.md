@@ -1,4 +1,5 @@
 ---
+id: "shifter-detachable-claws"
 name: "Detachable Claws"
 tags: ["extraordinary"]
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "thaumic-sink"
 name: "Thaumic Sink"
 tier: "advanced"
 tags:

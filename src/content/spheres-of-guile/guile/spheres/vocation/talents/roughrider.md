@@ -1,4 +1,5 @@
 ---
+id: "roughrider"
 name: "Roughrider"
 tier: "basic"
 tags:

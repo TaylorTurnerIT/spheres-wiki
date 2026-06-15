@@ -1,4 +1,5 @@
 ---
+id: "squire"
 name: "Squire"
 tier: "basic"
 tags:

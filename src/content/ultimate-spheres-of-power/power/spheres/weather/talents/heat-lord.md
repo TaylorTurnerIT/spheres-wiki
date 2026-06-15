@@ -1,4 +1,5 @@
 ---
+id: "heat-lord"
 name: "Heat Lord"
 tier: advanced
 tags: []

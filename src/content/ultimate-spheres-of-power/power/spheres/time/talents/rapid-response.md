@@ -1,4 +1,5 @@
 ---
+id: "rapid-response"
 name: "Rapid Response"
 tier: basic
 tags: ["time"]

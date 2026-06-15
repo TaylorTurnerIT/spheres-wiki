@@ -1,4 +1,5 @@
 ---
+id: "shifter-breath-weapon"
 name: "Breath Weapon"
 tags: ["supernatural"]
 featureId: bestial-trait

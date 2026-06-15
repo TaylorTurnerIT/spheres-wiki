@@ -1,4 +1,5 @@
 ---
+id: "no-honor-among-thieves"
 name: "No Honor Among Thieves"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "true-sight"
 name: "True Sight"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "philosopher-s-stone"
 name: "Philosopher’s Stone"
 tier: "advanced"
 tags:

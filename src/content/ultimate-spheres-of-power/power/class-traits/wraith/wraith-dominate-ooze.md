@@ -1,4 +1,5 @@
 ---
+id: "wraith-dominate-ooze"
 name: "Dominate Ooze"
 tags: []
 featureId: wraith-haunts

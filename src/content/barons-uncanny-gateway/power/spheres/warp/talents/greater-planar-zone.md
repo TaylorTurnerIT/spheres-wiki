@@ -1,4 +1,5 @@
 ---
+id: "greater-planar-zone"
 name: "Greater Planar Zone"
 tier: advanced
 tags: ["sm"]

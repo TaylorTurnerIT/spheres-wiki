@@ -1,4 +1,5 @@
 ---
+id: "magical-feverish-pace"
 name: "Magical Feverish Pace"
 tier: "advanced"
 tags:

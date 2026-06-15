@@ -1,4 +1,5 @@
 ---
+id: "intensity-control"
 name: "Intensity Control"
 tier: basic
 tags: []

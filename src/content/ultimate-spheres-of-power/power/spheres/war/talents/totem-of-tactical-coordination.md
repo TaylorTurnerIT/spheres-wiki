@@ -1,4 +1,5 @@
 ---
+id: "totem-of-tactical-coordination"
 name: "Totem Of Tactical Coordination"
 tier: basic
 tags: ["totem"]

@@ -1,4 +1,5 @@
 ---
+id: "steal-confidence"
 name: "Steal Confidence"
 tier: "basic"
 tags: []

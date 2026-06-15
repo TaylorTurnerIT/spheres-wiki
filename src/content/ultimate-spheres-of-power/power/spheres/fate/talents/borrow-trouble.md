@@ -1,4 +1,5 @@
 ---
+id: "borrow-trouble"
 name: "Borrow Trouble"
 tier: basic
 tags: ["curse", "word"]

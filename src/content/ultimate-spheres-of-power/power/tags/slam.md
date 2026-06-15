@@ -1,4 +1,5 @@
 ---
+id: "slam"
 label: "Slam"
 color: "#4A235A"
 priority: 0

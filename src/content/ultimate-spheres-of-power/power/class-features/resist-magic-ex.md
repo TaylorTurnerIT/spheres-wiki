@@ -1,4 +1,5 @@
 ---
+id: "resist-magic-ex"
 name: "Resist Magic (Ex)"
 type: class-feature
 className: mageknight

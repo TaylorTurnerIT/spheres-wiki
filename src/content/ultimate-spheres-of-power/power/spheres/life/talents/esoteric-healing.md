@@ -1,4 +1,5 @@
 ---
+id: "esoteric-healing"
 name: "Esoteric Healing"
 tier: basic
 tags: []

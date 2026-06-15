@@ -1,4 +1,5 @@
 ---
+id: "cooperative-momentum"
 name: "Cooperative Momentum"
 tier: basic
 tags: ["momentum", "warden"]

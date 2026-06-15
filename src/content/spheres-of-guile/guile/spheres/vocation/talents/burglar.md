@@ -1,4 +1,5 @@
 ---
+id: "burglar"
 name: "Burglar"
 tier: "basic"
 tags:

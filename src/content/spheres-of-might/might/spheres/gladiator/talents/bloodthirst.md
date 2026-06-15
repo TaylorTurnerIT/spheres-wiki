@@ -1,4 +1,5 @@
 ---
+id: "bloodthirst"
 name: "Bloodthirst"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "boosted-shuffle"
 name: "Boosted Shuffle"
 tier: advanced
 tags: ["amp", "manipulation"]

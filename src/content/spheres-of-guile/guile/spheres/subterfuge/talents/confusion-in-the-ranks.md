@@ -1,4 +1,5 @@
 ---
+id: "confusion-in-the-ranks"
 name: "Confusion In The Ranks"
 tier: "basic"
 tags:

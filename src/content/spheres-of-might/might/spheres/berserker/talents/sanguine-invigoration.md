@@ -1,4 +1,5 @@
 ---
+id: "sanguine-invigoration"
 name: "Sanguine Invigoration"
 tier: "basic"
 tags: []

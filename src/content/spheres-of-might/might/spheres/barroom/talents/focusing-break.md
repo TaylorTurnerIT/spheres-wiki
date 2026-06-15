@@ -1,4 +1,5 @@
 ---
+id: "focusing-break"
 name: "Focusing Break"
 tier: "basic"
 tags: []

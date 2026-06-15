@@ -1,4 +1,5 @@
 ---
+id: "ambrosia"
 name: "Ambrosia"
 tier: "advanced"
 tags:

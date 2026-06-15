@@ -1,4 +1,5 @@
 ---
+id: "pet"
 name: "Pet"
 tier: "basic"
 tags: []

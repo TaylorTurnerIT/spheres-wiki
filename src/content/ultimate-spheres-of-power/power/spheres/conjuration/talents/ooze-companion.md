@@ -1,4 +1,5 @@
 ---
+id: "ooze-companion"
 name: "Ooze Companion"
 tier: basic
 tags: ["type"]

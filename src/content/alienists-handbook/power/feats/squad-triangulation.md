@@ -1,4 +1,5 @@
 ---
+id: "squad-triangulation"
 name: "Squad Triangulation"
 sphere: war
 tags: ["squadron"]

@@ -1,4 +1,5 @@
 ---
+id: "soul-pierce"
 name: "Soul Pierce"
 tier: "advanced"
 tags: []

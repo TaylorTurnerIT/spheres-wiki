@@ -1,4 +1,5 @@
 ---
+id: "dancing-lights"
 name: "Dancing Lights"
 tier: basic
 tags: []

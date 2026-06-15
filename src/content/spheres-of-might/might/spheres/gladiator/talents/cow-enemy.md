@@ -1,4 +1,5 @@
 ---
+id: "cow-enemy"
 name: "Cow Enemy"
 tier: "basic"
 tags:

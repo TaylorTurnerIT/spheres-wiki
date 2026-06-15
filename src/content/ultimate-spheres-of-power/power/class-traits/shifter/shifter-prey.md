@@ -1,4 +1,5 @@
 ---
+id: "shifter-prey"
 name: "Prey"
 tags: ["extraordinary"]
 featureId: bestial-trait

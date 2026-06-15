@@ -1,4 +1,5 @@
 ---
+id: "arcane-fetters"
 name: "Arcane Fetters"
 sphere: protection
 dualSphere: creation

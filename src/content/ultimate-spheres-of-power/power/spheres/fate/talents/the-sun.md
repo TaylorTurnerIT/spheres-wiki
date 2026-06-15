@@ -1,4 +1,5 @@
 ---
+id: "the-sun"
 name: "The Sun"
 tier: basic
 tags: ["motif"]

@@ -1,4 +1,5 @@
 ---
+id: "trophy"
 name: "Trophy"
 tier: "basic"
 tags:

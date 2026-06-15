@@ -1,4 +1,5 @@
 ---
+id: "boxing"
 name: "Boxing"
 icon: "boxing"
 tags: []

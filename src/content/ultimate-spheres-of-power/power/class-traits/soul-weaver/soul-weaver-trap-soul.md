@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-trap-soul"
 name: "Trap Soul"
 tags: []
 featureId: bound-nexus

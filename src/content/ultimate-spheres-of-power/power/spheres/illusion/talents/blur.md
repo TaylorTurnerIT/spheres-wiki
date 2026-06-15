@@ -1,4 +1,5 @@
 ---
+id: "blur"
 name: "Blur"
 tier: basic
 tags: ["glamer"]

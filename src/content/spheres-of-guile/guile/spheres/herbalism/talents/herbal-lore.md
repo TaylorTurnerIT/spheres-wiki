@@ -1,4 +1,5 @@
 ---
+id: "herbal-lore"
 name: "Herbal Lore"
 tier: "base"
 tags:

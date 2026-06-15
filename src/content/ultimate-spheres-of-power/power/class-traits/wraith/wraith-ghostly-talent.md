@@ -1,4 +1,5 @@
 ---
+id: "wraith-ghostly-talent"
 name: "Ghostly Talent"
 tags: []
 featureId: wraith-haunts

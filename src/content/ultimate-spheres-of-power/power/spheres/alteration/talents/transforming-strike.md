@@ -1,4 +1,5 @@
 ---
+id: "transforming-strike"
 name: "Transforming Strike"
 tier: basic
 tags: ["strike"]

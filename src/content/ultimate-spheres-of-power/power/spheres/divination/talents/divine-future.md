@@ -1,4 +1,5 @@
 ---
+id: "divine-future"
 name: "Divine Future"
 tier: basic
 tags: ["divine"]

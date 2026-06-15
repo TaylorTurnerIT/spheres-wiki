@@ -1,4 +1,5 @@
 ---
+id: "darkland-s-cry"
 name: "Darkland’s Cry"
 tier: "advanced"
 tags:

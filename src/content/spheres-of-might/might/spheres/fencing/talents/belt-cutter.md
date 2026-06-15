@@ -1,4 +1,5 @@
 ---
+id: "belt-cutter"
 name: "Belt Cutter"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "bracing-pierce"
 name: "Bracing Pierce"
 tier: "basic"
 tags: []

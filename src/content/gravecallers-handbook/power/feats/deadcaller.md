@@ -1,4 +1,5 @@
 ---
+id: "deadcaller"
 name: "Deadcaller"
 sphere: death
 tags: []

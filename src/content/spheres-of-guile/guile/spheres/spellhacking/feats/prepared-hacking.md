@@ -1,4 +1,5 @@
 ---
+id: "prepared-hacking"
 name: "Prepared Hacking"
 tags: []
 ---

@@ -1,4 +1,5 @@
 ---
+id: "armored-magic"
 name: "Armored Magic"
 tier: basic
 tags: ["aegis"]

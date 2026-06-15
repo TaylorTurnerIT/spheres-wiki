@@ -1,4 +1,5 @@
 ---
+id: "possession"
 name: "Possession"
 tier: advanced
 tags: ["spell-like"]

@@ -1,4 +1,5 @@
 ---
+id: "hammering-shots"
 name: "Hammering Shots"
 tier: "basic"
 tags:

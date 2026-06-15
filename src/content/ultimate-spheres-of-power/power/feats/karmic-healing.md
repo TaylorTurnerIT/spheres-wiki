@@ -1,4 +1,5 @@
 ---
+id: "karmic-healing"
 name: "Karmic Healing"
 sphere: life
 tags: ["chance"]

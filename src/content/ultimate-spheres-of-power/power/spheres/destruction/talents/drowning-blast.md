@@ -1,4 +1,5 @@
 ---
+id: "drowning-blast"
 name: "Drowning Blast"
 tier: basic
 tags: ["blast-type", "cold"]

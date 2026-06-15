@@ -1,4 +1,5 @@
 ---
+id: "special-abilities"
 name: "Special Abilities"
 tier: base
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "caber-toss"
 name: "Caber Toss"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "arcane-proliferation"
 name: "Arcane Proliferation"
 tier: "basic"
 tags:

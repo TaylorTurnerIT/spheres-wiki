@@ -1,4 +1,5 @@
 ---
+id: "seizing-strike"
 name: "Seizing Strike"
 tier: basic
 tags: ["strike"]

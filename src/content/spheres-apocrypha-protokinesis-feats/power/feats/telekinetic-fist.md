@@ -1,4 +1,5 @@
 ---
+id: "telekinetic-fist"
 name: "Telekinetic Fist"
 sphere: telekinesis
 tags: ["combat", "protokinesis"]

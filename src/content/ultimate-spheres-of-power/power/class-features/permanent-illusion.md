@@ -1,4 +1,5 @@
 ---
+id: "permanent-illusion"
 name: "Permanent Illusion"
 type: class-feature
 className: fey-adept

@@ -1,4 +1,5 @@
 ---
+id: "powerful-companion"
 name: "Powerful Companion"
 tier: basic
 tags: ["form"]

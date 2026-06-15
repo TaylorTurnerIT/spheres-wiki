@@ -1,4 +1,5 @@
 ---
+id: "conflagrant-cluster"
 name: "Conflagrant Cluster"
 sphere: "destruction"
 tier: "advanced"

@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-skill-talent"
 name: "Skill Talent"
 tags: []
 featureId: secret

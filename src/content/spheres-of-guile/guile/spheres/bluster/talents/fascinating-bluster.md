@@ -1,4 +1,5 @@
 ---
+id: "fascinating-bluster"
 name: "Fascinating Bluster"
 tier: "basic"
 tags:

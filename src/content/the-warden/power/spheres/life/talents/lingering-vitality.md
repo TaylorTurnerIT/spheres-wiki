@@ -1,4 +1,5 @@
 ---
+id: "lingering-vitality"
 name: "Lingering Vitality"
 tier: basic
 tags: ["warden"]

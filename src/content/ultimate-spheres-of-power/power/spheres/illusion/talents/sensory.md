@@ -1,4 +1,5 @@
 ---
+id: "sensory"
 name: Sensory
 tier: basic
 tags: []

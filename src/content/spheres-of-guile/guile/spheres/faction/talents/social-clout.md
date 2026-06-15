@@ -1,4 +1,5 @@
 ---
+id: "social-clout"
 name: "Social Clout"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "waving-hand"
 name: "Waving Hand"
 tier: "basic"
 tags: []

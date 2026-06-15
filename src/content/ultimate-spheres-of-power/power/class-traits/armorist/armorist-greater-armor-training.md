@@ -1,4 +1,5 @@
 ---
+id: "armorist-greater-armor-training"
 name: "Greater Armor Training"
 tags: []
 featureId: arsenal-trick

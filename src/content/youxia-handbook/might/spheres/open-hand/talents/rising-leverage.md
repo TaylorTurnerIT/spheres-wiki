@@ -1,4 +1,5 @@
 ---
+id: "rising-leverage"
 name: "Rising Leverage"
 tier: "basic"
 tags: []

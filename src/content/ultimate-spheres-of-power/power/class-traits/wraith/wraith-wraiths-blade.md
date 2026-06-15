@@ -1,4 +1,5 @@
 ---
+id: "wraith-wraiths-blade"
 name: "Wraith's Blade"
 tags: []
 featureId: wraith-haunts

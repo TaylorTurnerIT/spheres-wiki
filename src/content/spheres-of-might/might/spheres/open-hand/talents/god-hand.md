@@ -1,4 +1,5 @@
 ---
+id: "god-hand"
 name: "God Hand"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "identify-structural-hazards"
 name: "Identify Structural Hazards"
 tier: "basic"
 tags:

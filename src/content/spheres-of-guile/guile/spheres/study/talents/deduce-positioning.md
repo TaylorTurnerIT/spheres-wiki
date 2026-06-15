@@ -1,4 +1,5 @@
 ---
+id: "deduce-positioning"
 name: "Deduce Positioning"
 tier: "basic"
 tags:

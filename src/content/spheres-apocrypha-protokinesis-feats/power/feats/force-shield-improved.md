@@ -1,4 +1,5 @@
 ---
+id: "force-shield-improved"
 name: "Force Shield, Improved"
 sphere: telekinesis
 tags: ["combat", "protokinesis"]

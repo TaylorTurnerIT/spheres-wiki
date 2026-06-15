@@ -1,4 +1,5 @@
 ---
+id: "militant-animation"
 name: "Militant Animation"
 sphere: enhancement
 tags: ["combat"]

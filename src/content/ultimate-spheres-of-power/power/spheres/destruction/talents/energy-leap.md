@@ -1,4 +1,5 @@
 ---
+id: "energy-leap"
 name: "Energy Leap"
 tier: basic
 tags: ["blast-shape"]

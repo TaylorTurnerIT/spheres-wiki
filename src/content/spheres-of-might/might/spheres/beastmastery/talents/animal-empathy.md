@@ -1,4 +1,5 @@
 ---
+id: "animal-empathy"
 name: "Animal Empathy"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "empathic-healing"
 name: "Empathic Healing"
 tier: basic
 tags: []

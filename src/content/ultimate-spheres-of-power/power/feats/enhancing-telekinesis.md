@@ -1,4 +1,5 @@
 ---
+id: "enhancing-telekinesis"
 name: Enhancing Telekinesis
 sphere: telekinesis
 dualSphere: enhancement

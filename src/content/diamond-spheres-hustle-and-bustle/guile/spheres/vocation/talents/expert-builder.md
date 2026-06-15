@@ -1,4 +1,5 @@
 ---
+id: "expert-builder"
 name: "Expert Builder"
 tier: "basic"
 tags:

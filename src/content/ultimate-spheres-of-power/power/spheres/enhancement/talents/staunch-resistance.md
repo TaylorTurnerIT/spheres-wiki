@@ -1,4 +1,5 @@
 ---
+id: "staunch-resistance"
 name: "Staunch Resistance"
 tier: basic
 tags: ["enhance"]

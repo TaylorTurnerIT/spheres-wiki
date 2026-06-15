@@ -1,4 +1,5 @@
 ---
+id: "shadow-creature"
 name: "Shadow Creature"
 tier: basic
 tags: ["form"]

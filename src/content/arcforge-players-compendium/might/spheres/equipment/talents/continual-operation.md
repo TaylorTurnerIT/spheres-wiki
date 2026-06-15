@@ -1,4 +1,5 @@
 ---
+id: "continual-operation"
 name: "Continual Operation"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "cluster-toss"
 name: "Cluster Toss"
 tier: "basic"
 tags: []

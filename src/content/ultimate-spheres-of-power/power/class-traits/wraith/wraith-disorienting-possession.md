@@ -1,4 +1,5 @@
 ---
+id: "wraith-disorienting-possession"
 name: "Disorienting Possession"
 tags: []
 featureId: wraith-haunts

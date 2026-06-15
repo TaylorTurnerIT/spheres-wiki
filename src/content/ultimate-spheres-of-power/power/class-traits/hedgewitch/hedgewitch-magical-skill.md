@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-magical-skill"
 name: "Magical Skill"
 tags: []
 featureId: secret

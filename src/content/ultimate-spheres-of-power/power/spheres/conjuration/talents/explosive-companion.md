@@ -1,4 +1,5 @@
 ---
+id: "explosive-companion"
 name: "Explosive Companion"
 tier: basic
 tags: ["form"]

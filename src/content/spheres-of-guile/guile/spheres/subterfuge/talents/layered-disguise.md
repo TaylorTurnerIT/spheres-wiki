@@ -1,4 +1,5 @@
 ---
+id: "layered-disguise"
 name: "Layered Disguise"
 tier: "basic"
 tags:

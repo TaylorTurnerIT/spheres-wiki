@@ -1,4 +1,5 @@
 ---
+id: "triumph"
 name: "Triumph"
 tier: "basic"
 tags: []

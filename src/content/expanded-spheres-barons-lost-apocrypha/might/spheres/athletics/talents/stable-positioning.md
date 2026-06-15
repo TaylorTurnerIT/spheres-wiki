@@ -1,4 +1,5 @@
 ---
+id: "stable-positioning"
 name: "Stable Positioning"
 tier: "basic"
 tags:

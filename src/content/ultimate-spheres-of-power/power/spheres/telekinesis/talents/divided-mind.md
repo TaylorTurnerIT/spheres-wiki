@@ -1,4 +1,5 @@
 ---
+id: "divided-mind"
 name: "Divided Mind"
 tier: basic
 tags: ["mass"]

@@ -1,4 +1,5 @@
 ---
+id: "create-nature"
 name: "Create Nature"
 tier: basic
 tags: ["geomancing"]

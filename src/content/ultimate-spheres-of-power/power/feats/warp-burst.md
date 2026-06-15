@@ -1,4 +1,5 @@
 ---
+id: "warp-burst"
 name: Warp Burst
 sphere: warp
 dualSphere: destruction

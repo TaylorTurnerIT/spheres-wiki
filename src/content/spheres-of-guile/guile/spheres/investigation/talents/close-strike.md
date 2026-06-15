@@ -1,4 +1,5 @@
 ---
+id: "close-strike"
 name: "Close Strike"
 tier: "basic"
 tags:

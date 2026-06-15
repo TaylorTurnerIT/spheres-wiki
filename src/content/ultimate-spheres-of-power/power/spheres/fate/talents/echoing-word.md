@@ -1,4 +1,5 @@
 ---
+id: "echoing-word"
 name: "Echoing Word"
 tier: basic
 tags: ["mass"]

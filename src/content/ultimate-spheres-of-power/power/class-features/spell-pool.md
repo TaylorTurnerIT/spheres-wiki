@@ -1,4 +1,5 @@
 ---
+id: "spell-pool"
 name: "Spell Pool"
 type: class-feature
 className: wraith

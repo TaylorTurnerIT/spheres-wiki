@@ -1,4 +1,5 @@
 ---
+id: "ranged-darkness"
 name: "Ranged Darkness"
 tier: basic
 tags: ["range"]

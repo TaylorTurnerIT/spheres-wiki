@@ -1,4 +1,5 @@
 ---
+id: "emotive-styles"
 name: "Emotive Styles"
 tier: "basic"
 tags:

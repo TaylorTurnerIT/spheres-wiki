@@ -1,4 +1,5 @@
 ---
+id: "armorist-burdensome-attacks"
 name: "Burdensome Attacks"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "darkvision-ex"
 name: "Darkvision (Ex)"
 type: class-feature
 className: fey-adept

@@ -1,4 +1,5 @@
 ---
+id: "natural-materials"
 name: "Natural Materials"
 tier: "basic"
 tags: []

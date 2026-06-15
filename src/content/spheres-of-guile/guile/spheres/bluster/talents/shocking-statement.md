@@ -1,4 +1,5 @@
 ---
+id: "shocking-statement"
 name: "Shocking Statement"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "mageknight-black-dog-companion"
 name: "Black Dog Companion"
 tags: []
 featureId: mystic-combat-su

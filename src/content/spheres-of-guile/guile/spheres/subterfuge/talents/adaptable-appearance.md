@@ -1,4 +1,5 @@
 ---
+id: "adaptable-appearance"
 name: "Adaptable Appearance"
 tier: "basic"
 tags:

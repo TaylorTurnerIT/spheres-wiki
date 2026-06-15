@@ -1,4 +1,5 @@
 ---
+id: "excise-triumph"
 name: "Excise Triumph"
 tier: advanced
 tags: ["curse", "word"]

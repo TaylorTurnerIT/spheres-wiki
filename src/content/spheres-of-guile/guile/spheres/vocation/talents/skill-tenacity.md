@@ -1,4 +1,5 @@
 ---
+id: "skill-tenacity"
 name: "Skill Tenacity"
 tier: "basic"
 tags: []

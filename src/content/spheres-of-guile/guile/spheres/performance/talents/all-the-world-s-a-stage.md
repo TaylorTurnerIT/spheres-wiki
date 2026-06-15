@@ -1,4 +1,5 @@
 ---
+id: "all-the-world-s-a-stage"
 name: "All The World's A Stage"
 tier: "advanced"
 tags: []

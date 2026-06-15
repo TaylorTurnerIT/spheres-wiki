@@ -1,4 +1,5 @@
 ---
+id: "armorist-space-bending-equipment"
 name: "Space-Bending Equipment"
 tags: []
 featureId: arsenal-trick

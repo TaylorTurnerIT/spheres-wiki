@@ -1,4 +1,5 @@
 ---
+id: "temporal-snare"
 name: "Temporal Snare"
 tier: "advanced"
 tags:

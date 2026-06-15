@@ -1,4 +1,5 @@
 ---
+id: "thief-of-names"
 name: "Thief of Names"
 tier: "advanced"
 tags: []

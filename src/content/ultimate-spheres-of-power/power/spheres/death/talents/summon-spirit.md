@@ -1,4 +1,5 @@
 ---
+id: "summon-spirit"
 name: "Summon Spirit"
 tier: advanced
 tags: []

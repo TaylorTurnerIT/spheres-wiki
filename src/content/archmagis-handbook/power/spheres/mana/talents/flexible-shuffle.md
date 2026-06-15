@@ -1,4 +1,5 @@
 ---
+id: "flexible-shuffle"
 name: "Flexible Shuffle"
 tier: basic
 tags: []

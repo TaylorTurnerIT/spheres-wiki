@@ -1,4 +1,5 @@
 ---
+id: "balanced-blows"
 name: "Balanced Blows"
 tier: "basic"
 tags: []

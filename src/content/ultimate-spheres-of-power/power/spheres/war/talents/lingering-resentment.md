@@ -1,4 +1,5 @@
 ---
+id: "lingering-resentment"
 name: "Lingering Resentment"
 tier: basic
 tags: []

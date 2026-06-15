@@ -1,4 +1,5 @@
 ---
+id: "anthropomorphic-transformation"
 name: "Anthropomorphic Transformation"
 tier: basic
 tags: ["transformation"]

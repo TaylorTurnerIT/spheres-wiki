@@ -1,4 +1,5 @@
 ---
+id: "discern-location"
 name: "Discern Location"
 tier: advanced
 tags: ["utility", "divine"]

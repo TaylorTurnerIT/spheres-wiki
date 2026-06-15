@@ -1,4 +1,5 @@
 ---
+id: "incanter-death-sub-specialization-guide-of-the-dead"
 name: "Death Sub-Specialization: Guide of the Dead"
 tags: []
 featureId: list-of-sphere-specializations

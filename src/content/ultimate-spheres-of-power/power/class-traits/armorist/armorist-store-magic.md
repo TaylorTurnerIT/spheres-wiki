@@ -1,4 +1,5 @@
 ---
+id: "armorist-store-magic"
 name: "Store Magic"
 tags: []
 featureId: arsenal-trick

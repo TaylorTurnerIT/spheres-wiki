@@ -1,4 +1,5 @@
 ---
+id: "painter"
 name: "Painter"
 tier: "basic"
 tags: []

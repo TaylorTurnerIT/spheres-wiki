@@ -1,4 +1,5 @@
 ---
+id: "cerebral-strike"
 name: "Cerebral Strike"
 tier: basic
 tags: ["charm"]

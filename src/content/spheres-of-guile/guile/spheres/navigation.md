@@ -1,4 +1,5 @@
 ---
+id: "navigation"
 name: "Navigation"
 icon: "navigation"
 tags: []

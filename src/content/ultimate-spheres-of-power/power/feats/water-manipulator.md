@@ -1,4 +1,5 @@
 ---
+id: "water-manipulator"
 name: Water Manipulator
 sphere: nature
 dualSphere: fallen-fey

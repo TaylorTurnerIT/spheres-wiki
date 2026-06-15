@@ -1,4 +1,5 @@
 ---
+id: "wraith-object-ride"
 name: "Object Ride"
 tags: []
 featureId: wraith-haunts

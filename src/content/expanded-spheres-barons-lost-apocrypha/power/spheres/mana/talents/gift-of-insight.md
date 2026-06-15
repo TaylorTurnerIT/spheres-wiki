@@ -1,4 +1,5 @@
 ---
+id: "gift-of-insight"
 name: "Gift of Insight"
 tier: advanced
 tags: []

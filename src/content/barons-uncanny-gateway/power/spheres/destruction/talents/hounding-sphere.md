@@ -1,4 +1,5 @@
 ---
+id: "hounding-sphere"
 name: "Hounding Sphere"
 tier: advanced
 tags: ["sm"]

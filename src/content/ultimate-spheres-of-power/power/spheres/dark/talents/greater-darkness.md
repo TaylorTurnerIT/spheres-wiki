@@ -1,4 +1,5 @@
 ---
+id: "greater-darkness"
 name: "Greater Darkness"
 tier: basic
 tags: []

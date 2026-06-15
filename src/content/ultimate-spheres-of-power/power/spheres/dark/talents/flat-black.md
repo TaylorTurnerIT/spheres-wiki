@@ -1,4 +1,5 @@
 ---
+id: "flat-black"
 name: "Flat Black"
 tier: basic
 tags: ["blot"]

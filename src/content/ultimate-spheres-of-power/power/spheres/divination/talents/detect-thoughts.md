@@ -1,4 +1,5 @@
 ---
+id: "detect-thoughts"
 name: "Detect Thoughts"
 tier: basic
 tags: ["divine", "spell-like", "utility"]

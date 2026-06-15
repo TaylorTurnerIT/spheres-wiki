@@ -1,4 +1,5 @@
 ---
+id: "channel-destruction"
 name: "Channel Destruction"
 sphere: destruction
 tags: ["channeling"]

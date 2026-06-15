@@ -1,4 +1,5 @@
 ---
+id: "cooperative-destruction"
 name: Cooperative Destruction
 sphere: destruction
 dualSphere: creation

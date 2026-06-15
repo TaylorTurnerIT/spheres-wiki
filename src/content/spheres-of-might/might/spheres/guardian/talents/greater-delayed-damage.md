@@ -1,4 +1,5 @@
 ---
+id: "greater-delayed-damage"
 name: "Greater Delayed Damage"
 tier: "basic"
 tags: []

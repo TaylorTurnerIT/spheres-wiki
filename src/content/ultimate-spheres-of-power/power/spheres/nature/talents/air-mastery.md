@@ -1,4 +1,5 @@
 ---
+id: "air-mastery"
 name: "Air Mastery"
 tier: basic
 tags: ["air", "geomancing"]

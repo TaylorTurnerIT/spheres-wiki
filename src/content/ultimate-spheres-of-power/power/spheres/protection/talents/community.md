@@ -1,4 +1,5 @@
 ---
+id: "community"
 name: "Community"
 tier: basic
 tags: []

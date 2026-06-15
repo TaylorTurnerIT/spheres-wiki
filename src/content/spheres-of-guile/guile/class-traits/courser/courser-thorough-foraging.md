@@ -1,4 +1,5 @@
 ---
+id: "courser-thorough-foraging"
 name: Thorough Foraging
 featureId: courser-ventures
 tags: []

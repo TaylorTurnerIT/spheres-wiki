@@ -1,4 +1,5 @@
 ---
+id: "hide-manifestation"
 name: "Hide Manifestation"
 tier: "basic"
 tags: []

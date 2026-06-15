@@ -1,4 +1,5 @@
 ---
+id: "blockade"
 name: "Blockade"
 tier: "basic"
 tags: []

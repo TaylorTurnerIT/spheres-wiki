@@ -1,4 +1,5 @@
 ---
+id: "battering-banter"
 name: "Battering Banter"
 tier: "basic"
 tags:

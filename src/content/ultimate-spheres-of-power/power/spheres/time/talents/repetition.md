@@ -1,4 +1,5 @@
 ---
+id: "repetition"
 name: "Repetition"
 tier: basic
 tags: ["time"]

@@ -1,4 +1,5 @@
 ---
+id: "destructive-companion"
 name: Destructive Companion
 sphere: destruction
 dualSphere: conjuration

@@ -1,4 +1,5 @@
 ---
+id: "hungry"
 name: "Hungry"
 sphere: conjuration
 tags: ["combat", "companion"]

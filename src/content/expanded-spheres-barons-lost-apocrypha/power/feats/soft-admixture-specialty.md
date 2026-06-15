@@ -1,4 +1,5 @@
 ---
+id: "soft-admixture-specialty"
 name: "Soft Admixture Specialty"
 sphere: destruction
 tags: []

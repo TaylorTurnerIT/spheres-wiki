@@ -1,4 +1,5 @@
 ---
+id: "close-combat-specialist"
 name: "Close Combat Specialist"
 tier: "basic"
 tags: []

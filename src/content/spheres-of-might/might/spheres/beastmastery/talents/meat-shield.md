@@ -1,4 +1,5 @@
 ---
+id: "meat-shield"
 name: "Meat Shield"
 tier: "basic"
 tags:

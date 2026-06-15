@@ -1,4 +1,5 @@
 ---
+id: "subtlety"
 name: "Subtlety"
 tier: basic
 tags: []

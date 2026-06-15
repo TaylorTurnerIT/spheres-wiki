@@ -1,4 +1,5 @@
 ---
+id: "morphic-disguise"
 name: "Morphic Disguise"
 tier: "base"
 tags:

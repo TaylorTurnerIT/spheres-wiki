@@ -1,4 +1,5 @@
 ---
+id: "nightmare-fuel"
 name: "Nightmare Fuel"
 tier: "advanced"
 tags: []

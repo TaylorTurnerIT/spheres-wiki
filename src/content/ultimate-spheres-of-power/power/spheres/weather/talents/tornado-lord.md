@@ -1,4 +1,5 @@
 ---
+id: "tornado-lord"
 name: "Tornado Lord"
 tier: advanced
 tags: []

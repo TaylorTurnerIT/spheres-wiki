@@ -1,4 +1,5 @@
 ---
+id: "snagging-steel"
 name: "Snagging Steel"
 tier: "basic"
 ---

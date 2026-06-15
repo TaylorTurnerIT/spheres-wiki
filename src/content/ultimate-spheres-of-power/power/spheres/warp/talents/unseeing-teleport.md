@@ -1,4 +1,5 @@
 ---
+id: "unseeing-teleport"
 name: "Unseeing Teleport"
 tier: basic
 tags: []

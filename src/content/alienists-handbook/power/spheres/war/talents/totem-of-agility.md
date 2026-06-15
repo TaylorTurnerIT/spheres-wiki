@@ -1,4 +1,5 @@
 ---
+id: "totem-of-agility"
 name: "Totem Of Agility"
 tier: basic
 tags: ["totem"]

@@ -1,4 +1,5 @@
 ---
+id: "mass-death-magic"
 name: "Mass Death Magic"
 tier: basic
 tags: ["mass"]

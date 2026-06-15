@@ -1,4 +1,5 @@
 ---
+id: "rabble-rouser"
 name: "Rabble-Rouser"
 tier: "basic"
 tags: []

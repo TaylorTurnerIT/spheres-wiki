@@ -1,4 +1,5 @@
 ---
+id: "glitched-hack"
 name: "Glitched Hack"
 tier: "basic"
 tags: []

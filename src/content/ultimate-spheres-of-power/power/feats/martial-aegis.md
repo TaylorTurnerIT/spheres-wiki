@@ -1,4 +1,5 @@
 ---
+id: "martial-aegis"
 name: "Martial Aegis"
 sphere: protection
 tags: ["combat"]

@@ -1,4 +1,5 @@
 ---
+id: "sniper"
 name: "Sniper"
 icon: "sniper"
 tags: []

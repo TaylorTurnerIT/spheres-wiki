@@ -1,4 +1,5 @@
 ---
+id: "reactive-barrier"
 name: "Reactive Barrier"
 tier: basic
 tags: []

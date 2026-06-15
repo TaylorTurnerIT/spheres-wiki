@@ -1,4 +1,5 @@
 ---
+id: "true-perception"
 name: "True Perception"
 tier: advanced
 tags: ["sense"]

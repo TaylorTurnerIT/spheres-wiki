@@ -1,4 +1,5 @@
 ---
+id: "slow"
 name: "Slow"
 tier: basic
 tags: []

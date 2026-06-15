@@ -1,4 +1,5 @@
 ---
+id: "improved-evasion-ex"
 name: "Improved Evasion (Ex)"
 type: class-feature
 className: symbiat

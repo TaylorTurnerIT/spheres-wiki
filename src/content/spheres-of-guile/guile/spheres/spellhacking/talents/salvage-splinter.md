@@ -1,4 +1,5 @@
 ---
+id: "salvage-splinter"
 name: "Salvage Splinter"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "ghost-strike"
 name: Ghost Strike
 tier: base
 tags: []

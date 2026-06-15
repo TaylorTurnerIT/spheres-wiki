@@ -1,4 +1,5 @@
 ---
+id: "synesthesia"
 name: "Synesthesia"
 tier: basic
 tags: []

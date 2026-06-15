@@ -1,4 +1,5 @@
 ---
+id: "bulwark"
 name: "Bulwark"
 dualSphere: mana
 tier: basic

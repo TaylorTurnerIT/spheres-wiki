@@ -1,4 +1,5 @@
 ---
+id: "traitorous-blade"
 name: "Traitorous Blade"
 tier: "basic"
 tags:

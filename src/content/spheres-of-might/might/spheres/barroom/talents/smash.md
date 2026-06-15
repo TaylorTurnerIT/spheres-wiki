@@ -1,4 +1,5 @@
 ---
+id: "smash"
 name: "Smash"
 tier: "base"
 tags: []

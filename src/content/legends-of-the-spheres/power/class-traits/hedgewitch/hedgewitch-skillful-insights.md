@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-skillful-insights"
 name: "Skillful Insights"
 tags: []
 featureId: secret

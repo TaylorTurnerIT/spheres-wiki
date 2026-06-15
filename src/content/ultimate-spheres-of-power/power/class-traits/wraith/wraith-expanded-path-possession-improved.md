@@ -1,4 +1,5 @@
 ---
+id: "wraith-expanded-path-possession-improved"
 name: "Expanded Path Possession, Improved"
 tags: []
 featureId: wraith-haunts

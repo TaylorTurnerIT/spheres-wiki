@@ -1,4 +1,5 @@
 ---
+id: "superior-reanimation"
 name: "Superior Reanimation"
 sphere: death
 tags: []

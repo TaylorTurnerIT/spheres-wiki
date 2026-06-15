@@ -1,4 +1,5 @@
 ---
+id: "phantom-mind"
 name: "Phantom Mind"
 tier: advanced
 tags: []

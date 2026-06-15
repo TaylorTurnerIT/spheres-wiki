@@ -1,4 +1,5 @@
 ---
+id: "courser-ambusher"
 name: Ambusher
 featureId: courser-ventures
 tags: []

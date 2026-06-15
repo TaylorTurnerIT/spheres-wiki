@@ -1,4 +1,5 @@
 ---
+id: "mageknight-chivalry"
 name: "Chivalry"
 tags: []
 featureId: mystic-combat-su

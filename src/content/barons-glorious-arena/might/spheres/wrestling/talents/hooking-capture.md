@@ -1,4 +1,5 @@
 ---
+id: "hooking-capture"
 name: "Hooking Capture"
 tier: "basic"
 ---

@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-divine-soul"
 name: "Divine Soul"
 tags: []
 featureId: bound-nexus

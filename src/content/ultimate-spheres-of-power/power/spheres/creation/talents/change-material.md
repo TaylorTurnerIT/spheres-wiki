@@ -1,4 +1,5 @@
 ---
+id: "change-material"
 name: "Change Material"
 tier: basic
 tags: ["alter"]

@@ -1,4 +1,5 @@
 ---
+id: "benevolence"
 name: Benevolence
 sphere: protection
 dualSphere: life

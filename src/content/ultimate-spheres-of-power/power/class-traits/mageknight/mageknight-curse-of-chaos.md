@@ -1,4 +1,5 @@
 ---
+id: "mageknight-curse-of-chaos"
 name: "Curse of Chaos"
 tags: []
 featureId: mystic-combat-su

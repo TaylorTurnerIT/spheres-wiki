@@ -1,4 +1,5 @@
 ---
+id: "charming-strike"
 name: "Charming Strike"
 tier: basic
 tags: ["strike"]

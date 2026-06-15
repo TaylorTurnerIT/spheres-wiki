@@ -1,4 +1,5 @@
 ---
+id: "soul"
 name: "Soul"
 tier: "advanced"
 tags:

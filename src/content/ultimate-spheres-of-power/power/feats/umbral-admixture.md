@@ -1,4 +1,5 @@
 ---
+id: "umbral-admixture"
 name: "Umbral Admixture"
 sphere: destruction
 tags: ["admixture"]

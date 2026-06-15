@@ -1,4 +1,5 @@
 ---
+id: "giant-physique"
 name: "Giant Physique"
 tier: "basic"
 tags:

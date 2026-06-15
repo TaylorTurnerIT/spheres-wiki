@@ -1,4 +1,5 @@
 ---
+id: "deep-cover"
 name: Deep Cover
 sphere: illusion
 dualSphere: alteration

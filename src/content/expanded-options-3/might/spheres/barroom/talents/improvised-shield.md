@@ -1,4 +1,5 @@
 ---
+id: "improvised-shield"
 name: "Improvised Shield"
 tier: "basic"
 tags: []

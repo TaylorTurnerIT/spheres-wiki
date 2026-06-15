@@ -1,4 +1,5 @@
 ---
+id: "pure-darkness"
 name: "Pure Darkness"
 tier: basic
 tags: ["darkness"]

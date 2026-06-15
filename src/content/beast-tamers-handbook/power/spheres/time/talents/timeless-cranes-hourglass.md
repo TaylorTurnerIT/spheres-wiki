@@ -1,4 +1,5 @@
 ---
+id: "timeless-cranes-hourglass"
 name: "Timeless Crane's Hourglass"
 tier: advanced
 tags: ["time"]

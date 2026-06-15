@@ -1,4 +1,5 @@
 ---
+id: "willful-companion"
 name: "Willful Companion"
 tier: basic
 tags: ["form"]

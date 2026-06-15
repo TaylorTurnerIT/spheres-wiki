@@ -1,4 +1,5 @@
 ---
+id: "invisible-friend"
 name: Invisible Friend
 sphere: illusion
 dualSphere: conjuration

@@ -1,4 +1,5 @@
 ---
+id: "formulae-geomancing"
 name: "Formulae Geomancing"
 sphere: nature
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "venomous-focus"
 name: "Venomous Focus"
 sphere: conjuration
 tags: ["companion"]

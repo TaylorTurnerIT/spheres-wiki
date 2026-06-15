@@ -1,4 +1,5 @@
 ---
+id: "dreadnought"
 name: "Dreadnought"
 tier: "basic"
 tags:

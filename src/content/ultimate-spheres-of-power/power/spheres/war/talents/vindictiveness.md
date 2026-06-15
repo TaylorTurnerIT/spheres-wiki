@@ -1,4 +1,5 @@
 ---
+id: "vindictiveness"
 name: "Vindictiveness"
 tier: basic
 tags: ["mandate"]

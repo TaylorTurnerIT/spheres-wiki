@@ -1,4 +1,5 @@
 ---
+id: "armory"
 name: "Armory"
 sphere: conjuration
 tags: ["companion"]

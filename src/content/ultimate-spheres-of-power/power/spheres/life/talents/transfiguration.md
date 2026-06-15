@@ -1,4 +1,5 @@
 ---
+id: "transfiguration"
 name: "Transfiguration"
 tier: advanced
 tags: []

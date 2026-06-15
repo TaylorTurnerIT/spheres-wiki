@@ -1,4 +1,5 @@
 ---
+id: "fabrication-package"
 name: "Fabrication Package"
 tier: "base"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "cherry-bomb"
 name: "Cherry Bomb"
 tier: "basic"
 tags:

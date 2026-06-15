@@ -1,4 +1,5 @@
 ---
+id: "armorist-energy-equipment"
 name: "Energy Equipment"
 tags: []
 featureId: arsenal-trick

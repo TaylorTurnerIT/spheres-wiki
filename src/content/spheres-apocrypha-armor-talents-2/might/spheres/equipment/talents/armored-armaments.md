@@ -1,4 +1,5 @@
 ---
+id: "armored-armaments"
 name: "Armored Armaments"
 tier: "advanced"
 tags: []

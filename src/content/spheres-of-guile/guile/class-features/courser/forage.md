@@ -1,4 +1,5 @@
 ---
+id: "forage"
 name: Forage
 level: 1
 tags: []

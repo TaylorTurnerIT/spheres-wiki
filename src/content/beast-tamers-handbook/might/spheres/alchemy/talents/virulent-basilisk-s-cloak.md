@@ -1,4 +1,5 @@
 ---
+id: "virulent-basilisk-s-cloak"
 name: "Virulent Basilisk’s Cloak"
 tier: "basic"
 tags:

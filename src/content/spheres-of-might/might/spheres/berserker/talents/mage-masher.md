@@ -1,4 +1,5 @@
 ---
+id: "mage-masher"
 name: "Mage Masher"
 tier: "basic"
 tags:

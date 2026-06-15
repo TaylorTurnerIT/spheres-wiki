@@ -1,4 +1,5 @@
 ---
+id: "intense-conditioning"
 name: "Intense Conditioning"
 tier: "advanced"
 tags:

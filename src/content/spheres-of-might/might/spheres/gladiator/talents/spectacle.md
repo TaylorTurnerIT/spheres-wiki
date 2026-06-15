@@ -1,4 +1,5 @@
 ---
+id: "spectacle"
 name: "Spectacle"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "faith-healer"
 name: "Faith Healer"
 tier: "basic"
 tags:

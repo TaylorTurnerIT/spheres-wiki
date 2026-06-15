@@ -1,4 +1,5 @@
 ---
+id: "chemical-coating"
 name: "Chemical Coating"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "tangling-shot"
 name: "Tangling Shot"
 tier: "basic"
 tags:

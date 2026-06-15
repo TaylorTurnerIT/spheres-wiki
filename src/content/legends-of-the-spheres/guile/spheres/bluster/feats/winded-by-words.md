@@ -1,4 +1,5 @@
 ---
+id: "winded-by-words"
 name: "Winded By Words"
 tags:
   - "champion"

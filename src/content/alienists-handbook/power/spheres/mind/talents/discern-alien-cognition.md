@@ -1,4 +1,5 @@
 ---
+id: "discern-alien-cognition"
 name: "Discern Alien Cognition"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "theatrical-effects"
 name: "Theatrical Effects"
 tags:
   - "champion"

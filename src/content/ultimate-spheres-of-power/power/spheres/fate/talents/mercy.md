@@ -1,4 +1,5 @@
 ---
+id: "mercy"
 name: "Mercy"
 tier: basic
 tags: ["curse", "word"]

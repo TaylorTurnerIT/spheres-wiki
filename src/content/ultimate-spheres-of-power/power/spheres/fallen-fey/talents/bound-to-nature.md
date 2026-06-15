@@ -1,4 +1,5 @@
 ---
+id: "bound-to-nature"
 name: "Bound To Nature"
 tier: advanced
 tags: ["fey-blessing"]

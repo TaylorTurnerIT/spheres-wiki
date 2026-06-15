@@ -1,4 +1,5 @@
 ---
+id: "mageknight-mystic-aegis"
 name: "Mystic Aegis"
 tags: ["spell-like"]
 featureId: mystic-combat-su

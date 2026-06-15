@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-soulfire"
 name: "Soulfire"
 tags: []
 featureId: invocations

@@ -1,4 +1,5 @@
 ---
+id: "truth"
 name: "Truth"
 tier: basic
 tags: ["curse", "utility", "word"]

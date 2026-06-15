@@ -1,4 +1,5 @@
 ---
+id: "obstruction"
 name: "Obstruction"
 tier: basic
 tags: ["aegis"]

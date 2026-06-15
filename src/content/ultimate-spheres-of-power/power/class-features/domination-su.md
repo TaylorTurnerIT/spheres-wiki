@@ -1,4 +1,5 @@
 ---
+id: "domination-su"
 name: "Domination (Su)"
 type: class-feature
 className: eliciter

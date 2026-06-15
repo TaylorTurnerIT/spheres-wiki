@@ -1,4 +1,5 @@
 ---
+id: "efficient-researcher"
 name: "Efficient Researcher"
 tier: "basic"
 tags:

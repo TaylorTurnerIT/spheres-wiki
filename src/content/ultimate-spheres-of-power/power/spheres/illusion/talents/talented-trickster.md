@@ -1,4 +1,5 @@
 ---
+id: "talented-trickster"
 name: "Talented Trickster"
 tier: basic
 tags: []

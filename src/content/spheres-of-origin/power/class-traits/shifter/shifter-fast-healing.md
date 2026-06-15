@@ -1,4 +1,5 @@
 ---
+id: "shifter-fast-healing"
 name: "Fast Healing"
 tags: ["extraordinary"]
 featureId: bestial-trait

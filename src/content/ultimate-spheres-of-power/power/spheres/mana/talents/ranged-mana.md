@@ -1,4 +1,5 @@
 ---
+id: "ranged-mana"
 name: "Ranged Mana"
 tier: basic
 tags: ["range"]

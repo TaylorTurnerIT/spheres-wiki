@@ -1,4 +1,5 @@
 ---
+id: "armorist-combat-feat"
 name: "Combat Feat"
 tags: []
 featureId: arsenal-trick

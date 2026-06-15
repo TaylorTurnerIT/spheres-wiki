@@ -1,4 +1,5 @@
 ---
+id: "vivid-creativity"
 name: "Vivid Creativity"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "lethal-teleport"
 name: "Lethal Teleport"
 tier: advanced
 tags: []

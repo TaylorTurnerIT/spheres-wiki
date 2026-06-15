@@ -1,4 +1,5 @@
 ---
+id: "resurrection-supreme"
 name: "Resurrection, Supreme"
 tier: advanced
 tags: ["warden"]

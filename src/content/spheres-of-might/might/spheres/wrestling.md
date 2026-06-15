@@ -1,4 +1,5 @@
 ---
+id: "wrestling"
 name: "Wrestling"
 icon: "wrestling"
 tags: []

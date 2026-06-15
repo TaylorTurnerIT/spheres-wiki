@@ -1,4 +1,5 @@
 ---
+id: "battering-blast"
 name: "Battering Blast"
 tier: basic
 tags: ["blast-type", "stone"]

@@ -1,4 +1,5 @@
 ---
+id: "anthropologist"
 name: "Anthropologist"
 tier: "basic"
 tags:

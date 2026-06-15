@@ -1,4 +1,5 @@
 ---
+id: "laugh-it-off"
 name: "Laugh It Off"
 tier: "basic"
 tags:

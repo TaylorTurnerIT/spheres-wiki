@@ -1,4 +1,5 @@
 ---
+id: "suppressive-rush"
 name: "Suppressive Rush"
 tier: "basic"
 tags: []

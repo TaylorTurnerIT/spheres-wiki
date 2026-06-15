@@ -1,4 +1,5 @@
 ---
+id: "smash"
 label: "Smash"
 sphere: "barroom"
 priority: 0

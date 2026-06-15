@@ -1,4 +1,5 @@
 ---
+id: "linear-pathing"
 name: "Linear Pathing"
 tier: "basic"
 tags: []

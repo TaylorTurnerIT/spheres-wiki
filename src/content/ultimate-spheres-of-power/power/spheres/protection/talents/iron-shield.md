@@ -1,4 +1,5 @@
 ---
+id: "iron-shield"
 name: "Iron Shield"
 tier: basic
 tags: ["aegis"]

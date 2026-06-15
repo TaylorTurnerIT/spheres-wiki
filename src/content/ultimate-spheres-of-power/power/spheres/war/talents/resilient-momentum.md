@@ -1,4 +1,5 @@
 ---
+id: "resilient-momentum"
 name: "Resilient Momentum"
 tier: basic
 tags: ["momentum"]

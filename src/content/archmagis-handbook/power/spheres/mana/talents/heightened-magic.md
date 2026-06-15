@@ -1,4 +1,5 @@
 ---
+id: "heightened-magic"
 name: "Heightened Magic"
 tier: basic
 tags: ["amp", "manipulation"]

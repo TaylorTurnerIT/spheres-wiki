@@ -1,4 +1,5 @@
 ---
+id: "gladiator"
 name: "Gladiator"
 icon: "gladiator"
 tags: []

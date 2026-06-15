@@ -1,4 +1,5 @@
 ---
+id: "light-speed"
 name: "Light Speed"
 tier: advanced
 tags: []

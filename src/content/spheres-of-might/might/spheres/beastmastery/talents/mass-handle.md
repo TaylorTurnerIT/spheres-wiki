@@ -1,4 +1,5 @@
 ---
+id: "mass-handle"
 name: "Mass Handle"
 tier: "basic"
 tags:

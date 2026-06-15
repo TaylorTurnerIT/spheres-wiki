@@ -1,4 +1,5 @@
 ---
+id: "shape-expert"
 name: "Shape Expert"
 sphere: destruction
 tags: ["combat"]

@@ -1,4 +1,5 @@
 ---
+id: "high-on-vitality"
 name: "High On Vitality"
 tier: basic
 tags: ["vitality"]

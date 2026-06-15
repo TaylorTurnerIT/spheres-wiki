@@ -1,4 +1,5 @@
 ---
+id: "incanter-protection-sub-specialization-lattice-weaver"
 name: "Protection Sub-Specialization: Lattice Weaver"
 tags: []
 featureId: list-of-sphere-specializations

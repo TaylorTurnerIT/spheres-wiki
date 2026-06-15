@@ -1,4 +1,5 @@
 ---
+id: "improved-negation"
 name: "Improved Negation"
 tier: advanced
 tags: []

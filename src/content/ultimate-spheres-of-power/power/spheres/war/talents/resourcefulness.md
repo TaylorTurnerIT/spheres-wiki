@@ -1,4 +1,5 @@
 ---
+id: "resourcefulness"
 name: "Resourcefulness"
 tier: basic
 tags: []

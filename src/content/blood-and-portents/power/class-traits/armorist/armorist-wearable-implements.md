@@ -1,4 +1,5 @@
 ---
+id: "armorist-wearable-implements"
 name: "Wearable Implements"
 tags: []
 featureId: arsenal-trick

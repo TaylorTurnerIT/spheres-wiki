@@ -1,4 +1,5 @@
 ---
+id: "strong-lungs"
 name: "Strong Lungs"
 tier: "basic"
 tags:

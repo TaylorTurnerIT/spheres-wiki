@@ -1,4 +1,5 @@
 ---
+id: "bounty-hunter-s-tools"
 name: "Bounty Hunter’s Tools"
 tier: "basic"
 tags:

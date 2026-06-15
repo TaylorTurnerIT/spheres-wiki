@@ -1,4 +1,5 @@
 ---
+id: "intimidating-ability"
 name: "Intimidating Ability"
 tier: "basic"
 tags: []

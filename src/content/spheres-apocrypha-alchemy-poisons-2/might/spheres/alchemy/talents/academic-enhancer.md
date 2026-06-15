@@ -1,4 +1,5 @@
 ---
+id: "academic-enhancer"
 name: "Academic Enhancer"
 tier: "basic"
 tags:

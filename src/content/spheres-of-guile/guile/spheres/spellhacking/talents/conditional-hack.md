@@ -1,4 +1,5 @@
 ---
+id: "conditional-hack"
 name: "Conditional Hack"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "grey-hawks-gambit"
 name: "Grey Hawk's Gambit"
 sphere: "time"
 tier: "advanced"

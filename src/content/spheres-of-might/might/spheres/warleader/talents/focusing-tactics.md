@@ -1,4 +1,5 @@
 ---
+id: "focusing-tactics"
 name: "Focusing Tactics"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "wind-lord"
 name: "Wind Lord"
 tier: advanced
 tags: []

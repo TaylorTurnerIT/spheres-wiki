@@ -1,4 +1,5 @@
 ---
+id: "enthrall"
 name: "Enthrall"
 tier: basic
 tags: ["utility", "charm"]

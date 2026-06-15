@@ -1,4 +1,5 @@
 ---
+id: "focusing-defense"
 name: "Focusing Defense"
 tier: "basic"
 tags: []

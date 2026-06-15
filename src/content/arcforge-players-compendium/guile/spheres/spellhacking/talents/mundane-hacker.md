@@ -1,4 +1,5 @@
 ---
+id: "mundane-hacker"
 name: "Mundane Hacker"
 tier: "base"
 tags:

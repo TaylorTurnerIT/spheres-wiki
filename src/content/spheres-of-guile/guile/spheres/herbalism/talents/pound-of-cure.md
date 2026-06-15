@@ -1,4 +1,5 @@
 ---
+id: "pound-of-cure"
 name: "Pound Of Cure"
 tier: "advanced"
 tags: []

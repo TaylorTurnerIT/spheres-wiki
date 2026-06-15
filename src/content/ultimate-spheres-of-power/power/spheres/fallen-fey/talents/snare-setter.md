@@ -1,4 +1,5 @@
 ---
+id: "snare-setter"
 name: "Snare Setter"
 tier: basic
 tags: ["fey-blessing"]

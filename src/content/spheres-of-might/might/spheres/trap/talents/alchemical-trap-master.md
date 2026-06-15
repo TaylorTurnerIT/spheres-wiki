@@ -1,4 +1,5 @@
 ---
+id: "alchemical-trap-master"
 name: "Alchemical Trap Master"
 tier: "basic"
 tags: []

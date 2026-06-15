@@ -1,4 +1,5 @@
 ---
+id: "wind-reader"
 name: "Wind Reader"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "incanter-familiar-1-2-specialization-points"
 name: "Familiar (1-2 specialization points)"
 tags: []
 featureId: incanter-specializations

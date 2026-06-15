@@ -1,4 +1,5 @@
 ---
+id: "offhand-parry"
 name: "Offhand Parry"
 tier: "basic"
 tags: []

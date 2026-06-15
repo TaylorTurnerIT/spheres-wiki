@@ -1,4 +1,5 @@
 ---
+id: "enhance-equipment"
 name: "Enhance Equipment"
 tier: basic
 tags: []

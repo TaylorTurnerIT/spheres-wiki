@@ -1,4 +1,5 @@
 ---
+id: "advisory-scout"
 name: "Advisory Scout"
 tier: "basic"
 tags: []

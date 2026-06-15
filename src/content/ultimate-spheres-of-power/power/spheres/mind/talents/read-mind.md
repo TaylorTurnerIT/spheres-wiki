@@ -1,4 +1,5 @@
 ---
+id: "read-mind"
 name: "Read Mind"
 tier: basic
 tags: ["utility", "charm"]

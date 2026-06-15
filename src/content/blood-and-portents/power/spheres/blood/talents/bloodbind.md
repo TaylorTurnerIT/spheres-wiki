@@ -1,4 +1,5 @@
 ---
+id: "bloodbind"
 name: "Bloodbind"
 tier: basic
 tags: ["blood-art"]

@@ -1,4 +1,5 @@
 ---
+id: "armorist-arms-of-the-outer-planes"
 name: "Arms of the Outer Planes"
 tags: []
 featureId: arsenal-trick

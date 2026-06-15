@@ -1,4 +1,5 @@
 ---
+id: "tree-meld"
 name: "Tree Meld"
 tier: basic
 tags: ["fey-blessing"]

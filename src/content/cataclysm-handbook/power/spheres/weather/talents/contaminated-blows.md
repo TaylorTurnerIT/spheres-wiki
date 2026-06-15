@@ -1,4 +1,5 @@
 ---
+id: "contaminated-blows"
 name: "Contaminated Blows"
 tier: advanced
 tags: ["mantle", "radiation"]

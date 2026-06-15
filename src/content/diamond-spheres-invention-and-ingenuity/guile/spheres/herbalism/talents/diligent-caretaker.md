@@ -1,4 +1,5 @@
 ---
+id: "diligent-caretaker"
 name: "Diligent Caretaker"
 tier: "basic"
 tags:

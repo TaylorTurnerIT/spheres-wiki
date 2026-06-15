@@ -1,4 +1,5 @@
 ---
+id: "fey-companion"
 name: "Fey Companion"
 tier: basic
 tags: ["type"]

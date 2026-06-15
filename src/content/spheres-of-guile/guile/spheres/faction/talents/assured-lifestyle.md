@@ -1,4 +1,5 @@
 ---
+id: "assured-lifestyle"
 name: "Assured Lifestyle"
 tier: "basic"
 tags:

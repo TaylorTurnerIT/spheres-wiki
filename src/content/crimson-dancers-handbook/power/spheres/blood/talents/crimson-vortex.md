@@ -1,4 +1,5 @@
 ---
+id: "crimson-vortex"
 name: "Crimson Vortex"
 tier: basic
 tags: []

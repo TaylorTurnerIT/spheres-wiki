@@ -1,4 +1,5 @@
 ---
+id: "blazing-skin"
 name: "Blazing Skin"
 tier: basic
 tags: ["heat", "mantle"]

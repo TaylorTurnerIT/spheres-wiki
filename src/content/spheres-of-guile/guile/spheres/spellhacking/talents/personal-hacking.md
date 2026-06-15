@@ -1,4 +1,5 @@
 ---
+id: "personal-hacking"
 name: "Personal Hacking"
 tier: "base"
 tags:

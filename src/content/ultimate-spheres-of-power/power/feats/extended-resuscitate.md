@@ -1,4 +1,5 @@
 ---
+id: "extended-resuscitate"
 name: "Extended Resuscitate"
 sphere: life
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "forgettable-theft"
 name: "Forgettable Theft"
 tier: "basic"
 tags: []

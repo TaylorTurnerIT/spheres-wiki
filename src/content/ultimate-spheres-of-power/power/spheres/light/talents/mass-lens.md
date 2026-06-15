@@ -1,4 +1,5 @@
 ---
+id: "mass-lens"
 name: "Mass Lens"
 tier: basic
 tags: ["mass"]

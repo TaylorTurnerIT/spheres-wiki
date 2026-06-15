@@ -1,4 +1,5 @@
 ---
+id: "wraith-share-wraith-form"
 name: "Share Wraith Form"
 tags: []
 featureId: wraith-haunts

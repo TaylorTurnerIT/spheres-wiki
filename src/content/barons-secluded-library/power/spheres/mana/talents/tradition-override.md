@@ -1,4 +1,5 @@
 ---
+id: "tradition-override"
 name: "Tradition Override"
 tier: advanced
 tags: ["sm"]

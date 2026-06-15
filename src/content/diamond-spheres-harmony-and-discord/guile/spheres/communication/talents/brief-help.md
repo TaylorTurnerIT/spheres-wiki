@@ -1,4 +1,5 @@
 ---
+id: "brief-help"
 name: "Brief Help"
 tier: "basic"
 tags:

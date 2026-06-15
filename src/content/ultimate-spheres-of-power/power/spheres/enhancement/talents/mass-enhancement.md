@@ -1,4 +1,5 @@
 ---
+id: "mass-enhancement"
 name: "Mass Enhancement"
 tier: basic
 tags: ["mass"]

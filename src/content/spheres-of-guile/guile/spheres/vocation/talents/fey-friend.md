@@ -1,4 +1,5 @@
 ---
+id: "fey-friend"
 name: "Fey Friend"
 tier: "basic"
 tags:

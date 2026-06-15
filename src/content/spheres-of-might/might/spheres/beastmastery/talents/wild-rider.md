@@ -1,4 +1,5 @@
 ---
+id: "wild-rider"
 name: "Wild Rider"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "mechanized-magnificence"
 name: Mechanized Magnificence
 dualSphere: tinker
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "manipulate-density"
 name: "Manipulate Density"
 tier: basic
 tags: ["quicken", "still"]

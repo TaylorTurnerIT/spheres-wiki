@@ -1,4 +1,5 @@
 ---
+id: "totem-tactics"
 name: "Totem Tactics"
 sphere: war
 tags: ["combat"]

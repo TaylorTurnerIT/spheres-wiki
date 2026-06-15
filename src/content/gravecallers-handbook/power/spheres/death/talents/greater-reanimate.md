@@ -1,4 +1,5 @@
 ---
+id: "greater-reanimate"
 name: "Greater Reanimate"
 tier: basic
 tags: []

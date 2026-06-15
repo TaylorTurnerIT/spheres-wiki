@@ -1,4 +1,5 @@
 ---
+id: "evisceration"
 name: "Evisceration"
 tier: advanced
 tags: ["ghost-strike"]

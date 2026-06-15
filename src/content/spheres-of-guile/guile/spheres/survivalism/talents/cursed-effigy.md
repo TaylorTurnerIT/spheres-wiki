@@ -1,4 +1,5 @@
 ---
+id: "cursed-effigy"
 name: "Cursed Effigy"
 tier: "advanced"
 tags:

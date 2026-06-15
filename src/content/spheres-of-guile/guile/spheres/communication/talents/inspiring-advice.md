@@ -1,4 +1,5 @@
 ---
+id: "inspiring-advice"
 name: "Inspiring Advice"
 tier: "basic"
 tags:

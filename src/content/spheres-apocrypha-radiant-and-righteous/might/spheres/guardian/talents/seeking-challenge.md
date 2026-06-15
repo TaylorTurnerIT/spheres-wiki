@@ -1,4 +1,5 @@
 ---
+id: "seeking-challenge"
 name: "Seeking Challenge"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "hidden-dragon"
 name: "Hidden Dragon"
 tier: "basic"
 tags:

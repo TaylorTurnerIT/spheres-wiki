@@ -1,4 +1,5 @@
 ---
+id: "crushing-combo"
 name: "Crushing Combo"
 tier: "basic"
 tags: []

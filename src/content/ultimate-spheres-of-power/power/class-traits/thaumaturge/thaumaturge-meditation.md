@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-meditation"
 name: "Meditation"
 tags: []
 featureId: invocations

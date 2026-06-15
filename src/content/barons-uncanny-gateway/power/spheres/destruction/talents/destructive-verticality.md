@@ -1,4 +1,5 @@
 ---
+id: "destructive-verticality"
 name: "Destructive Verticality"
 tier: advanced
 tags: ["sm"]

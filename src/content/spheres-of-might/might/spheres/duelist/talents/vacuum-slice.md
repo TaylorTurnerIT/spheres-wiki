@@ -1,4 +1,5 @@
 ---
+id: "vacuum-slice"
 name: "Vacuum Slice"
 tier: "advanced"
 tags: []

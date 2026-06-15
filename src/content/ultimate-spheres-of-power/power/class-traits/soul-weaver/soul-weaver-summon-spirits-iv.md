@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-summon-spirits-iv"
 name: "Summon Spirits IV"
 tags: []
 featureId: bound-nexus

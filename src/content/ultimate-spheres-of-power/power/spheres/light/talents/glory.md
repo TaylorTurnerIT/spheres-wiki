@@ -1,4 +1,5 @@
 ---
+id: "glory"
 name: "Glory"
 tier: basic
 tags: []

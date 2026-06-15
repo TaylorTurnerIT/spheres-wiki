@@ -1,4 +1,5 @@
 ---
+id: "fortifying-phalanx"
 name: "Fortifying Phalanx"
 tier: "basic"
 tags:

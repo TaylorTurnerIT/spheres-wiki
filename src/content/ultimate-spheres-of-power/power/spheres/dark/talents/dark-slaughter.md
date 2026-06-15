@@ -1,4 +1,5 @@
 ---
+id: "dark-slaughter"
 name: "Dark Slaughter"
 tier: basic
 tags: ["meld"]

@@ -1,4 +1,5 @@
 ---
+id: "force-blast"
 name: "Force Blast"
 tier: basic
 tags: ["blast-type", "force"]

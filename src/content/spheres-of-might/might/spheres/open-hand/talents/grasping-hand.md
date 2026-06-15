@@ -1,4 +1,5 @@
 ---
+id: "grasping-hand"
 name: "Grasping Hand"
 tier: "basic"
 tags: []

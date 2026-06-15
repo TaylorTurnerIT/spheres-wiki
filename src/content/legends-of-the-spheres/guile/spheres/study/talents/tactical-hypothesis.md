@@ -1,4 +1,5 @@
 ---
+id: "tactical-hypothesis"
 name: "Tactical Hypothesis"
 tier: "advanced"
 tags:

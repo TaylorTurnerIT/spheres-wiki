@@ -1,4 +1,5 @@
 ---
+id: "necromantic-conscription"
 name: "Necromantic Conscription"
 tier: basic
 tags: []

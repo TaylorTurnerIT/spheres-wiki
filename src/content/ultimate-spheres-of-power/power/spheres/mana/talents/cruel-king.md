@@ -1,4 +1,5 @@
 ---
+id: "cruel-king"
 name: "Cruel King"
 tier: advanced
 tags: []

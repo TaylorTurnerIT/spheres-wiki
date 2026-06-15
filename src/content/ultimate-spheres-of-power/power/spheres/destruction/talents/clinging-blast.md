@@ -1,4 +1,5 @@
 ---
+id: "clinging-blast"
 name: "Clinging Blast"
 tier: basic
 tags: []

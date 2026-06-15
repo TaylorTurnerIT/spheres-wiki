@@ -1,4 +1,5 @@
 ---
+id: "rogue-weapon-training"
 name: "Rogue Weapon Training"
 tier: "basic"
 tags:

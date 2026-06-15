@@ -1,4 +1,5 @@
 ---
+id: "impale"
 label: "Impale"
 sphere: "lancer"
 priority: 0

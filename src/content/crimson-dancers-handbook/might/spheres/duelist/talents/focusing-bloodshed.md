@@ -1,4 +1,5 @@
 ---
+id: "focusing-bloodshed"
 name: "Focusing Bloodshed"
 tier: "basic"
 tags: []

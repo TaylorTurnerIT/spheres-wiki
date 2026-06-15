@@ -1,4 +1,5 @@
 ---
+id: "disorienting-darkness"
 name: "Disorienting Darkness"
 tier: basic
 tags: ["darkness"]

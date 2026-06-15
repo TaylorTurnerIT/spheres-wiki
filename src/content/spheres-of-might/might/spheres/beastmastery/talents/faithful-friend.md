@@ -1,4 +1,5 @@
 ---
+id: "faithful-friend"
 name: "Faithful Friend"
 tier: "basic"
 tags: []

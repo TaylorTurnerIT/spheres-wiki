@@ -1,4 +1,5 @@
 ---
+id: "improved-explosive-companion"
 name: "Improved Explosive Companion"
 sphere: conjuration
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "coronal-shroud"
 name: Coronal Shroud
 sphere: weather
 dualSphere: light

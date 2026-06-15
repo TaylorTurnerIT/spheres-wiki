@@ -1,4 +1,5 @@
 ---
+id: "inspire-doubt"
 name: "Inspire Doubt"
 tier: basic
 tags: []

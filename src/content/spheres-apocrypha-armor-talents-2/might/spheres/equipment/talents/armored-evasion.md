@@ -1,4 +1,5 @@
 ---
+id: "armored-evasion"
 name: "Armored Evasion"
 tier: "basic"
 tags: []

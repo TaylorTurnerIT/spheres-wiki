@@ -1,4 +1,5 @@
 ---
+id: "survivalism"
 name: "Survivalism"
 icon: "survivalism"
 tags: []

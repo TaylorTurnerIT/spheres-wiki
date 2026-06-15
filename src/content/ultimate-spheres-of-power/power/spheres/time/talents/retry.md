@@ -1,4 +1,5 @@
 ---
+id: "retry"
 name: "Retry"
 tier: basic
 tags: ["time"]

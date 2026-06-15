@@ -1,4 +1,5 @@
 ---
+id: "target-weakness"
 name: "Target Weakness"
 tier: "basic"
 tags: []

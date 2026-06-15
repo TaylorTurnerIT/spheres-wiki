@@ -1,4 +1,5 @@
 ---
+id: "natures-weapon"
 name: "Nature's Weapon"
 tier: basic
 tags: ["spirit"]

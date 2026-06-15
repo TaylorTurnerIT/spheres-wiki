@@ -1,4 +1,5 @@
 ---
+id: "heel-tactics"
 name: "Heel Tactics"
 tier: "basic"
 tags:

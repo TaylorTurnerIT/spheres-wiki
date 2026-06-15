@@ -1,4 +1,5 @@
 ---
+id: "ranged-impale"
 name: "Ranged Impale"
 tier: "basic"
 tags: []

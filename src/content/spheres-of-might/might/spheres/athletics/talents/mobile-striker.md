@@ -1,4 +1,5 @@
 ---
+id: "mobile-striker"
 name: "Mobile Striker"
 tier: "basic"
 tags: []

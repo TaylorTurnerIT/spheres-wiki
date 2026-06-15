@@ -1,4 +1,5 @@
 ---
+id: "repurpose-activated-item"
 name: "Repurpose Activated Item"
 tier: "basic"
 tags:

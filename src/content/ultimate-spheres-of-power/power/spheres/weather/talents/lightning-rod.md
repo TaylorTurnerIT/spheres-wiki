@@ -1,4 +1,5 @@
 ---
+id: "lightning-rod"
 name: "Lightning Rod"
 tier: basic
 tags: ["mantle", "storm"]

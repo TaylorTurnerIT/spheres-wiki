@@ -1,4 +1,5 @@
 ---
+id: "spell-scent"
 name: "Spell Scent"
 tier: "advanced"
 tags:

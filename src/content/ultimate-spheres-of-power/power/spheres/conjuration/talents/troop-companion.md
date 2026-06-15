@@ -1,4 +1,5 @@
 ---
+id: "troop-companion"
 name: "Troop Companion"
 tier: advanced
 tags: ["form"]

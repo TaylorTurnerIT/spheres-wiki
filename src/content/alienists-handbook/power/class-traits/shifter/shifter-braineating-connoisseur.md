@@ -1,4 +1,5 @@
 ---
+id: "shifter-braineating-connoisseur"
 name: "Braineating Connoisseur"
 tags: []
 featureId: bestial-trait

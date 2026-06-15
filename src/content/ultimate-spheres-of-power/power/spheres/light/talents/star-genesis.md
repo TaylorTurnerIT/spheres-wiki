@@ -1,4 +1,5 @@
 ---
+id: "star-genesis"
 name: "Star Genesis"
 tier: advanced
 tags: []

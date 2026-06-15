@@ -1,4 +1,5 @@
 ---
+id: "generating-manifestation-points"
 name: "Generating Manifestation Points"
 tier: basic
 tags: []

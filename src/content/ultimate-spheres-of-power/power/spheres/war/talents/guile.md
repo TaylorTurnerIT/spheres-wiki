@@ -1,4 +1,5 @@
 ---
+id: "guile"
 name: "Guile"
 tier: basic
 tags: ["mandate"]

@@ -1,4 +1,5 @@
 ---
+id: "whip-fiend"
 name: "Whip Fiend"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "explosive-expunge"
 name: "Explosive Expunge"
 tier: basic
 tags: []

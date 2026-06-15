@@ -1,4 +1,5 @@
 ---
+id: "spell-channel"
 name: "Spell Channel"
 sphere: conjuration
 tags: ["companion"]

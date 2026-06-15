@@ -1,4 +1,5 @@
 ---
+id: "resistant-creature"
 name: "Resistant Creature"
 tier: basic
 tags: ["form"]

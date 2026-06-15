@@ -1,4 +1,5 @@
 ---
+id: "mark-of-magical-ineptitude"
 name: "Mark Of Magical Ineptitude"
 sphere: mana
 tags: []

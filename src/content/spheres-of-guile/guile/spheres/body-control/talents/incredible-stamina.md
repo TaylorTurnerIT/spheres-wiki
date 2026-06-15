@@ -1,4 +1,5 @@
 ---
+id: "incredible-stamina"
 name: "Incredible Stamina"
 tier: "base"
 tags:

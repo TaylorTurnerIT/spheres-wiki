@@ -1,4 +1,5 @@
 ---
+id: "reprogram-power"
 name: "Reprogram Power"
 sphere: mana
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "stunning-glance"
 name: "Stunning Glance"
 tier: basic
 tags: ["fey-blessing"]

@@ -1,4 +1,5 @@
 ---
+id: "dizzy-spin"
 name: "Dizzy Spin"
 tier: "basic"
 tags:

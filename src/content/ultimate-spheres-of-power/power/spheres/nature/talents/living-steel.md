@@ -1,4 +1,5 @@
 ---
+id: "living-steel"
 name: "Living Steel"
 tier: advanced
 tags: ["geomancing", "metal-and-plant"]

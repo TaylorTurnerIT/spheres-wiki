@@ -1,4 +1,5 @@
 ---
+id: "blast-juggler"
 name: "Blast Juggler"
 tier: advanced
 tags: ["sm"]

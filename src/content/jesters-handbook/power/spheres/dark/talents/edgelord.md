@@ -1,4 +1,5 @@
 ---
+id: "edgelord"
 name: "Edgelord"
 tier: basic
 tags: ["meld"]

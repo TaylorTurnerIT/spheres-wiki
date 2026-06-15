@@ -1,4 +1,5 @@
 ---
+id: "pattern"
 name: "Pattern"
 tier: "basic"
 tags:

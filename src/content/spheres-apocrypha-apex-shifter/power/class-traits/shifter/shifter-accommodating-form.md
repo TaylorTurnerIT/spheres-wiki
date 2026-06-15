@@ -1,4 +1,5 @@
 ---
+id: "shifter-accommodating-form"
 name: "Accommodating Form"
 tags: []
 featureId: bestial-trait

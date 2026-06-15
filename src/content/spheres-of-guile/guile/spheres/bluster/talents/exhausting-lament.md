@@ -1,4 +1,5 @@
 ---
+id: "exhausting-lament"
 name: "Exhausting Lament"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "gravewalker-su"
 name: "Gravewalker (Su)"
 type: class-feature
 className: soul-weaver

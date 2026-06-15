@@ -1,4 +1,5 @@
 ---
+id: "manifold-grip"
 name: "Manifold Grip"
 tier: "advanced"
 tags: []

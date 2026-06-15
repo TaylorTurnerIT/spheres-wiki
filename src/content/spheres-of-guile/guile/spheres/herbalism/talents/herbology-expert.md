@@ -1,4 +1,5 @@
 ---
+id: "herbology-expert"
 name: "Herbology Expert"
 tier: "base"
 tags:

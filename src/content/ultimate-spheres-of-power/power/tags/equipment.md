@@ -1,4 +1,5 @@
 ---
+id: "equipment"
 label: "Equipment"
 color: "#4A235A"
 priority: 0

@@ -1,4 +1,5 @@
 ---
+id: "living-crystal-blast"
 name: "Living Crystal Blast"
 tier: basic
 tags: ["blast-type", "crystal"]

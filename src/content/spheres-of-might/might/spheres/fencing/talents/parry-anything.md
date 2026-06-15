@@ -1,4 +1,5 @@
 ---
+id: "parry-anything"
 name: "Parry Anything"
 tier: "advanced"
 tags: []

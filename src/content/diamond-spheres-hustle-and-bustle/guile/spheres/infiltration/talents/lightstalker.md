@@ -1,4 +1,5 @@
 ---
+id: "lightstalker"
 name: "Lightstalker"
 tier: "basic"
 tags: []

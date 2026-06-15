@@ -1,4 +1,5 @@
 ---
+id: "temperance"
 name: "Temperance"
 tier: basic
 tags: ["motif"]

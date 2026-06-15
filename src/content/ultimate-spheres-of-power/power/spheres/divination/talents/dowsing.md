@@ -1,4 +1,5 @@
 ---
+id: "dowsing"
 name: "Dowsing"
 tier: basic
 tags: ["utility", "divine"]

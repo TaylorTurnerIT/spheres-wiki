@@ -1,4 +1,5 @@
 ---
+id: "expert-feint"
 name: "Expert Feint"
 tier: "basic"
 tags: []

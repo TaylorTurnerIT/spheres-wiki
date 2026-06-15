@@ -1,4 +1,5 @@
 ---
+id: "precogniscent-protection"
 name: "Precogniscent Protection"
 sphere: divination
 tags: ["combat"]

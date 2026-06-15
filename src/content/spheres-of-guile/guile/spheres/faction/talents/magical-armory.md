@@ -1,4 +1,5 @@
 ---
+id: "magical-armory"
 name: "Magical Armory"
 tier: "basic"
 tags:

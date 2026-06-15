@@ -1,4 +1,5 @@
 ---
+id: "locked-bond"
 name: Locked Bond
 sphere: warp
 dualSphere: mana

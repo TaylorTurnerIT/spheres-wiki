@@ -1,4 +1,5 @@
 ---
+id: "companionship"
 name: "Companionship"
 sphere: protection
 tags: ["warden"]

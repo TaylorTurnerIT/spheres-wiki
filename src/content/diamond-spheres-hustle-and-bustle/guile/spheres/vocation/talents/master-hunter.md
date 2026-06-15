@@ -1,4 +1,5 @@
 ---
+id: "master-hunter"
 name: "Master Hunter"
 tier: "advanced"
 tags: []

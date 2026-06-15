@@ -1,4 +1,5 @@
 ---
+id: "palm-throw"
 name: "Palm Throw"
 tier: "basic"
 tags: []

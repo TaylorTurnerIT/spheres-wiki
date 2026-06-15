@@ -1,4 +1,5 @@
 ---
+id: "pinning-shot"
 name: "Pinning Shot"
 tier: "basic"
 tags:

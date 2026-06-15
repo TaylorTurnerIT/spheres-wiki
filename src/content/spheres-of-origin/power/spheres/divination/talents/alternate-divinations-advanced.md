@@ -1,4 +1,5 @@
 ---
+id: "alternate-divinations-advanced"
 name: "Alternate Divinations, Advanced"
 tier: advanced
 tags: ["sense"]

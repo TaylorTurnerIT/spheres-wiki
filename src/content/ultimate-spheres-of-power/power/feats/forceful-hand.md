@@ -1,4 +1,5 @@
 ---
+id: "forceful-hand"
 name: Forceful Hand
 sphere: telekinesis
 dualSphere: protection

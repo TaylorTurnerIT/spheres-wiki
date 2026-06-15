@@ -1,4 +1,5 @@
 ---
+id: "mageknight-mounted-combatant-core"
 name: "Mounted Combatant [Core]"
 tags: []
 featureId: mystic-combat-su

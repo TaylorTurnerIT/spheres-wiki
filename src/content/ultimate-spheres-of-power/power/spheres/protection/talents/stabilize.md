@@ -1,4 +1,5 @@
 ---
+id: "stabilize"
 name: "Stabilize"
 tier: basic
 tags: ["aegis"]

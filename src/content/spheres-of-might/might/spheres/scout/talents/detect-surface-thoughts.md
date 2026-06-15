@@ -1,4 +1,5 @@
 ---
+id: "detect-surface-thoughts"
 name: "Detect Surface Thoughts"
 tier: "advanced"
 tags:

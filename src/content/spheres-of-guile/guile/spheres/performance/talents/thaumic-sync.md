@@ -1,4 +1,5 @@
 ---
+id: "thaumic-sync"
 name: "Thaumic Sync"
 tier: "advanced"
 tags:

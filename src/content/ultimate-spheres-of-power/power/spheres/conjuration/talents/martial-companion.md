@@ -1,4 +1,5 @@
 ---
+id: "martial-companion"
 name: "Martial Companion"
 tier: "basic"
 tags: []

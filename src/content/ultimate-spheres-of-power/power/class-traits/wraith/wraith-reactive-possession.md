@@ -1,4 +1,5 @@
 ---
+id: "wraith-reactive-possession"
 name: "Reactive Possession"
 tags: []
 featureId: wraith-haunts

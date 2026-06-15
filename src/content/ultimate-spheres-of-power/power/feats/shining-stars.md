@@ -1,4 +1,5 @@
 ---
+id: "shining-stars"
 name: "Shining Stars"
 sphere: light
 tags: []

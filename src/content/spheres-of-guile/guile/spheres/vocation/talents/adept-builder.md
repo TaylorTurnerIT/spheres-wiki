@@ -1,4 +1,5 @@
 ---
+id: "adept-builder"
 name: "Adept Builder"
 tier: "basic"
 tags:

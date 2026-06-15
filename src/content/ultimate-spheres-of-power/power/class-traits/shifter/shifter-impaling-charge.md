@@ -1,4 +1,5 @@
 ---
+id: "shifter-impaling-charge"
 name: "Impaling Charge"
 tags: ["extraordinary"]
 featureId: bestial-trait

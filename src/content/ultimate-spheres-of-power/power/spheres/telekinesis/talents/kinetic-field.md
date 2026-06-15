@@ -1,4 +1,5 @@
 ---
+id: "kinetic-field"
 name: "Kinetic Field"
 tier: basic
 tags: []

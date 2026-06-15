@@ -1,4 +1,5 @@
 ---
+id: "the-curtain-call-of-the-gossamer-veil"
 name: "The Curtain Call of the Gossamer Veil"
 tier: "advanced"
 tags:

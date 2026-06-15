@@ -1,4 +1,5 @@
 ---
+id: "alloy-creation"
 name: Alloy Creation
 sphere: nature
 dualSphere: creation

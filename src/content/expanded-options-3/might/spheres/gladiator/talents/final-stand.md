@@ -1,4 +1,5 @@
 ---
+id: "final-stand"
 name: "Final Stand"
 tier: "advanced"
 tags:

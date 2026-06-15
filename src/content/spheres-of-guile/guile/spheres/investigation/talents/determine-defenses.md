@@ -1,4 +1,5 @@
 ---
+id: "determine-defenses"
 name: "Determine Defenses"
 tier: "basic"
 tags:

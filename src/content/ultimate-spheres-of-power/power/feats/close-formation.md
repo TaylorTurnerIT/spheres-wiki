@@ -1,4 +1,5 @@
 ---
+id: "close-formation"
 name: "Close Formation"
 sphere: war
 tags: ["squadron"]

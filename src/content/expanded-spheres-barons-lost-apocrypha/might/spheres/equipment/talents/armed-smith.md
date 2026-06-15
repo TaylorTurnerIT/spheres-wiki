@@ -1,4 +1,5 @@
 ---
+id: "armed-smith"
 name: "Armed Smith"
 tier: "basic"
 tags:

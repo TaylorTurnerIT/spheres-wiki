@@ -1,4 +1,5 @@
 ---
+id: "shadow-lurk"
 name: "Shadow Lurk"
 tier: basic
 tags: ["shadow"]

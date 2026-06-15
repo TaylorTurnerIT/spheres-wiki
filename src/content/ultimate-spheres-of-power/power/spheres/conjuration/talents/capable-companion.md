@@ -1,4 +1,5 @@
 ---
+id: "capable-companion"
 name: "Capable Companion"
 tier: basic
 tags: ["form"]

@@ -1,4 +1,5 @@
 ---
+id: "compelling-diversion"
 name: "Compelling Diversion"
 tier: "basic"
 tags:

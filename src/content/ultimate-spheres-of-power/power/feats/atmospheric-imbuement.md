@@ -1,4 +1,5 @@
 ---
+id: "atmospheric-imbuement"
 name: Atmospheric Imbuement
 sphere: weather
 dualSphere: destruction

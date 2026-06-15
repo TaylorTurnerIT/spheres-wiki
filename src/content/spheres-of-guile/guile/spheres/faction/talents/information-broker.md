@@ -1,4 +1,5 @@
 ---
+id: "information-broker"
 name: "Information Broker"
 tier: "basic"
 tags:

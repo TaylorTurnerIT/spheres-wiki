@@ -1,4 +1,5 @@
 ---
+id: "crack"
 name: "Crack"
 tier: basic
 tags: ["alter", "extraordinary"]

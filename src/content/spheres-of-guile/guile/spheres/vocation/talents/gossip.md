@@ -1,4 +1,5 @@
 ---
+id: "gossip"
 name: "Gossip"
 tier: "basic"
 tags:

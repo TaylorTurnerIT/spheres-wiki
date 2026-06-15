@@ -1,4 +1,5 @@
 ---
+id: "climbing-companion"
 name: "Climbing Companion"
 tier: basic
 tags: ["form"]

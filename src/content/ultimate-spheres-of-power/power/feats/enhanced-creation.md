@@ -1,4 +1,5 @@
 ---
+id: "enhanced-creation"
 name: Enhanced Creation
 sphere: enhancement
 dualSphere: creation

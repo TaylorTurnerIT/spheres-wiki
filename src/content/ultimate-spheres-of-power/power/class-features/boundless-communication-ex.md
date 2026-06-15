@@ -1,4 +1,5 @@
 ---
+id: "boundless-communication-ex"
 name: "Boundless Communication (Ex)"
 type: class-feature
 className: shifter

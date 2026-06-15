@@ -1,4 +1,5 @@
 ---
+id: "sacrificial-shield"
 name: "Sacrificial Shield"
 tier: "basic"
 tags:

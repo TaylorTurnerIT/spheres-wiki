@@ -1,4 +1,5 @@
 ---
+id: "allied-cover"
 name: "Allied Cover"
 tier: "basic"
 tags:

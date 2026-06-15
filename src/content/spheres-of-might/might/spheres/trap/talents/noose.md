@@ -1,4 +1,5 @@
 ---
+id: "noose"
 name: "Noose"
 tier: "basic"
 tags:

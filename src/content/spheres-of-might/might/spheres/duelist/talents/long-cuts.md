@@ -1,4 +1,5 @@
 ---
+id: "long-cuts"
 name: "Long Cuts"
 tier: "basic"
 tags: []

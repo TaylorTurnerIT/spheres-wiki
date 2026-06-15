@@ -1,4 +1,5 @@
 ---
+id: "astral-projection"
 name: "Astral Projection"
 tier: advanced
 tags: ["utility"]

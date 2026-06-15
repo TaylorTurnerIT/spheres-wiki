@@ -1,4 +1,5 @@
 ---
+id: "nothing-shall-bear-your-name"
 name: "Nothing Shall Bear Your Name"
 tier: advanced
 tags: []

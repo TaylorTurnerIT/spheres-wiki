@@ -1,4 +1,5 @@
 ---
+id: "umbral-burst"
 name: "Umbral Burst"
 tier: basic
 tags: []

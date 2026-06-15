@@ -1,4 +1,5 @@
 ---
+id: "crimson-flash"
 name: "Crimson Flash"
 sphere: light
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "lightning-disguise"
 name: "Lightning Disguise"
 tier: "advanced"
 tags: []

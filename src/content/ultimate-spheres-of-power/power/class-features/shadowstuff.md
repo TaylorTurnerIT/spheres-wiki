@@ -1,4 +1,5 @@
 ---
+id: "shadowstuff"
 name: "Shadowstuff"
 type: class-feature
 className: fey-adept

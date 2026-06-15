@@ -1,4 +1,5 @@
 ---
+id: "steady-handler"
 name: "Steady Handler"
 tier: "basic"
 tags: []

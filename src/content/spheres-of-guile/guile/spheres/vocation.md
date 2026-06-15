@@ -1,4 +1,5 @@
 ---
+id: "vocation"
 name: "Vocation"
 icon: "vocation"
 tags: []

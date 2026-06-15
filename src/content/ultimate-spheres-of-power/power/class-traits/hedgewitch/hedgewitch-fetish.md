@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-fetish"
 name: "Fetish"
 tags: []
 featureId: secret

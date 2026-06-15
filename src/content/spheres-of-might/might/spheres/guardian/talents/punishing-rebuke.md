@@ -1,4 +1,5 @@
 ---
+id: "punishing-rebuke"
 name: "Punishing Rebuke"
 tier: "basic"
 tags:

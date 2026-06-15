@@ -1,4 +1,5 @@
 ---
+id: "pithing-protection-arcforge"
 name: "Pithing Protection [Arcforge Addendum]"
 tier: advanced
 tags: []

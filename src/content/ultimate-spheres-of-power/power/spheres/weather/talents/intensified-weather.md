@@ -1,4 +1,5 @@
 ---
+id: "intensified-weather"
 name: "Intensified Weather"
 tier: basic
 tags: ["shroud"]

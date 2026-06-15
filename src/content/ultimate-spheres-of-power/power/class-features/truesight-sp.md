@@ -1,4 +1,5 @@
 ---
+id: "truesight-sp"
 name: "Truesight (Sp)"
 type: class-feature
 className: fey-adept

@@ -1,4 +1,5 @@
 ---
+id: "mind-spy"
 name: "Mind Spy"
 tier: basic
 tags: ["charm"]

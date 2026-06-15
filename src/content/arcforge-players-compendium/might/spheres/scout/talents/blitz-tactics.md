@@ -1,4 +1,5 @@
 ---
+id: "blitz-tactics"
 name: "Blitz Tactics"
 tier: "basic"
 tags: []

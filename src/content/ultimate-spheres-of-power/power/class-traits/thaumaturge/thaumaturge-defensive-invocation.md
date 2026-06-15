@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-defensive-invocation"
 name: "Defensive Invocation"
 tags: []
 featureId: invocations

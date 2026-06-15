@@ -1,4 +1,5 @@
 ---
+id: "wraith-ranged-possession"
 name: "Ranged Possession"
 tags: []
 featureId: wraith-haunts

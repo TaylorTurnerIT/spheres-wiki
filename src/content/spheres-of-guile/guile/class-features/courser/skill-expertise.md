@@ -1,4 +1,5 @@
 ---
+id: "skill-expertise"
 name: Skill Expertise
 level: 1
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "declaration-of-war"
 name: "Declaration Of War"
 tier: basic
 tags: []

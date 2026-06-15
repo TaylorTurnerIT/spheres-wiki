@@ -1,4 +1,5 @@
 ---
+id: "revitalize"
 name: "Revitalize"
 tier: basic
 tags: []

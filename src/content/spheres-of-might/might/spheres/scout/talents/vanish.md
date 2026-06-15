@@ -1,4 +1,5 @@
 ---
+id: "vanish"
 name: "Vanish"
 tier: "advanced"
 tags: []

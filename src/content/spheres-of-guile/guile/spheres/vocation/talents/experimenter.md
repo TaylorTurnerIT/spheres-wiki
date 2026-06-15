@@ -1,4 +1,5 @@
 ---
+id: "experimenter"
 name: "Experimenter"
 tier: "basic"
 tags:

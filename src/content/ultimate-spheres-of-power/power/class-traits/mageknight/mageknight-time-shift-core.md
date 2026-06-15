@@ -1,4 +1,5 @@
 ---
+id: "mageknight-time-shift-core"
 name: "Time Shift [Core]"
 tags: []
 featureId: mystic-combat-su

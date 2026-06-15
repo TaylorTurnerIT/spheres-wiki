@@ -1,4 +1,5 @@
 ---
+id: "frost-blast"
 name: "Frost Blast"
 tier: basic
 tags: ["blast-type", "cold"]

@@ -1,4 +1,5 @@
 ---
+id: "terrifying-mind"
 name: "Terrifying Mind"
 tier: basic
 tags: ["cognition"]

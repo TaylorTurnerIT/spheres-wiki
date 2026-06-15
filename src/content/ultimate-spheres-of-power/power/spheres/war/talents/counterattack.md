@@ -1,4 +1,5 @@
 ---
+id: "counterattack"
 name: "Counterattack"
 tier: basic
 tags: ["rally"]

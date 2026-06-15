@@ -1,4 +1,5 @@
 ---
+id: "recondite-stimuli"
 name: "Recondite Stimuli"
 tier: advanced
 tags: []

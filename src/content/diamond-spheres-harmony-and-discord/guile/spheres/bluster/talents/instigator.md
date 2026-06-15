@@ -1,4 +1,5 @@
 ---
+id: "instigator"
 name: "Instigator"
 tier: "base"
 tags:

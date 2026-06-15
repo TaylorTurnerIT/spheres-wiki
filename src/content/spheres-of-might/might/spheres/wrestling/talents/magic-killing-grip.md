@@ -1,4 +1,5 @@
 ---
+id: "magic-killing-grip"
 name: "Magic Killing Grip"
 tier: "advanced"
 tags:

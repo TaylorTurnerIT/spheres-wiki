@@ -1,4 +1,5 @@
 ---
+id: "militant-admixture"
 name: "Militant Admixture"
 sphere: destruction
 tags: ["admixture"]

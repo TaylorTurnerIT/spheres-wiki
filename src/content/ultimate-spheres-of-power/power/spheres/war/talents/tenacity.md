@@ -1,4 +1,5 @@
 ---
+id: "tenacity"
 name: "Tenacity"
 tier: basic
 tags: ["mandate"]

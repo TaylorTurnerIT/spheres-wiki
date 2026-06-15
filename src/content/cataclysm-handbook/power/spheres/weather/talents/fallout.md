@@ -1,4 +1,5 @@
 ---
+id: "fallout"
 name: "Fallout"
 tier: basic
 tags: []

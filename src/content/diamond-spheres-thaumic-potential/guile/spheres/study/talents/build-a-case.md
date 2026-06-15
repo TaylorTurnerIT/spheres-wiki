@@ -1,4 +1,5 @@
 ---
+id: "build-a-case"
 name: "Build a Case"
 tier: "basic"
 tags:

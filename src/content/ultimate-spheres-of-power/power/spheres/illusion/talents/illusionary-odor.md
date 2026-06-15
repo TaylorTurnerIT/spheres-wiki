@@ -1,4 +1,5 @@
 ---
+id: "illusionary-odor"
 name: "Illusionary Odor"
 tier: basic
 tags: ["sensory", "taste-smell"]

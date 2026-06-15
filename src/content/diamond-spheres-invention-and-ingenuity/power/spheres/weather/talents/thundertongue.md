@@ -1,4 +1,5 @@
 ---
+id: "thundertongue"
 name: "Thundertongue"
 tier: basic
 tags: ["mantle", "storm"]

@@ -1,4 +1,5 @@
 ---
+id: "extract-blood-construct"
 name: "Extract Blood Construct"
 tier: basic
 tags: []

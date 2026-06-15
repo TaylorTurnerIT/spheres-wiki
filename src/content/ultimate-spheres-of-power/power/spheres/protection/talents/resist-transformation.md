@@ -1,4 +1,5 @@
 ---
+id: "resist-transformation"
 name: "Resist Transformation"
 tier: basic
 tags: ["aegis"]

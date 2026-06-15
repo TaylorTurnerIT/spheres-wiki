@@ -1,4 +1,5 @@
 ---
+id: "biting-wind"
 name: "Biting Wind"
 tier: basic
 tags: ["shroud", "wind"]

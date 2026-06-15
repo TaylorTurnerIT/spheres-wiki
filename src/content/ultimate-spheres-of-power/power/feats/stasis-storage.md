@@ -1,4 +1,5 @@
 ---
+id: "stasis-storage"
 name: Stasis Storage
 sphere: warp
 dualSphere: time

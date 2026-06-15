@@ -1,4 +1,5 @@
 ---
+id: "retribution"
 name: "Retribution"
 tier: basic
 tags: ["rally"]

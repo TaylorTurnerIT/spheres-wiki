@@ -1,4 +1,5 @@
 ---
+id: "stability-exercise"
 name: "Stability Exercise"
 tier: "basic"
 tags:

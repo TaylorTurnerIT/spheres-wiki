@@ -1,4 +1,5 @@
 ---
+id: "knight"
 name: "Knight"
 tier: "basic"
 tags:

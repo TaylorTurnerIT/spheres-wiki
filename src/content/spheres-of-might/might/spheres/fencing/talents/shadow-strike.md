@@ -1,4 +1,5 @@
 ---
+id: "shadow-strike"
 name: "Shadow Strike"
 tier: "basic"
 tags:

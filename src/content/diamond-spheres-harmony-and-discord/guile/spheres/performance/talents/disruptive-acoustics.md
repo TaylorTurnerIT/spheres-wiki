@@ -1,4 +1,5 @@
 ---
+id: "disruptive-acoustics"
 name: "Disruptive Acoustics"
 tier: "advanced"
 tags:

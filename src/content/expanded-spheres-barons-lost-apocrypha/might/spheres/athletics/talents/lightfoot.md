@@ -1,4 +1,5 @@
 ---
+id: "lightfoot"
 name: "Lightfoot"
 tier: "basic"
 tags:

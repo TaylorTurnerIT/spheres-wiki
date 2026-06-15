@@ -1,4 +1,5 @@
 ---
+id: "directional-darkness"
 name: "Directional Darkness"
 tier: basic
 tags: ["darkness"]

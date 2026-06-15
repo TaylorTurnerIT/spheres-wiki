@@ -1,4 +1,5 @@
 ---
+id: "spell-ward"
 name: "Spell Ward"
 tier: basic
 tags: ["aegis", "ward"]

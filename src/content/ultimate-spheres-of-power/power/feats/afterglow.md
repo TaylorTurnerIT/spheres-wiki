@@ -1,4 +1,5 @@
 ---
+id: "afterglow"
 name: "Afterglow"
 sphere: light
 tags: []

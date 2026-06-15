@@ -1,4 +1,5 @@
 ---
+id: "shouts"
 name: "Shouts"
 tier: "base"
 tags: []

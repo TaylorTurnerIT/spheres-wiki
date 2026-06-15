@@ -1,4 +1,5 @@
 ---
+id: "dispiriting-lament"
 name: "Dispiriting Lament"
 tier: "basic"
 tags:

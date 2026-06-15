@@ -1,4 +1,5 @@
 ---
+id: "adrenaline-surge"
 name: "Adrenaline Surge"
 tier: basic
 tags: ["tension"]

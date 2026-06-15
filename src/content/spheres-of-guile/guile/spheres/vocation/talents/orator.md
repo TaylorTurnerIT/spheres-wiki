@@ -1,4 +1,5 @@
 ---
+id: "orator"
 name: "Orator"
 tier: "basic"
 tags:

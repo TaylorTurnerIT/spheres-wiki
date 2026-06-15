@@ -1,4 +1,5 @@
 ---
+id: "poltergeist"
 name: "Poltergeist"
 tier: basic
 tags: ["ghost-strike"]

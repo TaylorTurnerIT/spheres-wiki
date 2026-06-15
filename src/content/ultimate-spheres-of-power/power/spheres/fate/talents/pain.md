@@ -1,4 +1,5 @@
 ---
+id: "pain"
 name: "Pain"
 tier: basic
 tags: ["curse", "word"]

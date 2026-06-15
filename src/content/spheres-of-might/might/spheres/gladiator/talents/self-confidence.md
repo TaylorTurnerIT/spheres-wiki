@@ -1,4 +1,5 @@
 ---
+id: "self-confidence"
 name: "Self Confidence"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "stone-shape"
 name: "Stone Shape"
 tier: basic
 tags: ["fey-blessing", "spell-like"]

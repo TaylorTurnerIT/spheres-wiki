@@ -1,4 +1,5 @@
 ---
+id: "lashing-serpent"
 name: "Lashing Serpent"
 tier: "basic"
 tags:

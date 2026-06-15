@@ -1,4 +1,5 @@
 ---
+id: "verbal-commands"
 name: "Verbal Commands"
 tier: "basic"
 tags: []

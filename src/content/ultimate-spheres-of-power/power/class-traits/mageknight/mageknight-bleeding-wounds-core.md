@@ -1,4 +1,5 @@
 ---
+id: "mageknight-bleeding-wounds-core"
 name: "Bleeding Wounds [Core]"
 tags: []
 featureId: mystic-combat-su

@@ -1,4 +1,5 @@
 ---
+id: "totem-of-mobility"
 name: "Totem Of Mobility"
 tier: basic
 tags: ["totem"]

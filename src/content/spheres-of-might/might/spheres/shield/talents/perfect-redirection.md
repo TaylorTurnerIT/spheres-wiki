@@ -1,4 +1,5 @@
 ---
+id: "perfect-redirection"
 name: "Perfect Redirection"
 tier: "advanced"
 tags: []

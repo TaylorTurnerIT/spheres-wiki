@@ -1,4 +1,5 @@
 ---
+id: "armorist-modification-expert"
 name: "Modification Expert"
 tags: []
 featureId: arsenal-trick

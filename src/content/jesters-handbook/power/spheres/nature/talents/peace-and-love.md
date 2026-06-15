@@ -1,4 +1,5 @@
 ---
+id: "peace-and-love"
 name: "Peace And Love"
 tier: advanced
 tags: ["spirit"]

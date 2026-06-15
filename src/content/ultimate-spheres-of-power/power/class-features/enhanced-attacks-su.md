@@ -1,4 +1,5 @@
 ---
+id: "enhanced-attacks-su"
 name: "Enhanced Attacks (Su)"
 type: class-feature
 className: shifter

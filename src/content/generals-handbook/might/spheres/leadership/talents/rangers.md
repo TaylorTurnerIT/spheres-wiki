@@ -1,4 +1,5 @@
 ---
+id: "rangers"
 name: "Rangers"
 tier: "basic"
 tags:

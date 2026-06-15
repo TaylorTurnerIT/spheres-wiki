@@ -1,4 +1,5 @@
 ---
+id: "planisphere"
 name: "Planisphere"
 tier: "advanced"
 tags:

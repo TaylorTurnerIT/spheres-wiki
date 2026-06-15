@@ -1,4 +1,5 @@
 ---
+id: "mechanical-savant"
 name: "Mechanical Savant"
 tier: "basic"
 tags: []

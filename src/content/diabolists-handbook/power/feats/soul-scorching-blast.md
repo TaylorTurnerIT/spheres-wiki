@@ -1,4 +1,5 @@
 ---
+id: "soul-scorching-blast"
 name: "Soul-Scorching Blast"
 sphere: destruction
 tags: []

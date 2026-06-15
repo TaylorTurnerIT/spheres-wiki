@@ -1,4 +1,5 @@
 ---
+id: "mageknight-weirding-adept"
 name: "Weirding Adept"
 tags: []
 featureId: mystic-combat-su

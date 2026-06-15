@@ -1,4 +1,5 @@
 ---
+id: "hidden-focus"
 name: "Hidden Focus"
 tier: "basic"
 tags: []

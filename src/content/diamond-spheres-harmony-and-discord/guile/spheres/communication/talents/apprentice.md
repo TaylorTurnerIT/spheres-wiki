@@ -1,4 +1,5 @@
 ---
+id: "apprentice"
 name: "Apprentice"
 tier: "base"
 tags:

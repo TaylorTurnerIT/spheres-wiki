@@ -1,4 +1,5 @@
 ---
+id: "fey-adept-destructive-blast"
 name: "Destructive Blast"
 tags: []
 featureId: shadowstuff

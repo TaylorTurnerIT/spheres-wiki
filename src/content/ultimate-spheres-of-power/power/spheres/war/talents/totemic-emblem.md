@@ -1,4 +1,5 @@
 ---
+id: "totemic-emblem"
 name: "Totemic Emblem"
 tier: basic
 tags: []

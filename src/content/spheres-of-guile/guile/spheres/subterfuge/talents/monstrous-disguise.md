@@ -1,4 +1,5 @@
 ---
+id: "monstrous-disguise"
 name: "Monstrous Disguise"
 tier: "basic"
 tags:

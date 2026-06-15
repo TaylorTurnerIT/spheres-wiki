@@ -1,4 +1,5 @@
 ---
+id: "garrote-grappler"
 name: "Garrote Grappler"
 tier: "basic"
 tags: []

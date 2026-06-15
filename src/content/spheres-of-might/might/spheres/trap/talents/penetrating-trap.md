@@ -1,4 +1,5 @@
 ---
+id: "penetrating-trap"
 name: "Penetrating Trap"
 tier: "advanced"
 tags: []

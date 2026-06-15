@@ -1,4 +1,5 @@
 ---
+id: "scatter-trap"
 name: "Scatter Trap"
 tier: "basic"
 ---

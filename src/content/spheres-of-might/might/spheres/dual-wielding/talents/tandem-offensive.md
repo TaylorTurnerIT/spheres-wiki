@@ -1,4 +1,5 @@
 ---
+id: "tandem-offensive"
 name: "Tandem Offensive"
 tier: "basic"
 tags: []

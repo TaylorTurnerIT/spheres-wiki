@@ -1,4 +1,5 @@
 ---
+id: "regain-senses"
 name: "Regain Senses"
 tier: "basic"
 tags:

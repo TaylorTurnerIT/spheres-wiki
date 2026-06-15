@@ -1,4 +1,5 @@
 ---
+id: "betray"
 name: "Betray"
 tier: "base"
 tags: []

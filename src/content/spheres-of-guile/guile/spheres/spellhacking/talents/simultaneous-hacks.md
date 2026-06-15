@@ -1,4 +1,5 @@
 ---
+id: "simultaneous-hacks"
 name: "Simultaneous Hacks"
 tier: "basic"
 tags: []

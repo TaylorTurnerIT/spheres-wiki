@@ -1,4 +1,5 @@
 ---
+id: "emphasize-belief"
 name: "Emphasize Belief"
 tier: basic
 tags: ["enhance"]

@@ -1,4 +1,5 @@
 ---
+id: "physiological-suspension"
 name: "Physiological Suspension"
 tier: "basic"
 tags:

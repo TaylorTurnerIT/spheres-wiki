@@ -1,4 +1,5 @@
 ---
+id: "defend-other"
 name: "Defend Other"
 tier: "basic"
 tags: []

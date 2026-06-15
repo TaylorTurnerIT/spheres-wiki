@@ -1,4 +1,5 @@
 ---
+id: "mass-aegis"
 name: "Mass Aegis"
 tier: basic
 tags: ["mass"]

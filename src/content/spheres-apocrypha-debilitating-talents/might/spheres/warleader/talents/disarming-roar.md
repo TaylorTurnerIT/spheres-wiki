@@ -1,4 +1,5 @@
 ---
+id: "disarming-roar"
 name: "Disarming Roar"
 tier: "basic"
 tags:

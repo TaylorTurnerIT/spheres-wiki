@@ -1,4 +1,5 @@
 ---
+id: "improved-itching-powder"
 name: "Improved Itching Powder"
 tier: "basic"
 tags:

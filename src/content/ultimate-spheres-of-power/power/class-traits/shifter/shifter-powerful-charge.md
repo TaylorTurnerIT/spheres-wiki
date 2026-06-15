@@ -1,4 +1,5 @@
 ---
+id: "shifter-powerful-charge"
 name: "Powerful Charge"
 tags: ["extraordinary"]
 featureId: bestial-trait

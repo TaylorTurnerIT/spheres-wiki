@@ -1,4 +1,5 @@
 ---
+id: "mageknight-banishing-strike"
 name: "Banishing Strike"
 tags: ["supernatural"]
 featureId: mystic-combat-su

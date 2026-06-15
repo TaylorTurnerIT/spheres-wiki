@@ -1,4 +1,5 @@
 ---
+id: "create-soul-gem"
 name: "Create Soul Gem"
 tier: advanced
 tags: []

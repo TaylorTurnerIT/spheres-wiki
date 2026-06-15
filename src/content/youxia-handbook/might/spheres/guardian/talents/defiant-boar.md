@@ -1,4 +1,5 @@
 ---
+id: "defiant-boar"
 name: "Defiant Boar"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge"
 name: "Thaumaturge"
 tags: []
 hitDie: 8

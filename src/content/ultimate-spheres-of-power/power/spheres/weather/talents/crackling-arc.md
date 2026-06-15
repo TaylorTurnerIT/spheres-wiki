@@ -1,4 +1,5 @@
 ---
+id: "crackling-arc"
 name: "Crackling Arc"
 tier: basic
 tags: ["precipitation", "shroud"]

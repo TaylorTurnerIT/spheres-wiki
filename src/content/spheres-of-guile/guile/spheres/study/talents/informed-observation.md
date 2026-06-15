@@ -1,4 +1,5 @@
 ---
+id: "informed-observation"
 name: "Informed Observation"
 tier: "basic"
 tags:

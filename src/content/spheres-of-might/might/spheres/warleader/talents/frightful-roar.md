@@ -1,4 +1,5 @@
 ---
+id: "frightful-roar"
 name: "Frightful Roar"
 tier: "basic"
 tags:

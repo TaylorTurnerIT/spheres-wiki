@@ -1,4 +1,5 @@
 ---
+id: "shifter-spider-climb"
 name: "Spider Climb"
 tags: ["extraordinary"]
 featureId: bestial-trait

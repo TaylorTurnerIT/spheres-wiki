@@ -1,4 +1,5 @@
 ---
+id: "expert-hunter"
 name: "Expert Hunter"
 tier: "advanced"
 tags: []

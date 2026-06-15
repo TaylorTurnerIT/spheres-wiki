@@ -1,4 +1,5 @@
 ---
+id: "stability-bottleneck"
 name: "Stability Bottleneck"
 tier: advanced
 tags: ["sm"]

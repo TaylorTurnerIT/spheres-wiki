@@ -1,4 +1,5 @@
 ---
+id: "slick"
 name: "Slick"
 tier: basic
 tags: ["quicken"]

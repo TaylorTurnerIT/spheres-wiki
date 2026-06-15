@@ -1,4 +1,5 @@
 ---
+id: "steal-skill"
 name: "Steal Skill"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "shifter-chameleon"
 name: "Chameleon"
 tags: ["extraordinary"]
 featureId: bestial-trait

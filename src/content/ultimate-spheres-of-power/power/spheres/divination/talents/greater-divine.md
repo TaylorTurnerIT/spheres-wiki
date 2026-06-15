@@ -1,4 +1,5 @@
 ---
+id: "greater-divine"
 name: "Greater Divine"
 tier: basic
 tags: ["range"]

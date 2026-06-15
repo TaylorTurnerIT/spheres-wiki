@@ -1,4 +1,5 @@
 ---
+id: "berserking"
 name: "Berserking"
 tier: "base"
 tags: []

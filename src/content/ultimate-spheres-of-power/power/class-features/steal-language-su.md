@@ -1,4 +1,5 @@
 ---
+id: "steal-language-su"
 name: "Steal Language (Su)"
 type: class-feature
 className: shifter

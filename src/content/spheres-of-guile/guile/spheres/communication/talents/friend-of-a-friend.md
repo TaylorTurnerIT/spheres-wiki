@@ -1,4 +1,5 @@
 ---
+id: "friend-of-a-friend"
 name: "Friend Of A Friend"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "confounding-escapist"
 name: "Confounding Escapist"
 tier: "basic"
 tags: []

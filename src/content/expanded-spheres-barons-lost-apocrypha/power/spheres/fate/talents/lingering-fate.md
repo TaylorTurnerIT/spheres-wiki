@@ -1,4 +1,5 @@
 ---
+id: "lingering-fate"
 name: "Lingering Fate"
 tier: basic
 tags: []

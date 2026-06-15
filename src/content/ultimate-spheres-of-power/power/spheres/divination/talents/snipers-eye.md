@@ -1,4 +1,5 @@
 ---
+id: "snipers-eye"
 name: "Sniper's Eye"
 tier: basic
 tags: ["sense"]

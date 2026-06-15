@@ -1,4 +1,5 @@
 ---
+id: "foreshadow"
 name: "Foreshadow"
 tier: basic
 tags: ["sense"]

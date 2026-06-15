@@ -1,4 +1,5 @@
 ---
+id: "freedom"
 name: "Freedom"
 tier: basic
 tags: ["word"]

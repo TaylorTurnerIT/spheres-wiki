@@ -1,4 +1,5 @@
 ---
+id: "acclimate"
 name: "Acclimate"
 tier: "base"
 tags: []

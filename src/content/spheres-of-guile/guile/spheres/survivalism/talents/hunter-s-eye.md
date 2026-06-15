@@ -1,4 +1,5 @@
 ---
+id: "hunter-s-eye"
 name: "Hunter’s Eye"
 tier: "basic"
 tags:

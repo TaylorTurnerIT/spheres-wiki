@@ -1,4 +1,5 @@
 ---
+id: "fool-proof-preparations"
 name: "Fool-proof Preparations"
 tier: "basic"
 tags:

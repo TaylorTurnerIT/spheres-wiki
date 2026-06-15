@@ -1,4 +1,5 @@
 ---
+id: "mystical-reinforcement"
 name: "Mystical Reinforcement"
 sphere: war
 tags: []

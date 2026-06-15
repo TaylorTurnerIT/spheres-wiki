@@ -1,4 +1,5 @@
 ---
+id: "elongated-step"
 name: "Elongated Step (stance)"
 tier: "basic"
 tags: ["stance"]

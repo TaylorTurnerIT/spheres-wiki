@@ -1,4 +1,5 @@
 ---
+id: "see-hazard"
 name: "See Hazard"
 tier: basic
 tags: ["sense"]

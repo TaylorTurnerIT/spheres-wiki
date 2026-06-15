@@ -1,4 +1,5 @@
 ---
+id: "mageknight-shared-marking"
 name: "Shared Marking"
 tags: []
 featureId: mystic-combat-su

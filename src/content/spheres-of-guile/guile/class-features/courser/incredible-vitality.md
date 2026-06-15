@@ -1,4 +1,5 @@
 ---
+id: "incredible-vitality"
 name: Incredible Vitality
 level: 18
 tags: []

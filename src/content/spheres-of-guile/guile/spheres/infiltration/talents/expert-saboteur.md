@@ -1,4 +1,5 @@
 ---
+id: "expert-saboteur"
 name: "Expert Saboteur"
 tier: "basic"
 tags: []

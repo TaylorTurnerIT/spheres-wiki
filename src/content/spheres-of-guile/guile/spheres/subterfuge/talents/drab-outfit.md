@@ -1,4 +1,5 @@
 ---
+id: "drab-outfit"
 name: "Drab Outfit"
 tier: "basic"
 tags:

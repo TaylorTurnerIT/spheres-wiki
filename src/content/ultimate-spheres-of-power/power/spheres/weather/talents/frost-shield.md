@@ -1,4 +1,5 @@
 ---
+id: "frost-shield"
 name: "Frost Shield"
 tier: basic
 tags: ["cold", "mantle"]

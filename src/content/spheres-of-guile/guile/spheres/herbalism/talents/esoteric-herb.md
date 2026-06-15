@@ -1,4 +1,5 @@
 ---
+id: "esoteric-herb"
 name: "Esoteric Herb"
 tier: "advanced"
 tags: []

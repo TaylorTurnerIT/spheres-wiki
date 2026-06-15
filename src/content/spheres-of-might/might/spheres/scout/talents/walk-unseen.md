@@ -1,4 +1,5 @@
 ---
+id: "walk-unseen"
 name: "Walk Unseen"
 tier: "advanced"
 tags: []

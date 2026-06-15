@@ -1,4 +1,5 @@
 ---
+id: "greater-grapple"
 name: "Greater Grapple"
 tier: "basic"
 tags: []

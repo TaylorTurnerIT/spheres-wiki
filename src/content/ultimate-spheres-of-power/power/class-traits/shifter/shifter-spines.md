@@ -1,4 +1,5 @@
 ---
+id: "shifter-spines"
 name: "Spines"
 tags: ["extraordinary"]
 featureId: bestial-trait

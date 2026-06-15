@@ -1,4 +1,5 @@
 ---
+id: "whispering-elements"
 name: "Whispering Elements"
 tier: advanced
 tags: ["utility", "geomancing"]

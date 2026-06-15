@@ -1,4 +1,5 @@
 ---
+id: "telekinesis"
 name: Telekinesis
 tier: base
 tags: []

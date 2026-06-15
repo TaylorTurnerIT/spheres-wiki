@@ -1,4 +1,5 @@
 ---
+id: "battle-ready-armor"
 name: "Battle Ready Armor"
 tier: "basic"
 tags: []

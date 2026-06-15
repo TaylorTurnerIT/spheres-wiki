@@ -1,4 +1,5 @@
 ---
+id: "fake-curse"
 name: "Fake Curse"
 tier: "basic"
 tags:

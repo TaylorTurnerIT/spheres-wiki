@@ -1,4 +1,5 @@
 ---
+id: "steel-hide"
 name: "Steel Hide"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "catnapping"
 name: "Catnapping"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "mageknight-arcane-weapon-focus"
 name: "Arcane Weapon Focus"
 tags: ["supernatural"]
 featureId: mystic-combat-su

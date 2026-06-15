@@ -1,4 +1,5 @@
 ---
+id: "magma-mastery"
 name: "Magma Mastery"
 tier: advanced
 tags: ["material"]

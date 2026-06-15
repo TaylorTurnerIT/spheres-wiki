@@ -1,4 +1,5 @@
 ---
+id: "freezing-geyser"
 name: "Freezing Geyser"
 tier: advanced
 tags: ["fire", "water", "geomancing"]

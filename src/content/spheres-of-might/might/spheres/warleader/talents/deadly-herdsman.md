@@ -1,4 +1,5 @@
 ---
+id: "deadly-herdsman"
 name: "Deadly Herdsman"
 tier: "basic"
 tags:

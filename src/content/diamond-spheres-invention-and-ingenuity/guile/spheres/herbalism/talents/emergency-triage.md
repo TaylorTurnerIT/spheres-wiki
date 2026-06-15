@@ -1,4 +1,5 @@
 ---
+id: "emergency-triage"
 name: "Emergency Triage"
 tier: "basic"
 tags:

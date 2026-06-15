@@ -1,4 +1,5 @@
 ---
+id: "ranged-disable"
 name: "Ranged Disable"
 tier: "basic"
 tags:

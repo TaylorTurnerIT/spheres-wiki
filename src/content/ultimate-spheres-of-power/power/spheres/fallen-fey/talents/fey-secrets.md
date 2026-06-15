@@ -1,4 +1,5 @@
 ---
+id: "fey-secrets"
 name: "Fey Secrets"
 tier: basic
 tags: ["fey-blessing"]

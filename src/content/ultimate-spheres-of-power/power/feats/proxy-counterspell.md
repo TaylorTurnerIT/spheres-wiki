@@ -1,4 +1,5 @@
 ---
+id: "proxy-counterspell"
 name: "Proxy Counterspell"
 sphere: enhancement
 tags: ["proxy"]

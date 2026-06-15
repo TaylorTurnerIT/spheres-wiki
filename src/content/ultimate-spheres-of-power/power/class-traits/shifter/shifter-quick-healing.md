@@ -1,4 +1,5 @@
 ---
+id: "shifter-quick-healing"
 name: "Quick Healing"
 tags: ["supernatural"]
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "fairy-flight"
 name: "Fairy Flight"
 tier: basic
 tags: ["fey-blessing"]

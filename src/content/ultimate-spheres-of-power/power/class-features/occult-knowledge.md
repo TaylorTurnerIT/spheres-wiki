@@ -1,4 +1,5 @@
 ---
+id: "occult-knowledge"
 name: "Occult Knowledge"
 type: class-feature
 className: thaumaturge

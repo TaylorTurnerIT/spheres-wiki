@@ -1,4 +1,5 @@
 ---
+id: "expanded-charm"
 name: "Expanded Charm"
 tier: basic
 tags: []

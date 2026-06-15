@@ -1,4 +1,5 @@
 ---
+id: "blaze-ahead"
 name: "Blaze Ahead"
 tier: "basic"
 tags:

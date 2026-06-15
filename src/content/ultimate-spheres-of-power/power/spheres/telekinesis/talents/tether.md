@@ -1,4 +1,5 @@
 ---
+id: "tether"
 name: "Tether"
 tier: basic
 tags: []

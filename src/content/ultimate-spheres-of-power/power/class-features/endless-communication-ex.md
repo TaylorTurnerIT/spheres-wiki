@@ -1,4 +1,5 @@
 ---
+id: "endless-communication-ex"
 name: "Endless Communication (Ex)"
 type: class-feature
 className: shifter

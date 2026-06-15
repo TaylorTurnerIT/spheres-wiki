@@ -1,4 +1,5 @@
 ---
+id: "false-mage"
 name: "False Mage"
 tier: "basic"
 tags:

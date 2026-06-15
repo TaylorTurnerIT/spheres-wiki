@@ -1,4 +1,5 @@
 ---
+id: "blooded-strike"
 name: "Blooded Strike"
 tier: "base"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "catty-observer"
 name: "Catty Observer"
 sphere: protection
 tags: []

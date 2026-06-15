@@ -1,4 +1,5 @@
 ---
+id: "radiotherapy"
 name: "Radiotherapy"
 tier: advanced
 tags: ["mantle", "radiation"]

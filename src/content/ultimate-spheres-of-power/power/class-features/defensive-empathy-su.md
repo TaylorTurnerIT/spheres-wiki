@@ -1,4 +1,5 @@
 ---
+id: "defensive-empathy-su"
 name: "Defensive Empathy (Su)"
 type: class-feature
 className: eliciter

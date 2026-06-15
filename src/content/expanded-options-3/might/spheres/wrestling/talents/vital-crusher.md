@@ -1,4 +1,5 @@
 ---
+id: "vital-crusher"
 name: "Vital Crusher"
 tier: "advanced"
 tags: []

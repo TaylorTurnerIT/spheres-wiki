@@ -1,4 +1,5 @@
 ---
+id: "barbaric-throw"
 name: "Barbaric Throw"
 tier: "basic"
 tags: []

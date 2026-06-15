@@ -1,4 +1,5 @@
 ---
+id: "permanent-control"
 name: "Permanent Control"
 tier: "advanced"
 tags:

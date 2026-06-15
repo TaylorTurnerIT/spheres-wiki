@@ -1,4 +1,5 @@
 ---
+id: "choke-hold"
 name: "Choke Hold"
 tier: "basic"
 tags: []

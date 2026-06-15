@@ -1,4 +1,5 @@
 ---
+id: "shifter-grab"
 name: "Grab"
 tags: ["extraordinary"]
 featureId: bestial-trait

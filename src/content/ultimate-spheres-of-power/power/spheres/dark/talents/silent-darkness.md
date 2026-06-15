@@ -1,4 +1,5 @@
 ---
+id: "silent-darkness"
 name: "Silent Darkness"
 tier: basic
 tags: ["darkness"]

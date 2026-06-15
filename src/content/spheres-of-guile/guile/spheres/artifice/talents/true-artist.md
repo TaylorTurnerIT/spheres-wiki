@@ -1,4 +1,5 @@
 ---
+id: "true-artist"
 name: "True Artist"
 tier: "basic"
 tags: []

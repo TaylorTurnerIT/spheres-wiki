@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-ghostpoint"
 name: "Ghostpoint"
 tags: []
 featureId: bound-nexus

@@ -1,4 +1,5 @@
 ---
+id: "humiliating-trick"
 name: "Humiliating Trick"
 tier: "basic"
 tags: []

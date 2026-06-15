@@ -1,4 +1,5 @@
 ---
+id: "mucus"
 name: "Mucus"
 tier: "basic"
 tags:

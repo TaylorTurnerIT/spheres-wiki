@@ -1,4 +1,5 @@
 ---
+id: "reinforce-deception"
 name: "Reinforce Deception"
 tier: "basic"
 tags:

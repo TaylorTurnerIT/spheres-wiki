@@ -1,4 +1,5 @@
 ---
+id: "mageknight-spell-mirror"
 name: "Spell Mirror"
 tags: []
 featureId: mystic-combat-su

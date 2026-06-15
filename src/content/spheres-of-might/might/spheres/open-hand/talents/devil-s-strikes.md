@@ -1,4 +1,5 @@
 ---
+id: "devil-s-strikes"
 name: "Devil’s Strikes"
 tier: "advanced"
 tags: []

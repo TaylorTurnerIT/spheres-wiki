@@ -1,4 +1,5 @@
 ---
+id: "radiation-lord"
 name: "Radiation Lord"
 tier: advanced
 tags: []

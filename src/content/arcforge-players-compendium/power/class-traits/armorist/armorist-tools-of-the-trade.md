@@ -1,4 +1,5 @@
 ---
+id: "armorist-tools-of-the-trade"
 name: "Tools of the Trade"
 tags: []
 featureId: arsenal-trick

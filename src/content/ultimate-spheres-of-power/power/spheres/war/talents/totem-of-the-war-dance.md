@@ -1,4 +1,5 @@
 ---
+id: "totem-of-the-war-dance"
 name: "Totem Of The War Dance"
 tier: basic
 tags: ["totem"]

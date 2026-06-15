@@ -1,4 +1,5 @@
 ---
+id: "summon-capacitor"
 name: "Summon Capacitor"
 sphere: time
 tags: []

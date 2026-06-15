@@ -1,4 +1,5 @@
 ---
+id: "exceptional-ally"
 name: Exceptional Ally
 sphere: enhancement
 dualSphere: conjuration

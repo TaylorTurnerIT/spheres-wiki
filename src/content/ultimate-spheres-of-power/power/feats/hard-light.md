@@ -1,4 +1,5 @@
 ---
+id: "hard-light"
 name: Hard Light
 sphere: light
 dualSphere: creation

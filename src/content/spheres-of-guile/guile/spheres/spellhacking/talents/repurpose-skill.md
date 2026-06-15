@@ -1,4 +1,5 @@
 ---
+id: "repurpose-skill"
 name: "Repurpose Skill"
 tier: "basic"
 tags:

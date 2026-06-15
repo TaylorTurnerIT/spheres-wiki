@@ -1,4 +1,5 @@
 ---
+id: "abandon-all-hope"
 name: "Abandon All Hope"
 tier: "basic"
 tags:

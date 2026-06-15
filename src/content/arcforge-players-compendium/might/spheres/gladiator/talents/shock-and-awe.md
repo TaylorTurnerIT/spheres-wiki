@@ -1,4 +1,5 @@
 ---
+id: "shock-and-awe"
 name: "Shock And Awe"
 tier: "advanced"
 tags: []

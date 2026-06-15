@@ -1,4 +1,5 @@
 ---
+id: "critical-climax"
 name: "Critical Climax"
 tier: advanced
 tags: []

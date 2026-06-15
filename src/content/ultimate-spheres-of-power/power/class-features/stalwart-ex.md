@@ -1,4 +1,5 @@
 ---
+id: "stalwart-ex"
 name: "Stalwart (Ex)"
 type: class-feature
 className: mageknight

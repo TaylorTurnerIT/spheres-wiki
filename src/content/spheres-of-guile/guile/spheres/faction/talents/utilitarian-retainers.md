@@ -1,4 +1,5 @@
 ---
+id: "utilitarian-retainers"
 name: "Utilitarian Retainers"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "opportune-stalker"
 name: Opportune Stalker
 level: 13
 tags: []

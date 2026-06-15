@@ -1,4 +1,5 @@
 ---
+id: "air-blast"
 name: "Air Blast"
 tier: basic
 tags: ["air", "blast-type"]

@@ -1,4 +1,5 @@
 ---
+id: "soothing-draught"
 name: "Soothing Draught"
 tier: "basic"
 tags:

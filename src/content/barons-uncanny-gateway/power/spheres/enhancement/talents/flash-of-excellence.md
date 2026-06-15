@@ -1,4 +1,5 @@
 ---
+id: "flash-of-excellence"
 name: "Flash of Excellence"
 tier: basic
 tags: ["sm"]

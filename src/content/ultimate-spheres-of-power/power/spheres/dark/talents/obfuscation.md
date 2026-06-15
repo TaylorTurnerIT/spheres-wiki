@@ -1,4 +1,5 @@
 ---
+id: "obfuscation"
 name: "Obfuscation"
 tier: basic
 tags: []

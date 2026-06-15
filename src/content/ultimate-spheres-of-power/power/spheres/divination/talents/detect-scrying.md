@@ -1,4 +1,5 @@
 ---
+id: "detect-scrying"
 name: "Detect Scrying"
 tier: basic
 tags: ["sense"]

@@ -1,4 +1,5 @@
 ---
+id: "wraith-amnesiac-possession"
 name: "Amnesiac Possession"
 tags: []
 featureId: wraith-haunts

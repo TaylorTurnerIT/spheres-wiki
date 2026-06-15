@@ -1,4 +1,5 @@
 ---
+id: "homogenous-companions"
 name: "Homogenous Companions"
 sphere: conjuration
 tags: []

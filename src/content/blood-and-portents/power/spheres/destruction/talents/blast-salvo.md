@@ -1,4 +1,5 @@
 ---
+id: "blast-salvo"
 name: "Blast Salvo"
 tier: basic
 tags: ["blast-shape"]

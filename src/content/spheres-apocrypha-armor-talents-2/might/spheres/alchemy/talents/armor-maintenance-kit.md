@@ -1,4 +1,5 @@
 ---
+id: "armor-maintenance-kit"
 name: "Armor Maintenance Kit"
 tier: "basic"
 tags:

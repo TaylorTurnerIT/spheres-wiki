@@ -1,4 +1,5 @@
 ---
+id: "careful-magic"
 name: "Careful Magic"
 sphere: enhancement
 tags: ["drawback"]

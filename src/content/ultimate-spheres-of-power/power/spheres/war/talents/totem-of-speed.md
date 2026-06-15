@@ -1,4 +1,5 @@
 ---
+id: "totem-of-speed"
 name: "Totem Of Speed"
 tier: basic
 tags: ["totem"]

@@ -1,4 +1,5 @@
 ---
+id: "weird-radiance"
 name: "Weird Radiance"
 tier: basic
 tags: ["nimbus"]

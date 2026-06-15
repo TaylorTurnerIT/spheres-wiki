@@ -1,4 +1,5 @@
 ---
+id: "quip"
 name: "Quip"
 tier: "base"
 tags: []

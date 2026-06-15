@@ -1,4 +1,5 @@
 ---
+id: "energy-bomb"
 name: "Energy Bomb"
 tier: basic
 tags: ["blast-shape", "instill"]

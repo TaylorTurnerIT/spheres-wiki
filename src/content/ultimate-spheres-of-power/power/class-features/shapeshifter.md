@@ -1,4 +1,5 @@
 ---
+id: "shapeshifter"
 name: "Shapeshifter"
 type: class-feature
 className: shifter

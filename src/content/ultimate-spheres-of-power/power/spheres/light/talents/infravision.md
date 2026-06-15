@@ -1,4 +1,5 @@
 ---
+id: "infravision"
 name: "Infravision"
 tier: basic
 tags: ["lens"]

@@ -1,4 +1,5 @@
 ---
+id: "scrounger"
 name: "Scrounger"
 tier: "basic"
 tags:

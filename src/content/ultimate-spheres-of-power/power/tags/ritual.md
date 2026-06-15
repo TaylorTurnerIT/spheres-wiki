@@ -1,4 +1,5 @@
 ---
+id: "ritual"
 label: "Ritual"
 color: "#4A235A"
 priority: 0

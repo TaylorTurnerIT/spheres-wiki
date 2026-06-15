@@ -1,4 +1,5 @@
 ---
+id: "time-of-the-season"
 name: "Time Of The Season"
 tier: basic
 tags: ["time"]

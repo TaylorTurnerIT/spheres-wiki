@@ -1,4 +1,5 @@
 ---
+id: "expendable-summons"
 name: "Expendable Summons"
 tier: advanced
 tags: []

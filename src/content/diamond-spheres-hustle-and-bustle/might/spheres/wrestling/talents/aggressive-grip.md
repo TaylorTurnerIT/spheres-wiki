@@ -1,4 +1,5 @@
 ---
+id: "aggressive-grip"
 name: "Aggressive Grip"
 tier: "basic"
 tags: []

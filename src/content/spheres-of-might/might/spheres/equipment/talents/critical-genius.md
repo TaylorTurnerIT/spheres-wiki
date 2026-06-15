@@ -1,4 +1,5 @@
 ---
+id: "critical-genius"
 name: "Critical Genius"
 tier: "basic"
 tags: []

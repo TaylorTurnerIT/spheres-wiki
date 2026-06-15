@@ -1,4 +1,5 @@
 ---
+id: "expanded-herbalist"
 name: "Expanded Herbalist"
 tier: "basic"
 tags: []

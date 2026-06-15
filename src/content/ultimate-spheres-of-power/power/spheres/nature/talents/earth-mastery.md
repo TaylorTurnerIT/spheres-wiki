@@ -1,4 +1,5 @@
 ---
+id: "earth-mastery"
 name: "Earth Mastery"
 tier: basic
 tags: ["earth", "geomancing"]

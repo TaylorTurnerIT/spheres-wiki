@@ -1,4 +1,5 @@
 ---
+id: "greater-invigorate"
 name: "Greater Invigorate"
 tier: basic
 tags: []

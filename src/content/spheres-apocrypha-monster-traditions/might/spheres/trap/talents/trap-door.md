@@ -1,4 +1,5 @@
 ---
+id: "trap-door"
 name: "Trap Door"
 tier: "basic"
 ---

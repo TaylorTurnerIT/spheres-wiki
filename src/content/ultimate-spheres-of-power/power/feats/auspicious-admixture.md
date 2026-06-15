@@ -1,4 +1,5 @@
 ---
+id: "auspicious-admixture"
 name: "Auspicious Admixture"
 sphere: destruction
 tags: ["admixture"]

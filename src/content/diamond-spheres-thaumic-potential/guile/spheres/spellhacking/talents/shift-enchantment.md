@@ -1,4 +1,5 @@
 ---
+id: "shift-enchantment"
 name: "Shift Enchantment"
 tier: "basic"
 tags:

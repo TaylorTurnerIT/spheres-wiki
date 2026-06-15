@@ -1,4 +1,5 @@
 ---
+id: "physician-s-efficacy"
 name: "Physician’s Efficacy"
 tier: "base"
 tags:

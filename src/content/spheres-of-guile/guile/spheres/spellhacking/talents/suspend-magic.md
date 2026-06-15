@@ -1,4 +1,5 @@
 ---
+id: "suspend-magic"
 name: "Suspend Magic"
 tier: "advanced"
 tags:

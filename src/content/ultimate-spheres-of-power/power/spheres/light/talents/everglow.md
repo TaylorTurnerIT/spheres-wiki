@@ -1,4 +1,5 @@
 ---
+id: "everglow"
 name: "Everglow"
 tier: advanced
 tags: []

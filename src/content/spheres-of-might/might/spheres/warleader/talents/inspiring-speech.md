@@ -1,4 +1,5 @@
 ---
+id: "inspiring-speech"
 name: "Inspiring Speech"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "two-headed-sight"
 name: "Two-Headed Sight"
 sphere: alteration
 tags: ["combat"]

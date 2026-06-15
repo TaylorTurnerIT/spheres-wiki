@@ -1,4 +1,5 @@
 ---
+id: "armorist-battle-magician"
 name: "Battle Magician"
 tags: []
 featureId: arsenal-trick

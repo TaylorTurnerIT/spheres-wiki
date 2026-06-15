@@ -1,4 +1,5 @@
 ---
+id: "punish-the-meek"
 name: "Punish the Meek"
 tier: "basic"
 tags: []

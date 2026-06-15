@@ -1,4 +1,5 @@
 ---
+id: "obscure-passage"
 name: "Obscure Passage"
 tier: basic
 tags: ["blot"]

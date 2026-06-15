@@ -1,4 +1,5 @@
 ---
+id: "altered-summons"
 name: Altered Summons
 sphere: conjuration
 dualSphere: alteration

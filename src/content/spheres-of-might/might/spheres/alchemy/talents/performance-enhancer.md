@@ -1,4 +1,5 @@
 ---
+id: "performance-enhancer"
 name: "Performance Enhancer"
 tier: "basic"
 tags:

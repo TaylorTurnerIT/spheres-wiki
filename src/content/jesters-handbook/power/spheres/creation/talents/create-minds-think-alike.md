@@ -1,4 +1,5 @@
 ---
+id: "create-minds-think-alike"
 name: "Create Minds Think Alike"
 tier: advanced
 tags: []

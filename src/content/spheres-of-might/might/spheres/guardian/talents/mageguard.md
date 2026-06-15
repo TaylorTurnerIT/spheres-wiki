@@ -1,4 +1,5 @@
 ---
+id: "mageguard"
 name: "Mageguard"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "incanter-technomancy-sub-specialization-energy"
 name: "Technomancy Sub-Specialization: Energy"
 tags: []
 featureId: list-of-sphere-specializations

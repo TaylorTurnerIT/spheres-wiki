@@ -1,4 +1,5 @@
 ---
+id: "searing-light"
 name: "Searing Light"
 tier: basic
 tags: ["light"]

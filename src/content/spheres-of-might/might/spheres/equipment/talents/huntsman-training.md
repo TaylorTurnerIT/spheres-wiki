@@ -1,4 +1,5 @@
 ---
+id: "huntsman-training"
 name: "Huntsman Training"
 tier: "basic"
 tags:

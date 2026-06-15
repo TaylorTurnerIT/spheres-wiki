@@ -1,4 +1,5 @@
 ---
+id: "spell-capacitor"
 name: "Spell Capacitor"
 sphere: time
 tags: []

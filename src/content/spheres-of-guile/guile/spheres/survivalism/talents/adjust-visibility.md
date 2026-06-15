@@ -1,4 +1,5 @@
 ---
+id: "adjust-visibility"
 name: "Adjust Visibility"
 tier: "basic"
 tags:

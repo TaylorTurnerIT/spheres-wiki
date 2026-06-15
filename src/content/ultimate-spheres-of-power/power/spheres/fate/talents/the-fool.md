@@ -1,4 +1,5 @@
 ---
+id: "the-fool"
 name: "The Fool"
 tier: basic
 tags: ["motif"]

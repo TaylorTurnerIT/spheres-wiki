@@ -1,4 +1,5 @@
 ---
+id: "perpetual-sphere"
 name: "Perpetual Sphere"
 sphere: destruction
 tags: ["combat"]

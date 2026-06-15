@@ -1,4 +1,5 @@
 ---
+id: "vermin-transformation"
 name: "Vermin Transformation"
 tier: basic
 tags: ["transformation"]

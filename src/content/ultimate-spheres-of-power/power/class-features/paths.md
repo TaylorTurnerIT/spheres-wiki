@@ -1,4 +1,5 @@
 ---
+id: "paths"
 name: "Paths"
 type: class-feature
 className: hedgewitch

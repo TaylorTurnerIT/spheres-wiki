@@ -1,4 +1,5 @@
 ---
+id: "snapping-crab"
 name: "Snapping Crab"
 tier: "basic"
 tags:

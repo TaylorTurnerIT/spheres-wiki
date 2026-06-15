@@ -1,4 +1,5 @@
 ---
+id: "armorist-overclocked-armaments"
 name: "Overclocked Armaments"
 tags: []
 featureId: arsenal-trick

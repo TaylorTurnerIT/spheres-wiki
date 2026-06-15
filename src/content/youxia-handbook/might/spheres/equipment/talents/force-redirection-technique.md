@@ -1,4 +1,5 @@
 ---
+id: "force-redirection-technique"
 name: "Force Redirection Technique"
 tier: "advanced"
 tags: []

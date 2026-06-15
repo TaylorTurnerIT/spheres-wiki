@@ -1,4 +1,5 @@
 ---
+id: "haste"
 name: "Haste"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "greater-brute"
 name: "Greater Brute"
 tier: "basic"
 tags: []

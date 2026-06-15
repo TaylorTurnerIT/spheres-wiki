@@ -1,4 +1,5 @@
 ---
+id: "analyze"
 name: "Analyze"
 tier: "base"
 tags: []

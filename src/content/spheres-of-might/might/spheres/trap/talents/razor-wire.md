@@ -1,4 +1,5 @@
 ---
+id: "razor-wire"
 name: "Razor Wire"
 tier: "basic"
 tags: []

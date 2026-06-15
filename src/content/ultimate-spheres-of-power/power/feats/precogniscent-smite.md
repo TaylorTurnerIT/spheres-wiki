@@ -1,4 +1,5 @@
 ---
+id: "precogniscent-smite"
 name: "Precogniscent Smite"
 sphere: divination
 tags: ["combat"]

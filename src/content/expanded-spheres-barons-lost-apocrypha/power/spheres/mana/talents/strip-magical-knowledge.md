@@ -1,4 +1,5 @@
 ---
+id: "strip-magical-knowledge"
 name: "Strip Magical Knowledge"
 tier: advanced
 tags: []

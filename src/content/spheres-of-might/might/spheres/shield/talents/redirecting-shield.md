@@ -1,4 +1,5 @@
 ---
+id: "redirecting-shield"
 name: "Redirecting Shield"
 tier: "basic"
 tags:

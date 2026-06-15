@@ -1,4 +1,5 @@
 ---
+id: "candid-disclosure"
 name: "Candid Disclosure"
 tier: "basic"
 tags:

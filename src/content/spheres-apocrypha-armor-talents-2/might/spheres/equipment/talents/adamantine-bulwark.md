@@ -1,4 +1,5 @@
 ---
+id: "adamantine-bulwark"
 name: "Adamantine Bulwark"
 tier: "advanced"
 tags: []

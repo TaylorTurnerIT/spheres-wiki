@@ -1,4 +1,5 @@
 ---
+id: "crimson-theurgy"
 name: Crimson Theurgy
 sphere: death
 dualSphere: blood

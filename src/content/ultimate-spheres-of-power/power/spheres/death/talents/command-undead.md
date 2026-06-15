@@ -1,4 +1,5 @@
 ---
+id: "command-undead"
 name: "Command Undead"
 tier: basic
 tags: ["ghost-strike"]

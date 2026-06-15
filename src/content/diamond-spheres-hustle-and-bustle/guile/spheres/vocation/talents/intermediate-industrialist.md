@@ -1,4 +1,5 @@
 ---
+id: "intermediate-industrialist"
 name: "Intermediate Industrialist"
 tier: "basic"
 tags:

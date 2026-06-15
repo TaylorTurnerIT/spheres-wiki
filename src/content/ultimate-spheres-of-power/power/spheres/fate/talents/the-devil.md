@@ -1,4 +1,5 @@
 ---
+id: "the-devil"
 name: "The Devil"
 tier: basic
 tags: ["motif"]

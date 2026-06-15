@@ -1,4 +1,5 @@
 ---
+id: "inciting-accusation"
 name: "Inciting Accusation"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "greater-disarm"
 name: "Greater Disarm"
 tier: "basic"
 tags: []

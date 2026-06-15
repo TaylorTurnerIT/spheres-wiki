@@ -1,4 +1,5 @@
 ---
+id: "fancy-footwork"
 name: "Fancy Footwork"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "flaunt-secrets"
 name: "Flaunt Secrets"
 tier: "base"
 tags: []

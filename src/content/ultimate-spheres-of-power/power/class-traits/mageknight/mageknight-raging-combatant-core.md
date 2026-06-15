@@ -1,4 +1,5 @@
 ---
+id: "mageknight-raging-combatant-core"
 name: "Raging Combatant [Core]"
 tags: []
 featureId: mystic-combat-su

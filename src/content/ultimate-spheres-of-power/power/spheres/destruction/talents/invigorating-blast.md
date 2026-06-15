@@ -1,4 +1,5 @@
 ---
+id: "invigorating-blast"
 name: "Invigorating Blast"
 tier: basic
 tags: ["blast-type", "force"]

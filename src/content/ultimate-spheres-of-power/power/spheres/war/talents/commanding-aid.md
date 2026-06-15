@@ -1,4 +1,5 @@
 ---
+id: "commanding-aid"
 name: "Commanding Aid"
 tier: basic
 tags: []

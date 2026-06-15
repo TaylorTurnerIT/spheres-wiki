@@ -1,4 +1,5 @@
 ---
+id: "projected-presence"
 name: "Projected Presence"
 sphere: illusion
 dualSphere: divination

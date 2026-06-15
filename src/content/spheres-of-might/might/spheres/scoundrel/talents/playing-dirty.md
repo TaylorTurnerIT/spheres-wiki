@@ -1,4 +1,5 @@
 ---
+id: "playing-dirty"
 name: "Playing Dirty"
 tier: "basic"
 tags: []

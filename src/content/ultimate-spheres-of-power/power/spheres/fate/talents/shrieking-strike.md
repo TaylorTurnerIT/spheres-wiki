@@ -1,4 +1,5 @@
 ---
+id: "shrieking-strike"
 name: "Shrieking Strike"
 tier: basic
 tags: ["strike"]

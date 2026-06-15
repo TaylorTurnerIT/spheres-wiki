@@ -1,4 +1,5 @@
 ---
+id: "melee-archer"
 name: "Melee Archer"
 tier: "base"
 tags: []

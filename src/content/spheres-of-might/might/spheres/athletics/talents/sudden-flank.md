@@ -1,4 +1,5 @@
 ---
+id: "sudden-flank"
 name: "Sudden Flank"
 tier: "basic"
 tags:

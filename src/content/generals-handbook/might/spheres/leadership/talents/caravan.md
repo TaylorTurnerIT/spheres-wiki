@@ -1,4 +1,5 @@
 ---
+id: "caravan"
 name: "Caravan"
 tier: "base"
 tags: []

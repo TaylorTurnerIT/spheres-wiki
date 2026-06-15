@@ -1,4 +1,5 @@
 ---
+id: "fool-divination"
 name: "Fool Divination"
 tier: "advanced"
 tags:

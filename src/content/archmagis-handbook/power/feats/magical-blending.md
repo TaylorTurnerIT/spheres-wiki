@@ -1,4 +1,5 @@
 ---
+id: "magical-blending"
 name: "Magical Blending"
 sphere: mana
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "focusing"
 name: "Focusing"
 tier: basic
 tags: ["manabond"]

@@ -1,4 +1,5 @@
 ---
+id: "mageknight-sustain-core"
 name: "Sustain [Core]"
 tags: []
 featureId: mystic-combat-su

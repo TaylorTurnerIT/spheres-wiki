@@ -1,4 +1,5 @@
 ---
+id: "armor-squirm"
 name: "Armor Squirm"
 tier: "advanced"
 tags: []

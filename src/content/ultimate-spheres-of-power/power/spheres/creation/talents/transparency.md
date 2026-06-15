@@ -1,4 +1,5 @@
 ---
+id: "transparency"
 name: "Transparency"
 tier: basic
 tags: ["alter", "utility"]

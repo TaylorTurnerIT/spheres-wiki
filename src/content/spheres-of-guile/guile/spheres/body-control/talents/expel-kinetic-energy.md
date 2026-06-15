@@ -1,4 +1,5 @@
 ---
+id: "expel-kinetic-energy"
 name: "Expel Kinetic Energy"
 tier: "advanced"
 tags:

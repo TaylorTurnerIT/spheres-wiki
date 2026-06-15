@@ -1,4 +1,5 @@
 ---
+id: "lexical-obfuscation"
 name: "Lexical Obfuscation"
 tier: "advanced"
 tags:

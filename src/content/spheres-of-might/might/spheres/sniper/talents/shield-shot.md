@@ -1,4 +1,5 @@
 ---
+id: "shield-shot"
 name: "Shield Shot"
 tier: "basic"
 tags:

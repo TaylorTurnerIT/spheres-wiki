@@ -1,4 +1,5 @@
 ---
+id: "mindless-mastery"
 name: "Mindless Mastery"
 tier: "advanced"
 tags:

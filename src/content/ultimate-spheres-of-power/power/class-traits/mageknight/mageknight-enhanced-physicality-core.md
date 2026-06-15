@@ -1,4 +1,5 @@
 ---
+id: "mageknight-enhanced-physicality-core"
 name: "Enhanced Physicality [Core]"
 tags: []
 featureId: mystic-combat-su

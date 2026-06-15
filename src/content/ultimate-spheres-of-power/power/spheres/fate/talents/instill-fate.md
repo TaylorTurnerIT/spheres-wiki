@@ -1,4 +1,5 @@
 ---
+id: "instill-fate"
 name: "Instill Fate"
 tier: basic
 tags: ["instill"]

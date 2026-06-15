@@ -1,4 +1,5 @@
 ---
+id: "crafting-creature"
 name: "Crafting Creature"
 tier: basic
 tags: ["form"]

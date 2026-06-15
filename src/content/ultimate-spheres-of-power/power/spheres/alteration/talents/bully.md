@@ -1,4 +1,5 @@
 ---
+id: "bully"
 name: "Bully"
 tier: basic
 tags: ["utility"]

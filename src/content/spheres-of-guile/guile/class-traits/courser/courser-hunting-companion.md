@@ -1,4 +1,5 @@
 ---
+id: "courser-hunting-companion"
 name: Hunting Companion
 featureId: courser-ventures
 tags: []

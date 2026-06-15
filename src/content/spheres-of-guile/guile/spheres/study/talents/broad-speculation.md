@@ -1,4 +1,5 @@
 ---
+id: "broad-speculation"
 name: "Broad Speculation"
 tier: "basic"
 tags: []

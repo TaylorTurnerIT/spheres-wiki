@@ -1,4 +1,5 @@
 ---
+id: "feast-and-famine"
 name: "Feast And Famine"
 tier: basic
 tags: ["fey-blessing"]

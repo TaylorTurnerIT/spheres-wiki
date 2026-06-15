@@ -1,4 +1,5 @@
 ---
+id: "ruthless-visage"
 name: "Ruthless Visage"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "hair-trigger"
 name: "Hair Trigger"
 tier: "basic"
 tags: []

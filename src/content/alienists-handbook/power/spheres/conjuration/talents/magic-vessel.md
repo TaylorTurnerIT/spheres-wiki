@@ -1,4 +1,5 @@
 ---
+id: "magic-vessel"
 name: "Magic Vessel"
 tier: basic
 tags: ["form"]

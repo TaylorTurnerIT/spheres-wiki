@@ -1,4 +1,5 @@
 ---
+id: "automatic-pilot"
 name: "Automatic Pilot"
 tier: "advanced"
 tags: []

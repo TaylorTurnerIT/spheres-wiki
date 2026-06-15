@@ -1,4 +1,5 @@
 ---
+id: "master-thief"
 name: "Master Thief"
 tier: "basic"
 tags: []

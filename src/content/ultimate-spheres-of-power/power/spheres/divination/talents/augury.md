@@ -1,4 +1,5 @@
 ---
+id: "augury"
 name: "Augury"
 tier: basic
 tags: ["utility", "divine"]

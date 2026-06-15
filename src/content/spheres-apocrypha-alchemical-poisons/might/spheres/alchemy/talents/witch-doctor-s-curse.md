@@ -1,4 +1,5 @@
 ---
+id: "witch-doctor-s-curse"
 name: "Witch Doctor’s Curse"
 tier: "advanced"
 tags:

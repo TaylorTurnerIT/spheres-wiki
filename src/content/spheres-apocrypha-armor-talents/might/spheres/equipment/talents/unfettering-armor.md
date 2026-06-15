@@ -1,4 +1,5 @@
 ---
+id: "unfettering-armor"
 name: "Unfettering Armor"
 tier: "basic"
 tags: []

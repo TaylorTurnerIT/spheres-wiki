@@ -1,4 +1,5 @@
 ---
+id: "wood-shape"
 name: "Wood Shape"
 tier: basic
 tags: ["fey-blessing"]

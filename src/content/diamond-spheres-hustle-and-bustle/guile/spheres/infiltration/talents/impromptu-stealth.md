@@ -1,4 +1,5 @@
 ---
+id: "impromptu-stealth"
 name: "Impromptu Stealth"
 tier: "basic"
 tags: []

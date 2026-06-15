@@ -1,4 +1,5 @@
 ---
+id: "aggressive-vitality"
 name: "Aggressive Vitality"
 tier: basic
 tags: ["vitality"]

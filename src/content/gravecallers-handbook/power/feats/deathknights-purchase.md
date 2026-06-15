@@ -1,4 +1,5 @@
 ---
+id: "deathknights-purchase"
 name: "Deathknight's Purchase"
 sphere: death
 tags: ["combat", "necrosis"]

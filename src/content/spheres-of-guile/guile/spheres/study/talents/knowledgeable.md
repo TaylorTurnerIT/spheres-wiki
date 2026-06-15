@@ -1,4 +1,5 @@
 ---
+id: "knowledgeable"
 name: "Knowledgeable"
 tier: "base"
 tags: []

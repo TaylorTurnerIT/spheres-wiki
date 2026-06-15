@@ -1,4 +1,5 @@
 ---
+id: "inspire"
 name: "Inspire"
 tier: "basic"
 tags:

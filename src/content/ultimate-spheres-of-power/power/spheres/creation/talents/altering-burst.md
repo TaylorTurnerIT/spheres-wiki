@@ -1,4 +1,5 @@
 ---
+id: "altering-burst"
 name: "Altering Burst"
 tier: basic
 tags: []

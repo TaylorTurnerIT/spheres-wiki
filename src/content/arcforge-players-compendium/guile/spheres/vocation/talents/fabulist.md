@@ -1,4 +1,5 @@
 ---
+id: "fabulist"
 name: "Fabulist"
 tier: "basic"
 tags:

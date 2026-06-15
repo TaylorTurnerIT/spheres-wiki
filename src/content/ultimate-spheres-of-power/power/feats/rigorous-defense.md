@@ -1,4 +1,5 @@
 ---
+id: "rigorous-defense"
 name: "Rigorous Defense"
 sphere: life
 tags: []

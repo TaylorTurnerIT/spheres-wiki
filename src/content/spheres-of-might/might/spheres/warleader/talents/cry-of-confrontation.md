@@ -1,4 +1,5 @@
 ---
+id: "cry-of-confrontation"
 name: "Cry Of Confrontation"
 tier: "basic"
 tags:

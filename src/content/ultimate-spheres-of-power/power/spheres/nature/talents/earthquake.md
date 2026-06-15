@@ -1,4 +1,5 @@
 ---
+id: "earthquake"
 name: "Earthquake"
 tier: advanced
 tags: ["earth", "geomancing"]

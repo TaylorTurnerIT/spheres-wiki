@@ -1,4 +1,5 @@
 ---
+id: "metalmind-solution"
 name: "Metalmind Solution"
 tier: "basic"
 tags:

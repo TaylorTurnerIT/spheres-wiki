@@ -1,4 +1,5 @@
 ---
+id: "impassable-defense"
 name: "Impassable Defense"
 tier: "basic"
 tags: []

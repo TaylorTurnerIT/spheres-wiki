@@ -1,4 +1,5 @@
 ---
+id: "demoralizing-momentum"
 name: "Demoralizing Momentum"
 tier: basic
 tags: ["momentum"]

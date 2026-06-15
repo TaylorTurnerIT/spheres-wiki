@@ -1,4 +1,5 @@
 ---
+id: "absorb-blood"
 name: "Absorb Blood"
 tier: basic
 tags: []

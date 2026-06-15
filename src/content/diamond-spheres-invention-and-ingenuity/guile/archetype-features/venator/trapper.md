@@ -1,4 +1,5 @@
 ---
+id: "trapper"
 name: Trapper
 level: 1
 tags: []

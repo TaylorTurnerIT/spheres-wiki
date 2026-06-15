@@ -1,4 +1,5 @@
 ---
+id: "spell-eater"
 name: "Spell-Eater"
 tier: advanced
 tags: ["aegis"]

@@ -1,4 +1,5 @@
 ---
+id: "dry-lightning"
 name: "Dry Lightning"
 tier: basic
 tags: []

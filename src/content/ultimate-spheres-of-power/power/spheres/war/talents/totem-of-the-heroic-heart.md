@@ -1,4 +1,5 @@
 ---
+id: "totem-of-the-heroic-heart"
 name: "Totem Of The Heroic Heart"
 tier: basic
 tags: ["totem"]

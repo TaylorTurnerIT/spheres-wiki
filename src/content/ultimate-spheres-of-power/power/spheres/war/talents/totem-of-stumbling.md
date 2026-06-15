@@ -1,4 +1,5 @@
 ---
+id: "totem-of-stumbling"
 name: "Totem Of Stumbling"
 tier: basic
 tags: ["totem"]

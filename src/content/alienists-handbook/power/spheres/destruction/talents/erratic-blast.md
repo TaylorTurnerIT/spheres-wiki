@@ -1,4 +1,5 @@
 ---
+id: "erratic-blast"
 name: "Erratic Blast"
 tier: advanced
 tags: ["blast-type"]

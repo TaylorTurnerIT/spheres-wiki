@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-rebuke-death"
 name: "Rebuke Death"
 tags: []
 featureId: invocations

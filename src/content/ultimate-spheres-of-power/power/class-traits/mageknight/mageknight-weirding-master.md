@@ -1,4 +1,5 @@
 ---
+id: "mageknight-weirding-master"
 name: "Weirding Master"
 tags: []
 featureId: mystic-combat-su

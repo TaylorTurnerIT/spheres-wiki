@@ -1,4 +1,5 @@
 ---
+id: "one-person-show"
 name: "One-Person Show"
 tier: "base"
 tags:

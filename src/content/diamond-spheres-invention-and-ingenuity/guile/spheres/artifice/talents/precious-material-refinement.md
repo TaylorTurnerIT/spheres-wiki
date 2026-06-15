@@ -1,4 +1,5 @@
 ---
+id: "precious-material-refinement"
 name: "Precious Material Refinement"
 tier: "basic"
 tags:

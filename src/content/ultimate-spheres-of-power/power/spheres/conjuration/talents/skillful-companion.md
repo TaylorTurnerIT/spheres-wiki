@@ -1,4 +1,5 @@
 ---
+id: "skillful-companion"
 name: "Skillful Companion"
 tier: basic
 tags: ["utility", "form"]

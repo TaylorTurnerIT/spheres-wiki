@@ -1,4 +1,5 @@
 ---
+id: "disorienting-patterns"
 name: "Disorienting Patterns"
 tier: basic
 tags: ["light"]

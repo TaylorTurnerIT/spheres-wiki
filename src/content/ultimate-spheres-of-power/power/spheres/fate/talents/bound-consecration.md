@@ -1,4 +1,5 @@
 ---
+id: "bound-consecration"
 name: "Bound Consecration"
 tier: basic
 tags: []

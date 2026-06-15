@@ -1,4 +1,5 @@
 ---
+id: "double-chug"
 name: "Double Chug"
 tier: "basic"
 tags: []

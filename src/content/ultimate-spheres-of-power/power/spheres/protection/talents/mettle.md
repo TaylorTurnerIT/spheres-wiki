@@ -1,4 +1,5 @@
 ---
+id: "mettle"
 name: "Mettle"
 tier: basic
 tags: ["aegis"]

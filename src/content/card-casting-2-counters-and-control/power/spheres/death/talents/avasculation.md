@@ -1,4 +1,5 @@
 ---
+id: "avasculation"
 name: "Avasculation"
 tier: advanced
 tags: ["ghost-strike"]

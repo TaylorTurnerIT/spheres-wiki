@@ -1,4 +1,5 @@
 ---
+id: "blackblood-strike"
 name: "Blackblood Strike"
 tier: "advanced"
 tags:

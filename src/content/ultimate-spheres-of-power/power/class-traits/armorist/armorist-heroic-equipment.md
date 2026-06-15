@@ -1,4 +1,5 @@
 ---
+id: "armorist-heroic-equipment"
 name: "Heroic Equipment"
 tags: []
 featureId: arsenal-trick

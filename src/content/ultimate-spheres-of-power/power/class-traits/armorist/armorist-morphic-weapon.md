@@ -1,4 +1,5 @@
 ---
+id: "armorist-morphic-weapon"
 name: "Morphic Weapon"
 tags: ["supernatural"]
 featureId: arsenal-trick

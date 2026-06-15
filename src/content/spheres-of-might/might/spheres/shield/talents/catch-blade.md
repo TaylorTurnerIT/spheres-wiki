@@ -1,4 +1,5 @@
 ---
+id: "catch-blade"
 name: "Catch Blade"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "internal-propulsion"
 name: "Internal Propulsion"
 tier: basic
 tags: ["blood-art", "quicken"]

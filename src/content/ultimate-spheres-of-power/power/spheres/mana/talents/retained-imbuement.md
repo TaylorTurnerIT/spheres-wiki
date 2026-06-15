@@ -1,4 +1,5 @@
 ---
+id: "retained-imbuement"
 name: "Retained Imbuement"
 tier: basic
 tags: []

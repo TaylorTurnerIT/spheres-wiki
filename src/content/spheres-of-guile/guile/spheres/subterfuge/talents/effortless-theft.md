@@ -1,4 +1,5 @@
 ---
+id: "effortless-theft"
 name: "Effortless Theft"
 tier: "basic"
 tags:

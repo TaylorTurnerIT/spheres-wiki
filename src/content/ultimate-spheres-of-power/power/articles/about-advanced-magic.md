@@ -1,4 +1,5 @@
 ---
+id: "about-advanced-magic"
 name: "About Advanced Magic"
 tags: []
 ---

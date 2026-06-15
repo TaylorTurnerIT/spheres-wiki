@@ -1,4 +1,5 @@
 ---
+id: "iron-fist"
 name: "Iron Fist"
 tier: "basic"
 tags: []

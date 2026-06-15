@@ -1,4 +1,5 @@
 ---
+id: "occult-aptitude"
 name: "Occult Aptitude"
 tier: "advanced"
 tags: []

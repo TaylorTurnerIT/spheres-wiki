@@ -1,4 +1,5 @@
 ---
+id: "barrier"
 name: "Barrier"
 tier: basic
 tags: ["program"]

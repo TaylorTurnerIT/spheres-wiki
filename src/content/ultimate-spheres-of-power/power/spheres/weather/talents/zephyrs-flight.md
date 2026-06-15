@@ -1,4 +1,5 @@
 ---
+id: "zephyrs-flight"
 name: "Zephyr's Flight"
 tier: basic
 tags: ["mantle", "wind"]

@@ -1,4 +1,5 @@
 ---
+id: "heckler"
 name: "Heckler"
 tier: "base"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "truthseeker"
 name: "Truthseeker"
 tier: "advanced"
 tags:

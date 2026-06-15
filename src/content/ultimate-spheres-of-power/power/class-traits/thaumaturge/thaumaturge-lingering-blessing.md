@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-lingering-blessing"
 name: "Lingering Blessing"
 tags: []
 featureId: invocations

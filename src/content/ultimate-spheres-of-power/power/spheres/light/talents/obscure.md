@@ -1,4 +1,5 @@
 ---
+id: "obscure"
 name: "Obscure"
 tier: basic
 tags: ["lens"]

@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-extra-magic-item"
 name: "Extra Magic Item"
 tags: []
 featureId: grand-secrets

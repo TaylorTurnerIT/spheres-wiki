@@ -1,4 +1,5 @@
 ---
+id: "sizeable-trinkets"
 name: "Sizeable Trinkets"
 tier: "basic"
 tags: []

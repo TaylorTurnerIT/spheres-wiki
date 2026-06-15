@@ -1,4 +1,5 @@
 ---
+id: "a-gilded-tower"
 name: "A Gilded Tower"
 tier: "basic"
 tags:

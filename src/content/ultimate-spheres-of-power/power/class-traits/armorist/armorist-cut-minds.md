@@ -1,4 +1,5 @@
 ---
+id: "armorist-cut-minds"
 name: "Cut Minds"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "compound-creation"
 name: "Compound Creation"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "symbiat-telekinetic-colossus"
 name: "Telekinetic Colossus"
 tags: []
 featureId: psionics-su

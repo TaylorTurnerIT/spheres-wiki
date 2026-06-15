@@ -1,4 +1,5 @@
 ---
+id: "trade-expertise"
 name: "Trade Expertise"
 tier: basic
 tags: ["form"]

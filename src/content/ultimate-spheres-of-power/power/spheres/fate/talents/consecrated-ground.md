@@ -1,4 +1,5 @@
 ---
+id: "consecrated-ground"
 name: "Consecrated Ground"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "second-skin-ex"
 name: "Second Skin (Ex)"
 type: class-feature
 className: shifter

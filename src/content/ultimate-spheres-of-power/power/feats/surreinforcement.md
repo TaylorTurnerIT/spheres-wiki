@@ -1,4 +1,5 @@
 ---
+id: "surreinforcement"
 name: Surreinforcement
 sphere: illusion
 dualSphere: creation

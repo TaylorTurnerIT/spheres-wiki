@@ -1,4 +1,5 @@
 ---
+id: "adept-socialite"
 name: "Adept Socialite"
 tier: "basic"
 tags:

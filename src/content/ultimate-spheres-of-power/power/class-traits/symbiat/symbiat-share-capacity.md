@@ -1,4 +1,5 @@
 ---
+id: "symbiat-share-capacity"
 name: "Share Capacity"
 tags: []
 featureId: psionics-su

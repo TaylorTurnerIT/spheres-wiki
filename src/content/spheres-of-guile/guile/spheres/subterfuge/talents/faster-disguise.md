@@ -1,4 +1,5 @@
 ---
+id: "faster-disguise"
 name: "Faster Disguise"
 tier: "basic"
 tags: []

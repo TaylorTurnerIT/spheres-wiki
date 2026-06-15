@@ -1,4 +1,5 @@
 ---
+id: "summon-fairy"
 name: "Summon Fairy"
 tier: basic
 tags: ["fey-blessing"]

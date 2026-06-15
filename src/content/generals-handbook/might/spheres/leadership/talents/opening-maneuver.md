@@ -1,4 +1,5 @@
 ---
+id: "opening-maneuver"
 name: "Opening Maneuver"
 tier: "basic"
 tags:

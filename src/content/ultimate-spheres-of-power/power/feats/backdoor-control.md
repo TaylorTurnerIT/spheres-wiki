@@ -1,4 +1,5 @@
 ---
+id: "backdoor-control"
 name: Backdoor Control
 sphere: mind
 dualSphere: enhancement

@@ -1,4 +1,5 @@
 ---
+id: "marauding-monkey"
 name: "Marauding Monkey"
 tier: "basic"
 tags:

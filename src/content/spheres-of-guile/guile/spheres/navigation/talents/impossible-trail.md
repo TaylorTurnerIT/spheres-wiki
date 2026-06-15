@@ -1,4 +1,5 @@
 ---
+id: "impossible-trail"
 name: "Impossible Trail"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "armbar"
 name: "Armbar"
 tier: "basic"
 tags:

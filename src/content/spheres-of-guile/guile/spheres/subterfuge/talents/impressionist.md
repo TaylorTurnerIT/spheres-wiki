@@ -1,4 +1,5 @@
 ---
+id: "impressionist"
 name: "Impressionist"
 tier: "base"
 tags:

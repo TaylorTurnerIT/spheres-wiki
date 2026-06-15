@@ -1,4 +1,5 @@
 ---
+id: "courser-enduring"
 name: Enduring
 featureId: courser-ventures
 tags: []

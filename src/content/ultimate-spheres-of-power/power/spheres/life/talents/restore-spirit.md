@@ -1,4 +1,5 @@
 ---
+id: "restore-spirit"
 name: "Restore Spirit"
 tier: basic
 tags: ["cure"]

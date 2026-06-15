@@ -1,4 +1,5 @@
 ---
+id: "alloy-telekinesis"
 name: Alloy Telekinesis
 sphere: telekinesis
 dualSphere: nature

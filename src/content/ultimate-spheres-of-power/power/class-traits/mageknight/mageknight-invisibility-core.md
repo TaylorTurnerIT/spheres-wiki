@@ -1,4 +1,5 @@
 ---
+id: "mageknight-invisibility-core"
 name: "Invisibility [Core]"
 tags: []
 featureId: mystic-combat-su

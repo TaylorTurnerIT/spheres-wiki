@@ -1,4 +1,5 @@
 ---
+id: "magic-armor"
 name: "Magic Armor"
 tier: "advanced"
 tags: []

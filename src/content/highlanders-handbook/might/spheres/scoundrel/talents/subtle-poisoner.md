@@ -1,4 +1,5 @@
 ---
+id: "subtle-poisoner"
 name: "Subtle Poisoner"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "communal-knowledge"
 name: "Communal Knowledge"
 tier: advanced
 tags: []

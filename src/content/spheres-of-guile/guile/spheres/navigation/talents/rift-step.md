@@ -1,4 +1,5 @@
 ---
+id: "rift-step"
 name: "Rift Step"
 tier: "advanced"
 tags:

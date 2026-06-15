@@ -1,4 +1,5 @@
 ---
+id: "military-training"
 name: "Military Training"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "distant-tamer"
 name: "Distant Tamer"
 tier: "advanced"
 tags:

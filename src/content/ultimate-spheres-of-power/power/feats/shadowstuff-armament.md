@@ -1,4 +1,5 @@
 ---
+id: "shadowstuff-armament"
 name: "Shadowstuff Armament"
 sphere: illusion
 tags: ["surreal"]

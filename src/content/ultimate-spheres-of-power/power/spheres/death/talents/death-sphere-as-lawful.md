@@ -1,4 +1,5 @@
 ---
+id: "death-sphere-as-lawful"
 name: "Death Sphere as Lawful"
 tier: basic
 tags: []

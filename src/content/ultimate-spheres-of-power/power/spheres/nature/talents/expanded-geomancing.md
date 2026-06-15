@@ -1,4 +1,5 @@
 ---
+id: "expanded-geomancing"
 name: "Expanded Geomancing"
 tier: basic
 tags: []

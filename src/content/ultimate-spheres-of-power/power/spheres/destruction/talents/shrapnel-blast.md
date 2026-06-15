@@ -1,4 +1,5 @@
 ---
+id: "shrapnel-blast"
 name: "Shrapnel Blast"
 tier: basic
 tags: ["blast-type", "stone"]

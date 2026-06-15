@@ -1,4 +1,5 @@
 ---
+id: "mundanity"
 name: "Mundanity"
 tier: basic
 tags: ["curse", "sm", "word"]

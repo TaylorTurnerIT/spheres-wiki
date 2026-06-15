@@ -1,4 +1,5 @@
 ---
+id: "siphoning-invigoration"
 name: "Siphoning Invigoration"
 sphere: life
 tags: []

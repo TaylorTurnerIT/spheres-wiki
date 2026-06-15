@@ -1,4 +1,5 @@
 ---
+id: "strange-corpsecraft"
 name: "Strange Corpsecraft"
 sphere: death
 tags: []

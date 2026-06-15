@@ -1,4 +1,5 @@
 ---
+id: "totemic-channeling"
 name: "Totemic Channeling"
 sphere: war
 tags: ["channeling"]

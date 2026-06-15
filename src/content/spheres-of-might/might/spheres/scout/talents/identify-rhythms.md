@@ -1,4 +1,5 @@
 ---
+id: "identify-rhythms"
 name: "Identify Rhythms"
 tier: "basic"
 tags: []

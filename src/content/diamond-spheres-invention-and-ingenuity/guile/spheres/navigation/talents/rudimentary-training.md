@@ -1,4 +1,5 @@
 ---
+id: "rudimentary-training"
 name: "Rudimentary Training"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "symbiat-greater-mind-link"
 name: "Greater Mind Link"
 tags: []
 featureId: psionics-su

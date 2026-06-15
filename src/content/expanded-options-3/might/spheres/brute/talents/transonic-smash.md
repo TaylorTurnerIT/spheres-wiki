@@ -1,4 +1,5 @@
 ---
+id: "transonic-smash"
 name: "Transonic Smash"
 tier: "advanced"
 tags:

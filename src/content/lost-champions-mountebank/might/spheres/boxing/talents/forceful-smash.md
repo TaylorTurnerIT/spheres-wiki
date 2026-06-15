@@ -1,4 +1,5 @@
 ---
+id: "forceful-smash"
 name: "Forceful Smash (counter)"
 tier: "basic"
 tags: ["counter"]

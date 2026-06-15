@@ -1,4 +1,5 @@
 ---
+id: "finish"
 name: "Finish"
 tier: basic
 tags: ["rally"]

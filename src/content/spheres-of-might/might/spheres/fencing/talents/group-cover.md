@@ -1,4 +1,5 @@
 ---
+id: "group-cover"
 name: "Group Cover"
 tier: "basic"
 tags: []

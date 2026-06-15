@@ -1,4 +1,5 @@
 ---
+id: "rapid-growth"
 name: "Rapid Growth"
 tier: advanced
 tags: ["plant", "geomancing"]

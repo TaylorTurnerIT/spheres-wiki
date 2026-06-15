@@ -1,4 +1,5 @@
 ---
+id: "soliloquy-of-rusted-masks"
 name: "Soliloquy Of Rusted Masks"
 tier: "advanced"
 tags:

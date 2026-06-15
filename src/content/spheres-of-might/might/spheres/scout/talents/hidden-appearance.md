@@ -1,4 +1,5 @@
 ---
+id: "hidden-appearance"
 name: "Hidden Appearance"
 tier: "basic"
 tags:

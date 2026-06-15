@@ -1,4 +1,5 @@
 ---
+id: "deafening-clangor"
 name: "Deafening Clangor"
 tier: "advanced"
 tags: []

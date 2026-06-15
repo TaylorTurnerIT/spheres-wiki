@@ -1,4 +1,5 @@
 ---
+id: "cosmic-body"
 name: "Cosmic Body"
 tier: basic
 tags: ["body"]

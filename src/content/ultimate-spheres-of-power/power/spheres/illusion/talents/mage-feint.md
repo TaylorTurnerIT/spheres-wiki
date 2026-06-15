@@ -1,4 +1,5 @@
 ---
+id: "mage-feint"
 name: "Mage Feint"
 tier: basic
 tags: []

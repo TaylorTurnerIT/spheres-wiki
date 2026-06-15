@@ -1,4 +1,5 @@
 ---
+id: "steal-shape"
 name: "Steal Shape"
 tier: basic
 tags: []

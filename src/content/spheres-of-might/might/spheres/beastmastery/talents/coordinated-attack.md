@@ -1,4 +1,5 @@
 ---
+id: "coordinated-attack"
 name: "Coordinated Attack"
 tier: "basic"
 tags: []

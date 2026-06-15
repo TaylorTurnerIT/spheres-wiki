@@ -1,4 +1,5 @@
 ---
+id: "spectral-distortion"
 name: "Spectral Distortion"
 tier: basic
 tags: ["ghost-strike"]

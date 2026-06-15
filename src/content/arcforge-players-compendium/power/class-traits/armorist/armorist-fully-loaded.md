@@ -1,4 +1,5 @@
 ---
+id: "armorist-fully-loaded"
 name: "Fully Loaded"
 tags: []
 featureId: arsenal-trick

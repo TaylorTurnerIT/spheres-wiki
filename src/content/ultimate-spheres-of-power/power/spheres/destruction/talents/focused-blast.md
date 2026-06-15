@@ -1,4 +1,5 @@
 ---
+id: "focused-blast"
 name: "Focused Blast"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "specter"
 name: "Specter"
 tier: "basic"
 tags:

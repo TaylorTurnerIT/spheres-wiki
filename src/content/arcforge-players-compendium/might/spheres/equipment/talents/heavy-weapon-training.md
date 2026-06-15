@@ -1,4 +1,5 @@
 ---
+id: "heavy-weapon-training"
 name: "Heavy Weapon Training"
 tier: "basic"
 tags:

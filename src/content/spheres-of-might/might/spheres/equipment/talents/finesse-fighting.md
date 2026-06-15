@@ -1,4 +1,5 @@
 ---
+id: "finesse-fighting"
 name: "Finesse Fighting"
 tier: "basic"
 tags: []

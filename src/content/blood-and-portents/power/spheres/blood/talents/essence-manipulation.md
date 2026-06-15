@@ -1,4 +1,5 @@
 ---
+id: "essence-manipulation"
 name: "Essence Manipulation"
 tier: advanced
 tags: []

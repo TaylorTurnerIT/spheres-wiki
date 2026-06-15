@@ -1,4 +1,5 @@
 ---
+id: "shielded-formation"
 name: "Shielded Formation"
 sphere: war
 tags: ["squadron"]

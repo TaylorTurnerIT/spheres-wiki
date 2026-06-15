@@ -1,4 +1,5 @@
 ---
+id: "blindfolded-oracle"
 name: "Blindfolded Oracle"
 tier: basic
 tags: ["sense"]

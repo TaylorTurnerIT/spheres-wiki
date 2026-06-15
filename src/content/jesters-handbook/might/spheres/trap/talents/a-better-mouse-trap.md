@@ -1,4 +1,5 @@
 ---
+id: "a-better-mouse-trap"
 name: "A Better Mouse Trap"
 tier: "advanced"
 tags:

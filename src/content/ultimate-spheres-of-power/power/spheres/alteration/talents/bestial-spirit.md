@@ -1,4 +1,5 @@
 ---
+id: "bestial-spirit"
 name: "Bestial Spirit"
 tier: basic
 tags: []

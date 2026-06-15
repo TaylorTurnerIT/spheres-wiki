@@ -1,4 +1,5 @@
 ---
+id: "acid-blast"
 name: "Acid Blast"
 tier: basic
 tags: ["acid", "blast-type"]

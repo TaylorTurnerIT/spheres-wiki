@@ -1,4 +1,5 @@
 ---
+id: "purify-nature"
 name: "Purify Nature"
 tier: basic
 tags: ["geomancing", "warden"]

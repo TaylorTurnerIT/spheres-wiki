@@ -1,4 +1,5 @@
 ---
+id: "spores"
 name: "Spores"
 tier: basic
 tags: ["fey-blessing"]

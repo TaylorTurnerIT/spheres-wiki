@@ -1,4 +1,5 @@
 ---
+id: "degenerating-poison"
 name: "Degenerating Poison"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "leopard-s-gambit"
 name: "Leopard’s Gambit"
 tier: "basic"
 tags:

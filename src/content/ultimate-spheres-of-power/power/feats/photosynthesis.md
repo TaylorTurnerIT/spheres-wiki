@@ -1,4 +1,5 @@
 ---
+id: "photosynthesis"
 name: "Photosynthesis"
 sphere: light
 tags: []

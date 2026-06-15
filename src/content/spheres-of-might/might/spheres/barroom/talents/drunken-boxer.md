@@ -1,4 +1,5 @@
 ---
+id: "drunken-boxer"
 name: "Drunken Boxer"
 tier: "basic"
 tags: []

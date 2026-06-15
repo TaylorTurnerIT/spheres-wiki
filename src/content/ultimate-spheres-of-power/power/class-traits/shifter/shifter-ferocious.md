@@ -1,4 +1,5 @@
 ---
+id: "shifter-ferocious"
 name: "Ferocious"
 tags: ["extraordinary"]
 featureId: bestial-trait

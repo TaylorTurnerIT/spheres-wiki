@@ -1,4 +1,5 @@
 ---
+id: "swift-slice"
 name: "Swift Slice"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "rift-strike-universal"
 name: "Rift Strike, Universal"
 tier: "advanced"
 tags: []

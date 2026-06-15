@@ -1,4 +1,5 @@
 ---
+id: "rapid-crafter"
 name: "Rapid Crafter"
 tier: "base"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "speculate-affairs"
 name: "Speculate Affairs"
 tier: "basic"
 tags:

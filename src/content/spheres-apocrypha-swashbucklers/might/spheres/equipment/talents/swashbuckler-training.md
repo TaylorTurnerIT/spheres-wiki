@@ -1,4 +1,5 @@
 ---
+id: "swashbuckler-training"
 name: "Swashbuckler Training"
 tier: "basic"
 tags:

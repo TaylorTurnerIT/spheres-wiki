@@ -1,4 +1,5 @@
 ---
+id: "gauntlet-shield"
 name: "Gauntlet Shield"
 tier: "basic"
 tags: []

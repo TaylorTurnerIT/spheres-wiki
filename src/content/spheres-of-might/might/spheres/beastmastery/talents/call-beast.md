@@ -1,4 +1,5 @@
 ---
+id: "call-beast"
 name: "Call Beast"
 tier: "advanced"
 tags:

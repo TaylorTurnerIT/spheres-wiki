@@ -1,4 +1,5 @@
 ---
+id: "blood-bond"
 name: "Blood Bond"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "last-chance-grapple"
 name: "Last Chance Grapple"
 tier: "basic"
 tags: []

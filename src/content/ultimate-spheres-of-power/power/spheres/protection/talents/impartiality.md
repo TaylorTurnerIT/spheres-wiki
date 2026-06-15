@@ -1,4 +1,5 @@
 ---
+id: "impartiality"
 name: "Impartiality"
 tier: basic
 tags: ["aegis", "ward"]

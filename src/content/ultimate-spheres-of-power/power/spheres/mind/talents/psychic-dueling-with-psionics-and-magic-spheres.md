@@ -1,4 +1,5 @@
 ---
+id: "psychic-dueling-with-psionics-and-magic-spheres"
 name: "Psychic Dueling with Psionics and Magic Spheres"
 tier: base
 tags: []

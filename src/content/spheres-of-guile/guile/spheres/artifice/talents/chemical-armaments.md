@@ -1,4 +1,5 @@
 ---
+id: "chemical-armaments"
 name: "Chemical Armaments"
 tier: "basic"
 tags:

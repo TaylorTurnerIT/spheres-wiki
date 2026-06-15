@@ -1,4 +1,5 @@
 ---
+id: "extra-beastmastery-package"
 name: "Extra Beastmastery Package"
 tier: "basic"
 tags: []

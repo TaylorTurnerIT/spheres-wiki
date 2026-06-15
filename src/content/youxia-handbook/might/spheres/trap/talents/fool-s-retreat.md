@@ -1,4 +1,5 @@
 ---
+id: "fool-s-retreat"
 name: "Fool’s Retreat"
 tier: "basic"
 tags:

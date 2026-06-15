@@ -1,4 +1,5 @@
 ---
+id: "wraith-ghost-glide"
 name: "Ghost Glide"
 tags: []
 featureId: wraith-haunts

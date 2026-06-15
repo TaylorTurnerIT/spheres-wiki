@@ -1,4 +1,5 @@
 ---
+id: "energy-surge"
 name: "Energy Surge"
 tier: "basic"
 tags:

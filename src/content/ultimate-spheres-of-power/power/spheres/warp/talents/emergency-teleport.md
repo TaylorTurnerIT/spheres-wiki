@@ -1,4 +1,5 @@
 ---
+id: "emergency-teleport"
 name: "Emergency Teleport"
 tier: basic
 tags: ["spell-like"]

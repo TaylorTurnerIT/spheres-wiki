@@ -1,4 +1,5 @@
 ---
+id: "high-energy"
 name: "High Energy"
 tier: basic
 tags: ["heat", "mantle"]

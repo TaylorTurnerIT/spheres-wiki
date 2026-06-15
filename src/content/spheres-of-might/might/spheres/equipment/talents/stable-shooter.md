@@ -1,4 +1,5 @@
 ---
+id: "stable-shooter"
 name: "Stable Shooter"
 tier: "advanced"
 tags: []

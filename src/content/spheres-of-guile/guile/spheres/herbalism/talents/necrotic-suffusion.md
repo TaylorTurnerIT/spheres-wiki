@@ -1,4 +1,5 @@
 ---
+id: "necrotic-suffusion"
 name: "Necrotic Suffusion"
 tier: "advanced"
 tags:

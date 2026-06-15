@@ -1,4 +1,5 @@
 ---
+id: "distracting-blades"
 name: "Distracting Blades"
 tier: "basic"
 tags:

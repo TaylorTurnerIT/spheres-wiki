@@ -1,4 +1,5 @@
 ---
+id: "shifter-fey-kin"
 name: "Fey Kin"
 tags: ["supernatural"]
 featureId: bestial-trait

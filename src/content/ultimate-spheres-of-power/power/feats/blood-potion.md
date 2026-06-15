@@ -1,4 +1,5 @@
 ---
+id: "blood-potion"
 name: "Blood Potion"
 sphere: blood
 tags: []

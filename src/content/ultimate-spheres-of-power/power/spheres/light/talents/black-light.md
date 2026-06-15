@@ -1,4 +1,5 @@
 ---
+id: "black-light"
 name: "Black Light"
 tier: basic
 tags: []

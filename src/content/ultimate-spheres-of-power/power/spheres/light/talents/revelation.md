@@ -1,4 +1,5 @@
 ---
+id: "revelation"
 name: "Revelation"
 tier: basic
 tags: ["light"]

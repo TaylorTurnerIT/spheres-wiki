@@ -1,4 +1,5 @@
 ---
+id: "debilitating-injuries"
 name: "Debilitating Injuries"
 tier: "basic"
 tags:

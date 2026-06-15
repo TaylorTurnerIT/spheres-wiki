@@ -1,4 +1,5 @@
 ---
+id: "impact-burst"
 name: "Impact Burst"
 tier: advanced
 tags: ["sm"]

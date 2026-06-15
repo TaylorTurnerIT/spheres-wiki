@@ -1,4 +1,5 @@
 ---
+id: "energy-aura"
 name: "Energy Aura"
 tier: basic
 tags: ["blast-shape"]

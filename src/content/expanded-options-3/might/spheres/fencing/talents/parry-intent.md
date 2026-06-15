@@ -1,4 +1,5 @@
 ---
+id: "parry-intent"
 name: "Parry Intent"
 tier: "advanced"
 tags: []

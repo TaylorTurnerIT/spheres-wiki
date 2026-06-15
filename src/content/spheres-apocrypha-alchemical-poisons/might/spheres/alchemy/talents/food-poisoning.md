@@ -1,4 +1,5 @@
 ---
+id: "food-poisoning"
 name: "Food Poisoning"
 tier: "basic"
 tags: []

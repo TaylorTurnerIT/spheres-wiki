@@ -1,4 +1,5 @@
 ---
+id: "fashionista"
 name: "Fashionista"
 tier: "base"
 tags:

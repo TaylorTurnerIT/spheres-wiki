@@ -1,4 +1,5 @@
 ---
+id: "steal-heart"
 name: "Steal Heart"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "faction-archives"
 name: "Faction Archives"
 tier: "basic"
 tags:

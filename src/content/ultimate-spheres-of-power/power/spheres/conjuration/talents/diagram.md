@@ -1,4 +1,5 @@
 ---
+id: "diagram"
 name: "Diagram"
 tier: advanced
 tags: []

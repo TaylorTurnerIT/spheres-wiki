@@ -1,4 +1,5 @@
 ---
+id: "courser-thaumic-disruption"
 name: Thaumic Disruption
 featureId: courser-ventures
 tags: []

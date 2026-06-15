@@ -1,4 +1,5 @@
 ---
+id: "armored-companion"
 name: "Armored Companion"
 tier: basic
 tags: ["form"]

@@ -1,4 +1,5 @@
 ---
+id: "companion-takeover"
 name: "Companion Takeover"
 tier: advanced
 tags: ["sm"]

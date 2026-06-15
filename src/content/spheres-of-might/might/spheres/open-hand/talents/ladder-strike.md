@@ -1,4 +1,5 @@
 ---
+id: "ladder-strike"
 name: "Ladder Strike"
 tier: "basic"
 tags: []

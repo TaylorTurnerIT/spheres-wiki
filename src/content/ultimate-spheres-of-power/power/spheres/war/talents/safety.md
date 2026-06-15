@@ -1,4 +1,5 @@
 ---
+id: "safety"
 name: "Safety"
 tier: basic
 tags: ["rally"]

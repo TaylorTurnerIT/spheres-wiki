@@ -1,4 +1,5 @@
 ---
+id: "sudden-invigoration"
 name: "Sudden Invigoration"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "paradigm-blast"
 name: "Paradigm Blast"
 tier: basic
 tags: ["blast-type", "holy"]

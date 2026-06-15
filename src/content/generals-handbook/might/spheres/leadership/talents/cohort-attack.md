@@ -1,4 +1,5 @@
 ---
+id: "cohort-attack"
 name: "Cohort Attack"
 tier: "basic"
 tags:

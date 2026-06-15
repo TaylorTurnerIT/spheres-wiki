@@ -1,4 +1,5 @@
 ---
+id: "master-trader"
 name: "Master Trader"
 tier: "advanced"
 tags: []

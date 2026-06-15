@@ -1,4 +1,5 @@
 ---
+id: "eternal-steel"
 name: "Eternal Steel"
 tier: advanced
 tags: ["geomancing", "metal-and-plant"]

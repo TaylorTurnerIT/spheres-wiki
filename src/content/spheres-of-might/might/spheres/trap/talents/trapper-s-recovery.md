@@ -1,4 +1,5 @@
 ---
+id: "trapper-s-recovery"
 name: "Trapper’s Recovery"
 tier: "basic"
 tags: []

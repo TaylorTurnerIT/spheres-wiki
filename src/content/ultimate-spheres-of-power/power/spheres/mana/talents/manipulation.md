@@ -1,4 +1,5 @@
 ---
+id: "manipulation"
 name: Manipulation
 tier: base
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "totemic-stamina"
 name: "Totemic Stamina"
 sphere: war
 tags: ["combat"]

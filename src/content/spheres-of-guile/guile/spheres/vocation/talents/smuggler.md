@@ -1,4 +1,5 @@
 ---
+id: "smuggler"
 name: "Smuggler"
 tier: "basic"
 tags:

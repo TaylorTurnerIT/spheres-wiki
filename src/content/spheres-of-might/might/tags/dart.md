@@ -1,4 +1,5 @@
 ---
+id: "dart"
 label: "Dart"
 sphere: "trap"
 priority: 0

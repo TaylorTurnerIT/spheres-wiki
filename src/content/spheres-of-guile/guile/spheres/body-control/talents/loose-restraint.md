@@ -1,4 +1,5 @@
 ---
+id: "loose-restraint"
 name: "Loose Restraint"
 tier: "basic"
 tags: []

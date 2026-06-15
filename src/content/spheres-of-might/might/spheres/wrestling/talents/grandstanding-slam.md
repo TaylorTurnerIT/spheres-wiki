@@ -1,4 +1,5 @@
 ---
+id: "grandstanding-slam"
 name: "Grandstanding Slam"
 tier: "basic"
 tags: []

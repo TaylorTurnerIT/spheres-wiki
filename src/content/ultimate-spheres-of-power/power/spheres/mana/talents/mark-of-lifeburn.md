@@ -1,4 +1,5 @@
 ---
+id: "mark-of-lifeburn"
 name: "Mark Of Lifeburn"
 tier: basic
 tags: ["expunge"]

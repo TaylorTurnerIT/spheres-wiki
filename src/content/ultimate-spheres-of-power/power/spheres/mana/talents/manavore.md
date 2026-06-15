@@ -1,4 +1,5 @@
 ---
+id: "manavore"
 name: "Manavore"
 tier: basic
 tags: []

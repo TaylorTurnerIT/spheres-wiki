@@ -1,4 +1,5 @@
 ---
+id: "curtain-call"
 name: "Curtain Call"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "three-wise-monkeys"
 name: "Three Wise Monkeys"
 tier: "basic"
 tags:

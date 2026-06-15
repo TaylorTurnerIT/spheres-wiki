@@ -1,4 +1,5 @@
 ---
+id: "divination-warding"
 name: "Divination Warding"
 tier: "advanced"
 tags:

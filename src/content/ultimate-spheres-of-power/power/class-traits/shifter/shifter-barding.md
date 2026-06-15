@@ -1,4 +1,5 @@
 ---
+id: "shifter-barding"
 name: "Barding"
 tags: ["supernatural"]
 featureId: bestial-trait

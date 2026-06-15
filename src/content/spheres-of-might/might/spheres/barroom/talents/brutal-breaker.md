@@ -1,4 +1,5 @@
 ---
+id: "brutal-breaker"
 name: "Brutal Breaker"
 tier: "base"
 tags: []

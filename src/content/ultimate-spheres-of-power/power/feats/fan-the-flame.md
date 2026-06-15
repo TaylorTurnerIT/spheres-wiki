@@ -1,4 +1,5 @@
 ---
+id: "fan-the-flame"
 name: Fan The Flame
 sphere: nature
 dualSphere: destruction

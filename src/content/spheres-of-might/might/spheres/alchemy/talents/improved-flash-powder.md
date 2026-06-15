@@ -1,4 +1,5 @@
 ---
+id: "improved-flash-powder"
 name: "Improved Flash Powder"
 tier: "basic"
 tags:

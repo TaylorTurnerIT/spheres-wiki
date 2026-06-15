@@ -1,4 +1,5 @@
 ---
+id: "speculative-analysis"
 name: "Speculative Analysis"
 dualSphere: "study"
 tags: []

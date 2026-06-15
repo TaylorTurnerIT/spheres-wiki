@@ -1,4 +1,5 @@
 ---
+id: "eternal-vigilance"
 name: "Eternal Vigilance"
 tier: basic
 tags: []

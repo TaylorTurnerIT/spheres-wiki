@@ -1,4 +1,5 @@
 ---
+id: "dimensional-lock"
 name: "Dimensional Lock"
 tier: advanced
 tags: ["space"]

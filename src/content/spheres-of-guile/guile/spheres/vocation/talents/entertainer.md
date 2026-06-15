@@ -1,4 +1,5 @@
 ---
+id: "entertainer"
 name: "Entertainer"
 tier: "basic"
 tags:

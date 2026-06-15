@@ -1,4 +1,5 @@
 ---
+id: "channel-energy"
 name: "Channel Energy"
 type: class-feature
 className: soul-weaver

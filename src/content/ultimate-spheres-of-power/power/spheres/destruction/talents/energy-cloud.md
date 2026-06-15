@@ -1,4 +1,5 @@
 ---
+id: "energy-cloud"
 name: "Energy Cloud"
 tier: advanced
 tags: ["blast-shape"]

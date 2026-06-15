@@ -1,4 +1,5 @@
 ---
+id: "defensive-proxies"
 name: "Defensive Proxies"
 sphere: enhancement
 tags: ["proxy"]

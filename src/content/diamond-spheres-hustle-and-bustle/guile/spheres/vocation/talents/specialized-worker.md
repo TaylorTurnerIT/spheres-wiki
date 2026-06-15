@@ -1,4 +1,5 @@
 ---
+id: "specialized-worker"
 name: "Specialized Worker"
 tier: "basic"
 tags:

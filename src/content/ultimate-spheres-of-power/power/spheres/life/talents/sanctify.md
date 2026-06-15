@@ -1,4 +1,5 @@
 ---
+id: "sanctify"
 name: "Sanctify"
 tier: basic
 tags: []

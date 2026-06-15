@@ -1,4 +1,5 @@
 ---
+id: "radiation"
 name: Radiation
 tier: advanced
 tags:

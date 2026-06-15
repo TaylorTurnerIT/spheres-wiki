@@ -1,4 +1,5 @@
 ---
+id: "armorist-dancing"
 name: "Dancing"
 tags: []
 featureId: arsenal-trick

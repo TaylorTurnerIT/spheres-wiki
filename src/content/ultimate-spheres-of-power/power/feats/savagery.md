@@ -1,4 +1,5 @@
 ---
+id: "savagery"
 name: "Savagery"
 sphere: war
 tags: []

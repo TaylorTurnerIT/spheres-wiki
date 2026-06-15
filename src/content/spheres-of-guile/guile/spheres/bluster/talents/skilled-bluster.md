@@ -1,4 +1,5 @@
 ---
+id: "skilled-bluster"
 name: "Skilled Bluster"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "crystal-blast"
 name: "Crystal Blast"
 tier: basic
 tags: ["blast-type", "crystal"]

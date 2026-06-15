@@ -1,4 +1,5 @@
 ---
+id: "wraith"
 name: "Wraith"
 tags: []
 hitDie: 8

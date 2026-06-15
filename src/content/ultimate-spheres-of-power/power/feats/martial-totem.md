@@ -1,4 +1,5 @@
 ---
+id: "martial-totem"
 name: "Martial Totem"
 sphere: war
 tags: ["combat"]

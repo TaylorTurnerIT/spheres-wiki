@@ -1,4 +1,5 @@
 ---
+id: "bolster-beast"
 name: "Bolster Beast"
 tier: "basic"
 tags:

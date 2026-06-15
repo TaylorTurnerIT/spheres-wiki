@@ -1,4 +1,5 @@
 ---
+id: "companion"
 label: "Companion"
 color: "#2D5A27"
 priority: 7

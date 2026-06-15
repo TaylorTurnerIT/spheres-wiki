@@ -1,4 +1,5 @@
 ---
+id: "split-blast"
 name: "Split Blast"
 tier: advanced
 tags: []

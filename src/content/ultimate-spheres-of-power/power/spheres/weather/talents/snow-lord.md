@@ -1,4 +1,5 @@
 ---
+id: "snow-lord"
 name: "Snow Lord"
 tier: basic
 tags: []

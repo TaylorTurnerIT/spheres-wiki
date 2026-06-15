@@ -1,4 +1,5 @@
 ---
+id: "for-a-drop-of-blood"
 name: "For a Drop of Blood"
 tier: "advanced"
 tags: []

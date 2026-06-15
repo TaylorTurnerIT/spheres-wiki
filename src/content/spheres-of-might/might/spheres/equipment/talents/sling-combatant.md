@@ -1,4 +1,5 @@
 ---
+id: "sling-combatant"
 name: "Sling Combatant"
 tier: "basic"
 tags: []

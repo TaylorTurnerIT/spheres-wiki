@@ -1,4 +1,5 @@
 ---
+id: "symbiat"
 name: "Symbiat"
 tags: []
 hitDie: 8

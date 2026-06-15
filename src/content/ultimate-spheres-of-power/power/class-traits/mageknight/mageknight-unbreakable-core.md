@@ -1,4 +1,5 @@
 ---
+id: "mageknight-unbreakable-core"
 name: "Unbreakable [Core]"
 tags: []
 featureId: mystic-combat-su

@@ -1,4 +1,5 @@
 ---
+id: "solipsistic-admixture"
 name: "Solipsistic Admixture"
 sphere: destruction
 tags: ["sm"]

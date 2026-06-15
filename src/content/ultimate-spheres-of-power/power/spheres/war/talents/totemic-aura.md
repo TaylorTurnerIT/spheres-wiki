@@ -1,4 +1,5 @@
 ---
+id: "totemic-aura"
 name: "Totemic Aura"
 tier: basic
 tags: []

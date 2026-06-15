@@ -1,4 +1,5 @@
 ---
+id: "triangulate-teleportation"
 name: "Triangulate Teleportation"
 tier: "basic"
 tags:

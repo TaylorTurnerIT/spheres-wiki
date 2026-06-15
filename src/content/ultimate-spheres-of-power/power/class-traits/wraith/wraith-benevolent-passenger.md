@@ -1,4 +1,5 @@
 ---
+id: "wraith-benevolent-passenger"
 name: "Benevolent Passenger"
 tags: []
 featureId: wraith-haunts

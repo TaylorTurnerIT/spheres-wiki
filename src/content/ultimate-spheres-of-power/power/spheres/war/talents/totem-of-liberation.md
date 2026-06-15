@@ -1,4 +1,5 @@
 ---
+id: "totem-of-liberation"
 name: "Totem Of Liberation"
 tier: basic
 tags: ["totem"]

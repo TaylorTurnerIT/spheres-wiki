@@ -1,4 +1,5 @@
 ---
+id: "extradimensional-torpor"
 name: "Extradimensional Torpor"
 tier: advanced
 tags: ["space"]

@@ -1,4 +1,5 @@
 ---
+id: "divine-pressure"
 name: "Divine Pressure"
 tier: basic
 tags: ["consecration"]

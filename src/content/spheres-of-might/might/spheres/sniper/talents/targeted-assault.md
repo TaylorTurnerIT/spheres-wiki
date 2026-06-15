@@ -1,4 +1,5 @@
 ---
+id: "targeted-assault"
 name: "Targeted Assault"
 tier: "basic"
 tags: []

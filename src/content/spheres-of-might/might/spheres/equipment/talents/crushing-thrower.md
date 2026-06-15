@@ -1,4 +1,5 @@
 ---
+id: "crushing-thrower"
 name: "Crushing Thrower"
 tier: "basic"
 tags: []

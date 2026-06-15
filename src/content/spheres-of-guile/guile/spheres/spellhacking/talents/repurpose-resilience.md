@@ -1,4 +1,5 @@
 ---
+id: "repurpose-resilience"
 name: "Repurpose Resilience"
 tier: "basic"
 tags:

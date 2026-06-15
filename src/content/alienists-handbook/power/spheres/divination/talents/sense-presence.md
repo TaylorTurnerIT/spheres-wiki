@@ -1,4 +1,5 @@
 ---
+id: "sense-presence"
 name: "Sense Presence"
 tier: basic
 tags: ["sense"]

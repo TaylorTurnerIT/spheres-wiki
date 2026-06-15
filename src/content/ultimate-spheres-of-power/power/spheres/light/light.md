@@ -1,4 +1,5 @@
 ---
+id: "light"
 name: Light
 icon: light
 description: You may create and manipulate light.

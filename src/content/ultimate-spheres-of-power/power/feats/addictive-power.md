@@ -1,4 +1,5 @@
 ---
+id: "addictive-power"
 name: "Addictive Power"
 sphere: enhancement
 tags: ["drawback"]

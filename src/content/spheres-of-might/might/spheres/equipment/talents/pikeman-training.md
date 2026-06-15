@@ -1,4 +1,5 @@
 ---
+id: "pikeman-training"
 name: "Pikeman Training"
 tier: "basic"
 tags:

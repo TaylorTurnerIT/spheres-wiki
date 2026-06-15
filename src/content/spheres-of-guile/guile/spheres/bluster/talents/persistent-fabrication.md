@@ -1,4 +1,5 @@
 ---
+id: "persistent-fabrication"
 name: "Persistent Fabrication"
 tier: "advanced"
 tags:

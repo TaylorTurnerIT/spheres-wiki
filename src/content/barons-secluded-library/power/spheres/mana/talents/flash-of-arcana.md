@@ -1,4 +1,5 @@
 ---
+id: "flash-of-arcana"
 name: "Flash of Arcana"
 tier: advanced
 tags: ["sm"]

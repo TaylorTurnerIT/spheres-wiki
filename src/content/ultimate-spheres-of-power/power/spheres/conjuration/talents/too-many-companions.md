@@ -1,4 +1,5 @@
 ---
+id: "too-many-companions"
 name: "Too Many Companions"
 tier: basic
 tags: []

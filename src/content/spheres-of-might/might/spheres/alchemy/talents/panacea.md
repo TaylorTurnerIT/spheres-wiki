@@ -1,4 +1,5 @@
 ---
+id: "panacea"
 name: "Panacea"
 tier: "basic"
 tags:

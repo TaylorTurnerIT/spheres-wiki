@@ -1,4 +1,5 @@
 ---
+id: "jarring-block"
 name: "Jarring Block"
 tier: "basic"
 tags:

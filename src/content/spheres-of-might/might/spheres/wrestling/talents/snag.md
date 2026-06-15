@@ -1,4 +1,5 @@
 ---
+id: "snag"
 name: "Snag"
 tier: "base"
 tags: []

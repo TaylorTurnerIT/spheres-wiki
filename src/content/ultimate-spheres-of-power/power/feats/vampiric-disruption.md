@@ -1,4 +1,5 @@
 ---
+id: "vampiric-disruption"
 name: "Vampiric Disruption"
 sphere: life
 tags: []

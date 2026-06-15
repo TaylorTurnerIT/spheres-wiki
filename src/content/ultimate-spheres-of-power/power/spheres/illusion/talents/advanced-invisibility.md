@@ -1,4 +1,5 @@
 ---
+id: "advanced-invisibility"
 name: "Advanced Invisibility"
 tier: advanced
 tags: []

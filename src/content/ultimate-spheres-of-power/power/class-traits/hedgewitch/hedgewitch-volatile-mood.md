@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-volatile-mood"
 name: "Volatile Mood"
 tags: []
 featureId: secret

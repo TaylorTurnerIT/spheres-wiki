@@ -1,4 +1,5 @@
 ---
+id: "volcano-lord"
 name: "Volcano Lord"
 tier: advanced
 tags: []

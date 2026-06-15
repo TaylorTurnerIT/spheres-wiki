@@ -1,4 +1,5 @@
 ---
+id: "symbiat-telekinetic-manipulation"
 name: "Telekinetic Manipulation"
 tags: []
 featureId: psionics-su

@@ -1,4 +1,5 @@
 ---
+id: "swords"
 name: "Swords"
 tier: basic
 tags: ["motif", "arcana"]

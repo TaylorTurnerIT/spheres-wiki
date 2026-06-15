@@ -1,4 +1,5 @@
 ---
+id: "endurance-training"
 name: "Endurance Training"
 tier: "basic"
 tags:

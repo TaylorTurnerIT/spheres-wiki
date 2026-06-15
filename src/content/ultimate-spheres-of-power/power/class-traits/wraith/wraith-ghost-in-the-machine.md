@@ -1,4 +1,5 @@
 ---
+id: "wraith-ghost-in-the-machine"
 name: "Ghost in the Machine"
 tags: []
 featureId: wraith-haunts

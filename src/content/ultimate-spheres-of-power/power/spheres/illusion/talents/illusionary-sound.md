@@ -1,4 +1,5 @@
 ---
+id: "illusionary-sound"
 name: "Illusionary Sound"
 tier: basic
 tags: ["sensory", "sound"]

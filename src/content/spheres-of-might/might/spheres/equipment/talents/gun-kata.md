@@ -1,4 +1,5 @@
 ---
+id: "gun-kata"
 name: "Gun Kata"
 tier: "basic"
 tags: []

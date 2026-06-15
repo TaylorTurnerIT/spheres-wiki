@@ -1,4 +1,5 @@
 ---
+id: "master-handler"
 name: "Master Handler"
 tier: "advanced"
 tags: []

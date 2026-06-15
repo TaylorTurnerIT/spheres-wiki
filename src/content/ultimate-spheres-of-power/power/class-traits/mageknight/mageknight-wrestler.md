@@ -1,4 +1,5 @@
 ---
+id: "mageknight-wrestler"
 name: "Wrestler"
 tags: []
 featureId: mystic-combat-su

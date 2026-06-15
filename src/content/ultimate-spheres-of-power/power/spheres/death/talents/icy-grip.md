@@ -1,4 +1,5 @@
 ---
+id: "icy-grip"
 name: "Icy Grip"
 tier: basic
 tags: []

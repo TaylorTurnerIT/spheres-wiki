@@ -1,4 +1,5 @@
 ---
+id: "improved-boost"
 name: "Improved Boost"
 tier: "advanced"
 tags: []

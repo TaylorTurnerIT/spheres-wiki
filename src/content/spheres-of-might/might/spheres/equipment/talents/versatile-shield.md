@@ -1,4 +1,5 @@
 ---
+id: "versatile-shield"
 name: "Versatile Shield"
 tier: "basic"
 tags: []

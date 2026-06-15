@@ -1,4 +1,5 @@
 ---
+id: "nether-blast"
 name: "Nether Blast"
 tier: basic
 tags: ["blast-type", "negative"]

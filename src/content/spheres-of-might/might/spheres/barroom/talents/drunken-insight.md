@@ -1,4 +1,5 @@
 ---
+id: "drunken-insight"
 name: "Drunken Insight"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "sneaky-trapper"
 name: "Sneaky Trapper"
 tier: "basic"
 tags: []

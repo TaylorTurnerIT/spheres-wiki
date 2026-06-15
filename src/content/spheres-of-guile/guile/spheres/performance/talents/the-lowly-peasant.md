@@ -1,4 +1,5 @@
 ---
+id: "the-lowly-peasant"
 name: "The Lowly Peasant"
 tier: "basic"
 tags:

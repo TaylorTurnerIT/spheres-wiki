@@ -1,4 +1,5 @@
 ---
+id: "cold-resolve"
 name: "Cold Resolve"
 tier: basic
 tags: ["cold", "mantle", "utility"]

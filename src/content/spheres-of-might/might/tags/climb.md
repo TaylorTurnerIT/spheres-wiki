@@ -1,4 +1,5 @@
 ---
+id: "climb"
 label: "Climb"
 sphere: "athletics"
 priority: 0

@@ -1,4 +1,5 @@
 ---
+id: "the-lovers"
 name: "The Lovers"
 tier: basic
 tags: ["motif"]

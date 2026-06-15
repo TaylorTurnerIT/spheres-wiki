@@ -1,4 +1,5 @@
 ---
+id: "vigilant-command"
 name: "Vigilant Command"
 sphere: war
 tags: ["squadron"]

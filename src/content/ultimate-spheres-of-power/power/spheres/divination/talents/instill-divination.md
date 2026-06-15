@@ -1,4 +1,5 @@
 ---
+id: "instill-divination"
 name: "Instill Divination"
 tier: basic
 tags: ["instill"]

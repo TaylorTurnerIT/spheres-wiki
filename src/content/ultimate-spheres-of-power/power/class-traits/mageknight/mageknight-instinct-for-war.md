@@ -1,4 +1,5 @@
 ---
+id: "mageknight-instinct-for-war"
 name: "Instinct for War"
 tags: []
 featureId: mystic-combat-su

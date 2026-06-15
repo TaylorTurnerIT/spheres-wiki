@@ -1,4 +1,5 @@
 ---
+id: "enchanting-music"
 name: "Enchanting Music"
 tier: basic
 tags: ["fey-blessing"]

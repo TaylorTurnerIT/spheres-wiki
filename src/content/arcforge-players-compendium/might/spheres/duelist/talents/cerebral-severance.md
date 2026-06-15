@@ -1,4 +1,5 @@
 ---
+id: "cerebral-severance"
 name: "Cerebral Severance"
 tier: "advanced"
 tags:

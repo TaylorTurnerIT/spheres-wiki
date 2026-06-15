@@ -1,4 +1,5 @@
 ---
+id: "pressure-point-proficiency"
 name: "Pressure Point Proficiency"
 sphere: mind
 tags: ["combat"]

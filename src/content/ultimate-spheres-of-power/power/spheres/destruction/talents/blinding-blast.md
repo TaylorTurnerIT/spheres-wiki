@@ -1,4 +1,5 @@
 ---
+id: "blinding-blast"
 name: "Blinding Blast"
 tier: basic
 tags: ["blast-type", "light"]

@@ -1,4 +1,5 @@
 ---
+id: "escapologist"
 name: "Escapologist"
 tier: "basic"
 tags:

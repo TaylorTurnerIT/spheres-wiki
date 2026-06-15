@@ -1,4 +1,5 @@
 ---
+id: "alchemical-dragon"
 name: "Alchemical Dragon"
 tier: "advanced"
 tags: []

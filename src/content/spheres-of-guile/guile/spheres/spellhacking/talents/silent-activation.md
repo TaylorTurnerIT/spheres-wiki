@@ -1,4 +1,5 @@
 ---
+id: "silent-activation"
 name: "Silent Activation"
 tier: "basic"
 tags:

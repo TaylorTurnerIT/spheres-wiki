@@ -1,4 +1,5 @@
 ---
+id: "opportune-impalement"
 name: "Opportune Impalement"
 tier: "basic"
 tags: []

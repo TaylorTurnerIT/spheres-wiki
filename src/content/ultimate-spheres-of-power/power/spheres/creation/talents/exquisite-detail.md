@@ -1,4 +1,5 @@
 ---
+id: "exquisite-detail"
 name: "Exquisite Detail"
 tier: basic
 tags: ["utility"]

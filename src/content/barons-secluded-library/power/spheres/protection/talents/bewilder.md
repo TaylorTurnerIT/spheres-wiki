@@ -1,4 +1,5 @@
 ---
+id: "bewilder"
 name: "Bewilder"
 tier: basic
 tags: ["sm", "succor"]

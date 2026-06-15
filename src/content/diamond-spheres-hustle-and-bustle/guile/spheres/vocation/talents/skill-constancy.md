@@ -1,4 +1,5 @@
 ---
+id: "skill-constancy"
 name: "Skill Constancy"
 tier: "advanced"
 tags: []

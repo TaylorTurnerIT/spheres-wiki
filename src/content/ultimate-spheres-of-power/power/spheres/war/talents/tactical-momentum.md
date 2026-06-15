@@ -1,4 +1,5 @@
 ---
+id: "tactical-momentum"
 name: "Tactical Momentum"
 tier: basic
 tags: ["momentum"]

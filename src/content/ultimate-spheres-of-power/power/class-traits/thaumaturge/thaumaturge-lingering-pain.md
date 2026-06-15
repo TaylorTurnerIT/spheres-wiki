@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-lingering-pain"
 name: "Lingering Pain"
 tags: []
 featureId: invocations

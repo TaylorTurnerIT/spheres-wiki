@@ -1,4 +1,5 @@
 ---
+id: "scale-foe"
 name: "Scale Foe"
 tier: "basic"
 tags:

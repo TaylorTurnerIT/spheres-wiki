@@ -1,4 +1,5 @@
 ---
+id: "false-courage"
 name: "False Courage"
 tier: "basic"
 tags:

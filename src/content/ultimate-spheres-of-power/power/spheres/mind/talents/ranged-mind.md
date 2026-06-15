@@ -1,4 +1,5 @@
 ---
+id: "ranged-mind"
 name: "Ranged Mind"
 tier: basic
 tags: ["range"]

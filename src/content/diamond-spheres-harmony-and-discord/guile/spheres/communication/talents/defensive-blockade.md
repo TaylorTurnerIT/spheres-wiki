@@ -1,4 +1,5 @@
 ---
+id: "defensive-blockade"
 name: "Defensive Blockade"
 tier: "basic"
 tags:

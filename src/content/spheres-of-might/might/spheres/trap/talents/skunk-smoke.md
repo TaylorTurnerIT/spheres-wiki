@@ -1,4 +1,5 @@
 ---
+id: "skunk-smoke"
 name: "Skunk Smoke"
 tier: "basic"
 tags:

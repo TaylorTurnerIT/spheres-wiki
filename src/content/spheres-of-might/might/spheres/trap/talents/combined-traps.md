@@ -1,4 +1,5 @@
 ---
+id: "combined-traps"
 name: "Combined Traps"
 tier: "basic"
 tags: []

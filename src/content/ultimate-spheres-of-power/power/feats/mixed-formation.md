@@ -1,4 +1,5 @@
 ---
+id: "mixed-formation"
 name: "Mixed Formation"
 sphere: war
 tags: ["squadron"]

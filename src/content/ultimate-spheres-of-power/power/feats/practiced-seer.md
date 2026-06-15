@@ -1,4 +1,5 @@
 ---
+id: "practiced-seer"
 name: "Practiced Seer"
 sphere: divination
 tags: []

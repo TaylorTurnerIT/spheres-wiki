@@ -1,4 +1,5 @@
 ---
+id: "light-step"
 name: "Light Step"
 tier: "base"
 tags: []

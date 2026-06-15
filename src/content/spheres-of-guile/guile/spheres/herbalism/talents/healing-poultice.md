@@ -1,4 +1,5 @@
 ---
+id: "healing-poultice"
 name: "Healing Poultice"
 tier: "basic"
 tags:

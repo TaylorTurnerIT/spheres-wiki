@@ -1,4 +1,5 @@
 ---
+id: "beastmastery"
 name: "Beastmastery"
 icon: "beastmastery"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "study-technique"
 name: "Study Technique"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "ninjutsu-training"
 name: "Ninjutsu Training"
 tier: "basic"
 tags:

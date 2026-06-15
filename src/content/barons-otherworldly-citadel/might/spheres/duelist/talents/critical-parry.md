@@ -1,4 +1,5 @@
 ---
+id: "critical-parry"
 name: "Critical Parry"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "all-part-of-the-plan"
 name: "All Part of the Plan"
 tier: "advanced"
 tags: []

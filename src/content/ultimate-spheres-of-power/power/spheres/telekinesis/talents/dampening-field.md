@@ -1,4 +1,5 @@
 ---
+id: "dampening-field"
 name: "Dampening Field"
 tier: basic
 tags: []

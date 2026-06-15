@@ -1,4 +1,5 @@
 ---
+id: "chasing-assault"
 name: "Chasing Assault"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "crouching-tiger"
 name: "Crouching Tiger"
 tier: "basic"
 tags:

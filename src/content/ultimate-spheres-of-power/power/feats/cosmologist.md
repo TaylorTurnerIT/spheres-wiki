@@ -1,4 +1,5 @@
 ---
+id: "cosmologist"
 name: "Cosmologist"
 sphere: warp
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "rage-of-the-grave"
 name: "Rage Of The Grave"
 sphere: death
 tags: ["combat"]

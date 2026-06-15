@@ -1,4 +1,5 @@
 ---
+id: "cohort"
 label: "Cohort"
 color: "#4A235A"
 priority: 20

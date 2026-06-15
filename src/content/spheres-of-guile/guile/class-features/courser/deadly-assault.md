@@ -1,4 +1,5 @@
 ---
+id: "deadly-assault"
 name: Deadly Assault
 level: 9
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "hypnotic-darkness"
 name: Hypnotic Darkness
 sphere: mind
 dualSphere: dark

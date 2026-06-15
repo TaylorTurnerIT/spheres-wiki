@@ -1,4 +1,5 @@
 ---
+id: "hurricane-blast"
 name: "Hurricane Blast"
 tier: basic
 tags: ["air", "blast-type"]

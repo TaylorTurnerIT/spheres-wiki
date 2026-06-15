@@ -1,4 +1,5 @@
 ---
+id: "influential-management"
 name: "Influential Management"
 tier: "basic"
 tags:

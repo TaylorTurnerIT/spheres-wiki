@@ -1,4 +1,5 @@
 ---
+id: "instill-dark"
 name: "Instill Dark"
 tier: basic
 tags: ["instill"]

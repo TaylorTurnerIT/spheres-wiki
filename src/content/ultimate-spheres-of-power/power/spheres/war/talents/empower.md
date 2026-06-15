@@ -1,4 +1,5 @@
 ---
+id: "empower"
 name: "Empower"
 tier: basic
 tags: ["rally"]

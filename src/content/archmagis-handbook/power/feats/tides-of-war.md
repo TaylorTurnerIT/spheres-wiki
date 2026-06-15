@@ -1,4 +1,5 @@
 ---
+id: "tides-of-war"
 name: Tides Of War
 sphere: war
 dualSphere: mana

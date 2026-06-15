@@ -1,4 +1,5 @@
 ---
+id: "small-arms"
 name: "Small Arms"
 tier: "basic"
 tags: []

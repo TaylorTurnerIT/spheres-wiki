@@ -1,4 +1,5 @@
 ---
+id: "pinching-joints"
 name: "Pinching Joints"
 tier: "basic"
 tags:

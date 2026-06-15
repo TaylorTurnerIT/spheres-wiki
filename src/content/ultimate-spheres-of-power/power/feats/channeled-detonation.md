@@ -1,4 +1,5 @@
 ---
+id: "channeled-detonation"
 name: "Channeled Detonation"
 sphere: death
 tags: ["channeling"]

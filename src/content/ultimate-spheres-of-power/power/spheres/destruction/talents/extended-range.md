@@ -1,4 +1,5 @@
 ---
+id: "extended-range"
 name: "Extended Range"
 tier: basic
 tags: ["range"]

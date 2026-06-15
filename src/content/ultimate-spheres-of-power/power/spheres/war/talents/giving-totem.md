@@ -1,4 +1,5 @@
 ---
+id: "giving-totem"
 name: "Giving Totem"
 tier: basic
 tags: ["totem"]

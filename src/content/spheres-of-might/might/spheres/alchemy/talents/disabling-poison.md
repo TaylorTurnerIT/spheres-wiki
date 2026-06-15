@@ -1,4 +1,5 @@
 ---
+id: "disabling-poison"
 name: "Disabling Poison"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "hollow-body"
 name: "Hollow Body"
 tier: advanced
 tags: []

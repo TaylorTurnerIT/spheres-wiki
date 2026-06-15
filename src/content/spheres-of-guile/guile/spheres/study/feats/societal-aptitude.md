@@ -1,4 +1,5 @@
 ---
+id: "societal-aptitude"
 name: "Societal Aptitude"
 tags: []
 ---

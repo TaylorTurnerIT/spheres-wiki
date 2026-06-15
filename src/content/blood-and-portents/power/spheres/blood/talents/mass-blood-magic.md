@@ -1,4 +1,5 @@
 ---
+id: "mass-blood-magic"
 name: "Mass Blood Magic"
 tier: basic
 tags: ["mass"]

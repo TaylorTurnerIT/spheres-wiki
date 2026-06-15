@@ -1,4 +1,5 @@
 ---
+id: "challenge"
 name: "Challenge"
 tier: "base"
 tags: []

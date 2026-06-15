@@ -1,4 +1,5 @@
 ---
+id: "mageknight-mystic-adaption-core"
 name: "Mystic Adaption [Core]"
 tags: []
 featureId: mystic-combat-su

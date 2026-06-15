@@ -1,4 +1,5 @@
 ---
+id: "shifter-shifting-style"
 name: "Shifting Style"
 tags: []
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "precise-marksmanship"
 name: "Precise Marksmanship"
 tier: "advanced"
 tags:

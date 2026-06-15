@@ -1,4 +1,5 @@
 ---
+id: "haymaker"
 name: "Haymaker"
 tier: "basic"
 tags:

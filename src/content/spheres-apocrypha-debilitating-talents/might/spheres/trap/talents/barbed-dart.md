@@ -1,4 +1,5 @@
 ---
+id: "barbed-dart"
 name: "Barbed Dart"
 tier: "basic"
 tags:

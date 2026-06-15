@@ -1,4 +1,5 @@
 ---
+id: "halo-effect"
 name: "Halo Effect"
 tier: basic
 tags: ["utility", "lens"]

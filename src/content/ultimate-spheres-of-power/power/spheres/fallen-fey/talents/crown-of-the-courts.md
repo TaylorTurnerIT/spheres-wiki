@@ -1,4 +1,5 @@
 ---
+id: "crown-of-the-courts"
 name: "Crown Of The Courts"
 tier: basic
 tags: ["fey-blessing"]

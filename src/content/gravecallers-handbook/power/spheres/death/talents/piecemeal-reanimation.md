@@ -1,4 +1,5 @@
 ---
+id: "piecemeal-reanimation"
 name: "Piecemeal Reanimation"
 tier: basic
 tags: ["dominion"]

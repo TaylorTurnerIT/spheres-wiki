@@ -1,4 +1,5 @@
 ---
+id: "lively-chime"
 name: "Lively Chime"
 tier: "basic"
 tags:

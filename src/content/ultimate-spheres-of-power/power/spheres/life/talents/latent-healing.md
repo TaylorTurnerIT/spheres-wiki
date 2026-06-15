@@ -1,4 +1,5 @@
 ---
+id: "latent-healing"
 name: "Latent Healing"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "conflict-of-wits"
 name: "Conflict Of Wits"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "gallowglass-training"
 name: "Gallowglass Training"
 tier: "basic"
 tags:

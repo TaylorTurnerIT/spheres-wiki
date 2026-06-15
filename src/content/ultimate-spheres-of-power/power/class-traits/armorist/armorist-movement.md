@@ -1,4 +1,5 @@
 ---
+id: "armorist-movement"
 name: "Movement"
 tags: []
 featureId: arsenal-trick

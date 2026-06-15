@@ -1,4 +1,5 @@
 ---
+id: "talisman"
 name: "Talisman"
 tier: "base"
 tags:

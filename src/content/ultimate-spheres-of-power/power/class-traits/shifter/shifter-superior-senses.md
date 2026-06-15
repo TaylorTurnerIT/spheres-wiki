@@ -1,4 +1,5 @@
 ---
+id: "shifter-superior-senses"
 name: "Superior Senses"
 tags: ["extraordinary"]
 featureId: bestial-trait

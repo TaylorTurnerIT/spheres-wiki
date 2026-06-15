@@ -1,4 +1,5 @@
 ---
+id: "mass-challenge"
 name: "Mass Challenge"
 tier: "basic"
 tags: []

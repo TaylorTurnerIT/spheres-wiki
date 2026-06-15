@@ -1,4 +1,5 @@
 ---
+id: "phantom-pain"
 name: "Phantom Pain"
 tier: advanced
 tags: []

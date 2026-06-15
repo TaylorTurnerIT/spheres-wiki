@@ -1,4 +1,5 @@
 ---
+id: "thunderous-punishment"
 name: "Thunderous Punishment"
 tier: "basic"
 tags: []

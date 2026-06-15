@@ -1,4 +1,5 @@
 ---
+id: "hot-pocket"
 name: "Hot Pocket"
 tier: "advanced"
 tags:

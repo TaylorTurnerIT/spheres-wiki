@@ -1,4 +1,5 @@
 ---
+id: "ooze-ichor"
 name: "Ooze Ichor"
 tier: "basic"
 tags: []

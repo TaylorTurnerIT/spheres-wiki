@@ -1,4 +1,5 @@
 ---
+id: "banish-to-faerie"
 name: "Banish to Faerie"
 tier: advanced
 tags: []

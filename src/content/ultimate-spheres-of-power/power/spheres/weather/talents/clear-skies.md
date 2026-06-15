@@ -1,4 +1,5 @@
 ---
+id: "clear-skies"
 name: "Clear Skies"
 tier: basic
 tags: ["all", "mantle"]

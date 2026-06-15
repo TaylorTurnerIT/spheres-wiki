@@ -1,4 +1,5 @@
 ---
+id: "armorist-share-bond"
 name: "Share Bond"
 tags: []
 featureId: arsenal-trick

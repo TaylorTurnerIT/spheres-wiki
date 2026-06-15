@@ -1,4 +1,5 @@
 ---
+id: "antimagic-aura-arcforge"
 name: "Antimagic Aura [Arcforge Addendum]"
 tier: advanced
 tags: []

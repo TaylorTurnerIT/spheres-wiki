@@ -1,4 +1,5 @@
 ---
+id: "second-chance"
 name: "Second Chance"
 tier: basic
 tags: ["combat", "mythic"]

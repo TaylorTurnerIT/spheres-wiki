@@ -1,4 +1,5 @@
 ---
+id: "mageknight-aura-of-chaos"
 name: "Aura of Chaos"
 tags: []
 featureId: mystic-combat-su

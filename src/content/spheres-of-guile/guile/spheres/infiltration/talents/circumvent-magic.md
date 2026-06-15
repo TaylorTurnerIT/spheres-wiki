@@ -1,4 +1,5 @@
 ---
+id: "circumvent-magic"
 name: "Circumvent Magic"
 tier: "basic"
 tags:

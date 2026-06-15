@@ -1,4 +1,5 @@
 ---
+id: "resolve"
 name: "Resolve"
 tier: basic
 tags: ["extraordinary", "mandate"]

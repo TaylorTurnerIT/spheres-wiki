@@ -1,4 +1,5 @@
 ---
+id: "devastating-tricks"
 name: "Devastating Tricks"
 tier: "basic"
 tags: ["trick"]

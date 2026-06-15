@@ -1,4 +1,5 @@
 ---
+id: "alarm-trap"
 name: "Alarm Trap"
 tier: "basic"
 tags:

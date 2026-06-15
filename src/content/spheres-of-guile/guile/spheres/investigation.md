@@ -1,4 +1,5 @@
 ---
+id: "investigation"
 name: "Investigation"
 icon: "investigation"
 tags: []

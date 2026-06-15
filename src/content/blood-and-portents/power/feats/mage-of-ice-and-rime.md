@@ -1,4 +1,5 @@
 ---
+id: "mage-of-ice-and-rime"
 name: "Mage Of Ice And Rime"
 sphere: nature
 tags: []

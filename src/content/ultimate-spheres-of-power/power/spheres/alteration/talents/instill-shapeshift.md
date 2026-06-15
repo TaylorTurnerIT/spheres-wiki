@@ -1,4 +1,5 @@
 ---
+id: "instill-shapeshift"
 name: "Instill Shapeshift"
 tier: basic
 tags: ["instill"]

@@ -1,4 +1,5 @@
 ---
+id: "natures-enhancement"
 name: Nature's Enhancement
 sphere: nature
 dualSphere: enhancement

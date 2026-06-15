@@ -1,4 +1,5 @@
 ---
+id: "bestial-reflexes"
 name: "Bestial Reflexes"
 tier: basic
 tags: []

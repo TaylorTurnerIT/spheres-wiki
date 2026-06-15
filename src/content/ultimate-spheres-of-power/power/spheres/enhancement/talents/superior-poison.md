@@ -1,4 +1,5 @@
 ---
+id: "superior-poison"
 name: "Superior Poison"
 tier: basic
 tags: ["enhance"]

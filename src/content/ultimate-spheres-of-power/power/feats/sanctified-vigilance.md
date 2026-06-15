@@ -1,4 +1,5 @@
 ---
+id: "sanctified-vigilance"
 name: Sanctified Vigilance
 sphere: war
 dualSphere: fate

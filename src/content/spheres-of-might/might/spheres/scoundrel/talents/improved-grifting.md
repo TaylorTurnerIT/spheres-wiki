@@ -1,4 +1,5 @@
 ---
+id: "improved-grifting"
 name: "Improved Grifting"
 tier: "basic"
 tags: []

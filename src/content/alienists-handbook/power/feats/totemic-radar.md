@@ -1,4 +1,5 @@
 ---
+id: "totemic-radar"
 name: Totemic Radar
 sphere: war
 dualSphere: divination

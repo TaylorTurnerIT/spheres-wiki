@@ -1,4 +1,5 @@
 ---
+id: "technological-suppression"
 name: "Technological Suppression"
 tier: basic
 tags: ["aegis", "ward"]

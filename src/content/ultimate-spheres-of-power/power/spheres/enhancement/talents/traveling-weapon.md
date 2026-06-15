@@ -1,4 +1,5 @@
 ---
+id: "traveling-weapon"
 name: "Traveling Weapon"
 tier: basic
 tags: ["enhance"]

@@ -1,4 +1,5 @@
 ---
+id: "hemorrhaging-poison"
 name: "Hemorrhaging Poison"
 tier: "advanced"
 tags: []

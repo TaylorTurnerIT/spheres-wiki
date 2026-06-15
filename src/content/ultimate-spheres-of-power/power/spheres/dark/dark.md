@@ -1,4 +1,5 @@
 ---
+id: "dark"
 name: "Dark"
 icon: dark
 description: "You may create and manipulate darkness."

@@ -1,4 +1,5 @@
 ---
+id: "sand-swimmer"
 name: "Sand Swimmer"
 tier: basic
 tags: ["aridity", "mantle"]

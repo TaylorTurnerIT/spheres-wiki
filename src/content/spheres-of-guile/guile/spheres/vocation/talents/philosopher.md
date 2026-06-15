@@ -1,4 +1,5 @@
 ---
+id: "philosopher"
 name: "Philosopher"
 tier: "basic"
 tags:

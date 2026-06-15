@@ -1,4 +1,5 @@
 ---
+id: "logistical-genius"
 name: "Logistical Genius"
 tier: "basic"
 tags:

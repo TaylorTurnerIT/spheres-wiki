@@ -1,4 +1,5 @@
 ---
+id: "shifter-graft-weapon"
 name: "Graft Weapon"
 tags: ["supernatural"]
 featureId: bestial-trait

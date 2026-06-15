@@ -1,4 +1,5 @@
 ---
+id: "blast-trap"
 name: "Blast Trap"
 tier: basic
 tags: ["blast-shape"]

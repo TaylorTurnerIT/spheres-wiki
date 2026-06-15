@@ -1,4 +1,5 @@
 ---
+id: "subvert-weapon"
 name: "Subvert Weapon"
 tier: basic
 tags: ["curse", "word"]

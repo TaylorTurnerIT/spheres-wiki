@@ -1,4 +1,5 @@
 ---
+id: "animal-whisperer"
 name: "Animal Whisperer"
 tier: "base"
 tags:

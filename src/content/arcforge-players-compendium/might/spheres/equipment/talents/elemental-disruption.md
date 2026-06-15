@@ -1,4 +1,5 @@
 ---
+id: "elemental-disruption"
 name: "Elemental Disruption"
 tier: "basic"
 tags: []

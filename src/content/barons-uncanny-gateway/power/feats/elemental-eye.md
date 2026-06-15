@@ -1,4 +1,5 @@
 ---
+id: "elemental-eye"
 name: "Elemental Eye"
 sphere: nature
 dualSphere: divination

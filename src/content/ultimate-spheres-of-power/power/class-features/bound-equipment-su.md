@@ -1,4 +1,5 @@
 ---
+id: "bound-equipment-su"
 name: "Bound Equipment (Su)"
 type: class-feature
 className: armorist

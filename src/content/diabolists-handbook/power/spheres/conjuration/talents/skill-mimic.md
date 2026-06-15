@@ -1,4 +1,5 @@
 ---
+id: "skill-mimic"
 name: "Skill Mimic"
 tier: basic
 tags: ["utility", "form"]

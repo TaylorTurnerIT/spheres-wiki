@@ -1,4 +1,5 @@
 ---
+id: "hardenweaken"
 name: "Harden/Weaken"
 tier: basic
 tags: ["enhance"]

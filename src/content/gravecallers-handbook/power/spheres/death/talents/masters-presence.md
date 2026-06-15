@@ -1,4 +1,5 @@
 ---
+id: "masters-presence"
 name: "Master's Presence"
 tier: basic
 tags: ["dominion"]

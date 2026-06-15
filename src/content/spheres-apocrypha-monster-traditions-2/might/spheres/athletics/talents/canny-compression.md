@@ -1,4 +1,5 @@
 ---
+id: "canny-compression"
 name: "Canny Compression"
 tier: "basic"
 tags: []

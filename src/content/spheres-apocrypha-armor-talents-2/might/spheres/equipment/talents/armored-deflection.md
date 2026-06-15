@@ -1,4 +1,5 @@
 ---
+id: "armored-deflection"
 name: "Armored Deflection"
 tier: "basic"
 tags: []

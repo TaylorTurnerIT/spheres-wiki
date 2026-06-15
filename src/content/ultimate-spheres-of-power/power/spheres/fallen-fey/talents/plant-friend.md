@@ -1,4 +1,5 @@
 ---
+id: "plant-friend"
 name: "Plant Friend"
 tier: basic
 tags: ["fey-blessing"]

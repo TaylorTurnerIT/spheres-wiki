@@ -1,4 +1,5 @@
 ---
+id: "channel-companion"
 name: "Channel Companion"
 tier: advanced
 tags: []

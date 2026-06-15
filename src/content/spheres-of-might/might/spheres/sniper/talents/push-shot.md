@@ -1,4 +1,5 @@
 ---
+id: "push-shot"
 name: "Push Shot"
 tier: "basic"
 tags:

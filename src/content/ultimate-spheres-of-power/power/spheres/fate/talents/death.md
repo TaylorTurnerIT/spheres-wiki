@@ -1,4 +1,5 @@
 ---
+id: "death"
 name: Death
 tier: advanced
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "continuous-ward"
 name: "Continuous Ward"
 tier: basic
 tags: []

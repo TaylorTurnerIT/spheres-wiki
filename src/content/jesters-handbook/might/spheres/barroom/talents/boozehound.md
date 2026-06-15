@@ -1,4 +1,5 @@
 ---
+id: "boozehound"
 name: "Boozehound"
 tier: "basic"
 tags:

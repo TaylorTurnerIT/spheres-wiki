@@ -1,4 +1,5 @@
 ---
+id: "lurking-surprise"
 name: "Lurking Surprise"
 sphere: dark
 tags: []

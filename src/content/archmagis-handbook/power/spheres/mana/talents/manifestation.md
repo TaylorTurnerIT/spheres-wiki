@@ -1,4 +1,5 @@
 ---
+id: "manifestation"
 name: "Manifestation"
 tier: advanced
 tags: ["companion"]

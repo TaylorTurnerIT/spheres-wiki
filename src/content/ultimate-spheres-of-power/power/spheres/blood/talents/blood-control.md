@@ -1,4 +1,5 @@
 ---
+id: "blood-control"
 name: "Blood Control"
 tier: base
 tags: []

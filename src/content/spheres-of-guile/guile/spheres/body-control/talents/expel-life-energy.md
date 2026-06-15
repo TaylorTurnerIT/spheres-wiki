@@ -1,4 +1,5 @@
 ---
+id: "expel-life-energy"
 name: "Expel Life Energy"
 tier: "advanced"
 tags:

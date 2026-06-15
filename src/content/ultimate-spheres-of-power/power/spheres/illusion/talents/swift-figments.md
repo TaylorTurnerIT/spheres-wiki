@@ -1,4 +1,5 @@
 ---
+id: "swift-figments"
 name: "Swift Figments"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "fire-blast"
 name: "Fire Blast"
 tier: basic
 tags: ["blast-type", "fire"]

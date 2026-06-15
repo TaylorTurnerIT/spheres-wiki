@@ -1,4 +1,5 @@
 ---
+id: "hypnotic-control"
 name: "Hypnotic Control"
 tier: "base"
 tags:

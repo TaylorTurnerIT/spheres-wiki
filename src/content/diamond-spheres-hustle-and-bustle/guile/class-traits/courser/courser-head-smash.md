@@ -1,4 +1,5 @@
 ---
+id: "courser-head-smash"
 name: Head Smash
 featureId: courser-ventures
 tags: []

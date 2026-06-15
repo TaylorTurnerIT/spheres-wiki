@@ -1,4 +1,5 @@
 ---
+id: "storm-lord"
 name: "Storm Lord"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "fast-divinations"
 name: "Fast Divinations"
 tier: basic
 tags: []

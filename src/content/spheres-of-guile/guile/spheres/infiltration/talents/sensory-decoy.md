@@ -1,4 +1,5 @@
 ---
+id: "sensory-decoy"
 name: "Sensory Decoy"
 tier: "basic"
 tags: []

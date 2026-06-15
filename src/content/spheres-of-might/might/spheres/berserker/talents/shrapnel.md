@@ -1,4 +1,5 @@
 ---
+id: "shrapnel"
 name: "Shrapnel"
 tier: "basic"
 tags:

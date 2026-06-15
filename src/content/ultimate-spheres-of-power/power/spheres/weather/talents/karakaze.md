@@ -1,4 +1,5 @@
 ---
+id: "karakaze"
 name: "Karakaze"
 tier: basic
 tags: ["cold", "shroud"]

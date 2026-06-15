@@ -1,4 +1,5 @@
 ---
+id: "cryptic-strike"
 name: "Cryptic Strike"
 tier: basic
 tags: ["strike"]

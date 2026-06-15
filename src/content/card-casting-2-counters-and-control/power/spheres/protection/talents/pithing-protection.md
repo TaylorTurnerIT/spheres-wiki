@@ -1,4 +1,5 @@
 ---
+id: "pithing-protection"
 name: "Pithing Protection [Original]"
 tier: advanced
 tags: []

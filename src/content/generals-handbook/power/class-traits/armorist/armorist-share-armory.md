@@ -1,4 +1,5 @@
 ---
+id: "armorist-share-armory"
 name: "Share Armory"
 tags: []
 featureId: arsenal-trick

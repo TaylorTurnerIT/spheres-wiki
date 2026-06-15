@@ -1,4 +1,5 @@
 ---
+id: "armament-modder"
 name: "Armament Modder"
 tier: "basic"
 tags:

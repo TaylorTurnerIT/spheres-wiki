@@ -1,4 +1,5 @@
 ---
+id: "hand-slasher"
 name: "Hand Slasher"
 tier: "basic"
 tags: []

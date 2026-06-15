@@ -1,4 +1,5 @@
 ---
+id: "vampires-guile"
 name: Vampire's Guile
 sphere: mind
 dualSphere: blood

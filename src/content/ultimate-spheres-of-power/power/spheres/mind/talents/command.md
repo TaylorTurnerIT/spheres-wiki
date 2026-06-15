@@ -1,4 +1,5 @@
 ---
+id: "command"
 name: "Command"
 tier: basic
 tags: ["charm"]

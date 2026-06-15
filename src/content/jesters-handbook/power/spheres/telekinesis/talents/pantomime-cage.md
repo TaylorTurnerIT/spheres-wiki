@@ -1,4 +1,5 @@
 ---
+id: "pantomime-cage"
 name: "Pantomime Cage"
 tier: basic
 tags: []

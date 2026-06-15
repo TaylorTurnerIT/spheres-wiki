@@ -1,4 +1,5 @@
 ---
+id: "object-reading"
 name: "Object Reading"
 tier: basic
 tags: ["divine", "ki", "mythic", "utility"]

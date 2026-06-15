@@ -1,4 +1,5 @@
 ---
+id: "suppressed-spell"
 name: "Suppressed Spell"
 sphere: illusion
 tags: ["metamagic"]

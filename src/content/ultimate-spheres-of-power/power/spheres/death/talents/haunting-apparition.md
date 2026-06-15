@@ -1,4 +1,5 @@
 ---
+id: "haunting-apparition"
 name: "Haunting Apparition"
 tier: basic
 tags: []

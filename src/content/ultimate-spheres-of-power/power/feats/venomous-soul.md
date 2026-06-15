@@ -1,4 +1,5 @@
 ---
+id: "venomous-soul"
 name: "Venomous Soul"
 sphere: alteration
 tags: ["combat"]

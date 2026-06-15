@@ -1,4 +1,5 @@
 ---
+id: "snipe"
 label: "Snipe"
 sphere: "sniper"
 priority: 0

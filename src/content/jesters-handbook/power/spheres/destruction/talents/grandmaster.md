@@ -1,4 +1,5 @@
 ---
+id: "grandmaster"
 name: "Grandmaster"
 tier: advanced
 tags: []

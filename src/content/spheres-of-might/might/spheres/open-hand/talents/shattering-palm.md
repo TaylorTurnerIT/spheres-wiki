@@ -1,4 +1,5 @@
 ---
+id: "shattering-palm"
 name: "Shattering Palm"
 tier: "basic"
 tags: []

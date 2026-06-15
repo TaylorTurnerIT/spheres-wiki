@@ -1,4 +1,5 @@
 ---
+id: "novel-deception"
 name: "Novel Deception"
 tier: basic
 tags: []

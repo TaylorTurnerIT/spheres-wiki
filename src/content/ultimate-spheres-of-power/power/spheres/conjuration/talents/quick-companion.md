@@ -1,4 +1,5 @@
 ---
+id: "quick-companion"
 name: "Quick Companion"
 tier: basic
 tags: ["form"]

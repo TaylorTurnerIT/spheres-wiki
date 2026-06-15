@@ -1,4 +1,5 @@
 ---
+id: "aurora"
 name: Aurora
 sphere: weather
 dualSphere: light

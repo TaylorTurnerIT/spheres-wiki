@@ -1,4 +1,5 @@
 ---
+id: "swift-demise"
 name: Swift Demise
 sphere: time
 dualSphere: death

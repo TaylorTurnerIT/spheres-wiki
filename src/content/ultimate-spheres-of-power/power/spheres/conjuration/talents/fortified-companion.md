@@ -1,4 +1,5 @@
 ---
+id: "fortified-companion"
 name: "Fortified Companion"
 tier: basic
 tags: ["form"]

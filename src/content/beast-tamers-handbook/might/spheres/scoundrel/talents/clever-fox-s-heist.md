@@ -1,4 +1,5 @@
 ---
+id: "clever-fox-s-heist"
 name: "Clever Fox’s Heist"
 tier: "basic"
 tags: []

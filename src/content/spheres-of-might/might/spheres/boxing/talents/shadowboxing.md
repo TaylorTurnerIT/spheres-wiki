@@ -1,4 +1,5 @@
 ---
+id: "shadowboxing"
 name: "Shadowboxing"
 tier: "basic"
 tags:

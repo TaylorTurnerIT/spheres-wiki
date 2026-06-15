@@ -1,4 +1,5 @@
 ---
+id: "hostile-lift"
 name: "Hostile Lift"
 tier: basic
 tags: []

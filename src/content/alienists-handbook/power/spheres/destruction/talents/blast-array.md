@@ -1,4 +1,5 @@
 ---
+id: "blast-array"
 name: "Blast Array"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "phalanx-formation"
 name: "Phalanx Formation"
 sphere: war
 tags: ["squadron"]

@@ -1,4 +1,5 @@
 ---
+id: "purifying-light"
 name: "Purifying Light"
 tier: basic
 tags: ["light"]

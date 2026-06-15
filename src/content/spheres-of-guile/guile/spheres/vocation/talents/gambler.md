@@ -1,4 +1,5 @@
 ---
+id: "gambler"
 name: "Gambler"
 tier: "basic"
 tags:

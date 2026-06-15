@@ -1,4 +1,5 @@
 ---
+id: "painkiller"
 name: "Painkiller"
 tier: basic
 tags: []

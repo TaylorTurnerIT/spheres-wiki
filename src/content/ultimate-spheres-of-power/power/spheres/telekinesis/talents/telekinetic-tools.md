@@ -1,4 +1,5 @@
 ---
+id: "telekinetic-tools"
 name: "Telekinetic Tools"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "historian"
 name: "Historian"
 tier: "basic"
 tags:

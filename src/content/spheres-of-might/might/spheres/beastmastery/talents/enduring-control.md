@@ -1,4 +1,5 @@
 ---
+id: "enduring-control"
 name: "Enduring Control"
 tier: "advanced"
 tags:

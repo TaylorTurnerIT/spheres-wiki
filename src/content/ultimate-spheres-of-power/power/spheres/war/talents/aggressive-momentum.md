@@ -1,4 +1,5 @@
 ---
+id: "aggressive-momentum"
 name: "Aggressive Momentum"
 tier: basic
 tags: ["momentum"]

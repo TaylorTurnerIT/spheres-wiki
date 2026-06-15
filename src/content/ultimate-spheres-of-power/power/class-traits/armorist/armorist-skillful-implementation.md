@@ -1,4 +1,5 @@
 ---
+id: "armorist-skillful-implementation"
 name: "Skillful Implementation"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "terrain-advantage"
 name: "Terrain Advantage"
 tier: "basic"
 tags:

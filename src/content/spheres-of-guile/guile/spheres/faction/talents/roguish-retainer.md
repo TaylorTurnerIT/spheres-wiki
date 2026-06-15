@@ -1,4 +1,5 @@
 ---
+id: "roguish-retainer"
 name: "Roguish Retainer"
 tier: "basic"
 tags:

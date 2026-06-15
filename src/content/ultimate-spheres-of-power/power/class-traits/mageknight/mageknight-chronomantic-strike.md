@@ -1,4 +1,5 @@
 ---
+id: "mageknight-chronomantic-strike"
 name: "Chronomantic Strike"
 tags: []
 featureId: mystic-combat-su

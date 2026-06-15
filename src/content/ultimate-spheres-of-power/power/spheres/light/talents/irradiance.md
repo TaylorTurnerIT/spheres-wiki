@@ -1,4 +1,5 @@
 ---
+id: "irradiance"
 name: "Irradiance"
 tier: basic
 tags: ["light"]

@@ -1,4 +1,5 @@
 ---
+id: "laborers"
 name: "Laborers"
 tier: "basic"
 tags:

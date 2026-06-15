@@ -1,4 +1,5 @@
 ---
+id: "teleport-beacon"
 name: "Teleport Beacon"
 tier: basic
 tags: ["space"]

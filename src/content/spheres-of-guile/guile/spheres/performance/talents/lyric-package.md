@@ -1,4 +1,5 @@
 ---
+id: "lyric-package"
 name: "Lyric Package"
 tier: "base"
 tags:

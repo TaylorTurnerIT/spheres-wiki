@@ -1,4 +1,5 @@
 ---
+id: "shifter-taste-for-blood"
 name: "Taste for Blood"
 tags: ["extraordinary"]
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "ranged-death"
 name: "Ranged Death"
 tier: basic
 tags: ["range"]

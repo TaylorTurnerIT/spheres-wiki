@@ -1,4 +1,5 @@
 ---
+id: "liver-shot"
 name: "Liver Shot"
 tier: "basic"
 tags:

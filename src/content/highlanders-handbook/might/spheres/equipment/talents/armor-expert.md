@@ -1,4 +1,5 @@
 ---
+id: "armor-expert"
 name: "Armor Expert"
 tier: "basic"
 tags: []

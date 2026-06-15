@@ -1,4 +1,5 @@
 ---
+id: "obscuring-mishap"
 name: "Obscuring Mishap"
 tier: "basic"
 tags:

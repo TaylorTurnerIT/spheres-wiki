@@ -1,4 +1,5 @@
 ---
+id: "anticipate-hostility"
 name: "Anticipate Hostility"
 tier: "basic"
 tags:

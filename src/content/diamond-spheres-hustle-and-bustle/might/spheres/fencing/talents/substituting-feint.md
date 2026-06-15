@@ -1,4 +1,5 @@
 ---
+id: "substituting-feint"
 name: "Substituting Feint"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "replenish"
 name: "Replenish"
 tier: basic
 tags: ["rally"]

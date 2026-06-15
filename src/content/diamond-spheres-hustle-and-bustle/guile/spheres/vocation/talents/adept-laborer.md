@@ -1,4 +1,5 @@
 ---
+id: "adept-laborer"
 name: "Adept Laborer"
 tier: "basic"
 tags:

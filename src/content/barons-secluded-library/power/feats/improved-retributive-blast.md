@@ -1,4 +1,5 @@
 ---
+id: "improved-retributive-blast"
 name: "Improved Retributive Blast"
 sphere: destruction
 tags: ["combat", "sm"]

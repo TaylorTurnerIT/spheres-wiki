@@ -1,4 +1,5 @@
 ---
+id: "mage-s-terror"
 name: "Mage’s Terror"
 tier: "basic"
 tags:

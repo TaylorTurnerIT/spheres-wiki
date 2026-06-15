@@ -1,4 +1,5 @@
 ---
+id: "exquisite-equipment"
 name: "Exquisite Equipment"
 tier: "advanced"
 tags:

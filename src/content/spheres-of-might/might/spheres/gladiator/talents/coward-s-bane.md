@@ -1,4 +1,5 @@
 ---
+id: "coward-s-bane"
 name: "Coward’s Bane"
 tier: "basic"
 tags:

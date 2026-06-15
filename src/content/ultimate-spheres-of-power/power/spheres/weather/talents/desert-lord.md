@@ -1,4 +1,5 @@
 ---
+id: "desert-lord"
 name: "Desert Lord"
 tier: advanced
 tags: []

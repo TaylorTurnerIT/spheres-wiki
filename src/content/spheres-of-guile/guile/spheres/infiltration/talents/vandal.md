@@ -1,4 +1,5 @@
 ---
+id: "vandal"
 name: "Vandal"
 tier: "base"
 tags:

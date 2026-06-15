@@ -1,4 +1,5 @@
 ---
+id: "speakeasy-special"
 name: "Speakeasy Special"
 tier: "basic"
 tags:

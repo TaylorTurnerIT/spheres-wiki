@@ -1,4 +1,5 @@
 ---
+id: "sirocco"
 name: "Sirocco"
 tier: basic
 tags: ["aridity", "shroud"]

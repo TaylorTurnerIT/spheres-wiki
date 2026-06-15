@@ -1,4 +1,5 @@
 ---
+id: "prizefighter"
 name: "Prizefighter"
 tier: "basic"
 tags: []

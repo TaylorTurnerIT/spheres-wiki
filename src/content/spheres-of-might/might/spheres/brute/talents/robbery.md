@@ -1,4 +1,5 @@
 ---
+id: "robbery"
 name: "Robbery"
 tier: "basic"
 tags:

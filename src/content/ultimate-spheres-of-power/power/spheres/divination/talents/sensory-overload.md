@@ -1,4 +1,5 @@
 ---
+id: "sensory-overload"
 name: "Sensory Overload"
 tier: basic
 tags: ["divine"]

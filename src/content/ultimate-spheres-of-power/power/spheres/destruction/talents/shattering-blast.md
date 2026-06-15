@@ -1,4 +1,5 @@
 ---
+id: "shattering-blast"
 name: "Shattering Blast"
 tier: basic
 tags: ["blast-type", "sonic"]

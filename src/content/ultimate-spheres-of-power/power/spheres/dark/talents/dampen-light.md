@@ -1,4 +1,5 @@
 ---
+id: "dampen-light"
 name: "Dampen Light"
 tier: basic
 tags: ["darkness"]

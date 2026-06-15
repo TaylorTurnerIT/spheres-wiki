@@ -1,4 +1,5 @@
 ---
+id: "blast-shape"
 description: "A mechanical descriptor identifying this as a blast shape effect or talent."
 priority: 0
 color: "#4A235A"

@@ -1,4 +1,5 @@
 ---
+id: "focusing-reload"
 name: "Focusing Reload"
 tier: "basic"
 tags: []

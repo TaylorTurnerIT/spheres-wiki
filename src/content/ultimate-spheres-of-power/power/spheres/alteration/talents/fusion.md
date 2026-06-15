@@ -1,4 +1,5 @@
 ---
+id: "fusion"
 name: "Fusion"
 tier: advanced
 tags: []

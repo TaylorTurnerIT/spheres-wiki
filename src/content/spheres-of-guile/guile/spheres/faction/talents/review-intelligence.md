@@ -1,4 +1,5 @@
 ---
+id: "review-intelligence"
 name: "Review Intelligence"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "looming-darkness"
 name: "Looming Darkness"
 tier: basic
 tags: ["blot", "darkness"]

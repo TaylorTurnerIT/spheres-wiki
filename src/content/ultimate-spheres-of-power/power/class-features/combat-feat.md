@@ -1,4 +1,5 @@
 ---
+id: "combat-feat"
 name: "Combat Feat"
 type: class-feature
 className: mageknight

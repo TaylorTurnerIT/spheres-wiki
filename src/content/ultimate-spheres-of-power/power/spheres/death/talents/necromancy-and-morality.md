@@ -1,4 +1,5 @@
 ---
+id: "necromancy-and-morality"
 name: "Necromancy and Morality"
 tier: base
 tags: []

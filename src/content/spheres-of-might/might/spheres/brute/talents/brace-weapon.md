@@ -1,4 +1,5 @@
 ---
+id: "brace-weapon"
 name: "Brace Weapon"
 tier: "basic"
 tags: []

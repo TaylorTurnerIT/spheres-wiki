@@ -1,4 +1,5 @@
 ---
+id: "explosive-orb"
 name: "Explosive Orb"
 tier: basic
 tags: ["blast-shape"]

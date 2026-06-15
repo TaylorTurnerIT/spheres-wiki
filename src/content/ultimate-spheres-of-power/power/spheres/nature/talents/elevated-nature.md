@@ -1,4 +1,5 @@
 ---
+id: "elevated-nature"
 name: "Elevated Nature"
 tier: basic
 tags: ["geomancing"]

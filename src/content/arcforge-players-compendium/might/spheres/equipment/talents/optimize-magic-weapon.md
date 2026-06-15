@@ -1,4 +1,5 @@
 ---
+id: "optimize-magic-weapon"
 name: "Optimize Magic Weapon"
 tier: "advanced"
 tags: []

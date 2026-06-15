@@ -1,4 +1,5 @@
 ---
+id: "greater-blood-control"
 name: "Greater Blood Control"
 tier: basic
 tags: []

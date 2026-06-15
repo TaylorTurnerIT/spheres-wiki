@@ -1,4 +1,5 @@
 ---
+id: "vengeance"
 name: "Vengeance"
 tier: basic
 tags: ["succor"]

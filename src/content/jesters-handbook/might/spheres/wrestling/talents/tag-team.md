@@ -1,4 +1,5 @@
 ---
+id: "tag-team"
 name: "Tag Team"
 tier: "basic"
 tags:

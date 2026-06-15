@@ -1,4 +1,5 @@
 ---
+id: "illustrious-light"
 name: Illustrious Light
 sphere: light
 dualSphere: illusion

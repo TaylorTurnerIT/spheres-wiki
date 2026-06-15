@@ -1,4 +1,5 @@
 ---
+id: "petrifying-poison"
 name: "Petrifying Poison"
 tier: "advanced"
 tags:

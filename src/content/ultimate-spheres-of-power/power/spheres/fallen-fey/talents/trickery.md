@@ -1,4 +1,5 @@
 ---
+id: "trickery"
 name: "Trickery"
 tier: basic
 tags: ["fey-blessing"]

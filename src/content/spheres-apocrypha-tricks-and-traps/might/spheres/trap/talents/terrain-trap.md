@@ -1,4 +1,5 @@
 ---
+id: "terrain-trap"
 name: "Terrain Trap"
 tier: "basic"
 tags: ["snare"]

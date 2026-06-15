@@ -1,4 +1,5 @@
 ---
+id: "revitalizing-grasp"
 name: "Revitalizing Grasp"
 sphere: life
 tags: ["warden"]

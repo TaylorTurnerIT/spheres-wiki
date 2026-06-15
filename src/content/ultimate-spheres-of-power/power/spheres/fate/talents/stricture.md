@@ -1,4 +1,5 @@
 ---
+id: "stricture"
 name: "Stricture"
 tier: basic
 tags: ["consecration"]

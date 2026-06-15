@@ -1,4 +1,5 @@
 ---
+id: "armorist-ramping-assault"
 name: "Ramping Assault"
 tags: []
 featureId: arsenal-trick

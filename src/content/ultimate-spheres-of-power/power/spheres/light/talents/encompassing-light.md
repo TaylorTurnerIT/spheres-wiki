@@ -1,4 +1,5 @@
 ---
+id: "encompassing-light"
 name: "Encompassing Light"
 tier: basic
 tags: ["light"]

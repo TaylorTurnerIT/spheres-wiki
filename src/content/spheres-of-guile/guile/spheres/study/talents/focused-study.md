@@ -1,4 +1,5 @@
 ---
+id: "focused-study"
 name: "Focused Study"
 tier: "basic"
 tags:

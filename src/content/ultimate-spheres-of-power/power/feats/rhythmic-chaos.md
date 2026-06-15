@@ -1,4 +1,5 @@
 ---
+id: "rhythmic-chaos"
 name: "Rhythmic Chaos"
 sphere: mana
 tags: ["wild-magic"]

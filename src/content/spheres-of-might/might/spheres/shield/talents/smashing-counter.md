@@ -1,4 +1,5 @@
 ---
+id: "smashing-counter"
 name: "Smashing Counter"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "extended-guard"
 name: "Extended Guard"
 tier: "basic"
 tags: []

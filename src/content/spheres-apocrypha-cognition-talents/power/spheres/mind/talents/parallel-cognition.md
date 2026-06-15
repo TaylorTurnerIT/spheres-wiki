@@ -1,4 +1,5 @@
 ---
+id: "parallel-cognition"
 name: "Parallel Cognition"
 tier: basic
 tags: ["cognition", "utility"]

@@ -1,4 +1,5 @@
 ---
+id: "revelation-of-infinite-possibility"
 name: "Revelation Of Infinite Possibility"
 tier: "advanced"
 tags:

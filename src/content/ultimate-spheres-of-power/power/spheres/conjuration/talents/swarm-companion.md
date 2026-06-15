@@ -1,4 +1,5 @@
 ---
+id: "swarm-companion"
 name: "Swarm Companion"
 tier: advanced
 tags: ["form"]

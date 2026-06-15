@@ -1,4 +1,5 @@
 ---
+id: "armorist-fighter-armor-training"
 name: "Fighter Armor Training"
 tags: []
 featureId: arsenal-trick

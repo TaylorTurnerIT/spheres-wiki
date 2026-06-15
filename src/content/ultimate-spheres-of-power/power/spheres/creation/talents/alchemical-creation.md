@@ -1,4 +1,5 @@
 ---
+id: "alchemical-creation"
 name: "Alchemical Creation"
 tier: basic
 tags: ["material"]

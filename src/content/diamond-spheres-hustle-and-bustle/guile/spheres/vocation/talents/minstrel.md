@@ -1,4 +1,5 @@
 ---
+id: "minstrel"
 name: "Minstrel"
 tier: "basic"
 tags:

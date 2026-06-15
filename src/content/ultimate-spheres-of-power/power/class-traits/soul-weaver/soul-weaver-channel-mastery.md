@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-channel-mastery"
 name: "Channel Mastery"
 tags: []
 featureId: bound-nexus

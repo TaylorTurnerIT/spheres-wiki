@@ -1,4 +1,5 @@
 ---
+id: "magical-resonance"
 name: "Magical Resonance"
 tier: "base"
 tags:

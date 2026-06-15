@@ -1,4 +1,5 @@
 ---
+id: "psychic-backlash"
 name: "Psychic Backlash"
 tier: advanced
 tags: ["supernatural"]

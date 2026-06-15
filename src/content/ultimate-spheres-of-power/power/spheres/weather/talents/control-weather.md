@@ -1,4 +1,5 @@
 ---
+id: "control-weather"
 name: "Control Weather"
 tier: base
 tags: ["spell-like"]

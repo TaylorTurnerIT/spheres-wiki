@@ -1,4 +1,5 @@
 ---
+id: "armorist-piercing-specialist"
 name: "Piercing Specialist"
 tags: []
 featureId: arsenal-trick

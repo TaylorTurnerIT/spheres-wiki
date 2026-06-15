@@ -1,4 +1,5 @@
 ---
+id: "greater-trainer"
 name: "Greater Trainer"
 tier: "basic"
 tags:

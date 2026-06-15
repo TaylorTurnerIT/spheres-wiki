@@ -1,4 +1,5 @@
 ---
+id: "duelist-s-grip"
 name: "Duelist’s Grip"
 tier: "basic"
 tags: []

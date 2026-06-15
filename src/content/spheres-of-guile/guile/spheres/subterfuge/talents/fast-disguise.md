@@ -1,4 +1,5 @@
 ---
+id: "fast-disguise"
 name: "Fast Disguise"
 tier: "base"
 tags: []

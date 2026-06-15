@@ -1,4 +1,5 @@
 ---
+id: "bottle-rocket"
 name: "Bottle Rocket"
 tier: "basic"
 tags: []

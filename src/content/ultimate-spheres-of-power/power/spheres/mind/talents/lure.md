@@ -1,4 +1,5 @@
 ---
+id: "lure"
 name: "Lure"
 tier: basic
 tags: ["cloud"]

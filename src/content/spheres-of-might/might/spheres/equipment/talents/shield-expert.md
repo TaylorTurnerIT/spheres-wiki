@@ -1,4 +1,5 @@
 ---
+id: "shield-expert"
 name: "Shield Expert"
 tier: "basic"
 tags: []

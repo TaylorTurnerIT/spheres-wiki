@@ -1,4 +1,5 @@
 ---
+id: "tabulated-mind"
 name: "Tabulated Mind"
 sphere: divination
 tags: []

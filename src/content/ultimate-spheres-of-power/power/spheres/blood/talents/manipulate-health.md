@@ -1,4 +1,5 @@
 ---
+id: "manipulate-health"
 name: "Manipulate Health"
 tier: basic
 tags: ["quicken", "still"]

@@ -1,4 +1,5 @@
 ---
+id: "blazewater"
 name: "Blazewater"
 tier: "advanced"
 tags: []

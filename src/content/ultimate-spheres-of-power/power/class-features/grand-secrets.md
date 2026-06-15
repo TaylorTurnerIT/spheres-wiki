@@ -1,4 +1,5 @@
 ---
+id: "grand-secrets"
 name: "Grand Secrets"
 type: class-feature
 className: hedgewitch

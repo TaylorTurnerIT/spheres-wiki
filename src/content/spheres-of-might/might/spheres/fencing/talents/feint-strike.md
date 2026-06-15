@@ -1,4 +1,5 @@
 ---
+id: "feint-strike"
 name: "Feint Strike"
 tier: "basic"
 tags: []

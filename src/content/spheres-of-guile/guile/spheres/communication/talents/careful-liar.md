@@ -1,4 +1,5 @@
 ---
+id: "careful-liar"
 name: "Careful Liar"
 tier: "basic"
 tags:

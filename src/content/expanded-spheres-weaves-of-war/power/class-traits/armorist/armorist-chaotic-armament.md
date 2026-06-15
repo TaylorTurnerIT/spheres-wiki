@@ -1,4 +1,5 @@
 ---
+id: "armorist-chaotic-armament"
 name: "Chaotic Armament"
 tags: []
 featureId: arsenal-trick

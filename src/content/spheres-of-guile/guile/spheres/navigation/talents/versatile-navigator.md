@@ -1,4 +1,5 @@
 ---
+id: "versatile-navigator"
 name: "Versatile Navigator"
 tier: "basic"
 tags: []

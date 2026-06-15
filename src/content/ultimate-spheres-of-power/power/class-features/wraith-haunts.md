@@ -1,4 +1,5 @@
 ---
+id: "wraith-haunts"
 name: "Wraith Haunts"
 type: class-feature
 className: wraith

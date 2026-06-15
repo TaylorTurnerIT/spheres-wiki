@@ -1,4 +1,5 @@
 ---
+id: "armorist-ammunition-specialist"
 name: "Ammunition Specialist"
 tags: []
 featureId: arsenal-trick

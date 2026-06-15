@@ -1,4 +1,5 @@
 ---
+id: "active-camouflage"
 name: "Active Camouflage"
 tier: "basic"
 tags: []

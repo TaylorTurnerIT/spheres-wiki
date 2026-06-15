@@ -1,4 +1,5 @@
 ---
+id: "launching-uppercut"
 name: "Launching Uppercut"
 tier: "basic"
 tags:

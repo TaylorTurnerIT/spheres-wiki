@@ -1,4 +1,5 @@
 ---
+id: "mageknight-graft-weapon"
 name: "Graft Weapon"
 tags: ["supernatural"]
 featureId: mystic-combat-su

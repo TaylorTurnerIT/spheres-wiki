@@ -1,4 +1,5 @@
 ---
+id: "discern-illusions"
 name: "Discern Illusions"
 tier: "basic"
 tags: []

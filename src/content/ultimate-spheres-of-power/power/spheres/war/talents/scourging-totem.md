@@ -1,4 +1,5 @@
 ---
+id: "scourging-totem"
 name: "Scourging Totem"
 tier: basic
 tags: ["totem"]

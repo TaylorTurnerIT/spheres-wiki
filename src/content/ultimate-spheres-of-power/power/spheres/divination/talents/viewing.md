@@ -1,4 +1,5 @@
 ---
+id: "viewing"
 name: "Viewing"
 tier: basic
 tags: ["utility", "divine"]

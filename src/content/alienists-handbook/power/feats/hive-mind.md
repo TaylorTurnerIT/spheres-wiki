@@ -1,4 +1,5 @@
 ---
+id: "hive-mind"
 name: "Hive Mind"
 sphere: war
 tags: ["squadron"]

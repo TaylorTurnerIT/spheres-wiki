@@ -1,4 +1,5 @@
 ---
+id: "equal-and-opposite"
 name: "Equal and Opposite"
 sphere: telekinesis
 tags: ["combat", "protokinesis"]

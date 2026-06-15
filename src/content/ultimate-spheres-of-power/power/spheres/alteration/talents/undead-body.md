@@ -1,4 +1,5 @@
 ---
+id: "undead-body"
 name: "Undead Body"
 tier: basic
 tags: ["body"]

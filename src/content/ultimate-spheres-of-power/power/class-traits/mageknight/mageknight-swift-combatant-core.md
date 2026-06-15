@@ -1,4 +1,5 @@
 ---
+id: "mageknight-swift-combatant-core"
 name: "Swift Combatant [Core]"
 tags: []
 featureId: mystic-combat-su

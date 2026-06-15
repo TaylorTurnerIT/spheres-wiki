@@ -1,4 +1,5 @@
 ---
+id: "incanter-nature-sub-specialization-phytomancer-plant"
 name: "Nature Sub-Specialization: Phytomancer (plant)"
 tags: []
 featureId: list-of-sphere-specializations

@@ -1,4 +1,5 @@
 ---
+id: "stupored-drop"
 name: "Stupored Drop"
 tier: "basic"
 tags:

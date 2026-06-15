@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-flexible-caster"
 name: "Flexible Caster"
 tags: []
 featureId: invocations

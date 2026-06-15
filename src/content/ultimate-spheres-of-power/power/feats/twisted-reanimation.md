@@ -1,4 +1,5 @@
 ---
+id: "twisted-reanimation"
 name: Twisted Reanimation
 sphere: death
 dualSphere: alteration

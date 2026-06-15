@@ -1,4 +1,5 @@
 ---
+id: "disarming-traps"
 name: "Disarming Traps"
 tier: "basic"
 tags: ["snare"]

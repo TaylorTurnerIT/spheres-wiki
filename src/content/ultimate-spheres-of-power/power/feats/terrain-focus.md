@@ -1,4 +1,5 @@
 ---
+id: "terrain-focus"
 name: "Terrain Focus"
 sphere: nature
 tags: ["drawback"]

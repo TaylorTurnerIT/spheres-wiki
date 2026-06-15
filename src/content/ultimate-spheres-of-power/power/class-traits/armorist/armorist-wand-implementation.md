@@ -1,4 +1,5 @@
 ---
+id: "armorist-wand-implementation"
 name: "Wand Implementation"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "aerial-trigger"
 name: "Aerial Trigger"
 tier: "basic"
 tags: []

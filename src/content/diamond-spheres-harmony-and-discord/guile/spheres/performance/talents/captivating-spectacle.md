@@ -1,4 +1,5 @@
 ---
+id: "captivating-spectacle"
 name: "Captivating Spectacle"
 tier: "basic"
 tags:

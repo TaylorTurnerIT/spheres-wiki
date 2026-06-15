@@ -1,4 +1,5 @@
 ---
+id: "elemental-purity"
 name: "Elemental Purity"
 tier: advanced
 tags: []

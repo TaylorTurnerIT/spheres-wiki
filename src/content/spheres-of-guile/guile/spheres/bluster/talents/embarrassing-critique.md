@@ -1,4 +1,5 @@
 ---
+id: "embarrassing-critique"
 name: "Embarrassing Critique"
 tier: "basic"
 tags:

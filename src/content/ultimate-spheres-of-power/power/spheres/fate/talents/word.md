@@ -1,4 +1,5 @@
 ---
+id: "word"
 name: Word
 tier: base
 tags: []

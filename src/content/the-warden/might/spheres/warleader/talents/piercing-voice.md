@@ -1,4 +1,5 @@
 ---
+id: "piercing-voice"
 name: "Piercing Voice"
 tier: "advanced"
 tags: []

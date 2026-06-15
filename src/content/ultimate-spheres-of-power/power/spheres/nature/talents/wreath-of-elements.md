@@ -1,4 +1,5 @@
 ---
+id: "wreath-of-elements"
 name: "Wreath Of Elements"
 tier: basic
 tags: ["spirit"]

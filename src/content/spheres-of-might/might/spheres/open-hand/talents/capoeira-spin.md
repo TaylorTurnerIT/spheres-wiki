@@ -1,4 +1,5 @@
 ---
+id: "capoeira-spin"
 name: "Capoeira Spin"
 tier: "basic"
 tags: []

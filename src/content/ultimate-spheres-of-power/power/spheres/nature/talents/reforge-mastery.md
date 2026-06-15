@@ -1,4 +1,5 @@
 ---
+id: "reforge-mastery"
 name: "Reforge Mastery"
 tier: basic
 tags: ["metal", "geomancing"]

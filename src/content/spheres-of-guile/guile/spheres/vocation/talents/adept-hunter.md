@@ -1,4 +1,5 @@
 ---
+id: "adept-hunter"
 name: "Adept Hunter"
 tier: "basic"
 tags:

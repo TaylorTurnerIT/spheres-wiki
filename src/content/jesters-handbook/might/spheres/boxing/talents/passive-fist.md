@@ -1,4 +1,5 @@
 ---
+id: "passive-fist"
 name: "Passive Fist"
 tier: "basic"
 tags: []

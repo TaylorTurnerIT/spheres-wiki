@@ -1,4 +1,5 @@
 ---
+id: "extra-trigger"
 name: "Extra Trigger"
 tier: "basic"
 tags: []

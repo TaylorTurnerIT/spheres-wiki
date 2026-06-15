@@ -1,4 +1,5 @@
 ---
+id: "mobile-tactics"
 name: "Mobile Tactics"
 sphere: war
 tags: ["squadron"]

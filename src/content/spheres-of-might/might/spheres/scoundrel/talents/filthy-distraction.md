@@ -1,4 +1,5 @@
 ---
+id: "filthy-distraction"
 name: "Filthy Distraction"
 tier: "basic"
 tags: []

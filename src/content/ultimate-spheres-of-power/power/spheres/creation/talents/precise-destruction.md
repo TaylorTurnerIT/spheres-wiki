@@ -1,4 +1,5 @@
 ---
+id: "precise-destruction"
 name: "Precise Destruction"
 tier: basic
 tags: ["utility"]

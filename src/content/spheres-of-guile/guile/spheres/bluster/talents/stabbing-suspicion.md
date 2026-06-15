@@ -1,4 +1,5 @@
 ---
+id: "stabbing-suspicion"
 name: "Stabbing Suspicion"
 tier: "basic"
 tags:

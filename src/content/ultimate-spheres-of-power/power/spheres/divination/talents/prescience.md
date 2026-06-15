@@ -1,4 +1,5 @@
 ---
+id: "prescience"
 name: "Prescience"
 tier: basic
 tags: ["sense"]

@@ -1,4 +1,5 @@
 ---
+id: "aura-of-mystery"
 name: "Aura Of Mystery"
 sphere: dark
 tags: []

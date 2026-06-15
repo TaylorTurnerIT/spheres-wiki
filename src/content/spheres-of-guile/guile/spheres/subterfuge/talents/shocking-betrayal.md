@@ -1,4 +1,5 @@
 ---
+id: "shocking-betrayal"
 name: "Shocking Betrayal"
 tier: "basic"
 tags: []

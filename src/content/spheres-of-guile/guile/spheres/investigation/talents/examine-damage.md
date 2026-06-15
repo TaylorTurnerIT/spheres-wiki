@@ -1,4 +1,5 @@
 ---
+id: "examine-damage"
 name: "Examine Damage"
 tier: "basic"
 tags:

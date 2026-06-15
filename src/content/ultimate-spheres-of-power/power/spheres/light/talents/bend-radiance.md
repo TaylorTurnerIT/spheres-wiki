@@ -1,4 +1,5 @@
 ---
+id: "bend-radiance"
 name: "Bend Radiance"
 tier: basic
 tags: []

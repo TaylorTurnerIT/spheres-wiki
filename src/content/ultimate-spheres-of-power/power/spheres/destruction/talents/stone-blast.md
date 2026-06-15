@@ -1,4 +1,5 @@
 ---
+id: "stone-blast"
 name: "Stone Blast"
 tier: basic
 tags: ["blast-type", "stone"]

@@ -1,4 +1,5 @@
 ---
+id: "shifter-feinting-shift"
 name: "Feinting Shift"
 tags: []
 featureId: bestial-trait

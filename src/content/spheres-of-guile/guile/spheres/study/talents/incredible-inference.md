@@ -1,4 +1,5 @@
 ---
+id: "incredible-inference"
 name: "Incredible Inference"
 tier: "advanced"
 tags:

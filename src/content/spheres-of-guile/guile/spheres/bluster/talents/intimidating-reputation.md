@@ -1,4 +1,5 @@
 ---
+id: "intimidating-reputation"
 name: "Intimidating Reputation"
 tier: "basic"
 tags:

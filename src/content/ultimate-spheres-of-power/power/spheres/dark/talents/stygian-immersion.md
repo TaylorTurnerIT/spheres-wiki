@@ -1,4 +1,5 @@
 ---
+id: "stygian-immersion"
 name: "Stygian Immersion"
 tier: basic
 tags: ["blot"]

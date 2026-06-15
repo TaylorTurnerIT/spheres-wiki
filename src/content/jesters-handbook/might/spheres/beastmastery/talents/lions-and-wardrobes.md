@@ -1,4 +1,5 @@
 ---
+id: "lions-and-wardrobes"
 name: "Lions And Wardrobes"
 tier: "advanced"
 tags:

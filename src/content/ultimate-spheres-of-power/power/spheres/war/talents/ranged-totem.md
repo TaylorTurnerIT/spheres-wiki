@@ -1,4 +1,5 @@
 ---
+id: "ranged-totem"
 name: "Ranged Totem"
 tier: basic
 tags: ["range"]

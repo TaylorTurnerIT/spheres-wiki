@@ -1,4 +1,5 @@
 ---
+id: "permanent-ward"
 name: "Permanent Ward"
 tier: advanced
 tags: []

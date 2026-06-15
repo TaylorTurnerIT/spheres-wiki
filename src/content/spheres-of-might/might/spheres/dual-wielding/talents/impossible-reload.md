@@ -1,4 +1,5 @@
 ---
+id: "impossible-reload"
 name: "Impossible Reload"
 tier: "basic"
 tags: []

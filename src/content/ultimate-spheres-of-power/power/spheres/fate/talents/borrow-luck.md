@@ -1,4 +1,5 @@
 ---
+id: "borrow-luck"
 name: "Borrow Luck"
 tier: basic
 tags: ["word"]

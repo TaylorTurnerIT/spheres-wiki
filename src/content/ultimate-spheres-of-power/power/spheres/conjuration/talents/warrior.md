@@ -1,4 +1,5 @@
 ---
+id: "warrior"
 name: "Warrior"
 tier: basic
 tags: []

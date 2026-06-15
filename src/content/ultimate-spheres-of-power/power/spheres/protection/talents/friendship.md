@@ -1,4 +1,5 @@
 ---
+id: "friendship"
 name: "Friendship"
 tier: basic
 tags: ["aegis"]

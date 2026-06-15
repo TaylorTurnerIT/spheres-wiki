@@ -1,4 +1,5 @@
 ---
+id: "armorist-champion"
 name: "Champion"
 tags: []
 featureId: arsenal-trick

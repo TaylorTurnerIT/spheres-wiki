@@ -1,4 +1,5 @@
 ---
+id: "shadow-infusion"
 name: "Shadow Infusion"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "blended-training"
 name: Blended Training
 level: 1
 tags: []

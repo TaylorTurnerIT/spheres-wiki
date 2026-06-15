@@ -1,4 +1,5 @@
 ---
+id: "bonds-of-blood-and-power"
 name: Bonds Of Blood And Power
 sphere: mana
 dualSphere: blood

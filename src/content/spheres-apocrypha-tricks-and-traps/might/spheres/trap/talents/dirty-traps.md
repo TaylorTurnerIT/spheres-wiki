@@ -1,4 +1,5 @@
 ---
+id: "dirty-traps"
 name: "Dirty Traps"
 tier: "basic"
 tags: []

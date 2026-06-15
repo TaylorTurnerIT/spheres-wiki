@@ -1,4 +1,5 @@
 ---
+id: "regenerating-companion"
 name: "Regenerating Companion"
 tier: advanced
 tags: ["form"]

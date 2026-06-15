@@ -1,4 +1,5 @@
 ---
+id: "mystic-fists"
 name: "Mystic Fists"
 tier: "basic"
 tags: []

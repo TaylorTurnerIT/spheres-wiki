@@ -1,4 +1,5 @@
 ---
+id: "technician"
 name: "Technician"
 tier: "basic"
 tags:

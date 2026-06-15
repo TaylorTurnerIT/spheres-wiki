@@ -1,4 +1,5 @@
 ---
+id: "tactical-proxies"
 name: "Tactical Proxies"
 sphere: enhancement
 tags: ["proxy"]

@@ -1,4 +1,5 @@
 ---
+id: "head-shot"
 name: "Head Shot"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "complete-recovery"
 name: "Complete Recovery"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "insulate"
 name: "Insulate"
 tier: "basic"
 tags:

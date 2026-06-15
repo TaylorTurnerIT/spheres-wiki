@@ -1,4 +1,5 @@
 ---
+id: "mindscape-configuration"
 name: "Mindscape Configuration"
 tier: advanced
 tags: []

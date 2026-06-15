@@ -1,4 +1,5 @@
 ---
+id: "rejuvenating-poultice"
 name: "Rejuvenating Poultice"
 tier: "advanced"
 tags: []

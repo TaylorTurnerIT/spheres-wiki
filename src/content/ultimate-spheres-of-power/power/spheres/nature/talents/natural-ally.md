@@ -1,4 +1,5 @@
 ---
+id: "natural-ally"
 name: "Natural Ally"
 tier: advanced
 tags: ["spirit"]

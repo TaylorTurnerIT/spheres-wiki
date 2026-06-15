@@ -1,4 +1,5 @@
 ---
+id: "tear-flesh"
 name: "Tear Flesh"
 tier: "basic"
 tags: []

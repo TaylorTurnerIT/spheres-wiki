@@ -1,4 +1,5 @@
 ---
+id: "magic-attacks"
 name: "Magic Attacks"
 tier: basic
 tags: ["form"]

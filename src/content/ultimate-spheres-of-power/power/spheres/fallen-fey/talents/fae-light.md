@@ -1,4 +1,5 @@
 ---
+id: "fae-light"
 name: "Fae Light"
 tier: basic
 tags: ["fey-blessing", "utility"]

@@ -1,4 +1,5 @@
 ---
+id: "eyes-of-the-cabal"
 name: "Eyes Of The Cabal"
 tier: advanced
 tags: []

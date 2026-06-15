@@ -1,4 +1,5 @@
 ---
+id: "mageknight-signature-scar"
 name: "Signature Scar"
 tags: ["supernatural"]
 featureId: mystic-combat-su

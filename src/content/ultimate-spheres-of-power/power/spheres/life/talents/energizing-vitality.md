@@ -1,4 +1,5 @@
 ---
+id: "energizing-vitality"
 name: "Energizing Vitality"
 tier: basic
 tags: ["vitality"]

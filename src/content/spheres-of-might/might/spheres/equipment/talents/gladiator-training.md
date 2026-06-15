@@ -1,4 +1,5 @@
 ---
+id: "gladiator-training"
 name: "Gladiator Training"
 tier: "basic"
 tags:

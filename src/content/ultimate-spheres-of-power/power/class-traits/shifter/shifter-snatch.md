@@ -1,4 +1,5 @@
 ---
+id: "shifter-snatch"
 name: "Snatch"
 tags: []
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "mindrot"
 name: "Mindrot"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "cheat-death"
 name: "Cheat Death"
 tier: "advanced"
 tags:

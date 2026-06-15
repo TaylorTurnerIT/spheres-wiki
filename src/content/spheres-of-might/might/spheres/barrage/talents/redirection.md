@@ -1,4 +1,5 @@
 ---
+id: "redirection"
 name: "Redirection"
 tier: "basic"
 tags:

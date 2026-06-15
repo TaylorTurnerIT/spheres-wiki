@@ -1,4 +1,5 @@
 ---
+id: "stubborn-serpent-s-coils"
 name: "Stubborn Serpent’s Coils"
 tier: "basic"
 tags: []

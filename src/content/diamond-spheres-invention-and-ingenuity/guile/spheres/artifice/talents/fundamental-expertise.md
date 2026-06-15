@@ -1,4 +1,5 @@
 ---
+id: "fundamental-expertise"
 name: "Fundamental Expertise"
 tier: "basic"
 tags: []

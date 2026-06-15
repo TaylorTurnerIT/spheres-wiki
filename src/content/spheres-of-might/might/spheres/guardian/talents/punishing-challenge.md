@@ -1,4 +1,5 @@
 ---
+id: "punishing-challenge"
 name: "Punishing Challenge"
 tier: "advanced"
 tags: []

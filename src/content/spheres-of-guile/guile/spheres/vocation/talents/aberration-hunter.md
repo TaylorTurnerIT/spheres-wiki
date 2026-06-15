@@ -1,4 +1,5 @@
 ---
+id: "aberration-hunter"
 name: "Aberration Hunter"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "ruthless-opportunist"
 name: "Ruthless Opportunist"
 tier: "basic"
 ---

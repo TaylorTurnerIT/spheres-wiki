@@ -1,4 +1,5 @@
 ---
+id: "dual-attack"
 name: "Dual Attack"
 tier: "base"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "afterlife-insurance"
 name: "Afterlife Insurance"
 tier: "advanced"
 tags:

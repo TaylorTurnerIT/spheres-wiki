@@ -1,4 +1,5 @@
 ---
+id: "test-of-strength"
 name: "Test Of Strength"
 tier: "basic"
 tags: []

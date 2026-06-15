@@ -1,4 +1,5 @@
 ---
+id: "zolavois-mantle"
 name: "Zolavoi's Mantle"
 tier: basic
 tags: ["fey-blessing"]

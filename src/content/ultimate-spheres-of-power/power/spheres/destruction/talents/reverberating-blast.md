@@ -1,4 +1,5 @@
 ---
+id: "reverberating-blast"
 name: "Reverberating Blast"
 tier: basic
 tags: ["blast-type", "sonic"]

@@ -1,4 +1,5 @@
 ---
+id: "wordmonger"
 name: "Wordmonger"
 tier: "basic"
 tags:

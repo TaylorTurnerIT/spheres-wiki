@@ -1,4 +1,5 @@
 ---
+id: "armorist-crafter"
 name: "Crafter"
 tags: []
 featureId: arsenal-trick

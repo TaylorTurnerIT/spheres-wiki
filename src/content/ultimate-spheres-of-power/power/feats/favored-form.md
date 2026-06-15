@@ -1,4 +1,5 @@
 ---
+id: "favored-form"
 name: "Favored Form"
 sphere: alteration
 tags: []

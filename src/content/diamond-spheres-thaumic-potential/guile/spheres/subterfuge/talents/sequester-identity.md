@@ -1,4 +1,5 @@
 ---
+id: "sequester-identity"
 name: "Sequester Identity"
 tier: "advanced"
 tags:

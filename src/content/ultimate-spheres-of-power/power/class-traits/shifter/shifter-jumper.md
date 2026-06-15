@@ -1,4 +1,5 @@
 ---
+id: "shifter-jumper"
 name: "Jumper"
 tags: ["extraordinary"]
 featureId: bestial-trait

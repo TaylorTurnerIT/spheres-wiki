@@ -1,4 +1,5 @@
 ---
+id: "slip-past"
 name: "Slip Past"
 tier: "base"
 tags: []

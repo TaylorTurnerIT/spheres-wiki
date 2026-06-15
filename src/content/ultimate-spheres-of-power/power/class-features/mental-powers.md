@@ -1,4 +1,5 @@
 ---
+id: "mental-powers"
 name: "Mental Powers"
 type: class-feature
 className: symbiat

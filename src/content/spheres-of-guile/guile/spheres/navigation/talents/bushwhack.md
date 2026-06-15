@@ -1,4 +1,5 @@
 ---
+id: "bushwhack"
 name: "Bushwhack"
 tier: "basic"
 tags:

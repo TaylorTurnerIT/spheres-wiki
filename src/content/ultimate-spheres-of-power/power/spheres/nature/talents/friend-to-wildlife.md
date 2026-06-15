@@ -1,4 +1,5 @@
 ---
+id: "friend-to-wildlife"
 name: "Friend To Wildlife"
 tier: basic
 tags: ["utility", "spirit"]

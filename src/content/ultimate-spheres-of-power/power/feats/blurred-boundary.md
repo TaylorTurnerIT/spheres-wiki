@@ -1,4 +1,5 @@
 ---
+id: "blurred-boundary"
 name: Blurred Boundary
 sphere: protection
 dualSphere: illusion

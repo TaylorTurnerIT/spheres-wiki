@@ -1,4 +1,5 @@
 ---
+id: "mageknight-vengeful-core"
 name: "Vengeful [Core]"
 tags: []
 featureId: mystic-combat-su

@@ -1,4 +1,5 @@
 ---
+id: "tripped-glyph"
 name: "Tripped Glyph"
 tier: advanced
 tags: []

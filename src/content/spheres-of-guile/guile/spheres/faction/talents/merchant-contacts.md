@@ -1,4 +1,5 @@
 ---
+id: "merchant-contacts"
 name: "Merchant Contacts"
 tier: "basic"
 tags:

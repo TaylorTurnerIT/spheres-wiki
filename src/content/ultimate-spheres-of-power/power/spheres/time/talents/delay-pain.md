@@ -1,4 +1,5 @@
 ---
+id: "delay-pain"
 name: "Delay Pain"
 tier: basic
 tags: ["time"]

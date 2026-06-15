@@ -1,4 +1,5 @@
 ---
+id: "medium"
 name: "Medium"
 tier: "basic"
 tags:

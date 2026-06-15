@@ -1,4 +1,5 @@
 ---
+id: "totem-of-insanity"
 name: "Totem Of Insanity"
 tier: basic
 tags: ["totem"]

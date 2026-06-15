@@ -1,4 +1,5 @@
 ---
+id: "cyclone"
 name: "Cyclone"
 tier: advanced
 tags: ["air", "geomancing"]

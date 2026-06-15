@@ -1,4 +1,5 @@
 ---
+id: "greater-restore"
 name: "Greater Restore"
 tier: basic
 tags: ["warden"]

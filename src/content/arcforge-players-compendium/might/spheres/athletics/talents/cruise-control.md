@@ -1,4 +1,5 @@
 ---
+id: "cruise-control"
 name: "Cruise Control"
 tier: "basic"
 tags: []

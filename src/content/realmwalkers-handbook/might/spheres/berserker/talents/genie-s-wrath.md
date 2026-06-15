@@ -1,4 +1,5 @@
 ---
+id: "genie-s-wrath"
 name: "Genie’s Wrath"
 tier: "advanced"
 tags:

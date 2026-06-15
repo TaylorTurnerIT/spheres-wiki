@@ -1,4 +1,5 @@
 ---
+id: "two-headed-adept"
 name: "Two-Headed Adept"
 sphere: alteration
 tags: ["combat"]

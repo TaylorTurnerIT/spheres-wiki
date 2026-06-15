@@ -1,4 +1,5 @@
 ---
+id: "reanimated-warriors"
 name: "Reanimated Warriors"
 tier: basic
 tags: ["dominion"]

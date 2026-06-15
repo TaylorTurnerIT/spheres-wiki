@@ -1,4 +1,5 @@
 ---
+id: "platoon-commander"
 name: "Platoon Commander"
 sphere: war
 tags: ["squadron"]

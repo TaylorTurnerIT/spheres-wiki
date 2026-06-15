@@ -1,4 +1,5 @@
 ---
+id: "absolute-determination"
 name: "Absolute Determination"
 tier: "basic"
 tags:

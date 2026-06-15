@@ -1,4 +1,5 @@
 ---
+id: "illuminating-shaft"
 name: "Illuminating Shaft"
 tier: basic
 tags: ["aridity", "shroud"]

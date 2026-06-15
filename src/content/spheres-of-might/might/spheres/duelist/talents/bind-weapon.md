@@ -1,4 +1,5 @@
 ---
+id: "bind-weapon"
 name: "Bind Weapon"
 tier: "basic"
 tags: []

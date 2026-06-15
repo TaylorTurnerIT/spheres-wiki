@@ -1,4 +1,5 @@
 ---
+id: "supernatural-elements"
 name: Supernatural Elements
 sphere: nature
 dualSphere: destruction

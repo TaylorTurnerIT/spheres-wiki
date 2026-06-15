@@ -1,4 +1,5 @@
 ---
+id: "two-minds"
 name: "Two Minds"
 sphere: alteration
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "steel-braggart"
 name: "Steel Braggart"
 tier: "basic"
 tags:

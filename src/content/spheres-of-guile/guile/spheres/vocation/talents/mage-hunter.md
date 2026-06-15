@@ -1,4 +1,5 @@
 ---
+id: "mage-hunter"
 name: "Mage Hunter"
 tier: "basic"
 tags:

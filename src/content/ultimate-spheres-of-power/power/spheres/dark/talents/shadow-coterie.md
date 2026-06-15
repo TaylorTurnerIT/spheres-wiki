@@ -1,4 +1,5 @@
 ---
+id: "shadow-coterie"
 name: "Shadow Coterie"
 tier: basic
 tags: []

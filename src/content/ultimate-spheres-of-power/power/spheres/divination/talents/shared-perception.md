@@ -1,4 +1,5 @@
 ---
+id: "shared-perception"
 name: "Shared Perception"
 tier: basic
 tags: ["sense", "supernatural"]

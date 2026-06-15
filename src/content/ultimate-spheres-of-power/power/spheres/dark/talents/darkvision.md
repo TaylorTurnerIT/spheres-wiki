@@ -1,4 +1,5 @@
 ---
+id: "darkvision"
 name: "Darkvision"
 tier: base
 tags: ["auxiliary", "extraordinary", "meld"]

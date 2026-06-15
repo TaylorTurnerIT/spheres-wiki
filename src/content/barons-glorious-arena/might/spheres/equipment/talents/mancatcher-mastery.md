@@ -1,4 +1,5 @@
 ---
+id: "mancatcher-mastery"
 name: "Mancatcher Mastery"
 tier: "basic"
 ---

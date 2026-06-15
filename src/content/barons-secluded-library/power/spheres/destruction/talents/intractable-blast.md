@@ -1,4 +1,5 @@
 ---
+id: "intractable-blast"
 name: "Intractable Blast"
 tier: advanced
 tags: ["blast-shape", "sm"]

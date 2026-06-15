@@ -1,4 +1,5 @@
 ---
+id: "pitch-black"
 name: "Pitch Black"
 tier: advanced
 tags: []

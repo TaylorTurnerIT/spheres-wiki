@@ -1,4 +1,5 @@
 ---
+id: "deadly-strike"
 name: "Deadly Strike"
 tier: "basic"
 tags: []

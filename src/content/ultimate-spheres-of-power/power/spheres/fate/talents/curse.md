@@ -1,4 +1,5 @@
 ---
+id: "curse"
 name: Curse
 dualSphere: death
 tier: basic

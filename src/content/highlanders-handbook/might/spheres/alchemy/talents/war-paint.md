@@ -1,4 +1,5 @@
 ---
+id: "war-paint"
 name: "War Paint"
 tier: "basic"
 tags:

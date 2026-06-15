@@ -1,4 +1,5 @@
 ---
+id: "mageknight-shifted-karma"
 name: "Shifted Karma"
 tags: ["supernatural"]
 featureId: mystic-combat-su

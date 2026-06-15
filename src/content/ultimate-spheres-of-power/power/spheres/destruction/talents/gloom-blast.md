@@ -1,4 +1,5 @@
 ---
+id: "gloom-blast"
 name: "Gloom Blast"
 tier: basic
 tags: ["blast-type", "negative"]

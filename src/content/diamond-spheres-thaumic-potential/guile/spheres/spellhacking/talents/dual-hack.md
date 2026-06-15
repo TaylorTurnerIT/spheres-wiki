@@ -1,4 +1,5 @@
 ---
+id: "dual-hack"
 name: "Dual Hack"
 tier: "base"
 tags:

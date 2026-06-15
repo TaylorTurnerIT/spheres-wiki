@@ -1,4 +1,5 @@
 ---
+id: "safe-house"
 name: "Safe House"
 tier: "basic"
 tags:

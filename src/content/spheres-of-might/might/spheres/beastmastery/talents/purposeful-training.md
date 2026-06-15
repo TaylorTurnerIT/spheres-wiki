@@ -1,4 +1,5 @@
 ---
+id: "purposeful-training"
 name: "Purposeful Training"
 tier: "basic"
 tags:

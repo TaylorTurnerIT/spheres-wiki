@@ -1,4 +1,5 @@
 ---
+id: "shifter-adaptation-greater"
 name: "Adaptation, Greater"
 tags: []
 featureId: bestial-trait

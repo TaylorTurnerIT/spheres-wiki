@@ -1,4 +1,5 @@
 ---
+id: "hail"
 name: "Hail"
 sphere: war
 tags: []

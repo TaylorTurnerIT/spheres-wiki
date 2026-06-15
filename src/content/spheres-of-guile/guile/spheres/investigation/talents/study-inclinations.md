@@ -1,4 +1,5 @@
 ---
+id: "study-inclinations"
 name: "Study Inclinations"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "custom-training"
 name: "Custom Training"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "sense-light"
 name: "Sense Light"
 sphere: light
 tags: []

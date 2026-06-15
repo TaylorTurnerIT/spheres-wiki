@@ -1,4 +1,5 @@
 ---
+id: "quicksilver"
 name: "Quicksilver"
 tier: "basic"
 tags:

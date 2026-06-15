@@ -1,4 +1,5 @@
 ---
+id: "muscular-surge"
 name: "Muscular Surge"
 tier: "basic"
 tags:

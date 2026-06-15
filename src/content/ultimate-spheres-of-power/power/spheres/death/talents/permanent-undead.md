@@ -1,4 +1,5 @@
 ---
+id: "permanent-undead"
 name: "Permanent Undead"
 tier: advanced
 tags: []

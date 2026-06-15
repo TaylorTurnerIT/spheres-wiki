@@ -1,4 +1,5 @@
 ---
+id: "dual-darkness"
 name: "Dual Darkness"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "blood-fountain"
 name: "Blood Fountain"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "mantle-of-autumn"
 name: "Mantle Of Autumn"
 tier: basic
 tags: ["fey-blessing"]

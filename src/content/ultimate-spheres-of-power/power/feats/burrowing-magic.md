@@ -1,4 +1,5 @@
 ---
+id: "burrowing-magic"
 name: "Burrowing Magic"
 sphere: warp
 tags: ["metamagic"]

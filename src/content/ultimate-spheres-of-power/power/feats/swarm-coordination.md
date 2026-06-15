@@ -1,4 +1,5 @@
 ---
+id: "swarm-coordination"
 name: "Swarm Coordination"
 sphere: alteration
 tags: ["combat"]

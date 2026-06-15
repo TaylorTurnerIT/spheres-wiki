@@ -1,4 +1,5 @@
 ---
+id: "listen-to-the-wind"
 name: "Listen To The Wind"
 tier: basic
 tags: ["fey-blessing", "utility"]

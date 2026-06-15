@@ -1,4 +1,5 @@
 ---
+id: "vigilant-sharpshooter"
 name: "Vigilant Sharpshooter"
 tier: "basic"
 tags: []

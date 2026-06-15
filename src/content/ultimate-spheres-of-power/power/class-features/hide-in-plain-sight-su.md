@@ -1,4 +1,5 @@
 ---
+id: "hide-in-plain-sight-su"
 name: "Hide in Plain Sight (Su)"
 type: class-feature
 className: fey-adept

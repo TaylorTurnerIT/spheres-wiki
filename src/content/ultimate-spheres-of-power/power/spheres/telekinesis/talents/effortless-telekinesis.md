@@ -1,4 +1,5 @@
 ---
+id: "effortless-telekinesis"
 name: "Effortless Telekinesis"
 tier: advanced
 tags: []

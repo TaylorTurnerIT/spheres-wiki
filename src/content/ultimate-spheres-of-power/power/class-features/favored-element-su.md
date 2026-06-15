@@ -1,4 +1,5 @@
 ---
+id: "favored-element-su"
 name: "Favored Element (Su)"
 type: class-feature
 className: elementalist

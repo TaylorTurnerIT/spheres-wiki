@@ -1,4 +1,5 @@
 ---
+id: "warping-strike"
 name: "Warping Strike"
 tier: basic
 tags: ["strike"]

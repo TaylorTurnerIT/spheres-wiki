@@ -1,4 +1,5 @@
 ---
+id: "base-of-operations"
 name: "Base Of Operations"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "armorist-energized-armaments"
 name: "Energized Armaments"
 tags: []
 featureId: arsenal-trick

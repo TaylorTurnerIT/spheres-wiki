@@ -1,4 +1,5 @@
 ---
+id: "steady-shot"
 name: "Steady Shot"
 tier: "basic"
 tags:

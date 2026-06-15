@@ -1,4 +1,5 @@
 ---
+id: "whole-set-blast"
 name: Whole-Set Blast
 sphere: fate
 dualSphere: destruction

@@ -1,4 +1,5 @@
 ---
+id: "virtuoso-s-challenge"
 name: "Virtuoso’s Challenge"
 tier: "advanced"
 tags: []

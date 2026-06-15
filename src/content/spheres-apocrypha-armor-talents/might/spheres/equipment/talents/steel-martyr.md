@@ -1,4 +1,5 @@
 ---
+id: "steel-martyr"
 name: "Steel Martyr"
 tier: "basic"
 tags: []

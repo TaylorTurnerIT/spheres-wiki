@@ -1,4 +1,5 @@
 ---
+id: "heat-stroke"
 name: "Heat Stroke"
 tier: basic
 tags: ["heat", "shroud"]

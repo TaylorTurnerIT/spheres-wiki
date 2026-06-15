@@ -1,4 +1,5 @@
 ---
+id: "compound-entrapment"
 name: "Compound Entrapment"
 tier: "basic"
 tags: []

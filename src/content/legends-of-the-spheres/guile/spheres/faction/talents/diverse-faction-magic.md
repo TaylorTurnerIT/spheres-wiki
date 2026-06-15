@@ -1,4 +1,5 @@
 ---
+id: "diverse-faction-magic"
 name: "Diverse Faction Magic"
 tier: "basic"
 tags:

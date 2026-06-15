@@ -1,4 +1,5 @@
 ---
+id: "aberrant-companion"
 name: "Aberrant Companion"
 tier: basic
 tags: ["type"]

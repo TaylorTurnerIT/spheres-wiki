@@ -1,4 +1,5 @@
 ---
+id: "heart-crusher"
 name: "Heart Crusher"
 tier: "basic"
 tags:

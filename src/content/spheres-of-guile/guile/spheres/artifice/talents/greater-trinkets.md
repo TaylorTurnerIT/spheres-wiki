@@ -1,4 +1,5 @@
 ---
+id: "greater-trinkets"
 name: "Greater Trinkets"
 tier: "basic"
 tags: []

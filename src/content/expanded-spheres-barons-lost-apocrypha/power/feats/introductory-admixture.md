@@ -1,4 +1,5 @@
 ---
+id: "introductory-admixture"
 name: "Introductory Admixture"
 sphere: destruction
 tags: ["admixture"]

@@ -1,4 +1,5 @@
 ---
+id: "combat-hustle"
 name: "Combat Hustle"
 tier: "basic"
 tags: []

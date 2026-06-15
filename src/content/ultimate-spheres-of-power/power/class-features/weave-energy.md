@@ -1,4 +1,5 @@
 ---
+id: "weave-energy"
 name: "Weave Energy"
 type: class-feature
 className: elementalist

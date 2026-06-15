@@ -1,4 +1,5 @@
 ---
+id: "immunity-to-poison-ex"
 name: "Immunity to Poison (Ex)"
 type: class-feature
 className: shifter

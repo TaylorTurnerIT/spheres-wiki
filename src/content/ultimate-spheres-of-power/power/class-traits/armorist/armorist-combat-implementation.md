@@ -1,4 +1,5 @@
 ---
+id: "armorist-combat-implementation"
 name: "Combat Implementation"
 tags: []
 featureId: arsenal-trick

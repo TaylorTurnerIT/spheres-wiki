@@ -1,4 +1,5 @@
 ---
+id: "falsehood"
 name: "Falsehood"
 tier: advanced
 tags: ["curse", "utility", "word"]

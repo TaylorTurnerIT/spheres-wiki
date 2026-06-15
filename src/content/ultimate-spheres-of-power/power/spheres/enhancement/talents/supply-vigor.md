@@ -1,4 +1,5 @@
 ---
+id: "supply-vigor"
 name: "Supply Vigor"
 tier: basic
 tags: ["enhance"]

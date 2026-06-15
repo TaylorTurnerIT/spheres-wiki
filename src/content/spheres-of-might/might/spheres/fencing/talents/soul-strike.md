@@ -1,4 +1,5 @@
 ---
+id: "soul-strike"
 name: "Soul Strike"
 tier: "advanced"
 tags:

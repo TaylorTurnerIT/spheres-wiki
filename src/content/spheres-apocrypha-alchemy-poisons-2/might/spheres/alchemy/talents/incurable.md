@@ -1,4 +1,5 @@
 ---
+id: "incurable"
 name: "Incurable"
 tier: "basic"
 tags: []

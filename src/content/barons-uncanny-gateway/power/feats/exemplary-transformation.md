@@ -1,4 +1,5 @@
 ---
+id: "exemplary-transformation"
 name: "Exemplary Transformation"
 sphere: enhancement
 dualSphere: alteration

@@ -1,4 +1,5 @@
 ---
+id: "showman-s-takedown"
 name: "Showman’s Takedown"
 tier: "basic"
 tags: []

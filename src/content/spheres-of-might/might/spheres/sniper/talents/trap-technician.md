@@ -1,4 +1,5 @@
 ---
+id: "trap-technician"
 name: "Trap Technician"
 tier: "basic"
 tags:

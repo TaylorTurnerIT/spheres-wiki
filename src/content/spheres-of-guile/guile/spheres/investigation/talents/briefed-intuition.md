@@ -1,4 +1,5 @@
 ---
+id: "briefed-intuition"
 name: "Briefed Intuition"
 tier: "basic"
 tags:

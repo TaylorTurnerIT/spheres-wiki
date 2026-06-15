@@ -1,4 +1,5 @@
 ---
+id: "barroom"
 name: "Barroom"
 icon: "barroom"
 tags: []

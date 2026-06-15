@@ -1,4 +1,5 @@
 ---
+id: "vampiric-strike"
 name: "Vampiric Strike"
 tier: basic
 tags: ["ghost-strike"]

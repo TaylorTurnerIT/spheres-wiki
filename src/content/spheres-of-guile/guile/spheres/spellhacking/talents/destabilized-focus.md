@@ -1,4 +1,5 @@
 ---
+id: "destabilized-focus"
 name: "Destabilized Focus"
 tier: "base"
 tags:

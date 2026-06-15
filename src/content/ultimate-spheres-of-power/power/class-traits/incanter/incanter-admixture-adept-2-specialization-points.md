@@ -1,4 +1,5 @@
 ---
+id: "incanter-admixture-adept-2-specialization-points"
 name: "Admixture Adept (2 specialization points)"
 tags: []
 featureId: incanter-specializations

@@ -1,4 +1,5 @@
 ---
+id: "splinter-magic"
 name: "Splinter Magic"
 tier: "basic"
 tags:

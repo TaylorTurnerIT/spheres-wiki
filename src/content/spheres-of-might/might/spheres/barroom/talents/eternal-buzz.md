@@ -1,4 +1,5 @@
 ---
+id: "eternal-buzz"
 name: "Eternal Buzz"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "scale"
 name: "Scale"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "bludgeon"
 name: "Bludgeon"
 tier: basic
 tags: []

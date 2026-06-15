@@ -1,4 +1,5 @@
 ---
+id: "empowered-reanimate"
 name: "Empowered Reanimate"
 tier: basic
 tags: []

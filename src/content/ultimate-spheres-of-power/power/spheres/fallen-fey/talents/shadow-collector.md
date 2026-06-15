@@ -1,4 +1,5 @@
 ---
+id: "shadow-collector"
 name: "Shadow Collector"
 tier: basic
 tags: ["fey-blessing"]

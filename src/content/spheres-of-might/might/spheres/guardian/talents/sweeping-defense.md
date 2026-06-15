@@ -1,4 +1,5 @@
 ---
+id: "sweeping-defense"
 name: "Sweeping Defense"
 tier: "basic"
 tags: []

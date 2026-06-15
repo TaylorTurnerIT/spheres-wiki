@@ -1,4 +1,5 @@
 ---
+id: "skilled-sneak"
 name: "Skilled Sneak"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "telekinetic-admixture"
 name: "Telekinetic Admixture"
 sphere: destruction
 tags: ["admixture"]

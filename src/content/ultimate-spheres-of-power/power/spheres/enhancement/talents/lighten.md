@@ -1,4 +1,5 @@
 ---
+id: "lighten"
 name: "Lighten"
 tier: basic
 tags: ["enhance"]

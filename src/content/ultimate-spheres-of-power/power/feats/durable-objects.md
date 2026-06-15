@@ -1,4 +1,5 @@
 ---
+id: "durable-objects"
 name: "Durable Objects"
 sphere: enhancement
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "merged-summons"
 name: Merged Summons
 sphere: conjuration
 dualSphere: alteration

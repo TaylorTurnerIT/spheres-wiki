@@ -1,4 +1,5 @@
 ---
+id: "feats-manifestation"
 name: Manifestation
 sphere: conjuration
 tags:

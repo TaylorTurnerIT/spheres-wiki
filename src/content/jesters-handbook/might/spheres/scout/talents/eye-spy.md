@@ -1,4 +1,5 @@
 ---
+id: "eye-spy"
 name: "Eye Spy"
 tier: "advanced"
 tags:

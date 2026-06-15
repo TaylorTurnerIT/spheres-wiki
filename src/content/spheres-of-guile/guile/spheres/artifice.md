@@ -1,4 +1,5 @@
 ---
+id: "artifice"
 name: "Artifice"
 icon: "artifice"
 tags: []

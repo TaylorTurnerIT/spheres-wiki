@@ -1,4 +1,5 @@
 ---
+id: "fleshcraft"
 name: "Fleshcraft"
 tier: advanced
 tags: ["material"]

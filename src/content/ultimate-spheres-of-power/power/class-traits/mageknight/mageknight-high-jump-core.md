@@ -1,4 +1,5 @@
 ---
+id: "mageknight-high-jump-core"
 name: "High Jump [Core]"
 tags: []
 featureId: mystic-combat-su

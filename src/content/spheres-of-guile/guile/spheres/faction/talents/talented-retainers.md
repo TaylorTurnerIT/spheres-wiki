@@ -1,4 +1,5 @@
 ---
+id: "talented-retainers"
 name: "Talented Retainers"
 tier: "basic"
 tags:

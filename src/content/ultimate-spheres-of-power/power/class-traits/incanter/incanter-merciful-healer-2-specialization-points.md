@@ -1,4 +1,5 @@
 ---
+id: "incanter-merciful-healer-2-specialization-points"
 name: "Merciful Healer (2 Specialization Points)"
 tags: []
 featureId: incanter-specializations

@@ -1,4 +1,5 @@
 ---
+id: "mind-venom"
 name: "Mind Venom"
 tier: "basic"
 tags:

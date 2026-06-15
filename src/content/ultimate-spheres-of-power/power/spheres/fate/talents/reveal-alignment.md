@@ -1,4 +1,5 @@
 ---
+id: "reveal-alignment"
 name: "Reveal Alignment"
 tier: basic
 tags: ["utility", "consecration"]

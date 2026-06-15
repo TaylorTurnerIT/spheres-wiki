@@ -1,4 +1,5 @@
 ---
+id: "covering-fire"
 name: "Covering Fire"
 tier: "basic"
 tags: []

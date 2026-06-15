@@ -1,4 +1,5 @@
 ---
+id: "beam"
 name: "Beam"
 tier: basic
 tags: ["nimbus"]

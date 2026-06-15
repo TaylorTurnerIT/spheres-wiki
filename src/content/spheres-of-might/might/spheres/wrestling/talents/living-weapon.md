@@ -1,4 +1,5 @@
 ---
+id: "living-weapon"
 name: "Living Weapon"
 tier: "basic"
 tags:

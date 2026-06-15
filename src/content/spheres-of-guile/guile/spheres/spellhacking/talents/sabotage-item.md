@@ -1,4 +1,5 @@
 ---
+id: "sabotage-item"
 name: "Sabotage Item"
 tier: "basic"
 tags:

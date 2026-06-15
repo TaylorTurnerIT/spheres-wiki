@@ -1,4 +1,5 @@
 ---
+id: "sensitive-divinations"
 name: "Sensitive Divinations"
 tier: advanced
 tags: []

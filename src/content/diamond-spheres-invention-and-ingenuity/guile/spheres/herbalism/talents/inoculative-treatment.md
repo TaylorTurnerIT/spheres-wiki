@@ -1,4 +1,5 @@
 ---
+id: "inoculative-treatment"
 name: "Inoculative Treatment"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "nature-sense"
 name: "Nature Sense"
 tier: basic
 tags: ["sense"]

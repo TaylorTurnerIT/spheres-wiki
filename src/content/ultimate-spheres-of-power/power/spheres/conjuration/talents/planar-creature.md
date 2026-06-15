@@ -1,4 +1,5 @@
 ---
+id: "planar-creature"
 name: "Planar Creature"
 tier: basic
 tags: ["type"]

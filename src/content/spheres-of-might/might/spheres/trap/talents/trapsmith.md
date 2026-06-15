@@ -1,4 +1,5 @@
 ---
+id: "trapsmith"
 name: "Trapsmith"
 tier: "basic"
 tags:

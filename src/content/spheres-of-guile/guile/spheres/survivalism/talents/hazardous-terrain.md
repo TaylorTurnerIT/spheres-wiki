@@ -1,4 +1,5 @@
 ---
+id: "hazardous-terrain"
 name: "Hazardous Terrain"
 tier: "basic"
 tags:

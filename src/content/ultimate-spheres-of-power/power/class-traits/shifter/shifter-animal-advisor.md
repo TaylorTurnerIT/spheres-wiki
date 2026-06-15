@@ -1,4 +1,5 @@
 ---
+id: "shifter-animal-advisor"
 name: "Animal Advisor"
 tags: ["supernatural"]
 featureId: bestial-trait

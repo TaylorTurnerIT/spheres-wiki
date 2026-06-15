@@ -1,4 +1,5 @@
 ---
+id: "weather-strike"
 name: "Weather Strike"
 tier: basic
 tags: ["strike"]

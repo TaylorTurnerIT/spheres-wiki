@@ -1,4 +1,5 @@
 ---
+id: "vudu"
 name: Vudu
 sphere: illusion
 dualSphere: death

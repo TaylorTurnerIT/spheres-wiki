@@ -1,4 +1,5 @@
 ---
+id: "villainy"
 name: "Villainy"
 tier: basic
 tags: ["curse", "word"]

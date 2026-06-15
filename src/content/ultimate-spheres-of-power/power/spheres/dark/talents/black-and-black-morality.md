@@ -1,4 +1,5 @@
 ---
+id: "black-and-black-morality"
 name: "Black And Black Morality"
 tier: advanced
 tags: ["blot", "darkness", "shadow"]

@@ -1,4 +1,5 @@
 ---
+id: "expressive-creativity"
 name: "Expressive Creativity"
 tier: "basic"
 tags:

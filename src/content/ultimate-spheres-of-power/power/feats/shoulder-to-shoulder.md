@@ -1,4 +1,5 @@
 ---
+id: "shoulder-to-shoulder"
 name: "Shoulder To Shoulder"
 sphere: war
 tags: []

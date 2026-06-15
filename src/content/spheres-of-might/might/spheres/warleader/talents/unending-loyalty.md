@@ -1,4 +1,5 @@
 ---
+id: "unending-loyalty"
 name: "Unending Loyalty"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "natural-shelter"
 name: "Natural Shelter"
 tier: "basic"
 tags:

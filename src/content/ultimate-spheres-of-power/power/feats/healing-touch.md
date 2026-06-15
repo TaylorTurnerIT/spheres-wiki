@@ -1,4 +1,5 @@
 ---
+id: "healing-touch"
 name: "Healing Touch"
 sphere: life
 tags: []

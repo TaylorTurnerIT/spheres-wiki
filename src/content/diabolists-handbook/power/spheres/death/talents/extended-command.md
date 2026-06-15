@@ -1,4 +1,5 @@
 ---
+id: "extended-command"
 name: "Extended Command"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "master-of-elements"
 name: "Master Of Elements"
 tier: basic
 tags: ["spirit"]

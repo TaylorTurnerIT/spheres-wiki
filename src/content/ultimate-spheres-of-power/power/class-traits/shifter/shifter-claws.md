@@ -1,4 +1,5 @@
 ---
+id: "shifter-claws"
 name: "Claws"
 tags: ["extraordinary"]
 featureId: bestial-trait

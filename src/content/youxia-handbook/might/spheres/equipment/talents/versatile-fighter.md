@@ -1,4 +1,5 @@
 ---
+id: "versatile-fighter"
 name: "Versatile Fighter"
 tier: "basic"
 tags:

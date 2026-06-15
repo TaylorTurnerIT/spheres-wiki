@@ -1,4 +1,5 @@
 ---
+id: "merchant"
 name: "Merchant"
 tier: "basic"
 tags:

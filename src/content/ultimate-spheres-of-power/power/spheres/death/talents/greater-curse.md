@@ -1,4 +1,5 @@
 ---
+id: "greater-curse"
 name: "Greater Curse"
 tier: advanced
 tags: []

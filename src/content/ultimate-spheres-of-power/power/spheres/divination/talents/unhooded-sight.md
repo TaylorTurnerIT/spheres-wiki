@@ -1,4 +1,5 @@
 ---
+id: "unhooded-sight"
 name: "Unhooded Sight"
 tier: basic
 tags: ["sense"]

@@ -1,4 +1,5 @@
 ---
+id: "energy-satellite"
 name: "Energy Satellite"
 tier: basic
 tags: ["blast-shape"]

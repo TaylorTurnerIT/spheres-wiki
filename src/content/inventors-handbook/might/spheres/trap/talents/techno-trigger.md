@@ -1,4 +1,5 @@
 ---
+id: "techno-trigger"
 name: "Techno Trigger"
 tier: "basic"
 tags:

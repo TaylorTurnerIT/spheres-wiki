@@ -1,4 +1,5 @@
 ---
+id: "armored-athlete"
 name: "Armored Athlete"
 tier: "basic"
 tags: []

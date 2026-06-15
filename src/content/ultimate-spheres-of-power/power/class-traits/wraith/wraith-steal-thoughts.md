@@ -1,4 +1,5 @@
 ---
+id: "wraith-steal-thoughts"
 name: "Steal Thoughts"
 tags: []
 featureId: wraith-haunts

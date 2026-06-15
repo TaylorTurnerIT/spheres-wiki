@@ -1,4 +1,5 @@
 ---
+id: "perpetual-motion"
 name: "Perpetual Motion"
 tier: "basic"
 tags:

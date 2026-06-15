@@ -1,4 +1,5 @@
 ---
+id: "sleuth"
 name: "Sleuth"
 tier: "basic"
 tags:

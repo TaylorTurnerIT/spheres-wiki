@@ -1,4 +1,5 @@
 ---
+id: "destiny-reader"
 name: "Destiny Reader"
 sphere: fate
 dualSphere: divination

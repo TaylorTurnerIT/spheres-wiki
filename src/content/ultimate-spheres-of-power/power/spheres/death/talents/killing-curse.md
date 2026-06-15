@@ -1,4 +1,5 @@
 ---
+id: "killing-curse"
 name: "Killing Curse"
 tier: basic
 tags: []

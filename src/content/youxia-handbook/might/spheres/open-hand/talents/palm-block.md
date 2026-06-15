@@ -1,4 +1,5 @@
 ---
+id: "palm-block"
 name: "Palm Block"
 tier: "basic"
 tags: []

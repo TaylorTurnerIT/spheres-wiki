@@ -1,4 +1,5 @@
 ---
+id: "primal-admixture"
 name: "Primal Admixture"
 sphere: nature
 tags: ["admixture"]

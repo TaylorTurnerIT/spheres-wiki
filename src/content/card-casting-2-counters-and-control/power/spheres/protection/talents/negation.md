@@ -1,4 +1,5 @@
 ---
+id: "negation"
 name: "Negation"
 tier: basic
 tags: ["succor"]

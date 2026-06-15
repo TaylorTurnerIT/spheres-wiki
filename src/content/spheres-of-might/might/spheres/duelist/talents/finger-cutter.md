@@ -1,4 +1,5 @@
 ---
+id: "finger-cutter"
 name: "Finger Cutter"
 tier: "basic"
 tags:

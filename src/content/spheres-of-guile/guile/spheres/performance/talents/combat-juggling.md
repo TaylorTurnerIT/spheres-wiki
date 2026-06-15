@@ -1,4 +1,5 @@
 ---
+id: "combat-juggling"
 name: "Combat Juggling"
 tier: "basic"
 tags: []

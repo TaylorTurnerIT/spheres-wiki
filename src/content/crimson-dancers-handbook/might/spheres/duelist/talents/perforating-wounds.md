@@ -1,4 +1,5 @@
 ---
+id: "perforating-wounds"
 name: "Perforating Wounds"
 tier: "basic"
 tags:

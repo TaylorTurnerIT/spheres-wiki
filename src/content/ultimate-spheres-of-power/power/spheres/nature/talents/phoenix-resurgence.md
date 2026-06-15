@@ -1,4 +1,5 @@
 ---
+id: "phoenix-resurgence"
 name: "Phoenix Resurgence"
 tier: advanced
 tags: ["fire", "spirit"]

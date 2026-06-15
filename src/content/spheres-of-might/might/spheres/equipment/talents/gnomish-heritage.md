@@ -1,4 +1,5 @@
 ---
+id: "gnomish-heritage"
 name: "Gnomish Heritage"
 tier: "basic"
 tags:

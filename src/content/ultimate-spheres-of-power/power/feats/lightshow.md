@@ -1,4 +1,5 @@
 ---
+id: "lightshow"
 name: "Lightshow"
 sphere: light
 tags: []

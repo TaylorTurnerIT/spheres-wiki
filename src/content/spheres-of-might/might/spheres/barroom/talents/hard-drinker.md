@@ -1,4 +1,5 @@
 ---
+id: "hard-drinker"
 name: "Hard Drinker"
 tier: "base"
 tags: []

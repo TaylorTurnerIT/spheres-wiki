@@ -1,4 +1,5 @@
 ---
+id: "propulsive-creation"
 name: Propulsive Creation
 sphere: telekinesis
 dualSphere: creation

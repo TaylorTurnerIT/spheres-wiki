@@ -1,4 +1,5 @@
 ---
+id: "occultist"
 name: "Occultist"
 tier: "basic"
 tags:

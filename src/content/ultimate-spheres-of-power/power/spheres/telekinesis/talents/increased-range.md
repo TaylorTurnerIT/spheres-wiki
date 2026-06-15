@@ -1,4 +1,5 @@
 ---
+id: "increased-range"
 name: "Increased Range"
 tier: basic
 tags: ["range"]

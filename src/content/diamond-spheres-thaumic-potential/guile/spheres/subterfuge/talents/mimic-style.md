@@ -1,4 +1,5 @@
 ---
+id: "mimic-style"
 name: "Mimic Style"
 tier: "advanced"
 tags:

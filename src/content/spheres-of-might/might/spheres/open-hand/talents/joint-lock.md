@@ -1,4 +1,5 @@
 ---
+id: "joint-lock"
 name: "Joint Lock"
 tier: "basic"
 tags: []

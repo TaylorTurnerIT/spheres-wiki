@@ -1,4 +1,5 @@
 ---
+id: "form-army"
 name: "Form Army"
 tier: "advanced"
 tags: []

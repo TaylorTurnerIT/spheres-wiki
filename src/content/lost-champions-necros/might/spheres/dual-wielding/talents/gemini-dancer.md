@@ -1,4 +1,5 @@
 ---
+id: "gemini-dancer"
 name: "Gemini Dancer (stance)"
 tier: "basic"
 tags: ["stance"]

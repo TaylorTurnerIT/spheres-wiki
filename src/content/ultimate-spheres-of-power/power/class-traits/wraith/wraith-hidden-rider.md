@@ -1,4 +1,5 @@
 ---
+id: "wraith-hidden-rider"
 name: "Hidden Rider"
 tags: []
 featureId: wraith-haunts

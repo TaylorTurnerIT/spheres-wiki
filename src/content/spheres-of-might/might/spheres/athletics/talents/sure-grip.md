@@ -1,4 +1,5 @@
 ---
+id: "sure-grip"
 name: "Sure Grip"
 tier: "basic"
 tags:

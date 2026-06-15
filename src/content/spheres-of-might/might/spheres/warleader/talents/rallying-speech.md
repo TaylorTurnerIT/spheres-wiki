@@ -1,4 +1,5 @@
 ---
+id: "rallying-speech"
 name: "Rallying Speech"
 tier: "basic"
 tags:

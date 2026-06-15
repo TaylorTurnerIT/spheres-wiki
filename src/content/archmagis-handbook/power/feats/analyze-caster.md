@@ -1,4 +1,5 @@
 ---
+id: "analyze-caster"
 name: Analyze Caster
 sphere: mana
 dualSphere: divination

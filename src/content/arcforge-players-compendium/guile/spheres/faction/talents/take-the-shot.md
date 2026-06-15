@@ -1,4 +1,5 @@
 ---
+id: "take-the-shot"
 name: "Take The Shot"
 tier: "advanced"
 tags:

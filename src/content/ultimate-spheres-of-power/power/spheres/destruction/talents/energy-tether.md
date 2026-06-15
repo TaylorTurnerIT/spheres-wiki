@@ -1,4 +1,5 @@
 ---
+id: "energy-tether"
 name: "Energy Tether"
 tier: basic
 tags: ["blast-shape"]

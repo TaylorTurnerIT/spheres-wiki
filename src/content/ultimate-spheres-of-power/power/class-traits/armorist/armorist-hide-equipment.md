@@ -1,4 +1,5 @@
 ---
+id: "armorist-hide-equipment"
 name: "Hide Equipment"
 tags: []
 featureId: arsenal-trick

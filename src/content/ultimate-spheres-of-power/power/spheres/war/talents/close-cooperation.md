@@ -1,4 +1,5 @@
 ---
+id: "close-cooperation"
 name: "Close Cooperation"
 tier: basic
 tags: []

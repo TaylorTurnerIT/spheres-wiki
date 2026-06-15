@@ -1,4 +1,5 @@
 ---
+id: "fuse-master"
 name: "Fuse Master"
 tier: "basic"
 tags: []

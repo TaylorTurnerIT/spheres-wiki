@@ -1,4 +1,5 @@
 ---
+id: "unarmored-training"
 name: "Unarmored Training"
 tier: "basic"
 tags: []

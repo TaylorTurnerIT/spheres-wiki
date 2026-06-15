@@ -1,4 +1,5 @@
 ---
+id: "synchronized-strikes"
 name: "Synchronized Strikes"
 tier: "basic"
 tags:

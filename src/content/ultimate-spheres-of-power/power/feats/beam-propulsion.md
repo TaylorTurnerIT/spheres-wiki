@@ -1,4 +1,5 @@
 ---
+id: "beam-propulsion"
 name: Beam Propulsion
 sphere: telekinesis
 dualSphere: light

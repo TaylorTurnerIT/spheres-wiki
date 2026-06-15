@@ -1,4 +1,5 @@
 ---
+id: "ranged-time"
 name: "Ranged Time"
 tier: basic
 tags: ["range"]

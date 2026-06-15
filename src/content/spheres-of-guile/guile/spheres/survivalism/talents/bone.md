@@ -1,4 +1,5 @@
 ---
+id: "bone"
 name: "Bone"
 tier: "basic"
 tags:

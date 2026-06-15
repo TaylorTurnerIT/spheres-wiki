@@ -1,4 +1,5 @@
 ---
+id: "divining-beacon"
 name: Divining Beacon
 sphere: warp
 dualSphere: divination

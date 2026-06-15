@@ -1,4 +1,5 @@
 ---
+id: "weapons-of-the-wild"
 name: "Weapons Of The Wild"
 tier: basic
 tags: ["fey-blessing"]

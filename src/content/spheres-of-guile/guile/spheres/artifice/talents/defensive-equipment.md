@@ -1,4 +1,5 @@
 ---
+id: "defensive-equipment"
 name: "Defensive Equipment"
 tier: "basic"
 tags:

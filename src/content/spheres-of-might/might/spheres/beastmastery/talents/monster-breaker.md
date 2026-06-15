@@ -1,4 +1,5 @@
 ---
+id: "monster-breaker"
 name: "Monster Breaker"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "adept-adventurer"
 name: "Adept Adventurer"
 tier: "basic"
 tags:

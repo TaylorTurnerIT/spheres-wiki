@@ -1,4 +1,5 @@
 ---
+id: "cystic-growth"
 name: "Cystic Growth"
 tier: basic
 tags: ["blood-art", "still"]

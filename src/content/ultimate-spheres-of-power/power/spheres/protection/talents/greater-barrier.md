@@ -1,4 +1,5 @@
 ---
+id: "greater-barrier"
 name: "Greater Barrier"
 tier: basic
 tags: []

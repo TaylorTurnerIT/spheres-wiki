@@ -1,4 +1,5 @@
 ---
+id: "retaliating-fire"
 name: "Retaliating Fire"
 tier: "basic"
 tags:

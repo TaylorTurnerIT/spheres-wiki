@@ -1,4 +1,5 @@
 ---
+id: "nature-lord"
 name: "Nature Lord"
 tier: basic
 tags: ["geomancing"]

@@ -1,4 +1,5 @@
 ---
+id: "cavalry-ready"
 name: "Cavalry Ready"
 tier: "basic"
 tags: []

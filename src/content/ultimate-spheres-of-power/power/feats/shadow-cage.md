@@ -1,4 +1,5 @@
 ---
+id: "shadow-cage"
 name: Shadow Cage
 sphere: protection
 dualSphere: dark

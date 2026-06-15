@@ -1,4 +1,5 @@
 ---
+id: "calamitous-coercion"
 name: "Calamitous Coercion"
 tier: "basic"
 tags:

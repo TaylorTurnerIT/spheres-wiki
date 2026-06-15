@@ -1,4 +1,5 @@
 ---
+id: "extensive-defense"
 name: "Extensive Defense"
 tier: "basic"
 tags: []

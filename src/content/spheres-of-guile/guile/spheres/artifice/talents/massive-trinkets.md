@@ -1,4 +1,5 @@
 ---
+id: "massive-trinkets"
 name: "Massive Trinkets"
 tier: "advanced"
 tags: []

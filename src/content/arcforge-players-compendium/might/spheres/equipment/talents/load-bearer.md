@@ -1,4 +1,5 @@
 ---
+id: "load-bearer"
 name: "Load Bearer"
 tier: "basic"
 tags: []

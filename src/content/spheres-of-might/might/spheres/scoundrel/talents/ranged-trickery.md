@@ -1,4 +1,5 @@
 ---
+id: "ranged-trickery"
 name: "Ranged Trickery"
 tier: "basic"
 tags:

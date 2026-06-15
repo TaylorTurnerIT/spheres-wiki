@@ -1,4 +1,5 @@
 ---
+id: "flight"
 name: "Flight"
 tier: basic
 tags: ["extraordinary", "harvest"]

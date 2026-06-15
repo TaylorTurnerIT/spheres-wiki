@@ -1,4 +1,5 @@
 ---
+id: "invigorating-sights"
 name: "Invigorating Sights"
 tier: "basic"
 tags:

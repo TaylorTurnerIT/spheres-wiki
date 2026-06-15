@@ -1,4 +1,5 @@
 ---
+id: "stirring-vapors"
 name: "Stirring Vapors"
 tier: "basic"
 tags:

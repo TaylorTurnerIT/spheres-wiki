@@ -1,4 +1,5 @@
 ---
+id: "mageknight-weirding-initiate"
 name: "Weirding Initiate"
 tags: []
 featureId: mystic-combat-su

@@ -1,4 +1,5 @@
 ---
+id: "earth-shattering-slam"
 name: "Earth-Shattering Slam"
 tier: "advanced"
 tags:

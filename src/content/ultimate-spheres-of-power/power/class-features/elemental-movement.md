@@ -1,4 +1,5 @@
 ---
+id: "elemental-movement"
 name: "Elemental Movement"
 type: class-feature
 className: elementalist

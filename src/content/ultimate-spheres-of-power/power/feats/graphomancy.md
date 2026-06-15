@@ -1,4 +1,5 @@
 ---
+id: "graphomancy"
 name: "Graphomancy"
 sphere: protection
 tags: []

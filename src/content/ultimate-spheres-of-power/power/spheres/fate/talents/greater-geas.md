@@ -1,4 +1,5 @@
 ---
+id: "greater-geas"
 name: "Greater Geas"
 tier: advanced
 tags: ["utility"]

@@ -1,4 +1,5 @@
 ---
+id: "dastardly-entrapment"
 name: "Dastardly Entrapment"
 tags:
   - "champion"

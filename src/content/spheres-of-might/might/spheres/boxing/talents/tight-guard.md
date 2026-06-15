@@ -1,4 +1,5 @@
 ---
+id: "tight-guard"
 name: "Tight Guard"
 tier: "basic"
 tags: []

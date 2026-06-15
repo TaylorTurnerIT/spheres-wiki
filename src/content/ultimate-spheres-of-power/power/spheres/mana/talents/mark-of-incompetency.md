@@ -1,4 +1,5 @@
 ---
+id: "mark-of-incompetency"
 name: "Mark Of Incompetency"
 tier: advanced
 tags: ["expunge"]

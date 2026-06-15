@@ -1,4 +1,5 @@
 ---
+id: "shifter-resistant-shift"
 name: "Resistant Shift"
 tags: []
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "permanent-item-supply"
 name: "Permanent Item Supply"
 tier: "basic"
 tags:

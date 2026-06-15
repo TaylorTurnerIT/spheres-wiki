@@ -1,4 +1,5 @@
 ---
+id: "hallucinatory-miasma"
 name: "Hallucinatory Miasma"
 tier: "advanced"
 tags:

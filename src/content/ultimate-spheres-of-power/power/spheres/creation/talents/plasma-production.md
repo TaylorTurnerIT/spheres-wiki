@@ -1,4 +1,5 @@
 ---
+id: "plasma-production"
 name: "Plasma Production"
 tier: basic
 tags: ["material"]

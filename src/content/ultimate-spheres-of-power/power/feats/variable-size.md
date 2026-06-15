@@ -1,4 +1,5 @@
 ---
+id: "variable-size"
 name: "Variable Size"
 sphere: conjuration
 tags: ["companion"]

@@ -1,4 +1,5 @@
 ---
+id: "magical-mercenary-retainer"
 name: "Magical Mercenary Retainer"
 tier: "advanced"
 tags:

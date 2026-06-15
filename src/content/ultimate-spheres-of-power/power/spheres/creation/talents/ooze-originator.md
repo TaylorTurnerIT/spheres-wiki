@@ -1,4 +1,5 @@
 ---
+id: "ooze-originator"
 name: "Ooze Originator"
 tier: advanced
 tags: ["create"]

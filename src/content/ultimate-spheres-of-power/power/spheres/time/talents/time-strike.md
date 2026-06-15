@@ -1,4 +1,5 @@
 ---
+id: "time-strike"
 name: "Time Strike"
 tier: basic
 tags: ["strike"]

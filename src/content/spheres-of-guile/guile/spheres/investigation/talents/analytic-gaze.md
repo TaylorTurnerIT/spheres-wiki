@@ -1,4 +1,5 @@
 ---
+id: "analytic-gaze"
 name: "Analytic Gaze"
 tier: "advanced"
 tags:

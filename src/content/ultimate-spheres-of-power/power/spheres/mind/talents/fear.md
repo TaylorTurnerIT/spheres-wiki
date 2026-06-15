@@ -1,4 +1,5 @@
 ---
+id: "fear"
 name: "Fear"
 tier: basic
 tags: ["charm"]

@@ -1,4 +1,5 @@
 ---
+id: "throw-bash"
 name: "Throw Bash"
 tier: "basic"
 tags: []

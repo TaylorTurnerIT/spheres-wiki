@@ -1,4 +1,5 @@
 ---
+id: "mageknight-martial-adaptation"
 name: "Martial Adaptation"
 tags: ["extraordinary"]
 featureId: mystic-combat-su

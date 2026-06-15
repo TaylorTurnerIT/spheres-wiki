@@ -1,4 +1,5 @@
 ---
+id: "boast"
 name: "Boast"
 tier: "base"
 tags: []

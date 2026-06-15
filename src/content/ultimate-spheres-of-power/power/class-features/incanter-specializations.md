@@ -1,4 +1,5 @@
 ---
+id: "incanter-specializations"
 name: "Incanter Specializations"
 type: class-feature
 className: incanter

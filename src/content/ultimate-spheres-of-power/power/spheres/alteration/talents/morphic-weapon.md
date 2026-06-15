@@ -1,4 +1,5 @@
 ---
+id: "morphic-weapon"
 name: "Morphic Weapon"
 tier: basic
 tags: ["supernatural"]

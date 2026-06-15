@@ -1,4 +1,5 @@
 ---
+id: "give-magic-life"
 name: "Give Magic Life"
 tier: advanced
 tags: []

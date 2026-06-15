@@ -1,4 +1,5 @@
 ---
+id: "instill-teleport"
 name: "Instill Teleport"
 tier: basic
 tags: ["instill"]

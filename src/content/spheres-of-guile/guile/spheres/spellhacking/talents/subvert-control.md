@@ -1,4 +1,5 @@
 ---
+id: "subvert-control"
 name: "Subvert Control"
 tier: "advanced"
 tags:

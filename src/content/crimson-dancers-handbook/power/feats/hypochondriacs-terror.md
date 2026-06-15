@@ -1,4 +1,5 @@
 ---
+id: "hypochondriacs-terror"
 name: Hypochondriac's Terror
 sphere: mind
 dualSphere: blood

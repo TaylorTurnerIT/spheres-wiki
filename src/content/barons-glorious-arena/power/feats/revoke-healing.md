@@ -1,4 +1,5 @@
 ---
+id: "revoke-healing"
 name: "Revoke Healing"
 sphere: life
 tags: []

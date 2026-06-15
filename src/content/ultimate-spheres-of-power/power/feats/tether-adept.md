@@ -1,4 +1,5 @@
 ---
+id: "tether-adept"
 name: "Tether Adept"
 sphere: destruction
 tags: ["combat"]

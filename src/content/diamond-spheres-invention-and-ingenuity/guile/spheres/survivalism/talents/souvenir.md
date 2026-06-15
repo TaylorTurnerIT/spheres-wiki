@@ -1,4 +1,5 @@
 ---
+id: "souvenir"
 name: "Souvenir"
 tier: "basic"
 tags:

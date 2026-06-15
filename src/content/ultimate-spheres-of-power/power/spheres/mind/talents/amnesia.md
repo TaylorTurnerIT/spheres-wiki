@@ -1,4 +1,5 @@
 ---
+id: "amnesia"
 name: "Amnesia"
 tier: basic
 tags: ["charm"]

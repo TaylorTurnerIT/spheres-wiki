@@ -1,4 +1,5 @@
 ---
+id: "shifter-see-in-darkness"
 name: "See in Darkness"
 tags: ["supernatural"]
 featureId: bestial-trait

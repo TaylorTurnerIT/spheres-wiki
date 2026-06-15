@@ -1,4 +1,5 @@
 ---
+id: "archaeologist"
 name: "Archaeologist"
 tier: "basic"
 tags:

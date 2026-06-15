@@ -1,4 +1,5 @@
 ---
+id: "anamnesis"
 name: "Anamnesis"
 tier: "advanced"
 tags:

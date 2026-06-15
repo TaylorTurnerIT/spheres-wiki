@@ -1,4 +1,5 @@
 ---
+id: "fortifier"
 name: "Fortifier"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "nimbus"
 name: Nimbus
 tier: basic
 tags: []

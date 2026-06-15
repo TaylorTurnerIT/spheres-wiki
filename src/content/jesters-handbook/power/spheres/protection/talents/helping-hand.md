@@ -1,4 +1,5 @@
 ---
+id: "helping-hand"
 name: "Helping Hand"
 tier: basic
 tags: ["succor"]

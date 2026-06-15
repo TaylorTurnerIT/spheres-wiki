@@ -1,4 +1,5 @@
 ---
+id: "sword-eater"
 name: "Sword Eater"
 tier: "basic"
 tags:

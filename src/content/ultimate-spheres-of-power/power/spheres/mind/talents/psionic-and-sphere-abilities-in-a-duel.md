@@ -1,4 +1,5 @@
 ---
+id: "psionic-and-sphere-abilities-in-a-duel"
 name: "Psionic and Sphere Abilities in a Duel"
 tier: basic
 tags: []

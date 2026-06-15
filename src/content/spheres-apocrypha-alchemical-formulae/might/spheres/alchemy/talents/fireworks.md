@@ -1,4 +1,5 @@
 ---
+id: "fireworks"
 name: "Fireworks"
 tier: "basic"
 tags: []

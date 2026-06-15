@@ -1,4 +1,5 @@
 ---
+id: "vortex"
 name: "Vortex"
 tier: basic
 tags: ["manabond"]

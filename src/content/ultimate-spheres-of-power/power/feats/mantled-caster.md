@@ -1,4 +1,5 @@
 ---
+id: "mantled-caster"
 name: "Mantled Caster"
 sphere: weather
 tags: []

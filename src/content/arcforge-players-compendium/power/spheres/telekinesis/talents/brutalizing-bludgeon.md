@@ -1,4 +1,5 @@
 ---
+id: "brutalizing-bludgeon"
 name: "Brutalizing Bludgeon"
 tier: advanced
 tags: []

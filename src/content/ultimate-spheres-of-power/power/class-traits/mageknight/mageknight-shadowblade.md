@@ -1,4 +1,5 @@
 ---
+id: "mageknight-shadowblade"
 name: "Shadowblade"
 tags: []
 featureId: mystic-combat-su

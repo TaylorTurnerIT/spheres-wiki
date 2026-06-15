@@ -1,4 +1,5 @@
 ---
+id: "tsunami"
 name: "Tsunami"
 tier: advanced
 tags: ["water", "geomancing"]

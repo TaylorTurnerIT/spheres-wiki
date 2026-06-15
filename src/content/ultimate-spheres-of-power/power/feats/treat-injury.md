@@ -1,4 +1,5 @@
 ---
+id: "treat-injury"
 name: "Treat Injury"
 sphere: life
 tags: []

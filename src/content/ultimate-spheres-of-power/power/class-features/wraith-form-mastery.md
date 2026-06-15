@@ -1,4 +1,5 @@
 ---
+id: "wraith-form-mastery"
 name: "Wraith Form Mastery"
 type: class-feature
 className: wraith

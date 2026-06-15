@@ -1,4 +1,5 @@
 ---
+id: "wraith-lengthened-control"
 name: "Lengthened Control"
 tags: []
 featureId: wraith-haunts

@@ -1,4 +1,5 @@
 ---
+id: "eviscerating-shot"
 name: "Eviscerating Shot"
 tier: "advanced"
 tags:

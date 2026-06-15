@@ -1,4 +1,5 @@
 ---
+id: "corpse-forge"
 name: "Corpse Forge"
 tier: advanced
 tags: ["dominion"]

@@ -1,4 +1,5 @@
 ---
+id: "pirate"
 name: "Pirate"
 tier: "basic"
 tags:

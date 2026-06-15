@@ -1,4 +1,5 @@
 ---
+id: "vog"
 name: "Vog"
 tier: basic
 tags: []

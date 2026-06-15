@@ -1,4 +1,5 @@
 ---
+id: "projecting-voice"
 name: "Projecting Voice"
 tier: "basic"
 tags: []

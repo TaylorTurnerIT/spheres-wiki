@@ -1,4 +1,5 @@
 ---
+id: "shifter-animal-trainer"
 name: "Animal Trainer"
 tags: ["extraordinary"]
 featureId: bestial-trait

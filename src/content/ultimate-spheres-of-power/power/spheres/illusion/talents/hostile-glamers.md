@@ -1,4 +1,5 @@
 ---
+id: "hostile-glamers"
 name: "Hostile Glamers"
 tier: basic
 tags: ["glamer"]

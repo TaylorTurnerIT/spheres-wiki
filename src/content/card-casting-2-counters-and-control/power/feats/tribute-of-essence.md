@@ -1,4 +1,5 @@
 ---
+id: "tribute-of-essence"
 name: "Tribute of Essence"
 sphere: mana
 tags: []

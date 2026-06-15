@@ -1,4 +1,5 @@
 ---
+id: "mageknight-elemental-defense"
 name: "Elemental Defense"
 tags: []
 featureId: mystic-combat-su

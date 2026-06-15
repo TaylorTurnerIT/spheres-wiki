@@ -1,4 +1,5 @@
 ---
+id: "energy-body"
 name: "Energy Body"
 type: class-feature
 className: elementalist

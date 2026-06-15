@@ -1,4 +1,5 @@
 ---
+id: "strike-fear"
 name: "Strike Fear"
 tier: "base"
 tags:

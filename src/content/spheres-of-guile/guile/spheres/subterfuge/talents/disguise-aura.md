@@ -1,4 +1,5 @@
 ---
+id: "disguise-aura"
 name: "Disguise Aura"
 tier: "advanced"
 tags:

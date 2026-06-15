@@ -1,4 +1,5 @@
 ---
+id: "dappled-shadows"
 name: "Dappled Shadows"
 tier: basic
 tags: ["mass"]

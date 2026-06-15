@@ -1,4 +1,5 @@
 ---
+id: "prismatic-radiance"
 name: "Prismatic Radiance"
 tier: advanced
 tags: ["light"]

@@ -1,4 +1,5 @@
 ---
+id: "fire-mastery"
 name: "Fire Mastery"
 tier: basic
 tags: ["fire", "geomancing"]

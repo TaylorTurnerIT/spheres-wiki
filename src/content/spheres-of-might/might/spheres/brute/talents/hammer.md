@@ -1,4 +1,5 @@
 ---
+id: "hammer"
 name: "Hammer"
 tier: "basic"
 tags: []

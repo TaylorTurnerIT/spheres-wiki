@@ -1,4 +1,5 @@
 ---
+id: "generative-admixture"
 name: "Generative Admixture"
 sphere: destruction
 tags: ["admixture"]

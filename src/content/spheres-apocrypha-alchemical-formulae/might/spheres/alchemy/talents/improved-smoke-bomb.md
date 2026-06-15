@@ -1,4 +1,5 @@
 ---
+id: "improved-smoke-bomb"
 name: "Improved Smoke Bomb"
 tier: "basic"
 tags:

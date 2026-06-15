@@ -1,4 +1,5 @@
 ---
+id: "spell-selectivity"
 name: "Spell Selectivity [Original]"
 tier: advanced
 tags: []

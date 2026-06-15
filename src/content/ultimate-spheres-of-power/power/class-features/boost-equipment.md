@@ -1,4 +1,5 @@
 ---
+id: "boost-equipment"
 name: "Boost Equipment"
 type: class-feature
 className: armorist

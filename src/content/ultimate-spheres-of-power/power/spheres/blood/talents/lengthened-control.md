@@ -1,4 +1,5 @@
 ---
+id: "lengthened-control"
 name: "Lengthened Control"
 tier: basic
 tags: []

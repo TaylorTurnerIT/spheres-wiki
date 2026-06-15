@@ -1,4 +1,5 @@
 ---
+id: "controlled-rupture"
 name: "Controlled Rupture"
 tier: "basic"
 tags: []

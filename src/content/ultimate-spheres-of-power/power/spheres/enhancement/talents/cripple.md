@@ -1,4 +1,5 @@
 ---
+id: "cripple"
 name: "Cripple"
 tier: basic
 tags: ["enhance"]

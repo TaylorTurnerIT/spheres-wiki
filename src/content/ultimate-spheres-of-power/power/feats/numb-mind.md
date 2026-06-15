@@ -1,4 +1,5 @@
 ---
+id: "numb-mind"
 name: "Numb Mind"
 sphere: death
 tags: ["necrosis"]

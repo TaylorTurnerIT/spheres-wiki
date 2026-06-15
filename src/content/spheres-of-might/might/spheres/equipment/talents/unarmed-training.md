@@ -1,4 +1,5 @@
 ---
+id: "unarmed-training"
 name: "Unarmed Training"
 tier: "basic"
 tags:

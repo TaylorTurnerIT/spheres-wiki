@@ -1,4 +1,5 @@
 ---
+id: "entropic-aura"
 name: "Entropic Aura"
 tier: advanced
 tags: ["curse", "consecration"]

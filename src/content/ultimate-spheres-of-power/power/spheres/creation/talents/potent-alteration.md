@@ -1,4 +1,5 @@
 ---
+id: "potent-alteration"
 name: "Potent Alteration"
 tier: basic
 tags: []

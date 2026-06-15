@@ -1,4 +1,5 @@
 ---
+id: "reset-duration"
 name: "Reset Duration"
 tier: advanced
 tags: ["manipulate"]

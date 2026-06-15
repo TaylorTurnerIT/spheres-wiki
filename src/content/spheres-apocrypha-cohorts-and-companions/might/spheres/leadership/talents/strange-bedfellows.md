@@ -1,4 +1,5 @@
 ---
+id: "strange-bedfellows"
 name: "Strange Bedfellows"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "dulled-senses"
 name: "Dulled Senses"
 tier: "basic"
 tags:

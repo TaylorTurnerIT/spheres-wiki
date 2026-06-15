@@ -1,4 +1,5 @@
 ---
+id: "unflappable-banter"
 name: "Unflappable Banter"
 tier: "basic"
 tags:

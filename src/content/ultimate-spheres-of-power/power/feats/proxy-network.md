@@ -1,4 +1,5 @@
 ---
+id: "proxy-network"
 name: "Proxy Network"
 sphere: enhancement
 tags: ["proxy"]

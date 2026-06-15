@@ -1,4 +1,5 @@
 ---
+id: "improvised-martial-arts"
 name: "Improvised Martial Arts"
 tier: "basic"
 tags:

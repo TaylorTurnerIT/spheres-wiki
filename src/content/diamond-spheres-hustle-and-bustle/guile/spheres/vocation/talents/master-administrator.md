@@ -1,4 +1,5 @@
 ---
+id: "master-administrator"
 name: "Master Administrator"
 tier: "advanced"
 tags:

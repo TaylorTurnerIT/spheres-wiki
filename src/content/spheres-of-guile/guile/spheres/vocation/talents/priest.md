@@ -1,4 +1,5 @@
 ---
+id: "priest"
 name: "Priest"
 tier: "basic"
 tags:

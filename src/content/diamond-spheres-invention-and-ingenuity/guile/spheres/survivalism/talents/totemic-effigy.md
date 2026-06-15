@@ -1,4 +1,5 @@
 ---
+id: "totemic-effigy"
 name: "Totemic Effigy"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "steel-hedge"
 name: "Steel Hedge"
 tier: "basic"
 tags:

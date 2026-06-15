@@ -1,4 +1,5 @@
 ---
+id: "soul-punch"
 name: "Soul Punch"
 tier: "advanced"
 tags: []

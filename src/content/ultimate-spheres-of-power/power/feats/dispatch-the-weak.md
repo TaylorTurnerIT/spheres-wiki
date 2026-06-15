@@ -1,4 +1,5 @@
 ---
+id: "dispatch-the-weak"
 name: "Dispatch The Weak"
 sphere: death
 tags: []

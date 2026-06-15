@@ -1,4 +1,5 @@
 ---
+id: "acidic-creation"
 name: "Acidic Creation"
 tier: basic
 tags: ["material"]

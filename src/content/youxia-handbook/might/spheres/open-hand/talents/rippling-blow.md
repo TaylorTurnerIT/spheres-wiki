@@ -1,4 +1,5 @@
 ---
+id: "rippling-blow"
 name: "Rippling Blow"
 tier: "basic"
 tags: []

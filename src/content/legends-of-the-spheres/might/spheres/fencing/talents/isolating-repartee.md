@@ -1,4 +1,5 @@
 ---
+id: "isolating-repartee"
 name: "Isolating Repartee"
 tier: "basic"
 tags:

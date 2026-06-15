@@ -1,4 +1,5 @@
 ---
+id: "power-bomb"
 name: "Power Bomb"
 tier: "basic"
 tags:

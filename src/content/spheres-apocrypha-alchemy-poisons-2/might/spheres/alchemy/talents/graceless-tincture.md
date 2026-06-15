@@ -1,4 +1,5 @@
 ---
+id: "graceless-tincture"
 name: "Graceless Tincture"
 tier: "basic"
 tags:

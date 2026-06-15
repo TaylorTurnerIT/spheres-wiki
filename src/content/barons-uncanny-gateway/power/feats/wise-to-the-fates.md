@@ -1,4 +1,5 @@
 ---
+id: "wise-to-the-fates"
 name: "Wise to the Fates"
 sphere: fate
 dualSphere: divination

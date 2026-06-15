@@ -1,4 +1,5 @@
 ---
+id: "greater-possession"
 name: "Greater Possession"
 type: class-feature
 className: wraith

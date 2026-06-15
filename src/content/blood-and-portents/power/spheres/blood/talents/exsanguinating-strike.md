@@ -1,4 +1,5 @@
 ---
+id: "exsanguinating-strike"
 name: "Exsanguinating Strike"
 tier: basic
 tags: ["strike"]

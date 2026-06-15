@@ -1,4 +1,5 @@
 ---
+id: "mana"
 name: "Mana"
 icon: mana
 tags: []

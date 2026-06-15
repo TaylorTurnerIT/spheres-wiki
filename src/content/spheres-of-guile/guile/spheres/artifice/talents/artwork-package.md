@@ -1,4 +1,5 @@
 ---
+id: "artwork-package"
 name: "Artwork Package"
 tier: "base"
 tags:

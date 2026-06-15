@@ -1,4 +1,5 @@
 ---
+id: "fey-blessing"
 label: "Fey Blessing"
 color: "#a55eea"
 priority: 15

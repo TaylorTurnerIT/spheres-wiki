@@ -1,4 +1,5 @@
 ---
+id: "double-impale"
 name: "Double Impale"
 tier: "basic"
 tags: []

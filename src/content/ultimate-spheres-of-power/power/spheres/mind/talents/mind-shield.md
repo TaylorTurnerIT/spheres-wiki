@@ -1,4 +1,5 @@
 ---
+id: "mind-shield"
 name: "Mind Shield"
 tier: basic
 tags: ["charm"]

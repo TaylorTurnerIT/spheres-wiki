@@ -1,4 +1,5 @@
 ---
+id: "scent"
 name: "Scent"
 tier: basic
 tags: ["auxiliary", "extraordinary", "sense"]

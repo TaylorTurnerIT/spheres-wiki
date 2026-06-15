@@ -1,4 +1,5 @@
 ---
+id: "net-master"
 name: "Net Master"
 tier: "basic"
 tags: []

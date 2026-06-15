@@ -1,4 +1,5 @@
 ---
+id: "unified-morale"
 name: "Unified Morale"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "verbal-trap"
 name: "Verbal Trap"
 tier: "basic"
 tags:

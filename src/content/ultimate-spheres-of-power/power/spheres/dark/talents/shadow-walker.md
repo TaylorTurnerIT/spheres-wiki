@@ -1,4 +1,5 @@
 ---
+id: "shadow-walker"
 name: "Shadow Walker"
 tier: advanced
 tags: ["meld", "mythic"]

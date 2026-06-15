@@ -1,4 +1,5 @@
 ---
+id: "telekineticat"
 name: "Telekineticat"
 sphere: telekinesis
 tags: ["protokinesis"]

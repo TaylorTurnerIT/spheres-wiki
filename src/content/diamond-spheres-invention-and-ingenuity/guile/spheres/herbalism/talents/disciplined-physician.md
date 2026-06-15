@@ -1,4 +1,5 @@
 ---
+id: "disciplined-physician"
 name: "Disciplined Physician"
 tier: "base"
 tags:

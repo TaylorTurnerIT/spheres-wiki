@@ -1,4 +1,5 @@
 ---
+id: "consensus-reality"
 name: "Consensus Reality"
 tier: basic
 tags: ["sm"]

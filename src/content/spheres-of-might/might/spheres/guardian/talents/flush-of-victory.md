@@ -1,4 +1,5 @@
 ---
+id: "flush-of-victory"
 name: "Flush Of Victory"
 tier: "basic"
 tags: []

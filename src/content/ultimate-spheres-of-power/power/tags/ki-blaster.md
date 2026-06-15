@@ -1,4 +1,5 @@
 ---
+id: "ki-blaster"
 label: "Ki Blaster"
 color: "#4A235A"
 priority: 0

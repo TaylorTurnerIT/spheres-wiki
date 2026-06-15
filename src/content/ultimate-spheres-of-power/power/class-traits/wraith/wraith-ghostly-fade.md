@@ -1,4 +1,5 @@
 ---
+id: "wraith-ghostly-fade"
 name: "Ghostly Fade"
 tags: []
 featureId: wraith-haunts

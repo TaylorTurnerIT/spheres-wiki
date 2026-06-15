@@ -1,4 +1,5 @@
 ---
+id: "heroism"
 name: "Heroism"
 tier: advanced
 tags: ["word"]

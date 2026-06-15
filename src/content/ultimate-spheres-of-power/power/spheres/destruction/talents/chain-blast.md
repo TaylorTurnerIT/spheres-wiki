@@ -1,4 +1,5 @@
 ---
+id: "chain-blast"
 name: "Chain Blast"
 tier: basic
 tags: ["blast-shape"]

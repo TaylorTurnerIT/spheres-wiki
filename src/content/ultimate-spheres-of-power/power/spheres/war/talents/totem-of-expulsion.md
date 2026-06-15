@@ -1,4 +1,5 @@
 ---
+id: "totem-of-expulsion"
 name: "Totem Of Expulsion"
 tier: basic
 tags: ["totem"]

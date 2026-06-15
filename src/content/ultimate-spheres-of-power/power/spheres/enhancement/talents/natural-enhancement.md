@@ -1,4 +1,5 @@
 ---
+id: "natural-enhancement"
 name: Natural Enhancement
 dualSphere: nature
 tier: basic

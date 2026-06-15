@@ -1,4 +1,5 @@
 ---
+id: "expanded-necromancy"
 name: "Expanded Necromancy"
 tier: basic
 tags: []

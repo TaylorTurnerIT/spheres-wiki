@@ -1,4 +1,5 @@
 ---
+id: "true-teleport"
 name: "True Teleport"
 tier: advanced
 tags: []

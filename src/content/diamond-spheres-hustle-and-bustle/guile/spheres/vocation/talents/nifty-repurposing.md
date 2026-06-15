@@ -1,4 +1,5 @@
 ---
+id: "nifty-repurposing"
 name: "Nifty Repurposing"
 tier: "basic"
 tags:

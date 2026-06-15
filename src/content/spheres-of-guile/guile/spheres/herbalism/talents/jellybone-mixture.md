@@ -1,4 +1,5 @@
 ---
+id: "jellybone-mixture"
 name: "Jellybone Mixture"
 tier: "basic"
 tags:

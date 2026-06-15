@@ -1,4 +1,5 @@
 ---
+id: "surface-strider"
 name: "Surface Strider"
 tier: "advanced"
 tags:

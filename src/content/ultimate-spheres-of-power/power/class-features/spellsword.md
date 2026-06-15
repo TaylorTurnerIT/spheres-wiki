@@ -1,4 +1,5 @@
 ---
+id: "spellsword"
 name: "Spellsword"
 type: class-feature
 className: mageknight

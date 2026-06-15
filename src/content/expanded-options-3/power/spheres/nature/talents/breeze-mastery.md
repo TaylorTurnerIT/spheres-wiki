@@ -1,4 +1,5 @@
 ---
+id: "breeze-mastery"
 name: "Breeze Mastery"
 tier: basic
 tags: ["air", "geomancing"]

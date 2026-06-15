@@ -1,4 +1,5 @@
 ---
+id: "lasting-oration"
 name: "Lasting Oration"
 tier: "basic"
 tags: []

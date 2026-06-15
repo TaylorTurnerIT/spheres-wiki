@@ -1,4 +1,5 @@
 ---
+id: "early-hunt"
 name: "Early Hunt"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "chronicler"
 name: "Chronicler"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "writer"
 name: "Writer"
 tier: "base"
 tags:

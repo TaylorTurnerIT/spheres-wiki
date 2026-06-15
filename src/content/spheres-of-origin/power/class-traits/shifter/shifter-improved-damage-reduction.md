@@ -1,4 +1,5 @@
 ---
+id: "shifter-improved-damage-reduction"
 name: "Improved Damage Reduction"
 tags: []
 featureId: bestial-trait

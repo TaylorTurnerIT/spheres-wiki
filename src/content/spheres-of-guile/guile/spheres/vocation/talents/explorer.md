@@ -1,4 +1,5 @@
 ---
+id: "explorer"
 name: "Explorer"
 tier: "basic"
 tags:

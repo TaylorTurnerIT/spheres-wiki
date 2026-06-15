@@ -1,4 +1,5 @@
 ---
+id: "grant-divination"
 name: "Grant Divination"
 tier: basic
 tags: []

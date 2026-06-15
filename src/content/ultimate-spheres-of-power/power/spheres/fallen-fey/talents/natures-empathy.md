@@ -1,4 +1,5 @@
 ---
+id: "natures-empathy"
 name: "Nature's Empathy"
 tier: basic
 tags: ["fey-blessing", "utility"]

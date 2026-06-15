@@ -1,4 +1,5 @@
 ---
+id: "animating-possession"
 name: Animating Possession
 sphere: enhancement
 dualSphere: death

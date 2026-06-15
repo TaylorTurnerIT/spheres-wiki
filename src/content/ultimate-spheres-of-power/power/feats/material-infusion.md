@@ -1,4 +1,5 @@
 ---
+id: "material-infusion"
 name: Material Infusion
 sphere: nature
 dualSphere: destruction

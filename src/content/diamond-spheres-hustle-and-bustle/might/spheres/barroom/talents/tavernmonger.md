@@ -1,4 +1,5 @@
 ---
+id: "tavernmonger"
 name: "Tavernmonger"
 tier: "basic"
 tags:

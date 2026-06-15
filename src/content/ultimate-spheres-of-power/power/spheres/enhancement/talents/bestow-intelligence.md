@@ -1,4 +1,5 @@
 ---
+id: "bestow-intelligence"
 name: "Bestow Intelligence"
 tier: basic
 tags: ["enhance"]

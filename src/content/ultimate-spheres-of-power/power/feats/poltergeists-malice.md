@@ -1,4 +1,5 @@
 ---
+id: "poltergeists-malice"
 name: Poltergeist's Malice
 sphere: telekinesis
 dualSphere: death

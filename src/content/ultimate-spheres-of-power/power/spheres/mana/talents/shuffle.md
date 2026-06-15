@@ -1,4 +1,5 @@
 ---
+id: "shuffle"
 name: "Shuffle"
 tier: basic
 tags: ["extraordinary", "manipulation"]

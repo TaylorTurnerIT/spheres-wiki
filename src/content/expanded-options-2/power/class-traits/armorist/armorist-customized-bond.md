@@ -1,4 +1,5 @@
 ---
+id: "armorist-customized-bond"
 name: "Customized Bond"
 tags: []
 featureId: arsenal-trick

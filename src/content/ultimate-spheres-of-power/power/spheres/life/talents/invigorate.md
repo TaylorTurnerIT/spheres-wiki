@@ -1,4 +1,5 @@
 ---
+id: "invigorate"
 name: "Invigorate"
 tier: base
 tags: []

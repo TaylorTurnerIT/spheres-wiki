@@ -1,4 +1,5 @@
 ---
+id: "tainted-manabond"
 name: "Tainted Manabond"
 sphere: mana
 tags: []

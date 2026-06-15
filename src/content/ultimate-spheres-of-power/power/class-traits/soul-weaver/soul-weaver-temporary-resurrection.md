@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-temporary-resurrection"
 name: "Temporary Resurrection"
 tags: []
 featureId: bound-nexus

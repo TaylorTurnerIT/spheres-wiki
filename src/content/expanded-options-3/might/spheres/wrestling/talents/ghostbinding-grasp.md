@@ -1,4 +1,5 @@
 ---
+id: "ghostbinding-grasp"
 name: "Ghostbinding Grasp"
 tier: "advanced"
 tags: []

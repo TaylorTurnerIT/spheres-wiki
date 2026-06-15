@@ -1,4 +1,5 @@
 ---
+id: "flounder"
 name: "Flounder"
 tier: advanced
 tags: ["curse", "word"]

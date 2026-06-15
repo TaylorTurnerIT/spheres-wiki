@@ -1,4 +1,5 @@
 ---
+id: "vassalize"
 name: "Vassalize"
 tier: advanced
 tags: []

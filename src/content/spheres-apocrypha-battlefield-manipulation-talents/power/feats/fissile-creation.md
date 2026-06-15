@@ -1,4 +1,5 @@
 ---
+id: "fissile-creation"
 name: Fissile Creation
 sphere: destruction
 dualSphere: creation

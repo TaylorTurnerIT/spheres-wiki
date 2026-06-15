@@ -1,4 +1,5 @@
 ---
+id: "stupendous-crafter"
 name: "Stupendous Crafter"
 tier: "advanced"
 tags: []

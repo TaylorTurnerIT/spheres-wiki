@@ -1,4 +1,5 @@
 ---
+id: "energizer"
 name: "Energizer"
 tier: "basic"
 tags:

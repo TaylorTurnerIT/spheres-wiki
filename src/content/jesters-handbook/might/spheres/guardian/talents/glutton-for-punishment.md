@@ -1,4 +1,5 @@
 ---
+id: "glutton-for-punishment"
 name: "Glutton For Punishment"
 tier: "basic"
 tags: []

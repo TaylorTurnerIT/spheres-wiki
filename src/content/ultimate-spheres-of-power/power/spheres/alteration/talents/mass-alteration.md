@@ -1,4 +1,5 @@
 ---
+id: "mass-alteration"
 name: "Mass Alteration"
 tier: basic
 tags: ["mass"]

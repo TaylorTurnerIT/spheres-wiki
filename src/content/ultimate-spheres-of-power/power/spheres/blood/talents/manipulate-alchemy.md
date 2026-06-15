@@ -1,4 +1,5 @@
 ---
+id: "manipulate-alchemy"
 name: "Manipulate Alchemy"
 tier: basic
 tags: ["quicken", "still"]

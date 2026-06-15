@@ -1,4 +1,5 @@
 ---
+id: "avoid-hazard"
 name: "Avoid Hazard"
 tier: "basic"
 tags:

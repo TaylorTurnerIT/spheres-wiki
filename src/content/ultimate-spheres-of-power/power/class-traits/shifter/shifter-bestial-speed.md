@@ -1,4 +1,5 @@
 ---
+id: "shifter-bestial-speed"
 name: "Bestial Speed"
 tags: ["extraordinary"]
 featureId: bestial-trait

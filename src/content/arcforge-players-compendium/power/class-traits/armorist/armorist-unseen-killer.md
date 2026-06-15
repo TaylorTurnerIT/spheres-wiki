@@ -1,4 +1,5 @@
 ---
+id: "armorist-unseen-killer"
 name: "Unseen Killer"
 tags: []
 featureId: arsenal-trick

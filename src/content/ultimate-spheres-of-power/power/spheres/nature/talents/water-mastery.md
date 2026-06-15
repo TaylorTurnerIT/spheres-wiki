@@ -1,4 +1,5 @@
 ---
+id: "water-mastery"
 name: "Water Mastery"
 tier: basic
 tags: ["water", "geomancing"]

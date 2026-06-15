@@ -1,4 +1,5 @@
 ---
+id: "prescient-hack"
 name: "Prescient Hack"
 tier: "basic"
 tags:

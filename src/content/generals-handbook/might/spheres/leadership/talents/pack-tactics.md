@@ -1,4 +1,5 @@
 ---
+id: "pack-tactics"
 name: "Pack Tactics"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "requested-command"
 name: "Requested Command"
 sphere: war
 tags: ["squadron"]

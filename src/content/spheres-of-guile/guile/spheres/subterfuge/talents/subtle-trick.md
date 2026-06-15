@@ -1,4 +1,5 @@
 ---
+id: "subtle-trick"
 name: "Subtle Trick"
 tier: "basic"
 tags: []

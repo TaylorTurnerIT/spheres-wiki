@@ -1,4 +1,5 @@
 ---
+id: "close-quarters-training"
 name: "Close Quarters Training"
 tier: "basic"
 tags: []

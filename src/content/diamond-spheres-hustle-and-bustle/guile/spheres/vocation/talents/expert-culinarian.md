@@ -1,4 +1,5 @@
 ---
+id: "expert-culinarian"
 name: "Expert Culinarian"
 tier: "basic"
 tags:

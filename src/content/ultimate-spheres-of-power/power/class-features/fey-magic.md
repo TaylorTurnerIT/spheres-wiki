@@ -1,4 +1,5 @@
 ---
+id: "fey-magic"
 name: "Fey Magic"
 type: class-feature
 className: fey-adept

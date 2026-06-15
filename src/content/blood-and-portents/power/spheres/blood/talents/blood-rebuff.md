@@ -1,4 +1,5 @@
 ---
+id: "blood-rebuff"
 name: "Blood Rebuff"
 tier: basic
 tags: ["blood-art"]

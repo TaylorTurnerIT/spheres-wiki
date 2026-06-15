@@ -1,4 +1,5 @@
 ---
+id: "unobscured-vision"
 name: "Unobscured Vision"
 tier: advanced
 tags: ["sense"]

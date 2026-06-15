@@ -1,4 +1,5 @@
 ---
+id: "courser-slaughter"
 name: Slaughter
 featureId: courser-ventures
 tags: []

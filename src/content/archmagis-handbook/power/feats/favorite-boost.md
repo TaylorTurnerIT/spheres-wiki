@@ -1,4 +1,5 @@
 ---
+id: "favorite-boost"
 name: "Favorite Boost"
 sphere: mana
 tags: []

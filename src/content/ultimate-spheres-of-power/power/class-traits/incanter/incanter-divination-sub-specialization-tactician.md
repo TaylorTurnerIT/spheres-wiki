@@ -1,4 +1,5 @@
 ---
+id: "incanter-divination-sub-specialization-tactician"
 name: "Divination Sub-Specialization: Tactician"
 tags: []
 featureId: list-of-sphere-specializations

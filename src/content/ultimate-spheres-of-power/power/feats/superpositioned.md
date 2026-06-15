@@ -1,4 +1,5 @@
 ---
+id: "superpositioned"
 name: Superpositioned
 sphere: warp
 dualSphere: illusion

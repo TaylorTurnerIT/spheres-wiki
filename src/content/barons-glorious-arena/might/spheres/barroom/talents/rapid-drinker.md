@@ -1,4 +1,5 @@
 ---
+id: "rapid-drinker"
 name: "Rapid Drinker"
 tier: "basic"
 tags: []

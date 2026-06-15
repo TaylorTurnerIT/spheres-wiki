@@ -1,4 +1,5 @@
 ---
+id: "performance-fighter"
 name: "Performance Fighter"
 tier: "basic"
 tags:

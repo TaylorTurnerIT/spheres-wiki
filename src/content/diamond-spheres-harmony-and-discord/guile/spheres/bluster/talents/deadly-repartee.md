@@ -1,4 +1,5 @@
 ---
+id: "deadly-repartee"
 name: "Deadly Repartee"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "bound-nexus"
 name: "Bound Nexus"
 type: class-feature
 className: soul-weaver

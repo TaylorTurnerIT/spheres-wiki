@@ -1,4 +1,5 @@
 ---
+id: "energy-wall"
 name: "Energy Wall"
 tier: basic
 tags: ["blast-shape"]

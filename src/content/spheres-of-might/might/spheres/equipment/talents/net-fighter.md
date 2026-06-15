@@ -1,4 +1,5 @@
 ---
+id: "net-fighter"
 name: "Net Fighter"
 tier: "basic"
 tags: []

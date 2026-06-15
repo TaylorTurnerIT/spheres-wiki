@@ -1,4 +1,5 @@
 ---
+id: "twirling-disarm"
 name: "Twirling Disarm"
 tier: "basic"
 tags:

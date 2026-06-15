@@ -1,4 +1,5 @@
 ---
+id: "body-double"
 name: Body Double
 sphere: illusion
 dualSphere: dark

@@ -1,4 +1,5 @@
 ---
+id: "aggrandizing-strike"
 name: "Aggrandizing Strike"
 tier: basic
 tags: ["strike"]

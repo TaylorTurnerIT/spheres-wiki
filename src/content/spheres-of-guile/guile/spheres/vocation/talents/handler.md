@@ -1,4 +1,5 @@
 ---
+id: "handler"
 name: "Handler"
 tier: "basic"
 tags:

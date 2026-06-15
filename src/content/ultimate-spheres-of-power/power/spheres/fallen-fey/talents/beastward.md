@@ -1,4 +1,5 @@
 ---
+id: "beastward"
 name: "Beastward"
 tier: basic
 tags: ["fey-blessing"]

@@ -1,4 +1,5 @@
 ---
+id: "easy-dismissal"
 name: "Easy Dismissal"
 tier: "basic"
 tags: []

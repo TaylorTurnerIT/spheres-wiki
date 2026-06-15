@@ -1,4 +1,5 @@
 ---
+id: "circumvent-defenses"
 name: "Circumvent Defenses"
 tier: "basic"
 tags:

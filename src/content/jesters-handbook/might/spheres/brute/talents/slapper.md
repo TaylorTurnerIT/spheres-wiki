@@ -1,4 +1,5 @@
 ---
+id: "slapper"
 name: "Slapper"
 tier: "basic"
 tags: []

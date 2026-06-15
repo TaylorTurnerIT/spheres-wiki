@@ -1,4 +1,5 @@
 ---
+id: "ailment"
 name: "Ailment"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "hypnotic-pattern"
 name: "Hypnotic Pattern"
 tier: basic
 tags: ["light"]

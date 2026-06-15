@@ -1,4 +1,5 @@
 ---
+id: "automatic-fortification"
 name: "Automatic Fortification"
 tier: advanced
 tags: []

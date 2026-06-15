@@ -1,4 +1,5 @@
 ---
+id: "repress-element"
 name: "Repress Element"
 tier: basic
 tags: ["geomancing"]

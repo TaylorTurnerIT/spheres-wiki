@@ -1,4 +1,5 @@
 ---
+id: "counterweight"
 name: "Counterweight"
 sphere: telekinesis
 tags: ["protokinesis"]

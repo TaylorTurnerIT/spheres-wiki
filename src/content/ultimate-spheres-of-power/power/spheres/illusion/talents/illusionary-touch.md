@@ -1,4 +1,5 @@
 ---
+id: "illusionary-touch"
 name: "Illusionary Touch"
 tier: basic
 tags: ["sensory", "touch"]

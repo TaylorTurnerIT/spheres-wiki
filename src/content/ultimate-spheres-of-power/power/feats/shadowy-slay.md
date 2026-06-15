@@ -1,4 +1,5 @@
 ---
+id: "shadowy-slay"
 name: "Shadowy Slay"
 sphere: illusion
 tags: ["surreal"]

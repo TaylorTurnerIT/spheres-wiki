@@ -1,4 +1,5 @@
 ---
+id: "energetic-touch"
 name: "Energetic Touch"
 tier: "advanced"
 tags: []

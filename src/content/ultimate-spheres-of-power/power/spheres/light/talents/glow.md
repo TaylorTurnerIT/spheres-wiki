@@ -1,4 +1,5 @@
 ---
+id: "glow"
 name: "Glow"
 tier: base
 tags: []

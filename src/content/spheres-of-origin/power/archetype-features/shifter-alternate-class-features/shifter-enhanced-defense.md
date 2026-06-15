@@ -1,4 +1,5 @@
 ---
+id: "shifter-enhanced-defense"
 name: "Enhanced Defense"
 tags: ["extraordinary"]
 level: 4

@@ -1,4 +1,5 @@
 ---
+id: "two-minds-ex"
 name: "Two Minds (Ex)"
 type: class-feature
 className: symbiat

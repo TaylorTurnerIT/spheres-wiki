@@ -1,4 +1,5 @@
 ---
+id: "totem-of-dread"
 name: "Totem Of Dread"
 tier: basic
 tags: ["totem"]

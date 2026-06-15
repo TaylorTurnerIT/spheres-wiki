@@ -1,4 +1,5 @@
 ---
+id: "blinding-beauty"
 name: "Blinding Beauty"
 tier: advanced
 tags: ["fey-blessing"]

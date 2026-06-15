@@ -1,4 +1,5 @@
 ---
+id: "knuckle-crusher"
 name: "Knuckle Crusher (counter)"
 tier: "basic"
 tags: ["counter"]

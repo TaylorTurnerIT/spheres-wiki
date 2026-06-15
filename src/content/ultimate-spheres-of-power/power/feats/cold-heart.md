@@ -1,4 +1,5 @@
 ---
+id: "cold-heart"
 name: "Cold Heart"
 sphere: death
 tags: ["necrosis"]

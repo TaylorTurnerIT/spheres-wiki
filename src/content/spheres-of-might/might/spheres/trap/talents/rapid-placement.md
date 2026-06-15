@@ -1,4 +1,5 @@
 ---
+id: "rapid-placement"
 name: "Rapid Placement"
 tier: "basic"
 tags: []

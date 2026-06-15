@@ -1,4 +1,5 @@
 ---
+id: "ranged-alteration"
 name: "Ranged Alteration"
 tier: basic
 tags: ["range"]

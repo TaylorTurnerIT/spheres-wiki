@@ -1,4 +1,5 @@
 ---
+id: "scar-tissue"
 name: "Scar Tissue"
 tier: "basic"
 tags: []

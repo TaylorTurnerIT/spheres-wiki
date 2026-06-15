@@ -1,4 +1,5 @@
 ---
+id: "manipulate-aura"
 name: "Manipulate Aura"
 tier: basic
 tags: ["magic", "sensory"]

@@ -1,4 +1,5 @@
 ---
+id: "gazelle-punch"
 name: "Gazelle Punch"
 tier: "basic"
 tags: []

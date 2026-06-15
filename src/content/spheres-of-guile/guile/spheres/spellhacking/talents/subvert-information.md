@@ -1,4 +1,5 @@
 ---
+id: "subvert-information"
 name: "Subvert Information"
 tier: "basic"
 tags:

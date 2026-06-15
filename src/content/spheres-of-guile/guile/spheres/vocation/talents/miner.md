@@ -1,4 +1,5 @@
 ---
+id: "miner"
 name: "Miner"
 tier: "basic"
 tags:

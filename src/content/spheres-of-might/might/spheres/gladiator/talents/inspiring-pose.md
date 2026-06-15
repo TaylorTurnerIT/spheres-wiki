@@ -1,4 +1,5 @@
 ---
+id: "inspiring-pose"
 name: "Inspiring Pose"
 tier: "basic"
 tags:

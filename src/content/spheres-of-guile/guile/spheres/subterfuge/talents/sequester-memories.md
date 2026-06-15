@@ -1,4 +1,5 @@
 ---
+id: "sequester-memories"
 name: "Sequester Memories"
 tier: "advanced"
 tags:

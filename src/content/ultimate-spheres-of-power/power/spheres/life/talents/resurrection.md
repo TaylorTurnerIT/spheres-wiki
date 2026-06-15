@@ -1,4 +1,5 @@
 ---
+id: "resurrection"
 name: "Resurrection"
 tier: advanced
 tags: []

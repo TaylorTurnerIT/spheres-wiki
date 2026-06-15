@@ -1,4 +1,5 @@
 ---
+id: "flexible-item-repurposing"
 name: "Flexible Item Repurposing"
 tier: "basic"
 tags: []

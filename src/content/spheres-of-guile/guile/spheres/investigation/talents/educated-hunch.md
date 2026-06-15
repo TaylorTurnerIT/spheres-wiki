@@ -1,4 +1,5 @@
 ---
+id: "educated-hunch"
 name: "Educated Hunch"
 tier: "base"
 tags:

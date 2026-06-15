@@ -1,4 +1,5 @@
 ---
+id: "parry"
 name: "Parry"
 tier: basic
 tags: ["extraordinary"]

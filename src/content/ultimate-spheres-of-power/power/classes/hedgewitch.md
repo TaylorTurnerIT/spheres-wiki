@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch"
 name: "Hedgewitch"
 tags: []
 hitDie: 8

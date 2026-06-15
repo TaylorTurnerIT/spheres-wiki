@@ -1,4 +1,5 @@
 ---
+id: "organ-detachment"
 name: "Organ Detachment"
 tier: advanced
 tags: ["space"]

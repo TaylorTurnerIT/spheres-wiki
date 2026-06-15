@@ -1,4 +1,5 @@
 ---
+id: "ichor"
 name: "Ichor"
 tier: "basic"
 tags:

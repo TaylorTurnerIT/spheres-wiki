@@ -1,4 +1,5 @@
 ---
+id: "focused-fire-tactics"
 name: "Focused Fire Tactics"
 sphere: war
 tags: ["squadron"]

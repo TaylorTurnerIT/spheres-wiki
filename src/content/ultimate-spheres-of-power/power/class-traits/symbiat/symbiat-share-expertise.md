@@ -1,4 +1,5 @@
 ---
+id: "symbiat-share-expertise"
 name: "Share Expertise"
 tags: []
 featureId: psionics-su

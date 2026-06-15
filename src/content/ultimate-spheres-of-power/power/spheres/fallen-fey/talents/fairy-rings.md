@@ -1,4 +1,5 @@
 ---
+id: "fairy-rings"
 name: "Fairy Rings"
 tier: basic
 tags: []

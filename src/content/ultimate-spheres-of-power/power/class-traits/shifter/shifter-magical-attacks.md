@@ -1,4 +1,5 @@
 ---
+id: "shifter-magical-attacks"
 name: "Magical Attacks"
 tags: ["supernatural"]
 featureId: bestial-trait

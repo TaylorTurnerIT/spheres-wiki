@@ -1,4 +1,5 @@
 ---
+id: "savage"
 name: "Savage"
 tier: "basic"
 tags: []

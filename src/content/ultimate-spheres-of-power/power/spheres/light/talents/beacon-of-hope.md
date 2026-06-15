@@ -1,4 +1,5 @@
 ---
+id: "beacon-of-hope"
 name: "Beacon Of Hope"
 tier: basic
 tags: ["light"]

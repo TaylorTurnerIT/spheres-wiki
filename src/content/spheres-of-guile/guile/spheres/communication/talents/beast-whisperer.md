@@ -1,4 +1,5 @@
 ---
+id: "beast-whisperer"
 name: "Beast Whisperer"
 tier: "basic"
 tags:

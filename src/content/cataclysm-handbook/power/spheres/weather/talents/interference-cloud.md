@@ -1,4 +1,5 @@
 ---
+id: "interference-cloud"
 name: "Interference Cloud"
 tier: advanced
 tags: ["radiation", "shroud"]

@@ -1,4 +1,5 @@
 ---
+id: "temporal-haste"
 name: "Temporal Haste"
 tier: advanced
 tags: []

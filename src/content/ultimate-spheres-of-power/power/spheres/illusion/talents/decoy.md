@@ -1,4 +1,5 @@
 ---
+id: "decoy"
 name: "Decoy"
 tier: basic
 tags: ["glamer"]

@@ -1,4 +1,5 @@
 ---
+id: "reveal-evidence"
 name: "Reveal Evidence"
 tier: "base"
 tags: []

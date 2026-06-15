@@ -1,4 +1,5 @@
 ---
+id: "battlefield-scavenger"
 name: "Battlefield Scavenger"
 tier: "basic"
 tags: []

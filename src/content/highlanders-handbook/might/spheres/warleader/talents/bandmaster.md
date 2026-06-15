@@ -1,4 +1,5 @@
 ---
+id: "bandmaster"
 name: "Bandmaster"
 tier: "basic"
 tags: []

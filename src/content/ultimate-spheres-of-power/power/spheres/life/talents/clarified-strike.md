@@ -1,4 +1,5 @@
 ---
+id: "clarified-strike"
 name: "Clarified Strike"
 tier: basic
 tags: ["strike"]

@@ -1,4 +1,5 @@
 ---
+id: "advanced-circles"
 name: "Advanced Circles"
 sphere: conjuration
 tags: []

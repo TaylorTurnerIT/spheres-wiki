@@ -1,4 +1,5 @@
 ---
+id: "shifter-track-master"
 name: "Track Master"
 tags: ["extraordinary"]
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "greater-altered-size"
 name: "Greater Altered Size"
 tier: advanced
 tags: ["form"]

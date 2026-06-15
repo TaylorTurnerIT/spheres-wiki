@@ -1,4 +1,5 @@
 ---
+id: "serendipity"
 name: "Serendipity"
 tier: basic
 tags: []

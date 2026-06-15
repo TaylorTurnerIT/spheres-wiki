@@ -1,4 +1,5 @@
 ---
+id: "eternal-tonic"
 name: "Eternal Tonic"
 tier: "advanced"
 tags: []

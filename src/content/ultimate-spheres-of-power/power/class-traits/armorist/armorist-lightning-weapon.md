@@ -1,4 +1,5 @@
 ---
+id: "armorist-lightning-weapon"
 name: "Lightning Weapon"
 tags: []
 featureId: arsenal-trick

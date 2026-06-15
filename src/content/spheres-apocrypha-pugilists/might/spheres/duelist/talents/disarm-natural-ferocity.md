@@ -1,4 +1,5 @@
 ---
+id: "disarm-natural-ferocity"
 name: "Disarm Natural Ferocity"
 tier: "advanced"
 tags: []

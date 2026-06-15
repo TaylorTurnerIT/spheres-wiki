@@ -1,4 +1,5 @@
 ---
+id: "focusing-momentum"
 name: "Focusing Momentum"
 tier: basic
 tags: ["momentum", "warden"]

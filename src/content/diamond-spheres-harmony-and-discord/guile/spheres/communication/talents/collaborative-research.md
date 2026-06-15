@@ -1,4 +1,5 @@
 ---
+id: "collaborative-research"
 name: "Collaborative Research"
 tier: "basic"
 tags:

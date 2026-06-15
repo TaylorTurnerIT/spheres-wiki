@@ -1,4 +1,5 @@
 ---
+id: "shifter-shredding-blows"
 name: "Shredding Blows"
 tags: ["extraordinary"]
 featureId: bestial-trait

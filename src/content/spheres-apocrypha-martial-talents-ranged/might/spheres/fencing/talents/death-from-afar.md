@@ -1,4 +1,5 @@
 ---
+id: "death-from-afar"
 name: "Death From Afar"
 tier: "basic"
 tags: []

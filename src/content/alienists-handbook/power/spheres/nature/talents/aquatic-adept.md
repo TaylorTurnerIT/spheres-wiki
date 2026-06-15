@@ -1,4 +1,5 @@
 ---
+id: "aquatic-adept"
 name: "Aquatic Adept"
 tier: basic
 tags: ["geomancing", "spirit", "water"]

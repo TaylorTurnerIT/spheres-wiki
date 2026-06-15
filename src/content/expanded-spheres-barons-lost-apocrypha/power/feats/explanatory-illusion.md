@@ -1,4 +1,5 @@
 ---
+id: "explanatory-illusion"
 name: Explanatory Illusion
 sphere: illusion
 dualSphere: divination

@@ -1,4 +1,5 @@
 ---
+id: "primal-blast"
 name: Primal Blast
 sphere: nature
 dualSphere: destruction

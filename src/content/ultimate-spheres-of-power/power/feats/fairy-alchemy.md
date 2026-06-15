@@ -1,4 +1,5 @@
 ---
+id: "fairy-alchemy"
 name: "Fairy Alchemy"
 sphere: fallen-fey
 tags: ["champion"]

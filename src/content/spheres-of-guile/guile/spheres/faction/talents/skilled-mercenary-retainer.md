@@ -1,4 +1,5 @@
 ---
+id: "skilled-mercenary-retainer"
 name: "Skilled Mercenary Retainer"
 tier: "advanced"
 tags:

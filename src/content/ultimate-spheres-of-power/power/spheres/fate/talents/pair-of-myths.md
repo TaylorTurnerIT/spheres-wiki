@@ -1,4 +1,5 @@
 ---
+id: "pair-of-myths"
 name: "Pair Of Myths"
 tier: basic
 tags: []

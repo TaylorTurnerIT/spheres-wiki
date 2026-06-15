@@ -1,4 +1,5 @@
 ---
+id: "tribal-fortification"
 name: Tribal Fortification
 sphere: war
 dualSphere: protection

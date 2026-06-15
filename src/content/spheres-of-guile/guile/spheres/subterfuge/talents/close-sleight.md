@@ -1,4 +1,5 @@
 ---
+id: "close-sleight"
 name: "Close Sleight"
 tier: "basic"
 tags: []

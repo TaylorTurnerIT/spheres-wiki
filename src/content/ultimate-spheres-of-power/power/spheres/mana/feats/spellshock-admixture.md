@@ -1,4 +1,5 @@
 ---
+id: "spellshock-admixture"
 name: "Spellshock Admixture"
 tags: ["admixture"]
 tier: feat

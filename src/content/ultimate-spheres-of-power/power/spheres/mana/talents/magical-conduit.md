@@ -1,4 +1,5 @@
 ---
+id: "magical-conduit"
 name: "Magical Conduit"
 tier: basic
 tags: ["mass"]

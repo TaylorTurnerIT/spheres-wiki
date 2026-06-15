@@ -1,4 +1,5 @@
 ---
+id: "combat-courtesy"
 name: "Combat Courtesy"
 tier: "basic"
 tags:

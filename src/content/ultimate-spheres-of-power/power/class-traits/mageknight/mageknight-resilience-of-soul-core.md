@@ -1,4 +1,5 @@
 ---
+id: "mageknight-resilience-of-soul-core"
 name: "Resilience of Soul [Core]"
 tags: []
 featureId: mystic-combat-su

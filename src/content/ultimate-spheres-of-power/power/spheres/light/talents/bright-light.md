@@ -1,4 +1,5 @@
 ---
+id: "bright-light"
 name: "Bright Light"
 tier: base
 tags: []

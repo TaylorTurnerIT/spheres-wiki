@@ -1,4 +1,5 @@
 ---
+id: "horizon-strider"
 name: "Horizon Strider"
 tier: "advanced"
 tags:

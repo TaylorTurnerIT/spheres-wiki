@@ -1,4 +1,5 @@
 ---
+id: "tremorsense"
 name: "Tremorsense"
 tier: basic
 tags: ["sense"]

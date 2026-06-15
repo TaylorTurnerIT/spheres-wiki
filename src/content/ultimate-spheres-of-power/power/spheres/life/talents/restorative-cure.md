@@ -1,4 +1,5 @@
 ---
+id: "restorative-cure"
 name: "Restorative Cure"
 tier: basic
 tags: []

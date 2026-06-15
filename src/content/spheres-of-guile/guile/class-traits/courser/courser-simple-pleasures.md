@@ -1,4 +1,5 @@
 ---
+id: "courser-simple-pleasures"
 name: Simple Pleasures
 featureId: courser-ventures
 tags: []

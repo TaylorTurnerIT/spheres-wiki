@@ -1,4 +1,5 @@
 ---
+id: "ablating"
 name: "Ablating"
 tier: basic
 tags: ["aegis"]

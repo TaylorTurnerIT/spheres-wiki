@@ -1,4 +1,5 @@
 ---
+id: "fey-potency"
 name: "Fey Potency"
 tier: basic
 tags: ["fey-blessing"]

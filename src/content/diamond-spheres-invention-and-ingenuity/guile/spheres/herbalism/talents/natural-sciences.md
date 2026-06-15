@@ -1,4 +1,5 @@
 ---
+id: "natural-sciences"
 name: Natural Sciences
 dualSphere: nature
 tier: base

@@ -1,4 +1,5 @@
 ---
+id: "particle-blade-emulation"
 name: "Particle Blade Emulation"
 tier: "basic"
 ---

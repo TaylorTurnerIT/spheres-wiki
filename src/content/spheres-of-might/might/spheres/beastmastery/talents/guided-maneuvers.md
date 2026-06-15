@@ -1,4 +1,5 @@
 ---
+id: "guided-maneuvers"
 name: "Guided Maneuvers"
 tier: "basic"
 tags:

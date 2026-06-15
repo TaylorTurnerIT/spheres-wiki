@@ -1,4 +1,5 @@
 ---
+id: "ascertain-equipment"
 name: "Ascertain Equipment"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "skirmish-rider"
 name: "Skirmish Rider"
 tier: "basic"
 tags:

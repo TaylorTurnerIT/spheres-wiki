@@ -1,4 +1,5 @@
 ---
+id: "instill-charm"
 name: "Instill Charm"
 tier: basic
 tags: ["instill"]

@@ -1,4 +1,5 @@
 ---
+id: "pincer-formation"
 name: "Pincer Formation"
 sphere: war
 tags: ["squadron"]

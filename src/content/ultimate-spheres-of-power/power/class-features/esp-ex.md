@@ -1,4 +1,5 @@
 ---
+id: "esp-ex"
 name: "ESP (Ex)"
 type: class-feature
 className: symbiat

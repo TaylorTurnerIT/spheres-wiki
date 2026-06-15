@@ -1,4 +1,5 @@
 ---
+id: "experienced-navigator"
 name: "Experienced Navigator"
 tier: "basic"
 tags:

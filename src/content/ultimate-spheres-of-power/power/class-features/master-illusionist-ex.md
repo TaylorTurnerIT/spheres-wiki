@@ -1,4 +1,5 @@
 ---
+id: "master-illusionist-ex"
 name: "Master Illusionist (Ex)"
 type: class-feature
 className: fey-adept

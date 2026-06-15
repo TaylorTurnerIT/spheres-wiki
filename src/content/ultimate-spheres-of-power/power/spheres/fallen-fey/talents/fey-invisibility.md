@@ -1,4 +1,5 @@
 ---
+id: "fey-invisibility"
 name: "Fey Invisibility"
 tier: advanced
 tags: ["fey-blessing"]

@@ -1,4 +1,5 @@
 ---
+id: "dynamic-wallcrafter"
 name: "Dynamic Wallcrafter"
 sphere: protection
 tags: ["sm"]

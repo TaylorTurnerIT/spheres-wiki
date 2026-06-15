@@ -1,4 +1,5 @@
 ---
+id: "mark-of-sudden-competence"
 name: "Mark of Sudden Competence"
 tier: advanced
 tags: []

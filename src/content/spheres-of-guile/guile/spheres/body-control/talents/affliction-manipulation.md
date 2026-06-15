@@ -1,4 +1,5 @@
 ---
+id: "affliction-manipulation"
 name: "Affliction Manipulation"
 tier: "basic"
 tags:

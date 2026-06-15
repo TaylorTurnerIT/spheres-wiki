@@ -1,4 +1,5 @@
 ---
+id: "coraltooth-flux"
 name: "Coraltooth Flux"
 tier: "advanced"
 tags:

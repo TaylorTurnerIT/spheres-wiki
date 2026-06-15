@@ -1,4 +1,5 @@
 ---
+id: "quantum-lock"
 name: "Quantum Lock"
 tier: basic
 tags: ["ward"]

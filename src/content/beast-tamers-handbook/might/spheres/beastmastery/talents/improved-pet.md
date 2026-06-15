@@ -1,4 +1,5 @@
 ---
+id: "improved-pet"
 name: "Improved Pet"
 tier: "advanced"
 tags: []

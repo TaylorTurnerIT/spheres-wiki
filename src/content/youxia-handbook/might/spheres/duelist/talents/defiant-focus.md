@@ -1,4 +1,5 @@
 ---
+id: "defiant-focus"
 name: "Defiant Focus"
 tier: "basic"
 tags: []

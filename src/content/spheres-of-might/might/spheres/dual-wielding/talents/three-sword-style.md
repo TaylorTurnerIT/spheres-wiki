@@ -1,4 +1,5 @@
 ---
+id: "three-sword-style"
 name: "Three-Sword Style"
 tier: "advanced"
 tags: []

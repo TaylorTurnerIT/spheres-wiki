@@ -1,4 +1,5 @@
 ---
+id: "divine-force"
 name: "Divine Force"
 tier: basic
 tags: ["consecration"]

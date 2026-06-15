@@ -1,4 +1,5 @@
 ---
+id: "intoxicating-darkness"
 name: "Intoxicating Darkness"
 tier: basic
 tags: ["blot", "darkness"]

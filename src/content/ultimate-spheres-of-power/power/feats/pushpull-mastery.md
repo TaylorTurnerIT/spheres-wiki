@@ -1,4 +1,5 @@
 ---
+id: "pushpull-mastery"
 name: "Push/Pull Mastery"
 sphere: telekinesis
 tags: ["drawback"]

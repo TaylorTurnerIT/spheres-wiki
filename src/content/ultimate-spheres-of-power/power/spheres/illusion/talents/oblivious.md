@@ -1,4 +1,5 @@
 ---
+id: "oblivious"
 name: "Oblivious"
 tier: basic
 tags: ["suppression"]

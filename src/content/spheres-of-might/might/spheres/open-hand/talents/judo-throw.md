@@ -1,4 +1,5 @@
 ---
+id: "judo-throw"
 name: "Judo Throw"
 tier: "basic"
 tags: []

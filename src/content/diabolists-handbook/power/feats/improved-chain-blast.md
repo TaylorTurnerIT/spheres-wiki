@@ -1,4 +1,5 @@
 ---
+id: "improved-chain-blast"
 name: "Improved Chain Blast"
 sphere: destruction
 tags: ["combat"]

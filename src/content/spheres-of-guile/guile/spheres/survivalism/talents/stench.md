@@ -1,4 +1,5 @@
 ---
+id: "stench"
 name: "Stench"
 tier: "basic"
 tags:

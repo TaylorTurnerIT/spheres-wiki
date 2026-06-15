@@ -1,4 +1,5 @@
 ---
+id: "threatening-persona"
 name: "Threatening Persona"
 tier: "basic"
 tags:

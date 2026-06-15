@@ -1,4 +1,5 @@
 ---
+id: "focusing-advantage"
 name: "Focusing Advantage"
 tier: "basic"
 tags: []

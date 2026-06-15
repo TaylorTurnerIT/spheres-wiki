@@ -1,4 +1,5 @@
 ---
+id: "divine-capability"
 name: "Divine Capability"
 tier: basic
 tags: ["divine", "sm", "utility"]

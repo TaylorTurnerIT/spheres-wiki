@@ -1,4 +1,5 @@
 ---
+id: "instant-loophole"
 name: "Instant Loophole"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "survival-instinct"
 name: "Survival Instinct"
 tier: "basic"
 tags:

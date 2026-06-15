@@ -1,4 +1,5 @@
 ---
+id: "loopy-blow"
 name: "Loopy Blow (counter)"
 tier: "basic"
 tags: ["counter"]

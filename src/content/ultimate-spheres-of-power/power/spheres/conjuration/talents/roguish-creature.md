@@ -1,4 +1,5 @@
 ---
+id: "roguish-creature"
 name: "Roguish Creature"
 tier: basic
 tags: ["form"]

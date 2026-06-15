@@ -1,4 +1,5 @@
 ---
+id: "restore-senses"
 name: "Restore Senses"
 tier: basic
 tags: ["cure"]

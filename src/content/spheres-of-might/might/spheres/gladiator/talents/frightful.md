@@ -1,4 +1,5 @@
 ---
+id: "frightful"
 name: "Frightful"
 tier: "basic"
 tags:

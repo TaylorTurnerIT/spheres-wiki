@@ -1,4 +1,5 @@
 ---
+id: "chink-in-the-armor"
 name: "Chink In The Armor"
 tier: "basic"
 tags:

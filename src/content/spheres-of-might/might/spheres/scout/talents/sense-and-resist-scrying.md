@@ -1,4 +1,5 @@
 ---
+id: "sense-and-resist-scrying"
 name: "Sense And Resist Scrying"
 tier: "basic"
 tags:

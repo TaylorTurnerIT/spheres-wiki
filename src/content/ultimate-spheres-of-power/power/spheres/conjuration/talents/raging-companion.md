@@ -1,4 +1,5 @@
 ---
+id: "raging-companion"
 name: "Raging Companion"
 tier: basic
 tags: ["form"]

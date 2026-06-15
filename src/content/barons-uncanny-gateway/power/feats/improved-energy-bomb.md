@@ -1,4 +1,5 @@
 ---
+id: "improved-energy-bomb"
 name: "Improved Energy Bomb"
 sphere: destruction
 tags: ["combat", "sm"]

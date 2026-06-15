@@ -1,4 +1,5 @@
 ---
+id: "cold-weather-adaptation"
 name: "Cold-Weather Adaptation"
 tier: "basic"
 tags: []

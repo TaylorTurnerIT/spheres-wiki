@@ -1,4 +1,5 @@
 ---
+id: "mageknight-arcane-strike-core"
 name: "Arcane Strike [Core]"
 tags: []
 featureId: mystic-combat-su

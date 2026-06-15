@@ -1,4 +1,5 @@
 ---
+id: "focusing-formula"
 name: "Focusing Formula"
 tier: "basic"
 tags:

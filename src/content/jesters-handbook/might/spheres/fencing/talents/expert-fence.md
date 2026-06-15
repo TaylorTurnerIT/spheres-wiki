@@ -1,4 +1,5 @@
 ---
+id: "expert-fence"
 name: "Expert Fence"
 tier: "basic"
 tags: []

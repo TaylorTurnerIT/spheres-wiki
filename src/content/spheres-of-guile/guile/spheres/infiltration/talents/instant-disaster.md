@@ -1,4 +1,5 @@
 ---
+id: "instant-disaster"
 name: "Instant Disaster"
 tier: "basic"
 tags:

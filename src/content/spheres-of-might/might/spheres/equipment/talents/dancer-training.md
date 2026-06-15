@@ -1,4 +1,5 @@
 ---
+id: "dancer-training"
 name: "Dancer Training"
 tier: "basic"
 tags:

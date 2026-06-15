@@ -1,4 +1,5 @@
 ---
+id: "sparrow-s-path"
 name: "Sparrow’s Path"
 tier: "advanced"
 tags:

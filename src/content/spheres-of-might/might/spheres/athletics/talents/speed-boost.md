@@ -1,4 +1,5 @@
 ---
+id: "speed-boost"
 name: "Speed Boost"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "luck"
 name: Luck
 tier: basic
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "fast-draw"
 name: "Fast Draw"
 tier: "basic"
 tags: []

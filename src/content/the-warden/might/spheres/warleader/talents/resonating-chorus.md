@@ -1,4 +1,5 @@
 ---
+id: "resonating-chorus"
 name: "Resonating Chorus"
 tier: "advanced"
 tags:

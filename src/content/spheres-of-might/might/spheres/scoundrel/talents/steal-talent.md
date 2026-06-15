@@ -1,4 +1,5 @@
 ---
+id: "steal-talent"
 name: "Steal Talent"
 tier: "advanced"
 tags: []

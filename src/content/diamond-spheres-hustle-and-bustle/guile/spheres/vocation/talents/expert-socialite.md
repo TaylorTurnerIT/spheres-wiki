@@ -1,4 +1,5 @@
 ---
+id: "expert-socialite"
 name: "Expert Socialite"
 tier: "advanced"
 tags:

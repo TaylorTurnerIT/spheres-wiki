@@ -1,4 +1,5 @@
 ---
+id: "charging-rush"
 name: "Charging Rush"
 tier: "basic"
 tags:

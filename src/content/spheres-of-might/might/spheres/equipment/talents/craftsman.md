@@ -1,4 +1,5 @@
 ---
+id: "craftsman"
 name: "Craftsman"
 tier: "basic"
 tags:

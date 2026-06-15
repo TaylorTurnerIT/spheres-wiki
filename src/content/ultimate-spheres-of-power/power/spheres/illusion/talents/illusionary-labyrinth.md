@@ -1,4 +1,5 @@
 ---
+id: "illusionary-labyrinth"
 name: "Illusionary Labyrinth"
 tier: basic
 tags: []

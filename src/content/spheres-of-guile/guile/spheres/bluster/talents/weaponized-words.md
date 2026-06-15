@@ -1,4 +1,5 @@
 ---
+id: "weaponized-words"
 name: "Weaponized Words"
 tier: "basic"
 tags: []

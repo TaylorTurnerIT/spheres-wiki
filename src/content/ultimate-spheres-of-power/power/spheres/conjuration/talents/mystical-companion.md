@@ -1,4 +1,5 @@
 ---
+id: "mystical-companion"
 name: "Mystical Companion"
 tier: basic
 tags: ["form"]

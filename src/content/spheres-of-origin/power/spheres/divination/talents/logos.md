@@ -1,4 +1,5 @@
 ---
+id: "logos"
 name: "Logos"
 tier: basic
 tags: ["sense"]

@@ -1,4 +1,5 @@
 ---
+id: "sea-cultist"
 name: "Sea Cultist"
 tier: "basic"
 tags:

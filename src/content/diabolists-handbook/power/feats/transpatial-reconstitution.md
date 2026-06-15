@@ -1,4 +1,5 @@
 ---
+id: "transpatial-reconstitution"
 name: Transpatial Reconstitution
 sphere: warp
 dualSphere: life

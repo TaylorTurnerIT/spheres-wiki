@@ -1,4 +1,5 @@
 ---
+id: "awareness"
 name: "Awareness"
 tier: basic
 tags: ["mandate"]

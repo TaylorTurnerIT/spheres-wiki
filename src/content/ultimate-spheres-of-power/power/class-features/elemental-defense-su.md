@@ -1,4 +1,5 @@
 ---
+id: "elemental-defense-su"
 name: "Elemental Defense (Su)"
 type: class-feature
 className: elementalist

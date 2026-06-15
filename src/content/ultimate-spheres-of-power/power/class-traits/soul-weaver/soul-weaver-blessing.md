@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-blessing"
 name: "Blessing"
 tags: []
 featureId: blessingblight

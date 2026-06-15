@@ -1,4 +1,5 @@
 ---
+id: "armorist-natural-materials"
 name: "Natural Materials"
 tags: []
 featureId: arsenal-trick

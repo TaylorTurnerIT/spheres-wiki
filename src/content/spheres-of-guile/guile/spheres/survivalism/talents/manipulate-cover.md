@@ -1,4 +1,5 @@
 ---
+id: "manipulate-cover"
 name: "Manipulate Cover"
 tier: "basic"
 tags:

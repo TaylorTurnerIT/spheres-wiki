@@ -1,4 +1,5 @@
 ---
+id: "weird-motion"
 name: "Weird Motion"
 sphere: illusion
 tags: ["combat"]

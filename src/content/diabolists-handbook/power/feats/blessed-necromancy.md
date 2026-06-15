@@ -1,4 +1,5 @@
 ---
+id: "blessed-necromancy"
 name: Blessed Necromancy
 sphere: fate
 dualSphere: death

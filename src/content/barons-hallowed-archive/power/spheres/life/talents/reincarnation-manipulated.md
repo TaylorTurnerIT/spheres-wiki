@@ -1,4 +1,5 @@
 ---
+id: "reincarnation-manipulated"
 name: "Reincarnation, Manipulated"
 tier: advanced
 tags: ["utility"]

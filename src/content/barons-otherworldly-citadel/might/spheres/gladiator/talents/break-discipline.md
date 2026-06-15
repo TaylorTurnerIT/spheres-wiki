@@ -1,4 +1,5 @@
 ---
+id: "break-discipline"
 name: "Break Discipline"
 tier: "advanced"
 tags:

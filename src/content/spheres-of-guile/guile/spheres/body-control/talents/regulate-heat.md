@@ -1,4 +1,5 @@
 ---
+id: "regulate-heat"
 name: "Regulate Heat"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "convincing-ex"
 name: "Convincing (Ex)"
 type: class-feature
 className: eliciter

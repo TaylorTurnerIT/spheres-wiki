@@ -1,4 +1,5 @@
 ---
+id: "elemental-strike"
 name: "Elemental Strike"
 tier: basic
 tags: ["strike"]

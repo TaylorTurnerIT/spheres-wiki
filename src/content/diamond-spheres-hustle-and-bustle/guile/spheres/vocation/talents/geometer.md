@@ -1,4 +1,5 @@
 ---
+id: "geometer"
 name: "Geometer"
 tier: "basic"
 tags:

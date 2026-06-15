@@ -1,4 +1,5 @@
 ---
+id: "leg-slash"
 name: "Leg Slash"
 tier: "basic"
 tags:

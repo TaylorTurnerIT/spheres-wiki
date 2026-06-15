@@ -1,4 +1,5 @@
 ---
+id: "endure-pain"
 name: "Endure Pain"
 tier: "basic"
 tags: []

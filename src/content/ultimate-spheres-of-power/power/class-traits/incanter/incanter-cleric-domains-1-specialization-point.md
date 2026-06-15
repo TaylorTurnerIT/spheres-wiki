@@ -1,4 +1,5 @@
 ---
+id: "incanter-cleric-domains-1-specialization-point"
 name: "Cleric Domains (1 specialization point)"
 tags: []
 featureId: incanter-specializations

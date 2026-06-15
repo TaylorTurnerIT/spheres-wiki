@@ -1,4 +1,5 @@
 ---
+id: "vanish-in-shadow"
 name: "Vanish In Shadow"
 tier: advanced
 tags: []

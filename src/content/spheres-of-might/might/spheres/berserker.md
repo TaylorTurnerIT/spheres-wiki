@@ -1,4 +1,5 @@
 ---
+id: "berserker"
 name: "Berserker"
 icon: "berserker"
 tags: []

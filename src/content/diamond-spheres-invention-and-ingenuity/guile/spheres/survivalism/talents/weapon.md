@@ -1,4 +1,5 @@
 ---
+id: "weapon"
 name: "Weapon"
 tier: "basic"
 tags:

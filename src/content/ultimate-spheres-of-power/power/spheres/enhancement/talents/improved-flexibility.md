@@ -1,4 +1,5 @@
 ---
+id: "improved-flexibility"
 name: "Improved Flexibility"
 tier: basic
 tags: ["enhance"]

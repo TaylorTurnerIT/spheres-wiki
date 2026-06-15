@@ -1,4 +1,5 @@
 ---
+id: "quick-force"
 name: "Quick Force"
 tier: "basic"
 tags: []

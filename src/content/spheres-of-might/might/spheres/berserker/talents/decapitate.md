@@ -1,4 +1,5 @@
 ---
+id: "decapitate"
 name: "Decapitate"
 tier: "basic"
 tags: []

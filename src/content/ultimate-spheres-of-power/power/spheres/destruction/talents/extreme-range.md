@@ -1,4 +1,5 @@
 ---
+id: "extreme-range"
 name: "Extreme Range"
 tier: advanced
 tags: []

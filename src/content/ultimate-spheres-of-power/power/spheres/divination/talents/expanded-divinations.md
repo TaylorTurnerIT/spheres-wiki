@@ -1,4 +1,5 @@
 ---
+id: "expanded-divinations"
 name: "Expanded Divinations"
 tier: basic
 tags: []

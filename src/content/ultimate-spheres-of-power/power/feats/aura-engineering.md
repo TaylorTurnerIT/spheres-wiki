@@ -1,4 +1,5 @@
 ---
+id: "aura-engineering"
 name: Aura Engineering
 sphere: illusion
 dualSphere: divination

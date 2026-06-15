@@ -1,4 +1,5 @@
 ---
+id: "spectral-enhancement"
 name: "Spectral Enhancement"
 tier: basic
 tags: ["enhance"]

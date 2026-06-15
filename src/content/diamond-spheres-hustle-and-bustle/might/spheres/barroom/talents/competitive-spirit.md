@@ -1,4 +1,5 @@
 ---
+id: "competitive-spirit"
 name: "Competitive Spirit"
 tier: "basic"
 tags:

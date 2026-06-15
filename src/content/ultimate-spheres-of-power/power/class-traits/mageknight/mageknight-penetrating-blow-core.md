@@ -1,4 +1,5 @@
 ---
+id: "mageknight-penetrating-blow-core"
 name: "Penetrating Blow [Core]"
 tags: []
 featureId: mystic-combat-su

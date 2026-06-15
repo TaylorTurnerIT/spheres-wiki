@@ -1,4 +1,5 @@
 ---
+id: "clarifying-incense"
 name: "Clarifying Incense"
 tier: "basic"
 tags:

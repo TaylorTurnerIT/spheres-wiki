@@ -1,4 +1,5 @@
 ---
+id: "fast-time"
 name: "Fast Time"
 tier: basic
 tags: ["time"]

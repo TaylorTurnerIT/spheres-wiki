@@ -1,4 +1,5 @@
 ---
+id: "bloody-rip"
 name: "Bloody Rip"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "weird-assault"
 name: "Weird Assault"
 sphere: illusion
 tags: ["combat"]

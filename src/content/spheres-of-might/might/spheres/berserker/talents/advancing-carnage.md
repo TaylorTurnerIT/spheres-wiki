@@ -1,4 +1,5 @@
 ---
+id: "advancing-carnage"
 name: "Advancing Carnage"
 tier: "basic"
 tags: []

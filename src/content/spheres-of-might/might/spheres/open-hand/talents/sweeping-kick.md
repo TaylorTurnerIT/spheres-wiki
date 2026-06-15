@@ -1,4 +1,5 @@
 ---
+id: "sweeping-kick"
 name: "Sweeping Kick"
 tier: "basic"
 tags: []

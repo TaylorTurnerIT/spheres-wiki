@@ -1,4 +1,5 @@
 ---
+id: "glut-of-information"
 name: "Glut Of Information"
 tier: "basic"
 tags:

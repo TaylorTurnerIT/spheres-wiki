@@ -1,4 +1,5 @@
 ---
+id: "stance"
 label: "Stance"
 color: "#4A235A"
 priority: 20

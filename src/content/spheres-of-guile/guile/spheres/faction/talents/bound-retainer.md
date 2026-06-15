@@ -1,4 +1,5 @@
 ---
+id: "bound-retainer"
 name: "Bound Retainer"
 tier: "advanced"
 tags:

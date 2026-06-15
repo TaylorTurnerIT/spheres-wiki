@@ -1,4 +1,5 @@
 ---
+id: "startle"
 name: "Startle"
 tier: "base"
 tags: []

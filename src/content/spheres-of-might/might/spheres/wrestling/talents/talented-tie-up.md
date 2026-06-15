@@ -1,4 +1,5 @@
 ---
+id: "talented-tie-up"
 name: "Talented Tie-Up"
 tier: "basic"
 tags: []

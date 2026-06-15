@@ -1,4 +1,5 @@
 ---
+id: "bolstering-rapport"
 name: "Bolstering Rapport"
 tier: "basic"
 tags:

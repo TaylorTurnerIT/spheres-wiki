@@ -1,4 +1,5 @@
 ---
+id: "demolishing-chemistry"
 name: "Demolishing Chemistry"
 tier: "basic"
 tags: []

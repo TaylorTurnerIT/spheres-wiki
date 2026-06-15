@@ -1,4 +1,5 @@
 ---
+id: "inflict-disease"
 name: "Inflict Disease"
 tier: basic
 tags: ["ghost-strike"]

@@ -1,4 +1,5 @@
 ---
+id: "courser-vicious-strikes"
 name: Vicious Strikes
 featureId: courser-ventures
 tags: []

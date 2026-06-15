@@ -1,4 +1,5 @@
 ---
+id: "expanded-survivalism"
 name: "Expanded Survivalism"
 tier: "basic"
 tags: []

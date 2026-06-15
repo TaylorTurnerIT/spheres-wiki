@@ -1,4 +1,5 @@
 ---
+id: "spellburn"
 name: "Spellburn"
 tier: basic
 tags: []

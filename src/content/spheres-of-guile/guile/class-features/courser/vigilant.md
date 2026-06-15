@@ -1,4 +1,5 @@
 ---
+id: "vigilant"
 name: Vigilant
 level: 3
 tags: []

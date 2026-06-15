@@ -1,4 +1,5 @@
 ---
+id: "web-exemplar"
 name: "Web Exemplar"
 sphere: conjuration
 tags: ["companion"]

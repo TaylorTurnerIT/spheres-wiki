@@ -1,4 +1,5 @@
 ---
+id: "animal-mind"
 name: "Animal Mind"
 tier: basic
 tags: []

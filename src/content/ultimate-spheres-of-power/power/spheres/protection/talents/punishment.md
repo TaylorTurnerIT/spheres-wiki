@@ -1,4 +1,5 @@
 ---
+id: "punishment"
 name: "Punishment"
 tier: basic
 tags: ["succor"]

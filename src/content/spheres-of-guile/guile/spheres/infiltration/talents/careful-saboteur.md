@@ -1,4 +1,5 @@
 ---
+id: "careful-saboteur"
 name: "Careful Saboteur"
 tier: "base"
 tags:

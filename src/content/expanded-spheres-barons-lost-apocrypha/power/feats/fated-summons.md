@@ -1,4 +1,5 @@
 ---
+id: "fated-summons"
 name: Fated Summons
 sphere: fate
 dualSphere: conjuration

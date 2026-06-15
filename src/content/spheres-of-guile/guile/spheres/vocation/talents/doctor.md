@@ -1,4 +1,5 @@
 ---
+id: "doctor"
 name: "Doctor"
 tier: "basic"
 tags:

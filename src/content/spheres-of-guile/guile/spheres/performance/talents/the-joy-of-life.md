@@ -1,4 +1,5 @@
 ---
+id: "the-joy-of-life"
 name: "The Joy Of Life"
 tier: "basic"
 tags:

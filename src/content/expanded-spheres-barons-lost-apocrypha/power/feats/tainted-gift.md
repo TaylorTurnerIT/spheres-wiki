@@ -1,4 +1,5 @@
 ---
+id: "tainted-gift"
 name: "Tainted Gift"
 sphere: mana
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "sanguine-minion"
 name: "Sanguine Minion"
 tier: advanced
 tags: []

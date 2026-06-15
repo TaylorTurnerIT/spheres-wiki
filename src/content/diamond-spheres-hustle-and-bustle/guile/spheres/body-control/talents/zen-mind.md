@@ -1,4 +1,5 @@
 ---
+id: "zen-mind"
 name: "Zen Mind"
 tier: "base"
 tags:

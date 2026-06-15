@@ -1,4 +1,5 @@
 ---
+id: "basic-analysis"
 name: "Basic Analysis"
 tier: "base"
 tags:

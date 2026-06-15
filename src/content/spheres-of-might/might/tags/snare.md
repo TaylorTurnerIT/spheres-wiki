@@ -1,4 +1,5 @@
 ---
+id: "snare"
 label: "Snare"
 sphere: "trap"
 priority: 0

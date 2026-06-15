@@ -1,4 +1,5 @@
 ---
+id: "magic-in-the-spirits"
 name: "Magic In The Spirits"
 tier: "advanced"
 tags: []

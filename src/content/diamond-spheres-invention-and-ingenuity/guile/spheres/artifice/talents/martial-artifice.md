@@ -1,4 +1,5 @@
 ---
+id: "martial-artifice"
 name: "Martial Artifice"
 tier: "basic"
 tags:

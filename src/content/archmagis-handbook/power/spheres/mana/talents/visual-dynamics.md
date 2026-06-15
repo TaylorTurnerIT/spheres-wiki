@@ -1,4 +1,5 @@
 ---
+id: "visual-dynamics"
 name: "Visual Dynamics"
 tier: basic
 tags: ["amp", "manipulation"]

@@ -1,4 +1,5 @@
 ---
+id: "armorist-cut-magic"
 name: "Cut Magic"
 tags: []
 featureId: arsenal-trick

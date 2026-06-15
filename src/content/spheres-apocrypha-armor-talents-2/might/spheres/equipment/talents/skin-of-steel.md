@@ -1,4 +1,5 @@
 ---
+id: "skin-of-steel"
 name: "Skin of Steel"
 tier: "basic"
 tags: []

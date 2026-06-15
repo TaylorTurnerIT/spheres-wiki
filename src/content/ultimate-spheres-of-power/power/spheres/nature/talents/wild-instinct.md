@@ -1,4 +1,5 @@
 ---
+id: "wild-instinct"
 name: "Wild Instinct"
 tier: basic
 tags: []

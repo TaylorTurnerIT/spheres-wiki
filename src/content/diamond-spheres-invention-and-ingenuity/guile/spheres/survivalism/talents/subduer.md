@@ -1,4 +1,5 @@
 ---
+id: "subduer"
 name: "Subduer"
 tier: "basic"
 tags: []

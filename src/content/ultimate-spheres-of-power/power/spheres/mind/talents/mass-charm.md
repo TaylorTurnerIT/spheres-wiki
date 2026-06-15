@@ -1,4 +1,5 @@
 ---
+id: "mass-charm"
 name: "Mass Charm"
 tier: basic
 tags: ["mass"]

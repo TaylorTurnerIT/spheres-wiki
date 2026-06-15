@@ -1,4 +1,5 @@
 ---
+id: "mystic-shell"
 name: "Mystic Shell"
 tier: basic
 tags: ["aegis"]

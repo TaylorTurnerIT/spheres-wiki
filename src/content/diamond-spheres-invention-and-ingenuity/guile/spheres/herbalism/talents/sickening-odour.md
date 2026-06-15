@@ -1,4 +1,5 @@
 ---
+id: "sickening-odour"
 name: "Sickening Odour"
 tier: "basic"
 tags:

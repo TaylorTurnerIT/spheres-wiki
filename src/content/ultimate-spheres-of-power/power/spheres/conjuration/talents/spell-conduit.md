@@ -1,4 +1,5 @@
 ---
+id: "spell-conduit"
 name: "Spell Conduit"
 tier: basic
 tags: []

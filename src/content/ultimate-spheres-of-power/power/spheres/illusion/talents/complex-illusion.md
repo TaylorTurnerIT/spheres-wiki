@@ -1,4 +1,5 @@
 ---
+id: "complex-illusion"
 name: "Complex Illusion"
 tier: basic
 tags: ["mass"]

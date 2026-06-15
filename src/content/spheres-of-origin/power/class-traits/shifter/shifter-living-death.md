@@ -1,4 +1,5 @@
 ---
+id: "shifter-living-death"
 name: "Living Death"
 tags: ["supernatural"]
 featureId: bestial-trait

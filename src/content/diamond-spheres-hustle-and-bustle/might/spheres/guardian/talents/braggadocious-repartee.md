@@ -1,4 +1,5 @@
 ---
+id: "braggadocious-repartee"
 name: "Braggadocious Repartee"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "expert-trader"
 name: "Expert Trader"
 tier: "basic"
 tags:

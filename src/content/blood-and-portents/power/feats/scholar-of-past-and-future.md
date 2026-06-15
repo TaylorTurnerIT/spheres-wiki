@@ -1,4 +1,5 @@
 ---
+id: "scholar-of-past-and-future"
 name: "Scholar Of Past And Future"
 sphere: divination
 tags: []

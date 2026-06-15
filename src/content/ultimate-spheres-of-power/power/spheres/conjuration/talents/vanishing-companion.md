@@ -1,4 +1,5 @@
 ---
+id: "vanishing-companion"
 name: "Vanishing Companion"
 tier: advanced
 tags: ["form"]

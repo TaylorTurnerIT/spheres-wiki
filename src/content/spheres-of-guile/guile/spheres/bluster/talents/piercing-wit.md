@@ -1,4 +1,5 @@
 ---
+id: "piercing-wit"
 name: "Piercing Wit"
 tier: "basic"
 tags: []

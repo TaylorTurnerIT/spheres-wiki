@@ -1,4 +1,5 @@
 ---
+id: "fount-of-stolen-life"
 name: Fount Of Stolen Life
 sphere: life
 dualSphere: blood

@@ -1,4 +1,5 @@
 ---
+id: "electricity"
 label: "Electricity"
 color: "#fbbf24"
 priority: 15

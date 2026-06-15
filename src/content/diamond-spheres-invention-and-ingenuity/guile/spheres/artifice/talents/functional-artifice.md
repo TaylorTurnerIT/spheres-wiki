@@ -1,4 +1,5 @@
 ---
+id: "functional-artifice"
 name: "Functional Artifice"
 tier: "basic"
 tags:

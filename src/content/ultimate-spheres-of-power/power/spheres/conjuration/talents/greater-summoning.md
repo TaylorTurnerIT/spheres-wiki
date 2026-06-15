@@ -1,4 +1,5 @@
 ---
+id: "greater-summoning"
 name: "Greater Summoning"
 tier: basic
 tags: []

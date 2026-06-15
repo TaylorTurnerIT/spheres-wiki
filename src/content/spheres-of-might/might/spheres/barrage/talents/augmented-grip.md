@@ -1,4 +1,5 @@
 ---
+id: "augmented-grip"
 name: "Augmented Grip"
 tier: "basic"
 tags: []

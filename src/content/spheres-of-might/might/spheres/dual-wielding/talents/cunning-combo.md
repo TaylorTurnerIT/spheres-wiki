@@ -1,4 +1,5 @@
 ---
+id: "cunning-combo"
 name: "Cunning Combo"
 tier: "basic"
 tags: []

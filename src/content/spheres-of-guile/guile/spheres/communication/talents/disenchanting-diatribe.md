@@ -1,4 +1,5 @@
 ---
+id: "disenchanting-diatribe"
 name: "Disenchanting Diatribe"
 tier: "advanced"
 tags: []

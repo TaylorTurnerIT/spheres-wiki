@@ -1,4 +1,5 @@
 ---
+id: "trap-wielder"
 name: "Trap Wielder"
 tier: "basic"
 tags: []

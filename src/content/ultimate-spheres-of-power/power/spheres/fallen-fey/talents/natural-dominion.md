@@ -1,4 +1,5 @@
 ---
+id: "natural-dominion"
 name: "Natural Dominion"
 tier: basic
 tags: ["fey-blessing"]

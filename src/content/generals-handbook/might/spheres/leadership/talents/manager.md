@@ -1,4 +1,5 @@
 ---
+id: "manager"
 name: "Manager"
 tier: "basic"
 tags:

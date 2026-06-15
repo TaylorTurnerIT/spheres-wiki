@@ -1,4 +1,5 @@
 ---
+id: "trap-launcher"
 name: "Trap Launcher"
 tier: "basic"
 tags: []

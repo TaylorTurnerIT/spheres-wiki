@@ -1,4 +1,5 @@
 ---
+id: "shield-training"
 name: "Shield Training"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "rancher"
 name: "Rancher"
 tier: "base"
 tags:

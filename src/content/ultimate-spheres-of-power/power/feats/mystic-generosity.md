@@ -1,4 +1,5 @@
 ---
+id: "mystic-generosity"
 name: "Mystic Generosity"
 sphere: enhancement
 tags: ["proxy"]

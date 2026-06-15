@@ -1,4 +1,5 @@
 ---
+id: "conflagrant-cluster"
 name: "Conflagrant Cluster"
 tier: advanced
 tags: []

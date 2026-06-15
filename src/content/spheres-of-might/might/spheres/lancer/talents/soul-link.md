@@ -1,4 +1,5 @@
 ---
+id: "soul-link"
 name: "Soul Link"
 tier: "advanced"
 tags: []

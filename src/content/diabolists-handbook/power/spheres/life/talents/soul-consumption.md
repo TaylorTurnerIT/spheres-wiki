@@ -1,4 +1,5 @@
 ---
+id: "soul-consumption"
 name: "Soul Consumption"
 tier: advanced
 tags: []

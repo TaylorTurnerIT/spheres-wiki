@@ -1,4 +1,5 @@
 ---
+id: "compel-possessor"
 name: "Compel Possessor"
 tier: advanced
 tags: ["curse"]

@@ -1,4 +1,5 @@
 ---
+id: "prying-sight"
 name: "Prying Sight"
 tier: basic
 tags: ["sense"]

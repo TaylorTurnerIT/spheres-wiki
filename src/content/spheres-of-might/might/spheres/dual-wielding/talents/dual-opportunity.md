@@ -1,4 +1,5 @@
 ---
+id: "dual-opportunity"
 name: "Dual Opportunity"
 tier: "basic"
 tags: []

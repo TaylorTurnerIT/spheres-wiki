@@ -1,4 +1,5 @@
 ---
+id: "exemplar"
 name: "Exemplar"
 tier: "basic"
 tags:

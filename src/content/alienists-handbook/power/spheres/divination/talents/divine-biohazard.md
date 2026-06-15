@@ -1,4 +1,5 @@
 ---
+id: "divine-biohazard"
 name: "Divine Biohazard"
 tier: basic
 tags: ["divine"]

@@ -1,4 +1,5 @@
 ---
+id: "cold-iron-call"
 name: "Cold Iron Call"
 tier: "basic"
 tags: []

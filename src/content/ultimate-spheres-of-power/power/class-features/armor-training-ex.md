@@ -1,4 +1,5 @@
 ---
+id: "armor-training-ex"
 name: "Armor Training (Ex)"
 type: class-feature
 className: armorist

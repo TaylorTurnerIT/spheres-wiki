@@ -1,4 +1,5 @@
 ---
+id: "shoot-and-scoot"
 name: "Shoot And Scoot"
 tier: "basic"
 tags:

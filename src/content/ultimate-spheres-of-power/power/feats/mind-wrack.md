@@ -1,4 +1,5 @@
 ---
+id: "mind-wrack"
 name: "Mind Wrack"
 sphere: destruction
 tags: ["admixture"]

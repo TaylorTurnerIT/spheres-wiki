@@ -1,4 +1,5 @@
 ---
+id: "metal-mastery"
 name: "Metal Mastery"
 tier: basic
 tags: ["metal", "geomancing"]

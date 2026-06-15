@@ -1,4 +1,5 @@
 ---
+id: "archmagis-methods"
 name: "Archmagi's Methods"
 tier: advanced
 tags: ["amp", "manipulation"]

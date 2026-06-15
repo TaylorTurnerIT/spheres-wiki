@@ -1,4 +1,5 @@
 ---
+id: "magical-focus"
 name: "Magical Focus"
 sphere: enhancement
 tags: ["drawback"]

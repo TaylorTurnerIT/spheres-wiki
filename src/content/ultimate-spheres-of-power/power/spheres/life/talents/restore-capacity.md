@@ -1,4 +1,5 @@
 ---
+id: "restore-capacity"
 name: "Restore Capacity"
 tier: basic
 tags: ["cure"]

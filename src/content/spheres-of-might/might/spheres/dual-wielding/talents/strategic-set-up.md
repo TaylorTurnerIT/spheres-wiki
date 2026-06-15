@@ -1,4 +1,5 @@
 ---
+id: "strategic-set-up"
 name: "Strategic Set-Up"
 tier: "basic"
 tags: []

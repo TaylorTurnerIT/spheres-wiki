@@ -1,4 +1,5 @@
 ---
+id: "boiling-lord"
 name: "Boiling Lord"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "the-star"
 name: "The Star"
 tier: basic
 tags: ["motif"]

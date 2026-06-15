@@ -1,4 +1,5 @@
 ---
+id: "dynamic-crafting-aptitude"
 name: "Dynamic Crafting Aptitude"
 tier: "advanced"
 tags:

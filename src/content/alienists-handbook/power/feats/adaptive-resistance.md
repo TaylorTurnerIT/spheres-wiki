@@ -1,4 +1,5 @@
 ---
+id: "adaptive-resistance"
 name: "Adaptive Resistance"
 sphere: alteration
 tags: []

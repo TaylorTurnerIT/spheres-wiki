@@ -1,4 +1,5 @@
 ---
+id: "sense-observation"
 name: "Sense Observation"
 tier: advanced
 tags: ["sense"]

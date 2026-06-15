@@ -1,4 +1,5 @@
 ---
+id: "spell-capacitor-focused"
 name: "Spell Capacitor, Focused"
 sphere: time
 tags: []

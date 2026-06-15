@@ -1,4 +1,5 @@
 ---
+id: "mind-against-body"
 name: "Mind Against Body"
 sphere: telekinesis
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "read-omens"
 name: "Read Omens"
 tier: advanced
 tags: ["utility", "divine"]

@@ -1,4 +1,5 @@
 ---
+id: "spiked-chain-savant"
 name: "Spiked Chain Savant"
 tier: "basic"
 ---

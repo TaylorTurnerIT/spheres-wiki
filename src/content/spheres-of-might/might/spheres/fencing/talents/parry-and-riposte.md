@@ -1,4 +1,5 @@
 ---
+id: "parry-and-riposte"
 name: "Parry And Riposte"
 tier: "basic"
 tags: []

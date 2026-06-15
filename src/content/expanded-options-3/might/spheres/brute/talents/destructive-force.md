@@ -1,4 +1,5 @@
 ---
+id: "destructive-force"
 name: "Destructive Force"
 tier: "advanced"
 tags: []

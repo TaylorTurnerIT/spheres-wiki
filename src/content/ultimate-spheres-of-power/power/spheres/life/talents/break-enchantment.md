@@ -1,4 +1,5 @@
 ---
+id: "break-enchantment"
 name: "Break Enchantment"
 tier: basic
 tags: []

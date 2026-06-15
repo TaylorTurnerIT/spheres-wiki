@@ -1,4 +1,5 @@
 ---
+id: "armorist-group-summons"
 name: "Group Summons"
 tags: []
 featureId: arsenal-trick

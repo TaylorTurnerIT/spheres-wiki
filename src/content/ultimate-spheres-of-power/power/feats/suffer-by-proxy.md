@@ -1,4 +1,5 @@
 ---
+id: "suffer-by-proxy"
 name: "Suffer By Proxy"
 sphere: enhancement
 tags: ["drawback", "proxy"]

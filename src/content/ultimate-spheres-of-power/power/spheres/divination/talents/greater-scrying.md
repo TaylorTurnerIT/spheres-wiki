@@ -1,4 +1,5 @@
 ---
+id: "greater-scrying"
 name: "Greater Scrying"
 tier: advanced
 tags: ["utility", "divine"]

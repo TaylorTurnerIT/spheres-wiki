@@ -1,4 +1,5 @@
 ---
+id: "project-thoughts"
 name: "Project Thoughts"
 tier: basic
 tags: ["utility", "charm"]

@@ -1,4 +1,5 @@
 ---
+id: "planned-sabotage"
 name: "Planned Sabotage"
 tier: "basic"
 tags:

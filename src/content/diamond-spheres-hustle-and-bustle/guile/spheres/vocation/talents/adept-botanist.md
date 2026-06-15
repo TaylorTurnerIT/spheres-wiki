@@ -1,4 +1,5 @@
 ---
+id: "adept-botanist"
 name: "Adept Botanist"
 tier: "basic"
 tags:

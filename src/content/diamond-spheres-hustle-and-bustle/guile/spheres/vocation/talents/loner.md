@@ -1,4 +1,5 @@
 ---
+id: "loner"
 name: "Loner"
 tier: "basic"
 tags:

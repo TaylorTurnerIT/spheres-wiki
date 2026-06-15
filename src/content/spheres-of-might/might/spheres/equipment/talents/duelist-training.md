@@ -1,4 +1,5 @@
 ---
+id: "duelist-training"
 name: "Duelist Training"
 tier: "basic"
 tags:

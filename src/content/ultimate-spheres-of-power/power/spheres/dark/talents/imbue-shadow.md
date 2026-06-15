@@ -1,4 +1,5 @@
 ---
+id: "imbue-shadow"
 name: "Imbue Shadow"
 tier: basic
 tags: ["shadow"]

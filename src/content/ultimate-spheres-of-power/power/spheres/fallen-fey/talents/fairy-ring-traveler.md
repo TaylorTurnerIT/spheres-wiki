@@ -1,4 +1,5 @@
 ---
+id: "fairy-ring-traveler"
 name: "Fairy Ring Traveler"
 tier: advanced
 tags: ["utility"]

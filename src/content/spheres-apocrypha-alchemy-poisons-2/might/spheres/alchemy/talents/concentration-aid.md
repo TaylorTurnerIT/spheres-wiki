@@ -1,4 +1,5 @@
 ---
+id: "concentration-aid"
 name: "Concentration Aid"
 tier: "basic"
 tags:

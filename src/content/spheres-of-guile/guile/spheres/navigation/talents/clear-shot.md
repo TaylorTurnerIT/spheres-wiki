@@ -1,4 +1,5 @@
 ---
+id: "clear-shot"
 name: "Clear Shot"
 tier: "base"
 tags:

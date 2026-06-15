@@ -1,4 +1,5 @@
 ---
+id: "securing-vitality"
 name: "Securing Vitality"
 tier: basic
 tags: ["vitality", "warden"]

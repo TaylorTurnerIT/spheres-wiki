@@ -1,4 +1,5 @@
 ---
+id: "deadlords-reach"
 name: "Deadlord's Reach"
 tier: advanced
 tags: ["dominion"]

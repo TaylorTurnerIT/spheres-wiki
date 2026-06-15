@@ -1,4 +1,5 @@
 ---
+id: "bound-light"
 name: "Bound Light"
 tier: basic
 tags: ["light"]

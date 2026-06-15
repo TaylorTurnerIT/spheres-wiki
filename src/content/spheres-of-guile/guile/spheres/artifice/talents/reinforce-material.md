@@ -1,4 +1,5 @@
 ---
+id: "reinforce-material"
 name: "Reinforce Material"
 tier: "basic"
 tags: []

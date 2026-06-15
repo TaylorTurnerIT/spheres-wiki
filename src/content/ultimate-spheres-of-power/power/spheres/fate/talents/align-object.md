@@ -1,4 +1,5 @@
 ---
+id: "align-object"
 name: "Align Object"
 tier: basic
 tags: ["word"]

@@ -1,4 +1,5 @@
 ---
+id: "intelligent-interactions"
 name: "Intelligent Interactions"
 tier: basic
 tags: ["amp", "manipulation"]

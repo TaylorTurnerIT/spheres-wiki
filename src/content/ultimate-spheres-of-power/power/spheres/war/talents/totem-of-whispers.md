@@ -1,4 +1,5 @@
 ---
+id: "totem-of-whispers"
 name: "Totem Of Whispers"
 tier: basic
 tags: ["totem"]

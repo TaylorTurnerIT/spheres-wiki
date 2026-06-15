@@ -1,4 +1,5 @@
 ---
+id: "dynamite-throwing-form"
 name: "Dynamite Throwing Form"
 tier: "basic"
 tags:

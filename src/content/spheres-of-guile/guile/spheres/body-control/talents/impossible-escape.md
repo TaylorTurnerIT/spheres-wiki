@@ -1,4 +1,5 @@
 ---
+id: "impossible-escape"
 name: "Impossible Escape"
 tier: "advanced"
 tags:

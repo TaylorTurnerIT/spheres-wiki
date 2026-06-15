@@ -1,4 +1,5 @@
 ---
+id: "weird-defense"
 name: "Weird Defense"
 sphere: illusion
 tags: ["combat"]

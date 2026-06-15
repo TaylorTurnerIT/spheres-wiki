@@ -1,4 +1,5 @@
 ---
+id: "executioner"
 name: "Executioner"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "monster-hunter"
 name: "Monster Hunter"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "drench"
 name: "Drench"
 tier: basic
 tags: ["precipitation", "shroud"]

@@ -1,4 +1,5 @@
 ---
+id: "ventriloquism"
 name: "Ventriloquism"
 tier: "basic"
 tags:

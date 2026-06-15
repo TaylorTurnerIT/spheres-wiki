@@ -1,4 +1,5 @@
 ---
+id: "heart-of-hope-and-fear"
 name: "Heart of Hope and Fear"
 tier: advanced
 tags: ["sm"]

@@ -1,4 +1,5 @@
 ---
+id: "instill-life"
 name: "Instill Life"
 tier: basic
 tags: ["instill"]

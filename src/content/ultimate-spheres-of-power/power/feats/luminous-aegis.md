@@ -1,4 +1,5 @@
 ---
+id: "luminous-aegis"
 name: Luminous Aegis
 sphere: protection
 dualSphere: light

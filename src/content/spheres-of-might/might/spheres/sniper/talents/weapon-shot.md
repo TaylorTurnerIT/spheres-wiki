@@ -1,4 +1,5 @@
 ---
+id: "weapon-shot"
 name: "Weapon Shot"
 tier: "basic"
 tags:

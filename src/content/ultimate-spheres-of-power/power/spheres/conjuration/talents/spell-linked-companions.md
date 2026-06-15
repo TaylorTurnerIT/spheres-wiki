@@ -1,4 +1,5 @@
 ---
+id: "spell-linked-companions"
 name: "Spell-Linked Companions"
 tier: basic
 tags: []

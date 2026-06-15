@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-lovelorn-soul"
 name: "Lovelorn Soul"
 tags: []
 featureId: bound-nexus

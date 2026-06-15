@@ -1,4 +1,5 @@
 ---
+id: "elemental-rift"
 name: "Elemental Rift"
 tier: "advanced"
 tags:

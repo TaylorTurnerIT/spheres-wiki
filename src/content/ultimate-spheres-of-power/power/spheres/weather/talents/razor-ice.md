@@ -1,4 +1,5 @@
 ---
+id: "razor-ice"
 name: "Razor Ice"
 tier: basic
 tags: ["cold", "mantle"]

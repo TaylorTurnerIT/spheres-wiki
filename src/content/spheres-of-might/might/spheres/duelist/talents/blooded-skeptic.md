@@ -1,4 +1,5 @@
 ---
+id: "blooded-skeptic"
 name: "Blooded Skeptic"
 tier: "basic"
 tags: []

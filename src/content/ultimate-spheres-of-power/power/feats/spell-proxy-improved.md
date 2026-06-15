@@ -1,4 +1,5 @@
 ---
+id: "spell-proxy-improved"
 name: "Spell Proxy, Improved"
 sphere: enhancement
 tags: ["proxy"]

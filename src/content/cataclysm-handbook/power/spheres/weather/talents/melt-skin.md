@@ -1,4 +1,5 @@
 ---
+id: "melt-skin"
 name: "Melt Skin"
 tier: advanced
 tags: ["radiation", "shroud"]

@@ -1,4 +1,5 @@
 ---
+id: "mind-over-manners"
 name: "Mind Over Manners"
 sphere: conjuration
 tags: []

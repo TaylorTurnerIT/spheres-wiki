@@ -1,4 +1,5 @@
 ---
+id: "greater-healing"
 name: "Greater Healing"
 tier: advanced
 tags: ["form"]

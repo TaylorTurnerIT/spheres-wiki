@@ -1,4 +1,5 @@
 ---
+id: "mark-of-judgment"
 name: "Mark Of Judgment"
 tier: advanced
 tags: ["curse"]

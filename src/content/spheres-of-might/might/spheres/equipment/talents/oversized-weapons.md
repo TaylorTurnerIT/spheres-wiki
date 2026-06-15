@@ -1,4 +1,5 @@
 ---
+id: "oversized-weapons"
 name: "Oversized Weapons"
 tier: "advanced"
 tags: []

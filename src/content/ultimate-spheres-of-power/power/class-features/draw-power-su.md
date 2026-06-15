@@ -1,4 +1,5 @@
 ---
+id: "draw-power-su"
 name: "Draw Power (Su)"
 type: class-feature
 className: mageknight

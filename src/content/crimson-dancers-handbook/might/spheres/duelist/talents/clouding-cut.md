@@ -1,4 +1,5 @@
 ---
+id: "clouding-cut"
 name: "Clouding Cut"
 tier: "basic"
 tags:

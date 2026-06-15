@@ -1,4 +1,5 @@
 ---
+id: "pummel-mastery"
 name: "Pummel Mastery"
 tier: basic
 tags: ["plant", "geomancing"]

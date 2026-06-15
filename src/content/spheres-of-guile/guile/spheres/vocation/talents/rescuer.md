@@ -1,4 +1,5 @@
 ---
+id: "rescuer"
 name: "Rescuer"
 tier: "basic"
 tags:

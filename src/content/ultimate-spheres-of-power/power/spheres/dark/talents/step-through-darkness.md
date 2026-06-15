@@ -1,4 +1,5 @@
 ---
+id: "step-through-darkness"
 name: "Step Through Darkness"
 tier: basic
 tags: ["meld"]

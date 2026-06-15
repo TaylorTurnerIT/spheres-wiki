@@ -1,4 +1,5 @@
 ---
+id: "yoga-strikes"
 name: "Yoga Strikes"
 tier: "advanced"
 tags: []

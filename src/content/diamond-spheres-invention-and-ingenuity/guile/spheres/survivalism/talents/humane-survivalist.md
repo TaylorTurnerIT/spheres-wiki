@@ -1,4 +1,5 @@
 ---
+id: "humane-survivalist"
 name: "Humane Survivalist"
 tier: "basic"
 tags: []

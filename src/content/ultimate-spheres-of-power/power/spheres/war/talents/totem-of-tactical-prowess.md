@@ -1,4 +1,5 @@
 ---
+id: "totem-of-tactical-prowess"
 name: "Totem Of Tactical Prowess"
 tier: basic
 tags: ["totem"]

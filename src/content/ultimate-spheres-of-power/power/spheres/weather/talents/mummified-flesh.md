@@ -1,4 +1,5 @@
 ---
+id: "mummified-flesh"
 name: "Mummified Flesh"
 tier: basic
 tags: ["aridity", "mantle"]

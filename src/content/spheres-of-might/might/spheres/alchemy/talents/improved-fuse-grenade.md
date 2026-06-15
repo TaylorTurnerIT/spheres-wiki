@@ -1,4 +1,5 @@
 ---
+id: "improved-fuse-grenade"
 name: "Improved Fuse Grenade"
 tier: "basic"
 tags:

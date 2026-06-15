@@ -1,4 +1,5 @@
 ---
+id: "fear-and-flame"
 name: "Fear And Flame"
 sphere: destruction
 tags: ["combat"]

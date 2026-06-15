@@ -1,4 +1,5 @@
 ---
+id: "blood-construct-mastery"
 name: "Blood Construct Mastery"
 sphere: blood
 tags: []

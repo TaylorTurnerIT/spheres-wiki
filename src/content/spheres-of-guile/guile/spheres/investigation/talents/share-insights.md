@@ -1,4 +1,5 @@
 ---
+id: "share-insights"
 name: "Share Insights"
 tier: "basic"
 tags: []

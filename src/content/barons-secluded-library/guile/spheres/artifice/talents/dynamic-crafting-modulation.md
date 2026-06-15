@@ -1,4 +1,5 @@
 ---
+id: "dynamic-crafting-modulation"
 name: "Dynamic Crafting Modulation"
 tier: "advanced"
 tags:

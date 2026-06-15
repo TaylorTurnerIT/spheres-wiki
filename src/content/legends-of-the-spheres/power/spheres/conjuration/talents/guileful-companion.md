@@ -1,4 +1,5 @@
 ---
+id: "guileful-companion"
 name: "Guileful Companion"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "combat-inertia"
 name: "Combat Inertia"
 tier: basic
 tags: []

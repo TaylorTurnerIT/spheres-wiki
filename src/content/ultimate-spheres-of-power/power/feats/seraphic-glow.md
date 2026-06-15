@@ -1,4 +1,5 @@
 ---
+id: "seraphic-glow"
 name: "Seraphic Glow"
 sphere: light
 tags: []

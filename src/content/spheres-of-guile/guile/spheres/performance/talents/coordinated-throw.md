@@ -1,4 +1,5 @@
 ---
+id: "coordinated-throw"
 name: "Coordinated Throw"
 tier: "basic"
 tags:

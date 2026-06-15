@@ -1,4 +1,5 @@
 ---
+id: "red-mist"
 name: "Red Mist"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "shifter-gore"
 name: "Gore"
 tags: ["extraordinary"]
 featureId: bestial-trait

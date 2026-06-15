@@ -1,4 +1,5 @@
 ---
+id: "instill-enhancement"
 name: "Instill Enhancement"
 tier: basic
 tags: ["instill"]

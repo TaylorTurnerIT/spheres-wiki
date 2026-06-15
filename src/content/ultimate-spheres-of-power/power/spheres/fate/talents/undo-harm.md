@@ -1,4 +1,5 @@
 ---
+id: "undo-harm"
 name: "Undo Harm"
 tier: basic
 tags: ["consecration"]

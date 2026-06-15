@@ -1,4 +1,5 @@
 ---
+id: "esteem"
 name: "Esteem"
 tier: basic
 tags: ["charm"]

@@ -1,4 +1,5 @@
 ---
+id: "cats-luck"
 name: "Cat's Luck"
 tier: advanced
 tags: ["consecration", "word"]

@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-curious-spirit"
 name: "Curious Spirit"
 tags: []
 featureId: bound-nexus

@@ -1,4 +1,5 @@
 ---
+id: "punch-block"
 name: "Punch Block"
 tier: "basic"
 tags: []

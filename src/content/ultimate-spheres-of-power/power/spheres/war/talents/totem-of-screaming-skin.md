@@ -1,4 +1,5 @@
 ---
+id: "totem-of-screaming-skin"
 name: "Totem Of Screaming Skin"
 tier: basic
 tags: ["totem"]

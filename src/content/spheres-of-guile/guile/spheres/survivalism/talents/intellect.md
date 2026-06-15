@@ -1,4 +1,5 @@
 ---
+id: "intellect"
 name: "Intellect"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "armorist-extradimensional-storage"
 name: "Extradimensional Storage"
 tags: ["spell-like"]
 featureId: arsenal-trick

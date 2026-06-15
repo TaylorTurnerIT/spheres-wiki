@@ -1,4 +1,5 @@
 ---
+id: "adept-trader"
 name: "Adept Trader"
 tier: "basic"
 tags:

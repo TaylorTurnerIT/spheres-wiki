@@ -1,4 +1,5 @@
 ---
+id: "steal-senses"
 name: "Steal Senses"
 tier: basic
 tags: ["enhance", "supernatural"]

@@ -1,4 +1,5 @@
 ---
+id: "telekinetic-exoskeleton"
 name: "Telekinetic Exoskeleton"
 sphere: telekinesis
 tags: ["protokinesis"]

@@ -1,4 +1,5 @@
 ---
+id: "improved-animal-companion"
 name: "Improved Animal Companion"
 tier: "advanced"
 tags: []

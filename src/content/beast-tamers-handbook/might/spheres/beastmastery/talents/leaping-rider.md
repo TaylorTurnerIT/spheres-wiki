@@ -1,4 +1,5 @@
 ---
+id: "leaping-rider"
 name: "Leaping Rider"
 tier: "basic"
 tags:

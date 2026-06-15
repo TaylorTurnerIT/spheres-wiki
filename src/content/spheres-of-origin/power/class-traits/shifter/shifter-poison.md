@@ -1,4 +1,5 @@
 ---
+id: "shifter-poison"
 name: "Poison"
 tags: ["extraordinary"]
 featureId: bestial-trait

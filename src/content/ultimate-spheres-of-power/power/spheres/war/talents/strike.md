@@ -1,4 +1,5 @@
 ---
+id: "strike"
 name: Strike
 tier: basic
 tags:

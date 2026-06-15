@@ -1,4 +1,5 @@
 ---
+id: "wildspeaker"
 name: "Wildspeaker"
 sphere: nature
 tags: []

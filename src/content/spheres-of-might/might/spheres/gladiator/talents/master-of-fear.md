@@ -1,4 +1,5 @@
 ---
+id: "master-of-fear"
 name: "Master Of Fear"
 tier: "basic"
 tags: []

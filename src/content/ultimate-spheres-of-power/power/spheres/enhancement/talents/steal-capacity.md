@@ -1,4 +1,5 @@
 ---
+id: "steal-capacity"
 name: "Steal Capacity"
 tier: basic
 tags: ["enhance"]

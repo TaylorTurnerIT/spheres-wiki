@@ -1,4 +1,5 @@
 ---
+id: "power-of-the-name"
 name: "Power Of The Name"
 tier: advanced
 tags: ["utility"]

@@ -1,4 +1,5 @@
 ---
+id: "channel-life"
 name: "Channel Life"
 sphere: life
 tags: ["channeling"]

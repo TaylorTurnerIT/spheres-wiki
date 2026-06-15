@@ -1,4 +1,5 @@
 ---
+id: "defensive-vigilance"
 name: Defensive Vigilance
 sphere: war
 dualSphere: protection

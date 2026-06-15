@@ -1,4 +1,5 @@
 ---
+id: "clarity"
 name: "Clarity"
 tier: basic
 tags: ["ward"]

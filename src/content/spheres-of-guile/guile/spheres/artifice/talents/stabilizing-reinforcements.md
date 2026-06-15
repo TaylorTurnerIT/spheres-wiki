@@ -1,4 +1,5 @@
 ---
+id: "stabilizing-reinforcements"
 name: "Stabilizing Reinforcements"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "sinking-blow"
 name: "Sinking Blow"
 tier: "basic"
 tags:

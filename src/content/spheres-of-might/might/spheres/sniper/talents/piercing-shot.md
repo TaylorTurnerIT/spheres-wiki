@@ -1,4 +1,5 @@
 ---
+id: "piercing-shot"
 name: "Piercing Shot"
 tier: "basic"
 tags:

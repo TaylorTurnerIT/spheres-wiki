@@ -1,4 +1,5 @@
 ---
+id: "extended-transformation-sp"
 name: "Extended Transformation (Sp)"
 type: class-feature
 className: shifter

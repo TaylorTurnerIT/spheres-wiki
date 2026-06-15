@@ -1,4 +1,5 @@
 ---
+id: "humiliate"
 name: "Humiliate"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "inescapable-grasp"
 name: "Inescapable Grasp"
 tier: "basic"
 tags: []

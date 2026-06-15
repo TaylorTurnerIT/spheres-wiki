@@ -1,4 +1,5 @@
 ---
+id: "decrease-mass"
 name: "Decrease Mass"
 tier: "advanced"
 tags:

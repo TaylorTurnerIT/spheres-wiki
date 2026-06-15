@@ -1,4 +1,5 @@
 ---
+id: "tactile-shot"
 name: "Tactile Shot"
 tier: "basic"
 tags:

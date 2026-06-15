@@ -1,4 +1,5 @@
 ---
+id: "bestial-trait"
 name: "Bestial Trait"
 type: class-feature
 className: shifter

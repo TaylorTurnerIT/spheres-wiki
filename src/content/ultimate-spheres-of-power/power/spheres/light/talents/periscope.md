@@ -1,4 +1,5 @@
 ---
+id: "periscope"
 name: "Periscope"
 tier: basic
 tags: ["utility", "lens"]

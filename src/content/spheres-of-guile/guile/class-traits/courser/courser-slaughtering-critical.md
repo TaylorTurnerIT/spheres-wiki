@@ -1,4 +1,5 @@
 ---
+id: "courser-slaughtering-critical"
 name: Slaughtering Critical
 featureId: courser-ventures
 tags: []

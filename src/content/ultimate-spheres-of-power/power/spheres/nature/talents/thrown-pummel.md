@@ -1,4 +1,5 @@
 ---
+id: "thrown-pummel"
 name: "Thrown Pummel"
 tier: basic
 tags: ["plant", "geomancing"]

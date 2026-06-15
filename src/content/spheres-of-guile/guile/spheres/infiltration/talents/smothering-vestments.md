@@ -1,4 +1,5 @@
 ---
+id: "smothering-vestments"
 name: "Smothering Vestments"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "psychic-vengeance"
 name: "Psychic Vengeance"
 tier: basic
 tags: []

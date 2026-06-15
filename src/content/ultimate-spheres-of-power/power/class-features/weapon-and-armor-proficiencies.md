@@ -1,4 +1,5 @@
 ---
+id: "weapon-and-armor-proficiencies"
 name: "Weapon and Armor Proficiencies"
 type: class-feature
 className: wraith

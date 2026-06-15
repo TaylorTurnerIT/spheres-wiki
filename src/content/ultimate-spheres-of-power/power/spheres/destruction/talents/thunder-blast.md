@@ -1,4 +1,5 @@
 ---
+id: "thunder-blast"
 name: "Thunder Blast"
 tier: basic
 tags: ["blast-type", "sonic"]

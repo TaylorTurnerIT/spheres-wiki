@@ -1,4 +1,5 @@
 ---
+id: "kinetic-creation"
 name: Kinetic Creation
 sphere: telekinesis
 dualSphere: creation

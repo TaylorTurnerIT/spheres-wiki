@@ -1,4 +1,5 @@
 ---
+id: "cover-ally"
 name: "Cover Ally"
 tier: "basic"
 tags: []

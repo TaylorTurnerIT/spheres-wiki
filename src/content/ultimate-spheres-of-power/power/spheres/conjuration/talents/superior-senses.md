@@ -1,4 +1,5 @@
 ---
+id: "superior-senses"
 name: "Superior Senses"
 tier: basic
 tags: ["extraordinary", "form"]

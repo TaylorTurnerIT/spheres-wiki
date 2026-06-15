@@ -1,4 +1,5 @@
 ---
+id: "shifter-home-in-nature"
 name: "Home in Nature"
 tags: ["extraordinary"]
 featureId: bestial-trait

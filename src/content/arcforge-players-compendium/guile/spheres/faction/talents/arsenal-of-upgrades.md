@@ -1,4 +1,5 @@
 ---
+id: "arsenal-of-upgrades"
 name: "Arsenal Of Upgrades"
 tier: "advanced"
 tags:

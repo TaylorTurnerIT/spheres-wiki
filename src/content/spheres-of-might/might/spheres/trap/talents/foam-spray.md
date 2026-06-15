@@ -1,4 +1,5 @@
 ---
+id: "foam-spray"
 name: "Foam Spray"
 tier: "basic"
 tags:

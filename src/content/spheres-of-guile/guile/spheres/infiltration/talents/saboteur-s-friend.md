@@ -1,4 +1,5 @@
 ---
+id: "saboteur-s-friend"
 name: "Saboteur’s Friend"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "swap-placement"
 name: "Swap Placement"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "animate-hair"
 name: "Animate Hair"
 tier: basic
 tags: ["fey-blessing"]

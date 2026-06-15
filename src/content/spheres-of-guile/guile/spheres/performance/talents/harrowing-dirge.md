@@ -1,4 +1,5 @@
 ---
+id: "harrowing-dirge"
 name: "Harrowing Dirge"
 tier: "basic"
 tags:

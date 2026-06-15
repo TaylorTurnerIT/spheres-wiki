@@ -1,4 +1,5 @@
 ---
+id: "totem-of-courage"
 name: "Totem Of Courage"
 tier: basic
 tags: ["totem"]

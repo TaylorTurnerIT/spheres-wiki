@@ -1,4 +1,5 @@
 ---
+id: "revealing-strike"
 name: "Revealing Strike"
 tier: basic
 tags: ["strike"]

@@ -1,4 +1,5 @@
 ---
+id: "hide-in-darkness"
 name: "Hide In Darkness"
 tier: basic
 tags: ["meld"]

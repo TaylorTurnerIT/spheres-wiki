@@ -1,4 +1,5 @@
 ---
+id: "clear-path"
 name: "Clear Path"
 tier: "basic"
 tags:

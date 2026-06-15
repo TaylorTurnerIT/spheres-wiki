@@ -1,4 +1,5 @@
 ---
+id: "scratching-post"
 name: "Scratching Post"
 tier: "basic"
 tags:

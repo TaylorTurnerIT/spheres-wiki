@@ -1,4 +1,5 @@
 ---
+id: "undead-whisperer"
 name: "Undead Whisperer"
 tier: basic
 tags: ["dominion"]

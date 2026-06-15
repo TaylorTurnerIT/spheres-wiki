@@ -1,4 +1,5 @@
 ---
+id: "adept-assistant"
 name: "Adept Assistant"
 tier: "basic"
 tags:

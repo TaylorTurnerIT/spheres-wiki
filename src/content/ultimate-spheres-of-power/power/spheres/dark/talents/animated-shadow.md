@@ -1,4 +1,5 @@
 ---
+id: "animated-shadow"
 name: "Animated Shadow"
 tier: advanced
 tags: ["shadow"]

@@ -1,4 +1,5 @@
 ---
+id: "powerful-charm"
 name: "Powerful Charm"
 tier: basic
 tags: []

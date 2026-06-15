@@ -1,4 +1,5 @@
 ---
+id: "mutable-blast"
 name: "Mutable Blast"
 tier: basic
 tags: ["blast-shape"]

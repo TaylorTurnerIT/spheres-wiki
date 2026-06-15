@@ -1,4 +1,5 @@
 ---
+id: "veil-of-mystery"
 name: "Veil of Mystery"
 tier: "basic"
 tags:

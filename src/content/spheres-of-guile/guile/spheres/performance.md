@@ -1,4 +1,5 @@
 ---
+id: "performance"
 name: "Performance"
 icon: "performance"
 tags: []

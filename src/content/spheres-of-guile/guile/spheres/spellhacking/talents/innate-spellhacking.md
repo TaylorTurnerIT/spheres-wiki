@@ -1,4 +1,5 @@
 ---
+id: "innate-spellhacking"
 name: "Innate Spellhacking"
 tier: "basic"
 tags:

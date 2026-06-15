@@ -1,4 +1,5 @@
 ---
+id: "solar-strike"
 name: "Solar Strike"
 tier: basic
 tags: ["strike"]

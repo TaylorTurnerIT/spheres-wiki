@@ -1,4 +1,5 @@
 ---
+id: "infinite-arsenal-su"
 name: "Infinite Arsenal (Su)"
 type: class-feature
 className: armorist

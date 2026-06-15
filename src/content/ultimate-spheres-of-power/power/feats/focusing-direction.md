@@ -1,4 +1,5 @@
 ---
+id: "focusing-direction"
 name: "Focusing Direction"
 sphere: conjuration
 tags: []

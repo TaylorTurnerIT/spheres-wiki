@@ -1,4 +1,5 @@
 ---
+id: "inspire-devotion"
 name: "Inspire Devotion"
 tier: "advanced"
 tags: []

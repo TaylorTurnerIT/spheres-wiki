@@ -1,4 +1,5 @@
 ---
+id: "symbologist"
 name: "Symbologist"
 tier: "advanced"
 tags:

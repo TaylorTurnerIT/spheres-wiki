@@ -1,4 +1,5 @@
 ---
+id: "tactical-preparation"
 name: "Tactical Preparation"
 tier: "basic"
 tags:

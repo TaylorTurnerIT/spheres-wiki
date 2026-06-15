@@ -1,4 +1,5 @@
 ---
+id: "esoteric-link"
 name: "Esoteric Link"
 tier: "advanced"
 tags:

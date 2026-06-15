@@ -1,4 +1,5 @@
 ---
+id: "homeguard-magic"
 name: Homeguard Magic
 sphere: protection
 dualSphere: mana

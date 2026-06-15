@@ -1,4 +1,5 @@
 ---
+id: "eagle-s-path"
 name: "Eagle’s Path"
 tier: "advanced"
 tags:

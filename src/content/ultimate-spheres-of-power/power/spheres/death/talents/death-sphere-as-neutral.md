@@ -1,4 +1,5 @@
 ---
+id: "death-sphere-as-neutral"
 name: "Death Sphere as Neutral"
 tier: basic
 tags: []

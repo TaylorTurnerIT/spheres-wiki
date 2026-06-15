@@ -1,4 +1,5 @@
 ---
+id: "reincarnation"
 name: "Reincarnation"
 tier: advanced
 tags: ["utility"]

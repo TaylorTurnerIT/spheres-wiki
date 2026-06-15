@@ -1,4 +1,5 @@
 ---
+id: "dumbfounding-crack"
 name: "Dumbfounding Crack"
 tier: "advanced"
 tags:

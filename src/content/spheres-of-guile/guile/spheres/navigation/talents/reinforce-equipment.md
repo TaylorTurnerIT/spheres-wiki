@@ -1,4 +1,5 @@
 ---
+id: "reinforce-equipment"
 name: "Reinforce Equipment"
 tier: "basic"
 tags:

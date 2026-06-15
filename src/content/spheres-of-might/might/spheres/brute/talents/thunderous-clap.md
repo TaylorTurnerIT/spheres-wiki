@@ -1,4 +1,5 @@
 ---
+id: "thunderous-clap"
 name: "Thunderous Clap"
 tier: "advanced"
 tags: []

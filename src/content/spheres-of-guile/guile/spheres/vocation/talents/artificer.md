@@ -1,4 +1,5 @@
 ---
+id: "artificer"
 name: "Artificer"
 tier: "basic"
 tags:

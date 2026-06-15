@@ -1,4 +1,5 @@
 ---
+id: "crippling-strike"
 name: "Crippling Strike"
 tier: basic
 tags: ["strike"]

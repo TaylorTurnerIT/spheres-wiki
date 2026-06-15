@@ -1,4 +1,5 @@
 ---
+id: "bear-trap"
 name: "Bear Trap"
 tier: "basic"
 tags: ["snare"]

@@ -1,4 +1,5 @@
 ---
+id: "dancing-weapon"
 name: "Dancing Weapon"
 tier: basic
 tags: []

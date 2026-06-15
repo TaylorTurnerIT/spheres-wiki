@@ -1,4 +1,5 @@
 ---
+id: "weapon-cover"
 name: "Weapon Cover"
 tier: "basic"
 tags: []

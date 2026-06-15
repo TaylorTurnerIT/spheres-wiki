@@ -1,4 +1,5 @@
 ---
+id: "ash"
 name: "Ash"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "forge"
 name: "Forge"
 tier: basic
 tags: ["alter"]

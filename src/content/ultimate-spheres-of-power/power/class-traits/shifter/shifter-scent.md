@@ -1,4 +1,5 @@
 ---
+id: "shifter-scent"
 name: "Scent"
 tags: ["extraordinary"]
 featureId: bestial-trait

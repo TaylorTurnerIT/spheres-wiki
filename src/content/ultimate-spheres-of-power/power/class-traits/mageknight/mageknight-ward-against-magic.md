@@ -1,4 +1,5 @@
 ---
+id: "mageknight-ward-against-magic"
 name: "Ward Against Magic"
 tags: ["spell-like"]
 featureId: mystic-combat-su

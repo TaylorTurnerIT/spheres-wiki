@@ -1,4 +1,5 @@
 ---
+id: "wild-walk"
 name: "Wild Walk"
 tier: basic
 tags: ["fey-blessing"]

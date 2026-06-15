@@ -1,4 +1,5 @@
 ---
+id: "pirate-training"
 name: "Pirate Training"
 tier: "basic"
 tags:

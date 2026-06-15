@@ -1,4 +1,5 @@
 ---
+id: "shape-quintessence"
 name: Shape Quintessence
 sphere: time
 dualSphere: creation

@@ -1,4 +1,5 @@
 ---
+id: "wiggling-kitten-lunging-lion"
 name: "Wiggling Kitten, Lunging Lion"
 tier: "advanced"
 tags:

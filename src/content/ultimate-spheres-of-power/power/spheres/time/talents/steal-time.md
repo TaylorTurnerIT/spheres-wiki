@@ -1,4 +1,5 @@
 ---
+id: "steal-time"
 name: "Steal Time"
 tier: basic
 tags: ["time"]

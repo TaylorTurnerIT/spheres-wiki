@@ -1,4 +1,5 @@
 ---
+id: "totem-of-stability"
 name: "Totem Of Stability"
 tier: basic
 tags: ["totem"]

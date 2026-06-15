@@ -1,4 +1,5 @@
 ---
+id: "wraith-active-possession"
 name: "Active Possession"
 tags: []
 featureId: possession-su

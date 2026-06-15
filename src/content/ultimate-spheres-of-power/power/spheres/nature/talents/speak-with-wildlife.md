@@ -1,4 +1,5 @@
 ---
+id: "speak-with-wildlife"
 name: "Speak With Wildlife"
 tier: basic
 tags: ["utility", "spirit"]

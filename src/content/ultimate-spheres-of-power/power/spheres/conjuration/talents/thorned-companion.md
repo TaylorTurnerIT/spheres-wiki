@@ -1,4 +1,5 @@
 ---
+id: "thorned-companion"
 name: "Thorned Companion"
 tier: basic
 tags: ["form"]

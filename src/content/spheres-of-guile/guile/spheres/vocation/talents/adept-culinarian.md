@@ -1,4 +1,5 @@
 ---
+id: "adept-culinarian"
 name: "Adept Culinarian"
 tier: "basic"
 tags:

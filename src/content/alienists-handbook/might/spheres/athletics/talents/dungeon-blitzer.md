@@ -1,4 +1,5 @@
 ---
+id: "dungeon-blitzer"
 name: "Dungeon Blitzer"
 tier: "basic"
 tags: []

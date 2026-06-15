@@ -1,4 +1,5 @@
 ---
+id: "doubled-nimbus"
 name: "Doubled Nimbus"
 tier: basic
 tags: []

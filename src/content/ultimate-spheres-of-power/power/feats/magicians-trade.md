@@ -1,4 +1,5 @@
 ---
+id: "magicians-trade"
 name: "Magician's Trade"
 sphere: enhancement
 tags: ["counterspell"]

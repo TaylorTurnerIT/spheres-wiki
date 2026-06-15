@@ -1,4 +1,5 @@
 ---
+id: "tome-raider"
 name: "Tome Raider"
 tier: "basic"
 tags:

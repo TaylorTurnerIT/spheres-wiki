@@ -1,4 +1,5 @@
 ---
+id: "specialized-venom"
 name: "Specialized Venom"
 tier: "basic"
 tags: []

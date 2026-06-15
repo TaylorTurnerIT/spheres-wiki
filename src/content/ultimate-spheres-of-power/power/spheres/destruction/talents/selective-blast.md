@@ -1,4 +1,5 @@
 ---
+id: "selective-blast"
 name: "Selective Blast"
 tier: basic
 tags: []

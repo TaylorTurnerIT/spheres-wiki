@@ -1,4 +1,5 @@
 ---
+id: "aboleth-mucus"
 name: "Aboleth Mucus"
 tier: "advanced"
 tags:

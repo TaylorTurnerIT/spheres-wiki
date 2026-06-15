@@ -1,4 +1,5 @@
 ---
+id: "excoriate"
 name: "Excoriate"
 tier: "basic"
 tags:

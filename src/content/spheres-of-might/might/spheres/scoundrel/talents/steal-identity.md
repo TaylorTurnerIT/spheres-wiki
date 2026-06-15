@@ -1,4 +1,5 @@
 ---
+id: "steal-identity"
 name: "Steal Identity"
 tier: "advanced"
 tags:

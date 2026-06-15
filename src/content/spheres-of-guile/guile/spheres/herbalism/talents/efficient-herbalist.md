@@ -1,4 +1,5 @@
 ---
+id: "efficient-herbalist"
 name: "Efficient Herbalist"
 tier: "advanced"
 tags: []

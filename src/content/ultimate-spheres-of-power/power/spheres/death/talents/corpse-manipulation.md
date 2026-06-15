@@ -1,4 +1,5 @@
 ---
+id: "corpse-manipulation"
 name: "Corpse Manipulation"
 tier: basic
 tags: []

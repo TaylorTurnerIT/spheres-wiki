@@ -1,4 +1,5 @@
 ---
+id: "suave-performer"
 name: "Suave Performer"
 tier: "basic"
 tags:

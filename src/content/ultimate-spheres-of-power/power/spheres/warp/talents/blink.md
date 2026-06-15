@@ -1,4 +1,5 @@
 ---
+id: "blink"
 name: "Blink"
 tier: basic
 tags: ["space"]

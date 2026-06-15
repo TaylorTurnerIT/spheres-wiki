@@ -1,4 +1,5 @@
 ---
+id: "counter-theft"
 name: "Counter Theft"
 tier: "basic"
 tags: []

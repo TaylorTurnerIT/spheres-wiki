@@ -1,4 +1,5 @@
 ---
+id: "battlefield-sense-ex"
 name: "Battlefield Sense (Ex)"
 type: class-feature
 className: symbiat

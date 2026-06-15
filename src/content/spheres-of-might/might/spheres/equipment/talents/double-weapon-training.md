@@ -1,4 +1,5 @@
 ---
+id: "double-weapon-training"
 name: "Double Weapon Training"
 tier: "basic"
 tags:

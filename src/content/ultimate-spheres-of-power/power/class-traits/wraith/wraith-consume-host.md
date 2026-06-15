@@ -1,4 +1,5 @@
 ---
+id: "wraith-consume-host"
 name: "Consume Host"
 tags: []
 featureId: wraith-haunts

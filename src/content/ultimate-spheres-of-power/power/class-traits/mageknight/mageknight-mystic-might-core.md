@@ -1,4 +1,5 @@
 ---
+id: "mageknight-mystic-might-core"
 name: "Mystic Might [Core]"
 tags: []
 featureId: mystic-combat-su

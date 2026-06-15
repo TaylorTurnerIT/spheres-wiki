@@ -1,4 +1,5 @@
 ---
+id: "teleport-object"
 name: "Teleport Object"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "taint-soul"
 name: "Taint Soul"
 tier: basic
 tags: []

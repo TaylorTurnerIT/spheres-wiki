@@ -1,4 +1,5 @@
 ---
+id: "glamer"
 label: "Glamer"
 color: "#e056fd"
 priority: 15

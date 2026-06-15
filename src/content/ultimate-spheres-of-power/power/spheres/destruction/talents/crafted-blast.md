@@ -1,4 +1,5 @@
 ---
+id: "crafted-blast"
 name: "Crafted Blast"
 tier: basic
 tags: []

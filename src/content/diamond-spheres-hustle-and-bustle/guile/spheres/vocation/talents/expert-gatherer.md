@@ -1,4 +1,5 @@
 ---
+id: "expert-gatherer"
 name: "Expert Gatherer"
 tier: "advanced"
 tags: []

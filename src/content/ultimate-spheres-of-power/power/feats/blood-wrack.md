@@ -1,4 +1,5 @@
 ---
+id: "blood-wrack"
 name: "Blood Wrack"
 sphere: destruction
 tags: ["admixture"]

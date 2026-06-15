@@ -1,4 +1,5 @@
 ---
+id: "totem-of-the-dragonslayer"
 name: "Totem Of The Dragonslayer"
 tier: basic
 tags: ["totem"]

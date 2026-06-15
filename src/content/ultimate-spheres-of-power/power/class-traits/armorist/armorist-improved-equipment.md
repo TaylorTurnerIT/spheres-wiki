@@ -1,4 +1,5 @@
 ---
+id: "armorist-improved-equipment"
 name: "Improved Equipment"
 tags: []
 featureId: arsenal-trick

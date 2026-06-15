@@ -1,4 +1,5 @@
 ---
+id: "ethical-gathering"
 name: "Ethical Gathering"
 tier: "advanced"
 tags: []

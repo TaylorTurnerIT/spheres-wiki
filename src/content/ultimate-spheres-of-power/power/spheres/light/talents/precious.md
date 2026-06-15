@@ -1,4 +1,5 @@
 ---
+id: "precious"
 name: "Precious"
 tier: basic
 tags: ["light"]

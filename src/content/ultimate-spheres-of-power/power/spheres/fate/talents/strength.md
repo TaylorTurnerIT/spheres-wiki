@@ -1,4 +1,5 @@
 ---
+id: "strength"
 name: "Strength"
 tier: basic
 tags: ["motif"]

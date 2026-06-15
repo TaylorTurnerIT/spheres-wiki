@@ -1,4 +1,5 @@
 ---
+id: "triangle-slash"
 name: "Triangle Slash"
 tier: "advanced"
 tags: []

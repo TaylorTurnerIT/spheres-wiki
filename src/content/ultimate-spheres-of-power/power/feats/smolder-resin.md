@@ -1,4 +1,5 @@
 ---
+id: "smolder-resin"
 name: "Smolder Resin"
 sphere: nature
 tags: []

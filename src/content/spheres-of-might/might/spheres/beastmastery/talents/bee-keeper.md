@@ -1,4 +1,5 @@
 ---
+id: "bee-keeper"
 name: "Bee Keeper"
 tier: "basic"
 tags:

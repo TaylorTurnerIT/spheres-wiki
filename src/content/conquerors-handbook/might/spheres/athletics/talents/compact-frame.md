@@ -1,4 +1,5 @@
 ---
+id: "compact-frame"
 name: "Compact Frame"
 tier: "basic"
 tags: []

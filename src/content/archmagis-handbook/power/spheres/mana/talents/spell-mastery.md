@@ -1,4 +1,5 @@
 ---
+id: "spell-mastery"
 name: "Spell Mastery"
 tier: basic
 tags: ["amp", "manipulation"]

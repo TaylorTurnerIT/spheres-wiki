@@ -1,4 +1,5 @@
 ---
+id: "restrictive-casing"
 name: "Restrictive Casing"
 tier: basic
 tags: []

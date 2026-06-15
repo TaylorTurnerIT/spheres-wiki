@@ -1,4 +1,5 @@
 ---
+id: "catalyze-lost-magic"
 name: "Catalyze Lost Magic"
 tier: "advanced"
 tags:

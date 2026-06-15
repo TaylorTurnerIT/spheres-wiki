@@ -1,4 +1,5 @@
 ---
+id: "lurker"
 name: "Lurker"
 tier: "basic"
 tags: []

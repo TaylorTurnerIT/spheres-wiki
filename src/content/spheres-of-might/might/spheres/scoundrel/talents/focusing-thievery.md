@@ -1,4 +1,5 @@
 ---
+id: "focusing-thievery"
 name: "Focusing Thievery"
 tier: "basic"
 tags: []

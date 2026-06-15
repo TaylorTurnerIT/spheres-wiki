@@ -1,4 +1,5 @@
 ---
+id: "reanimate"
 name: "Reanimate"
 tier: base
 tags: []

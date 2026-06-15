@@ -1,4 +1,5 @@
 ---
+id: "improved-sneezing-powder"
 name: "Improved Sneezing Powder"
 tier: "basic"
 tags:

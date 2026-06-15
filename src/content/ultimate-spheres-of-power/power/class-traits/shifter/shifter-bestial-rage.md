@@ -1,4 +1,5 @@
 ---
+id: "shifter-bestial-rage"
 name: "Bestial Rage"
 tags: ["extraordinary"]
 featureId: bestial-trait

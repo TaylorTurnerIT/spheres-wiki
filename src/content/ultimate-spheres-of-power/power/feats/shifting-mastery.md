@@ -1,4 +1,5 @@
 ---
+id: "shifting-mastery"
 name: "Shifting Mastery"
 sphere: alteration
 tags: []

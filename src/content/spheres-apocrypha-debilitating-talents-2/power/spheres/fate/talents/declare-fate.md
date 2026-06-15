@@ -1,4 +1,5 @@
 ---
+id: "declare-fate"
 name: "Declare Fate"
 tier: advanced
 tags: ["curse", "word"]

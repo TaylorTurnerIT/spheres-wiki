@@ -1,4 +1,5 @@
 ---
+id: "mageknight-form-breaker"
 name: "Form-Breaker"
 tags: ["supernatural"]
 featureId: mystic-combat-su

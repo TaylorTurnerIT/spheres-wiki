@@ -1,4 +1,5 @@
 ---
+id: "innocence"
 name: "Innocence"
 tier: basic
 tags: ["charm", "sm"]

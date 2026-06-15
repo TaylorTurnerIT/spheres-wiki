@@ -1,4 +1,5 @@
 ---
+id: "devourer"
 name: "Devourer"
 sphere: alteration
 tags: ["combat"]

@@ -1,4 +1,5 @@
 ---
+id: "phasic-shot"
 name: "Phasic Shot"
 tier: "advanced"
 tags: []

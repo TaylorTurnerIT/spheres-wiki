@@ -1,4 +1,5 @@
 ---
+id: "inflating-flattery"
 name: "Inflating Flattery"
 tier: "basic"
 tags:

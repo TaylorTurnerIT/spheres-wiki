@@ -1,4 +1,5 @@
 ---
+id: "looped-space"
 name: "Looped Space"
 tier: basic
 tags: ["space"]

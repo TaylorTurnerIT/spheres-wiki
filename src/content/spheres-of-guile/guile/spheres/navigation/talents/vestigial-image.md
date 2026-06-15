@@ -1,4 +1,5 @@
 ---
+id: "vestigial-image"
 name: "Vestigial Image"
 tier: "advanced"
 tags:

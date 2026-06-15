@@ -1,4 +1,5 @@
 ---
+id: "destructive-radiance"
 name: Destructive Radiance
 sphere: light
 dualSphere: destruction

@@ -1,4 +1,5 @@
 ---
+id: "hold-on-hope"
 name: "Hold on Hope"
 tier: advanced
 tags: ["sm", "word"]

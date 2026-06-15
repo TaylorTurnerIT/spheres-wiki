@@ -1,4 +1,5 @@
 ---
+id: "detect-spellcaster"
 name: "Detect Spellcaster"
 tier: basic
 tags: ["divine"]

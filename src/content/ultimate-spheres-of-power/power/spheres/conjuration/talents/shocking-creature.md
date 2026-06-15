@@ -1,4 +1,5 @@
 ---
+id: "shocking-creature"
 name: "Shocking Creature"
 tier: basic
 tags: ["form"]

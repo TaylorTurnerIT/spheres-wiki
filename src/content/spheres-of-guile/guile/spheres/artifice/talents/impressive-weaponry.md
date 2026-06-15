@@ -1,4 +1,5 @@
 ---
+id: "impressive-weaponry"
 name: "Impressive Weaponry"
 tier: "basic"
 tags:

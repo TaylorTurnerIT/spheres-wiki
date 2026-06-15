@@ -1,4 +1,5 @@
 ---
+id: "marked-su"
 name: "Marked (Su)"
 type: class-feature
 className: mageknight

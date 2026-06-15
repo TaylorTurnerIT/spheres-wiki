@@ -1,4 +1,5 @@
 ---
+id: "canny-survivor"
 name: "Canny Survivor"
 tier: "base"
 tags: []

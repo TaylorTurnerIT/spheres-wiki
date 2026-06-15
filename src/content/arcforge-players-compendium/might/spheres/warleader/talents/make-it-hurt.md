@@ -1,4 +1,5 @@
 ---
+id: "make-it-hurt"
 name: "Make It Hurt"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "peasant-training"
 name: "Peasant Training"
 tier: "basic"
 tags:

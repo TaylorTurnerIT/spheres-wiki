@@ -1,4 +1,5 @@
 ---
+id: "resonant-notes"
 name: "Resonant Notes"
 tier: "advanced"
 tags:

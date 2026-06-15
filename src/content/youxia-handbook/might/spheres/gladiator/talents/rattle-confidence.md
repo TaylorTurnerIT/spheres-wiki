@@ -1,4 +1,5 @@
 ---
+id: "rattle-confidence"
 name: "Rattle Confidence"
 tier: "basic"
 tags:

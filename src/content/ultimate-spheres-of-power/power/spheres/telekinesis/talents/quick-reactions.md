@@ -1,4 +1,5 @@
 ---
+id: "quick-reactions"
 name: "Quick Reactions"
 tier: basic
 tags: []

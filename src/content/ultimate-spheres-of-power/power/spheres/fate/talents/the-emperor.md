@@ -1,4 +1,5 @@
 ---
+id: "the-emperor"
 name: "The Emperor"
 tier: basic
 tags: ["motif"]

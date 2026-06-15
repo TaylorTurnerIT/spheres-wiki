@@ -1,4 +1,5 @@
 ---
+id: "link"
 name: "Link"
 tier: basic
 tags: ["utility"]

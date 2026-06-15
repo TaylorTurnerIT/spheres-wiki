@@ -1,4 +1,5 @@
 ---
+id: "sylvan-necromancy"
 name: Sylvan Necromancy
 sphere: nature
 dualSphere: death

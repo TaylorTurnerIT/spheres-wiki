@@ -1,4 +1,5 @@
 ---
+id: "fey-adept-glamer"
 name: "Glamer"
 tags: []
 featureId: shadowstuff

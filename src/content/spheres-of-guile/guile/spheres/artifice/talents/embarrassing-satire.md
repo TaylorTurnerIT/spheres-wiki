@@ -1,4 +1,5 @@
 ---
+id: "embarrassing-satire"
 name: "Embarrassing Satire"
 tier: "basic"
 tags:

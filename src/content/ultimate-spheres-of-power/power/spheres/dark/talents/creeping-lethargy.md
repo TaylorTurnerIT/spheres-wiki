@@ -1,4 +1,5 @@
 ---
+id: "creeping-lethargy"
 name: "Creeping Lethargy"
 tier: basic
 tags: ["blot", "darkness"]

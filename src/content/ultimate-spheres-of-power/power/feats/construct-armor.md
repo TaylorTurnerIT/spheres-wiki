@@ -1,4 +1,5 @@
 ---
+id: "construct-armor"
 name: "Construct Armor"
 sphere: blood
 tags: []

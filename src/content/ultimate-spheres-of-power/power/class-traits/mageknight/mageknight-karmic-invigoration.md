@@ -1,4 +1,5 @@
 ---
+id: "mageknight-karmic-invigoration"
 name: "Karmic Invigoration"
 tags: ["supernatural"]
 featureId: mystic-combat-su

@@ -1,4 +1,5 @@
 ---
+id: "close-quarters-conduction"
 name: "Close-Quarters Conduction"
 sphere: destruction
 tags: ["combat", "sm"]

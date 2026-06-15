@@ -1,4 +1,5 @@
 ---
+id: "acoustic-attunement"
 name: "Acoustic Attunement"
 tier: "basic"
 tags:

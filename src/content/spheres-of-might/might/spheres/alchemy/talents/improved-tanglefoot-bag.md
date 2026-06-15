@@ -1,4 +1,5 @@
 ---
+id: "improved-tanglefoot-bag"
 name: "Improved Tanglefoot Bag"
 tier: "basic"
 tags:

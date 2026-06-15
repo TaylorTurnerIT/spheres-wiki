@@ -1,4 +1,5 @@
 ---
+id: "imbued-vessel"
 name: "Imbued Vessel"
 tier: basic
 tags: ["manipulation"]

@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-channel-punishment"
 name: "Channel Punishment"
 tags: []
 featureId: invocations

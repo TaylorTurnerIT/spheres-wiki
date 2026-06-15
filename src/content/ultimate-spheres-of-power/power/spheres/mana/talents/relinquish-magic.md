@@ -1,4 +1,5 @@
 ---
+id: "relinquish-magic"
 name: "Relinquish Magic"
 tier: basic
 tags: ["manipulation"]

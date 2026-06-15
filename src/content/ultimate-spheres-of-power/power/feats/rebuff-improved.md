@@ -1,4 +1,5 @@
 ---
+id: "rebuff-improved"
 name: "Rebuff, Improved"
 sphere: destruction
 tags: ["combat"]

@@ -1,4 +1,5 @@
 ---
+id: "forbidden-lore"
 name: "Forbidden Lore"
 type: class-feature
 className: thaumaturge

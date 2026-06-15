@@ -1,4 +1,5 @@
 ---
+id: "favorite-tools"
 name: "Favorite Tools"
 tier: "basic"
 tags:

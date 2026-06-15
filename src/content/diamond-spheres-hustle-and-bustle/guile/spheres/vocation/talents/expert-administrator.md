@@ -1,4 +1,5 @@
 ---
+id: "expert-administrator"
 name: "Expert Administrator"
 tier: "advanced"
 tags:

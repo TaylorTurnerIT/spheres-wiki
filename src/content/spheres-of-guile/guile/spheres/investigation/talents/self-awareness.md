@@ -1,4 +1,5 @@
 ---
+id: "self-awareness"
 name: "Self Awareness"
 tier: "basic"
 tags:

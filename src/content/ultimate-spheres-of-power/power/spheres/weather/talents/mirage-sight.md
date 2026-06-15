@@ -1,4 +1,5 @@
 ---
+id: "mirage-sight"
 name: "Mirage Sight"
 tier: basic
 tags: ["heat", "mantle"]

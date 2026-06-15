@@ -1,4 +1,5 @@
 ---
+id: "damnatio-ad-gladium"
 name: "Damnatio ad Gladium"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "hemomancy"
 name: "Hemomancy"
 sphere: death
 tags: ["necrosis"]

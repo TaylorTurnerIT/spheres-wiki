@@ -1,4 +1,5 @@
 ---
+id: "destructive-counter"
 name: "Destructive Counter"
 sphere: creation
 tags: ["combat"]

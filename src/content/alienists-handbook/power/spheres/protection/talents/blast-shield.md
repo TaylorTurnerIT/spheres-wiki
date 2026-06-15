@@ -1,4 +1,5 @@
 ---
+id: "blast-shield"
 name: "Blast Shield"
 tier: basic
 tags: ["succor"]

@@ -1,4 +1,5 @@
 ---
+id: "link-su"
 name: "Link (Su)"
 type: class-feature
 className: eliciter

@@ -1,4 +1,5 @@
 ---
+id: "web-spinner"
 name: "Web Spinner"
 tier: basic
 tags: ["form"]

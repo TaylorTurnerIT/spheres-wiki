@@ -1,4 +1,5 @@
 ---
+id: "elemental-enhancement"
 name: "Elemental Enhancement"
 tier: basic
 tags: ["amp", "manipulation"]

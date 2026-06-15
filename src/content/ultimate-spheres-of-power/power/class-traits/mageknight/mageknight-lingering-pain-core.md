@@ -1,4 +1,5 @@
 ---
+id: "mageknight-lingering-pain-core"
 name: "Lingering Pain [Core]"
 tags: []
 featureId: mystic-combat-su

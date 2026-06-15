@@ -1,4 +1,5 @@
 ---
+id: "analytical-linguist"
 name: "Analytical Linguist"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "mageknight-champion-cs"
 name: "Champion [CS]"
 tags: []
 featureId: mystic-combat-su

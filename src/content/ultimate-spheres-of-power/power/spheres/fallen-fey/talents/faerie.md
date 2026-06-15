@@ -1,4 +1,5 @@
 ---
+id: "faerie"
 name: "Faerie?"
 tier: basic
 tags: []

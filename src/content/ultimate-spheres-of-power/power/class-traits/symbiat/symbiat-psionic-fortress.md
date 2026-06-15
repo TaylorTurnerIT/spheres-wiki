@@ -1,4 +1,5 @@
 ---
+id: "symbiat-psionic-fortress"
 name: "Psionic Fortress"
 tags: []
 featureId: psionics-su

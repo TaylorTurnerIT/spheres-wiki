@@ -1,4 +1,5 @@
 ---
+id: "swiftwind-philter"
 name: "Swiftwind Philter"
 tier: "basic"
 tags:

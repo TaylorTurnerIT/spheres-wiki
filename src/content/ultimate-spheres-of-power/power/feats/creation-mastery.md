@@ -1,4 +1,5 @@
 ---
+id: "creation-mastery"
 name: "Creation Mastery"
 sphere: creation
 tags: []

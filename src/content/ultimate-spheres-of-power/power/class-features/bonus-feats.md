@@ -1,4 +1,5 @@
 ---
+id: "bonus-feats"
 name: "Bonus Feats"
 type: class-feature
 className: thaumaturge

@@ -1,4 +1,5 @@
 ---
+id: "magical-crafter"
 name: "Magical Crafter"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "dread"
 name: "Dread"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "friendly-banter"
 name: "Friendly Banter"
 tier: "base"
 tags:

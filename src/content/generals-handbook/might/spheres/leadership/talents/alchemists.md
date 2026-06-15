@@ -1,4 +1,5 @@
 ---
+id: "alchemists"
 name: "Alchemists"
 tier: "basic"
 tags:

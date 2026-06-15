@@ -1,4 +1,5 @@
 ---
+id: "impedance"
 name: "Impedance"
 tier: basic
 tags: ["aegis", "ward"]

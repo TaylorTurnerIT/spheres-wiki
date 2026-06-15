@@ -1,4 +1,5 @@
 ---
+id: "stampede"
 name: "Stampede"
 tier: "basic"
 tags: []

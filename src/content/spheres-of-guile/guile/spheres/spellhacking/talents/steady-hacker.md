@@ -1,4 +1,5 @@
 ---
+id: "steady-hacker"
 name: "Steady Hacker"
 tier: "basic"
 tags:

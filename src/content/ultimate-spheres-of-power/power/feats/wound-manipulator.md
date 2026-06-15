@@ -1,4 +1,5 @@
 ---
+id: "wound-manipulator"
 name: Wound Manipulator
 sphere: life
 dualSphere: alteration

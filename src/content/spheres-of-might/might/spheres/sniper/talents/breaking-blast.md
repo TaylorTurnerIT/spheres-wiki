@@ -1,4 +1,5 @@
 ---
+id: "breaking-blast"
 name: "Breaking Blast"
 tier: "basic"
 tags: []

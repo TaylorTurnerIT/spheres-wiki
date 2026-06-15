@@ -1,4 +1,5 @@
 ---
+id: "resounding-rally"
 name: "Resounding Rally"
 tier: basic
 tags: []

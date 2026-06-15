@@ -1,4 +1,5 @@
 ---
+id: "adept-gatherer"
 name: "Adept Gatherer"
 tier: "basic"
 tags:

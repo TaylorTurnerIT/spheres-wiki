@@ -1,4 +1,5 @@
 ---
+id: "gelid-body"
 name: "Gelid Body"
 tier: basic
 tags: ["cold", "mantle"]

@@ -1,4 +1,5 @@
 ---
+id: "feign-weakness"
 name: "Feign Weakness"
 tier: "basic"
 tags: []

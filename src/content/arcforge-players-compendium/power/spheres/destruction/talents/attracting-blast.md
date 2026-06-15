@@ -1,4 +1,5 @@
 ---
+id: "attracting-blast"
 name: "Attracting Blast"
 tier: basic
 tags: ["blast-type", "electricity"]

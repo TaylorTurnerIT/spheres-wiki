@@ -1,4 +1,5 @@
 ---
+id: "energy-sphere"
 name: "Energy Sphere"
 tier: basic
 tags: ["blast-shape"]

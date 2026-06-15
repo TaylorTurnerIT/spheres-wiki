@@ -1,4 +1,5 @@
 ---
+id: "expanded-materials"
 name: "Expanded Materials"
 tier: basic
 tags: ["material"]

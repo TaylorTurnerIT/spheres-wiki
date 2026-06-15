@@ -1,4 +1,5 @@
 ---
+id: "magnifying-blast"
 name: "Magnifying Blast"
 tier: advanced
 tags: ["blast-type"]

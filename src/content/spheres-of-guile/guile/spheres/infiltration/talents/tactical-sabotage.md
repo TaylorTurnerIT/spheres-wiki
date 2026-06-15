@@ -1,4 +1,5 @@
 ---
+id: "tactical-sabotage"
 name: "Tactical Sabotage"
 tier: "basic"
 tags: []

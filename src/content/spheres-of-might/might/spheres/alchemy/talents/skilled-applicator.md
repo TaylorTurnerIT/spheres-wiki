@@ -1,4 +1,5 @@
 ---
+id: "skilled-applicator"
 name: "Skilled Applicator"
 tier: "basic"
 tags: []

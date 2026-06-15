@@ -1,4 +1,5 @@
 ---
+id: "semaphore"
 name: "Semaphore"
 tier: "basic"
 tags: []

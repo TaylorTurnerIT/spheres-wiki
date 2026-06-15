@@ -1,4 +1,5 @@
 ---
+id: "nerve-venom"
 name: "Nerve Venom"
 tier: "basic"
 tags:

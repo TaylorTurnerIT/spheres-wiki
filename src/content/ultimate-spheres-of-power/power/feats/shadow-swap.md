@@ -1,4 +1,5 @@
 ---
+id: "shadow-swap"
 name: "Shadow Swap"
 sphere: dark
 tags: []

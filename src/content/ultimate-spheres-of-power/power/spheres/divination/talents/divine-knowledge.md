@@ -1,4 +1,5 @@
 ---
+id: "divine-knowledge"
 name: "Divine Knowledge"
 tier: advanced
 tags: ["utility", "divine"]

@@ -1,4 +1,5 @@
 ---
+id: "opportunist"
 name: "Opportunist"
 tier: "basic"
 tags: []

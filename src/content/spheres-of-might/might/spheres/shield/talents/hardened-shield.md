@@ -1,4 +1,5 @@
 ---
+id: "hardened-shield"
 name: "Hardened Shield"
 tier: "basic"
 tags: []

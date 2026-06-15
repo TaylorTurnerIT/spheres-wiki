@@ -1,4 +1,5 @@
 ---
+id: "shadow-talents"
 name: "Shadow Talents"
 tier: basic
 tags: []

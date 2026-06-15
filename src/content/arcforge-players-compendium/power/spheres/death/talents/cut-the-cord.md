@@ -1,4 +1,5 @@
 ---
+id: "cut-the-cord"
 name: "Cut The Cord"
 tier: advanced
 tags: []

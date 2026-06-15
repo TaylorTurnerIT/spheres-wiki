@@ -1,4 +1,5 @@
 ---
+id: "alloy-enhancement"
 name: Alloy Enhancement
 sphere: nature
 dualSphere: enhancement

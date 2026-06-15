@@ -1,4 +1,5 @@
 ---
+id: "drain"
 name: "Drain"
 tier: basic
 tags: ["ghost-strike", "program"]

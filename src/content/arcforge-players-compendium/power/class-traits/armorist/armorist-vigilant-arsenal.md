@@ -1,4 +1,5 @@
 ---
+id: "armorist-vigilant-arsenal"
 name: "Vigilant Arsenal"
 tags: []
 featureId: arsenal-trick

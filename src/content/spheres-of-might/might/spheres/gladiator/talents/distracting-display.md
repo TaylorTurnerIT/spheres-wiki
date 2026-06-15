@@ -1,4 +1,5 @@
 ---
+id: "distracting-display"
 name: "Distracting Display"
 tier: "basic"
 tags:

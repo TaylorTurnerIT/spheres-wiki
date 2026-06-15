@@ -1,4 +1,5 @@
 ---
+id: "favorable-momentum"
 name: "Favorable Momentum"
 tier: basic
 tags: ["momentum"]

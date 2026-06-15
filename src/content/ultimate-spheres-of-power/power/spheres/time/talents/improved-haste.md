@@ -1,4 +1,5 @@
 ---
+id: "improved-haste"
 name: "Improved Haste"
 tier: basic
 tags: []

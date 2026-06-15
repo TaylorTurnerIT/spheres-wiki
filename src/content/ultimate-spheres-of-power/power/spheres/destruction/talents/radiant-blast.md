@@ -1,4 +1,5 @@
 ---
+id: "radiant-blast"
 name: "Radiant Blast"
 tier: basic
 tags: ["blast-type", "light"]

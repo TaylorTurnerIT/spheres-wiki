@@ -1,4 +1,5 @@
 ---
+id: "stinking-companion"
 name: "Stinking Companion"
 tier: basic
 tags: ["form"]

@@ -1,4 +1,5 @@
 ---
+id: "rebuff-superior"
 name: "Rebuff, Superior"
 sphere: destruction
 tags: ["combat"]

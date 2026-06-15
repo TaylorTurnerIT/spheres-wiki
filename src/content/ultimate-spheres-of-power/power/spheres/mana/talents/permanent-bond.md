@@ -1,4 +1,5 @@
 ---
+id: "permanent-bond"
 name: "Permanent Bond"
 tier: advanced
 tags: []

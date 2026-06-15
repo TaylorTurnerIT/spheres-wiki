@@ -1,4 +1,5 @@
 ---
+id: "temporal-stasis"
 name: "Temporal Stasis"
 tier: advanced
 tags: []

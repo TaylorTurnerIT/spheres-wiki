@@ -1,4 +1,5 @@
 ---
+id: "foresee-conflict"
 name: "Foresee Conflict"
 tier: "advanced"
 tags:

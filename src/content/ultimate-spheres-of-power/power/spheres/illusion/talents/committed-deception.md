@@ -1,4 +1,5 @@
 ---
+id: "committed-deception"
 name: "Committed Deception"
 tier: basic
 tags: []

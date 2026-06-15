@@ -1,4 +1,5 @@
 ---
+id: "touchsense"
 name: "Touchsense"
 sphere: telekinesis
 tags: ["protokinesis"]

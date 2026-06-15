@@ -1,4 +1,5 @@
 ---
+id: "confident-sniper"
 name: "Confident Sniper"
 tier: "basic"
 tags: []

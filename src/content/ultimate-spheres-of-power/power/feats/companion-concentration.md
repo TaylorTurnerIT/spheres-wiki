@@ -1,4 +1,5 @@
 ---
+id: "companion-concentration"
 name: "Companion Concentration"
 sphere: conjuration
 tags: ["companion"]

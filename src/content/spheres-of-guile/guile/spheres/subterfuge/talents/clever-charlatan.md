@@ -1,4 +1,5 @@
 ---
+id: "clever-charlatan"
 name: "Clever Charlatan"
 tier: "basic"
 tags:

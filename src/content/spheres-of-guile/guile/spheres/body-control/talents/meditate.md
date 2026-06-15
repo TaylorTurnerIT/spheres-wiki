@@ -1,4 +1,5 @@
 ---
+id: "meditate"
 name: "Meditate"
 tier: "base"
 tags: []

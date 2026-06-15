@@ -1,4 +1,5 @@
 ---
+id: "sojourner"
 name: "Sojourner"
 tags:
   - "champion"

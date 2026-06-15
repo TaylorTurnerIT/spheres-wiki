@@ -1,4 +1,5 @@
 ---
+id: "good-for-what-ails-ya"
 name: "Good For What Ails Ya"
 tier: "advanced"
 tags: []

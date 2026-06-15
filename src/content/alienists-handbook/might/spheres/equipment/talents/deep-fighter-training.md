@@ -1,4 +1,5 @@
 ---
+id: "deep-fighter-training"
 name: "Deep Fighter Training"
 tier: "basic"
 tags:

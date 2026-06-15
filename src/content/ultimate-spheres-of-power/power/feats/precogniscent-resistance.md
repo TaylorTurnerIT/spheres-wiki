@@ -1,4 +1,5 @@
 ---
+id: "precogniscent-resistance"
 name: "Precogniscent Resistance"
 sphere: divination
 tags: ["combat"]

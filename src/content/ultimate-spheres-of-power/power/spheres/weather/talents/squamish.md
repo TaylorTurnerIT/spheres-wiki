@@ -1,4 +1,5 @@
 ---
+id: "squamish"
 name: "Squamish"
 tier: basic
 tags: ["shroud", "wind"]

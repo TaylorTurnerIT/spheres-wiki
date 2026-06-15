@@ -1,4 +1,5 @@
 ---
+id: "magical-misdirection"
 name: "Magical Misdirection"
 tier: basic
 tags: ["manabond"]

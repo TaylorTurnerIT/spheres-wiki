@@ -1,4 +1,5 @@
 ---
+id: "shattering-resonance"
 name: "Shattering Resonance"
 tier: "advanced"
 tags:

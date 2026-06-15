@@ -1,4 +1,5 @@
 ---
+id: "luminous-flame"
 name: Luminous Flame
 sphere: nature
 dualSphere: light

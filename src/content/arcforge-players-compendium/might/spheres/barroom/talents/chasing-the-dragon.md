@@ -1,4 +1,5 @@
 ---
+id: "chasing-the-dragon"
 name: "Chasing the Dragon"
 tier: "basic"
 tags: []

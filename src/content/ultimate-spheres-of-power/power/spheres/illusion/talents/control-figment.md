@@ -1,4 +1,5 @@
 ---
+id: "control-figment"
 name: "Control Figment"
 tier: basic
 tags: []

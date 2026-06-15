@@ -1,4 +1,5 @@
 ---
+id: "staff-mastery"
 name: "Staff Mastery"
 tier: "basic"
 tags: []

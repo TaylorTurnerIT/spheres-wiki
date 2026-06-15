@@ -1,4 +1,5 @@
 ---
+id: "manipulate-nature"
 name: "Manipulate Nature"
 tier: basic
 tags: ["geomancing"]

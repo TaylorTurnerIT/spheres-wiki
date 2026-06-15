@@ -1,4 +1,5 @@
 ---
+id: "hear-their-screams"
 name: "Hear Their Screams"
 tier: "basic"
 tags:

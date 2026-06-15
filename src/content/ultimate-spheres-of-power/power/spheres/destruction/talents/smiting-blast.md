@@ -1,4 +1,5 @@
 ---
+id: "smiting-blast"
 name: "Smiting Blast"
 tier: basic
 tags: ["blast-type", "holy"]

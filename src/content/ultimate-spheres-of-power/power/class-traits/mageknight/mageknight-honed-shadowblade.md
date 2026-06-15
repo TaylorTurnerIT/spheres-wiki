@@ -1,4 +1,5 @@
 ---
+id: "mageknight-honed-shadowblade"
 name: "Honed Shadowblade"
 tags: []
 featureId: mystic-combat-su

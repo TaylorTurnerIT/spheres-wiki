@@ -1,4 +1,5 @@
 ---
+id: "hungry-darkness"
 name: "Hungry Darkness"
 tier: basic
 tags: ["blot", "darkness"]

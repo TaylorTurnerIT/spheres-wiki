@@ -1,4 +1,5 @@
 ---
+id: "expert-eye"
 name: "Expert Eye"
 tier: "basic"
 tags:

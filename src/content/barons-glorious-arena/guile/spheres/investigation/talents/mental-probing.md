@@ -1,4 +1,5 @@
 ---
+id: "mental-probing"
 name: "Mental Probing"
 tier: "base"
 tags:

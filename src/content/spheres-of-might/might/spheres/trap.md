@@ -1,4 +1,5 @@
 ---
+id: "trap"
 name: "Trap"
 icon: "trap"
 tags: []

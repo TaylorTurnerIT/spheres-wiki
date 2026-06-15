@@ -1,4 +1,5 @@
 ---
+id: "shining-arsenal"
 name: "Shining Arsenal"
 tier: basic
 tags: ["light"]

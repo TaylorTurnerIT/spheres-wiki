@@ -1,4 +1,5 @@
 ---
+id: "implausible-deniability"
 name: Implausible Deniability
 sphere: mind
 dualSphere: illusion

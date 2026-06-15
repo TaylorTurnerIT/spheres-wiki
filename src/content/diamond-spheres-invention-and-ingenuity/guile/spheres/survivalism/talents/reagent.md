@@ -1,4 +1,5 @@
 ---
+id: "reagent"
 name: "Reagent"
 tier: "basic"
 tags:

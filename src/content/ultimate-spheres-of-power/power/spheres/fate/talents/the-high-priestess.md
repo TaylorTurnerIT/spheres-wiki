@@ -1,4 +1,5 @@
 ---
+id: "the-high-priestess"
 name: "The High Priestess"
 tier: advanced
 tags: ["motif"]

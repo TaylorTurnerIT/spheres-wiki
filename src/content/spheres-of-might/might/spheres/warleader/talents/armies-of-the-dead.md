@@ -1,4 +1,5 @@
 ---
+id: "armies-of-the-dead"
 name: "Armies Of The Dead"
 tier: "advanced"
 tags: []

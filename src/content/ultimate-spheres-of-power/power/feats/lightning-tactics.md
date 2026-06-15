@@ -1,4 +1,5 @@
 ---
+id: "lightning-tactics"
 name: "Lightning Tactics"
 sphere: war
 tags: ["squadron"]

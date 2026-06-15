@@ -1,4 +1,5 @@
 ---
+id: "shifting-disguise"
 name: "Shifting Disguise"
 sphere: alteration
 tags: []

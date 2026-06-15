@@ -1,4 +1,5 @@
 ---
+id: "herding-fusillade"
 name: "Herding Fusillade"
 tier: "basic"
 tags:

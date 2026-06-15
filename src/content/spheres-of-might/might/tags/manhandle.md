@@ -1,4 +1,5 @@
 ---
+id: "manhandle"
 label: "Manhandle"
 sphere: "brute"
 priority: 0

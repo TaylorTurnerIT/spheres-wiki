@@ -1,4 +1,5 @@
 ---
+id: "gore-blast"
 name: "Gore Blast"
 tier: basic
 tags: ["blast-type", "negative"]

@@ -1,4 +1,5 @@
 ---
+id: "idle-concentration"
 name: "Idle Concentration"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "soul-drain"
 name: "Soul Drain"
 tier: advanced
 tags: ["extraordinary"]

@@ -1,4 +1,5 @@
 ---
+id: "energy-snake"
 name: "Energy Snake"
 sphere: destruction
 tags: ["combat"]

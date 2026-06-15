@@ -1,4 +1,5 @@
 ---
+id: "singularity"
 name: "Singularity"
 tier: "advanced"
 tags:

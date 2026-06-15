@@ -1,4 +1,5 @@
 ---
+id: "mageknight-imbued-weapon"
 name: "Imbued Weapon"
 tags: ["supernatural"]
 featureId: mystic-combat-su

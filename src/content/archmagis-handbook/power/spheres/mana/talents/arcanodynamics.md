@@ -1,4 +1,5 @@
 ---
+id: "arcanodynamics"
 name: "Arcanodynamics"
 tier: basic
 tags: ["amp", "manipulation"]

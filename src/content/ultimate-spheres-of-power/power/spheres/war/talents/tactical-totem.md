@@ -1,4 +1,5 @@
 ---
+id: "tactical-totem"
 name: "Tactical Totem"
 tier: basic
 tags: ["totem"]

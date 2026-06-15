@@ -1,4 +1,5 @@
 ---
+id: "stop-drop-and-control"
 name: "Stop Drop And Control"
 tier: "basic"
 tags: []

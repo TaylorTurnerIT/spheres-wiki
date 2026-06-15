@@ -1,4 +1,5 @@
 ---
+id: "the-knight"
 name: "The Knight"
 tier: basic
 tags: ["motif"]

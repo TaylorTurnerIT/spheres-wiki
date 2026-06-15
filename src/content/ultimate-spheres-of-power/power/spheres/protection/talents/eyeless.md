@@ -1,4 +1,5 @@
 ---
+id: "eyeless"
 name: "Eyeless"
 tier: basic
 tags: ["aegis"]

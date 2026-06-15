@@ -1,4 +1,5 @@
 ---
+id: "trapper"
 name: "Trapper"
 tier: "basic"
 tags:

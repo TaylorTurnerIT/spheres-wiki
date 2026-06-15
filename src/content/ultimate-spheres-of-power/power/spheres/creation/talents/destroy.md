@@ -1,4 +1,5 @@
 ---
+id: "destroy"
 name: "Destroy"
 tier: basic
 tags: []

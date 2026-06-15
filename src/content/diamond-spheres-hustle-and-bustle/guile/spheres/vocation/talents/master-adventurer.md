@@ -1,4 +1,5 @@
 ---
+id: "master-adventurer"
 name: "Master Adventurer"
 tier: "advanced"
 tags: []

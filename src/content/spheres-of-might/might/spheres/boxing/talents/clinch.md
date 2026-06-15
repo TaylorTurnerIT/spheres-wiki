@@ -1,4 +1,5 @@
 ---
+id: "clinch"
 name: "Clinch"
 tier: "basic"
 tags:

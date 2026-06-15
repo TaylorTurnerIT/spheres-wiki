@@ -1,4 +1,5 @@
 ---
+id: "knowledge-drain"
 name: "Knowledge Drain"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "alone-in-a-crowd"
 name: "Alone in a Crowd"
 tier: "basic"
 tags:

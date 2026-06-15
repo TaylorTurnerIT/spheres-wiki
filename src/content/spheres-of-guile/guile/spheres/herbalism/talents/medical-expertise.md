@@ -1,4 +1,5 @@
 ---
+id: "medical-expertise"
 name: "Medical Expertise"
 tier: "base"
 tags:

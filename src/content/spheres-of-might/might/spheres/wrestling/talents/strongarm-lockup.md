@@ -1,4 +1,5 @@
 ---
+id: "strongarm-lockup"
 name: "Strongarm Lockup"
 tier: "basic"
 tags: []

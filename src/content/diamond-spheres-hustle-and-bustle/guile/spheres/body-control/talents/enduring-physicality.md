@@ -1,4 +1,5 @@
 ---
+id: "enduring-physicality"
 name: "Enduring Physicality"
 tier: "base"
 tags:

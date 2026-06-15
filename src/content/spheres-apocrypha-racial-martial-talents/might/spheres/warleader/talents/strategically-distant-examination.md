@@ -1,4 +1,5 @@
 ---
+id: "strategically-distant-examination"
 name: "Strategically Distant Examination"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "outsider-body"
 name: "Outsider Body"
 tier: basic
 tags: ["body"]

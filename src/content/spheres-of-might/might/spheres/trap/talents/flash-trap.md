@@ -1,4 +1,5 @@
 ---
+id: "flash-trap"
 name: "Flash Trap"
 tier: "basic"
 tags:

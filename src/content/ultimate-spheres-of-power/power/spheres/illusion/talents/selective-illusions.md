@@ -1,4 +1,5 @@
 ---
+id: "selective-illusions"
 name: "Selective Illusions"
 tier: basic
 tags: []

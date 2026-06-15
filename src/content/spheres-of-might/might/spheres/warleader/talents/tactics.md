@@ -1,4 +1,5 @@
 ---
+id: "tactics"
 name: "Tactics"
 tier: "base"
 tags: []

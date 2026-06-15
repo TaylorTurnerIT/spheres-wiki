@@ -1,4 +1,5 @@
 ---
+id: "death-blossom"
 name: "Death Blossom"
 tier: "advanced"
 tags: []

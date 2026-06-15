@@ -1,4 +1,5 @@
 ---
+id: "spear-dancer"
 name: "Spear Dancer"
 tier: "basic"
 tags: []

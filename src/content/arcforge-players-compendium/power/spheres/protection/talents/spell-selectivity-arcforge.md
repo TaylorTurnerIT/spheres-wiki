@@ -1,4 +1,5 @@
 ---
+id: "spell-selectivity-arcforge"
 name: "Spell Selectivity [Arcforge Addendum]"
 tier: advanced
 tags: []

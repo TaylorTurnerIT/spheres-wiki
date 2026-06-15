@@ -1,4 +1,5 @@
 ---
+id: "strongarm"
 name: "Strongarm"
 tier: "basic"
 tags:

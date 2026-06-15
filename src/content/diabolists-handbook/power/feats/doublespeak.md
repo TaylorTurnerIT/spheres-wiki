@@ -1,4 +1,5 @@
 ---
+id: "doublespeak"
 name: Doublespeak
 sphere: mind
 dualSphere: fate

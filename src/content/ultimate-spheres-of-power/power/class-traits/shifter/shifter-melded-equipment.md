@@ -1,4 +1,5 @@
 ---
+id: "shifter-melded-equipment"
 name: "Melded Equipment"
 tags: ["supernatural"]
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "mageknight-mark-of-pain"
 name: "Mark of Pain"
 tags: []
 featureId: mystic-combat-su

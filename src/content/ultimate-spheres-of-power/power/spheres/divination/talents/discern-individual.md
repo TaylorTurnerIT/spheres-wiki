@@ -1,4 +1,5 @@
 ---
+id: "discern-individual"
 name: "Discern Individual"
 tier: basic
 tags: ["sense"]

@@ -1,4 +1,5 @@
 ---
+id: "community-awareness"
 name: "Community Awareness"
 tier: "basic"
 tags:

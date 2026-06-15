@@ -1,4 +1,5 @@
 ---
+id: "spirit-form"
 name: Spirit Form
 sphere: nature
 dualSphere: alteration

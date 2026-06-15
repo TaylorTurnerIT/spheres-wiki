@@ -1,4 +1,5 @@
 ---
+id: "wild-empathy-ex"
 name: "Wild Empathy (Ex)"
 type: class-feature
 className: shifter

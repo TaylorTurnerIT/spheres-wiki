@@ -1,4 +1,5 @@
 ---
+id: "totem-of-deep-thought"
 name: "Totem Of Deep Thought"
 tier: basic
 tags: ["totem"]

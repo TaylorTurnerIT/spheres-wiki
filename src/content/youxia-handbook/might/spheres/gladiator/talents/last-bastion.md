@@ -1,4 +1,5 @@
 ---
+id: "last-bastion"
 name: "Last Bastion"
 tier: "basic"
 tags:

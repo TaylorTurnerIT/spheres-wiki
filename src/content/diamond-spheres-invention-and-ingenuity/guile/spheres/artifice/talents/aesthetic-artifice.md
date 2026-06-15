@@ -1,4 +1,5 @@
 ---
+id: "aesthetic-artifice"
 name: "Aesthetic Artifice"
 tier: "basic"
 tags:

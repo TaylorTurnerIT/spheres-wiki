@@ -1,4 +1,5 @@
 ---
+id: "whisking-disarm"
 name: "Whisking Disarm"
 tier: "basic"
 tags:

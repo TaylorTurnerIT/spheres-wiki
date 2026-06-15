@@ -1,4 +1,5 @@
 ---
+id: "flexible-contemplation"
 name: "Flexible Contemplation"
 tier: "basic"
 tags: []

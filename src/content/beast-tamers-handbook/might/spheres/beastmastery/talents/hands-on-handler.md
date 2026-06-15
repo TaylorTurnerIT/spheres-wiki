@@ -1,4 +1,5 @@
 ---
+id: "hands-on-handler"
 name: "Hands-On Handler"
 tier: "basic"
 tags:

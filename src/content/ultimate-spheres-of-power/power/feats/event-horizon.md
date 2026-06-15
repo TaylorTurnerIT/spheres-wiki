@@ -1,4 +1,5 @@
 ---
+id: "event-horizon"
 name: Event Horizon
 sphere: telekinesis
 dualSphere: dark

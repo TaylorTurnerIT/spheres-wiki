@@ -1,4 +1,5 @@
 ---
+id: "costly-creation"
 name: "Costly Creation"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "tactical-trick"
 name: "Tactical Trick"
 tier: "basic"
 tags: []

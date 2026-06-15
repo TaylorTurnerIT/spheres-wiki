@@ -1,4 +1,5 @@
 ---
+id: "sequestered-support"
 name: "Sequestered Support"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "boundless-wit"
 name: "Boundless Wit"
 tier: "base"
 tags:

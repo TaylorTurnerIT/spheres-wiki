@@ -1,4 +1,5 @@
 ---
+id: "plexing-boon"
 name: Plexing Boon
 sphere: protection
 dualSphere: enhancement

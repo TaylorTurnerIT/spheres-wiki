@@ -1,4 +1,5 @@
 ---
+id: "insinuating-incantation"
 name: "Insinuating Incantation"
 tags:
   - "champion"

@@ -1,4 +1,5 @@
 ---
+id: "faceful-of-shrapnel"
 name: "Faceful Of Shrapnel"
 tier: "basic"
 tags: []

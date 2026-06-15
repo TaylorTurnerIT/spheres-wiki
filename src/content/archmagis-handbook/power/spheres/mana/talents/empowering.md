@@ -1,4 +1,5 @@
 ---
+id: "empowering"
 name: "Empowering"
 tier: basic
 tags: ["manabond"]

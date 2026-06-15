@@ -1,4 +1,5 @@
 ---
+id: "death-sphere-as-evil"
 name: "Death Sphere as Evil"
 tier: basic
 tags: []

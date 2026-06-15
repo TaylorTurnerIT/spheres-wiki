@@ -1,4 +1,5 @@
 ---
+id: "elemental-creature"
 name: "Elemental Creature"
 tier: basic
 tags: ["form"]

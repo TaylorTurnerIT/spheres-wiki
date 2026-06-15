@@ -1,4 +1,5 @@
 ---
+id: "psionics-su"
 name: "Psionics (Su)"
 type: class-feature
 className: symbiat

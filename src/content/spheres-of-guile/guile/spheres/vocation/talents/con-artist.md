@@ -1,4 +1,5 @@
 ---
+id: "con-artist"
 name: "Con Artist"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "mageknight-combat-talent-cs"
 name: "Combat Talent [CS]"
 tags: []
 featureId: mystic-combat-su

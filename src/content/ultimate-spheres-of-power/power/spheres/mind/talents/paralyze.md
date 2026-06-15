@@ -1,4 +1,5 @@
 ---
+id: "paralyze"
 name: "Paralyze"
 tier: basic
 tags: ["charm"]

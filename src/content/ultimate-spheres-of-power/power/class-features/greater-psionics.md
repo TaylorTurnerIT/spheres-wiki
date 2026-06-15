@@ -1,4 +1,5 @@
 ---
+id: "greater-psionics"
 name: "Greater Psionics"
 type: class-feature
 className: symbiat

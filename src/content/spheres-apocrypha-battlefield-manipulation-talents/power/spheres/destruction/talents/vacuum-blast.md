@@ -1,4 +1,5 @@
 ---
+id: "vacuum-blast"
 name: "Vacuum Blast"
 tier: basic
 tags: ["air", "blast-type"]

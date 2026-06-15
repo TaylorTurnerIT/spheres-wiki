@@ -1,4 +1,5 @@
 ---
+id: "arcane-armor"
 name: "Arcane Armor"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "scrutinize"
 name: "Scrutinize"
 tier: "base"
 tags: []

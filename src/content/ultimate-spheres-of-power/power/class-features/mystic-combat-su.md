@@ -1,4 +1,5 @@
 ---
+id: "mystic-combat-su"
 name: "Mystic Combat (Su)"
 type: class-feature
 className: mageknight

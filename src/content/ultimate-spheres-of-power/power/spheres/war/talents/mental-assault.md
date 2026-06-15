@@ -1,4 +1,5 @@
 ---
+id: "mental-assault"
 name: "Mental Assault"
 tier: basic
 tags: []

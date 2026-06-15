@@ -1,4 +1,5 @@
 ---
+id: "the-hanged-man"
 name: "The Hanged Man"
 tier: basic
 tags: ["motif"]

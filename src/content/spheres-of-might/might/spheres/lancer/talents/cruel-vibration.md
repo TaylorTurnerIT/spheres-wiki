@@ -1,4 +1,5 @@
 ---
+id: "cruel-vibration"
 name: "Cruel Vibration"
 tier: "basic"
 tags:

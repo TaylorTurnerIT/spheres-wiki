@@ -1,4 +1,5 @@
 ---
+id: "shifter-learned-behavior"
 name: "Learned Behavior"
 tags: []
 featureId: bestial-trait

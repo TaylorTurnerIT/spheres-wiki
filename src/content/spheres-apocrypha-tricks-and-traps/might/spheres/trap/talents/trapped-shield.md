@@ -1,4 +1,5 @@
 ---
+id: "trapped-shield"
 name: "Trapped Shield"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "baleful-storm"
 name: Baleful Storm
 sphere: weather
 dualSphere: death

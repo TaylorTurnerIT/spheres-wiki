@@ -1,4 +1,5 @@
 ---
+id: "admixture"
 name: Admixture
 tier: basic
 tags: []

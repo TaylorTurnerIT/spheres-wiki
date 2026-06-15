@@ -1,4 +1,5 @@
 ---
+id: "puppets-curse"
 name: "Puppet's Curse"
 tier: advanced
 tags: []

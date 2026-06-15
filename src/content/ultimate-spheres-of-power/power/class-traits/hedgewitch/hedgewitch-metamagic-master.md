@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-metamagic-master"
 name: "Metamagic Master"
 tags: []
 featureId: grand-secrets

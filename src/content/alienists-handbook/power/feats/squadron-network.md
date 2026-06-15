@@ -1,4 +1,5 @@
 ---
+id: "squadron-network"
 name: "Squadron Network"
 sphere: war
 tags: ["squadron"]

@@ -1,4 +1,5 @@
 ---
+id: "uncanny-dodge-ex"
 name: "Uncanny Dodge (Ex)"
 type: class-feature
 className: symbiat

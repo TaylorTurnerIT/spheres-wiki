@@ -1,4 +1,5 @@
 ---
+id: "enforcer-training"
 name: "Enforcer Training"
 tier: "basic"
 tags:

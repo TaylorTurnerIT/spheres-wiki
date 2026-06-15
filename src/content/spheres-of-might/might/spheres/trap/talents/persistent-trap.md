@@ -1,4 +1,5 @@
 ---
+id: "persistent-trap"
 name: "Persistent Trap"
 tier: "basic"
 tags: []

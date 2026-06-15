@@ -1,4 +1,5 @@
 ---
+id: "dancing-display"
 name: "Dancing Display"
 tier: "basic"
 tags: []

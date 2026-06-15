@@ -1,4 +1,5 @@
 ---
+id: "armor-training"
 name: "Armor Training"
 tier: "basic"
 tags: []

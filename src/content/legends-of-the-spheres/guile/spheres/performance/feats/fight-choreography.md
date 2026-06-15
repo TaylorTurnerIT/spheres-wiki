@@ -1,4 +1,5 @@
 ---
+id: "fight-choreography"
 name: "Fight Choreography"
 tags:
   - "champion"

@@ -1,4 +1,5 @@
 ---
+id: "painful-aegis"
 name: "Painful Aegis"
 tier: basic
 tags: ["aegis"]

@@ -1,4 +1,5 @@
 ---
+id: "courageous-chorus"
 name: "Courageous Chorus"
 tier: "basic"
 tags:

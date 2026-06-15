@@ -1,4 +1,5 @@
 ---
+id: "tandem-enchantment"
 name: "Tandem Enchantment"
 tier: "advanced"
 tags: []

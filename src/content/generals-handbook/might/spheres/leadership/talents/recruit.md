@@ -1,4 +1,5 @@
 ---
+id: "recruit"
 name: "Recruit"
 tier: "base"
 tags: []

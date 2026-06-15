@@ -1,4 +1,5 @@
 ---
+id: "fate"
 name: "Fate"
 icon: fate
 description: "You command cosmic forces including luck, destiny, and alignment."

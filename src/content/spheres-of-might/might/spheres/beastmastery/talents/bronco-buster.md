@@ -1,4 +1,5 @@
 ---
+id: "bronco-buster"
 name: "Bronco Buster"
 tier: "basic"
 tags:

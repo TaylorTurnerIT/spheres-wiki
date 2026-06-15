@@ -1,4 +1,5 @@
 ---
+id: "store-structure"
 name: "Store Structure"
 tier: advanced
 tags: []

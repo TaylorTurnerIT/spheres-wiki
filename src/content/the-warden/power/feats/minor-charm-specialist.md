@@ -1,4 +1,5 @@
 ---
+id: "minor-charm-specialist"
 name: "Minor Charm Specialist"
 sphere: mind
 tags: ["warden"]

@@ -1,4 +1,5 @@
 ---
+id: "temporal-trap"
 name: "Temporal Trap"
 tier: basic
 tags: []

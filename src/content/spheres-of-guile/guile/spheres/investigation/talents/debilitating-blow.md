@@ -1,4 +1,5 @@
 ---
+id: "debilitating-blow"
 name: "Debilitating Blow"
 tier: "basic"
 tags:

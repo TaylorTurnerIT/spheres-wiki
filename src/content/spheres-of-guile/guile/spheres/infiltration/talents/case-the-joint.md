@@ -1,4 +1,5 @@
 ---
+id: "case-the-joint"
 name: "Case The Joint"
 tier: "basic"
 tags:

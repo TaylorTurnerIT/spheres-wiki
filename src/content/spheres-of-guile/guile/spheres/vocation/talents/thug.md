@@ -1,4 +1,5 @@
 ---
+id: "thug"
 name: "Thug"
 tier: "basic"
 tags:

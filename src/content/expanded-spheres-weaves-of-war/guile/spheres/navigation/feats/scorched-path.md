@@ -1,4 +1,5 @@
 ---
+id: "scorched-path"
 name: "Scorched Path"
 tags:
   - "champion"

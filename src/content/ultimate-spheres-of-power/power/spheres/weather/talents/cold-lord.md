@@ -1,4 +1,5 @@
 ---
+id: "cold-lord"
 name: "Cold Lord"
 tier: advanced
 tags: []

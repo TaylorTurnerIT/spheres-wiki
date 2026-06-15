@@ -1,4 +1,5 @@
 ---
+id: "concealed-command"
 name: "Concealed Command"
 sphere: illusion
 tags: []

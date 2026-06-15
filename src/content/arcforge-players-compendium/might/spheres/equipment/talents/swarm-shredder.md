@@ -1,4 +1,5 @@
 ---
+id: "swarm-shredder"
 name: "Swarm Shredder"
 tier: "basic"
 tags: []

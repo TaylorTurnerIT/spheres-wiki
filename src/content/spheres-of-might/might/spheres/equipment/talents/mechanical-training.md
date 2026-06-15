@@ -1,4 +1,5 @@
 ---
+id: "mechanical-training"
 name: "Mechanical Training"
 tier: "basic"
 tags:

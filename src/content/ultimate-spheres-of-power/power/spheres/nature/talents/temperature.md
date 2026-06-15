@@ -1,4 +1,5 @@
 ---
+id: "temperature"
 name: "Temperature"
 tier: basic
 tags: ["fire", "geomancing"]

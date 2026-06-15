@@ -1,4 +1,5 @@
 ---
+id: "what-is-it-good-for"
 name: "What Is It Good For?"
 tier: basic
 tags: ["totem"]

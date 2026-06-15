@@ -1,4 +1,5 @@
 ---
+id: "determined-stalker"
 name: Determined Stalker
 level: 3
 tags: []

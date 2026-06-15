@@ -1,4 +1,5 @@
 ---
+id: "destroy-element"
 name: "Destroy Element"
 tier: basic
 tags: ["spirit"]

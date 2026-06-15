@@ -1,4 +1,5 @@
 ---
+id: "tactical-animation"
 name: "Tactical Animation"
 sphere: enhancement
 tags: []

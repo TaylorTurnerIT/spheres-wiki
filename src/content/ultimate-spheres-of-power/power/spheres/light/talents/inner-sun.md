@@ -1,4 +1,5 @@
 ---
+id: "inner-sun"
 name: "Inner Sun"
 tier: basic
 tags: ["light"]

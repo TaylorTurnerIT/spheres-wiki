@@ -1,4 +1,5 @@
 ---
+id: "fey-adept-companion"
 name: "Companion"
 tags: []
 featureId: shadowstuff

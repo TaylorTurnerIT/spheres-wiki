@@ -1,4 +1,5 @@
 ---
+id: "steady-gunner"
 name: "Steady Gunner"
 tier: "advanced"
 tags: []

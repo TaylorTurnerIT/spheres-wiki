@@ -1,4 +1,5 @@
 ---
+id: "instant-foam"
 name: "Instant Foam"
 tier: "basic"
 tags:

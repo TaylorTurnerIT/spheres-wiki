@@ -1,4 +1,5 @@
 ---
+id: "extra-companion"
 name: "Extra Companion"
 tier: basic
 tags: []

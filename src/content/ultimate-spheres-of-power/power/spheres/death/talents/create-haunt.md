@@ -1,4 +1,5 @@
 ---
+id: "create-haunt"
 name: "Create Haunt"
 tier: advanced
 tags: []

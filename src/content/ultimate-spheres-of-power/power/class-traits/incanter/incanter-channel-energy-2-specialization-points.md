@@ -1,4 +1,5 @@
 ---
+id: "incanter-channel-energy-2-specialization-points"
 name: "Channel Energy (2 specialization points)"
 tags: []
 featureId: incanter-specializations

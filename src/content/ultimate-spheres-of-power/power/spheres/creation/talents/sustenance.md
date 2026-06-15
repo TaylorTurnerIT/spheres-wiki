@@ -1,4 +1,5 @@
 ---
+id: "sustenance"
 name: "Sustenance"
 tier: advanced
 tags: ["material", "utility"]

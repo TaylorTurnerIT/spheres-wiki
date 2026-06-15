@@ -1,4 +1,5 @@
 ---
+id: "misleading-magic"
 name: "Misleading Magic"
 tier: "basic"
 tags:

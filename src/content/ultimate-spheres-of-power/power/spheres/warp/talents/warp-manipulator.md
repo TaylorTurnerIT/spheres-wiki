@@ -1,4 +1,5 @@
 ---
+id: "warp-manipulator"
 name: "Warp Manipulator"
 tier: advanced
 tags: []

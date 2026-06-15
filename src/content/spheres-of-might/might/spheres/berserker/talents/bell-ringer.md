@@ -1,4 +1,5 @@
 ---
+id: "bell-ringer"
 name: "Bell-Ringer"
 tier: "basic"
 tags:

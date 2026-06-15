@@ -1,4 +1,5 @@
 ---
+id: "self-control"
 name: "Self Control"
 tier: basic
 tags: []

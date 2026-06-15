@@ -1,4 +1,5 @@
 ---
+id: "deadly-vision"
 name: "Deadly Vision"
 tier: advanced
 tags: ["charm"]

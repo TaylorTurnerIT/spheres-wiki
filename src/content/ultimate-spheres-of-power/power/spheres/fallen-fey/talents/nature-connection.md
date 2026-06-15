@@ -1,4 +1,5 @@
 ---
+id: "nature-connection"
 name: "Nature-Connection"
 tier: basic
 tags: ["fey-blessing"]

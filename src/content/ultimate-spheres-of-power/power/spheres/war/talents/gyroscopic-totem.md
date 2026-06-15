@@ -1,4 +1,5 @@
 ---
+id: "gyroscopic-totem"
 name: "Gyroscopic Totem"
 tier: basic
 tags: ["totem"]

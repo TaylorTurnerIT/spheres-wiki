@@ -1,4 +1,5 @@
 ---
+id: "spatial-storage"
 name: "Spatial Storage"
 tags:
   - "champion"

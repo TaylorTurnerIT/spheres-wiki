@@ -1,4 +1,5 @@
 ---
+id: "shocking-gossip"
 name: "Shocking Gossip"
 tier: "basic"
 tags:

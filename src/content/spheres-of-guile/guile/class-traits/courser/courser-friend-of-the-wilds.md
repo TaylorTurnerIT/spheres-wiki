@@ -1,4 +1,5 @@
 ---
+id: "courser-friend-of-the-wilds"
 name: Friend of the Wilds
 featureId: courser-ventures
 tags: []

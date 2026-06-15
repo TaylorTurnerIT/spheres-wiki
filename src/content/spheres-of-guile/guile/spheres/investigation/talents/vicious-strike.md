@@ -1,4 +1,5 @@
 ---
+id: "vicious-strike"
 name: "Vicious Strike"
 tier: "basic"
 tags:

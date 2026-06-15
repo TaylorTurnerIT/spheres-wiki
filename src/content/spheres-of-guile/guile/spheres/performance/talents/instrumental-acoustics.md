@@ -1,4 +1,5 @@
 ---
+id: "instrumental-acoustics"
 name: "Instrumental Acoustics"
 tier: "base"
 tags:

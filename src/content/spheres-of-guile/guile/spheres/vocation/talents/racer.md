@@ -1,4 +1,5 @@
 ---
+id: "racer"
 name: "Racer"
 tier: "basic"
 tags:

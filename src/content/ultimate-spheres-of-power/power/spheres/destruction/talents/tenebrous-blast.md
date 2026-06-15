@@ -1,4 +1,5 @@
 ---
+id: "tenebrous-blast"
 name: "Tenebrous Blast"
 tier: basic
 tags: ["blast-type", "negative"]

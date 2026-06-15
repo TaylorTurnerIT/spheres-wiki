@@ -1,4 +1,5 @@
 ---
+id: "master-of-deception"
 name: "Master Of Deception"
 tier: "advanced"
 tags: []

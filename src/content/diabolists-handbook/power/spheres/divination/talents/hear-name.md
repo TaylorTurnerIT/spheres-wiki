@@ -1,4 +1,5 @@
 ---
+id: "hear-name"
 name: "Hear Name"
 tier: advanced
 tags: ["utility", "sense"]

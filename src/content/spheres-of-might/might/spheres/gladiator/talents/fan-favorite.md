@@ -1,4 +1,5 @@
 ---
+id: "fan-favorite"
 name: "Fan Favorite"
 tier: "basic"
 tags: []

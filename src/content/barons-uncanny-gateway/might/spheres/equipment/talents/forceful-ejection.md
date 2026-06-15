@@ -1,4 +1,5 @@
 ---
+id: "forceful-ejection"
 name: "Forceful Ejection"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "conquer"
 name: "Conquer"
 tier: advanced
 tags: ["manipulation"]

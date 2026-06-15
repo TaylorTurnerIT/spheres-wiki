@@ -1,4 +1,5 @@
 ---
+id: "theatrical-boast"
 name: "Theatrical Boast"
 tier: "basic"
 tags: []

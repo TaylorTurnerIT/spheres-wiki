@@ -1,4 +1,5 @@
 ---
+id: "telekinesis"
 name: "Telekinesis"
 icon: telekinesis
 description: "You can lift and move objects through magic."

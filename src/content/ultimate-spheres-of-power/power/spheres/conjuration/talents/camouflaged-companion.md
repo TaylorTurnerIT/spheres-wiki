@@ -1,4 +1,5 @@
 ---
+id: "camouflaged-companion"
 name: "Camouflaged Companion"
 tier: basic
 tags: ["form"]

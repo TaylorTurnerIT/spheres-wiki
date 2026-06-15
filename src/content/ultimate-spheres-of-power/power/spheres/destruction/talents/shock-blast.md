@@ -1,4 +1,5 @@
 ---
+id: "shock-blast"
 name: "Shock Blast"
 tier: basic
 tags: ["blast-type", "electricity"]

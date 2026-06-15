@@ -1,4 +1,5 @@
 ---
+id: "lingering-slight"
 name: "Lingering Slight"
 tier: "basic"
 tags: []

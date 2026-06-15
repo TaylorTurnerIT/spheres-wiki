@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-item-lore"
 name: "Item Lore"
 tags: []
 featureId: invocations

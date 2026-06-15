@@ -1,4 +1,5 @@
 ---
+id: "elementalist"
 name: "Elementalist"
 tags: []
 hitDie: 8

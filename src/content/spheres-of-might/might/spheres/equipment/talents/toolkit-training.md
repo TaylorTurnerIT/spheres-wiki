@@ -1,4 +1,5 @@
 ---
+id: "toolkit-training"
 name: "Toolkit Training"
 tier: "basic"
 tags:

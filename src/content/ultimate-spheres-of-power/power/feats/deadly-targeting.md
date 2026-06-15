@@ -1,4 +1,5 @@
 ---
+id: "deadly-targeting"
 name: "Deadly Targeting"
 sphere: destruction
 tags: ["combat"]

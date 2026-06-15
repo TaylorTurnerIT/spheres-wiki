@@ -1,4 +1,5 @@
 ---
+id: "dazzler"
 name: "Dazzler"
 tier: "basic"
 tags:

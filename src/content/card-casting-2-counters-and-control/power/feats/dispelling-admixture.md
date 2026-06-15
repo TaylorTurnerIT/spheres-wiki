@@ -1,4 +1,5 @@
 ---
+id: "dispelling-admixture"
 name: "Dispelling Admixture"
 sphere: destruction
 tags: ["admixture", "counterspell"]

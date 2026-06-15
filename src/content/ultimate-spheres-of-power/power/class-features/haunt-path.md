@@ -1,4 +1,5 @@
 ---
+id: "haunt-path"
 name: "Haunt Path"
 type: class-feature
 className: wraith

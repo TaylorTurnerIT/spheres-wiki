@@ -1,4 +1,5 @@
 ---
+id: "mechanical-counterintelligence"
 name: "Mechanical Counterintelligence"
 tier: advanced
 tags: []

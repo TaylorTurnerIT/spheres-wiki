@@ -1,4 +1,5 @@
 ---
+id: "extreme-acclimation"
 name: "Extreme Acclimation"
 tier: "basic"
 tags:

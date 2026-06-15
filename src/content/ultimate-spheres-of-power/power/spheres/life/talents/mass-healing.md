@@ -1,4 +1,5 @@
 ---
+id: "mass-healing"
 name: "Mass Healing"
 tier: basic
 tags: ["mass"]

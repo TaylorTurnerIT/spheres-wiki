@@ -1,4 +1,5 @@
 ---
+id: "infuriating-insult"
 name: "Infuriating Insult"
 tier: "basic"
 tags:

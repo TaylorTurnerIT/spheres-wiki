@@ -1,4 +1,5 @@
 ---
+id: "machine-hacker"
 name: "Machine Hacker"
 tier: "basic"
 tags: []

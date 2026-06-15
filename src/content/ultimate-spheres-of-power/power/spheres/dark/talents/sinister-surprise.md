@@ -1,4 +1,5 @@
 ---
+id: "sinister-surprise"
 name: "Sinister Surprise"
 tier: basic
 tags: []

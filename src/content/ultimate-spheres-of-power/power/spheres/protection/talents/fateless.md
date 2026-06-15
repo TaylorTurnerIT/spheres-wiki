@@ -1,4 +1,5 @@
 ---
+id: "fateless"
 name: "Fateless"
 tier: basic
 tags: ["aegis"]

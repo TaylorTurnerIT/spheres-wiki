@@ -1,4 +1,5 @@
 ---
+id: "focusing-poisoning"
 name: "Focusing Poisoning"
 tier: "basic"
 tags: []

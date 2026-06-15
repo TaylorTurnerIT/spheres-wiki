@@ -1,4 +1,5 @@
 ---
+id: "mageknight-enchanted-touch-core"
 name: "Enchanted Touch [Core]"
 tags: []
 featureId: mystic-combat-su

@@ -1,4 +1,5 @@
 ---
+id: "talented"
 name: "Talented"
 tier: "basic"
 tags:

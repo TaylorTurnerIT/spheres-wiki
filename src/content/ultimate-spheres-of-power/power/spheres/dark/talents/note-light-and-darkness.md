@@ -1,4 +1,5 @@
 ---
+id: "note-light-and-darkness"
 name: "Note: Light And Darkness"
 tier: basic
 tags: []

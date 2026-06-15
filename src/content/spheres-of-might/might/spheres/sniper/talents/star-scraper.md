@@ -1,4 +1,5 @@
 ---
+id: "star-scraper"
 name: "Star Scraper"
 tier: "advanced"
 tags:

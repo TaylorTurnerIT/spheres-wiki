@@ -1,4 +1,5 @@
 ---
+id: "call-planar-creature"
 name: "Call Planar Creature"
 tier: advanced
 tags: []

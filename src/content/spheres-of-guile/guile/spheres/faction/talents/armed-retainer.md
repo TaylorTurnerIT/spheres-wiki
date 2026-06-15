@@ -1,4 +1,5 @@
 ---
+id: "armed-retainer"
 name: "Armed Retainer"
 tier: "basic"
 tags:

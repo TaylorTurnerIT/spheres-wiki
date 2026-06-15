@@ -1,4 +1,5 @@
 ---
+id: "mageknight-bloodlust-core"
 name: "Bloodlust [Core]"
 tags: []
 featureId: mystic-combat-su

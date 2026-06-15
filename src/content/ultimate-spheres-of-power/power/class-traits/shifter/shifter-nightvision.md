@@ -1,4 +1,5 @@
 ---
+id: "shifter-nightvision"
 name: "Nightvision"
 tags: []
 featureId: bestial-trait

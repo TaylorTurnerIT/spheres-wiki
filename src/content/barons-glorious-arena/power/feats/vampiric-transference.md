@@ -1,4 +1,5 @@
 ---
+id: "vampiric-transference"
 name: "Vampiric Transference"
 sphere: life
 tags: []

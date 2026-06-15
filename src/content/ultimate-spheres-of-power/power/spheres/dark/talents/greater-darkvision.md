@@ -1,4 +1,5 @@
 ---
+id: "greater-darkvision"
 name: "Greater Darkvision"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "throw"
 name: "Throw"
 tier: "basic"
 tags:

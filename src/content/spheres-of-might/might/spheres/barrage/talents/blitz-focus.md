@@ -1,4 +1,5 @@
 ---
+id: "blitz-focus"
 name: "Blitz Focus"
 tier: "basic"
 tags: []

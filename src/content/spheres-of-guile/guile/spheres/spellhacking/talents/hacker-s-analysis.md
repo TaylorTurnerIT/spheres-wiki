@@ -1,4 +1,5 @@
 ---
+id: "hacker-s-analysis"
 name: "Hacker’s Analysis"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "duplicate"
 name: "Duplicate"
 tier: advanced
 tags: []

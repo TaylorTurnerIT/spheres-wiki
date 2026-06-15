@@ -1,4 +1,5 @@
 ---
+id: "dolphin-strike"
 name: "Dolphin Strike"
 tier: "basic"
 tags:

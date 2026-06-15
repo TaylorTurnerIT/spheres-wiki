@@ -1,4 +1,5 @@
 ---
+id: "hurricane-strike"
 name: "Hurricane Strike"
 tier: "basic"
 tags:

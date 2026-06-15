@@ -1,4 +1,5 @@
 ---
+id: "dim-light"
 name: "Dim Light"
 tier: basic
 tags: ["lens"]

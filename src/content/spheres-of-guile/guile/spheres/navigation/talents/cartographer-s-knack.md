@@ -1,4 +1,5 @@
 ---
+id: "cartographer-s-knack"
 name: "Cartographer's Knack"
 tier: "basic"
 tags:

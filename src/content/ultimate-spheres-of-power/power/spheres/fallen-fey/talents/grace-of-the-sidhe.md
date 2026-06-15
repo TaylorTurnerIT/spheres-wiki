@@ -1,4 +1,5 @@
 ---
+id: "grace-of-the-sidhe"
 name: "Grace Of The Sidhe"
 tier: basic
 tags: ["fey-blessing"]

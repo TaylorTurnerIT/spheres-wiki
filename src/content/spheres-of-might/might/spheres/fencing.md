@@ -1,4 +1,5 @@
 ---
+id: "fencing"
 name: "Fencing"
 icon: "fencing"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "rapid-sweep"
 name: "Rapid Sweep"
 tier: "basic"
 ---

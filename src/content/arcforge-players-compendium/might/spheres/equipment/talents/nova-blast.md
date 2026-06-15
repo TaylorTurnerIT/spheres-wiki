@@ -1,4 +1,5 @@
 ---
+id: "nova-blast"
 name: "Nova Blast"
 tier: "advanced"
 tags: []

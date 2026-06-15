@@ -1,4 +1,5 @@
 ---
+id: "mindless"
 name: "Mindless"
 tier: basic
 tags: []

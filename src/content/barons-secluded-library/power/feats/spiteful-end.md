@@ -1,4 +1,5 @@
 ---
+id: "spiteful-end"
 name: "Spiteful End"
 sphere: fate
 tags: ["sm"]

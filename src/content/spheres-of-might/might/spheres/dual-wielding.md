@@ -1,4 +1,5 @@
 ---
+id: "dual-wielding"
 name: "Dual Wielding"
 icon: "dual-wielding"
 tags: []

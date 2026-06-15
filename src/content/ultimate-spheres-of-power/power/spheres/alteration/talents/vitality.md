@@ -1,4 +1,5 @@
 ---
+id: "vitality"
 name: Vitality
 tier: basic
 tags: []

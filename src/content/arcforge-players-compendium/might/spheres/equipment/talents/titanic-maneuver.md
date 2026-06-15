@@ -1,4 +1,5 @@
 ---
+id: "titanic-maneuver"
 name: "Titanic Maneuver"
 tier: "basic"
 tags: []

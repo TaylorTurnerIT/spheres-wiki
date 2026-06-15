@@ -1,4 +1,5 @@
 ---
+id: "weapon-and-armor-training"
 name: "Weapon and Armor Training"
 type: class-feature
 className: thaumaturge

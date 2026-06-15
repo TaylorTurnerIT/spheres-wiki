@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver"
 name: "Soul Weaver"
 tags: []
 hitDie: 6

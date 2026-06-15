@@ -1,4 +1,5 @@
 ---
+id: "dirty-curse"
 name: "Dirty Curse"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "adept-administrator"
 name: "Adept Administrator"
 tier: "basic"
 tags:

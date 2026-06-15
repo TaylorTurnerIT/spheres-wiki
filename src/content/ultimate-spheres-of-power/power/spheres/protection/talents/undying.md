@@ -1,4 +1,5 @@
 ---
+id: "undying"
 name: "Undying"
 tier: advanced
 tags: ["aegis"]

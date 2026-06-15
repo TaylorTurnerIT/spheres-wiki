@@ -1,4 +1,5 @@
 ---
+id: "flabbergast"
 name: "Flabbergast"
 tier: basic
 tags: ["charm"]

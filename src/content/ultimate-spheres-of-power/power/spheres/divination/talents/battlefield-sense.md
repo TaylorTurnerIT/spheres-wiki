@@ -1,4 +1,5 @@
 ---
+id: "battlefield-sense"
 name: "Battlefield Sense"
 tier: basic
 tags: ["sense"]

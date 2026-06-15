@@ -1,4 +1,5 @@
 ---
+id: "survivalist"
 name: "Survivalist"
 tier: "advanced"
 tags: []

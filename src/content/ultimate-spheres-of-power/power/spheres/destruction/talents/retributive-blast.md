@@ -1,4 +1,5 @@
 ---
+id: "retributive-blast"
 name: "Retributive Blast"
 tier: basic
 tags: ["blast-shape"]

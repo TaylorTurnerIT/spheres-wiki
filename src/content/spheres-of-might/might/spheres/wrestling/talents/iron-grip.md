@@ -1,4 +1,5 @@
 ---
+id: "iron-grip"
 name: "Iron Grip"
 tier: "basic"
 tags: []

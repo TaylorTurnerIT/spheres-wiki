@@ -1,4 +1,5 @@
 ---
+id: "catalyzed-poison"
 name: "Catalyzed Poison"
 tier: "basic"
 tags:

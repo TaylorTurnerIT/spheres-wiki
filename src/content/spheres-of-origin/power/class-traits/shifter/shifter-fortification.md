@@ -1,4 +1,5 @@
 ---
+id: "shifter-fortification"
 name: "Fortification"
 tags: ["extraordinary"]
 featureId: bestial-trait

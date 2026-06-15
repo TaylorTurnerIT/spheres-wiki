@@ -1,4 +1,5 @@
 ---
+id: "slickened-grip"
 name: "Slickened Grip"
 tier: "basic"
 tags:

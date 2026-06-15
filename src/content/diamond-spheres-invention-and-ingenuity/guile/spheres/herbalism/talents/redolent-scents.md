@@ -1,4 +1,5 @@
 ---
+id: "redolent-scents"
 name: "Redolent Scents"
 tier: "basic"
 tags: []

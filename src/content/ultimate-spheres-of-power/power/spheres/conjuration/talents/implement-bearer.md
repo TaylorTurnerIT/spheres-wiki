@@ -1,4 +1,5 @@
 ---
+id: "implement-bearer"
 name: "Implement Bearer"
 tier: basic
 tags: ["form"]

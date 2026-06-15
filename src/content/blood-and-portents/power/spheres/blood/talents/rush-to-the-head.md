@@ -1,4 +1,5 @@
 ---
+id: "rush-to-the-head"
 name: "Rush To The Head"
 tier: basic
 tags: ["blood-art"]

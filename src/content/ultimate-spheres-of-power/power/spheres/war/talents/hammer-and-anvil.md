@@ -1,4 +1,5 @@
 ---
+id: "hammer-and-anvil"
 name: "Hammer And Anvil"
 tier: basic
 tags: []

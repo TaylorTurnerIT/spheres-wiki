@@ -1,4 +1,5 @@
 ---
+id: "discern-condition"
 name: "Discern Condition"
 tier: "basic"
 tags: []

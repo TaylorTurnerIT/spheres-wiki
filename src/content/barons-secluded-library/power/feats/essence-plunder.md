@@ -1,4 +1,5 @@
 ---
+id: "essence-plunder"
 name: "Essence Plunder"
 sphere: mana
 tags: ["combat", "sm"]

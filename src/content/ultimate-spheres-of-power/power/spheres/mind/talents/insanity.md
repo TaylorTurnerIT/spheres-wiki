@@ -1,4 +1,5 @@
 ---
+id: "insanity"
 name: "Insanity"
 tier: advanced
 tags: []

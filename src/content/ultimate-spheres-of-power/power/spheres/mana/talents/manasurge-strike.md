@@ -1,4 +1,5 @@
 ---
+id: "manasurge-strike"
 name: "Manasurge Strike"
 tier: basic
 tags: ["strike"]

@@ -1,4 +1,5 @@
 ---
+id: "inspiration"
 name: "Inspiration"
 tier: basic
 tags: ["charm", "extraordinary"]

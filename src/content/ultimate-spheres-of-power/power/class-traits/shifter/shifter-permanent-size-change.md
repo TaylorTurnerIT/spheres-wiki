@@ -1,4 +1,5 @@
 ---
+id: "shifter-permanent-size-change"
 name: "Permanent Size Change"
 tags: ["extraordinary"]
 featureId: bestial-trait

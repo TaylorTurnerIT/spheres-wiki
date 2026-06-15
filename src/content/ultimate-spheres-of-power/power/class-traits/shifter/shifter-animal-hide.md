@@ -1,4 +1,5 @@
 ---
+id: "shifter-animal-hide"
 name: "Animal Hide"
 tags: ["extraordinary"]
 featureId: bestial-trait

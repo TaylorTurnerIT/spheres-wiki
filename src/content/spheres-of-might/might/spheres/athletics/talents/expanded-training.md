@@ -1,4 +1,5 @@
 ---
+id: "expanded-training"
 name: "Expanded Training"
 tier: "basic"
 tags: []

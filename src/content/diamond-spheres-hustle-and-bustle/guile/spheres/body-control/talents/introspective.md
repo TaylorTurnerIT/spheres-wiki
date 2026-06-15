@@ -1,4 +1,5 @@
 ---
+id: "introspective"
 name: "Introspective"
 tier: "basic"
 tags:

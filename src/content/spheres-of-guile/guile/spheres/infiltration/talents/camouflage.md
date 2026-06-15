@@ -1,4 +1,5 @@
 ---
+id: "camouflage"
 name: "Camouflage"
 tier: "basic"
 tags:

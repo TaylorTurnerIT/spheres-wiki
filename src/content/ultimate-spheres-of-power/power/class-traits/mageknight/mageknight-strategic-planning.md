@@ -1,4 +1,5 @@
 ---
+id: "mageknight-strategic-planning"
 name: "Strategic Planning"
 tags: []
 featureId: mystic-combat-su

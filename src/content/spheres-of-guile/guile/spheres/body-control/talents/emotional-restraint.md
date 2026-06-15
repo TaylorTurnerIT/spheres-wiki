@@ -1,4 +1,5 @@
 ---
+id: "emotional-restraint"
 name: "Emotional Restraint"
 tier: "basic"
 tags:

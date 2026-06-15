@@ -1,4 +1,5 @@
 ---
+id: "burn-the-chaff"
 name: "Burn The Chaff"
 tier: "advanced"
 tags: []

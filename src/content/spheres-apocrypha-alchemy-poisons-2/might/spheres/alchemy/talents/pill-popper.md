@@ -1,4 +1,5 @@
 ---
+id: "pill-popper"
 name: "Pill Popper"
 tier: "basic"
 tags: []

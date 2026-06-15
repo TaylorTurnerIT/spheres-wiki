@@ -1,4 +1,5 @@
 ---
+id: "kinetic-sense"
 name: "Kinetic Sense"
 tier: basic
 tags: []

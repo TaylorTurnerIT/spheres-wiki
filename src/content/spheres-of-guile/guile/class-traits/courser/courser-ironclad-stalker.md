@@ -1,4 +1,5 @@
 ---
+id: "courser-ironclad-stalker"
 name: Ironclad Stalker
 featureId: courser-ventures
 tags: []

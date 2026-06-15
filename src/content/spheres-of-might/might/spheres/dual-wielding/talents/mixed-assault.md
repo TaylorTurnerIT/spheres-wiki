@@ -1,4 +1,5 @@
 ---
+id: "mixed-assault"
 name: "Mixed Assault"
 tier: "basic"
 tags: []

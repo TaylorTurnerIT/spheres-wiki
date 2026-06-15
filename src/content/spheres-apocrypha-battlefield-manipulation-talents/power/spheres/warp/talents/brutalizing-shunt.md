@@ -1,4 +1,5 @@
 ---
+id: "brutalizing-shunt"
 name: "Brutalizing Shunt"
 tier: advanced
 tags: []

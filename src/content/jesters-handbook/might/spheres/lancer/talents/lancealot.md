@@ -1,4 +1,5 @@
 ---
+id: "lancealot"
 name: "Lancealot"
 tier: "basic"
 tags: []

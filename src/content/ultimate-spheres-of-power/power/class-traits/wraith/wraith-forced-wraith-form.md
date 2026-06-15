@@ -1,4 +1,5 @@
 ---
+id: "wraith-forced-wraith-form"
 name: "Forced Wraith Form"
 tags: []
 featureId: wraith-haunts

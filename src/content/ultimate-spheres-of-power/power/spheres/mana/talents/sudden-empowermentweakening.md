@@ -1,4 +1,5 @@
 ---
+id: "sudden-empowermentweakening"
 name: "Sudden Empowerment/Weakening"
 tier: basic
 tags: []

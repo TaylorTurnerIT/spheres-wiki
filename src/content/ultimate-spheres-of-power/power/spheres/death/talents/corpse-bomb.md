@@ -1,4 +1,5 @@
 ---
+id: "corpse-bomb"
 name: "Corpse Bomb"
 tier: basic
 tags: []

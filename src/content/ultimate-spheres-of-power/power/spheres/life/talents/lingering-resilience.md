@@ -1,4 +1,5 @@
 ---
+id: "lingering-resilience"
 name: "Lingering Resilience"
 tier: basic
 tags: []

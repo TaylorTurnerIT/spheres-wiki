@@ -1,4 +1,5 @@
 ---
+id: "venom-spitter"
 name: "Venom Spitter"
 sphere: alteration
 tags: ["combat"]

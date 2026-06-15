@@ -1,4 +1,5 @@
 ---
+id: "earth-creature"
 name: "Earth Creature"
 tier: basic
 tags: ["form"]

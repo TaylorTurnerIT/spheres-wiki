@@ -1,4 +1,5 @@
 ---
+id: "artisan"
 name: "Artisan"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "ranged-command"
 name: "Ranged Command"
 sphere: war
 tags: ["squadron"]

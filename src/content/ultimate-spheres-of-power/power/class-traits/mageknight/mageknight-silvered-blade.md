@@ -1,4 +1,5 @@
 ---
+id: "mageknight-silvered-blade"
 name: "Silvered Blade"
 tags: ["supernatural"]
 featureId: mystic-combat-su

@@ -1,4 +1,5 @@
 ---
+id: "undead-creature"
 name: "Undead Creature"
 tier: basic
 tags: ["type"]

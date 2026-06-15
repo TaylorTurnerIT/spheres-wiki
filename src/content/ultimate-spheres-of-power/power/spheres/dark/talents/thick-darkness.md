@@ -1,4 +1,5 @@
 ---
+id: "thick-darkness"
 name: "Thick Darkness"
 tier: basic
 tags: ["darkness"]

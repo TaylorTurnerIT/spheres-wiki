@@ -1,4 +1,5 @@
 ---
+id: "bioluminescent-transformation"
 name: Bioluminescent Transformation
 sphere: light
 dualSphere: alteration

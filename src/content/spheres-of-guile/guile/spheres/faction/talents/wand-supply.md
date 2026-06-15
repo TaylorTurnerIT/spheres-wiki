@@ -1,4 +1,5 @@
 ---
+id: "wand-supply"
 name: "Wand Supply"
 tier: "basic"
 tags:

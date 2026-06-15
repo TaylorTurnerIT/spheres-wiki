@@ -1,4 +1,5 @@
 ---
+id: "instrumental-package"
 name: "Instrumental Package"
 tier: "base"
 tags:

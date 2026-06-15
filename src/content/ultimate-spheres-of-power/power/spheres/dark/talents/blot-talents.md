@@ -1,4 +1,5 @@
 ---
+id: "blot-talents"
 name: "Blot Talents"
 tier: basic
 tags: []

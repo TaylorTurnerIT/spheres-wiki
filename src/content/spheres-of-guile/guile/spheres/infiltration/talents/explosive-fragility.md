@@ -1,4 +1,5 @@
 ---
+id: "explosive-fragility"
 name: "Explosive Fragility"
 tier: "basic"
 tags:

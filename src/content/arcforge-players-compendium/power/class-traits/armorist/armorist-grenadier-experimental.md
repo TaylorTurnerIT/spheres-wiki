@@ -1,4 +1,5 @@
 ---
+id: "armorist-grenadier-experimental"
 name: "Grenadier, Experimental"
 tags: []
 featureId: arsenal-trick

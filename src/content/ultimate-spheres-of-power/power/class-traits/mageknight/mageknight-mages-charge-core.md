@@ -1,4 +1,5 @@
 ---
+id: "mageknight-mages-charge-core"
 name: "Mage's Charge [Core]"
 tags: []
 featureId: mystic-combat-su

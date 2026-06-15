@@ -1,4 +1,5 @@
 ---
+id: "underhanded-blades"
 name: "Underhanded Blades"
 tier: "basic"
 ---

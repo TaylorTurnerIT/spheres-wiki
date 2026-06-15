@@ -1,4 +1,5 @@
 ---
+id: "chest-strike"
 name: "Chest Strike"
 tier: "basic"
 tags:

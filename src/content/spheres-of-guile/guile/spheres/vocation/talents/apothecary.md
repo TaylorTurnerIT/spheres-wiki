@@ -1,4 +1,5 @@
 ---
+id: "apothecary"
 name: "Apothecary"
 tier: "basic"
 tags:

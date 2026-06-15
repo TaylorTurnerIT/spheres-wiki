@@ -1,4 +1,5 @@
 ---
+id: "sucker-punch"
 name: "Sucker Punch"
 tier: "basic"
 tags: []

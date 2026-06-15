@@ -1,4 +1,5 @@
 ---
+id: "shifter-shape-weapon"
 name: "Shape Weapon"
 tags: ["supernatural"]
 featureId: bestial-trait

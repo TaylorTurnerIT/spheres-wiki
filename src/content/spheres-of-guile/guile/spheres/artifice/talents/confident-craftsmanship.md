@@ -1,4 +1,5 @@
 ---
+id: "confident-craftsmanship"
 name: "Confident Craftsmanship"
 tier: "basic"
 tags:

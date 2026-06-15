@@ -1,4 +1,5 @@
 ---
+id: "repositioning-strike"
 name: "Repositioning Strike"
 tier: "basic"
 tags:

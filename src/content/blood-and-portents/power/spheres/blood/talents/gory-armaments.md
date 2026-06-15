@@ -1,4 +1,5 @@
 ---
+id: "gory-armaments"
 name: "Gory Armaments"
 tier: basic
 tags: ["blood-art"]

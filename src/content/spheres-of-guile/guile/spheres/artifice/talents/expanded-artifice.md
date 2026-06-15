@@ -1,4 +1,5 @@
 ---
+id: "expanded-artifice"
 name: "Expanded Artifice"
 tier: "basic"
 tags: []

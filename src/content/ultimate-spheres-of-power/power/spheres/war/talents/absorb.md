@@ -1,4 +1,5 @@
 ---
+id: "absorb"
 name: "Absorb"
 tier: basic
 tags: ["rally"]

@@ -1,4 +1,5 @@
 ---
+id: "vitiating-unguent"
 name: "Vitiating Unguent"
 tier: "basic"
 tags:

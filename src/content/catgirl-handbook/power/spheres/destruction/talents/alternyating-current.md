@@ -1,4 +1,5 @@
 ---
+id: "alternyating-current"
 name: "Alternyating Current"
 tier: basic
 tags: ["blast-type", "electricity"]

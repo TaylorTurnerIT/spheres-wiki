@@ -1,4 +1,5 @@
 ---
+id: "heroic-companion"
 name: "Heroic Companion"
 sphere: conjuration
 tags: ["luck"]

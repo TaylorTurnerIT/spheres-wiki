@@ -1,4 +1,5 @@
 ---
+id: "bushido-training"
 name: "Bushido Training"
 tier: "basic"
 tags:

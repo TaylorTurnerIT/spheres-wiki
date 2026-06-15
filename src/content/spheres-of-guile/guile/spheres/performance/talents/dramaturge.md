@@ -1,4 +1,5 @@
 ---
+id: "dramaturge"
 name: "Dramaturge"
 tier: "base"
 tags:

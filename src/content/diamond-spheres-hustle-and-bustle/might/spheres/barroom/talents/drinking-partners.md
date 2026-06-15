@@ -1,4 +1,5 @@
 ---
+id: "drinking-partners"
 name: "Drinking Partners"
 tier: "basic"
 tags: []

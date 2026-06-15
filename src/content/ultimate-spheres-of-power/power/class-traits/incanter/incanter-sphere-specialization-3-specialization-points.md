@@ -1,4 +1,5 @@
 ---
+id: "incanter-sphere-specialization-3-specialization-points"
 name: "Sphere Specialization (3 specialization points)"
 tags: []
 featureId: incanter-specializations

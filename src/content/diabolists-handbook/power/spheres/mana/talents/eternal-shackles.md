@@ -1,4 +1,5 @@
 ---
+id: "eternal-shackles"
 name: "Eternal Shackles"
 tier: advanced
 tags: []

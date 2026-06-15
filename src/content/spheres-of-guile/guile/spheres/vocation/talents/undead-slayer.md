@@ -1,4 +1,5 @@
 ---
+id: "undead-slayer"
 name: "Undead Slayer"
 tier: "basic"
 tags:

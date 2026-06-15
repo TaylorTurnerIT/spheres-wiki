@@ -1,4 +1,5 @@
 ---
+id: "ranged-blood-magic"
 name: "Ranged Blood Magic"
 tier: basic
 tags: ["range"]

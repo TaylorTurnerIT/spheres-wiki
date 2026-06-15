@@ -1,4 +1,5 @@
 ---
+id: "power-dynamics"
 name: "Power Dynamics"
 tier: basic
 tags: ["amp", "manipulation"]

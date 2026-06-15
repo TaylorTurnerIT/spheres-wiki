@@ -1,4 +1,5 @@
 ---
+id: "possession-su"
 name: "Possession (Su)"
 type: class-feature
 className: wraith

@@ -1,4 +1,5 @@
 ---
+id: "exceptional-discipline"
 name: "Exceptional Discipline"
 tags: []
 ---

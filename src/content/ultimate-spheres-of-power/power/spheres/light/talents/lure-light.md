@@ -1,4 +1,5 @@
 ---
+id: "lure-light"
 name: "Lure Light"
 tier: basic
 tags: ["light"]

@@ -1,4 +1,5 @@
 ---
+id: "undying-obstinance"
 name: "Undying Obstinance"
 tier: advanced
 tags: ["consecration"]

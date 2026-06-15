@@ -1,4 +1,5 @@
 ---
+id: "discern-esoterics"
 name: "Discern Esoterics"
 tier: "basic"
 tags:

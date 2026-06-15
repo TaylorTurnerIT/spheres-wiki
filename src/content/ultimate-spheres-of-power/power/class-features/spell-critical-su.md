@@ -1,4 +1,5 @@
 ---
+id: "spell-critical-su"
 name: "Spell Critical (Su)"
 type: class-feature
 className: mageknight

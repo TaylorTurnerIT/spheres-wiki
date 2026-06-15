@@ -1,4 +1,5 @@
 ---
+id: "master-of-words"
 name: "Master Of Words"
 tier: "advanced"
 tags:

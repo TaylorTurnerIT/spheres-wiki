@@ -1,4 +1,5 @@
 ---
+id: "instill-alteration"
 name: "Instill Alteration"
 tier: basic
 tags: ["instill"]

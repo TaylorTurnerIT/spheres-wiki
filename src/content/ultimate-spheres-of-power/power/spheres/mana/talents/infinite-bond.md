@@ -1,4 +1,5 @@
 ---
+id: "infinite-bond"
 name: "Infinite Bond"
 tier: advanced
 tags: []

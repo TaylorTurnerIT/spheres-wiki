@@ -1,4 +1,5 @@
 ---
+id: "instill-aegis"
 name: "Instill Aegis"
 tier: basic
 tags: ["instill"]

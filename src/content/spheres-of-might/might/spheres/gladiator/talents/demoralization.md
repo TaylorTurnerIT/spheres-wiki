@@ -1,4 +1,5 @@
 ---
+id: "demoralization"
 name: "Demoralization"
 tier: "base"
 tags: []

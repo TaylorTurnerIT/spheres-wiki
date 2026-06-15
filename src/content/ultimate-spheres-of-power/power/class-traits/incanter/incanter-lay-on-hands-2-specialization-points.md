@@ -1,4 +1,5 @@
 ---
+id: "incanter-lay-on-hands-2-specialization-points"
 name: "Lay on Hands (2 Specialization Points)"
 tags: []
 featureId: incanter-specializations

@@ -1,4 +1,5 @@
 ---
+id: "animated-arsenal"
 name: "Animated Arsenal"
 sphere: enhancement
 tags: []

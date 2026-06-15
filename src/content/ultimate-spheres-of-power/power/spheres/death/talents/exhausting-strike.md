@@ -1,4 +1,5 @@
 ---
+id: "exhausting-strike"
 name: "Exhausting Strike"
 tier: base
 tags: []

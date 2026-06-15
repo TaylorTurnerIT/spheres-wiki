@@ -1,4 +1,5 @@
 ---
+id: "recall-spirit"
 name: "Recall Spirit"
 tier: "advanced"
 tags:

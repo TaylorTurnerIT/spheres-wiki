@@ -1,4 +1,5 @@
 ---
+id: "lasting-sabotage"
 name: "Lasting Sabotage"
 tier: "advanced"
 tags: []

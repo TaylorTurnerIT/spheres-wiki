@@ -1,4 +1,5 @@
 ---
+id: "shield-bearer"
 name: "Shield Bearer"
 tier: basic
 tags: ["form"]

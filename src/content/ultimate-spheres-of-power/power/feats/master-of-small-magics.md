@@ -1,4 +1,5 @@
 ---
+id: "master-of-small-magics"
 name: "Master Of Small Magics"
 sphere: enhancement
 tags: []

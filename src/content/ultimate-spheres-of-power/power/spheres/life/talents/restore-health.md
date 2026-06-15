@@ -1,4 +1,5 @@
 ---
+id: "restore-health"
 name: "Restore Health"
 tier: basic
 tags: ["cure"]

@@ -1,4 +1,5 @@
 ---
+id: "powerful-telekinesis"
 name: "Powerful Telekinesis"
 tier: basic
 tags: []

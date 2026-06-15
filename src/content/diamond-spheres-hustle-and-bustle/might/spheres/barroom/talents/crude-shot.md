@@ -1,4 +1,5 @@
 ---
+id: "crude-shot"
 name: "Crude Shot"
 tier: "basic"
 tags:

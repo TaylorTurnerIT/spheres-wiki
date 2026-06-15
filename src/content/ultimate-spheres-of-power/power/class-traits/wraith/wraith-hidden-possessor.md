@@ -1,4 +1,5 @@
 ---
+id: "wraith-hidden-possessor"
 name: "Hidden Possessor"
 tags: []
 featureId: wraith-haunts

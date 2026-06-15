@@ -1,4 +1,5 @@
 ---
+id: "liquid-courage"
 name: "Liquid Courage"
 tier: "basic"
 tags: []

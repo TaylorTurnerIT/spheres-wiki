@@ -1,4 +1,5 @@
 ---
+id: "armorist-heavy-ordnance"
 name: "Heavy Ordnance"
 tags: []
 featureId: arsenal-trick

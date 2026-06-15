@@ -1,4 +1,5 @@
 ---
+id: "enmity"
 name: "Enmity"
 tier: basic
 tags: ["curse", "word"]

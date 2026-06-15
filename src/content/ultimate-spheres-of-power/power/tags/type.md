@@ -1,4 +1,5 @@
 ---
+id: "type"
 label: "Type"
 color: "#1A3A4A"
 priority: 8

@@ -1,4 +1,5 @@
 ---
+id: "dodge-bonus"
 name: "Dodge Bonus"
 type: class-feature
 className: elementalist

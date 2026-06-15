@@ -1,4 +1,5 @@
 ---
+id: "theorize"
 name: "Theorize"
 tier: "base"
 tags: []

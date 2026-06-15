@@ -1,4 +1,5 @@
 ---
+id: "inspect-object"
 name: "Inspect Object"
 tier: "basic"
 tags:

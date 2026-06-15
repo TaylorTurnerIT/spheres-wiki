@@ -1,4 +1,5 @@
 ---
+id: "brutal-strike"
 name: "Brutal Strike"
 tier: "base"
 tags: []

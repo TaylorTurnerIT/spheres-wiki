@@ -1,4 +1,5 @@
 ---
+id: "rolling-blackout"
 name: "Rolling Blackout"
 tier: basic
 tags: ["control"]

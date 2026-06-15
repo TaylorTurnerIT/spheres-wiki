@@ -1,4 +1,5 @@
 ---
+id: "burning-ears"
 name: "Burning Ears"
 tier: "advanced"
 tags:

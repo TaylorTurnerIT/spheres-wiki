@@ -1,4 +1,5 @@
 ---
+id: "master-builder"
 name: "Master Builder"
 tier: "advanced"
 tags: []

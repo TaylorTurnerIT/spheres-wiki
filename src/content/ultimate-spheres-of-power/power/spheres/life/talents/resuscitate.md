@@ -1,4 +1,5 @@
 ---
+id: "resuscitate"
 name: "Resuscitate"
 tier: basic
 tags: []

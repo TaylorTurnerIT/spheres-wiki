@@ -1,4 +1,5 @@
 ---
+id: "tombstone-burial"
 name: "Tombstone Burial"
 tier: "advanced"
 tags: []

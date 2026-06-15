@@ -1,4 +1,5 @@
 ---
+id: "resounding-word"
 name: "Resounding Word"
 tier: basic
 tags: ["range"]

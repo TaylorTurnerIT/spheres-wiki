@@ -1,4 +1,5 @@
 ---
+id: "conjuration"
 name: "Conjuration"
 icon: conjuration
 description: "You have made contracts with outsiders, calling them to your side when you are in need."

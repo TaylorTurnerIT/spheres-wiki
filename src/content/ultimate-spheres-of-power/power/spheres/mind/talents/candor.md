@@ -1,4 +1,5 @@
 ---
+id: "candor"
 name: "Candor"
 tier: basic
 tags: ["utility", "charm"]

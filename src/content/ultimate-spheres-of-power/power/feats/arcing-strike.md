@@ -1,4 +1,5 @@
 ---
+id: "arcing-strike"
 name: "Arcing Strike"
 sphere: divination
 tags: ["combat"]

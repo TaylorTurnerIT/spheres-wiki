@@ -1,4 +1,5 @@
 ---
+id: "zone"
 label: "Zone"
 sphere: "guardian"
 priority: 0

@@ -1,4 +1,5 @@
 ---
+id: "chameleon"
 name: "Chameleon"
 tier: basic
 tags: ["extraordinary", "lens"]

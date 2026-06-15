@@ -1,4 +1,5 @@
 ---
+id: "rain-bomb"
 name: "Rain Bomb"
 tier: advanced
 tags: []

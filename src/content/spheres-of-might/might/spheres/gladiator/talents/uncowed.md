@@ -1,4 +1,5 @@
 ---
+id: "uncowed"
 name: "Uncowed"
 tier: "basic"
 tags: []

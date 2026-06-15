@@ -1,4 +1,5 @@
 ---
+id: "guarded-combatant"
 name: "Guarded Combatant"
 tier: "basic"
 tags: []

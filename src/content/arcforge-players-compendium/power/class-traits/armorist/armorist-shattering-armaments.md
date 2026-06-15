@@ -1,4 +1,5 @@
 ---
+id: "armorist-shattering-armaments"
 name: "Shattering Armaments"
 tags: []
 featureId: arsenal-trick

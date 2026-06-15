@@ -1,4 +1,5 @@
 ---
+id: "lingering-darkness"
 name: "Lingering Darkness"
 tier: basic
 tags: ["duration"]

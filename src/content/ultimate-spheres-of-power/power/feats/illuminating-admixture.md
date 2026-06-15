@@ -1,4 +1,5 @@
 ---
+id: "illuminating-admixture"
 name: "Illuminating Admixture"
 sphere: destruction
 tags: ["admixture"]

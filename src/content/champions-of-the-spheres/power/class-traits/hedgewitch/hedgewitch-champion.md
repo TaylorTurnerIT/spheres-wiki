@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-champion"
 name: "Champion"
 tags: []
 featureId: secret

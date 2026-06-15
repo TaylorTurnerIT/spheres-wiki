@@ -1,4 +1,5 @@
 ---
+id: "destructive-blast"
 name: "Destructive Blast"
 tier: base
 tags: []

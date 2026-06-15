@@ -1,4 +1,5 @@
 ---
+id: "bonerattle"
 name: "Bonerattle"
 tier: basic
 tags: ["ghost-strike"]

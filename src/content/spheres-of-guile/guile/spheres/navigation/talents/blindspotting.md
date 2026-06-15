@@ -1,4 +1,5 @@
 ---
+id: "blindspotting"
 name: "Blindspotting"
 tier: "basic"
 tags:

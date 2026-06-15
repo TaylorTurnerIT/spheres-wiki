@@ -1,4 +1,5 @@
 ---
+id: "shadow-stash"
 name: "Shadow Stash"
 tier: basic
 tags: ["utility"]

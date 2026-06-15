@@ -1,4 +1,5 @@
 ---
+id: "wreck-apparatus"
 name: "Wreck Apparatus"
 tier: "basic"
 tags:

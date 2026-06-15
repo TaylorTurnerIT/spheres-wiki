@@ -1,4 +1,5 @@
 ---
+id: "pinning-punishment"
 name: "Pinning Punishment"
 tier: "basic"
 tags:

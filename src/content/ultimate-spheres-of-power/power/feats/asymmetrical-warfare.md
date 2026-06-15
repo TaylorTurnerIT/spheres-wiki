@@ -1,4 +1,5 @@
 ---
+id: "asymmetrical-warfare"
 name: Asymmetrical Warfare
 sphere: war
 dualSphere: illusion

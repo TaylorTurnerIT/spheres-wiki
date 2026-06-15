@@ -1,4 +1,5 @@
 ---
+id: "animal-companion"
 name: "Animal Companion"
 tier: "basic"
 tags: []

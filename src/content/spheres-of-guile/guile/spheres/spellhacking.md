@@ -1,4 +1,5 @@
 ---
+id: "spellhacking"
 name: "Spellhacking"
 icon: "spellhacking"
 tags: []

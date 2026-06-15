@@ -1,4 +1,5 @@
 ---
+id: "confident-subtlety"
 name: "Confident Subtlety"
 tier: "base"
 tags: []

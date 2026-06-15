@@ -1,4 +1,5 @@
 ---
+id: "wraith-extra-incorporeality"
 name: "Extra Incorporeality"
 tags: []
 featureId: wraith-haunts

@@ -1,4 +1,5 @@
 ---
+id: "primal-dancer"
 name: Primal Dancer
 dualSphere: destruction
 tags:

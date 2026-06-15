@@ -1,4 +1,5 @@
 ---
+id: "defiant-radiance"
 name: "Defiant Radiance"
 sphere: light
 tags: []

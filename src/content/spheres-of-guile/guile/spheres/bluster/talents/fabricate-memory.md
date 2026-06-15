@@ -1,4 +1,5 @@
 ---
+id: "fabricate-memory"
 name: "Fabricate Memory"
 tier: "basic"
 tags:

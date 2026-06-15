@@ -1,4 +1,5 @@
 ---
+id: "shortcut-mastery"
 name: "Shortcut Mastery"
 tier: "advanced"
 tags:

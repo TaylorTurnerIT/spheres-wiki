@@ -1,4 +1,5 @@
 ---
+id: "magic-sweep"
 name: "Magic Sweep"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "hardened-bond"
 name: "Hardened Bond"
 tier: basic
 tags: []

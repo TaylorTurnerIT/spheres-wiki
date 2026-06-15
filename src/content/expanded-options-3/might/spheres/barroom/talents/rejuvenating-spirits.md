@@ -1,4 +1,5 @@
 ---
+id: "rejuvenating-spirits"
 name: "Rejuvenating Spirits"
 tier: "advanced"
 tags: []

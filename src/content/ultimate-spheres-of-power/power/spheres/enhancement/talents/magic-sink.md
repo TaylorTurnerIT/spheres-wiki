@@ -1,4 +1,5 @@
 ---
+id: "magic-sink"
 name: "Magic Sink"
 tier: basic
 tags: ["enhance"]

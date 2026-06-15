@@ -1,4 +1,5 @@
 ---
+id: "integrity-shifter"
 name: "Integrity Shifter"
 tier: "basic"
 tags:

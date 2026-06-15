@@ -1,4 +1,5 @@
 ---
+id: "power-parasitism"
 name: "Power Parasitism"
 tier: basic
 tags: []

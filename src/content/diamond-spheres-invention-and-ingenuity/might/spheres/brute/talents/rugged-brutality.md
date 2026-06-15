@@ -1,4 +1,5 @@
 ---
+id: "rugged-brutality"
 name: "Rugged Brutality"
 tier: "basic"
 tags: []

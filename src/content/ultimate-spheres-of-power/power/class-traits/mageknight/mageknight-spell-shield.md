@@ -1,4 +1,5 @@
 ---
+id: "mageknight-spell-shield"
 name: "Spell Shield"
 tags: []
 featureId: mystic-combat-su

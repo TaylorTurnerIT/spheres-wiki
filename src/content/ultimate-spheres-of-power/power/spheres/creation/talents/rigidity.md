@@ -1,4 +1,5 @@
 ---
+id: "rigidity"
 name: "Rigidity"
 tier: basic
 tags: ["alter"]

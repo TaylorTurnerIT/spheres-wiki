@@ -1,4 +1,5 @@
 ---
+id: "lightning-escapist"
 name: "Lightning Escapist"
 tier: "basic"
 tags: []

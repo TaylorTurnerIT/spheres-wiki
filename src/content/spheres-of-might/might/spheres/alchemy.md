@@ -1,4 +1,5 @@
 ---
+id: "alchemy"
 name: "Alchemy"
 icon: "alchemy"
 tags: []

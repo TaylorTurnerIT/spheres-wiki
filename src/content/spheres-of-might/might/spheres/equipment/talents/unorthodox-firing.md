@@ -1,4 +1,5 @@
 ---
+id: "unorthodox-firing"
 name: "Unorthodox Firing"
 tier: "basic"
 tags: []

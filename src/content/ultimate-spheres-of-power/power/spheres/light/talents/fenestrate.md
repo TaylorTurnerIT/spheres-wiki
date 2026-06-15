@@ -1,4 +1,5 @@
 ---
+id: "fenestrate"
 name: "Fenestrate"
 tier: basic
 tags: ["light"]

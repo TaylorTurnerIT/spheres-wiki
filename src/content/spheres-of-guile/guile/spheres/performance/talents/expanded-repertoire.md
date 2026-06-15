@@ -1,4 +1,5 @@
 ---
+id: "expanded-repertoire"
 name: "Expanded Repertoire"
 tier: "basic"
 tags: []

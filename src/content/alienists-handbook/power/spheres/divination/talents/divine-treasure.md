@@ -1,4 +1,5 @@
 ---
+id: "divine-treasure"
 name: "Divine Treasure"
 tier: basic
 tags: ["divine", "utility"]

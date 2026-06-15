@@ -1,4 +1,5 @@
 ---
+id: "techmaniac"
 name: "Techmaniac"
 tier: "basic"
 tags:

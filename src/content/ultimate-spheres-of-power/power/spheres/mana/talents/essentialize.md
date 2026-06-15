@@ -1,4 +1,5 @@
 ---
+id: "essentialize"
 name: "Essentialize"
 tier: basic
 tags: ["manipulation"]

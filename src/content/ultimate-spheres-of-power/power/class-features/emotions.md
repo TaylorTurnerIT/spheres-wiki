@@ -1,4 +1,5 @@
 ---
+id: "emotions"
 name: "Emotions"
 type: class-feature
 className: eliciter

@@ -1,4 +1,5 @@
 ---
+id: "weapon-and-armor-proficiency"
 name: Weapon and Armor Proficiencies
 level: 1
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "armorist-ranged-summons"
 name: "Ranged Summons"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "friction"
 name: "Friction"
 tier: basic
 tags: ["manabond"]

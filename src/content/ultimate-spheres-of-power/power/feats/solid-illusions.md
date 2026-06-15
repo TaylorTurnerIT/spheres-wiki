@@ -1,4 +1,5 @@
 ---
+id: "solid-illusions"
 name: Solid Illusions
 sphere: illusion
 dualSphere: enhancement

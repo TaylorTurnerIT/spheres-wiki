@@ -1,4 +1,5 @@
 ---
+id: "precision-bombardment"
 name: "Precision Bombardment"
 sphere: creation
 tags: ["combat"]

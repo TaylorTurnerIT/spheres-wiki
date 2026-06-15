@@ -1,4 +1,5 @@
 ---
+id: "dual-pathing"
 name: "Dual Pathing"
 tags: []
 ---

@@ -1,4 +1,5 @@
 ---
+id: "light-link"
 name: "Light Link"
 tier: basic
 tags: []

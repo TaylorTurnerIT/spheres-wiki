@@ -1,4 +1,5 @@
 ---
+id: "revealing-light"
 name: "Revealing Light"
 tier: basic
 tags: ["light"]

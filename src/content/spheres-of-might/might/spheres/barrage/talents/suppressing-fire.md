@@ -1,4 +1,5 @@
 ---
+id: "suppressing-fire"
 name: "Suppressing Fire"
 tier: "basic"
 tags:

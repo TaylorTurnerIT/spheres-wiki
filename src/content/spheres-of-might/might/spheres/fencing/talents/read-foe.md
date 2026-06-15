@@ -1,4 +1,5 @@
 ---
+id: "read-foe"
 name: "Read Foe"
 tier: "basic"
 tags:

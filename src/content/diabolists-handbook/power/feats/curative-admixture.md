@@ -1,4 +1,5 @@
 ---
+id: "curative-admixture"
 name: "Curative Admixture"
 sphere: destruction
 tags: ["admixture"]

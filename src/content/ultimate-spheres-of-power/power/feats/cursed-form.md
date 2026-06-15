@@ -1,4 +1,5 @@
 ---
+id: "cursed-form"
 name: "Cursed Form"
 sphere: alteration
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "specialized-degree"
 name: "Specialized Degree"
 tier: "base"
 tags:

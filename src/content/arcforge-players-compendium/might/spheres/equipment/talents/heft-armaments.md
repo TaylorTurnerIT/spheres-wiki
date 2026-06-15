@@ -1,4 +1,5 @@
 ---
+id: "heft-armaments"
 name: "Heft Armaments"
 tier: "basic"
 tags:

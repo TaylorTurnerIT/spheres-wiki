@@ -1,4 +1,5 @@
 ---
+id: "sunlight-strike"
 name: "Sunlight Strike"
 sphere: light
 tags: ["combat"]

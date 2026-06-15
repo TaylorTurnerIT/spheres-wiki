@@ -1,4 +1,5 @@
 ---
+id: "ruin-into-resurgence"
 name: "Ruin into Resurgence"
 tier: basic
 tags: ["vitality"]

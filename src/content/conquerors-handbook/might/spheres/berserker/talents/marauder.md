@@ -1,4 +1,5 @@
 ---
+id: "marauder"
 name: "Marauder"
 tier: "basic"
 tags:

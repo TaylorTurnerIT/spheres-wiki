@@ -1,4 +1,5 @@
 ---
+id: "giant-traits"
 name: "Giant Traits"
 tier: basic
 tags: []

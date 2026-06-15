@@ -1,4 +1,5 @@
 ---
+id: "interposing-shield"
 name: "Interposing Shield"
 tier: "basic"
 tags: []

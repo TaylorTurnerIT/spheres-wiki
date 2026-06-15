@@ -1,4 +1,5 @@
 ---
+id: "disintegrate"
 name: "Disintegrate"
 tier: advanced
 tags: ["blast-type"]

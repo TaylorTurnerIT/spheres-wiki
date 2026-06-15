@@ -1,4 +1,5 @@
 ---
+id: "read-the-rhythm"
 name: "Read the Rhythm"
 tier: "basic"
 tags:

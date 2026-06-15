@@ -1,4 +1,5 @@
 ---
+id: "gremlins-presence"
 name: "Gremlin's Presence"
 tier: basic
 tags: ["fey-blessing"]

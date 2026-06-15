@@ -1,4 +1,5 @@
 ---
+id: "meticulous-hunter"
 name: "Meticulous Hunter"
 tier: "basic"
 tags: []

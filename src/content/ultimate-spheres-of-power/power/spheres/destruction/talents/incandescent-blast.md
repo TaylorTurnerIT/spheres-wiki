@@ -1,4 +1,5 @@
 ---
+id: "incandescent-blast"
 name: "Incandescent Blast"
 tier: basic
 tags: ["blast-type", "light"]

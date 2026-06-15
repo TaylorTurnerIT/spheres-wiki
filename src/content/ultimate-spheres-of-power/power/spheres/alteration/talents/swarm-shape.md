@@ -1,4 +1,5 @@
 ---
+id: "swarm-shape"
 name: "Swarm Shape"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "consecration"
 name: Consecration
 tier: base
 tags: []

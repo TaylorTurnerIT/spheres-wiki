@@ -1,4 +1,5 @@
 ---
+id: "secret"
 name: "Secret"
 type: class-feature
 className: hedgewitch

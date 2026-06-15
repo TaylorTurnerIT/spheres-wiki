@@ -1,4 +1,5 @@
 ---
+id: "light-touch"
 name: "Light Touch"
 tier: "basic"
 tags:

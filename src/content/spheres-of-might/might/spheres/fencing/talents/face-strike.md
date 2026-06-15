@@ -1,4 +1,5 @@
 ---
+id: "face-strike"
 name: "Face Strike"
 tier: "basic"
 tags:

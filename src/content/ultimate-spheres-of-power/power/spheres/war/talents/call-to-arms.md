@@ -1,4 +1,5 @@
 ---
+id: "call-to-arms"
 name: "Call To Arms"
 tier: basic
 tags: []

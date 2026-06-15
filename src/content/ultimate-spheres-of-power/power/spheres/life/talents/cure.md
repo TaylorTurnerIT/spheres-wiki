@@ -1,4 +1,5 @@
 ---
+id: "cure"
 name: Cure
 tier: base
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "vagabond-nick"
 name: "Vagabond Nick"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "electric-blast"
 name: "Electric Blast"
 tier: basic
 tags: ["blast-type", "electricity"]

@@ -1,4 +1,5 @@
 ---
+id: "sniper-shot"
 name: "Sniper Shot"
 tier: "basic"
 tags: []

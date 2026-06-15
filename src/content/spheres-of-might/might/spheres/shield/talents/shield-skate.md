@@ -1,4 +1,5 @@
 ---
+id: "shield-skate"
 name: "Shield Skate"
 tier: "basic"
 tags: []

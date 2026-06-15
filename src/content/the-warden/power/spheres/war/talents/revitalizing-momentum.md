@@ -1,4 +1,5 @@
 ---
+id: "revitalizing-momentum"
 name: "Revitalizing Momentum"
 tier: basic
 tags: ["momentum", "warden"]

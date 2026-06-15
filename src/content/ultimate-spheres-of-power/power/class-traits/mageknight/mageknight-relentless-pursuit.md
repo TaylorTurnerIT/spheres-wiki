@@ -1,4 +1,5 @@
 ---
+id: "mageknight-relentless-pursuit"
 name: "Relentless Pursuit"
 tags: []
 featureId: mystic-combat-su

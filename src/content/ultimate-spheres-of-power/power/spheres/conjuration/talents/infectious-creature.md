@@ -1,4 +1,5 @@
 ---
+id: "infectious-creature"
 name: "Infectious Creature"
 tier: basic
 tags: ["form"]

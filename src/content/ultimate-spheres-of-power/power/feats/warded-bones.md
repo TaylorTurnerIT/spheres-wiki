@@ -1,4 +1,5 @@
 ---
+id: "warded-bones"
 name: Warded Bones
 sphere: protection
 dualSphere: death

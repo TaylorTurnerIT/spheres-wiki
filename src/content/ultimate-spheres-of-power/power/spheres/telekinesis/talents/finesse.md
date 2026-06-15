@@ -1,4 +1,5 @@
 ---
+id: "finesse"
 name: "Finesse"
 tier: basic
 tags: ["utility"]

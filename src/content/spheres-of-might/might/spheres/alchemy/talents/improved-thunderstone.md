@@ -1,4 +1,5 @@
 ---
+id: "improved-thunderstone"
 name: "Improved Thunderstone"
 tier: "basic"
 tags:

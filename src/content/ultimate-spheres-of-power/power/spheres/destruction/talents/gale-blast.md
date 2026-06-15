@@ -1,4 +1,5 @@
 ---
+id: "gale-blast"
 name: "Gale Blast"
 tier: basic
 tags: ["air", "blast-type"]

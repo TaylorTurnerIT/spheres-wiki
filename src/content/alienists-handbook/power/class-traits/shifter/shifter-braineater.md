@@ -1,4 +1,5 @@
 ---
+id: "shifter-braineater"
 name: "Braineater"
 tags: []
 featureId: bestial-trait

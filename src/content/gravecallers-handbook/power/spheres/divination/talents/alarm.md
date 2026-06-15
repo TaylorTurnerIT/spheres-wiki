@@ -1,4 +1,5 @@
 ---
+id: "alarm"
 name: "Alarm"
 tier: basic
 tags: ["spell-like", "utility"]

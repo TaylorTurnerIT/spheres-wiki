@@ -1,4 +1,5 @@
 ---
+id: "expert-grenadier"
 name: "Expert Grenadier"
 tier: "basic"
 tags: []

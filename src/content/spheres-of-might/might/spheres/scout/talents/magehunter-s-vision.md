@@ -1,4 +1,5 @@
 ---
+id: "magehunter-s-vision"
 name: "Magehunter’s Vision"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "feats-succor"
 name: Succor
 sphere: war
 tags: []

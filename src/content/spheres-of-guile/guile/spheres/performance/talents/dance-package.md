@@ -1,4 +1,5 @@
 ---
+id: "dance-package"
 name: "Dance Package"
 tier: "base"
 tags:

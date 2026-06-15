@@ -1,4 +1,5 @@
 ---
+id: "mageknight-sunder-the-veil"
 name: "Sunder the Veil"
 tags: []
 featureId: mystic-combat-su

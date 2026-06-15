@@ -1,4 +1,5 @@
 ---
+id: "appeal-to-normalcy"
 name: "Appeal to Normalcy"
 tier: "basic"
 tags:

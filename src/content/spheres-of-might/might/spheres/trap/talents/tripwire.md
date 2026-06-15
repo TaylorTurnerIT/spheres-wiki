@@ -1,4 +1,5 @@
 ---
+id: "tripwire"
 name: "Tripwire"
 tier: "base"
 tags:

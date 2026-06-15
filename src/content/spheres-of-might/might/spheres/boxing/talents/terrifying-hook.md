@@ -1,4 +1,5 @@
 ---
+id: "terrifying-hook"
 name: "Terrifying Hook"
 tier: "basic"
 tags:

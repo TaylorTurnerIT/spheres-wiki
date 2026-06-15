@@ -1,4 +1,5 @@
 ---
+id: "blood-puppet"
 name: "Blood Puppet"
 tier: basic
 tags: ["quicken"]

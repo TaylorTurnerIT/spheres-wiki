@@ -1,4 +1,5 @@
 ---
+id: "blood-thirst"
 name: "Blood Thirst"
 sphere: blood
 tags: ["extraordinary"]

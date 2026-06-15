@@ -1,4 +1,5 @@
 ---
+id: "detonating-salvo"
 name: "Detonating Salvo"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "piercing-fear"
 name: "Piercing Fear"
 tier: "basic"
 tags:

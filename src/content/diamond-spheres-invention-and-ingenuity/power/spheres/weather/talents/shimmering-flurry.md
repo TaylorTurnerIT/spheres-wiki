@@ -1,4 +1,5 @@
 ---
+id: "shimmering-flurry"
 name: "Shimmering Flurry"
 tier: basic
 tags: ["mantle", "snow", "utility"]

@@ -1,4 +1,5 @@
 ---
+id: "expert-handler"
 name: "Expert Handler"
 tier: "advanced"
 tags: []

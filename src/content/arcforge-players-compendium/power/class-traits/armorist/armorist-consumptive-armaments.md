@@ -1,4 +1,5 @@
 ---
+id: "armorist-consumptive-armaments"
 name: "Consumptive Armaments"
 tags: []
 featureId: arsenal-trick

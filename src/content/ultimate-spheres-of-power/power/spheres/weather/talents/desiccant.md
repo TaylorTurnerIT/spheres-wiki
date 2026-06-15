@@ -1,4 +1,5 @@
 ---
+id: "desiccant"
 name: "Desiccant"
 tier: basic
 tags: ["aridity", "mantle"]

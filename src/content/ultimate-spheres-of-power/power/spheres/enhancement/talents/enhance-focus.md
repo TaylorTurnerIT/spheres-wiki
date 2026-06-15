@@ -1,4 +1,5 @@
 ---
+id: "enhance-focus"
 name: "Enhance Focus"
 tier: basic
 tags: ["enhance"]

@@ -1,4 +1,5 @@
 ---
+id: "penetrating-divination"
 name: "Penetrating Divination"
 tier: advanced
 tags: []

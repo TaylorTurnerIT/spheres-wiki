@@ -1,4 +1,5 @@
 ---
+id: "sight-beyond-sight"
 name: "Sight Beyond Sight"
 tier: "basic"
 tags: []

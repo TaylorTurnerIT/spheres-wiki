@@ -1,4 +1,5 @@
 ---
+id: "shadow-shield-improved"
 name: "Shadow Shield, Improved"
 sphere: illusion
 tags: ["surreal"]

@@ -1,4 +1,5 @@
 ---
+id: "ranged-light"
 name: "Ranged Light"
 tier: basic
 tags: ["range"]

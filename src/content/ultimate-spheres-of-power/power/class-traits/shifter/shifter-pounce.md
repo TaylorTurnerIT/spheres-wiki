@@ -1,4 +1,5 @@
 ---
+id: "shifter-pounce"
 name: "Pounce"
 tags: ["extraordinary"]
 featureId: bestial-trait

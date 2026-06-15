@@ -1,4 +1,5 @@
 ---
+id: "counter-punch"
 name: "Counter Punch"
 tier: "base"
 tags: []

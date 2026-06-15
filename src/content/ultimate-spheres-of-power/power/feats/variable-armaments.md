@@ -1,4 +1,5 @@
 ---
+id: "variable-armaments"
 name: "Variable Armaments"
 sphere: conjuration
 tags: ["companion"]

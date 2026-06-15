@@ -1,4 +1,5 @@
 ---
+id: "courser-opportunistic-harry"
 name: Opportunistic Harry
 featureId: courser-ventures
 tags: []

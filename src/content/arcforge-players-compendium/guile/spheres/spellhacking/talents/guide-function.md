@@ -1,4 +1,5 @@
 ---
+id: "guide-function"
 name: "Guide Function"
 tier: "basic"
 tags:

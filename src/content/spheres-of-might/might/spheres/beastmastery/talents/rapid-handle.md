@@ -1,4 +1,5 @@
 ---
+id: "rapid-handle"
 name: "Rapid Handle"
 tier: "basic"
 tags: []

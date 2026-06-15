@@ -1,4 +1,5 @@
 ---
+id: "carry-companion"
 name: "Carry Companion"
 tier: "advanced"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "slowing-poison"
 name: "Slowing Poison"
 tier: "basic"
 tags:

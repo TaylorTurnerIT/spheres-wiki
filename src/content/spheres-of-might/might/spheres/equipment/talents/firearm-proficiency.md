@@ -1,4 +1,5 @@
 ---
+id: "firearm-proficiency"
 name: "Firearm Proficiency"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "distracting-phantoms"
 name: "Distracting Phantoms"
 tier: basic
 tags: []

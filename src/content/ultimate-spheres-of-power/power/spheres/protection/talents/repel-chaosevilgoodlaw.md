@@ -1,4 +1,5 @@
 ---
+id: "repel-chaosevilgoodlaw"
 name: "Repel Chaos/Evil/Good/Law"
 tier: basic
 tags: ["ward"]

@@ -1,4 +1,5 @@
 ---
+id: "resilience-training"
 name: "Resilience Training"
 tier: "basic"
 tags:

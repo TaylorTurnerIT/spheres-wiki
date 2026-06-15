@@ -1,4 +1,5 @@
 ---
+id: "cowing-nightmare"
 name: "Cowing Nightmare"
 tier: "basic"
 tags:

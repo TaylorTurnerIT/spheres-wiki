@@ -1,4 +1,5 @@
 ---
+id: "tenebrous-legerdemain"
 name: "Tenebrous Legerdemain"
 tier: basic
 tags: ["blot", "darkness", "meld"]

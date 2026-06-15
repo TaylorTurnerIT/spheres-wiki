@@ -1,4 +1,5 @@
 ---
+id: "sensory-protections"
 name: "Sensory Protections"
 tier: "basic"
 tags:

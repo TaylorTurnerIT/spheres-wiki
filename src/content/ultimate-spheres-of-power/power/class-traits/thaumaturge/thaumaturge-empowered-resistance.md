@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-empowered-resistance"
 name: "Empowered Resistance"
 tags: []
 featureId: invocations

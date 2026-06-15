@@ -1,4 +1,5 @@
 ---
+id: "illusionary-blast"
 name: Illusionary Blast
 sphere: illusion
 dualSphere: destruction

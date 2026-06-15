@@ -1,4 +1,5 @@
 ---
+id: "alloyed-plating"
 name: "Alloyed Plating"
 tier: "basic"
 tags:

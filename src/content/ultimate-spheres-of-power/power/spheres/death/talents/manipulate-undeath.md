@@ -1,4 +1,5 @@
 ---
+id: "manipulate-undeath"
 name: "Manipulate Undeath"
 tier: basic
 tags: ["ghost-strike"]

@@ -1,4 +1,5 @@
 ---
+id: "lethal-precision"
 name: "Lethal Precision"
 tier: "basic"
 tags: []

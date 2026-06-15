@@ -1,4 +1,5 @@
 ---
+id: "boon-companion"
 name: "Boon Companion"
 tier: basic
 tags: ["form"]

@@ -1,4 +1,5 @@
 ---
+id: "skill-acuity"
 name: "Skill Acuity"
 tier: "basic"
 tags: []

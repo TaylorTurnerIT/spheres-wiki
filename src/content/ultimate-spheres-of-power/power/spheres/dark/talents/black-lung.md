@@ -1,4 +1,5 @@
 ---
+id: "black-lung"
 name: "Black Lung"
 tier: basic
 tags: ["darkness"]

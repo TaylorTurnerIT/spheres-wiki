@@ -1,4 +1,5 @@
 ---
+id: "petrichor"
 name: "Petrichor"
 tier: basic
 tags: ["mantle", "precipitation", "utility"]

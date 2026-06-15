@@ -1,4 +1,5 @@
 ---
+id: "smash-brute"
 name: "Smash"
 tier: "basic"
 tags: []

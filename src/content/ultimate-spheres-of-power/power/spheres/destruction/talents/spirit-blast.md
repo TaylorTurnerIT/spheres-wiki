@@ -1,4 +1,5 @@
 ---
+id: "spirit-blast"
 name: "Spirit Blast"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "energy-modification"
 name: "Energy Modification"
 tier: basic
 tags: ["amp", "manipulation"]

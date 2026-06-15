@@ -1,4 +1,5 @@
 ---
+id: "hallowedunhallowed-totem"
 name: "Hallowed/Unhallowed Totem"
 tier: basic
 tags: ["totem"]

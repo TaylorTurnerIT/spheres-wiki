@@ -1,4 +1,5 @@
 ---
+id: "manathief"
 name: "Manathief"
 tier: advanced
 tags: ["expunge"]

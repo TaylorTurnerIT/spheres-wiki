@@ -1,4 +1,5 @@
 ---
+id: "voidwatcher"
 name: "Voidwatcher"
 tier: basic
 tags: ["meld"]

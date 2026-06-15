@@ -1,4 +1,5 @@
 ---
+id: "survey-of-your-realm"
 name: Survey of your Realm
 sphere: warp
 dualSphere: divination

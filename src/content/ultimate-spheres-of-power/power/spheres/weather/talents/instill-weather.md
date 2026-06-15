@@ -1,4 +1,5 @@
 ---
+id: "instill-weather"
 name: "Instill Weather"
 tier: basic
 tags: ["instill"]

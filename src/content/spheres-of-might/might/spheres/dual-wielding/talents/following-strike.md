@@ -1,4 +1,5 @@
 ---
+id: "following-strike"
 name: "Following Strike"
 tier: "basic"
 tags: []

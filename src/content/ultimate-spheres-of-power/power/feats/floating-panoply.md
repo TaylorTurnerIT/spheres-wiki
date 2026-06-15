@@ -1,4 +1,5 @@
 ---
+id: "floating-panoply"
 name: "Floating Panoply"
 sphere: telekinesis
 tags: []

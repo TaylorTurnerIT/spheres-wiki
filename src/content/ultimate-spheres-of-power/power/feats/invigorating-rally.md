@@ -1,4 +1,5 @@
 ---
+id: "invigorating-rally"
 name: Invigorating Rally
 sphere: war
 dualSphere: life

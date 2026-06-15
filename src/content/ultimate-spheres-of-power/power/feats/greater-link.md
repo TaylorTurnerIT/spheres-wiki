@@ -1,4 +1,5 @@
 ---
+id: "greater-link"
 name: "Greater Link"
 sphere: conjuration
 tags: []

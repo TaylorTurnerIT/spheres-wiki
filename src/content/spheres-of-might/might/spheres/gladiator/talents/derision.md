@@ -1,4 +1,5 @@
 ---
+id: "derision"
 name: "Derision"
 tier: "basic"
 tags: []

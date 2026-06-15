@@ -1,4 +1,5 @@
 ---
+id: "parts-and-pieces"
 name: Parts And Pieces
 sphere: enhancement
 dualSphere: death

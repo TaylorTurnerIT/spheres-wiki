@@ -1,4 +1,5 @@
 ---
+id: "detect-patronage"
 name: "Detect Patronage"
 tier: advanced
 tags: ["utility"]

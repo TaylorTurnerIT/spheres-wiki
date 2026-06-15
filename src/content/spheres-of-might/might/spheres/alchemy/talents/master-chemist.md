@@ -1,4 +1,5 @@
 ---
+id: "master-chemist"
 name: "Master Chemist"
 tier: "basic"
 tags: []

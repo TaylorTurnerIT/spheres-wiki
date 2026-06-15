@@ -1,4 +1,5 @@
 ---
+id: "voidfarer"
 name: "Voidfarer"
 tier: "advanced"
 tags: []

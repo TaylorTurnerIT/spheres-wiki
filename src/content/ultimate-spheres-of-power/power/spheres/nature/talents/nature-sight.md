@@ -1,4 +1,5 @@
 ---
+id: "nature-sight"
 name: "Nature Sight"
 tier: basic
 tags: ["spirit"]

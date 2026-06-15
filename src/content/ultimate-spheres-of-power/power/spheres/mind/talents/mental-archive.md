@@ -1,4 +1,5 @@
 ---
+id: "mental-archive"
 name: "Mental Archive"
 tier: basic
 tags: ["cognition", "utility"]

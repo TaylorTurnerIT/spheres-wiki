@@ -1,4 +1,5 @@
 ---
+id: "shadow-slick"
 name: "Shadow Slick"
 tier: basic
 tags: ["blot", "shadow"]

@@ -1,4 +1,5 @@
 ---
+id: "wind-up-brace"
 name: "Wind-Up Brace"
 tier: "basic"
 tags:

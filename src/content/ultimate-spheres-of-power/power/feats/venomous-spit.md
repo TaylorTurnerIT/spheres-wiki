@@ -1,4 +1,5 @@
 ---
+id: "venomous-spit"
 name: "Venomous Spit"
 sphere: conjuration
 tags: ["companion"]

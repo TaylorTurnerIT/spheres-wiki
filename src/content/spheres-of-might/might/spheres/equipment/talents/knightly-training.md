@@ -1,4 +1,5 @@
 ---
+id: "knightly-training"
 name: "Knightly Training"
 tier: "basic"
 tags:

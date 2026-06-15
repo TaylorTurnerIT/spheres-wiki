@@ -1,4 +1,5 @@
 ---
+id: "randomized-planeshift"
 name: "Randomized Planeshift"
 tier: advanced
 tags: ["sm"]

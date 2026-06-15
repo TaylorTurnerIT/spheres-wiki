@@ -1,4 +1,5 @@
 ---
+id: "warning-sign"
 name: Warning Sign
 sphere: war
 dualSphere: protection

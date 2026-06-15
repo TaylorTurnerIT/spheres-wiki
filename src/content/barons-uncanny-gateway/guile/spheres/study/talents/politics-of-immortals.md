@@ -1,4 +1,5 @@
 ---
+id: "politics-of-immortals"
 name: "Politics of Immortals"
 tier: "advanced"
 tags:

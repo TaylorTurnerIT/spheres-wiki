@@ -1,4 +1,5 @@
 ---
+id: "trap-finder"
 name: "Trap Finder"
 tier: "basic"
 tags:

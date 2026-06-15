@@ -1,4 +1,5 @@
 ---
+id: "alternate-methods"
 name: "Alternate Methods"
 tier: "basic"
 tags:

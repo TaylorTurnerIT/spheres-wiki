@@ -1,4 +1,5 @@
 ---
+id: "occult-countermeasures"
 name: "Occult Countermeasures"
 tier: "basic"
 tags:

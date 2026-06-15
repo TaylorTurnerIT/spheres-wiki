@@ -1,4 +1,5 @@
 ---
+id: "fitness-instructor"
 name: "Fitness Instructor"
 tier: "basic"
 tags:

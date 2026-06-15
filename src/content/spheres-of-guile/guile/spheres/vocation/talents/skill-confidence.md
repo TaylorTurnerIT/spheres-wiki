@@ -1,4 +1,5 @@
 ---
+id: "skill-confidence"
 name: "Skill Confidence"
 tier: "basic"
 tags: []

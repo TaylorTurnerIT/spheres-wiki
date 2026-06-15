@@ -1,4 +1,5 @@
 ---
+id: "beastmastery-and-taming-intelligent-creatures"
 name: "Sphere-Specific Variant Rule: Beastmastery and Taming Intelligent Creatures"
 source: beast-tamers-handbook
 ---

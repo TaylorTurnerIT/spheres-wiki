@@ -1,4 +1,5 @@
 ---
+id: "natural-blessing"
 name: "Natural Blessing"
 tier: basic
 tags: ["fey-blessing"]

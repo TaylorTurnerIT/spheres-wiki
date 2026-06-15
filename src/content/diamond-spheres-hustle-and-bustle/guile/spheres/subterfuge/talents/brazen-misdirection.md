@@ -1,4 +1,5 @@
 ---
+id: "brazen-misdirection"
 name: "Brazen Misdirection"
 tier: "basic"
 tags: []

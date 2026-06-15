@@ -1,4 +1,5 @@
 ---
+id: "greater-illusionary-disguise"
 name: "Greater Illusionary Disguise"
 tier: basic
 tags: ["utility"]

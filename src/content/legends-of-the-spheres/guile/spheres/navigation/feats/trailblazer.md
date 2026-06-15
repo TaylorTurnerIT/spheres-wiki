@@ -1,4 +1,5 @@
 ---
+id: "trailblazer"
 name: "Trailblazer"
 tags:
   - "champion"

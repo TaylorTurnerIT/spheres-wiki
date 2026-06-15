@@ -1,4 +1,5 @@
 ---
+id: "great-amplification"
 name: "Great Amplification"
 tier: advanced
 tags: []

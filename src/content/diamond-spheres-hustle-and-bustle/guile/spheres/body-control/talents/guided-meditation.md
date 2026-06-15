@@ -1,4 +1,5 @@
 ---
+id: "guided-meditation"
 name: "Guided Meditation"
 tier: "basic"
 tags: []

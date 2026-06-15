@@ -1,4 +1,5 @@
 ---
+id: "inspector-retainer"
 name: "Inspector Retainer"
 tier: "advanced"
 tags:

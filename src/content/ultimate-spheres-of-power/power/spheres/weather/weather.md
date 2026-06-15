@@ -1,4 +1,5 @@
 ---
+id: "weather"
 name: "Weather"
 icon: weather
 description: "You can command the weather to do your bidding."

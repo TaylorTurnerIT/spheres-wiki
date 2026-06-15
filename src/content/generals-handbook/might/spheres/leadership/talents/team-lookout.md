@@ -1,4 +1,5 @@
 ---
+id: "team-lookout"
 name: "Team Lookout"
 tier: "basic"
 tags:

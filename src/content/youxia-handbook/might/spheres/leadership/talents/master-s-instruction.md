@@ -1,4 +1,5 @@
 ---
+id: "master-s-instruction"
 name: "Master’s Instruction"
 tier: "basic"
 tags:

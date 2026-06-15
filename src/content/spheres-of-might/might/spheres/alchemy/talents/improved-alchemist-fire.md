@@ -1,4 +1,5 @@
 ---
+id: "improved-alchemist-fire"
 name: "Improved Alchemist Fire"
 tier: "basic"
 tags:

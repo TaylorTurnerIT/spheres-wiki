@@ -1,4 +1,5 @@
 ---
+id: "logic"
 name: "Logic"
 tier: basic
 tags: ["ward"]

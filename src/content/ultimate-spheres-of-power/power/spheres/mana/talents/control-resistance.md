@@ -1,4 +1,5 @@
 ---
+id: "control-resistance"
 name: "Control Resistance"
 tier: basic
 tags: ["manabond"]

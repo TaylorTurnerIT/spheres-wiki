@@ -1,4 +1,5 @@
 ---
+id: "leg-cutter"
 name: "Leg Cutter"
 tier: "basic"
 tags:

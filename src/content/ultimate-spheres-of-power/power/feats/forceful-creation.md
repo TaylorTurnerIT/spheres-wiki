@@ -1,4 +1,5 @@
 ---
+id: "forceful-creation"
 name: Forceful Creation
 sphere: telekinesis
 dualSphere: creation

@@ -1,4 +1,5 @@
 ---
+id: "steal-skin"
 name: "Steal Skin"
 tier: advanced
 tags: ["fey-blessing"]

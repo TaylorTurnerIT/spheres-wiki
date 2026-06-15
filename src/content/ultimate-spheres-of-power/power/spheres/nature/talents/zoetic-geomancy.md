@@ -1,4 +1,5 @@
 ---
+id: "zoetic-geomancy"
 name: "Zoetic Geomancy"
 tier: advanced
 tags: []

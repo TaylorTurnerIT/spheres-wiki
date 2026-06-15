@@ -1,4 +1,5 @@
 ---
+id: "bullet-cyclone"
 name: "Bullet Cyclone"
 tier: "advanced"
 tags: []

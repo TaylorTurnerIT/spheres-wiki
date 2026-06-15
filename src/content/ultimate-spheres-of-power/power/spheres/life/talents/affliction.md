@@ -1,4 +1,5 @@
 ---
+id: "affliction"
 name: "Affliction"
 tier: basic
 tags: []

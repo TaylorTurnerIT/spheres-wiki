@@ -1,4 +1,5 @@
 ---
+id: "totem-of-allegiance"
 name: "Totem Of Allegiance"
 tier: basic
 tags: ["totem"]

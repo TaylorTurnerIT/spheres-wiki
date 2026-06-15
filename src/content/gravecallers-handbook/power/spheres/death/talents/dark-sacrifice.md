@@ -1,4 +1,5 @@
 ---
+id: "dark-sacrifice"
 name: "Dark Sacrifice"
 tier: basic
 tags: ["dominion"]

@@ -1,4 +1,5 @@
 ---
+id: "incense"
 name: "Incense"
 tier: basic
 tags: ["charm"]

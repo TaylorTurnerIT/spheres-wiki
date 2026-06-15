@@ -1,4 +1,5 @@
 ---
+id: "deep-spellburn"
 name: "Deep Spellburn"
 sphere: mana
 tags: []

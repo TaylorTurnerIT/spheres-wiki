@@ -1,4 +1,5 @@
 ---
+id: "intermediate-daredevil"
 name: "Intermediate Daredevil"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "mounted-magician"
 name: "Mounted Magician"
 sphere: enhancement
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "bounty-of-the-fey"
 name: "Bounty of the Fey"
 tier: basic
 tags: ["mass"]

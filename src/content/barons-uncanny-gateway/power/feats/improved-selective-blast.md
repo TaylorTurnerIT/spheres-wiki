@@ -1,4 +1,5 @@
 ---
+id: "improved-selective-blast"
 name: "Improved Selective Blast"
 sphere: destruction
 tags: ["combat", "sm"]

@@ -1,4 +1,5 @@
 ---
+id: "clearsight"
 name: "Clearsight"
 tier: basic
 tags: ["meld"]

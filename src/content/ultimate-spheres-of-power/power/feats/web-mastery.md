@@ -1,4 +1,5 @@
 ---
+id: "web-mastery"
 name: "Web Mastery"
 sphere: alteration
 tags: ["combat", "combat", "companion"]

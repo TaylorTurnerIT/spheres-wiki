@@ -1,4 +1,5 @@
 ---
+id: "intense-meditation"
 name: "Intense Meditation"
 tier: "basic"
 tags: []

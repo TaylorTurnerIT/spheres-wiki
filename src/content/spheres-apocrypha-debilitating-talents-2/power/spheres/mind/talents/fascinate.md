@@ -1,4 +1,5 @@
 ---
+id: "fascinate"
 name: "Fascinate"
 tier: basic
 tags: ["charm"]

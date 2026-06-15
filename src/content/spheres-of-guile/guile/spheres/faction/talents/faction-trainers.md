@@ -1,4 +1,5 @@
 ---
+id: "faction-trainers"
 name: "Faction Trainers"
 tier: "basic"
 tags:

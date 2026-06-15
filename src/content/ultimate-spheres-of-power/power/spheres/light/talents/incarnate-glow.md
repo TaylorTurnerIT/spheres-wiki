@@ -1,4 +1,5 @@
 ---
+id: "incarnate-glow"
 name: "Incarnate Glow"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "mass-teleport"
 name: "Mass Teleport"
 tier: basic
 tags: ["mass"]

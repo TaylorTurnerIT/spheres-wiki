@@ -1,4 +1,5 @@
 ---
+id: "magnifyminimize"
 name: "Magnify/Minimize"
 tier: basic
 tags: ["alter"]

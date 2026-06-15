@@ -1,4 +1,5 @@
 ---
+id: "signature-trait"
 name: "Signature Trait"
 tier: advanced
 tags: []

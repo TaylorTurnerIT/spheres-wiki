@@ -1,4 +1,5 @@
 ---
+id: "greater-undead"
 name: "Greater Undead"
 tier: advanced
 tags: []

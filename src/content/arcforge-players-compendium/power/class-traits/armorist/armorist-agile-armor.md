@@ -1,4 +1,5 @@
 ---
+id: "armorist-agile-armor"
 name: "Agile Armor"
 tags: []
 featureId: arsenal-trick

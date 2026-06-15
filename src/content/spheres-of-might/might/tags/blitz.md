@@ -1,4 +1,5 @@
 ---
+id: "blitz"
 label: "Blitz"
 sphere: "barrage"
 priority: 0

@@ -1,4 +1,5 @@
 ---
+id: "shadow-shield"
 name: "Shadow Shield"
 sphere: illusion
 tags: ["surreal"]

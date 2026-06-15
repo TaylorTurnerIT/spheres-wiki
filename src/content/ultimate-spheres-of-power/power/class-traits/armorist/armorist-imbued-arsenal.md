@@ -1,4 +1,5 @@
 ---
+id: "armorist-imbued-arsenal"
 name: "Imbued Arsenal"
 tags: []
 featureId: arsenal-trick

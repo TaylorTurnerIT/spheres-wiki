@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-arcane-builder"
 name: "Arcane Builder"
 tags: []
 featureId: grand-secrets

@@ -1,4 +1,5 @@
 ---
+id: "armorist-horsemans-materials"
 name: "Horseman's Materials"
 tags: []
 featureId: arsenal-trick

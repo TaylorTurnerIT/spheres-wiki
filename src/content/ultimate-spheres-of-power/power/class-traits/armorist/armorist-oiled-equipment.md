@@ -1,4 +1,5 @@
 ---
+id: "armorist-oiled-equipment"
 name: "Oiled Equipment"
 tags: []
 featureId: arsenal-trick

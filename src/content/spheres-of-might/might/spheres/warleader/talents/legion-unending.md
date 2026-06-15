@@ -1,4 +1,5 @@
 ---
+id: "legion-unending"
 name: "Legion Unending"
 tier: "advanced"
 tags:

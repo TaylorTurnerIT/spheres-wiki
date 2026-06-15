@@ -1,4 +1,5 @@
 ---
+id: "ranged-geomancy"
 name: "Ranged Geomancy"
 tier: basic
 tags: ["range"]

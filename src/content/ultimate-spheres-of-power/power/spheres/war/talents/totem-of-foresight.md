@@ -1,4 +1,5 @@
 ---
+id: "totem-of-foresight"
 name: "Totem Of Foresight"
 tier: basic
 tags: ["totem"]

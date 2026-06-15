@@ -1,4 +1,5 @@
 ---
+id: "rose-tinted"
 name: "Rose-Tinted"
 tier: basic
 tags: ["lens"]

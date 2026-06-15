@@ -1,4 +1,5 @@
 ---
+id: "ragdoll-swing"
 name: "Ragdoll Swing"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "frightening-hallucinogen"
 name: "Frightening Hallucinogen"
 tier: "basic"
 tags:

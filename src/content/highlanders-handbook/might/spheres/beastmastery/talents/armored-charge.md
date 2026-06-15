@@ -1,4 +1,5 @@
 ---
+id: "armored-charge"
 name: "Armored Charge"
 tier: "basic"
 tags: []

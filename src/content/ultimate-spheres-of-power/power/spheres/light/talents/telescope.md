@@ -1,4 +1,5 @@
 ---
+id: "telescope"
 name: "Telescope"
 tier: base
 tags: ["lens"]

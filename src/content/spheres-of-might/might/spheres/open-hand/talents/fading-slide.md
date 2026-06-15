@@ -1,4 +1,5 @@
 ---
+id: "fading-slide"
 name: "Fading Slide"
 tier: "basic"
 tags: []

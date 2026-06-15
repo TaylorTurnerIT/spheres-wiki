@@ -1,4 +1,5 @@
 ---
+id: "minor-thaumaturgy"
 name: "Minor Thaumaturgy"
 tier: "basic"
 tags:

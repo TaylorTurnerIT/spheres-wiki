@@ -1,4 +1,5 @@
 ---
+id: "invocations"
 name: "Invocations"
 type: class-feature
 className: thaumaturge

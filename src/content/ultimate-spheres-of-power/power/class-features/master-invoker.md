@@ -1,4 +1,5 @@
 ---
+id: "master-invoker"
 name: "Master Invoker"
 type: class-feature
 className: thaumaturge

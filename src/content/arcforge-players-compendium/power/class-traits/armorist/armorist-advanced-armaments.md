@@ -1,4 +1,5 @@
 ---
+id: "armorist-advanced-armaments"
 name: "Advanced Armaments"
 tags: []
 featureId: arsenal-trick

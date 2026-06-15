@@ -1,4 +1,5 @@
 ---
+id: "investigate-area"
 name: "Investigate Area"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "selective-barrier"
 name: "Selective Barrier"
 tier: basic
 tags: []

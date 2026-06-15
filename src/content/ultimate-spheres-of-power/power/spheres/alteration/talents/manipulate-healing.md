@@ -1,4 +1,5 @@
 ---
+id: "manipulate-healing"
 name: "Manipulate Healing"
 tier: advanced
 tags: []

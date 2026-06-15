@@ -1,4 +1,5 @@
 ---
+id: "shade"
 name: Shade
 sphere: illusion
 dualSphere: dark

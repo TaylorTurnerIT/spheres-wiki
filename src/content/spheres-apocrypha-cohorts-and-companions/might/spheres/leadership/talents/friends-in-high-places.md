@@ -1,4 +1,5 @@
 ---
+id: "friends-in-high-places"
 name: "Friends In High Places"
 tier: "advanced"
 tags:

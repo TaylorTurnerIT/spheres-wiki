@@ -1,4 +1,5 @@
 ---
+id: "defiant-shadow"
 name: "Defiant Shadow"
 sphere: dark
 tags: []

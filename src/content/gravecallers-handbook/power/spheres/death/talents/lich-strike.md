@@ -1,4 +1,5 @@
 ---
+id: "lich-strike"
 name: "Lich Strike"
 tier: basic
 tags: ["ghost-strike"]

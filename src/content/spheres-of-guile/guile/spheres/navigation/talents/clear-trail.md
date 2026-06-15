@@ -1,4 +1,5 @@
 ---
+id: "clear-trail"
 name: "Clear Trail"
 tier: "basic"
 tags:

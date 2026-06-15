@@ -1,4 +1,5 @@
 ---
+id: "permanent-image"
 name: "Permanent Image"
 tier: advanced
 tags: []

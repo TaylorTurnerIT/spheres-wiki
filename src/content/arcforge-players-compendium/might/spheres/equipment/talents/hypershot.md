@@ -1,4 +1,5 @@
 ---
+id: "hypershot"
 name: "Hypershot"
 tier: "advanced"
 tags: []

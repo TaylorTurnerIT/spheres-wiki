@@ -1,4 +1,5 @@
 ---
+id: "double-dose"
 name: "Double Dose"
 tier: "basic"
 tags: []

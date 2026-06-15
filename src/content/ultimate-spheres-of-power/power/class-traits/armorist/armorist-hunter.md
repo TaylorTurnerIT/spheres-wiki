@@ -1,4 +1,5 @@
 ---
+id: "armorist-hunter"
 name: "Hunter"
 tags: []
 featureId: arsenal-trick

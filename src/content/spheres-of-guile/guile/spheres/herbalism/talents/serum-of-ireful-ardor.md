@@ -1,4 +1,5 @@
 ---
+id: "serum-of-ireful-ardor"
 name: "Serum Of Ireful Ardor"
 tier: "basic"
 tags:

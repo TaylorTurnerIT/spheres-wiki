@@ -1,4 +1,5 @@
 ---
+id: "guarding-weapon"
 name: "Guarding Weapon"
 tier: "basic"
 tags: []

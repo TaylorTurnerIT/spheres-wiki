@@ -1,4 +1,5 @@
 ---
+id: "healers"
 name: "Healers"
 tier: "basic"
 tags:

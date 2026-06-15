@@ -1,4 +1,5 @@
 ---
+id: "axe-kick"
 name: "Axe Kick"
 tier: "basic"
 tags: []

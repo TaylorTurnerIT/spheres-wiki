@@ -1,4 +1,5 @@
 ---
+id: "armorist-executioner"
 name: "Executioner"
 tags: []
 featureId: arsenal-trick

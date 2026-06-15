@@ -1,4 +1,5 @@
 ---
+id: "martial-disguise"
 name: "Martial Disguise"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "stone-whisperer"
 name: "Stone Whisperer"
 tier: "advanced"
 tags:

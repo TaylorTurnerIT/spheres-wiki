@@ -1,4 +1,5 @@
 ---
+id: "walking-fire"
 name: "Walking Fire"
 tier: "basic"
 tags: []

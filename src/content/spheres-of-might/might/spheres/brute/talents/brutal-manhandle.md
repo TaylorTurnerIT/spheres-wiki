@@ -1,4 +1,5 @@
 ---
+id: "brutal-manhandle"
 name: "Brutal Manhandle"
 tier: "basic"
 tags: []

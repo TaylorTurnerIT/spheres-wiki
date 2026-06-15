@@ -1,4 +1,5 @@
 ---
+id: "quick-teleport"
 name: "Quick Teleport"
 tier: basic
 tags: []

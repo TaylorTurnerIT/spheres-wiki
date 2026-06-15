@@ -1,4 +1,5 @@
 ---
+id: "vicious-accuracy"
 name: "Vicious Accuracy"
 tier: advanced
 tags: ["enhance"]

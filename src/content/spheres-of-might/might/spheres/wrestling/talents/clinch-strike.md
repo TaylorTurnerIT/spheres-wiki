@@ -1,4 +1,5 @@
 ---
+id: "clinch-strike"
 name: "Clinch Strike"
 tier: "basic"
 tags:

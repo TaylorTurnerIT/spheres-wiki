@@ -1,4 +1,5 @@
 ---
+id: "adamant-stalker"
 name: "Adamant Stalker"
 tier: "basic"
 tags: []

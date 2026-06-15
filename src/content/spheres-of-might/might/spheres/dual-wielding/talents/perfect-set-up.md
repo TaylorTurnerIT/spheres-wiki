@@ -1,4 +1,5 @@
 ---
+id: "perfect-set-up"
 name: "Perfect Set-Up"
 tier: "basic"
 tags: []

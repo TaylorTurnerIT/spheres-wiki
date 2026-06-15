@@ -1,4 +1,5 @@
 ---
+id: "redirect-strike"
 name: "Redirect Strike"
 tier: "basic"
 tags: []

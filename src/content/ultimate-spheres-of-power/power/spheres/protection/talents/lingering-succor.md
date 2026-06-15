@@ -1,4 +1,5 @@
 ---
+id: "lingering-succor"
 name: "Lingering Succor"
 tier: basic
 tags: []

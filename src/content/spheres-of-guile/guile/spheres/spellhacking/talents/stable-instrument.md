@@ -1,4 +1,5 @@
 ---
+id: "stable-instrument"
 name: "Stable Instrument"
 tier: "base"
 tags:

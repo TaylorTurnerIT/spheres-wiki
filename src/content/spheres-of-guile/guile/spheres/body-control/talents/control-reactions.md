@@ -1,4 +1,5 @@
 ---
+id: "control-reactions"
 name: "Control Reactions"
 tier: "basic"
 tags:

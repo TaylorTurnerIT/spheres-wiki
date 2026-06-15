@@ -1,4 +1,5 @@
 ---
+id: "acute-senses"
 name: "Acute Senses"
 tier: "basic"
 tags:

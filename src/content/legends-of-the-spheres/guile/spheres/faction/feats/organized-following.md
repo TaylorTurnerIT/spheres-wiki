@@ -1,4 +1,5 @@
 ---
+id: "organized-following"
 name: "Organized Following"
 tags:
   - "champion"

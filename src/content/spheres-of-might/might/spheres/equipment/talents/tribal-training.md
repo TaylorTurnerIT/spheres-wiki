@@ -1,4 +1,5 @@
 ---
+id: "tribal-training"
 name: "Tribal Training"
 tier: "basic"
 tags:

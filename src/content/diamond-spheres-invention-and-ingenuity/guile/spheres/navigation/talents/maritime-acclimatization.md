@@ -1,4 +1,5 @@
 ---
+id: "maritime-acclimatization"
 name: "Maritime Acclimatization"
 tier: "basic"
 tags:

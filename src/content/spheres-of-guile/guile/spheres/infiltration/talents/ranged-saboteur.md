@@ -1,4 +1,5 @@
 ---
+id: "ranged-saboteur"
 name: "Ranged Saboteur"
 tier: "advanced"
 tags: []

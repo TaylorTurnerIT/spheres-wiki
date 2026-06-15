@@ -1,4 +1,5 @@
 ---
+id: "withering-defense"
 name: "Withering Defense"
 tier: "basic"
 tags: []

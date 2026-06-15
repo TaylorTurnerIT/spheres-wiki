@@ -1,4 +1,5 @@
 ---
+id: "diplomat"
 name: "Diplomat"
 tier: "basic"
 tags:

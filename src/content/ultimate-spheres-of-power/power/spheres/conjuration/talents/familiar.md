@@ -1,4 +1,5 @@
 ---
+id: "familiar"
 name: "Familiar"
 tier: basic
 tags: ["supernatural"]

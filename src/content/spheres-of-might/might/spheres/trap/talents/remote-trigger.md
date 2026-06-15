@@ -1,4 +1,5 @@
 ---
+id: "remote-trigger"
 name: "Remote Trigger"
 tier: "basic"
 tags: []

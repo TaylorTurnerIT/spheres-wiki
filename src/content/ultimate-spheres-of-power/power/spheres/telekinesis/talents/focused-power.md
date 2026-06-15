@@ -1,4 +1,5 @@
 ---
+id: "focused-power"
 name: "Focused Power"
 tier: advanced
 tags: []

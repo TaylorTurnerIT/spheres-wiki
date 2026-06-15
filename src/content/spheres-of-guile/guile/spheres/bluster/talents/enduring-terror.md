@@ -1,4 +1,5 @@
 ---
+id: "enduring-terror"
 name: "Enduring Terror"
 tier: "advanced"
 tags:

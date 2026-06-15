@@ -1,4 +1,5 @@
 ---
+id: "shortbow-mastery"
 name: "Shortbow Mastery"
 tier: "basic"
 tags: []

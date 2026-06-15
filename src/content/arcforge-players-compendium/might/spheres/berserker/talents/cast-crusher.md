@@ -1,4 +1,5 @@
 ---
+id: "cast-crusher"
 name: "Cast-Crusher"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "magical-curiosity"
 name: "Magical Curiosity"
 tier: "basic"
 tags: []

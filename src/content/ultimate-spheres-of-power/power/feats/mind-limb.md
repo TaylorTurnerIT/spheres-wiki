@@ -1,4 +1,5 @@
 ---
+id: "mind-limb"
 name: "Mind Limb"
 sphere: telekinesis
 tags: ["protokinesis"]

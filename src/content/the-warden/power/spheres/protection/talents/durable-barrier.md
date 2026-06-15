@@ -1,4 +1,5 @@
 ---
+id: "durable-barrier"
 name: "Durable Barrier"
 tier: basic
 tags: ["warden"]

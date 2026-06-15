@@ -1,4 +1,5 @@
 ---
+id: "trip-shot"
 name: "Trip Shot"
 tier: "basic"
 tags:

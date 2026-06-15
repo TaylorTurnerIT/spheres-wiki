@@ -1,4 +1,5 @@
 ---
+id: "ensouled-vision"
 name: "Ensouled Vision"
 sphere: divination
 tags: []

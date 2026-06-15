@@ -1,4 +1,5 @@
 ---
+id: "battering-defense"
 name: "Battering Defense"
 tier: "basic"
 tags: []

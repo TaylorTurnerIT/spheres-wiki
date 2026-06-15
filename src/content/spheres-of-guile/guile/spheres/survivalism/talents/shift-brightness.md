@@ -1,4 +1,5 @@
 ---
+id: "shift-brightness"
 name: "Shift Brightness"
 tier: "advanced"
 tags:

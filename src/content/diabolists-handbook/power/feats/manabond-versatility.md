@@ -1,4 +1,5 @@
 ---
+id: "manabond-versatility"
 name: Manabond Versatility
 sphere: mana
 dualSphere: "any"

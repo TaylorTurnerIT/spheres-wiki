@@ -1,4 +1,5 @@
 ---
+id: "shifter-undead-kin"
 name: "Undead Kin"
 tags: ["supernatural"]
 featureId: bestial-trait

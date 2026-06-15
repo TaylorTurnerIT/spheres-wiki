@@ -1,4 +1,5 @@
 ---
+id: "defensive-leverage"
 name: "Defensive Leverage"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "hammerlock"
 name: "Hammerlock"
 tier: "basic"
 tags: []

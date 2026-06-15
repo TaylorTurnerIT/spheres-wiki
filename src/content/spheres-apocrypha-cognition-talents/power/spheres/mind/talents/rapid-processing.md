@@ -1,4 +1,5 @@
 ---
+id: "rapid-processing"
 name: "Rapid Processing"
 tier: basic
 tags: ["cognition", "utility"]

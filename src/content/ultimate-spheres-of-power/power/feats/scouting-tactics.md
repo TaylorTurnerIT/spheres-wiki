@@ -1,4 +1,5 @@
 ---
+id: "scouting-tactics"
 name: "Scouting Tactics"
 sphere: war
 tags: ["squadron"]

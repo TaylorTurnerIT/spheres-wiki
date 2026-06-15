@@ -1,4 +1,5 @@
 ---
+id: "naturalist-s-eye"
 name: "Naturalist’s Eye"
 tier: "base"
 tags:

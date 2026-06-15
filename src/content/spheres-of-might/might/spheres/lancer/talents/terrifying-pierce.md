@@ -1,4 +1,5 @@
 ---
+id: "terrifying-pierce"
 name: "Terrifying Pierce"
 tier: "basic"
 tags: []

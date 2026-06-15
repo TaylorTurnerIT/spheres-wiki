@@ -1,4 +1,5 @@
 ---
+id: "mass-tame"
 name: "Mass Tame"
 tier: "advanced"
 tags:

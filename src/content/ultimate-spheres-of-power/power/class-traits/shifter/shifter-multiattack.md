@@ -1,4 +1,5 @@
 ---
+id: "shifter-multiattack"
 name: "Multiattack"
 tags: []
 featureId: bestial-trait

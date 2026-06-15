@@ -1,4 +1,5 @@
 ---
+id: "master-s-aura"
 name: "Master’s Aura"
 tier: "advanced"
 tags:

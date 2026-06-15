@@ -1,4 +1,5 @@
 ---
+id: "stair-shot"
 name: "Stair Shot"
 tier: "advanced"
 tags:

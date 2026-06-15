@@ -1,4 +1,5 @@
 ---
+id: "scatter-mastery"
 name: "Scatter Mastery"
 tier: "basic"
 tags: []

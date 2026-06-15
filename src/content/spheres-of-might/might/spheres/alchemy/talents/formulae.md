@@ -1,4 +1,5 @@
 ---
+id: "formulae"
 name: "Formulae"
 tier: "base"
 tags: []

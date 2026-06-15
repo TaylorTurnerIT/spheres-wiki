@@ -1,4 +1,5 @@
 ---
+id: "focused-blast-type-group"
 name: "Focused Blast Type Group"
 sphere: destruction
 tags: []

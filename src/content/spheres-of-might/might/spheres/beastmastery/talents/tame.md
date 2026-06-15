@@ -1,4 +1,5 @@
 ---
+id: "tame"
 name: "Tame"
 tier: "base"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "mageknight-shining-armor"
 name: "Shining Armor"
 tags: ["supernatural"]
 featureId: mystic-combat-su

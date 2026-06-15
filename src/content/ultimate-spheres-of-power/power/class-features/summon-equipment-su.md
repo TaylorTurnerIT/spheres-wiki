@@ -1,4 +1,5 @@
 ---
+id: "summon-equipment-su"
 name: "Summon Equipment (Su)"
 type: class-feature
 className: armorist

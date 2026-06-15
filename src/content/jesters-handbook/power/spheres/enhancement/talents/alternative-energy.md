@@ -1,4 +1,5 @@
 ---
+id: "alternative-energy"
 name: "Alternative Energy"
 tier: advanced
 tags: []

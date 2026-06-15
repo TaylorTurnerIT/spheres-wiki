@@ -1,4 +1,5 @@
 ---
+id: "unseelie-trapper"
 name: "Unseelie Trapper"
 sphere: fallen-fey
 tags: ["champion"]

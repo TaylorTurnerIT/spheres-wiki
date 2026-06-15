@@ -1,4 +1,5 @@
 ---
+id: "rewrite-memory"
 name: "Rewrite Memory"
 tier: "advanced"
 tags: []

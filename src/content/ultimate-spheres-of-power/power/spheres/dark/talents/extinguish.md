@@ -1,4 +1,5 @@
 ---
+id: "extinguish"
 name: "Extinguish"
 tier: basic
 tags: ["utility"]

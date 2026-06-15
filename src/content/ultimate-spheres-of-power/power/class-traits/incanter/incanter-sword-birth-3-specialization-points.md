@@ -1,4 +1,5 @@
 ---
+id: "incanter-sword-birth-3-specialization-points"
 name: "Sword Birth (3 specialization points)"
 tags: []
 featureId: incanter-specializations

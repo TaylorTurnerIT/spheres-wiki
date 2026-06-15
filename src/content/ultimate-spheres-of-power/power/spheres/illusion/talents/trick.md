@@ -1,4 +1,5 @@
 ---
+id: "trick"
 name: "Trick"
 tier: base
 tags: []

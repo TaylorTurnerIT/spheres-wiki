@@ -1,4 +1,5 @@
 ---
+id: "past-sight"
 name: "Past Sight"
 tier: advanced
 tags: ["utility"]

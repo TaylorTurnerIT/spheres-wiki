@@ -1,4 +1,5 @@
 ---
+id: "pressuring-divinations"
 name: "Pressuring Divinations"
 tier: basic
 tags: ["sm", "utility"]

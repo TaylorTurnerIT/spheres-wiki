@@ -1,4 +1,5 @@
 ---
+id: "whispering-winds"
 name: "Whispering Winds"
 tier: basic
 tags: ["mantle", "utility", "wind"]

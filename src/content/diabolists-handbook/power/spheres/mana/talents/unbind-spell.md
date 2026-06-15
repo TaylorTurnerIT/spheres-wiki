@@ -1,4 +1,5 @@
 ---
+id: "unbind-spell"
 name: "Unbind Spell"
 tier: advanced
 tags: []

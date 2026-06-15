@@ -1,4 +1,5 @@
 ---
+id: "shifter-sprint"
 name: "Sprint"
 tags: ["extraordinary"]
 featureId: bestial-trait

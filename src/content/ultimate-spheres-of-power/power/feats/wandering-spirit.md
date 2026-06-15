@@ -1,4 +1,5 @@
 ---
+id: "wandering-spirit"
 name: "Wandering Spirit"
 sphere: death
 tags: ["necrosis"]

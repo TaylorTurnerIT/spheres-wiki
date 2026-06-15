@@ -1,4 +1,5 @@
 ---
+id: "master-gatherer"
 name: "Master Gatherer"
 tier: "advanced"
 tags: []

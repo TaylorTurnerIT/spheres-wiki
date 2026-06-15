@@ -1,4 +1,5 @@
 ---
+id: "mental-loophole"
 name: "Mental Loophole"
 tier: "basic"
 tags: []

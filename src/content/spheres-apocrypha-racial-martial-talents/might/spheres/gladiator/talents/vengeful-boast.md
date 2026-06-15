@@ -1,4 +1,5 @@
 ---
+id: "vengeful-boast"
 name: "Vengeful Boast"
 tier: "basic"
 tags: []

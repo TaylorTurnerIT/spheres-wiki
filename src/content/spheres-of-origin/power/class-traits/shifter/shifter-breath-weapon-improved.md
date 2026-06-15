@@ -1,4 +1,5 @@
 ---
+id: "shifter-breath-weapon-improved"
 name: "Breath Weapon, Improved"
 tags: []
 featureId: bestial-trait

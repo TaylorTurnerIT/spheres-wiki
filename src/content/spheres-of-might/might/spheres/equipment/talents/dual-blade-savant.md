@@ -1,4 +1,5 @@
 ---
+id: "dual-blade-savant"
 name: "Dual Blade Savant"
 tier: "basic"
 tags: []

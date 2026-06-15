@@ -1,4 +1,5 @@
 ---
+id: "expanded-wayfarer"
 name: "Expanded Wayfarer"
 tier: "basic"
 tags: []

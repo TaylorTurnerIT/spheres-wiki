@@ -1,4 +1,5 @@
 ---
+id: "fey-adept"
 name: "Fey Adept"
 tags: []
 hitDie: 6

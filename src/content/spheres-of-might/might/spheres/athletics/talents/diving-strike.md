@@ -1,4 +1,5 @@
 ---
+id: "diving-strike"
 name: "Diving Strike"
 tier: "basic"
 tags:

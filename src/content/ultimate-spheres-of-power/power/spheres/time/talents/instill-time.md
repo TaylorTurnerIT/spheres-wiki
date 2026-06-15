@@ -1,4 +1,5 @@
 ---
+id: "instill-time"
 name: "Instill Time"
 tier: basic
 tags: ["instill"]

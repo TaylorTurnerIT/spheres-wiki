@@ -1,4 +1,5 @@
 ---
+id: "quick-transformation"
 name: "Quick Transformation"
 type: class-feature
 className: shifter

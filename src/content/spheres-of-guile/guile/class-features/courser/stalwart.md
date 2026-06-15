@@ -1,4 +1,5 @@
 ---
+id: "stalwart"
 name: Stalwart
 level: 5
 tags: []

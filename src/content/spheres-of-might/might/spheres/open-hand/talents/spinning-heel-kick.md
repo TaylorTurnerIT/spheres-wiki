@@ -1,4 +1,5 @@
 ---
+id: "spinning-heel-kick"
 name: "Spinning Heel Kick"
 tier: "basic"
 tags: []

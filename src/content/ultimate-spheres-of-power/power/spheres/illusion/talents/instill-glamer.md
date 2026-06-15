@@ -1,4 +1,5 @@
 ---
+id: "instill-glamer"
 name: "Instill Glamer"
 tier: basic
 tags: ["instill"]

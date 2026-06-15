@@ -1,4 +1,5 @@
 ---
+id: "defensive-slice"
 name: "Defensive Slice"
 tier: "basic"
 tags: []

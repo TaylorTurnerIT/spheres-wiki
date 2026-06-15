@@ -1,4 +1,5 @@
 ---
+id: "mass-rally"
 name: "Mass Rally"
 tier: basic
 tags: ["mass"]

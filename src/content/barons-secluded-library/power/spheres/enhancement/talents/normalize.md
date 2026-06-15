@@ -1,4 +1,5 @@
 ---
+id: "normalize"
 name: "Normalize"
 tier: advanced
 tags: ["enhance", "sm"]

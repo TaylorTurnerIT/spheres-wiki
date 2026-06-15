@@ -1,4 +1,5 @@
 ---
+id: "solemn-requiem"
 name: "Solemn Requiem"
 tier: "basic"
 tags:

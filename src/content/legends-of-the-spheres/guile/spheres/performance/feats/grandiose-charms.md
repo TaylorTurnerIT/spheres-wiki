@@ -1,4 +1,5 @@
 ---
+id: "grandiose-charms"
 name: "Grandiose Charms"
 dualSphere: "bluster"
 tags:

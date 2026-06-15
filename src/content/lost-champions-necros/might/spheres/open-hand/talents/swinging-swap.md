@@ -1,4 +1,5 @@
 ---
+id: "swinging-swap"
 name: "Swinging Swap"
 tier: "basic"
 tags: []

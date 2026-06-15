@@ -1,4 +1,5 @@
 ---
+id: "mystical-bond"
 name: "Mystical Bond"
 tier: basic
 tags: ["manabond"]

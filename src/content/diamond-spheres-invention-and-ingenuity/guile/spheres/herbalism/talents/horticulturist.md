@@ -1,4 +1,5 @@
 ---
+id: "horticulturist"
 name: Horticulturist
 dualSphere: creation
 tier: base

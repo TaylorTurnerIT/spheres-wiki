@@ -1,4 +1,5 @@
 ---
+id: "shifter"
 name: "Shifter"
 tags: []
 hitDie: 8

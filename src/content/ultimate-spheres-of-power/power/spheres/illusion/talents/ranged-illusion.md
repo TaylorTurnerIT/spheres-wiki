@@ -1,4 +1,5 @@
 ---
+id: "ranged-illusion"
 name: "Ranged Illusion"
 tier: basic
 tags: ["range"]

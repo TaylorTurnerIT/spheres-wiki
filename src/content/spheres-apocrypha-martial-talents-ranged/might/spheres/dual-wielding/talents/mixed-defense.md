@@ -1,4 +1,5 @@
 ---
+id: "mixed-defense"
 name: "Mixed Defense"
 tier: "basic"
 tags: []

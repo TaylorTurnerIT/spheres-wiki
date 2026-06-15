@@ -1,4 +1,5 @@
 ---
+id: "armorist-shadow-armory"
 name: "Shadow Armory"
 tags: ["spell-like"]
 featureId: arsenal-trick

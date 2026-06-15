@@ -1,4 +1,5 @@
 ---
+id: "talentless-poison"
 name: "Talentless Poison"
 tier: "basic"
 tags:

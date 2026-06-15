@@ -1,4 +1,5 @@
 ---
+id: "tactile-illusion"
 name: Tactile Illusion
 sphere: telekinesis
 dualSphere: illusion

@@ -1,4 +1,5 @@
 ---
+id: "terrain-mishap"
 name: "Terrain Mishap"
 tier: "basic"
 tags:

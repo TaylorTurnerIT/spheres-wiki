@@ -1,4 +1,5 @@
 ---
+id: "courser-deadly-hunter"
 name: Deadly Hunter
 featureId: courser-ventures
 tags: []

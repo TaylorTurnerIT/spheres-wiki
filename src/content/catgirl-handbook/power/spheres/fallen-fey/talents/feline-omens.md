@@ -1,4 +1,5 @@
 ---
+id: "feline-omens"
 name: "Feline Omens"
 tier: basic
 tags: ["fey-blessing"]

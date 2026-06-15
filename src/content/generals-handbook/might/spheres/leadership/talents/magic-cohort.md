@@ -1,4 +1,5 @@
 ---
+id: "magic-cohort"
 name: "Magic Cohort"
 tier: "advanced"
 tags: []

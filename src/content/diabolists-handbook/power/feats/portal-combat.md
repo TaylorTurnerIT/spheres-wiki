@@ -1,4 +1,5 @@
 ---
+id: "portal-combat"
 name: "Portal Combat"
 sphere: warp
 tags: ["combat"]

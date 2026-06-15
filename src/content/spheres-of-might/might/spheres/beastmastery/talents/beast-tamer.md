@@ -1,4 +1,5 @@
 ---
+id: "beast-tamer"
 name: "Beast Tamer"
 tier: "advanced"
 tags:

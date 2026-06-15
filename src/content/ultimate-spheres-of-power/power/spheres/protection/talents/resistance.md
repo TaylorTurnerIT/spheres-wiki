@@ -1,4 +1,5 @@
 ---
+id: "resistance"
 name: "Resistance"
 tier: basic
 tags: ["aegis"]

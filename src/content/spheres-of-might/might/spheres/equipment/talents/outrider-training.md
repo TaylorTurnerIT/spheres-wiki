@@ -1,4 +1,5 @@
 ---
+id: "outrider-training"
 name: "Outrider Training"
 tier: "basic"
 tags:

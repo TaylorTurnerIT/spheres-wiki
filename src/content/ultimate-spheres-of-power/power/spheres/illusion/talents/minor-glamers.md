@@ -1,4 +1,5 @@
 ---
+id: "minor-glamers"
 name: "Minor Glamers"
 tier: basic
 tags: []

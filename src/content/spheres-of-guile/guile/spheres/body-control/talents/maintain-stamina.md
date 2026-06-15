@@ -1,4 +1,5 @@
 ---
+id: "maintain-stamina"
 name: "Maintain Stamina"
 tier: "basic"
 tags:

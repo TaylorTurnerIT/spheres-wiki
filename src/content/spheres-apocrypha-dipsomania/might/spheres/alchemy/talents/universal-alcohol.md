@@ -1,4 +1,5 @@
 ---
+id: "universal-alcohol"
 name: "Universal Alcohol"
 tier: "basic"
 tags:

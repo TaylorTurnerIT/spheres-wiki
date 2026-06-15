@@ -1,4 +1,5 @@
 ---
+id: "sustained-necromancy"
 name: "Sustained Necromancy"
 tier: basic
 tags: []

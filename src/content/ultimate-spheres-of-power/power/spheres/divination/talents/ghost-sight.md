@@ -1,4 +1,5 @@
 ---
+id: "ghost-sight"
 name: "Ghost Sight"
 tier: basic
 tags: ["sense"]

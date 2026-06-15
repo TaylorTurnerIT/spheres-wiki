@@ -1,4 +1,5 @@
 ---
+id: "divine-information"
 name: "Divine Information"
 tier: basic
 tags: ["utility", "divine"]

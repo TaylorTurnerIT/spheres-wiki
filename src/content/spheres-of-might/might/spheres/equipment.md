@@ -1,4 +1,5 @@
 ---
+id: "equipment"
 name: "Equipment"
 icon: "equipment"
 tags: []

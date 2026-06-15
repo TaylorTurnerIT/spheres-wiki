@@ -1,4 +1,5 @@
 ---
+id: "snap-kick"
 name: "Snap Kick"
 tier: "basic"
 tags: []

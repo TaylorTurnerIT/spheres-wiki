@@ -1,4 +1,5 @@
 ---
+id: "enhance-potency"
 name: "Enhance Potency"
 tier: basic
 tags: ["enhance", "sm"]

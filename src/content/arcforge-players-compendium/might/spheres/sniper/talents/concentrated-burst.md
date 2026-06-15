@@ -1,4 +1,5 @@
 ---
+id: "concentrated-burst"
 name: "Concentrated Burst"
 tier: "basic"
 tags: []

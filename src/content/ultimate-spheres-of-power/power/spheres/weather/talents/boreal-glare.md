@@ -1,4 +1,5 @@
 ---
+id: "boreal-glare"
 name: "Boreal Glare"
 tier: basic
 tags: ["cold", "mantle"]

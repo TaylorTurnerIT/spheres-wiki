@@ -1,4 +1,5 @@
 ---
+id: "numbing-blast"
 name: "Numbing Blast"
 tier: basic
 tags: ["blast-type", "cold"]

@@ -1,4 +1,5 @@
 ---
+id: "rapid-recharger"
 name: "Rapid Recharger"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "list-of-sphere-specializations"
 name: "List of Sphere Specializations"
 type: class-feature
 className: incanter

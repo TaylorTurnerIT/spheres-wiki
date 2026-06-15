@@ -1,4 +1,5 @@
 ---
+id: "rock-toss"
 name: "Rock Toss"
 tier: "basic"
 tags:

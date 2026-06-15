@@ -1,4 +1,5 @@
 ---
+id: "enchanter"
 name: "Enchanter"
 type: class-feature
 className: eliciter

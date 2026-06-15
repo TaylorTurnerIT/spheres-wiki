@@ -1,4 +1,5 @@
 ---
+id: "eldritch-supplies"
 name: "Eldritch Supplies"
 tags:
   - "champion"

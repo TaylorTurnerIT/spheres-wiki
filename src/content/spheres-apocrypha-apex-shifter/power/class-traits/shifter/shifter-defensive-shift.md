@@ -1,4 +1,5 @@
 ---
+id: "shifter-defensive-shift"
 name: "Defensive Shift"
 tags: []
 featureId: bestial-trait

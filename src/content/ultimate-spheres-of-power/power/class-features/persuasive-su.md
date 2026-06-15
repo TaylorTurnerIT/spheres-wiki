@@ -1,4 +1,5 @@
 ---
+id: "persuasive-su"
 name: "Persuasive (Su)"
 type: class-feature
 className: eliciter

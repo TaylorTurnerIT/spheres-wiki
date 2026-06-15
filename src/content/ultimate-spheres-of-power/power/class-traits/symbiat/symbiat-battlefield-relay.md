@@ -1,4 +1,5 @@
 ---
+id: "symbiat-battlefield-relay"
 name: "Battlefield Relay"
 tags: []
 featureId: psionics-su

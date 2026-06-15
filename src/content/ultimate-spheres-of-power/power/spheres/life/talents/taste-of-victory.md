@@ -1,4 +1,5 @@
 ---
+id: "taste-of-victory"
 name: "Taste Of Victory"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "armorist-spelltank"
 name: "Spelltank"
 tags: []
 featureId: arsenal-trick

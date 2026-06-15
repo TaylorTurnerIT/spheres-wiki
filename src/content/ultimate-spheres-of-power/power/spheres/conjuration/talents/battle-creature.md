@@ -1,4 +1,5 @@
 ---
+id: "battle-creature"
 name: "Battle Creature"
 tier: basic
 tags: ["form"]

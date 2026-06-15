@@ -1,4 +1,5 @@
 ---
+id: "wraith-form-su"
 name: "Wraith Form (Su)"
 type: class-feature
 className: wraith

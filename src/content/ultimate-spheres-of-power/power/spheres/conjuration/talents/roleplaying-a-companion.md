@@ -1,4 +1,5 @@
 ---
+id: "roleplaying-a-companion"
 name: "Roleplaying a Companion"
 tier: basic
 tags: []

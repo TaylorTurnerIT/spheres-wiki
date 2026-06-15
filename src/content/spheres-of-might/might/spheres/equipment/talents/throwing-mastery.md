@@ -1,4 +1,5 @@
 ---
+id: "throwing-mastery"
 name: "Throwing Mastery"
 tier: "basic"
 tags: []

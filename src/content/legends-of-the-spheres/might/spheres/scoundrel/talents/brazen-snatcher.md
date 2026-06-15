@@ -1,4 +1,5 @@
 ---
+id: "brazen-snatcher"
 name: "Brazen Snatcher"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "ravenous-weapon"
 name: "Ravenous Weapon"
 tier: basic
 tags: ["enhance", "sm"]

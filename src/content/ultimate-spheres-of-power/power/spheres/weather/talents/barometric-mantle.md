@@ -1,4 +1,5 @@
 ---
+id: "barometric-mantle"
 name: "Barometric Mantle"
 tier: basic
 tags: ["all", "mantle"]

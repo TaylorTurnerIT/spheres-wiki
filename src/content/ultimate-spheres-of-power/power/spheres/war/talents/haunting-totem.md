@@ -1,4 +1,5 @@
 ---
+id: "haunting-totem"
 name: "Haunting Totem"
 tier: basic
 tags: ["totem"]

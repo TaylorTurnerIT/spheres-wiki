@@ -1,4 +1,5 @@
 ---
+id: "hard-whip"
 name: "Hard Whip"
 tier: "basic"
 tags:

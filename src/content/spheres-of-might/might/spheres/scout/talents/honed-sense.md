@@ -1,4 +1,5 @@
 ---
+id: "honed-sense"
 name: "Honed Sense"
 tier: "basic"
 ---

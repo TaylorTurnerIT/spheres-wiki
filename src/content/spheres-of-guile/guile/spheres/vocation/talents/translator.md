@@ -1,4 +1,5 @@
 ---
+id: "translator"
 name: "Translator"
 tier: "basic"
 tags:

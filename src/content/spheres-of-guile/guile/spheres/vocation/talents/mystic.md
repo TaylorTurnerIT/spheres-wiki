@@ -1,4 +1,5 @@
 ---
+id: "mystic"
 name: "Mystic"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "intuit-knowledge"
 name: "Intuit Knowledge"
 tier: basic
 tags: ["cognition", "utility"]

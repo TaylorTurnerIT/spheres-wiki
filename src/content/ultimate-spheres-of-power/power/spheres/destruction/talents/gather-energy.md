@@ -1,4 +1,5 @@
 ---
+id: "gather-energy"
 name: "Gather Energy"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "medical-malpractice"
 name: "Medical Malpractice"
 tier: "basic"
 tags:

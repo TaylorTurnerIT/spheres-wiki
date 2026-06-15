@@ -1,4 +1,5 @@
 ---
+id: "initiates-training"
 name: "Initiate's Training"
 tier: basic
 tags: ["amp", "manipulation"]

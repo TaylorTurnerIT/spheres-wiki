@@ -1,4 +1,5 @@
 ---
+id: "deduction"
 name: "Deduction"
 sphere: war
 tags: []

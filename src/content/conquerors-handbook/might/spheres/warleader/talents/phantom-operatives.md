@@ -1,4 +1,5 @@
 ---
+id: "phantom-operatives"
 name: "Phantom Operatives"
 tier: "advanced"
 tags: []

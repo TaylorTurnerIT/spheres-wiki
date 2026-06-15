@@ -1,4 +1,5 @@
 ---
+id: "unseelie-aura"
 name: "Unseelie Aura"
 tier: basic
 tags: ["fey-blessing"]

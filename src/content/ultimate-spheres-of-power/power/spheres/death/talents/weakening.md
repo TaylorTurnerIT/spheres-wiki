@@ -1,4 +1,5 @@
 ---
+id: "weakening"
 name: "Weakening"
 tier: basic
 tags: ["ghost-strike"]

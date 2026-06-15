@@ -1,4 +1,5 @@
 ---
+id: "mobile-bludgeon"
 name: "Mobile Bludgeon"
 tier: basic
 tags: []

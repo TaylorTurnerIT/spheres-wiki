@@ -1,4 +1,5 @@
 ---
+id: "weapon-and-armor-proficiency"
 name: "Weapon and Armor Proficiency"
 type: class-feature
 className: symbiat

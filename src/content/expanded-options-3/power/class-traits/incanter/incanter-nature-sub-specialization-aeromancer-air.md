@@ -1,4 +1,5 @@
 ---
+id: "incanter-nature-sub-specialization-aeromancer-air"
 name: "Nature Sub-Specialization: Aeromancer (air)"
 tags: []
 featureId: list-of-sphere-specializations

@@ -1,4 +1,5 @@
 ---
+id: "industrious-worker"
 name: "Industrious Worker"
 tier: "basic"
 tags:

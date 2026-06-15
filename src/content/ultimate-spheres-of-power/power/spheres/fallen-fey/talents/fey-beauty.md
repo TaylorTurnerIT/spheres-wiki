@@ -1,4 +1,5 @@
 ---
+id: "fey-beauty"
 name: "Fey Beauty"
 tier: basic
 tags: ["fey-blessing", "utility"]

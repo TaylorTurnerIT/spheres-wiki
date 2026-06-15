@@ -1,4 +1,5 @@
 ---
+id: "extradimensional-storage"
 name: "Extradimensional Storage"
 tier: basic
 tags: ["spell-like", "space", "utility"]

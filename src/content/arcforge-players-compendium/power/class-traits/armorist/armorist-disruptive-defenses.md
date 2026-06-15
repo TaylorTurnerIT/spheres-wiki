@@ -1,4 +1,5 @@
 ---
+id: "armorist-disruptive-defenses"
 name: "Disruptive Defenses"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "malediction"
 name: Malediction
 sphere: protection
 dualSphere: fate

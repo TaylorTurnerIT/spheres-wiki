@@ -1,4 +1,5 @@
 ---
+id: "fount-of-mercy"
 name: "Fount Of Mercy"
 sphere: life
 tags: []

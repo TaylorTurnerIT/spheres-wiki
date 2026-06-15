@@ -1,4 +1,5 @@
 ---
+id: "bizarre-artistry"
 name: "Bizarre Artistry"
 tier: "advanced"
 tags:

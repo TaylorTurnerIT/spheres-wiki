@@ -1,4 +1,5 @@
 ---
+id: "perseverance"
 name: "Perseverance"
 tier: basic
 tags: ["mandate"]

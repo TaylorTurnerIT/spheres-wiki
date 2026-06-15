@@ -1,4 +1,5 @@
 ---
+id: "armored-apocalypse"
 name: "Armored Apocalypse"
 tier: "advanced"
 tags: []

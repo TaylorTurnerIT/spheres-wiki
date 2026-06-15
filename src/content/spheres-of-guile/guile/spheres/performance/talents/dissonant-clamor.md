@@ -1,4 +1,5 @@
 ---
+id: "dissonant-clamor"
 name: "Dissonant Clamor"
 tier: "basic"
 tags:

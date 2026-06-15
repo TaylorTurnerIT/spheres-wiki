@@ -1,4 +1,5 @@
 ---
+id: "charming-drunk"
 name: "Charming Drunk"
 tier: "basic"
 tags:

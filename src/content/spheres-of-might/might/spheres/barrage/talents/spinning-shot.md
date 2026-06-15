@@ -1,4 +1,5 @@
 ---
+id: "spinning-shot"
 name: "Spinning Shot"
 tier: "basic"
 tags: []

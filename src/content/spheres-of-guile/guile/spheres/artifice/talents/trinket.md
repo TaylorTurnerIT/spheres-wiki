@@ -1,4 +1,5 @@
 ---
+id: "trinket"
 name: "Trinket"
 tier: "base"
 tags: []

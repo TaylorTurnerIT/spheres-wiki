@@ -1,4 +1,5 @@
 ---
+id: "rebuff"
 name: "Rebuff"
 tier: basic
 tags: ["blast-shape"]

@@ -1,4 +1,5 @@
 ---
+id: "hack-magic"
 name: "Hack Magic"
 tier: "base"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "venomous-ichor"
 name: "Venomous Ichor"
 sphere: alteration
 tags: ["combat"]

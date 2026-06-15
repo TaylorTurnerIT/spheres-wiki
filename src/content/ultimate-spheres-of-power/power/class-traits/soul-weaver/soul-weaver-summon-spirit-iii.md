@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-summon-spirit-iii"
 name: "Summon Spirit III"
 tags: []
 featureId: bound-nexus

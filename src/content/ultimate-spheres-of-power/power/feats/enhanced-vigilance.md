@@ -1,4 +1,5 @@
 ---
+id: "enhanced-vigilance"
 name: Enhanced Vigilance
 sphere: war
 dualSphere: enhancement

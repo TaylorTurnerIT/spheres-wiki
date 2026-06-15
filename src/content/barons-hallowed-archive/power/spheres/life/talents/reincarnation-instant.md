@@ -1,4 +1,5 @@
 ---
+id: "reincarnation-instant"
 name: "Reincarnation, Instant"
 tier: advanced
 tags: []

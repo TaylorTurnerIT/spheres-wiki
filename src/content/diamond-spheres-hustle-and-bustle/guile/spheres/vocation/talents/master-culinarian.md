@@ -1,4 +1,5 @@
 ---
+id: "master-culinarian"
 name: "Master Culinarian"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "mageknight"
 name: "Mageknight"
 tags: []
 hitDie: 10

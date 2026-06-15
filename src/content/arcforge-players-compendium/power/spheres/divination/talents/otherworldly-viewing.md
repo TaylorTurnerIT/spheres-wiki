@@ -1,4 +1,5 @@
 ---
+id: "otherworldly-viewing"
 name: "Otherworldly Viewing"
 tier: advanced
 tags: []

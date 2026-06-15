@@ -1,4 +1,5 @@
 ---
+id: "by-the-scruff-of-your-neck"
 name: "By The Scruff Of Your Neck"
 tier: "advanced"
 tags: []

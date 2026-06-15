@@ -1,4 +1,5 @@
 ---
+id: "nebulous-admixture"
 name: "Nebulous Admixture"
 sphere: destruction
 tags: ["admixture"]

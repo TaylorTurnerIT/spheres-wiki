@@ -1,4 +1,5 @@
 ---
+id: "shadowblast"
 name: "Shadowblast"
 sphere: illusion
 tags: ["surreal"]

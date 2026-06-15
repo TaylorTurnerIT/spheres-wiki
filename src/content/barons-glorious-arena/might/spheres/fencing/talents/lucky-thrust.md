@@ -1,4 +1,5 @@
 ---
+id: "lucky-thrust"
 name: "Lucky Thrust"
 tier: "basic"
 tags: []

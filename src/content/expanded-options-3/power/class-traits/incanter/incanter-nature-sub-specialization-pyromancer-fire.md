@@ -1,4 +1,5 @@
 ---
+id: "incanter-nature-sub-specialization-pyromancer-fire"
 name: "Nature Sub-Specialization: Pyromancer (fire)"
 tags: []
 featureId: list-of-sphere-specializations

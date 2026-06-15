@@ -1,4 +1,5 @@
 ---
+id: "pixie-sticks"
 name: "Pixie Sticks"
 tier: basic
 tags: ["fey-blessing"]

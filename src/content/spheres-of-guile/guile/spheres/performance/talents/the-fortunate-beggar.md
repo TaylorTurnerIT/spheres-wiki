@@ -1,4 +1,5 @@
 ---
+id: "the-fortunate-beggar"
 name: "The Fortunate Beggar"
 tier: "basic"
 tags:

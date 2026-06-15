@@ -1,4 +1,5 @@
 ---
+id: "buried"
 name: "Buried"
 tier: basic
 tags: []

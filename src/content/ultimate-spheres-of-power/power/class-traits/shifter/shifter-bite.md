@@ -1,4 +1,5 @@
 ---
+id: "shifter-bite"
 name: "Bite"
 tags: ["extraordinary"]
 featureId: bestial-trait

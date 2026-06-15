@@ -1,4 +1,5 @@
 ---
+id: "resist-elements"
 name: "Resist Elements"
 tier: basic
 tags: ["spirit"]

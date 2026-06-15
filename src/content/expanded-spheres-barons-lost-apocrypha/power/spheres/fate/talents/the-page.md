@@ -1,4 +1,5 @@
 ---
+id: "the-page"
 name: "The Page"
 tier: basic
 tags: ["motif"]

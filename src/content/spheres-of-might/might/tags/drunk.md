@@ -1,4 +1,5 @@
 ---
+id: "drunk"
 label: "Drunk"
 sphere: "barroom"
 priority: 0

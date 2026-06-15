@@ -1,4 +1,5 @@
 ---
+id: "mind"
 name: "Mind"
 icon: mind
 description: "You gain the ability to alter the minds of others, causing them to act as you see fit."

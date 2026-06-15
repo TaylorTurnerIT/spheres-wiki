@@ -1,4 +1,5 @@
 ---
+id: "ascetic-control"
 name: "Ascetic Control"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "lingering-poison"
 name: "Lingering Poison"
 tier: "basic"
 tags: []

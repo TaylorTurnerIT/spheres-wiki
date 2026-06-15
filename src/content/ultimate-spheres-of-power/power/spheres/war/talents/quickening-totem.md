@@ -1,4 +1,5 @@
 ---
+id: "quickening-totem"
 name: "Quickening Totem"
 tier: basic
 tags: ["totem"]

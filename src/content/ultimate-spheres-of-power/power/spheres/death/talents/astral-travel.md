@@ -1,4 +1,5 @@
 ---
+id: "astral-travel"
 name: "Astral Travel"
 tier: advanced
 tags: ["utility"]

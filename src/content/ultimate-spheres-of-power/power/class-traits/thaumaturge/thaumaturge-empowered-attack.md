@@ -1,4 +1,5 @@
 ---
+id: "thaumaturge-empowered-attack"
 name: "Empowered Attack"
 tags: []
 featureId: invocations

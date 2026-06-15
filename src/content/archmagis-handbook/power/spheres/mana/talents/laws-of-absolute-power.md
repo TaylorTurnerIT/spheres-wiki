@@ -1,4 +1,5 @@
 ---
+id: "laws-of-absolute-power"
 name: "Laws Of Absolute Power"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "inherent-enhancement"
 name: "Inherent Enhancement"
 tier: advanced
 tags: ["enhance"]

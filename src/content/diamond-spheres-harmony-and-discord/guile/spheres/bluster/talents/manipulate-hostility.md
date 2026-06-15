@@ -1,4 +1,5 @@
 ---
+id: "manipulate-hostility"
 name: "Manipulate Hostility"
 tier: "basic"
 tags: []

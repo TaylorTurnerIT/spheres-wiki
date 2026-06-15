@@ -1,4 +1,5 @@
 ---
+id: "telekinetic-crush"
 name: "Telekinetic Crush"
 tier: basic
 tags: []

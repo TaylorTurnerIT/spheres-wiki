@@ -1,4 +1,5 @@
 ---
+id: "subtle-humiliation"
 name: "Subtle Humiliation"
 tier: "basic"
 tags:

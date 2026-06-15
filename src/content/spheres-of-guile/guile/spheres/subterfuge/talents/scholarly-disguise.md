@@ -1,4 +1,5 @@
 ---
+id: "scholarly-disguise"
 name: "Scholarly Disguise"
 tier: "basic"
 tags:

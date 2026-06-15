@@ -1,4 +1,5 @@
 ---
+id: "cups"
 name: "Cups"
 tier: basic
 tags: ["motif", "arcana"]

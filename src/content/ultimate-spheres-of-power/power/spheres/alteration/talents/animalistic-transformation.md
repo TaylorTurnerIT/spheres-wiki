@@ -1,4 +1,5 @@
 ---
+id: "animalistic-transformation"
 name: "Animalistic Transformation"
 tier: basic
 tags: ["transformation"]

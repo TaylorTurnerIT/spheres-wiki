@@ -1,4 +1,5 @@
 ---
+id: "materials-of-legend"
 name: "Materials Of Legend"
 tier: advanced
 tags: ["metal", "geomancing"]

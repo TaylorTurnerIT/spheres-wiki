@@ -1,4 +1,5 @@
 ---
+id: "confusion"
 name: "Confusion"
 tier: basic
 tags: ["charm"]

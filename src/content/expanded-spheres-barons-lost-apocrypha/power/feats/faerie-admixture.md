@@ -1,4 +1,5 @@
 ---
+id: "faerie-admixture"
 name: "Faerie Admixture"
 sphere: destruction
 tags: ["admixture"]

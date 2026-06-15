@@ -1,4 +1,5 @@
 ---
+id: "cruel-worg-s-challenge"
 name: "Cruel Worg’s Challenge"
 tier: "advanced"
 tags: []

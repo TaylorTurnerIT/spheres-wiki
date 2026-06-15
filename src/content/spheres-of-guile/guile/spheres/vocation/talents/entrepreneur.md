@@ -1,4 +1,5 @@
 ---
+id: "entrepreneur"
 name: "Entrepreneur"
 tier: "advanced"
 tags:

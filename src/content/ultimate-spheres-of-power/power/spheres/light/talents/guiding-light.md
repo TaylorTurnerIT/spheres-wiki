@@ -1,4 +1,5 @@
 ---
+id: "guiding-light"
 name: "Guiding Light"
 tier: basic
 tags: ["light"]

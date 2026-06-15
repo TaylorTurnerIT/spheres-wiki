@@ -1,4 +1,5 @@
 ---
+id: "necrotic-feeding"
 name: "Necrotic Feeding"
 tier: basic
 tags: ["ghost-strike"]

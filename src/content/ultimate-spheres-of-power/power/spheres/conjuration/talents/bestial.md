@@ -1,4 +1,5 @@
 ---
+id: "bestial"
 name: "Bestial"
 tier: basic
 tags: ["classification", "form"]

@@ -1,4 +1,5 @@
 ---
+id: "soulmate"
 name: "Soulmate"
 tier: basic
 tags: ["manabond"]

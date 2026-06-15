@@ -1,4 +1,5 @@
 ---
+id: "attuned-dreamer"
 name: "Attuned Dreamer"
 sphere: mind
 tags: ["sm"]

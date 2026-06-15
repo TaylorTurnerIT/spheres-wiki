@@ -1,4 +1,5 @@
 ---
+id: "armorist-overload-specialist"
 name: "Overload Specialist:"
 tags: []
 featureId: arsenal-trick

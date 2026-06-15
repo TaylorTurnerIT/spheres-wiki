@@ -1,4 +1,5 @@
 ---
+id: "area-glow"
 name: "Area Glow"
 tier: basic
 tags: []

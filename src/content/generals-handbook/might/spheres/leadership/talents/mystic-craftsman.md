@@ -1,4 +1,5 @@
 ---
+id: "mystic-craftsman"
 name: "Mystic Craftsman"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "athlete"
 name: "Athlete"
 tier: "basic"
 tags:

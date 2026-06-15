@@ -1,4 +1,5 @@
 ---
+id: "biohazard"
 name: "Biohazard"
 tier: advanced
 tags: []

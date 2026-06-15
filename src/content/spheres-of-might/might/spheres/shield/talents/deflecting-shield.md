@@ -1,4 +1,5 @@
 ---
+id: "deflecting-shield"
 name: "Deflecting Shield"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "quick-summons"
 name: "Quick Summons"
 type: class-feature
 className: armorist

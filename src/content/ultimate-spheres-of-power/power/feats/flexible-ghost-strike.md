@@ -1,4 +1,5 @@
 ---
+id: "flexible-ghost-strike"
 name: Flexible Ghost Strike
 sphere: destruction
 dualSphere: death

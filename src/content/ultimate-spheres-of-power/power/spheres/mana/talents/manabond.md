@@ -1,4 +1,5 @@
 ---
+id: "manabond"
 name: Manabond
 tier: base
 tags: []

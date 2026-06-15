@@ -1,4 +1,5 @@
 ---
+id: "flesh-absorption-master"
 name: "Flesh Absorption Master"
 sphere: death
 tags: []

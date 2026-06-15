@@ -1,4 +1,5 @@
 ---
+id: "persisting-influence"
 name: "Persisting Influence"
 tier: "basic"
 tags: []

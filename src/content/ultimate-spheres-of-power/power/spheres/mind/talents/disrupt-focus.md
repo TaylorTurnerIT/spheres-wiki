@@ -1,4 +1,5 @@
 ---
+id: "disrupt-focus"
 name: "Disrupt Focus"
 tier: basic
 tags: ["apply", "charm"]

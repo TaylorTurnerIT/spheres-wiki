@@ -1,4 +1,5 @@
 ---
+id: "symbiat-telekinetic-edge"
 name: "Telekinetic Edge"
 tags: []
 featureId: psionics-su

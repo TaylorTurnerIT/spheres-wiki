@@ -1,4 +1,5 @@
 ---
+id: "mageknight-whirl-of-blows-core"
 name: "Whirl of Blows [Core]"
 tags: []
 featureId: mystic-combat-su

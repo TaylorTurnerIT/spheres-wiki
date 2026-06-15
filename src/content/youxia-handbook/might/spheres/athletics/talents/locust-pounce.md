@@ -1,4 +1,5 @@
 ---
+id: "locust-pounce"
 name: "Locust Pounce"
 tier: "basic"
 tags:

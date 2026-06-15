@@ -1,4 +1,5 @@
 ---
+id: "vengeful-scorpion"
 name: "Vengeful Scorpion"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "shift-glamers"
 name: "Shift Glamers"
 tier: basic
 tags: []

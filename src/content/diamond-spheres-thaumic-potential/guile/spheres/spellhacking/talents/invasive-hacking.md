@@ -1,4 +1,5 @@
 ---
+id: "invasive-hacking"
 name: "Invasive Hacking"
 tier: "basic"
 tags: []

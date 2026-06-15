@@ -1,4 +1,5 @@
 ---
+id: "cooperative-reanimate"
 name: "Cooperative Reanimate"
 sphere: death
 tags: ["teamwork"]

@@ -1,4 +1,5 @@
 ---
+id: "sweep-for-traps"
 name: "Sweep For Traps"
 tier: "basic"
 tags:

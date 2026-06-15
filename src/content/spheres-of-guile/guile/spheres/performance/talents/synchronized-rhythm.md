@@ -1,4 +1,5 @@
 ---
+id: "synchronized-rhythm"
 name: "Synchronized Rhythm"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "healing-aegis"
 name: "Healing Aegis"
 tier: basic
 tags: ["succor"]

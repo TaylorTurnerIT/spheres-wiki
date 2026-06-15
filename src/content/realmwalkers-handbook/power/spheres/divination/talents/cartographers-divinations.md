@@ -1,4 +1,5 @@
 ---
+id: "cartographers-divinations"
 name: "Cartographer's Divinations"
 tier: advanced
 tags: ["divine", "utility"]

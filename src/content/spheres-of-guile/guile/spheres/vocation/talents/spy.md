@@ -1,4 +1,5 @@
 ---
+id: "spy"
 name: "Spy"
 tier: "basic"
 tags:

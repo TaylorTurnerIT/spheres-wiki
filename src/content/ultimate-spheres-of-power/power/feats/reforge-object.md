@@ -1,4 +1,5 @@
 ---
+id: "reforge-object"
 name: Reforge Object
 sphere: enhancement
 dualSphere: creation

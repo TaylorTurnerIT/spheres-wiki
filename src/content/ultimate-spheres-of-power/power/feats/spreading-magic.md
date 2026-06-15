@@ -1,4 +1,5 @@
 ---
+id: "spreading-magic"
 name: "Spreading Magic"
 sphere: enhancement
 tags: ["proxy"]

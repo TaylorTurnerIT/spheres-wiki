@@ -1,4 +1,5 @@
 ---
+id: "fools-counterspell"
 name: "Fool's Counterspell"
 sphere: mind
 tags: ["counterspell"]

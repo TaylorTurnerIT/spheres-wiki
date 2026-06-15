@@ -1,4 +1,5 @@
 ---
+id: "tandem-bushcraft"
 name: "Tandem Bushcraft"
 tier: "basic"
 tags: []

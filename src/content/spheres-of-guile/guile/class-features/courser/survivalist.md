@@ -1,4 +1,5 @@
 ---
+id: "survivalist"
 name: Survivalist
 level: 1
 tags: []

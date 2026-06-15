@@ -1,4 +1,5 @@
 ---
+id: "rejuvenation"
 name: "Rejuvenation"
 tier: basic
 tags: ["spirit"]

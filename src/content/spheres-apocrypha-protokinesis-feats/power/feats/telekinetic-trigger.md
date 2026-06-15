@@ -1,4 +1,5 @@
 ---
+id: "telekinetic-trigger"
 name: "Telekinetic Trigger"
 sphere: telekinesis
 tags: ["protokinesis"]

@@ -1,4 +1,5 @@
 ---
+id: "ensouled-illuminations"
 name: "Ensouled Illuminations"
 sphere: light
 tags: []

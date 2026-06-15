@@ -1,4 +1,5 @@
 ---
+id: "wildfire"
 name: "Wildfire"
 tier: advanced
 tags: ["fire", "supernatural"]

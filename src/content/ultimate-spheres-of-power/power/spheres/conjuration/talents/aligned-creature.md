@@ -1,4 +1,5 @@
 ---
+id: "aligned-creature"
 name: "Aligned Creature"
 tier: basic
 tags: ["form"]

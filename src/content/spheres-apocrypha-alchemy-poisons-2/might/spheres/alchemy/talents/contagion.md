@@ -1,4 +1,5 @@
 ---
+id: "contagion"
 name: "Contagion"
 tier: "advanced"
 tags:

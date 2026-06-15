@@ -1,4 +1,5 @@
 ---
+id: "shifter-trip"
 name: "Trip"
 tags: ["extraordinary"]
 featureId: bestial-trait

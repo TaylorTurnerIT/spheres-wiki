@@ -1,4 +1,5 @@
 ---
+id: "flash-warp"
 name: Flash Warp
 sphere: warp
 dualSphere: light

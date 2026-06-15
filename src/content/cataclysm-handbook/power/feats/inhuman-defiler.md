@@ -1,4 +1,5 @@
 ---
+id: "inhuman-defiler"
 name: "Inhuman Defiler"
 sphere: death
 tags: ["defiler", "drawback", "necrosis"]

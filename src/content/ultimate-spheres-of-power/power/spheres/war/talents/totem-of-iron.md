@@ -1,4 +1,5 @@
 ---
+id: "totem-of-iron"
 name: "Totem Of Iron"
 tier: basic
 tags: ["totem"]

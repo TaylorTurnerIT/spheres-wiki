@@ -1,4 +1,5 @@
 ---
+id: "menace"
 name: "Menace"
 tier: "basic"
 tags:

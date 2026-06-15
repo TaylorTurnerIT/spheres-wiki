@@ -1,4 +1,5 @@
 ---
+id: "disarming-jab"
 name: "Disarming Jab"
 tier: "basic"
 tags:

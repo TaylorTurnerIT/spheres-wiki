@@ -1,4 +1,5 @@
 ---
+id: "murderous-intent"
 name: "Murderous Intent"
 tier: "basic"
 tags:

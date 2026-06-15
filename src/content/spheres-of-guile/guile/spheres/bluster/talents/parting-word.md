@@ -1,4 +1,5 @@
 ---
+id: "parting-word"
 name: "Parting Word"
 tier: "basic"
 tags: []

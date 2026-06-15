@@ -1,4 +1,5 @@
 ---
+id: "spectacular-admixture"
 name: "Spectacular Admixture"
 sphere: destruction
 tags: ["admixture"]

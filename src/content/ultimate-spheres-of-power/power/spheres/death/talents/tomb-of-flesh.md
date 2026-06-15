@@ -1,4 +1,5 @@
 ---
+id: "tomb-of-flesh"
 name: "Tomb Of Flesh"
 tier: basic
 tags: []

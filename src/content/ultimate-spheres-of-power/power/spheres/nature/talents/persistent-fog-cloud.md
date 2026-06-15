@@ -1,4 +1,5 @@
 ---
+id: "persistent-fog-cloud"
 name: "Persistent Fog Cloud"
 tier: advanced
 tags: ["water", "spirit"]

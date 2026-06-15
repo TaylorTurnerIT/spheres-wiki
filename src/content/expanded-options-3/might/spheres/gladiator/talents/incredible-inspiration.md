@@ -1,4 +1,5 @@
 ---
+id: "incredible-inspiration"
 name: "Incredible Inspiration"
 tier: "advanced"
 tags: []

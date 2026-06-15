@@ -1,4 +1,5 @@
 ---
+id: "splinter"
 name: "Splinter"
 tier: basic
 tags: []

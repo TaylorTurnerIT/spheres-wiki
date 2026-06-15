@@ -1,4 +1,5 @@
 ---
+id: "arsenal-trick"
 name: "Arsenal Trick"
 type: class-feature
 className: armorist

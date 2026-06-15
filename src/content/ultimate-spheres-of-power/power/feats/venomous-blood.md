@@ -1,4 +1,5 @@
 ---
+id: "venomous-blood"
 name: "Venomous Blood"
 sphere: conjuration
 tags: ["companion"]

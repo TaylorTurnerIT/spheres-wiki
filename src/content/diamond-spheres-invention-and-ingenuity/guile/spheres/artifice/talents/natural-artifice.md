@@ -1,4 +1,5 @@
 ---
+id: "natural-artifice"
 name: "Natural Artifice"
 tier: "advanced"
 tags:

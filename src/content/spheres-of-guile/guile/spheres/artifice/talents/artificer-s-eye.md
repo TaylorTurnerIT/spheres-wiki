@@ -1,4 +1,5 @@
 ---
+id: "artificer-s-eye"
 name: "Artificer's Eye"
 tier: "basic"
 tags:

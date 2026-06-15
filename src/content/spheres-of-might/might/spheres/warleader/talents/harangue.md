@@ -1,4 +1,5 @@
 ---
+id: "harangue"
 name: "Harangue"
 tier: "basic"
 tags:

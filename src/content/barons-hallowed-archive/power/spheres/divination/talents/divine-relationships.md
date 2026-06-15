@@ -1,4 +1,5 @@
 ---
+id: "divine-relationships"
 name: "Divine Relationships"
 tier: basic
 tags: ["utility", "divine"]

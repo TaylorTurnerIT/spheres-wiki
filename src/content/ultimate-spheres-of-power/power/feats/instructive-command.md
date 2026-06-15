@@ -1,4 +1,5 @@
 ---
+id: "instructive-command"
 name: "Instructive Command"
 sphere: war
 tags: ["squadron"]

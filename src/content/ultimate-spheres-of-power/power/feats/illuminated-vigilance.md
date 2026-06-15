@@ -1,4 +1,5 @@
 ---
+id: "illuminated-vigilance"
 name: Illuminated Vigilance
 sphere: war
 dualSphere: light

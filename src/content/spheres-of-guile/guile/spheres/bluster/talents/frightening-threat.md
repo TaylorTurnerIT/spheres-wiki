@@ -1,4 +1,5 @@
 ---
+id: "frightening-threat"
 name: "Frightening Threat"
 tier: "basic"
 tags:

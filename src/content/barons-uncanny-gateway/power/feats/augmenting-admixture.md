@@ -1,4 +1,5 @@
 ---
+id: "augmenting-admixture"
 name: "Augmenting Admixture"
 sphere: destruction
 tags: ["admixture", "sm"]

@@ -1,4 +1,5 @@
 ---
+id: "expensive-parts"
 name: "Expensive Parts"
 tier: "base"
 tags:

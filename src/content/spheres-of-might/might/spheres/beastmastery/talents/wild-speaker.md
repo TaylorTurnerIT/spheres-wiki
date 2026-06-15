@@ -1,4 +1,5 @@
 ---
+id: "wild-speaker"
 name: "Wild Speaker"
 tier: "advanced"
 tags:

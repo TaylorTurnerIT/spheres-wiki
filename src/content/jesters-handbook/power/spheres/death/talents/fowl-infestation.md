@@ -1,4 +1,5 @@
 ---
+id: "fowl-infestation"
 name: "Fowl Infestation"
 tier: basic
 tags: ["curse", "ghost-strike"]

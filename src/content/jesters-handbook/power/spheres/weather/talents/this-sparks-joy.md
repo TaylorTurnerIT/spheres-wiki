@@ -1,4 +1,5 @@
 ---
+id: "this-sparks-joy"
 name: "This Sparks Joy"
 tier: basic
 tags: ["mantle", "storm"]

@@ -1,4 +1,5 @@
 ---
+id: "melt-power"
 name: "Melt Power"
 tier: basic
 tags: ["expunge"]

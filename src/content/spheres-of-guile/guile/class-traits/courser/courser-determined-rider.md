@@ -1,4 +1,5 @@
 ---
+id: "courser-determined-rider"
 name: Determined Rider
 featureId: courser-ventures
 tags: []

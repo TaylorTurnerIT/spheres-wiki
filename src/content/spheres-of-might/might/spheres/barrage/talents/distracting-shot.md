@@ -1,4 +1,5 @@
 ---
+id: "distracting-shot"
 name: "Distracting Shot"
 tier: "basic"
 tags:

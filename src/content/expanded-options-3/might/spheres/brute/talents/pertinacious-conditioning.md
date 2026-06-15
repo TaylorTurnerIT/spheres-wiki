@@ -1,4 +1,5 @@
 ---
+id: "pertinacious-conditioning"
 name: "Pertinacious Conditioning"
 tier: "advanced"
 tags:

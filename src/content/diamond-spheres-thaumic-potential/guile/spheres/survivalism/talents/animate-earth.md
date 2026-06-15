@@ -1,4 +1,5 @@
 ---
+id: "animate-earth"
 name: "Animate Earth"
 tier: "advanced"
 tags:

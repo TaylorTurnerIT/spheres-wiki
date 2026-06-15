@@ -1,4 +1,5 @@
 ---
+id: "stable-footing"
 name: "Stable Footing"
 tier: "basic"
 tags:

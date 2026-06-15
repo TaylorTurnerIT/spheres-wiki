@@ -1,4 +1,5 @@
 ---
+id: "elude-fate"
 name: "Elude Fate"
 tier: advanced
 tags: ["word"]

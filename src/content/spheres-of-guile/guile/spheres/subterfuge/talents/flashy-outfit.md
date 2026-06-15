@@ -1,4 +1,5 @@
 ---
+id: "flashy-outfit"
 name: "Flashy Outfit"
 tier: "basic"
 tags:

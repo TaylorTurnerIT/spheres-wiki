@@ -1,4 +1,5 @@
 ---
+id: "voice-of-giants"
 name: "Voice Of Giants"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "arm-strike"
 name: "Arm Strike"
 tier: "basic"
 tags:

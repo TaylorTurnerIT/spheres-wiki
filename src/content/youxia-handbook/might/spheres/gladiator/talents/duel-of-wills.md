@@ -1,4 +1,5 @@
 ---
+id: "duel-of-wills"
 name: "Duel Of Wills"
 tier: "basic"
 tags:

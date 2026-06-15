@@ -1,4 +1,5 @@
 ---
+id: "alteration"
 name: "Alteration"
 icon: alteration
 description: "You have the ability to change the physical makeup of creatures."

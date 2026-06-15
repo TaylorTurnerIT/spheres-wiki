@@ -1,4 +1,5 @@
 ---
+id: "distracting-trickery"
 name: "Distracting Trickery"
 tier: "basic"
 tags: []

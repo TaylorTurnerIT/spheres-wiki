@@ -1,4 +1,5 @@
 ---
+id: "guided-strike"
 name: "Guided Strike"
 tier: basic
 tags: ["blast-shape"]

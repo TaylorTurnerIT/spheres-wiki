@@ -1,4 +1,5 @@
 ---
+id: "enhancement"
 name: "Enhancement"
 icon: enhancement
 description: "You may place enhancements on creatures and objects, altering their properties."

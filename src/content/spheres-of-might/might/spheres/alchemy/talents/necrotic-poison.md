@@ -1,4 +1,5 @@
 ---
+id: "necrotic-poison"
 name: "Necrotic Poison"
 tier: "advanced"
 tags:

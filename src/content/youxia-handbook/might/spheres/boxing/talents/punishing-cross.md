@@ -1,4 +1,5 @@
 ---
+id: "punishing-cross"
 name: "Punishing Cross"
 tier: "basic"
 tags: []

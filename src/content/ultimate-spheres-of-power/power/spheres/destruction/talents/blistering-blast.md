@@ -1,4 +1,5 @@
 ---
+id: "blistering-blast"
 name: "Blistering Blast"
 tier: basic
 tags: ["blast-type", "fire"]

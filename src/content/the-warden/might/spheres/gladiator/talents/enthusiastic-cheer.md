@@ -1,4 +1,5 @@
 ---
+id: "enthusiastic-cheer"
 name: "Enthusiastic Cheer"
 tier: "basic"
 tags:

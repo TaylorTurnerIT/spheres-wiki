@@ -1,4 +1,5 @@
 ---
+id: "frozen-to-the-bone"
 name: "Frozen To The Bone"
 sphere: destruction
 tags: ["combat"]

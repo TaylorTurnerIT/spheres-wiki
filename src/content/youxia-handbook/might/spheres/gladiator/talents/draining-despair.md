@@ -1,4 +1,5 @@
 ---
+id: "draining-despair"
 name: "Draining Despair"
 tier: "advanced"
 tags:

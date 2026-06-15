@@ -1,4 +1,5 @@
 ---
+id: "dust-cloud"
 name: "Dust Cloud"
 tier: basic
 tags: ["aridity", "shroud"]

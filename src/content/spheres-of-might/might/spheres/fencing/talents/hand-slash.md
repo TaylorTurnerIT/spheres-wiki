@@ -1,4 +1,5 @@
 ---
+id: "hand-slash"
 name: "Hand Slash"
 tier: "basic"
 tags:

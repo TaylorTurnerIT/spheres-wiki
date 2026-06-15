@@ -1,4 +1,5 @@
 ---
+id: "rapid-glyph"
 name: "Rapid Glyph"
 tier: advanced
 tags: []

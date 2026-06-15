@@ -1,4 +1,5 @@
 ---
+id: "righteous-reproach"
 name: "Righteous Reproach"
 tier: "basic"
 tags:

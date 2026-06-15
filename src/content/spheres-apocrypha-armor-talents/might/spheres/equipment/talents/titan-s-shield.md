@@ -1,4 +1,5 @@
 ---
+id: "titan-s-shield"
 name: "Titan’s Shield"
 tier: "advanced"
 tags: []

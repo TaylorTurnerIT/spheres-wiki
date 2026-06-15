@@ -1,4 +1,5 @@
 ---
+id: "trapfinding"
 name: "Trapfinding"
 tier: advanced
 tags: ["extraordinary", "sense"]

@@ -1,4 +1,5 @@
 ---
+id: "omniglot"
 name: "Omniglot"
 tier: "advanced"
 tags:

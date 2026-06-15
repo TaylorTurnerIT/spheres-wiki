@@ -1,4 +1,5 @@
 ---
+id: "instill-blood-magic"
 name: "Instill Blood Magic"
 tier: basic
 tags: ["instill"]

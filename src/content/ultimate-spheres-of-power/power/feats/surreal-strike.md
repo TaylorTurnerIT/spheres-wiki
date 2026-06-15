@@ -1,4 +1,5 @@
 ---
+id: "surreal-strike"
 name: "Surreal Strike"
 sphere: illusion
 tags: ["surreal"]

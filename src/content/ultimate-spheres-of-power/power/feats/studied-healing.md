@@ -1,4 +1,5 @@
 ---
+id: "studied-healing"
 name: "Studied Healing"
 sphere: life
 tags: []

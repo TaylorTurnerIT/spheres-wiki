@@ -1,4 +1,5 @@
 ---
+id: "labyrinth-lord"
 name: "Labyrinth Lord"
 tier: "advanced"
 tags:

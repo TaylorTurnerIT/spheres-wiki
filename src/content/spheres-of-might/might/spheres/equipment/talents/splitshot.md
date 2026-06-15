@@ -1,4 +1,5 @@
 ---
+id: "splitshot"
 name: "Splitshot"
 tier: "basic"
 tags: []

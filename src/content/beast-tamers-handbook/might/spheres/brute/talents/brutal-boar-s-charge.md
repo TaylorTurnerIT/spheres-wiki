@@ -1,4 +1,5 @@
 ---
+id: "brutal-boar-s-charge"
 name: "Brutal Boar’s Charge"
 tier: "basic"
 tags: []

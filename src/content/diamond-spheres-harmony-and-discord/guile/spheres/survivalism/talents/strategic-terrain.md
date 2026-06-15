@@ -1,4 +1,5 @@
 ---
+id: "strategic-terrain"
 name: Strategic Terrain
 dualSphere: warleader
 tier: advanced

@@ -1,4 +1,5 @@
 ---
+id: "essence-manipulation-duelist"
 name: "Essence Manipulation"
 tier: "advanced"
 tags: []

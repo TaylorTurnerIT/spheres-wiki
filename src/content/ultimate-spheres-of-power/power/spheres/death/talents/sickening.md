@@ -1,4 +1,5 @@
 ---
+id: "sickening"
 name: "Sickening"
 tier: basic
 tags: ["ghost-strike"]

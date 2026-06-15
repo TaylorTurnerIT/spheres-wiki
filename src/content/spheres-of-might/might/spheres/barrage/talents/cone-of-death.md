@@ -1,4 +1,5 @@
 ---
+id: "cone-of-death"
 name: "Cone Of Death"
 tier: "advanced"
 tags: []

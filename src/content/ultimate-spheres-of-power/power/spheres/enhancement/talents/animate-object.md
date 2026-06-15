@@ -1,4 +1,5 @@
 ---
+id: "animate-object"
 name: "Animate Object"
 tier: basic
 tags: ["enhance"]

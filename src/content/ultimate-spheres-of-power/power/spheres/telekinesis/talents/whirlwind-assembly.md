@@ -1,4 +1,5 @@
 ---
+id: "whirlwind-assembly"
 name: "Whirlwind Assembly"
 tier: basic
 tags: []

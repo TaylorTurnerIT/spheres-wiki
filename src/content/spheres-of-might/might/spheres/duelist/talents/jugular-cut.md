@@ -1,4 +1,5 @@
 ---
+id: "jugular-cut"
 name: "Jugular Cut"
 tier: "advanced"
 tags:

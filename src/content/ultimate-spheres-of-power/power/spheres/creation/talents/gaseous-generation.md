@@ -1,4 +1,5 @@
 ---
+id: "gaseous-generation"
 name: "Gaseous Generation"
 tier: basic
 tags: ["material"]

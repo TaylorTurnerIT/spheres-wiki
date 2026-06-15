@@ -1,4 +1,5 @@
 ---
+id: "carry-the-flag"
 name: "Carry The Flag"
 tier: advanced
 tags: []

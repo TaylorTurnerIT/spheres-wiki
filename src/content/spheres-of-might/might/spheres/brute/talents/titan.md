@@ -1,4 +1,5 @@
 ---
+id: "titan"
 name: "Titan"
 tier: "advanced"
 tags: []

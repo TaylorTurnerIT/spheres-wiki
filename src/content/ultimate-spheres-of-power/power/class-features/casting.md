@@ -1,4 +1,5 @@
 ---
+id: "casting"
 name: "Casting"
 type: class-feature
 className: wraith

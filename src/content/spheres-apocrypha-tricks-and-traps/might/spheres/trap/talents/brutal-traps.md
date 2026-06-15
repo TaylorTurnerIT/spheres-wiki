@@ -1,4 +1,5 @@
 ---
+id: "brutal-traps"
 name: "Brutal Traps"
 tier: "basic"
 tags: ["snare"]

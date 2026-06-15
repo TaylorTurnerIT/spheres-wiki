@@ -1,4 +1,5 @@
 ---
+id: "forged-arcana"
 name: "Forged Arcana"
 sphere: mana
 tags: []

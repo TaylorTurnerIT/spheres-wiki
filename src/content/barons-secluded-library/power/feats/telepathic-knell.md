@@ -1,4 +1,5 @@
 ---
+id: "telepathic-knell"
 name: "Telepathic Knell"
 sphere: mind
 tags: ["combat", "sm"]

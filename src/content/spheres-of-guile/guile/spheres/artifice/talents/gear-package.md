@@ -1,4 +1,5 @@
 ---
+id: "gear-package"
 name: "Gear Package"
 tier: "base"
 tags:

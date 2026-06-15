@@ -1,4 +1,5 @@
 ---
+id: "daylight"
 name: "Daylight"
 tier: advanced
 tags: ["light"]

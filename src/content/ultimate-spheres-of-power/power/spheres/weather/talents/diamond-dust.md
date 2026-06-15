@@ -1,4 +1,5 @@
 ---
+id: "diamond-dust"
 name: "Diamond Dust"
 tier: basic
 tags: ["cold", "shroud"]

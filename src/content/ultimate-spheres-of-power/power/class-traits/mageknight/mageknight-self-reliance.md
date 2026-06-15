@@ -1,4 +1,5 @@
 ---
+id: "mageknight-self-reliance"
 name: "Self-Reliance"
 tags: ["extraordinary"]
 featureId: mystic-combat-su

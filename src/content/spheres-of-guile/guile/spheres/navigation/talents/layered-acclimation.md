@@ -1,4 +1,5 @@
 ---
+id: "layered-acclimation"
 name: "Layered Acclimation"
 tier: "basic"
 tags: []

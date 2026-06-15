@@ -1,4 +1,5 @@
 ---
+id: "shuffling-array"
 name: "Shuffling Array"
 sphere: mana
 tags: []

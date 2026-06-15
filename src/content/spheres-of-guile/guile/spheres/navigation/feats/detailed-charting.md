@@ -1,4 +1,5 @@
 ---
+id: "detailed-charting"
 name: "Detailed Charting"
 dualSphere: "investigation"
 tags: []

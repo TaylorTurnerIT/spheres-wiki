@@ -1,4 +1,5 @@
 ---
+id: "militant-will"
 name: "Militant Will"
 tier: "basic"
 tags:

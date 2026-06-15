@@ -1,4 +1,5 @@
 ---
+id: "wraith-moan"
 name: "Moan"
 tags: []
 featureId: wraith-haunts

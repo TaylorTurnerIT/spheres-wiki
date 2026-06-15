@@ -1,4 +1,5 @@
 ---
+id: "friction-manipulation"
 name: "Friction Manipulation"
 tier: "advanced"
 tags:

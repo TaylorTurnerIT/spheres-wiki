@@ -1,4 +1,5 @@
 ---
+id: "inspiring-composition"
 name: "Inspiring Composition"
 tier: "basic"
 tags:

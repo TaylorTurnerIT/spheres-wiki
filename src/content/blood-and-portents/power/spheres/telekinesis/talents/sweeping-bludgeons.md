@@ -1,4 +1,5 @@
 ---
+id: "sweeping-bludgeons"
 name: "Sweeping Bludgeons"
 tier: basic
 tags: []

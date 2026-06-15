@@ -1,4 +1,5 @@
 ---
+id: "shaped-chemistry"
 name: "Shaped Chemistry"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "sorcerer-s-scourge"
 name: "Sorcerer's Scourge"
 tier: "advanced"
 tags:

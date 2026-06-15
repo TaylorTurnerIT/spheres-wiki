@@ -1,4 +1,5 @@
 ---
+id: "volcano"
 name: "Volcano"
 tier: advanced
 tags: ["fire", "geomancing"]

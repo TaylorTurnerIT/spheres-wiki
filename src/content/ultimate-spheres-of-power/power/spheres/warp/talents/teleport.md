@@ -1,4 +1,5 @@
 ---
+id: "teleport"
 name: "Teleport"
 tier: base
 tags: []

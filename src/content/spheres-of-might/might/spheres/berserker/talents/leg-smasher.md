@@ -1,4 +1,5 @@
 ---
+id: "leg-smasher"
 name: "Leg-Smasher"
 tier: "basic"
 tags:

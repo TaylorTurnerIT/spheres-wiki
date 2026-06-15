@@ -1,4 +1,5 @@
 ---
+id: "mageknight-mystic-maneuver-core"
 name: "Mystic Maneuver [Core]"
 tags: []
 featureId: mystic-combat-su

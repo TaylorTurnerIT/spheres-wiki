@@ -1,4 +1,5 @@
 ---
+id: "fade"
 name: "Fade"
 tier: basic
 tags: ["fey-blessing"]

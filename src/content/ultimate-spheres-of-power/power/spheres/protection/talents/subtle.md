@@ -1,4 +1,5 @@
 ---
+id: "subtle"
 name: "Subtle"
 tier: advanced
 tags: ["aegis"]

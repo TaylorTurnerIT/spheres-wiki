@@ -1,4 +1,5 @@
 ---
+id: "soul-seer"
 name: "Soul Seer"
 sphere: death
 tags: []

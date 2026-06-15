@@ -1,4 +1,5 @@
 ---
+id: "anemic-wounds"
 name: "Anemic Wounds"
 sphere: death
 tags: []

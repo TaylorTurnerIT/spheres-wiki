@@ -1,4 +1,5 @@
 ---
+id: "bless"
 name: "Bless"
 tier: basic
 tags: ["word"]

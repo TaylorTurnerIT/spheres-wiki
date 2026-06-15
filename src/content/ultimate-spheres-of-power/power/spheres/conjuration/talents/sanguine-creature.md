@@ -1,4 +1,5 @@
 ---
+id: "sanguine-creature"
 name: "Sanguine Creature"
 tier: basic
 tags: ["form"]

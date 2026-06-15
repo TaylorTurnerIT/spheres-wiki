@@ -1,4 +1,5 @@
 ---
+id: "forceful-telekinesis"
 name: "Forceful Telekinesis"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "crimson-coagulant"
 name: "Crimson Coagulant"
 tier: "basic"
 tags:

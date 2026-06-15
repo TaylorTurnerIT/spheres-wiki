@@ -1,4 +1,5 @@
 ---
+id: "penetrating-blast"
 name: "Penetrating Blast"
 tier: advanced
 tags: []

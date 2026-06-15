@@ -1,4 +1,5 @@
 ---
+id: "resourceful-foraging"
 name: Resourceful Foraging
 level: 7
 tags: []

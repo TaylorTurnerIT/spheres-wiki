@@ -1,4 +1,5 @@
 ---
+id: "disarming-transformation"
 name: "Disarming Transformation"
 sphere: alteration
 tags: ["combat"]

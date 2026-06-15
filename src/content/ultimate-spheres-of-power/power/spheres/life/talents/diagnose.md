@@ -1,4 +1,5 @@
 ---
+id: "diagnose"
 name: "Diagnose"
 tier: basic
 tags: ["utility"]

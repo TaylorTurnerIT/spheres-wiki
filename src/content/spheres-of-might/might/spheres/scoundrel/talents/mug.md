@@ -1,4 +1,5 @@
 ---
+id: "mug"
 name: "Mug"
 tier: "basic"
 tags:

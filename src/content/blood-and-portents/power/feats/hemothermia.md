@@ -1,4 +1,5 @@
 ---
+id: "hemothermia"
 name: Hemothermia
 sphere: nature
 dualSphere: blood

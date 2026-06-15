@@ -1,4 +1,5 @@
 ---
+id: "discern-tells"
 name: "Discern Tells"
 tier: "basic"
 tags:

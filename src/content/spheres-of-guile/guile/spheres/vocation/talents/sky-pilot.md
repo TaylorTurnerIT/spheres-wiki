@@ -1,4 +1,5 @@
 ---
+id: "sky-pilot"
 name: "Sky Pilot"
 tier: "basic"
 tags:

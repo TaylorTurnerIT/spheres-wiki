@@ -1,4 +1,5 @@
 ---
+id: "bashing-shield"
 name: "Bashing Shield"
 tier: "basic"
 tags: []

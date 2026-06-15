@@ -1,4 +1,5 @@
 ---
+id: "spellcaster-disguise"
 name: "Spellcaster Disguise"
 tier: "basic"
 tags:

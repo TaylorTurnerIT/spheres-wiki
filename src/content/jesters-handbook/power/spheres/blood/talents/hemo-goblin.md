@@ -1,4 +1,5 @@
 ---
+id: "hemo-goblin"
 name: "Hemo Goblin"
 tier: basic
 tags: []

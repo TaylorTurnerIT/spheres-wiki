@@ -1,4 +1,5 @@
 ---
+id: "inescapable-challenge"
 name: "Inescapable Challenge"
 tier: "advanced"
 tags: []

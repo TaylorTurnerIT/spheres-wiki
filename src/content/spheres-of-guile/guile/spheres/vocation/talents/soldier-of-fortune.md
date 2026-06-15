@@ -1,4 +1,5 @@
 ---
+id: "soldier-of-fortune"
 name: "Soldier Of Fortune"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "tentacles"
 name: "Tentacles"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "divergent-retry"
 name: "Divergent Retry"
 tier: advanced
 tags: ["sm"]

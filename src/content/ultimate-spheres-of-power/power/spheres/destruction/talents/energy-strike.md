@@ -1,4 +1,5 @@
 ---
+id: "energy-strike"
 name: "Energy Strike"
 tier: basic
 tags: ["blast-shape", "strike"]

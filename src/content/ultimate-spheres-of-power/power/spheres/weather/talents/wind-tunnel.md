@@ -1,4 +1,5 @@
 ---
+id: "wind-tunnel"
 name: "Wind Tunnel"
 tier: basic
 tags: ["mantle", "wind"]

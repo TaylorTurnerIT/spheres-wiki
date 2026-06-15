@@ -1,4 +1,5 @@
 ---
+id: "counterfeiter"
 name: "Counterfeiter"
 tier: "basic"
 tags:

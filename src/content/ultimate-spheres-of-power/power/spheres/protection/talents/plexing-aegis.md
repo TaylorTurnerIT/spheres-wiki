@@ -1,4 +1,5 @@
 ---
+id: "plexing-aegis"
 name: "Plexing Aegis"
 tier: basic
 tags: ["aegis"]

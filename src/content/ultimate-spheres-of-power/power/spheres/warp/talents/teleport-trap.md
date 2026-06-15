@@ -1,4 +1,5 @@
 ---
+id: "teleport-trap"
 name: "Teleport Trap"
 tier: basic
 tags: []

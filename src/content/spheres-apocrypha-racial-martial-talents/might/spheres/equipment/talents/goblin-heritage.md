@@ -1,4 +1,5 @@
 ---
+id: "goblin-heritage"
 name: "Goblin Heritage"
 tier: "basic"
 tags: ["discipline"]

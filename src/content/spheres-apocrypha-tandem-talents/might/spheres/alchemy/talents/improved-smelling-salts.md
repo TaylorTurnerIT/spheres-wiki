@@ -1,4 +1,5 @@
 ---
+id: "improved-smelling-salts"
 name: "Improved Smelling Salts"
 tier: "basic"
 tags:

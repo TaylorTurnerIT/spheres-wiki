@@ -1,4 +1,5 @@
 ---
+id: "armorist-shifting-weapon"
 name: "Shifting Weapon"
 tags: []
 featureId: arsenal-trick

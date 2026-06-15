@@ -1,4 +1,5 @@
 ---
+id: "miracle-drink"
 name: "Miracle Drink"
 tier: "basic"
 tags:

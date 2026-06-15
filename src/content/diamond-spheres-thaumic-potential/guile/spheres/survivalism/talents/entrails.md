@@ -1,4 +1,5 @@
 ---
+id: "entrails"
 name: "Entrails"
 tier: "advanced"
 tags:

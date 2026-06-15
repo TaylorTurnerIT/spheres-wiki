@@ -1,4 +1,5 @@
 ---
+id: "tug-fate"
 name: "Tug Fate"
 tier: basic
 tags: ["curse", "consecration"]

@@ -1,4 +1,5 @@
 ---
+id: "reliquarian"
 name: "Reliquarian"
 tier: "basic"
 tags:

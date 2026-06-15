@@ -1,4 +1,5 @@
 ---
+id: "sustaining-vitality"
 name: "Sustaining Vitality"
 tier: basic
 tags: ["vitality"]

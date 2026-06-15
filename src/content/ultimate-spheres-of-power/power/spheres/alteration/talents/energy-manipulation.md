@@ -1,4 +1,5 @@
 ---
+id: "energy-manipulation"
 name: "Energy Manipulation"
 tier: advanced
 tags: []

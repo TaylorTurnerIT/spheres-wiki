@@ -1,4 +1,5 @@
 ---
+id: "expanded-breaker"
 name: "Expanded Breaker"
 tier: "basic"
 tags: []

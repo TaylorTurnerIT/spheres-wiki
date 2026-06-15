@@ -1,4 +1,5 @@
 ---
+id: "invigorating-words"
 name: "Invigorating Words"
 tier: "advanced"
 tags:

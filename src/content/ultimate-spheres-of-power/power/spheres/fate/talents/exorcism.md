@@ -1,4 +1,5 @@
 ---
+id: "exorcism"
 name: "Exorcism"
 tier: basic
 tags: ["supernatural", "word"]

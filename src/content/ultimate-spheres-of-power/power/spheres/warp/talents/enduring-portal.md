@@ -1,4 +1,5 @@
 ---
+id: "enduring-portal"
 name: "Enduring Portal"
 tier: advanced
 tags: []

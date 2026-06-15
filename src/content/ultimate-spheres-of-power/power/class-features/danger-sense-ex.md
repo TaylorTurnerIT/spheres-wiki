@@ -1,4 +1,5 @@
 ---
+id: "danger-sense-ex"
 name: "Danger Sense (Ex)"
 type: class-feature
 className: symbiat

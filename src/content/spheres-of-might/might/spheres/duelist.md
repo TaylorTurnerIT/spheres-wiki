@@ -1,4 +1,5 @@
 ---
+id: "duelist"
 name: "Duelist"
 icon: "duelist"
 tags: []

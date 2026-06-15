@@ -1,4 +1,5 @@
 ---
+id: "flustering-fever"
 name: "Flustering Fever"
 tier: basic
 tags: ["heat", "mantle", "utility"]

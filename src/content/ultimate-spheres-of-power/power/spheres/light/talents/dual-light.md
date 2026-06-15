@@ -1,4 +1,5 @@
 ---
+id: "dual-light"
 name: "Dual Light"
 tier: basic
 tags: []

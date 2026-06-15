@@ -1,4 +1,5 @@
 ---
+id: "reflexive-magic"
 name: "Reflexive Magic"
 sphere: war
 tags: []

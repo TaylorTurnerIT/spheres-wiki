@@ -1,4 +1,5 @@
 ---
+id: "linked-equipment"
 name: "Linked Equipment"
 sphere: conjuration
 tags: []

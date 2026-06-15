@@ -1,4 +1,5 @@
 ---
+id: "calamity"
 name: "Calamity"
 tier: advanced
 tags: ["blast-shape"]

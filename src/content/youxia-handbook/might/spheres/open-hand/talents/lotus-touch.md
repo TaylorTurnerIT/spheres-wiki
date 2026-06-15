@@ -1,4 +1,5 @@
 ---
+id: "lotus-touch"
 name: "Lotus Touch"
 tier: "basic"
 tags: []

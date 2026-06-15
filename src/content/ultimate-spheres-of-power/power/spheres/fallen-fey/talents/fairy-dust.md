@@ -1,4 +1,5 @@
 ---
+id: "fairy-dust"
 name: "Fairy Dust"
 tier: basic
 tags: ["fey-blessing"]

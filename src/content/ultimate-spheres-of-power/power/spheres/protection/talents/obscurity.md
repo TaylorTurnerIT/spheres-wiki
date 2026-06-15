@@ -1,4 +1,5 @@
 ---
+id: "obscurity"
 name: "Obscurity"
 tier: basic
 tags: ["aegis", "ward"]

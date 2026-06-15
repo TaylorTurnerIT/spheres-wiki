@@ -1,4 +1,5 @@
 ---
+id: "improved-blanch-bomb"
 name: "Improved Blanch Bomb"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "wall-master"
 name: "Wall Master"
 sphere: creation
 tags: []

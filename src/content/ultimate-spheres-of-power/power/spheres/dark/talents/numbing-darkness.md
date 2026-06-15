@@ -1,4 +1,5 @@
 ---
+id: "numbing-darkness"
 name: "Numbing Darkness"
 tier: basic
 tags: ["blot", "darkness"]

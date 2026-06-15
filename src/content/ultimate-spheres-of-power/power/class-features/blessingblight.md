@@ -1,4 +1,5 @@
 ---
+id: "blessingblight"
 name: "Blessing/Blight"
 type: class-feature
 className: soul-weaver

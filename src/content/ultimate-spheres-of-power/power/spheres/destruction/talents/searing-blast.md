@@ -1,4 +1,5 @@
 ---
+id: "searing-blast"
 name: "Searing Blast"
 tier: basic
 tags: ["blast-type", "fire"]

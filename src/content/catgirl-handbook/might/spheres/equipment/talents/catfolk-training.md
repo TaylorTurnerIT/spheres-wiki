@@ -1,4 +1,5 @@
 ---
+id: "catfolk-training"
 name: "Catfolk Training"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "mercy-killing"
 name: "Mercy Killing"
 tier: advanced
 tags: []

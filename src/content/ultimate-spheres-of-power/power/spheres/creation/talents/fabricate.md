@@ -1,4 +1,5 @@
 ---
+id: "fabricate"
 name: "Fabricate"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "runic-magic"
 name: "Runic Magic"
 tier: advanced
 tags: ["amp", "manipulation"]

@@ -1,4 +1,5 @@
 ---
+id: "suggestion"
 name: "Suggestion"
 tier: basic
 tags: ["spell-like"]

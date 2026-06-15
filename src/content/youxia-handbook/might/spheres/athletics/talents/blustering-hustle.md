@@ -1,4 +1,5 @@
 ---
+id: "blustering-hustle"
 name: "Blustering Hustle"
 tier: "basic"
 tags:

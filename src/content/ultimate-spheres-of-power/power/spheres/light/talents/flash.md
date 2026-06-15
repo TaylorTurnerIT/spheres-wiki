@@ -1,4 +1,5 @@
 ---
+id: "flash"
 name: "Flash"
 tier: basic
 tags: []

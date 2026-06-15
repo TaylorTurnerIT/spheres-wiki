@@ -1,4 +1,5 @@
 ---
+id: "hyperaware-senses"
 name: "Hyperaware Senses"
 tier: "advanced"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "snap-toss"
 name: "Snap Toss"
 tier: "basic"
 tags: []

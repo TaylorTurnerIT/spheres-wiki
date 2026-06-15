@@ -1,4 +1,5 @@
 ---
+id: "lethargy"
 name: "Lethargy"
 tier: basic
 tags: ["time"]

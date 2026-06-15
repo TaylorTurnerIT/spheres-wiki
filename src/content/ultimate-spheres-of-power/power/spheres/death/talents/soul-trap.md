@@ -1,4 +1,5 @@
 ---
+id: "soul-trap"
 name: "Soul Trap"
 tier: advanced
 tags: []

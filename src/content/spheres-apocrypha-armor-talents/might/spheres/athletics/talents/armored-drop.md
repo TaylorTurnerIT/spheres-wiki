@@ -1,4 +1,5 @@
 ---
+id: "armored-drop"
 name: "Armored Drop"
 tier: "basic"
 tags:

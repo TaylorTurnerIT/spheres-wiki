@@ -1,4 +1,5 @@
 ---
+id: "faction"
 name: "Faction"
 icon: "faction"
 tags: []

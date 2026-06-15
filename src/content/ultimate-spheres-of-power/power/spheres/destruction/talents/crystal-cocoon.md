@@ -1,4 +1,5 @@
 ---
+id: "crystal-cocoon"
 name: "Crystal Cocoon"
 tier: advanced
 tags: []

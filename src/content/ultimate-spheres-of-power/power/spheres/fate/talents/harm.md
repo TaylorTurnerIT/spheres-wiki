@@ -1,4 +1,5 @@
 ---
+id: "harm"
 name: "Harm"
 tier: basic
 tags: ["curse", "word"]

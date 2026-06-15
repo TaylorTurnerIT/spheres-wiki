@@ -1,4 +1,5 @@
 ---
+id: "misdirected-attack"
 name: "Misdirected Attack"
 tier: "basic"
 tags: []

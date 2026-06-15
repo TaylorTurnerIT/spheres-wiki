@@ -1,4 +1,5 @@
 ---
+id: "enhanced-physicality-ex"
 name: "Enhanced Physicality (Ex)"
 type: class-feature
 className: shifter

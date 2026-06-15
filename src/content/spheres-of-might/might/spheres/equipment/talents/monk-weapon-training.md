@@ -1,4 +1,5 @@
 ---
+id: "monk-weapon-training"
 name: "Monk Weapon Training"
 tier: "basic"
 tags:

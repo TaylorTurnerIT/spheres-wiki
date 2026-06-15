@@ -1,4 +1,5 @@
 ---
+id: "aiming-scope"
 name: "Aiming Scope"
 tier: basic
 tags: ["lens"]

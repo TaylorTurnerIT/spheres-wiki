@@ -1,4 +1,5 @@
 ---
+id: "sword-shooter"
 name: "Sword Shooter"
 tier: "advanced"
 tags: []

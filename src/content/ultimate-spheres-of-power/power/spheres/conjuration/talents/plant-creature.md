@@ -1,4 +1,5 @@
 ---
+id: "plant-creature"
 name: "Plant Creature"
 tier: basic
 tags: ["type"]

@@ -1,4 +1,5 @@
 ---
+id: "ornery-ox"
 name: "Ornery Ox"
 tier: "basic"
 tags:

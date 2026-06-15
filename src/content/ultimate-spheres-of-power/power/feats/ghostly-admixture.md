@@ -1,4 +1,5 @@
 ---
+id: "ghostly-admixture"
 name: "Ghostly Admixture"
 sphere: destruction
 tags: ["admixture"]

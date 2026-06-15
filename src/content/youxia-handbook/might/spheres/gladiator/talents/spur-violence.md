@@ -1,4 +1,5 @@
 ---
+id: "spur-violence"
 name: "Spur Violence"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "imbue-teleport"
 name: "Imbue Teleport"
 tier: basic
 tags: []

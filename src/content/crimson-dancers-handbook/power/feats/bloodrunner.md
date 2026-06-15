@@ -1,4 +1,5 @@
 ---
+id: "bloodrunner"
 name: "Bloodrunner"
 sphere: blood
 tags: []

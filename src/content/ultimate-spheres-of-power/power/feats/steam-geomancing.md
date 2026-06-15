@@ -1,4 +1,5 @@
 ---
+id: "steam-geomancing"
 name: "Steam Geomancing"
 sphere: nature
 tags: []

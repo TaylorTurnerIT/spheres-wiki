@@ -1,4 +1,5 @@
 ---
+id: "antimagic-aegis"
 name: "Antimagic Aegis"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "afterimage"
 name: "Afterimage"
 tier: "advanced"
 tags:

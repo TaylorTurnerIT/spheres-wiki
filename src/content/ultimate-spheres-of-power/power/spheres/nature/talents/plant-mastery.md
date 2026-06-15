@@ -1,4 +1,5 @@
 ---
+id: "plant-mastery"
 name: "Plant Mastery"
 tier: basic
 tags: ["plant", "geomancing"]

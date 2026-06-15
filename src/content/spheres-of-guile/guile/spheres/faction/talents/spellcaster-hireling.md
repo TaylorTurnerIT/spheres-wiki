@@ -1,4 +1,5 @@
 ---
+id: "spellcaster-hireling"
 name: "Spellcaster Hireling"
 tier: "basic"
 tags:

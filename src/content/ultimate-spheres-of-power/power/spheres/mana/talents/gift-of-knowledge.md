@@ -1,4 +1,5 @@
 ---
+id: "gift-of-knowledge"
 name: "Gift Of Knowledge"
 tier: basic
 tags: ["manipulation"]

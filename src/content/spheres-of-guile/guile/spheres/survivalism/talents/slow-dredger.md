@@ -1,4 +1,5 @@
 ---
+id: "slow-dredger"
 name: "Slow Dredger"
 tier: "base"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "spell-warded-companion"
 name: "Spell-Warded Companion"
 tier: basic
 tags: ["form"]

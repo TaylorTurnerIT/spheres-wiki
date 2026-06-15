@@ -1,4 +1,5 @@
 ---
+id: "confine"
 name: "Confine"
 tier: basic
 tags: ["curse", "word"]

@@ -1,4 +1,5 @@
 ---
+id: "shifter-combat-talent"
 name: "Combat Talent"
 tags: []
 featureId: bestial-trait

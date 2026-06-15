@@ -1,4 +1,5 @@
 ---
+id: "invigorating-totem"
 name: "Invigorating Totem"
 tier: basic
 tags: ["totem"]

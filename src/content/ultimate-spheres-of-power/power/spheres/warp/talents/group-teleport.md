@@ -1,4 +1,5 @@
 ---
+id: "group-teleport"
 name: "Group Teleport"
 tier: advanced
 tags: []

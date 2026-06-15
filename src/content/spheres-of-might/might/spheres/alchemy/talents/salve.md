@@ -1,4 +1,5 @@
 ---
+id: "salve"
 name: "Salve"
 tier: "basic"
 tags:

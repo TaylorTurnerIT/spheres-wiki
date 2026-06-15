@@ -1,4 +1,5 @@
 ---
+id: "blinding-light"
 name: "Blinding Light"
 tier: basic
 tags: ["light"]

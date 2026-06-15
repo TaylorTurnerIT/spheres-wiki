@@ -1,4 +1,5 @@
 ---
+id: "shattering-disarm"
 name: "Shattering Disarm"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "fastidious-mercy"
 name: "Fastidious Mercy"
 sphere: fate
 tags: ["sm"]

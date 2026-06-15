@@ -1,4 +1,5 @@
 ---
+id: "resourceful-laborer"
 name: "Resourceful Laborer"
 tier: "base"
 tags:

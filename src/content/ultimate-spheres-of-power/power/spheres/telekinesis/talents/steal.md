@@ -1,4 +1,5 @@
 ---
+id: "steal"
 name: "Steal"
 tier: basic
 tags: []

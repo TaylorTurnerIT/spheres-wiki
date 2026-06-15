@@ -1,4 +1,5 @@
 ---
+id: "famous-leader"
 name: "Famous Leader"
 tier: "base"
 tags:

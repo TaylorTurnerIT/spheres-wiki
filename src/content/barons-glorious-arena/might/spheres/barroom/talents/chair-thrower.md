@@ -1,4 +1,5 @@
 ---
+id: "chair-thrower"
 name: "Chair Thrower"
 tier: "basic"
 tags: []

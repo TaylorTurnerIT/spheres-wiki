@@ -1,4 +1,5 @@
 ---
+id: "footwork"
 name: "Footwork"
 tier: "basic"
 tags: []

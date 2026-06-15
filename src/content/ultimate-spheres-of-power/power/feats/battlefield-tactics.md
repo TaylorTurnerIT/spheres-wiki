@@ -1,4 +1,5 @@
 ---
+id: "battlefield-tactics"
 name: "Battlefield Tactics"
 sphere: war
 tags: ["squadron"]

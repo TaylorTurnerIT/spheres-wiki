@@ -1,4 +1,5 @@
 ---
+id: "insinuate"
 name: "Insinuate"
 tier: basic
 tags: ["utility"]

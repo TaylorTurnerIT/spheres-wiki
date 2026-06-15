@@ -1,4 +1,5 @@
 ---
+id: "classify"
 name: "Classify"
 tier: basic
 tags: ["utility", "word"]

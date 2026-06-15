@@ -1,4 +1,5 @@
 ---
+id: "barding-expertise"
 name: "Barding Expertise"
 tier: "basic"
 tags:

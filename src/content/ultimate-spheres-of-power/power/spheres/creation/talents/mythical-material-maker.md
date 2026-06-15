@@ -1,4 +1,5 @@
 ---
+id: "mythical-material-maker"
 name: "Mythical Material Maker"
 tier: advanced
 tags: ["material"]

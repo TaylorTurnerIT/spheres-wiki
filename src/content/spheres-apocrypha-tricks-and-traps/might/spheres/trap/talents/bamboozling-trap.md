@@ -1,4 +1,5 @@
 ---
+id: "bamboozling-trap"
 name: "Bamboozling Trap"
 tier: "basic"
 tags: ["snare"]

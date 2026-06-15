@@ -1,4 +1,5 @@
 ---
+id: "hedgewitch-poppet"
 name: "Poppet"
 tags: []
 featureId: secret

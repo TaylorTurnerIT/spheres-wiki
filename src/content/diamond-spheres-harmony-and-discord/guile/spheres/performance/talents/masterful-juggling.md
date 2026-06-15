@@ -1,4 +1,5 @@
 ---
+id: "masterful-juggling"
 name: "Masterful Juggling"
 tier: "advanced"
 tags: []

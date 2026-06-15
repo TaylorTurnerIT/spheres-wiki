@@ -1,4 +1,5 @@
 ---
+id: "armored-defense"
 name: "Armored Defense"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "death"
 name: "Death"
 icon: death
 description: "You may command the powers of unlife."

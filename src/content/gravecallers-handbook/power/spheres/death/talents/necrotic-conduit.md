@@ -1,4 +1,5 @@
 ---
+id: "necrotic-conduit"
 name: "Necrotic Conduit"
 tier: basic
 tags: ["dominion"]

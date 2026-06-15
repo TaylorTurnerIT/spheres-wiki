@@ -1,4 +1,5 @@
 ---
+id: "scrying"
 name: "Scrying"
 tier: advanced
 tags: ["utility"]

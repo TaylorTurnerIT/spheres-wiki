@@ -1,4 +1,5 @@
 ---
+id: "flare"
 name: "Flare"
 tier: basic
 tags: []

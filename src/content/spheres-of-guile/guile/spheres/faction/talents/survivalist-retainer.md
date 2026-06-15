@@ -1,4 +1,5 @@
 ---
+id: "survivalist-retainer"
 name: "Survivalist Retainer"
 tier: "advanced"
 tags:

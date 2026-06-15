@@ -1,4 +1,5 @@
 ---
+id: "archery-bash"
 name: "Archery Bash"
 tier: "basic"
 tags:

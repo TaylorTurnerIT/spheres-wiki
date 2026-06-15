@@ -1,4 +1,5 @@
 ---
+id: "greater-trip"
 name: "Greater Trip"
 tier: "basic"
 tags: []

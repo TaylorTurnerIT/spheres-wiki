@@ -1,4 +1,5 @@
 ---
+id: "eyes-of-battle"
 name: Eyes Of Battle
 sphere: war
 dualSphere: divination

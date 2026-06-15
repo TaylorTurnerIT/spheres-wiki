@@ -1,4 +1,5 @@
 ---
+id: "absolute-totem"
 name: "Absolute Totem"
 tier: basic
 tags: ["totem"]

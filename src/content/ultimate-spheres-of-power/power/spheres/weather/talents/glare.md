@@ -1,4 +1,5 @@
 ---
+id: "glare"
 name: "Glare"
 tier: basic
 tags: ["heat", "shroud"]

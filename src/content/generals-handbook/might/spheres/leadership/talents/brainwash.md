@@ -1,4 +1,5 @@
 ---
+id: "brainwash"
 name: "Brainwash"
 tier: "advanced"
 tags:

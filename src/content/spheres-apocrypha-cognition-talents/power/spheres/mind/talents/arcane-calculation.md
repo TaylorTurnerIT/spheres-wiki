@@ -1,4 +1,5 @@
 ---
+id: "arcane-calculation"
 name: "Arcane Calculation"
 tier: basic
 tags: ["cognition", "utility"]

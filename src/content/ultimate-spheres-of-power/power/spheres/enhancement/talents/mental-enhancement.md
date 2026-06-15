@@ -1,4 +1,5 @@
 ---
+id: "mental-enhancement"
 name: "Mental Enhancement"
 tier: basic
 tags: ["enhance"]

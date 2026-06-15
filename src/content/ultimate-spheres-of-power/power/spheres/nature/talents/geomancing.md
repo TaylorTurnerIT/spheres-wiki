@@ -1,4 +1,5 @@
 ---
+id: "geomancing"
 name: Geomancing
 tier: base
 tags: []

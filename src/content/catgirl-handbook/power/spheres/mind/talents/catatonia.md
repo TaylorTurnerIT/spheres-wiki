@@ -1,4 +1,5 @@
 ---
+id: "catatonia"
 name: "Catatonia"
 tier: advanced
 tags: []

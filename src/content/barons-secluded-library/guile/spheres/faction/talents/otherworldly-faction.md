@@ -1,4 +1,5 @@
 ---
+id: "otherworldly-faction"
 name: "Otherworldly Faction"
 tier: "base"
 tags:

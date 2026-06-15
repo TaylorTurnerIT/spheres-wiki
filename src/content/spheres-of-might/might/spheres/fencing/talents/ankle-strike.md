@@ -1,4 +1,5 @@
 ---
+id: "ankle-strike"
 name: "Ankle Strike"
 tier: "basic"
 tags:

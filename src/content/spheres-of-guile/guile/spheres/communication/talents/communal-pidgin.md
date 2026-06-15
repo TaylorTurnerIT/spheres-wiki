@@ -1,4 +1,5 @@
 ---
+id: "communal-pidgin"
 name: "Communal Pidgin"
 tier: "basic"
 tags:

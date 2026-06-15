@@ -1,4 +1,5 @@
 ---
+id: "focused-might"
 name: "Focused Might"
 tier: "basic"
 tags: []

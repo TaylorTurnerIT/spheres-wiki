@@ -1,4 +1,5 @@
 ---
+id: "teleportation"
 name: "Teleportation"
 tier: "advanced"
 tags:

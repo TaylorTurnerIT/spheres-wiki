@@ -1,4 +1,5 @@
 ---
+id: "searing-brilliance"
 name: "Searing Brilliance"
 sphere: light
 tags: []

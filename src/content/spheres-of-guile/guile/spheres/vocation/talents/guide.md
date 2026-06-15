@@ -1,4 +1,5 @@
 ---
+id: "guide"
 name: "Guide"
 tier: "basic"
 tags:

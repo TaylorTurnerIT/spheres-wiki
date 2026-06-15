@@ -1,4 +1,5 @@
 ---
+id: "control-mishap"
 name: "Control Mishap"
 tier: "base"
 tags: []

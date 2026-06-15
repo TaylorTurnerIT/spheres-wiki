@@ -1,4 +1,5 @@
 ---
+id: "programmed-illusion"
 name: "Programmed Illusion"
 tier: basic
 tags: []

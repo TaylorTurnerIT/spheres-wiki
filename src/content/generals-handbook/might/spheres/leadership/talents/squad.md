@@ -1,4 +1,5 @@
 ---
+id: "squad"
 name: "Squad"
 tier: "basic"
 tags:

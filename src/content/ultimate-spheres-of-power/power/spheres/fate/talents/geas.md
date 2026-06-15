@@ -1,4 +1,5 @@
 ---
+id: "geas"
 name: "Geas"
 tier: advanced
 tags: ["curse", "utility", "word"]

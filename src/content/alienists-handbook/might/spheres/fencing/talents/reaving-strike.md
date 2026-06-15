@@ -1,4 +1,5 @@
 ---
+id: "reaving-strike"
 name: "Reaving Strike"
 tier: "advanced"
 tags: []

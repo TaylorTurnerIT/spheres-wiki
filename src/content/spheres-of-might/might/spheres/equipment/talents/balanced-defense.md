@@ -1,4 +1,5 @@
 ---
+id: "balanced-defense"
 name: "Balanced Defense"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "defensive-rider"
 name: "Defensive Rider"
 tier: "base"
 tags: []

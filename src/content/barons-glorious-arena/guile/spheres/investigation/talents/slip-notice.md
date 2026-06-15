@@ -1,4 +1,5 @@
 ---
+id: "slip-notice"
 name: "Slip Notice"
 tier: "basic"
 tags:

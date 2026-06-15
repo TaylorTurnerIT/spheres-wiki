@@ -1,4 +1,5 @@
 ---
+id: "divisive-totem"
 name: "Divisive Totem"
 tier: basic
 tags: ["totem"]

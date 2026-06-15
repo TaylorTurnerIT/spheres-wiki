@@ -1,4 +1,5 @@
 ---
+id: "sculpt-blast"
 name: "Sculpt Blast"
 tier: basic
 tags: ["blast-shape"]

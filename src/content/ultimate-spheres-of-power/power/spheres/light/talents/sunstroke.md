@@ -1,4 +1,5 @@
 ---
+id: "sunstroke"
 name: "Sunstroke"
 tier: basic
 tags: ["light"]

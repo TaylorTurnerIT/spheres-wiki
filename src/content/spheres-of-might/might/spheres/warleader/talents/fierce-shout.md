@@ -1,4 +1,5 @@
 ---
+id: "fierce-shout"
 name: "Fierce Shout"
 tier: "base"
 tags: []

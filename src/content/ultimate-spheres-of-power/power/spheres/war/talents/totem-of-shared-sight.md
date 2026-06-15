@@ -1,4 +1,5 @@
 ---
+id: "totem-of-shared-sight"
 name: "Totem Of Shared Sight"
 tier: basic
 tags: ["totem"]

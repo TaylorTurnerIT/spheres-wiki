@@ -1,4 +1,5 @@
 ---
+id: "shifter-champion"
 name: "Champion"
 tags: []
 featureId: bestial-trait

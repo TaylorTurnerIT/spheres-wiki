@@ -1,4 +1,5 @@
 ---
+id: "armorist-trick-shooter"
 name: "Trick Shooter"
 tags: []
 featureId: arsenal-trick

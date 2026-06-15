@@ -1,4 +1,5 @@
 ---
+id: "mass-summon"
 name: "Mass Summon"
 tier: basic
 tags: ["mass"]

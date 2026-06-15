@@ -1,4 +1,5 @@
 ---
+id: "tricky-traps"
 name: "Tricky Traps"
 tier: "basic"
 tags: ["snare"]

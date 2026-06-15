@@ -1,4 +1,5 @@
 ---
+id: "potent-poison"
 name: "Potent Poison"
 tier: "basic"
 tags: []

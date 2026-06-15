@@ -1,4 +1,5 @@
 ---
+id: "pentacles"
 name: "Pentacles"
 tier: basic
 tags: ["motif", "arcana"]

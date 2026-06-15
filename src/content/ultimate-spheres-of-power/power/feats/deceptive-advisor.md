@@ -1,4 +1,5 @@
 ---
+id: "deceptive-advisor"
 name: "Deceptive Advisor"
 sphere: mind
 tags: []

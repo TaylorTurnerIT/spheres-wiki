@@ -1,4 +1,5 @@
 ---
+id: "totem-of-enemies"
 name: "Totem Of Enemies"
 tier: basic
 tags: ["totem"]

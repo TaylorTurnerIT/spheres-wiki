@@ -1,4 +1,5 @@
 ---
+id: "hurricane-kick"
 name: "Hurricane Kick"
 tier: "basic"
 tags: []

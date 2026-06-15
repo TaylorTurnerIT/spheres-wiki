@@ -1,4 +1,5 @@
 ---
+id: "detached"
 name: "Detached"
 tier: "basic"
 tags:

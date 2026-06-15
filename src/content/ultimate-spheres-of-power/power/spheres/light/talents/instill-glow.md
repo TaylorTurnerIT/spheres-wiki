@@ -1,4 +1,5 @@
 ---
+id: "instill-glow"
 name: "Instill Glow"
 tier: basic
 tags: ["instill"]

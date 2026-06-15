@@ -1,4 +1,5 @@
 ---
+id: "fervent-spell"
 name: "Fervent Spell"
 tier: basic
 tags: ["metamagic"]

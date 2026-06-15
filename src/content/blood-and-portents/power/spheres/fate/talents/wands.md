@@ -1,4 +1,5 @@
 ---
+id: "wands"
 name: "Wands"
 tier: basic
 tags: ["motif", "arcana"]

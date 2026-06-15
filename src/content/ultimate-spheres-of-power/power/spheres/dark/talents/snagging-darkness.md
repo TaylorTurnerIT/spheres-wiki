@@ -1,4 +1,5 @@
 ---
+id: "snagging-darkness"
 name: "Snagging Darkness"
 tier: basic
 tags: ["blot"]

@@ -1,4 +1,5 @@
 ---
+id: "scholars"
 name: "Scholars"
 tier: "basic"
 tags:

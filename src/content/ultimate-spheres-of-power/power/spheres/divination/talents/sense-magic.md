@@ -1,4 +1,5 @@
 ---
+id: "sense-magic"
 name: "Sense Magic"
 tier: basic
 tags: ["sense"]

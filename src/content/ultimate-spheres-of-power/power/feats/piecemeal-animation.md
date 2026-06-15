@@ -1,4 +1,5 @@
 ---
+id: "piecemeal-animation"
 name: Piecemeal Animation
 sphere: telekinesis
 dualSphere: death

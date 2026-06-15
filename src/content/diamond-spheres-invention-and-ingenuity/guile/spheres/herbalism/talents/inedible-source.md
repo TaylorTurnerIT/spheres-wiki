@@ -1,4 +1,5 @@
 ---
+id: "inedible-source"
 name: "Inedible Source"
 tier: "base"
 tags:

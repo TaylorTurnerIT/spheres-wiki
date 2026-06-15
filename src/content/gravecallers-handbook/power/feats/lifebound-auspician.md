@@ -1,4 +1,5 @@
 ---
+id: "lifebound-auspician"
 name: "Lifebound Auspician"
 sphere: life
 tags: []

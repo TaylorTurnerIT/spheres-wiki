@@ -1,4 +1,5 @@
 ---
+id: "prickly"
 name: "Prickly"
 tier: basic
 tags: []

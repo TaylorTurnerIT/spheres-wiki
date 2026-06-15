@@ -1,4 +1,5 @@
 ---
+id: "shifter-improved-evasion"
 name: "Improved Evasion"
 tags: ["extraordinary"]
 featureId: bestial-trait

@@ -1,4 +1,5 @@
 ---
+id: "wondrous-item-supply"
 name: "Wondrous Item Supply"
 tier: "basic"
 tags:

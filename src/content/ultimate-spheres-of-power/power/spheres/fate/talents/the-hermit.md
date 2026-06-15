@@ -1,4 +1,5 @@
 ---
+id: "the-hermit"
 name: "The Hermit"
 tier: basic
 tags: ["motif"]

@@ -1,4 +1,5 @@
 ---
+id: "armorist-rigorous-equipment"
 name: "Rigorous Equipment"
 tags: []
 featureId: arsenal-trick

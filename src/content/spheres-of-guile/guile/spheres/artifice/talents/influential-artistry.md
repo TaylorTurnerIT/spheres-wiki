@@ -1,4 +1,5 @@
 ---
+id: "influential-artistry"
 name: "Influential Artistry"
 tier: "basic"
 tags:

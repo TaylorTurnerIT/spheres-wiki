@@ -1,4 +1,5 @@
 ---
+id: "haboob-lord"
 name: "Haboob Lord"
 sphere: weather
 tags: []

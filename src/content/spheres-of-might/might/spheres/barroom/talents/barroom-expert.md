@@ -1,4 +1,5 @@
 ---
+id: "barroom-expert"
 name: "Barroom Expert"
 tier: "basic"
 tags: []

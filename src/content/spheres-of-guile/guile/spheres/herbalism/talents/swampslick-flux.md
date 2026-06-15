@@ -1,4 +1,5 @@
 ---
+id: "swampslick-flux"
 name: "Swampslick Flux"
 tier: "advanced"
 tags:

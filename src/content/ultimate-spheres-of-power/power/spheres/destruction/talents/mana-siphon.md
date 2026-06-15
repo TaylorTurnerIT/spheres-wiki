@@ -1,4 +1,5 @@
 ---
+id: "mana-siphon"
 name: "Mana Siphon"
 tier: basic
 tags: ["blast-type", "force"]

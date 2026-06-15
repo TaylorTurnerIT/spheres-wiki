@@ -1,4 +1,5 @@
 ---
+id: "assurance-of-the-future"
 name: "Assurance of the Future"
 tier: advanced
 tags: ["sm"]

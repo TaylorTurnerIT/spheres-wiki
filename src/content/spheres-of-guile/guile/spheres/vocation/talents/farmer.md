@@ -1,4 +1,5 @@
 ---
+id: "farmer"
 name: "Farmer"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "master-socialite"
 name: "Master Socialite"
 tier: "advanced"
 tags:

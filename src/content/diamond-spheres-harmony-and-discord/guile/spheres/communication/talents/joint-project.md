@@ -1,4 +1,5 @@
 ---
+id: "joint-project"
 name: "Joint Project"
 tier: "advanced"
 tags:

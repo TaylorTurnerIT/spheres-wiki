@@ -1,4 +1,5 @@
 ---
+id: "query-self"
 name: "Query Self"
 tier: advanced
 tags: ["utility"]

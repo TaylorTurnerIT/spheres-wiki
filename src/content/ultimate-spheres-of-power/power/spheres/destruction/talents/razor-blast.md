@@ -1,4 +1,5 @@
 ---
+id: "razor-blast"
 name: "Razor Blast"
 tier: basic
 tags: ["blast-type", "crystal"]

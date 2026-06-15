@@ -1,4 +1,5 @@
 ---
+id: "veiled-dialogue"
 name: "Veiled Dialogue"
 tier: "basic"
 tags:

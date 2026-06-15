@@ -1,4 +1,5 @@
 ---
+id: "the-bonds-forged-in-war"
 name: "The Bonds Forged In War"
 tier: "basic"
 tags:

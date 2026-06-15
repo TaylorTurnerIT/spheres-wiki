@@ -1,4 +1,5 @@
 ---
+id: "channel-resistance"
 name: "Channel Resistance"
 sphere: death
 tags: []

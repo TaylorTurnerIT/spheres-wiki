@@ -1,4 +1,5 @@
 ---
+id: "admixture-efficiency"
 name: "Admixture Efficiency"
 sphere: destruction
 tags: ["sm"]

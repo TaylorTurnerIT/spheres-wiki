@@ -1,4 +1,5 @@
 ---
+id: "conjunction"
 name: "Conjunction"
 tier: basic
 tags: ["word"]

@@ -1,4 +1,5 @@
 ---
+id: "cumulative-nimbus"
 name: "Cumulative Nimbus"
 sphere: weather
 tags: ["teamwork"]

@@ -1,4 +1,5 @@
 ---
+id: "martial-presence"
 name: "Martial Presence"
 sphere: war
 tags: ["combat"]

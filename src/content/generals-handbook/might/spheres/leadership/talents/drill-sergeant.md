@@ -1,4 +1,5 @@
 ---
+id: "drill-sergeant"
 name: "Drill Sergeant"
 tier: "basic"
 tags:

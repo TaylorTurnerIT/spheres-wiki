@@ -1,4 +1,5 @@
 ---
+id: "vicious-performer"
 name: Vicious Performer
 dualSphere: war
 tags:

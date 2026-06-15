@@ -1,4 +1,5 @@
 ---
+id: "battlefield-stealth"
 name: "Battlefield Stealth"
 tier: "basic"
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "pinning-impale"
 name: "Pinning Impale"
 tier: "basic"
 tags: []

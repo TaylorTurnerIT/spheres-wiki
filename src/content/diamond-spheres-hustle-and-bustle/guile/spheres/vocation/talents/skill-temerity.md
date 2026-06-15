@@ -1,4 +1,5 @@
 ---
+id: "skill-temerity"
 name: "Skill Temerity"
 tier: "basic"
 tags: []

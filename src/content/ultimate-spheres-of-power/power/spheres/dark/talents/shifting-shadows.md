@@ -1,4 +1,5 @@
 ---
+id: "shifting-shadows"
 name: "Shifting Shadows"
 tier: basic
 tags: ["control"]

@@ -1,4 +1,5 @@
 ---
+id: "slip-and-strike"
 name: "Slip And Strike"
 tier: "basic"
 tags: []

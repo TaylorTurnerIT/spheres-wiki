@@ -1,4 +1,5 @@
 ---
+id: "extra-faction-package"
 name: "Extra Faction Package"
 tier: "basic"
 tags: []

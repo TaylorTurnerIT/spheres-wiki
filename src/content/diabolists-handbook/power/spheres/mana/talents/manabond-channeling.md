@@ -1,4 +1,5 @@
 ---
+id: "manabond-channeling"
 name: "Manabond Channeling"
 tier: basic
 tags: ["manabond"]

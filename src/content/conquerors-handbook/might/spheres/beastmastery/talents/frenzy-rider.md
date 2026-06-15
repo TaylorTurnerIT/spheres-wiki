@@ -1,4 +1,5 @@
 ---
+id: "frenzy-rider"
 name: "Frenzy Rider"
 tier: "basic"
 tags:

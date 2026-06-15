@@ -1,4 +1,5 @@
 ---
+id: "prepare-atmosphere"
 name: "Prepare Atmosphere"
 tier: "basic"
 tags:

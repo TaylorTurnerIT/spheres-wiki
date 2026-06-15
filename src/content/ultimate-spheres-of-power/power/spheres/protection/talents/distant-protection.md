@@ -1,4 +1,5 @@
 ---
+id: "distant-protection"
 name: "Distant Protection"
 tier: basic
 tags: ["range"]

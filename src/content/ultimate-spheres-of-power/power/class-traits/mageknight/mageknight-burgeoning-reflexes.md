@@ -1,4 +1,5 @@
 ---
+id: "mageknight-burgeoning-reflexes"
 name: "Burgeoning Reflexes"
 tags: []
 featureId: mystic-combat-su

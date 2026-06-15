@@ -1,4 +1,5 @@
 ---
+id: "subordinate-schemers"
 name: "Subordinate Schemers"
 tier: "basic"
 tags:

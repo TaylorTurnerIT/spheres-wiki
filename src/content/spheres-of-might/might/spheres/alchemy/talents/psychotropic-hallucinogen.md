@@ -1,4 +1,5 @@
 ---
+id: "psychotropic-hallucinogen"
 name: "Psychotropic Hallucinogen"
 tier: "basic"
 tags:

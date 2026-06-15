@@ -1,4 +1,5 @@
 ---
+id: "hidden-blade"
 name: "Hidden Blade"
 tier: "basic"
 tags:

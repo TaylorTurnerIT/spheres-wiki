@@ -1,4 +1,5 @@
 ---
+id: "armorist-bonded-boost"
 name: "Bonded Boost"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "beckoning-call"
 name: "Beckoning Call"
 tier: basic
 tags: ["fey-blessing", "utility"]

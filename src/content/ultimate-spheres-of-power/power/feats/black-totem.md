@@ -1,4 +1,5 @@
 ---
+id: "black-totem"
 name: Black Totem
 sphere: war
 dualSphere: dark

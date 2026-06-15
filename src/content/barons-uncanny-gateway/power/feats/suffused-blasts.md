@@ -1,4 +1,5 @@
 ---
+id: "suffused-blasts"
 name: "Suffused Blasts"
 sphere: destruction
 tags: ["sm"]

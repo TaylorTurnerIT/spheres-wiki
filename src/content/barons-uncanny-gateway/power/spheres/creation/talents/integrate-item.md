@@ -1,4 +1,5 @@
 ---
+id: "integrate-item"
 name: "Integrate Item"
 tier: advanced
 tags: ["alter", "sm"]

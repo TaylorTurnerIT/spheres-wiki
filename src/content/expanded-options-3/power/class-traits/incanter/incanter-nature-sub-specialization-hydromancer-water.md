@@ -1,4 +1,5 @@
 ---
+id: "incanter-nature-sub-specialization-hydromancer-water"
 name: "Nature Sub-Specialization: Hydromancer (water)"
 tags: []
 featureId: list-of-sphere-specializations

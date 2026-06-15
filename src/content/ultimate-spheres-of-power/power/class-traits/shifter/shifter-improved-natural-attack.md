@@ -1,4 +1,5 @@
 ---
+id: "shifter-improved-natural-attack"
 name: "Improved Natural Attack"
 tags: ["extraordinary"]
 featureId: bestial-trait

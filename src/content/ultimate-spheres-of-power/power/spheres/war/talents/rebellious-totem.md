@@ -1,4 +1,5 @@
 ---
+id: "rebellious-totem"
 name: "Rebellious Totem"
 tier: basic
 tags: ["totem"]

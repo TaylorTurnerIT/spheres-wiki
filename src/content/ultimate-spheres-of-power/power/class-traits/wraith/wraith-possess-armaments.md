@@ -1,4 +1,5 @@
 ---
+id: "wraith-possess-armaments"
 name: "Possess Armaments"
 tags: []
 featureId: wraith-haunts

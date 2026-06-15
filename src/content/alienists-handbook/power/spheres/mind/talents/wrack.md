@@ -1,4 +1,5 @@
 ---
+id: "wrack"
 name: "Wrack"
 tier: basic
 tags: ["charm"]

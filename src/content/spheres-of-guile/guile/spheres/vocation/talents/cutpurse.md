@@ -1,4 +1,5 @@
 ---
+id: "cutpurse"
 name: "Cutpurse"
 tier: "basic"
 tags:

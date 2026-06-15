@@ -1,4 +1,5 @@
 ---
+id: "poltergeists-fingers"
 name: "Poltergeist's Fingers"
 sphere: telekinesis
 tags: ["protokinesis"]

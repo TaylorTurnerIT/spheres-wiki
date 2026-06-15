@@ -1,4 +1,5 @@
 ---
+id: "servant"
 name: "Servant"
 tier: "basic"
 tags:

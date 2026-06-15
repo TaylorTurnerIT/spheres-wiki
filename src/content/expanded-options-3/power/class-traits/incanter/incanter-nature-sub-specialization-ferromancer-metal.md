@@ -1,4 +1,5 @@
 ---
+id: "incanter-nature-sub-specialization-ferromancer-metal"
 name: "Nature Sub-Specialization: Ferromancer (metal)"
 tags: []
 featureId: list-of-sphere-specializations

@@ -1,4 +1,5 @@
 ---
+id: "see-in-darkness-su"
 name: "See in Darkness (Su)"
 type: class-feature
 className: fey-adept

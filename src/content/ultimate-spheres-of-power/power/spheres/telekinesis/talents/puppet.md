@@ -1,4 +1,5 @@
 ---
+id: "puppet"
 name: "Puppet"
 tier: advanced
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "warning-shot"
 name: "Warning Shot"
 tier: "basic"
 tags:

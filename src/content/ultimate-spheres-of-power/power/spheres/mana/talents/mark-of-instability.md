@@ -1,4 +1,5 @@
 ---
+id: "mark-of-instability"
 name: "Mark Of Instability"
 tier: basic
 tags: ["expunge"]

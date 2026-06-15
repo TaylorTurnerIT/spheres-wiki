@@ -1,4 +1,5 @@
 ---
+id: "adept-handler"
 name: "Adept Handler"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "flicker"
 name: "Flicker"
 tier: basic
 tags: ["light"]

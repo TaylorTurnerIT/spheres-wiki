@@ -1,4 +1,5 @@
 ---
+id: "tribal-mark"
 name: Tribal Mark
 sphere: war
 dualSphere: enhancement

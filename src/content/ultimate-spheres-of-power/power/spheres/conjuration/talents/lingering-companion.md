@@ -1,4 +1,5 @@
 ---
+id: "lingering-companion"
 name: "Lingering Companion"
 tier: basic
 tags: ["form"]

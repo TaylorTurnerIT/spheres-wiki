@@ -1,4 +1,5 @@
 ---
+id: "adhesive-blast"
 name: "Adhesive Blast"
 tier: basic
 tags: ["acid", "blast-type"]

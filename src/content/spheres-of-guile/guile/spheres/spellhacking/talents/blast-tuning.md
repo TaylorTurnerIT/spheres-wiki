@@ -1,4 +1,5 @@
 ---
+id: "blast-tuning"
 name: "Blast Tuning"
 tier: "basic"
 tags:

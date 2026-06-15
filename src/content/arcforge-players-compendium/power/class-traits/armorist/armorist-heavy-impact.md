@@ -1,4 +1,5 @@
 ---
+id: "armorist-heavy-impact"
 name: "Heavy Impact"
 tags: []
 featureId: arsenal-trick

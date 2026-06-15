@@ -1,4 +1,5 @@
 ---
+id: "armorist-bloody-equipment"
 name: "Bloody Equipment"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "fearful-darkness"
 name: "Fearful Darkness"
 tier: basic
 tags: ["blot", "darkness"]

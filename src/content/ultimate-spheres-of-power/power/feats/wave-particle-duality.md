@@ -1,4 +1,5 @@
 ---
+id: "wave-particle-duality"
 name: Wave-Particle Duality
 sphere: light
 dualSphere: illusion

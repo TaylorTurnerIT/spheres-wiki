@@ -1,4 +1,5 @@
 ---
+id: "psychometric-analysis"
 name: "Psychometric Analysis"
 tier: "advanced"
 tags:

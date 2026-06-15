@@ -1,4 +1,5 @@
 ---
+id: "shifter-flight-skillful"
 name: "Flight, Skillful"
 tags: ["extraordinary"]
 featureId: bestial-trait

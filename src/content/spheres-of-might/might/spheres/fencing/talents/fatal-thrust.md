@@ -1,4 +1,5 @@
 ---
+id: "fatal-thrust"
 name: "Fatal Thrust"
 tier: "base"
 tags: []

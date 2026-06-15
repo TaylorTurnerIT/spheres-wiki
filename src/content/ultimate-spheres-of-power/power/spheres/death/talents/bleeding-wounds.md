@@ -1,4 +1,5 @@
 ---
+id: "bleeding-wounds"
 name: "Bleeding Wounds"
 tier: basic
 tags: ["ghost-strike"]

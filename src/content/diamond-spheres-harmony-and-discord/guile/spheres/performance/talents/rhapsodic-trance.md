@@ -1,4 +1,5 @@
 ---
+id: "rhapsodic-trance"
 name: "Rhapsodic Trance"
 tier: "advanced"
 tags:

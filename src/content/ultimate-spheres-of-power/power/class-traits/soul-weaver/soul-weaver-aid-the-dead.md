@@ -1,4 +1,5 @@
 ---
+id: "soul-weaver-aid-the-dead"
 name: "Aid the Dead"
 tags: []
 featureId: bound-nexus

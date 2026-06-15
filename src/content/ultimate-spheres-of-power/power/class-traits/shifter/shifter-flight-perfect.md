@@ -1,4 +1,5 @@
 ---
+id: "shifter-flight-perfect"
 name: "Flight, Perfect"
 tags: []
 featureId: bestial-trait

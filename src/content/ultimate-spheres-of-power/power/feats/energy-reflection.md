@@ -1,4 +1,5 @@
 ---
+id: "energy-reflection"
 name: "Energy Reflection"
 sphere: protection
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "hunger"
 name: "Hunger"
 tier: basic
 tags: ["ghost-strike"]

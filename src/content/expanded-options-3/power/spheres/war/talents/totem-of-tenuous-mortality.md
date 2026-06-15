@@ -1,4 +1,5 @@
 ---
+id: "totem-of-tenuous-mortality"
 name: "Totem Of Tenuous Mortality"
 tier: advanced
 tags: ["totem"]

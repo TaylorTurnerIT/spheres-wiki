@@ -1,4 +1,5 @@
 ---
+id: "community-contacts"
 name: "Community Contacts"
 tier: "basic"
 tags:

@@ -1,4 +1,5 @@
 ---
+id: "eternal-darkness"
 name: "Eternal Darkness"
 tier: advanced
 tags: []

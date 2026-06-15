@@ -1,4 +1,5 @@
 ---
+id: "lingering-divination"
 name: "Lingering Divination"
 tier: basic
 tags: []

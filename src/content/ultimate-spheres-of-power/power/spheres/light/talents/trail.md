@@ -1,4 +1,5 @@
 ---
+id: "trail"
 name: "Trail"
 tier: basic
 tags: ["nimbus"]

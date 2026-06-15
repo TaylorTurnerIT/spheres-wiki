@@ -1,4 +1,5 @@
 ---
+id: "choking-grasp"
 name: "Choking Grasp"
 tier: advanced
 tags: []

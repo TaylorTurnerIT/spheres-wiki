@@ -1,4 +1,5 @@
 ---
+id: "might-of-the-grave"
 name: Might Of The Grave
 sphere: enhancement
 dualSphere: death

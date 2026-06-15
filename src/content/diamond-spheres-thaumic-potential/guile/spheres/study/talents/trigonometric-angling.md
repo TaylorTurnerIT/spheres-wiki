@@ -1,4 +1,5 @@
 ---
+id: "trigonometric-angling"
 name: "Trigonometric Angling"
 tier: "basic"
 tags:

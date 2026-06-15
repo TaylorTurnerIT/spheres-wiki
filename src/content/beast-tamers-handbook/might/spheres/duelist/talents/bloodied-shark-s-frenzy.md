@@ -1,4 +1,5 @@
 ---
+id: "bloodied-shark-s-frenzy"
 name: "Bloodied Shark’s Frenzy"
 tier: "basic"
 tags: []

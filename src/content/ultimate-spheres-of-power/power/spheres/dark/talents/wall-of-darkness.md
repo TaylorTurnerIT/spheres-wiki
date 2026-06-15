@@ -1,4 +1,5 @@
 ---
+id: "wall-of-darkness"
 name: "Wall Of Darkness"
 tier: basic
 tags: []

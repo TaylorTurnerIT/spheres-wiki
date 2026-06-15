@@ -1,4 +1,5 @@
 ---
+id: "blunt-dart"
 name: "Blunt Dart"
 tier: "basic"
 tags:

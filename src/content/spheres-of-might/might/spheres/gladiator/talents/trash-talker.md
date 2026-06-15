@@ -1,4 +1,5 @@
 ---
+id: "trash-talker"
 name: "Trash Talker"
 tier: "basic"
 tags: []

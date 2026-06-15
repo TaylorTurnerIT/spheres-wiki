@@ -1,4 +1,5 @@
 ---
+id: "ruthlessness"
 name: "Ruthlessness"
 tier: basic
 tags: ["mandate"]

@@ -1,4 +1,5 @@
 ---
+id: "plague-lord"
 name: "Plague Lord"
 sphere: death
 tags: []

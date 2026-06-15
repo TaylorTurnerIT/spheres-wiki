@@ -1,4 +1,5 @@
 ---
+id: "destruction"
 name: "Destruction"
 icon: destruction
 description: "You can use destructive power."

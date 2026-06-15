@@ -1,4 +1,5 @@
 ---
+id: "rallying-beseechment"
 name: "Rallying Beseechment"
 tier: "basic"
 tags:

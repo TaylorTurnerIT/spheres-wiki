@@ -1,4 +1,5 @@
 ---
+id: "watchful-companion"
 name: "Watchful Companion"
 sphere: conjuration
 tags: ["companion"]

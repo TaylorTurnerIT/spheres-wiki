@@ -1,4 +1,5 @@
 ---
+id: "draining-spellburn"
 name: "Draining Spellburn"
 tier: basic
 tags: []

@@ -1,4 +1,5 @@
 ---
+id: "lingering-illusion"
 name: "Lingering Illusion"
 tier: basic
 tags: []

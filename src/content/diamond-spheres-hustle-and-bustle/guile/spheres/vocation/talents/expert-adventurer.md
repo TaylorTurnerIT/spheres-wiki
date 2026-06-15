@@ -1,4 +1,5 @@
 ---
+id: "expert-adventurer"
 name: "Expert Adventurer"
 tier: "basic"
 tags:

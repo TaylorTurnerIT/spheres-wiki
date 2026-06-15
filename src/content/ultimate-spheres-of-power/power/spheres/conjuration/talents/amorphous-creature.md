@@ -1,4 +1,5 @@
 ---
+id: "amorphous-creature"
 name: "Amorphous Creature"
 tier: basic
 tags: ["form"]

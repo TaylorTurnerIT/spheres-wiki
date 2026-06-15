@@ -1,4 +1,5 @@
 ---
+id: "armorist-psibreaker"
 name: "Psibreaker"
 tags: []
 featureId: arsenal-trick

@@ -1,4 +1,5 @@
 ---
+id: "grey-hawks-gambit"
 name: "Grey Hawk's Gambit"
 tier: advanced
 tags: []

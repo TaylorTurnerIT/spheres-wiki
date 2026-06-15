@@ -1,4 +1,5 @@
 ---
+id: "pit"
 name: "Pit"
 tier: "basic"
 tags:

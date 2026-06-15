@@ -1,4 +1,5 @@
 ---
+id: "scout"
 name: "Scout"
 tier: "basic"
 tags:

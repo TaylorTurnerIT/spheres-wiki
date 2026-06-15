@@ -1,4 +1,5 @@
 ---
+id: "shared-aegis"
 name: "Shared Aegis"
 tier: basic
 tags: []

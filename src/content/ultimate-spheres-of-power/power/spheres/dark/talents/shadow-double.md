@@ -1,4 +1,5 @@
 ---
+id: "shadow-double"
 name: "Shadow Double"
 tier: advanced
 tags: ["shadow"]

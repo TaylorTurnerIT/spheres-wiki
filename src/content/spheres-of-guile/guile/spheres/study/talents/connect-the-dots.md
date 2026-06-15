@@ -1,4 +1,5 @@
 ---
+id: "connect-the-dots"
 name: "Connect The Dots"
 tier: "basic"
 tags:

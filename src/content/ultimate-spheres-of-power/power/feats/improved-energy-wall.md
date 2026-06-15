@@ -1,4 +1,5 @@
 ---
+id: "improved-energy-wall"
 name: "Improved Energy Wall"
 sphere: destruction
 tags: ["combat"]

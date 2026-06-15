@@ -1,4 +1,5 @@
 ---
+id: "stabilizing-invigoration"
 name: "Stabilizing Invigoration"
 tier: basic
 tags: ["warden"]

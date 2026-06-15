@@ -1,4 +1,5 @@
 ---
+id: "riding-fog"
 name: "Riding Fog"
 tier: basic
 tags: ["geomancing", "water"]

@@ -1,4 +1,5 @@
 ---
+id: "bomb-jump"
 name: "Bomb Jump"
 tier: "advanced"
 tags:

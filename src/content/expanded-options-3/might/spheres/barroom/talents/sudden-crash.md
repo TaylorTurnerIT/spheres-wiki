@@ -1,4 +1,5 @@
 ---
+id: "sudden-crash"
 name: "Sudden Crash"
 tier: "basic"
 tags:

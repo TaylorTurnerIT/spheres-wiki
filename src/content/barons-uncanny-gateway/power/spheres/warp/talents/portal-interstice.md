@@ -1,4 +1,5 @@
 ---
+id: "portal-interstice"
 name: "Portal Interstice"
 tier: advanced
 tags: ["sm"]
