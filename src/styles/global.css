@@ -75,7 +75,7 @@ svg {
 
   /* Type scale */
   --fs-xl: 1.3rem; /* 20px        — site title              */
-  --fs-lg: 1.125rem; /* 18px        — (unused, kept for scale) */
+  --fs-lg: 1.125rem; /* 18px        — prose h2                */
   --fs-body: clamp(
     1rem,
     0.95rem + 0.25vw,
@@ -131,6 +131,13 @@ svg {
   --sp-4: 16px;
   --sp-5: 20px;
   --sp-6: 24px;
+  --sp-7: 32px; /* section-group rhythm */
+  --sp-8: 48px; /* major section break  */
+
+  /* Elevation — shadow only on hover/floating; rest state is border-defined */
+  --shadow-raised: 0 3px 12px rgba(0, 0, 0, 0.1); /* card hover            */
+  --shadow-floating: 0 4px 12px rgba(0, 0, 0, 0.15); /* dropdowns, popovers   */
+  --shadow-lifted: 0 12px 24px -8px rgba(0, 0, 0, 0.2); /* store-card hover    */
 }
 
 /* ── Namespace custom property ─────────────────────────── */
@@ -409,7 +416,7 @@ a:hover {
 
 /* ── Hierarchical section group (page) ─────────────────── */
 .section-group {
-  margin-top: 32px;
+  margin-top: var(--sp-7);
 }
 .section-group-header {
   display: flex;
@@ -699,7 +706,7 @@ a:hover {
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-floating);
   z-index: 1000;
   max-height: 400px;
   overflow-y: auto;
@@ -961,7 +968,7 @@ h6 {
   color: var(--clr-text);
 }
 .intro-card:hover {
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-raised);
   transform: translateY(-2px);
   text-decoration: none;
 }
@@ -1798,12 +1805,12 @@ h6 {
 .store-card.is-link:hover {
   text-decoration: none;
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-lifted);
   border-color: var(--clr-brand);
 }
 .store-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-lifted);
 }
 .store-card-cover {
   width: 100%;
@@ -2314,7 +2321,7 @@ h6 {
   grid-template-columns: 1fr 240px;
   gap: 24px;
   align-items: start;
-  margin-bottom: 48px;
+  margin-bottom: var(--sp-8);
 }
 .class-lists {
   border: 1px solid var(--clr-border);
