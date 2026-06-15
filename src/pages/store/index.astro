@@ -39,20 +39,20 @@ const ddsBooks = allBooks.filter(b => b.publisher === 'Drop Dead Studios').sort(
 
 // Latest arrivals
 const latestFirstParty = allBooks.filter(b => OFFICIAL_PUBLISHERS.has(b.publisher)).sort(sortByDate)[0];
-const latestThirdParty = allBooks.filter(b => !OFFICIAL_PUBLISHERS.has(b.publisher) && b.publisher !== 'Unknown').sort(sortByDate)[0];
+const latestThirdParty = allBooks.filter(b => !OFFICIAL_PUBLISHERS.has(b.publisher) && b.publisher !== 'Unknown' && !b.publisher.startsWith('__')).sort(sortByDate)[0];
 
 const thirdPartyGroups = allBooks
-  .filter(b => !OFFICIAL_PUBLISHERS.has(b.publisher) && b.publisher !== 'Unknown')
+  .filter(b => !OFFICIAL_PUBLISHERS.has(b.publisher) && b.publisher !== 'Unknown' && !b.publisher.startsWith('__'))
   .reduce((acc, book) => {
     if (!acc[book.publisher]) acc[book.publisher] = [];
     acc[book.publisher].push(book);
     return acc;
   }, {} as Record<string, typeof allBooks>);
 
-// Sort each TP group by date and sort groups themselves by latest book in group
+// Sort each TP group by date and sort groups by book count descending
 const sortedTPGroups = Object.entries(thirdPartyGroups)
   .map(([name, group]) => ({ name, books: group.sort(sortByDate) }))
-  .sort((a, b) => new Date(b.books[0].publishedDate).getTime() - new Date(a.books[0].publishedDate).getTime());
+  .sort((a, b) => b.books.length - a.books.length);
 ---
 <WikiPage title="Store — Spheres Wiki">
 
