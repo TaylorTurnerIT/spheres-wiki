@@ -145,6 +145,7 @@ describe("inferFromPath", () => {
         ),
       ).toEqual({
         type: "archetype-feature",
+        className: "cleric",
         archetypeId: "abductee",
         id: "abducted",
       });

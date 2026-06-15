@@ -6,7 +6,10 @@ export function buildOrderedTagIds(
   tagMap: Map<string, TagEntry>,
   options?: {
     currentSphereId?: string;
+    /** Show sphere identity tags (e.g. "alteration-sphere"). Superseded by includeSphere. */
     showHidden?: boolean;
+    /** Alias for showHidden — show sphere identity tags. */
+    includeSphere?: boolean;
   },
 ): string[] {
   const tags = new Set<string>();
@@ -28,35 +31,54 @@ export function buildOrderedTagIds(
     else if (entry.tier === "advanced") tags.add("advanced");
   }
 
-  // System auto-tag
-  if ("system" in entry && entry.system) tags.add(entry.system);
-
   // 3pp
   const pub = bookMetaMap.get(entry.sourceBook)?.publisher;
-  if (pub && !["Drop Dead Studios", "Diamond Recreational Studios"].includes(pub)) {
+  if (
+    pub &&
+    !["Drop Dead Studios", "Diamond Recreational Studios"].includes(pub)
+  ) {
     tags.add("3pp");
   }
 
   // User tags
-  for (const t of userTags) tags.add(t);
+  for (const t of userTags) {
+    tags.add(t);
+  }
 
-  // Dual-sphere
+  // Dual-sphere logic — dualSphere field is single source of truth.
+  // Auto-inject "dual-sphere" tag for TOC grouping (sectionDefinitions filter on it).
+  // Skip injection for "any" (universal pairing — no TOC grouping needed).
   const hasDualSphere =
     "dualSphere" in entry && entry.dualSphere && entry.dualSphere !== "any";
-  if (hasDualSphere) tags.add("dual-sphere");
+  if (hasDualSphere) {
+    tags.add("dual-sphere");
+  }
 
-  // Sphere identity tags — always added; hidden filtering controls visibility
   if (entry.type === "talent" || entry.type === "feat") {
-    if (entry.sphere) tags.add(`${entry.sphere}-sphere`);
-    if ("dualSphere" in entry && entry.dualSphere) tags.add(`${entry.dualSphere}-sphere`);
+    // Primary sphere tag — shown when explicitly requested or when multi-sphere context exists
+    if (entry.sphere) {
+      const showHidden = !!(options?.showHidden || options?.includeSphere);
+      const isMultiSphere =
+        hasDualSphere || userTags.some((id) => id.endsWith("-sphere"));
+      if (showHidden || isMultiSphere) {
+        tags.add(`${entry.sphere}-sphere`);
+      }
+    }
+    // Dual sphere tag — always shown when dualSphere is set
+    if (hasDualSphere && entry.dualSphere) {
+      tags.add(`${entry.dualSphere}-sphere`);
+    }
   }
 
   return Array.from(tags)
     .filter((id) => {
-      if (options?.showHidden) return true;
+      if (options?.showHidden || options?.includeSphere) return true;
+      // User-specified tags are always visible
+      if (userTags.includes(id)) return true;
       const tagDef = tagMap.get(id);
-      if (tagDef?.hidden !== undefined) return !tagDef.hidden;
-      // No definition file: hide [sphere]-sphere tags by convention
+      // Tags that have a definition file are visible (hidden flag controls visibility)
+      if (tagDef) return tagDef.hidden !== true;
+      // No definition file: hide auto-generated [sphere]-sphere tags by convention
       return !id.endsWith("-sphere");
     })
     .sort((a, b) => {

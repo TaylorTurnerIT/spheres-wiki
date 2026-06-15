@@ -106,16 +106,22 @@ export function inferFromPath(fileId: string): InferredFields {
         id: last,
       });
     }
-    // Class Traits: classes/[cid]/class-traits/[id]
+    // Class Traits: classes/[cid]/features/[fid]/traits/[id]
+    //              classes/[cid]/class-traits/[id]
     if (
       prev === "class-traits" ||
       (prev === "traits" &&
         parts[parts.length - 4].toLowerCase() === "features")
     ) {
-      const cid = parts[parts.length - 3];
+      const featureId = parts[parts.length - 3];
+      const className = parts.length >= 6 ? parts[parts.length - 5] : undefined;
+      // When under features/[fid]/traits, the className is two levels above featureId.
+      // For class-traits/[id], parts[parts.length - 3] IS the className.
+      const cid = prev === "class-traits" ? featureId : className;
       return withSystem({
         type: "class-trait",
         className: cid,
+        featureId,
         id: last,
       });
     }
