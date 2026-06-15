@@ -2,7 +2,7 @@
 import SphereBadge from "./SphereBadge.astro";
 
 interface Props {
-  spheres?: { id: string; name: string; icon: string }[];
+  spheres?: { id: string; name: string; icon: string; badge?: string }[];
   system?: "power" | "might" | "guile" | "champions";
   className?: string;
   style?: string;
@@ -12,7 +12,7 @@ const { spheres = [], system, className = "", style } = Astro.props;
 ---
 <div class={`sphere-badge-grid ${className}`.trim()} style={style}>
   {system && spheres.map(s => (
-    <SphereBadge id={s.id} name={s.name} icon={s.icon} system={system} />
+    <SphereBadge id={s.id} name={s.name} icon={s.icon} system={system} badge={s.badge} />
   ))}
   <slot />
 </div>

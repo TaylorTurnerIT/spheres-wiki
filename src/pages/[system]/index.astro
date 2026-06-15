@@ -3,7 +3,6 @@ import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import SphereBadgeGrid from '@/components/SphereBadgeGrid.astro';
-import SphereBadge from '@/components/SphereBadge.astro';
 import { getSystemPaths, resolveSystem } from '@/lib/systems';
 import type { SphereEntry, ClassEntry } from '@/lib/types';
 
@@ -27,9 +26,16 @@ export async function getStaticPaths() {
   for (const { params: { system } } of getSystemPaths()) {
     if (system === 'champions') continue;
 
-    const spheres = [...sphereMap.values()]
+    let spheres = [...sphereMap.values()]
       .filter(s => s.system === system)
       .sort((a, b) => a.name.localeCompare(b.name));
+
+    if (system === 'power') {
+      spheres.push(
+        { id: 'bear', name: 'Bear', icon: 'bear', system: 'power', badge: 'April Fools' } as any,
+        { id: 'technomancy', name: 'Technomancy', icon: 'technomancy', system: 'power', badge: '3PP' } as any,
+      );
+    }
 
     const allSystemClasses = [...classMap.values()].filter(c => c.system === system);
 
@@ -271,13 +277,6 @@ const content = systemContent[system]!;
     <div class="section-heading-rule"></div>
   </div>
   <SphereBadgeGrid spheres={spheres} system={system} style={system !== 'power' ? 'margin-bottom: 24px;' : undefined} />
-
-  {system === 'power' && (
-    <SphereBadgeGrid className="other-badge-grid">
-      <SphereBadge id="bear" name="Bear" icon="bear" system="power" badge="April Fools" />
-      <SphereBadge id="technomancy" name="Technomancy" icon="technomancy" system="power" badge="3PP" />
-    </SphereBadgeGrid>
-  )}
 
   <div class="classes-and-links">
     <div class="class-column">
