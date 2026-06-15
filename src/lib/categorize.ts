@@ -26,7 +26,13 @@ export function buildCategories(
   // 2. Process Custom Category Definitions
   if (sphere.categoryDefinitions && sphere.categoryDefinitions.length > 0) {
     for (const def of sphere.categoryDefinitions) {
-      const categoryEntries = filterEntries(def, basicTalents, advancedTalents, feats, usedIds);
+      const categoryEntries = filterEntries(
+        def,
+        basicTalents,
+        advancedTalents,
+        feats,
+        usedIds,
+      );
       if (categoryEntries.length > 0) {
         categories.push({
           label: def.label,
@@ -43,7 +49,9 @@ export function buildCategories(
     categories.push({
       label: "Basic Talents",
       id: "basic-talents",
-      entries: remainingBasic.map((t) => ({ id: t.id, type: "talent" as const })).sort((a, b) => a.id.localeCompare(b.id)),
+      entries: remainingBasic
+        .map((t) => ({ id: t.id, type: "talent" as const }))
+        .sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
 
@@ -53,7 +61,9 @@ export function buildCategories(
     categories.push({
       label: "Advanced Talents",
       id: "advanced-talents",
-      entries: remainingAdvanced.map((t) => ({ id: t.id, type: "talent" as const })).sort((a, b) => a.id.localeCompare(b.id)),
+      entries: remainingAdvanced
+        .map((t) => ({ id: t.id, type: "talent" as const }))
+        .sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
 
@@ -63,7 +73,9 @@ export function buildCategories(
     categories.push({
       label: "General Feats",
       id: "general-feats",
-      entries: remainingFeats.map((f) => ({ id: f.id, type: "feat" as const })).sort((a, b) => a.id.localeCompare(b.id)),
+      entries: remainingFeats
+        .map((f) => ({ id: f.id, type: "feat" as const }))
+        .sort((a, b) => a.id.localeCompare(b.id)),
     });
   }
 
@@ -76,6 +88,22 @@ export type SectionResult = {
   categories: CategoryResult[];
 };
 
+/**
+ * Returns the effective tags for a talent or feat entry, including tags
+ * that are auto-derived from entry fields (e.g. "dual-sphere" from the
+ * dualSphere field). This mirrors tags.ts buildOrderedTagIds logic so
+ * sectionDefinitions can filter on auto-injected tags.
+ */
+function getEffectiveTags(entry: TalentEntry | FeatEntry): Set<string> {
+  const tags = new Set(entry.tags.map((t) => t.toLowerCase()));
+  // dualSphere: "any" is still a dual-sphere feat (universal pairing) — it gets
+  // the "dual-sphere" tag for TOC grouping, just no concrete {sphere}-sphere identity.
+  if (entry.dualSphere != null && entry.dualSphere !== "") {
+    tags.add("dual-sphere");
+  }
+  return tags;
+}
+
 function filterEntries(
   def: TalentCategory,
   basicTalents: TalentEntry[],
@@ -87,9 +115,11 @@ function filterEntries(
 
   for (const t of basicTalents) {
     if (usedIds.has(t.id)) continue;
+    const effTags = getEffectiveTags(t);
     const tierMatch = !def.tiers || def.tiers.includes("basic");
-    const tagMatch = !def.tags || def.tags.some((tag) => t.tags.includes(tag));
-    const excludeMatch = !def.excludeTags || !def.excludeTags.some((tag) => t.tags.includes(tag));
+    const tagMatch = !def.tags || def.tags.some((tag) => effTags.has(tag));
+    const excludeMatch =
+      !def.excludeTags || !def.excludeTags.some((tag) => effTags.has(tag));
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: t.id, type: "talent" });
       usedIds.add(t.id);
@@ -98,9 +128,11 @@ function filterEntries(
 
   for (const t of advancedTalents) {
     if (usedIds.has(t.id)) continue;
+    const effTags = getEffectiveTags(t);
     const tierMatch = !def.tiers || def.tiers.includes("advanced");
-    const tagMatch = !def.tags || def.tags.some((tag) => t.tags.includes(tag));
-    const excludeMatch = !def.excludeTags || !def.excludeTags.some((tag) => t.tags.includes(tag));
+    const tagMatch = !def.tags || def.tags.some((tag) => effTags.has(tag));
+    const excludeMatch =
+      !def.excludeTags || !def.excludeTags.some((tag) => effTags.has(tag));
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: t.id, type: "talent" });
       usedIds.add(t.id);
@@ -109,9 +141,11 @@ function filterEntries(
 
   for (const f of feats) {
     if (usedIds.has(f.id)) continue;
+    const effTags = getEffectiveTags(f);
     const tierMatch = !def.tiers || def.tiers.includes("feat");
-    const tagMatch = !def.tags || def.tags.some((tag) => f.tags.includes(tag));
-    const excludeMatch = !def.excludeTags || !def.excludeTags.some((tag) => f.tags.includes(tag));
+    const tagMatch = !def.tags || def.tags.some((tag) => effTags.has(tag));
+    const excludeMatch =
+      !def.excludeTags || !def.excludeTags.some((tag) => effTags.has(tag));
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: f.id, type: "feat" });
       usedIds.add(f.id);
@@ -139,7 +173,13 @@ export function buildSections(
 
       if (secDef.categories && secDef.categories.length > 0) {
         for (const catDef of secDef.categories) {
-          const catEntries = filterEntries(catDef, basicTalents, advancedTalents, feats, usedIds);
+          const catEntries = filterEntries(
+            catDef,
+            basicTalents,
+            advancedTalents,
+            feats,
+            usedIds,
+          );
           categories.push({
             label: catDef.label,
             id: catDef.label.toLowerCase().replace(/\s+/g, "-"),
@@ -158,7 +198,11 @@ export function buildSections(
   const remainingAdvanced = advancedTalents.filter((t) => !usedIds.has(t.id));
   const remainingFeats = feats.filter((f) => !usedIds.has(f.id));
 
-  if (remainingBasic.length > 0 || remainingAdvanced.length > 0 || remainingFeats.length > 0) {
+  if (
+    remainingBasic.length > 0 ||
+    remainingAdvanced.length > 0 ||
+    remainingFeats.length > 0
+  ) {
     const otherCategories: CategoryResult[] = [];
     if (remainingBasic.length > 0) {
       otherCategories.push({

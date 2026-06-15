@@ -47,9 +47,12 @@ export function buildOrderedTagIds(
 
   // Dual-sphere logic — dualSphere field is single source of truth.
   // Auto-inject "dual-sphere" tag for TOC grouping (sectionDefinitions filter on it).
-  // Skip injection for "any" (universal pairing — no TOC grouping needed).
+  // "any" means universal pairing (works with any second sphere) and still gets
+  // the dual-sphere tag — it just doesn't get a concrete {sphere}-sphere identity tag.
   const hasDualSphere =
-    "dualSphere" in entry && entry.dualSphere && entry.dualSphere !== "any";
+    "dualSphere" in entry &&
+    entry.dualSphere != null &&
+    entry.dualSphere !== "";
   if (hasDualSphere) {
     tags.add("dual-sphere");
   }
@@ -64,8 +67,8 @@ export function buildOrderedTagIds(
         tags.add(`${entry.sphere}-sphere`);
       }
     }
-    // Dual sphere tag — always shown when dualSphere is set
-    if (hasDualSphere && entry.dualSphere) {
+    // Dual sphere identity tag — shown when dualSphere is set to a concrete sphere
+    if (hasDualSphere && entry.dualSphere && entry.dualSphere !== "any") {
       tags.add(`${entry.dualSphere}-sphere`);
     }
   }
