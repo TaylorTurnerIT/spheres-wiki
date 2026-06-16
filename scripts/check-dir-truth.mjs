@@ -31,7 +31,7 @@ function inferFromPath(relPath, book) {
     parts = parts.slice(1);
   }
 
-  const [s0, s1, s2, s3] = parts;
+  const [s0, s1, _s2, _s3] = parts;
   const last = parts[parts.length - 1];
   const prev = parts.length > 1 ? parts[parts.length - 2] : "";
   const prev2 = parts.length > 2 ? parts[parts.length - 3] : "";
@@ -73,30 +73,48 @@ function inferFromPath(relPath, book) {
     // archetype-features: .../archetypes/[aid]/archetype-features/[id]
     if (
       prev === "archetype-features" ||
-      (prev === "features" && parts[parts.length - 4]?.toLowerCase() === "archetypes")
+      (prev === "features" &&
+        parts[parts.length - 4]?.toLowerCase() === "archetypes")
     ) {
-      return { ...inferred, type: "archetype-feature", archetypeId: parts[parts.length - 3] };
+      return {
+        ...inferred,
+        type: "archetype-feature",
+        archetypeId: parts[parts.length - 3],
+      };
     }
     // class-traits: .../[cid]/class-features/[fid]/class-traits/[id]
     if (
       prev === "class-traits" ||
-      (prev === "traits" && parts[parts.length - 4]?.toLowerCase() === "features")
+      (prev === "traits" &&
+        parts[parts.length - 4]?.toLowerCase() === "features")
     ) {
       const fid = parts[parts.length - 3];
       const cid = parts[parts.length - 5] || parts[1];
-      return { ...inferred, type: "class-trait", className: cid, featureId: fid };
+      return {
+        ...inferred,
+        type: "class-trait",
+        className: cid,
+        featureId: fid,
+      };
     }
   }
 
   if (parts.length >= 3) {
     // class-features: .../[cid]/class-features/[id]
     if (prev === "class-features" || prev === "features") {
-      return { ...inferred, type: "class-feature", className: parts[parts.length - 3] };
+      return {
+        ...inferred,
+        type: "class-feature",
+        className: parts[parts.length - 3],
+      };
     }
     // archetypes: .../[cid]/archetypes/[aid]/[aid]
     if (
       (prev2 === "archetypes" || prev2 === "Archetypes") &&
-      (last === prev || last === "index" || last.endsWith("-" + prev) || last.includes(prev))
+      (last === prev ||
+        last === "index" ||
+        last.endsWith(`-${prev}`) ||
+        last.includes(prev))
     ) {
       return {
         ...inferred,
@@ -146,7 +164,16 @@ function parseFrontmatter(filePath) {
 
 // ── Walk content ────────────────────────────────────────────────────────────
 
-const INFERABLE_FIELDS = ["type", "id", "system", "sourceBook", "sphere", "className", "featureId", "archetypeId"];
+const INFERABLE_FIELDS = [
+  "type",
+  "id",
+  "system",
+  "sourceBook",
+  "sphere",
+  "className",
+  "featureId",
+  "archetypeId",
+];
 
 /** @type {Array<{file: string, field: string, inferred: string, declared: string}>} */
 const conflicts = [];
@@ -164,7 +191,9 @@ function walkBook(bookDir, bookSlug) {
         const relPath = relative(bookDir, fullPath);
         const fm = parseFrontmatter(fullPath);
         if (fm === null) {
-          console.warn(`WARN  missing/invalid frontmatter: src/content/${bookSlug}/${relPath}`);
+          console.warn(
+            `WARN  missing/invalid frontmatter: src/content/${bookSlug}/${relPath}`,
+          );
           warnCount++;
           return;
         }
@@ -200,7 +229,9 @@ for (const entry of readdirSync(CONTENT_ROOT, { withFileTypes: true })) {
 // ── Report ──────────────────────────────────────────────────────────────────
 
 if (conflicts.length === 0) {
-  console.log(`✓ ${fileCount} files checked, 0 conflicts${warnCount ? `, ${warnCount} warnings` : ""}`);
+  console.log(
+    `✓ ${fileCount} files checked, 0 conflicts${warnCount ? `, ${warnCount} warnings` : ""}`,
+  );
   process.exit(0);
 }
 
@@ -210,15 +241,22 @@ for (const c of conflicts) {
   (byField[c.field] ??= []).push(c);
 }
 
-console.log(`CONFLICTS FOUND — ${conflicts.length} total across ${Object.keys(byField).length} field(s)\n`);
+console.log(
+  `CONFLICTS FOUND — ${conflicts.length} total across ${Object.keys(byField).length} field(s)\n`,
+);
 
 for (const [field, list] of Object.entries(byField)) {
   console.log(`  ${field}: ${list.length} conflict(s)`);
   for (const c of list) {
-    console.log(`    CONFLICT  field=${c.field}  inferred=${c.inferred}  declared=${c.declared}  ${c.file}`);
+    console.log(
+      `    CONFLICT  field=${c.field}  inferred=${c.inferred}  declared=${c.declared}  ${c.file}`,
+    );
   }
 }
 
-if (warnCount) console.log(`\n${warnCount} warning(s) — files with missing/invalid frontmatter`);
+if (warnCount)
+  console.log(
+    `\n${warnCount} warning(s) — files with missing/invalid frontmatter`,
+  );
 
 process.exit(1);

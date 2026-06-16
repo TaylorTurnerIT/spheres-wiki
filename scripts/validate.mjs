@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // Single-pass validation: v2 consistency (id matches filename) + tag integrity.
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -14,39 +14,75 @@ const KNOWN_SYSTEMS = new Set(["power", "might", "guile", "champions"]);
 function inferFromPath(relPathFromBook) {
   let parts = relPathFromBook.replace(/\.mdx?$/, "").split(path.sep);
   const result = {};
-  if (KNOWN_SYSTEMS.has(parts[0])) { result.system = parts[0]; parts = parts.slice(1); }
+  if (KNOWN_SYSTEMS.has(parts[0])) {
+    result.system = parts[0];
+    parts = parts.slice(1);
+  }
   result.id = parts[parts.length - 1];
   const last = result.id;
   const prev = parts.length > 1 ? parts[parts.length - 2] : "";
   const prev2 = parts.length > 2 ? parts[parts.length - 3] : "";
   if (parts.length === 2) {
-    const MAP = { talents:"talent", feats:"feat", spheres:"sphere", classes:"class",
-      archetypes:"archetype", "archetype-features":"archetype-feature", articles:"article", tags:"tag" };
-    if (MAP[parts[0]]) { result.type = MAP[parts[0]]; return result; }
+    const MAP = {
+      talents: "talent",
+      feats: "feat",
+      spheres: "sphere",
+      classes: "class",
+      archetypes: "archetype",
+      "archetype-features": "archetype-feature",
+      articles: "article",
+      tags: "tag",
+    };
+    if (MAP[parts[0]]) {
+      result.type = MAP[parts[0]];
+      return result;
+    }
   }
   if (parts.length === 3) {
-    if (parts[0]==="class-features") return {...result, type:"class-feature"};
-    if (parts[0]==="class-traits")   return {...result, type:"class-trait"};
-    if (parts[0]==="archetype-features") return {...result, type:"archetype-feature"};
+    if (parts[0] === "class-features")
+      return { ...result, type: "class-feature" };
+    if (parts[0] === "class-traits") return { ...result, type: "class-trait" };
+    if (parts[0] === "archetype-features")
+      return { ...result, type: "archetype-feature" };
   }
   if (parts.length >= 4) {
-    if (prev==="archetype-features" || (prev==="features" && parts[parts.length-4]?.toLowerCase()==="archetypes"))
-      return {...result, type:"archetype-feature"};
-    if (prev==="class-traits" || (prev==="traits" && parts[parts.length-4]?.toLowerCase()==="features"))
-      return {...result, type:"class-trait"};
+    if (
+      prev === "archetype-features" ||
+      (prev === "features" &&
+        parts[parts.length - 4]?.toLowerCase() === "archetypes")
+    )
+      return { ...result, type: "archetype-feature" };
+    if (
+      prev === "class-traits" ||
+      (prev === "traits" &&
+        parts[parts.length - 4]?.toLowerCase() === "features")
+    )
+      return { ...result, type: "class-trait" };
   }
   if (parts.length >= 3) {
-    if (prev==="class-features"||prev==="features") return {...result, type:"class-feature"};
-    if ((prev2==="archetypes"||prev2==="Archetypes") &&
-        (last===prev||last==="index"||last.endsWith("-"+prev)||last.includes(prev)))
-      return {...result, type:"archetype", id:prev};
-    if (prev==="talents") return {...result, type:"talent"};
-    if (prev==="feats")   return {...result, type:"feat"};
-    if (parts[parts.length-3]==="spheres"&&(last===prev||last==="index"))
-      return {...result, type:"sphere", id:prev};
+    if (prev === "class-features" || prev === "features")
+      return { ...result, type: "class-feature" };
+    if (
+      (prev2 === "archetypes" || prev2 === "Archetypes") &&
+      (last === prev ||
+        last === "index" ||
+        last.endsWith(`-${prev}`) ||
+        last.includes(prev))
+    )
+      return { ...result, type: "archetype", id: prev };
+    if (prev === "talents") return { ...result, type: "talent" };
+    if (prev === "feats") return { ...result, type: "feat" };
+    if (
+      parts[parts.length - 3] === "spheres" &&
+      (last === prev || last === "index")
+    )
+      return { ...result, type: "sphere", id: prev };
   }
-  if (parts[0]?.toLowerCase()==="classes"&&(last===prev||last==="index"))
-    return {...result, type:"class", id:prev};
+  if (
+    parts[0]?.toLowerCase() === "classes" &&
+    (last === prev || last === "index")
+  )
+    return { ...result, type: "class", id: prev };
   return result;
 }
 const contentDir = path.resolve(__dirname, "../src/content");
@@ -115,7 +151,7 @@ for (const filePath of allFiles) {
   const relPathFromBook = relPath.split(path.sep).slice(1).join(path.sep);
   const inferred = inferFromPath(relPathFromBook);
   const entryType = frontmatter.type ?? inferred.type;
-  const entryId   = frontmatter.id   ?? inferred.id;
+  const entryId = frontmatter.id ?? inferred.id;
 
   // v2 check: resolved id must match filename
   const fileSlug = path.basename(filePath, ".md");
@@ -124,7 +160,11 @@ for (const filePath of allFiles) {
     // Require at least one digit in the first 6 chars to avoid false positives on
     // a-f-only words like "deadcaller" or "beefsteak".
     const prefix6 = entryId.slice(0, 6);
-    if (prefix6.length === 6 && /^[0-9a-fA-F]+$/.test(prefix6) && /[0-9]/.test(prefix6)) {
+    if (
+      prefix6.length === 6 &&
+      /^[0-9a-fA-F]+$/.test(prefix6) &&
+      /[0-9]/.test(prefix6)
+    ) {
       console.error(
         `V59 Violation: ${filePath} has hex-prefixed ID "${entryId}"`,
       );

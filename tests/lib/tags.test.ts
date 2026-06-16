@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import {
   buildOrderedTagIds,
   getSystemAutoTags,
@@ -377,9 +377,9 @@ describe("buildOrderedTagIds — priority sorting", () => {
       indices[t] = i;
     });
 
-    expect(indices["talent"]).toBeLessThan(indices["basic"]);
-    expect(indices["basic"]).toBeLessThan(indices["combat"]);
-    expect(indices["combat"]).toBeLessThan(indices["utility"]);
+    expect(indices.talent).toBeLessThan(indices.basic);
+    expect(indices.basic).toBeLessThan(indices.combat);
+    expect(indices.combat).toBeLessThan(indices.utility);
     expect(result).toHaveLength(4);
   });
 
@@ -525,7 +525,11 @@ describe("sortTagsByPriority", () => {
   });
 
   it("hides undefined sphere-suffixed tags by convention", () => {
-    const result = sortTagsByPriority(["alteration-sphere", "talent"], tagMap, []);
+    const result = sortTagsByPriority(
+      ["alteration-sphere", "talent"],
+      tagMap,
+      [],
+    );
     // alteration-sphere has a tagMap def (hidden not set -> visible)
     expect(result).toContain("alteration-sphere");
   });
@@ -544,11 +548,9 @@ describe("sortTagsByPriority", () => {
       ...tagMap,
       ["secret", { ...makeTag("secret", 1), hidden: true }],
     ]);
-    const result = sortTagsByPriority(
-      ["secret", "talent"],
-      hiddenTagMap,
-      ["secret"],
-    );
+    const result = sortTagsByPriority(["secret", "talent"], hiddenTagMap, [
+      "secret",
+    ]);
     expect(result).toContain("secret");
   });
 

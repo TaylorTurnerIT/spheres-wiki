@@ -2,8 +2,8 @@
 // Regenerate .pages.yml from discovered book slugs.
 // Run after adding a new book, then commit the result.
 
-import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
-import { join, dirname } from "node:path";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const REPO_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -29,7 +29,10 @@ function parseYamlField(text, field) {
 }
 
 function slugToLabel(slug) {
-  return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 }
 
 function shortenTitle(title) {
@@ -55,58 +58,89 @@ function pad(n) {
 // Each field spec: [name, type, label, extras]
 // extras: { required, list, options }
 const ALL_FIELDS = {
-  name:                   ["string",  "Name",                    { required: true }],
-  tags:                   ["string",  "Tags",                    { list: true }],
-  body:                   ["rich-text","Body",                   {}],
-  tier:                   ["select",  "Tier",                    { options: ["base","basic","advanced"] }],
-  dualSphere:             ["string",  "Dual Sphere",             {}],
-  modifies:               ["string",  "Modifies",                {}],
-  icon:                   ["string",  "Icon",                    {}],
-  hitDie:                 ["number",  "Hit Die",                 {}],
-  alignment:              ["string",  "Alignment",               {}],
-  startingWealth:         ["string",  "Starting Wealth",         {}],
-  skillRanks:             ["number",  "Skill Ranks",             {}],
-  classSkills:            ["string",  "Class Skills",            { list: true }],
-  babProgression:         ["select",  "BAB Progression",         { options: ["full","3/4","half"] }],
-  fortSaveProgression:    ["select",  "Fort Save",               { options: ["good","poor"] }],
-  refSaveProgression:     ["select",  "Ref Save",                { options: ["good","poor"] }],
-  willSaveProgression:    ["select",  "Will Save",               { options: ["good","poor"] }],
-  casterTier:             ["select",  "Caster Tier",             { options: ["high","mid","low","none"] }],
-  spheres:                ["string",  "Spheres",                 { list: true }],
-  level:                  ["number",  "Level",                   {}],
-  replaces:               ["string",  "Replaces",                { list: true }],
-  alters:                 ["string",  "Alters",                  { list: true }],
-  mutuallyExclusive:      ["boolean", "Mutually Exclusive",      {}],
-  isTraitContainer:       ["boolean", "Is Trait Container",      {}],
-  requires:               ["string",  "Requires",                {}],
-  isAlternateClassFeature:["boolean", "Is Alternate Class Feature", {}],
+  name: ["string", "Name", { required: true }],
+  tags: ["string", "Tags", { list: true }],
+  body: ["rich-text", "Body", {}],
+  tier: ["select", "Tier", { options: ["base", "basic", "advanced"] }],
+  dualSphere: ["string", "Dual Sphere", {}],
+  modifies: ["string", "Modifies", {}],
+  icon: ["string", "Icon", {}],
+  hitDie: ["number", "Hit Die", {}],
+  alignment: ["string", "Alignment", {}],
+  startingWealth: ["string", "Starting Wealth", {}],
+  skillRanks: ["number", "Skill Ranks", {}],
+  classSkills: ["string", "Class Skills", { list: true }],
+  babProgression: [
+    "select",
+    "BAB Progression",
+    { options: ["full", "3/4", "half"] },
+  ],
+  fortSaveProgression: ["select", "Fort Save", { options: ["good", "poor"] }],
+  refSaveProgression: ["select", "Ref Save", { options: ["good", "poor"] }],
+  willSaveProgression: ["select", "Will Save", { options: ["good", "poor"] }],
+  casterTier: [
+    "select",
+    "Caster Tier",
+    { options: ["high", "mid", "low", "none"] },
+  ],
+  spheres: ["string", "Spheres", { list: true }],
+  level: ["number", "Level", {}],
+  replaces: ["string", "Replaces", { list: true }],
+  alters: ["string", "Alters", { list: true }],
+  mutuallyExclusive: ["boolean", "Mutually Exclusive", {}],
+  isTraitContainer: ["boolean", "Is Trait Container", {}],
+  requires: ["string", "Requires", {}],
+  isAlternateClassFeature: ["boolean", "Is Alternate Class Feature", {}],
 };
 
 // Per type-dir field sets (narrow — only what that dir's content actually uses)
 const DIR_FIELD_SETS = {
-  spheres:            ["name","tags","body","icon","tier","dualSphere","modifies"],
-  talents:            ["name","tags","body","tier","dualSphere","modifies"],
-  feats:              ["name","tags","body","dualSphere","modifies"],
-  classes:            ["name","tags","body","hitDie","alignment","startingWealth","skillRanks","classSkills","babProgression","fortSaveProgression","refSaveProgression","willSaveProgression","casterTier","spheres"],
-  "class-features":   ["name","tags","body","isTraitContainer"],
-  "class-traits":     ["name","tags","body","requires"],
-  archetypes:         ["name","tags","body","isAlternateClassFeature"],
-  "archetype-features":["name","tags","body","level","replaces","alters","mutuallyExclusive"],
-  articles:           ["name","body"],
-  tags:               ["name","tags","body"],
+  spheres: ["name", "tags", "body", "icon", "tier", "dualSphere", "modifies"],
+  talents: ["name", "tags", "body", "tier", "dualSphere", "modifies"],
+  feats: ["name", "tags", "body", "dualSphere", "modifies"],
+  classes: [
+    "name",
+    "tags",
+    "body",
+    "hitDie",
+    "alignment",
+    "startingWealth",
+    "skillRanks",
+    "classSkills",
+    "babProgression",
+    "fortSaveProgression",
+    "refSaveProgression",
+    "willSaveProgression",
+    "casterTier",
+    "spheres",
+  ],
+  "class-features": ["name", "tags", "body", "isTraitContainer"],
+  "class-traits": ["name", "tags", "body", "requires"],
+  archetypes: ["name", "tags", "body", "isAlternateClassFeature"],
+  "archetype-features": [
+    "name",
+    "tags",
+    "body",
+    "level",
+    "replaces",
+    "alters",
+    "mutuallyExclusive",
+  ],
+  articles: ["name", "body"],
+  tags: ["name", "tags", "body"],
 };
 
 const DIR_LABELS = {
-  spheres:             "Spheres & Talents",
-  talents:             "Talents",
-  feats:               "Feats",
-  classes:             "Classes",
-  "class-features":    "Class Features",
-  "class-traits":      "Class Traits",
-  archetypes:          "Archetypes",
-  "archetype-features":"Archetype Features",
-  articles:            "Articles",
-  tags:                "Tags",
+  spheres: "Spheres & Talents",
+  talents: "Talents",
+  feats: "Feats",
+  classes: "Classes",
+  "class-features": "Class Features",
+  "class-traits": "Class Traits",
+  archetypes: "Archetypes",
+  "archetype-features": "Archetype Features",
+  articles: "Articles",
+  tags: "Tags",
 };
 
 const SYSTEM_LABELS = {
@@ -116,7 +150,7 @@ const SYSTEM_LABELS = {
   champions: "Champions",
 };
 
-function renderFieldItem(fieldName, i) {
+function renderFieldItem(fieldName, _i) {
   const [type, label, extras] = ALL_FIELDS[fieldName];
   const lines = [
     `- name: ${fieldName}`,
@@ -204,7 +238,11 @@ const books = readdirSync(CONTENT_DIR, { withFileTypes: true })
   .map((d) => {
     const bookFile = join(CONTENT_DIR, d.name, "_book.yaml");
     let raw;
-    try { raw = readFileSync(bookFile, "utf8"); } catch { return null; }
+    try {
+      raw = readFileSync(bookFile, "utf8");
+    } catch {
+      return null;
+    }
     const title = parseYamlField(raw, "title") ?? slugToLabel(d.name);
     const publisher = parseYamlField(raw, "publisher") ?? "Unknown";
     const typeDirs = getBookTypeDirs(d.name);
@@ -229,7 +267,9 @@ const sortedPublishers = [...byPublisher.keys()].sort((a, b) => {
   return a.localeCompare(b);
 });
 
-console.log(`Found ${books.length} books across ${sortedPublishers.length} publishers.`);
+console.log(
+  `Found ${books.length} books across ${sortedPublishers.length} publishers.`,
+);
 
 // ── YAML assembly ─────────────────────────────────────────────────────────────
 
@@ -285,9 +325,10 @@ function renderBookGroup(book, indent) {
     const collectionName = `${book.slug}-${system}-${typeDir}`;
     const sysLabel = SYSTEM_LABELS[system] ?? system;
     const typeLabel = DIR_LABELS[typeDir] ?? typeDir;
-    const label = book.typeDirs.filter((d) => d.typeDir === typeDir).length > 1 || true
-      ? `${sysLabel}: ${typeLabel}`
-      : typeLabel;
+    const label =
+      book.typeDirs.filter((d) => d.typeDir === typeDir).length > 1 || true
+        ? `${sysLabel}: ${typeLabel}`
+        : typeLabel;
     return renderCollection(
       {
         name: collectionName,
@@ -310,7 +351,10 @@ function renderBookGroup(book, indent) {
 }
 
 function renderPublisherGroup(publisher, publisherBooks) {
-  const pubSlug = publisher.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+$/, "");
+  const pubSlug = publisher
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/-+$/, "");
   const bookGroups = publisherBooks.map((book) => renderBookGroup(book, 6));
   return renderGroup(
     {
@@ -324,7 +368,9 @@ function renderPublisherGroup(publisher, publisherBooks) {
 
 const sections = [
   SOURCEBOOKS_COLLECTION,
-  ...sortedPublishers.map((pub) => renderPublisherGroup(pub, byPublisher.get(pub))),
+  ...sortedPublishers.map((pub) =>
+    renderPublisherGroup(pub, byPublisher.get(pub)),
+  ),
 ];
 
 const output = [
@@ -341,4 +387,6 @@ const output = [
 ].join("\n");
 
 writeFileSync(OUT_FILE, output, "utf8");
-console.log(`Wrote .pages.yml — ${books.length} books, ${sortedPublishers.length} publishers.`);
+console.log(
+  `Wrote .pages.yml — ${books.length} books, ${sortedPublishers.length} publishers.`,
+);

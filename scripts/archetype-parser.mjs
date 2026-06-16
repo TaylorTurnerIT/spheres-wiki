@@ -11,18 +11,17 @@
  */
 
 import {
-  readFileSync,
-  readdirSync,
   existsSync,
-  realpathSync,
   mkdirSync,
+  readdirSync,
+  readFileSync,
+  realpathSync,
   writeFileSync,
-} from "fs";
-import { join, dirname, basename } from "path";
-import { fileURLToPath } from "url";
-
-import { normalizeQuotes, cleanBody } from "./lib/wikidot-markup.mjs";
-import { kebab, fmArray } from "./lib/render.mjs";
+} from "node:fs";
+import { basename, dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { kebab } from "./lib/render.mjs";
+import { cleanBody, normalizeQuotes } from "./lib/wikidot-markup.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -126,7 +125,7 @@ function detectLevel(bodyText) {
   ];
   for (const re of patterns) {
     const m = bodyText.match(re);
-    if (m) return parseInt(m[1]);
+    if (m) return parseInt(m[1], 10);
   }
   return 1;
 }
@@ -136,7 +135,7 @@ function detectLevel(bodyText) {
  */
 function parseArchetypeFile(text, filename) {
   // Strip modules and = blocks
-  let clean = text
+  const clean = text
     .replace(/\[\[module[\s\S]*?\[\[\/module\]\]/gi, "")
     .replace(/\[\[=\]\][\s\S]*?\[\[\/=\]\]/gi, "");
 
@@ -248,7 +247,7 @@ function parseArchetypeFile(text, filename) {
 
 function yamlStr(val) {
   // Escape double quotes and backslashes for YAML double-quoted strings
-  return '"' + String(val).replace(/\\/g, "\\\\").replace(/"/g, '\\"') + '"';
+  return `"${String(val).replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
 }
 
 // ─── Rendering ────────────────────────────────────────────────────────────────

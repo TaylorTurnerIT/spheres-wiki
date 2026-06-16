@@ -82,7 +82,8 @@ export function resolveSphereEntry(
   withSystem: WithSystem,
 ): InferredFields | undefined {
   return (
-    resolveSphereFlat(parts, withSystem) ?? resolveSphereNested(parts, withSystem)
+    resolveSphereFlat(parts, withSystem) ??
+    resolveSphereNested(parts, withSystem)
   );
 }
 
@@ -141,7 +142,7 @@ function resolveArchetypeNested(
     (prev2 === "Archetypes" || prev2 === "archetypes") &&
     (last === prev ||
       last === "index" ||
-      last.endsWith("-" + prev) ||
+      last.endsWith(`-${prev}`) ||
       last.includes(prev));
   if (!isArchetypeChild) return undefined;
 
@@ -202,7 +203,12 @@ function resolveClassTraitNested(
   // When under features/[fid]/traits, the className is two levels above featureId.
   // For class-traits/[id], parts[parts.length - 3] IS the className.
   const cid = prev === "class-traits" ? featureId : className;
-  return withSystem({ type: "class-trait", className: cid, featureId, id: last });
+  return withSystem({
+    type: "class-trait",
+    className: cid,
+    featureId,
+    id: last,
+  });
 }
 
 /** .../[cid]/class-features/[id] or features/[id] */

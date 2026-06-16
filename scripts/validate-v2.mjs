@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { parse as parseYaml } from 'yaml';
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { parse as parseYaml } from "yaml";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const contentDir = path.resolve(__dirname, '../src/content');
+const contentDir = path.resolve(__dirname, "../src/content");
 
 function getFilesRecursively(dir) {
   const results = [];
@@ -14,9 +14,9 @@ function getFilesRecursively(dir) {
   for (const file of list) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    if (stat && stat.isDirectory()) {
+    if (stat?.isDirectory()) {
       results.push(...getFilesRecursively(filePath));
-    } else if (file.endsWith('.md')) {
+    } else if (file.endsWith(".md")) {
       results.push(filePath);
     }
   }
@@ -24,7 +24,7 @@ function getFilesRecursively(dir) {
 }
 
 if (!fs.existsSync(contentDir)) {
-  console.log('Content directory does not exist.');
+  console.log("Content directory does not exist.");
   process.exit(0);
 }
 
@@ -32,7 +32,7 @@ const mdFiles = getFilesRecursively(contentDir);
 let hasError = false;
 
 for (const filePath of mdFiles) {
-  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const fileContent = fs.readFileSync(filePath, "utf8");
   const frontmatterRegex = /^---\r?\n([\s\S]*?)\r?\n---/;
   const match = fileContent.match(frontmatterRegex);
 
@@ -45,10 +45,12 @@ for (const filePath of mdFiles) {
   try {
     const yamlStr = match[1];
     const frontmatter = parseYaml(yamlStr);
-    const fileSlug = path.basename(filePath, '.md');
+    const fileSlug = path.basename(filePath, ".md");
 
-    if (frontmatter && frontmatter.id && frontmatter.id !== fileSlug) {
-      console.error(`V2 Violation: ${filePath} has frontmatter ID "${frontmatter.id}" but filename is "${fileSlug}.md"`);
+    if (frontmatter?.id && frontmatter.id !== fileSlug) {
+      console.error(
+        `V2 Violation: ${filePath} has frontmatter ID "${frontmatter.id}" but filename is "${fileSlug}.md"`,
+      );
       hasError = true;
     }
   } catch (e) {
@@ -58,9 +60,11 @@ for (const filePath of mdFiles) {
 }
 
 if (hasError) {
-  console.error('\nConsistency check FAILED.');
+  console.error("\nConsistency check FAILED.");
   process.exit(1);
 } else {
-  console.log(`\nSuccessfully validated ${mdFiles.length} files. All files are V2 consistent.`);
+  console.log(
+    `\nSuccessfully validated ${mdFiles.length} files. All files are V2 consistent.`,
+  );
   process.exit(0);
 }

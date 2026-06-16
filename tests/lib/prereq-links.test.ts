@@ -1,12 +1,10 @@
-import { describe, it, expect } from "vitest";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
+import { describe, expect, it } from "vitest";
+import { getEntryUrl, getEntryUrlByName } from "../../src/lib/entryDatabase";
 import {
-  parsePrerequisiteText,
   autoLinkPrerequisites,
   type EntryResolvers,
+  parsePrerequisiteText,
 } from "../../src/lib/remarkEntryLinks";
-import { getEntryUrlByName, getEntryUrl } from "../../src/lib/entryDatabase";
 
 // ---------------------------------------------------------------------------
 // Stub resolvers — no filesystem, instant, deterministic
@@ -19,7 +17,7 @@ const SPHERES: Record<string, string> = {
 };
 
 const TALENTS: Record<string, string> = {
-  "blast": "/power/destruction/blast/",
+  blast: "/power/destruction/blast/",
   "aligned blast": "/power/destruction/aligned-blast/",
   "energy blast": "/power/destruction/energy-blast/",
   "aligned liquid": "/might/alchemy/aligned-liquid/",
@@ -40,7 +38,7 @@ describe("parsePrerequisiteText — sphere linking", () => {
   it("links a single sphere name", () => {
     const nodes = parsePrerequisiteText("Alchemy sphere.", "/", stubResolvers);
     expect(nodes).not.toBeNull();
-    const link = nodes!.find((n: any) => n.type === "link");
+    const link = nodes?.find((n: any) => n.type === "link");
     expect(link).toBeDefined();
     expect(link.url).toBe("/might/alchemy/");
     expect(link.children[0].value).toBe("Alchemy sphere");
@@ -52,7 +50,11 @@ describe("parsePrerequisiteText — sphere linking", () => {
   });
 
   it("does not link unknown sphere names", () => {
-    const nodes = parsePrerequisiteText("Telekinesis sphere.", "/", stubResolvers);
+    const nodes = parsePrerequisiteText(
+      "Telekinesis sphere.",
+      "/",
+      stubResolvers,
+    );
     expect(nodes).toBeNull();
   });
 });
@@ -65,7 +67,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     expect(nodes).not.toBeNull();
-    const links = nodes!.filter((n: any) => n.type === "link");
+    const links = nodes?.filter((n: any) => n.type === "link");
     expect(links).toHaveLength(2);
     expect(links[0].url).toBe("/power/destruction/");
     expect(links[1].url).toBe("/power/destruction/blast/");
@@ -79,7 +81,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     expect(nodes).not.toBeNull();
-    const links = nodes!.filter((n: any) => n.type === "link");
+    const links = nodes?.filter((n: any) => n.type === "link");
     const urls = links.map((l: any) => l.url);
     expect(urls).toContain("/power/destruction/aligned-blast/");
     expect(urls).toContain("/power/destruction/energy-blast/");
@@ -92,7 +94,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     expect(nodes).not.toBeNull();
-    const links = nodes!.filter((n: any) => n.type === "link");
+    const links = nodes?.filter((n: any) => n.type === "link");
     const urls = links.map((l: any) => l.url);
     expect(urls).toContain("/power/destruction/aligned-blast/");
     expect(urls).toContain("/power/destruction/energy-blast/");
@@ -106,7 +108,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     expect(nodes).not.toBeNull();
-    const links = nodes!.filter((n: any) => n.type === "link");
+    const links = nodes?.filter((n: any) => n.type === "link");
     const urls = links.map((l: any) => l.url);
     expect(urls).toContain("/power/destruction/aligned-blast/");
     expect(urls).toContain("/power/destruction/energy-blast/");
@@ -120,7 +122,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     // sphere itself should link; (Any) should not
-    const links = nodes!?.filter((n: any) => n.type === "link") ?? [];
+    const links = nodes?.filter((n: any) => n.type === "link") ?? [];
     expect(links.every((l: any) => l.children[0].value !== "Any")).toBe(true);
   });
 
@@ -131,8 +133,10 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       "/",
       stubResolvers,
     );
-    const links = nodes!?.filter((n: any) => n.type === "link") ?? [];
-    expect(links.every((l: any) => l.children[0].value !== "formulae")).toBe(true);
+    const links = nodes?.filter((n: any) => n.type === "link") ?? [];
+    expect(links.every((l: any) => l.children[0].value !== "formulae")).toBe(
+      true,
+    );
   });
 
   it("skips non-talent parens: (toxin)", () => {
@@ -141,7 +145,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       "/",
       stubResolvers,
     );
-    const links = nodes!?.filter((n: any) => n.type === "link") ?? [];
+    const links = nodes?.filter((n: any) => n.type === "link") ?? [];
     expect(links.every((l: any) => l.children[0].value !== "toxin")).toBe(true);
   });
 });
@@ -150,7 +154,7 @@ describe("parsePrerequisiteText — bare talent names", () => {
   it("links bare talent with no sphere prefix", () => {
     const nodes = parsePrerequisiteText("Blast.", "/", stubResolvers);
     expect(nodes).not.toBeNull();
-    const link = nodes!.find((n: any) => n.type === "link");
+    const link = nodes?.find((n: any) => n.type === "link");
     expect(link).toBeDefined();
     expect(link.url).toBe("/power/destruction/blast/");
   });
@@ -163,9 +167,13 @@ describe("parsePrerequisiteText — bare talent names", () => {
 
 describe("parsePrerequisiteText — text structure", () => {
   it("preserves non-linked text as text nodes", () => {
-    const nodes = parsePrerequisiteText("Alchemy sphere, 5 ranks.", "/", stubResolvers);
+    const nodes = parsePrerequisiteText(
+      "Alchemy sphere, 5 ranks.",
+      "/",
+      stubResolvers,
+    );
     expect(nodes).not.toBeNull();
-    const textNodes = nodes!.filter((n: any) => n.type === "text");
+    const textNodes = nodes?.filter((n: any) => n.type === "text");
     const textContent = textNodes.map((n: any) => n.value).join("");
     expect(textContent).toContain(", 5 ranks.");
   });
@@ -176,7 +184,11 @@ describe("parsePrerequisiteText — text structure", () => {
       resolveTalent: () => null,
       resolveFeat: () => null,
     };
-    const nodes = parsePrerequisiteText("Alchemy sphere (Blast).", "/", nullResolvers);
+    const nodes = parsePrerequisiteText(
+      "Alchemy sphere (Blast).",
+      "/",
+      nullResolvers,
+    );
     expect(nodes).toBeNull();
   });
 });
@@ -209,13 +221,18 @@ describe("autoLinkPrerequisites — preserves non-text children", () => {
 
     // The existing link must still be present and unchanged
     const links = paraNode.children.filter((n: any) => n.type === "link");
-    expect(links.some((l: any) => l.url === "/power/destruction/blast/")).toBe(true);
+    expect(links.some((l: any) => l.url === "/power/destruction/blast/")).toBe(
+      true,
+    );
     // The Alchemy sphere text node should also produce a link
     expect(links.some((l: any) => l.url === "/might/alchemy/")).toBe(true);
   });
 
   it("preserves emphasis nodes between text nodes", () => {
-    const emNode = { type: "emphasis", children: [{ type: "text", value: "note" }] };
+    const emNode = {
+      type: "emphasis",
+      children: [{ type: "text", value: "note" }],
+    };
     const paraNode = {
       children: [
         {
@@ -230,7 +247,9 @@ describe("autoLinkPrerequisites — preserves non-text children", () => {
 
     autoLinkPrerequisites(paraNode, "/", stubResolvers);
 
-    expect(paraNode.children.some((n: any) => n.type === "emphasis")).toBe(true);
+    expect(paraNode.children.some((n: any) => n.type === "emphasis")).toBe(
+      true,
+    );
   });
 });
 

@@ -1,7 +1,7 @@
 /** Invisible marker `remarkStripTocFlags` substitutes for `{.toc-exclude}`.
  *  Survives into Astro's `headings` array (unlike plain stripping, which
  *  runs before Astro collects headings) but renders as nothing on the page. */
-export const EXCLUDE_SENTINEL = '​';
+export const EXCLUDE_SENTINEL = "​";
 
 export interface TocNode {
   id: string;
@@ -30,7 +30,7 @@ export function buildTocTree(headings: RenderedHeading[]): TocNode[] {
   for (const h of headings) {
     if (h.text.includes(EXCLUDE_SENTINEL)) continue;
 
-    const label = h.text.replaceAll(EXCLUDE_SENTINEL, '').trim();
+    const label = h.text.replaceAll(EXCLUDE_SENTINEL, "").trim();
     const node: TocNode = { id: h.slug, label, depth: h.depth, children: [] };
 
     while (stack.length && stack[stack.length - 1].depth >= h.depth) {

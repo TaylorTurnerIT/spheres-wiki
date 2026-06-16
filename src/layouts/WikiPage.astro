@@ -1,11 +1,4 @@
 ---
-import Base from './Base.astro';
-import SiteHeader from '@/components/SiteHeader.astro';
-import Sidebar from '@/components/Sidebar.astro';
-import TabNav from '@/components/TabNav.astro';
-import BetaToast from '@/components/BetaToast.astro';
-import SiteFooter from '@/components/SiteFooter.astro';
-
 interface Props {
   title?: string;
   description?: string;
@@ -13,7 +6,12 @@ interface Props {
   pagefindIgnore?: boolean;
 }
 
-const { title, description, activeNamespace, pagefindIgnore = false } = Astro.props;
+const {
+  title,
+  description,
+  activeNamespace,
+  pagefindIgnore = false,
+} = Astro.props;
 ---
 <Base title={title} description={description}>
   <a href="#main-content" class="skip-link">Skip to content</a>

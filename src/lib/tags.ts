@@ -35,7 +35,11 @@ function getEntryTypeAndTierTags(entry: AnyEntry): string[] {
   const tags: string[] = [];
   const typeTag = ENTRY_TYPE_AUTO_TAGS[entry.type];
   if (typeTag) tags.push(typeTag);
-  if (entry.type === "talent" && entry.tier && TALENT_TIER_TAGS.has(entry.tier)) {
+  if (
+    entry.type === "talent" &&
+    entry.tier &&
+    TALENT_TIER_TAGS.has(entry.tier)
+  ) {
     tags.push(entry.tier);
   }
   return tags;
@@ -120,7 +124,12 @@ export function getSystemAutoTags(
 
   if (isDualSphere) tags.add("dual-sphere");
 
-  for (const t of getSphereIdentityTags(entry, isDualSphere, userTags, options)) {
+  for (const t of getSphereIdentityTags(
+    entry,
+    isDualSphere,
+    userTags,
+    options,
+  )) {
     tags.add(t);
   }
 

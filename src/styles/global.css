@@ -42,10 +42,10 @@ svg {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
   }
 }
 
@@ -78,12 +78,14 @@ svg {
   --fs-lg: 1.125rem; /* 18px        — prose h2                */
   --fs-body: clamp(
     1rem,
-    0.95rem + 0.25vw,
+    0.95rem +
+    0.25vw,
     1.125rem
   ); /* 16→18px fluid — body prose      */
   --fs-md: clamp(
     0.9375rem,
-    0.9rem + 0.25vw,
+    0.9rem +
+    0.25vw,
     1rem
   ); /* 15→16px fluid — talent, nav     */
   --fs-base: 0.875rem; /* 14px        — compact nav links       */
@@ -1672,7 +1674,7 @@ h6 {
 }
 .talent-tag[data-tag="talent"],
 .talent-tag[data-tag="basic"] {
-  --tag-clr: var(--clr-ns) !important;
+  --tag-clr: var(--clr-ns);
 }
 .tag-wrapper {
   position: relative;
@@ -1781,7 +1783,7 @@ h6 {
 }
 @media (max-width: 768px) {
   .carousel-btn {
-    display: none !important;
+    display: none;
   }
 }
 

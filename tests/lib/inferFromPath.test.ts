@@ -1,10 +1,10 @@
 // tests/lib/inferFromPath.test.ts
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import {
   inferFromPath,
-  resolveSphereEntry,
-  resolveClassEntry,
   resolveArchetypeEntry,
+  resolveClassEntry,
+  resolveSphereEntry,
 } from "../../src/lib/inferFromPath";
 
 /** No-op system attacher for testing sub-parsers in isolation. */
@@ -240,12 +240,18 @@ describe("resolveSphereEntry", () => {
   });
   it("resolves nested spheres/{sid}/talents/{id}", () => {
     expect(
-      resolveSphereEntry(["spheres", "alteration", "talents", "bluff"], identity),
+      resolveSphereEntry(
+        ["spheres", "alteration", "talents", "bluff"],
+        identity,
+      ),
     ).toEqual({ type: "talent", sphere: "alteration", id: "bluff" });
   });
   it("resolves nested spheres/{sid}/feats/{id}", () => {
     expect(
-      resolveSphereEntry(["spheres", "alteration", "feats", "toxic-webs"], identity),
+      resolveSphereEntry(
+        ["spheres", "alteration", "feats", "toxic-webs"],
+        identity,
+      ),
     ).toEqual({ type: "feat", sphere: "alteration", id: "toxic-webs" });
   });
   it("resolves spheres/{sid}/index", () => {
@@ -254,7 +260,9 @@ describe("resolveSphereEntry", () => {
     ).toEqual({ type: "sphere", id: "alteration" });
   });
   it("returns undefined for a path it does not own", () => {
-    expect(resolveSphereEntry(["classes", "shifter"], identity)).toBeUndefined();
+    expect(
+      resolveSphereEntry(["classes", "shifter"], identity),
+    ).toBeUndefined();
   });
 });
 
@@ -267,8 +275,15 @@ describe("resolveClassEntry", () => {
   });
   it("resolves legacy class-features/{cid}/{id}", () => {
     expect(
-      resolveClassEntry(["class-features", "shifter", "shifter-casting"], identity),
-    ).toEqual({ type: "class-feature", className: "shifter", id: "shifter-casting" });
+      resolveClassEntry(
+        ["class-features", "shifter", "shifter-casting"],
+        identity,
+      ),
+    ).toEqual({
+      type: "class-feature",
+      className: "shifter",
+      id: "shifter-casting",
+    });
   });
   it("resolves legacy class-traits/{cid}/{id}", () => {
     expect(
@@ -288,7 +303,11 @@ describe("resolveClassEntry", () => {
         ["classes", "shifter", "features", "shifter-casting"],
         identity,
       ),
-    ).toEqual({ type: "class-feature", className: "shifter", id: "shifter-casting" });
+    ).toEqual({
+      type: "class-feature",
+      className: "shifter",
+      id: "shifter-casting",
+    });
   });
   it("resolves nested class-trait under classes/{cid}/features/{fid}/traits/{id}", () => {
     expect(
@@ -311,7 +330,9 @@ describe("resolveClassEntry", () => {
     });
   });
   it("resolves classes/{cid}/index", () => {
-    expect(resolveClassEntry(["classes", "shifter", "index"], identity)).toEqual({
+    expect(
+      resolveClassEntry(["classes", "shifter", "index"], identity),
+    ).toEqual({
       type: "class",
       id: "shifter",
     });
@@ -328,16 +349,20 @@ describe("resolveClassEntry", () => {
     // inferFromPath (archetype resolver runs first). See inferFromPath-level test.
   });
   it("returns undefined for a path it does not own", () => {
-    expect(resolveClassEntry(["spheres", "alteration"], identity)).toBeUndefined();
+    expect(
+      resolveClassEntry(["spheres", "alteration"], identity),
+    ).toBeUndefined();
   });
 });
 
 describe("resolveArchetypeEntry", () => {
   it("resolves 2-segment archetypes/{id}", () => {
-    expect(resolveArchetypeEntry(["archetypes", "abductee"], identity)).toEqual({
-      type: "archetype",
-      id: "abductee",
-    });
+    expect(resolveArchetypeEntry(["archetypes", "abductee"], identity)).toEqual(
+      {
+        type: "archetype",
+        id: "abductee",
+      },
+    );
   });
   it("resolves 2-segment archetype-features/{id}", () => {
     expect(
@@ -346,8 +371,15 @@ describe("resolveArchetypeEntry", () => {
   });
   it("resolves legacy archetype-features/{aid}/{id}", () => {
     expect(
-      resolveArchetypeEntry(["archetype-features", "abductee", "abducted"], identity),
-    ).toEqual({ type: "archetype-feature", archetypeId: "abductee", id: "abducted" });
+      resolveArchetypeEntry(
+        ["archetype-features", "abductee", "abducted"],
+        identity,
+      ),
+    ).toEqual({
+      type: "archetype-feature",
+      archetypeId: "abductee",
+      id: "abducted",
+    });
   });
   it("resolves classes/{cid}/archetypes/{aid}/index", () => {
     expect(
@@ -371,6 +403,8 @@ describe("resolveArchetypeEntry", () => {
     });
   });
   it("returns undefined for a path it does not own", () => {
-    expect(resolveArchetypeEntry(["talents", "bluff"], identity)).toBeUndefined();
+    expect(
+      resolveArchetypeEntry(["talents", "bluff"], identity),
+    ).toBeUndefined();
   });
 });

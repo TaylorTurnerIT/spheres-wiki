@@ -1,9 +1,8 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import {
-  splitBodyOnMarkers,
   renderMarkdownFragment,
+  splitBodyOnMarkers,
 } from "../../src/lib/renderBody";
-import type { BodySegment } from "../../src/lib/renderBody";
 
 describe("splitBodyOnMarkers", () => {
   it("returns empty array for undefined body", () => {

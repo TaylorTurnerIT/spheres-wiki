@@ -1,21 +1,12 @@
 ---
-import { url } from "@/lib/url";
-import { ClientRouter } from 'astro:transitions';
-import SVGSprite from '@/components/SVGSprite.astro';
-import '@/styles/global.css';
-import '@fontsource/cinzel/400.css';
-import '@fontsource/cinzel/600.css';
-import '@fontsource/cinzel/700.css';
-import '@fontsource/crimson-text/400.css';
-import '@fontsource/crimson-text/400-italic.css';
-import '@fontsource/crimson-text/600.css';
-import '@fontsource/crimson-text/600-italic.css';
-
-import cinzel700 from '@fontsource/cinzel/files/cinzel-latin-700-normal.woff2?url';
-import crimson400 from '@fontsource/crimson-text/files/crimson-text-latin-400-normal.woff2?url';
-import crimson400i from '@fontsource/crimson-text/files/crimson-text-latin-400-italic.woff2?url';
-import crimson600 from '@fontsource/crimson-text/files/crimson-text-latin-600-normal.woff2?url';
-import crimson600i from '@fontsource/crimson-text/files/crimson-text-latin-600-italic.woff2?url';
+import "@/styles/global.css";
+import "@fontsource/cinzel/400.css";
+import "@fontsource/cinzel/600.css";
+import "@fontsource/cinzel/700.css";
+import "@fontsource/crimson-text/400.css";
+import "@fontsource/crimson-text/400-italic.css";
+import "@fontsource/crimson-text/600.css";
+import "@fontsource/crimson-text/600-italic.css";
 
 interface Props {
   title?: string;
@@ -23,8 +14,8 @@ interface Props {
 }
 
 const {
-  title = 'Spheres of Power Wiki',
-  description = 'A quick reference site for the Spheres system.',
+  title = "Spheres of Power Wiki",
+  description = "A quick reference site for the Spheres system.",
 } = Astro.props;
 ---
 <!doctype html>

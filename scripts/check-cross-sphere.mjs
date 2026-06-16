@@ -3,14 +3,17 @@
 // the dualSphere field in the current codebase (V58).
 // Only the old wiki's explicit labeling defines dual-sphere status — prerequisite
 // text is not authoritative for this determination.
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.resolve(__dirname, "../src/content");
-const wikiDir = path.resolve(__dirname, "../../spheresofpower-wikidot-archive/pages");
+const wikiDir = path.resolve(
+  __dirname,
+  "../../spheresofpower-wikidot-archive/pages",
+);
 
 // ── 1. Parse old wiki for (Dual Sphere) entries ─────────────────────────
 // Old wiki pages are named {sphere}.txt and contain ++++ Name (Dual Sphere) [Src]
@@ -71,7 +74,9 @@ for (const [filename, sphere] of Object.entries(OLD_PAGE_SPHERE_MAP)) {
 
   for (const line of lines) {
     // Match: ++++ Name (Dual Sphere), ++++ Name [Dual Sphere], ++++ Name (Champion, Dual Sphere), etc.
-    const m = line.match(/^\+\+\+\+\s+(.+?)\s+[\[(](?:[\w\s,-]+,\s*)?Dual Sphere[\])]/i);
+    const m = line.match(
+      /^\+\+\+\+\s+(.+?)\s+[[(](?:[\w\s,-]+,\s*)?Dual Sphere[\])]/i,
+    );
     if (!m) continue;
 
     // Strip any trailing bracket citation
@@ -107,7 +112,11 @@ for (const filePath of allFiles) {
   if (!match) continue;
 
   let fm;
-  try { fm = parseYaml(match[1]); } catch { continue; }
+  try {
+    fm = parseYaml(match[1]);
+  } catch {
+    continue;
+  }
   if (!fm) continue;
   if (fm.type !== "talent" && fm.type !== "feat") continue;
 
@@ -123,7 +132,7 @@ for (const filePath of allFiles) {
   if (!fm.dualSphere) {
     const relPath = path.relative(contentDir, filePath);
     console.error(
-      `Missing dualSphere: "${fm.name}" (${relPath}) — tagged (Dual Sphere) on old wiki but no dualSphere field`
+      `Missing dualSphere: "${fm.name}" (${relPath}) — tagged (Dual Sphere) on old wiki but no dualSphere field`,
     );
     hasError = true;
   }
@@ -139,6 +148,8 @@ if (hasError) {
   console.error("\nDual Sphere check FAILED.");
   process.exit(1);
 } else {
-  console.log("Dual Sphere check passed — all old-wiki (Dual Sphere) entries have dualSphere field.");
+  console.log(
+    "Dual Sphere check passed — all old-wiki (Dual Sphere) entries have dualSphere field.",
+  );
   process.exit(0);
 }

@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 import { inferFromPath } from "./inferFromPath";
 
@@ -103,7 +103,7 @@ export function getEntryUrl(
   base: string = "/",
 ): string | null {
   ensureCache();
-  const entry = dbCache!.get(`${type}:${id}`);
+  const entry = dbCache?.get(`${type}:${id}`);
   if (!entry) return null;
   return buildEntryUrl(entry, base);
 }
@@ -114,7 +114,7 @@ export function getEntryUrlByName(
   base: string = "/",
 ): string | null {
   ensureCache();
-  const entry = nameIndex!.get(`${type}:${name.toLowerCase()}`);
+  const entry = nameIndex?.get(`${type}:${name.toLowerCase()}`);
   if (!entry) return null;
   return buildEntryUrl(entry, base);
 }
@@ -124,7 +124,7 @@ export function lookupEntryByName(
   name: string,
 ): { id: string; system: string; sphere?: string } | null {
   ensureCache();
-  const entry = nameIndex!.get(`${type}:${name.toLowerCase()}`);
+  const entry = nameIndex?.get(`${type}:${name.toLowerCase()}`);
   if (!entry) return null;
   return {
     id: entry.id,

@@ -1,8 +1,8 @@
 import type {
-  TalentEntry,
   FeatEntry,
   SphereEntry,
   TalentCategory,
+  TalentEntry,
 } from "./types";
 
 export type CategoryResult = {
@@ -118,8 +118,7 @@ function filterEntries(
     const effTags = getEffectiveTags(t);
     const tierMatch = !def.tiers || def.tiers.includes("basic");
     const tagMatch = !def.tags || def.tags.some((tag) => effTags.has(tag));
-    const excludeMatch =
-      !def.excludeTags || !def.excludeTags.some((tag) => effTags.has(tag));
+    const excludeMatch = !def.excludeTags?.some((tag) => effTags.has(tag));
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: t.id, type: "talent" });
       usedIds.add(t.id);
@@ -131,8 +130,7 @@ function filterEntries(
     const effTags = getEffectiveTags(t);
     const tierMatch = !def.tiers || def.tiers.includes("advanced");
     const tagMatch = !def.tags || def.tags.some((tag) => effTags.has(tag));
-    const excludeMatch =
-      !def.excludeTags || !def.excludeTags.some((tag) => effTags.has(tag));
+    const excludeMatch = !def.excludeTags?.some((tag) => effTags.has(tag));
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: t.id, type: "talent" });
       usedIds.add(t.id);
@@ -144,8 +142,7 @@ function filterEntries(
     const effTags = getEffectiveTags(f);
     const tierMatch = !def.tiers || def.tiers.includes("feat");
     const tagMatch = !def.tags || def.tags.some((tag) => effTags.has(tag));
-    const excludeMatch =
-      !def.excludeTags || !def.excludeTags.some((tag) => effTags.has(tag));
+    const excludeMatch = !def.excludeTags?.some((tag) => effTags.has(tag));
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: f.id, type: "feat" });
       usedIds.add(f.id);

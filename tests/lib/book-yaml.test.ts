@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
+import { describe, expect, it } from "vitest";
 import { parse as parseYaml } from "yaml";
 
 const REQUIRED_FIELDS = [
@@ -73,7 +73,7 @@ describe("_book.yaml validation", () => {
     for (const book of sourceBooks) {
       const data = loadBookYaml(book);
       if (!data) continue;
-      if (String(data["publishedDate"] ?? "") === EPOCH_DATE) {
+      if (String(data.publishedDate ?? "") === EPOCH_DATE) {
         violations.push(book);
       }
     }
@@ -87,7 +87,7 @@ describe("_book.yaml validation", () => {
     for (const book of sourceBooks) {
       const data = loadBookYaml(book);
       if (!data) continue;
-      const price = String(data["price"] ?? "");
+      const price = String(data.price ?? "");
       if (price === "PLACEHOLDER" || !PRICE_RE.test(price)) {
         violations.push(
           `${book}: price="${price}" (must be $_.__ e.g. $19.99)`,
@@ -105,7 +105,7 @@ describe("_book.yaml validation", () => {
     for (const book of sourceBooks) {
       const data = loadBookYaml(book);
       if (!data) continue;
-      const cover = String(data["coverImage"] ?? "").trim();
+      const cover = String(data.coverImage ?? "").trim();
       if (!cover || cover === "undefined") continue;
 
       if (

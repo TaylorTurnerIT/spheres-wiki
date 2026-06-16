@@ -10,7 +10,7 @@
  */
 
 import { execSync } from "node:child_process";
-import { readdirSync, readFileSync, existsSync, mkdirSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { load as parseYaml } from "/home/taylor/Projects/spheres-wiki/node_modules/js-yaml/index.js";
 
@@ -97,14 +97,14 @@ for (const bookEntry of readdirSync(CONTENT_ROOT, { withFileTypes: true })) {
     const srcDir = join(bookDir, dirEntry.name);
 
     // Determine target system
-    let system =
+    const system =
       detectSystemFromFrontmatter(srcDir) ??
       detectSystemFromSiblings(bookDir) ??
       detectSystemFromPeerDirs(bookDir, dirEntry.name);
 
     if (!system) {
       console.warn(
-        `WARN  cannot determine system for ${bookEntry.name}/${dirEntry.name} — skipping`
+        `WARN  cannot determine system for ${bookEntry.name}/${dirEntry.name} — skipping`,
       );
       warnings++;
       continue;
@@ -112,7 +112,7 @@ for (const bookEntry of readdirSync(CONTENT_ROOT, { withFileTypes: true })) {
 
     const destParent = join(bookDir, system);
     const destDir = join(destParent, dirEntry.name);
-    const rel = (p) => p.replace(CONTENT_ROOT + "/", "src/content/");
+    const rel = (p) => p.replace(`${CONTENT_ROOT}/`, "src/content/");
 
     if (existsSync(destDir)) {
       // Dest dir already exists — merge files individually (e.g. might/tags/ already present)
@@ -121,7 +121,9 @@ for (const bookEntry of readdirSync(CONTENT_ROOT, { withFileTypes: true })) {
         const srcFile = join(srcDir, file);
         const destFile = join(destDir, file);
         if (existsSync(destFile)) {
-          console.warn(`WARN  dest file already exists, skipping: ${rel(destFile)}`);
+          console.warn(
+            `WARN  dest file already exists, skipping: ${rel(destFile)}`,
+          );
           warnings++;
           continue;
         }
@@ -152,7 +154,7 @@ for (const bookEntry of readdirSync(CONTENT_ROOT, { withFileTypes: true })) {
 }
 
 console.log(
-  `\n${moves} move(s) ${DRY_RUN ? "planned" : "executed"}, ${warnings} warning(s)`
+  `\n${moves} move(s) ${DRY_RUN ? "planned" : "executed"}, ${warnings} warning(s)`,
 );
 if (DRY_RUN && moves > 0) {
   console.log("Run with --execute to apply.");

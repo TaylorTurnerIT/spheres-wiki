@@ -10,10 +10,10 @@
  *   node scripts/generate-bestial-traits.mjs --validate # compare existing files vs parsed
  */
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
-import { normalizeQuotes, cleanBody } from "./lib/wikidot-markup.mjs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { cleanBody, normalizeQuotes } from "./lib/wikidot-markup.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -50,7 +50,7 @@ const LOWERCASE_WORDS = new Set([
   "as",
 ]);
 
-const SOURCE_MAP = {
+const _SOURCE_MAP = {
   Apoc: "Spheres Apocrypha: Apex Shifter",
   Origin: "Spheres of Origin",
   "Alienist HB": "The Alienist's Handbook",

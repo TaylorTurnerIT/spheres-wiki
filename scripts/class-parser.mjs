@@ -8,17 +8,16 @@
  */
 
 import {
-  readFileSync,
   existsSync,
-  realpathSync,
   mkdirSync,
+  readFileSync,
+  realpathSync,
   writeFileSync,
-} from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
-
-import { normalizeQuotes, cleanBody } from "./lib/wikidot-markup.mjs";
-import { kebab, fmArray, writeEntries } from "./lib/render.mjs";
+} from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { kebab, writeEntries } from "./lib/render.mjs";
+import { cleanBody, normalizeQuotes } from "./lib/wikidot-markup.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -152,7 +151,7 @@ const CLASS_CONFIGS = {
  */
 function parseClassFile(text, config) {
   // Strip modules and = blocks (but NOT tabview — stat blocks live inside tabs)
-  let clean = text
+  const clean = text
     .replace(/\[\[module[\s\S]*?\[\[\/module\]\]/gi, "")
     .replace(/\[\[=\]\][\s\S]*?\[\[\/=\]\]/gi, "")
     // Strip individual tabview/tab tag lines but KEEP content
@@ -183,7 +182,7 @@ function parseClassFile(text, config) {
   let classSkills = [];
   if (fields.classSkills) {
     // First strip the leading "The X's class skills are..." prefix
-    let skillsText = fields.classSkills
+    const skillsText = fields.classSkills
       .replace(/^[^.]*?(?:class skills are |class skills include )/i, "")
       .replace(/\.\s*In addition, if this is[^.]+\.[^.]*\.?/gi, "")
       .replace(/\.$/g, "");
@@ -195,7 +194,7 @@ function parseClassFile(text, config) {
       // Handle "X and Y" at the end
       const andParts = part.split(/\s+and\s+/);
       for (const ap of andParts) {
-        let cleaned = ap
+        const cleaned = ap
           .replace(/\(Dex\)|\(Str\)|\(Con\)|\(Int\)|\(Wis\)|\(Cha\)/gi, "")
           .replace(/the .+'s class skills are/gi, "")
           .replace(/^and\s+/i, "")
@@ -277,14 +276,16 @@ function parseClassFile(text, config) {
 
         // Determine the level from the level column
         const levelCell = cells[levelIdx] || "";
-        const levelNum = parseInt(levelCell.replace(/[^\d]/g, ""));
+        const levelNum = parseInt(levelCell.replace(/[^\d]/g, ""), 10);
         if (!levelNum || levelNum < 1 || levelNum > 20) continue;
 
         // BAB & save values for progression detection
-        const bab = parseInt(cells[babIdx]?.replace(/[^+\-\d]/g, "")) || 0;
-        const fort = parseInt(cells[fortIdx]?.replace(/[^+\-\d]/g, "")) || 0;
-        const ref = parseInt(cells[refIdx]?.replace(/[^+\-\d]/g, "")) || 0;
-        const will = parseInt(cells[willIdx]?.replace(/[^+\-\d]/g, "")) || 0;
+        const bab = parseInt(cells[babIdx]?.replace(/[^+\-\d]/g, ""), 10) || 0;
+        const fort =
+          parseInt(cells[fortIdx]?.replace(/[^+\-\d]/g, ""), 10) || 0;
+        const ref = parseInt(cells[refIdx]?.replace(/[^+\-\d]/g, ""), 10) || 0;
+        const will =
+          parseInt(cells[willIdx]?.replace(/[^+\-\d]/g, ""), 10) || 0;
 
         if (bab !== 0 || (cells[babIdx] || "").includes("0"))
           babValues.push(bab);
@@ -295,7 +296,7 @@ function parseClassFile(text, config) {
         // Capture Special column text for dynamic table generation
         if (specialIdx >= 0 && cells[specialIdx]) {
           // Clean up the special cell text (strip wikidot markup minimally)
-          let sp = cells[specialIdx]
+          const sp = cells[specialIdx]
             .replace(/##[^|#]+\|([^#]+)##/g, "$1")
             .replace(/\[\[\[([^\]|]+)(?:\|[^\]]+)?\]\]\]/g, "$1")
             .replace(/\[\[footnote\]\]([\s\S]*?)\[\[\/footnote\]\]/g, "")
@@ -372,10 +373,10 @@ function parseClassFile(text, config) {
     name,
     system: config.system,
     casterTier: config.casterTier,
-    hitDie: fields.hitDie ? parseInt(fields.hitDie) : null,
+    hitDie: fields.hitDie ? parseInt(fields.hitDie, 10) : null,
     alignment: fields.alignment || "",
     startingWealth: fields.startingWealth || "",
-    skillRanks: fields.skillRanks ? parseInt(fields.skillRanks) : null,
+    skillRanks: fields.skillRanks ? parseInt(fields.skillRanks, 10) : null,
     classSkills,
     babProgression: babProgression || "3/4",
     fortSaveProgression: fortSave || "good",
@@ -565,7 +566,7 @@ function parseTraitChunk(chunk, featureId) {
   while (bodyLines.length && !bodyLines[bodyLines.length - 1].trim())
     bodyLines.pop();
 
-  let body = cleanBody(bodyLines.join("\n"));
+  const body = cleanBody(bodyLines.join("\n"));
 
   // Source is now handled by the template via frontmatter sourceBook metadata
 
@@ -624,7 +625,7 @@ function parseClassFeatures(text) {
     if (!m) {
       m = bodyRaw.match(/(?:At |Starting at |Beginning at )level (\d+)/);
     }
-    if (m) level = parseInt(m[1]);
+    if (m) level = parseInt(m[1], 10);
 
     // Check for trait sub-entries (++++ headings within the feature body).
     // Split on ++++ boundaries — the first chunk is the feature description,
@@ -632,7 +633,10 @@ function parseClassFeatures(text) {
     const traitChunks = bodyRaw.split(/\n(?=\+\+\+\+ )/);
     const hasTraits = traitChunks.length > 1;
 
-    let body = cleanBody(traitChunks[0]).replace(/([^\n])\n---/g, "$1\n\n---");
+    const body = cleanBody(traitChunks[0]).replace(
+      /([^\n])\n---/g,
+      "$1\n\n---",
+    );
     let isTraitContainer = false;
     const featureTraits = [];
 
@@ -665,7 +669,7 @@ function parseClassFeatures(text) {
 
 // ─── Rendering ────────────────────────────────────────────────────────────────
 
-function renderClassPage(parsed, config) {
+function renderClassPage(parsed, _config) {
   const id = kebab(parsed.name);
   const lines = [
     "---",
@@ -799,7 +803,7 @@ if (isMain) {
       lines.push("isTraitContainer: true");
     }
     lines.push("---", "", entry.body || "");
-    return lines.join("\n") + "\n";
+    return `${lines.join("\n")}\n`;
   };
 
   const { newCount, skipCount } = writeEntries(
@@ -842,7 +846,7 @@ if (isMain) {
     if (trait.sourceKey === "WM") return "expanded-spheres-weaves-of-war";
 
     // Unresolved
-    return "QUARANTINE-" + trait.sourceKey;
+    return `QUARANTINE-${trait.sourceKey}`;
   }
 
   if (traits.length > 0) {
@@ -877,7 +881,7 @@ if (isMain) {
         lines.push(`requires: ${JSON.stringify(entry.requires)}`);
       }
       lines.push("---", "", entry.body || "");
-      return lines.join("\n") + "\n";
+      return `${lines.join("\n")}\n`;
     };
 
     const { newCount: traitNew, skipCount: traitSkip } = writeEntries(

@@ -1,10 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const contentDir = path.resolve(__dirname, '../src/content');
+const contentDir = path.resolve(__dirname, "../src/content");
 
 function getFilesRecursively(dir) {
   const results = [];
@@ -12,9 +12,9 @@ function getFilesRecursively(dir) {
   for (const file of list) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    if (stat && stat.isDirectory()) {
+    if (stat?.isDirectory()) {
       results.push(...getFilesRecursively(filePath));
-    } else if (file.endsWith('.md')) {
+    } else if (file.endsWith(".md")) {
       results.push(filePath);
     }
   }
@@ -22,11 +22,11 @@ function getFilesRecursively(dir) {
 }
 
 const mdFiles = getFilesRecursively(contentDir);
-let links = new Set();
+const links = new Set();
 let count = 0;
 
 for (const filePath of mdFiles) {
-  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const fileContent = fs.readFileSync(filePath, "utf8");
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
   let match;
   while ((match = linkRegex.exec(fileContent)) !== null) {
@@ -36,6 +36,6 @@ for (const filePath of mdFiles) {
 }
 
 console.log(`Found ${count} total links.`);
-console.log('Unique link targets:');
+console.log("Unique link targets:");
 const uniqueLinks = Array.from(links);
 console.log(uniqueLinks.slice(0, 50));

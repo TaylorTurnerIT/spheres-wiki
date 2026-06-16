@@ -2,13 +2,7 @@
   "ci": {
     "collect": {
       "staticDistDir": "./dist",
-      "url": [
-        "/",
-        "/power/",
-        "/power/alteration/",
-        "/might/",
-        "/guile/"
-      ],
+      "url": ["/", "/power/", "/power/alteration/", "/might/", "/guile/"],
       "numberOfRuns": 2
     },
     "assert": {

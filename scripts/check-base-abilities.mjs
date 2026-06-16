@@ -2,9 +2,9 @@
 // Check that all tier:"base" talent entries have a matching [TalentName] marker
 // in their parent sphere's body (V31, V56). Missing markers mean the base ability
 // won't render on the sphere page.
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -88,7 +88,7 @@ for (const talent of baseTalents) {
 
   if (!sphere) {
     console.error(
-      `Base talent "${talent.id}" (${talent.filePath}) references sphere "${talent.sphere}" which has no body file.`
+      `Base talent "${talent.id}" (${talent.filePath}) references sphere "${talent.sphere}" which has no body file.`,
     );
     hasError = true;
     continue;
@@ -98,16 +98,13 @@ for (const talent of baseTalents) {
   // Normalize curly apostrophes to straight for matching (Wikidot artifacts).
   const cleanName = talent.name.replace(/[‘’“”]/g, "'");
   const namePattern = cleanName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const markerRegex = new RegExp(
-    `\\[${namePattern}\\]`,
-    "i"
-  );
+  const markerRegex = new RegExp(`\\[${namePattern}\\]`, "i");
 
   // Also normalize curly quotes in body text before matching
   const cleanBody = sphere.body.replace(/[\u2018\u2019\u201C\u201D]/g, "'");
   if (!markerRegex.test(sphere.body) && !markerRegex.test(cleanBody)) {
     console.error(
-      `Base talent "${talent.name}" (${talent.filePath}) has no [${cleanName}] marker in sphere body (${sphere.filePath})`
+      `Base talent "${talent.name}" (${talent.filePath}) has no [${cleanName}] marker in sphere body (${sphere.filePath})`,
     );
     hasError = true;
   }
@@ -125,7 +122,7 @@ if (hasError) {
   process.exit(1);
 } else {
   console.log(
-    `Base ability check passed. ${baseTalents.length} base talents verified.`
+    `Base ability check passed. ${baseTalents.length} base talents verified.`,
   );
   process.exit(0);
 }

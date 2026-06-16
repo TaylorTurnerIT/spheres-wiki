@@ -12,7 +12,6 @@
 
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
-import { load as parseYaml } from "/home/taylor/Projects/spheres-wiki/node_modules/js-yaml/index.js";
 
 const DRY_RUN = !process.argv.includes("--execute");
 const CONTENT_ROOT = new URL("../src/content", import.meta.url).pathname;
@@ -39,42 +38,92 @@ function inferFromPath(relPath, book) {
 
   if (parts.length === 2) {
     const TYPE_MAP = {
-      talents: "talent", feats: "feat", spheres: "sphere", classes: "class",
-      archetypes: "archetype", "archetype-features": "archetype-feature",
-      articles: "article", tags: "tag",
+      talents: "talent",
+      feats: "feat",
+      spheres: "sphere",
+      classes: "class",
+      archetypes: "archetype",
+      "archetype-features": "archetype-feature",
+      articles: "article",
+      tags: "tag",
     };
-    if (TYPE_MAP[parts[0]]) { inferred.type = TYPE_MAP[parts[0]]; return inferred; }
+    if (TYPE_MAP[parts[0]]) {
+      inferred.type = TYPE_MAP[parts[0]];
+      return inferred;
+    }
   }
 
   if (parts.length === 3) {
-    if (parts[0] === "class-features") return { ...inferred, type: "class-feature", className: parts[1] };
-    if (parts[0] === "class-traits")   return { ...inferred, type: "class-trait", className: parts[1] };
-    if (parts[0] === "archetype-features") return { ...inferred, type: "archetype-feature", archetypeId: parts[1] };
+    if (parts[0] === "class-features")
+      return { ...inferred, type: "class-feature", className: parts[1] };
+    if (parts[0] === "class-traits")
+      return { ...inferred, type: "class-trait", className: parts[1] };
+    if (parts[0] === "archetype-features")
+      return { ...inferred, type: "archetype-feature", archetypeId: parts[1] };
   }
 
   if (parts.length >= 4) {
-    if (prev === "archetype-features" || (prev === "features" && parts[parts.length - 4]?.toLowerCase() === "archetypes"))
-      return { ...inferred, type: "archetype-feature", archetypeId: parts[parts.length - 3] };
-    if (prev === "class-traits" || (prev === "traits" && parts[parts.length - 4]?.toLowerCase() === "features")) {
+    if (
+      prev === "archetype-features" ||
+      (prev === "features" &&
+        parts[parts.length - 4]?.toLowerCase() === "archetypes")
+    )
+      return {
+        ...inferred,
+        type: "archetype-feature",
+        archetypeId: parts[parts.length - 3],
+      };
+    if (
+      prev === "class-traits" ||
+      (prev === "traits" &&
+        parts[parts.length - 4]?.toLowerCase() === "features")
+    ) {
       const fid = parts[parts.length - 3];
       const cid = parts[parts.length - 5] || parts[1];
-      return { ...inferred, type: "class-trait", className: cid, featureId: fid };
+      return {
+        ...inferred,
+        type: "class-trait",
+        className: cid,
+        featureId: fid,
+      };
     }
   }
 
   if (parts.length >= 3) {
     if (prev === "class-features" || prev === "features")
-      return { ...inferred, type: "class-feature", className: parts[parts.length - 3] };
-    if ((prev2 === "archetypes" || prev2 === "Archetypes") &&
-        (last === prev || last === "index" || last.endsWith("-" + prev) || last.includes(prev)))
-      return { ...inferred, type: "archetype", className: parts[parts.length - 4], id: prev };
-    if (prev === "talents") return { ...inferred, type: "talent", sphere: parts[parts.length - 3] };
-    if (prev === "feats")   return { ...inferred, type: "feat",   sphere: parts[parts.length - 3] };
-    if (parts[parts.length - 3] === "spheres" && (last === prev || last === "index"))
+      return {
+        ...inferred,
+        type: "class-feature",
+        className: parts[parts.length - 3],
+      };
+    if (
+      (prev2 === "archetypes" || prev2 === "Archetypes") &&
+      (last === prev ||
+        last === "index" ||
+        last.endsWith(`-${prev}`) ||
+        last.includes(prev))
+    )
+      return {
+        ...inferred,
+        type: "archetype",
+        className: parts[parts.length - 4],
+        id: prev,
+      };
+    if (prev === "talents")
+      return { ...inferred, type: "talent", sphere: parts[parts.length - 3] };
+    if (prev === "feats")
+      return { ...inferred, type: "feat", sphere: parts[parts.length - 3] };
+    if (
+      parts[parts.length - 3] === "spheres" &&
+      (last === prev || last === "index")
+    )
       return { ...inferred, type: "sphere", id: prev };
   }
 
-  if (parts[0]?.toLowerCase() === "classes" && (last === prev || last === "index"))
+  if (
+    parts[0]?.toLowerCase() === "classes" &&
+    (last === prev || last === "index")
+  )
     return { ...inferred, type: "class", id: prev };
 
   return inferred;
@@ -99,8 +148,8 @@ function stripFields(content, fieldsToStrip) {
   const body = content.slice(fmMatch[0].length);
 
   const pattern = new RegExp(
-    `^(?:${fieldsToStrip.map(f => f.replace(/[-]/g, "\\-")).join("|")}):[ \\t].*\\r?\\n?`,
-    "gm"
+    `^(?:${fieldsToStrip.map((f) => f.replace(/[-]/g, "\\-")).join("|")}):[ \\t].*\\r?\\n?`,
+    "gm",
   );
   const stripped = fmText.replace(pattern, "");
 
@@ -116,7 +165,10 @@ function walkBook(bookDir, bookSlug) {
   function walk(dir) {
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
       const fullPath = join(dir, entry.name);
-      if (entry.isDirectory()) { walk(fullPath); continue; }
+      if (entry.isDirectory()) {
+        walk(fullPath);
+        continue;
+      }
       if (!entry.name.endsWith(".md") && !entry.name.endsWith(".mdx")) continue;
 
       const relPath = relative(bookDir, fullPath);
@@ -128,7 +180,10 @@ function walkBook(bookDir, bookSlug) {
       const original = readFileSync(fullPath, "utf8");
       const stripped = stripFields(original, fieldsToStrip);
 
-      if (stripped === original) { unchanged++; return; }
+      if (stripped === original) {
+        unchanged++;
+        return;
+      }
 
       const display = `src/content/${bookSlug}/${relPath}`;
       console.log(`STRIP  ${display}  [${fieldsToStrip.join(", ")}]`);
@@ -144,5 +199,7 @@ for (const entry of readdirSync(CONTENT_ROOT, { withFileTypes: true })) {
   walkBook(join(CONTENT_ROOT, entry.name), entry.name);
 }
 
-console.log(`\n${modified} file(s) ${DRY_RUN ? "would be modified" : "modified"}, ${unchanged} unchanged`);
+console.log(
+  `\n${modified} file(s) ${DRY_RUN ? "would be modified" : "modified"}, ${unchanged} unchanged`,
+);
 if (DRY_RUN && modified > 0) console.log("Run with --execute to apply.");

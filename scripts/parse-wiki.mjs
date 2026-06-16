@@ -15,21 +15,20 @@
  */
 
 import {
-  readFileSync,
   existsSync,
-  realpathSync,
   mkdirSync,
+  readFileSync,
+  realpathSync,
   writeFileSync,
-} from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
-
+} from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { fmArray, kebab, writeEntries } from "./lib/render.mjs";
 import {
-  normalizeQuotes,
-  convertWikidotTable,
   cleanBody,
+  convertWikidotTable,
+  normalizeQuotes,
 } from "./lib/wikidot-markup.mjs";
-import { kebab, fmArray, writeEntries } from "./lib/render.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -408,7 +407,7 @@ const PAREN_TAG_MAP = {
  * Parse a ++++ heading line. Returns { name, tags, sourceKey, type, tier }.
  * sectionCtx provides defaults for type/tier/sectionTags.
  */
-function parseHeading(headingLine, sectionCtx, config) {
+function parseHeading(headingLine, sectionCtx, _config) {
   let head = headingLine.replace(/^\++\s+/, "").trim();
 
   // Strip Wikidot color markup: ##rrggbb|text## or ##colorname|text## → text
@@ -418,7 +417,7 @@ function parseHeading(headingLine, sectionCtx, config) {
   let isDualSphere = false;
   let sourceKey = null;
   let type = sectionCtx.type;
-  let tier = sectionCtx.tier;
+  const tier = sectionCtx.tier;
 
   // Extract all [bracket] items
   for (const m of head.matchAll(/\[([^\]]+)\]/g)) {
@@ -686,7 +685,7 @@ function parseEntryBlock(divContent, sectionCtx, config) {
  */
 function generateSpherePage(text, config, existingContent = null) {
   // 1. Extract intro text — strip blocks whose content should NOT appear, then clean
-  let clean = text
+  const clean = text
     // Strip module blocks entirely (CSS has no place in body text)
     .replace(/\[\[module[\s\S]*?\[\[\/module\]\]/gi, "")
     // Strip [[=]]...[[/=]] blocks entirely (purchase sidebars)
@@ -863,12 +862,15 @@ function generateSpherePage(text, config, existingContent = null) {
   }
 
   if (existingContent) {
-    let [empty, frontmatter, ...bodyParts] = existingContent.split("---");
-    let body = bodyParts.join("---");
+    const [_empty, frontmatter, ...bodyParts] = existingContent.split("---");
+    const body = bodyParts.join("---");
     // Replace existing sectionDefinitions
-    let newFm = frontmatter.replace(/sectionDefinitions:[\s\S]*?(?=\n\w|---|$)/, lines.join("\n") + "\n");
+    let newFm = frontmatter.replace(
+      /sectionDefinitions:[\s\S]*?(?=\n\w|---|$)/,
+      `${lines.join("\n")}\n`,
+    );
     if (!newFm.includes("sectionDefinitions:")) {
-      newFm += lines.join("\n") + "\n";
+      newFm += `${lines.join("\n")}\n`;
     }
     return `---${newFm}---${body}`;
   }
@@ -932,21 +934,21 @@ function renderEntry(entry, config) {
 // ─── Exports ──────────────────────────────────────────────────────────────────
 
 export {
-  normalizeQuotes,
-  kebab,
-  convertWikidotTable,
-  cleanBody,
-  parseSectionContext,
-  parseHeading,
-  resolveSourceBook,
-  extractDualSphere,
-  parseWikiFile,
-  generateSpherePage,
-  parseEntryBlock,
-  SPHERE_CONFIGS,
   BRACKET_TAGS,
-  PAREN_TAG_MAP,
+  cleanBody,
+  convertWikidotTable,
+  extractDualSphere,
+  generateSpherePage,
   KNOWN_SPHERES,
+  kebab,
+  normalizeQuotes,
+  PAREN_TAG_MAP,
+  parseEntryBlock,
+  parseHeading,
+  parseSectionContext,
+  parseWikiFile,
+  resolveSourceBook,
+  SPHERE_CONFIGS,
 };
 
 // ─── Main ─────────────────────────────────────────────────────────────────────

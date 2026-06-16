@@ -2,17 +2,17 @@
 import { inferFromPath } from "./inferFromPath";
 import type {
   AnyEntry,
-  SphereEntry,
-  TalentEntry,
-  FeatEntry,
+  ArticleEntry,
+  BookMeta,
   ClassEntry,
   ClassFeatureEntry,
   ClassTraitEntry,
-  ArticleEntry,
-  TagEntry,
   EntryKey,
+  FeatEntry,
   ResolvedMaps,
-  BookMeta,
+  SphereEntry,
+  TagEntry,
+  TalentEntry,
 } from "./types";
 
 function entryKey(type: string, id: string): EntryKey {
@@ -43,7 +43,7 @@ export function buildTagMap(
       seenInBook.add(raw.id);
       if (tagMap.has(raw.id)) {
         throw new Error(
-          `Duplicate tag "${raw.id}" defined in both "${tagMap.get(raw.id)!.sourceBook}" and "${book.slug}"`,
+          `Duplicate tag "${raw.id}" defined in both "${tagMap.get(raw.id)?.sourceBook}" and "${book.slug}"`,
         );
       }
       tagMap.set(raw.id, {

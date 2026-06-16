@@ -24,7 +24,7 @@ export default function remarkEntryLinks(options: Options = {}) {
   return (tree: any) => {
     // Pass 1: resolve explicit @type:id links
     visit(tree, "link", (node: any) => {
-      if (node.url && node.url.startsWith("@")) {
+      if (node.url?.startsWith("@")) {
         const match = node.url.match(
           /^@(talent|feat|sphere|class|ability):(.+)$/,
         );
@@ -123,7 +123,13 @@ export function parsePrerequisiteText(
     if (!sphereUrl) continue;
 
     for (let i = start; i < end; i++) claimed.add(i);
-    segments.push({ start, end, type: "sphere", url: sphereUrl, text: fullMatch });
+    segments.push({
+      start,
+      end,
+      type: "sphere",
+      url: sphereUrl,
+      text: fullMatch,
+    });
 
     // Check for parenthetical talent refs immediately after the sphere
     const afterSphere = text.slice(end);
@@ -133,7 +139,11 @@ export function parsePrerequisiteText(
       // absolute offset of the first char inside the open paren
       const openParenOffset = end + parenMatch[0].indexOf("(") + 1;
 
-      for (const { name, start: relStart, end: relEnd } of parseTalentListWithOffsets(innerText)) {
+      for (const {
+        name,
+        start: relStart,
+        end: relEnd,
+      } of parseTalentListWithOffsets(innerText)) {
         const talentUrl = resolvers.resolveTalent(name, base);
         if (!talentUrl) continue;
 
@@ -141,7 +151,13 @@ export function parsePrerequisiteText(
         const absEnd = openParenOffset + relEnd;
 
         for (let i = absStart; i < absEnd; i++) claimed.add(i);
-        segments.push({ start: absStart, end: absEnd, type: "talent", url: talentUrl, text: name });
+        segments.push({
+          start: absStart,
+          end: absEnd,
+          type: "talent",
+          url: talentUrl,
+          text: name,
+        });
       }
     }
   }
@@ -221,8 +237,20 @@ function buildUnclaimedRanges(
 }
 
 const STOPWORDS = new Set([
-  "the", "a", "an", "when", "if", "you", "this", "for", "with",
-  "your", "each", "all", "any", "both",
+  "the",
+  "a",
+  "an",
+  "when",
+  "if",
+  "you",
+  "this",
+  "for",
+  "with",
+  "your",
+  "each",
+  "all",
+  "any",
+  "both",
 ]);
 
 function findBareTalents(
@@ -267,7 +295,13 @@ function findBareTalents(
     if (alreadyClaimed) continue;
 
     for (let i = absStart; i < absEnd; i++) claimed.add(i);
-    segments.push({ start: absStart, end: absEnd, type: "talent", url: entryUrl, text: name });
+    segments.push({
+      start: absStart,
+      end: absEnd,
+      type: "talent",
+      url: entryUrl,
+      text: name,
+    });
   }
 }
 

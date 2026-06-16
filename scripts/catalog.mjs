@@ -15,9 +15,9 @@
  * --book X   Filter entries to a specific book slug
  */
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
-import { join, dirname, basename, relative } from "path";
-import { fileURLToPath } from "url";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -323,7 +323,7 @@ function isCreatureContent(content) {
   );
 }
 
-function hasClassFeatures(content) {
+function _hasClassFeatures(content) {
   return /^\+\+\+?\s*(Class Features|Path Abilities|Class Abilities)/m.test(
     content,
   );
@@ -354,8 +354,8 @@ function classifyFile(filename, content) {
     (title || "").match(/\(CR (\d+)\/MR (\d+)\)/) ||
     name.match(/cr-(\d+)-mr-(\d+)/);
   if (crMr) {
-    entry.cr = parseInt(crMr[1]);
-    entry.mr = parseInt(crMr[2]);
+    entry.cr = parseInt(crMr[1], 10);
+    entry.mr = parseInt(crMr[2], 10);
   }
 
   // ─── Determine system and book from parent ──────────────────────────
@@ -364,7 +364,7 @@ function classifyFile(filename, content) {
     const pm = PARENT_MAP[parent];
     entry.system = pm.system;
     if (pm.book) entry.book = pm.book;
-  } else if (parent && parent.startsWith("mythic-creatures-")) {
+  } else if (parent?.startsWith("mythic-creatures-")) {
     entry.system = "mythic";
     entry.book = "mythic-rules";
   }
@@ -451,7 +451,7 @@ function classifyFile(filename, content) {
 
   // 5. Class feature / archetype sub-pages (parent is a class name)
   if (parent && CLASS_PAGES.has(parent)) {
-    if (title && title.includes("Archetype")) {
+    if (title?.includes("Archetype")) {
       entry.type = "archetype";
     } else {
       entry.type = "class-feature";
@@ -463,7 +463,7 @@ function classifyFile(filename, content) {
   }
 
   // 6. Explicit archetype pages (title says "Archetype")
-  if (title && title.includes("Archetype")) {
+  if (title?.includes("Archetype")) {
     entry.type = "archetype";
     if (!entry.book) entry.book = "spheres-of-power-core";
     return entry;
@@ -512,7 +512,7 @@ function classifyFile(filename, content) {
     if (isClassDefinition(content)) entry.type = "class";
     else if (isFeatContent(content)) entry.type = "feat";
     else if (isCreatureContent(content)) entry.type = "creature";
-    else if (title && title.includes("Archetype")) entry.type = "archetype";
+    else if (title?.includes("Archetype")) entry.type = "archetype";
     else entry.type = "article";
     if (!entry.book) entry.book = parent;
     return entry;
@@ -656,7 +656,7 @@ function main() {
   const systemCounts = {};
   const parentCounts = {};
   const bookCounts = {};
-  const unmappedBooks = new Set();
+  const _unmappedBooks = new Set();
   const unmappedSystemParents = new Set();
 
   for (const entry of entries) {

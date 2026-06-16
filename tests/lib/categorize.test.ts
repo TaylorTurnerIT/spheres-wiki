@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import { buildSections } from "../../src/lib/categorize";
-import type { SphereEntry, TalentEntry, FeatEntry } from "../../src/lib/types";
+import type { FeatEntry, SphereEntry, TalentEntry } from "../../src/lib/types";
 
 function makeSphere(overrides: Partial<SphereEntry> = {}): SphereEntry {
   return {

@@ -2,9 +2,9 @@
 // Post-build audit: detect headings with valid id attr in page body that have
 // no corresponding data-toc-item entry in the sidebar TOC (V57).
 // Run after `npm run build` — reads dist/ HTML files.
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(__dirname, "../dist");
@@ -35,7 +35,7 @@ function findSpherePages(dir) {
 }
 
 const SPHERE_TYPES = new Set(["power", "might", "guile", "champ"]);
-const SPHERE_PAGES = findSpherePages(distDir).filter(f => {
+const SPHERE_PAGES = findSpherePages(distDir).filter((f) => {
   // filter to sphere pages: matches {system}/spheres/{sphere}/index.html
   const parts = f.split(path.sep);
   const idx = parts.indexOf("spheres");
@@ -73,7 +73,7 @@ for (const pagePath of SPHERE_PAGES) {
   for (const cls of TRACKED_CLASSES) {
     const blockRegex = new RegExp(
       `class="[^"]*\\b${cls}\\b[^"]*"[^>]*\\bid="([^"]+)"`,
-      "g"
+      "g",
     );
     let blockMatch;
     while ((blockMatch = blockRegex.exec(html)) !== null) {

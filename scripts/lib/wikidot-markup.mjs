@@ -53,15 +53,15 @@ export function convertWikidotTable(tableLines) {
     });
     if (cells.length && cells[cells.length - 1].trim() === "") cells.pop();
 
-    result.push("| " + cells.join(" | ") + " |");
+    result.push(`| ${cells.join(" | ")} |`);
 
     if (isHeader && !separatorInserted) {
-      result.push("|" + cells.map(() => "---|").join(""));
+      result.push(`|${cells.map(() => "---|").join("")}`);
       separatorInserted = true;
     } else if (!separatorInserted && result.length === 1) {
       // No header row found — insert separator after first data row so the
       // output is valid Markdown (first row becomes the implicit header).
-      result.push("|" + cells.map(() => "---|").join(""));
+      result.push(`|${cells.map(() => "---|").join("")}`);
       separatorInserted = true;
     }
   }
@@ -152,7 +152,7 @@ export function cleanBody(text) {
     line = line.replace(/\[\[footnote\]\]([\s\S]*?)\[\[\/footnote\]\]/g, "$1");
 
     // Strip inline superscript refs: ^^ARG^^
-    line = line.replace(/\^\^[^\^]+\^\^/g, "");
+    line = line.replace(/\^\^[^^]+\^\^/g, "");
 
     // Strip inline body source citations
     line = line.replace(
