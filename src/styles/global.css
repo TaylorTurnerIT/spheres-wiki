@@ -1471,6 +1471,18 @@ h6 {
   text-decoration-color: var(--clr-active);
 }
 
+/* ── Sidebar Link Reset ────────────────────────────────── */
+.article-sidebar a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Re-allow components like .local-toc to use their own hover styles */
+.article-sidebar a:hover {
+  text-decoration: none;
+}
+/* Specifically restore underline for sidebar links that aren't part of a specialized component if needed,
+   but for now, let's keep it clean as requested. */
+
 /* ── Entry grid (namespace index pages) ────────────────── */
 .entry-grid {
   display: grid;

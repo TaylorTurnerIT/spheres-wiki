@@ -404,6 +404,9 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T102 | .      | Add cross-sphere feat audit script — detect feats present on 1 sphere page but absent from another that references them | V58 |
 | T103 | .      | Normalize `tier:"base"` → `[TalentName]` marker generation in Might export pipeline; verify all base abilities render via V31 markers | V31,V32,V56 |
 | T104 | .      | Unify dual-sphere: eliminate `dual-sphere` tag/`dualSphere` duplication. `dualSphere` field = single source of truth. Tag auto-derived by tags.ts. Support `dualSphere:"any"` for universal pairing (Manabond Versatility). See `docs/cavekit-dual-sphere-refactor.md` | V58 |
+| T105 | .      | Create generalized `TabbedContent.astro` component — supports rendering content from `.md` entries (via `render()`) OR custom `.astro` content via named slots. Reusable across the wiki. | V48,V49 |
+| T106 | .      | Define custom schemas for `drawback`, `boon`, and `tradition` entries in `src/content.config.ts`. | I.content |
+| T107 | .      | Implement interactive Casting Tradition Builder component — cost calculation, validation, and export (Markdown/Foundry). | I.layout |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.

@@ -1,0 +1,235 @@
+---
+import { getEntry, render } from 'astro:content';
+import LocalToc from '@/components/LocalToc.astro';
+import type { TocItem } from '@/components/LocalToc.astro';
+
+interface Tab {
+  label: string;
+  slug: string;
+  articleId?: string;
+  collection?: string;
+  showToc?: boolean;
+}
+
+interface Props {
+  tabs: Tab[];
+  defaultTab?: string;
+  id?: string;
+  system?: string;
+}
+
+const { tabs, defaultTab, id = "tab-container", system = 'power' } = Astro.props;
+const initialTab = defaultTab || tabs[0].slug;
+
+// Pre-render all article-based tabs and extract TOC items
+const renderedTabs = await Promise.all(
+  tabs.map(async (tab) => {
+    let Content = null;
+    let tocItems: TocItem[] = [];
+
+    if (tab.articleId && tab.collection) {
+      const entry = await getEntry(tab.collection as any, tab.articleId);
+      if (entry) {
+        const { Content: RenderedContent, headings } = await render(entry);
+        Content = RenderedContent;
+
+        if (tab.showToc) {
+          let currentCat: TocItem | null = null;
+          for (const h of headings) {
+            if (h.text.includes('{.toc-exclude}')) continue;
+
+            const label = h.text
+              .replace('{.toc-include}', '')
+              .replace('{.toc-exclude}', '')
+              .trim();
+
+            if (h.depth === 2) {
+              currentCat = { id: h.slug, label, sub: [] };
+              tocItems.push(currentCat);
+            } else if (h.depth === 3 && currentCat) {
+              currentCat.sub?.push({ id: h.slug, label });
+            }
+          }
+        }
+      }
+    }
+    return { slug: tab.slug, Content, tocItems };
+  })
+);
+---
+
+<div class="tabbed-content" id={id} data-initial-tab={initialTab}>
+  <nav class="tab-nav" role="tablist">
+    {tabs.map((tab) => (
+      <button
+        class:list={['tab', { active: tab.slug === initialTab }]}
+        role="tab"
+        aria-selected={tab.slug === initialTab}
+        aria-controls={`${id}-panel-${tab.slug}`}
+        id={`${id}-tab-${tab.slug}`}
+        data-tab={tab.slug}
+      >
+        {tab.label}
+      </button>
+    ))}
+  </nav>
+
+  <div class="tab-panels">
+    {tabs.map((tab) => {
+      const rendered = renderedTabs.find(r => r.slug === tab.slug);
+      const Content = rendered?.Content;
+      const tocItems = rendered?.tocItems || [];
+
+      return (
+        <div
+          class:list={['tab-panel', { active: tab.slug === initialTab }]}
+          role="tabpanel"
+          id={`${id}-panel-${tab.slug}`}
+          aria-labelledby={`${id}-tab-${tab.slug}`}
+          hidden={tab.slug !== initialTab}
+          data-tab-panel={tab.slug}
+        >
+          {/* TOC template for sidebar injection */}
+          <template data-toc-template={tab.slug}>
+             {tocItems.length > 0 && <LocalToc items={tocItems} system={system} />}
+          </template>
+          {Content ? <Content /> : <Fragment set:html={await Astro.slots.render(tab.slug)} />}
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+<script>
+  function initTabs(container: HTMLElement) {
+    const tabs = container.querySelectorAll<HTMLButtonElement>('.tab');
+    const panels = container.querySelectorAll<HTMLElement>('.tab-panel');
+
+    const sidebar = document.getElementById('article-sidebar');
+
+    function switchTab(slug: string, updateHash = true) {
+      tabs.forEach(tab => {
+        const isActive = tab.dataset.tab === slug;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive.toString());
+      });
+
+      panels.forEach(panel => {
+        const isActive = panel.dataset.tabPanel === slug;
+        panel.classList.toggle('active', isActive);
+        panel.hidden = !isActive;
+      });
+
+      if (sidebar) {
+        const oldToc = sidebar.querySelector('.local-toc');
+        if (oldToc) oldToc.remove();
+
+        const template = container.querySelector(`template[data-toc-template="${slug}"]`) as HTMLTemplateElement;
+        if (template) {
+           const clone = template.content.cloneNode(true);
+           sidebar.prepend(clone);
+           // Re-init TOC highlight logic
+           if ((window as any).reinitLocalToc) {
+             (window as any).reinitLocalToc();
+           }
+        }
+      }
+
+      if (updateHash) {
+        const url = new URL(window.location.href);
+        url.hash = slug;
+        window.history.replaceState({}, '', url);
+      }
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const slug = tab.dataset.tab;
+        if (slug) switchTab(slug);
+      });
+    });
+
+    const hash = window.location.hash.slice(1);
+    if (hash && Array.from(tabs).some(t => t.dataset.tab === hash)) {
+      switchTab(hash, false);
+    } else {
+      const initial = container.dataset.initialTab;
+      if (initial) switchTab(initial, false);
+    }
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    document.querySelectorAll<HTMLElement>('.tabbed-content').forEach(initTabs);
+  });
+</script>
+
+<style>
+  .tab-nav {
+    display: flex;
+    gap: 3px;
+    border-bottom: 0.5px solid var(--clr-border);
+    margin-bottom: 1.5rem;
+
+    /* Extend line across whole area */
+    margin-left: calc(-1 * var(--sp-5));
+    margin-right: calc(-1 * var(--sp-5));
+    padding-left: var(--sp-5);
+    padding-right: var(--sp-5);
+
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+  }
+
+  .tab {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    padding: 5px 12px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    border: 0.5px solid var(--clr-border);
+    border-bottom: none;
+    cursor: pointer;
+    background: var(--clr-bg);
+    color: var(--clr-ns, inherit);
+    transition: background 0.13s ease;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tab:hover:not(.active) {
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .tab.active {
+    background: var(--clr-surface);
+    color: var(--clr-active);
+    z-index: 2;
+    margin-bottom: -0.5px;
+    box-shadow: 0 1px 0 var(--clr-surface);
+  }
+
+  .tab-panel:not(.active) {
+    display: none;
+  }
+
+  /* Sidebar clearance */
+  :global(.article-content:has(.tabbed-content) .article-sidebar) {
+    margin-top: 50px;
+  }
+
+  @media (max-width: 640px) {
+    .tab-nav {
+      margin-left: calc(-1 * var(--sp-4));
+      margin-right: calc(-1 * var(--sp-4));
+      padding-left: var(--sp-4);
+      padding-right: var(--sp-4);
+      gap: 2px;
+    }
+    .tab {
+      font-size: var(--fs-2xs);
+      padding: 4px 8px;
+    }
+  }
+</style>

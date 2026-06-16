@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import { parse as parseYaml } from "yaml";
 import remarkEntryLinks from "./src/lib/remarkEntryLinks.ts";
+import remarkStripTocFlags from "./src/lib/remarkStripTocFlags.ts";
 import sitemap from "@astrojs/sitemap";
 
 /** Vite plugin: transform *.yaml / *.yml imports into ES modules */
@@ -25,14 +26,17 @@ export default defineConfig({
     defaultStrategy: "hover",
   },
   markdown: {
-    remarkPlugins: [[remarkEntryLinks, { base: "/spheres-wiki/" }]],
+    remarkPlugins: [
+      [remarkEntryLinks, { base: "/spheres-wiki/" }],
+      remarkStripTocFlags,
+    ],
   },
   integrations: [sitemap()],
   vite: {
     plugins: [yamlPlugin],
     server: {
       watch: {
-        ignored: ['**/.cave/**', '**/node_modules/**'],
+        ignored: ["**/.cave/**", "**/node_modules/**"],
       },
     },
   },

@@ -1,0 +1,80 @@
+---
+import { url } from "@/lib/url";
+
+interface TocItem {
+  label: string;
+  href: string;
+  id?: string;
+  description?: string;
+}
+
+interface Props {
+  title: string;
+  items: TocItem[];
+  columns?: 1 | 2 | 3;
+}
+
+const { title, items, columns = 2 } = Astro.props;
+---
+<div class="ref-card toc-card">
+  <div class="ref-card-header">
+    <span class="ref-card-title">{title}</span>
+  </div>
+  <div class="ref-card-body">
+    <div class:list={['toc-grid', `cols-${columns}`]}>
+      {items.map(item => (
+        <a href={item.href} class="toc-item" data-astro-prefetch="hover">
+          <span class="toc-label">{item.label}</span>
+          {item.description && <span class="toc-desc">{item.description}</span>}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .toc-card {
+    margin: 1.5rem 0;
+  }
+
+  .toc-grid {
+    display: grid;
+    gap: 0.5rem 1.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .toc-grid.cols-1 { grid-template-columns: 1fr; }
+  .toc-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .toc-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+  @media (max-width: 640px) {
+    .toc-grid.cols-2, .toc-grid.cols-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .toc-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem 0;
+    transition: transform 0.1s ease;
+  }
+
+  .toc-item:hover {
+    transform: translateX(4px);
+  }
+
+  .toc-label {
+    font-family: var(--ff-display);
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--clr-active);
+  }
+
+  .toc-desc {
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    margin-top: 1px;
+  }
+</style>

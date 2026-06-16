@@ -66,11 +66,14 @@ export function inferFromPath(fileId: string): InferredFields {
         return withSystem({ type: "archetype-feature", id: s1 });
       case "class-features":
         return withSystem({ type: "class-feature", id: s1 });
-      case "articles":
-        return withSystem({ type: "article", id: s1 });
       case "tags":
         return withSystem({ type: "tag", id: s1 });
     }
+  }
+
+  // Articles root or nested
+  if (s0 === "articles") {
+    return withSystem({ type: "article", id: parts[parts.length - 1] });
   }
 
   // ── 3-segment legacy paths ──────────────────────────────────────────────────

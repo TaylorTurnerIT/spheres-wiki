@@ -13,58 +13,74 @@ interface Props {
 
 const { article, book, description } = Astro.props;
 
-const sys = article.system ? SYSTEMS[article.system] : undefined;
-const sysLabel = sys?.label ?? "The Spheres";
-const sysRoute = sys?.route ?? "/";
-const cssKey = sys?.cssKey ?? "";
-const metaDescription = description ?? `${article.name}: a rules guide for ${sysLabel}.`;
+// Determine system for color-coding
+const sys = article.system || 'power';
+const sysLabel = SYSTEMS[sys as keyof typeof SYSTEMS]?.label || 'Power';
 ---
-<WikiPage
-  title={`${article.name} — ${sysLabel} Wiki`}
-  description={metaDescription}
-  activeNamespace={article.system}
->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    {sys && (
-      <>
-        <span class="breadcrumb-sep">›</span>
-        <a href={url(sysRoute)} data-astro-prefetch="hover">{sysLabel}</a>
-      </>
-    )}
-    <span class="breadcrumb-sep">›</span>
-    <span>{article.name}</span>
-  </nav>
 
-  <span data-pagefind-filter="type:guide" hidden></span>
-  {sys && <span data-pagefind-filter={`system:${sysLabel}`} hidden></span>}
-  <h1 class={`page-title ${cssKey}`} id="overview" data-pagefind-weight="10">
-    {article.name}
-  </h1>
-  <span data-pagefind-meta={`title:${article.name}`} hidden></span>
+<WikiPage title={article.name} description={description} activeNamespace={sys}>
+  <div class="article-header">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={url("/")}>Home</a>
+      <span class="sep">/</span>
+      <a href={url(`/${sys}/`)}>{sysLabel}</a>
+      <span class="sep">/</span>
+      <span class="current">{article.name}</span>
+    </nav>
+
+    <h1 class="page-title">{article.name}</h1>
+  </div>
+
   <span data-pagefind-meta="type:guide" hidden></span>
   {sys && <span data-pagefind-meta={`system:${sysLabel}`} hidden></span>}
   <hr class="page-title-rule" />
 
   <div class="article-content entry-description">
-    {book && (
-      <div class="book-sidebar">
-        <BookCard book={book} />
+    <slot name="before-content" />
+
+    <div class="article-layout">
+      <div class="content-body">
+        <slot />
       </div>
-    )}
-    <slot />
+
+      {(book || Astro.slots.has('sidebar')) && (
+        <aside class="article-sidebar" id="article-sidebar">
+          <slot name="sidebar" />
+          {book && <BookCard book={book} />}
+        </aside>
+      )}
+    </div>
   </div>
 </WikiPage>
 
 <style is:global>
-  /* The article body is injected from rendered markdown (<Content />), which is
-     not subject to Astro scoped styles — so these are global, scoped by the
-     .article-content wrapper class to limit their blast radius. */
+  .article-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+  }
 
-  .article-content .book-sidebar {
-    float: right;
-    width: 160px;
-    margin: 0 1.5rem 1rem 1.5rem;
+  .article-content .content-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .article-content .article-sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 1rem;
+  }
+
+  @media (max-width: 1000px) {
+    .article-layout {
+      flex-direction: column;
+    }
+    .article-content .article-sidebar {
+      width: 100%;
+      position: static;
+    }
   }
 
   /* ── Note boxes ──────────────────────────────────────────── */
@@ -72,284 +88,12 @@ const metaDescription = description ?? `${article.name}: a rules guide for ${sys
     background: color-mix(in srgb, var(--clr-active) 8%, transparent);
     border-left: 3px solid var(--clr-active);
     border-radius: 0 4px 4px 0;
-    padding: 0.6rem 0.85rem;
-    margin: 1rem 0;
-    font-size: var(--fs-md);
-  }
-
-  .article-content .author-note {
-    background: color-mix(in srgb, var(--clr-muted) 8%, transparent);
-    border-left: 3px solid var(--clr-muted);
-    border-radius: 0 4px 4px 0;
-    padding: 0.6rem 0.85rem;
-    margin: 1rem 0;
-    font-size: var(--fs-md);
-  }
-
-  .article-content .author-note p { margin: 0.4rem 0 0; }
-  .article-content .author-note ol,
-  .article-content .author-note ul { margin: 0.4rem 0 0 1.25rem; }
-
-  .article-content .example-box {
-    background: color-mix(in srgb, var(--clr-border) 40%, transparent);
-    border-radius: 4px;
-    padding: 0.5rem 0.85rem;
-    margin: 0.75rem 0;
-    font-size: var(--fs-md);
-  }
-
-  /* ── Tables ──────────────────────────────────────────────── */
-  .article-content .wiki-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0 1.25rem;
-    font-size: var(--fs-md);
-  }
-
-  .article-content .wiki-table caption {
-    text-align: left;
-    margin-bottom: 0.35rem;
-    font-size: var(--fs-sm);
-  }
-
-  .article-content .wiki-table th,
-  .article-content .wiki-table td {
-    border: 1px solid var(--clr-border);
-    padding: 0.3rem 0.6rem;
-    text-align: left;
-    vertical-align: top;
-  }
-
-  .article-content .wiki-table thead th {
-    background: color-mix(in srgb, var(--clr-active) 12%, transparent);
-    color: var(--clr-active);
-    font-weight: 600;
-  }
-
-  .article-content .wiki-table--center td,
-  .article-content .wiki-table--center th {
-    text-align: center;
-  }
-
-  .article-content .wiki-table--center {
-    width: auto;
-    min-width: 200px;
-  }
-
-  .article-content .table-footnote {
-    font-size: var(--fs-sm);
-    color: var(--clr-muted);
-    margin-top: 0.25rem;
-  }
-
-  /* ── Source tags ─────────────────────────────────────────── */
-  .article-content .source-tag {
-    font-size: var(--fs-sm);
-    color: var(--clr-muted);
-    font-weight: normal;
-    font-style: italic;
-  }
-
-  /* ── Headings ────────────────────────────────────────────── */
-  .article-content h2 {
-    font-family: var(--font-display);
-    font-size: var(--fs-xl);
-    font-weight: 700;
-    color: var(--clr-active);
-    margin: 2rem 0 0.5rem;
-    padding-bottom: 0.2em;
-    border-bottom: 1px solid var(--clr-border);
-  }
-
-  .article-content h3 {
-    font-family: var(--font-display);
-    font-size: var(--fs-lg);
-    font-weight: 700;
-    color: var(--clr-active);
-    margin: 1.5rem 0 0.4rem;
-  }
-
-  .article-content h4 {
-    font-family: var(--font-display);
-    font-size: var(--fs-md);
-    font-weight: 700;
-    color: var(--clr-fg);
-    margin: 1.2rem 0 0.3rem;
-  }
-
-  .article-content h5 {
-    font-family: var(--font-display);
-    font-size: var(--fs-sm);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--clr-muted);
-    margin: 1.2rem 0 0.3rem;
-  }
-
-  /* ── Line length & Typography ────────────────────────────── */
-  .article-content {
-    line-height: 1.6;
-  }
-
-  .article-content p { margin: 1rem 0; }
-  .article-content ul,
-  .article-content ol { margin: 1rem 0 1rem 1.5rem; }
-  .article-content li { margin-bottom: 0.4rem; }
-
-  /* ── Blockquotes & Pull quotes ───────────────────────────── */
-  .article-content blockquote {
-    font-size: var(--fs-lg);
-    font-family: var(--font-body);
-    color: var(--clr-text);
-    border-left: 4px solid var(--clr-active);
+    padding: 1rem 1.25rem;
     margin: 1.5rem 0;
-    padding: 0.5rem 1.5rem;
-    background: color-mix(in srgb, var(--clr-active) 3%, transparent);
-    font-style: italic;
+    font-size: var(--fs-sm);
   }
 
-  .article-content blockquote > *:first-child {
-    margin-top: 0;
-  }
-
-  .article-content blockquote > *:last-child {
+  .article-content .wiki-note p:last-child {
     margin-bottom: 0;
-  }
-
-  .article-content .pull-quote {
-    float: right;
-    width: clamp(250px, 30%, 350px);
-    margin: 1.5rem;
-    font-size: var(--fs-xl);
-    font-family: var(--font-display);
-    color: var(--clr-active);
-    text-align: center;
-    border-top: 2px solid var(--clr-active);
-    border-bottom: 2px solid var(--clr-active);
-    padding: 1.5rem 0;
-    font-style: italic;
-  }
-
-  /* ── Figures & Captions ──────────────────────────────────── */
-  .article-content figure {
-    margin: 2.5rem 0;
-    max-width: 100%;
-  }
-
-  .article-content figure img {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--radius);
-  }
-
-  .article-content figcaption,
-  .article-content .caption {
-    font-size: var(--fs-sm);
-    color: var(--clr-muted);
-    text-align: center;
-    margin-top: 0.75rem;
-    font-style: italic;
-  }
-
-  /* ── Sidebars / Asides ───────────────────────────────────── */
-  .article-content aside,
-  .article-content .article-sidebar {
-    float: right;
-    width: clamp(250px, 30%, 350px);
-    margin: 0 1.5rem 1.5rem 1.5rem;
-    padding: 1.25rem;
-    background: color-mix(in srgb, var(--clr-surface) 60%, transparent);
-    border: 1px solid var(--clr-border);
-    border-radius: var(--radius);
-    font-size: var(--fs-sm);
-  }
-
-  .article-content aside h3,
-  .article-content .article-sidebar h3 {
-    margin-top: 0;
-    font-size: var(--fs-md);
-  }
-
-  /* ── Section breaks ──────────────────────────────────────── */
-  .article-content hr {
-    border: none;
-    height: 1px;
-    background: var(--clr-border);
-    margin: 3rem auto;
-    width: 25%;
-    max-width: 200px;
-  }
-
-  /* ── Resource Cards ──────────────────────────────────────── */
-  .article-content .resource-link-block {
-    max-width: 520px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 1.5rem 0;
-  }
-
-  .article-content .resource-card,
-  .article-content .resource-primary-link {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 16px 18px;
-    border: 1px solid var(--clr-border);
-    border-radius: var(--radius);
-    text-decoration: none;
-    color: var(--clr-text);
-    transition: border-color 0.15s, background 0.15s;
-  }
-
-  .article-content .resource-card:hover,
-  .article-content .resource-primary-link:hover {
-    border-color: var(--clr-active);
-    background: color-mix(in srgb, var(--clr-active) 4%, transparent);
-  }
-
-  .article-content .resource-card-icon {
-    width: 22px;
-    height: 22px;
-    flex-shrink: 0;
-    color: var(--clr-active);
-  }
-
-  .article-content .discord-icon {
-    color: #5865F2;
-  }
-
-  .article-content .resource-card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  .article-content .resource-card-name {
-    font-family: var(--font-display);
-    font-size: var(--fs-md);
-    font-weight: 600;
-    color: var(--clr-active);
-  }
-
-  .article-content .resource-card-desc {
-    font-size: var(--fs-xs);
-    color: var(--clr-muted);
-  }
-
-  .article-content .resource-card-external {
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
-    color: var(--clr-muted);
-  }
-
-  .article-content .resource-card-cta {
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    color: var(--clr-active);
-    margin-top: 2px;
   }
 </style>

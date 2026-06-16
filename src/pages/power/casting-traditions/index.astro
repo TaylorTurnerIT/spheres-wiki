@@ -1,19 +1,17 @@
 ---
-import { getCollection, render } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import ArticlePage from "@/layouts/ArticlePage.astro";
+import TabbedContent from "@/components/TabbedContent.astro";
 import { resolveEntries } from "@/lib/resolveEntries";
 import type { ArticleEntry } from "@/lib/types";
 
-const entries = await getCollection("ultimate-spheres-of-power");
-const entry = entries.find(
-  (e: any) => e.data.type === "article" && e.data.id === "casting-traditions",
-);
+// Base entry for metadata
+const entry = await getEntry("ultimate-spheres-of-power", "power/articles/casting-traditions");
 if (!entry) {
   throw new Error(
     "Missing article entry: ultimate-spheres-of-power/articles/casting-traditions.md",
   );
 }
-const { Content } = await render(entry);
 const article = entry.data as ArticleEntry;
 
 const { bookMetaMap } = await resolveEntries();
@@ -21,7 +19,16 @@ const book = bookMetaMap.get("ultimate-spheres-of-power");
 
 const description =
   "Define how your magic works in Ultimate Spheres of Power with casting traditions, drawbacks, and boons.";
+
+const tabs = [
+  { label: "Rules", slug: "rules", articleId: "power/articles/casting-traditions/rules", collection: "ultimate-spheres-of-power", showToc: true },
+  { label: "Standard Traditions", slug: "standard", articleId: "power/articles/casting-traditions/standard-traditions", collection: "ultimate-spheres-of-power", showToc: true },
+  { label: "Custom Traditions", slug: "custom", articleId: "power/articles/casting-traditions/custom-traditions", collection: "ultimate-spheres-of-power", showToc: true },
+  { label: "General Drawbacks", slug: "general-drawbacks", articleId: "power/articles/casting-traditions/general-drawbacks", collection: "ultimate-spheres-of-power", showToc: true },
+  { label: "Sphere Drawbacks", slug: "sphere-drawbacks", articleId: "power/articles/casting-traditions/sphere-drawbacks", collection: "ultimate-spheres-of-power", showToc: true },
+  { label: "Boons", slug: "boons", articleId: "power/articles/casting-traditions/boons", collection: "ultimate-spheres-of-power", showToc: true },
+];
 ---
 <ArticlePage article={article} book={book} description={description}>
-  <Content />
+  <TabbedContent tabs={tabs} />
 </ArticlePage>
