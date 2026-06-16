@@ -47,19 +47,6 @@ const {
     <SVGSprite />
     <slot />
   </body>
-  <style is:global>
-    ._access-icon { display: none !important; }
-  </style>
-  <script>
-    import { Accessibility } from 'accessibility';
-
-    function initAccessibility() {
-      if ((window as any).__a11y) return;
-      (window as any).__a11y = new Accessibility();
-    }
-
-    document.addEventListener('astro:page-load', initAccessibility);
-  </script>
   <script>
     const saved = sessionStorage.getItem('scroll-y');
     if (saved) {

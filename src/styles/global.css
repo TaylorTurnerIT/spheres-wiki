@@ -199,9 +199,16 @@ a:hover {
 
 /* ── Sidebar ────────────────────────────────────────────── */
 .sidebar {
+  display: none; /* hidden by default — media queries show it where needed */
   width: var(--sidebar-w);
   flex-shrink: 0;
   padding: var(--sp-3) var(--sp-2) var(--sp-3) 0;
+}
+
+@media (min-width: 1025px) {
+  .sidebar {
+    display: block;
+  }
 }
 
 .sidebar-inner {
@@ -288,9 +295,6 @@ a:hover {
 
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .sidebar {
-    display: none;
-  }
   .sidebar.open {
     display: block;
     position: fixed;

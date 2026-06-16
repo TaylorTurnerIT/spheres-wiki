@@ -74,3 +74,28 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run validate
+
+  # ── Lighthouse CI (performance budget) ──────────────────────────────────
+  lighthouse:
+    name: Lighthouse (Perf Budget)
+    runs-on: ubuntu-latest
+    needs: [validate]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: ln -sfn . dist/spheres-wiki
+      - run: npx lhci autorun
+      - name: Upload Lighthouse report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: .lighthouseci/
+          retention-days: 7

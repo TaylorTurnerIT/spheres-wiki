@@ -26,7 +26,6 @@
     "@astrojs/sitemap": "^3.7.3",
     "@fontsource/cinzel": "^5.2.8",
     "@fontsource/crimson-text": "^5.2.7",
-    "accessibility": "^6.1.0",
     "astro": "^6.3.3",
     "rehype-raw": "^7.0.0",
     "tom-select": "^2.6.1",
@@ -34,6 +33,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.60.0",
     "pagefind": "^1.5.2",
     "serve": "^14.2.6",
