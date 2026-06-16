@@ -36,4 +36,13 @@ describe('ArticleTOC rename', () => {
     expect(content).not.toContain("h.depth === 2");
     expect(content).not.toContain('reinitLocalToc');
   });
+
+  it('ArticlePage.astro accepts headings/showToc props and auto-renders ArticleTOC into the sidebar', () => {
+    const content = read('src/layouts/ArticlePage.astro');
+    expect(content).toContain('headings?: RenderedHeading[]');
+    expect(content).toContain('showToc?: boolean');
+    expect(content).toContain('buildTocTree');
+    expect(content).toContain('<ArticleTOC');
+    expect(content).toContain("tocItems.length >= 2");
+  });
 });

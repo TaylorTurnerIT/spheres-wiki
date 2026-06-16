@@ -2,6 +2,8 @@
 import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import BookCard from "@/components/BookCard.astro";
+import ArticleTOC from "@/components/ArticleTOC.astro";
+import { buildTocTree, type RenderedHeading } from "@/lib/articleToc";
 import { SYSTEMS } from "@/config/site";
 import type { ArticleEntry, BookMeta } from "@/lib/types";
 
@@ -9,13 +11,17 @@ interface Props {
   article: ArticleEntry;
   book?: BookMeta;
   description?: string;
+  headings?: RenderedHeading[];
+  showToc?: boolean;
 }
 
-const { article, book, description } = Astro.props;
+const { article, book, description, headings = [], showToc = true } = Astro.props;
 
 // Determine system for color-coding
 const sys = article.system || 'power';
 const sysLabel = SYSTEMS[sys as keyof typeof SYSTEMS]?.label || 'Power';
+
+const tocItems = showToc ? buildTocTree(headings) : [];
 ---
 
 <WikiPage title={article.name} description={description} activeNamespace={sys}>
@@ -43,8 +49,9 @@ const sysLabel = SYSTEMS[sys as keyof typeof SYSTEMS]?.label || 'Power';
         <slot />
       </div>
 
-      {(book || Astro.slots.has('sidebar')) && (
+      {(book || Astro.slots.has('sidebar') || tocItems.length >= 2) && (
         <aside class="article-sidebar" id="article-sidebar">
+          {tocItems.length >= 2 && <ArticleTOC items={tocItems} system={sys} />}
           <slot name="sidebar" />
           {book && <BookCard book={book} />}
         </aside>
