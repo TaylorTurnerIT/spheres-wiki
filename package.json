@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "postinstall": "node scripts/patch-fontsource.mjs",
     "build": "node scripts/validate.mjs && node scripts/check-base-abilities.mjs && astro build && pagefind --site dist && node scripts/check-toc.mjs",
     "preview": "astro preview",
     "astro": "astro",

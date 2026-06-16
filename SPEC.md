@@ -343,7 +343,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T41 | .      | Tag system — resolve 17 multi-sphere tags: assign to primary sphere or leave cross-sphere. Candidates: `admixture` (dest/mana/nature), `air` (dest/nature), `cold` (dest/weather), `fire` (dest/nature), `companion` (alt/conj/mana), `counterspell` (dest/enh/mind), `curse` (death/fate/mana), `light` (dest/light), `metamagic` (fate/ill/warp), `all` (warp/weather), `auxiliary` (dark/div/prot), `champion` (fey/warp), `ghost-strike` (death/fate), `manipulation` (mana/prot), `program` (death/mana/prot), `teamwork` (death/light/weather). | I.content |
 | T42 | .      | Tag system — audit 16 unused tags (defined but not applied to any entry): `background`, `bleed`, `boast`, `cohort`, `equipment`, `item-creation`, `ki-blaster`, `leap`, `legendary`, `minor-artifact`, `mutation`, `potent`, `racial`, `ritual`, `slam`, `stance`. Assign sphere where clear; move cross-sphere ones to `__built-in__`; delete if genuinely obsolete. | I.content |
 | T43 | .      | Tag system — show sphere link on `/tags/[tag]/` detail page when `tag.sphere` is set. | I.pages |
-| T44 | .      | Audit entire website for any possible Flash of Unstyled Content (FOUC) and resolve by removing remote scripts/CSS in favor of local bundling | V11 |
+| T44 | x      | Audit entire website for any possible Flash of Unstyled Content (FOUC) and resolve by removing remote scripts/CSS in favor of local bundling | V11 |
 | T45 | x      | Audit all `src/content` for V15/V16/V17 compliance       | V15,V16,V17 |
 | T46 | x      | Verify `SVGSprite.astro` has all icons named in `src/content/**/*.md` | V19 |
 | T47 | x      | Implement ranking weights in Pagefind for V18            | V18,I.pagefind |

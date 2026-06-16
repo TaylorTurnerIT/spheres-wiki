@@ -11,6 +11,10 @@ import '@fontsource/crimson-text/400-italic.css';
 import '@fontsource/crimson-text/600.css';
 import '@fontsource/crimson-text/600-italic.css';
 
+import cinzel700 from '@fontsource/cinzel/files/cinzel-latin-700-normal.woff2?url';
+import crimson400 from '@fontsource/crimson-text/files/crimson-text-latin-400-normal.woff2?url';
+import crimson600 from '@fontsource/crimson-text/files/crimson-text-latin-600-normal.woff2?url';
+
 interface Props {
   title?: string;
   description?: string;
@@ -31,6 +35,9 @@ const {
     <meta name="description" content={description} />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="preload" href={cinzel700} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={crimson400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={crimson600} as="font" type="font/woff2" crossorigin />
     <title>{title}</title>
     <ClientRouter />
     <style is:inline>
