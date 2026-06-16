@@ -20,7 +20,7 @@ The four player-facing systems are **Power**, **Might**, **Guile**, and **Champi
 - **Pagefind** for client-side search (index built at deploy)
 - **TomSelect** for select/dropdown UI; vanilla CSS (`src/styles/global.css`), no framework
 - Self-hosted fonts via `@fontsource/cinzel` + `@fontsource/crimson-text` — **no external CDN, no analytics** (see SPEC V11/V12)
-- **Node.js ≥ 22.12.0**
+- **Bun ≥ 1.1.0**
 - Deployed to **GitHub Pages** at base path `/spheres-wiki/` (`astro.config.mjs`)
 
 > Note: `README.md` still says "Astro 4.x" — stale; the real version is 6.x per `package.json`.
@@ -250,10 +250,9 @@ Quarantined entries are NOT auto-generated. They must be manually created in the
 
 ## Testing
 
-- **Unit** (`tests/lib/`, Vitest): schema/resolution/categorize/tags/url/search/etc. Run with `npm test`.
-- **E2E** (`tests/e2e/`, Playwright): routes, accessibility, search, meta tags, navigation, performance, toast. Run with `npm run test:e2e` (or the Docker variants). `routes.spec.ts` is kept in sync with SPEC §I.pages.
+- **Unit** (`tests/lib/`, Vitest): schema/resolution/categorize/tags/url/search/etc. Run with `bun run test`.
 
-When adding a feature or fixing a bug, prefer adding/extending a test, and run `npm run validate` to catch content-contract violations before building.
+When adding a feature or fixing a bug, prefer adding/extending a test, and run `bun run validate` to catch content-contract violations before building.
 
 ---
 

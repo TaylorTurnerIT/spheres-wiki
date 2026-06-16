@@ -18,7 +18,7 @@ Fast static wiki for the Spheres tabletop RPG (Power/Might/Guile/Champions) by D
 - C5. OGL compliance — all content under Open Game License; legal page must exist
 - C6. New sphere in existing system must appear site-wide with only content files added (no component edits) — except icon SVG which requires one `<symbol>` addition to SVGSprite.astro
 - C7. New game system requires coordinated changes across config, CSS, nav, pages — this is acceptable but must be documented in §I
-- C8. Toolchain pinned — Astro 6.x SSG + TypeScript, Node.js ≥ 22.12.0
+- C8. Toolchain pinned — Astro 6.x SSG + TypeScript, Bun ≥ 1.1.0
 - C9. Entry metadata path-encoded — `src/content/<book>/<system>/<type>/*.md`; `type`+`sphere` inferred from path by `inferFromPath` (I.content); `system` derived from directory, not frontmatter
 - C10. All entry `id`s are lowercase kebab-case (`^[a-z0-9-]+$`), enforced by `entrySchema`
 - C11. `system:` field ⊥ in entry frontmatter — always derived from `{book}/{system}` directory prefix; ∃ only in `_system.yaml` at `{book}/{system}/`
