@@ -2,6 +2,7 @@
 @AGENTS.md
 @SPEC.md
 @DESIGN.md
+@FALLOW_GUIDE.md
 
 # AGENTS.md — Spheres Wiki
 
@@ -29,9 +30,11 @@ The four player-facing systems are **Power**, **Might**, **Guile**, and **Champi
 ```bash
 npm install            # setup
 npm run dev            # dev server → http://localhost:4321
-npm run build          # validate.mjs → astro build → pagefind index (output: dist/)
+npm run build          # validate.mjs → check-base → fallow-audit → astro build → pagefind index (output: dist/)
 npm run preview        # serve the production build locally
 npm run validate       # content validation only (scripts/validate.mjs)
+npm run fallow         # run comprehensive codebase audit (dead code, health, duplication)
+npm run fallow-audit   # run build-blocking complexity/dead-code audit
 npm test               # unit tests (Vitest)
 npx astro check        # type check
 ```
@@ -251,3 +254,31 @@ Quarantined entries are NOT auto-generated. They must be manually created in the
 - **E2E** (`tests/e2e/`, Playwright): routes, accessibility, search, meta tags, navigation, performance, toast. Run with `npm run test:e2e` (or the Docker variants). `routes.spec.ts` is kept in sync with SPEC §I.pages.
 
 When adding a feature or fixing a bug, prefer adding/extending a test, and run `npm run validate` to catch content-contract violations before building.
+
+---
+
+<!-- fallow:setup-hooks:start -->
+## Fallow local gate
+
+Before any `git commit` or `git push`, run `fallow audit --format json --quiet --explain --gate-marker agent`. If the verdict is `fail`, fix the reported findings before retrying. Treat JSON runtime errors like `{ "error": true, ... }` as non-blocking.
+
+Audit defaults to `gate=new-only`: only findings introduced by the current changeset affect the verdict. Inherited findings on touched files are reported under `attribution` and annotated with `introduced: false`, but do not block the commit. Set `[audit] gate = "all"` in `fallow.toml` to gate every finding in changed files.
+
+For non-skill agents, treat the task map below as the local onboarding source: run the listed fallow command before destructive edits, before commits, and before pull request handoff.
+
+## Fallow task map
+
+| When the agent is about to... | Run |
+|---|---|
+| delete an "unused" export or file | `fallow dead-code --trace <file>:<export>` |
+| delete an "unused" dependency | `fallow dead-code --trace-dependency <name>` |
+| commit or open a PR | `fallow audit --base <ref>` |
+| prioritize refactoring | `fallow health --hotspots --targets` |
+| ask who owns code | `fallow health --ownership` |
+| check untested-but-reachable code | `fallow health --coverage-gaps` |
+| consolidate duplication | `fallow dupes --trace dup:<fingerprint>` |
+| find feature flags | `fallow flags` |
+| surface security candidates | `fallow security` |
+| understand a finding | `fallow explain <issue-type>` |
+| scope a monorepo | `--workspace <glob> / --changed-workspaces <ref>` (global flags, prefix any command) |
+<!-- fallow:setup-hooks:end -->
