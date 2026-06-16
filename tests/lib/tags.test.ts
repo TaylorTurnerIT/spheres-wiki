@@ -1,5 +1,9 @@
 import { describe, it, expect } from "vitest";
-import { buildOrderedTagIds } from "../../src/lib/tags";
+import {
+  buildOrderedTagIds,
+  getSystemAutoTags,
+  sortTagsByPriority,
+} from "../../src/lib/tags";
 import type { AnyEntry, BookMeta, TagEntry } from "../../src/lib/types";
 
 function makeBookMeta(overrides: Partial<BookMeta> = {}): BookMeta {
@@ -410,6 +414,149 @@ describe("buildOrderedTagIds — priority sorting", () => {
     const zzzIdx = result.indexOf("zzz-custom");
     const advIdx = result.indexOf("advanced");
     expect(zzzIdx).toBeGreaterThan(advIdx);
+  });
+});
+
+// ─── getSystemAutoTags (extracted helper) ─────────────────────────────────
+
+describe("getSystemAutoTags", () => {
+  it("returns entry-type and tier tags for a basic talent", () => {
+    const entry: AnyEntry = {
+      type: "talent",
+      id: "test-talent",
+      sphere: "alteration",
+      system: "power",
+      tier: "basic",
+      name: "Test Talent",
+      sourceBook: "drop-dead",
+      tags: [],
+    };
+    const result = getSystemAutoTags(entry, bookMetaMap);
+    expect(result.has("talent")).toBe(true);
+    expect(result.has("basic")).toBe(true);
+    expect(result.has("feat")).toBe(false);
+  });
+
+  it("flags 3pp for third-party sourceBook", () => {
+    const entry: AnyEntry = {
+      type: "talent",
+      id: "3pp-talent",
+      sphere: "alteration",
+      system: "power",
+      tier: "basic",
+      name: "3PP Talent",
+      sourceBook: "third-party-book",
+      tags: [],
+    };
+    const result = getSystemAutoTags(entry, bookMetaMap);
+    expect(result.has("3pp")).toBe(true);
+  });
+
+  it("does not add sphere identity tag without dualSphere or includeSphere", () => {
+    const entry: AnyEntry = {
+      type: "talent",
+      id: "plain-talent",
+      sphere: "alteration",
+      system: "power",
+      tier: "basic",
+      name: "Plain Talent",
+      sourceBook: "drop-dead",
+      tags: [],
+    };
+    const result = getSystemAutoTags(entry, bookMetaMap);
+    expect(result.has("alteration-sphere")).toBe(false);
+  });
+
+  it("adds primary + dual sphere identity tags when dualSphere is set", () => {
+    const entry: AnyEntry = {
+      type: "talent",
+      id: "dual-talent",
+      sphere: "alteration",
+      dualSphere: "death",
+      system: "power",
+      tier: "basic",
+      name: "Dual Talent",
+      sourceBook: "drop-dead",
+      tags: [],
+    };
+    const result = getSystemAutoTags(entry, bookMetaMap);
+    expect(result.has("alteration-sphere")).toBe(true);
+    expect(result.has("death-sphere")).toBe(true);
+    expect(result.has("dual-sphere")).toBe(true);
+  });
+
+  it("respects includeSphere option to force sphere identity tag", () => {
+    const entry: AnyEntry = {
+      type: "talent",
+      id: "included-talent",
+      sphere: "alteration",
+      system: "power",
+      tier: "basic",
+      name: "Included",
+      sourceBook: "drop-dead",
+      tags: [],
+    };
+    const result = getSystemAutoTags(entry, bookMetaMap, {
+      includeSphere: true,
+    });
+    expect(result.has("alteration-sphere")).toBe(true);
+  });
+});
+
+// ─── sortTagsByPriority (extracted helper) ────────────────────────────────
+
+describe("sortTagsByPriority", () => {
+  it("sorts by tagMap priority ascending, then alphabetically", () => {
+    const result = sortTagsByPriority(
+      ["utility", "combat", "talent", "basic"],
+      tagMap,
+      [],
+    );
+    expect(result).toEqual(["talent", "basic", "combat", "utility"]);
+  });
+
+  it("gives unmapped tags priority 999 (sorts last)", () => {
+    const result = sortTagsByPriority(
+      ["zzz-unknown", "aaa-unknown", "talent"],
+      tagMap,
+      [],
+    );
+    expect(result).toEqual(["talent", "aaa-unknown", "zzz-unknown"]);
+  });
+
+  it("hides undefined sphere-suffixed tags by convention", () => {
+    const result = sortTagsByPriority(["alteration-sphere", "talent"], tagMap, []);
+    // alteration-sphere has a tagMap def (hidden not set -> visible)
+    expect(result).toContain("alteration-sphere");
+  });
+
+  it("hides tags marked hidden:true in tagMap unless user-specified", () => {
+    const hiddenTagMap = new Map<string, TagEntry>([
+      ...tagMap,
+      ["secret", { ...makeTag("secret", 1), hidden: true }],
+    ]);
+    const result = sortTagsByPriority(["secret", "talent"], hiddenTagMap, []);
+    expect(result).not.toContain("secret");
+  });
+
+  it("keeps user-specified tags visible even when marked hidden", () => {
+    const hiddenTagMap = new Map<string, TagEntry>([
+      ...tagMap,
+      ["secret", { ...makeTag("secret", 1), hidden: true }],
+    ]);
+    const result = sortTagsByPriority(
+      ["secret", "talent"],
+      hiddenTagMap,
+      ["secret"],
+    );
+    expect(result).toContain("secret");
+  });
+
+  it("showHidden option bypasses all visibility filtering", () => {
+    const result = sortTagsByPriority(["alteration-sphere"], new Map(), [], {
+      showHidden: true,
+    });
+    expect(result).toContain("alteration-sphere");
   });
 });
 

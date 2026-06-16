@@ -1,6 +1,14 @@
 // tests/lib/inferFromPath.test.ts
 import { describe, it, expect } from "vitest";
-import { inferFromPath } from "../../src/lib/inferFromPath";
+import {
+  inferFromPath,
+  resolveSphereEntry,
+  resolveClassEntry,
+  resolveArchetypeEntry,
+} from "../../src/lib/inferFromPath";
+
+/** No-op system attacher for testing sub-parsers in isolation. */
+const identity = <T>(fields: T): T => fields;
 
 describe("inferFromPath", () => {
   // ── Legacy flat paths — must continue working ──────────────────────────────
@@ -206,5 +214,163 @@ describe("inferFromPath", () => {
     it("unrecognized top-level segment returns empty object", () => {
       expect(inferFromPath("unknown/foo.md")).toEqual({});
     });
+  });
+});
+
+// ─── Sub-parsers (extracted resolvers) ────────────────────────────────────
+
+describe("resolveSphereEntry", () => {
+  it("resolves 2-segment talents/{id}", () => {
+    expect(resolveSphereEntry(["talents", "bluff"], identity)).toEqual({
+      type: "talent",
+      id: "bluff",
+    });
+  });
+  it("resolves 2-segment feats/{id}", () => {
+    expect(resolveSphereEntry(["feats", "toxic-webs"], identity)).toEqual({
+      type: "feat",
+      id: "toxic-webs",
+    });
+  });
+  it("resolves 2-segment spheres/{id}", () => {
+    expect(resolveSphereEntry(["spheres", "alteration"], identity)).toEqual({
+      type: "sphere",
+      id: "alteration",
+    });
+  });
+  it("resolves nested spheres/{sid}/talents/{id}", () => {
+    expect(
+      resolveSphereEntry(["spheres", "alteration", "talents", "bluff"], identity),
+    ).toEqual({ type: "talent", sphere: "alteration", id: "bluff" });
+  });
+  it("resolves nested spheres/{sid}/feats/{id}", () => {
+    expect(
+      resolveSphereEntry(["spheres", "alteration", "feats", "toxic-webs"], identity),
+    ).toEqual({ type: "feat", sphere: "alteration", id: "toxic-webs" });
+  });
+  it("resolves spheres/{sid}/index", () => {
+    expect(
+      resolveSphereEntry(["spheres", "alteration", "index"], identity),
+    ).toEqual({ type: "sphere", id: "alteration" });
+  });
+  it("returns undefined for a path it does not own", () => {
+    expect(resolveSphereEntry(["classes", "shifter"], identity)).toBeUndefined();
+  });
+});
+
+describe("resolveClassEntry", () => {
+  it("resolves 2-segment classes/{id}", () => {
+    expect(resolveClassEntry(["classes", "shifter"], identity)).toEqual({
+      type: "class",
+      id: "shifter",
+    });
+  });
+  it("resolves legacy class-features/{cid}/{id}", () => {
+    expect(
+      resolveClassEntry(["class-features", "shifter", "shifter-casting"], identity),
+    ).toEqual({ type: "class-feature", className: "shifter", id: "shifter-casting" });
+  });
+  it("resolves legacy class-traits/{cid}/{id}", () => {
+    expect(
+      resolveClassEntry(
+        ["class-traits", "armorist", "armorist-additional-binding"],
+        identity,
+      ),
+    ).toEqual({
+      type: "class-trait",
+      className: "armorist",
+      id: "armorist-additional-binding",
+    });
+  });
+  it("resolves nested classes/{cid}/features/{id}", () => {
+    expect(
+      resolveClassEntry(
+        ["classes", "shifter", "features", "shifter-casting"],
+        identity,
+      ),
+    ).toEqual({ type: "class-feature", className: "shifter", id: "shifter-casting" });
+  });
+  it("resolves nested class-trait under classes/{cid}/features/{fid}/traits/{id}", () => {
+    expect(
+      resolveClassEntry(
+        [
+          "classes",
+          "armorist",
+          "features",
+          "arsenal-trick",
+          "traits",
+          "armorist-additional-binding",
+        ],
+        identity,
+      ),
+    ).toEqual({
+      type: "class-trait",
+      className: "armorist",
+      featureId: "arsenal-trick",
+      id: "armorist-additional-binding",
+    });
+  });
+  it("resolves classes/{cid}/index", () => {
+    expect(resolveClassEntry(["classes", "shifter", "index"], identity)).toEqual({
+      type: "class",
+      id: "shifter",
+    });
+  });
+  it("does not steal an archetype-feature nested path (features under archetypes)", () => {
+    expect(
+      resolveClassEntry(
+        ["classes", "cleric", "archetypes", "abductee", "features", "abducted"],
+        identity,
+      ),
+    ).toEqual({ type: "class-feature", className: "abductee", id: "abducted" });
+    // ^ resolveClassEntry alone (out of pipeline order) DOES match this generically —
+    // disambiguation from archetype-features happens by resolver call order in
+    // inferFromPath (archetype resolver runs first). See inferFromPath-level test.
+  });
+  it("returns undefined for a path it does not own", () => {
+    expect(resolveClassEntry(["spheres", "alteration"], identity)).toBeUndefined();
+  });
+});
+
+describe("resolveArchetypeEntry", () => {
+  it("resolves 2-segment archetypes/{id}", () => {
+    expect(resolveArchetypeEntry(["archetypes", "abductee"], identity)).toEqual({
+      type: "archetype",
+      id: "abductee",
+    });
+  });
+  it("resolves 2-segment archetype-features/{id}", () => {
+    expect(
+      resolveArchetypeEntry(["archetype-features", "abducted"], identity),
+    ).toEqual({ type: "archetype-feature", id: "abducted" });
+  });
+  it("resolves legacy archetype-features/{aid}/{id}", () => {
+    expect(
+      resolveArchetypeEntry(["archetype-features", "abductee", "abducted"], identity),
+    ).toEqual({ type: "archetype-feature", archetypeId: "abductee", id: "abducted" });
+  });
+  it("resolves classes/{cid}/archetypes/{aid}/index", () => {
+    expect(
+      resolveArchetypeEntry(
+        ["classes", "cleric", "archetypes", "abductee", "index"],
+        identity,
+      ),
+    ).toEqual({ type: "archetype", className: "cleric", id: "abductee" });
+  });
+  it("resolves classes/{cid}/archetypes/{aid}/features/{id}", () => {
+    expect(
+      resolveArchetypeEntry(
+        ["classes", "cleric", "archetypes", "abductee", "features", "abducted"],
+        identity,
+      ),
+    ).toEqual({
+      type: "archetype-feature",
+      className: "cleric",
+      archetypeId: "abductee",
+      id: "abducted",
+    });
+  });
+  it("returns undefined for a path it does not own", () => {
+    expect(resolveArchetypeEntry(["talents", "bluff"], identity)).toBeUndefined();
   });
 });

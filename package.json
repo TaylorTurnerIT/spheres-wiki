@@ -26,22 +26,28 @@
     "audit": "node scripts/validate.mjs && node scripts/check-base-abilities.mjs && node scripts/check-cross-sphere.mjs"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
     "@fontsource/cinzel": "^5.2.8",
     "@fontsource/crimson-text": "^5.2.7",
     "astro": "^6.3.3",
     "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
     "tom-select": "^2.6.1",
-    "uipro-cli": "^2.2.3"
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0",
+    "yaml": "^2.9.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@astrojs/sitemap": "^3.7.3",
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.60.0",
     "fallow": "^2.97.0",
     "pagefind": "^1.5.2",
-    "serve": "^14.2.6",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.5"
+    "vitest": "^4.1.5",
+    "zod": "^4.4.3"
   }
 }
