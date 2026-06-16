@@ -1,4 +1,8 @@
 ---
+import { url } from "@/lib/url";
+import WikiPage from "@/layouts/WikiPage.astro";
+import BookCard from "@/components/BookCard.astro";
+import ArticleTOC from "@/components/ArticleTOC.astro";
 import { SYSTEMS } from "@/config/site";
 import { buildTocTree, type RenderedHeading } from "@/lib/articleToc";
 import type { ArticleEntry, BookMeta } from "@/lib/types";
@@ -21,9 +25,9 @@ const {
 
 // Determine system for color-coding
 const sys = article.system || "power";
-const _sysLabel = SYSTEMS[sys as keyof typeof SYSTEMS]?.label || "Power";
+const sysLabel = SYSTEMS[sys as keyof typeof SYSTEMS]?.label || "Power";
 
-const _tocItems = showToc ? buildTocTree(headings) : [];
+const tocItems = showToc ? buildTocTree(headings) : [];
 ---
 
 <WikiPage title={article.name} description={description} activeNamespace={sys}>
