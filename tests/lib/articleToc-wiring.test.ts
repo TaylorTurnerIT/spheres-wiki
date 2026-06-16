@@ -45,4 +45,20 @@ describe('ArticleTOC rename', () => {
     expect(content).toContain('<ArticleTOC');
     expect(content).toContain("tocItems.length >= 2");
   });
+
+  it('all 6 non-tab article pages pass headings through to ArticlePage', () => {
+    const pages = [
+      'src/pages/about/index.astro',
+      'src/pages/legal/index.astro',
+      'src/pages/privacy/index.astro',
+      'src/pages/community-resources/index.astro',
+      'src/pages/power/using-spheres-of-power/index.astro',
+      'src/pages/power/how-to-build-spherecaster/index.astro',
+    ];
+    for (const page of pages) {
+      const content = read(page);
+      expect(content).toContain('const { Content, headings } = await render(entry);');
+      expect(content).toContain('headings={headings}');
+    }
+  });
 });

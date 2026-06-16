@@ -13,7 +13,7 @@ if (!entry) {
     "Missing article entry: ultimate-spheres-of-power/articles/how-to-build-spherecaster.md",
   );
 }
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 const article = entry.data as ArticleEntry;
 
 const { bookMetaMap } = await resolveEntries();
@@ -22,6 +22,6 @@ const book = bookMetaMap.get("ultimate-spheres-of-power");
 const description =
   "A step-by-step guide to building a Spherecaster in Ultimate Spheres of Power: picking classes, selecting spheres, and understanding magic talents.";
 ---
-<ArticlePage article={article} book={book} description={description}>
+<ArticlePage article={article} book={book} description={description} headings={headings}>
   <Content />
 </ArticlePage>
