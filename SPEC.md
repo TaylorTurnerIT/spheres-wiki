@@ -307,7 +307,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T5  | x      | Create `/community-resources/` page                      | V1,I.pages    |
 | T6  | -      | ~~Create `/citations-guide/` page~~ — removed            | V1,I.pages    |
 | T7  | x      | Create `/contact/` page                                  | V1,I.pages    |
-| T8  | ~      | Create `/power/how-to-build-*` guide pages (Spherecaster done; 2 remaining) | V1,I.pages    |
+| T8  | ~      | Create `/power/how-to-build-*` guide pages (Spherecaster done; 3 remaining: champion, practitioner, operative) | V1,I.pages    |
 | T9  | x      | Remove/fix all dead sidebar links (Other Systems block, subsection stubs) | V1,V9 |
 | T10 | .      | Implement `/recent-changes/` with real content (git-log or manual changelog) | V1,I.pages |
 | T11 | .      | Wire champion class body + features into `/champions/[slug]` | V1,I.pages |
@@ -323,13 +323,13 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T21 | x      | Refactor `pages/index.astro` home RefCards to loop over SYSTEMS | V3,V5,I.config |
 | T22 | x      | Move IntroCard meta record to SYSTEMS config             | V5,I.config   |
 | T23 | .      | Add `si-fallback` symbol to SVGSprite.astro; guard icon lookup in sphere templates | V8,I.svg |
-| T24 | .      | Add `@astrojs/sitemap` integration                       | I.pages       |
+| T24 | x      | Add `@astrojs/sitemap` integration                       | I.pages       |
 | T25 | .      | Create custom `404.astro` page                           | V1,I.pages    |
 | T26 | .      | Add OG/social meta tags to Base.astro (og:title, og:image, og:description, twitter:card, canonical) | V6 |
 | T27 | .      | Pass per-page `description` from all detail pages to Base.astro | V6 |
 | T28 | .      | Add `@media print` stylesheet block to global.css        |               |
 | T29 | .      | Add dark mode toggle with CSS `[data-theme="dark"]` vars and localStorage persistence | |
-| T30 | .      | Add localStorage dismiss to BetaToast component          |               |
+| T30 | x      | Add localStorage dismiss to BetaToast component          |               |
 | T31 | .      | Add JSON-LD breadcrumb structured data to detail pages   | V6            |
 | T32 | .      | Add RSS feed route (`/rss.xml`)                          |               |
 | T33 | x      | Self-host fonts — install `@fontsource/cinzel` + `@fontsource/crimson-text`, import in Base.astro, delete `fonts.googleapis.com` link; remove all Umami analytics scripts | V11,V12 |
@@ -360,17 +360,17 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T58 | .      | Upgrade `export_might.rs` — auto-generate `[TalentName]` markers in sphere body for tier:base entries; derive marker names from base-ability slugs | V31,V32 |
 | T59 | x      | Auto-link prerequisites text — parse `**Prerequisites:**` blocks in body markdown (remark plugin), link sphere names + parenthetical talent refs, skip non-talent qualifiers like `(Any)` | V33,I.resolveEntries |
 | T60 | x      | Generalize `/power/` index page design to `/might/`, `/guile/`, and `/champions/`. Retain individual section designs where needed, but reuse the general layout without regressions. | I.pages |
-| T61 | .      | Extract `ClassProgressionTable` component — 80-line level-grid table + CSS out of `[class].astro` into shared component; accepts `cls`, `featuresByLevel`, and `tableRows` props | V48,V49,I.class-family |
-| T62 | .      | Extract `TraitCatalogSection` component — collapsible trait toggle + catalog grid out of `[class].astro` into shared component | V48,V49,I.class-family |
-| T63 | .      | Extract `ClassFeatureBlock` component — h2 heading with name/level/sep/sourcebook + entry-description into shared component; must receive and propagate Astro scoped CSS | V48,V49,I.class-family |
-| T64 | .      | Extract `ArchetypeSwapper` as standalone component — TomSelect multi-select, conflict detection, replaced/altered hot-swap, table + ToC updates, all archetype-injection CSS; exposes data via props + script slot | V48,V49,V50,I.archetype |
-| T65 | .      | Unify `[system]/classes/[class].astro` — collapse might/power/guile copies into single `src/pages/[system]/classes/[class].astro`; use SYSTEMS registry for all system-specific strings | V48,V53,T61,T62,T63,T64 |
-| T66 | .      | Unify `[system]/classes/[class]/[archetype].astro` — collapse 3 copies into single dynamic route | V48,V53,T63 |
-| T67 | .      | Unify `[system]/classes/[class]/traits/[trait].astro` — collapse 3 copies | V48,V53 |
-| T68 | .      | Unify `[system]/[sphere]/index.astro` — collapse 3 copies | V48,V53 |
-| T69 | .      | Unify `[system]/[sphere]/[talent].astro` — collapse 3 copies | V48,V53 |
-| T70 | .      | Unify `[system]/[sphere]/feats/[feat].astro` — collapse 3 copies | V48,V53 |
-| T71 | .      | Unify `[system]/index.astro` — collapse 3 copies | V48,V53 |
+| T61 | x      | Extract `ClassProgressionTable` component — 80-line level-grid table + CSS out of `[class].astro` into shared component; accepts `cls`, `featuresByLevel`, and `tableRows` props | V48,V49,I.class-family |
+| T62 | x      | Extract `TraitCatalogSection` component — collapsible trait toggle + catalog grid out of `[class].astro` into shared component | V48,V49,I.class-family |
+| T63 | x      | Extract `ClassFeatureBlock` component — h2 heading with name/level/sep/sourcebook + entry-description into shared component; must receive and propagate Astro scoped CSS | V48,V49,I.class-family |
+| T64 | x      | Extract `ArchetypeSwapper` as standalone component — TomSelect multi-select, conflict detection, replaced/altered hot-swap, table + ToC updates, all archetype-injection CSS; exposes data via props + script slot | V48,V49,V50,I.archetype |
+| T65 | x      | Unify `[system]/classes/[class].astro` — collapse might/power/guile copies into single `src/pages/[system]/classes/[class].astro`; use SYSTEMS registry for all system-specific strings | V48,V53,T61,T62,T63,T64 |
+| T66 | x      | Unify `[system]/classes/[class]/[archetype].astro` — collapse 3 copies into single dynamic route | V48,V53,T63 |
+| T67 | x      | Unify `[system]/classes/[class]/traits/[trait].astro` — collapse 3 copies | V48,V53 |
+| T68 | x      | Unify `[system]/[sphere]/index.astro` — collapse 3 copies | V48,V53 |
+| T69 | x      | Unify `[system]/[sphere]/[talent].astro` — collapse 3 copies | V48,V53 |
+| T70 | x      | Unify `[system]/[sphere]/feats/[feat].astro` — collapse 3 copies | V48,V53 |
+| T71 | x      | Unify `[system]/index.astro` — collapse 3 copies | V48,V53 |
 | T72 | .      | Audit all pages for inline TagBadge reimplementation — replace with TagBadge component | V49,V51 |
 | T73 | .      | Author 2 missing Power sphere pages from old wiki source: Bear, Technomancy | V1,V55,I.pages |
 | T74 | .      | Author 7 missing Power talents: Death/Curse, Mana/Bulwark, Mind/Disrupt Focus+Polyglot, Telekinesis/Flight, War/Commander, Fallen Fey/Ventriloquism | V55 |
@@ -400,11 +400,11 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T98 | .      | Add 5 missing rule notes/sidebars: Spellhacking/Dispel Checks+Hacking Instrument, Faction/New and Old Factions+Authority and Responsibility, Performance/Ally Coordination | V55 |
 | T99 | .      | Cross-system completeness verification — re-run full audit after T73-T98; confirm 0 genuine gaps across all 64 spheres | V55 |
 | T100 | .      | Add slug validation script — reject hex-prefix slugs (`^993300`, color codes) at schema or build-check level | V59 |
-| T101 | .      | Add TOC audit script — detect page-body headings with `id` attr missing from `data-toc-item` sidebar entries | V57 |
-| T102 | .      | Add cross-sphere feat audit script — detect feats present on 1 sphere page but absent from another that references them | V58 |
+| T101 | x      | Add TOC audit script — detect page-body headings with `id` attr missing from `data-toc-item` sidebar entries | V57 |
+| T102 | x      | Add cross-sphere feat audit script — detect feats present on 1 sphere page but absent from another that references them | V58 |
 | T103 | .      | Normalize `tier:"base"` → `[TalentName]` marker generation in Might export pipeline; verify all base abilities render via V31 markers | V31,V32,V56 |
 | T104 | .      | Unify dual-sphere: eliminate `dual-sphere` tag/`dualSphere` duplication. `dualSphere` field = single source of truth. Tag auto-derived by tags.ts. Support `dualSphere:"any"` for universal pairing (Manabond Versatility). See `docs/cavekit-dual-sphere-refactor.md` | V58 |
-| T105 | .      | Create generalized `TabbedContent.astro` component — supports rendering content from `.md` entries (via `render()`) OR custom `.astro` content via named slots. Reusable across the wiki. | V48,V49 |
+| T105 | x      | Create generalized `TabbedContent.astro` component — supports rendering content from `.md` entries (via `render()`) OR custom `.astro` content via named slots. Reusable across the wiki. | V48,V49 |
 | T106 | .      | Define custom schemas for `drawback`, `boon`, and `tradition` entries in `src/content.config.ts`. | I.content |
 | T107 | .      | Implement interactive Casting Tradition Builder component — cost calculation, validation, and export (Markdown/Foundry). | I.layout |
 
@@ -426,7 +426,7 @@ Then infra (T23→T24→T26→T27→T28→T29→T30→T31→T32).
 6. Verification: T99 (re-audit all 64 spheres → confirm 0 gaps)
 7. Refactor: T104 (unify dual-sphere into dualSphere field)
 
-Tasks T44–T50 carried from the legacy AGENTS.md spec: T45–T50 done; **T44 (FOUC audit) still open.**
+Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resolved via B17 + T33).
 
 ---
 
