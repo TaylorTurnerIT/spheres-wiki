@@ -13,7 +13,7 @@ if (!entry) {
     "Missing article entry: ultimate-spheres-of-power/articles/using-spheres-of-power.md",
   );
 }
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 const article = entry.data as ArticleEntry;
 
 const { bookMetaMap } = await resolveEntries();
@@ -22,6 +22,6 @@ const book = bookMetaMap.get("ultimate-spheres-of-power");
 const description =
   "How to use the Spheres of Power magic system: magic talents, caster level, casting ability modifier, spell points, save DCs, magic skill bonus, descriptors, transparency rules, and FAQ.";
 ---
-<ArticlePage article={article} book={book} description={description}>
+<ArticlePage article={article} book={book} description={description} headings={headings}>
   <Content />
 </ArticlePage>

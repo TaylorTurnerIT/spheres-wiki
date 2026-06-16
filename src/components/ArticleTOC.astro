@@ -1,35 +1,19 @@
 ---
-export interface TocItem {
-  id: string;
-  label: string;
-  sub?: Array<{ id: string; label: string }>;
-}
+import ArticleTocNode from './ArticleTocNode.astro';
+import type { TocNode } from '@/lib/articleToc';
 
 interface Props {
-  items: TocItem[];
+  items: TocNode[];
   system?: string;
 }
 
 const { items, system = 'power' } = Astro.props;
 ---
-<nav class="toc local-toc" aria-label="On this page" style={`--clr-system: var(--clr-${system})`}>
+<nav class="toc article-toc" aria-label="On this page" style={`--clr-system: var(--clr-${system})`}>
   <p class="toc-title">On This Page</p>
   <ul class="toc-list">
-    {items.map(cat => (
-      <li class="toc-category" data-toc-section={cat.id}>
-        <a href={`#${cat.id}`} class="toc-cat-link">
-          <span>{cat.label}</span>
-        </a>
-        {cat.sub && cat.sub.length > 0 && (
-          <div class="toc-sub-list">
-            <div class="toc-sub-inner">
-              {cat.sub.map(s => (
-                <a href={`#${s.id}`} data-toc-item={s.id}>{s.label}</a>
-              ))}
-            </div>
-          </div>
-        )}
-      </li>
+    {items.map(item => (
+      <ArticleTocNode node={item} isTop rootDepth={item.depth} />
     ))}
   </ul>
 </nav>
@@ -41,7 +25,6 @@ let activeScrollHandler: (() => void) | null = null;
 function initToc(nav: HTMLElement) {
   const getTargetElement = (id: string): HTMLElement | null => {
     try {
-      // Find the header element with the ID
       return document.getElementById(id);
     } catch {
       return null;
@@ -113,22 +96,22 @@ function initToc(nav: HTMLElement) {
 }
 
 // Global function to be called by TabbedContent
-(window as any).reinitLocalToc = () => {
+(window as any).reinitArticleToc = () => {
   activeObserver?.disconnect();
   if (activeScrollHandler) window.removeEventListener('scroll', activeScrollHandler);
 
-  const nav = document.querySelector<HTMLElement>('.local-toc');
+  const nav = document.querySelector<HTMLElement>('.article-toc');
   if (nav) initToc(nav);
 };
 
 document.addEventListener('astro:page-load', () => {
-  const nav = document.querySelector<HTMLElement>('.local-toc');
+  const nav = document.querySelector<HTMLElement>('.article-toc');
   if (nav) initToc(nav);
 });
 </script>
 
 <style>
-  .local-toc {
+  .article-toc {
     margin-bottom: 1.5rem;
     position: static;
     width: 100%;
