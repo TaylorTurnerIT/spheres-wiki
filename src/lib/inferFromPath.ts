@@ -173,7 +173,7 @@ function resolveClassFlat(
   if (parts.length === 2) {
     if (s0 === "classes") return withSystem({ type: "class", id: s1 });
     if (s0 === "class-features")
-      return withSystem({ type: "class-feature", className: s1, id: s2 });
+      return withSystem({ type: "class-feature", id: s1 });
   }
   if (parts.length === 3) {
     if (s0 === "class-features")
