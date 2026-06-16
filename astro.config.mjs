@@ -33,6 +33,9 @@ export default defineConfig({
   },
   integrations: [sitemap()],
   vite: {
+    css: {
+      transformer: "lightningcss",
+    },
     plugins: [yamlPlugin],
     server: {
       watch: {
