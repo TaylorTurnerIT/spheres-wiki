@@ -131,7 +131,7 @@ Adding content the supported way:
 |------|----------------|
 | `src/content.config.ts` | `entrySchema` (Zod) + auto-discovery of book collections |
 | `src/lib/inferFromPath.ts` | derives `type`/`sphere`/`system` from a content file's path |
-| `src/lib/resolveEntries.ts` | builds `ResolvedMaps`, applies errata patches, links entries |
+| `src/lib/resolveEntries.ts` | builds `ResolvedMaps`, applies errata patches, links entries; exports `getCollEntriesMap()` for cached raw Astro entries |
 | `src/lib/categorize.ts` | groups a sphere's talents/feats into display sections (+ "Other") |
 | `src/lib/url.ts` | base-path-aware link helper — **use `url()` for every internal link** (SPEC C2) |
 | `src/lib/remarkEntryLinks.ts` | remark plugin turning entry references into links during markdown build |
@@ -155,6 +155,9 @@ Adding content the supported way:
 - **Class trait rendering**: Traits use the `.talent-header` pattern (top row: name + source; bottom row: `TagBadge` components via `buildOrderedTagIds()`). The `class-trait` tag is auto-injected — never hardcode a label span.
 - **Prerequisites**: On trait entries, `requires` frontmatter renders as `**Prerequisites:** {req}` below the heading — never inline `(requires ...)`.
 - **ACFs**: Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. They use `archetypeId: {class}-alternate-class-features` (virtual — no content file).
+- **Build concurrency — two rules to follow in `getStaticPaths()`:**
+  1. Never loop `BOOK_COLLECTIONS` with sequential `await getCollection()`. Use `getCollEntriesMap()` from `resolveEntries.ts` instead — it is built in the same parallel pass as `resolveEntries()` and shared across all page files.
+  2. When multiple independent async operations must run locally (e.g. `render()` calls for a set of entries), wrap them in `Promise.all([...])` rather than `await`-ing each in a loop.
 
 ## Scripts & content pipeline
 

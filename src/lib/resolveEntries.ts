@@ -135,6 +135,23 @@ export function buildResolvedMaps(
  * Cannot be called in vitest tests (depends on Astro runtime).
  */
 let resolveEntriesCache: ResolvedMaps | null = null;
+// Keyed "type:id" → raw Astro entry; populated in the same pass as resolveEntriesCache.
+let collEntriesCache: Map<string, any> | null = null;
+
+/**
+ * Returns a map of "type:id" → raw Astro collection entry (for render()).
+ * Built in the same single-pass fetch as resolveEntries() — no second scan.
+ * Always await resolveEntries() before this to warm the cache on first call.
+ *
+ * CONCURRENCY NOTE: prefer getCollEntriesMap() over looping BOOK_COLLECTIONS
+ * with getCollection() in getStaticPaths(). The per-page loop is sequential
+ * and runs once per page file; this cache runs once per build.
+ */
+export async function getCollEntriesMap(): Promise<Map<string, any>> {
+  if (collEntriesCache) return collEntriesCache;
+  await resolveEntries();
+  return collEntriesCache!;
+}
 
 export async function resolveEntries(): Promise<ResolvedMaps> {
   if (resolveEntriesCache) return resolveEntriesCache;
@@ -165,18 +182,25 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
     rawTagEntries: RawTagEntry[];
   }> = [];
 
-  for (const collectionSlug of bookMetaMap.keys()) {
+  // Fetch all 71+ book collections in parallel — eliminates sequential per-book await chain.
+  const fetched = await Promise.all(
+    [...bookMetaMap.keys()].map(async (slug) => {
+      try {
+        return { slug, entries: await getCollection(slug as any) };
+      } catch {
+        return {
+          slug,
+          entries: [] as Awaited<ReturnType<typeof getCollection>>,
+        };
+      }
+    }),
+  );
+
+  const collEntries = new Map<string, any>();
+
+  for (const { slug: collectionSlug, entries: rawEntries } of fetched) {
     const meta = bookMetaMap.get(collectionSlug);
     const publishedDate = meta?.publishedDate ?? "1970-01-01";
-
-    let rawEntries: Awaited<ReturnType<typeof getCollection>>;
-    try {
-      rawEntries = await getCollection(collectionSlug as any);
-    } catch {
-      // Collection directory may not exist yet for a listed-but-empty book
-      rawEntries = [];
-    }
-
     const bookSystem = meta?.system;
 
     const tagEntriesForBook: RawTagEntry[] = [];
@@ -200,6 +224,11 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       } else if (effectiveType !== undefined) {
         contentEntriesForBook.push(merged as AnyEntry);
       }
+
+      // Populate collEntriesCache for getCollEntriesMap() — avoids re-fetching in getStaticPaths().
+      if (effectiveType !== undefined) {
+        collEntries.set(`${effectiveType}:${raw.id as string}`, e);
+      }
     }
 
     tagEntriesByBook.push({
@@ -212,6 +241,8 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       entries: contentEntriesForBook,
     });
   }
+
+  collEntriesCache = collEntries;
 
   const tagMap = buildTagMap(tagEntriesByBook);
 

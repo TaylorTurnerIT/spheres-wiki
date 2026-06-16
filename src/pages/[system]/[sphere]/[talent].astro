@@ -4,8 +4,7 @@ import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import TagBadge from '@/components/TagBadge.astro';
-import { resolveEntries } from '@/lib/resolveEntries';
-import { BOOK_COLLECTIONS } from '@/content.config';
+import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { TalentEntry, SphereEntry, BookMeta, TagEntry } from '@/lib/types';
@@ -20,20 +19,8 @@ interface Props {
 }
 
 export async function getStaticPaths() {
-  const { getCollection } = await import('astro:content');
   const { talentMap, sphereMap, bookMetaMap, tagMap } = await resolveEntries();
-
-  const allCollEntries = new Map<string, any>();
-  for (const slug of BOOK_COLLECTIONS) {
-    try {
-      const entries = await getCollection(slug as any);
-      for (const e of entries) {
-        if ((e.data as any).type !== 'tag') {
-          allCollEntries.set(`${(e.data as any).type}:${(e.data as any).id}`, e);
-        }
-      }
-    } catch {}
-  }
+  const allCollEntries = await getCollEntriesMap();
 
   const paths = [];
 

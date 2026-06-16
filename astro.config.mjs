@@ -33,6 +33,11 @@ export default defineConfig({
     ],
   },
   integrations: [sitemap()],
+  // CONCURRENCY NOTE: parallel page rendering — raise if build machine has more cores.
+  // getStaticPaths() runs once per page file; concurrency controls simultaneous page renders.
+  build: {
+    concurrency: 4,
+  },
   vite: {
     css: {
       transformer: "lightningcss",

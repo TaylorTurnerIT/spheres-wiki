@@ -3,8 +3,7 @@ import { render } from 'astro:content';
 import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
-import { resolveEntries } from "@/lib/resolveEntries";
-import { BOOK_COLLECTIONS } from "@/content.config";
+import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
 import { buildOrderedTagIds } from "@/lib/tags";
 import type { TagEntry, BookMeta } from "@/lib/types";
 
@@ -35,21 +34,9 @@ interface Props {
 }
 
 export async function getStaticPaths() {
-  const { getCollection } = await import("astro:content");
   const { tagMap, talentMap, featMap, sphereMap, bookMetaMap } =
     await resolveEntries();
-
-  const tagCollEntries = new Map<string, any>();
-  for (const slug of BOOK_COLLECTIONS) {
-    try {
-      const entries = await getCollection(slug as any);
-      for (const e of entries) {
-        if ((e.data as any).type === "tag") {
-          tagCollEntries.set((e.data as any).id, e);
-        }
-      }
-    } catch {}
-  }
+  const allCollEntries = await getCollEntriesMap();
 
   const SYSTEM_LABELS: Record<string, string> = {
     power: "Spheres of Power",
@@ -141,7 +128,7 @@ export async function getStaticPaths() {
       props: {
         tag,
         groups,
-        collEntry: tagCollEntries.get(tag.id),
+        collEntry: allCollEntries.get(`tag:${tag.id}`),
         bookTitle:
           tag.sourceBook === "__built-in__"
             ? "Built-in"
