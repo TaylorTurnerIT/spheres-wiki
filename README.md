@@ -1,7 +1,7 @@
 # Spheres Wiki (BETA)
 
 Static reference wiki for the Spheres tabletop RPG system by Drop Dead Studios.
-Built with Astro 4.x + TypeScript. Replaces the existing Wikidot site with a fast, searchable static experience.
+Built with Astro 6.x + TypeScript. Replaces the existing Wikidot site with a fast, searchable static experience.
 
 ## Status: Beta
 The website is currently in **Beta**. Some content and functionality may be incomplete.
@@ -49,25 +49,22 @@ All game content lives in `src/content/`. The system uses a dynamic discovery me
 
 ### Creating a New Book
 1. Create a directory in `src/content/` (e.g., `src/content/my-book/`).
-2. Add a `_book.yaml` in that directory:
+2. Add a `_book.yaml` in that directory (slug is derived from the folder name — do not add it here):
    ```yaml
    title: "My Book"
    publisher: "Drop Dead Studios"
-   slug: my-book
    publishedDate: "2024-01-01"
    price: "$19.99"
    buyUrl: "https://..."
    ```
-3. Add entries as Markdown files with frontmatter in subdirectories (spheres, talents, feats, classes).
+3. Add entries as Markdown files under `{system}/spheres/`, `{system}/feats/`, etc.
 
 ### Frontmatter Example
+`type`, `system`, and `sourceBook` are all inferred from the file path — do not add them to frontmatter.
 ```yaml
 ---
 id: my-talent
 name: My Talent
-system: power
-sourceBook: my-book
-type: talent
 sphere: alteration
 tier: basic
 tags: ["transformation", "utility"]
@@ -78,21 +75,24 @@ Talent description goes here...
 ## Project Structure
 ```
 src/
-  config/site.ts          site title, nav links, featured release, namespace color tokens
+  config/site.ts          SYSTEMS registry — single source of truth for system metadata (label, color, route)
+  content.config.ts       Zod entry schema + auto-discovery of book collections
   content/
-    config.ts             Zod schema and collection discovery
-    */_book.yaml          book-level metadata
-    */{type}/*.md         individual content entries
+    */_book.yaml          book-level metadata (title, publisher, publishedDate, price?, buyUrl?)
+    */{system}/{type}/*.md  individual content entries (type/system inferred from path)
   components/
-    SVGSprite.astro        all sphere icon symbols (60+)
+    SVGSprite.astro        all sphere icon symbols
     BetaToast.astro        dismissible beta notification
   layouts/
-    WikiPage.astro         header + sidebar + tab nav + content slot (marks indexing scope)
+    WikiPage.astro         header + sidebar + tab nav + content slot (marks Pagefind indexing scope)
   lib/
-    resolveEntries.ts      content resolution and linking logic
-    url.ts                 base path aware link helper
+    resolveEntries.ts      content resolution, errata patching, build-time cache (resolveEntries, getCollEntriesMap)
+    inferFromPath.ts       derives type/sphere/system from a content file's path
+    categorize.ts          groups sphere talents/feats into display sections
+    tags.ts                buildOrderedTagIds — auto-injects system/tier tags, sorts by priority
+    url.ts                 base-path-aware link helper (use for every internal link)
   styles/
-    global.css             design tokens, search results, and layout styles
+    global.css             design tokens, layout, per-system theming via --clr-ns
 ```
 
 ## Progress
