@@ -1,3 +1,8 @@
+# Project Context
+@AGENTS.md
+@SPEC.md
+@DESIGN.md
+
 # AGENTS.md — Spheres Wiki
 
 Orientation for AI agents and new contributors working in this repo. This file explains **how the project is laid out and how to work in it**. For **what the project must do** — goal, constraints, interface contracts, invariants, the task backlog, and the bug log — read [`SPEC.md`](./SPEC.md), which is the source of truth. When code and SPEC.md disagree, that is a bug to reconcile.
@@ -28,14 +33,12 @@ npm run build          # validate.mjs → astro build → pagefind index (output
 npm run preview        # serve the production build locally
 npm run validate       # content validation only (scripts/validate.mjs)
 npm test               # unit tests (Vitest)
-npm run test:e2e       # end-to-end tests (Playwright)
-npm run test:all       # vitest + playwright
 npx astro check        # type check
 ```
 
-`just` wraps the common ones: `just run` (the default) = `test → validate → build → preview`; also `just test`, `just validate`, `just build`, `just preview`.
+`just` wraps the common ones: `just run` (the default) = `test → validate → build → preview`; also `just test`, `just validate`, `just build`, `just preview`. When running code, 
 
-CI (`.github/workflows/`): `test.yml` runs Vitest + content validation on push/PR (Playwright e2e is currently commented out); `deploy.yml` builds and publishes to GitHub Pages on push to `main`.
+CI (`.github/workflows/`): `test.yml` runs Vitest + content validation on push/PR; `deploy.yml` builds and publishes to GitHub Pages on push to `main`.
 
 ## Repository layout
 
@@ -56,7 +59,6 @@ src/
 scripts/              content ETL + validators (Wikidot parsing, tag/link/v2 checks)
 tests/
   lib/                Vitest unit tests
-  e2e/                Playwright tests (routes, a11y, search, meta, performance, ...)
 public/               static passthrough (robots.txt, etc.)
 docs/                 supporting docs
 ```
