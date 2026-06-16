@@ -14,35 +14,34 @@ The website is currently in **Beta**. Some content and functionality may be inco
 - **View Transitions**: Seamless page navigation using Astro's View Transitions.
 
 ## Prerequisites
-- Node.js ≥ 22.12.0
-- npm
+- Bun ≥ 1.1.0
 
 ## Setup
 ```bash
-npm install
+bun install
 ```
 
 ## Development
 ```bash
 # Start dev server
-npm run dev
+bun run dev
 # → http://localhost:4321
 
 # Run unit tests
-npm test
+bun run test
 
 # Type check
-npx astro check
+bunx astro check
 ```
 
 ## Production Build
 The build process automatically generates a search index using Pagefind.
 ```bash
-npm run build
+bun run build
 # output in dist/
 
 # Preview the build locally
-npm run preview
+bun run preview
 ```
 
 ## Adding Content

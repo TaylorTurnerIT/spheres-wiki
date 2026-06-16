@@ -28,15 +28,15 @@ The four player-facing systems are **Power**, **Might**, **Guile**, and **Champi
 ## Commands
 
 ```bash
-npm install            # setup
-npm run dev            # dev server → http://localhost:4321
-npm run build          # validate.mjs → check-base → fallow-audit → astro build → pagefind index (output: dist/)
-npm run preview        # serve the production build locally
-npm run validate       # content validation only (scripts/validate.mjs)
-npm run fallow         # run comprehensive codebase audit (dead code, health, duplication)
-npm run fallow-audit   # run build-blocking complexity/dead-code audit
-npm test               # unit tests (Vitest)
-npx astro check        # type check
+bun install            # setup
+bun run dev            # dev server → http://localhost:4321
+bun run build          # validate.mjs → check-base → fallow-audit → astro build → pagefind index (output: dist/)
+bun run preview        # serve the production build locally
+bun run validate       # content validation only (scripts/validate.mjs)
+bun run fallow         # run comprehensive codebase audit (dead code, health, duplication)
+bun run fallow-audit   # run build-blocking complexity/dead-code audit
+bun run test           # unit tests (Vitest)
+bunx astro check       # type check
 ```
 
 `just` wraps the common ones: `just run` (the default) = `test → validate → build → preview`; also `just test`, `just validate`, `just build`, `just preview`. When running code, 

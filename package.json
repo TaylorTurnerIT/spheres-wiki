@@ -7,18 +7,18 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "postinstall": "node scripts/patch-fontsource.mjs",
-    "build": "node scripts/validate.mjs && node scripts/check-base-abilities.mjs && npm run fallow-audit && astro build && pagefind --site dist && node scripts/check-toc.mjs",
+    "postinstall": "bun scripts/patch-fontsource.mjs",
+    "build": "bun scripts/validate.mjs && bun scripts/check-base-abilities.mjs && bun run fallow-audit && astro build && pagefind --site dist && bun scripts/check-toc.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",
-    "validate": "node scripts/validate.mjs",
+    "validate": "bun scripts/validate.mjs",
     "fallow": "fallow",
     "fallow-audit": "fallow audit --max-crap 30 --fail-on-issues --explain",
-    "check-base": "node scripts/check-base-abilities.mjs",
-    "check-cross": "node scripts/check-cross-sphere.mjs",
-    "check-toc": "node scripts/check-toc.mjs",
-    "audit": "node scripts/validate.mjs && node scripts/check-base-abilities.mjs && node scripts/check-cross-sphere.mjs"
+    "check-base": "bun scripts/check-base-abilities.mjs",
+    "check-cross": "bun scripts/check-cross-sphere.mjs",
+    "check-toc": "bun scripts/check-toc.mjs",
+    "audit": "bun scripts/validate.mjs && bun scripts/check-base-abilities.mjs && bun scripts/check-cross-sphere.mjs"
   },
   "dependencies": {
     "@fontsource/cinzel": "^5.2.8",
