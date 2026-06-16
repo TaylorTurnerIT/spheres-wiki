@@ -3,6 +3,7 @@
 @SPEC.md
 @DESIGN.md
 @FALLOW_GUIDE.md
+@docs/lessons-learned.md
 
 # AGENTS.md — Spheres Wiki
 
@@ -165,6 +166,7 @@ Adding content the supported way:
 - `validate.mjs` (runs in `npm run build`), plus `validate-tags.mjs`, `validate-v2.mjs`, `check-links.mjs`, `purge-dead-links.mjs`
 - parsers/generators: `parse-wiki.mjs`, `class-parser.mjs`, `archetype-parser.mjs`, `generate-tags.mjs`, `generate-bestial-traits.mjs`, `catalog.mjs`, `migrate-to-nested.mjs`, `download_covers.py`
 - See `scripts/PARSE-WIKI.md` for the parsing workflow.
+- See `docs/lessons-learned.md` for recent operational lessons from performance, Biome, and Fallow fixes.
 
 ## Might sphere migration (Wikidot → Markdown)
 
