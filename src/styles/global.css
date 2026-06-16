@@ -1101,11 +1101,6 @@ h6 {
   text-transform: uppercase;
   color: var(--clr-muted);
 }
-.home-store .store-card {
-  flex: none;
-  max-width: 160px;
-  width: 160px;
-}
 .shop-btn {
   display: inline-flex;
   align-items: center;
@@ -1817,6 +1812,11 @@ h6 {
   text-decoration: none;
   color: inherit;
 }
+.home-store .store-card {
+  flex: none;
+  max-width: 160px;
+  width: 160px;
+}
 .store-card.is-link {
   cursor: pointer;
 }
@@ -1905,9 +1905,6 @@ h6 {
   box-shadow: 0 4px 8px -2px rgba(22, 90, 28, 0.3);
 }
 
-/* ── Inner page responsive additions ────────────────────── */
-@media (max-width: 1024px) {
-}
 @media (max-width: 768px) {
   .entry-grid {
     grid-template-columns: 1fr;
@@ -2215,11 +2212,6 @@ h6 {
   opacity: 1;
   transform: translateX(3px);
 }
-.gs-card:hover .gs-card-title {
-  text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--clr-ns) 35%, transparent);
-  text-underline-offset: 3px;
-}
 .gs-card-icon {
   display: none;
 }
@@ -2234,6 +2226,11 @@ h6 {
   font-weight: 700;
   color: var(--clr-ns);
   line-height: 1.4;
+}
+.gs-card:hover .gs-card-title {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--clr-ns) 35%, transparent);
+  text-underline-offset: 3px;
 }
 .gs-card-desc {
   font-family: var(--font-body);

@@ -2,6 +2,8 @@
 import { inferFromPath } from "./inferFromPath";
 import type {
   AnyEntry,
+  ArchetypeEntry,
+  ArchetypeFeatureEntry,
   ArticleEntry,
   BookMeta,
   ClassEntry,
@@ -44,18 +46,21 @@ type EntryMaps = Pick<
 >;
 
 const TYPE_TO_MAP_KEY: Partial<Record<string, keyof EntryMaps>> = {
-  "sphere":            "sphereMap",
-  "talent":            "talentMap",
-  "feat":              "featMap",
-  "class":             "classMap",
-  "class-feature":     "classFeatureMap",
-  "class-trait":       "classTraitMap",
-  "article":           "articleMap",
-  "archetype":         "archetypeMap",
+  sphere: "sphereMap",
+  talent: "talentMap",
+  feat: "featMap",
+  class: "classMap",
+  "class-feature": "classFeatureMap",
+  "class-trait": "classTraitMap",
+  article: "articleMap",
+  archetype: "archetypeMap",
   "archetype-feature": "archetypeFeatureMap",
 };
 
-function getTypedMap(type: string, maps: EntryMaps): Map<EntryKey, any> | undefined {
+function getTypedMap(
+  type: string,
+  maps: EntryMaps,
+): Map<EntryKey, any> | undefined {
   const key = TYPE_TO_MAP_KEY[type];
   return key ? maps[key] : undefined;
 }
@@ -64,11 +69,22 @@ function storeEntry(entry: AnyEntry, key: EntryKey, maps: EntryMaps): void {
   getTypedMap(entry.type, maps)?.set(key, entry);
 }
 
-function applyPatch(patch: AnyEntry, targetKey: EntryKey, maps: EntryMaps): void {
-  const { modifies: _m, id: _i, ...fieldsToMerge } = patch as AnyEntry & { modifies?: string };
+function applyPatch(
+  patch: AnyEntry,
+  targetKey: EntryKey,
+  maps: EntryMaps,
+): void {
+  const {
+    modifies: _m,
+    id: _i,
+    ...fieldsToMerge
+  } = patch as AnyEntry & { modifies?: string };
   const map = getTypedMap(patch.type, maps);
-  if (map?.has(targetKey)) {
-    map.set(targetKey, { ...map.get(targetKey)!, ...fieldsToMerge });
+  if (!map) return;
+
+  const existing = map.get(targetKey);
+  if (existing) {
+    map.set(targetKey, { ...existing, ...fieldsToMerge });
   }
 }
 
@@ -111,14 +127,14 @@ export function buildResolvedMaps(
   );
 
   const entryMaps: EntryMaps = {
-    sphereMap:           new Map<EntryKey, SphereEntry>(),
-    talentMap:           new Map<EntryKey, TalentEntry>(),
-    featMap:             new Map<EntryKey, FeatEntry>(),
-    classMap:            new Map<EntryKey, ClassEntry>(),
-    classFeatureMap:     new Map<EntryKey, ClassFeatureEntry>(),
-    classTraitMap:       new Map<EntryKey, ClassTraitEntry>(),
-    articleMap:          new Map<EntryKey, ArticleEntry>(),
-    archetypeMap:        new Map<EntryKey, ArchetypeEntry>(),
+    sphereMap: new Map<EntryKey, SphereEntry>(),
+    talentMap: new Map<EntryKey, TalentEntry>(),
+    featMap: new Map<EntryKey, FeatEntry>(),
+    classMap: new Map<EntryKey, ClassEntry>(),
+    classFeatureMap: new Map<EntryKey, ClassFeatureEntry>(),
+    classTraitMap: new Map<EntryKey, ClassTraitEntry>(),
+    articleMap: new Map<EntryKey, ArticleEntry>(),
+    archetypeMap: new Map<EntryKey, ArchetypeEntry>(),
     archetypeFeatureMap: new Map<EntryKey, ArchetypeFeatureEntry>(),
   };
   const entrySourceBook = new Map<EntryKey, string>();
@@ -159,7 +175,10 @@ let collEntriesCache: Map<string, any> | null = null;
 export async function getCollEntriesMap(): Promise<Map<string, any>> {
   if (collEntriesCache) return collEntriesCache;
   await resolveEntries();
-  return collEntriesCache!;
+  if (!collEntriesCache) {
+    throw new Error("Collection entries cache was not initialized");
+  }
+  return collEntriesCache;
 }
 
 export async function resolveEntries(): Promise<ResolvedMaps> {
@@ -179,7 +198,10 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       try {
         return { slug, entries: await getCollection(slug as any) };
       } catch {
-        return { slug, entries: [] as Awaited<ReturnType<typeof getCollection>> };
+        return {
+          slug,
+          entries: [] as Awaited<ReturnType<typeof getCollection>>,
+        };
       }
     }),
   );
@@ -194,7 +216,11 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
     processed.map((p) => ({ slug: p.slug, rawTagEntries: p.tagEntries })),
   );
   const maps = buildResolvedMaps(
-    processed.map((p) => ({ slug: p.slug, publishedDate: p.publishedDate, entries: p.contentEntries })),
+    processed.map((p) => ({
+      slug: p.slug,
+      publishedDate: p.publishedDate,
+      entries: p.contentEntries,
+    })),
   );
 
   injectSphereTags(maps.sphereMap, tagMap);
@@ -210,7 +236,8 @@ function buildBookMetaMap(
 ): Map<string, BookMeta> {
   const map = new Map<string, BookMeta>();
   for (const [path, mod] of Object.entries(modules)) {
-    const slug = path.split("/").at(-2)!;
+    const slug = path.split("/").at(-2);
+    if (!slug) continue;
     map.set(slug, { slug, ...mod.default });
   }
   return map;
@@ -231,7 +258,8 @@ function processBookEntries(
 ): ProcessedBook {
   const publishedDate = meta?.publishedDate ?? "1970-01-01";
   // Hoist system overlay so the ternary isn't inside the per-entry loop.
-  const systemOverlay = meta?.system !== undefined ? { system: meta.system } : {};
+  const systemOverlay =
+    meta?.system !== undefined ? { system: meta.system } : {};
   const tagEntries: RawTagEntry[] = [];
   const contentEntries: AnyEntry[] = [];
   const collEntries: Array<[string, any]> = [];

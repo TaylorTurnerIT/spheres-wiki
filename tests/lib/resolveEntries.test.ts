@@ -118,9 +118,12 @@ describe("buildResolvedMaps", () => {
 
   it("errata patch does not leak modifies field onto resolved entry", () => {
     const maps = buildResolvedMaps([baseBook, errataBook]);
-    const resolved = maps.talentMap.get("talent:alter-shape")!;
-    expect((resolved as Record<string, unknown>).modifies).toBeUndefined();
-    expect(resolved.id).toBe("alter-shape");
+    const resolved = maps.talentMap.get("talent:alter-shape");
+    expect(resolved).toBeDefined();
+    expect(
+      (resolved as Record<string, unknown> | undefined)?.modifies,
+    ).toBeUndefined();
+    expect(resolved?.id).toBe("alter-shape");
   });
 
   it("silently skips errata patch when base entry does not exist", () => {
@@ -212,9 +215,12 @@ describe("classFeatureMap and classTraitMap", () => {
 
   it("stores level as array when provided as array", () => {
     const maps = buildResolvedMaps([bookWithFeatures]);
-    const f = maps.classFeatureMap.get("class-feature:shifter-bestial-trait")!;
-    expect(Array.isArray(f.level)).toBe(true);
-    expect((f.level as number[])[0]).toBe(2);
+    const feature = maps.classFeatureMap.get(
+      "class-feature:shifter-bestial-trait",
+    );
+    const level = feature?.level;
+    expect(Array.isArray(level)).toBe(true);
+    expect((level as number[])[0]).toBe(2);
   });
 
   it('adds class-trait entries under "class-trait:id" key', () => {
