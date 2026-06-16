@@ -1,13 +1,11 @@
 import { visit } from 'unist-util-visit';
+import { EXCLUDE_SENTINEL } from './articleToc';
 
 export default function remarkStripTocFlags() {
-  return (tree) => {
-    visit(tree, 'heading', (node) => {
-      visit(node, 'text', (textNode) => {
-        textNode.value = textNode.value
-          .replace(/\{.toc-include\}/g, '')
-          .replace(/\{.toc-exclude\}/g, '')
-          .trim();
+  return (tree: any) => {
+    visit(tree, 'heading', (node: any) => {
+      visit(node, 'text', (textNode: any) => {
+        textNode.value = textNode.value.replace(/\{\.toc-exclude\}\s*/g, EXCLUDE_SENTINEL);
       });
     });
   };
