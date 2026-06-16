@@ -1,7 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content';
-import LocalToc from '@/components/LocalToc.astro';
-import type { TocItem } from '@/components/LocalToc.astro';
+import ArticleTOC from '@/components/ArticleTOC.astro';
+import { buildTocTree, type TocNode } from '@/lib/articleToc';
 
 interface Tab {
   label: string;
@@ -25,7 +25,7 @@ const initialTab = defaultTab || tabs[0].slug;
 const renderedTabs = await Promise.all(
   tabs.map(async (tab) => {
     let Content = null;
-    let tocItems: TocItem[] = [];
+    let tocItems: TocNode[] = [];
 
     if (tab.articleId && tab.collection) {
       const entry = await getEntry(tab.collection as any, tab.articleId);
@@ -34,22 +34,7 @@ const renderedTabs = await Promise.all(
         Content = RenderedContent;
 
         if (tab.showToc) {
-          let currentCat: TocItem | null = null;
-          for (const h of headings) {
-            if (h.text.includes('{.toc-exclude}')) continue;
-
-            const label = h.text
-              .replace('{.toc-include}', '')
-              .replace('{.toc-exclude}', '')
-              .trim();
-
-            if (h.depth === 2) {
-              currentCat = { id: h.slug, label, sub: [] };
-              tocItems.push(currentCat);
-            } else if (h.depth === 3 && currentCat) {
-              currentCat.sub?.push({ id: h.slug, label });
-            }
-          }
+          tocItems = buildTocTree(headings);
         }
       }
     }
@@ -91,7 +76,7 @@ const renderedTabs = await Promise.all(
         >
           {/* TOC template for sidebar injection */}
           <template data-toc-template={tab.slug}>
-             {tocItems.length > 0 && <LocalToc items={tocItems} system={system} />}
+             {tocItems.length > 0 && <ArticleTOC items={tocItems} system={system} />}
           </template>
           {Content ? <Content /> : <Fragment set:html={await Astro.slots.render(tab.slug)} />}
         </div>
@@ -121,7 +106,7 @@ const renderedTabs = await Promise.all(
       });
 
       if (sidebar) {
-        const oldToc = sidebar.querySelector('.local-toc');
+        const oldToc = sidebar.querySelector('.article-toc');
         if (oldToc) oldToc.remove();
 
         const template = container.querySelector(`template[data-toc-template="${slug}"]`) as HTMLTemplateElement;
@@ -129,8 +114,8 @@ const renderedTabs = await Promise.all(
            const clone = template.content.cloneNode(true);
            sidebar.prepend(clone);
            // Re-init TOC highlight logic
-           if ((window as any).reinitLocalToc) {
-             (window as any).reinitLocalToc();
+           if ((window as any).reinitArticleToc) {
+             (window as any).reinitArticleToc();
            }
         }
       }

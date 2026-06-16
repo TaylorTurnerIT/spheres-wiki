@@ -27,4 +27,13 @@ describe('ArticleTOC rename', () => {
     const content = read('src/styles/global.css');
     expect(content).not.toContain('.local-toc');
   });
+
+  it('TabbedContent.astro uses the shared buildTocTree and ArticleTOC, not the old per-tab depth-2/3 loop', () => {
+    const content = read('src/components/TabbedContent.astro');
+    expect(content).toContain("import { buildTocTree");
+    expect(content).toContain('<ArticleTOC');
+    expect(content).not.toContain('LocalToc');
+    expect(content).not.toContain("h.depth === 2");
+    expect(content).not.toContain('reinitLocalToc');
+  });
 });
