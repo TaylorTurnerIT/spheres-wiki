@@ -45,4 +45,4 @@ const defaultRevealLabel = type === 'email' ? 'Show email address' : `Show invit
   ? <button id={uid} class={`sp-reveal-btn${cls ? ' ' + cls : ''}`}>{revealLabel ?? defaultRevealLabel}</button>
   : <span id={uid}></span>
 }
-<script set:html={script}></script>
+<script is:inline set:html={script}></script>

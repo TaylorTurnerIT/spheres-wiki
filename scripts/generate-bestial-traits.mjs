@@ -50,15 +50,6 @@ const LOWERCASE_WORDS = new Set([
   "as",
 ]);
 
-const _SOURCE_MAP = {
-  Apoc: "Spheres Apocrypha: Apex Shifter",
-  Origin: "Spheres of Origin",
-  "Alienist HB": "The Alienist's Handbook",
-  BTH: "Beast Tamer's Handbook",
-  CotS: "Champions of the Spheres",
-  DRS: "Drop Dead Studios",
-};
-
 // ─── Parse the raw Wikidot source ────────────────────────────────────────────
 
 const rawText = readFileSync(join(ROOT, "shifter-class.md"), "utf-8");

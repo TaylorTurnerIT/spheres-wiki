@@ -1,5 +1,6 @@
 // astro.config.mjs
 
+import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 import { parse as parseYaml } from "yaml";
@@ -27,10 +28,12 @@ export default defineConfig({
     defaultStrategy: "hover",
   },
   markdown: {
-    remarkPlugins: [
-      [remarkEntryLinks, { base: "/spheres-wiki/" }],
-      remarkStripTocFlags,
-    ],
+    processor: unified({
+      remarkPlugins: [
+        [remarkEntryLinks, { base: "/spheres-wiki/" }],
+        remarkStripTocFlags,
+      ],
+    }),
   },
   integrations: [sitemap()],
   // CONCURRENCY NOTE: parallel page rendering — raise if build machine has more cores.

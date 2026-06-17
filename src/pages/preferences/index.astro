@@ -594,7 +594,7 @@ const STANDARD_TOGGLES = [
     }
 
     buttons.forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      btn.addEventListener('click', () => {
         const pref = btn.getAttribute('data-pref');
         if (!pref) return;
 

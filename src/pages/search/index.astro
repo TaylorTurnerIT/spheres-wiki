@@ -547,14 +547,6 @@ function makeOnChange(key: string) {
   };
 }
 
-function clearResults() {
-  document.getElementById('sp-results')!.innerHTML = '';
-  document.getElementById('sp-status')!.hidden = true;
-  document.getElementById('sp-load-more')!.hidden = true;
-  allData = [];
-  browseAll = false;
-}
-
 function initTomSelects(
   staticSpheres: string[],
   staticTags: { value: string; text: string }[]

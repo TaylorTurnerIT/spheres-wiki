@@ -323,12 +323,6 @@ function isCreatureContent(content) {
   );
 }
 
-function _hasClassFeatures(content) {
-  return /^\+\+\+?\s*(Class Features|Path Abilities|Class Abilities)/m.test(
-    content,
-  );
-}
-
 // ─── Classification ───────────────────────────────────────────────────────────
 
 function classifyFile(filename, content) {
@@ -656,7 +650,6 @@ function main() {
   const systemCounts = {};
   const parentCounts = {};
   const bookCounts = {};
-  const _unmappedBooks = new Set();
   const unmappedSystemParents = new Set();
 
   for (const entry of entries) {

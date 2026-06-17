@@ -30,6 +30,10 @@ const stubResolvers: EntryResolvers = {
   resolveFeat: (_name, _base) => null,
 };
 
+function filterLinks(nodes: any[] | null): any[] {
+  return (nodes ?? []).filter((n: any) => n.type === "link");
+}
+
 // ---------------------------------------------------------------------------
 // parsePrerequisiteText — unit tests (no I/O)
 // ---------------------------------------------------------------------------
@@ -81,8 +85,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     expect(nodes).not.toBeNull();
-    const links = nodes!.filter((n: any) => n.type === "link");
-    const urls = links.map((l: any) => l.url);
+    const urls = filterLinks(nodes).map((l: any) => l.url);
     expect(urls).toContain("/power/destruction/aligned-blast/");
     expect(urls).toContain("/power/destruction/energy-blast/");
   });
@@ -94,8 +97,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     expect(nodes).not.toBeNull();
-    const links = nodes!.filter((n: any) => n.type === "link");
-    const urls = links.map((l: any) => l.url);
+    const urls = filterLinks(nodes).map((l: any) => l.url);
     expect(urls).toContain("/power/destruction/aligned-blast/");
     expect(urls).toContain("/power/destruction/energy-blast/");
   });
@@ -108,8 +110,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     expect(nodes).not.toBeNull();
-    const links = nodes!.filter((n: any) => n.type === "link");
-    const urls = links.map((l: any) => l.url);
+    const urls = filterLinks(nodes).map((l: any) => l.url);
     expect(urls).toContain("/power/destruction/aligned-blast/");
     expect(urls).toContain("/power/destruction/energy-blast/");
     expect(urls).toContain("/power/destruction/blast/");
@@ -122,7 +123,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     // sphere itself should link; (Any) should not
-    const links = nodes?.filter((n: any) => n.type === "link") ?? [];
+    const links = filterLinks(nodes);
     expect(links.every((l: any) => l.children[0].value !== "Any")).toBe(true);
   });
 
@@ -133,7 +134,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       "/",
       stubResolvers,
     );
-    const links = nodes?.filter((n: any) => n.type === "link") ?? [];
+    const links = filterLinks(nodes);
     expect(links.every((l: any) => l.children[0].value !== "formulae")).toBe(
       true,
     );
@@ -145,7 +146,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       "/",
       stubResolvers,
     );
-    const links = nodes?.filter((n: any) => n.type === "link") ?? [];
+    const links = filterLinks(nodes);
     expect(links.every((l: any) => l.children[0].value !== "toxin")).toBe(true);
   });
 });

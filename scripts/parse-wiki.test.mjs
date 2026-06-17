@@ -38,7 +38,6 @@ const testConfig = {
 
 const basicCtx = { type: "talent", tier: "basic", sectionTags: [] };
 const featCtx = { type: "feat", tier: null, sectionTags: [] };
-const _bodyCtx = { type: "talent", tier: "basic", sectionTags: ["body"] };
 const advCtx = { type: "talent", tier: "advanced", sectionTags: [] };
 
 // ─── normalizeQuotes ──────────────────────────────────────────────────────────

@@ -1,4 +1,5 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "zod";
 import { EventEmitter } from "node:events";
 import { glob } from "astro/loaders";
 import { inferFromPath } from "./lib/inferFromPath";

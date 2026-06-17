@@ -533,9 +533,6 @@ document.addEventListener('astro:page-load', () => {
     // 12. Update ToC
     if (tocGroupContainer) {
       activeFeatures.forEach(af => {
-        const option = selectEl ? Array.from(selectEl.options).find(o => o.value === af.archetypeId) : null;
-        const arcName = option ? option.dataset.name! : af.archetypeId;
-
         af.replaces.forEach(baseId => {
           const tocItem = tocGroupContainer.querySelector<HTMLElement>(`[data-toc-section="${baseId}"]`);
           if (tocItem) {
