@@ -49,17 +49,9 @@ function resolveHeadings(categories: HTMLElement[]): HeadingEntry[] {
 }
 
 // ── Section visibility helpers ────────────────────────────────────
-function setCategoryHeight(cat: HTMLElement, isActive: boolean) {
-  const subList = cat.querySelector<HTMLElement>('.toc-sub-list');
-  const inner = cat.querySelector<HTMLElement>('.toc-sub-inner');
-  if (!subList || !inner) return;
-  subList.style.maxHeight = isActive ? String(inner.scrollHeight) + 'px' : '0';
-}
-
 function updateActiveSection(categories: HTMLElement[], active: HTMLElement | null) {
   for (const cat of categories) {
     cat.classList.toggle('is-active', cat === active);
-    setCategoryHeight(cat, cat === active);
   }
 }
 

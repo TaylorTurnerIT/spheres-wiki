@@ -2000,6 +2000,12 @@ h6 {
   overflow: hidden;
   transition: max-height 200ms ease;
 }
+/* Article TOC sub-lists are always open — no collapse animation */
+.article-toc .toc-sub-list {
+  max-height: none;
+  overflow: visible;
+  transition: none;
+}
 .toc-sub-inner {
   display: flex;
   flex-direction: column;
