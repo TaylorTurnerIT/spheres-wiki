@@ -2180,7 +2180,7 @@ h6 {
 }
 .gs-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 12px;
   margin-bottom: 20px;
 }
@@ -2189,8 +2189,12 @@ h6 {
   align-items: flex-start;
   gap: 7px;
   padding: 3px 0;
+  border: 0;
+  background: transparent;
   text-decoration: none;
   color: var(--clr-text);
+  font: inherit;
+  text-align: left;
   transition: color 0.12s ease;
 }
 .gs-card::before {
@@ -2200,19 +2204,24 @@ h6 {
   opacity: 0.55;
   flex-shrink: 0;
   line-height: 1.4;
+  transform: translateY(-0.08em);
   transition:
     color 0.12s ease,
     opacity 0.12s ease,
     transform 0.15s ease;
 }
-.gs-card:hover {
+.gs-card:not(:disabled):hover {
   color: var(--clr-ns);
   text-decoration: none;
 }
-.gs-card:hover::before {
+.gs-card:not(:disabled):hover::before {
   color: var(--clr-ns);
   opacity: 1;
-  transform: translateX(3px);
+  transform: translate(3px, -0.08em);
+}
+.gs-card:disabled {
+  cursor: default;
+  opacity: 0.68;
 }
 .gs-card-icon {
   display: none;
@@ -2229,7 +2238,7 @@ h6 {
   color: var(--clr-ns);
   line-height: 1.4;
 }
-.gs-card:hover .gs-card-title {
+.gs-card:not(:disabled):hover .gs-card-title {
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--clr-ns) 35%, transparent);
   text-underline-offset: 3px;
@@ -2250,7 +2259,7 @@ h6 {
   gap: 0;
   border-top: 1px solid var(--clr-border);
   border-left: 1px solid var(--clr-border);
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   background: var(--clr-bg);
 }
 .other-badge-grid {

@@ -88,6 +88,7 @@ const systemContent: Record<string, {
   intro: string;
   card1Title: string; card1Desc: string; card1Href: string;
   card2Title: string; card2Desc: string; card2Href: string;
+  card3Title: string; card3Desc: string; card3Href?: string;
 }> = {
   power: {
     intro: 'Spheres of Power is a unique magic system created by Drop Dead Studios for use with the Pathfinder Roleplaying Game. In this variant system, players choose their magical abilities from among twenty different spheres, spending Magic Talents to create a uniquely customized character. Spheres of Power is more about what you can do than what you can\'t — it gives you the tools you need to create a character, then lets you decide how to flavor it.',
@@ -97,6 +98,9 @@ const systemContent: Record<string, {
     card2Title: 'How to Build a Spherecaster',
     card2Desc: 'A step-by-step guide to creating your first magical character.',
     card2Href: '/power/how-to-build-spherecaster/',
+    card3Title: 'Casting Traditions',
+    card3Desc: 'Rules for defining how your character uses magic.',
+    card3Href: '/power/casting-traditions/',
   },
   might: {
     intro: 'Spheres of Might is a unique martial system created by Drop Dead Studios for use with the Pathfinder Roleplaying Game. In this system, players choose martial abilities from twenty-three different spheres, spending Combat Talents to create a uniquely customized practitioner. Spheres of Might is extremely flexible and focuses on allowing players to build up an idea, rather than pushing them into a specific role.',
@@ -106,6 +110,8 @@ const systemContent: Record<string, {
     card2Title: 'How to Build a Practitioner',
     card2Desc: 'A step-by-step guide to creating your first martial character.',
     card2Href: '/power/how-to-build-practitioner/',
+    card3Title: 'Martial Traditions',
+    card3Desc: 'Tradition rules for martial training and starting talents.',
   },
   guile: {
     intro: 'Spheres of Guile is a new skills-focused system created by Drop Dead Studios for use with the Pathfinder Roleplaying Game. In this variant system, players can learn many new ways to use and apply their skills, allowing them to create a uniquely customized character with abilities beyond simple combat and spellcasting. Spheres of Guile can be played standalone, combined with the other Spheres systems, or utilized as an expansion to the core game rules.',
@@ -115,10 +121,17 @@ const systemContent: Record<string, {
     card2Title: 'How to Build an Operative',
     card2Desc: 'A step-by-step guide to creating your first skill-based character.',
     card2Href: '/guile/how-to-build-operative/',
+    card3Title: 'Trade Traditions',
+    card3Desc: 'Tradition rules for skill training and professional focus.',
   },
 };
 
 const content = systemContent[system]!;
+const cards = [
+  { title: content.card1Title, desc: content.card1Desc, href: content.card1Href },
+  { title: content.card2Title, desc: content.card2Desc, href: content.card2Href },
+  { title: content.card3Title, desc: content.card3Desc, href: content.card3Href },
+];
 ---
 <WikiPage title={`${sysConfig.label} — Spheres Wiki`} activeNamespace={system} pagefindIgnore={true}>
 
@@ -245,30 +258,33 @@ const content = systemContent[system]!;
 
   <hr class="page-title-rule" />
   <div class="gs-grid">
-    <a href={url(content.card1Href)} class="gs-card" data-astro-prefetch="hover">
-      <div class="gs-card-icon">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M2 3h5a1 1 0 0 1 1 1v9H2V3zM14 3H9a1 1 0 0 0-1 1v9h6V3z"/>
-        </svg>
-      </div>
-      <div class="gs-card-body">
-        <div class="gs-card-title">{content.card1Title}</div>
-        <div class="gs-card-desc">{content.card1Desc}</div>
-      </div>
-      <span class="gs-card-arrow" aria-hidden="true">→</span>
-    </a>
-    <a href={url(content.card2Href)} class="gs-card" data-astro-prefetch="hover">
-      <div class="gs-card-icon">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M14.5 3.5v9a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1zM4 6.5h8M4 9.5h5"/>
-        </svg>
-      </div>
-      <div class="gs-card-body">
-        <div class="gs-card-title">{content.card2Title}</div>
-        <div class="gs-card-desc">{content.card2Desc}</div>
-      </div>
-      <span class="gs-card-arrow" aria-hidden="true">→</span>
-    </a>
+    {cards.map(card => card.href ? (
+      <a href={url(card.href)} class="gs-card" data-astro-prefetch="hover">
+        <div class="gs-card-icon">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 3h5a1 1 0 0 1 1 1v9H2V3zM14 3H9a1 1 0 0 0-1 1v9h6V3z"/>
+          </svg>
+        </div>
+        <div class="gs-card-body">
+          <div class="gs-card-title">{card.title}</div>
+          <div class="gs-card-desc">{card.desc}</div>
+        </div>
+        <span class="gs-card-arrow" aria-hidden="true">→</span>
+      </a>
+    ) : (
+      <button type="button" class="gs-card" disabled title="Coming soon">
+        <div class="gs-card-icon">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 3h5a1 1 0 0 1 1 1v9H2V3zM14 3H9a1 1 0 0 0-1 1v9h6V3z"/>
+          </svg>
+        </div>
+        <div class="gs-card-body">
+          <div class="gs-card-title">{card.title}</div>
+          <div class="gs-card-desc">{card.desc}</div>
+        </div>
+        <span class="gs-card-arrow" aria-hidden="true">→</span>
+      </button>
+    ))}
   </div>
   <hr class="page-title-rule" />
 
