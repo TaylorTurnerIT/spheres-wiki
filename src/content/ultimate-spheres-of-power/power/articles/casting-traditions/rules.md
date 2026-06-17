@@ -4,7 +4,7 @@ name: "Casting Traditions Rules"
 type: "article"
 ---
 
-# Rules
+## Rules
 
 Casting traditions are the method by which a caster creates magic. In the core magic system for the Pathfinder Roleplaying Game a wizard, a cleric, and a druid can often create very similar magical effects, but one does so through arcane materials and signs, the other through a holy symbol and a prayer, and the other through invoking a connection to nature. Each of these and other magic-using classes possess restrictions on how they invoke magic, an ability score that governs their magic, as well as specific information regarding what magic spells they have access to, and whether their magic is arcane in origin, divine in origin, or comes from another source entirely.
 
@@ -21,9 +21,6 @@ Drawbacks represent restrictions and methodologies used by a casting tradition, 
 
 While casting traditions are a great way to customize a world, it is possible to use Spheres of Power with no tradition at all, either as a specific choice, or simply because a player or GM does not wish to include them. In that instance, magic is considered to be innate, and is treated the same as spell-like abilities. In these cases, the magic has no restrictions on its use, no benefits associated with it, and defaults to using Charisma as the casting ability modifier (the ability score used to govern spell-like abilities). If a character gains a casting ability modifier without gaining casting (such as through a class feature) then later gains a casting tradition, the casting tradition’s casting ability modifier takes precedence.
 
-### Technology-Related Casting Drawbacks in Low Technology Settings [SUE]
-GMs are strongly recommended against using the casting tradition drawbacks from *Ultimate Engineering* in a setting where gizmos, mechanical machinery, or the progress of science are not common enough to cause one of these drawbacks to be relevant. If trying to use these casting tradition drawbacks where technology is infrequent, a GM could determine that masterwork metal objects (such as tools, weapons, etc.) and alchemical items (such as an alchemist’s fire) are treated as active Tinker sphere gizmos.
-
 ## Casting Ability Modifiers
 The first component of a casting tradition is its casting ability modifier: the ability score the caster uses when determining their spell points and the difficulty class of their magical effects. Unless a particular boon or magic trait is being used, this choice must be made from Intelligence, Wisdom, or Charisma.
 
@@ -38,6 +35,9 @@ One aspect of core magic use in Pathfinder is magic type; whether a particular c
 In the core Pathfinder magic system this distinction is important when determining whether or not a caster can do things such as use a spell completion item (such as a scroll), which in the core Pathfinder system requires that the caster be of the proper magic type (arcane, divine, or psychic) as well as have the spell on their class spell list. However, this distinction is not discussed in detail here as part of casting traditions because it only serves such a purpose when interacting with that very specific core magic rule; as casting traditions already cover things such as arcane spell chance failure and specific manifestation, no other benefit is gained by deciding if a casting tradition is arcane, divine, or psychic in nature.
 
 If a GM so desires, they may completely ignore magic type, or decide that every casting tradition must be either arcane, divine, or psychic in nature (and indeed, such distinctions are listed in the ‘standard traditions’ section below for ease of reference). Alternatively, they may invent their own magic types to reflect how magic works within their world (which could include arcane, divine, psychic, occult, primal, blood, draconic, etc.), or treat each custom tradition as if it were its own separate magic type. The choice, ultimately, is up to them.
+
+> ## Technology-Related Casting Drawbacks in Low Technology Settings [SUE]
+> GMs are strongly recommended against using the casting tradition drawbacks from *Ultimate Engineering* in a setting where gizmos, mechanical machinery, or the progress of science are not common enough to cause one of these drawbacks to be relevant. If trying to use these casting tradition drawbacks where technology is infrequent, a GM could determine that masterwork metal objects (such as tools, weapons, etc.) and alchemical items (such as an alchemist’s fire) are treated as active Tinker sphere gizmos.
 
 ## Multiple Traditions
 As a variant rule, a GM may permit a player to follow two traditions (similar to creating a wizard/cleric in traditional Pathfinder). When gaining a level in casting classes beyond their 1st, the caster may apply that casting level to a new tradition.
