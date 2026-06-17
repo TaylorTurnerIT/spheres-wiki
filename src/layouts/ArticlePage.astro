@@ -95,6 +95,9 @@ const tocItems = showToc ? buildTocTree(headings) : [];
     flex-shrink: 0;
     position: sticky;
     top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    scroll-padding-bottom: 4rem;
   }
 
   /* BookCard fills sidebar width */
@@ -110,6 +113,8 @@ const tocItems = showToc ? buildTocTree(headings) : [];
     .article-content .article-sidebar {
       width: 100%;
       position: static;
+      max-height: none;
+      overflow-y: visible;
     }
   }
 
