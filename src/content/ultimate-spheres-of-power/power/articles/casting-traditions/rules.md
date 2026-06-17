@@ -4,6 +4,8 @@ name: "Casting Traditions Rules"
 type: "article"
 ---
 
+# Rules
+
 Casting traditions are the method by which a caster creates magic. In the core magic system for the Pathfinder Roleplaying Game a wizard, a cleric, and a druid can often create very similar magical effects, but one does so through arcane materials and signs, the other through a holy symbol and a prayer, and the other through invoking a connection to nature. Each of these and other magic-using classes possess restrictions on how they invoke magic, an ability score that governs their magic, as well as specific information regarding what magic spells they have access to, and whether their magic is arcane in origin, divine in origin, or comes from another source entirely.
 
 While many gaming tables are content to adventure in worlds that carry these assumptions, and indeed many great stories have been told in these worlds, there are all manner of stories to be told in worlds that have none of these rules. Perhaps the story takes place in a world where magic is cast entirely through written runes. Perhaps a player wants to recreate a favorite TV, book, or movie character whose powers simply do not fit this paradigm for how magic operates in the core magic system.
