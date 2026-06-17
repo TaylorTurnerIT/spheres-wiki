@@ -86,15 +86,38 @@ function updateSubLinkHighlight(allSubLinks: HTMLAnchorElement[], active: HTMLAn
   for (const link of allSubLinks) link.classList.toggle('is-current', link === active);
 }
 
+// ── Sidebar scroll ────────────────────────────────────────────────
+// fallow-ignore-next-line complexity — two guard clauses + two scroll directions
+function scrollSidebarToActive(nav: HTMLElement) {
+  const sidebar = nav.closest<HTMLElement>('.article-sidebar');
+  const active = nav.querySelector<HTMLElement>('.is-active, .is-current');
+  if (!sidebar || !active) return;
+  const sb = sidebar.getBoundingClientRect();
+  const el = active.getBoundingClientRect();
+  const pad = 8;
+  if (el.bottom > sb.bottom - pad) {
+    sidebar.scrollBy({ top: el.bottom - sb.bottom + pad, behavior: 'smooth' });
+  } else if (el.top < sb.top + pad) {
+    sidebar.scrollBy({ top: el.top - sb.top - pad, behavior: 'smooth' });
+  }
+}
+
 // ── Recalc handler ────────────────────────────────────────────────
 function createRecalcHandler(
+  nav: HTMLElement,
   categories: HTMLElement[],
   headings: HeadingEntry[],
   allSubLinks: HTMLAnchorElement[],
 ) {
+  let lastActive: HTMLElement | null = null;
   return () => {
     updateActiveSection(categories, findCurrentSection(headings));
     updateSubLinkHighlight(allSubLinks, findCurrentSubLink(headings));
+    const current = nav.querySelector<HTMLElement>('.is-active, .is-current');
+    if (current && current !== lastActive) {
+      lastActive = current;
+      scrollSidebarToActive(nav);
+    }
   };
 }
 
@@ -106,7 +129,7 @@ function initToc(nav: HTMLElement) {
   if (headings.length === 0) return;
 
   const allSubLinks = [...nav.querySelectorAll<HTMLAnchorElement>('[data-toc-item]')];
-  const recalc = createRecalcHandler(categories, headings, allSubLinks);
+  const recalc = createRecalcHandler(nav, categories, headings, allSubLinks);
 
   activeObserver = new IntersectionObserver(recalc, {
     rootMargin: '-5% 0px -5% 0px',
