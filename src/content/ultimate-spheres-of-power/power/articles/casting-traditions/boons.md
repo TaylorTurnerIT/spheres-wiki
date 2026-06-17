@@ -43,7 +43,7 @@ You gain a +1 competence bonus to your caster level whenever at least 3 creature
 ##### Drawback Feat
 You gain a (drawback) feat, chosen when this casting tradition is created. You may take this boon multiple times.
 
-**See Also:** [Drawback Feats](@feat:drawback-feats)
+**See Also:** [Drawback Feats](../../tags/drawback/)
 
 ##### Easy Focus
 When maintaining a sphere ability through concentration, effects that normally require a standard action to concentrate on only require a move action for you. This does not decrease the sphere ability’s casting time, only the action used to maintain concentration.
@@ -84,4 +84,3 @@ As a free action, you may gain a +2 competence bonus to caster level to the next
 Choose an environment from the ranger’s favored terrain list. Animals, vermin, and magical beasts commonly found in your selected environment are especially susceptible to your magic; your talents are treated as 2 caster levels higher when affecting these creatures. Vermin common to these environments are treated as animals with an Intelligence score of 1 for the purposes of affecting them with your mind-affecting talents.
 
 This boon may be taken multiple times, each time using a different environmental setting.
-

@@ -271,18 +271,19 @@ function parseParent(content) {
 }
 
 function isClassDefinition(content) {
-  // Power classes — must have Casting section or stat block
-  if (/^\+\+ Casting\b/m.test(content)) return true;
-  if (/^\*\*(Casting Ability Modifier|Spell Pool|Caster Level)/m.test(content))
+  const classMarkers = [
+    /^\+\+ Casting\b/m,
+    /^\*\*(Casting Ability Modifier|Spell Pool|Caster Level)/m,
+    /^\+\+.*Combat Training/m,
+    /^\*\*Practitioner Modifier/m,
+    /^\+\+.*\|(Class Features|Class Abilities)\|/m,
+  ];
+  if (classMarkers.some((re) => re.test(content))) {
     return true;
-  // Might classes — Combat Training is the key marker
-  if (/^\+\+.*Combat Training/m.test(content)) return true;
-  if (/^\*\*Practitioner Modifier/m.test(content)) return true;
-  // Broad class section headers (color-annotated Wikidot format)
-  if (/^\+\+.*\|(Class Features|Class Abilities)\|/m.test(content)) return true;
+  }
+
   // Must have Hit Die AND at least 2 other class-only stat fields
-  const hasHitDie = /^\*\*Hit Die:\*\*/m.test(content);
-  if (!hasHitDie) return false;
+  if (!/^\*\*Hit Die:\*\*/m.test(content)) return false;
   const classOnlyFields = [
     /^\*\*Class Skills:\*\*/m,
     /^\*\*Skill Ranks Per Level:\*\*/m,
@@ -292,11 +293,7 @@ function isClassDefinition(content) {
     /^\*\*Casting Ability Modifier/m,
     /^\*\*Spell Pool/m,
   ];
-  let count = 0;
-  for (const re of classOnlyFields) {
-    if (re.test(content)) count++;
-  }
-  return count >= 2;
+  return classOnlyFields.filter((re) => re.test(content)).length >= 2;
 }
 
 function isSphereDefinition(content) {
@@ -323,19 +320,301 @@ function isCreatureContent(content) {
   );
 }
 
+const CREATURE_PARENTS = new Set([
+  "creature-templates",
+  "templates",
+  "mythos-bestiary",
+  "great-old-ones-outer-gods-and-elder-influences",
+]);
+
+const ARTICLE_PARENTS = new Set([
+  "mythic-rules",
+  "other-options",
+  "start",
+  "newsletters",
+  "diamond-recreational-studios",
+  "ultimate-engineering",
+  "alternate-racial-traits",
+  "arcforge",
+  "kingking",
+  "veil-list-and-descriptions",
+]);
+
+const THIRD_PARTY_PARENTS = new Set([
+  "pact-magic",
+  "strange-magic",
+  "gonzo",
+  "cthulhu-mythos",
+  "heroes-of-the-jade-oath",
+  "akashic-mysteries",
+  "the-primordial-dancer",
+  "scion-of-discordia",
+]);
+
 // ─── Classification ───────────────────────────────────────────────────────────
+
+function defaultBookForSystem(system, includeGuile = true) {
+  if (system === "might") return "spheres-of-might";
+  if (includeGuile && system === "guile") return "spheres-of-guile";
+  return "spheres-of-power-core";
+}
+
+function setDefaultBook(entry, book) {
+  if (!entry.book) entry.book = book;
+}
+
+function getParentMetadata(parent) {
+  if (!parent) return null;
+  if (PARENT_MAP[parent]) return PARENT_MAP[parent];
+  return parent.startsWith("mythic-creatures-")
+    ? { system: "mythic", book: "mythic-rules" }
+    : null;
+}
+
+function assignParentMetadata(entry) {
+  const pm = getParentMetadata(entry.parent);
+  if (!pm) return;
+  entry.system = pm.system;
+  if (pm.book) entry.book = pm.book;
+}
+
+function assignCrMr(entry) {
+  const crMr =
+    (entry.title || "").match(/\(CR (\d+)\/MR (\d+)\)/) ||
+    entry.basename.match(/cr-(\d+)-mr-(\d+)/);
+  if (!crMr) return;
+  entry.cr = parseInt(crMr[1], 10);
+  entry.mr = parseInt(crMr[2], 10);
+}
+
+const MIXED_CONTENT_TYPE_TESTS = [
+  ["class", (_entry, content) => isClassDefinition(content)],
+  ["feat", (_entry, content) => isFeatContent(content)],
+  ["creature", (_entry, content) => isCreatureContent(content)],
+  ["archetype", (entry) => entry.title?.includes("Archetype")],
+];
+
+const POWER_MIGHT_SUBTYPE_TESTS = [
+  ["feat", (entry, content) => isFeatContent(content) || entry.title?.includes("Feat")],
+  ["archetype", (entry) => entry.title?.includes("Archetype")],
+  ["sphere", (_entry, content) => isSphereDefinition(content)],
+];
+
+function firstMatchingType(tests, entry, content) {
+  return tests.find(([, matches]) => matches(entry, content))?.[0] ?? "article";
+}
+
+function assignMixedContentType(entry, content) {
+  entry.type = firstMatchingType(MIXED_CONTENT_TYPE_TESTS, entry, content);
+}
+
+function assignPowerOrMightSubtype(entry, content, book) {
+  entry.type = firstMatchingType(POWER_MIGHT_SUBTYPE_TESTS, entry, content);
+  setDefaultBook(entry, book);
+}
+
+function isCreatureEntry(entry) {
+  return Boolean(
+    entry.cr ||
+      entry.mr ||
+      CREATURE_PARENTS.has(entry.parent) ||
+      entry.parent?.startsWith("mythic-creatures-"),
+  );
+}
+
+function classifyCreature(entry) {
+  if (!isCreatureEntry(entry)) return false;
+  entry.type = "creature";
+  return true;
+}
+
+function classifySphereChild(entry, content) {
+  if (!entry.parent || !KNOWN_SPHERES.has(entry.parent)) return false;
+  entry.sphereName = entry.parent;
+  entry.type = isFeatContent(content) ? "feat" : "talent";
+  setDefaultBook(entry, "spheres-of-power-core");
+  return true;
+}
+
+function topLevelSphereSystem(sphereId) {
+  if (POWER_SPHERES.has(sphereId)) return "power";
+  return MIGHT_SPHERES.has(sphereId) ? "might" : "guile";
+}
+
+function topLevelSphereId(entry) {
+  if (entry.parent) return null;
+  const sphereId = SPHERE_FILENAME_MAP[entry.basename] || entry.basename;
+  return KNOWN_SPHERES.has(sphereId) ? sphereId : null;
+}
+
+function classifyTopLevelSphere(entry) {
+  const sphereId = topLevelSphereId(entry);
+  if (!sphereId) return false;
+  entry.type = "sphere";
+  entry.sphereName = sphereId;
+  entry.system = topLevelSphereSystem(sphereId);
+  setDefaultBook(entry, defaultBookForSystem(entry.system));
+  return true;
+}
+
+function isTopLevelClassPage(entry) {
+  return CLASS_PAGES.has(entry.basename) && !entry.parent;
+}
+
+function hasMinimalClassFormatting(content) {
+  return [
+    /^\*\*Hit Die:\*\*/m,
+    /^\*\*Role:\*\*/m,
+    /^\+\+.*\|/m,
+  ].some((re) => re.test(content));
+}
+
+function assignTopLevelClass(entry, includeGuile) {
+  entry.type = "class";
+  setDefaultBook(entry, defaultBookForSystem(entry.system, includeGuile));
+  return true;
+}
+
+function classifyTopLevelClass(entry, content) {
+  if (!isTopLevelClassPage(entry)) return false;
+  if (isClassDefinition(content)) {
+    return assignTopLevelClass(entry, true);
+  }
+  return hasMinimalClassFormatting(content)
+    ? assignTopLevelClass(entry, false)
+    : false;
+}
+
+function isClassChild(entry) {
+  return Boolean(entry.parent && CLASS_PAGES.has(entry.parent));
+}
+
+function classChildType(title) {
+  return title?.includes("Archetype") ? "archetype" : "class-feature";
+}
+
+function classChildBook(system) {
+  return system === "might" ? "spheres-of-might" : "spheres-of-power-core";
+}
+
+function classifyClassChild(entry) {
+  if (!isClassChild(entry)) return false;
+  entry.type = classChildType(entry.title);
+  setDefaultBook(entry, classChildBook(entry.system));
+  return true;
+}
+
+function classifyExplicitArchetype(entry) {
+  if (!entry.title?.includes("Archetype")) return false;
+  entry.type = "archetype";
+  setDefaultBook(entry, "spheres-of-power-core");
+  return true;
+}
+
+function classifyExplicitFeat(entry) {
+  if (entry.parent !== "feats" && entry.parent !== "divine-talents")
+    return false;
+  entry.type = "feat";
+  setDefaultBook(entry, "spheres-of-power-core");
+  return true;
+}
+
+function classifyArticleParent(entry) {
+  if (!ARTICLE_PARENTS.has(entry.parent)) return false;
+  entry.type = "article";
+  setDefaultBook(entry, entry.parent);
+  return true;
+}
+
+function classifyThirdPartyParent(entry, content) {
+  if (!THIRD_PARTY_PARENTS.has(entry.parent)) return false;
+  assignMixedContentType(entry, content);
+  setDefaultBook(entry, entry.parent);
+  return true;
+}
+
+function classifySpheresOfPowerParent(entry, content) {
+  if (entry.parent !== "spheres-of-power") return false;
+  assignPowerOrMightSubtype(entry, content, "spheres-of-power-core");
+  return true;
+}
+
+function isMightSpherePage(content, mightSphereId) {
+  return MIGHT_SPHERES.has(mightSphereId) || isSphereDefinition(content);
+}
+
+function assignMightSphere(entry, mightSphereId) {
+  entry.type = "sphere";
+  entry.sphereName = mightSphereId;
+  entry.system = "might";
+  entry.book = "spheres-of-might";
+}
+
+function classifySpheresOfMightParent(entry, content) {
+  if (entry.parent !== "spheres-of-might") return false;
+  const mightSphereId = SPHERE_FILENAME_MAP[entry.basename] || entry.basename;
+  if (isMightSpherePage(content, mightSphereId)) {
+    assignMightSphere(entry, mightSphereId);
+  } else {
+    assignPowerOrMightSubtype(entry, content, "spheres-of-might");
+  }
+  return true;
+}
+
+const TOP_LEVEL_TYPE_TESTS = [
+  ["class", (_entry, content) => isClassDefinition(content)],
+  ["sphere", (_entry, content) => isSphereDefinition(content)],
+  ["creature", (_entry, content) => isCreatureContent(content)],
+  ["feat", (_entry, content) => isFeatContent(content)],
+];
+
+function topLevelBook(entry) {
+  if (MIGHT_SPHERES.has(entry.basename)) return "spheres-of-might";
+  if (entry.basename === "spheres-of-might") return "spheres-of-might";
+  return entry.basename === "spheres-of-guile"
+    ? "spheres-of-guile"
+    : "spheres-of-power-core";
+}
+
+function classifyTopLevel(entry, content) {
+  if (entry.parent) return false;
+  entry.type = firstMatchingType(TOP_LEVEL_TYPE_TESTS, entry, content);
+  setDefaultBook(entry, topLevelBook(entry));
+  return true;
+}
+
+function classifyFallback(entry, content) {
+  if (isCreatureContent(content)) entry.type = "creature";
+  else if (isClassDefinition(content)) entry.type = "class";
+  else if (isFeatContent(content)) entry.type = "feat";
+  else entry.type = "article";
+  return true;
+}
+
+const CLASSIFIERS = [
+  classifyCreature,
+  classifySphereChild,
+  classifyTopLevelSphere,
+  classifyTopLevelClass,
+  classifyClassChild,
+  classifyExplicitArchetype,
+  classifyExplicitFeat,
+  classifyArticleParent,
+  classifyThirdPartyParent,
+  classifySpheresOfPowerParent,
+  classifySpheresOfMightParent,
+  classifyTopLevel,
+  classifyFallback,
+];
 
 function classifyFile(filename, content) {
   const name = filename.replace(/\.txt$/, "");
-  const title = parseTitle(content);
-  const parent = parseParent(content);
-
   const entry = {
     basename: name,
     filename,
-    title,
-    parent,
-    type: "article", // default
+    title: parseTitle(content),
+    parent: parseParent(content),
+    type: "article",
     system: "power",
     book: null,
     cr: null,
@@ -343,243 +622,9 @@ function classifyFile(filename, content) {
     sphereName: null,
   };
 
-  // Parse CR/MR from filename or title
-  const crMr =
-    (title || "").match(/\(CR (\d+)\/MR (\d+)\)/) ||
-    name.match(/cr-(\d+)-mr-(\d+)/);
-  if (crMr) {
-    entry.cr = parseInt(crMr[1], 10);
-    entry.mr = parseInt(crMr[2], 10);
-  }
-
-  // ─── Determine system and book from parent ──────────────────────────
-
-  if (parent && PARENT_MAP[parent]) {
-    const pm = PARENT_MAP[parent];
-    entry.system = pm.system;
-    if (pm.book) entry.book = pm.book;
-  } else if (parent?.startsWith("mythic-creatures-")) {
-    entry.system = "mythic";
-    entry.book = "mythic-rules";
-  }
-
-  // ─── Type classification ────────────────────────────────────────────
-
-  // 1. Bestiary / creature entries
-  if (
-    entry.cr ||
-    entry.mr ||
-    (parent &&
-      (parent === "creature-templates" ||
-        parent === "templates" ||
-        parent.startsWith("mythic-creatures-") ||
-        parent === "mythos-bestiary" ||
-        parent === "great-old-ones-outer-gods-and-elder-influences"))
-  ) {
-    entry.type = "creature";
-    return entry;
-  }
-
-  // 2. Content under a sphere page (sub-pages like talents, feats, etc.)
-  if (parent && KNOWN_SPHERES.has(parent)) {
-    entry.sphereName = parent;
-    // These are usually sub-feats or standalone pages under spheres
-    if (isFeatContent(content)) {
-      entry.type = "feat";
-    } else {
-      entry.type = "talent"; // could be a talent sub-page
-    }
-    if (!entry.book) entry.book = "spheres-of-power-core";
-    return entry;
-  }
-
-  // 3. Top-level sphere definition pages (no parent, but in SPHERE list)
-  const sphereId = SPHERE_FILENAME_MAP[name] || name;
-  if (!parent && KNOWN_SPHERES.has(sphereId)) {
-    entry.type = "sphere";
-    entry.sphereName = sphereId;
-    entry.system = POWER_SPHERES.has(sphereId)
-      ? "power"
-      : MIGHT_SPHERES.has(sphereId)
-        ? "might"
-        : "guile";
-    if (!entry.book) {
-      entry.book =
-        entry.system === "might"
-          ? "spheres-of-might"
-          : entry.system === "guile"
-            ? "spheres-of-guile"
-            : "spheres-of-power-core";
-    }
-    return entry;
-  }
-
-  // 4. Top-level class definition pages
-  if (CLASS_PAGES.has(name) && !parent) {
-    if (isClassDefinition(content)) {
-      entry.type = "class";
-      if (!entry.book)
-        entry.book =
-          entry.system === "might"
-            ? "spheres-of-might"
-            : entry.system === "guile"
-              ? "spheres-of-guile"
-              : "spheres-of-power-core";
-      return entry;
-    }
-    // Some class pages have minimal wiki formatting but are still classes
-    if (
-      /^\*\*Hit Die:\*\*/m.test(content) ||
-      /^\*\*Role:\*\*/m.test(content) ||
-      /^\+\+.*\|/m.test(content)
-    ) {
-      entry.type = "class";
-      if (!entry.book)
-        entry.book =
-          entry.system === "might"
-            ? "spheres-of-might"
-            : "spheres-of-power-core";
-      return entry;
-    }
-  }
-
-  // 5. Class feature / archetype sub-pages (parent is a class name)
-  if (parent && CLASS_PAGES.has(parent)) {
-    if (title?.includes("Archetype")) {
-      entry.type = "archetype";
-    } else {
-      entry.type = "class-feature";
-    }
-    if (!entry.book)
-      entry.book =
-        entry.system === "might" ? "spheres-of-might" : "spheres-of-power-core";
-    return entry;
-  }
-
-  // 6. Explicit archetype pages (title says "Archetype")
-  if (title?.includes("Archetype")) {
-    entry.type = "archetype";
-    if (!entry.book) entry.book = "spheres-of-power-core";
-    return entry;
-  }
-
-  // 7. Explicit feat pages (parent is 'feats' or 'divine-talents')
-  if (parent === "feats" || parent === "divine-talents") {
-    entry.type = "feat";
-    if (!entry.book) entry.book = "spheres-of-power-core";
-    return entry;
-  }
-
-  // 8. Articles under mythic-rules, other-options, etc.
-  if (
-    parent === "mythic-rules" ||
-    parent === "other-options" ||
-    parent === "start" ||
-    parent === "newsletters" ||
-    parent === "diamond-recreational-studios" ||
-    parent === "ultimate-engineering" ||
-    parent === "alternate-racial-traits" ||
-    parent === "arcforge" ||
-    parent === "kingking" ||
-    parent === "veil-list-and-descriptions"
-  ) {
-    entry.type = "article";
-    if (!entry.book) entry.book = parent;
-    return entry;
-  }
-
-  // 9. Content under 3rd-party system parents
-  if (
-    parent &&
-    [
-      "pact-magic",
-      "strange-magic",
-      "gonzo",
-      "cthulhu-mythos",
-      "heroes-of-the-jade-oath",
-      "akashic-mysteries",
-      "the-primordial-dancer",
-      "scion-of-discordia",
-    ].includes(parent)
-  ) {
-    // May be mixed types - use content analysis
-    if (isClassDefinition(content)) entry.type = "class";
-    else if (isFeatContent(content)) entry.type = "feat";
-    else if (isCreatureContent(content)) entry.type = "creature";
-    else if (title?.includes("Archetype")) entry.type = "archetype";
-    else entry.type = "article";
-    if (!entry.book) entry.book = parent;
-    return entry;
-  }
-
-  // 10. Spheres-of-Power/Might sub-content
-  if (parent === "spheres-of-power") {
-    if (isFeatContent(content) || title?.includes("Feat")) entry.type = "feat";
-    else if (title?.includes("Archetype")) entry.type = "archetype";
-    else if (isSphereDefinition(content)) entry.type = "sphere";
-    else entry.type = "article";
-    if (!entry.book) entry.book = "spheres-of-power-core";
-    return entry;
-  }
-
-  if (parent === "spheres-of-might") {
-    // Might sphere pages live under this parent in some Wikidot structures
-    const mightSphereId = SPHERE_FILENAME_MAP[name] || name;
-    if (MIGHT_SPHERES.has(mightSphereId) || isSphereDefinition(content)) {
-      entry.type = "sphere";
-      entry.sphereName = mightSphereId;
-      entry.system = "might";
-      entry.book = "spheres-of-might";
-      return entry;
-    }
-    if (isFeatContent(content) || title?.includes("Feat")) entry.type = "feat";
-    else if (title?.includes("Archetype")) entry.type = "archetype";
-    else entry.type = "article";
-    if (!entry.book) entry.book = "spheres-of-might";
-    return entry;
-  }
-
-  // 11. Top-level hub/guide pages (no parent, known patterns)
-  if (!parent) {
-    if (isClassDefinition(content)) {
-      entry.type = "class";
-    } else if (isSphereDefinition(content)) {
-      entry.type = "sphere";
-    } else if (isCreatureContent(content)) {
-      entry.type = "creature";
-    } else if (isFeatContent(content)) {
-      entry.type = "feat";
-    } else {
-      entry.type = "article";
-    }
-
-    // Assign book for top-level pages based on known patterns
-    if (!entry.book) {
-      if (MIGHT_SPHERES.has(name)) {
-        entry.book = "spheres-of-might";
-      } else if (name === "spheres-of-might") {
-        entry.book = "spheres-of-might";
-      } else if (name === "spheres-of-guile") {
-        entry.book = "spheres-of-guile";
-      } else {
-        // Default most top-level pages to spheres-of-power-core
-        entry.book = "spheres-of-power-core";
-      }
-    }
-    return entry;
-  }
-
-  // 12. Fallback content analysis
-  if (isCreatureContent(content)) {
-    entry.type = "creature";
-  } else if (isClassDefinition(content)) {
-    entry.type = "class";
-  } else if (isFeatContent(content)) {
-    entry.type = "feat";
-  } else {
-    entry.type = "article";
-  }
-
+  assignCrMr(entry);
+  assignParentMetadata(entry);
+  CLASSIFIERS.find((classify) => classify(entry, content));
   return entry;
 }
 
@@ -594,153 +639,185 @@ function countExistingMdByBook() {
       const full = join(dir, entry.name);
       if (entry.isDirectory()) {
         walk(full, depth + 1);
-      } else if (entry.name.endsWith(".md") && depth >= 1) {
-        // depth 0 = content/ root (ignore)
-        // depth 1 = book directories (e.g. content/spheres-of-power-core/)
-        const parts = full.split("/");
-        const contentIdx = parts.indexOf("content");
-        const book = parts[contentIdx + 1] || "(unknown)";
-        counts[book] = (counts[book] || 0) + 1;
+        continue;
       }
+      countMarkdownFile(counts, full, entry.name, depth);
     }
   }
   walk(CONTENT_DIR, 0);
   return counts;
 }
 
+function countMarkdownFile(counts, full, filename, depth) {
+  if (!shouldCountMarkdown(filename, depth)) return;
+  const parts = full.split("/");
+  const contentIdx = parts.indexOf("content");
+  const book = parts[contentIdx + 1] || "(unknown)";
+  counts[book] = (counts[book] || 0) + 1;
+}
+
+function shouldCountMarkdown(filename, depth) {
+  return filename.endsWith(".md") && depth >= 1;
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
-function main() {
-  const args = process.argv.slice(2);
-  const showSummary = args.includes("--summary");
-  const showMissing = args.includes("--missing");
-  const bookFilter = args.includes("--book")
-    ? args[args.indexOf("--book") + 1]
-    : null;
+function parseCatalogArgs(args) {
+  const bookArgIndex = args.indexOf("--book");
+  return {
+    showSummary: args.includes("--summary"),
+    showMissing: args.includes("--missing"),
+    bookFilter: bookArgIndex === -1 ? null : args[bookArgIndex + 1],
+  };
+}
 
-  if (!existsSync(WIKIDOT_REPO)) {
-    console.error(`Wikidot repo not found at: ${WIKIDOT_REPO}`);
-    process.exit(1);
-  }
-
+function readSourceEntries() {
   console.error("Reading source files...");
   const files = readdirSync(WIKIDOT_REPO)
     .filter((f) => f.endsWith(".txt"))
     .sort();
-
   console.error(`Found ${files.length} .txt files`);
-
   console.error("Classifying...");
-  const entries = [];
-  for (const file of files) {
+  return files.map((file) => {
     const content = readFileSync(join(WIKIDOT_REPO, file), "utf-8");
-    const entry = classifyFile(file, content);
-    entries.push(entry);
-  }
+    return classifyFile(file, content);
+  });
+}
 
-  // ─── Statistics ────────────────────────────────────────────────────────
+function incrementCount(counts, key) {
+  counts[key] = (counts[key] || 0) + 1;
+}
 
-  const existingMdByBook = countExistingMdByBook();
-  const totalExistingMd = Object.values(existingMdByBook).reduce(
-    (a, b) => a + b,
-    0,
-  );
+function sortedEntriesObject(counts) {
+  return Object.fromEntries(Object.entries(counts).sort((a, b) => b[1] - a[1]));
+}
 
-  const typeCounts = {};
-  const systemCounts = {};
-  const parentCounts = {};
-  const bookCounts = {};
-  const unmappedSystemParents = new Set();
+function emptyStats() {
+  return {
+    typeCounts: {},
+    systemCounts: {},
+    parentCounts: {},
+    bookCounts: {},
+    unmappedSystemParents: new Set(),
+  };
+}
 
-  for (const entry of entries) {
-    typeCounts[entry.type] = (typeCounts[entry.type] || 0) + 1;
-    systemCounts[entry.system] = (systemCounts[entry.system] || 0) + 1;
-    parentCounts[entry.parent || "(none)"] =
-      (parentCounts[entry.parent || "(none)"] || 0) + 1;
+function recordStatsEntry(stats, entry) {
+  incrementCount(stats.typeCounts, entry.type);
+  incrementCount(stats.systemCounts, entry.system);
+  incrementCount(stats.parentCounts, entry.parent || "(none)");
+  incrementCount(stats.bookCounts, entry.book || "(unmapped)");
+  recordUnmappedParent(stats, entry);
+}
 
-    const book = entry.book || "(unmapped)";
-    bookCounts[book] = (bookCounts[book] || 0) + 1;
+function recordUnmappedParent(stats, entry) {
+  if (entry.book || !entry.parent) return;
+  stats.unmappedSystemParents.add(entry.parent);
+}
 
-    if (!entry.book) {
-      if (entry.parent) unmappedSystemParents.add(entry.parent);
-    }
-  }
+function totalCount(counts) {
+  return Object.values(counts).reduce((a, b) => a + b, 0);
+}
 
-  // ─── Output ────────────────────────────────────────────────────────────
+function buildStats(entries, existingMdByBook) {
+  const stats = emptyStats();
+  for (const entry of entries) recordStatsEntry(stats, entry);
+  return { ...stats, totalExistingMd: totalCount(existingMdByBook) };
+}
 
-  const catalog = {
+function shouldIncludeEntry(entry, options, existingMdByBook) {
+  if (options.bookFilter) return entry.book === options.bookFilter;
+  if (options.showMissing) return !existingMdByBook[entry.book];
+  return true;
+}
+
+function buildCatalog(entries, existingMdByBook, stats, options) {
+  return {
     generatedAt: new Date().toISOString(),
     sourceRepo: WIKIDOT_REPO,
     summary: {
       totalSourceFiles: entries.length,
-      totalExistingMd: totalExistingMd,
+      totalExistingMd: stats.totalExistingMd,
       // "Migrated" here means: we have some .md content in the target book
       // It's a rough estimate; 1 source file can produce many .md files.
       booksWithContent: Object.keys(existingMdByBook).length,
       existingMdByBook,
       byType: Object.fromEntries(
-        Object.entries(typeCounts)
+        Object.entries(stats.typeCounts)
           .sort((a, b) => b[1] - a[1])
           .map(([type, count]) => [type, { total: count }]),
       ),
-      bySystem: Object.fromEntries(
-        Object.entries(systemCounts).sort((a, b) => b[1] - a[1]),
-      ),
-      byParent: Object.fromEntries(
-        Object.entries(parentCounts).sort((a, b) => b[1] - a[1]),
-      ),
-      byBook: Object.fromEntries(
-        Object.entries(bookCounts).sort((a, b) => b[1] - a[1]),
-      ),
-      unmappedParents: [...unmappedSystemParents].sort(),
+      bySystem: sortedEntriesObject(stats.systemCounts),
+      byParent: sortedEntriesObject(stats.parentCounts),
+      byBook: sortedEntriesObject(stats.bookCounts),
+      unmappedParents: [...stats.unmappedSystemParents].sort(),
     },
-    entries: entries.filter((e) => {
-      if (bookFilter) return e.book === bookFilter;
-      if (showMissing) return !existingMdByBook[e.book];
-      return true;
-    }),
+    entries: entries.filter((entry) =>
+      shouldIncludeEntry(entry, options, existingMdByBook),
+    ),
   };
+}
 
+function writeCatalog(catalog) {
   const outputPath = join(__dirname, "catalog.json");
   writeFileSync(outputPath, JSON.stringify(catalog, null, 2));
   console.error(`\nCatalog written to: ${outputPath}`);
+}
 
-  if (showSummary) {
-    console.log(`\n=== Catalog Summary ===`);
-    console.log(`Source files (.txt):  ${entries.length}`);
+function printCountSection(title, entries, labelWidth, valueMapper = (v) => v) {
+  console.log(`\n${title}:`);
+  for (const [label, value] of entries) {
     console.log(
-      `Existing .md files:   ${totalExistingMd} in ${catalog.summary.booksWithContent} books`,
+      `  ${label.padEnd(labelWidth)} ${String(valueMapper(value)).padStart(4)}`,
     );
-    console.log(`\nBy Type:`);
-    for (const [type, info] of Object.entries(catalog.summary.byType)) {
-      console.log(`  ${type.padEnd(18)} ${String(info.total).padStart(4)}`);
-    }
-    console.log(`\nBy System:`);
-    for (const [sys, count] of Object.entries(catalog.summary.bySystem)) {
-      console.log(`  ${sys.padEnd(18)} ${String(count).padStart(4)}`);
-    }
-    console.log(`\nTop Books (source files → existing .md):`);
-    const topBooks = Object.entries(catalog.summary.byBook).slice(0, 25);
-    for (const [book, count] of topBooks) {
-      const mdCount = existingMdByBook[book] || 0;
-      console.log(
-        `  ${book.padEnd(40)} ${String(count).padStart(4)} src → ${String(mdCount).padStart(4)} md`,
-      );
-    }
-    console.log(`\nTop Parents:`);
-    const topParents = Object.entries(catalog.summary.byParent).slice(0, 20);
-    for (const [parent, count] of topParents) {
-      console.log(`  ${parent.padEnd(35)} ${String(count).padStart(4)}`);
-    }
-    if (catalog.summary.unmappedParents.length > 0) {
-      console.log(
-        `\nUnmapped Parents (${catalog.summary.unmappedParents.length}):`,
-      );
-      console.log(`  ${catalog.summary.unmappedParents.join(", ")}`);
-    }
-  } else {
-    console.log(JSON.stringify(catalog, null, 2));
   }
+}
+
+function printTopBooks(catalog, existingMdByBook) {
+  console.log(`\nTop Books (source files → existing .md):`);
+  for (const [book, count] of Object.entries(catalog.summary.byBook).slice(0, 25)) {
+    const mdCount = existingMdByBook[book] || 0;
+    console.log(
+      `  ${book.padEnd(40)} ${String(count).padStart(4)} src → ${String(mdCount).padStart(4)} md`,
+    );
+  }
+}
+
+function printUnmappedParents(unmappedParents) {
+  if (unmappedParents.length === 0) return;
+  console.log(`\nUnmapped Parents (${unmappedParents.length}):`);
+  console.log(`  ${unmappedParents.join(", ")}`);
+}
+
+function printCatalogSummary(catalog, existingMdByBook) {
+  console.log(`\n=== Catalog Summary ===`);
+  console.log(`Source files (.txt):  ${catalog.summary.totalSourceFiles}`);
+  console.log(
+    `Existing .md files:   ${catalog.summary.totalExistingMd} in ${catalog.summary.booksWithContent} books`,
+  );
+  printCountSection("By Type", Object.entries(catalog.summary.byType), 18, (info) => info.total);
+  printCountSection("By System", Object.entries(catalog.summary.bySystem), 18);
+  printTopBooks(catalog, existingMdByBook);
+  printCountSection("Top Parents", Object.entries(catalog.summary.byParent).slice(0, 20), 35);
+  printUnmappedParents(catalog.summary.unmappedParents);
+}
+
+function ensureWikidotRepo() {
+  if (existsSync(WIKIDOT_REPO)) return;
+  console.error(`Wikidot repo not found at: ${WIKIDOT_REPO}`);
+  process.exit(1);
+}
+
+function main() {
+  const options = parseCatalogArgs(process.argv.slice(2));
+  ensureWikidotRepo();
+  const entries = readSourceEntries();
+  const existingMdByBook = countExistingMdByBook();
+  const stats = buildStats(entries, existingMdByBook);
+  const catalog = buildCatalog(entries, existingMdByBook, stats, options);
+  writeCatalog(catalog);
+  if (options.showSummary) printCatalogSummary(catalog, existingMdByBook);
+  else console.log(JSON.stringify(catalog, null, 2));
 }
 
 main();

@@ -78,43 +78,44 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
     expect(links[1].children[0].value).toBe("Blast");
   });
 
-  it("links comma-separated talent list", () => {
-    const nodes = parsePrerequisiteText(
-      "Destruction sphere (Aligned Blast, Energy Blast).",
-      "/",
-      stubResolvers,
-    );
-    expect(nodes).not.toBeNull();
-    const urls = filterLinks(nodes).map((l: any) => l.url);
-    expect(urls).toContain("/power/destruction/aligned-blast/");
-    expect(urls).toContain("/power/destruction/energy-blast/");
-  });
+  const talentListCases = [
+    {
+      name: "comma-separated talent list",
+      text: "Destruction sphere (Aligned Blast, Energy Blast).",
+      expectedUrls: [
+        "/power/destruction/aligned-blast/",
+        "/power/destruction/energy-blast/",
+      ],
+    },
+    {
+      name: "or-separated talent list",
+      text: "Destruction sphere (Aligned Blast or Energy Blast).",
+      expectedUrls: [
+        "/power/destruction/aligned-blast/",
+        "/power/destruction/energy-blast/",
+      ],
+    },
+    {
+      name: "mixed comma+or talent list (A, B or C)",
+      text: "Destruction sphere (Aligned Blast, Energy Blast or Blast).",
+      expectedUrls: [
+        "/power/destruction/aligned-blast/",
+        "/power/destruction/energy-blast/",
+        "/power/destruction/blast/",
+      ],
+    },
+  ];
 
-  it("links or-separated talent list", () => {
-    const nodes = parsePrerequisiteText(
-      "Destruction sphere (Aligned Blast or Energy Blast).",
-      "/",
-      stubResolvers,
-    );
-    expect(nodes).not.toBeNull();
-    const urls = filterLinks(nodes).map((l: any) => l.url);
-    expect(urls).toContain("/power/destruction/aligned-blast/");
-    expect(urls).toContain("/power/destruction/energy-blast/");
-  });
-
-  it("links mixed comma+or talent list (A, B or C)", () => {
-    // "Aligned Blast, Energy Blast or Blast" — all three should be found
-    const nodes = parsePrerequisiteText(
-      "Destruction sphere (Aligned Blast, Energy Blast or Blast).",
-      "/",
-      stubResolvers,
-    );
-    expect(nodes).not.toBeNull();
-    const urls = filterLinks(nodes).map((l: any) => l.url);
-    expect(urls).toContain("/power/destruction/aligned-blast/");
-    expect(urls).toContain("/power/destruction/energy-blast/");
-    expect(urls).toContain("/power/destruction/blast/");
-  });
+  for (const { name, text, expectedUrls } of talentListCases) {
+    it(`links ${name}`, () => {
+      const nodes = parsePrerequisiteText(text, "/", stubResolvers);
+      expect(nodes).not.toBeNull();
+      const urls = filterLinks(nodes).map((l: any) => l.url);
+      for (const expectedUrl of expectedUrls) {
+        expect(urls).toContain(expectedUrl);
+      }
+    });
+  }
 
   it("skips non-talent parens: (Any)", () => {
     const nodes = parsePrerequisiteText(

@@ -169,9 +169,6 @@ const discoveredSlugs = Object.keys(bookYamls)
   .map((p) => p.replace("./content/", "").replace("/_book.yaml", ""))
   .filter((slug) => slugsWithContent.has(slug));
 
-export const BOOK_COLLECTIONS: string[] = discoveredSlugs;
-export type BookCollectionSlug = string;
-
 export const collections = Object.fromEntries(
   discoveredSlugs.map((slug) => [
     slug,

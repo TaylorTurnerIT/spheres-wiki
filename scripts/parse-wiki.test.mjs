@@ -588,6 +588,13 @@ Body text for second.
 [[/div]]
 `.trim();
 
+  function parseBaseAndTalentScenario(wiki) {
+    const entries = parseWikiFile(wiki.trim(), config);
+    assert.equal(entries.length, 2);
+    assert.equal(entries[0].tier, "base");
+    return entries;
+  }
+
   it("returns 3 entries for the minimal wiki", () => {
     const entries = parseWikiFile(minimalWiki, config);
     assert.equal(entries.length, 3);
@@ -702,11 +709,8 @@ Sub body.
 ++++ Regular Talent
 Regular body.
 [[/div]]
-`.trim();
-    const entries = parseWikiFile(wiki, config);
-    // base entry + regular talent — NOT base + sub + regular
-    assert.equal(entries.length, 2);
-    assert.equal(entries[0].tier, "base");
+`;
+    const entries = parseBaseAndTalentScenario(wiki);
     assert.ok(entries[0].body.includes("#### Built-in Sub"));
     assert.ok(entries[0].body.includes("Sub body."));
     assert.equal(entries[1].tier, "basic");
@@ -726,10 +730,8 @@ Sub body.
 ++++ Normal Talent
 Normal body.
 [[/div]]
-`.trim();
-    const entries = parseWikiFile(wiki, config);
-    assert.equal(entries.length, 2);
-    assert.equal(entries[0].tier, "base");
+`;
+    const entries = parseBaseAndTalentScenario(wiki);
     assert.equal(entries[1].tier, "basic");
   });
 
@@ -798,10 +800,8 @@ A bird form.
 ++++ A Talent
 Talent body.
 [[/div]]
-`.trim();
-    const entries = parseWikiFile(wiki, config);
-    assert.equal(entries.length, 2);
-    assert.equal(entries[0].tier, "base");
+`;
+    const entries = parseBaseAndTalentScenario(wiki);
     assert.ok(entries[0].body.includes("Avian"));
     assert.ok(entries[0].body.includes("A bird form."));
     assert.equal(entries[1].name, "A Talent");

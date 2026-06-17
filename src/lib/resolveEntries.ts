@@ -45,6 +45,16 @@ type EntryMaps = Pick<
   | "archetypeFeatureMap"
 >;
 
+function discoverBookCollectionSlugs(
+  bookMetaMap: Map<string, BookMeta>,
+): string[] {
+  const bookMarkdowns = import.meta.glob("/src/content/**/*.md");
+  const slugsWithContent = new Set(
+    Object.keys(bookMarkdowns).map((path) => path.split("/")[3]),
+  );
+  return [...bookMetaMap.keys()].filter((slug) => slugsWithContent.has(slug));
+}
+
 const TYPE_TO_MAP_KEY: Partial<Record<string, keyof EntryMaps>> = {
   sphere: "sphereMap",
   talent: "talentMap",
@@ -191,10 +201,11 @@ export async function resolveEntries(): Promise<ResolvedMaps> {
       { eager: true },
     ),
   );
+  const collectionSlugs = discoverBookCollectionSlugs(bookMetaMap);
 
   // Fetch all book collections in parallel — eliminates sequential per-book await chain.
   const fetched = await Promise.all(
-    [...bookMetaMap.keys()].map(async (slug) => {
+    collectionSlugs.map(async (slug) => {
       try {
         return { slug, entries: await getCollection(slug as any) };
       } catch {

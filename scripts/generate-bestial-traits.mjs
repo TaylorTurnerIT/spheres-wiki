@@ -133,54 +133,80 @@ if (MODE === "--validate") {
 
 function parseChunk(chunk) {
   const lines = chunk.split("\n");
-  const heading = lines[0].replace(/^\+\+\+\+\s+/, "").trim();
-  let bodyLines = lines.slice(1);
+  const heading = parseTraitHeading(lines[0]);
+  if (!heading.name) return null;
 
-  // --- Extract source bracket e.g. "[Origin]" or "[Alienist HB]" ---
-  const sourceMatch = heading.match(/\[([^\]]+)\]\s*$/);
-  const sourceKey = sourceMatch?.[1] ?? null;
-  let head = sourceMatch ? heading.slice(0, sourceMatch.index).trim() : heading;
-
-  // --- Extract (Ex), (Su), (Sp) type marker ---
-  const typeMatch = head.match(/\((Ex|Su|Sp)\)/i);
-  const abilityType = typeMatch ? typeMatch[1].toLowerCase() : null;
-  head = head.replace(/\((Ex|Su|Sp)\)/i, "").trim();
-
-  // --- Extract inline (requires ...) ---
-  // May appear multiple times: "(requires foo, bar) (requires baz)" — unlikely but handle
-  let requires = null;
-  const reqMatch = head.match(/\(requires ([^)]+)\)/i);
-  if (reqMatch) {
-    requires = titleCase(reqMatch[1].trim());
-    head = head.replace(/\(requires [^)]+\)/i, "").trim();
-  }
-
-  // head is now the clean name
-  const name = normalizeQuotes(head.replace(/\s+/g, " ").trim());
-  if (!name) return null;
-
-  // --- Clean up body lines ---
-  // Strip Wikidot ^^...^^ superscript source lines
-  bodyLines = bodyLines.filter((l) => !l.trim().startsWith("^^"));
-
-  // Extract **Requires:** lines from body (Shifting Style style)
-  const reqLineIdx = bodyLines.findIndex((l) =>
-    /^\*\*Requires:\*\*/i.test(l.trim()),
+  const sourceStrippedLines = stripBodySourceLines(lines.slice(1));
+  const { bodyLines, requires } = extractBodyRequires(
+    sourceStrippedLines,
+    heading.requires,
   );
-  if (reqLineIdx !== -1 && !requires) {
-    const reqLine = bodyLines[reqLineIdx].trim();
-    requires = reqLine.replace(/^\*\*Requires:\*\*\s*/i, "").trim();
-    bodyLines.splice(reqLineIdx, 1);
+  const body = cleanBody(trimBlankLines(bodyLines).join("\n"));
+
+  return { ...heading, requires, body };
+}
+
+function parseTraitHeading(rawHeading) {
+  const initialHead = rawHeading.replace(/^\+\+\+\+\s+/, "").trim();
+  const { head: withoutSource, sourceKey } = stripHeadingSource(initialHead);
+  const { head: withoutType, abilityType } = stripAbilityType(withoutSource);
+  const { head, requires } = stripInlineRequires(withoutType);
+  return {
+    name: normalizeQuotes(head.replace(/\s+/g, " ").trim()),
+    abilityType,
+    requires,
+    sourceKey,
+  };
+}
+
+function stripHeadingSource(head) {
+  const sourceMatch = head.match(/\[([^\]]+)\]\s*$/);
+  return {
+    sourceKey: sourceMatch?.[1] ?? null,
+    head: sourceMatch ? head.slice(0, sourceMatch.index).trim() : head,
+  };
+}
+
+function stripAbilityType(head) {
+  const typeMatch = head.match(/\((Ex|Su|Sp)\)/i);
+  return {
+    abilityType: typeMatch ? typeMatch[1].toLowerCase() : null,
+    head: head.replace(/\((Ex|Su|Sp)\)/i, "").trim(),
+  };
+}
+
+function stripInlineRequires(head) {
+  const reqMatch = head.match(/\(requires ([^)]+)\)/i);
+  return {
+    requires: reqMatch ? titleCase(reqMatch[1].trim()) : null,
+    head: head.replace(/\(requires [^)]+\)/i, "").trim(),
+  };
+}
+
+function stripBodySourceLines(lines) {
+  return lines.filter((line) => !line.trim().startsWith("^^"));
+}
+
+function extractBodyRequires(bodyLines, currentRequires) {
+  const reqLineIdx = bodyLines.findIndex((line) =>
+    /^\*\*Requires:\*\*/i.test(line.trim()),
+  );
+  if (reqLineIdx === -1 || currentRequires) {
+    return { bodyLines, requires: currentRequires };
   }
+  const reqLine = bodyLines[reqLineIdx].trim();
+  return {
+    bodyLines: bodyLines.toSpliced(reqLineIdx, 1),
+    requires: reqLine.replace(/^\*\*Requires:\*\*\s*/i, "").trim(),
+  };
+}
 
-  // Strip leading/trailing blank lines from body
-  while (bodyLines.length && !bodyLines[0].trim()) bodyLines.shift();
-  while (bodyLines.length && !bodyLines[bodyLines.length - 1].trim())
-    bodyLines.pop();
-
-  const body = cleanBody(bodyLines.join("\n"));
-
-  return { name, abilityType, requires, sourceKey, body };
+function trimBlankLines(lines) {
+  const firstContent = lines.findIndex((line) => line.trim());
+  if (firstContent === -1) return [];
+  let lastContent = lines.length - 1;
+  while (lastContent > firstContent && !lines[lastContent].trim()) lastContent--;
+  return lines.slice(firstContent, lastContent + 1);
 }
 
 // ─── Rendering ───────────────────────────────────────────────────────────────
@@ -232,20 +258,31 @@ function titleCase(str) {
 }
 
 function showDiff(existing, generated) {
+  const diffs = differingLines(existing, generated).slice(0, 20);
+  for (const diff of diffs) printDiffLine(diff);
+  if (diffs.length === 0) console.log("  (whitespace difference only)");
+  console.log("");
+}
+
+function differingLines(existing, generated) {
   const eLines = existing.split("\n");
   const gLines = generated.split("\n");
-  const maxLen = Math.max(eLines.length, gLines.length);
-  let shown = 0;
-  for (let i = 0; i < maxLen && shown < 20; i++) {
-    const e = eLines[i] ?? "(none)";
-    const g = gLines[i] ?? "(none)";
-    if (e !== g) {
-      console.log(`  line ${i + 1}:`);
-      console.log(`    EXISTING:  ${e}`);
-      console.log(`    GENERATED: ${g}`);
-      shown++;
-    }
-  }
-  if (shown === 0) console.log("  (whitespace difference only)");
-  console.log("");
+  return Array.from(
+    { length: Math.max(eLines.length, gLines.length) },
+    (_, index) => diffLine(eLines, gLines, index),
+  ).filter(Boolean);
+}
+
+function diffLine(eLines, gLines, index) {
+  const existing = eLines[index] ?? "(none)";
+  const generated = gLines[index] ?? "(none)";
+  return existing === generated
+    ? null
+    : { lineNumber: index + 1, existing, generated };
+}
+
+function printDiffLine(diff) {
+  console.log(`  line ${diff.lineNumber}:`);
+  console.log(`    EXISTING:  ${diff.existing}`);
+  console.log(`    GENERATED: ${diff.generated}`);
 }
