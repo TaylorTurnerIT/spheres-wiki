@@ -21,11 +21,12 @@ interface Props {
 const { tabs, defaultTab, id = "tab-container", system = 'power' } = Astro.props;
 const initialTab = defaultTab || tabs[0].slug;
 
-// Pre-render all article-based tabs and extract TOC items
+// Pre-render all tabs: article entries AND named slots
 const renderedTabs = await Promise.all(
   tabs.map(async (tab) => {
     let Content = null;
     let tocItems: TocNode[] = [];
+    let slotHtml: string | null = null;
 
     if (tab.articleId && tab.collection) {
       const entry = await getEntry(tab.collection as any, tab.articleId);
@@ -37,8 +38,10 @@ const renderedTabs = await Promise.all(
           tocItems = buildTocTree(headings);
         }
       }
+    } else {
+      slotHtml = await Astro.slots.render(tab.slug);
     }
-    return { slug: tab.slug, Content, tocItems };
+    return { slug: tab.slug, Content, tocItems, slotHtml };
   })
 );
 ---
@@ -64,6 +67,7 @@ const renderedTabs = await Promise.all(
       const rendered = renderedTabs.find(r => r.slug === tab.slug);
       const Content = rendered?.Content;
       const tocItems = rendered?.tocItems || [];
+      const slotHtml = rendered?.slotHtml ?? '';
 
       return (
         <div
@@ -78,7 +82,7 @@ const renderedTabs = await Promise.all(
           <template data-toc-template={tab.slug}>
              {tocItems.length > 0 && <ArticleTOC items={tocItems} system={system} />}
           </template>
-          {Content ? <Content /> : <Fragment set:html={await Astro.slots.render(tab.slug)} />}
+          {Content ? <Content /> : <Fragment set:html={slotHtml} />}
         </div>
       );
     })}

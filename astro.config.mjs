@@ -38,6 +38,10 @@ export default defineConfig({
   build: {
     concurrency: 4,
   },
+  experimental: {
+    rustCompiler: true,
+    contentIntellisense: true,
+  },
   vite: {
     css: {
       transformer: "lightningcss",
