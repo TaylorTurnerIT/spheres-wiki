@@ -42,12 +42,12 @@ describe("buildTocTree", () => {
         id: "cat",
         label: "Cat",
         depth: 2,
-        children: [{ id: "entry", label: "Entry", depth: 5, children: [] }],
+        children: [{ id: "entry", label: "Entry", depth: 3, children: [] }],
       },
     ]);
   });
 
-  it("nests a sub-entry under its entry, then pops back to a sibling entry at the same depth", () => {
+  it("flattens all H3+ headings to one child level under the nearest H1/H2", () => {
     const headings = [
       { depth: 2, slug: "cat", text: "Cat" },
       { depth: 5, slug: "entry-1", text: "Entry 1" },
@@ -55,20 +55,15 @@ describe("buildTocTree", () => {
       { depth: 5, slug: "entry-2", text: "Entry 2" },
     ];
     const tree = buildTocTree(headings);
+    // All H3+ normalized to depth 3 — siblings, not nested under each other
     expect(tree[0].children).toEqual([
-      {
-        id: "entry-1",
-        label: "Entry 1",
-        depth: 5,
-        children: [
-          { id: "entry-1-sub", label: "Entry 1 Sub", depth: 6, children: [] },
-        ],
-      },
-      { id: "entry-2", label: "Entry 2", depth: 5, children: [] },
+      { id: "entry-1", label: "Entry 1", depth: 3, children: [] },
+      { id: "entry-1-sub", label: "Entry 1 Sub", depth: 3, children: [] },
+      { id: "entry-2", label: "Entry 2", depth: 3, children: [] },
     ]);
   });
 
-  it("starts a new root sibling when depth decreases below all open ancestors", () => {
+  it("treats consecutive H3+ headings as peers, H1/H2 as roots", () => {
     const headings = [
       { depth: 3, slug: "top", text: "Top" },
       { depth: 4, slug: "mid", text: "Mid" },
@@ -76,8 +71,10 @@ describe("buildTocTree", () => {
       { depth: 2, slug: "new-root", text: "New Root" },
     ];
     const tree = buildTocTree(headings);
-    expect(tree.map((n) => n.id)).toEqual(["top", "new-root"]);
-    expect(tree[0].children[0].children[0].id).toBe("leaf");
+    // Without an H1/H2 ancestor, H3+ items are all roots (depth 3).
+    // Each subsequent H3+ item replaces the previous as root because
+    // they share the same normalized depth.
+    expect(tree.map((n) => n.id)).toEqual(["top", "mid", "leaf", "new-root"]);
   });
 
   it("skips a heading flagged with the exclude sentinel", () => {

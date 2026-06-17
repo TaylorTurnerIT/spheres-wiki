@@ -164,9 +164,9 @@ const renderedTabs = await Promise.all(
     border-bottom: 0.5px solid var(--clr-border);
     margin-bottom: 1.5rem;
 
-    /* Extend line across whole area */
+    /* Extend line across whole area, including past the sidebar */
     margin-left: calc(-1 * var(--sp-5));
-    margin-right: calc(-1 * var(--sp-5));
+    margin-right: calc(-1 * var(--sp-5) - var(--rail-w, 0px) - var(--content-gap, 0rem));
     padding-left: var(--sp-5);
     padding-right: var(--sp-5);
 

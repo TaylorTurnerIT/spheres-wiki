@@ -12,11 +12,15 @@ describe("ArticleTOC rename", () => {
     ).toBe(false);
   });
 
-  it("ArticleTOC.astro exists, uses the .article-toc class, and exposes reinitArticleToc", () => {
+  it("ArticleTOC.astro exists and uses the .article-toc class", () => {
     const content = read("src/components/ArticleTOC.astro");
     expect(content).toContain("article-toc");
-    expect(content).toContain("reinitArticleToc");
     expect(content).not.toContain("local-toc");
+  });
+
+  it("articleTocClient.ts exposes reinitArticleToc", () => {
+    const content = read("src/lib/articleTocClient.ts");
+    expect(content).toContain("reinitArticleToc");
     expect(content).not.toContain("reinitLocalToc");
   });
 

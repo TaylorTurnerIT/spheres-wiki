@@ -1965,6 +1965,10 @@ h6 {
   flex-direction: column;
   gap: 3px;
 }
+.toc-list li {
+  padding-left: 0;
+  margin-left: 0;
+}
 .toc-cat-link {
   color: var(--clr-text);
   text-decoration: none;

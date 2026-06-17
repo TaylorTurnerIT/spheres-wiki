@@ -30,10 +30,13 @@ export function buildTocTree(headings: RenderedHeading[]): TocNode[] {
   for (const h of headings) {
     if (h.text.includes(EXCLUDE_SENTINEL)) continue;
 
-    const label = h.text.replaceAll(EXCLUDE_SENTINEL, "").trim();
-    const node: TocNode = { id: h.slug, label, depth: h.depth, children: [] };
+    // Normalize: H1+H2 → root (depth 2), H3+ → one child level (depth 3)
+    const depth = h.depth <= 2 ? 2 : 3;
 
-    while (stack.length && stack[stack.length - 1].depth >= h.depth) {
+    const label = h.text.replaceAll(EXCLUDE_SENTINEL, "").trim();
+    const node: TocNode = { id: h.slug, label, depth, children: [] };
+
+    while (stack.length && stack[stack.length - 1].depth >= depth) {
       stack.pop();
     }
 
