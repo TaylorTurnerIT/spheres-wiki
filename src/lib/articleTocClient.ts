@@ -94,12 +94,11 @@ function scrollSidebarToActive(nav: HTMLElement) {
   if (!sidebar || !active) return;
   const sb = sidebar.getBoundingClientRect();
   const el = active.getBoundingClientRect();
-  // Only scroll when element is fully outside the visible area
-  const step = sb.height * 0.5;
+  // Scroll only when element is fully outside the sidebar viewport
   if (el.bottom > sb.bottom) {
-    sidebar.scrollBy({ top: step, behavior: 'auto' });
+    sidebar.scrollBy({ top: el.bottom - sb.bottom + 12, behavior: 'auto' });
   } else if (el.top < sb.top) {
-    sidebar.scrollBy({ top: -step, behavior: 'auto' });
+    sidebar.scrollBy({ top: el.top - sb.top - 12, behavior: 'auto' });
   }
 }
 
