@@ -2,11 +2,11 @@
 const icons = import.meta.glob('../assets/spheres-icons/*.{webp,png}', { eager: true });
 const iconMap = Object.fromEntries(
   Object.entries(icons).map(([path, mod]) => [
-    path.split('/').pop().split('.')[0],
+    path.split('/').pop()!.split('.')[0],
     (mod as any).default.src
   ])
 );
-function getIcon(name) {
+function getIcon(name: string) {
   return iconMap[name] || iconMap[name.replace('_', '-')] || '';
 }
 

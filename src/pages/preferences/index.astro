@@ -527,7 +527,7 @@ const STANDARD_TOGGLES = [
       'champ-april-fools': true,
     };
 
-    let currentPrefs = { ...defaultPrefs };
+    let currentPrefs: Record<string, boolean> = { ...defaultPrefs };
 
     // Load from localStorage
     Object.keys(currentPrefs).forEach(key => {
@@ -602,7 +602,7 @@ const STANDARD_TOGGLES = [
 
         // Toggle state
         currentPrefs[pref] = !currentPrefs[pref];
-        localStorage.setItem('pref:' + pref, currentPrefs[pref]);
+        localStorage.setItem('pref:' + pref, String(currentPrefs[pref]));
 
         renderState();
       });
@@ -629,7 +629,7 @@ const STANDARD_TOGGLES = [
         const newState = !allOn;
         keys.forEach(k => {
           currentPrefs[k] = newState;
-          localStorage.setItem('pref:' + k, newState);
+          localStorage.setItem('pref:' + k, String(newState));
         });
         renderState();
       });
@@ -649,8 +649,8 @@ const STANDARD_TOGGLES = [
             currentPrefs['power-original'] = false;
             currentPrefs['power-ultimate'] = true;
           }
-          localStorage.setItem('pref:power-original', currentPrefs['power-original']);
-          localStorage.setItem('pref:power-ultimate', currentPrefs['power-ultimate']);
+          localStorage.setItem('pref:power-original', String(currentPrefs['power-original']));
+          localStorage.setItem('pref:power-ultimate', String(currentPrefs['power-ultimate']));
           renderState();
         });
       });

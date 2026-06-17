@@ -273,7 +273,7 @@ const groups: TocGroup[] = sections.map(sec => ({
     </div>
 
     <aside class="right-rail" aria-label="Page contents">
-      <TableOfContents overview={overview} groups={groups} system={system} />
+      <TableOfContents overview={overview} groups={groups} system={sysConfig.cssKey as 'power' | 'might' | 'guile' | 'champ'} />
       <SourceBookCallout book={sourceBook} />
     </aside>
   </div>

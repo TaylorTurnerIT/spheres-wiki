@@ -93,7 +93,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
       
       <StoreCarousel>
         {featuredCoreBooks.map(book => (
-          book.isComingSoon ? (
+          ('isComingSoon' in book && book.isComingSoon) ? (
              <div class="store-card coming-soon-card">
                <div class="store-card-cover-placeholder">
                  <span>Coming Soon</span>

@@ -43,6 +43,9 @@ export default defineConfig({
     contentIntellisense: true,
   },
   vite: {
+    build: {
+      chunkSizeWarningLimit: 200,
+    },
     css: {
       transformer: "lightningcss",
     },

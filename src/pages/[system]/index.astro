@@ -56,7 +56,7 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { system } = Astro.params;
+const system = Astro.params.system as 'power' | 'might' | 'guile' | 'champions';
 const { spheres, classes, prestigeClasses } = Astro.props;
 
 const sysConfig = resolveSystem(system)!;

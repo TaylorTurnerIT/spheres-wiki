@@ -313,7 +313,7 @@ const formatBaseFeatureName = (id: string) => {
     </div>
 
     <aside class="right-rail" aria-label="Page contents">
-      <TableOfContents overview={tocOverview} groups={tocGroups} system={system} />
+      <TableOfContents overview={tocOverview} groups={tocGroups} system={sysConfig.cssKey as 'power' | 'might' | 'guile' | 'champ'} />
       <SourceBookCallout book={sourceBook} />
     </aside>
   </div>

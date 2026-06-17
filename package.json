@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "postinstall": "bun scripts/patch-fontsource.mjs",
-    "build": "bun scripts/validate.mjs && bun scripts/check-base-abilities.mjs && bun run fallow-audit && astro build && pagefind --site dist && bun scripts/check-toc.mjs",
+    "build": "bun scripts/validate.mjs && bun scripts/check-base-abilities.mjs && bun run fallow-audit && astro check && astro build && pagefind --site dist && bun scripts/check-toc.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",
