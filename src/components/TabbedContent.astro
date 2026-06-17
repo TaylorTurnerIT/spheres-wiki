@@ -117,11 +117,9 @@ const renderedTabs = await Promise.all(
         if (template) {
            const clone = template.content.cloneNode(true);
            sidebar.prepend(clone);
-           // Re-init TOC highlight logic via global function
            if ((window as any).reinitArticleToc) {
              (window as any).reinitArticleToc();
            }
-           // Also dispatch event as a more robust signal
            document.dispatchEvent(new CustomEvent('article-toc:reinit'));
         }
       }
@@ -143,8 +141,8 @@ const renderedTabs = await Promise.all(
     const hash = window.location.hash.slice(1);
     const initial = container.dataset.initialTab;
 
-    // Use requestAnimationFrame to ensure the script has finished executing and
-    // ArticleTOC has registered its global handler/event listener
+    // Use requestAnimationFrame so articleTocClient's module-level code
+    // (which registers reinitArticleToc) has executed before we call it
     requestAnimationFrame(() => {
       if (hash && Array.from(tabs).some(t => t.dataset.tab === hash)) {
         switchTab(hash, false);
@@ -154,9 +152,9 @@ const renderedTabs = await Promise.all(
     });
     }
 
-  document.addEventListener('astro:page-load', () => {
+    document.addEventListener('astro:page-load', () => {
     document.querySelectorAll<HTMLElement>('.tabbed-content').forEach(initTabs);
-  });
+    });
 </script>
 
 <style>

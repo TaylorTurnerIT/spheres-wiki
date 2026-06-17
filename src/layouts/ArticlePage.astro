@@ -66,6 +66,12 @@ const tocItems = showToc ? buildTocTree(headings) : [];
   </div>
 </WikiPage>
 
+<script>
+  // Must load here (not in ArticleTOC.astro) because ArticleTOC can be rendered
+  // inside <template> tags by TabbedContent, where scripts are inert.
+  import '@/lib/articleTocClient';
+</script>
+
 <style is:global>
   .article-layout {
     display: flex;
