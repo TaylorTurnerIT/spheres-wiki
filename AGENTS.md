@@ -142,6 +142,8 @@ Adding content the supported way:
 | `src/lib/tags.ts` | `buildOrderedTagIds()` — auto-injects system tags (talent, feat, sphere, class-trait, tiers) and sorts by tag priority |
 | `src/lib/renderBody.ts` | Markdown rendering pipeline (unified) + `splitBodyOnMarkers()` for base-ability extraction |
 | `src/config/site.ts` | `SYSTEMS` registry: label, color, route, subtitle, etc. (single source — SPEC V4/V5) |
+| `src/lib/articleToc.ts` | `buildTocTree()` — builds nested TOC tree from rendered headings |
+| `src/lib/articleTocClient.ts` | client-side TOC highlight/scroll logic; imported via `<script>` in `ArticlePage.astro`. Exposes `window.reinitArticleToc` for `TabbedContent` to call after injecting a tab's TOC into the sidebar. Must be a standalone module (not inline in `ArticleTOC.astro`) because `ArticleTOC` is rendered inside `<template>` tags, where scripts are inert |
 | `src/components/SVGSprite.astro` | every sphere icon `<symbol>` (+ `si-fallback`) |
 | `scripts/class-parser.mjs` | Parses Wikidot class source → class/feature/trait `.md` files |
 | `scripts/generate-bestial-traits.mjs` | Parses Shifter Bestial Trait Wikidot source → trait `.md` files |
@@ -159,6 +161,7 @@ Adding content the supported way:
 - **Prerequisites**: On trait entries, `requires` frontmatter renders as `**Prerequisites:** {req}` below the heading — never inline `(requires ...)`.
 - **ACFs**: Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. They use `archetypeId: {class}-alternate-class-features` (virtual — no content file).
 - **Markdown config**: use `markdown.processor: unified({ remarkPlugins })` from `@astrojs/markdown-remark`. Do not use deprecated top-level `markdown.remarkPlugins`.
+- **Component scripts in `<template>` tags are inert**: If a component that defines `<script>` is rendered inside a `<template>` (e.g. `TabbedContent.astro`'s per-tab TOC templates), the script never executes. Client-side logic for such components must live in an external module imported via the layout's `<script>` block (see `articleTocClient.ts` imported by `ArticlePage.astro`).
 - **Build strictness**: `bun run build` must complete without Astro check diagnostics, Fallow findings, Vite warnings, unresolved remark links, or TOC audit failures. `vite.build.chunkSizeWarningLimit` is intentionally strict at 200KB.
 - **Build concurrency — two rules to follow in `getStaticPaths()`:**
   1. Never loop book metadata slugs with sequential `await getCollection()`. Metadata-only `_book.yaml` folders are not collections. Use `getCollEntriesMap()` from `resolveEntries.ts` instead — it is built in the same parallel pass as `resolveEntries()` and shared across all page files.
