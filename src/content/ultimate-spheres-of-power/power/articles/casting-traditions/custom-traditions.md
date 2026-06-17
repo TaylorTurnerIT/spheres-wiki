@@ -9,7 +9,7 @@ By combining drawbacks and boons, a truly unique casting tradition can be create
 
 **Example:** Jake the GM is creating a campaign centered around the conflict between four groups of magic users; wizards (who use the Traditional Magic tradition), clerics (who use the Divine Petitioner tradition), druids (who use the Druidic tradition), and cultists (who use the Blood Magic tradition). He informs the players that they are free to use whatever classes they wish, but that their character should pick one of those four traditions to use. One of the players approaches the GM and asks if they can use a custom tradition; their character is an alchemist who gains power by ingesting custom brews, transforming into a magical alter-ego not unlike Dr. Jekyll and Mr. Hyde. After thinking it over, the GM decides this is awesome and agrees, telling the player that his tradition will be considered a subset of the Traditional Magic tradition and will count as Traditional Magic for all purposes.
 
-## Sample Custom Casting Traditions
+## Sample Custom Traditions
 ### Addled
 Hidden within the ramblings of the insane, one word is often repeated. Some healers theorize that this word is the name of the hidden god of madness, gaining power from—and granting power to—those who surrender their minds to him. There must be some truth to this theory, because sometimes, when those with this word on their lips are displeased with their surroundings, they possess the ability to change them.
 
@@ -502,4 +502,3 @@ You have studied the planes to construct a powerful arsenal of abilities, gather
 **Casting Ability Modifier:** Charisma, Intelligence, or Wisdom.<br>
 **Drawbacks:** Card Casting (Colored Mana, Cooldown, Deckout, Gradual Ramp, Mana Pool, Stagnant Pool), Expensive Locus, Terrain Casting<br>
 **Boons:** Drawback Feat (any 2 Deck feats), +1 spell point, +1 per level in casting classes.
-
