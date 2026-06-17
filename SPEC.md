@@ -18,7 +18,7 @@ Fast static wiki for the Spheres tabletop RPG (Power/Might/Guile/Champions) by D
 - C5. OGL compliance — all content under Open Game License; legal page must exist
 - C6. New sphere in existing system must appear site-wide with only content files added (no component edits) — except icon SVG which requires one `<symbol>` addition to SVGSprite.astro
 - C7. New game system requires coordinated changes across config, CSS, nav, pages — this is acceptable but must be documented in §I
-- C8. Toolchain pinned — Astro 6.x SSG + TypeScript, Bun ≥ 1.1.0
+- C8. Toolchain pinned — Astro 6.x SSG + TypeScript, Bun ≥ 1.1.0; `astro.config.mjs` enables `experimental.rustCompiler` and `experimental.contentIntellisense`
 - C9. Entry metadata path-encoded — `src/content/<book>/<system>/<type>/*.md`; `type`+`sphere` inferred from path by `inferFromPath` (I.content); `system` derived from directory, not frontmatter
 - C10. All entry `id`s are lowercase kebab-case (`^[a-z0-9-]+$`), enforced by `entrySchema`
 - C11. `system:` field ⊥ in entry frontmatter — always derived from `{book}/{system}` directory prefix; ∃ only in `_system.yaml` at `{book}/{system}/`
@@ -47,10 +47,14 @@ src/content/<book-slug>/
 ```
 Entry types: `sphere | talent | feat | class | class-feature | class-trait | article | archetype | archetype-feature | tag`
 
+Collection discovery rule: a book folder is an Astro collection iff it contains both `_book.yaml` and at least one `.md` entry. `_book.yaml`-only folders are valid metadata/store placeholders but are not collections and must not be passed to `getCollection()`.
+
 **PF1e base class convention:** PF1e base classes (Fighter, Rogue, etc.) stored as `ClassEntry` with `system: "pf1e"`. Their archetypes use `system: "power"|"might"|"guile"|"champions"` to indicate which sphere system they grant. Archetype named `"Spheres {ClassName}"` (e.g. `"Spheres Fighter"`) is the canonical base conversion and always sorts first in its class group. PF1e classes never appear on system index pages (filtered by system ∈ power/might/guile/champions only).
 
 ### I.resolveEntries — data API
-`resolveEntries()` → `ResolvedMaps`: sphereMap, talentMap, featMap, classMap, classFeatureMap, classTraitMap, articleMap, archetypeMap, archetypeFeatureMap, tagMap, bookMetaMap, entrySourceBook
+`resolveEntries()` → `ResolvedMaps`: sphereMap, talentMap, featMap, classMap, classFeatureMap, classTraitMap, articleMap, archetypeMap, archetypeFeatureMap, tagMap, bookMetaMap, entrySourceBook.
+
+`bookMetaMap` includes every `_book.yaml`, including metadata-only folders. Raw Astro content entries are fetched only for real collections (`_book.yaml` + `.md`) and cached behind `getCollEntriesMap()` for `getStaticPaths()` consumers.
 
 ### I.config — system registry (target state)
 `src/config/site.ts` exports single `SYSTEMS` record keyed by system id:
@@ -67,6 +71,13 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 
 ### I.pagefind — search index + ranking
 Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight is marked in `WikiPage.astro`. Result ranking weights primary entries (spheres, classes) above talents/feats (see V18).
+
+### I.build — strict local/build gate
+`bun run build` is the canonical acceptance gate:
+```
+validate.mjs → check-base-abilities.mjs → fallow-audit → astro check → astro build → pagefind --site dist → check-toc.mjs
+```
+The gate must exit 0 and emit no actionable diagnostics: no Astro check errors/warnings/hints, no Fallow dead-code/complexity/duplication findings, no unresolved remark entry links, no Vite warnings, no Pagefind failures, and no TOC audit failures. `vite.build.chunkSizeWarningLimit` is 200KB by design.
 
 ### I.layout — page shell
 `WikiPage.astro`: header + sidebar + tab nav + content slot; sets Pagefind indexing scope/weight per page. `Base.astro`: html shell, meta/OG tags, footer, self-hosted fonts + `global.css` load.
@@ -191,9 +202,9 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 - V31. Base abilities rendered via `[TalentName]` markers in sphere body — marker ID must match `tier:"base"` talent entry slug (lowercase kebab). `splitBodyOnMarkers()` extracts segments; page template matches against talentMap.
 - V32. `sectionDefinitions` category with `tiers:["base"]` always empty — page template filters base talents before `buildSections()`. Base abilities render exclusively via V31 markers.
 - V33. Prerequisites text auto-linked at build time: `**Prerequisites:**` block parsed; `<Name> Sphere|sphere` → sphere page link; parenthetical talent refs `(TalentName)` → talent page link iff talent exists in talentMap; non-talent parens (e.g. `(Any)`, `(formulae)`, `(toxin)`) left unlinked. Comma/"or"-separated multi-refs handled. Bare talent names (no sphere prefix) linked when found in talentMap. Case-insensitive matching of display names.
-- V34. ∀ changes → npm run build ! pass. No change is considered complete unless the Astro site builds successfully without data or schema errors.
+- V34. ∀ changes → `bun run build` must pass cleanly. No change is complete unless the full I.build gate exits 0 with zero actionable diagnostics (data/schema errors, Astro check errors/warnings/hints, Fallow findings, unresolved entry links, Vite warnings, Pagefind failures, or TOC audit failures).
 - V35. `coverImage` in `_book.yaml` must point to an existing local file in `src/assets/covers/` and cannot be a hotlink (URL).
-- V36. All Might sphere conversions must pass `npm run build` — V34 applies to each sphere individually before marking COMPLETE.
+- V36. All Might sphere conversions must pass `bun run build` — V34 applies to each sphere individually before marking COMPLETE.
 - V37. Duplicate talent IDs (`type:sourceBook:id`) across different spheres must be manually disambiguated (e.g. `smash` → `smash-brute`). Original file path and display name stay unchanged.
 - V38. Tags that exist in `ultimate-spheres-of-power` must NOT be redefined in Might — use the existing Power definition. Only create new Might tag files when no Power equivalent exists.
 
@@ -228,6 +239,10 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 - V57. ∀ heading with valid `id` attr in page body → `data-toc-item` entry in sidebar TOC. No orphaned content.
 - V58. Cross-sphere feats ! appear on ALL referenced sphere pages, not just one.
 - V59. Entry slug IDs ! contain format artifacts (`993300`, hex color prefixes, etc.). Schema must reject at build time.
+- V60. `src/content.config.ts` must import `z` directly from `zod`; deprecated `astro:content` `z` re-export is prohibited.
+- V61. Markdown plugins must be configured through `markdown.processor: unified({ remarkPlugins })` from `@astrojs/markdown-remark`; deprecated top-level `markdown.remarkPlugins` is prohibited.
+- V62. `_book.yaml`-only folders must remain metadata-only placeholders. They may appear in `bookMetaMap`, but collection fetch code must skip them to avoid Astro "collection does not exist or is empty" diagnostics.
+- V63. Fallow must remain fully clean under the build audit: no dead-code, duplication, or complexity findings. Intentional framework-loaded dependency exceptions must be narrow and documented in `.fallowrc.json`.
 
 ---
 

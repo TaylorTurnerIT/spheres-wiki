@@ -18,6 +18,8 @@ The four player-facing systems are **Power**, **Might**, **Guile**, and **Champi
 ## Tech stack
 
 - **Astro 6.x** static site generator + **TypeScript** (no server runtime)
+  - `experimental.rustCompiler: true` with `@astrojs/compiler-rs`
+  - `experimental.contentIntellisense: true`
 - **Pagefind** for client-side search (index built at deploy)
 - **TomSelect** for select/dropdown UI; vanilla CSS (`src/styles/global.css`), no framework
 - Self-hosted fonts via `@fontsource/cinzel` + `@fontsource/crimson-text` — **no external CDN, no analytics** (see SPEC V11/V12)
@@ -31,16 +33,16 @@ The four player-facing systems are **Power**, **Might**, **Guile**, and **Champi
 ```bash
 bun install            # setup
 bun run dev            # dev server → http://localhost:4321
-bun run build          # validate.mjs → check-base → fallow-audit → astro build → pagefind index (output: dist/)
+bun run build          # validate → check-base → fallow-audit → astro check → astro build → pagefind → check-toc
 bun run preview        # serve the production build locally
 bun run validate       # content validation only (scripts/validate.mjs)
 bun run fallow         # run comprehensive codebase audit (dead code, health, duplication)
-bun run fallow-audit   # run build-blocking complexity/dead-code audit
+bun run fallow-audit   # build-blocking Fallow audit: zero new dead-code/complexity/duplication findings
 bun run test           # unit tests (Vitest)
-bunx astro check       # type check
+bunx astro check       # Astro/Volar type check; must report 0 errors, 0 warnings, 0 hints
 ```
 
-`just` wraps the common ones: `just run` (the default) = `test → validate → build → preview`; also `just test`, `just validate`, `just build`, `just preview`. When running code, 
+`just` wraps the common ones: `just run` (the default) = `test → validate → build → preview`; also `just test`, `just validate`, `just build`, `just preview`.
 
 CI (`.github/workflows/`): `test.yml` runs Vitest + content validation on push/PR; `deploy.yml` builds and publishes to GitHub Pages on push to `main`.
 
@@ -69,7 +71,7 @@ docs/                 supporting docs
 
 ## Content model (read this before touching content)
 
-Books are **auto-discovered**: a folder under `src/content/` is registered as a collection iff it has both a `_book.yaml` **and** at least one `.md` entry (`content.config.ts`). No manual registration anywhere.
+Books are **auto-discovered**: a folder under `src/content/` is registered as a collection iff it has both a `_book.yaml` **and** at least one `.md` entry (`content.config.ts`). `_book.yaml`-only folders are allowed as metadata/store placeholders, but they are not Astro collections and must not be passed to `getCollection()`.
 
 ```
 src/content/<book-slug>/
@@ -87,7 +89,7 @@ src/content/<book-slug>/
   ...                 # entry type is inferred from the path by lib/inferFromPath.ts
 ```
 
-Entry types (discriminated union on `type` in `entrySchema`): `sphere`, `talent`, `feat`, `class`, `class-feature`, `class-trait`, `article`, `archetype`, `archetype-feature`, `tag`.
+Entry types (discriminated union on `type` in `entrySchema`): `sphere`, `talent`, `feat`, `class`, `class-feature`, `class-trait`, `article`, `archetype`, `archetype-feature`, `tag`. `entrySchema` uses direct `zod` import, not deprecated `astro:content` `z`.
 
 Frontmatter is intentionally minimal because `inferFromPath` fills in `type`/`sphere`/`system` from the file's location. **Do not add `system:` to entry frontmatter** — it is derived from the `{book}/{system}/` directory prefix (SPEC V26, C11). Example talent at `src/content/ultimate-spheres-of-power/power/spheres/alteration/talents/my-talent.md`:
 
@@ -130,12 +132,12 @@ Adding content the supported way:
 
 | File | Responsibility |
 |------|----------------|
-| `src/content.config.ts` | `entrySchema` (Zod) + auto-discovery of book collections |
+| `src/content.config.ts` | `entrySchema` (Zod) + auto-discovery of real book collections (`_book.yaml` + `.md`) |
 | `src/lib/inferFromPath.ts` | derives `type`/`sphere`/`system` from a content file's path |
-| `src/lib/resolveEntries.ts` | builds `ResolvedMaps`, applies errata patches, links entries; exports `getCollEntriesMap()` for cached raw Astro entries |
+| `src/lib/resolveEntries.ts` | builds `ResolvedMaps`, applies errata patches, links entries; keeps `_book.yaml` metadata for all books, fetches only real Astro collections, exports `getCollEntriesMap()` for cached raw entries |
 | `src/lib/categorize.ts` | groups a sphere's talents/feats into display sections (+ "Other") |
 | `src/lib/url.ts` | base-path-aware link helper — **use `url()` for every internal link** (SPEC C2) |
-| `src/lib/remarkEntryLinks.ts` | remark plugin turning entry references into links during markdown build |
+| `src/lib/remarkEntryLinks.ts` | remark plugin turning explicit `@talent`/`@feat`/`@sphere`/`@class` refs and prerequisites into links during markdown build |
 | `src/lib/types.ts` | entry + `ResolvedMaps` TypeScript types |
 | `src/lib/tags.ts` | `buildOrderedTagIds()` — auto-injects system tags (talent, feat, sphere, class-trait, tiers) and sorts by tag priority |
 | `src/lib/renderBody.ts` | Markdown rendering pipeline (unified) + `splitBodyOnMarkers()` for base-ability extraction |
@@ -156,15 +158,18 @@ Adding content the supported way:
 - **Class trait rendering**: Traits use the `.talent-header` pattern (top row: name + source; bottom row: `TagBadge` components via `buildOrderedTagIds()`). The `class-trait` tag is auto-injected — never hardcode a label span.
 - **Prerequisites**: On trait entries, `requires` frontmatter renders as `**Prerequisites:** {req}` below the heading — never inline `(requires ...)`.
 - **ACFs**: Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. They use `archetypeId: {class}-alternate-class-features` (virtual — no content file).
+- **Markdown config**: use `markdown.processor: unified({ remarkPlugins })` from `@astrojs/markdown-remark`. Do not use deprecated top-level `markdown.remarkPlugins`.
+- **Build strictness**: `bun run build` must complete without Astro check diagnostics, Fallow findings, Vite warnings, unresolved remark links, or TOC audit failures. `vite.build.chunkSizeWarningLimit` is intentionally strict at 200KB.
 - **Build concurrency — two rules to follow in `getStaticPaths()`:**
-  1. Never loop `BOOK_COLLECTIONS` with sequential `await getCollection()`. Use `getCollEntriesMap()` from `resolveEntries.ts` instead — it is built in the same parallel pass as `resolveEntries()` and shared across all page files.
+  1. Never loop book metadata slugs with sequential `await getCollection()`. Metadata-only `_book.yaml` folders are not collections. Use `getCollEntriesMap()` from `resolveEntries.ts` instead — it is built in the same parallel pass as `resolveEntries()` and shared across all page files.
   2. When multiple independent async operations must run locally (e.g. `render()` calls for a set of entries), wrap them in `Promise.all([...])` rather than `await`-ing each in a loop.
 
 ## Scripts & content pipeline
 
 `scripts/` holds the Wikidot import/ETL and validators — not part of the runtime site:
-- `validate.mjs` (runs in `npm run build`), plus `validate-tags.mjs`, `validate-v2.mjs`, `check-links.mjs`, `purge-dead-links.mjs`
+- `validate.mjs` (runs in `bun run build`), plus `validate-tags.mjs`, `validate-v2.mjs`, `check-links.mjs`, `purge-dead-links.mjs`
 - parsers/generators: `parse-wiki.mjs`, `class-parser.mjs`, `archetype-parser.mjs`, `generate-tags.mjs`, `generate-bestial-traits.mjs`, `catalog.mjs`, `migrate-to-nested.mjs`, `download_covers.py`
+- Fallow treats `scripts/catalog.mjs`, `scripts/generate-bestial-traits.mjs`, and `scripts/parse-wiki.test.mjs` as explicit entrypoints. Keep ETL helpers small enough to avoid complexity findings.
 - See `scripts/PARSE-WIKI.md` for the parsing workflow.
 - See `docs/lessons-learned.md` for recent operational lessons from performance, Biome, and Fallow fixes.
 
@@ -183,7 +188,7 @@ The Spheres of Might content is migrated from Wikidot source files via a Rust pa
 7. Resolve quarantine: add missing lexicon entries OR acknowledge for manual creation
 8. Force-write: `--force` generates `.md` files under `src/content/<book>/might/spheres/<sphere>/`
 9. Create tag definitions: `src/content/spheres-of-might/might/tags/<tag>.md` (unless tag exists in Power)
-10. Run `npm run build` — must pass with 0 errors
+10. Run `bun run build` — must pass cleanly with 0 errors/warnings/hints/findings
 
 ### Post-write cleanup
 
@@ -223,7 +228,7 @@ The Spheres of Guile content uses the same pipeline as Might: Rust parser `../ft
 7. Resolve quarantine: add missing lexicon entries OR (for no-body-source 3PP) search Library of Metzofitz
 8. Force-write: `--force` generates `.md` files to temp; copy to `src/content/<book>/guile/spheres/<sphere>/`
 9. Create tag definitions: `src/content/spheres-of-guile/guile/tags/<tag>.md` (unless tag exists in Power/Might)
-10. Run `npm run validate` → `npm run build` — must pass with 0 errors
+10. Run `bun run validate` → `bun run build` — must pass cleanly with 0 errors/warnings/hints/findings
 
 ### Critical rules (universal — applies to Might and Power too)
 
@@ -257,14 +262,14 @@ Quarantined entries are NOT auto-generated. They must be manually created in the
 
 - **Unit** (`tests/lib/`, Vitest): schema/resolution/categorize/tags/url/search/etc. Run with `bun run test`.
 
-When adding a feature or fixing a bug, prefer adding/extending a test, and run `bun run validate` to catch content-contract violations before building.
+When adding a feature or fixing a bug, prefer adding/extending a test. Run targeted tests, then `bun run build` before handoff; the build already includes content validation, Fallow, Astro check, Astro build, Pagefind, and TOC audit.
 
 ---
 
 <!-- fallow:setup-hooks:start -->
 ## Fallow local gate
 
-Before any `git commit` or `git push`, run `fallow audit --format json --quiet --explain --gate-marker agent`. If the verdict is `fail`, fix the reported findings before retrying. Treat JSON runtime errors like `{ "error": true, ... }` as non-blocking.
+Before any `git commit` or `git push`, run `fallow audit --format json --quiet --explain --gate-marker agent`. If the verdict is `fail`, fix the reported findings before retrying. Treat JSON runtime errors like `{ "error": true, ... }` as non-blocking. The only dependency ignored in `.fallowrc.json` specifically for framework loading is `@astrojs/compiler-rs`; do not add broad ignores for code issues.
 
 Audit defaults to `gate=new-only`: only findings introduced by the current changeset affect the verdict. Inherited findings on touched files are reported under `attribution` and annotated with `introduced: false`, but do not block the commit. Set `[audit] gate = "all"` in `fallow.toml` to gate every finding in changed files.
 
