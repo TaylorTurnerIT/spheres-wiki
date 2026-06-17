@@ -82,11 +82,12 @@ function isSubLinkInViewport(el: HTMLElement): boolean {
 }
 
 function findCurrentSubLink(headings: HeadingEntry[]): HTMLAnchorElement | null {
+  let active: HTMLAnchorElement | null = null;
   for (const link of headings.flatMap(h => h.subLinks)) {
     const el = findTargetElement(link.dataset.tocItem!);
-    if (el && isSubLinkInViewport(el)) return link;
+    if (el && isSubLinkInViewport(el)) active = link;
   }
-  return null;
+  return active;
 }
 
 function updateSubLinkHighlight(allSubLinks: HTMLAnchorElement[], active: HTMLAnchorElement | null) {
