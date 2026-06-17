@@ -1960,6 +1960,7 @@ h6 {
 .toc-list {
   list-style: none;
   padding: 0;
+  padding-inline-start: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -1967,7 +1968,9 @@ h6 {
 }
 .toc-list li {
   padding-left: 0;
+  padding-inline-start: 0;
   margin-left: 0;
+  margin-inline-start: 0;
 }
 .toc-cat-link {
   color: var(--clr-text);
