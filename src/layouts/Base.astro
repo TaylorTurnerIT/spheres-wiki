@@ -2,6 +2,7 @@
 import { url } from "@/lib/url";
 import { ClientRouter } from 'astro:transitions';
 import SVGSprite from '@/components/SVGSprite.astro';
+import ScrollToTop from '@/components/ScrollToTop.astro';
 import "@/styles/global.css";
 import "@fontsource/cinzel/400.css";
 import "@fontsource/cinzel/600.css";
@@ -57,6 +58,7 @@ const {
   <body>
     <SVGSprite />
     <slot />
+    <ScrollToTop />
   </body>
   <script>
     const saved = sessionStorage.getItem('scroll-y');

@@ -8,7 +8,7 @@ import Toast from './Toast.astro';
   id="beta-toast"
   title="BETA VERSION"
   storageKey="beta-toast-dismissed"
-  bottom="clamp(20px, 3vh, 50px)"
+  bottom="calc(clamp(20px, 3vh, 50px) + var(--sp-6) + 30px)"
 >
   Some content and functionality may be incomplete.
   Report issues or discuss changes on
