@@ -56,6 +56,21 @@ Collection discovery rule: a book folder is an Astro collection iff it contains 
 
 `bookMetaMap` includes every `_book.yaml`, including metadata-only folders. Raw Astro content entries are fetched only for real collections (`_book.yaml` + `.md`) and cached behind `getCollEntriesMap()` for `getStaticPaths()` consumers.
 
+### I.book-metadata — `_book.yaml` verification contract
+`_book.yaml` is canonical site metadata for a source book: title, publisher, publishedDate, price, buyUrl, and local cover reference. These fields affect store display, source attribution, collection discovery, and errata patch ordering, so real-looking values must be verified before commit.
+
+Accepted verification sources:
+- Primary or storefront product pages: DriveThruRPG, OpenGamingStore, Paizo, publisher product pages.
+- Publisher/legal listings: Drop Dead Studios/Spheres legal pages and source/citation listings.
+- Library/reference indexes used by this project, especially Library of Metzofitz, when they expose concrete title, publisher, or release-date data.
+
+Verification rules:
+- Do not invent plausible metadata. If a field is unknown, use §P placeholder conventions or omit optional fields; never write a value that looks real because it is "probably right."
+- Normalize verified dates to `YYYY-MM-DD`; preserve exact publisher/title spelling and punctuation from the best available source.
+- Treat prices and storefront URLs as current-source facts: verify them at the time of edit, and prefer a live product page over copied historic notes.
+- When adding or correcting multiple books, record the evidence trail in the relevant context kit or docs note so future agents can audit why the metadata is trusted.
+- If sources disagree, prefer the publisher/product page for storefront fields and the source/legal listing for citation identity; document the conflict rather than silently choosing.
+
 ### I.config — system registry (target state)
 `src/config/site.ts` exports single `SYSTEMS` record keyed by system id:
 ```ts
@@ -159,6 +174,7 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 - Placeholder dates **must** use `1970-01-01` (Unix epoch / UTC 0) — never a "plausible" date like 2020-01-01. An obviously wrong date is immediately visible as a stub; a plausible one is silently wrong.
 - Placeholder strings should be conspicuously fake (e.g. `"PLACEHOLDER"`, `"TBD"`). Do not guess real values.
 - `publishedDate` in `_book.yaml` drives errata ordering (V21). A placeholder must never sort before a real date; `1970-01-01` safely predates all real content.
+- Optional storefront fields (`price`, `buyUrl`) should be omitted if unverified unless a conspicuous placeholder is intentionally needed for a migration queue. Never use fake product IDs, fake URLs, or plausible prices.
 
 ---
 
@@ -243,6 +259,7 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 - V61. Markdown plugins must be configured through `markdown.processor: unified({ remarkPlugins })` from `@astrojs/markdown-remark`; deprecated top-level `markdown.remarkPlugins` is prohibited.
 - V62. `_book.yaml`-only folders must remain metadata-only placeholders. They may appear in `bookMetaMap`, but collection fetch code must skip them to avoid Astro "collection does not exist or is empty" diagnostics.
 - V63. Fallow must remain fully clean under the build audit: no dead-code, duplication, or complexity findings. Intentional framework-loaded dependency exceptions must be narrow and documented in `.fallowrc.json`.
+- V64. `_book.yaml` metadata that looks real must be source-verified before commit. Unverified values must be conspicuous placeholders per §P or omitted if optional. Product URLs, prices, publishers, and published dates must not be fabricated, inferred from nearby products, or filled with temporary plausible data.
 
 ---
 
