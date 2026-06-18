@@ -2003,6 +2003,11 @@ h6 {
   overflow: hidden;
   transition: max-height 200ms ease;
 }
+/* .entry-description ul (0,1,1) beats .toc-list (0,1,0) — override with .toc context */
+.toc .toc-list {
+  padding: 0;
+  padding-inline-start: 0;
+}
 /* Article TOC sub-lists are always open — no collapse animation */
 .article-toc .toc-sub-list {
   max-height: none;

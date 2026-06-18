@@ -87,18 +87,18 @@ function updateSubLinkHighlight(allSubLinks: HTMLAnchorElement[], active: HTMLAn
 }
 
 // ── Sidebar scroll ────────────────────────────────────────────────
-// fallow-ignore-next-line complexity — two guards + two scroll directions
+// fallow-ignore-next-line complexity
 function scrollSidebarToActive(nav: HTMLElement) {
   const sidebar = nav.closest<HTMLElement>('.article-sidebar');
-  const active = nav.querySelector<HTMLElement>('.is-active, .is-current');
+  const active = nav.querySelector<HTMLElement>('.is-current') ?? nav.querySelector<HTMLElement>('.is-active .toc-cat-link');
   if (!sidebar || !active) return;
   const sb = sidebar.getBoundingClientRect();
   const el = active.getBoundingClientRect();
-  // Scroll only when element is fully outside the sidebar viewport
-  if (el.bottom > sb.bottom) {
-    sidebar.scrollBy({ top: el.bottom - sb.bottom + 12, behavior: 'auto' });
-  } else if (el.top < sb.top) {
-    sidebar.scrollBy({ top: el.top - sb.top - 12, behavior: 'auto' });
+  const pad = 8;
+  if (el.bottom > sb.bottom - pad) {
+    sidebar.scrollBy({ top: el.bottom - sb.bottom + pad, behavior: 'smooth' });
+  } else if (el.top < sb.top + pad) {
+    sidebar.scrollBy({ top: el.top - sb.top - pad, behavior: 'smooth' });
   }
 }
 
@@ -109,10 +109,17 @@ function createRecalcHandler(
   headings: HeadingEntry[],
   allSubLinks: HTMLAnchorElement[],
 ) {
+  let lastActiveKey = '';
   return () => {
-    updateActiveSection(categories, findCurrentSection(headings));
-    updateSubLinkHighlight(allSubLinks, findCurrentSubLink(headings));
-    scrollSidebarToActive(nav);
+    const activeSection = findCurrentSection(headings);
+    const activeSubLink = findCurrentSubLink(headings);
+    updateActiveSection(categories, activeSection);
+    updateSubLinkHighlight(allSubLinks, activeSubLink);
+    const key = (activeSection?.dataset.tocSection ?? '') + '|' + (activeSubLink?.dataset.tocItem ?? '');
+    if (key !== lastActiveKey) {
+      lastActiveKey = key;
+      scrollSidebarToActive(nav);
+    }
   };
 }
 

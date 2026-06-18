@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   inferFromPath,
   resolveArchetypeEntry,
+  resolveCastingTraditionEntry,
   resolveClassEntry,
   resolveSphereEntry,
 } from "../../src/lib/inferFromPath";
@@ -207,6 +208,69 @@ describe("inferFromPath", () => {
     });
   });
 
+  describe("casting tradition paths", () => {
+    it("power/casting-traditions/drawbacks/general/{id}.md → general drawback", () => {
+      expect(
+        inferFromPath(
+          "power/casting-traditions/drawbacks/general/draining-casting.md",
+        ),
+      ).toEqual({
+        type: "drawback",
+        drawbackKind: "general",
+        id: "draining-casting",
+        system: "power",
+      });
+    });
+
+    it("power/casting-traditions/drawbacks/spheres/{sphere}/{id}.md → sphere drawback", () => {
+      expect(
+        inferFromPath(
+          "power/casting-traditions/drawbacks/spheres/alteration/lycanthropic.md",
+        ),
+      ).toEqual({
+        type: "drawback",
+        drawbackKind: "sphere",
+        sphere: "alteration",
+        id: "lycanthropic",
+        system: "power",
+      });
+    });
+
+    it("power/casting-traditions/drawbacks/dual-spheres/{id}.md → dual-sphere drawback", () => {
+      expect(
+        inferFromPath(
+          "power/casting-traditions/drawbacks/dual-spheres/terrain-warper.md",
+        ),
+      ).toEqual({
+        type: "drawback",
+        drawbackKind: "dual-sphere",
+        id: "terrain-warper",
+        system: "power",
+      });
+    });
+
+    it("power/casting-traditions/boons/{id}.md → boon", () => {
+      expect(
+        inferFromPath("power/casting-traditions/boons/fortified-casting.md"),
+      ).toEqual({
+        type: "boon",
+        id: "fortified-casting",
+        system: "power",
+      });
+    });
+
+    it("power/casting-traditions/traditions/custom/{id}.md → custom tradition", () => {
+      expect(
+        inferFromPath("power/casting-traditions/traditions/custom/blood-magic.md"),
+      ).toEqual({
+        type: "tradition",
+        traditionKind: "custom",
+        id: "blood-magic",
+        system: "power",
+      });
+    });
+  });
+
   describe("edge cases", () => {
     it("_book.yaml returns empty object", () => {
       expect(inferFromPath("_book.yaml")).toEqual({});
@@ -351,6 +415,69 @@ describe("resolveClassEntry", () => {
   it("returns undefined for a path it does not own", () => {
     expect(
       resolveClassEntry(["spheres", "alteration"], identity),
+    ).toBeUndefined();
+  });
+});
+
+describe("resolveCastingTraditionEntry", () => {
+  it("resolves general drawbacks", () => {
+    expect(
+      resolveCastingTraditionEntry(
+        ["casting-traditions", "drawbacks", "general", "draining-casting"],
+        identity,
+      ),
+    ).toEqual({
+      type: "drawback",
+      drawbackKind: "general",
+      id: "draining-casting",
+    });
+  });
+
+  it("resolves sphere drawbacks", () => {
+    expect(
+      resolveCastingTraditionEntry(
+        [
+          "casting-traditions",
+          "drawbacks",
+          "spheres",
+          "alteration",
+          "lycanthropic",
+        ],
+        identity,
+      ),
+    ).toEqual({
+      type: "drawback",
+      drawbackKind: "sphere",
+      sphere: "alteration",
+      id: "lycanthropic",
+    });
+  });
+
+  it("resolves boons", () => {
+    expect(
+      resolveCastingTraditionEntry(
+        ["casting-traditions", "boons", "fortified-casting"],
+        identity,
+      ),
+    ).toEqual({ type: "boon", id: "fortified-casting" });
+  });
+
+  it("resolves tradition categories", () => {
+    expect(
+      resolveCastingTraditionEntry(
+        ["casting-traditions", "traditions", "standard", "wizard"],
+        identity,
+      ),
+    ).toEqual({
+      type: "tradition",
+      traditionKind: "standard",
+      id: "wizard",
+    });
+  });
+
+  it("returns undefined for a path it does not own", () => {
+    expect(
+      resolveCastingTraditionEntry(["spheres", "alteration"], identity),
     ).toBeUndefined();
   });
 });

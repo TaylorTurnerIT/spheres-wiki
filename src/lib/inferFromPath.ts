@@ -10,7 +10,10 @@ export type EntryType =
   | "archetype"
   | "archetype-feature"
   | "article"
-  | "tag";
+  | "tag"
+  | "drawback"
+  | "boon"
+  | "tradition";
 
 export type InferredFields = {
   type?: EntryType;
@@ -20,6 +23,8 @@ export type InferredFields = {
   featureId?: string;
   archetypeId?: string;
   system?: string;
+  drawbackKind?: "general" | "sphere" | "dual-sphere";
+  traditionKind?: "standard" | "custom" | "card" | "variant";
 };
 
 /** System ids that appear as the first directory segment in content paths. */
@@ -249,6 +254,66 @@ export function resolveClassEntry(
   );
 }
 
+// ─── Casting traditions ─────────────────────────────────────────────────────
+
+function resolveDrawbackEntry(
+  parts: string[],
+  group: string,
+  maybeId: string,
+  maybeNestedId: string,
+  withSystem: WithSystem,
+): InferredFields | undefined {
+  if (group === "general" && parts.length === 4) {
+    return withSystem({ type: "drawback", drawbackKind: "general", id: maybeId });
+  }
+  if (group === "spheres" && parts.length === 5) {
+    return withSystem({ type: "drawback", drawbackKind: "sphere", sphere: maybeId, id: maybeNestedId });
+  }
+  if (group === "dual-spheres" && parts.length === 4) {
+    return withSystem({ type: "drawback", drawbackKind: "dual-sphere", id: maybeId });
+  }
+  return undefined;
+}
+
+const TRADITION_KIND_BY_GROUP: Record<string, "standard" | "custom" | "card" | "variant"> = {
+  standard: "standard",
+  custom: "custom",
+  card: "card",
+  variants: "variant",
+};
+
+function resolveTraditionEntry(
+  parts: string[],
+  group: string,
+  maybeId: string,
+  withSystem: WithSystem,
+): InferredFields | undefined {
+  const traditionKind = TRADITION_KIND_BY_GROUP[group];
+  if (traditionKind && parts.length === 4) {
+    return withSystem({ type: "tradition", traditionKind, id: maybeId });
+  }
+  return undefined;
+}
+
+export function resolveCastingTraditionEntry(
+  parts: string[],
+  withSystem: WithSystem,
+): InferredFields | undefined {
+  if (parts[0] !== "casting-traditions") return undefined;
+
+  const [, family, group, maybeId, maybeNestedId] = parts;
+  if (family === "boons" && parts.length === 3) {
+    return withSystem({ type: "boon", id: group });
+  }
+  if (family === "drawbacks") {
+    return resolveDrawbackEntry(parts, group, maybeId, maybeNestedId, withSystem);
+  }
+  if (family === "traditions") {
+    return resolveTraditionEntry(parts, group, maybeId, withSystem);
+  }
+  return undefined;
+}
+
 /**
  * Infers structural metadata from an Astro content entry's file id.
  * `fileId` is the path relative to the collection (book) directory, e.g.
@@ -286,6 +351,7 @@ export function inferFromPath(fileId: string): InferredFields {
     resolveSphereEntry(parts, withSystem) ??
     resolveArchetypeEntry(parts, withSystem) ??
     resolveClassEntry(parts, withSystem) ??
+    resolveCastingTraditionEntry(parts, withSystem) ??
     withSystem({})
   );
 }

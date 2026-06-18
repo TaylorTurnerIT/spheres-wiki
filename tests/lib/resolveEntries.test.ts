@@ -2,8 +2,11 @@ import { describe, expect, it } from "vitest";
 import { buildResolvedMaps, buildTagMap } from "../../src/lib/resolveEntries";
 import type {
   AnyEntry,
+  BoonEntry,
   ClassFeatureEntry,
   ClassTraitEntry,
+  DrawbackEntry,
+  TraditionEntry,
 } from "../../src/lib/types";
 
 type BookInput = { slug: string; publishedDate: string; entries: AnyEntry[] };
@@ -426,6 +429,119 @@ describe("archetypeMap and archetypeFeatureMap", () => {
       maps.archetypeFeatureMap.get("archetype-feature:apex-shifter-knowledge")
         ?.replaces,
     ).toContain("shifter-endurance");
+  });
+});
+
+describe("casting tradition maps", () => {
+  const drainingCasting: DrawbackEntry = {
+    type: "drawback",
+    id: "draining-casting",
+    system: "power",
+    name: "Draining Casting",
+    sourceBook: "ultimate-spheres-of-power",
+    tags: [],
+    drawbackKind: "general",
+    drawbackValue: 1,
+  };
+
+  const lycanthropic: DrawbackEntry = {
+    type: "drawback",
+    id: "lycanthropic",
+    system: "power",
+    name: "Lycanthropic",
+    sourceBook: "ultimate-spheres-of-power",
+    tags: [],
+    drawbackKind: "sphere",
+    drawbackValue: 1,
+    sphere: "alteration",
+    incompatible: ["fleshwarper", "rebound"],
+  };
+
+  const fortifiedCasting: BoonEntry = {
+    type: "boon",
+    id: "fortified-casting",
+    system: "power",
+    name: "Fortified Casting",
+    sourceBook: "ultimate-spheres-of-power",
+    tags: [],
+    boonCost: 1,
+    requires: { all: [{ drawback: "draining-casting" }] },
+    rules: [
+      {
+        op: "allow-cam",
+        ability: "con",
+        mode: "if-higher-than-base",
+      },
+    ],
+  };
+
+  const bloodMagic: TraditionEntry = {
+    type: "tradition",
+    id: "blood-magic",
+    system: "power",
+    name: "Blood Magic",
+    sourceBook: "ultimate-spheres-of-power",
+    tags: [],
+    traditionKind: "custom",
+    magicType: "arcane",
+    cam: { mode: "fixed", abilities: ["con"] },
+    drawbacks: [
+      { id: "draining-casting" },
+      { id: "extended-casting" },
+      { id: "somatic-casting", count: 2 },
+      { id: "verbal-casting" },
+    ],
+    boons: [
+      { id: "deathful-magic" },
+      { id: "fortified-casting" },
+      { id: "overcharge" },
+    ],
+  };
+
+  const bookWithTraditions: BookInput = {
+    slug: "ultimate-spheres-of-power",
+    publishedDate: "2017-01-01",
+    entries: [drainingCasting, lycanthropic, fortifiedCasting, bloodMagic],
+  };
+
+  it('adds drawback entries under "drawback:id" key', () => {
+    const maps = buildResolvedMaps([bookWithTraditions]);
+    expect(maps.drawbackMap.has("drawback:draining-casting")).toBe(true);
+    expect(maps.drawbackMap.get("drawback:lycanthropic")?.sphere).toBe(
+      "alteration",
+    );
+  });
+
+  it('adds boon entries under "boon:id" key', () => {
+    const maps = buildResolvedMaps([bookWithTraditions]);
+    expect(maps.boonMap.has("boon:fortified-casting")).toBe(true);
+    expect(maps.boonMap.get("boon:fortified-casting")?.rules?.[0]).toEqual({
+      op: "allow-cam",
+      ability: "con",
+      mode: "if-higher-than-base",
+    });
+  });
+
+  it('adds tradition entries under "tradition:id" key', () => {
+    const maps = buildResolvedMaps([bookWithTraditions]);
+    expect(maps.traditionMap.has("tradition:blood-magic")).toBe(true);
+    expect(maps.traditionMap.get("tradition:blood-magic")?.cam).toEqual({
+      mode: "fixed",
+      abilities: ["con"],
+    });
+  });
+
+  it("records casting tradition entries in entrySourceBook", () => {
+    const maps = buildResolvedMaps([bookWithTraditions]);
+    expect(maps.entrySourceBook.get("drawback:draining-casting")).toBe(
+      "ultimate-spheres-of-power",
+    );
+    expect(maps.entrySourceBook.get("boon:fortified-casting")).toBe(
+      "ultimate-spheres-of-power",
+    );
+    expect(maps.entrySourceBook.get("tradition:blood-magic")).toBe(
+      "ultimate-spheres-of-power",
+    );
   });
 });
 

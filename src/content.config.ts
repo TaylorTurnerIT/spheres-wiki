@@ -46,6 +46,99 @@ const baseFields = {
   modifies: z.string().optional(),
 };
 
+const abilityScoreSchema = z.enum(["str", "dex", "con", "int", "wis", "cha"]);
+
+const entryRefSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/, "id must be lowercase kebab-case"),
+  label: z.string().optional(),
+  count: z.number().int().positive().optional(),
+  option: z.string().optional(),
+  sphere: z.string().optional(),
+  sourceBook: z.string().optional(),
+});
+
+const predicateSchema: z.ZodType<any> = z.lazy(() =>
+  z.union([
+    z.object({ drawback: z.string() }),
+    z.object({ boon: z.string() }),
+    z.object({ choice: z.string() }),
+    z.object({ not: predicateSchema }),
+    z.object({ all: z.array(predicateSchema) }),
+    z.object({ any: z.array(predicateSchema) }),
+  ]),
+);
+
+const ruleSchema = z.discriminatedUnion("op", [
+  z.object({
+    op: z.literal("allow-cam"),
+    ability: abilityScoreSchema,
+    mode: z.enum(["always", "if-higher-than-base"]),
+    when: predicateSchema.optional(),
+  }),
+  z.object({
+    op: z.literal("set-cam"),
+    abilities: z.array(abilityScoreSchema).min(1),
+    mode: z.enum(["fixed", "choose-one", "highest"]),
+    when: predicateSchema.optional(),
+  }),
+  z.object({
+    op: z.literal("add-drawback-value"),
+    value: z.number(),
+    when: predicateSchema.optional(),
+  }),
+  z.object({
+    op: z.literal("add-bonus-spell-points"),
+    formula: z.string(),
+    when: predicateSchema.optional(),
+  }),
+  z.object({
+    op: z.literal("grant-talent"),
+    sphere: z.string().optional(),
+    talent: z.string().optional(),
+    selector: z.string().optional(),
+    when: predicateSchema.optional(),
+  }),
+  z.object({
+    op: z.literal("grant-feat"),
+    feat: z.string().optional(),
+    selector: z.string().optional(),
+    when: predicateSchema.optional(),
+  }),
+  z.object({
+    op: z.literal("require-choice"),
+    choice: z.string(),
+    when: predicateSchema.optional(),
+  }),
+  z.object({
+    op: z.literal("export-note"),
+    text: z.string(),
+    when: predicateSchema.optional(),
+  }),
+]);
+
+const choiceSchema = z.object({
+  id: z.string(),
+  label: z.string(),
+  min: z.number().int().min(0).optional(),
+  max: z.number().int().min(0).optional(),
+  options: z
+    .array(
+      z.object({
+        id: z.string(),
+        label: z.string(),
+        addsDrawbackValue: z.number().optional(),
+        requires: predicateSchema.optional(),
+      }),
+    )
+    .default([]),
+});
+
+const repeatSchema = z.object({
+  min: z.number().int().min(0).optional(),
+  max: z.number().int().positive().optional(),
+  valueMode: z.enum(["flat", "per-selection", "scaling"]).optional(),
+});
+
 export const entrySchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal("sphere"),
@@ -156,6 +249,50 @@ export const entrySchema = z.discriminatedUnion("type", [
     description: z.string(),
     sphere: z.string().optional(),
     hidden: z.boolean().optional(),
+  }),
+  z.object({
+    type: z.literal("drawback"),
+    ...baseFields,
+    drawbackKind: z.enum(["general", "sphere", "dual-sphere"]),
+    drawbackValue: z.number().default(1),
+    sphere: z.string().optional(),
+    spheres: z.array(z.string()).optional(),
+    grants: z.array(entryRefSchema).optional(),
+    buyoff: z.enum(["talent", "feat", "none", "custom"]).optional(),
+    repeat: repeatSchema.optional(),
+    choices: z.array(choiceSchema).optional(),
+    requires: predicateSchema.optional(),
+    incompatible: z.array(z.string()).optional(),
+    rules: z.array(ruleSchema).optional(),
+  }),
+  z.object({
+    type: z.literal("boon"),
+    ...baseFields,
+    boonCost: z.number().default(1),
+    repeat: repeatSchema.optional(),
+    choices: z.array(choiceSchema).optional(),
+    requires: predicateSchema.optional(),
+    incompatible: z.array(z.string()).optional(),
+    rules: z.array(ruleSchema).optional(),
+  }),
+  z.object({
+    type: z.literal("tradition"),
+    ...baseFields,
+    traditionKind: z.enum(["standard", "custom", "card", "variant"]),
+    magicType: z
+      .enum(["arcane", "divine", "psychic", "other", "none", "custom"])
+      .optional(),
+    cam: z.object({
+      mode: z.enum(["fixed", "choose-one", "highest"]),
+      abilities: z.array(abilityScoreSchema).min(1),
+    }),
+    drawbacks: z.array(entryRefSchema).default([]),
+    sphereDrawbacks: z.array(entryRefSchema).optional(),
+    boons: z.array(entryRefSchema).default([]),
+    classes: z.array(z.string()).optional(),
+    parentTradition: z.string().optional(),
+    notes: z.array(z.string()).optional(),
+    rules: z.array(ruleSchema).optional(),
   }),
 ]);
 

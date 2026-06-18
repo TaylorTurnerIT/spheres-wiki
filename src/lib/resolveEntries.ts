@@ -6,15 +6,18 @@ import type {
   ArchetypeFeatureEntry,
   ArticleEntry,
   BookMeta,
+  BoonEntry,
   ClassEntry,
   ClassFeatureEntry,
   ClassTraitEntry,
+  DrawbackEntry,
   EntryKey,
   FeatEntry,
   ResolvedMaps,
   SphereEntry,
   TagEntry,
   TalentEntry,
+  TraditionEntry,
 } from "./types";
 
 function entryKey(type: string, id: string): EntryKey {
@@ -43,6 +46,9 @@ type EntryMaps = Pick<
   | "articleMap"
   | "archetypeMap"
   | "archetypeFeatureMap"
+  | "drawbackMap"
+  | "boonMap"
+  | "traditionMap"
 >;
 
 function discoverBookCollectionSlugs(
@@ -65,6 +71,9 @@ const TYPE_TO_MAP_KEY: Partial<Record<string, keyof EntryMaps>> = {
   article: "articleMap",
   archetype: "archetypeMap",
   "archetype-feature": "archetypeFeatureMap",
+  drawback: "drawbackMap",
+  boon: "boonMap",
+  tradition: "traditionMap",
 };
 
 function getTypedMap(
@@ -146,6 +155,9 @@ export function buildResolvedMaps(
     articleMap: new Map<EntryKey, ArticleEntry>(),
     archetypeMap: new Map<EntryKey, ArchetypeEntry>(),
     archetypeFeatureMap: new Map<EntryKey, ArchetypeFeatureEntry>(),
+    drawbackMap: new Map<EntryKey, DrawbackEntry>(),
+    boonMap: new Map<EntryKey, BoonEntry>(),
+    traditionMap: new Map<EntryKey, TraditionEntry>(),
   };
   const entrySourceBook = new Map<EntryKey, string>();
   // bookMetaMap populated only by resolveEntries() — empty here.

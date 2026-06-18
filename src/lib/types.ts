@@ -23,6 +23,141 @@ export type SectionDefinition = {
   categories?: TalentCategory[];
 };
 
+export type AbilityScore = "str" | "dex" | "con" | "int" | "wis" | "cha";
+
+export type EntryRef = {
+  id: string;
+  label?: string;
+  count?: number;
+  option?: string;
+  sphere?: string;
+  sourceBook?: string;
+};
+
+export type TraditionPredicate =
+  | { drawback: string }
+  | { boon: string }
+  | { choice: string }
+  | { not: TraditionPredicate }
+  | { all: TraditionPredicate[] }
+  | { any: TraditionPredicate[] };
+
+export type TraditionRule =
+  | {
+      op: "allow-cam";
+      ability: AbilityScore;
+      mode: "always" | "if-higher-than-base";
+      when?: TraditionPredicate;
+    }
+  | {
+      op: "set-cam";
+      abilities: AbilityScore[];
+      mode: "fixed" | "choose-one" | "highest";
+      when?: TraditionPredicate;
+    }
+  | { op: "add-drawback-value"; value: number; when?: TraditionPredicate }
+  | {
+      op: "add-bonus-spell-points";
+      formula: string;
+      when?: TraditionPredicate;
+    }
+  | {
+      op: "grant-talent";
+      sphere?: string;
+      talent?: string;
+      selector?: string;
+      when?: TraditionPredicate;
+    }
+  | {
+      op: "grant-feat";
+      feat?: string;
+      selector?: string;
+      when?: TraditionPredicate;
+    }
+  | { op: "require-choice"; choice: string; when?: TraditionPredicate }
+  | { op: "export-note"; text: string; when?: TraditionPredicate };
+
+export type TraditionChoiceOption = {
+  id: string;
+  label: string;
+  addsDrawbackValue?: number;
+  requires?: TraditionPredicate;
+};
+
+export type TraditionChoice = {
+  id: string;
+  label: string;
+  min?: number;
+  max?: number;
+  options: TraditionChoiceOption[];
+};
+
+export type RepeatRule = {
+  min?: number;
+  max?: number;
+  valueMode?: "flat" | "per-selection" | "scaling";
+};
+
+export type DrawbackEntry = {
+  type: "drawback";
+  id: string;
+  system: string;
+  name: string;
+  sourceBook: string;
+  tags: string[];
+  modifies?: string;
+  drawbackKind: "general" | "sphere" | "dual-sphere";
+  drawbackValue: number;
+  sphere?: string;
+  spheres?: string[];
+  grants?: EntryRef[];
+  buyoff?: "talent" | "feat" | "none" | "custom";
+  repeat?: RepeatRule;
+  choices?: TraditionChoice[];
+  requires?: TraditionPredicate;
+  incompatible?: string[];
+  rules?: TraditionRule[];
+};
+
+export type BoonEntry = {
+  type: "boon";
+  id: string;
+  system: string;
+  name: string;
+  sourceBook: string;
+  tags: string[];
+  modifies?: string;
+  boonCost: number;
+  repeat?: RepeatRule;
+  choices?: TraditionChoice[];
+  requires?: TraditionPredicate;
+  incompatible?: string[];
+  rules?: TraditionRule[];
+};
+
+export type TraditionEntry = {
+  type: "tradition";
+  id: string;
+  system: string;
+  name: string;
+  sourceBook: string;
+  tags: string[];
+  modifies?: string;
+  traditionKind: "standard" | "custom" | "card" | "variant";
+  magicType?: "arcane" | "divine" | "psychic" | "other" | "none" | "custom";
+  cam: {
+    mode: "fixed" | "choose-one" | "highest";
+    abilities: AbilityScore[];
+  };
+  drawbacks: EntryRef[];
+  sphereDrawbacks?: EntryRef[];
+  boons: EntryRef[];
+  classes?: string[];
+  parentTradition?: string;
+  notes?: string[];
+  rules?: TraditionRule[];
+};
+
 export type SphereEntry = {
   type: "sphere";
   id: string;
@@ -178,7 +313,10 @@ export type AnyEntry =
   | ClassTraitEntry
   | ArticleEntry
   | ArchetypeEntry
-  | ArchetypeFeatureEntry;
+  | ArchetypeFeatureEntry
+  | DrawbackEntry
+  | BoonEntry
+  | TraditionEntry;
 
 export type EntryKey = string; // "type:id"
 
@@ -192,6 +330,9 @@ export type ResolvedMaps = {
   articleMap: Map<EntryKey, ArticleEntry>;
   archetypeMap: Map<EntryKey, ArchetypeEntry>;
   archetypeFeatureMap: Map<EntryKey, ArchetypeFeatureEntry>;
+  drawbackMap: Map<EntryKey, DrawbackEntry>;
+  boonMap: Map<EntryKey, BoonEntry>;
+  traditionMap: Map<EntryKey, TraditionEntry>;
   entrySourceBook: Map<EntryKey, string>;
   bookMetaMap: Map<string, BookMeta>;
   tagMap: Map<string, TagEntry>;

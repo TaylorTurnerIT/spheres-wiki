@@ -1,0 +1,277 @@
+import type {
+  AbilityScore,
+  DrawbackEntry,
+  EntryRef,
+  TraditionPredicate,
+  TraditionRule,
+} from "../types";
+import type {
+  ResolvedTraditionState,
+  TraditionData,
+  TraditionDiagnostic,
+  TraditionSelection,
+} from "./types";
+
+const DEFAULT_CAM_OPTIONS: AbilityScore[] = ["int", "wis", "cha"];
+
+function byId<T extends { id: string }>(entries: T[]): Map<string, T> {
+  return new Map(entries.map((entry) => [entry.id, entry]));
+}
+
+function refCount(ref: EntryRef): number {
+  return ref.count ?? 1;
+}
+
+function selectedIds(state: ResolvedTraditionState): Set<string> {
+  return new Set([
+    ...state.drawbacks.map(({ entry }) => entry.id),
+    ...state.sphereDrawbacks.map(({ entry }) => entry.id),
+    ...state.boons.map(({ entry }) => entry.id),
+  ]);
+}
+
+export function buildTraditionState(
+  selection: TraditionSelection,
+  data: TraditionData,
+): ResolvedTraditionState {
+  const drawbackMap = byId(data.drawbacks);
+  const boonMap = byId(data.boons);
+
+  return {
+    selection,
+    drawbacks: selection.drawbacks.flatMap((ref) => {
+      const entry = drawbackMap.get(ref.id);
+      return entry ? [{ ref, entry }] : [];
+    }),
+    sphereDrawbacks: (selection.sphereDrawbacks ?? []).flatMap((ref) => {
+      const entry = drawbackMap.get(ref.id);
+      return entry ? [{ ref, entry }] : [];
+    }),
+    boons: selection.boons.flatMap((ref) => {
+      const entry = boonMap.get(ref.id);
+      return entry ? [{ ref, entry }] : [];
+    }),
+  };
+}
+
+function evaluatePredicate(
+  predicate: TraditionPredicate | undefined,
+  state: ResolvedTraditionState,
+): boolean {
+  if (!predicate) return true;
+  if ("drawback" in predicate)
+    return selectedIds(state).has(predicate.drawback);
+  if ("boon" in predicate) return selectedIds(state).has(predicate.boon);
+  if ("choice" in predicate) {
+    return Object.values(state.selection.choices ?? {}).some((choices) =>
+      choices.includes(predicate.choice),
+    );
+  }
+  if ("not" in predicate) return !evaluatePredicate(predicate.not, state);
+  if ("all" in predicate) {
+    return predicate.all.every((child) => evaluatePredicate(child, state));
+  }
+  if ("any" in predicate) {
+    return predicate.any.some((child) => evaluatePredicate(child, state));
+  }
+  return false;
+}
+
+function ruleAddsDrawbackValue(
+  rule: TraditionRule,
+  state: ResolvedTraditionState,
+): number {
+  if (rule.op !== "add-drawback-value") return 0;
+  return evaluatePredicate(rule.when, state) ? rule.value : 0;
+}
+
+function drawbackValue(
+  ref: EntryRef,
+  entry: DrawbackEntry,
+  state: ResolvedTraditionState,
+): number {
+  const extra = (entry.rules ?? []).reduce(
+    (sum, rule) => sum + ruleAddsDrawbackValue(rule, state),
+    0,
+  );
+  return (entry.drawbackValue + extra) * refCount(ref);
+}
+
+export function calculateGeneralDrawbackValue(
+  state: ResolvedTraditionState,
+): number {
+  return state.drawbacks.reduce((sum, { ref, entry }) => {
+    if (entry.drawbackKind !== "general") return sum;
+    return sum + drawbackValue(ref, entry, state);
+  }, 0);
+}
+
+function calculateBoonCost(state: ResolvedTraditionState): number {
+  return state.boons.reduce(
+    (sum, { ref, entry }) => sum + entry.boonCost * refCount(ref),
+    0,
+  );
+}
+
+export function calculateAvailableBoonSlots(
+  state: ResolvedTraditionState,
+): number {
+  return Math.floor(calculateGeneralDrawbackValue(state) / 2);
+}
+
+export function calculateUnspentDrawbackValue(
+  state: ResolvedTraditionState,
+): number {
+  return calculateGeneralDrawbackValue(state) - calculateBoonCost(state) * 2;
+}
+
+export function bonusSpellPointFormula(
+  unspentDrawbacks: number,
+): string | null {
+  const formulas: Record<number, string> = {
+    1: "+1, +1 per 6 levels in casting classes",
+    2: "+1, +1 per 3 levels in casting classes",
+    3: "+1 per odd level in a casting class",
+    4: "+1, +1 per 1.5 levels in casting classes",
+    5: "+1 per level in a casting class",
+  };
+  return formulas[Math.min(Math.max(unspentDrawbacks, 0), 5)] ?? null;
+}
+
+function applyCamRule(
+  allowed: Set<AbilityScore>,
+  rule: TraditionRule,
+  state: ResolvedTraditionState,
+): Set<AbilityScore> {
+  if (!evaluatePredicate(rule.when, state)) return allowed;
+  if (rule.op === "allow-cam") {
+    allowed.add(rule.ability);
+  }
+  if (rule.op === "set-cam") {
+    return new Set(rule.abilities);
+  }
+  return allowed;
+}
+
+export function getAllowedCastingAbilities(
+  state: ResolvedTraditionState,
+): AbilityScore[] {
+  let allowed = new Set(DEFAULT_CAM_OPTIONS);
+  for (const { entry } of state.boons) {
+    for (const rule of entry.rules ?? []) {
+      allowed = applyCamRule(allowed, rule, state);
+    }
+  }
+  return [...allowed];
+}
+
+function missingRefDiagnostics(
+  selection: TraditionSelection,
+  data: TraditionData,
+): TraditionDiagnostic[] {
+  const knownDrawbacks = new Set(data.drawbacks.map((entry) => entry.id));
+  const knownBoons = new Set(data.boons.map((entry) => entry.id));
+  const diagnostics: TraditionDiagnostic[] = [];
+
+  for (const ref of [
+    ...selection.drawbacks,
+    ...(selection.sphereDrawbacks ?? []),
+  ]) {
+    if (!knownDrawbacks.has(ref.id)) {
+      diagnostics.push({
+        severity: "error",
+        code: "unknown-drawback",
+        message: `Unknown drawback: ${ref.id}`,
+        sourceIds: [ref.id],
+      });
+    }
+  }
+
+  for (const ref of selection.boons) {
+    if (!knownBoons.has(ref.id)) {
+      diagnostics.push({
+        severity: "error",
+        code: "unknown-boon",
+        message: `Unknown boon: ${ref.id}`,
+        sourceIds: [ref.id],
+      });
+    }
+  }
+
+  return diagnostics;
+}
+
+function prerequisiteDiagnostics(
+  state: ResolvedTraditionState,
+): TraditionDiagnostic[] {
+  return [...state.drawbacks, ...state.sphereDrawbacks, ...state.boons].flatMap(
+    ({ entry }) => {
+      if (evaluatePredicate(entry.requires, state)) return [];
+      return [
+        {
+          severity: "error",
+          code: "missing-prerequisite",
+          message: `${entry.name} has unmet prerequisites.`,
+          sourceIds: [entry.id],
+        } satisfies TraditionDiagnostic,
+      ];
+    },
+  );
+}
+
+function incompatibilityDiagnostics(
+  state: ResolvedTraditionState,
+): TraditionDiagnostic[] {
+  const ids = selectedIds(state);
+  return [...state.drawbacks, ...state.sphereDrawbacks, ...state.boons].flatMap(
+    ({ entry }) =>
+      (entry.incompatible ?? [])
+        .filter((id) => ids.has(id))
+        .map(
+          (id) =>
+            ({
+              severity: "error",
+              code: "incompatible-selection",
+              message: `${entry.name} is incompatible with ${id}.`,
+              sourceIds: [entry.id, id],
+            }) satisfies TraditionDiagnostic,
+        ),
+  );
+}
+
+export function validateTradition(
+  selection: TraditionSelection,
+  data: TraditionData,
+): TraditionDiagnostic[] {
+  const state = buildTraditionState(selection, data);
+  const diagnostics = [
+    ...missingRefDiagnostics(selection, data),
+    ...prerequisiteDiagnostics(state),
+    ...incompatibilityDiagnostics(state),
+  ];
+
+  const boonSlots = calculateAvailableBoonSlots(state);
+  const boonCost = calculateBoonCost(state);
+  if (boonCost > boonSlots) {
+    diagnostics.push({
+      severity: "error",
+      code: "insufficient-drawbacks",
+      message: `Selected boons cost ${boonCost}, but only ${boonSlots} boon slots are available.`,
+      sourceIds: state.boons.map(({ entry }) => entry.id),
+    });
+  }
+
+  if (
+    selection.cam &&
+    !getAllowedCastingAbilities(state).includes(selection.cam)
+  ) {
+    diagnostics.push({
+      severity: "error",
+      code: "invalid-cam",
+      message: `${selection.cam.toUpperCase()} is not an allowed casting ability modifier.`,
+      sourceIds: [],
+    });
+  }
+
+  return diagnostics;
+}
