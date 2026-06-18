@@ -17,7 +17,7 @@ Casting Traditions are now structurally migrated, but not yet fully normalized f
 - Typed `drawback`, `boon`, and `tradition` entries exist, resolve through `ResolvedMaps`, and participate in the current search/build pipeline.
 - Pure builder-facing logic exists in `src/lib/castingTraditions/`, including selection validation, drawback value accounting, boon slot accounting, CAM resolution, and export helpers.
 - `bun run build` is currently green: content validation, Fallow, `astro check`, static build, Pagefind, and TOC audit all pass.
-- Full `bun run test` is blocked by existing `_book.yaml` metadata stubs for books whose real price/date/buy URL metadata has not been verified. Do not patch those with plausible values.
+- Full `bun run test` has passed after replacing remaining `_book.yaml` metadata stubs with verified publisher/date/price data.
 
 Structured inventory now on disk:
 

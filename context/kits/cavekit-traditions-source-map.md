@@ -84,9 +84,9 @@ Specific entries where source label + body source is confirmed.
 
 | Body source title | Book slug | Notes |
 |---|---|---|
-| `Spheres Apocrypha: Casting Traditions` | `spheres-apocrypha-casting-traditions` | DDS, DTRPG 286411 |
-| `Spheres Apocrypha: Casting Traditions 2` | `spheres-apocrypha-casting-traditions-2` | DDS, DTRPG 286903 |
-| `Expanded Spheres: Cardcaster's Gamble` | `expanded-spheres-cardcasters-gamble` | Studio M—, no URL yet |
+| `Spheres Apocrypha: Casting Traditions` | `spheres-apocrypha-casting-traditions` | Verified: DDS, DTRPG 286411, 2019-08-20, $0.99 |
+| `Spheres Apocrypha: Casting Traditions 2` | `spheres-apocrypha-casting-traditions-2` | Verified: DDS, DTRPG 286903, 2019-09-26, $0.99 |
+| `Expanded Spheres: Cardcaster's Gamble` | `expanded-spheres-cardcasters-gamble` | Verified: Studio M—, DTRPG 408995, 2022-09-04, $3.00 |
 
 Entries: Charged Spells, Expensive Locus, Madness Mantra (Casting Traditions);
 Anemic, Innate Curse (Casting Traditions 2); Card Casting, Spell Gamble (Cardcaster's Gamble).
@@ -96,8 +96,8 @@ Anemic, Innate Curse (Casting Traditions 2); Card Casting, Spell Gamble (Cardcas
 | Label | Book slug | Product |
 |---|---|---|
 | `WM` | `wild-magic` | Wild Magic (DTRPG 239904). `wild-surge.md` moved from USoP to correct location. |
-| `SB:DE` | `spheres-bestiary-desert-encounters` | Spheres Bestiary: Desert Encounters (DTRPG 330751). Publisher TBD. |
-| `PGtS` | `players-guide-to-skybourne` | The Player's Guide to Skybourne (DTRPG 173399). Publisher TBD. |
-| `Mana HB` | `initiates-handbook` | The Initiate's Handbook (DTRPG 300841). Publisher TBD. |
+| `SB:DE` | `spheres-bestiary-desert-encounters` | Spheres Bestiary: Desert Encounters (DTRPG 330751). Verified: Drop Dead Studios, 2020-10-01, $4.99. |
+| `PGtS` | `players-guide-to-skybourne` | The Player's Guide to Skybourne (DTRPG 173399). Verified: Drop Dead Studios, 2016-02-19, $9.99. |
+| `Mana HB` | `initiates-handbook` | The Initiate's Handbook (DTRPG 300841). Verified: Drop Dead Studios, 2020-01-17, $4.99. |
 
-All four added to `power-lexicon.toml` citation_keys. `_book.yaml` stubs created with `publishedDate: 1970-01-01` and `publisher: PLACEHOLDER` — update when confirmed.
+All four added to `power-lexicon.toml` citation_keys. `_book.yaml` metadata is verified for these labels.
