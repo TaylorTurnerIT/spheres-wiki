@@ -27,15 +27,15 @@ Structured inventory now on disk:
 - 24 standard traditions.
 - 58 custom traditions.
 - 7 card traditions.
-- 89 total tradition entries.
+- 6 variant traditions.
+- 95 total tradition entries.
 
 Remaining semantic gaps after coverage migration:
 
-- 6 prose-only subtraditions still exist only as article headings: `Divine Crusader`, `Inquisitor`, `Hunter`, `Combat Sorcery`, `Combat Wizardry`, and `Witchcraft`.
 - Several builder-critical decisions still live only in prose `notes` or free-text `option` strings, including `Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, and open-ended deck feat selections.
 - The `Card Casting` drawback body is preserved, but its modifications are not yet normalized into machine-readable `choices` and `rules`.
 - All 29 dual-sphere drawbacks still describe granted feats in body prose instead of structured `grants` payloads.
-- 61 of 89 structured traditions still omit `magicType`.
+- 61 of 95 structured traditions still omit `magicType`.
 - At least one migrated tradition (`Akashic Tech`) still carries an explicit unresolved normalization note.
 
 Important rule cases that still drive the remaining plan:
@@ -418,15 +418,15 @@ The coverage pass is done. The remaining work is no longer “migrate missing fi
 
 ### Workstream 1: Variant Traditions
 
-- Create structured `traditionKind: variant` entries for the 6 prose-only subtraditions still embedded in `custom-traditions.md`.
-- Use `parentTradition` where the variant modifies an existing tradition instead of duplicating unrelated text.
-- Preserve variant-specific class/CAM/boon adjustments in frontmatter rather than leaving them in article prose.
+- Status: complete.
+- Structured `traditionKind: variant` entries now exist for the 6 former prose-only subtraditions from `custom-traditions.md`.
+- `parentTradition` is now used for those variant entries, and the duplicated subheading prose was removed from the affected parent structured entries.
 
-Target entries:
+Implemented entries:
 
 - `divine-crusader`
-- `inquisitor-variant` or equivalent disambiguated id
-- `hunter-variant` or equivalent disambiguated id
+- `inquisitor-divine-petitioner`
+- `hunter-druidic`
 - `combat-sorcery`
 - `combat-wizardry`
 - `witchcraft`
@@ -476,18 +476,17 @@ Priority cases:
 
 ## Recommended Sequence
 
-1. Finish variant traditions first, because they affect the final tradition inventory and `parentTradition` model.
-2. Backfill `magicType` and dual-sphere `grants`, because they are high-confidence metadata cleanup with low rule risk.
-3. Normalize the bounded choice cases (`Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, `Akashic Tech`, `Qlippoth Psionics`).
-4. Tackle `Card Casting` last, because it is the most complex single rule surface and will likely refine the schema vocabulary.
-5. Only after those are done should the interactive builder UI be treated as unblocked.
+1. Backfill `magicType` and dual-sphere `grants`, because they are high-confidence metadata cleanup with low rule risk.
+2. Normalize the bounded choice cases (`Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, `Akashic Tech`, `Qlippoth Psionics`).
+3. Tackle `Card Casting` last, because it is the most complex single rule surface and will likely refine the schema vocabulary.
+4. Only after those are done should the interactive builder UI be treated as unblocked.
 
 ## Acceptance Criteria
 
 - `drawback`, `boon`, and `tradition` are valid schema types.
 - Structured entries resolve into `ResolvedMaps`.
 - Existing article tabs still render.
-- All 6 prose-only subtraditions are represented as structured `tradition` entries or are explicitly documented as intentional skips.
+- All 6 former prose-only subtraditions are represented as structured `tradition` entries.
 - Builder can validate a Blood Magic tradition using Constitution.
 - Builder can validate `Fortified Casting` only when `Draining Casting` is present.
 - Builder can calculate unspent drawback spell-point bonuses.

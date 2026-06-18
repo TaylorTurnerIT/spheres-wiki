@@ -269,6 +269,19 @@ describe("inferFromPath", () => {
         system: "power",
       });
     });
+
+    it("power/casting-traditions/traditions/variants/{id}.md → variant tradition", () => {
+      expect(
+        inferFromPath(
+          "power/casting-traditions/traditions/variants/combat-wizardry.md",
+        ),
+      ).toEqual({
+        type: "tradition",
+        traditionKind: "variant",
+        id: "combat-wizardry",
+        system: "power",
+      });
+    });
   });
 
   describe("edge cases", () => {
@@ -472,6 +485,19 @@ describe("resolveCastingTraditionEntry", () => {
       type: "tradition",
       traditionKind: "standard",
       id: "wizard",
+    });
+  });
+
+  it("resolves variant traditions", () => {
+    expect(
+      resolveCastingTraditionEntry(
+        ["casting-traditions", "traditions", "variants", "combat-wizardry"],
+        identity,
+      ),
+    ).toEqual({
+      type: "tradition",
+      traditionKind: "variant",
+      id: "combat-wizardry",
     });
   });
 
