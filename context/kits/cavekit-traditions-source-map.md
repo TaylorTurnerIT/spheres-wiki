@@ -92,13 +92,13 @@ Do not create entries for these until the books are imported.
 Entries in these books: Charged Spells, Expensive Locus, Madness Mantra (Casting Traditions);
 Anemic, Innate Curse (Casting Traditions 2); Card Casting, Spell Gamble (Cardcaster's Gamble).
 
-## Unresolved Labels (unknown book — needs user input)
+## Resolved Labels (previously unknown — user confirmed)
 
-These labels appear in articles but are not in the power-lexicon.toml or any known book slug.
-
-| Label | Entry | Notes |
+| Label | Book slug | Product |
 |---|---|---|
-| `WM` | Wild Surge (boon) | Unknown publisher/book — not in lexicon. **File currently misplaced at `ultimate-spheres-of-power/power/casting-traditions/boons/wild-surge.md`; must move once resolved.** |
-| `SB:DE` | Demonology (custom tradition) | Unknown — possibly "Sphereborn: Dark Edition" or similar |
-| `PGtS` | Divine Crusader, Inquisitor, Hunter, Combat Sorcery, Combat Wizardry, Witchcraft (sub-traditions) | Unknown — possibly "Player's Guide to Spheres" |
-| `Mana HB` | Unstable Storage, Vulnerable Spellcaster (drawbacks); Conservationist, Incongruent, Selfish Caster, Weapon-bound (sphere drawbacks) | `__DEFERRED__` in power-lexicon; book not in repo |
+| `WM` | `wild-magic` | Wild Magic (DTRPG 239904). `wild-surge.md` moved from USoP to correct location. |
+| `SB:DE` | `spheres-bestiary-desert-encounters` | Spheres Bestiary: Desert Encounters (DTRPG 330751). Publisher TBD. |
+| `PGtS` | `players-guide-to-skybourne` | The Player's Guide to Skybourne (DTRPG 173399). Publisher TBD. |
+| `Mana HB` | `initiates-handbook` | The Initiate's Handbook (DTRPG 300841). Publisher TBD. |
+
+All four added to `power-lexicon.toml` citation_keys. `_book.yaml` stubs created with `publishedDate: 1970-01-01` and `publisher: PLACEHOLDER` — update when confirmed.
