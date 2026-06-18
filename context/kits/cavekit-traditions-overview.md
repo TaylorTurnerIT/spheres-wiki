@@ -4,7 +4,7 @@ description: Master index for refactoring Casting Traditions into a multi-page t
 metadata:
   type: project
   created: 2026-06-15
-  last_edited: 2026-06-15
+  last_edited: 2026-06-18
 ---
 
 # Cavekit Overview: Casting Traditions Overhaul
@@ -19,7 +19,7 @@ Refactor the massive `casting-traditions.md` (212KB) into a manageable, tabbed i
 | cavekit-traditions-tabs.md | Phase 1: Splitting the master article into logical sub-pages and implementing the generalized `TabbedContent` Astro component. 3 requirements (R1-R3). |
 | cavekit-traditions-schema.md | Phase 2: Defining `drawback`, `boon`, and `tradition` content collections/schemas to support structured data and rule overrides. 3 requirements (R1-R3). |
 | cavekit-traditions-builder.md | Phase 3: Architectural spec for the interactive Casting Tradition Builder, including real-time validation and multi-format export. 3 requirements (R1-R3). |
-| cavekit-traditions-full-plan.md | Consolidated deep plan for schema, migration, rule operations, builder logic, UI, acceptance criteria, and open decisions. |
+| cavekit-traditions-full-plan.md | Consolidated deep plan for schema, completed migration coverage, post-migration remediation, builder logic, UI, acceptance criteria, and open decisions. |
 | cavekit-traditions-source-map.md | Source label to book slug map for assigning converted entries to the correct source-book directories. |
 
 ## Dependency Graph
@@ -74,4 +74,4 @@ This overhaul realizes SPEC tasks T105–T107:
 - [ ] `Fortified Casting` logic is correctly captured in the schema.
 - [ ] Builder export matches the existing wiki Markdown style for traditions.
 - [ ] The site builds with no data or schema errors (SPEC V34).
-- [ ] `cavekit-traditions-full-plan.md` remains aligned with any schema or builder implementation changes.
+- [ ] `cavekit-traditions-full-plan.md` remains aligned with any schema, migration, or builder implementation changes.

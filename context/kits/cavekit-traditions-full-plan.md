@@ -4,35 +4,46 @@ description: Comprehensive implementation plan for structured Casting Traditions
 metadata:
   type: plan
   created: 2026-06-17
-  last_edited: 2026-06-17
+  last_edited: 2026-06-18
 ---
 
 # Cavekit: Casting Traditions Full Plan
 
 ## Current State
 
-Casting Traditions are currently article-only content:
+Casting Traditions are now structurally migrated, but not yet fully normalized for builder-grade semantics:
 
-- `src/pages/power/casting-traditions/index.astro` renders `ArticlePage` plus `TabbedContent`.
-- `src/content/ultimate-spheres-of-power/power/articles/casting-traditions/` holds six tabs: rules, standard traditions, custom traditions, general drawbacks, sphere drawbacks, and boons.
-- No typed `drawback`, `boon`, or `tradition` entries exist yet.
-- SPEC already tracks this as T106 and T107.
+- `src/pages/power/casting-traditions/index.astro` still renders the legacy tabbed article view through `ArticlePage` plus `TabbedContent`.
+- Typed `drawback`, `boon`, and `tradition` entries exist, resolve through `ResolvedMaps`, and participate in the current search/build pipeline.
+- Pure builder-facing logic exists in `src/lib/castingTraditions/`, including selection validation, drawback value accounting, boon slot accounting, CAM resolution, and export helpers.
+- `bun run build` is currently green: content validation, Fallow, `astro check`, static build, Pagefind, and TOC audit all pass.
 
-Content inventory:
+Structured inventory now on disk:
 
-- 57 general drawback headings.
-- 191 sphere or dual-sphere drawback headings.
-- 19 boon headings.
+- 57 general drawbacks.
+- 162 sphere drawbacks.
+- 29 dual-sphere drawbacks.
+- 19 boons.
 - 24 standard traditions.
-- 71 custom/card traditions.
-- 89 casting ability modifier lines across standard/custom traditions.
+- 58 custom traditions.
+- 7 card traditions.
+- 89 total tradition entries.
 
-Important rule cases already visible:
+Remaining semantic gaps after coverage migration:
+
+- 6 prose-only subtraditions still exist only as article headings: `Divine Crusader`, `Inquisitor`, `Hunter`, `Combat Sorcery`, `Combat Wizardry`, and `Witchcraft`.
+- Several builder-critical decisions still live only in prose `notes` or free-text `option` strings, including `Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, and open-ended deck feat selections.
+- The `Card Casting` drawback body is preserved, but its modifications are not yet normalized into machine-readable `choices` and `rules`.
+- All 29 dual-sphere drawbacks still describe granted feats in body prose instead of structured `grants` payloads.
+- 61 of 89 structured traditions still omit `magicType`.
+- At least one migrated tradition (`Akashic Tech`) still carries an explicit unresolved normalization note.
+
+Important rule cases that still drive the remaining plan:
 
 - `Fortified Casting` allows Constitution as CAM if higher and requires `Draining Casting`.
 - `Bloodletting` and `Blood Magic` use Constitution directly.
 - `Demonology` uses Charisma or Constitution if higher.
-- `Spellscourged` allows Charisma or Constitution by text.
+- `Spellscourged` allows a boon choice that changes CAM behavior.
 - `Card Casting` has nested selectable modifications and variable drawback value.
 - Several entries have incompatibilities, prerequisites, repeat counts, forced bonus talents, required spheres, special buyoff rules, source tags, and source-book overrides.
 
@@ -401,15 +412,89 @@ Implementation should use vanilla TypeScript unless later complexity justifies a
 - Run `bun run test`, `bun run validate`, and `bun run build`.
 - Update SPEC T106/T107 when complete.
 
+## Post-Migration Remediation Plan
+
+The coverage pass is done. The remaining work is no longer “migrate missing files”; it is “replace prose-only semantics with structured builder-ready data”.
+
+### Workstream 1: Variant Traditions
+
+- Create structured `traditionKind: variant` entries for the 6 prose-only subtraditions still embedded in `custom-traditions.md`.
+- Use `parentTradition` where the variant modifies an existing tradition instead of duplicating unrelated text.
+- Preserve variant-specific class/CAM/boon adjustments in frontmatter rather than leaving them in article prose.
+
+Target entries:
+
+- `divine-crusader`
+- `inquisitor-variant` or equivalent disambiguated id
+- `hunter-variant` or equivalent disambiguated id
+- `combat-sorcery`
+- `combat-wizardry`
+- `witchcraft`
+
+### Workstream 2: Choice Normalization
+
+- Replace builder-critical prose notes with schema-backed `choices`, `requires`, and `rules`.
+- Normalize boon alternatives, optional sphere drawback allowances, and bounded selection sets so `validateTradition()` can reason over them.
+- Keep `notes` only for flavor, export text, or genuinely free-form GM guidance.
+
+Priority cases:
+
+- `Spellscourged` boon choice.
+- `Morose Essentialist` variable boon choice.
+- `Inherent Divinity` extra sphere-drawback allowance.
+- `Akashic Tech` unresolved drawback/boon mapping.
+- `Qlippoth Psionics` option-bearing boon payloads.
+
+### Workstream 3: Card Casting Data Model
+
+- Upgrade `card-casting` from prose-preserved migration output to a structured drawback with nested `choices` and rule-aware value scaling.
+- Model the core modifications (`Cooldown`, `Mana Pool`, `Mana Graveyard`) and the bounded secondary modifications as normalized option ids.
+- Repoint all 7 card traditions away from opaque `option:` text and toward the structured choice ids.
+- Only leave free-text where the source is intentionally open-ended, such as “any Deck feat”, and document that as a deliberate escape hatch.
+
+### Workstream 4: Dual-Sphere Grant Normalization
+
+- Add `grants` payloads to all 29 dual-sphere drawbacks whose body text currently contains `**Feat:** ...`.
+- Preserve the markdown explanation, but make the granted feat machine-readable for summaries, validation, and builder export.
+- Add targeted tests proving grant payloads survive resolution and are available to builder code.
+
+### Workstream 5: Metadata Completion
+
+- Backfill `magicType` on the 61 traditions that still omit it.
+- Remove explicit unresolved-normalization notes from migrated entries by converting them into structured frontmatter or documenting them as intentional skips in this plan.
+- Review `classes`, `parentTradition`, and other optional tradition metadata wherever the article gives concrete structured meaning.
+
+### Workstream 6: Builder-Readiness Hardening
+
+- Extend `tests/lib/castingTraditions.test.ts` to cover:
+  - variant tradition inheritance and overrides
+  - choice-bearing boon/drawback validation
+  - dual-sphere grant surfacing
+  - card-casting drawback value and prerequisite logic
+- Add an audit pass that fails if structured casting-tradition entries still contain unresolved migration markers such as `Unresolved source references`.
+- Re-run `bun run test` and `bun run build` after each workstream, not only at the end.
+
+## Recommended Sequence
+
+1. Finish variant traditions first, because they affect the final tradition inventory and `parentTradition` model.
+2. Backfill `magicType` and dual-sphere `grants`, because they are high-confidence metadata cleanup with low rule risk.
+3. Normalize the bounded choice cases (`Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, `Akashic Tech`, `Qlippoth Psionics`).
+4. Tackle `Card Casting` last, because it is the most complex single rule surface and will likely refine the schema vocabulary.
+5. Only after those are done should the interactive builder UI be treated as unblocked.
+
 ## Acceptance Criteria
 
 - `drawback`, `boon`, and `tradition` are valid schema types.
 - Structured entries resolve into `ResolvedMaps`.
 - Existing article tabs still render.
+- All 6 prose-only subtraditions are represented as structured `tradition` entries or are explicitly documented as intentional skips.
 - Builder can validate a Blood Magic tradition using Constitution.
 - Builder can validate `Fortified Casting` only when `Draining Casting` is present.
 - Builder can calculate unspent drawback spell-point bonuses.
 - Builder can flag incompatible selections.
+- Builder-critical choices are represented structurally rather than only in `notes`.
+- Dual-sphere drawbacks expose granted feats through `grants`.
+- All structured traditions have an explicit `magicType`.
 - Builder can export Markdown matching current tradition style.
 - Future content authors can add a normal drawback, boon, or tradition with no code changes.
 
@@ -419,4 +504,3 @@ Implementation should use vanilla TypeScript unless later complexity justifies a
 - Whether source tags embedded in old article bodies should be stripped during migration or preserved until source metadata is fully normalized.
 - Whether tradition variants should be first-class `tradition` entries with `parentTradition`, or nested notes on the parent.
 - Whether Foundry export should target a generic JSON shape first or a specific system/module schema.
-
