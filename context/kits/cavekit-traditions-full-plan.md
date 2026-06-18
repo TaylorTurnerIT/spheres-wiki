@@ -17,6 +17,7 @@ Casting Traditions are now structurally migrated, but not yet fully normalized f
 - Typed `drawback`, `boon`, and `tradition` entries exist, resolve through `ResolvedMaps`, and participate in the current search/build pipeline.
 - Pure builder-facing logic exists in `src/lib/castingTraditions/`, including selection validation, drawback value accounting, boon slot accounting, CAM resolution, and export helpers.
 - `bun run build` is currently green: content validation, Fallow, `astro check`, static build, Pagefind, and TOC audit all pass.
+- Full `bun run test` is blocked by existing `_book.yaml` metadata stubs for books whose real price/date/buy URL metadata has not been verified. Do not patch those with plausible values.
 
 Structured inventory now on disk:
 
@@ -33,7 +34,7 @@ Structured inventory now on disk:
 Remaining semantic gaps after coverage migration:
 
 - Several builder-critical decisions now have schema-backed `choices`, and selected choice option `grants` are applied into resolved selections.
-- The `Card Casting` drawback body is preserved, but its modifications are not yet normalized into machine-readable `choices` and `rules`.
+- `Card Casting` now exposes source-stated modifications as machine-readable choices, including preset `choiceSelections` for the seven card traditions and runtime validation for option prerequisites.
 - All 95 structured traditions now have explicit `magicType`, but the conservative `custom` assignments on nonstandard traditions may still be refined during later rule normalization.
 - All 29 dual-sphere drawbacks now expose granted feats through structured `grants`, and selector-style entries such as `Admixture Specialist`, `Propagandist`, and `Unnatural Crafter` also expose structured `choices`.
 
@@ -43,7 +44,7 @@ Important rule cases that still drive the remaining plan:
 - `Bloodletting` and `Blood Magic` use Constitution directly.
 - `Demonology` uses Charisma or Constitution if higher.
 - `Spellscourged` allows a boon choice that changes CAM behavior.
-- `Card Casting` has nested selectable modifications and variable drawback value.
+- `Card Casting` has nested selectable modifications and variable drawback value; this is now represented through `choices`, `choiceSelections`, and selected option `addsDrawbackValue`.
 - Several entries have incompatibilities, prerequisites, repeat counts, forced bonus talents, required spheres, special buyoff rules, source tags, and source-book overrides.
 
 ## Goals
