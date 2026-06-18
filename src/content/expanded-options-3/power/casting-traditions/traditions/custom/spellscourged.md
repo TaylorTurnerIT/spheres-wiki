@@ -13,8 +13,24 @@ drawbacks:
   - id: witchmarked
 sphereDrawbacks: []
 boons: []
+choices:
+  - id: spellscourged-boon
+    label: Spellscourged boon
+    selector: boon
+    min: 1
+    max: 1
+    options:
+      - id: empowered-abilities
+        label: Empowered Abilities
+        grants:
+          - id: empowered-abilities
+            kind: boon
+      - id: fortified-casting
+        label: Fortified Casting
+        grants:
+          - id: fortified-casting
+            kind: boon
 notes:
-  - "Empowered Abilities or Fortified Casting"
   - "+1 spell point"
   - "+1 per 1.5 levels in a casting class"
 ---

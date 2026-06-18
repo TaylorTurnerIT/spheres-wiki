@@ -28,6 +28,7 @@ export type AbilityScore = "str" | "dex" | "con" | "int" | "wis" | "cha";
 export type EntryRef = {
   id: string;
   label?: string;
+  kind?: "drawback" | "sphere-drawback" | "boon" | "feat" | "talent";
   count?: number;
   option?: string;
   sphere?: string;
@@ -80,6 +81,7 @@ export type TraditionRule =
 export type TraditionChoiceOption = {
   id: string;
   label: string;
+  grants?: EntryRef[];
   addsDrawbackValue?: number;
   requires?: TraditionPredicate;
 };
@@ -87,6 +89,7 @@ export type TraditionChoiceOption = {
 export type TraditionChoice = {
   id: string;
   label: string;
+  selector?: "drawback" | "sphere-drawback" | "boon" | "feat" | "talent";
   min?: number;
   max?: number;
   options: TraditionChoiceOption[];
@@ -152,6 +155,7 @@ export type TraditionEntry = {
   drawbacks: EntryRef[];
   sphereDrawbacks?: EntryRef[];
   boons: EntryRef[];
+  choices?: TraditionChoice[];
   classes?: string[];
   parentTradition?: string;
   notes?: string[];

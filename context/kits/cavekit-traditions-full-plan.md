@@ -23,7 +23,7 @@ Structured inventory now on disk:
 - 57 general drawbacks.
 - 162 sphere drawbacks.
 - 29 dual-sphere drawbacks.
-- 19 boons.
+- 21 boons.
 - 24 standard traditions.
 - 58 custom traditions.
 - 7 card traditions.
@@ -32,11 +32,10 @@ Structured inventory now on disk:
 
 Remaining semantic gaps after coverage migration:
 
-- Several builder-critical decisions still live only in prose `notes` or free-text `option` strings, including `Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, and open-ended deck feat selections.
+- Several builder-critical decisions now have schema-backed `choices`, but the builder still needs a pass that applies choice option `grants` into resolved selections.
 - The `Card Casting` drawback body is preserved, but its modifications are not yet normalized into machine-readable `choices` and `rules`.
 - All 95 structured traditions now have explicit `magicType`, but the conservative `custom` assignments on nonstandard traditions may still be refined during later rule normalization.
-- All 29 dual-sphere drawbacks now expose granted feats through structured `grants`, but selector-style entries such as `Admixture Specialist`, `Propagandist`, and `Unnatural Crafter` still need full choice modeling.
-- At least one migrated tradition (`Akashic Tech`) still carries an explicit unresolved normalization note.
+- All 29 dual-sphere drawbacks now expose granted feats through structured `grants`, and selector-style entries such as `Admixture Specialist`, `Propagandist`, and `Unnatural Crafter` also expose structured `choices`.
 
 Important rule cases that still drive the remaining plan:
 
@@ -433,17 +432,17 @@ Implemented entries:
 
 ### Workstream 2: Choice Normalization
 
-- Replace builder-critical prose notes with schema-backed `choices`, `requires`, and `rules`.
-- Normalize boon alternatives, optional sphere drawback allowances, and bounded selection sets so `validateTradition()` can reason over them.
-- Keep `notes` only for flavor, export text, or genuinely free-form GM guidance.
+- Status: in progress.
+- Schema-backed `choices` now exist on tradition entries as well as boons and drawbacks.
+- `Spellscourged`, `Morose Essentialist`, and `Inherent Divinity` no longer depend on prose-only notes for their key selection prompts.
+- `Akashic Tech` now references the source-backed `Essence Empowerment` and `Essence Pool` boons from `Spheres of Akasha`.
+- `Qlippoth Psionics` now has a normalized spell-point note instead of an ambiguous `+1` note.
 
 Priority cases:
 
-- `Spellscourged` boon choice.
-- `Morose Essentialist` variable boon choice.
-- `Inherent Divinity` extra sphere-drawback allowance.
-- `Akashic Tech` unresolved drawback/boon mapping.
-- `Qlippoth Psionics` option-bearing boon payloads.
+- Apply choice option `grants` during `buildTraditionState()` or an adjacent builder-selection expansion step.
+- Decide whether open selector choices should remain empty-option selectors or be expanded from resolved entry maps at runtime.
+- Add validation for min/max choice constraints.
 
 ### Workstream 3: Card Casting Data Model
 
@@ -454,14 +453,15 @@ Priority cases:
 
 ### Workstream 4: Dual-Sphere Grant Normalization
 
-- Add `grants` payloads to all 29 dual-sphere drawbacks whose body text currently contains `**Feat:** ...`.
-- Preserve the markdown explanation, but make the granted feat machine-readable for summaries, validation, and builder export.
-- Add targeted tests proving grant payloads survive resolution and are available to builder code.
+- Status: complete for static grant payloads; in progress for builder behavior.
+- All 29 dual-sphere drawbacks expose `grants` payloads.
+- `Admixture Specialist`, `Propagandist`, and `Unnatural Crafter` now expose selector/alternative `choices` instead of relying only on prose.
+- Remaining builder work is applying selected choice grants to exports and summaries.
 
 ### Workstream 5: Metadata Completion
 
 - Review the new `magicType` assignments and refine any entries that should graduate from conservative `custom` classifications after rule normalization.
-- Remove explicit unresolved-normalization notes from migrated entries by converting them into structured frontmatter or documenting them as intentional skips in this plan.
+- Remove explicit unresolved-normalization notes from migrated entries by converting them into structured frontmatter or documenting them as intentional skips in this plan. `Akashic Tech` no longer carries an unresolved normalization marker.
 - Review `classes`, `parentTradition`, and other optional tradition metadata wherever the article gives concrete structured meaning.
 
 ### Workstream 6: Builder-Readiness Hardening
@@ -476,7 +476,7 @@ Priority cases:
 
 ## Recommended Sequence
 
-1. Normalize the bounded choice cases (`Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, `Akashic Tech`, `Qlippoth Psionics`, and selector-style dual-sphere feat grants).
+1. Add builder logic for applying choice option `grants` and validating choice min/max constraints.
 2. Tackle `Card Casting` last, because it is the most complex single rule surface and will likely refine the schema vocabulary.
 3. Once those are complete, harden the builder and audit coverage around choices, grants, and export behavior.
 4. Only after those are done should the interactive builder UI be treated as unblocked.

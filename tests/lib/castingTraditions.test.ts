@@ -221,4 +221,24 @@ describe("casting tradition builder logic", () => {
       drawbacks: [{ id: "draining-casting", name: "Draining Casting" }],
     });
   });
+
+  it("preserves selected choice ids in structured JSON", () => {
+    const exported = JSON.parse(
+      exportTraditionJson(
+        {
+          name: "Choice Test",
+          drawbacks: [{ id: "draining-casting" }, { id: "somatic-casting" }],
+          boons: [],
+          choices: {
+            "spellscourged-boon": ["fortified-casting"],
+          },
+        },
+        data,
+      ),
+    );
+
+    expect(exported.choices).toEqual({
+      "spellscourged-boon": ["fortified-casting"],
+    });
+  });
 });

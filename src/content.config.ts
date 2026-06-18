@@ -51,6 +51,9 @@ const abilityScoreSchema = z.enum(["str", "dex", "con", "int", "wis", "cha"]);
 const entryRefSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/, "id must be lowercase kebab-case"),
   label: z.string().optional(),
+  kind: z
+    .enum(["drawback", "sphere-drawback", "boon", "feat", "talent"])
+    .optional(),
   count: z.number().int().positive().optional(),
   option: z.string().optional(),
   sphere: z.string().optional(),
@@ -119,6 +122,9 @@ const ruleSchema = z.discriminatedUnion("op", [
 const choiceSchema = z.object({
   id: z.string(),
   label: z.string(),
+  selector: z
+    .enum(["drawback", "sphere-drawback", "boon", "feat", "talent"])
+    .optional(),
   min: z.number().int().min(0).optional(),
   max: z.number().int().min(0).optional(),
   options: z
@@ -126,6 +132,7 @@ const choiceSchema = z.object({
       z.object({
         id: z.string(),
         label: z.string(),
+        grants: z.array(entryRefSchema).optional(),
         addsDrawbackValue: z.number().optional(),
         requires: predicateSchema.optional(),
       }),
@@ -289,6 +296,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     drawbacks: z.array(entryRefSchema).default([]),
     sphereDrawbacks: z.array(entryRefSchema).optional(),
     boons: z.array(entryRefSchema).default([]),
+    choices: z.array(choiceSchema).optional(),
     classes: z.array(z.string()).optional(),
     parentTradition: z.string().optional(),
     notes: z.array(z.string()).optional(),

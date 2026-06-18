@@ -75,6 +75,7 @@ export function exportTraditionJson(
         count: ref.count ?? 1,
         option: ref.option,
       })),
+      choices: selection.choices,
     },
     null,
     2,

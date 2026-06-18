@@ -16,7 +16,10 @@ sphereDrawbacks: []
 boons:
   - id: alien-source
     option: Technomancy
-notes:
-  - "Unresolved source references from the article: Akashic Spells, Clarke Compliance, Imbued Power x2, Essence Empowerment, Essence Pool (2 drawbacks)."
+  - id: essence-empowerment
+    sourceBook: spheres-of-akasha
+  - id: essence-pool
+    option: 2 drawbacks
+    sourceBook: spheres-of-akasha
 ---
 Akasha on Vandara represents a refined integration of technological and magical knowledge, a tool metaphysically sculpted onto its user to augment their abilities.

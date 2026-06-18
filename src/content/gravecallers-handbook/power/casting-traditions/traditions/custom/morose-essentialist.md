@@ -12,9 +12,25 @@ drawbacks:
   - id: verbal-casting
 sphereDrawbacks: []
 boons: []
+choices:
+  - id: morose-essentialist-boon
+    label: Variable boon
+    selector: boon
+    min: 1
+    max: 1
+    options:
+      - id: deathful-magic
+        label: Deathful Magic
+        grants:
+          - id: deathful-magic
+            kind: boon
+      - id: easy-focus
+        label: Easy Focus
+        grants:
+          - id: easy-focus
+            kind: boon
 notes:
   - "+1 spell point"
   - "+1 per six levels in casting classes"
-  - "Morose essentialists gain their choice of either the Deathful Magic or Easy Focus boon."
 ---
 A morose essentialist possesses a grim, pensive mindset to their applications of magic, often using undead they create or the treated, preserved bones of those they respect.
