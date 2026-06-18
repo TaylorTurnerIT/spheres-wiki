@@ -1,0 +1,5 @@
+---
+id: fey-infused-magic
+name: Fey-Infused Magic
+---
+Your magic is intrinsically linked to the realm of Faerie and shares its inhabitants aversion to iron. Any creature wearing light armor consisting of cold iron, steel or iron gains a +1 circumstance bonus to saving throws against sphere effects originating from you. Wearing medium armor increases this bonus to +2 and wearing heavy armor increases it to +3. Wielding a weapon made of cold iron increases this bonus by +1. When a target under the effects of one of your sphere abilities takes damage from iron or steel weapons, that target is treated as if it had been affected by the Counterspell feat, with a magic skill check equal to 10 +1/4th the damage dealt. This Counterspell is applied at the beginning of that creature's turn, adding together all damage suffered from applicable sources since the beginning of its last turn, and ignores all effects that do not have the Fey-Infused Magic drawback. If the target is struck by a weapon made out of cold iron, the Counterspell is capable of dispelling one additional sphere effect per 5 points of base attack bonus that the attacker possesses.
