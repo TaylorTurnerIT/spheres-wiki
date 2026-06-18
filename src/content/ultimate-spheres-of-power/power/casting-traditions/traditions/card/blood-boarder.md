@@ -7,11 +7,13 @@ cam:
   abilities: [int, wis, cha]
 drawbacks:
   - id: card-casting
-    option: Cooldown, Gradual Ramp, Mana Graveyard, Mana Pool
 sphereDrawbacks: []
 boons:
   - id: drawback-feat
     option: Consumptive Play
+choiceSelections:
+  card-casting-core: [cooldown, mana-pool, mana-graveyard]
+  card-casting-secondary: [gradual-ramp]
 notes:
   - "+1 spell point"
   - "+1 per 2 levels in casting classes"

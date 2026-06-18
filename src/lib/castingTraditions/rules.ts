@@ -77,6 +77,20 @@ function collectChoiceDefinitions(
   return { tradition, choices };
 }
 
+function applyPresetChoiceSelections(
+  selection: TraditionSelection,
+  tradition: TraditionEntry | undefined,
+): TraditionSelection {
+  if (!tradition?.choiceSelections) return selection;
+  return {
+    ...selection,
+    choices: {
+      ...tradition.choiceSelections,
+      ...(selection.choices ?? {}),
+    },
+  };
+}
+
 function selectedChoiceGrants(
   selected: TraditionSelection["choices"],
   choices: TraditionChoice[],
@@ -111,6 +125,19 @@ function applyChoiceGrants(
   };
 }
 
+function selectedChoiceOptions(
+  selected: TraditionSelection["choices"],
+  choices: TraditionChoice[],
+): TraditionChoiceOption[] {
+  const optionsById = choiceOptionsById(choices);
+  return Object.entries(selected ?? {}).flatMap(([choiceId, optionIds]) =>
+    optionIds.flatMap((optionId) => {
+      const option = optionsById.get(`${choiceId}:${optionId}`);
+      return option ? [option] : [];
+    }),
+  );
+}
+
 function selectedIds(state: ResolvedTraditionState): Set<string> {
   return new Set([
     ...state.drawbacks.map(({ entry }) => entry.id),
@@ -126,7 +153,14 @@ export function buildTraditionState(
   const drawbackMap = byId(data.drawbacks);
   const boonMap = byId(data.boons);
   const initial = collectChoiceDefinitions(selection, data);
-  const expandedSelection = applyChoiceGrants(selection, initial.choices);
+  const selectionWithPresetChoices = applyPresetChoiceSelections(
+    selection,
+    initial.tradition,
+  );
+  const expandedSelection = applyChoiceGrants(
+    selectionWithPresetChoices,
+    initial.choices,
+  );
   const final = collectChoiceDefinitions(expandedSelection, data);
 
   return {
@@ -191,13 +225,21 @@ function drawbackValue(
   return (entry.drawbackValue + extra) * refCount(ref);
 }
 
+function selectedChoiceDrawbackValue(state: ResolvedTraditionState): number {
+  return selectedChoiceOptions(state.selection.choices, state.choices).reduce(
+    (sum, option) => sum + (option.addsDrawbackValue ?? 0),
+    0,
+  );
+}
+
 export function calculateGeneralDrawbackValue(
   state: ResolvedTraditionState,
 ): number {
-  return state.drawbacks.reduce((sum, { ref, entry }) => {
+  const baseDrawbackValue = state.drawbacks.reduce((sum, { ref, entry }) => {
     if (entry.drawbackKind !== "general") return sum;
     return sum + drawbackValue(ref, entry, state);
   }, 0);
+  return baseDrawbackValue + selectedChoiceDrawbackValue(state);
 }
 
 function calculateBoonCost(state: ResolvedTraditionState): number {
@@ -381,6 +423,29 @@ function unknownOptionDiagnostics(
   });
 }
 
+function choiceOptionPrerequisiteDiagnostics(
+  choice: TraditionChoice,
+  selectedOptionIds: string[],
+  state: ResolvedTraditionState,
+): TraditionDiagnostic[] {
+  const optionsById = new Map(
+    choice.options.map((option) => [option.id, option]),
+  );
+
+  return selectedOptionIds.flatMap((optionId) => {
+    const option = optionsById.get(optionId);
+    if (!option || evaluatePredicate(option.requires, state)) return [];
+    return [
+      {
+        severity: "error",
+        code: "missing-choice-prerequisite",
+        message: `${option.label} has unmet prerequisites.`,
+        sourceIds: [choice.id, option.id],
+      } satisfies TraditionDiagnostic,
+    ];
+  });
+}
+
 function unknownChoiceDiagnostics(
   selected: Record<string, string[]>,
   choices: TraditionChoice[],
@@ -402,11 +467,13 @@ function unknownChoiceDiagnostics(
 function knownChoiceDiagnostics(
   choice: TraditionChoice,
   selected: Record<string, string[]>,
+  state: ResolvedTraditionState,
 ): TraditionDiagnostic[] {
   const selectedOptionIds = selected[choice.id] ?? [];
   return [
     ...choiceCardinalityDiagnostics(choice, selectedOptionIds),
     ...unknownOptionDiagnostics(choice, selectedOptionIds),
+    ...choiceOptionPrerequisiteDiagnostics(choice, selectedOptionIds, state),
   ];
 }
 
@@ -414,7 +481,9 @@ function choiceDiagnostics(state: ResolvedTraditionState): TraditionDiagnostic[]
   const selected = state.selection.choices ?? {};
 
   return [
-    ...state.choices.flatMap((choice) => knownChoiceDiagnostics(choice, selected)),
+    ...state.choices.flatMap((choice) =>
+      knownChoiceDiagnostics(choice, selected, state),
+    ),
     ...unknownChoiceDiagnostics(selected, state.choices),
   ];
 }

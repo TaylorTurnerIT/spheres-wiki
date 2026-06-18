@@ -7,11 +7,13 @@ cam:
   abilities: [int, wis, cha]
 drawbacks:
   - id: card-casting
-    option: Cooldown, Deckout
   - id: magical-signs
   - id: ramp-up
 sphereDrawbacks: []
 boons: []
+choiceSelections:
+  card-casting-core: [cooldown]
+  card-casting-secondary: [deckout]
 notes:
   - "+1 spell point"
   - "+1 per level in casting classes"

@@ -3,6 +3,95 @@ id: card-casting
 name: "Card Casting"
 repeat:
   max: 3
+choices:
+  - id: card-casting-core
+    label: Card Casting core modifications
+    selector: drawback
+    max: 3
+    options:
+      - id: cooldown
+        label: Cooldown
+        addsDrawbackValue: 1
+      - id: mana-pool
+        label: Mana Pool
+        addsDrawbackValue: 1
+      - id: mana-graveyard
+        label: Mana Graveyard
+        addsDrawbackValue: 1
+        requires:
+          all:
+            - choice: cooldown
+            - choice: mana-pool
+  - id: card-casting-secondary
+    label: Card Casting secondary modifications
+    selector: drawback
+    options:
+      - id: bleeding-hand
+        label: Bleeding Hand
+        addsDrawbackValue: 1
+      - id: bleeding-hand-2
+        label: Bleeding Hand x2
+        addsDrawbackValue: 1
+        requires:
+          choice: bleeding-hand
+      - id: deckout
+        label: Deckout
+        addsDrawbackValue: 1
+        requires:
+          choice: cooldown
+      - id: exposed-grip
+        label: Exposed Grip
+        addsDrawbackValue: 1
+        requires:
+          choice: cooldown
+      - id: gradual-ramp
+        label: Gradual Ramp
+        addsDrawbackValue: 1
+        requires:
+          choice: mana-pool
+      - id: lifebound-deck
+        label: Lifebound Deck
+        addsDrawbackValue: 1
+      - id: singleton
+        label: Singleton
+        addsDrawbackValue: 1
+        requires:
+          choice: cooldown
+      - id: stagnant-pool
+        label: Stagnant Pool
+        addsDrawbackValue: 1
+        requires:
+          all:
+            - choice: mana-pool
+            - not:
+                choice: mana-graveyard
+      - id: strikable-assets
+        label: Strikable Assets
+        addsDrawbackValue: 1
+      - id: tight-hand
+        label: Tight Hand
+        addsDrawbackValue: 1
+  - id: card-casting-colored-mana
+    label: Card Casting colored mana
+    selector: drawback
+    max: 1
+    options:
+      - id: colored-mana
+        label: Colored Mana
+        addsDrawbackValue: 1
+        requires:
+          all:
+            - choice: mana-pool
+            - not:
+                drawback: prepared-caster
+      - id: colored-mana-five-colors
+        label: Colored Mana (five colors)
+        addsDrawbackValue: 2
+        requires:
+          all:
+            - choice: mana-pool
+            - not:
+                drawback: prepared-caster
 ---
 You cannot use abilities that cost 1 or more spell points through normal means. Instead, your magical abilities are allocated to you at random, limiting what you are capable of doing at any given moment.
 

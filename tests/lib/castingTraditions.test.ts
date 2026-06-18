@@ -70,6 +70,49 @@ const data: TraditionData = {
       drawbackValue: 1,
       sphere: "alteration",
     },
+    {
+      type: "drawback",
+      id: "card-casting",
+      system: "power",
+      name: "Card Casting",
+      sourceBook: "expanded-spheres-cardcasters-gamble",
+      tags: [],
+      drawbackKind: "general",
+      drawbackValue: 1,
+      choices: [
+        {
+          id: "card-casting-core",
+          label: "Card Casting core modifications",
+          selector: "drawback",
+          max: 3,
+          options: [
+            { id: "cooldown", label: "Cooldown", addsDrawbackValue: 1 },
+            { id: "mana-pool", label: "Mana Pool", addsDrawbackValue: 1 },
+            {
+              id: "mana-graveyard",
+              label: "Mana Graveyard",
+              addsDrawbackValue: 1,
+              requires: {
+                all: [{ choice: "cooldown" }, { choice: "mana-pool" }],
+              },
+            },
+          ],
+        },
+        {
+          id: "card-casting-secondary",
+          label: "Card Casting secondary modifications",
+          selector: "drawback",
+          options: [
+            {
+              id: "gradual-ramp",
+              label: "Gradual Ramp",
+              addsDrawbackValue: 1,
+              requires: { choice: "mana-pool" },
+            },
+          ],
+        },
+      ],
+    },
   ],
   boons: [
     {
@@ -147,6 +190,23 @@ const data: TraditionData = {
         },
       ],
     },
+    {
+      type: "tradition",
+      id: "card-crusader",
+      system: "power",
+      name: "Card Crusader",
+      sourceBook: "ultimate-spheres-of-power",
+      tags: [],
+      traditionKind: "card",
+      magicType: "custom",
+      cam: { mode: "choose-one", abilities: ["int", "wis", "cha"] },
+      drawbacks: [{ id: "card-casting" }],
+      sphereDrawbacks: [],
+      boons: [],
+      choiceSelections: {
+        "card-casting-core": ["cooldown"],
+      },
+    },
   ],
 };
 
@@ -175,6 +235,55 @@ describe("casting tradition builder logic", () => {
     );
 
     expect(calculateGeneralDrawbackValue(state)).toBe(2);
+  });
+
+  it("counts selected choice drawback values", () => {
+    const state = buildTraditionState(
+      {
+        drawbacks: [{ id: "card-casting" }],
+        boons: [],
+        choices: {
+          "card-casting-core": ["cooldown", "mana-pool", "mana-graveyard"],
+          "card-casting-secondary": ["gradual-ramp"],
+        },
+      },
+      data,
+    );
+
+    expect(calculateGeneralDrawbackValue(state)).toBe(5);
+  });
+
+  it("applies tradition preset choice selections", () => {
+    const state = buildTraditionState(
+      {
+        traditionId: "card-crusader",
+        drawbacks: [{ id: "card-casting" }],
+        boons: [],
+      },
+      data,
+    );
+
+    expect(state.selection.choices).toEqual({
+      "card-casting-core": ["cooldown"],
+    });
+    expect(calculateGeneralDrawbackValue(state)).toBe(2);
+  });
+
+  it("rejects selected choice options with unmet prerequisites", () => {
+    const diagnostics = validateTradition(
+      {
+        drawbacks: [{ id: "card-casting" }],
+        boons: [],
+        choices: {
+          "card-casting-core": ["mana-graveyard"],
+        },
+      },
+      data,
+    );
+
+    expect(diagnostics.map((diagnostic) => diagnostic.code)).toContain(
+      "missing-choice-prerequisite",
+    );
   });
 
   it("allows Constitution CAM when Fortified Casting prerequisites are met", () => {

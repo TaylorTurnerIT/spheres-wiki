@@ -7,7 +7,6 @@ cam:
   abilities: [int, wis, cha]
 drawbacks:
   - id: card-casting
-    option: Cooldown, Deckout
   - id: focus-casting
     option: deck of cards
   - id: magical-signs
@@ -17,6 +16,9 @@ sphereDrawbacks: []
 boons:
   - id: drawback-feat
     option: any Deck feat
+choiceSelections:
+  card-casting-core: [cooldown]
+  card-casting-secondary: [deckout]
 notes:
   - "+1 spell point"
   - "+1 per level in casting classes"

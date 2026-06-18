@@ -297,6 +297,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     sphereDrawbacks: z.array(entryRefSchema).optional(),
     boons: z.array(entryRefSchema).default([]),
     choices: z.array(choiceSchema).optional(),
+    choiceSelections: z.record(z.string(), z.array(z.string())).optional(),
     classes: z.array(z.string()).optional(),
     parentTradition: z.string().optional(),
     notes: z.array(z.string()).optional(),

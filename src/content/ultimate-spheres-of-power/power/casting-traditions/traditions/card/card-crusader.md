@@ -7,9 +7,10 @@ cam:
   abilities: [int, wis, cha]
 drawbacks:
   - id: card-casting
-    option: Cooldown
 sphereDrawbacks: []
 boons: []
+choiceSelections:
+  card-casting-core: [cooldown]
 notes:
   - "+1 spell point"
   - "+1 per 3 levels in casting classes"

@@ -7,13 +7,16 @@ cam:
   abilities: [int, wis, cha]
 drawbacks:
   - id: card-casting
-    option: Colored Mana, Cooldown, Deckout, Gradual Ramp, Mana Pool, Stagnant Pool
   - id: expensive-locus
   - id: terrain-casting
 sphereDrawbacks: []
 boons:
   - id: drawback-feat
     option: any 2 Deck feats
+choiceSelections:
+  card-casting-core: [cooldown, mana-pool]
+  card-casting-secondary: [deckout, gradual-ramp, stagnant-pool]
+  card-casting-colored-mana: [colored-mana]
 notes:
   - "+1 spell point"
   - "+1 per level in casting classes"

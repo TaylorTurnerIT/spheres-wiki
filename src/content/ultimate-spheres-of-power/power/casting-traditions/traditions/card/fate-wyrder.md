@@ -7,11 +7,12 @@ cam:
   abilities: [int, wis, cha]
 drawbacks:
   - id: card-casting
-    option: Bleeding Hand x2, Lifebound Deck, Tight Hand
 sphereDrawbacks: []
 boons:
   - id: drawback-feat
     option: Handblood's Advantage, selecting the Fresh Hand deck manipulation
+choiceSelections:
+  card-casting-secondary: [bleeding-hand, bleeding-hand-2, lifebound-deck, tight-hand]
 notes:
   - "+1 spell point"
   - "+1 per 2 levels in casting classes"

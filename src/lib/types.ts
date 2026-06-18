@@ -156,6 +156,7 @@ export type TraditionEntry = {
   sphereDrawbacks?: EntryRef[];
   boons: EntryRef[];
   choices?: TraditionChoice[];
+  choiceSelections?: Record<string, string[]>;
   classes?: string[];
   parentTradition?: string;
   notes?: string[];
