@@ -1,6 +1,7 @@
 ---
 id: wizardry
 name: Wizardry
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

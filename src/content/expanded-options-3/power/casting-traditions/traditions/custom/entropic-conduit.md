@@ -1,6 +1,7 @@
 ---
 id: entropic-conduit
 name: Entropic Conduit
+magicType: custom
 cam:
   mode: fixed
   abilities: [wis]

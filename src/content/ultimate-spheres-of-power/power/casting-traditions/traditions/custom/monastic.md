@@ -1,6 +1,7 @@
 ---
 id: monastic
 name: Monastic
+magicType: custom
 cam:
   mode: fixed
   abilities: [wis]

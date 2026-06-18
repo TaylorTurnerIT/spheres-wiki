@@ -1,6 +1,7 @@
 ---
 id: millennium-duelist
 name: Millennium Duelist
+magicType: custom
 cam:
   mode: choose-one
   abilities: [int, wis, cha]

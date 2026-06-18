@@ -1,6 +1,7 @@
 ---
 id: bloodletting
 name: Bloodletting
+magicType: arcane
 cam:
   mode: fixed
   abilities: [con]

@@ -1,6 +1,7 @@
 ---
 id: elemental-shaman
 name: Elemental Shaman
+magicType: divine
 cam:
   mode: fixed
   abilities: [wis]

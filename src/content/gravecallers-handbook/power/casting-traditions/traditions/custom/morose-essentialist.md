@@ -1,6 +1,7 @@
 ---
 id: morose-essentialist
 name: Morose Essentialist
+magicType: psychic
 cam:
   mode: fixed
   abilities: [wis]

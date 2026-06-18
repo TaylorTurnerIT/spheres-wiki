@@ -1,6 +1,7 @@
 ---
 id: demonology
 name: Demonology
+magicType: arcane
 cam:
   mode: highest
   abilities: [cha, con]

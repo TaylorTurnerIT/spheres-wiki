@@ -1,6 +1,7 @@
 ---
 id: sorcerous-blood
 name: Sorcerous Blood
+magicType: arcane
 cam:
   mode: fixed
   abilities: [cha]

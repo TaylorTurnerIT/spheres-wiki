@@ -1,6 +1,7 @@
 ---
 id: mysticism
 name: Mysticism
+magicType: divine
 cam:
   mode: fixed
   abilities: [wis]

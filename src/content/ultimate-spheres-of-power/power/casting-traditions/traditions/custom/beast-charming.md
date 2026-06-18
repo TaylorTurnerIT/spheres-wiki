@@ -1,6 +1,7 @@
 ---
 id: beast-charming
 name: Beast Charming
+magicType: arcane
 cam:
   mode: fixed
   abilities: [cha]

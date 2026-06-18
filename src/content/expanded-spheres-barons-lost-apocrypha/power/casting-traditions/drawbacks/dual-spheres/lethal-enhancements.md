@@ -3,7 +3,7 @@ id: lethal-enhancements
 name: Lethal Enhancements
 spheres:
   - enhancement
+grants:
+  - id: might-of-the-grave
 ---
-**Feat:** Might of the Grave
-
 Your enhancement effects can only target undead creatures created through reanimate.

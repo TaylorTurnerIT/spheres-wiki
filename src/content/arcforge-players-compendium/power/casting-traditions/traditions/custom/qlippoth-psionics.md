@@ -1,6 +1,7 @@
 ---
 id: qlippoth-psionics
 name: Qlippoth Psionics
+magicType: psychic
 cam:
   mode: choose-one
   abilities: [int, wis, cha]

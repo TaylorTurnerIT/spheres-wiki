@@ -1,6 +1,7 @@
 ---
 id: mind
 name: Mind
+magicType: psychic
 cam:
   mode: fixed
   abilities: [int]

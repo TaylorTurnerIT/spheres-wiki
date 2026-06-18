@@ -1,6 +1,7 @@
 ---
 id: hearthmage
 name: Hearthmage
+magicType: custom
 cam:
   mode: choose-one
   abilities: [int, wis, cha]

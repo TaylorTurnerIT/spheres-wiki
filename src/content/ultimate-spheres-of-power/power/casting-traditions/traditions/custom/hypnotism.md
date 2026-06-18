@@ -1,6 +1,7 @@
 ---
 id: hypnotism
 name: Hypnotism
+magicType: psychic
 cam:
   mode: fixed
   abilities: [int]

@@ -1,6 +1,7 @@
 ---
 id: sin-wizard
 name: Sin Wizard
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

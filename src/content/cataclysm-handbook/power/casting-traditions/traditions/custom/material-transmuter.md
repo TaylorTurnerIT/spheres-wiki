@@ -1,6 +1,7 @@
 ---
 id: material-transmuter
 name: Material Transmuter
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

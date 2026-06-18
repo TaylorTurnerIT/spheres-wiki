@@ -1,6 +1,7 @@
 ---
 id: apothecary
 name: Apothecary
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

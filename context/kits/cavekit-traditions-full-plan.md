@@ -34,8 +34,8 @@ Remaining semantic gaps after coverage migration:
 
 - Several builder-critical decisions still live only in prose `notes` or free-text `option` strings, including `Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, and open-ended deck feat selections.
 - The `Card Casting` drawback body is preserved, but its modifications are not yet normalized into machine-readable `choices` and `rules`.
-- All 29 dual-sphere drawbacks still describe granted feats in body prose instead of structured `grants` payloads.
-- 61 of 95 structured traditions still omit `magicType`.
+- All 95 structured traditions now have explicit `magicType`, but the conservative `custom` assignments on nonstandard traditions may still be refined during later rule normalization.
+- All 29 dual-sphere drawbacks now expose granted feats through structured `grants`, but selector-style entries such as `Admixture Specialist`, `Propagandist`, and `Unnatural Crafter` still need full choice modeling.
 - At least one migrated tradition (`Akashic Tech`) still carries an explicit unresolved normalization note.
 
 Important rule cases that still drive the remaining plan:
@@ -460,7 +460,7 @@ Priority cases:
 
 ### Workstream 5: Metadata Completion
 
-- Backfill `magicType` on the 61 traditions that still omit it.
+- Review the new `magicType` assignments and refine any entries that should graduate from conservative `custom` classifications after rule normalization.
 - Remove explicit unresolved-normalization notes from migrated entries by converting them into structured frontmatter or documenting them as intentional skips in this plan.
 - Review `classes`, `parentTradition`, and other optional tradition metadata wherever the article gives concrete structured meaning.
 
@@ -476,9 +476,9 @@ Priority cases:
 
 ## Recommended Sequence
 
-1. Backfill `magicType` and dual-sphere `grants`, because they are high-confidence metadata cleanup with low rule risk.
-2. Normalize the bounded choice cases (`Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, `Akashic Tech`, `Qlippoth Psionics`).
-3. Tackle `Card Casting` last, because it is the most complex single rule surface and will likely refine the schema vocabulary.
+1. Normalize the bounded choice cases (`Spellscourged`, `Morose Essentialist`, `Inherent Divinity`, `Akashic Tech`, `Qlippoth Psionics`, and selector-style dual-sphere feat grants).
+2. Tackle `Card Casting` last, because it is the most complex single rule surface and will likely refine the schema vocabulary.
+3. Once those are complete, harden the builder and audit coverage around choices, grants, and export behavior.
 4. Only after those are done should the interactive builder UI be treated as unblocked.
 
 ## Acceptance Criteria

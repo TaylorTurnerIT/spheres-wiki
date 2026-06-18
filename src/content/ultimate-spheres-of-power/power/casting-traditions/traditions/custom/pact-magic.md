@@ -1,6 +1,7 @@
 ---
 id: pact-magic
 name: Pact Magic
+magicType: custom
 cam:
   mode: fixed
   abilities: [cha]

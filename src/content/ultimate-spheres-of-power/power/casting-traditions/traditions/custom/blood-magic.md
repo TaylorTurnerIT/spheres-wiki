@@ -1,6 +1,7 @@
 ---
 id: blood-magic
 name: Blood Magic
+magicType: arcane
 cam:
   mode: fixed
   abilities: [con]

@@ -1,6 +1,7 @@
 ---
 id: blood-boarder
 name: Blood Boarder
+magicType: custom
 cam:
   mode: choose-one
   abilities: [int, wis, cha]

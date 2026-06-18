@@ -1,6 +1,7 @@
 ---
 id: cartomancy
 name: Cartomancy
+magicType: psychic
 cam:
   mode: fixed
   abilities: [wis]

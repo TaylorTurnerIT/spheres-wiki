@@ -1,6 +1,7 @@
 ---
 id: lycanthrope
 name: Lycanthrope
+magicType: custom
 cam:
   mode: fixed
   abilities: [cha]

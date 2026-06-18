@@ -1,6 +1,7 @@
 ---
 id: spellscourged
 name: Spellscourged
+magicType: custom
 cam:
   mode: choose-one
   abilities: [cha, con]

@@ -1,6 +1,7 @@
 ---
 id: fate-wyrder
 name: Fate Wyrder
+magicType: custom
 cam:
   mode: choose-one
   abilities: [int, wis, cha]

@@ -1,6 +1,7 @@
 ---
 id: wild-born
 name: Wild-Born
+magicType: custom
 cam:
   mode: fixed
   abilities: [cha]

@@ -1,6 +1,7 @@
 ---
 id: fey-magic
 name: Fey Magic
+magicType: custom
 cam:
   mode: fixed
   abilities: [cha]

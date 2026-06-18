@@ -1,6 +1,7 @@
 ---
 id: dream-casting
 name: Dream Casting
+magicType: psychic
 cam:
   mode: fixed
   abilities: [wis]

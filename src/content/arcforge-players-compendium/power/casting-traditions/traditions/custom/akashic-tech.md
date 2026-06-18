@@ -1,6 +1,7 @@
 ---
 id: akashic-tech
 name: Akashic Tech
+magicType: custom
 cam:
   mode: choose-one
   abilities: [cha, int, wis]

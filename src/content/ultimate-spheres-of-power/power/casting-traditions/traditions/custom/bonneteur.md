@@ -1,6 +1,7 @@
 ---
 id: bonneteur
 name: Bonneteur
+magicType: psychic
 cam:
   mode: fixed
   abilities: [cha]

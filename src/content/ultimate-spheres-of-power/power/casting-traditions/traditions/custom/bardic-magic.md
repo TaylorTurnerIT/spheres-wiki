@@ -1,6 +1,7 @@
 ---
 id: bardic-magic
 name: Bardic Magic
+magicType: arcane
 cam:
   mode: fixed
   abilities: [cha]

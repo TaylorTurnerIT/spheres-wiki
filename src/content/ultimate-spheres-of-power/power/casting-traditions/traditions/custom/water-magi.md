@@ -1,6 +1,7 @@
 ---
 id: water-magi
 name: Water-Magi
+magicType: custom
 cam:
   mode: fixed
   abilities: [wis]

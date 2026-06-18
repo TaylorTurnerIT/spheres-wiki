@@ -1,6 +1,7 @@
 ---
 id: contaminated
 name: Contaminated
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

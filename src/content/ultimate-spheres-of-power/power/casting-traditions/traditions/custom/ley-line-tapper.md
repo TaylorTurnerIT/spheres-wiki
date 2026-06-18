@@ -1,6 +1,7 @@
 ---
 id: ley-line-tapper
 name: Ley-line Tapper
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

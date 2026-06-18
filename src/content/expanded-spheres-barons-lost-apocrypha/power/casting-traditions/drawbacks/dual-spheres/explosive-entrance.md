@@ -3,7 +3,7 @@ id: explosive-entrance
 name: Explosive Entrance
 spheres:
   - warp
+grants:
+  - id: warp-burst
 ---
-**Feat:** Warp Burst
-
 You must use a destruction sphere effect when you teleport yourself.

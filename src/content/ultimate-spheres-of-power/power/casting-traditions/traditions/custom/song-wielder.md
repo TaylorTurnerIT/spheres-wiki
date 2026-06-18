@@ -1,6 +1,7 @@
 ---
 id: song-wielder
 name: Song-Wielder
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

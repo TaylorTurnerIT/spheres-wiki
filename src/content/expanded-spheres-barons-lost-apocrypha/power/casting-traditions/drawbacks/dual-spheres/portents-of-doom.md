@@ -3,7 +3,7 @@ id: portents-of-doom
 name: Portents of Doom
 spheres:
   - fate
+grants:
+  - id: blessed-necromancy
 ---
-**Feat:** Blessed Necromancy
-
 You may only use your word talents through your ghost strikes or through affecting undead as you reanimate them.

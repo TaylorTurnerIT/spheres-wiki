@@ -1,6 +1,7 @@
 ---
 id: strange-mentalist
 name: Strange Mentalist
+magicType: psychic
 cam:
   mode: fixed
   abilities: [int]

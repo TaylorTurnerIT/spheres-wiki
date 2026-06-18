@@ -1,6 +1,7 @@
 ---
 id: cholmic-traditionalist
 name: Cholmic Traditionalist
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

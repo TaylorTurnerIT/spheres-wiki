@@ -1,6 +1,7 @@
 ---
 id: nomad-shamans
 name: Nomad Shamans
+magicType: divine
 cam:
   mode: fixed
   abilities: [cha]

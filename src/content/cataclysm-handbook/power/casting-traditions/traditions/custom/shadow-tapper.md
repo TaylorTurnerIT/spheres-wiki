@@ -1,6 +1,7 @@
 ---
 id: shadow-tapper
 name: Shadow Tapper
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

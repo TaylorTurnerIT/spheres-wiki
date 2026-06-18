@@ -3,7 +3,7 @@ id: thrashing-corpses
 name: Thrashing Corpses
 spheres:
   - nature
+grants:
+  - id: sylvan-necromancy
 ---
-**Feat:** Sylvan Necromancy
-
 You may not apply your (plant) geomancing abilities to plants, only to corpses.

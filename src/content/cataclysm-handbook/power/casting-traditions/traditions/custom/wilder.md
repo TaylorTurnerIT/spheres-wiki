@@ -1,6 +1,7 @@
 ---
 id: wilder
 name: Wilder
+magicType: psychic
 cam:
   mode: fixed
   abilities: [cha]

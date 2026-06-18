@@ -3,7 +3,7 @@ id: luminous-grip
 name: Luminous Grip
 spheres:
   - telekinesis
+grants:
+  - id: beam-propulsion
 ---
-**Feat:** Beam Propulsion
-
 You can only lift a target as part of the action to make it glow.

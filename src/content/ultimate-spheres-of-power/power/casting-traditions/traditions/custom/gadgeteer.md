@@ -1,6 +1,7 @@
 ---
 id: gadgeteer
 name: Gadgeteer
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

@@ -1,6 +1,7 @@
 ---
 id: runist
 name: Runist
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

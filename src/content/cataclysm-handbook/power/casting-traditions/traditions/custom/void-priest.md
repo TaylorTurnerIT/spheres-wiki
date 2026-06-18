@@ -1,6 +1,7 @@
 ---
 id: void-priest
 name: Void Priest
+magicType: divine
 cam:
   mode: fixed
   abilities: [wis]

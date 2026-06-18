@@ -1,6 +1,7 @@
 ---
 id: caffiend
 name: Caffiend
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

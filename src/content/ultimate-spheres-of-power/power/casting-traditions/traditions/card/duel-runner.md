@@ -1,6 +1,7 @@
 ---
 id: duel-runner
 name: Duel Runner
+magicType: custom
 cam:
   mode: choose-one
   abilities: [int, wis, cha]

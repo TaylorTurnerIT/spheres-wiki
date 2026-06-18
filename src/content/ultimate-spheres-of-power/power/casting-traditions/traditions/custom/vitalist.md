@@ -1,6 +1,7 @@
 ---
 id: vitalist
 name: Vitalist
+magicType: custom
 cam:
   mode: fixed
   abilities: [cha]

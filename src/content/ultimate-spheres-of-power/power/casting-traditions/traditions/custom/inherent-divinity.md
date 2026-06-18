@@ -1,6 +1,7 @@
 ---
 id: inherent-divinity
 name: Inherent Divinity
+magicType: divine
 cam:
   mode: fixed
   abilities: [cha]

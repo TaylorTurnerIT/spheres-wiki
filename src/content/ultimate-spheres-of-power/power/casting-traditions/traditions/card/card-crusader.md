@@ -1,6 +1,7 @@
 ---
 id: card-crusader
 name: Card Crusader
+magicType: custom
 cam:
   mode: choose-one
   abilities: [int, wis, cha]

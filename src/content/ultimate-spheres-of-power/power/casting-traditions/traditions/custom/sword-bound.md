@@ -1,6 +1,7 @@
 ---
 id: sword-bound
 name: Sword-Bound
+magicType: custom
 cam:
   mode: fixed
   abilities: [cha]

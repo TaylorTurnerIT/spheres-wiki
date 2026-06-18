@@ -1,6 +1,7 @@
 ---
 id: natural
 name: Natural
+magicType: none
 cam:
   mode: fixed
   abilities: [cha]

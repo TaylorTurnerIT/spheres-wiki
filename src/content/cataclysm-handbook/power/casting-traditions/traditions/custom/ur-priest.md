@@ -1,6 +1,7 @@
 ---
 id: ur-priest
 name: Ur-Priest
+magicType: divine
 cam:
   mode: fixed
   abilities: [wis]

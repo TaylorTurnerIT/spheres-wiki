@@ -1,6 +1,7 @@
 ---
 id: corrupted-apostle
 name: Corrupted Apostle
+magicType: custom
 cam:
   mode: fixed
   abilities: [cha]

@@ -1,6 +1,7 @@
 ---
 id: artificery
 name: Artificery
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

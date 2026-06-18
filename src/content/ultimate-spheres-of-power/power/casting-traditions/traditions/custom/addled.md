@@ -1,6 +1,7 @@
 ---
 id: addled
 name: Addled
+magicType: divine
 cam:
   mode: fixed
   abilities: [cha]

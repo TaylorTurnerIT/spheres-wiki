@@ -1,6 +1,7 @@
 ---
 id: chi-tracer
 name: Chi Tracer
+magicType: psychic
 cam:
   mode: fixed
   abilities: [wis]

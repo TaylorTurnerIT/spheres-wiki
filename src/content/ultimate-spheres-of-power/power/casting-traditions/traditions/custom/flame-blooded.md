@@ -1,6 +1,7 @@
 ---
 id: flame-blooded
 name: Flame-Blooded
+magicType: custom
 cam:
   mode: fixed
   abilities: [cha]

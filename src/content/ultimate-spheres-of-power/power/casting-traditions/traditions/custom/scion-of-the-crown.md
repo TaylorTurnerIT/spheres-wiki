@@ -1,6 +1,7 @@
 ---
 id: scion-of-the-crown
 name: Scion Of The Crown
+magicType: arcane
 cam:
   mode: fixed
   abilities: [cha]

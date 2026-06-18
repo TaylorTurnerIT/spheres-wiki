@@ -1,6 +1,7 @@
 ---
 id: traditional-magic
 name: Traditional Magic
+magicType: arcane
 cam:
   mode: fixed
   abilities: [int]

@@ -1,6 +1,7 @@
 ---
 id: keeper
 name: Keeper
+magicType: divine
 cam:
   mode: fixed
   abilities: [wis]
