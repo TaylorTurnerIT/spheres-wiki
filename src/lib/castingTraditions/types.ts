@@ -3,10 +3,12 @@ import type {
   BoonEntry,
   DrawbackEntry,
   EntryRef,
+  TraditionChoice,
   TraditionEntry,
 } from "../types";
 
 export type TraditionSelection = {
+  traditionId?: string;
   name?: string;
   magicType?: TraditionEntry["magicType"];
   cam?: AbilityScore;
@@ -24,6 +26,8 @@ export type TraditionData = {
 
 export type ResolvedTraditionState = {
   selection: TraditionSelection;
+  tradition?: TraditionEntry;
+  choices: TraditionChoice[];
   drawbacks: Array<{ ref: EntryRef; entry: DrawbackEntry }>;
   sphereDrawbacks: Array<{ ref: EntryRef; entry: DrawbackEntry }>;
   boons: Array<{ ref: EntryRef; entry: BoonEntry }>;

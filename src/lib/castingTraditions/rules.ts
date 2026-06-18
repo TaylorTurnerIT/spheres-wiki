@@ -2,8 +2,11 @@ import type {
   AbilityScore,
   DrawbackEntry,
   EntryRef,
+  TraditionChoice,
+  TraditionChoiceOption,
   TraditionPredicate,
   TraditionRule,
+  TraditionEntry,
 } from "../types";
 import type {
   ResolvedTraditionState,
@@ -22,6 +25,92 @@ function refCount(ref: EntryRef): number {
   return ref.count ?? 1;
 }
 
+function refKey(ref: EntryRef): string {
+  return [
+    ref.kind ?? "",
+    ref.sourceBook ?? "",
+    ref.id,
+    ref.option ?? "",
+    ref.sphere ?? "",
+  ].join("|");
+}
+
+function appendUniqueRefs(refs: EntryRef[], additions: EntryRef[]): EntryRef[] {
+  const seen = new Set(refs.map(refKey));
+  const result = [...refs];
+  for (const ref of additions) {
+    const key = refKey(ref);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    result.push(ref);
+  }
+  return result;
+}
+
+function choiceOptionsById(choices: TraditionChoice[]): Map<string, TraditionChoiceOption> {
+  const options = new Map<string, TraditionChoiceOption>();
+  for (const choice of choices) {
+    for (const option of choice.options) {
+      options.set(`${choice.id}:${option.id}`, option);
+    }
+  }
+  return options;
+}
+
+function collectChoiceDefinitions(
+  selection: TraditionSelection,
+  data: TraditionData,
+): { tradition?: TraditionEntry; choices: TraditionChoice[] } {
+  const drawbackMap = byId(data.drawbacks);
+  const boonMap = byId(data.boons);
+  const tradition = selection.traditionId
+    ? data.traditions?.find((entry) => entry.id === selection.traditionId)
+    : undefined;
+  const choices = [
+    ...(tradition?.choices ?? []),
+    ...selection.drawbacks.flatMap((ref) => drawbackMap.get(ref.id)?.choices ?? []),
+    ...(selection.sphereDrawbacks ?? []).flatMap(
+      (ref) => drawbackMap.get(ref.id)?.choices ?? [],
+    ),
+    ...selection.boons.flatMap((ref) => boonMap.get(ref.id)?.choices ?? []),
+  ];
+  return { tradition, choices };
+}
+
+function selectedChoiceGrants(
+  selected: TraditionSelection["choices"],
+  choices: TraditionChoice[],
+): EntryRef[] {
+  const optionsById = choiceOptionsById(choices);
+  return Object.entries(selected ?? {}).flatMap(([choiceId, optionIds]) =>
+    optionIds.flatMap(
+      (optionId) => optionsById.get(`${choiceId}:${optionId}`)?.grants ?? [],
+    ),
+  );
+}
+
+function applyChoiceGrants(
+  selection: TraditionSelection,
+  choices: TraditionChoice[],
+): TraditionSelection {
+  const grants = selectedChoiceGrants(selection.choices, choices);
+  return {
+    ...selection,
+    drawbacks: appendUniqueRefs(
+      selection.drawbacks,
+      grants.filter((ref) => ref.kind === "drawback"),
+    ),
+    sphereDrawbacks: appendUniqueRefs(
+      selection.sphereDrawbacks ?? [],
+      grants.filter((ref) => ref.kind === "sphere-drawback"),
+    ),
+    boons: appendUniqueRefs(
+      selection.boons,
+      grants.filter((ref) => ref.kind === "boon"),
+    ),
+  };
+}
+
 function selectedIds(state: ResolvedTraditionState): Set<string> {
   return new Set([
     ...state.drawbacks.map(({ entry }) => entry.id),
@@ -36,18 +125,23 @@ export function buildTraditionState(
 ): ResolvedTraditionState {
   const drawbackMap = byId(data.drawbacks);
   const boonMap = byId(data.boons);
+  const initial = collectChoiceDefinitions(selection, data);
+  const expandedSelection = applyChoiceGrants(selection, initial.choices);
+  const final = collectChoiceDefinitions(expandedSelection, data);
 
   return {
-    selection,
-    drawbacks: selection.drawbacks.flatMap((ref) => {
+    selection: expandedSelection,
+    tradition: final.tradition,
+    choices: final.choices,
+    drawbacks: expandedSelection.drawbacks.flatMap((ref) => {
       const entry = drawbackMap.get(ref.id);
       return entry ? [{ ref, entry }] : [];
     }),
-    sphereDrawbacks: (selection.sphereDrawbacks ?? []).flatMap((ref) => {
+    sphereDrawbacks: (expandedSelection.sphereDrawbacks ?? []).flatMap((ref) => {
       const entry = drawbackMap.get(ref.id);
       return entry ? [{ ref, entry }] : [];
     }),
-    boons: selection.boons.flatMap((ref) => {
+    boons: expandedSelection.boons.flatMap((ref) => {
       const entry = boonMap.get(ref.id);
       return entry ? [{ ref, entry }] : [];
     }),
@@ -239,15 +333,102 @@ function incompatibilityDiagnostics(
   );
 }
 
+function choiceCardinalityDiagnostics(
+  choice: TraditionChoice,
+  selectedOptionIds: string[],
+): TraditionDiagnostic[] {
+  const diagnostics: TraditionDiagnostic[] = [];
+  const min = choice.min ?? 0;
+  const max = choice.max ?? Number.POSITIVE_INFINITY;
+
+  if (selectedOptionIds.length < min) {
+    diagnostics.push({
+      severity: "error",
+      code: "missing-choice",
+      message: `${choice.label} requires at least ${min} selection${min === 1 ? "" : "s"}.`,
+      sourceIds: [choice.id],
+    });
+  }
+
+  if (selectedOptionIds.length > max) {
+    diagnostics.push({
+      severity: "error",
+      code: "too-many-choices",
+      message: `${choice.label} allows at most ${max} selection${max === 1 ? "" : "s"}.`,
+      sourceIds: [choice.id],
+    });
+  }
+
+  return diagnostics;
+}
+
+function unknownOptionDiagnostics(
+  choice: TraditionChoice,
+  selectedOptionIds: string[],
+): TraditionDiagnostic[] {
+  const optionIds = new Set(choice.options.map((option) => option.id));
+  if (optionIds.size === 0) return [];
+  return selectedOptionIds.flatMap((optionId) => {
+    if (optionIds.has(optionId)) return [];
+    return [
+      {
+        severity: "error",
+        code: "unknown-choice-option",
+        message: `${optionId} is not a valid option for ${choice.label}.`,
+        sourceIds: [choice.id, optionId],
+      } satisfies TraditionDiagnostic,
+    ];
+  });
+}
+
+function unknownChoiceDiagnostics(
+  selected: Record<string, string[]>,
+  choices: TraditionChoice[],
+): TraditionDiagnostic[] {
+  const knownChoiceIds = new Set(choices.map((choice) => choice.id));
+  return Object.keys(selected).flatMap((choiceId) => {
+    if (knownChoiceIds.has(choiceId)) return [];
+    return [
+      {
+        severity: "error",
+        code: "unknown-choice",
+        message: `Unknown choice: ${choiceId}`,
+        sourceIds: [choiceId],
+      } satisfies TraditionDiagnostic,
+    ];
+  });
+}
+
+function knownChoiceDiagnostics(
+  choice: TraditionChoice,
+  selected: Record<string, string[]>,
+): TraditionDiagnostic[] {
+  const selectedOptionIds = selected[choice.id] ?? [];
+  return [
+    ...choiceCardinalityDiagnostics(choice, selectedOptionIds),
+    ...unknownOptionDiagnostics(choice, selectedOptionIds),
+  ];
+}
+
+function choiceDiagnostics(state: ResolvedTraditionState): TraditionDiagnostic[] {
+  const selected = state.selection.choices ?? {};
+
+  return [
+    ...state.choices.flatMap((choice) => knownChoiceDiagnostics(choice, selected)),
+    ...unknownChoiceDiagnostics(selected, state.choices),
+  ];
+}
+
 export function validateTradition(
   selection: TraditionSelection,
   data: TraditionData,
 ): TraditionDiagnostic[] {
   const state = buildTraditionState(selection, data);
   const diagnostics = [
-    ...missingRefDiagnostics(selection, data),
+    ...missingRefDiagnostics(state.selection, data),
     ...prerequisiteDiagnostics(state),
     ...incompatibilityDiagnostics(state),
+    ...choiceDiagnostics(state),
   ];
 
   const boonSlots = calculateAvailableBoonSlots(state);

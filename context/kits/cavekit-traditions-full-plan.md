@@ -32,7 +32,7 @@ Structured inventory now on disk:
 
 Remaining semantic gaps after coverage migration:
 
-- Several builder-critical decisions now have schema-backed `choices`, but the builder still needs a pass that applies choice option `grants` into resolved selections.
+- Several builder-critical decisions now have schema-backed `choices`, and selected choice option `grants` are applied into resolved selections.
 - The `Card Casting` drawback body is preserved, but its modifications are not yet normalized into machine-readable `choices` and `rules`.
 - All 95 structured traditions now have explicit `magicType`, but the conservative `custom` assignments on nonstandard traditions may still be refined during later rule normalization.
 - All 29 dual-sphere drawbacks now expose granted feats through structured `grants`, and selector-style entries such as `Admixture Specialist`, `Propagandist`, and `Unnatural Crafter` also expose structured `choices`.
@@ -432,17 +432,17 @@ Implemented entries:
 
 ### Workstream 2: Choice Normalization
 
-- Status: in progress.
+- Status: complete for non-Card-Casting choices.
 - Schema-backed `choices` now exist on tradition entries as well as boons and drawbacks.
 - `Spellscourged`, `Morose Essentialist`, and `Inherent Divinity` no longer depend on prose-only notes for their key selection prompts.
 - `Akashic Tech` now references the source-backed `Essence Empowerment` and `Essence Pool` boons from `Spheres of Akasha`.
 - `Qlippoth Psionics` now has a normalized spell-point note instead of an ambiguous `+1` note.
+- `buildTraditionState()` now applies selected choice option `grants` into drawback, sphere drawback, and boon refs.
+- `validateTradition()` now validates choice `min` and `max` cardinality and rejects unknown choice ids/options.
 
-Priority cases:
+Remaining follow-up:
 
-- Apply choice option `grants` during `buildTraditionState()` or an adjacent builder-selection expansion step.
 - Decide whether open selector choices should remain empty-option selectors or be expanded from resolved entry maps at runtime.
-- Add validation for min/max choice constraints.
 
 ### Workstream 3: Card Casting Data Model
 
@@ -456,7 +456,7 @@ Priority cases:
 - Status: complete for static grant payloads; in progress for builder behavior.
 - All 29 dual-sphere drawbacks expose `grants` payloads.
 - `Admixture Specialist`, `Propagandist`, and `Unnatural Crafter` now expose selector/alternative `choices` instead of relying only on prose.
-- Remaining builder work is applying selected choice grants to exports and summaries.
+- Selected choice grants now flow into resolved selections for validation and export.
 
 ### Workstream 5: Metadata Completion
 
@@ -476,10 +476,9 @@ Priority cases:
 
 ## Recommended Sequence
 
-1. Add builder logic for applying choice option `grants` and validating choice min/max constraints.
-2. Tackle `Card Casting` last, because it is the most complex single rule surface and will likely refine the schema vocabulary.
-3. Once those are complete, harden the builder and audit coverage around choices, grants, and export behavior.
-4. Only after those are done should the interactive builder UI be treated as unblocked.
+1. Tackle `Card Casting` last, because it is the most complex single rule surface and will likely refine the schema vocabulary.
+2. Once Card Casting is complete, harden the builder and audit coverage around choices, grants, and export behavior.
+3. Only after those are done should the interactive builder UI be treated as unblocked.
 
 ## Acceptance Criteria
 
@@ -492,6 +491,8 @@ Priority cases:
 - Builder can calculate unspent drawback spell-point bonuses.
 - Builder can flag incompatible selections.
 - Builder-critical choices are represented structurally rather than only in `notes`.
+- Builder can apply selected choice option grants into resolved selections.
+- Builder can validate required and maximum choice counts.
 - Dual-sphere drawbacks expose granted feats through `grants`.
 - All structured traditions have an explicit `magicType`.
 - Builder can export Markdown matching current tradition style.

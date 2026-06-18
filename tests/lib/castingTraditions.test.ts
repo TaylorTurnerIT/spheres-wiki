@@ -98,6 +98,55 @@ const data: TraditionData = {
       tags: [],
       boonCost: 1,
     },
+    {
+      type: "boon",
+      id: "empowered-abilities",
+      system: "power",
+      name: "Empowered Abilities",
+      sourceBook: "ultimate-spheres-of-power",
+      tags: [],
+      boonCost: 1,
+    },
+  ],
+  traditions: [
+    {
+      type: "tradition",
+      id: "spellscourged",
+      system: "power",
+      name: "Spellscourged",
+      sourceBook: "expanded-options-3",
+      tags: [],
+      traditionKind: "custom",
+      magicType: "custom",
+      cam: { mode: "choose-one", abilities: ["cha", "con"] },
+      drawbacks: [
+        { id: "draining-casting" },
+        { id: "somatic-casting" },
+      ],
+      sphereDrawbacks: [],
+      boons: [],
+      choices: [
+        {
+          id: "spellscourged-boon",
+          label: "Spellscourged boon",
+          selector: "boon",
+          min: 1,
+          max: 1,
+          options: [
+            {
+              id: "empowered-abilities",
+              label: "Empowered Abilities",
+              grants: [{ id: "empowered-abilities", kind: "boon" }],
+            },
+            {
+              id: "fortified-casting",
+              label: "Fortified Casting",
+              grants: [{ id: "fortified-casting", kind: "boon" }],
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
 
@@ -240,5 +289,57 @@ describe("casting tradition builder logic", () => {
     expect(exported.choices).toEqual({
       "spellscourged-boon": ["fortified-casting"],
     });
+  });
+
+  it("applies selected choice grants to the resolved state", () => {
+    const state = buildTraditionState(
+      {
+        traditionId: "spellscourged",
+        drawbacks: [{ id: "draining-casting" }, { id: "somatic-casting" }],
+        boons: [],
+        choices: {
+          "spellscourged-boon": ["fortified-casting"],
+        },
+      },
+      data,
+    );
+
+    expect(state.boons.map(({ entry }) => entry.id)).toEqual([
+      "fortified-casting",
+    ]);
+    expect(validateTradition(state.selection, data)).toEqual([]);
+  });
+
+  it("rejects missing required choices", () => {
+    const diagnostics = validateTradition(
+      {
+        traditionId: "spellscourged",
+        drawbacks: [{ id: "draining-casting" }, { id: "somatic-casting" }],
+        boons: [],
+      },
+      data,
+    );
+
+    expect(diagnostics.map((diagnostic) => diagnostic.code)).toContain(
+      "missing-choice",
+    );
+  });
+
+  it("rejects too many selected choice options", () => {
+    const diagnostics = validateTradition(
+      {
+        traditionId: "spellscourged",
+        drawbacks: [{ id: "draining-casting" }, { id: "somatic-casting" }],
+        boons: [],
+        choices: {
+          "spellscourged-boon": ["fortified-casting", "empowered-abilities"],
+        },
+      },
+      data,
+    );
+
+    expect(diagnostics.map((diagnostic) => diagnostic.code)).toContain(
+      "too-many-choices",
+    );
   });
 });
