@@ -78,18 +78,17 @@ Specific entries where source label + body source is confirmed.
 | Spell Stand-In | `Apoc` | `spheres-apocrypha-cohorts-and-companions` |
 | Confluent Casting (boon) | `SM—` | `barons-otherworldly-citadel` |
 
-## Missing Books (not in repo — entries unresolvable until added)
+## Previously Missing Books (stubs now created)
 
-These source titles appear in article body tags but have no `_book.yaml` in `src/content/`.
-Do not create entries for these until the books are imported.
+`_book.yaml` stubs exist; entries can now be placed under these slugs.
 
-| Body source title | Notes |
-|---|---|
-| `Spheres Apocrypha: Casting Traditions` | DTRPG product 286411; needs slug `spheres-apocrypha-casting-traditions` |
-| `Spheres Apocrypha: Casting Traditions 2` | DTRPG product 286903; needs slug `spheres-apocrypha-casting-traditions-2` |
-| `Expanded Spheres: Cardcaster's Gamble` | Needs slug `expanded-spheres-cardcasters-gamble` |
+| Body source title | Book slug | Notes |
+|---|---|---|
+| `Spheres Apocrypha: Casting Traditions` | `spheres-apocrypha-casting-traditions` | DDS, DTRPG 286411 |
+| `Spheres Apocrypha: Casting Traditions 2` | `spheres-apocrypha-casting-traditions-2` | DDS, DTRPG 286903 |
+| `Expanded Spheres: Cardcaster's Gamble` | `expanded-spheres-cardcasters-gamble` | Studio M—, no URL yet |
 
-Entries in these books: Charged Spells, Expensive Locus, Madness Mantra (Casting Traditions);
+Entries: Charged Spells, Expensive Locus, Madness Mantra (Casting Traditions);
 Anemic, Innate Curse (Casting Traditions 2); Card Casting, Spell Gamble (Cardcaster's Gamble).
 
 ## Resolved Labels (previously unknown — user confirmed)
