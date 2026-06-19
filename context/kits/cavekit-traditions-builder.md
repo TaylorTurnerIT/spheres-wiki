@@ -125,6 +125,12 @@ Acceptance criteria:
 - [ ] Users can reset the current builder back to defaults after a confirmation popup if the current state has unsaved changes.
 - [ ] Reset defaults clears selected drawbacks, boons, sphere-specific drawbacks, choices, overrides, manual GM adjustments, and export toggles, and restores the empty builder defaults without deleting saved traditions.
 - [ ] Saved tradition records include a stable id, display name, updated timestamp, and builder schema version for future migrations.
+- [ ] Users can export their entire saved-tradition catalog as a portable JSON backup file.
+- [ ] Users can import a saved-tradition catalog from a JSON backup file.
+- [ ] Import validates schema version and record shape before writing to browser storage.
+- [ ] Import offers a clear choice between merging with existing saved traditions and replacing the existing catalog.
+- [ ] Import never overwrites a saved tradition with the same id without user confirmation or deterministic conflict handling.
+- [ ] The saved-traditions area includes a small info icon tooltip warning that clearing browser data will remove saved casting traditions unless they have exported a backup.
 - [ ] Browser storage key, purpose, retention, and deletion behavior are documented on `/privacy/`.
 - [ ] URL state remains shareable; loading precedence is explicit: URL state wins over stored draft when URL parameters are present.
 
@@ -168,7 +174,7 @@ Acceptance criteria:
 
 - Extend export helpers to support detailed Markdown and always-text-rich JSON.
 - Normalize table serialization for detailed exports.
-- Add browser-storage persistence, URL precedence, named saved traditions, debounced autosave, manual Save, reset defaults, confirmed delete, and `/privacy/` documentation.
+- Add browser-storage persistence, URL precedence, named saved traditions, debounced autosave, manual Save, reset defaults, confirmed delete, catalog import/export, browser-data-loss warning tooltip, and `/privacy/` documentation.
 
 ### Step 6: Magic Type Removal and Verification
 
@@ -189,6 +195,7 @@ Acceptance criteria:
   - JSON includes entry text.
   - Stored draft restores after leaving and returning; URL parameters override the draft.
   - Save creates/selects a named saved tradition; delete requires confirmation; reset defaults does not delete saved traditions.
+  - Catalog export produces a portable JSON backup; catalog import can merge or replace saved traditions; the saved-traditions warning tooltip is visible.
 
 ## Cross-References
 

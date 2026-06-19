@@ -424,6 +424,9 @@ This plan is the next implementation pass after the initial remediation shipped.
 - Add reset-to-defaults behavior that clears the active builder state, choices, overrides, manual GM adjustments, and export toggles without deleting saved traditions.
 - Store only compact serialized builder state and saved-tradition metadata; do not write rendered card HTML or hydrated source-entry data.
 - Track save status in the UI: unsaved changes, saving, saved, and save failed.
+- Add full saved-catalog export to a portable JSON backup file.
+- Add saved-catalog import from a JSON backup file, with schema validation, merge/replace choice, and conflict handling for duplicate saved-tradition ids.
+- Add a small info icon tooltip near saved-tradition controls warning that clearing browser data will remove saved traditions unless the user exports a backup.
 - Document browser storage keys and saved-tradition behavior on `/privacy/`.
 - URL state remains supported and wins over stored drafts when URL parameters are present.
 
@@ -582,7 +585,7 @@ Remaining follow-up:
 - Dual-sphere drawbacks expose granted feats through `grants`.
 - Magic Type no longer participates in builder state or exports; standard tradition cards preserve source-faithful magic-type labels as hard-coded display metadata.
 - Builder can export Markdown matching current tradition style.
-- Builder has a manual Save button, debounced realtime autosave, saved-tradition selection, confirmed deletion, and reset-to-defaults controls.
+- Builder has a manual Save button, debounced realtime autosave, saved-tradition selection, confirmed deletion, reset-to-defaults controls, and full catalog import/export backup controls.
 - Future content authors can add a normal drawback, boon, or tradition with no code changes.
 
 ## Open Decisions

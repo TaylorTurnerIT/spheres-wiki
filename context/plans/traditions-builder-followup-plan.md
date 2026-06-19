@@ -154,13 +154,17 @@ Work:
 - Add confirmed deletion for saved casting traditions.
 - Add reset-to-defaults control. If the current state has unsaved changes, confirm before clearing. Reset clears selected drawbacks, boons, sphere-specific drawbacks, choices, overrides, manual GM adjustments, and export toggles, but does not delete saved traditions.
 - Include stable id, display name, updated timestamp, and builder schema version in each saved tradition record.
+- Add a saved-catalog Export button that downloads all saved traditions as a portable JSON backup file.
+- Add a saved-catalog Import button that accepts a JSON backup file, validates schema version and record shape, and then offers merge or replace behavior.
+- Handle duplicate saved-tradition ids on import with user confirmation or deterministic conflict handling that never silently overwrites existing saved traditions.
+- Add a small info icon tooltip near saved-tradition controls warning that clearing browser data will remove saved casting traditions unless the user exports a backup.
 - URL state wins over stored drafts when URL parameters are present.
-- Document browser storage key, purpose, retention, and deletion behavior on `/privacy/`.
+- Document browser storage key, purpose, retention, deletion behavior, reset behavior, and catalog backup/export behavior on `/privacy/`.
 
 Verification:
 
-- Unit tests for detailed Markdown, text-rich JSON, storage serialization shape, and reset-defaults behavior.
-- Manual storage restore, named Save/load, confirmed delete, reset-defaults, autosave debounce, and URL precedence checks.
+- Unit tests for detailed Markdown, text-rich JSON, storage serialization shape, reset-defaults behavior, and catalog import validation.
+- Manual storage restore, named Save/load, confirmed delete, reset-defaults, autosave debounce, catalog export/import, duplicate-id import handling, warning tooltip, and URL precedence checks.
 - `bun run test`
 - `bun run build`
 
@@ -213,6 +217,9 @@ Before commit, manually verify:
 - Delete requires confirmation and removes only the selected saved tradition.
 - Reset defaults clears the active builder state without deleting saved traditions.
 - Autosave is debounced and does not write the hydrated source-entry catalog.
+- Catalog export downloads a JSON backup containing all saved traditions.
+- Catalog import validates the file and supports merge/replace behavior without silent overwrites.
+- The info tooltip warns that clearing browser data removes saved traditions unless a backup has been exported.
 
 ## Relevant Planning Docs:
 
