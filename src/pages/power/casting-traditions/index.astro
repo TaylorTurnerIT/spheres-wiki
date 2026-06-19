@@ -453,7 +453,7 @@ const tabs = [
             <div class="builder-subsection-header">
               <span class="builder-label">General Drawbacks</span>
               <div class="builder-currency-group">
-                <span id="tb-gdv-display" class="builder-currency-badge">0 DV</span>
+                <span id="tb-gdv-display" class="builder-currency-badge">0 Drawbacks</span>
                 <div class="builder-manual-inline">
                   <span class="builder-manual-label">GM Adj.</span>
                   <button class="builder-stepper-btn" data-stepper="gdv" data-dir="down" type="button">−</button>
@@ -689,7 +689,7 @@ const tabs = [
       const spBonus = bonusSpellPointFormula(unspent);
 
       const gdvEl = document.getElementById("tb-gdv-display");
-      if (gdvEl) gdvEl.textContent = `${gdv} DV`;
+      if (gdvEl) gdvEl.textContent = `${gdv} Drawbacks`;
       const currEl = document.getElementById("tb-boon-currency");
       if (currEl) currEl.textContent = `${boonCost} / ${slots} slots`;
 
@@ -805,7 +805,7 @@ const tabs = [
           return `<label class="builder-check-item" title="${escapeHtml(d.bodyPlain.slice(0, 200))}">
             <input type="checkbox" data-drawback="${d.id}" ${checked} />
             <span class="bcl-name">${d.name}<a href="#${d.id}" class="bcl-anchor" data-anchor-tab="general-drawbacks" data-anchor-id="${d.id}" title="View entry details"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg></a></span>
-            <span class="bcl-badge">${d.drawbackValue} DV</span>
+            <span class="bcl-badge">${d.drawbackValue} Drawbacks</span>
           </label>`;
         })
         .join("");
@@ -956,6 +956,24 @@ const tabs = [
     function manualSave() {
       const name = (document.getElementById("tb-name") as HTMLInputElement)?.value?.trim() || "Unnamed Tradition";
       const saved: any[] = loadSavedTraditions();
+      const sel = document.getElementById("tb-saved-traditions") as HTMLSelectElement;
+      const selectedId = sel?.value;
+
+      // If a saved tradition is selected in the dropdown, ask to update vs create new
+      if (selectedId && saved.some((s: any) => s.id === selectedId)) {
+        const update = confirm(`"${name}" is already selected.\n\nOK = Update existing\nCancel = Save as new`);
+        if (update) {
+          const idx = saved.findIndex((s: any) => s.id === selectedId);
+          if (idx !== -1) {
+            saved[idx] = { ...saved[idx], name, ts: Date.now(), drawbacks: selDrawbacks, sphereDrawbacks: selSphereDrawbacks, boons: selBoons, cam: selCam, camOverride, manualGDV, manualBoonSlots };
+          }
+          try { localStorage.setItem(SAVED_KEY, JSON.stringify(saved)); saveStatus = "Saved"; } catch { saveStatus = "Save failed"; }
+          updateSaveStatus();
+          populateSavedDropdown(selectedId);
+          return;
+        }
+      }
+
       const id = crypto.randomUUID();
       const record = {
         id,
@@ -973,7 +991,7 @@ const tabs = [
       saved.push(record);
       try { localStorage.setItem(SAVED_KEY, JSON.stringify(saved)); saveStatus = "Saved"; } catch { saveStatus = "Save failed"; }
       updateSaveStatus();
-      populateSavedDropdown();
+      populateSavedDropdown(id);
     }
 
     function loadSavedTraditions(): any[] {
@@ -983,12 +1001,13 @@ const tabs = [
       } catch { return []; }
     }
 
-    function populateSavedDropdown() {
+    function populateSavedDropdown(selectId?: string) {
       const sel = document.getElementById("tb-saved-traditions") as HTMLSelectElement;
       if (!sel) return;
       const saved = loadSavedTraditions();
       sel.innerHTML = '<option value="">— Load saved tradition —</option>' +
         saved.map((s: any) => `<option value="${s.id}">${s.name} (${new Date(s.ts).toLocaleDateString()})</option>`).join("");
+      if (selectId) sel.value = selectId;
     }
 
     function loadSavedTradition(id: string) {
@@ -1030,6 +1049,8 @@ const tabs = [
       if (nameInput) nameInput.value = "";
       const detCheck = document.getElementById("tb-detailed-export") as HTMLInputElement;
       if (detCheck) detCheck.checked = false;
+      const savedSel = document.getElementById("tb-saved-traditions") as HTMLSelectElement;
+      if (savedSel) savedSel.value = "";
       onUpdate(true);
     }
 
@@ -1079,6 +1100,7 @@ const tabs = [
 
     // ── Update cycle ──────────────────────────────────────
     function onUpdate(fullRender = false, syncUrl = true) {
+      if (saveStatus === "Saved") { saveStatus = "Unsaved changes"; updateSaveStatus(); }
       renderCamOptions();
       if (fullRender) {
         syncCamRadio();
@@ -1755,6 +1777,7 @@ const tabs = [
   .builder-delete-btn:hover {
     background: color-mix(in srgb, #cc0000 12%, transparent);
     border-color: #cc0000;
+    color: #cc0000;
   }
 
   .builder-reset-btn {
