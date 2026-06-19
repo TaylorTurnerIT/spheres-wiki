@@ -1935,4 +1935,31 @@ const tabs = [
     color: var(--clr-bg);
     border-color: var(--clr-muted);
   }
+
+  :global(.tradition-builder table),
+  :global(.entry-listing-cards table),
+  :global(.article-tab-content table) {
+    border-collapse: collapse;
+    width: 100%;
+    margin: var(--sp-3) 0;
+    font-size: var(--fs-sm);
+  }
+
+  :global(.tradition-builder table th),
+  :global(.tradition-builder table td),
+  :global(.entry-listing-cards table th),
+  :global(.entry-listing-cards table td),
+  :global(.article-tab-content table th),
+  :global(.article-tab-content table td) {
+    border: 1px solid var(--clr-border);
+    padding: 6px 10px;
+    text-align: left;
+  }
+
+  :global(.tradition-builder table th),
+  :global(.entry-listing-cards table th),
+  :global(.article-tab-content table th) {
+    background: color-mix(in srgb, var(--clr-active) 8%, transparent);
+    font-weight: 600;
+  }
 </style>
