@@ -150,6 +150,45 @@ Base: background `--clr-bg`, border `0.5px solid --clr-border`, radius `--radius
 - **Store card** (`.store-card`): radius 4px, cover aspect 17/22; hover `translateY(-4px)` + `box-shadow: 0 12px 24px -8px rgba(0,0,0,.2)`, border `--clr-brand`.
 - **Talent entry / base-ability block**: border `1px solid --clr-border` + left `3px solid --clr-active`; raises `z-index:10` on hover/focus-within (for tag tooltips).
 
+### Entry Card — canonical named-entry primitive (`EntryCard.astro`)
+
+**This is the universal rendering primitive for every named game entry** (talent, feat, class trait, drawback, boon, tradition, and any future type). Never inline this layout — use the shared component (SPEC V70, V71).
+
+**DOM shape:**
+```
+.entry-card-block                        ← wrapper; border-left 3px solid var(--clr-active); bg var(--clr-bg)
+  .talent-header
+    .talent-header-top
+      .talent-name [or <a>]              ← Cinzel 700 --fs-md, color var(--clr-active)
+      .talent-source                     ← Cinzel italic --fs-3xs, color var(--clr-muted)
+    .talent-header-bottom
+      <TagBadge> …                       ← zero or more; uses tag-bucket colors
+  .entry-card-meta (optional)            ← compact key-value row, --fs-xs --clr-muted, rendered between header and body
+  .entry-description
+    <Content />                          ← rendered markdown body
+```
+
+**Visual rules:**
+- Name color: `var(--clr-active)` — automatically recolors per system.
+- Source label: Cinzel italic `--fs-3xs`, `--clr-muted`, right-aligned in header-top row.
+- Left accent stripe: `3px solid var(--clr-active)`, same as class-trait (inherited from entry card idiom §4 Cards).
+- Metadata row (e.g. "Drawback Value: 1", "Boon Cost: 1 slot"): `--fs-xs`, `--clr-muted`, no additional border. Omit row entirely if empty.
+- Body: Crimson Text `--fs-md`, `line-height: 1.55` (matches `.entry-description` prose block).
+- When `href` is provided, name renders as `<a>` — inherits `--clr-active`, underline on hover.
+- Hover (when used as a clickable block): `background: color-mix(in srgb, var(--clr-active) 4%, var(--clr-surface))`.
+
+**Usage guide:**
+- Talents and feats on sphere index pages → use `EntryCard`.
+- Base ability blocks → use `EntryCard` (name links to talent detail page).
+- Class traits in `ClassFeatureBlock.astro` → use `EntryCard`.
+- Drawbacks, boons, traditions on casting-traditions page → use `EntryCard` with type-specific metadata row (`drawbackValue`, `boonCost`, `traditionKind`).
+- Any future entry type rendered inline on a listing page → `EntryCard`.
+
+**Do NOT:**
+- Hardcode a type-specific name color; always `var(--clr-active)`.
+- Add a separate CSS class for "drawback card" or "boon card" — type is expressed through `metadata`, not visual divergence.
+- Render `*Source: Book*` in the body; pass `sourceBookTitle` as a prop.
+
 ### Inputs
 **Search bar (`.search-bar`)**
 - Background `--clr-surface`; border `0.5px solid rgba(0,0,0,.4)`; radius 4px; height 32px; padding 6px 12px

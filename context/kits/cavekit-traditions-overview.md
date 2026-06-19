@@ -21,6 +21,7 @@ Refactor the massive `casting-traditions.md` (212KB) into a manageable, tabbed i
 | cavekit-traditions-builder.md | Phase 3: Architectural spec for the interactive Casting Tradition Builder, including real-time validation and multi-format export. 3 requirements (R1-R3). |
 | cavekit-traditions-full-plan.md | Consolidated deep plan for schema, completed migration coverage, post-migration remediation, builder logic, UI, acceptance criteria, and open decisions. |
 | cavekit-traditions-source-map.md | Source label to book slug map for assigning converted entries to the correct source-book directories. |
+| cavekit-traditions-remediation.md | Fix-on-kit (2026-06-18 review): corrects the "built but not wired" failure — surfaces structured entries (routes + search), fixes the rule engine (B19–B22), ships the Builder UI. Adds integration acceptance criteria; supersedes the isolation-only "done" definition in builder/schema kits. SPEC T107–T109, V65–V69, B18–B22. |
 
 ## Dependency Graph
 

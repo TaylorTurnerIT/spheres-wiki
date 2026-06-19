@@ -33,3 +33,14 @@ Operational notes from recent fixes. Keep this focused on repeatable engineering
 - For components used both directly AND inside templates (like `ArticleTOC`), move client-side logic to an external `.ts` module and import it via a `<script>` block in the common ancestor layout (not a frontmatter `import`, which would SSR-evaluate and crash on `window`/`document`).
 - Register globals (`window.reinitX`) and event listeners (`document.addEventListener`) at module scope so they're available before any downstream `astro:page-load` handler tries to call them.
 - Use `requestAnimationFrame` (not `setTimeout(0)`) in init code that depends on sibling components' module-level registrations — it fires after all synchronous scripts in the same bundle have executed.
+
+## Integration Before "Done" (built-but-not-wired)
+
+Root cause of the casting-traditions review findings (SPEC B18–B22, V65–V69): a large schema + content migration (364 entries) and a fully unit-tested logic engine (`src/lib/castingTraditions/`) progressed while **no page rendered the entries, search excluded them, and only `tests/` imported the logic**. Green build + passing unit tests hid that the feature reached zero users.
+
+- A feature is not done when its logic passes tests; it is done when a user-facing surface consumes it. Trace every new lib with `fallow dead-code --trace <file>:<export>` — if the only caller is a test, it is unfinished, not shippable.
+- New content-collection types must be surfaced the same session they are added: a route that renders them, an entry in the search manifest, Pagefind indexing. A collection that resolves into `ResolvedMaps` but renders nowhere is invisible content that also duplicates whatever prose still renders.
+- Write at least one test that drives validation/calculation logic from **real resolved content** (actual `ResolvedMaps` entries), not only synthetic inline fixtures. Fixture-only tests passed here while the production path (loading a preset tradition, honoring its `cam` model) was never exercised — and was in fact broken.
+- Schema fields are a promise to read them. If frontmatter declares a rule model (`tradition.cam`, `rules`, `mode`) that no code consumes, the schema is lying about behavior. Either wire the reader or do not add the field yet.
+- Reconcile SPEC §T status in the same change that finishes (or partially finishes) the work. Partial = `~`, not `x`. The full-plan said "update T106/T107 when complete" and it never happened, so SPEC drifted — exactly the code/SPEC disagreement CLAUDE.md calls a bug.
+- Kit acceptance criteria drive this failure when every criterion is "logic can do X" (unit-testable in isolation). Add integration criteria: "X is reachable at route R", "X appears in search", "a real entry E validates correctly". See `cavekit-traditions-remediation.md`.

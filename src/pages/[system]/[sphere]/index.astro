@@ -11,6 +11,7 @@ import type { SectionResult } from '@/lib/categorize';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
 import TagBadge from '@/components/TagBadge.astro';
+import EntryCard from '@/components/EntryCard.astro';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { SphereEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
 
@@ -186,19 +187,17 @@ const groups: TocGroup[] = sections.map(sec => ({
         const tContent = talentRendered.find(r => r.id === seg.id);
         const tBook = t ? bookMetaMap.get(t.sourceBook) : undefined;
         return t ? (
-          <div class="base-ability-block" id={t.id} data-pagefind-weight="0.5">
-            <div class="base-ability-header">
-              <div class="base-ability-header-top">
-                <a href={url(`/${system}/${sphere.id}/${t.id}/`)} class="base-ability-name" data-astro-prefetch="hover">{t.name}</a>
-                {tBook && <span class="talent-source">{tBook.title}</span>}
-              </div>
-              <div class="base-ability-header-bottom">
-                {buildOrderedTagIds(t, bookMetaMap, tagMap, { currentSphereId: sphere.id })
-                  .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
-                }
-              </div>
-            </div>
-            {tContent && <div class="talent-body"><tContent.Content /></div>}
+          <div data-pagefind-weight="0.5">
+            <EntryCard
+              id={t.id}
+              name={t.name}
+              sourceBookTitle={tBook?.title}
+              tagIds={buildOrderedTagIds(t, bookMetaMap, tagMap, { currentSphereId: sphere.id })}
+              Content={tContent?.Content}
+              href={url(`/${system}/${sphere.id}/${t.id}/`)}
+              tagMap={tagMap}
+              bookMetaMap={bookMetaMap}
+            />
           </div>
         ) : null;
       })}

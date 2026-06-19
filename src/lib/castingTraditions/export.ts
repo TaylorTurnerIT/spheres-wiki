@@ -38,9 +38,9 @@ export function exportTraditionMarkdown(
 
   const unspent = calculateUnspentDrawbackValue(state);
   const spellPointBoon = bonusSpellPointFormula(unspent);
-  const boonText = formatRefs(state.boons);
+  const boonDisplay = state.boons.length > 0 ? formatRefs(state.boons) : null;
   lines.push(
-    `**Boons:** ${[boonText, spellPointBoon].filter(Boolean).join("; ")}`,
+    `**Boons:** ${[boonDisplay, spellPointBoon].filter(Boolean).join("; ") || "None"}`,
   );
 
   return `${lines.join("\n")}\n`;

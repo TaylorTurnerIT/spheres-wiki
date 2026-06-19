@@ -11,11 +11,11 @@ metadata:
 
 ## Current State
 
-Casting Traditions are now structurally migrated, but not yet fully normalized for builder-grade semantics:
+Casting Traditions are now structurally migrated and surfaced on the user-facing page, with remaining future work limited to deeper builder-grade semantics:
 
-- `src/pages/power/casting-traditions/index.astro` still renders the legacy tabbed article view through `ArticlePage` plus `TabbedContent`.
-- Typed `drawback`, `boon`, and `tradition` entries exist, resolve through `ResolvedMaps`, and participate in the current search/build pipeline.
-- Pure builder-facing logic exists in `src/lib/castingTraditions/`, including selection validation, drawback value accounting, boon slot accounting, CAM resolution, and export helpers.
+- `src/pages/power/casting-traditions/index.astro` renders the tabbed article view through `ArticlePage` plus `TabbedContent`, with structured `drawback`, `boon`, and `tradition` listing sections on the relevant tabs.
+- Typed `drawback`, `boon`, and `tradition` entries exist, resolve through `ResolvedMaps`, render on `/power/casting-traditions/` with stable anchor ids, and participate in the current search/build pipeline.
+- Pure builder-facing logic exists in `src/lib/castingTraditions/`, including selection validation, drawback value accounting, boon slot accounting, CAM resolution, preset hydration, and export helpers. The page-level Builder tab now imports and consumes this logic.
 - `bun run build` is currently green: content validation, Fallow, `astro check`, static build, Pagefind, and TOC audit all pass.
 - Full `bun run test` has passed after replacing remaining `_book.yaml` metadata stubs with verified publisher/date/price data.
 
@@ -485,7 +485,7 @@ Remaining follow-up:
 
 - `drawback`, `boon`, and `tradition` are valid schema types.
 - Structured entries resolve into `ResolvedMaps`.
-- Existing article tabs still render.
+- Existing article tabs still render, and structured entries render inside the Casting Traditions page.
 - All 6 former prose-only subtraditions are represented as structured `tradition` entries.
 - Builder can validate a Blood Magic tradition using Constitution.
 - Builder can validate `Fortified Casting` only when `Draining Casting` is present.
@@ -501,7 +501,7 @@ Remaining follow-up:
 
 ## Open Decisions
 
-- Whether structured entries should get standalone public detail routes immediately or first render only inside the Casting Traditions page.
+- Resolved 2026-06-18: structured entries first render inside the existing Casting Traditions page with stable anchor ids and search-manifest links. Standalone public detail routes remain deferred until there is a concrete need for per-entry pages.
 - Whether source tags embedded in old article bodies should be stripped during migration or preserved until source metadata is fully normalized.
 - Whether tradition variants should be first-class `tradition` entries with `parentTradition`, or nested notes on the parent.
 - Whether Foundry export should target a generic JSON shape first or a specific system/module schema.

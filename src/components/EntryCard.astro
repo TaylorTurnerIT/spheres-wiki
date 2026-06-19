@@ -1,0 +1,99 @@
+---
+import TagBadge from "@/components/TagBadge.astro";
+import type { TagEntry, BookMeta } from "@/lib/types";
+
+interface Props {
+  name: string;
+  sourceBookTitle?: string | null;
+  tagIds?: string[];
+  Content?: any;
+  href?: string;
+  metadata?: Record<string, string>;
+  id?: string;
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
+}
+
+const {
+  name,
+  sourceBookTitle,
+  tagIds = [],
+  Content,
+  href,
+  metadata,
+  id,
+  tagMap,
+  bookMetaMap,
+} = Astro.props;
+
+const hasMetadata = metadata && Object.keys(metadata).length > 0;
+---
+
+<div class="entry-card-block" id={id}>
+  <div class="talent-header">
+    <div class="talent-header-top">
+      {href
+        ? <a href={href} class="talent-name" data-astro-prefetch="hover">{name}</a>
+        : <span class="talent-name">{name}</span>
+      }
+      {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
+    </div>
+    {tagIds.length > 0 && (
+      <div class="talent-header-bottom">
+        {tagIds.map(tagId => (
+          <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+        ))}
+      </div>
+    )}
+  </div>
+  {hasMetadata && (
+    <dl class="entry-card-meta">
+      {Object.entries(metadata!).map(([k, v]) => (
+        <>
+          <dt>{k}</dt>
+          <dd>{v}</dd>
+        </>
+      ))}
+    </dl>
+  )}
+  {Content && <div class="entry-description"><Content /></div>}
+</div>
+
+<style>
+  .entry-card-block {
+    border: 1px solid var(--clr-border);
+    border-left: 3px solid var(--clr-active);
+    border-radius: var(--radius);
+    background: var(--clr-bg);
+    padding: 12px 14px;
+    margin: 14px 0;
+    position: relative;
+  }
+
+  .entry-card-block:hover,
+  .entry-card-block:focus-within {
+    z-index: 10;
+  }
+
+  .entry-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    margin: 4px 0 8px;
+  }
+
+  .entry-card-meta dt {
+    font-weight: 600;
+  }
+
+  .entry-card-meta dt::after {
+    content: ":";
+    margin-right: 3px;
+  }
+
+  .entry-card-meta dd {
+    margin: 0;
+  }
+</style>

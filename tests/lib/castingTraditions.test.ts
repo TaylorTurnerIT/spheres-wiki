@@ -1,4 +1,7 @@
+import fs from "node:fs";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
+import { parse as parseYaml } from "yaml";
 import {
   exportTraditionJson,
   exportTraditionMarkdown,
@@ -8,12 +11,20 @@ import {
   calculateAvailableBoonSlots,
   calculateGeneralDrawbackValue,
   getAllowedCastingAbilities,
+  selectionFromTradition,
   validateTradition,
 } from "../../src/lib/castingTraditions/rules";
 import type {
   TraditionData,
   TraditionSelection,
 } from "../../src/lib/castingTraditions/types";
+import type { TraditionEntry } from "../../src/lib/types";
+
+function allowedAbilityIds(selection: TraditionSelection, testData: TraditionData) {
+  return getAllowedCastingAbilities(
+    buildTraditionState(selection, testData),
+  ).map((a) => a.ability);
+}
 
 const data: TraditionData = {
   drawbacks: [
@@ -294,7 +305,7 @@ describe("casting tradition builder logic", () => {
     };
     const state = buildTraditionState(selection, data);
 
-    expect(getAllowedCastingAbilities(state)).toContain("con");
+    expect(getAllowedCastingAbilities(state).map((c) => c.ability)).toContain("con");
     expect(validateTradition(selection, data)).toEqual([]);
   });
 
@@ -450,5 +461,242 @@ describe("casting tradition builder logic", () => {
     expect(diagnostics.map((diagnostic) => diagnostic.code)).toContain(
       "too-many-choices",
     );
+  });
+
+  // B19/B22: tradition cam mode applied, AllowedCam mode annotated
+  it("fixed cam tradition restricts to the specified ability", () => {
+    const tradition: TraditionEntry = {
+      type: "tradition",
+      id: "t-fixed",
+      name: "Fixed Tradition",
+      system: "power",
+      sourceBook: "test",
+      tags: [],
+      traditionKind: "standard",
+      cam: { mode: "fixed", abilities: ["con"] },
+      drawbacks: [],
+      sphereDrawbacks: [],
+      boons: [],
+    };
+    const testData: TraditionData = { drawbacks: [], boons: [], traditions: [tradition] };
+    const selection = selectionFromTradition(tradition, testData);
+    expect(selection.cam).toBe("con");
+    const state = buildTraditionState(selection, testData);
+    const allowed = getAllowedCastingAbilities(state);
+    const ids = allowed.map((a) => a.ability);
+    expect(ids).toEqual(["con"]);
+    expect(allowed.find((a) => a.ability === "con")?.mode).toBe("fixed");
+    // int/wis/cha must not appear
+    expect(ids).not.toContain("int");
+    expect(ids).not.toContain("wis");
+    expect(ids).not.toContain("cha");
+  });
+
+  // B19: highest cam mode restricts to listed abilities (not default int/wis/cha)
+  it("highest cam tradition restricts to specified abilities with if-higher-than-base mode", () => {
+    const tradition: TraditionEntry = {
+      type: "tradition",
+      id: "t-highest",
+      name: "Highest Tradition",
+      system: "power",
+      sourceBook: "test",
+      tags: [],
+      traditionKind: "standard",
+      cam: { mode: "highest", abilities: ["cha", "con"] },
+      drawbacks: [],
+      sphereDrawbacks: [],
+      boons: [],
+    };
+    const testData: TraditionData = { drawbacks: [], boons: [], traditions: [tradition] };
+    const selection = selectionFromTradition(tradition, testData);
+    expect(selection.cam).toBeUndefined();
+    const allowed = getAllowedCastingAbilities(
+      buildTraditionState(selection, testData),
+    );
+    const ids = allowedAbilityIds(selection, testData);
+    expect(ids).toContain("cha");
+    expect(ids).toContain("con");
+    expect(ids).not.toContain("int");
+    expect(ids).not.toContain("wis");
+    expect(allowed.find((a) => a.ability === "con")?.mode).toBe("if-higher-than-base");
+  });
+
+  // B21: boon choice addsDrawbackValue must not fund boon slots
+  it("boon choice addsDrawbackValue does not increase boon currency", () => {
+    const boonWithChoiceValue = {
+      type: "boon" as const,
+      id: "boon-with-choice",
+      system: "power",
+      name: "Boon With Choice",
+      sourceBook: "test",
+      tags: [],
+      boonCost: 1,
+      choices: [
+        {
+          id: "boon-choice",
+          label: "Boon Choice",
+          selector: "boon" as const,
+          options: [{ id: "opt1", label: "Opt 1", addsDrawbackValue: 5 }],
+        },
+      ],
+    };
+    const testData: TraditionData = {
+      drawbacks: data.drawbacks,
+      boons: [...data.boons, boonWithChoiceValue],
+    };
+    const state = buildTraditionState(
+      {
+        drawbacks: [{ id: "draining-casting" }, { id: "somatic-casting" }],
+        boons: [{ id: "boon-with-choice" }],
+        choices: { "boon-choice": ["opt1"] },
+      },
+      testData,
+    );
+    // General drawback value must be 2 (draining + somatic), not 7 (2 + 5 from boon choice)
+    expect(calculateGeneralDrawbackValue(state)).toBe(2);
+    expect(calculateAvailableBoonSlots(state)).toBe(1);
+  });
+
+  // B22: allow-cam rule annotates ability with correct mode
+  it("allow-cam rule annotates ability with if-higher-than-base mode", () => {
+    const selection: TraditionSelection = {
+      drawbacks: [{ id: "draining-casting" }, { id: "somatic-casting" }],
+      boons: [{ id: "fortified-casting" }],
+    };
+    const state = buildTraditionState(selection, data);
+    const allowed = getAllowedCastingAbilities(state);
+    const conEntry = allowed.find((c) => c.ability === "con");
+    expect(conEntry).toBeDefined();
+    expect(conEntry?.mode).toBe("if-higher-than-base");
+  });
+
+  // B20: selectionFromTradition pre-populates from tradition entry
+  it("selectionFromTradition pre-populates drawbacks, boons, and choices", () => {
+    const tradition = data.traditions![0]; // spellscourged
+    const selection = selectionFromTradition(tradition, data);
+    expect(selection.traditionId).toBe("spellscourged");
+    expect(selection.drawbacks).toEqual([{ id: "draining-casting" }, { id: "somatic-casting" }]);
+    expect(selection.boons).toEqual([]);
+    expect(selection.cam).toBeUndefined(); // choose-one with 2 abilities → no pre-set
+  });
+
+  // Export: boons empty with spell-point bonus must not show "None;"
+  it("exports Markdown with only bonus spell points when no boons selected", () => {
+    const markdown = exportTraditionMarkdown(
+      {
+        name: "No Boons",
+        cam: "int",
+        drawbacks: [{ id: "draining-casting" }],
+        boons: [],
+      },
+      data,
+    );
+    // unspentDrawbacks = 1, bonus = "+1, +1 per 6 levels..."
+    expect(markdown).not.toContain("**Boons:** None;");
+    expect(markdown).toContain("**Boons:** +1, +1 per 6 levels");
+  });
+});
+
+// Integration test: drives logic from real content files (V67)
+describe("casting tradition integration (real content)", () => {
+  const contentRoot = path.resolve(__dirname, "../../src/content");
+
+  function readFrontmatter(filePath: string): Record<string, unknown> {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    const match = raw.match(/^---\n([\s\S]*?)\n---/);
+    if (!match) return {};
+    return parseYaml(match[1]) as Record<string, unknown>;
+  }
+
+  function traditionFromFile(
+    relativePath: string,
+    id: string,
+    sourceBook: string,
+    fallbackName: string,
+  ): TraditionEntry | null {
+    const filePath = path.join(contentRoot, relativePath);
+    if (!fs.existsSync(filePath)) return null;
+    const fm = readFrontmatter(filePath);
+    return {
+      type: "tradition",
+      id,
+      name: (fm.name as string) ?? fallbackName,
+      system: "power",
+      sourceBook,
+      tags: [],
+      traditionKind: "custom",
+      magicType: fm.magicType as TraditionEntry["magicType"],
+      cam: fm.cam as TraditionEntry["cam"],
+      drawbacks: (fm.drawbacks as TraditionEntry["drawbacks"]) ?? [],
+      sphereDrawbacks:
+        (fm.sphereDrawbacks as TraditionEntry["sphereDrawbacks"]) ?? [],
+      boons: (fm.boons as TraditionEntry["boons"]) ?? [],
+    };
+  }
+
+  it("Blood Magic tradition has correct fixed CAM (con only)", () => {
+    const tradition = traditionFromFile(
+      "ultimate-spheres-of-power/power/casting-traditions/traditions/custom/blood-magic.md",
+      "blood-magic",
+      "ultimate-spheres-of-power",
+      "Blood Magic",
+    );
+    if (!tradition) return;
+
+    const testData: TraditionData = { drawbacks: [], boons: [], traditions: [tradition] };
+    const selection = selectionFromTradition(tradition, testData);
+
+    // Blood Magic cam is fixed [con]
+    expect(selection.cam).toBe("con");
+    expect(selection.traditionId).toBe("blood-magic");
+
+    const ids = allowedAbilityIds(selection, testData);
+
+    expect(ids).toContain("con");
+    expect(ids).not.toContain("int");
+    expect(ids).not.toContain("wis");
+
+    // Validate with correct CAM — no invalid-cam diagnostics
+    const diagnostics = validateTradition(
+      { ...selection, cam: "con" },
+      testData,
+    );
+    expect(diagnostics.filter((d) => d.code === "invalid-cam")).toHaveLength(0);
+
+    // Validate with int CAM — must get invalid-cam diagnostic
+    const intDiagnostics = validateTradition(
+      { ...selection, cam: "int" },
+      testData,
+    );
+    expect(intDiagnostics.some((d) => d.code === "invalid-cam")).toBe(true);
+  });
+
+  it("Demonology tradition has correct highest CAM (cha/con, not int/wis)", () => {
+    const tradition = traditionFromFile(
+      "spheres-bestiary-desert-encounters/power/casting-traditions/traditions/custom/demonology.md",
+      "demonology",
+      "spheres-bestiary-desert-encounters",
+      "Demonology",
+    );
+    if (!tradition) return;
+
+    const testData: TraditionData = { drawbacks: [], boons: [], traditions: [tradition] };
+    const selection = selectionFromTradition(tradition, testData);
+
+    // highest with [cha, con] — no pre-set cam
+    expect(selection.cam).toBeUndefined();
+
+    const allowed = getAllowedCastingAbilities(
+      buildTraditionState(selection, testData),
+    );
+    const ids = allowedAbilityIds(selection, testData);
+
+    expect(ids).toContain("cha");
+    expect(ids).toContain("con");
+    expect(ids).not.toContain("int");
+    expect(ids).not.toContain("wis");
+
+    // con should be annotated if-higher-than-base
+    expect(allowed.find((a) => a.ability === "con")?.mode).toBe("if-higher-than-base");
   });
 });

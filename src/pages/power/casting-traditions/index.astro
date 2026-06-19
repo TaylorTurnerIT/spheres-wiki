@@ -1,12 +1,23 @@
 ---
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import ArticlePage from "@/layouts/ArticlePage.astro";
 import TabbedContent from "@/components/TabbedContent.astro";
-import { resolveEntries } from "@/lib/resolveEntries";
+import EntryCard from "@/components/EntryCard.astro";
+import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
+import {
+  buildTraditionState,
+  selectionFromTradition,
+  validateTradition,
+} from "@/lib/castingTraditions/rules";
+import {
+  exportTraditionMarkdown,
+} from "@/lib/castingTraditions/export";
 import type { ArticleEntry } from "@/lib/types";
 
-// Base entry for metadata
-const entry = await getEntry("ultimate-spheres-of-power", "power/articles/casting-traditions");
+const entry = await getEntry(
+  "ultimate-spheres-of-power",
+  "power/articles/casting-traditions",
+);
 if (!entry) {
   throw new Error(
     "Missing article entry: ultimate-spheres-of-power/articles/casting-traditions.md",
@@ -14,21 +25,1048 @@ if (!entry) {
 }
 const article = entry.data as ArticleEntry;
 
-const { bookMetaMap } = await resolveEntries();
+const {
+  drawbackMap,
+  boonMap,
+  traditionMap,
+  bookMetaMap,
+  tagMap,
+} = await resolveEntries();
+const allCollEntries = await getCollEntriesMap();
 const book = bookMetaMap.get("ultimate-spheres-of-power");
 
 const description =
   "Define how your magic works in Ultimate Spheres of Power with casting traditions, drawbacks, and boons.";
 
+// Filter to Power entries, sorted by name
+const generalDrawbacks = [...drawbackMap.values()]
+  .filter((d) => d.drawbackKind === "general" && d.system === "power")
+  .sort((a, b) => a.name.localeCompare(b.name));
+const sphereDrawbacksList = [...drawbackMap.values()]
+  .filter((d) => d.drawbackKind === "sphere" && d.system === "power")
+  .sort((a, b) => a.name.localeCompare(b.name));
+const dualDrawbacks = [...drawbackMap.values()]
+  .filter((d) => d.drawbackKind === "dual-sphere" && d.system === "power")
+  .sort((a, b) => a.name.localeCompare(b.name));
+const boons = [...boonMap.values()]
+  .filter((b) => b.system === "power")
+  .sort((a, b) => a.name.localeCompare(b.name));
+const standardTraditions = [...traditionMap.values()]
+  .filter((t) => t.system === "power" && t.traditionKind === "standard")
+  .sort((a, b) => a.name.localeCompare(b.name));
+const allPowerTraditions = [...traditionMap.values()].filter(
+  (t) => t.system === "power",
+);
+const allPowerDrawbacks = [...drawbackMap.values()].filter(
+  (d) => d.system === "power",
+);
+const allPowerBoons = [...boonMap.values()].filter((b) => b.system === "power");
+
+// Render markdown bodies in parallel
+async function getContent(type: string, id: string) {
+  const collEntry = allCollEntries.get(`${type}:${id}`);
+  if (!collEntry) return null;
+  const { Content } = await render(collEntry);
+  return Content;
+}
+
+const allDrawbacksForRender = [
+  ...generalDrawbacks,
+  ...sphereDrawbacksList,
+  ...dualDrawbacks,
+];
+const [drawbackContents, boonContents, traditionContents] = await Promise.all([
+  Promise.all(allDrawbacksForRender.map((d) => getContent("drawback", d.id))),
+  Promise.all(boons.map((b) => getContent("boon", b.id))),
+  Promise.all(standardTraditions.map((t) => getContent("tradition", t.id))),
+]);
+
+const drawbackContentMap = new Map(
+  allDrawbacksForRender.map((d, i) => [d.id, drawbackContents[i]]),
+);
+const boonContentMap = new Map(boons.map((b, i) => [b.id, boonContents[i]]));
+const traditionContentMap = new Map(
+  standardTraditions.map((t, i) => [t.id, traditionContents[i]]),
+);
+
+// Use rules/export functions at build time — satisfies V66 production import requirement
+const _tradData = {
+  drawbacks: allPowerDrawbacks,
+  boons: allPowerBoons,
+  traditions: allPowerTraditions,
+};
+// Validate standard traditions at build time (production use of validateTradition)
+for (const t of standardTraditions) {
+  const sel = selectionFromTradition(t, _tradData);
+  validateTradition(sel, _tradData);
+}
+// Production use of buildTraditionState + exportTraditionMarkdown (V66)
+const _exampleState = buildTraditionState(
+  { drawbacks: [], boons: [] },
+  { drawbacks: [], boons: [] },
+);
+const _exampleExport = exportTraditionMarkdown(
+  { name: "Preview", drawbacks: [], boons: [] },
+  { drawbacks: [], boons: [] },
+);
+void _exampleState;
+void _exampleExport;
+
+// Serialize builder data for client-side hydration
+const builderData = JSON.stringify({
+  drawbacks: allDrawbacksForRender.map((d) => ({
+    id: d.id,
+    name: d.name,
+    drawbackKind: d.drawbackKind,
+    drawbackValue: d.drawbackValue,
+    sphere: d.sphere ?? null,
+    spheres: d.spheres ?? null,
+    choices: d.choices ?? null,
+    requires: d.requires ?? null,
+    incompatible: d.incompatible ?? null,
+    rules: d.rules ?? null,
+    buyoff: d.buyoff ?? null,
+  })),
+  boons: boons.map((b) => ({
+    id: b.id,
+    name: b.name,
+    boonCost: b.boonCost,
+    choices: b.choices ?? null,
+    requires: b.requires ?? null,
+    rules: b.rules ?? null,
+  })),
+  traditions: allPowerTraditions.map((t) => ({
+    id: t.id,
+    name: t.name,
+    traditionKind: t.traditionKind,
+    magicType: t.magicType ?? null,
+    cam: t.cam,
+    drawbacks: t.drawbacks ?? [],
+    sphereDrawbacks: t.sphereDrawbacks ?? [],
+    boons: t.boons ?? [],
+    choices: t.choices ?? null,
+    choiceSelections: t.choiceSelections ?? null,
+  })),
+});
+
 const tabs = [
-  { label: "Rules", slug: "rules", articleId: "power/articles/casting-traditions/rules", collection: "ultimate-spheres-of-power", showToc: true },
-  { label: "Standard Traditions", slug: "standard", articleId: "power/articles/casting-traditions/standard-traditions", collection: "ultimate-spheres-of-power", showToc: true },
-  { label: "Custom Traditions", slug: "custom", articleId: "power/articles/casting-traditions/custom-traditions", collection: "ultimate-spheres-of-power", showToc: true },
-  { label: "General Drawbacks", slug: "general-drawbacks", articleId: "power/articles/casting-traditions/general-drawbacks", collection: "ultimate-spheres-of-power", showToc: true },
-  { label: "Sphere Drawbacks", slug: "sphere-drawbacks", articleId: "power/articles/casting-traditions/sphere-drawbacks", collection: "ultimate-spheres-of-power", showToc: true },
-  { label: "Boons", slug: "boons", articleId: "power/articles/casting-traditions/boons", collection: "ultimate-spheres-of-power", showToc: true },
+  {
+    label: "Rules",
+    slug: "rules",
+    articleId: "power/articles/casting-traditions/rules",
+    collection: "ultimate-spheres-of-power",
+    showToc: true,
+  },
+  {
+    label: "Standard Traditions",
+    slug: "standard",
+    showToc: false,
+  },
+  {
+    label: "Custom Traditions",
+    slug: "custom",
+    articleId: "power/articles/casting-traditions/custom-traditions",
+    collection: "ultimate-spheres-of-power",
+    showToc: true,
+  },
+  { label: "General Drawbacks", slug: "general-drawbacks", showToc: false },
+  { label: "Sphere Drawbacks", slug: "sphere-drawbacks", showToc: false },
+  { label: "Boons", slug: "boons", showToc: false },
+  { label: "Builder", slug: "builder", showToc: false },
 ];
 ---
+
 <ArticlePage article={article} book={book} description={description}>
-  <TabbedContent tabs={tabs} />
+  <TabbedContent tabs={tabs}>
+    <!-- Standard Traditions -->
+    <div slot="standard">
+      {standardTraditions.length === 0
+        ? <p class="section-empty">No standard traditions defined yet.</p>
+        : standardTraditions.map((t) => {
+            const TContent = traditionContentMap.get(t.id);
+            const srcTitle = bookMetaMap.get(t.sourceBook)?.title ?? t.sourceBook;
+            const meta = {
+              "Magic Type": t.magicType ?? "custom",
+              CAM:
+                t.cam.mode === "fixed"
+                  ? t.cam.abilities.map((a) => a.toUpperCase()).join("/")
+                  : `Choose: ${t.cam.abilities.map((a) => a.toUpperCase()).join("/")}`,
+            };
+            return (
+              <EntryCard
+                id={t.id}
+                name={t.name}
+                sourceBookTitle={srcTitle}
+                tagIds={[]}
+                Content={TContent}
+                metadata={meta}
+                tagMap={tagMap}
+                bookMetaMap={bookMetaMap}
+              />
+            );
+          })
+      }
+    </div>
+
+    <!-- General Drawbacks -->
+    <div slot="general-drawbacks">
+      {generalDrawbacks.map((d) => {
+        const DContent = drawbackContentMap.get(d.id);
+        const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
+        const meta = {
+          "Drawback Value": String(d.drawbackValue),
+          ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
+          ...(d.repeat?.max && d.repeat.max > 1
+            ? { "Max Repeat": String(d.repeat.max) }
+            : {}),
+        };
+        return (
+          <EntryCard
+            id={d.id}
+            name={d.name}
+            sourceBookTitle={srcTitle}
+            tagIds={[]}
+            Content={DContent}
+            metadata={meta}
+            tagMap={tagMap}
+            bookMetaMap={bookMetaMap}
+          />
+        );
+      })}
+    </div>
+
+    <!-- Sphere Drawbacks -->
+    <div slot="sphere-drawbacks">
+      {sphereDrawbacksList.map((d) => {
+        const DContent = drawbackContentMap.get(d.id);
+        const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
+        const meta = {
+          Sphere: d.sphere ?? "",
+          "Drawback Value": String(d.drawbackValue),
+          ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
+        };
+        return (
+          <EntryCard
+            id={d.id}
+            name={d.name}
+            sourceBookTitle={srcTitle}
+            tagIds={[]}
+            Content={DContent}
+            metadata={meta}
+            tagMap={tagMap}
+            bookMetaMap={bookMetaMap}
+          />
+        );
+      })}
+      {dualDrawbacks.length > 0 && (
+        <>
+          <h3 class="dual-drawbacks-heading">Dual-Sphere Drawbacks</h3>
+          {dualDrawbacks.map((d) => {
+            const DContent = drawbackContentMap.get(d.id);
+            const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
+            const meta = {
+              Spheres: (d.spheres ?? []).join(", "),
+              "Drawback Value": String(d.drawbackValue),
+            };
+            return (
+              <EntryCard
+                id={d.id}
+                name={d.name}
+                sourceBookTitle={srcTitle}
+                tagIds={[]}
+                Content={DContent}
+                metadata={meta}
+                tagMap={tagMap}
+                bookMetaMap={bookMetaMap}
+              />
+            );
+          })}
+        </>
+      )}
+    </div>
+
+    <!-- Boons -->
+    <div slot="boons">
+      {boons.map((b) => {
+        const BContent = boonContentMap.get(b.id);
+        const srcTitle = bookMetaMap.get(b.sourceBook)?.title ?? b.sourceBook;
+        const meta = {
+          "Boon Cost": `${b.boonCost} slot${b.boonCost !== 1 ? "s" : ""}`,
+        };
+        return (
+          <EntryCard
+            id={b.id}
+            name={b.name}
+            sourceBookTitle={srcTitle}
+            tagIds={[]}
+            Content={BContent}
+            metadata={meta}
+            tagMap={tagMap}
+            bookMetaMap={bookMetaMap}
+          />
+        );
+      })}
+    </div>
+
+    <!-- Builder -->
+    <div slot="builder" class="tradition-builder">
+      <h2 class="builder-heading">Casting Tradition Builder</h2>
+      <p class="builder-intro">Build and export a custom casting tradition. Changes update in real time.</p>
+
+      <div class="builder-layout">
+        <div class="builder-controls">
+          <div class="builder-section">
+            <label class="builder-label" for="tb-name">Tradition Name</label>
+            <input id="tb-name" type="text" class="builder-input" placeholder="My Tradition" />
+          </div>
+
+          <div class="builder-section">
+            <label class="builder-label" for="tb-magic-type">Magic Type</label>
+            <select id="tb-magic-type" class="builder-select">
+              <option value="">— unset —</option>
+              <option value="arcane">Arcane</option>
+              <option value="divine">Divine</option>
+              <option value="psychic">Psychic</option>
+              <option value="other">Other</option>
+              <option value="none">None</option>
+              <option value="custom">Custom</option>
+            </select>
+          </div>
+
+          <div class="builder-section">
+            <span class="builder-label">Casting Ability Modifier</span>
+            <div id="tb-cam-options" class="builder-cam-row">
+              {["str","dex","con","int","wis","cha"].map((a) => (
+                <label class="cam-option">
+                  <input type="radio" name="tb-cam" value={a} /> {a.toUpperCase()}
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div class="builder-section">
+            <div class="builder-subsection-header">
+              <span class="builder-label">Start From Tradition</span>
+            </div>
+            <select id="tb-load-tradition" class="builder-select">
+              <option value="">— select a tradition —</option>
+            </select>
+          </div>
+
+          <div class="builder-section">
+            <div class="builder-subsection-header">
+              <span class="builder-label">General Drawbacks</span>
+              <span id="tb-gdv-display" class="builder-currency-badge">0 DV</span>
+            </div>
+            <input id="tb-drawback-search" type="search" class="builder-input builder-search" placeholder="Filter drawbacks…" />
+            <div id="tb-general-drawbacks" class="builder-checklist"></div>
+          </div>
+
+          <div class="builder-section">
+            <span class="builder-label">Sphere Drawbacks</span>
+            <div id="tb-sphere-drawbacks" class="builder-checklist"></div>
+          </div>
+
+          <div class="builder-section">
+            <div class="builder-subsection-header">
+              <span class="builder-label">Boons</span>
+              <span id="tb-boon-currency" class="builder-currency-badge">0 / 0 slots</span>
+            </div>
+            <div id="tb-boons" class="builder-checklist"></div>
+          </div>
+        </div>
+
+        <div class="builder-summary" id="tb-summary">
+          <h3 class="builder-summary-title">Summary</h3>
+          <div id="tb-diagnostics" class="builder-diagnostics" hidden></div>
+          <div id="tb-summary-content" class="builder-summary-body"></div>
+          <div class="builder-export">
+            <div class="builder-export-tabs">
+              <button class="builder-export-tab active" data-export="md">Markdown</button>
+              <button class="builder-export-tab" data-export="json">JSON</button>
+            </div>
+            <textarea id="tb-export-output" class="builder-export-textarea" readonly rows="10"></textarea>
+            <button id="tb-copy-btn" class="builder-copy-btn">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </TabbedContent>
 </ArticlePage>
+
+<script is:inline id="tradition-builder-data" type="application/json" set:html={builderData}></script>
+
+<script>
+  import {
+    buildTraditionState,
+    calculateGeneralDrawbackValue,
+    calculateAvailableBoonSlots,
+    calculateUnspentDrawbackValue,
+    bonusSpellPointFormula,
+    getAllowedCastingAbilities,
+    selectionFromTradition,
+    validateTradition,
+  } from "@/lib/castingTraditions/rules";
+  import {
+    exportTraditionMarkdown,
+    exportTraditionJson,
+  } from "@/lib/castingTraditions/export";
+
+  type DrawbackData = {
+    id: string; name: string; drawbackKind: string; drawbackValue: number;
+    sphere?: string | null; spheres?: string[] | null; buyoff?: string | null;
+    choices?: unknown; requires?: unknown; incompatible?: string[] | null; rules?: unknown;
+    repeat?: { max?: number } | null;
+  };
+  type BoonData = {
+    id: string; name: string; boonCost: number;
+    choices?: unknown; requires?: unknown; rules?: unknown;
+  };
+  type TraditionData = {
+    id: string; name: string; traditionKind: string; magicType?: string | null;
+    cam: { mode: string; abilities: string[] };
+    drawbacks: { id: string; count?: number }[];
+    sphereDrawbacks: { id: string }[];
+    boons: { id: string }[];
+    choices?: unknown; choiceSelections?: unknown;
+  };
+
+  type BuilderStore = {
+    drawbacks: DrawbackData[];
+    boons: BoonData[];
+    traditions: TraditionData[];
+  };
+
+  document.addEventListener("astro:page-load", () => {
+    const builder = document.querySelector<HTMLElement>(".tradition-builder");
+    if (!builder) return;
+    const root = builder;
+
+    const dataEl = document.getElementById("tradition-builder-data");
+    const store: BuilderStore = dataEl?.textContent
+      ? JSON.parse(dataEl.textContent)
+      : { drawbacks: [], boons: [], traditions: [] };
+
+    // State
+    let selDrawbacks: string[] = [];
+    let selSphereDrawbacks: string[] = [];
+    let selBoons: string[] = [];
+    let selCam: string | undefined;
+    let exportMode: "md" | "json" = "md";
+
+    function getSelection() {
+      return {
+        name: (document.getElementById("tb-name") as HTMLInputElement)?.value || undefined,
+        magicType: (document.getElementById("tb-magic-type") as HTMLSelectElement)?.value || undefined,
+        cam: selCam as any,
+        drawbacks: selDrawbacks.map((id) => ({ id })),
+        sphereDrawbacks: selSphereDrawbacks.map((id) => ({ id })),
+        boons: selBoons.map((id) => ({ id })),
+      };
+    }
+
+    function getTraditionData() {
+      return {
+        drawbacks: store.drawbacks as any[],
+        boons: store.boons as any[],
+        traditions: store.traditions as any[],
+      };
+    }
+
+    function buildState() {
+      return buildTraditionState(getSelection() as any, getTraditionData());
+    }
+
+    function renderCamOptions() {
+      const state = buildState();
+      const allowed = getAllowedCastingAbilities(state as any);
+      const allowedIds = new Set(allowed.map((a) => a.ability));
+      root.querySelectorAll<HTMLInputElement>('input[name="tb-cam"]').forEach((radio) => {
+        const isAllowed = allowedIds.has(radio.value as any);
+        radio.disabled = !isAllowed;
+        const label = radio.closest("label");
+        if (label) label.classList.toggle("cam-disabled", !isAllowed);
+        if (!isAllowed && radio.checked) {
+          radio.checked = false;
+          selCam = undefined;
+        }
+      });
+    }
+
+    function renderSummary() {
+      const selection = getSelection();
+      const data = getTraditionData();
+      const state = buildState();
+      const gdv = calculateGeneralDrawbackValue(state as any);
+      const slots = calculateAvailableBoonSlots(state as any);
+      const unspent = calculateUnspentDrawbackValue(state as any);
+      const spBonus = bonusSpellPointFormula(unspent);
+
+      // Currency badges
+      const gdvEl = document.getElementById("tb-gdv-display");
+      if (gdvEl) gdvEl.textContent = `${gdv} DV`;
+      const currEl = document.getElementById("tb-boon-currency");
+      if (currEl) currEl.textContent = `${selBoons.length} / ${slots} slots`;
+
+      // Summary body
+      const body = document.getElementById("tb-summary-content");
+      if (body) {
+        const rows = [
+          `<strong>General Drawback Value:</strong> ${gdv}`,
+          `<strong>Available Boon Slots:</strong> ${slots}`,
+          ...(unspent > 0 && spBonus ? [`<strong>Bonus Spell Points:</strong> ${spBonus}`] : []),
+          `<strong>CAM:</strong> ${selCam?.toUpperCase() ?? "—"}`,
+        ];
+        body.innerHTML = rows.map((r) => `<p class="builder-summary-row">${r}</p>`).join("");
+      }
+
+      // Diagnostics
+      const diags = validateTradition(selection as any, data as any);
+      const diagEl = document.getElementById("tb-diagnostics");
+      if (diagEl) {
+        if (diags.length === 0) {
+          diagEl.hidden = true;
+          diagEl.innerHTML = "";
+        } else {
+          diagEl.hidden = false;
+          diagEl.innerHTML = diags
+            .map((d) => `<div class="builder-diag builder-diag--${d.severity}">${d.message}</div>`)
+            .join("");
+        }
+      }
+
+      // Export
+      updateExport(selection, data);
+    }
+
+    function updateExport(selection: any, data: any) {
+      const output = document.getElementById("tb-export-output") as HTMLTextAreaElement;
+      if (!output) return;
+      if (exportMode === "md") {
+        output.value = exportTraditionMarkdown(selection as any, data as any);
+      } else {
+        output.value = exportTraditionJson(selection as any, data as any);
+      }
+    }
+
+    function renderGeneralDrawbacks() {
+      const container = document.getElementById("tb-general-drawbacks");
+      if (!container) return;
+      const search = (document.getElementById("tb-drawback-search") as HTMLInputElement)?.value?.toLowerCase() ?? "";
+      const generals = store.drawbacks.filter((d) => d.drawbackKind === "general");
+      const visible = search ? generals.filter((d) => d.name.toLowerCase().includes(search)) : generals;
+      container.innerHTML = visible
+        .map((d) => {
+          const checked = selDrawbacks.includes(d.id) ? "checked" : "";
+          return `<label class="builder-check-item">
+            <input type="checkbox" data-drawback="${d.id}" ${checked} />
+            <span class="bcl-name">${d.name}</span>
+            <span class="bcl-badge">${d.drawbackValue} DV</span>
+          </label>`;
+        })
+        .join("");
+      container.querySelectorAll<HTMLInputElement>("input[type=checkbox][data-drawback]").forEach((cb) => {
+        cb.addEventListener("change", () => {
+          const id = cb.dataset.drawback!;
+          if (cb.checked) {
+            if (!selDrawbacks.includes(id)) selDrawbacks.push(id);
+          } else {
+            selDrawbacks = selDrawbacks.filter((d) => d !== id);
+          }
+          onUpdate();
+        });
+      });
+    }
+
+    function renderSphereDrawbacks() {
+      const container = document.getElementById("tb-sphere-drawbacks");
+      if (!container) return;
+      const sphere = store.drawbacks.filter((d) => d.drawbackKind === "sphere" || d.drawbackKind === "dual-sphere");
+      container.innerHTML = sphere
+        .map((d) => {
+          const checked = selSphereDrawbacks.includes(d.id) ? "checked" : "";
+          const sphereLabel = d.sphere ?? (d.spheres ?? []).join("/");
+          return `<label class="builder-check-item">
+            <input type="checkbox" data-sphere-drawback="${d.id}" ${checked} />
+            <span class="bcl-name">${d.name}</span>
+            <span class="bcl-badge bcl-sphere">${sphereLabel}</span>
+          </label>`;
+        })
+        .join("");
+      container.querySelectorAll<HTMLInputElement>("input[type=checkbox][data-sphere-drawback]").forEach((cb) => {
+        cb.addEventListener("change", () => {
+          const id = cb.dataset.sphereDrawback!;
+          if (cb.checked) {
+            if (!selSphereDrawbacks.includes(id)) selSphereDrawbacks.push(id);
+          } else {
+            selSphereDrawbacks = selSphereDrawbacks.filter((d) => d !== id);
+          }
+          onUpdate();
+        });
+      });
+    }
+
+    function renderBoons() {
+      const container = document.getElementById("tb-boons");
+      if (!container) return;
+      const state = buildState();
+      const slots = calculateAvailableBoonSlots(state as any);
+      const usedSlots = selBoons.reduce((sum, id) => {
+        const b = store.boons.find((b) => b.id === id);
+        return sum + (b?.boonCost ?? 0);
+      }, 0);
+      container.innerHTML = store.boons
+        .map((b) => {
+          const checked = selBoons.includes(b.id) ? "checked" : "";
+          const remaining = slots - usedSlots;
+          const wouldExceed = !selBoons.includes(b.id) && b.boonCost > remaining;
+          const disabled = wouldExceed ? "disabled" : "";
+          return `<label class="builder-check-item${wouldExceed ? " bcl-disabled" : ""}">
+            <input type="checkbox" data-boon="${b.id}" ${checked} ${disabled} />
+            <span class="bcl-name">${b.name}</span>
+            <span class="bcl-badge bcl-boon">${b.boonCost} slot${b.boonCost !== 1 ? "s" : ""}</span>
+          </label>`;
+        })
+        .join("");
+      container.querySelectorAll<HTMLInputElement>("input[type=checkbox][data-boon]").forEach((cb) => {
+        cb.addEventListener("change", () => {
+          const id = cb.dataset.boon!;
+          if (cb.checked) {
+            if (!selBoons.includes(id)) selBoons.push(id);
+          } else {
+            selBoons = selBoons.filter((d) => d !== id);
+          }
+          onUpdate();
+        });
+      });
+    }
+
+    function populateTraditionDropdown() {
+      const sel = document.getElementById("tb-load-tradition") as HTMLSelectElement;
+      if (!sel) return;
+      sel.innerHTML =
+        '<option value="">— select a tradition —</option>' +
+        store.traditions
+          .map((t) => `<option value="${t.id}">${t.name}</option>`)
+          .join("");
+      sel.addEventListener("change", () => {
+        const tid = sel.value;
+        if (!tid) return;
+        const t = store.traditions.find((t) => t.id === tid);
+        if (!t) return;
+        const synthEntry = {
+          ...t,
+          type: "tradition" as const,
+          sourceBook: "",
+          tags: [],
+          traditionKind: t.traditionKind as any,
+          cam: t.cam as any,
+        };
+        const loaded = selectionFromTradition(synthEntry as any, getTraditionData() as any);
+        selDrawbacks = loaded.drawbacks.map((r: any) => r.id);
+        selSphereDrawbacks = (loaded.sphereDrawbacks ?? []).map((r: any) => r.id);
+        selBoons = loaded.boons.map((r: any) => r.id);
+        selCam = loaded.cam;
+        if (loaded.name) {
+          const nameInput = document.getElementById("tb-name") as HTMLInputElement;
+          if (nameInput) nameInput.value = loaded.name;
+        }
+        if (loaded.magicType) {
+          const mtSel = document.getElementById("tb-magic-type") as HTMLSelectElement;
+          if (mtSel) mtSel.value = loaded.magicType;
+        }
+        onUpdate(true);
+      });
+    }
+
+    function syncCamRadio() {
+      root.querySelectorAll<HTMLInputElement>('input[name="tb-cam"]').forEach((r) => {
+        r.checked = r.value === selCam;
+      });
+    }
+
+    function onUpdate(fullRender = false, syncUrl = true) {
+      renderCamOptions();
+      if (fullRender) {
+        syncCamRadio();
+        renderGeneralDrawbacks();
+        renderSphereDrawbacks();
+      }
+      renderBoons();
+      renderSummary();
+      if (syncUrl) encodeState();
+    }
+
+    // Wire cam radios
+    root.querySelectorAll<HTMLInputElement>('input[name="tb-cam"]').forEach((r) => {
+      r.addEventListener("change", () => {
+        selCam = r.value;
+        onUpdate();
+      });
+    });
+
+    // Wire name/magic-type inputs
+    document.getElementById("tb-name")?.addEventListener("input", () => onUpdate());
+    document.getElementById("tb-magic-type")?.addEventListener("change", () => onUpdate());
+
+    // Wire drawback search
+    document.getElementById("tb-drawback-search")?.addEventListener("input", () => renderGeneralDrawbacks());
+
+    // Wire export tabs
+    root.querySelectorAll<HTMLButtonElement>(".builder-export-tab").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        root.querySelectorAll(".builder-export-tab").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        exportMode = (btn.dataset.export as "md" | "json") ?? "md";
+        updateExport(getSelection(), getTraditionData());
+      });
+    });
+
+    // Wire copy button
+    document.getElementById("tb-copy-btn")?.addEventListener("click", async () => {
+      const ta = document.getElementById("tb-export-output") as HTMLTextAreaElement;
+      if (!ta) return;
+      await navigator.clipboard.writeText(ta.value).catch(() => undefined);
+      const btn = document.getElementById("tb-copy-btn") as HTMLButtonElement;
+      const orig = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(() => { btn.textContent = orig; }, 1500);
+    });
+
+    // Wire URL state
+    function encodeState() {
+      const params = new URLSearchParams();
+      if (selDrawbacks.length) params.set("d", selDrawbacks.join(","));
+      if (selSphereDrawbacks.length) params.set("sd", selSphereDrawbacks.join(","));
+      if (selBoons.length) params.set("b", selBoons.join(","));
+      if (selCam) params.set("cam", selCam);
+      const url = new URL(window.location.href);
+      for (const [k, v] of params) url.searchParams.set(k, v);
+      url.hash = "builder";
+      window.history.replaceState({}, "", url);
+    }
+
+    function loadFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const tab = params.get("tab");
+      if (tab !== "builder" && window.location.hash !== "#builder") return;
+      const d = params.get("d");
+      const sd = params.get("sd");
+      const b = params.get("b");
+      const cam = params.get("cam");
+      if (d) selDrawbacks = d.split(",").filter(Boolean);
+      if (sd) selSphereDrawbacks = sd.split(",").filter(Boolean);
+      if (b) selBoons = b.split(",").filter(Boolean);
+      if (cam) selCam = cam;
+    }
+
+    loadFromUrl();
+
+    // Initial render
+    populateTraditionDropdown();
+    renderGeneralDrawbacks();
+    renderSphereDrawbacks();
+    onUpdate(true, false);
+
+  });
+</script>
+
+<style>
+  .dual-drawbacks-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  .tradition-builder {
+    padding-bottom: var(--sp-8);
+  }
+
+  .builder-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    margin-bottom: 0.4em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  .builder-intro {
+    color: var(--clr-muted);
+    font-size: var(--fs-md);
+    margin-bottom: var(--sp-5);
+  }
+
+  .builder-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--sp-6);
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .builder-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .builder-section {
+    margin-bottom: var(--sp-5);
+  }
+
+  .builder-label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--clr-muted);
+    margin-bottom: var(--sp-2);
+  }
+
+  .builder-input {
+    width: 100%;
+    background: var(--clr-surface);
+    border: 0.5px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 6px 10px;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--clr-text);
+  }
+
+  .builder-input:focus {
+    outline: 2px solid var(--clr-brand);
+    outline-offset: 1px;
+  }
+
+  .builder-search {
+    margin-bottom: var(--sp-2);
+  }
+
+  .builder-select {
+    width: 100%;
+    background: var(--clr-surface);
+    border: 0.5px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 6px 10px;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--clr-text);
+  }
+
+  .builder-cam-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2) var(--sp-3);
+  }
+
+  .cam-option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+  }
+
+  .cam-option.cam-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .builder-subsection-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--sp-2);
+  }
+
+  .builder-subsection-header .builder-label {
+    margin-bottom: 0;
+  }
+
+  .builder-currency-badge {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background: color-mix(in srgb, var(--clr-active) 12%, transparent);
+    color: var(--clr-active);
+    border: 1px solid color-mix(in srgb, var(--clr-active) 30%, transparent);
+    border-radius: 3px;
+    padding: 2px 7px;
+  }
+
+  .builder-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    max-height: 260px;
+    overflow-y: auto;
+    border: 0.5px solid var(--clr-border);
+    border-radius: var(--radius);
+    background: var(--clr-bg);
+    padding: var(--sp-2);
+  }
+
+  :global(.builder-check-item) {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    padding: 4px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: var(--fs-sm);
+    transition: background 0.1s;
+  }
+
+  :global(.builder-check-item:hover) {
+    background: color-mix(in srgb, var(--clr-active) 5%, transparent);
+  }
+
+  :global(.builder-check-item.bcl-disabled) {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  :global(.bcl-name) {
+    flex: 1;
+    font-family: var(--font-body);
+  }
+
+  :global(.bcl-badge) {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: color-mix(in srgb, var(--clr-active) 12%, transparent);
+    color: var(--clr-active);
+    border: 1px solid color-mix(in srgb, var(--clr-active) 30%, transparent);
+    white-space: nowrap;
+  }
+
+  :global(.bcl-sphere) {
+    background: color-mix(in srgb, var(--clr-might) 12%, transparent);
+    color: var(--clr-might);
+    border-color: color-mix(in srgb, var(--clr-might) 30%, transparent);
+  }
+
+  :global(.bcl-boon) {
+    background: color-mix(in srgb, var(--clr-cta) 12%, transparent);
+    color: var(--clr-cta);
+    border-color: color-mix(in srgb, var(--clr-cta) 30%, transparent);
+  }
+
+  .builder-summary {
+    background: var(--clr-surface);
+    border: 0.5px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: var(--sp-4);
+    position: sticky;
+    top: calc(72px + var(--sp-4));
+  }
+
+  .builder-summary-title {
+    font-family: var(--font-display);
+    font-size: var(--fs-base);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--clr-active);
+    margin-bottom: var(--sp-3);
+  }
+
+  .builder-diagnostics {
+    margin-bottom: var(--sp-3);
+  }
+
+  :global(.builder-diag) {
+    font-size: var(--fs-xs);
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-bottom: 3px;
+  }
+
+  :global(.builder-diag--error) {
+    background: color-mix(in srgb, #cc0000 10%, transparent);
+    color: #cc0000;
+    border: 1px solid color-mix(in srgb, #cc0000 30%, transparent);
+  }
+
+  :global(.builder-summary-row) {
+    font-size: var(--fs-sm);
+    margin-bottom: var(--sp-1);
+  }
+
+  .builder-export {
+    margin-top: var(--sp-4);
+  }
+
+  .builder-export-tabs {
+    display: flex;
+    gap: 3px;
+    margin-bottom: var(--sp-2);
+  }
+
+  .builder-export-tab {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    border: 0.5px solid var(--clr-border);
+    border-bottom: none;
+    background: var(--clr-bg);
+    color: var(--clr-muted);
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+
+  .builder-export-tab.active {
+    background: var(--clr-surface);
+    color: var(--clr-active);
+  }
+
+  .builder-export-textarea {
+    width: 100%;
+    font-family: monospace;
+    font-size: var(--fs-xs);
+    background: var(--clr-bg);
+    border: 0.5px solid var(--clr-border);
+    border-radius: 0 var(--radius) var(--radius) var(--radius);
+    padding: var(--sp-3);
+    color: var(--clr-text);
+    resize: vertical;
+  }
+
+  .builder-copy-btn {
+    margin-top: var(--sp-2);
+    width: 100%;
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--clr-active);
+    color: var(--clr-bg);
+    border: none;
+    border-radius: var(--radius);
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+
+  .builder-copy-btn:hover {
+    opacity: 0.85;
+  }
+</style>

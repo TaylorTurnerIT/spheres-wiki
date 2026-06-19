@@ -17,6 +17,11 @@ import type {
 
 const DEFAULT_CAM_OPTIONS: AbilityScore[] = ["int", "wis", "cha"];
 
+export type AllowedCam = {
+  ability: AbilityScore;
+  mode: "always" | "if-higher-than-base" | "fixed";
+};
+
 function byId<T extends { id: string }>(entries: T[]): Map<string, T> {
   return new Map(entries.map((entry) => [entry.id, entry]));
 }
@@ -182,6 +187,30 @@ export function buildTraditionState(
   };
 }
 
+/**
+ * Build a TraditionSelection pre-populated from a preset TraditionEntry.
+ * Callers can pass the result directly to validateTradition or buildTraditionState.
+ */
+export function selectionFromTradition(
+  entry: TraditionEntry,
+  _data: TraditionData,
+): TraditionSelection {
+  return {
+    traditionId: entry.id,
+    name: entry.name,
+    magicType: entry.magicType,
+    // Pre-set CAM only for fixed-mode traditions with exactly one ability
+    cam:
+      entry.cam.mode === "fixed" && entry.cam.abilities.length === 1
+        ? entry.cam.abilities[0]
+        : undefined,
+    drawbacks: entry.drawbacks ?? [],
+    sphereDrawbacks: entry.sphereDrawbacks ?? [],
+    boons: entry.boons ?? [],
+    choices: entry.choiceSelections,
+  };
+}
+
 function evaluatePredicate(
   predicate: TraditionPredicate | undefined,
   state: ResolvedTraditionState,
@@ -225,13 +254,6 @@ function drawbackValue(
   return (entry.drawbackValue + extra) * refCount(ref);
 }
 
-function selectedChoiceDrawbackValue(state: ResolvedTraditionState): number {
-  return selectedChoiceOptions(state.selection.choices, state.choices).reduce(
-    (sum, option) => sum + (option.addsDrawbackValue ?? 0),
-    0,
-  );
-}
-
 export function calculateGeneralDrawbackValue(
   state: ResolvedTraditionState,
 ): number {
@@ -239,7 +261,15 @@ export function calculateGeneralDrawbackValue(
     if (entry.drawbackKind !== "general") return sum;
     return sum + drawbackValue(ref, entry, state);
   }, 0);
-  return baseDrawbackValue + selectedChoiceDrawbackValue(state);
+  // Only sum addsDrawbackValue from choices on general drawbacks (B21)
+  const generalChoices = state.drawbacks
+    .filter(({ entry }) => entry.drawbackKind === "general")
+    .flatMap(({ entry }) => entry.choices ?? []);
+  const choiceValue = selectedChoiceOptions(
+    state.selection.choices,
+    generalChoices,
+  ).reduce((sum, option) => sum + (option.addsDrawbackValue ?? 0), 0);
+  return baseDrawbackValue + choiceValue;
 }
 
 function calculateBoonCost(state: ResolvedTraditionState): number {
@@ -274,31 +304,85 @@ export function bonusSpellPointFormula(
   return formulas[Math.min(Math.max(unspentDrawbacks, 0), 5)] ?? null;
 }
 
-function applyCamRule(
-  allowed: Set<AbilityScore>,
+function applyCamRuleToMap(
+  allowed: Map<AbilityScore, AllowedCam["mode"]>,
   rule: TraditionRule,
   state: ResolvedTraditionState,
-): Set<AbilityScore> {
+): Map<AbilityScore, AllowedCam["mode"]> {
   if (!evaluatePredicate(rule.when, state)) return allowed;
   if (rule.op === "allow-cam") {
-    allowed.add(rule.ability);
+    if (!allowed.has(rule.ability)) {
+      allowed.set(rule.ability, rule.mode);
+    }
   }
   if (rule.op === "set-cam") {
-    return new Set(rule.abilities);
+    const entryMode: AllowedCam["mode"] =
+      rule.mode === "fixed"
+        ? "fixed"
+        : rule.mode === "highest"
+          ? "if-higher-than-base"
+          : "always";
+    return new Map(rule.abilities.map((a) => [a, entryMode]));
   }
   return allowed;
 }
 
+function traditionCamMode(
+  mode: TraditionEntry["cam"]["mode"],
+): AllowedCam["mode"] {
+  if (mode === "fixed") return "fixed";
+  if (mode === "highest") return "if-higher-than-base";
+  return "always";
+}
+
+function initialAllowedCams(
+  tradition: TraditionEntry | undefined,
+): Map<AbilityScore, AllowedCam["mode"]> {
+  if (!tradition) {
+    return new Map(DEFAULT_CAM_OPTIONS.map((a) => [a, "always" as const]));
+  }
+  const mode = traditionCamMode(tradition.cam.mode);
+  return new Map(
+    tradition.cam.abilities.map((a) => [a, mode] as [AbilityScore, AllowedCam["mode"]]),
+  );
+}
+
+function applyCamRules(
+  allowed: Map<AbilityScore, AllowedCam["mode"]>,
+  rules: TraditionRule[] | undefined,
+  state: ResolvedTraditionState,
+): Map<AbilityScore, AllowedCam["mode"]> {
+  let result = allowed;
+  for (const rule of rules ?? []) {
+    result = applyCamRuleToMap(result, rule, state);
+  }
+  return result;
+}
+
+function formatAllowedCams(
+  allowed: Map<AbilityScore, AllowedCam["mode"]>,
+): AllowedCam[] {
+  return [...allowed.entries()].map(([ability, mode]) => ({ ability, mode }));
+}
+
+/**
+ * Returns allowed casting ability modifiers with their mode annotation.
+ * Starts from tradition.cam (if any) instead of the default {int,wis,cha} set,
+ * then applies drawback, tradition, and boon rules in order (B19, B22).
+ */
 export function getAllowedCastingAbilities(
   state: ResolvedTraditionState,
-): AbilityScore[] {
-  let allowed = new Set(DEFAULT_CAM_OPTIONS);
-  for (const { entry } of state.boons) {
-    for (const rule of entry.rules ?? []) {
-      allowed = applyCamRule(allowed, rule, state);
-    }
+): AllowedCam[] {
+  let allowed = initialAllowedCams(state.tradition);
+  for (const { entry } of [...state.drawbacks, ...state.sphereDrawbacks]) {
+    allowed = applyCamRules(allowed, entry.rules, state);
   }
-  return [...allowed];
+  allowed = applyCamRules(allowed, state.tradition?.rules, state);
+  for (const { entry } of state.boons) {
+    allowed = applyCamRules(allowed, entry.rules, state);
+  }
+
+  return formatAllowedCams(allowed);
 }
 
 function missingRefDiagnostics(
@@ -513,7 +597,7 @@ export function validateTradition(
 
   if (
     selection.cam &&
-    !getAllowedCastingAbilities(state).includes(selection.cam)
+    !getAllowedCastingAbilities(state).some((c) => c.ability === selection.cam)
   ) {
     diagnostics.push({
       severity: "error",

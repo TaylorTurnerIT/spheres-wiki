@@ -1,5 +1,5 @@
 ---
-import TagBadge from "@/components/TagBadge.astro";
+import EntryCard from "@/components/EntryCard.astro";
 import TraitCatalogSection from "@/components/TraitCatalogSection.astro";
 import { buildOrderedTagIds } from "@/lib/tags";
 import type { ClassFeatureEntry, ClassTraitEntry, TagEntry, BookMeta } from "@/lib/types";
@@ -70,26 +70,16 @@ function ordinal(n: number): string {
     />
   ) : (
     traits.map(({ trait, Content: TraitContent, sourceBookTitle: traitSourceTitle }) => (
-      <div class="class-trait" id={trait.id}>
-        <div class="talent-header">
-          <div class="talent-header-top">
-            <span class="talent-name">{trait.name}</span>
-            {traitSourceTitle && <span class="talent-source">{traitSourceTitle}</span>}
-          </div>
-          <div class="talent-header-bottom">
-            {buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {}).map(tagId => (
-              <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />
-            ))}
-          </div>
-        </div>
-        {trait.requires && (
-          <p class="trait-prerequisites"><strong>Prerequisites:</strong> {trait.requires}</p>
-        )}
-        {TraitContent
-          ? <div class="entry-description"><TraitContent /></div>
-          : null
-        }
-      </div>
+      <EntryCard
+        id={trait.id}
+        name={trait.name}
+        sourceBookTitle={traitSourceTitle}
+        tagIds={buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {})}
+        Content={TraitContent}
+        metadata={trait.requires ? { Prerequisites: trait.requires } : undefined}
+        tagMap={tagMap}
+        bookMetaMap={bookMetaMap}
+      />
     ))
   )}
 </div>
@@ -133,20 +123,6 @@ function ordinal(n: number): string {
     color: var(--clr-muted);
     opacity: 1;
     font-weight: 400;
-  }
-
-  .class-trait {
-    margin-top: 1rem;
-    padding: 0.75rem 1rem;
-    border-left: 3px solid var(--clr-active);
-    background: color-mix(in srgb, var(--clr-active) 3%, transparent);
-    border-radius: 0 6px 6px 0;
-  }
-
-  .trait-prerequisites {
-    font-size: 0.9em;
-    font-style: italic;
-    margin: 0 0 0.5rem;
   }
 
   @keyframes fadeIn {

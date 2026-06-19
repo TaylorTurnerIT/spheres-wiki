@@ -6,7 +6,7 @@ import { resolveEntries } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { SYSTEMS } from '@/config/site';
 
-const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, tagMap, bookMetaMap } = await resolveEntries();
+const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, drawbackMap, boonMap, traditionMap, tagMap, bookMetaMap } = await resolveEntries();
 
 type ManifestEntry = { url: string; title: string; system: string; type: string; sphere?: string; tags?: string };
 const manifest: ManifestEntry[] = [];
@@ -41,11 +41,23 @@ for (const t of classTraitMap.values()) {
   if (!SYSTEMS[t.system]) continue;
   manifest.push({ url: url(`/${t.system}/classes/${t.className}/traits/${t.id}/`), title: t.name, system: SYSTEMS[t.system].label, type: 'class-trait', tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
 }
+for (const d of drawbackMap.values()) {
+  if (d.system !== 'power') continue;
+  manifest.push({ url: url(`/power/casting-traditions/#${d.id}`), title: d.name, system: SYSTEMS['power'].label, type: 'drawback', tags: buildOrderedTagIds(d, bookMetaMap, tagMap).join(', ') });
+}
+for (const b of boonMap.values()) {
+  if (b.system !== 'power') continue;
+  manifest.push({ url: url(`/power/casting-traditions/#${b.id}`), title: b.name, system: SYSTEMS['power'].label, type: 'boon', tags: buildOrderedTagIds(b, bookMetaMap, tagMap).join(', ') });
+}
+for (const t of traditionMap.values()) {
+  if (t.system !== 'power') continue;
+  manifest.push({ url: url(`/power/casting-traditions/#${t.id}`), title: t.name, system: SYSTEMS['power'].label, type: 'tradition', tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
+}
 
 const staticSpheres = [...new Set([...sphereMap.values()].map(s => s.name))].sort();
 const sphereNamesLower = new Set(staticSpheres.map(s => s.toLowerCase()));
 const systemKeys = new Set(Object.keys(SYSTEMS));
-const typeKeys   = new Set(['sphere', 'talent', 'feat', 'class', 'archetype', 'class-trait']);
+const typeKeys   = new Set(['sphere', 'talent', 'feat', 'class', 'archetype', 'class-trait', 'drawback', 'boon', 'tradition']);
 const staticTags = [...tagMap.entries()]
   .filter(([id]) => !sphereNamesLower.has(id) && !systemKeys.has(id) && !typeKeys.has(id))
   .sort((a, b) => (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0]))
@@ -385,9 +397,12 @@ const TYPE_LABELS: Record<string, string> = {
   class:         'Class',
   archetype:     'Archetype',
   'class-trait': 'Trait',
+  drawback:      'Drawback',
+  boon:          'Boon',
+  tradition:     'Tradition',
 };
 
-const TYPE_ORDER = ['sphere','talent','feat','class','archetype','class-trait'];
+const TYPE_ORDER = ['sphere','talent','feat','class','archetype','class-trait','drawback','boon','tradition'];
 
 let pagefind: any;
 let browseManifest: any[] = [];
