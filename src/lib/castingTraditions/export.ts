@@ -20,7 +20,7 @@ function appendDetailSection(
   for (const { entry } of items) {
     const body = (entry as any).bodyPlain ?? "";
     if (!body) continue;
-    lines.push(`\n### ${entry.name}`);
+    lines.push(`\n> ### ${entry.name}`);
     lines.push(
       body
         .split("\n")

@@ -65,6 +65,22 @@ const allPowerDrawbacks = [...drawbackMap.values()].filter(
   (d) => d.system === "power",
 );
 const allPowerBoons = [...boonMap.values()].filter((b) => b.system === "power");
+const drawbackNameMap = new Map(allPowerDrawbacks.map((d) => [d.id, d.name]));
+const boonNameMap = new Map(allPowerBoons.map((b) => [b.id, b.name]));
+
+function resolveNames(ids: { id: string }[] | undefined, map: Map<string, string>): { name: string; href: string }[] {
+  return ids?.map((r) => ({ name: map.get(r.id) ?? r.id, href: `#${r.id}` })) ?? [];
+}
+function buildEntryLists(t: { drawbacks?: { id: string }[]; sphereDrawbacks?: { id: string }[]; boons?: { id: string }[] }) {
+  const lists: { label: string; items: { name: string; href: string }[] }[] = [];
+  const dr = resolveNames(t.drawbacks, drawbackNameMap);
+  if (dr.length) lists.push({ label: "Drawbacks", items: dr });
+  const sdr = resolveNames(t.sphereDrawbacks, drawbackNameMap);
+  if (sdr.length) lists.push({ label: "Sphere Drawbacks", items: sdr });
+  const bo = resolveNames(t.boons, boonNameMap);
+  if (bo.length) lists.push({ label: "Boons", items: bo });
+  return lists;
+}
 
 // Render markdown bodies and raw text in parallel
 async function getContent(type: string, id: string) {
@@ -236,7 +252,7 @@ const tabs = [
                 const srcTitle = bookMetaMap.get(t.sourceBook)?.title ?? t.sourceBook;
                 const meta = {
                   ...(t.magicType ? { "Magic Type": t.magicType } : {}),
-                  CAM:
+                  "Casting Ability Modifier":
                     t.cam.mode === "fixed"
                       ? t.cam.abilities.map((a) => a.toUpperCase()).join("/")
                       : `Choose: ${t.cam.abilities.map((a) => a.toUpperCase()).join("/")}`,
@@ -249,6 +265,7 @@ const tabs = [
                     tagIds={t.tags ?? []}
                     Content={TContent}
                     metadata={meta}
+                    entryLists={buildEntryLists(t)}
                     tagMap={tagMap}
                     bookMetaMap={bookMetaMap}
                   />
@@ -270,7 +287,7 @@ const tabs = [
                 const TContent = traditionContentMap.get(t.id);
                 const srcTitle = bookMetaMap.get(t.sourceBook)?.title ?? t.sourceBook;
                 const meta = {
-                  CAM:
+                  "Casting Ability Modifier":
                     t.cam.mode === "fixed"
                       ? t.cam.abilities.map((a) => a.toUpperCase()).join("/")
                       : `Choose: ${t.cam.abilities.map((a) => a.toUpperCase()).join("/")}`,
@@ -283,6 +300,7 @@ const tabs = [
                     tagIds={t.tags ?? []}
                     Content={TContent}
                     metadata={meta}
+                    entryLists={buildEntryLists(t)}
                     tagMap={tagMap}
                     bookMetaMap={bookMetaMap}
                   />
@@ -873,13 +891,6 @@ const tabs = [
       const container = document.getElementById("tb-boons");
       if (!container) return;
       const search = (document.getElementById("tb-boon-search") as HTMLInputElement)?.value?.toLowerCase() ?? "";
-      const state = buildState();
-      const rawSlots = calculateAvailableBoonSlots(state as any);
-      const slots = Math.max(0, rawSlots + manualBoonSlots);
-      const usedSlots = selBoons.reduce((sum, id) => {
-        const b = store.boons.find((b) => b.id === id);
-        return sum + (b?.boonCost ?? 0);
-      }, 0);
       const visible = filterByText(store.boons, search);
       container.innerHTML = visible
         .map((b) => {

@@ -9,6 +9,7 @@ interface Props {
   Content?: any;
   href?: string;
   metadata?: Record<string, string>;
+  entryLists?: { label: string; items: { name: string; href: string }[] }[];
   id?: string;
   tagMap: Map<string, TagEntry>;
   bookMetaMap: Map<string, BookMeta>;
@@ -25,6 +26,7 @@ const {
   id,
   tagMap,
   bookMetaMap,
+  entryLists = [],
   builderActions = [],
 } = Astro.props;
 
@@ -49,14 +51,39 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
     )}
   </div>
   {hasMetadata && (
-    <dl class="entry-card-meta">
+    <div class="entry-card-details">
       {Object.entries(metadata!).map(([k, v]) => (
-        <>
-          <dt>{k}</dt>
-          <dd>{v}</dd>
-        </>
+        <div class="ec-meta-row">
+          <strong>{k}:</strong> {v}
+        </div>
       ))}
-    </dl>
+      {entryLists.map((list) => (
+        <div class="ec-meta-row">
+          <strong>{list.label}:</strong>{" "}
+          {list.items.map((item, i) => (
+            <>
+              {i > 0 && ", "}
+              <a href={item.href}>{item.name}</a>
+            </>
+          ))}
+        </div>
+      ))}
+    </div>
+  )}
+  {!hasMetadata && entryLists.length > 0 && (
+    <div class="entry-card-details">
+      {entryLists.map((list) => (
+        <div class="ec-meta-row">
+          <strong>{list.label}:</strong>{" "}
+          {list.items.map((item, i) => (
+            <>
+              {i > 0 && ", "}
+              <a href={item.href}>{item.name}</a>
+            </>
+          ))}
+        </div>
+      ))}
+    </div>
   )}
   {Content && <div class="entry-description"><Content /></div>}
   {builderActions.length > 0 && (
@@ -91,25 +118,25 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
     z-index: 10;
   }
 
-  .entry-card-meta {
+  .entry-card-details {
+    font-size: var(--fs-sm);
+    margin: 6px 0 4px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 4px 16px;
-    font-size: var(--fs-xs);
-    color: var(--clr-muted);
-    margin: 4px 0 8px;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--clr-border);
   }
 
-  .entry-card-meta dt {
+  .ec-meta-row strong {
     font-weight: 600;
   }
 
-  .entry-card-meta dt::after {
-    content: ":";
-    margin-right: 3px;
+  .ec-meta-row a {
+    text-decoration: none;
   }
 
-  .entry-card-meta dd {
-    margin: 0;
+  .ec-meta-row a:hover {
+    text-decoration: underline;
   }
 </style>
