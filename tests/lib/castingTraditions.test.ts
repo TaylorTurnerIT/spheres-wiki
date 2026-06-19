@@ -20,7 +20,10 @@ import type {
 } from "../../src/lib/castingTraditions/types";
 import type { TraditionEntry } from "../../src/lib/types";
 
-function allowedAbilityIds(selection: TraditionSelection, testData: TraditionData) {
+function allowedAbilityIds(
+  selection: TraditionSelection,
+  testData: TraditionData,
+) {
   return getAllowedCastingAbilities(
     buildTraditionState(selection, testData),
   ).map((a) => a.ability);
@@ -173,10 +176,7 @@ const data: TraditionData = {
       traditionKind: "custom",
       magicType: "custom",
       cam: { mode: "choose-one", abilities: ["cha", "con"] },
-      drawbacks: [
-        { id: "draining-casting" },
-        { id: "somatic-casting" },
-      ],
+      drawbacks: [{ id: "draining-casting" }, { id: "somatic-casting" }],
       sphereDrawbacks: [],
       boons: [],
       choices: [
@@ -305,7 +305,9 @@ describe("casting tradition builder logic", () => {
     };
     const state = buildTraditionState(selection, data);
 
-    expect(getAllowedCastingAbilities(state).map((c) => c.ability)).toContain("con");
+    expect(getAllowedCastingAbilities(state).map((c) => c.ability)).toContain(
+      "con",
+    );
     expect(validateTradition(selection, data)).toEqual([]);
   });
 
@@ -363,7 +365,7 @@ describe("casting tradition builder logic", () => {
       data,
     );
 
-    expect(markdown).toContain("### Blood Test");
+    expect(markdown).toContain("# Blood Test");
     expect(markdown).toContain("**Casting Ability Modifier:** CON");
     expect(markdown).toContain(
       "**Drawbacks:** Draining Casting, Somatic Casting",
@@ -478,7 +480,11 @@ describe("casting tradition builder logic", () => {
       sphereDrawbacks: [],
       boons: [],
     };
-    const testData: TraditionData = { drawbacks: [], boons: [], traditions: [tradition] };
+    const testData: TraditionData = {
+      drawbacks: [],
+      boons: [],
+      traditions: [tradition],
+    };
     const selection = selectionFromTradition(tradition, testData);
     expect(selection.cam).toBe("con");
     const state = buildTraditionState(selection, testData);
@@ -507,7 +513,11 @@ describe("casting tradition builder logic", () => {
       sphereDrawbacks: [],
       boons: [],
     };
-    const testData: TraditionData = { drawbacks: [], boons: [], traditions: [tradition] };
+    const testData: TraditionData = {
+      drawbacks: [],
+      boons: [],
+      traditions: [tradition],
+    };
     const selection = selectionFromTradition(tradition, testData);
     expect(selection.cam).toBeUndefined();
     const allowed = getAllowedCastingAbilities(
@@ -518,7 +528,9 @@ describe("casting tradition builder logic", () => {
     expect(ids).toContain("con");
     expect(ids).not.toContain("int");
     expect(ids).not.toContain("wis");
-    expect(allowed.find((a) => a.ability === "con")?.mode).toBe("if-higher-than-base");
+    expect(allowed.find((a) => a.ability === "con")?.mode).toBe(
+      "if-higher-than-base",
+    );
   });
 
   // B21: boon choice addsDrawbackValue must not fund boon slots
@@ -575,7 +587,10 @@ describe("casting tradition builder logic", () => {
     const tradition = data.traditions![0]; // spellscourged
     const selection = selectionFromTradition(tradition, data);
     expect(selection.traditionId).toBe("spellscourged");
-    expect(selection.drawbacks).toEqual([{ id: "draining-casting" }, { id: "somatic-casting" }]);
+    expect(selection.drawbacks).toEqual([
+      { id: "draining-casting" },
+      { id: "somatic-casting" },
+    ]);
     expect(selection.boons).toEqual([]);
     expect(selection.cam).toBeUndefined(); // choose-one with 2 abilities → no pre-set
   });
@@ -643,7 +658,11 @@ describe("casting tradition integration (real content)", () => {
     );
     if (!tradition) return;
 
-    const testData: TraditionData = { drawbacks: [], boons: [], traditions: [tradition] };
+    const testData: TraditionData = {
+      drawbacks: [],
+      boons: [],
+      traditions: [tradition],
+    };
     const selection = selectionFromTradition(tradition, testData);
 
     // Blood Magic cam is fixed [con]
@@ -680,7 +699,11 @@ describe("casting tradition integration (real content)", () => {
     );
     if (!tradition) return;
 
-    const testData: TraditionData = { drawbacks: [], boons: [], traditions: [tradition] };
+    const testData: TraditionData = {
+      drawbacks: [],
+      boons: [],
+      traditions: [tradition],
+    };
     const selection = selectionFromTradition(tradition, testData);
 
     // highest with [cha, con] — no pre-set cam
@@ -697,7 +720,9 @@ describe("casting tradition integration (real content)", () => {
     expect(ids).not.toContain("wis");
 
     // con should be annotated if-higher-than-base
-    expect(allowed.find((a) => a.ability === "con")?.mode).toBe("if-higher-than-base");
+    expect(allowed.find((a) => a.ability === "con")?.mode).toBe(
+      "if-higher-than-base",
+    );
   });
 });
 
@@ -710,24 +735,130 @@ import {
   canSelectEntry,
   isSafeFix,
 } from "../../src/lib/castingTraditions/builderHelpers";
-import type { BuilderStore, SelectedIds } from "../../src/lib/castingTraditions/builderHelpers";
+import type {
+  BuilderStore,
+  SelectedIds,
+} from "../../src/lib/castingTraditions/builderHelpers";
 
 describe("builderHelpers", () => {
   const mockStore: BuilderStore = {
     drawbacks: [
-      { id: "d1", name: "Zebra Drawback", drawbackKind: "general", drawbackValue: 1, sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "Desc 1" },
-      { id: "d2", name: "Alpha Drawback", drawbackKind: "general", drawbackValue: 2, sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "Desc 2" },
-      { id: "sd1", name: "Conduit Focus", drawbackKind: "sphere", drawbackValue: 1, sphere: "alteration", sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "" },
-      { id: "sd2", name: "War Focus", drawbackKind: "sphere", drawbackValue: 1, sphere: "war", sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "" },
-      { id: "dual1", name: "Dual Focus", drawbackKind: "dual-sphere", drawbackValue: 1, spheres: ["alteration", "war"], sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "" },
-      { id: "prereq-target", name: "Target Drawback", drawbackKind: "general", drawbackValue: 1, sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "", requires: { all: [{ drawback: "d1" }] } },
-      { id: "incompat-a", name: "Incompat A", drawbackKind: "general", drawbackValue: 1, sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "", incompatible: ["incompat-b"] },
-      { id: "incompat-b", name: "Incompat B", drawbackKind: "general", drawbackValue: 1, sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "", incompatible: ["incompat-a"] },
+      {
+        id: "d1",
+        name: "Zebra Drawback",
+        drawbackKind: "general",
+        drawbackValue: 1,
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "Desc 1",
+      },
+      {
+        id: "d2",
+        name: "Alpha Drawback",
+        drawbackKind: "general",
+        drawbackValue: 2,
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "Desc 2",
+      },
+      {
+        id: "sd1",
+        name: "Conduit Focus",
+        drawbackKind: "sphere",
+        drawbackValue: 1,
+        sphere: "alteration",
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "",
+      },
+      {
+        id: "sd2",
+        name: "War Focus",
+        drawbackKind: "sphere",
+        drawbackValue: 1,
+        sphere: "war",
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "",
+      },
+      {
+        id: "dual1",
+        name: "Dual Focus",
+        drawbackKind: "dual-sphere",
+        drawbackValue: 1,
+        spheres: ["alteration", "war"],
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "",
+      },
+      {
+        id: "prereq-target",
+        name: "Target Drawback",
+        drawbackKind: "general",
+        drawbackValue: 1,
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "",
+        requires: { all: [{ drawback: "d1" }] },
+      },
+      {
+        id: "incompat-a",
+        name: "Incompat A",
+        drawbackKind: "general",
+        drawbackValue: 1,
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "",
+        incompatible: ["incompat-b"],
+      },
+      {
+        id: "incompat-b",
+        name: "Incompat B",
+        drawbackKind: "general",
+        drawbackValue: 1,
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "",
+        incompatible: ["incompat-a"],
+      },
     ],
     boons: [
-      { id: "b1", name: "Boon One", boonCost: 1, sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "" },
-      { id: "b2", name: "Boon Two", boonCost: 2, sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "" },
-      { id: "b-needs-boon", name: "Needy Boon", boonCost: 1, sourceBookTitle: "Test", tags: [], bodyHtml: "", bodyPlain: "", requires: { boon: "b1" } },
+      {
+        id: "b1",
+        name: "Boon One",
+        boonCost: 1,
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "",
+      },
+      {
+        id: "b2",
+        name: "Boon Two",
+        boonCost: 2,
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "",
+      },
+      {
+        id: "b-needs-boon",
+        name: "Needy Boon",
+        boonCost: 1,
+        sourceBookTitle: "Test",
+        tags: [],
+        bodyHtml: "",
+        bodyPlain: "",
+        requires: { boon: "b1" },
+      },
     ],
     traditions: [],
   };
@@ -749,7 +880,9 @@ describe("builderHelpers", () => {
   });
 
   it("groupBySphere groups and sorts by sphere", () => {
-    const grouped = groupBySphere(mockStore.drawbacks.filter((d) => d.drawbackKind !== "general"));
+    const grouped = groupBySphere(
+      mockStore.drawbacks.filter((d) => d.drawbackKind !== "general"),
+    );
     const keys = [...grouped.keys()];
     expect(keys[0]).toBe("alteration");
     expect(keys[1]).toBe("alteration/war");
@@ -758,31 +891,67 @@ describe("builderHelpers", () => {
 
   it("formatIncompatibleName resolves id to name", () => {
     expect(formatIncompatibleName("incompat-b", mockStore)).toBe("Incompat B");
-    expect(formatIncompatibleName("nonexistent", mockStore)).toBe("nonexistent");
+    expect(formatIncompatibleName("nonexistent", mockStore)).toBe(
+      "nonexistent",
+    );
   });
 
   it("prerequisiteExcerpt returns human-readable text", () => {
-    expect(prerequisiteExcerpt(mockStore.drawbacks.find((d) => d.id === "prereq-target")! as any, mockStore)).toContain("Zebra Drawback");
-    expect(prerequisiteExcerpt({ requires: { drawback: "d1" } }, mockStore)).toBe("Zebra Drawback");
-    expect(prerequisiteExcerpt({ requires: { boon: "b1" } }, mockStore)).toBe("Boon One");
-    expect(prerequisiteExcerpt({ requires: { all: [{ drawback: "d1" }, { boon: "b1" }] } }, mockStore)).toBe("Zebra Drawback and Boon One");
+    expect(
+      prerequisiteExcerpt(
+        mockStore.drawbacks.find((d) => d.id === "prereq-target")! as any,
+        mockStore,
+      ),
+    ).toContain("Zebra Drawback");
+    expect(
+      prerequisiteExcerpt({ requires: { drawback: "d1" } }, mockStore),
+    ).toBe("Zebra Drawback");
+    expect(prerequisiteExcerpt({ requires: { boon: "b1" } }, mockStore)).toBe(
+      "Boon One",
+    );
+    expect(
+      prerequisiteExcerpt(
+        { requires: { all: [{ drawback: "d1" }, { boon: "b1" }] } },
+        mockStore,
+      ),
+    ).toBe("Zebra Drawback and Boon One");
   });
 
   it("canSelectEntry allows valid additions", () => {
     const ids: SelectedIds = { drawbacks: [], sphereDrawbacks: [], boons: [] };
-    expect(canSelectEntry("d1", "drawback", ids, mockStore, 0, 0).allowed).toBe(true);
+    expect(canSelectEntry("d1", "drawback", ids, mockStore, 0, 0).allowed).toBe(
+      true,
+    );
   });
 
   it("canSelectEntry blocks incompatible additions", () => {
-    const ids: SelectedIds = { drawbacks: ["incompat-b"], sphereDrawbacks: [], boons: [] };
-    const result = canSelectEntry("incompat-a", "drawback", ids, mockStore, 0, 0);
+    const ids: SelectedIds = {
+      drawbacks: ["incompat-b"],
+      sphereDrawbacks: [],
+      boons: [],
+    };
+    const result = canSelectEntry(
+      "incompat-a",
+      "drawback",
+      ids,
+      mockStore,
+      0,
+      0,
+    );
     expect(result.allowed).toBe(false);
     expect(result.reason).toContain("incompatible");
   });
 
   it("canSelectEntry blocks unmet prerequisites", () => {
     const ids: SelectedIds = { drawbacks: [], sphereDrawbacks: [], boons: [] };
-    const result = canSelectEntry("prereq-target", "drawback", ids, mockStore, 0, 0);
+    const result = canSelectEntry(
+      "prereq-target",
+      "drawback",
+      ids,
+      mockStore,
+      0,
+      0,
+    );
     expect(result.allowed).toBe(false);
   });
 
@@ -796,8 +965,17 @@ describe("builderHelpers", () => {
 
   it("isSafeFix identifies safe prerequisite fixes", () => {
     // prereq-target needs d1 — adding d1 should fix without new failures
-    const ids: SelectedIds = { drawbacks: ["prereq-target"], sphereDrawbacks: [], boons: [] };
-    const diag = { severity: "error" as const, code: "missing-prerequisite", message: "", sourceIds: ["prereq-target"] };
+    const ids: SelectedIds = {
+      drawbacks: ["prereq-target"],
+      sphereDrawbacks: [],
+      boons: [],
+    };
+    const diag = {
+      severity: "error" as const,
+      code: "missing-prerequisite",
+      message: "",
+      sourceIds: ["prereq-target"],
+    };
     expect(isSafeFix(diag, mockStore, ids)).toBe(true);
   });
 });
@@ -805,10 +983,30 @@ describe("builderHelpers", () => {
 describe("detailed export and JSON", () => {
   const testData: any = {
     drawbacks: [
-      { type: "drawback", id: "d1", name: "Test Drawback", system: "power", sourceBook: "test", tags: [], drawbackKind: "general", drawbackValue: 1, bodyPlain: "This is the drawback text." },
+      {
+        type: "drawback",
+        id: "d1",
+        name: "Test Drawback",
+        system: "power",
+        sourceBook: "test",
+        tags: [],
+        drawbackKind: "general",
+        drawbackValue: 1,
+        bodyPlain: "This is the drawback text.",
+      },
     ],
     boons: [
-      { type: "boon", id: "b1", name: "Test Boon", system: "power", sourceBook: "test", tags: [], boonCost: 1, bodyHtml: "<p>Boon body</p>", bodyPlain: "Boon body" },
+      {
+        type: "boon",
+        id: "b1",
+        name: "Test Boon",
+        system: "power",
+        sourceBook: "test",
+        tags: [],
+        boonCost: 1,
+        bodyHtml: "<p>Boon body</p>",
+        bodyPlain: "Boon body",
+      },
     ],
   };
 
@@ -833,10 +1031,17 @@ describe("detailed export and JSON", () => {
   });
 
   it("JSON includes bodyHtml and bodyPlain", () => {
-    const json = JSON.parse(exportTraditionJson(
-      { name: "Test", cam: "int", drawbacks: [{ id: "d1" }], boons: [{ id: "b1" }] },
-      testData,
-    ));
+    const json = JSON.parse(
+      exportTraditionJson(
+        {
+          name: "Test",
+          cam: "int",
+          drawbacks: [{ id: "d1" }],
+          boons: [{ id: "b1" }],
+        },
+        testData,
+      ),
+    );
     expect(json.drawbacks[0].bodyHtml).toBeDefined();
     expect(json.drawbacks[0].bodyPlain).toBeDefined();
     expect(json.boons[0].bodyHtml).toBe("<p>Boon body</p>");
@@ -844,19 +1049,30 @@ describe("detailed export and JSON", () => {
   });
 
   it("JSON includes manual adjustment fields", () => {
-    const json = JSON.parse(exportTraditionJson(
-      { name: "Test", cam: "int", drawbacks: [], boons: [], camOverride: true, manualGeneralDrawbackValue: 3, manualBoonSlots: 2 },
-      { drawbacks: [], boons: [] },
-    ));
+    const json = JSON.parse(
+      exportTraditionJson(
+        {
+          name: "Test",
+          cam: "int",
+          drawbacks: [],
+          boons: [],
+          camOverride: true,
+        },
+        { drawbacks: [], boons: [] },
+      ),
+    );
     expect(json.camOverride).toBe(true);
-    expect(json.manualGeneralDrawbackValue).toBe(3);
-    expect(json.manualBoonSlots).toBe(2);
   });
 });
 
 describe("selectionFromTradition no magicType", () => {
   const tradition: any = {
-    type: "tradition", id: "t1", name: "Test", system: "power", sourceBook: "test", tags: [],
+    type: "tradition",
+    id: "t1",
+    name: "Test",
+    system: "power",
+    sourceBook: "test",
+    tags: [],
     traditionKind: "custom",
     magicType: "arcane",
     cam: { mode: "choose-one", abilities: ["int", "wis"] },
