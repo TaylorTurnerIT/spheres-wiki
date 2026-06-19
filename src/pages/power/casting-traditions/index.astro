@@ -30,6 +30,7 @@ const {
   drawbackMap,
   boonMap,
   traditionMap,
+  sphereMap,
   bookMetaMap,
   tagMap,
 } = await resolveEntries();
@@ -67,6 +68,7 @@ const allPowerDrawbacks = [...drawbackMap.values()].filter(
 const allPowerBoons = [...boonMap.values()].filter((b) => b.system === "power");
 const drawbackNameMap = new Map(allPowerDrawbacks.map((d) => [d.id, d.name]));
 const boonNameMap = new Map(allPowerBoons.map((b) => [b.id, b.name]));
+const sphereNameMap = new Map([...sphereMap.values()].filter((s) => s.system === "power").map((s) => [s.id, s.name]));
 
 function resolveNames(ids: { id: string }[] | undefined, map: Map<string, string>): { name: string; href: string }[] {
   return ids?.map((r) => ({ name: map.get(r.id) ?? r.id, href: `#${r.id}` })) ?? [];
@@ -320,7 +322,6 @@ const tabs = [
             const DContent = drawbackContentMap.get(d.id);
             const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
             const meta = {
-              "Drawback Value": String(d.drawbackValue),
               ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
               ...(d.repeat?.max && d.repeat.max > 1
                 ? { "Max Repeat": String(d.repeat.max) }
@@ -353,8 +354,7 @@ const tabs = [
             const DContent = drawbackContentMap.get(d.id);
             const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
             const meta = {
-              Sphere: d.sphere ?? "",
-              "Drawback Value": String(d.drawbackValue),
+              Sphere: sphereNameMap.get(d.sphere ?? "") ?? d.sphere ?? "",
               ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
             };
             return (
@@ -378,8 +378,7 @@ const tabs = [
                 const DContent = drawbackContentMap.get(d.id);
                 const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
                 const meta = {
-                  Spheres: (d.spheres ?? []).join(", "),
-                  "Drawback Value": String(d.drawbackValue),
+                  Spheres: (d.spheres ?? []).map((sid) => sphereNameMap.get(sid) ?? sid).join(", "),
                 };
                 return (
                   <EntryCard
@@ -1120,6 +1119,7 @@ const tabs = [
       }
       renderBoons();
       renderSummary();
+      syncActionButtons();
       if (syncUrl) encodeState();
     }
 
@@ -1215,6 +1215,34 @@ const tabs = [
         if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 100);
     });
+
+    document.addEventListener("click", (e) => {
+      const btn = (e.target as HTMLElement).closest?.("[data-action-add]") as HTMLElement | null;
+      if (!btn) return;
+      e.preventDefault();
+      const id = btn.dataset.actionAdd!;
+      const kind = btn.dataset.actionKind!;
+      if (kind === "drawback") {
+        if (selDrawbacks.includes(id)) selDrawbacks = selDrawbacks.filter((x) => x !== id);
+        else selDrawbacks.push(id);
+      } else if (kind === "sphere-drawback") {
+        if (selSphereDrawbacks.includes(id)) selSphereDrawbacks = selSphereDrawbacks.filter((x) => x !== id);
+        else selSphereDrawbacks.push(id);
+      } else if (kind === "boon") {
+        if (selBoons.includes(id)) selBoons = selBoons.filter((x) => x !== id);
+        else selBoons.push(id);
+      }
+      onUpdate(kind === "drawback" || kind === "sphere-drawback");
+    });
+
+    function syncActionButtons() {
+      const selected = new Set([...selDrawbacks, ...selSphereDrawbacks, ...selBoons]);
+      document.querySelectorAll("[data-action-add]").forEach((btn) => {
+        const id = (btn as HTMLElement).dataset.actionAdd!;
+        btn.classList.toggle("ec-action-added", selected.has(id));
+        btn.textContent = selected.has(id) ? "Added" : "Add to Builder";
+      });
+    }
 
     // ── URL state ────────────────────────────────────────
     function encodeState() {
@@ -1880,5 +1908,18 @@ const tabs = [
   :global(.entry-card-action-btn:disabled) {
     opacity: 0.4;
     cursor: not-allowed;
+  }
+
+  :global(.entry-card-action-btn.ec-action-added) {
+    background: var(--clr-active);
+    color: var(--clr-bg);
+    border-color: var(--clr-active);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  :global(.entry-card-action-btn.ec-action-added:hover) {
+    background: var(--clr-muted);
+    color: var(--clr-bg);
+    border-color: var(--clr-muted);
   }
 </style>
