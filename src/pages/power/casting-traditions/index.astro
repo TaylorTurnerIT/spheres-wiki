@@ -39,29 +39,30 @@ const book = bookMetaMap.get("ultimate-spheres-of-power");
 
 const description =
   "Define how your magic works in Ultimate Spheres of Power with casting traditions, drawbacks, and boons.";
+const byName = <T extends { name: string }>(a: T, b: T) => a.name.localeCompare(b.name);
 
 // Filter to Power entries, sorted by name
 const generalDrawbacks = [...drawbackMap.values()]
   .filter((d) => d.drawbackKind === "general" && d.system === "power")
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort(byName);
 const sphereDrawbacksList = [...drawbackMap.values()]
   .filter((d) => d.drawbackKind === "sphere" && d.system === "power")
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort(byName);
 const dualDrawbacks = [...drawbackMap.values()]
   .filter((d) => d.drawbackKind === "dual-sphere" && d.system === "power")
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort(byName);
 const boons = [...boonMap.values()]
   .filter((b) => b.system === "power")
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort(byName);
 const standardTraditions = [...traditionMap.values()]
   .filter((t) => t.system === "power" && t.traditionKind === "standard")
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort(byName);
 const customTraditions = [...traditionMap.values()]
   .filter((t) => t.system === "power" && t.traditionKind !== "standard")
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort(byName);
 const allPowerTraditions = [...traditionMap.values()].filter(
   (t) => t.system === "power",
-);
+).sort(byName);
 const allPowerDrawbacks = [...drawbackMap.values()].filter(
   (d) => d.system === "power",
 );
@@ -536,6 +537,8 @@ const tabs = [
 
         <div class="builder-summary" id="tb-summary">
           <h3 class="builder-summary-title">Summary <span id="tb-save-status" class="builder-save-status">Unsaved changes</span></h3>
+          <div class="builder-summary-separator" aria-hidden="true"></div>
+          <h2 id="tb-summary-name" class="builder-summary-name">Unnamed Tradition</h2>
           <div id="tb-diagnostics" class="builder-diagnostics" hidden></div>
           <div id="tb-summary-content" class="builder-summary-body"></div>
           <div class="builder-export">
@@ -729,6 +732,10 @@ const tabs = [
       if (gdvEl) gdvEl.textContent = `${gdv} Drawbacks`;
       const currEl = document.getElementById("tb-boon-currency");
       if (currEl) currEl.textContent = `${boonCost} / ${slots} slots`;
+      const nameEl = document.getElementById("tb-summary-name");
+      if (nameEl) {
+        nameEl.textContent = selection.name?.trim() || "Unnamed Tradition";
+      }
 
       const body = document.getElementById("tb-summary-content");
       if (body) {
@@ -1567,6 +1574,20 @@ const tabs = [
     letter-spacing: 0.04em;
     color: var(--clr-active);
     margin-bottom: var(--sp-3);
+  }
+
+  .builder-summary-separator {
+    border-top: 0.5px solid var(--clr-border);
+    margin: 0 0 var(--sp-3);
+  }
+
+  .builder-summary-name {
+    margin: 0 0 var(--sp-3);
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    overflow-wrap: anywhere;
   }
 
   .builder-diagnostics {
