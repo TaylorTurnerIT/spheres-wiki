@@ -858,7 +858,6 @@ const tabs = [
           html += `<label class="builder-check-item" title="${escapeHtml(d.bodyPlain.slice(0, 200))}">
             <input type="checkbox" data-sphere-drawback="${d.id}" ${checked} />
             <span class="bcl-name">${d.name}<a href="#${d.id}" class="bcl-anchor" data-anchor-tab="sphere-drawbacks" data-anchor-id="${d.id}" title="View entry details"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg></a></span>
-            <span class="bcl-badge bcl-sphere"></span>
           </label>`;
         }
       }
@@ -1497,12 +1496,6 @@ const tabs = [
     color: var(--clr-active);
     border: 1px solid color-mix(in srgb, var(--clr-active) 30%, transparent);
     white-space: nowrap;
-  }
-
-  :global(.bcl-sphere) {
-    background: color-mix(in srgb, var(--clr-might) 12%, transparent);
-    color: var(--clr-might);
-    border-color: color-mix(in srgb, var(--clr-might) 30%, transparent);
   }
 
   :global(.bcl-boon) {
