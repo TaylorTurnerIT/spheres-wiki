@@ -1,6 +1,8 @@
 import {
   bonusSpellPointFormula,
   buildTraditionState,
+  calculateAvailableBoonSlots,
+  calculateGeneralDrawbackValue,
   calculateUnspentDrawbackValue,
 } from "./rules";
 import type { TraditionData, TraditionSelection } from "./types";
@@ -61,14 +63,17 @@ export function exportTraditionMarkdown(
     `**Boons:** ${[boonDisplay, spellPointBoon].filter(Boolean).join("; ") || "None"}`,
   );
 
+  const baseGdv = calculateGeneralDrawbackValue(state);
+  const baseSlots = calculateAvailableBoonSlots(state);
+  const manualGdv = selection.manualGeneralDrawbackValue ?? 0;
+  const manualSlots = selection.manualBoonSlots ?? 0;
+  const gdvPart = manualGdv ? ` (base: ${baseGdv} + GM: ${manualGdv})` : "";
+  const slotsPart = manualSlots ? ` (base: ${baseSlots} + GM: ${manualSlots})` : "";
+  lines.push(`**General Drawback Value:** ${baseGdv + manualGdv}${gdvPart}`);
+  lines.push(`**Available Boon Slots:** ${baseSlots + manualSlots}${slotsPart}`);
+
   if (selection.camOverride) {
     lines.push(`**CAM Override:** Yes (GM)`);
-  }
-  if (selection.manualGeneralDrawbackValue) {
-    lines.push(`**Manual GDV Adjustment:** ${selection.manualGeneralDrawbackValue}`);
-  }
-  if (selection.manualBoonSlots) {
-    lines.push(`**Manual Boon Slots Adjustment:** ${selection.manualBoonSlots}`);
   }
 
   if (detailed) {

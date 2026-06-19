@@ -452,7 +452,15 @@ const tabs = [
           <div class="builder-section">
             <div class="builder-subsection-header">
               <span class="builder-label">General Drawbacks</span>
-              <span id="tb-gdv-display" class="builder-currency-badge">0 DV</span>
+              <div class="builder-currency-group">
+                <span id="tb-gdv-display" class="builder-currency-badge">0 DV</span>
+                <div class="builder-manual-inline">
+                  <span class="builder-manual-label">GM Adj.</span>
+                  <button class="builder-stepper-btn" data-stepper="gdv" data-dir="down" type="button">−</button>
+                  <span id="tb-manual-gdv" class="builder-manual-value">0</span>
+                  <button class="builder-stepper-btn" data-stepper="gdv" data-dir="up" type="button">+</button>
+                </div>
+              </div>
             </div>
             <input id="tb-drawback-search" type="search" class="builder-input builder-search" placeholder="Filter drawbacks…" />
             <div id="tb-general-drawbacks" class="builder-checklist"></div>
@@ -461,7 +469,15 @@ const tabs = [
           <div class="builder-section">
             <div class="builder-subsection-header">
               <span class="builder-label">Boons</span>
-              <span id="tb-boon-currency" class="builder-currency-badge">0 / 0 slots</span>
+              <div class="builder-currency-group">
+                <span id="tb-boon-currency" class="builder-currency-badge">0 / 0 slots</span>
+                <div class="builder-manual-inline">
+                  <span class="builder-manual-label">GM Adj.</span>
+                  <button class="builder-stepper-btn" data-stepper="bslots" data-dir="down" type="button">−</button>
+                  <span id="tb-manual-bslots" class="builder-manual-value">0</span>
+                  <button class="builder-stepper-btn" data-stepper="bslots" data-dir="up" type="button">+</button>
+                </div>
+              </div>
             </div>
             <input id="tb-boon-search" type="search" class="builder-input builder-search" placeholder="Filter boons…" />
             <div id="tb-boons" class="builder-checklist"></div>
@@ -485,20 +501,6 @@ const tabs = [
           <h3 class="builder-summary-title">Summary <span id="tb-save-status" class="builder-save-status">Unsaved changes</span></h3>
           <div id="tb-diagnostics" class="builder-diagnostics" hidden></div>
           <div id="tb-summary-content" class="builder-summary-body"></div>
-          <div class="builder-manual-adjustments">
-            <div class="builder-manual-row">
-              <span class="builder-manual-label">GM: GDV Adj.</span>
-              <button class="builder-stepper-btn" data-stepper="gdv" data-dir="down" type="button">−</button>
-              <span id="tb-manual-gdv" class="builder-manual-value">0</span>
-              <button class="builder-stepper-btn" data-stepper="gdv" data-dir="up" type="button">+</button>
-            </div>
-            <div class="builder-manual-row">
-              <span class="builder-manual-label">GM: Boon Slots Adj.</span>
-              <button class="builder-stepper-btn" data-stepper="bslots" data-dir="down" type="button">−</button>
-              <span id="tb-manual-bslots" class="builder-manual-value">0</span>
-              <button class="builder-stepper-btn" data-stepper="bslots" data-dir="up" type="button">+</button>
-            </div>
-          </div>
           <div class="builder-export">
             <div class="builder-export-tabs">
               <button class="builder-export-tab active" data-export="md">Markdown</button>
@@ -687,9 +689,9 @@ const tabs = [
       const spBonus = bonusSpellPointFormula(unspent);
 
       const gdvEl = document.getElementById("tb-gdv-display");
-      if (gdvEl) gdvEl.textContent = `${gdv} DV${manualGDV ? " (GM adj.)" : ""}`;
+      if (gdvEl) gdvEl.textContent = `${gdv} DV`;
       const currEl = document.getElementById("tb-boon-currency");
-      if (currEl) currEl.textContent = `${boonCost} / ${slots} slots${manualBoonSlots ? " (GM adj.)" : ""}`;
+      if (currEl) currEl.textContent = `${boonCost} / ${slots} slots`;
 
       const body = document.getElementById("tb-summary-content");
       if (body) {
@@ -1548,34 +1550,34 @@ const tabs = [
     margin-bottom: var(--sp-1);
   }
 
-  .builder-manual-adjustments {
-    margin-top: var(--sp-3);
-    padding-top: var(--sp-3);
-    border-top: 0.5px solid var(--clr-border);
-  }
-
-  .builder-manual-row {
+  .builder-currency-group {
     display: flex;
     align-items: center;
     gap: var(--sp-2);
-    margin-bottom: var(--sp-2);
+  }
+
+  .builder-manual-inline {
+    display: flex;
+    align-items: center;
+    gap: 1px;
   }
 
   .builder-manual-label {
-    font-family: var(--font-display);
-    font-size: var(--fs-3xs);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-family: var(--font-body);
+    font-size: 9px;
     color: var(--clr-muted);
+    font-style: italic;
+    margin-right: 3px;
+    letter-spacing: 0.02em;
   }
 
   .builder-manual-value {
     font-family: var(--font-display);
-    font-size: var(--fs-sm);
+    font-size: var(--fs-3xs);
     font-weight: 700;
-    min-width: 24px;
+    min-width: 14px;
     text-align: center;
+    color: var(--clr-muted);
   }
 
   .builder-stepper-btn {
