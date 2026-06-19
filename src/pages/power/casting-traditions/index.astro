@@ -1275,12 +1275,12 @@ const tabs = [
 
   .builder-layout {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: 1fr 1fr;
     gap: var(--sp-6);
     align-items: start;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
     .builder-layout {
       grid-template-columns: 1fr;
     }
@@ -1480,7 +1480,7 @@ const tabs = [
     background: var(--clr-surface);
     border: 0.5px solid var(--clr-border);
     border-radius: var(--radius);
-    padding: var(--sp-4);
+    padding: 0 var(--sp-4) var(--sp-4);
     position: sticky;
     top: calc(72px + var(--sp-4));
   }

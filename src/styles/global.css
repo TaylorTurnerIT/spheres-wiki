@@ -2541,10 +2541,6 @@ h6 {
 }
 
 /* ── Builder-active layout ─────────────────────────────── */
-.builder-active .article-sidebar .store-card {
+.builder-active .article-sidebar {
   display: none;
-}
-
-.builder-active .content-body {
-  max-width: none;
 }
