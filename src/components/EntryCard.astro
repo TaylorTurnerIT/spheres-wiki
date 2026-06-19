@@ -57,20 +57,10 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
           <strong>{k}:</strong> {v}
         </div>
       ))}
-      {entryLists.map((list) => (
-        <div class="ec-meta-row">
-          <strong>{list.label}:</strong>{" "}
-          {list.items.map((item, i) => (
-            <>
-              {i > 0 && ", "}
-              <a href={item.href}>{item.name}</a>
-            </>
-          ))}
-        </div>
-      ))}
     </div>
   )}
-  {!hasMetadata && entryLists.length > 0 && (
+  {Content && <div class="entry-description"><Content /></div>}
+  {entryLists.length > 0 && (
     <div class="entry-card-details">
       {entryLists.map((list) => (
         <div class="ec-meta-row">
@@ -85,7 +75,6 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
       ))}
     </div>
   )}
-  {Content && <div class="entry-description"><Content /></div>}
   {builderActions.length > 0 && (
     <div class="entry-card-actions">
       {builderActions.map((action) => (

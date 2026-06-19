@@ -66,9 +66,21 @@ const allPowerDrawbacks = [...drawbackMap.values()].filter(
   (d) => d.system === "power",
 );
 const allPowerBoons = [...boonMap.values()].filter((b) => b.system === "power");
+
 const drawbackNameMap = new Map(allPowerDrawbacks.map((d) => [d.id, d.name]));
 const boonNameMap = new Map(allPowerBoons.map((b) => [b.id, b.name]));
 const sphereNameMap = new Map([...sphereMap.values()].filter((s) => s.system === "power").map((s) => [s.id, s.name]));
+
+// Pre-group sphere drawbacks by sphere name for the listing tab
+const sphereDrawbackGroups = (() => {
+  const g = new Map<string, typeof sphereDrawbacksList>();
+  for (const d of sphereDrawbacksList) {
+    const key = sphereNameMap.get(d.sphere ?? "") ?? d.sphere ?? "Other";
+    if (!g.has(key)) g.set(key, []);
+    g.get(key)!.push(d);
+  }
+  return [...g.entries()].sort(([a], [b]) => a.localeCompare(b));
+})();
 
 function resolveNames(ids: { id: string }[] | undefined, map: Map<string, string>): { name: string; href: string }[] {
   return ids?.map((r) => ({ name: map.get(r.id) ?? r.id, href: `#${r.id}` })) ?? [];
@@ -82,6 +94,10 @@ function buildEntryLists(t: { drawbacks?: { id: string }[]; sphereDrawbacks?: { 
   const bo = resolveNames(t.boons, boonNameMap);
   if (bo.length) lists.push({ label: "Boons", items: bo });
   return lists;
+}
+
+function buildIncompatibles(incompatible: string[] | undefined) {
+  return resolveNames(incompatible?.map((id) => ({ id })), drawbackNameMap);
 }
 
 // Render markdown bodies and raw text in parallel
@@ -335,6 +351,7 @@ const tabs = [
                 tagIds={d.tags ?? []}
                 Content={DContent}
                 metadata={meta}
+                entryLists={d.incompatible?.length ? [{ label: "Incompatible", items: buildIncompatibles(d.incompatible) }] : []}
                 tagMap={tagMap}
                 bookMetaMap={bookMetaMap}
                 builderActions={[{ entryId: d.id, kind: "drawback" }]}
@@ -350,27 +367,29 @@ const tabs = [
       <details class="entry-listing-toggle" open>
         <summary>Sphere-Specific drawbacks</summary>
         <div class="entry-listing-cards">
-          {sphereDrawbacksList.map((d) => {
-            const DContent = drawbackContentMap.get(d.id);
-            const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
-            const meta = {
-              Sphere: sphereNameMap.get(d.sphere ?? "") ?? d.sphere ?? "",
-              ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
-            };
-            return (
-              <EntryCard
-                id={d.id}
-                name={d.name}
-                sourceBookTitle={srcTitle}
-                tagIds={d.tags ?? []}
-                Content={DContent}
-                metadata={meta}
-                tagMap={tagMap}
-                bookMetaMap={bookMetaMap}
-                builderActions={[{ entryId: d.id, kind: "sphere-drawback" }]}
-              />
-            );
-          })}
+          {sphereDrawbackGroups.map(([sphereName, items]) => (
+            <>
+              <h3 class="dual-drawbacks-heading">{sphereName}</h3>
+              {items.map((d) => {
+                const DContent = drawbackContentMap.get(d.id);
+                const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
+                return (
+                  <EntryCard
+                    id={d.id}
+                    name={d.name}
+                    sourceBookTitle={srcTitle}
+                    tagIds={d.tags ?? []}
+                    Content={DContent}
+                    metadata={{ ...(d.buyoff ? { Buyoff: d.buyoff } : {}) }}
+                    entryLists={d.incompatible?.length ? [{ label: "Incompatible", items: buildIncompatibles(d.incompatible) }] : []}
+                    tagMap={tagMap}
+                    bookMetaMap={bookMetaMap}
+                    builderActions={[{ entryId: d.id, kind: "sphere-drawback" }]}
+                  />
+                );
+              })}
+            </>
+          ))}
           {dualDrawbacks.length > 0 && (
             <>
               <h3 class="dual-drawbacks-heading">Dual-Sphere Drawbacks</h3>
@@ -388,6 +407,7 @@ const tabs = [
                     tagIds={d.tags ?? []}
                     Content={DContent}
                     metadata={meta}
+                    entryLists={d.incompatible?.length ? [{ label: "Incompatible", items: buildIncompatibles(d.incompatible) }] : []}
                     tagMap={tagMap}
                     bookMetaMap={bookMetaMap}
                     builderActions={[{ entryId: d.id, kind: "sphere-drawback" }]}
