@@ -10,7 +10,10 @@ import remarkStripTocFlags from "./src/lib/remarkStripTocFlags.ts";
 
 // Astro/Vite legitimately attach many listeners to one dev FSWatcher in this
 // content-heavy repo. Raise the cap early so dev startup stays warning-free.
-EventEmitter.defaultMaxListeners = Math.max(EventEmitter.defaultMaxListeners, 128);
+EventEmitter.defaultMaxListeners = Math.max(
+  EventEmitter.defaultMaxListeners,
+  128,
+);
 
 /** Vite plugin: transform *.yaml / *.yml imports into ES modules */
 const yamlPlugin = {
@@ -44,7 +47,7 @@ export default defineConfig({
   // CONCURRENCY NOTE: parallel page rendering — raise if build machine has more cores.
   // getStaticPaths() runs once per page file; concurrency controls simultaneous page renders.
   build: {
-    concurrency: 4,
+    concurrency: 6,
   },
   experimental: {
     rustCompiler: true,
