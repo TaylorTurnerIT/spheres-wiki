@@ -310,53 +310,28 @@ const staticTags = [...tagMap.entries()]
     display: block;
     padding: 12px 14px;
     background: var(--clr-bg);
-    border: 0.5px solid var(--clr-border);
+    border: 1px solid var(--clr-border);
+    border-left: 3px solid var(--clr-active);
     border-radius: var(--radius);
     text-decoration: none;
     color: var(--clr-text);
-    transition: border-color 0.12s, box-shadow 0.12s;
+    transition: background 0.12s, box-shadow 0.12s;
   }
   .sp-result:hover,
   .sp-result:focus {
-    border-color: var(--clr-brand);
+    background: color-mix(in srgb, var(--clr-active) 4%, var(--clr-surface));
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     text-decoration: none;
     outline: none;
   }
-  .sp-result-header {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 4px;
-  }
-  .sp-result-title {
-    font-family: var(--font-display);
-    font-size: var(--fs-sm);
-    font-weight: 700;
-    color: var(--clr-brand);
-    flex-shrink: 0;
-  }
-  .sp-result-title.sp-text-power { color: var(--clr-power); }
-  .sp-result-title.sp-text-might { color: var(--clr-might); }
-  .sp-result-title.sp-text-guile { color: var(--clr-guile); }
-  .sp-result-title.sp-text-champions { color: var(--clr-champ); }
-
-  .sp-result-footer {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    align-items: center;
-  }
-
   .sp-result-excerpt {
     font-size: var(--fs-xs);
     color: var(--clr-muted);
     line-height: 1.5;
+    margin-top: 6px;
   }
   .sp-result-excerpt mark {
-    background: color-mix(in srgb, var(--clr-brand) 20%, transparent);
+    background: color-mix(in srgb, var(--clr-active) 20%, transparent);
     color: var(--clr-text);
     border-radius: 2px;
     padding: 0 1px;
@@ -498,43 +473,52 @@ function renderResults() {
     const sysKey    = sysEntry?.key ?? '';
     const typeLabel = TYPE_LABELS[type] ?? type;
     const tier      = r.meta?.tier ?? '';
-    let tags      = parseTags(r.meta?.tags ?? '');
-    
-    // Explicitly add Type and Tier to the beginning of the tags array so they render
-    if (type && type !== 'sphere') {
-      const formattedTier = tier ? tier.charAt(0).toUpperCase() + tier.slice(1) : '';
-      const displayType = formattedTier ? `${formattedTier} ${typeLabel}` : typeLabel;
-      if (!tags.includes(displayType.toLowerCase())) {
-        tags.unshift(displayType);
-      }
+
+    // Per-card system color — cascades to .talent-name (--clr-active) and tier tags (--clr-ns)
+    const cssColor = sysKey === 'champions' ? 'var(--clr-champ)'
+                   : sysKey ? `var(--clr-${sysKey})`
+                   : 'var(--clr-brand)';
+
+    // Source label: keep sphere names in the tag row so they can share system color.
+    let sourceLabel = '';
+    if (type === 'sphere') {
+      sourceLabel = sysEntry?.label ?? '';
+    } else if (sphere) {
+      sourceLabel = typeLabel;
+    } else {
+      sourceLabel = sysEntry ? `${sysEntry.label} · ${typeLabel}` : typeLabel;
     }
 
-    return `<a href="${r.url}" class="sp-result">
-      <div class="sp-result-header">
-        <span class="sp-result-title ${sysKey ? `sp-text-${sysKey}` : ''}">${title}</span>
+    // Build tag list with real tag IDs for both pagefind and browse-all results.
+    // browse-all: buildOrderedTagIds already includes type + tier tags.
+    // pagefind:   r.meta.tags has raw frontmatter tags only; inject type + tier by ID.
+    let tags = parseTags(r.meta?.tags ?? '');
+    if (type && type !== 'sphere' && !tags.includes(type)) tags = [type, ...tags];
+    if (tier && !tags.includes(tier)) tags = [tier, ...tags];
+
+    const tagHtml = tags.map(t => {
+      const templateHtml = tagTemplates[t];
+      if (templateHtml) return templateHtml;
+      // Fallback for tags without a pre-rendered template
+      const style = tagColorMap[t] ? ` style="--tag-clr: ${tagColorMap[t]}"` : '';
+      const displayMap: Record<string, string> = { 'ex': 'Extraordinary', 'su': 'Supernatural', 'sp': 'Spell-like', 'base': 'Base Ability' };
+      const display = displayMap[t.toLowerCase()] || t;
+      return `<span class="tag-wrapper"><span class="talent-tag" data-tag="${t}"${style}>${display}</span></span>`;
+    }).join('');
+    const sphereTagHtml = sphere && type !== 'sphere'
+      ? `<span class="tag-wrapper"><span class="talent-tag" data-tag="sphere-name" style="--tag-clr: var(--clr-ns)">${sphere}</span></span>`
+      : '';
+    const headerTagHtml = `${sphereTagHtml}${tagHtml}`;
+
+    return `<a href="${r.url}" class="sp-result" style="--clr-active: ${cssColor}; --clr-ns: ${cssColor}">
+      <div class="talent-header">
+        <div class="talent-header-top">
+          <span class="talent-name">${title}</span>
+          ${sourceLabel ? `<span class="talent-source">${sourceLabel}</span>` : ''}
+        </div>
+        ${headerTagHtml ? `<div class="talent-header-bottom">${headerTagHtml}</div>` : ''}
       </div>
       ${r.excerpt ? `<div class="sp-result-excerpt">${r.excerpt}</div>` : ''}
-      <div class="sp-result-footer">
-        ${sysKey    ? `<span class="tag-wrapper"><span class="talent-tag" style="--tag-clr: var(--clr-${sysKey === 'champions' ? 'champ' : sysKey})">${sysEntry!.label}</span></span>` : ''}
-        ${sphere && type !== 'sphere' ? `<span class="tag-wrapper"><span class="talent-tag">${sphere}</span></span>` : ''}
-        ${tags.map(t => {
-          let c = tagColorMap[t];
-
-          // If we have a fully pre-rendered TagBadge component for this tag, inject it
-          let templateHtml = tagTemplates[t];
-          if (templateHtml) {
-            return templateHtml;
-          }
-          
-          // Fallback if tag lacks a tooltip definition
-          const style = c ? ` style="--tag-clr: ${c}"` : '';
-          const displayMap: Record<string, string> = { 'ex': 'Extraordinary', 'su': 'Supernatural', 'sp': 'Spell-like' };
-          let display = displayMap[t.toLowerCase()] || t;
-          if (display.toLowerCase() === 'base') display = 'Base Ability';
-          
-          return `<span class="tag-wrapper"><span class="talent-tag" data-tag="${t}"${style}>${display}</span></span>`;
-        }).join('')}
-      </div>
     </a>`;
   }).join('');
 
