@@ -1,13 +1,14 @@
 import {
   bonusSpellPointFormula,
   buildTraditionState,
-  calculateAvailableBoonSlots,
-  calculateGeneralDrawbackValue,
   calculateUnspentDrawbackValue,
 } from "./rules";
 import type { TraditionData, TraditionSelection } from "./types";
 
-type EntryWithBody = { entry: { name: string }; ref: { count?: number; option?: string } };
+type EntryWithBody = {
+  entry: { name: string };
+  ref: { count?: number; option?: string };
+};
 
 function appendDetailSection(
   lines: string[],
@@ -20,7 +21,12 @@ function appendDetailSection(
     const body = (entry as any).bodyPlain ?? "";
     if (!body) continue;
     lines.push(`\n### ${entry.name}`);
-    lines.push(body.split("\n").map((l: string) => `> ${l}`).join("\n"));
+    lines.push(
+      body
+        .split("\n")
+        .map((l: string) => `> ${l}`)
+        .join("\n"),
+    );
   }
 }
 
@@ -47,13 +53,15 @@ export function exportTraditionMarkdown(
 ): string {
   const state = buildTraditionState(selection, data);
   const lines = [
-    `### ${selection.name || "Custom Tradition"}`,
+    `# ${selection.name || "Custom Tradition"}`,
     `**Casting Ability Modifier:** ${selection.cam?.toUpperCase() ?? "Choose one"}`,
     `**Drawbacks:** ${formatRefs(state.drawbacks)}`,
   ];
 
   if (state.sphereDrawbacks.length > 0) {
-    lines.push(`**Sphere-Specific Drawbacks:** ${formatRefs(state.sphereDrawbacks)}`);
+    lines.push(
+      `**Sphere-Specific Drawbacks:** ${formatRefs(state.sphereDrawbacks)}`,
+    );
   }
 
   const unspent = calculateUnspentDrawbackValue(state);
@@ -63,22 +71,17 @@ export function exportTraditionMarkdown(
     `**Boons:** ${[boonDisplay, spellPointBoon].filter(Boolean).join("; ") || "None"}`,
   );
 
-  const baseGdv = calculateGeneralDrawbackValue(state);
-  const baseSlots = calculateAvailableBoonSlots(state);
-  const manualGdv = selection.manualGeneralDrawbackValue ?? 0;
-  const manualSlots = selection.manualBoonSlots ?? 0;
-  const gdvPart = manualGdv ? ` (base: ${baseGdv} + GM: ${manualGdv})` : "";
-  const slotsPart = manualSlots ? ` (base: ${baseSlots} + GM: ${manualSlots})` : "";
-  lines.push(`**General Drawback Value:** ${baseGdv + manualGdv}${gdvPart}`);
-  lines.push(`**Available Boon Slots:** ${baseSlots + manualSlots}${slotsPart}`);
-
   if (selection.camOverride) {
     lines.push(`**CAM Override:** Yes (GM)`);
   }
 
   if (detailed) {
     appendDetailSection(lines, "Drawbacks", state.drawbacks);
-    appendDetailSection(lines, "Sphere-Specific Drawbacks", state.sphereDrawbacks);
+    appendDetailSection(
+      lines,
+      "Sphere-Specific Drawbacks",
+      state.sphereDrawbacks,
+    );
     appendDetailSection(lines, "Boons", state.boons);
   }
 
@@ -95,7 +98,7 @@ export function exportTraditionJson(
       name: selection.name ?? "Custom Tradition",
       cam: selection.cam,
       camOverride: selection.camOverride ?? false,
-      manualGeneralDrawbackValue: selection.manualGeneralDrawbackValue ?? 0,
+      manualDrawbackOverride: selection.manualGeneralDrawbackValue ?? 0,
       manualBoonSlots: selection.manualBoonSlots ?? 0,
       drawbacks: state.drawbacks.map(({ ref, entry }) => ({
         id: entry.id,

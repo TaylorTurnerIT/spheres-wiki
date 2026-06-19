@@ -505,10 +505,10 @@ const tabs = [
             <div class="builder-export-tabs">
               <button class="builder-export-tab active" data-export="md">Markdown</button>
               <button class="builder-export-tab" data-export="json">JSON</button>
+              <label class="builder-export-detailed">
+                <input type="checkbox" id="tb-detailed-export" /> Detailed
+              </label>
             </div>
-            <label class="builder-export-detailed">
-              <input type="checkbox" id="tb-detailed-export" /> Detailed
-            </label>
             <textarea id="tb-export-output" class="builder-export-textarea" readonly rows="10"></textarea>
           </div>
           <div class="builder-save-area">
@@ -1639,7 +1639,6 @@ const tabs = [
   .builder-export-tabs {
     display: flex;
     gap: 3px;
-    margin-bottom: var(--sp-2);
   }
 
   .builder-export-tab {
@@ -1664,12 +1663,13 @@ const tabs = [
   .builder-export-detailed {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     font-size: var(--fs-xs);
     font-family: var(--font-body);
     color: var(--clr-muted);
-    margin-bottom: var(--sp-2);
     cursor: pointer;
+    margin-left: var(--sp-2);
+    white-space: nowrap;
   }
 
   .builder-export-textarea {
