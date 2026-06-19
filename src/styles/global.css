@@ -177,7 +177,7 @@ a:hover {
   background: var(--clr-bg);
   border-bottom: 1px solid var(--clr-border);
   position: relative;
-  z-index: 9999;
+  z-index: 50; /* above page hover content (max 10); tooltip at 10000 sits above this */
 }
 
 .site-header {
@@ -1674,33 +1674,41 @@ h6 {
   --tag-clr: var(--clr-ns);
 }
 .tag-wrapper {
-  position: relative;
   display: inline-block;
 }
+/* Visual base — shared between popover and fallback states */
 .tag-tooltip {
-  position: absolute;
-  bottom: calc(100% + 6px);
-  left: 50%;
-  transform: translateX(-50%);
   width: 200px;
   background: var(--clr-surface);
   border: 0.5px solid var(--clr-border);
   border-radius: var(--radius);
+  box-shadow: var(--shadow-floating);
   padding: 8px 10px;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  opacity: 0;
+}
+/* Portal tooltip — Popover API places this in the top layer, above all z-index */
+#global-tag-tooltip {
+  position: fixed;
+  inset: auto;   /* override UA popover default (inset: 0) */
+  margin: 0;     /* override UA popover default (margin: auto) */
   pointer-events: none;
+  opacity: 0;
   transition: opacity 150ms ease;
-  z-index: 100;
+  z-index: 10000; /* fallback for browsers without popover support */
 }
-.tag-wrapper:hover,
-.tag-wrapper:focus-within {
-  z-index: 10;
+#global-tag-tooltip:popover-open {
+  opacity: 1;
+  pointer-events: auto;
 }
-.tag-wrapper:hover .tag-tooltip,
-.tag-wrapper:focus-within .tag-tooltip {
+/* Fade-in from 0 on open (requires @starting-style — Chrome 117+, Firefox 129+, Safari 17.5+) */
+@starting-style {
+  #global-tag-tooltip:popover-open { opacity: 0; }
+}
+/* Fallback for browsers without popover API */
+#global-tag-tooltip.is-visible {
+  display: flex;
   opacity: 1;
   pointer-events: auto;
 }

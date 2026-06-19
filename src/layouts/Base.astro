@@ -59,7 +59,112 @@ const {
     <SVGSprite />
     <slot />
     <ScrollToTop />
+    <div id="global-tag-tooltip" popover="manual" class="tag-tooltip" role="tooltip">
+      <span class="tag-tooltip-name"></span>
+      <span class="tag-tooltip-desc"></span>
+      <span class="tag-tooltip-source"></span>
+    </div>
   </body>
+  <script>
+    // Global tag tooltip — uses Popover API (top layer) so it's above all z-index/stacking contexts.
+    // Falls back to .is-visible class on browsers without popover support.
+    const hasPopover = 'showPopover' in HTMLElement.prototype;
+
+    let tooltip: HTMLElement;
+    let nameEl: HTMLElement;
+    let descEl: HTMLElement;
+    let sourceEl: HTMLElement;
+    let activeWrapper: Element | null = null;
+
+    function cacheRefs() {
+      tooltip  = document.getElementById('global-tag-tooltip') as HTMLElement;
+      nameEl   = tooltip.querySelector<HTMLElement>('.tag-tooltip-name')!;
+      descEl   = tooltip.querySelector<HTMLElement>('.tag-tooltip-desc')!;
+      sourceEl = tooltip.querySelector<HTMLElement>('.tag-tooltip-source')!;
+      activeWrapper = null;
+    }
+
+    function openTooltip() {
+      if (hasPopover) (tooltip as any).showPopover();
+      else tooltip.classList.add('is-visible');
+      tooltip.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeTooltip() {
+      if (hasPopover) {
+        try { (tooltip as any).hidePopover(); } catch {}
+      } else {
+        tooltip.classList.remove('is-visible');
+      }
+      tooltip.setAttribute('aria-hidden', 'true');
+      activeWrapper = null;
+    }
+
+    function showAt(wrapper: Element) {
+      const d = (wrapper as HTMLElement).dataset;
+      if (!d.ttName) return;
+      nameEl.textContent = d.ttName;
+      descEl.innerHTML = d.ttDesc || '';
+      sourceEl.textContent = d.ttSource || '';
+      sourceEl.style.display = d.ttSource ? '' : 'none';
+
+      const rect = wrapper.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      tooltip.style.left = `${cx}px`;
+      tooltip.style.top = `${rect.top - 6}px`;
+      tooltip.style.transform = 'translateX(-50%) translateY(-100%)';
+      activeWrapper = wrapper;
+      openTooltip();
+
+      requestAnimationFrame(() => {
+        const tr = tooltip.getBoundingClientRect();
+        if (tr.top < 8) {
+          tooltip.style.top = `${rect.bottom + 6}px`;
+          tooltip.style.transform = 'translateX(-50%)';
+        }
+        const tr2 = tooltip.getBoundingClientRect();
+        if (tr2.left < 8) {
+          tooltip.style.left = `${cx + (8 - tr2.left)}px`;
+        } else if (tr2.right > window.innerWidth - 8) {
+          tooltip.style.left = `${cx - (tr2.right - window.innerWidth + 8)}px`;
+        }
+      });
+    }
+
+    // Re-cache refs on each page load (View Transitions swaps the DOM)
+    document.addEventListener('astro:page-load', cacheRefs);
+
+    // Event delegation — registered once, works across all navigations
+    document.addEventListener('mouseover', (e) => {
+      if (!tooltip || tooltip.contains(e.target as Node)) return;
+      const w = (e.target as Element).closest?.('.tag-wrapper[data-tt-name]') ?? null;
+      if (w && w !== activeWrapper) showAt(w);
+      else if (!w && activeWrapper) closeTooltip();
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      if (!activeWrapper) return;
+      const rel = (e as MouseEvent).relatedTarget as Node | null;
+      if (!rel || (!activeWrapper.contains(rel) && !tooltip.contains(rel))) closeTooltip();
+    });
+
+    document.addEventListener('focusin', (e) => {
+      const w = (e.target as Element).closest?.('.tag-wrapper[data-tt-name]') ?? null;
+      if (w) showAt(w);
+    });
+
+    document.addEventListener('focusout', (e) => {
+      if (!activeWrapper) return;
+      const rel = (e as FocusEvent).relatedTarget as Element | null;
+      if (!activeWrapper.contains(rel) && !tooltip?.contains(rel)) closeTooltip();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && activeWrapper) closeTooltip();
+    });
+
+    window.addEventListener('scroll', () => { if (activeWrapper) closeTooltip(); }, { passive: true });
+  </script>
   <script>
     const saved = sessionStorage.getItem('scroll-y');
     if (saved) {
