@@ -10,8 +10,5 @@
   "ignoreDependencies": ["lightningcss", "@astrojs/sitemap", "@astrojs/compiler-rs"],
   "duplicates": {
     "minOccurrences": 3
-  },
-  "rules": {
-    "unused-dependencies": "warn"
   }
 }

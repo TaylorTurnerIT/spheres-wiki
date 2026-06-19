@@ -54,6 +54,9 @@ const boons = [...boonMap.values()]
 const standardTraditions = [...traditionMap.values()]
   .filter((t) => t.system === "power" && t.traditionKind === "standard")
   .sort((a, b) => a.name.localeCompare(b.name));
+const customTraditions = [...traditionMap.values()]
+  .filter((t) => t.system === "power" && t.traditionKind !== "standard")
+  .sort((a, b) => a.name.localeCompare(b.name));
 const allPowerTraditions = [...traditionMap.values()].filter(
   (t) => t.system === "power",
 );
@@ -75,10 +78,11 @@ const allDrawbacksForRender = [
   ...sphereDrawbacksList,
   ...dualDrawbacks,
 ];
+const traditionsForRender = [...standardTraditions, ...customTraditions];
 const [drawbackContents, boonContents, traditionContents] = await Promise.all([
   Promise.all(allDrawbacksForRender.map((d) => getContent("drawback", d.id))),
   Promise.all(boons.map((b) => getContent("boon", b.id))),
-  Promise.all(standardTraditions.map((t) => getContent("tradition", t.id))),
+  Promise.all(traditionsForRender.map((t) => getContent("tradition", t.id))),
 ]);
 
 const drawbackContentMap = new Map(
@@ -86,7 +90,7 @@ const drawbackContentMap = new Map(
 );
 const boonContentMap = new Map(boons.map((b, i) => [b.id, boonContents[i]]));
 const traditionContentMap = new Map(
-  standardTraditions.map((t, i) => [t.id, traditionContents[i]]),
+  traditionsForRender.map((t, i) => [t.id, traditionContents[i]]),
 );
 
 // Use rules/export functions at build time — satisfies V66 production import requirement
@@ -160,7 +164,9 @@ const tabs = [
   {
     label: "Standard Traditions",
     slug: "standard",
-    showToc: false,
+    articleId: "power/articles/casting-traditions/standard-traditions",
+    collection: "ultimate-spheres-of-power",
+    showToc: true,
   },
   {
     label: "Custom Traditions",
@@ -169,9 +175,27 @@ const tabs = [
     collection: "ultimate-spheres-of-power",
     showToc: true,
   },
-  { label: "General Drawbacks", slug: "general-drawbacks", showToc: false },
-  { label: "Sphere Drawbacks", slug: "sphere-drawbacks", showToc: false },
-  { label: "Boons", slug: "boons", showToc: false },
+  {
+    label: "General Drawbacks",
+    slug: "general-drawbacks",
+    articleId: "power/articles/casting-traditions/general-drawbacks",
+    collection: "ultimate-spheres-of-power",
+    showToc: true,
+  },
+  {
+    label: "Sphere Drawbacks",
+    slug: "sphere-drawbacks",
+    articleId: "power/articles/casting-traditions/sphere-drawbacks",
+    collection: "ultimate-spheres-of-power",
+    showToc: true,
+  },
+  {
+    label: "Boons",
+    slug: "boons",
+    articleId: "power/articles/casting-traditions/boons",
+    collection: "ultimate-spheres-of-power",
+    showToc: true,
+  },
   { label: "Builder", slug: "builder", showToc: false },
 ];
 ---
@@ -180,93 +204,88 @@ const tabs = [
   <TabbedContent tabs={tabs}>
     <!-- Standard Traditions -->
     <div slot="standard">
-      {standardTraditions.length === 0
-        ? <p class="section-empty">No standard traditions defined yet.</p>
-        : standardTraditions.map((t) => {
-            const TContent = traditionContentMap.get(t.id);
-            const srcTitle = bookMetaMap.get(t.sourceBook)?.title ?? t.sourceBook;
-            const meta = {
-              "Magic Type": t.magicType ?? "custom",
-              CAM:
-                t.cam.mode === "fixed"
-                  ? t.cam.abilities.map((a) => a.toUpperCase()).join("/")
-                  : `Choose: ${t.cam.abilities.map((a) => a.toUpperCase()).join("/")}`,
-            };
-            return (
-              <EntryCard
-                id={t.id}
-                name={t.name}
-                sourceBookTitle={srcTitle}
-                tagIds={[]}
-                Content={TContent}
-                metadata={meta}
-                tagMap={tagMap}
-                bookMetaMap={bookMetaMap}
-              />
-            );
-          })
-      }
+      <details class="entry-listing-toggle" open>
+        <summary>Structured standard traditions</summary>
+        <div class="entry-listing-cards">
+          {standardTraditions.length === 0
+            ? <p class="section-empty">No standard traditions defined yet.</p>
+            : standardTraditions.map((t) => {
+                const TContent = traditionContentMap.get(t.id);
+                const srcTitle = bookMetaMap.get(t.sourceBook)?.title ?? t.sourceBook;
+                const meta = {
+                  "Magic Type": t.magicType ?? "custom",
+                  CAM:
+                    t.cam.mode === "fixed"
+                      ? t.cam.abilities.map((a) => a.toUpperCase()).join("/")
+                      : `Choose: ${t.cam.abilities.map((a) => a.toUpperCase()).join("/")}`,
+                };
+                return (
+                  <EntryCard
+                    id={t.id}
+                    name={t.name}
+                    sourceBookTitle={srcTitle}
+                    tagIds={[]}
+                    Content={TContent}
+                    metadata={meta}
+                    tagMap={tagMap}
+                    bookMetaMap={bookMetaMap}
+                  />
+                );
+              })
+          }
+        </div>
+      </details>
+    </div>
+
+    <!-- Custom Traditions -->
+    <div slot="custom">
+      <details class="entry-listing-toggle" open>
+        <summary>Structured custom traditions</summary>
+        <div class="entry-listing-cards">
+          {customTraditions.length === 0
+            ? <p class="section-empty">No custom traditions defined yet.</p>
+            : customTraditions.map((t) => {
+                const TContent = traditionContentMap.get(t.id);
+                const srcTitle = bookMetaMap.get(t.sourceBook)?.title ?? t.sourceBook;
+                const meta = {
+                  "Magic Type": t.magicType ?? "custom",
+                  CAM:
+                    t.cam.mode === "fixed"
+                      ? t.cam.abilities.map((a) => a.toUpperCase()).join("/")
+                      : `Choose: ${t.cam.abilities.map((a) => a.toUpperCase()).join("/")}`,
+                };
+                return (
+                  <EntryCard
+                    id={t.id}
+                    name={t.name}
+                    sourceBookTitle={srcTitle}
+                    tagIds={[]}
+                    Content={TContent}
+                    metadata={meta}
+                    tagMap={tagMap}
+                    bookMetaMap={bookMetaMap}
+                  />
+                );
+              })
+          }
+        </div>
+      </details>
     </div>
 
     <!-- General Drawbacks -->
     <div slot="general-drawbacks">
-      {generalDrawbacks.map((d) => {
-        const DContent = drawbackContentMap.get(d.id);
-        const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
-        const meta = {
-          "Drawback Value": String(d.drawbackValue),
-          ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
-          ...(d.repeat?.max && d.repeat.max > 1
-            ? { "Max Repeat": String(d.repeat.max) }
-            : {}),
-        };
-        return (
-          <EntryCard
-            id={d.id}
-            name={d.name}
-            sourceBookTitle={srcTitle}
-            tagIds={[]}
-            Content={DContent}
-            metadata={meta}
-            tagMap={tagMap}
-            bookMetaMap={bookMetaMap}
-          />
-        );
-      })}
-    </div>
-
-    <!-- Sphere Drawbacks -->
-    <div slot="sphere-drawbacks">
-      {sphereDrawbacksList.map((d) => {
-        const DContent = drawbackContentMap.get(d.id);
-        const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
-        const meta = {
-          Sphere: d.sphere ?? "",
-          "Drawback Value": String(d.drawbackValue),
-          ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
-        };
-        return (
-          <EntryCard
-            id={d.id}
-            name={d.name}
-            sourceBookTitle={srcTitle}
-            tagIds={[]}
-            Content={DContent}
-            metadata={meta}
-            tagMap={tagMap}
-            bookMetaMap={bookMetaMap}
-          />
-        );
-      })}
-      {dualDrawbacks.length > 0 && (
-        <>
-          <h3 class="dual-drawbacks-heading">Dual-Sphere Drawbacks</h3>
-          {dualDrawbacks.map((d) => {
+      <details class="entry-listing-toggle" open>
+        <summary>Structured general drawbacks</summary>
+        <div class="entry-listing-cards">
+          {generalDrawbacks.map((d) => {
             const DContent = drawbackContentMap.get(d.id);
             const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
             const meta = {
-              Spheres: (d.spheres ?? []).join(", "),
               "Drawback Value": String(d.drawbackValue),
+              ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
+              ...(d.repeat?.max && d.repeat.max > 1
+                ? { "Max Repeat": String(d.repeat.max) }
+                : {}),
             };
             return (
               <EntryCard
@@ -281,31 +300,91 @@ const tabs = [
               />
             );
           })}
-        </>
-      )}
+        </div>
+      </details>
+    </div>
+
+    <!-- Sphere Drawbacks -->
+    <div slot="sphere-drawbacks">
+      <details class="entry-listing-toggle" open>
+        <summary>Structured sphere drawbacks</summary>
+        <div class="entry-listing-cards">
+          {sphereDrawbacksList.map((d) => {
+            const DContent = drawbackContentMap.get(d.id);
+            const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
+            const meta = {
+              Sphere: d.sphere ?? "",
+              "Drawback Value": String(d.drawbackValue),
+              ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
+            };
+            return (
+              <EntryCard
+                id={d.id}
+                name={d.name}
+                sourceBookTitle={srcTitle}
+                tagIds={[]}
+                Content={DContent}
+                metadata={meta}
+                tagMap={tagMap}
+                bookMetaMap={bookMetaMap}
+              />
+            );
+          })}
+          {dualDrawbacks.length > 0 && (
+            <>
+              <h3 class="dual-drawbacks-heading">Dual-Sphere Drawbacks</h3>
+              {dualDrawbacks.map((d) => {
+                const DContent = drawbackContentMap.get(d.id);
+                const srcTitle = bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook;
+                const meta = {
+                  Spheres: (d.spheres ?? []).join(", "),
+                  "Drawback Value": String(d.drawbackValue),
+                };
+                return (
+                  <EntryCard
+                    id={d.id}
+                    name={d.name}
+                    sourceBookTitle={srcTitle}
+                    tagIds={[]}
+                    Content={DContent}
+                    metadata={meta}
+                    tagMap={tagMap}
+                    bookMetaMap={bookMetaMap}
+                  />
+                );
+              })}
+            </>
+          )}
+        </div>
+      </details>
     </div>
 
     <!-- Boons -->
     <div slot="boons">
-      {boons.map((b) => {
-        const BContent = boonContentMap.get(b.id);
-        const srcTitle = bookMetaMap.get(b.sourceBook)?.title ?? b.sourceBook;
-        const meta = {
-          "Boon Cost": `${b.boonCost} slot${b.boonCost !== 1 ? "s" : ""}`,
-        };
-        return (
-          <EntryCard
-            id={b.id}
-            name={b.name}
-            sourceBookTitle={srcTitle}
-            tagIds={[]}
-            Content={BContent}
-            metadata={meta}
-            tagMap={tagMap}
-            bookMetaMap={bookMetaMap}
-          />
-        );
-      })}
+      <details class="entry-listing-toggle" open>
+        <summary>Structured boons</summary>
+        <div class="entry-listing-cards">
+          {boons.map((b) => {
+            const BContent = boonContentMap.get(b.id);
+            const srcTitle = bookMetaMap.get(b.sourceBook)?.title ?? b.sourceBook;
+            const meta = {
+              "Boon Cost": `${b.boonCost} slot${b.boonCost !== 1 ? "s" : ""}`,
+            };
+            return (
+              <EntryCard
+                id={b.id}
+                name={b.name}
+                sourceBookTitle={srcTitle}
+                tagIds={[]}
+                Content={BContent}
+                metadata={meta}
+                tagMap={tagMap}
+                bookMetaMap={bookMetaMap}
+              />
+            );
+          })}
+        </div>
+      </details>
     </div>
 
     <!-- Builder -->
@@ -772,6 +851,24 @@ const tabs = [
 </script>
 
 <style>
+  .entry-listing-toggle {
+    margin: 1.5rem 0 0;
+    border-top: 1px solid var(--clr-border);
+    padding-top: 0.75rem;
+  }
+
+  .entry-listing-toggle summary {
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--clr-active);
+  }
+
+  .entry-listing-cards {
+    margin-top: 0.75rem;
+  }
+
   .dual-drawbacks-heading {
     font-family: var(--font-display);
     font-size: var(--fs-lg);

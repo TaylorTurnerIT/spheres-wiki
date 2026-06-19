@@ -21,7 +21,7 @@ interface Props {
 const { tabs, defaultTab, id = "tab-container", system = 'power' } = Astro.props;
 const initialTab = defaultTab || tabs[0].slug;
 
-// Pre-render all tabs: article entries AND named slots
+// Pre-render all tabs: article entries plus optional same-named slots.
 const renderedTabs = await Promise.all(
   tabs.map(async (tab) => {
     let Content = null;
@@ -38,9 +38,12 @@ const renderedTabs = await Promise.all(
           tocItems = buildTocTree(headings);
         }
       }
-    } else {
+    }
+
+    if (Astro.slots.has(tab.slug)) {
       slotHtml = await Astro.slots.render(tab.slug);
     }
+
     return { slug: tab.slug, Content, tocItems, slotHtml };
   })
 );
@@ -82,7 +85,8 @@ const renderedTabs = await Promise.all(
           <template data-toc-template={tab.slug}>
              {tocItems.length > 0 && <ArticleTOC items={tocItems} system={system} />}
           </template>
-          {Content ? <Content /> : <Fragment set:html={slotHtml} />}
+          {Content && <Content />}
+          {slotHtml && <Fragment set:html={slotHtml} />}
         </div>
       );
     })}
