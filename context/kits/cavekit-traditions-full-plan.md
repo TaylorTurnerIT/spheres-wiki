@@ -1,6 +1,6 @@
 ---
 name: traditions-full-plan
-description: Comprehensive implementation plan for structured Casting Traditions content and the future builder.
+description: Comprehensive implementation plan for structured Casting Traditions content and Builder follow-up work.
 metadata:
   type: plan
   created: 2026-06-17
@@ -15,7 +15,7 @@ Casting Traditions are now structurally migrated and surfaced on the user-facing
 
 - `src/pages/power/casting-traditions/index.astro` renders the tabbed article view through `ArticlePage` plus `TabbedContent`, with structured `drawback`, `boon`, and `tradition` listing sections on the relevant tabs.
 - Typed `drawback`, `boon`, and `tradition` entries exist, resolve through `ResolvedMaps`, render on `/power/casting-traditions/` with stable anchor ids, and participate in the current search/build pipeline.
-- Pure builder-facing logic exists in `src/lib/castingTraditions/`, including selection validation, drawback value accounting, boon slot accounting, CAM resolution, preset hydration, and export helpers. The page-level Builder tab now imports and consumes this logic.
+- Pure builder-facing logic exists in `src/lib/castingTraditions/`, including selection validation, drawback value accounting, boon slot accounting, Casting Ability Modifier resolution, preset hydration, and export helpers. The page-level Builder tab now imports and consumes this logic.
 - `bun run build` is currently green: content validation, Fallow, `astro check`, static build, Pagefind, and TOC audit all pass.
 - Full `bun run test` has passed after replacing remaining `_book.yaml` metadata stubs with verified publisher/date/price data.
 
@@ -35,15 +35,15 @@ Remaining semantic gaps after coverage migration:
 
 - Several builder-critical decisions now have schema-backed `choices`, and selected choice option `grants` are applied into resolved selections.
 - `Card Casting` now exposes source-stated modifications as machine-readable choices, including preset `choiceSelections` for the seven card traditions and runtime validation for option prerequisites.
-- All 95 structured traditions now have explicit `magicType`, but the conservative `custom` assignments on nonstandard traditions may still be refined during later rule normalization.
+- All 95 structured traditions currently have explicit `magicType`, but the next builder follow-up removes Magic Type from the builder/state/export system. Standard traditions may keep hard-coded source-faithful magic-type display labels in their listing headers only.
 - All 29 dual-sphere drawbacks now expose granted feats through structured `grants`, and selector-style entries such as `Admixture Specialist`, `Propagandist`, and `Unnatural Crafter` also expose structured `choices`.
 
 Important rule cases that still drive the remaining plan:
 
-- `Fortified Casting` allows Constitution as CAM if higher and requires `Draining Casting`.
+- `Fortified Casting` allows Constitution as Casting Ability Modifier if higher and requires `Draining Casting`.
 - `Bloodletting` and `Blood Magic` use Constitution directly.
 - `Demonology` uses Charisma or Constitution if higher.
-- `Spellscourged` allows a boon choice that changes CAM behavior.
+- `Spellscourged` allows a boon choice that changes Casting Ability Modifier behavior.
 - `Card Casting` has nested selectable modifications and variable drawback value; this is now represented through `choices`, `choiceSelections`, and selected option `addsDrawbackValue`.
 - Several entries have incompatibilities, prerequisites, repeat counts, forced bonus talents, required spheres, special buyoff rules, source tags, and source-book overrides.
 
@@ -190,7 +190,7 @@ Fields:
 - `requires`: prerequisites.
 - `repeat`: repeat rules.
 - `choices`: boon-specific choices.
-- `rules`: operations such as CAM overrides, CL bonuses, export notes, or conditional effects.
+- `rules`: operations such as Casting Ability Modifier overrides, CL bonuses, export notes, or conditional effects.
 
 ### Tradition Entry
 
@@ -200,7 +200,6 @@ id: blood-magic
 name: Blood Magic
 type: tradition
 traditionKind: custom
-magicType: arcane
 cam:
   mode: fixed
   abilities: [con]
@@ -220,7 +219,7 @@ boons:
 Fields:
 
 - `traditionKind`: `standard | custom | card | variant`.
-- `magicType`: `arcane | divine | psychic | other | none | custom`.
+- `magicType`: legacy migration field slated for removal from builder state, exports, and nonstandard cards. Standard traditions may retain hard-coded display labels for PF1e source parity.
 - `cam`: structured casting ability model.
 - `drawbacks`: selected drawback refs.
 - `sphereDrawbacks`: selected sphere/dual-sphere refs.
@@ -305,8 +304,8 @@ Phase 1 required logic:
 - Explicit incompatibilities.
 - Explicit prerequisites.
 - Repeated drawbacks and `x2` style entries.
-- CAM defaults: Int, Wis, Cha.
-- CAM exceptions: Constitution via `Fortified Casting` and fixed-Con traditions.
+- Casting Ability Modifier defaults: Int, Wis, Cha.
+- Casting Ability Modifier exceptions: Constitution via `Fortified Casting` and fixed-Con traditions.
 
 Phase 2 required logic:
 
@@ -326,29 +325,108 @@ Phase 3 required logic:
 
 ## UI Plan
 
-Add a new Builder tab to `/power/casting-traditions/` after the data layer exists.
+The Builder tab now exists on `/power/casting-traditions/`. The next UI pass should make it the primary workflow while preserving the prose article tabs and reusing one shared entry-action implementation across the builder and article-tab cards.
 
 Controls:
 
 - Tradition name input.
-- Magic type segmented control.
-- CAM segmented control with dynamic enabled states.
+- Casting Ability Modifier segmented control with dynamic enabled states.
 - General drawbacks searchable multi-select/list.
-- Sphere drawbacks grouped by sphere.
 - Boons panel enabled by available currency.
+- Sphere-specific drawbacks grouped by sphere.
 - Selected summary rail with diagnostics.
-- Export panel with Markdown and JSON tabs.
+- Export panel with Markdown and JSON tabs plus a Detailed Markdown toggle.
 
 UX rules:
 
+- Article prose remains visible; entry listings are toggleable add-ons, not prose replacements.
+- The Builder tab should be visually emphasized as the primary feature.
+- When the Builder tab is active, hide the sidebar book card and let the summary rail occupy the freed space.
 - Disabled choices must explain why.
-- Incompatibilities should show both sides.
+- Incompatibilities should show formatted entry names on both sides, not ids.
 - Required choices should be inline, not deferred to final validation.
 - Calculated boon currency and bonus spell points should update immediately.
 - Source links should point back to detail entries.
+- Add/Remove buttons on listing cards and builder controls must share the same selection validation logic.
+- Hovering drawbacks, boons, or traditions should show an excerpt tooltip from the entry text.
+- Browser storage may persist drafts, but `/privacy/` must document the key, purpose, retention, and deletion behavior.
 - On mobile, summary moves below selections; no nested card layouts.
 
 Implementation should use vanilla TypeScript unless later complexity justifies an island framework.
+
+## Builder UX Follow-Up Plan
+
+This plan is the next implementation pass after the initial remediation shipped. It is tracked in more detail in `cavekit-traditions-builder.md`.
+
+### Step 1: Shared builder/listing entry model
+
+- Build one client-side entry index for drawbacks, boons, and traditions.
+- Include id, display name, source, tags, `3pp` tag state, sphere metadata, cost/value, prerequisite/incompatibility data, plain-text excerpt, and full rendered text.
+- Use this index for builder checklists, article-tab card actions, hover tooltips, diagnostics, detailed export, JSON export, and storage.
+- Add a shared `canSelectEntry()` path for builder checkbox state and listing-card Add buttons.
+
+### Step 2: Layout and wording
+
+- Hide the book card when the Builder tab is active and allow the builder summary rail to use the freed sidebar width.
+- Emphasize the Builder tab visually while preserving `role="tab"` semantics.
+- Rename `Sphere Drawbacks` to `Sphere-Specific Drawbacks`.
+- Replace `CAM` with `Casting Ability Modifier`.
+- Remove `Structured` from listing toggle labels.
+- Fix the summary top gap by using bottom-only spacing.
+- Improve muted metadata/subtext contrast.
+
+### Step 3: Filtering, grouping, and ordering
+
+- Group sphere-specific drawbacks by parent sphere.
+- Sort sphere-specific drawbacks by sphere and then alphabetically within each sphere.
+- Move boons above sphere-specific drawbacks in the Builder tab.
+- Add text filters for boons and sphere-specific drawbacks.
+- Add a sphere dropdown to sphere-specific drawbacks; keep the text filter half width next to the dropdown.
+- Expose the same boon filter and sphere-specific drawback filter/dropdown on the corresponding article tabs.
+- Set the Start From Tradition default option text to `None`.
+
+### Step 4: Entry-card actions and tooltips
+
+- Add Add/Remove buttons to every drawback and boon listing card.
+- Disable Add when prerequisites, incompatibilities, currency, or other restrictions fail.
+- Provide a tooltip with the exact reason an Add button is disabled.
+- Add a direct anchor-link button beside every listed drawback, boon, and tradition.
+- Show entry text excerpts in hover tooltips for drawbacks, boons, and traditions.
+- Render `TagBadge` tags, including `3pp`, on boons and drawbacks.
+
+### Step 5: Overrides and adjustments
+
+- Blocked Casting Ability Modifier choices show the exact tooltip:
+  `"Unless a particular boon or magic trait is being used, this choice must be made from Intelligence, Wisdom, or Charisma. With GM permission, this can be overwritten by clicking the lock icon."`
+- Add lock/unlock override for Casting Ability Modifier restrictions; locked state follows the rule engine, unlocked state permits any ability.
+- Add +/- controls for manual General Drawback Value adjustment.
+- Add +/- controls for manual Available Boon Slots adjustment.
+- Treat manual adjustments as explicit GM adjustments in the UI, saved state, and JSON export.
+
+### Step 6: Diagnostics and safe fixes
+
+- Show prerequisite excerpts in unmet prerequisite diagnostics.
+- Show formatted names in incompatibility diagnostics.
+- Add Fix buttons for diagnostics only when the fix can be applied without creating another restriction failure.
+- Reuse the shared selection-validation helper for Fix button eligibility.
+
+### Step 7: Export and persistence
+
+- Add Detailed Markdown output.
+- Concise Markdown remains the current name-only style.
+- Detailed Markdown appends full entry text for selected drawbacks, boons, and sphere-specific drawbacks, each separated into its own blockquote.
+- Preserve Markdown tables inside detailed export, especially boon tables.
+- JSON export always includes full entry text regardless of Detailed mode.
+- Persist builder state in browser storage and document it on `/privacy/`.
+- URL state remains supported and wins over stored drafts when URL parameters are present.
+
+### Step 8: Magic Type removal
+
+- Remove Magic Type from the Builder UI.
+- Remove `magicType` from `TraditionSelection`, builder hydration/state, storage, concise Markdown export, and JSON export.
+- Remove Magic Type metadata from nonstandard tradition cards.
+- Keep hard-coded magic-type labels on standard tradition cards only, because those standard traditions align directly with Pathfinder 1e source categories.
+- Remove or ignore `magicType` in structured content/schema after verifying validation and page rendering.
 
 ## Migration Plan
 
@@ -461,7 +539,7 @@ Remaining follow-up:
 
 ### Workstream 5: Metadata Completion
 
-- Review the new `magicType` assignments and refine any entries that should graduate from conservative `custom` classifications after rule normalization.
+- Remove Magic Type from the builder-facing tradition system; keep only hard-coded standard-tradition display labels where needed for PF1e source parity.
 - Remove explicit unresolved-normalization notes from migrated entries by converting them into structured frontmatter or documenting them as intentional skips in this plan. `Akashic Tech` no longer carries an unresolved normalization marker.
 - Review `classes`, `parentTradition`, and other optional tradition metadata wherever the article gives concrete structured meaning.
 
@@ -495,13 +573,15 @@ Remaining follow-up:
 - Builder can apply selected choice option grants into resolved selections.
 - Builder can validate required and maximum choice counts.
 - Dual-sphere drawbacks expose granted feats through `grants`.
-- All structured traditions have an explicit `magicType`.
+- Magic Type no longer participates in builder state or exports; standard tradition cards preserve source-faithful magic-type labels as hard-coded display metadata.
 - Builder can export Markdown matching current tradition style.
 - Future content authors can add a normal drawback, boon, or tradition with no code changes.
 
 ## Open Decisions
 
 - Resolved 2026-06-18: structured entries first render inside the existing Casting Traditions page with stable anchor ids and search-manifest links. Standalone public detail routes remain deferred until there is a concrete need for per-entry pages.
+- Resolved 2026-06-18: article prose remains always visible; structured entry listings are optional/toggleable sections appended to relevant tabs.
+- Resolved 2026-06-18: Magic Type is removed from builder state/export semantics. Standard traditions may keep source-faithful magic-type display labels in their card headers only.
 - Whether source tags embedded in old article bodies should be stripped during migration or preserved until source metadata is fully normalized.
 - Whether tradition variants should be first-class `tradition` entries with `parentTradition`, or nested notes on the parent.
 - Whether Foundry export should target a generic JSON shape first or a specific system/module schema.
