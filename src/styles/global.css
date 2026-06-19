@@ -58,7 +58,7 @@ svg {
 
   /* Text */
   --clr-text: #1c1c1c;
-  --clr-muted: #6b5f58;
+  --clr-muted: #5c524d;
 
   /* Brand */
   --clr-brand: #990000;
@@ -2538,4 +2538,13 @@ h6 {
   .class-roster {
     grid-template-columns: 1fr;
   }
+}
+
+/* ── Builder-active layout ─────────────────────────────── */
+.builder-active .article-sidebar .store-card {
+  display: none;
+}
+
+.builder-active .content-body {
+  max-width: none;
 }

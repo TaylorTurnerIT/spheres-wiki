@@ -198,7 +198,6 @@ export function selectionFromTradition(
   return {
     traditionId: entry.id,
     name: entry.name,
-    magicType: entry.magicType,
     // Pre-set CAM only for fixed-mode traditions with exactly one ability
     cam:
       entry.cam.mode === "fixed" && entry.cam.abilities.length === 1

@@ -12,6 +12,7 @@ interface Props {
   id?: string;
   tagMap: Map<string, TagEntry>;
   bookMetaMap: Map<string, BookMeta>;
+  builderActions?: { entryId: string; kind: "drawback" | "sphere-drawback" | "boon" }[];
 }
 
 const {
@@ -24,6 +25,7 @@ const {
   id,
   tagMap,
   bookMetaMap,
+  builderActions = [],
 } = Astro.props;
 
 const hasMetadata = metadata && Object.keys(metadata).length > 0;
@@ -57,6 +59,20 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
     </dl>
   )}
   {Content && <div class="entry-description"><Content /></div>}
+  {builderActions.length > 0 && (
+    <div class="entry-card-actions">
+      {builderActions.map((action) => (
+        <button
+          class="entry-card-action-btn"
+          data-action-add={action.entryId}
+          data-action-kind={action.kind}
+          type="button"
+        >
+          Add to Builder
+        </button>
+      ))}
+    </div>
+  )}
 </div>
 
 <style>

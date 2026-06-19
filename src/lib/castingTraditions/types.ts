@@ -10,8 +10,10 @@ import type {
 export type TraditionSelection = {
   traditionId?: string;
   name?: string;
-  magicType?: TraditionEntry["magicType"];
   cam?: AbilityScore;
+  camOverride?: boolean;
+  manualGeneralDrawbackValue?: number;
+  manualBoonSlots?: number;
   drawbacks: EntryRef[];
   sphereDrawbacks?: EntryRef[];
   boons: EntryRef[];

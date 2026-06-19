@@ -5,10 +5,27 @@ import {
 } from "./rules";
 import type { TraditionData, TraditionSelection } from "./types";
 
+type EntryWithBody = { entry: { name: string }; ref: { count?: number; option?: string } };
+
+function appendDetailSection(
+  lines: string[],
+  heading: string,
+  items: Array<EntryWithBody>,
+): void {
+  if (items.length === 0) return;
+  lines.push(`\n## ${heading}`);
+  for (const { entry } of items) {
+    const body = (entry as any).bodyPlain ?? "";
+    if (!body) continue;
+    lines.push(`\n### ${entry.name}`);
+    lines.push(body.split("\n").map((l: string) => `> ${l}`).join("\n"));
+  }
+}
+
 function formatRefs(
   refs: Array<{
     ref: { count?: number; option?: string };
-    entry: { name: string };
+    entry: { name: string; bodyPlain?: string };
   }>,
 ): string {
   if (refs.length === 0) return "None";
@@ -24,6 +41,7 @@ function formatRefs(
 export function exportTraditionMarkdown(
   selection: TraditionSelection,
   data: TraditionData,
+  detailed = false,
 ): string {
   const state = buildTraditionState(selection, data);
   const lines = [
@@ -33,7 +51,7 @@ export function exportTraditionMarkdown(
   ];
 
   if (state.sphereDrawbacks.length > 0) {
-    lines.push(`**Sphere Drawbacks:** ${formatRefs(state.sphereDrawbacks)}`);
+    lines.push(`**Sphere-Specific Drawbacks:** ${formatRefs(state.sphereDrawbacks)}`);
   }
 
   const unspent = calculateUnspentDrawbackValue(state);
@@ -42,6 +60,22 @@ export function exportTraditionMarkdown(
   lines.push(
     `**Boons:** ${[boonDisplay, spellPointBoon].filter(Boolean).join("; ") || "None"}`,
   );
+
+  if (selection.camOverride) {
+    lines.push(`**CAM Override:** Yes (GM)`);
+  }
+  if (selection.manualGeneralDrawbackValue) {
+    lines.push(`**Manual GDV Adjustment:** ${selection.manualGeneralDrawbackValue}`);
+  }
+  if (selection.manualBoonSlots) {
+    lines.push(`**Manual Boon Slots Adjustment:** ${selection.manualBoonSlots}`);
+  }
+
+  if (detailed) {
+    appendDetailSection(lines, "Drawbacks", state.drawbacks);
+    appendDetailSection(lines, "Sphere-Specific Drawbacks", state.sphereDrawbacks);
+    appendDetailSection(lines, "Boons", state.boons);
+  }
 
   return `${lines.join("\n")}\n`;
 }
@@ -54,13 +88,17 @@ export function exportTraditionJson(
   return JSON.stringify(
     {
       name: selection.name ?? "Custom Tradition",
-      magicType: selection.magicType,
       cam: selection.cam,
+      camOverride: selection.camOverride ?? false,
+      manualGeneralDrawbackValue: selection.manualGeneralDrawbackValue ?? 0,
+      manualBoonSlots: selection.manualBoonSlots ?? 0,
       drawbacks: state.drawbacks.map(({ ref, entry }) => ({
         id: entry.id,
         name: entry.name,
         count: ref.count ?? 1,
         option: ref.option,
+        bodyHtml: (entry as any).bodyHtml ?? "",
+        bodyPlain: (entry as any).bodyPlain ?? "",
       })),
       sphereDrawbacks: state.sphereDrawbacks.map(({ ref, entry }) => ({
         id: entry.id,
@@ -68,12 +106,16 @@ export function exportTraditionJson(
         sphere: entry.sphere,
         count: ref.count ?? 1,
         option: ref.option,
+        bodyHtml: (entry as any).bodyHtml ?? "",
+        bodyPlain: (entry as any).bodyPlain ?? "",
       })),
       boons: state.boons.map(({ ref, entry }) => ({
         id: entry.id,
         name: entry.name,
         count: ref.count ?? 1,
         option: ref.option,
+        bodyHtml: (entry as any).bodyHtml ?? "",
+        bodyPlain: (entry as any).bodyPlain ?? "",
       })),
       choices: selection.choices,
     },
