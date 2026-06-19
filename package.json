@@ -16,7 +16,7 @@
     "lint": "biome check .",
     "validate": "bun scripts/validate.mjs",
     "fallow": "fallow",
-    "fallow-audit": "fallow audit --max-crap 30 --fail-on-issues --explain",
+    "fallow-audit": "fallow audit --max-crap 30 --fail-on-issues --explain --gate all",
     "check-base": "bun scripts/check-base-abilities.mjs",
     "check-cross": "bun scripts/check-cross-sphere.mjs",
     "check-toc": "bun scripts/check-toc.mjs",
