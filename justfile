@@ -1,15 +1,15 @@
 default: run
 
 test:
-	npm run test
+	bun run test
 
 validate:
-	npm run validate
+	bun run validate
 
 build:
-	npm run build
+	bun run build
 
 preview:
-	npm run preview
+	bun run preview
 
 run: test validate build preview
