@@ -482,7 +482,7 @@ const tabs = [
         </div>
 
         <div class="builder-summary" id="tb-summary">
-          <h3 class="builder-summary-title">Summary</h3>
+          <h3 class="builder-summary-title">Summary <span id="tb-save-status" class="builder-save-status">Unsaved changes</span></h3>
           <div id="tb-diagnostics" class="builder-diagnostics" hidden></div>
           <div id="tb-summary-content" class="builder-summary-body"></div>
           <div class="builder-manual-adjustments">
@@ -511,17 +511,16 @@ const tabs = [
           </div>
           <div class="builder-save-area">
             <div class="builder-save-row">
-              <button id="tb-copy-btn" class="builder-copy-btn">Copy</button>
               <button id="tb-save-btn" class="builder-save-btn">Save</button>
+              <button id="tb-copy-btn" class="builder-copy-btn">Copy</button>
               <button id="tb-reset-btn" class="builder-reset-btn">Reset to Defaults</button>
-              <span id="tb-save-status" class="builder-save-status"></span>
             </div>
             <div class="builder-save-row builder-save-row--divider">
               <select id="tb-saved-traditions" class="builder-select">
                 <option value="">— Load saved tradition —</option>
               </select>
               <button id="tb-delete-saved" class="builder-icon-btn builder-delete-btn" type="button" title="Delete selected saved tradition">
-                <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 4h8M5 4V3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1M6 7v4M8 7v4M4 4l1 8h4l1-8" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
               </button>
             </div>
             <div class="builder-catalog-row">
@@ -567,7 +566,6 @@ const tabs = [
     type SelectedIds,
   } from "@/lib/castingTraditions/builderHelpers";
 
-  const STORAGE_KEY = "spheres-wiki:casting-tradition-builder";
   const SAVED_KEY = "spheres-wiki:saved-casting-traditions";
   const SCHEMA_VERSION = 1;
 
@@ -592,8 +590,6 @@ const tabs = [
     let exportMode: "md" | "json" = "md";
     let detailedExport = false;
     let saveStatus = "";
-    let autosaveTimer: ReturnType<typeof setTimeout> | null = null;
-    let dirty = false;
 
     function getSelectedIds(): SelectedIds {
       return { drawbacks: selDrawbacks, sphereDrawbacks: selSphereDrawbacks, boons: selBoons };
@@ -806,7 +802,7 @@ const tabs = [
           const checked = selDrawbacks.includes(d.id) ? "checked" : "";
           return `<label class="builder-check-item" title="${escapeHtml(d.bodyPlain.slice(0, 200))}">
             <input type="checkbox" data-drawback="${d.id}" ${checked} />
-            <span class="bcl-name">${d.name}<a href="#${d.id}" class="bcl-anchor" data-anchor-tab="general-drawbacks" data-anchor-id="${d.id}" title="View entry details">#</a></span>
+            <span class="bcl-name">${d.name}<a href="#${d.id}" class="bcl-anchor" data-anchor-tab="general-drawbacks" data-anchor-id="${d.id}" title="View entry details"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg></a></span>
             <span class="bcl-badge">${d.drawbackValue} DV</span>
           </label>`;
         })
@@ -842,7 +838,7 @@ const tabs = [
           const checked = selSphereDrawbacks.includes(d.id) ? "checked" : "";
           html += `<label class="builder-check-item" title="${escapeHtml(d.bodyPlain.slice(0, 200))}">
             <input type="checkbox" data-sphere-drawback="${d.id}" ${checked} />
-            <span class="bcl-name">${d.name}<a href="#${d.id}" class="bcl-anchor" data-anchor-tab="sphere-drawbacks" data-anchor-id="${d.id}" title="View entry details">#</a></span>
+            <span class="bcl-name">${d.name}<a href="#${d.id}" class="bcl-anchor" data-anchor-tab="sphere-drawbacks" data-anchor-id="${d.id}" title="View entry details"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg></a></span>
             <span class="bcl-badge bcl-sphere"></span>
           </label>`;
         }
@@ -891,7 +887,7 @@ const tabs = [
           const disabled = wouldExceed ? "disabled" : "";
           return `<label class="builder-check-item${wouldExceed ? " bcl-disabled" : ""}" title="${escapeHtml(b.bodyPlain.slice(0, 200))}">
             <input type="checkbox" data-boon="${b.id}" ${checked} ${disabled} />
-            <span class="bcl-name">${b.name}<a href="#${b.id}" class="bcl-anchor" data-anchor-tab="boons" data-anchor-id="${b.id}" title="View entry details">#</a></span>
+            <span class="bcl-name">${b.name}<a href="#${b.id}" class="bcl-anchor" data-anchor-tab="boons" data-anchor-id="${b.id}" title="View entry details"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg></a></span>
             <span class="bcl-badge bcl-boon">${b.boonCost} slot${b.boonCost !== 1 ? "s" : ""}</span>
           </label>`;
         })
@@ -952,70 +948,10 @@ const tabs = [
       });
     }
 
-    // ── Autosave ──────────────────────────────────────────
-    function scheduleAutosave() {
-      dirty = true;
-      if (autosaveTimer) clearTimeout(autosaveTimer);
-      autosaveTimer = setTimeout(flushAutosave, 300);
-    }
-
-    function flushAutosave() {
-      if (autosaveTimer) { clearTimeout(autosaveTimer); autosaveTimer = null; }
-      if (!dirty) return;
-      const payload = {
-        v: SCHEMA_VERSION,
-        ts: Date.now(),
-        drawbacks: selDrawbacks,
-        sphereDrawbacks: selSphereDrawbacks,
-        boons: selBoons,
-        cam: selCam,
-        camOverride,
-        manualGDV,
-        manualBoonSlots,
-        name: (document.getElementById("tb-name") as HTMLInputElement)?.value || "",
-        detailedExport,
-      };
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(payload)); } catch { /* quota exceeded */ }
-      dirty = false;
-      saveStatus = "Autosaved";
-      updateSaveStatus();
-    }
-
-    function restoreAutosave(): boolean {
-      // URL state wins
-      if (window.location.search.includes("d=") || window.location.search.includes("cam=")) return false;
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return false;
-        const data = JSON.parse(raw);
-        if (data.v !== SCHEMA_VERSION) return false;
-        selDrawbacks = data.drawbacks ?? [];
-        selSphereDrawbacks = data.sphereDrawbacks ?? [];
-        selBoons = data.boons ?? [];
-        selCam = data.cam;
-        camOverride = data.camOverride ?? false;
-        manualGDV = data.manualGDV ?? 0;
-        manualBoonSlots = data.manualBoonSlots ?? 0;
-        detailedExport = data.detailedExport ?? false;
-        const nameInput = document.getElementById("tb-name") as HTMLInputElement;
-        if (nameInput && data.name) nameInput.value = data.name;
-        const detCheck = document.getElementById("tb-detailed-export") as HTMLInputElement;
-        if (detCheck) detCheck.checked = detailedExport;
-        return true;
-      } catch {
-        return false;
-      }
-    }
-
-    function deleteAutosave() {
-      try { localStorage.removeItem(STORAGE_KEY); } catch {}
-    }
-
     // ── Save/Load ─────────────────────────────────────────
     function updateSaveStatus() {
       const el = document.getElementById("tb-save-status");
       if (el) el.textContent = saveStatus;
-      if (saveStatus) setTimeout(() => { saveStatus = ""; updateSaveStatus(); }, 2000);
     }
 
     function manualSave() {
@@ -1095,7 +1031,6 @@ const tabs = [
       if (nameInput) nameInput.value = "";
       const detCheck = document.getElementById("tb-detailed-export") as HTMLInputElement;
       if (detCheck) detCheck.checked = false;
-      deleteAutosave();
       onUpdate(true);
     }
 
@@ -1154,7 +1089,6 @@ const tabs = [
       renderBoons();
       renderSummary();
       if (syncUrl) encodeState();
-      scheduleAutosave();
     }
 
     // ── Wire UI events ────────────────────────────────────
@@ -1180,7 +1114,6 @@ const tabs = [
     document.getElementById("tb-detailed-export")?.addEventListener("change", () => {
       detailedExport = (document.getElementById("tb-detailed-export") as HTMLInputElement)?.checked ?? false;
       updateExport(getSelection(), getTraditionData());
-      scheduleAutosave();
     });
 
     root.querySelectorAll<HTMLButtonElement>(".builder-export-tab").forEach((btn) => {
@@ -1202,7 +1135,7 @@ const tabs = [
       setTimeout(() => { btn.textContent = orig; }, 1500);
     });
 
-    document.getElementById("tb-save-btn")?.addEventListener("click", () => { manualSave(); flushAutosave(); });
+    document.getElementById("tb-save-btn")?.addEventListener("click", () => { manualSave(); });
     document.getElementById("tb-reset-btn")?.addEventListener("click", () => resetDefaults());
 
     document.getElementById("tb-saved-traditions")?.addEventListener("change", () => {
@@ -1280,8 +1213,7 @@ const tabs = [
     }
 
     // ── Init ──────────────────────────────────────────────
-    const fromUrl = loadFromUrl();
-    if (!fromUrl) restoreAutosave();
+    loadFromUrl();
 
     populateTraditionDropdown();
     populateSphereFilter();
@@ -1289,9 +1221,6 @@ const tabs = [
     renderGeneralDrawbacks();
     renderSphereDrawbacks();
     onUpdate(true, false);
-
-    // Flush autosave on pagehide
-    window.addEventListener("pagehide", () => flushAutosave());
   });
 </script>
 
@@ -1524,21 +1453,14 @@ const tabs = [
 
   :global(.bcl-anchor) {
     display: inline-block;
-    font-size: var(--fs-3xs);
-    font-weight: 700;
     color: var(--clr-muted);
     text-decoration: none;
-    padding: 0 3px;
-    opacity: 0;
-    transition: opacity 0.1s;
-  }
-
-  :global(.builder-check-item:hover .bcl-anchor) {
-    opacity: 0.7;
+    margin-left: 6px;
+    vertical-align: middle;
+    line-height: 0;
   }
 
   :global(.bcl-anchor:hover) {
-    opacity: 1;
     color: var(--clr-active);
   }
 
@@ -1564,6 +1486,8 @@ const tabs = [
   }
 
   .builder-summary-title {
+    display: flex;
+    align-items: baseline;
     font-family: var(--font-display);
     font-size: var(--fs-base);
     font-weight: 700;
@@ -1764,11 +1688,11 @@ const tabs = [
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    padding: 5px 12px;
+    border: 0.5px solid var(--clr-active);
+    border-radius: var(--radius);
     background: var(--clr-active);
     color: var(--clr-bg);
-    border: none;
-    border-radius: var(--radius);
-    padding: 5px 12px;
     cursor: pointer;
     transition: opacity 0.15s;
     white-space: nowrap;
@@ -1815,9 +1739,14 @@ const tabs = [
   }
 
   .builder-save-status {
+    font-family: var(--font-body);
     font-size: var(--fs-3xs);
+    font-weight: 400;
     color: var(--clr-muted);
     font-style: italic;
+    margin-left: var(--sp-2);
+    letter-spacing: 0;
+    text-transform: none;
   }
 
   .builder-delete-btn {
@@ -1835,7 +1764,7 @@ const tabs = [
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border: 0.5px solid var(--clr-border);
     border-radius: var(--radius);
     background: transparent;

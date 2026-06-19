@@ -82,6 +82,6 @@ This site links to external services including GitHub, Discord, Google Docs, and
 
 ### Contact
 
-Questions or concerns about data handling: join the Drop Dead Studios Discord and reach out to **@Chef** for technical concerns or **@Rednal** for content.
+Questions or concerns about data handling: join the Drop Dead Studios Discord and reach out to **@Chef**.
 
 </div>
