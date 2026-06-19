@@ -4,14 +4,7 @@ name: "General Drawbacks"
 type: "article"
 ---
 
-# Drawbacks
-Do magic-users of this particular tradition need to gesture to invoke magic? Must they speak in a resounding voice? Do they require a special magical focus or magical components, or does their magic only affect animals? If the answer to any of these or other, similar question is ‘yes’, then that casting tradition would make use of a drawback.
-
-Drawbacks come in two varieties: general and sphere-specific. General drawbacks define the method by which a magic- user of that tradition creates magic, while sphere-specific drawbacks help define how that magic manifests. General drawbacks are always considered part of a casting tradition, and cannot be gained after character creation. Sphere-specific drawbacks, however, can be gained as part of a casting tradition, but can also be gained by a player at the time they gain a particular magic sphere.
-
-For example, the sample tradition “Lycanthrope” describes a caster who draws their power from a lycanthropic curse, and so contains the Lycanthropic Alteration sphere drawback, which limits the Alteration sphere to only being able to affect the caster alone. However, a character without the Lycanthrope tradition could still choose, upon gaining the Alteration sphere, to gain the Lycanthropic drawback to reflect that their particular caster only knows how to transform herself. In one case the drawback is a result of the casting tradition, in another case it is a voluntary limitation to reflect the caster’s focus, but both cases are equally viable for gaining that sphere-specific drawback.
-
-## General Drawbacks
+# General Drawbacks
 General drawbacks are the currency by which a casting tradition grants boons and bonus spell points. The more general drawbacks a tradition has, the more power it can grant its casters.
 
 Some drawbacks are especially powerful; these drawbacks count as two drawbacks when calculating potential boons and bonus spell points. With GM permission a general drawback might be removed after character creation, but the caster must also lose the boon or bonus spell points gained from that drawback.
