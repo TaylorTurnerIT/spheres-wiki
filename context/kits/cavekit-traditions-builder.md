@@ -31,7 +31,7 @@ Do not build separate tab-card and builder-entry implementations that can disagr
 3. Make every drawback/boon/tradition entry actionable from its listing card.
 4. Make disabled states explainable and, where appropriate, fixable.
 5. Support GM override workflows without corrupting the normal rule engine.
-6. Persist in-progress traditions in browser storage and document that storage.
+6. Persist in-progress and named saved traditions in browser storage and document that storage.
 7. Remove Magic Type from the builder/tradition data flow, while preserving hard-coded magic-type labels for standard traditions where the PF1e source text expects them.
 
 ## Requirements
@@ -116,6 +116,15 @@ Acceptance criteria:
 - [ ] JSON export always includes the full text for each selected ability, regardless of Detailed mode.
 - [ ] Broken tables in boon Markdown render correctly in the exported detailed text.
 - [ ] Builder state is persisted in browser storage so users do not lose work when navigating away.
+- [ ] Realtime autosave is debounced and writes only the compact serialized builder state, not rendered card HTML or hydrated source entry data.
+- [ ] Autosave flushes on deliberate Save, reset/delete actions, and page lifecycle events such as `pagehide` when supported.
+- [ ] A visible Save button writes the current tradition as a named saved tradition.
+- [ ] Save status is visible without being noisy: unsaved changes, saving, saved, and save failed states.
+- [ ] Users can select a previously saved casting tradition from a saved-traditions control.
+- [ ] Users can delete a saved casting tradition only after a confirmation popup.
+- [ ] Users can reset the current builder back to defaults after a confirmation popup if the current state has unsaved changes.
+- [ ] Reset defaults clears selected drawbacks, boons, sphere-specific drawbacks, choices, overrides, manual GM adjustments, and export toggles, and restores the empty builder defaults without deleting saved traditions.
+- [ ] Saved tradition records include a stable id, display name, updated timestamp, and builder schema version for future migrations.
 - [ ] Browser storage key, purpose, retention, and deletion behavior are documented on `/privacy/`.
 - [ ] URL state remains shareable; loading precedence is explicit: URL state wins over stored draft when URL parameters are present.
 
@@ -159,7 +168,7 @@ Acceptance criteria:
 
 - Extend export helpers to support detailed Markdown and always-text-rich JSON.
 - Normalize table serialization for detailed exports.
-- Add browser-storage persistence, URL precedence, and `/privacy/` documentation.
+- Add browser-storage persistence, URL precedence, named saved traditions, debounced autosave, manual Save, reset defaults, confirmed delete, and `/privacy/` documentation.
 
 ### Step 6: Magic Type Removal and Verification
 
@@ -179,6 +188,7 @@ Acceptance criteria:
   - Detailed Markdown includes blockquoted entry text and boon tables remain tables.
   - JSON includes entry text.
   - Stored draft restores after leaving and returning; URL parameters override the draft.
+  - Save creates/selects a named saved tradition; delete requires confirmation; reset defaults does not delete saved traditions.
 
 ## Cross-References
 

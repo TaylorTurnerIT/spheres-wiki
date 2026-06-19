@@ -144,14 +144,23 @@ Work:
 - Detailed Markdown appends selected drawback/boon/sphere-specific drawback text in blockquotes.
 - Preserve Markdown tables in detailed export, especially boon tables.
 - JSON always includes full entry text regardless of Detailed mode.
-- Persist builder state in browser storage.
+- Persist the active builder draft in browser storage.
+- Implement realtime autosave with a debounce so text input, checkbox toggles, filters, and export toggles do not write on every event.
+- Autosave writes only compact serialized builder state: selection ids, choices, name, Casting Ability Modifier override state, manual GM adjustments, export options, schema version, and timestamps. Do not store rendered HTML or the hydrated source-entry catalog.
+- Flush pending autosave on explicit Save, reset/delete actions, and `pagehide` where supported.
+- Add a visible Save button that stores the current builder state as a named saved casting tradition.
+- Track and display save status: unsaved changes, saving, saved, and save failed.
+- Add a saved-tradition picker for loading previously saved casting traditions.
+- Add confirmed deletion for saved casting traditions.
+- Add reset-to-defaults control. If the current state has unsaved changes, confirm before clearing. Reset clears selected drawbacks, boons, sphere-specific drawbacks, choices, overrides, manual GM adjustments, and export toggles, but does not delete saved traditions.
+- Include stable id, display name, updated timestamp, and builder schema version in each saved tradition record.
 - URL state wins over stored drafts when URL parameters are present.
 - Document browser storage key, purpose, retention, and deletion behavior on `/privacy/`.
 
 Verification:
 
-- Unit tests for detailed Markdown and text-rich JSON.
-- Manual storage restore and URL precedence checks.
+- Unit tests for detailed Markdown, text-rich JSON, storage serialization shape, and reset-defaults behavior.
+- Manual storage restore, named Save/load, confirmed delete, reset-defaults, autosave debounce, and URL precedence checks.
 - `bun run test`
 - `bun run build`
 
@@ -200,6 +209,10 @@ Before commit, manually verify:
 - Detailed Markdown includes blockquoted entry text and keeps boon tables readable.
 - JSON includes full entry text.
 - Stored drafts restore after navigation, and URL parameters override stored drafts.
+- Manual Save creates a named saved tradition; the saved-tradition picker can reload it.
+- Delete requires confirmation and removes only the selected saved tradition.
+- Reset defaults clears the active builder state without deleting saved traditions.
+- Autosave is debounced and does not write the hydrated source-entry catalog.
 
 ## Relevant Planning Docs:
 

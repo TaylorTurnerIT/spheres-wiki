@@ -321,7 +321,7 @@ Phase 3 required logic:
 - Export to wiki markdown.
 - Export to JSON.
 - Shareable URL state.
-- Optional localStorage drafts if documented on `/privacy/`.
+- Browser-storage drafts and named saved traditions, with debounced autosave and `/privacy/` documentation.
 
 ## UI Plan
 
@@ -349,7 +349,7 @@ UX rules:
 - Source links should point back to detail entries.
 - Add/Remove buttons on listing cards and builder controls must share the same selection validation logic.
 - Hovering drawbacks, boons, or traditions should show an excerpt tooltip from the entry text.
-- Browser storage may persist drafts, but `/privacy/` must document the key, purpose, retention, and deletion behavior.
+- Browser storage may persist drafts and named saved traditions, but `/privacy/` must document the key, purpose, retention, deletion behavior, and reset behavior.
 - On mobile, summary moves below selections; no nested card layouts.
 
 Implementation should use vanilla TypeScript unless later complexity justifies an island framework.
@@ -417,7 +417,14 @@ This plan is the next implementation pass after the initial remediation shipped.
 - Detailed Markdown appends full entry text for selected drawbacks, boons, and sphere-specific drawbacks, each separated into its own blockquote.
 - Preserve Markdown tables inside detailed export, especially boon tables.
 - JSON export always includes full entry text regardless of Detailed mode.
-- Persist builder state in browser storage and document it on `/privacy/`.
+- Persist the current builder draft in browser storage with debounced realtime autosave.
+- Add a visible Save button that writes the current state as a named saved casting tradition.
+- Add saved-tradition selection so users can load prior saved traditions.
+- Add confirmed deletion for saved traditions.
+- Add reset-to-defaults behavior that clears the active builder state, choices, overrides, manual GM adjustments, and export toggles without deleting saved traditions.
+- Store only compact serialized builder state and saved-tradition metadata; do not write rendered card HTML or hydrated source-entry data.
+- Track save status in the UI: unsaved changes, saving, saved, and save failed.
+- Document browser storage keys and saved-tradition behavior on `/privacy/`.
 - URL state remains supported and wins over stored drafts when URL parameters are present.
 
 ### Step 8: Magic Type removal
@@ -575,6 +582,7 @@ Remaining follow-up:
 - Dual-sphere drawbacks expose granted feats through `grants`.
 - Magic Type no longer participates in builder state or exports; standard tradition cards preserve source-faithful magic-type labels as hard-coded display metadata.
 - Builder can export Markdown matching current tradition style.
+- Builder has a manual Save button, debounced realtime autosave, saved-tradition selection, confirmed deletion, and reset-to-defaults controls.
 - Future content authors can add a normal drawback, boon, or tradition with no code changes.
 
 ## Open Decisions
