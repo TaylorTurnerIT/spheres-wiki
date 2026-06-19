@@ -224,26 +224,8 @@ const renderedTabs = await Promise.all(
     box-shadow: 0 1px 0 var(--clr-surface);
   }
 
-  .tab--builder {
-    position: relative;
-  }
-
   .tab--builder::after {
-    content: "";
-    position: absolute;
-    right: 6px;
-    top: 6px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--clr-brand);
-  }
-
-  .tab--builder.active {
-    background: var(--clr-surface);
-    color: var(--clr-brand);
-    border-color: var(--clr-brand);
-    box-shadow: 0 1px 0 var(--clr-surface), inset 0 1px 0 var(--clr-brand);
+    content: none;
   }
 
   .tab-panel:not(.active) {
