@@ -1,9 +1,10 @@
 ---
 id: piranha-strike
-name: Piranha Strike
+name: Piranha Strike*
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 You make a combination of quick strikes, sacrificing accuracy for multiple, minor wounds that prove exceptionally deadly.

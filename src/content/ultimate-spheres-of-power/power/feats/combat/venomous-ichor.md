@@ -1,8 +1,9 @@
 ---
-id: "venomous-ichor"
-name: "Venomous Ichor"
+id: venomous-ichor
+name: Venomous Ichor
 sphere: alteration
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

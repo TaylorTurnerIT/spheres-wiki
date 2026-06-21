@@ -5,6 +5,7 @@ color: "var(--clr-brand)"
 priority: 190
 description: "Surreal feats use or rely upon shadowstuff."
 featCategory: true
+system: "power"
 sphere: "illusion"
 ---
 

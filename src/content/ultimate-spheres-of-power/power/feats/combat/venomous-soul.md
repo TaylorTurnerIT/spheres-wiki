@@ -1,8 +1,9 @@
 ---
-id: "venomous-soul"
-name: "Venomous Soul"
+id: venomous-soul
+name: Venomous Soul
 sphere: alteration
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

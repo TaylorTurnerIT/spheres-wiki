@@ -1,8 +1,9 @@
 ---
-id: "blood-wrack"
-name: "Blood Wrack"
-sphere: destruction
-tags: ["admixture"]
+id: blood-wrack
+name: Blood Wrack
+sphere: blood
+tags:
+  - admixture
 tier: feat
 ---
 

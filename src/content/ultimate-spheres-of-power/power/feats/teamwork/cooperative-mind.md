@@ -1,0 +1,10 @@
+---
+id: cooperative-mind
+name: Cooperative Mind
+tags:
+  - teamwork
+tier: feat
+---
+**Prerequisites:** Must have been subject to the Fusion advanced talent, 5th character level or higher.
+
+**Benefit:** When under the effects of the Fusion advanced talent with another creature that possesses this feat, you may act together more efficiently. You may choose to cooperate, allowing each creature to use the body to take a standard action. This consumes the amalgamated body's full round action, but leaves each mind with their normal move and swift actions. This allows both creatures to supply verbal or somatic spell components, allows either creature to make attacks of opportunity, grants each creature access to combat feats known by the other, and allows the you to choose which mind is targeted by effects requiring a Will save until the start of your next turn.

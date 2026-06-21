@@ -1,8 +1,9 @@
 ---
-id: "arcing-strike"
-name: "Arcing Strike"
-sphere: divination
-tags: ["combat"]
+id: arcing-strike
+name: Arcing Strike
+sphere: destruction
+tags:
+  - combat
 tier: feat
 ---
 

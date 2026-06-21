@@ -3,6 +3,7 @@ id: extra-courser-venture
 name: Extra Courser Venture
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Courser 5.

@@ -1,10 +1,11 @@
 ---
-id: "vicious-performer"
+id: vicious-performer
 name: Vicious Performer
 sphere: performance
 dualSphere: war
 tags:
   - champion
+tier: feat
 ---
 
 **Prerequisite:** Performance sphere; either the Gladiator sphere or War sphere.

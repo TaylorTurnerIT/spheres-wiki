@@ -1,8 +1,10 @@
 ---
-id: "faerie-admixture"
-name: "Faerie Admixture"
+id: faerie-admixture
+name: Faerie Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - 3pp
+  - admixture
 tier: feat
 ---
 

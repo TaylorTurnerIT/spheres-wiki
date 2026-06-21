@@ -3,6 +3,8 @@ id: improved-atavism
 name: Improved Atavism
 tags:
   - practitioner
+sphere: berserker
+tier: feat
 ---
 
 Your powers are long known with stories untold. You have unlocked more of your latent bloodline’s potentials, harnessing the might of those who stood before you.

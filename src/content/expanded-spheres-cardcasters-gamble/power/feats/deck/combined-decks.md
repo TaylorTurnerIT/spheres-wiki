@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
   - theurge
+tier: feat
 ---
 
 **Prerequisites:** At least two casting traditions with Card Casting

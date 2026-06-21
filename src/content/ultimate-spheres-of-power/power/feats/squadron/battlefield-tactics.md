@@ -1,8 +1,9 @@
 ---
-id: "battlefield-tactics"
-name: "Battlefield Tactics"
+id: battlefield-tactics
+name: Battlefield Tactics
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

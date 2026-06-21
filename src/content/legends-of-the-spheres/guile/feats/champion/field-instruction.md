@@ -1,9 +1,10 @@
 ---
-id: "field-instruction"
-name: "Field Instruction"
+id: field-instruction
+name: Field Instruction
 sphere: navigation
 tags:
-  - "champion"
+  - champion
+tier: feat
 ---
 
 **Prerequisites:** Navigation sphere, Warleader sphere.

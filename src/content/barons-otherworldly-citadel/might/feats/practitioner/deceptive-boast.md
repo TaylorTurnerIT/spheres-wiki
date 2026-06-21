@@ -4,6 +4,8 @@ name: Deceptive Boast
 tags:
   - combat
   - practitioner
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Fencing Sphere, Gladiator Sphere

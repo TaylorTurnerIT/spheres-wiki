@@ -3,6 +3,9 @@ id: mechanical-aptitude
 name: Mechanical Aptitude
 tags:
   - operative
+  - sm
+sphere: study
+tier: feat
 ---
 
 You possess a deep understanding of machinery and how people use it.

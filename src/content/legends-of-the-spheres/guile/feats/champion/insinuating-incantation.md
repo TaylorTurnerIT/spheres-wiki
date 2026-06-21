@@ -1,10 +1,11 @@
 ---
-id: "insinuating-incantation"
-name: "Insinuating Incantation"
+id: insinuating-incantation
+name: Insinuating Incantation
 sphere: bluster
 tags:
-  - "champion"
-  - "drawback"
+  - champion
+  - drawback
+tier: feat
 ---
 
 **Prerequisites:** Bluster sphere, caster level 1st.

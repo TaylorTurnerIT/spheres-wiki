@@ -3,6 +3,7 @@ id: saga-bound-doom
 name: Saga-Bound Doom
 tags:
   - saga
+tier: feat
 ---
 
 **Prerequisites:** Saga-Bound Fate, Saga-Bound Suits

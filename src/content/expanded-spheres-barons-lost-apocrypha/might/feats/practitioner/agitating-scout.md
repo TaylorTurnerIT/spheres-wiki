@@ -2,7 +2,10 @@
 id: agitating-scout
 name: Agitating Scout
 tags:
+  - 3pp
   - practitioner
+sphere: scout
+tier: feat
 ---
 
 **Prerequisites:** Guardian Sphere (challenge package, Swift Guardian), Scout sphere

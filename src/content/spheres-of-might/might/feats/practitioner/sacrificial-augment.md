@@ -4,6 +4,8 @@ name: Sacrificial Augment
 tags:
   - combat
   - practitioner
+sphere: guardian
+tier: feat
 ---
 
 **Prerequisite:** Guardian sphere.

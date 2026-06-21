@@ -3,6 +3,8 @@ id: escutcheon
 name: Escutcheon
 tags:
   - practitioner
+sphere: shield
+tier: feat
 ---
 
 **Prerequisites:** Banner class feature or Warleader sphere (Heraldry), Shield sphere.

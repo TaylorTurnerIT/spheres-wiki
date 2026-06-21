@@ -1,8 +1,9 @@
 ---
-id: "hemomancy"
-name: "Hemomancy"
+id: hemomancy
+name: Hemomancy
 sphere: death
-tags: ["necrosis"]
+tags:
+  - necrosis
 tier: feat
 ---
 

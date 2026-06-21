@@ -1,8 +1,9 @@
 ---
-id: "swift-warrior"
-name: "Swift Warrior"
+id: swift-warrior
+name: Swift Warrior
 sphere: time
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

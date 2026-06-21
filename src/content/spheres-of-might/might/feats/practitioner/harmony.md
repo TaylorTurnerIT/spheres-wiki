@@ -3,6 +3,8 @@ id: harmony
 name: Harmony
 tags:
   - practitioner
+sphere: leadership
+tier: feat
 ---
 
 **Prerequisites:** Leadership sphere, (cohort) package, bard song or raging song class feature.

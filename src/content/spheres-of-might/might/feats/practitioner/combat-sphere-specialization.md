@@ -4,6 +4,7 @@ name: Combat Sphere Specialization
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 Your knowledge of one particular combat sphere is without peer.

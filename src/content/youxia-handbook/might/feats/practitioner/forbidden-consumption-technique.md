@@ -4,6 +4,7 @@ name: Forbidden Consumption Technique
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisite:** Base attack bonus +5.

@@ -1,8 +1,10 @@
 ---
-id: "essence-plunder"
-name: "Essence Plunder"
+id: essence-plunder
+name: Essence Plunder
 sphere: mana
-tags: ["combat", "sm"]
+tags:
+  - combat
+  - sm
 tier: feat
 ---
 

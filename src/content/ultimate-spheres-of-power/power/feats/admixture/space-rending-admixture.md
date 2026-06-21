@@ -1,8 +1,9 @@
 ---
-id: "space-rending-admixture"
-name: "Space-Rending Admixture"
+id: space-rending-admixture
+name: Space-Rending Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - admixture
 tier: feat
 ---
 

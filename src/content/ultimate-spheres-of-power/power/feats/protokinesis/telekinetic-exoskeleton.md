@@ -1,8 +1,8 @@
 ---
-id: "telekinetic-exoskeleton"
-name: "Telekinetic Exoskeleton"
-sphere: telekinesis
-tags: ["protokinesis"]
+id: telekinetic-exoskeleton
+name: Telekinetic Exoskeleton
+tags:
+  - protokinesis
 tier: feat
 ---
 

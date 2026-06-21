@@ -5,6 +5,7 @@ color: "var(--clr-brand)"
 priority: 40
 description: "Chance feats grant kismet and a way to use it."
 featCategory: true
+system: "power"
 sphere: "life"
 ---
 

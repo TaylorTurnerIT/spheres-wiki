@@ -1,8 +1,8 @@
 ---
-id: "shadowblast"
-name: "Shadowblast"
-sphere: illusion
-tags: ["surreal"]
+id: shadowblast
+name: Shadowblast
+tags:
+  - surreal
 tier: feat
 ---
 

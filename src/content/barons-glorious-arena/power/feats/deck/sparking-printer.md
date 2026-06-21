@@ -4,6 +4,7 @@ name: Sparking Printer
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting

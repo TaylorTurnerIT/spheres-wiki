@@ -1,8 +1,9 @@
 ---
-id: "watchful-companion"
-name: "Watchful Companion"
+id: watchful-companion
+name: Watchful Companion
 sphere: conjuration
-tags: ["companion"]
+tags:
+  - companion
 tier: feat
 ---
 

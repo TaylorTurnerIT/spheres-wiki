@@ -1,8 +1,9 @@
 ---
-id: "phalanx-formation"
-name: "Phalanx Formation"
+id: phalanx-formation
+name: Phalanx Formation
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

@@ -1,9 +1,9 @@
 ---
 id: terrain-adaptation
 name: Terrain Adaptation
-sphere: investigation
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisites:** Investigation Sphere, favored terrain class feature.

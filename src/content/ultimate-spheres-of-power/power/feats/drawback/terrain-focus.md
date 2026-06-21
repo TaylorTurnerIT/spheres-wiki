@@ -1,8 +1,9 @@
 ---
-id: "terrain-focus"
-name: "Terrain Focus"
+id: terrain-focus
+name: Terrain Focus
 sphere: nature
-tags: ["drawback"]
+tags:
+  - drawback
 tier: feat
 ---
 

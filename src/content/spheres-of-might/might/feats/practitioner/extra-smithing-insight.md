@@ -3,6 +3,7 @@ id: extra-smithing-insight
 name: Extra Smithing Insight
 tags:
   - practitioner
+tier: feat
 ---
 
 Your experience and skill unlock new insights into the smith’s craft.

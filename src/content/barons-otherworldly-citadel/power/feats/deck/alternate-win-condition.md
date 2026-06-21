@@ -5,6 +5,7 @@ tags:
   - aristeia
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting Drawback

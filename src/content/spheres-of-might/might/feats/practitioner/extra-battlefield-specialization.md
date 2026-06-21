@@ -3,6 +3,7 @@ id: extra-battlefield-specialization
 name: Extra Battlefield Specialization
 tags:
   - practitioner
+tier: feat
 ---
 
 Your expertise extends to a new battlefield environment.

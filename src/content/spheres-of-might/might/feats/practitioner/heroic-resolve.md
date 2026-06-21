@@ -4,6 +4,7 @@ name: Heroic Resolve
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Ability to gain martial focus, Constitution 13 or higher.

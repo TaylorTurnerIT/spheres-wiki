@@ -3,6 +3,7 @@ id: focused-stamina
 name: Focused Stamina
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Martial focus, combat stamina.

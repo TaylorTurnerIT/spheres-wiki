@@ -1,9 +1,10 @@
 ---
-id: "organized-following"
-name: "Organized Following"
+id: organized-following
+name: Organized Following
 sphere: faction
 tags:
-  - "champion"
+  - champion
+tier: feat
 ---
 
 **Prerequisites:** Faction sphere, Leadership sphere.

@@ -4,6 +4,7 @@ name: Trap Card
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisite:** Card Casting drawback

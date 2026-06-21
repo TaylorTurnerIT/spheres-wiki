@@ -4,6 +4,7 @@ name: Practiced Interruption
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 You are adept at anticipating and interrupting spellcasters.

@@ -4,6 +4,8 @@ name: Spell Kicker
 tags:
   - deck
   - drawback
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Card Casting or Charged Spells drawback

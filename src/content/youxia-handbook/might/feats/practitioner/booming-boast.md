@@ -4,6 +4,8 @@ name: Booming Boast
 tags:
   - combat
   - practitioner
+sphere: gladiator
+tier: feat
 ---
 
 **Prerequisites:** Gladiator sphere, Warleader sphere.

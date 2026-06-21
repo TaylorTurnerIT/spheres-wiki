@@ -4,6 +4,7 @@ name: Extend Stance
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisite:** Any (stance) talent.

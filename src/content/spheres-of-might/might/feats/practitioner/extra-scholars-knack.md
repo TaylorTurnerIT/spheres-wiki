@@ -1,8 +1,9 @@
 ---
 id: extra-scholars-knack
-name: Extra Scholar’s Knack
+name: Extra Scholar's Knack
 tags:
   - practitioner
+tier: feat
 ---
 
 Research and study lead you to new academic discoveries.

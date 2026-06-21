@@ -1,8 +1,8 @@
 ---
-id: "shadowy-slay"
-name: "Shadowy Slay"
-sphere: illusion
-tags: ["surreal"]
+id: shadowy-slay
+name: Shadowy Slay
+tags:
+  - surreal
 tier: feat
 ---
 

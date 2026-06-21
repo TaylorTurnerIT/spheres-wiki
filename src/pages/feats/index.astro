@@ -4,6 +4,7 @@ import WikiPage from "@/layouts/WikiPage.astro";
 import FeatsTabbedContent from "@/components/FeatsTabbedContent.astro";
 import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
 import { getCanonicalFeatCategory, getFeatUrl } from "@/lib/featCategories";
+import { buildOrderedTagIds } from "@/lib/tags";
 import { url } from "@/lib/url";
 import type { FeatEntry, TagEntry } from "@/lib/types";
 
@@ -64,7 +65,9 @@ function featCard(feat: FeatEntry, system?: "power" | "might" | "guile" | "champ
     id: feat.id,
     name: feat.name,
     sourceBookTitle: sourceTitle(feat.sourceBook),
-    tagIds: feat.tags ?? [],
+    tagIds: buildOrderedTagIds(feat, bookMetaMap, tagMap, {
+      showHidden: !!(feat.dualSphere && feat.dualSphere !== "any"),
+    }),
     Content: featContentMap.get(featKey(feat)),
     href: url(getFeatUrl(feat, tagMap)),
     system,
@@ -83,12 +86,8 @@ const categoryTabData = categoryTags.map((tag) => ({
   RulesContent: categoryRuleMap.get(tag.id),
   items: feats
     .filter((feat) => (feat.tags ?? []).includes(tag.id))
-    .map((feat) => featCard(feat, tag.system)),
+    .map((feat) => featCard(feat, systemScopeFor(feat))),
 }));
-
-const generalFeatCards = feats
-  .filter((feat) => getCanonicalFeatCategory(feat, tagMap) === "general")
-  .map((feat) => featCard(feat, systemScopeFor(feat)));
 
 const sphereFocusedFeats = feats.filter((feat) => {
   if (hasCategoryTag(feat)) return false;
@@ -122,13 +121,6 @@ const tabs = [
     system: tag.system,
     emptyMessage: `No ${tag.label.toLowerCase()} feats indexed yet.`,
   })),
-  {
-    label: "General",
-    slug: "general",
-    description: "General feats have no category tag and are not associated with a specific sphere.",
-    items: generalFeatCards,
-    emptyMessage: "No general feats indexed yet.",
-  },
   {
     label: "Sphere-focused",
     slug: "sphere-focused",

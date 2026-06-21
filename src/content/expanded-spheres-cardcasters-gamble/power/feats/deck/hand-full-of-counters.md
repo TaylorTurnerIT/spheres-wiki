@@ -5,6 +5,7 @@ tags:
   - counterspell
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting drawback (cooldown), Counterspell Mastery

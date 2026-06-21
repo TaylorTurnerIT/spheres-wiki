@@ -4,6 +4,8 @@ name: Control Caster
 tags:
   - deck
   - drawback
+sphere: blood
+tier: feat
 ---
 
 **Prerequisites:** Card Casting

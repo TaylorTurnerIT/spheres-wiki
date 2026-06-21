@@ -1,9 +1,10 @@
 ---
-id: "fight-choreography"
-name: "Fight Choreography"
+id: fight-choreography
+name: Fight Choreography
 sphere: performance
 tags:
-  - "champion"
+  - champion
+tier: feat
 ---
 
 **Prerequisites:** Performance sphere ((act) or (dance) package), Warleader sphere.

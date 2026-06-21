@@ -1,9 +1,10 @@
 ---
 id: fates-deal
-name: Fate’s Deal
+name: Fate's Deal
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Fate Sphere, Card Casting drawback

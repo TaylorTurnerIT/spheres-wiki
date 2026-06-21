@@ -1,8 +1,9 @@
 ---
-id: "pressure-point-pugilist"
-name: "Pressure Point Pugilist"
+id: pressure-point-pugilist
+name: Pressure Point Pugilist
 sphere: mind
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

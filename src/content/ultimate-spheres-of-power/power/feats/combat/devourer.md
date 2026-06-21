@@ -1,8 +1,9 @@
 ---
-id: "devourer"
-name: "Devourer"
+id: devourer
+name: Devourer
 sphere: alteration
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

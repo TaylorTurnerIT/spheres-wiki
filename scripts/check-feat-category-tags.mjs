@@ -3,39 +3,21 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
+import {
+  FEAT_CATEGORY_SOURCE_MANIFEST,
+  getAllFeatCategorySources,
+} from "./lib/feat-category-sources.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.resolve(__dirname, "../src/content");
 
-const DESCRIPTION_SOURCES = {
-  admixture: "admixture-feats.txt",
-  anathema: "anathema-feats.txt",
-  champion: "champion-feats.txt",
-  chance: "chance-feats.txt",
-  channeling: "channeling-feats.txt",
-  combat: "combat-feats.txt",
-  companion: "companion-feats.txt",
-  counterspell: "counterspell-feats.txt",
-  drawback: "drawback-feats.txt",
-  extra: "extra-feats.txt",
-  "item-creation": "item-creation-feats.txt",
-  metamagic: "metamagic-feats.txt",
-  mythic: "mythic-spheres-3.txt",
-  necrosis: "necrosis-feats.txt",
-  operative: "operative-feats.txt",
-  practitioner: "practitioner-feats.txt",
-  protokinesis: "protokinesis-feats.txt",
-  proxy: "proxy-feats.txt",
-  racial: "racial-feats.txt",
-  ritual: "ritual-feats.txt",
-  ante: "card-and-deck-feats.txt#ante-feats",
-  deck: "card-and-deck-feats.txt#deck-feats",
-  saga: "card-and-deck-feats.txt#saga-feats",
-  squadron: "squadron-feats.txt",
-  surreal: "surreal-feats.txt",
-  teamwork: "teamwork-feats.txt",
-  "wild-magic": "wild-magic-feats.txt",
-};
+const DESCRIPTION_SOURCES = Object.fromEntries(
+  getAllFeatCategorySources().map((source) => [source.tagId, source.descriptionSource]),
+);
+
+const EXPECTED_SYSTEM_SCOPE = Object.fromEntries(
+  FEAT_CATEGORY_SOURCE_MANIFEST.map((source) => [source.tagId, source.tagSystem]),
+);
 
 function markdownFiles(dir) {
   const files = [];
@@ -53,8 +35,20 @@ function readFrontmatter(filePath) {
   return match ? parseYaml(match[1]) : undefined;
 }
 
+function readBody(filePath) {
+  const content = fs.readFileSync(filePath, "utf8");
+  const match = content.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n([\s\S]*)$/);
+  return match?.[1] ?? "";
+}
+
 function hasPlaceholderDescription(value) {
   return typeof value !== "string" || value.trim() === "" || /\b(TBD|PLACEHOLDER)\b/i.test(value);
+}
+
+function hasSectionBleed(body) {
+  return body
+    .split(/\r?\n/)
+    .some((line) => /^\s*(?:\+{2,}|#{2,})\s+\S/.test(line));
 }
 
 let hasError = false;
@@ -64,14 +58,32 @@ for (const filePath of markdownFiles(contentDir)) {
   const frontmatter = readFrontmatter(filePath);
   if (frontmatter?.featCategory !== true) continue;
   checked++;
-  if (!hasPlaceholderDescription(frontmatter.description)) continue;
-
-  const source = DESCRIPTION_SOURCES[frontmatter.id] ?? "unmapped source";
   const relativePath = path.relative(contentDir, filePath);
-  console.error(
-    `Feat-category tag "${frontmatter.id}" in ${relativePath} has a missing or placeholder description (source: ${source}).`,
-  );
-  hasError = true;
+
+  if (hasPlaceholderDescription(frontmatter.description)) {
+    const source = DESCRIPTION_SOURCES[frontmatter.id] ?? "unmapped source";
+    console.error(
+      `Feat-category tag "${frontmatter.id}" in ${relativePath} has a missing or placeholder description (source: ${source}).`,
+    );
+    hasError = true;
+  }
+
+  const expectedSystem = EXPECTED_SYSTEM_SCOPE[frontmatter.id];
+  if (frontmatter.system !== expectedSystem) {
+    const expected = expectedSystem ?? "(none)";
+    const actual = frontmatter.system ?? "(none)";
+    console.error(
+      `Feat-category tag "${frontmatter.id}" in ${relativePath} has system "${actual}", expected "${expected}".`,
+    );
+    hasError = true;
+  }
+
+  if (hasSectionBleed(readBody(filePath))) {
+    console.error(
+      `Feat-category tag "${frontmatter.id}" in ${relativePath} has section headings in its rules body. This usually means category extraction bled into feat entries or the next category.`,
+    );
+    hasError = true;
+  }
 }
 
 if (hasError) {

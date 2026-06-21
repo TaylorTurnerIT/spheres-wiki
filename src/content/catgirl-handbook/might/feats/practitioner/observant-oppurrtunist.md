@@ -4,6 +4,8 @@ name: Observant Oppurrtunist
 tags:
   - combat
   - practitioner
+sphere: scout
+tier: feat
 ---
 
 The soft paws pace around their target, slowly analyzing and waiting for the moment to pounce.

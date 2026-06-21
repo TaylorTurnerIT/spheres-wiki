@@ -1,8 +1,8 @@
 ---
-id: "maintain-proxy"
-name: "Maintain Proxy"
-sphere: enhancement
-tags: ["proxy"]
+id: maintain-proxy
+name: Maintain Proxy
+tags:
+  - proxy
 tier: feat
 ---
 

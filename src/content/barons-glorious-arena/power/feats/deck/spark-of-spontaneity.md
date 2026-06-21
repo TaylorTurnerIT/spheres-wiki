@@ -4,6 +4,7 @@ name: Spark of Spontaneity
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting, Sparking Printer

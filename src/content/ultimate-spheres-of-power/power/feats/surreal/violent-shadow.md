@@ -1,8 +1,8 @@
 ---
-id: "violent-shadow"
-name: "Violent Shadow"
-sphere: illusion
-tags: ["surreal"]
+id: violent-shadow
+name: Violent Shadow
+tags:
+  - surreal
 tier: feat
 ---
 

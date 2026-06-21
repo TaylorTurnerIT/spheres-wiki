@@ -3,6 +3,7 @@ id: extra-prowess
 name: Extra Prowess
 tags:
   - practitioner
+tier: feat
 ---
 
 You know how to better utilize your armiger abilities.

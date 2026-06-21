@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
   - metamagic
+tier: feat
 ---
 
 **Prerequisites:** Card Casting

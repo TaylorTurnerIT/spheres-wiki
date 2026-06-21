@@ -4,6 +4,8 @@ name: Overwatch
 tags:
   - combat
   - practitioner
+sphere: guardian
+tier: feat
 ---
 
 **Prerequisites:** Covering Fire talent, Guardian sphere (patrol package)

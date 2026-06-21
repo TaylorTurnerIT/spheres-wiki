@@ -4,6 +4,7 @@ name: Lethal Gambit
 tags:
   - ante
   - combat
+tier: feat
 ---
 
 **Prerequisites:** Ante Up

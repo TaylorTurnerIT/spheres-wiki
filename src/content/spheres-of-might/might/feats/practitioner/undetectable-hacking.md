@@ -3,6 +3,7 @@ id: undetectable-hacking
 name: Undetectable Hacking
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Tech sphere (Remote Control), Remote Hacking.

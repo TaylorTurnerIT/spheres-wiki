@@ -4,6 +4,7 @@ name: Prepared Hacking
 sphere: spellhacking
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Spellhacking sphere.

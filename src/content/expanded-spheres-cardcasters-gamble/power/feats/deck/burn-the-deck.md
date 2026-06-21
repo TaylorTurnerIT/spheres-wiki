@@ -4,6 +4,7 @@ name: Burn the Deck
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting drawback (Cooldown)

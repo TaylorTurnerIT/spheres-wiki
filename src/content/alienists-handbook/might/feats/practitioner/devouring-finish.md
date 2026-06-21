@@ -4,6 +4,8 @@ name: Devouring Finish
 tags:
   - combat
   - practitioner
+sphere: wrestling
+tier: feat
 ---
 
 **Prerequisites:** Wrestling sphere, Brain Consumption.

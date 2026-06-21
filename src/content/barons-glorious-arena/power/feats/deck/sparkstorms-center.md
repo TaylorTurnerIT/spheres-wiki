@@ -1,9 +1,10 @@
 ---
 id: sparkstorms-center
-name: Sparkstorm’s Center
+name: Sparkstorm's Center
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting, Sparking Printer

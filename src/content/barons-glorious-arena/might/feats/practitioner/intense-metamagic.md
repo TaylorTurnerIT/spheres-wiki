@@ -2,8 +2,10 @@
 id: intense-metamagic
 name: Intense Metamagic
 tags:
+  - 3pp
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** tension pool, any metamagic feat

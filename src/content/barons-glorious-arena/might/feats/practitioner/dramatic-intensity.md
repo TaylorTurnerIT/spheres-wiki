@@ -2,8 +2,10 @@
 id: dramatic-intensity
 name: Dramatic Intensity
 tags:
+  - 3pp
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** tension pool, one of a grit, luck, or panache pool

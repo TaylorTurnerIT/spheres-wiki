@@ -1,8 +1,9 @@
 ---
-id: "channel-life"
-name: "Channel Life"
+id: channel-life
+name: Channel Life
 sphere: life
-tags: ["channeling"]
+tags:
+  - channeling
 tier: feat
 ---
 

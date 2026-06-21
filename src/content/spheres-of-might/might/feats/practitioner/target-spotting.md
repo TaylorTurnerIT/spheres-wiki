@@ -3,6 +3,8 @@ id: target-spotting
 name: Target Spotting
 tags:
   - practitioner
+sphere: scout
+tier: feat
 ---
 
 **Prerequisites:** Scout sphere, favored enemy class feature.

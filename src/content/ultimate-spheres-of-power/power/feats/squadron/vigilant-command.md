@@ -1,8 +1,9 @@
 ---
-id: "vigilant-command"
-name: "Vigilant Command"
+id: vigilant-command
+name: Vigilant Command
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

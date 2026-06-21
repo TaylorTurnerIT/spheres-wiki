@@ -1,8 +1,9 @@
 ---
-id: "pushpull-mastery"
-name: "Push/Pull Mastery"
+id: pushpull-mastery
+name: Push/Pull Mastery
 sphere: telekinesis
-tags: ["drawback"]
+tags:
+  - drawback
 tier: feat
 ---
 

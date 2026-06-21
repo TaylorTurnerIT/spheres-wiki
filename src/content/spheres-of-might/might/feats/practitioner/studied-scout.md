@@ -3,6 +3,8 @@ id: studied-scout
 name: Studied Scout
 tags:
   - practitioner
+sphere: scout
+tier: feat
 ---
 
 **Prerequisites:** Scout sphere, studied target or studied combat class feature.

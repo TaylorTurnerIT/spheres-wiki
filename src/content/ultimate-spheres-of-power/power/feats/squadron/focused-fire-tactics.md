@@ -1,8 +1,9 @@
 ---
-id: "focused-fire-tactics"
-name: "Focused Fire Tactics"
+id: focused-fire-tactics
+name: Focused Fire Tactics
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

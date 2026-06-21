@@ -4,6 +4,7 @@ label: Operative
 priority: 240
 description: Operative feats are mainly designed for characters made using the rules from Spheres of Guile.
 featCategory: true
+system: guile
 color: var(--clr-brand)
 ---
 

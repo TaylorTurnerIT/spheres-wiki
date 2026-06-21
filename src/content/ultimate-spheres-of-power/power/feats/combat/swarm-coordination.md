@@ -1,8 +1,9 @@
 ---
-id: "swarm-coordination"
-name: "Swarm Coordination"
+id: swarm-coordination
+name: Swarm Coordination
 sphere: alteration
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

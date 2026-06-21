@@ -4,6 +4,7 @@ name: Ante Up
 tags:
   - ante
   - combat
+tier: feat
 ---
 
 **Benefit:** As a swift action, you may increase your ante by 1. If you increase your ante in this way, you gain a circumstance bonus to the next attack roll you make this round equal to your ante and increase the save DCs of the next sphere ability you use within the next round by 1 for every 2 points of ante you possess.

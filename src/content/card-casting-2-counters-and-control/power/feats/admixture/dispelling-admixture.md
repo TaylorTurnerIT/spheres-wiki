@@ -1,8 +1,11 @@
 ---
-id: "dispelling-admixture"
-name: "Dispelling Admixture"
+id: dispelling-admixture
+name: Dispelling Admixture
 sphere: destruction
-tags: ["admixture", "counterspell"]
+tags:
+  - 3pp
+  - admixture
+  - counterspell
 tier: feat
 ---
 

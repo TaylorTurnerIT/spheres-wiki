@@ -3,6 +3,8 @@ id: adopt-animal-ally
 name: Adopt Animal Ally
 tags:
   - practitioner
+sphere: beastmastery
+tier: feat
 ---
 
 **Prerequisites:** Beastmastery sphere (handle animal) package, an animal or vermin companion.

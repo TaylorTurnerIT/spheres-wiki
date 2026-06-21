@@ -1,8 +1,9 @@
 ---
-id: "telekinetic-admixture"
-name: "Telekinetic Admixture"
+id: telekinetic-admixture
+name: Telekinetic Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - admixture
 tier: feat
 ---
 

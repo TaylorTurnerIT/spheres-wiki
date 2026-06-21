@@ -1,8 +1,9 @@
 ---
-id: "perpetual-sphere"
-name: "Perpetual Sphere"
+id: perpetual-sphere
+name: Perpetual Sphere
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

@@ -1,8 +1,8 @@
 ---
-id: "telekinetic-fist"
-name: "Telekinetic Fist"
+id: telekinetic-fist
+name: Telekinetic Fist
 sphere: telekinesis
-tags: ["combat", "protokinesis"]
+tags: []
 tier: feat
 ---
 

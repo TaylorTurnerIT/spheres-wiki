@@ -1,8 +1,9 @@
 ---
-id: "improved-energy-leap"
-name: "Improved Energy Leap"
+id: improved-energy-leap
+name: Improved Energy Leap
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

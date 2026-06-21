@@ -3,6 +3,7 @@ id: extra-mastermind-trick
 name: Extra Mastermind Trick
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Mastermind 7.

@@ -1,8 +1,9 @@
 ---
-id: "mass-command"
-name: "Mass Command"
+id: mass-command
+name: Mass Command
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

@@ -1,8 +1,8 @@
 ---
-id: "shadowstuff-armament"
-name: "Shadowstuff Armament"
-sphere: illusion
-tags: ["surreal"]
+id: shadowstuff-armament
+name: Shadowstuff Armament
+tags:
+  - surreal
 tier: feat
 ---
 

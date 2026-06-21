@@ -4,6 +4,7 @@ name: Determined Defense
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisite:** Combat Expertise.

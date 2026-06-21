@@ -4,6 +4,8 @@ name: Adrenaline-Fueled Frenzy
 tags:
   - combat
   - practitioner
+sphere: berserker
+tier: feat
 ---
 
 The shark’s frenzy turns to a churning rage.

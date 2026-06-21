@@ -1,8 +1,9 @@
 ---
 id: dragons-tattoos
-name: Dragon’s Tattoos
+name: Dragon's Tattoos
 tags:
   - practitioner
+tier: feat
 ---
 
 Etching your limbs with exquisite art, your body truly becomes a weapon.

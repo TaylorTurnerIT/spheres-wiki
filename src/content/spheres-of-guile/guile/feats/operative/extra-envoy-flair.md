@@ -3,6 +3,7 @@ id: extra-envoy-flair
 name: Extra Envoy Flair
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Envoy 5.

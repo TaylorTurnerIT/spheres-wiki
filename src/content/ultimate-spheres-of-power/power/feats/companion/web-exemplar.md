@@ -1,8 +1,8 @@
 ---
-id: "web-exemplar"
-name: "Web Exemplar"
+id: web-exemplar
+name: Web Exemplar
 sphere: conjuration
-tags: ["companion"]
+tags: []
 tier: feat
 ---
 

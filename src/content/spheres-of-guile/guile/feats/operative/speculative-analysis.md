@@ -2,9 +2,9 @@
 id: speculative-analysis
 name: Speculative Analysis
 sphere: investigation
-dualSphere: study
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Investigation sphere, Study sphere.

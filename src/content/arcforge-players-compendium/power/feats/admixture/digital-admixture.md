@@ -1,8 +1,9 @@
 ---
-id: "digital-admixture"
-name: "Digital Admixture"
+id: digital-admixture
+name: Digital Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - admixture
 tier: feat
 ---
 

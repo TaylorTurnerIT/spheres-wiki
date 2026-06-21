@@ -4,6 +4,7 @@ name: Latent Energies
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting drawback

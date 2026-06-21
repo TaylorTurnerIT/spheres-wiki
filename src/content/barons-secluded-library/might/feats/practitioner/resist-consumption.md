@@ -4,6 +4,8 @@ name: Resist Consumption
 tags:
   - combat
   - practitioner
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Forbidden Consumption Technique

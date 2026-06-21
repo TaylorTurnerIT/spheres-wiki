@@ -3,6 +3,8 @@ id: nebulous-preparation
 name: Nebulous Preparation
 tags:
   - operative
+  - plan
+tier: feat
 ---
 
 You know how to prepare spells or extracts most of the way, and then finish the process at the last moment.

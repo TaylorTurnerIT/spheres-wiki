@@ -1,8 +1,9 @@
 ---
-id: "mind-over-matter"
-name: "Mind Over Matter"
+id: mind-over-matter
+name: Mind Over Matter
 sphere: mind
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

@@ -4,6 +4,7 @@ name: Cultivate Ki
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Improved Unarmed Strike, base attack bonus +4, martial focus.

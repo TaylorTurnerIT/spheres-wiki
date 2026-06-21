@@ -1,8 +1,9 @@
 ---
 id: zodiac-tattoos
-name: Zodiac Tattoos
+name: Zodiac Tattoos*
 tags:
   - practitioner
+tier: feat
 ---
 
 Mystical tattoos ward you from harm and transform your skin into protective armor.

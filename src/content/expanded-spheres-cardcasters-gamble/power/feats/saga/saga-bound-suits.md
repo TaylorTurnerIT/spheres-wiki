@@ -3,6 +3,7 @@ id: saga-bound-suits
 name: Saga-Bound Suits
 tags:
   - saga
+tier: feat
 ---
 
 **Prerequisites:** Saga-Bound Fate

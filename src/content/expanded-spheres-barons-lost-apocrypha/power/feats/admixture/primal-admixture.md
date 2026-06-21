@@ -1,8 +1,10 @@
 ---
-id: "primal-admixture"
-name: "Primal Admixture"
-sphere: nature
-tags: ["admixture"]
+id: primal-admixture
+name: Primal Admixture
+sphere: destruction
+tags:
+  - 3pp
+  - admixture
 tier: feat
 ---
 

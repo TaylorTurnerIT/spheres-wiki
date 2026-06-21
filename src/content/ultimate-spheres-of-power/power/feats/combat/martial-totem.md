@@ -1,8 +1,9 @@
 ---
-id: "martial-totem"
-name: "Martial Totem"
+id: martial-totem
+name: Martial Totem
 sphere: war
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

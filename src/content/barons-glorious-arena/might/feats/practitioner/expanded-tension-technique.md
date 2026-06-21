@@ -2,8 +2,10 @@
 id: expanded-tension-technique
 name: Expanded Tension Technique
 tags:
+  - 3pp
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** tension pool

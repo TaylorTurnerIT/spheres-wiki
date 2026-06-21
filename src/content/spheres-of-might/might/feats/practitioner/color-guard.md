@@ -3,6 +3,7 @@ id: color-guard
 name: Color Guard
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Banner class feature, character level 10th.

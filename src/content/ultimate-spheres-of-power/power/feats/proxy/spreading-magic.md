@@ -1,8 +1,8 @@
 ---
-id: "spreading-magic"
-name: "Spreading Magic"
-sphere: enhancement
-tags: ["proxy"]
+id: spreading-magic
+name: Spreading Magic
+tags:
+  - proxy
 tier: feat
 ---
 

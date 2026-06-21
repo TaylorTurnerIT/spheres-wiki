@@ -1,9 +1,10 @@
 ---
 id: giantslayer
-name: Giantslayer
+name: Giantslayer*
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 Your martial training and natural heartiness are the only tools you need to tackle even the mightiest foes.

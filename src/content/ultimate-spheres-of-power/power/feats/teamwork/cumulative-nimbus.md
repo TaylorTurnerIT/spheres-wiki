@@ -1,8 +1,8 @@
 ---
-id: "cumulative-nimbus"
-name: "Cumulative Nimbus"
-sphere: weather
-tags: ["teamwork"]
+id: cumulative-nimbus
+name: Cumulative Nimbus
+tags:
+  - teamwork
 tier: feat
 ---
 

@@ -3,6 +3,7 @@ id: mobile-drone
 name: Mobile Drone
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Tech sphere, Drone.

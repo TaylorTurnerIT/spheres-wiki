@@ -4,6 +4,7 @@ name: Raise the Stakes
 tags:
   - ante
   - combat
+tier: feat
 ---
 
 **Prerequisites:** Ante Up, caster level 3rd.

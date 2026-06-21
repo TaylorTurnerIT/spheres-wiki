@@ -1,8 +1,8 @@
 ---
-id: "martial-presence"
-name: "Martial Presence"
-sphere: war
-tags: ["combat"]
+id: martial-presence
+name: Martial Presence
+tags:
+  - combat
 tier: feat
 ---
 

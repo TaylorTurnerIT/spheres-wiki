@@ -1,9 +1,11 @@
 ---
 id: cerebrevores-ecstasy
-name: Cerebrevore’s Ecstasy
+name: Cerebrevore's Ecstasy
 tags:
   - combat
   - practitioner
+sphere: barroom
+tier: feat
 ---
 
 **Prerequisites:** Barroom sphere, Brain Consumption.

@@ -1,8 +1,9 @@
 ---
-id: "close-formation"
-name: "Close Formation"
+id: close-formation
+name: Close Formation
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

@@ -5,6 +5,7 @@ tags:
   - chance
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting drawback, one Chance feat, one Deck feat

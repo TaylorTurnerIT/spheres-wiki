@@ -4,6 +4,8 @@ name: Shared Rage
 tags:
   - combat
   - practitioner
+sphere: leadership
+tier: feat
 ---
 
 **Prerequisites:** Leadership sphere, (cohort) package, rage or bloodrage class feature.

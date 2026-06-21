@@ -1,9 +1,10 @@
 ---
-id: "spatial-storage"
-name: "Spatial Storage"
+id: spatial-storage
+name: Spatial Storage
 sphere: artifice
 tags:
-  - "champion"
+  - champion
+tier: feat
 ---
 
 **Prerequisites:** Artifice sphere (Storage Enhancement), Warp sphere (Extradimensional Storage).

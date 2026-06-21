@@ -1,8 +1,9 @@
 ---
-id: "cooperative-reanimate"
-name: "Cooperative Reanimate"
+id: cooperative-reanimate
+name: Cooperative Reanimate
 sphere: death
-tags: ["teamwork"]
+tags:
+  - teamwork
 tier: feat
 ---
 

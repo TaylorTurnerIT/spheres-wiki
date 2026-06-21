@@ -3,6 +3,7 @@ id: technical-compatibility
 name: Technical Compatibility
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Independent Invention, Tech sphere, Drone.

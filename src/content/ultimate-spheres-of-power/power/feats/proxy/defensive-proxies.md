@@ -1,8 +1,8 @@
 ---
-id: "defensive-proxies"
-name: "Defensive Proxies"
-sphere: enhancement
-tags: ["proxy"]
+id: defensive-proxies
+name: Defensive Proxies
+tags:
+  - proxy
 tier: feat
 ---
 

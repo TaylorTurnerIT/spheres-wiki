@@ -1,8 +1,8 @@
 ---
-id: "mind-limb"
-name: "Mind Limb"
-sphere: telekinesis
-tags: ["protokinesis"]
+id: mind-limb
+name: Mind Limb
+tags:
+  - protokinesis
 tier: feat
 ---
 

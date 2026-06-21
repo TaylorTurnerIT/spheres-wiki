@@ -1,8 +1,8 @@
 ---
-id: "twilight-adept"
-name: "Twilight Adept"
-sphere: light
-tags: ["teamwork"]
+id: twilight-adept
+name: Twilight Adept
+tags:
+  - teamwork
 tier: feat
 ---
 

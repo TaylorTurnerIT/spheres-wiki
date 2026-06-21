@@ -3,6 +3,8 @@ id: vermin-master
 name: Vermin Master
 tags:
   - practitioner
+sphere: beastmastery
+tier: feat
 ---
 
 **Prerequisites:** Beastmastery sphere (Bee Keeper), able to tame creatures of the vermin type.

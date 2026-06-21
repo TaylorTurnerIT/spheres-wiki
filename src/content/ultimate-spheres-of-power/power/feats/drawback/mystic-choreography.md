@@ -1,8 +1,10 @@
 ---
-id: "mystic-choreography"
-name: "Mystic Choreography"
+id: mystic-choreography
+name: Mystic Choreography
 sphere: enhancement
-tags: ["drawback", "proxy"]
+tags:
+  - drawback
+  - proxy
 tier: feat
 ---
 

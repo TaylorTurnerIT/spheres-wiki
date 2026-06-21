@@ -3,6 +3,7 @@ id: extra-skill-leverage
 name: Extra Skill Leverage
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Skill leverage.

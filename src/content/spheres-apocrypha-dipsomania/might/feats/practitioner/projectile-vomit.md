@@ -3,6 +3,8 @@ id: projectile-vomit
 name: Projectile Vomit
 tags:
   - practitioner
+sphere: barroom
+tier: feat
 ---
 
 **Prerequisites:** Barroom sphere (Purge), base attack bonus +5.

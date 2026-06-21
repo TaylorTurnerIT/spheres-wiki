@@ -1,8 +1,8 @@
 ---
-id: "technical-companion"
-name: "Technical Companion"
+id: technical-companion
+name: Technical Companion
 sphere: conjuration
-tags: ["companion"]
+tags: []
 tier: feat
 ---
 

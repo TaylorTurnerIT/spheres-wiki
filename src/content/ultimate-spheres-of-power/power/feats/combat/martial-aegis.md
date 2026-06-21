@@ -1,8 +1,9 @@
 ---
-id: "martial-aegis"
-name: "Martial Aegis"
+id: martial-aegis
+name: Martial Aegis
 sphere: protection
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 **Prerequisites:** Protection sphere, base attack bonus +1.

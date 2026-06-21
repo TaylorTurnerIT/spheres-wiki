@@ -1,8 +1,8 @@
 ---
-id: "equal-and-opposite"
-name: "Equal and Opposite"
+id: equal-and-opposite
+name: Equal and Opposite
 sphere: telekinesis
-tags: ["combat", "protokinesis"]
+tags: []
 tier: feat
 ---
 

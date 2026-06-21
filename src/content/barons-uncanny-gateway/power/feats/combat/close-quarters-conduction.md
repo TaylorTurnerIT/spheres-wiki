@@ -1,8 +1,9 @@
 ---
-id: "close-quarters-conduction"
-name: "Close-Quarters Conduction"
-sphere: destruction
-tags: ["combat", "sm"]
+id: close-quarters-conduction
+name: Close-Quarters Conduction
+tags:
+  - combat
+  - sm
 tier: feat
 ---
 

@@ -7,6 +7,9 @@
     "src/components/TabbedContent.astro",
     "scripts/catalog.mjs",
     "scripts/check-feat-category-tags.mjs",
+    "scripts/check-feat-category-membership.mjs",
+    "scripts/validate-tags.mjs",
+    "scripts/repair-feat-category-membership.mjs",
     "scripts/generate-bestial-traits.mjs",
     "scripts/parse-wiki.test.mjs"
   ],

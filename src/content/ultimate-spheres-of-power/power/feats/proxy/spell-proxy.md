@@ -1,8 +1,8 @@
 ---
-id: "spell-proxy"
-name: "Spell Proxy"
-sphere: enhancement
-tags: ["proxy"]
+id: spell-proxy
+name: Spell Proxy
+tags:
+  - proxy
 tier: feat
 ---
 

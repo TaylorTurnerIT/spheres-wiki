@@ -4,6 +4,8 @@ name: Onslaught Conversion
 tags:
   - combat
   - practitioner
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Base Attack Bonus +6

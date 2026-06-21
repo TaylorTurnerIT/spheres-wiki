@@ -2,8 +2,10 @@
 id: hold-the-note
 name: Hold the Note
 tags:
+  - 3pp
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** tension pool, one of bardic performance, psionics, or raging song

@@ -3,6 +3,8 @@ id: vaporized-formulae
 name: Vaporized Formulae
 tags:
   - practitioner
+sphere: alchemy
+tier: feat
 ---
 
 **Prerequisites:** Alchemy sphere ((formulae) package)

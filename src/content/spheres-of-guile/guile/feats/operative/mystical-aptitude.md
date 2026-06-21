@@ -4,6 +4,7 @@ name: Mystical Aptitude
 sphere: study
 tags:
   - operative
+tier: feat
 ---
 
 You are well-informed on many phenomena, the essence and functions of the planes, and the foundations of arcana.

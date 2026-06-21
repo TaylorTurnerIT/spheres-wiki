@@ -3,6 +3,7 @@ id: extra-nuance
 name: Extra Nuance
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** 5th-level dissident.

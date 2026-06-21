@@ -1,8 +1,9 @@
 ---
-id: "companion-concentration"
-name: "Companion Concentration"
+id: companion-concentration
+name: Companion Concentration
 sphere: conjuration
-tags: ["companion"]
+tags:
+  - companion
 tier: feat
 ---
 

@@ -1,9 +1,9 @@
 ---
 id: handbloods-guard
-name: Handblood’s Guard
+name: Handblood's Guard
 tags:
   - deck
-  - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Bleeding Hand)

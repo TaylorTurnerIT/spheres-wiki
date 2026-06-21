@@ -2,8 +2,10 @@
 id: swooping-grapple
 name: Swooping Grapple
 tags:
+  - 3pp
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Athletics Sphere (Mobile Striker), Wrestling Sphere

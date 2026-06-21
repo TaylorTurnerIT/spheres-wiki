@@ -1,8 +1,8 @@
 ---
-id: "force-shield"
-name: "Force Shield"
-sphere: telekinesis
-tags: ["protokinesis"]
+id: force-shield
+name: Force Shield
+tags:
+  - protokinesis
 tier: feat
 ---
 

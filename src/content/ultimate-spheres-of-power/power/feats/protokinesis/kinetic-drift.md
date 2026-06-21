@@ -1,8 +1,8 @@
 ---
-id: "kinetic-drift"
-name: "Kinetic Drift"
-sphere: telekinesis
-tags: ["protokinesis"]
+id: kinetic-drift
+name: Kinetic Drift
+tags:
+  - protokinesis
 tier: feat
 ---
 

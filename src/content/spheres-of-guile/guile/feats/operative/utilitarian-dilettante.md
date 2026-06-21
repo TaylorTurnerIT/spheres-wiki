@@ -3,6 +3,7 @@ id: utilitarian-dilettante
 name: Utilitarian Dilettante
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Extra Skill Talent.

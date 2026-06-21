@@ -1,8 +1,8 @@
 ---
-id: "greater-earth-creature"
-name: "Greater Earth Creature"
+id: greater-earth-creature
+name: Greater Earth Creature
 sphere: conjuration
-tags: ["companion"]
+tags: []
 tier: feat
 ---
 

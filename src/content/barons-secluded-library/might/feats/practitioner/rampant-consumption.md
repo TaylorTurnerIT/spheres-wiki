@@ -4,6 +4,8 @@ name: Rampant Consumption
 tags:
   - combat
   - practitioner
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Forbidden Consumption Technique, Knowledge of at least one technique

@@ -3,6 +3,7 @@ id: recon-drone
 name: Recon Drone
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Tech sphere, Drone.

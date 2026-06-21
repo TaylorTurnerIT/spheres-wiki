@@ -1,8 +1,8 @@
 ---
-id: "banshees-sotto-voce"
-name: "Banshee's Sotto Voce"
+id: banshees-sotto-voce
+name: Banshee's Sotto Voce
 sphere: death
-tags: ["necrosis"]
+tags: []
 tier: feat
 ---
 Whisper your lamentations to the world.

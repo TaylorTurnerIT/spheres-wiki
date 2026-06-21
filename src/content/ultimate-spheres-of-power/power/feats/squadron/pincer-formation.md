@@ -1,8 +1,9 @@
 ---
-id: "pincer-formation"
-name: "Pincer Formation"
+id: pincer-formation
+name: Pincer Formation
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

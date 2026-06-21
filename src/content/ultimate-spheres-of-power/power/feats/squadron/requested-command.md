@@ -1,8 +1,9 @@
 ---
-id: "requested-command"
-name: "Requested Command"
+id: requested-command
+name: Requested Command
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

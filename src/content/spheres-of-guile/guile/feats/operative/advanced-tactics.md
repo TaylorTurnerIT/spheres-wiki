@@ -3,6 +3,7 @@ id: advanced-tactics
 name: Advanced Tactics
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisites:** 4 ranks in any skill, skill leverage.

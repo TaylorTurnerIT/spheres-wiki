@@ -4,6 +4,8 @@ name: Judge, Jury, Executioner
 tags:
   - combat
   - operative
+sphere: vocation
+tier: feat
 ---
 
 *The letter of law often leaves little room for justice.*

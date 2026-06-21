@@ -1,8 +1,9 @@
 ---
-id: "variable-armaments"
-name: "Variable Armaments"
+id: variable-armaments
+name: Variable Armaments
 sphere: conjuration
-tags: ["companion"]
+tags:
+  - companion
 tier: feat
 ---
 

@@ -3,6 +3,7 @@ id: catisthenics
 name: Catisthenics
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisite:** 1 rank in any Strength- or Dexterity-based skill.

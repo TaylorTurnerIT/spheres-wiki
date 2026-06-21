@@ -4,6 +4,7 @@ name: Lingering Opening
 tags:
   - combat
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Discerning strike or expose vulnerability class feature.

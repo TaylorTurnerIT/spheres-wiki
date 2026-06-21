@@ -5,6 +5,7 @@ color: "var(--clr-brand)"
 priority: 130
 description: "Necrosis feats represent ongoing necromantic modification, corruption, or experimentation made to bring a body closer to undead anatomy."
 featCategory: true
+system: "power"
 sphere: "death"
 ---
 

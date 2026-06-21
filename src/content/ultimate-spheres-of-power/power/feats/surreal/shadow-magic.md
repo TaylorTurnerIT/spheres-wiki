@@ -1,8 +1,9 @@
 ---
-id: "shadow-magic"
-name: "Shadow Magic"
+id: shadow-magic
+name: Shadow Magic
 sphere: illusion
-tags: ["surreal"]
+tags:
+  - surreal
 tier: feat
 ---
 

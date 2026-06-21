@@ -1,8 +1,9 @@
 ---
-id: "armory"
-name: "Armory"
+id: armory
+name: Armory
 sphere: conjuration
-tags: ["companion"]
+tags:
+  - companion
 tier: feat
 ---
 

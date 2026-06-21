@@ -1,9 +1,10 @@
 ---
 id: craft-ooze
-name: Craft Ooze
+name: Craft Ooze*
 tags:
   - item-creation
   - practitioner
+tier: feat
 ---
 
 You can use alchemy to create dangerous ooze creatures.

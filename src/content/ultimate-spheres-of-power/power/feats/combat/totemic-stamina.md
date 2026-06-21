@@ -1,8 +1,9 @@
 ---
-id: "totemic-stamina"
-name: "Totemic Stamina"
+id: totemic-stamina
+name: Totemic Stamina
 sphere: war
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

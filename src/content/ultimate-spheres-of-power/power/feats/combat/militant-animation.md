@@ -1,8 +1,9 @@
 ---
-id: "militant-animation"
-name: "Militant Animation"
+id: militant-animation
+name: Militant Animation
 sphere: enhancement
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

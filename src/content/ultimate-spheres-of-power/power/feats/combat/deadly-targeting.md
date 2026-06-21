@@ -1,8 +1,9 @@
 ---
-id: "deadly-targeting"
-name: "Deadly Targeting"
+id: deadly-targeting
+name: Deadly Targeting
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

@@ -3,6 +3,8 @@ id: understand-thy-enemy
 name: Understand Thy Enemy
 tags:
   - practitioner
+sphere: fencing
+tier: feat
 ---
 
 **Prerequisites:** Fencing sphere (Read Foe, Parry And Riposte) or Fencing sphere (Read Foe) and opportune parry and riposte deed, Scout sphere.

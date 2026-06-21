@@ -4,6 +4,7 @@ name: Rainbow Efficiency
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Mana Pool and Colored Mana)

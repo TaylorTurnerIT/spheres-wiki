@@ -1,8 +1,9 @@
 ---
-id: "precision-bombardment"
-name: "Precision Bombardment"
+id: precision-bombardment
+name: Precision Bombardment
 sphere: creation
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

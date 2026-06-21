@@ -1,8 +1,9 @@
 ---
-id: "auspicious-admixture"
-name: "Auspicious Admixture"
+id: auspicious-admixture
+name: Auspicious Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - admixture
 tier: feat
 ---
 

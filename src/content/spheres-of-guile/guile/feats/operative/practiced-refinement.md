@@ -4,6 +4,7 @@ name: Practiced Refinement
 sphere: survivalism
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisites:** Associated skill 5 ranks, Survivalism sphere ((harvest) package), favored enemy class feature.

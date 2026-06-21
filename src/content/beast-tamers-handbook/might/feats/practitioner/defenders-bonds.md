@@ -1,8 +1,10 @@
 ---
 id: defenders-bonds
-name: Defender’s Bonds
+name: Defender's Bonds
 tags:
   - practitioner
+sphere: beastmastery
+tier: feat
 ---
 
 The bonds between a warrior and his faithful companions shine in combat.

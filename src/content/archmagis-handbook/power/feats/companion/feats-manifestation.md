@@ -1,9 +1,8 @@
 ---
-id: "feats-manifestation"
+id: feats-manifestation
 name: Manifestation
 sphere: conjuration
-tags:
-  - companion
+tags: []
 tier: feat
 ---
 **Prerequisites:** Conjuration sphere (Shadow Creature (form)).

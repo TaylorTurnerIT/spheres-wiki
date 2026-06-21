@@ -3,6 +3,7 @@ id: petrifying-pennant
 name: Petrifying Pennant
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Base attack bonus +8 or Diplomacy 8 ranks, banner class feature or Warleader sphere (Heraldry).

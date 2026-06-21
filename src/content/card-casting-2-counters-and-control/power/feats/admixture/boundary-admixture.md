@@ -1,8 +1,10 @@
 ---
-id: "boundary-admixture"
-name: "Boundary Admixture"
+id: boundary-admixture
+name: Boundary Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - 3pp
+  - admixture
 tier: feat
 ---
 

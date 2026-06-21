@@ -1,8 +1,8 @@
 ---
-id: "spell-channel"
-name: "Spell Channel"
+id: spell-channel
+name: Spell Channel
 sphere: conjuration
-tags: ["companion"]
+tags: []
 tier: feat
 ---
 

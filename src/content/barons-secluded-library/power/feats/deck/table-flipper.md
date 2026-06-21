@@ -3,6 +3,8 @@ id: table-flipper
 name: Table Flipper
 tags:
   - deck
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** casting class feature, does not possess the Card Casting drawback

@@ -1,8 +1,9 @@
 ---
-id: "venomous-focus"
-name: "Venomous Focus"
+id: venomous-focus
+name: Venomous Focus
 sphere: conjuration
-tags: ["companion"]
+tags:
+  - companion
 tier: feat
 ---
 

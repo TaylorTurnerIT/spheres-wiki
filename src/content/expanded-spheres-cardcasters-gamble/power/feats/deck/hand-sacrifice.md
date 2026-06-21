@@ -4,6 +4,7 @@ name: Hand Sacrifice
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Cooldown)

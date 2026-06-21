@@ -1,8 +1,9 @@
 ---
-id: "destructive-counter"
-name: "Destructive Counter"
+id: destructive-counter
+name: Destructive Counter
 sphere: creation
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

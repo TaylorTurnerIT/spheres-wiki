@@ -1,8 +1,9 @@
 ---
-id: "magicians-trade"
-name: "Magician's Trade"
+id: magicians-trade
+name: Magician's Trade
 sphere: enhancement
-tags: ["counterspell"]
+tags:
+  - counterspell
 tier: feat
 ---
 

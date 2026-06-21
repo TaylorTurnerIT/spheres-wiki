@@ -4,6 +4,7 @@ name: Mass Offerings
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting, Conjuration Sphere, Mana Sphere (Essentialize), Tribute of Essence, one of Altered Summons, Exceptional Ally, or Fated Summons

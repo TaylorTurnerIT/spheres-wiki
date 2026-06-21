@@ -1,10 +1,10 @@
 ---
 id: detailed-charting
 name: Detailed Charting
-sphere: navigation
-dualSphere: investigation
+sphere: investigation
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisites:** Investigation sphere, Navigation sphere.

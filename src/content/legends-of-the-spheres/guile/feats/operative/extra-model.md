@@ -3,6 +3,7 @@ id: extra-model
 name: Extra Model
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Model class feature or Theoretical Initiate.

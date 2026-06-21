@@ -1,8 +1,8 @@
 ---
-id: "gather-shadowstuff"
-name: "Gather Shadowstuff"
-sphere: illusion
-tags: ["surreal"]
+id: gather-shadowstuff
+name: Gather Shadowstuff
+tags:
+  - surreal
 tier: feat
 ---
 

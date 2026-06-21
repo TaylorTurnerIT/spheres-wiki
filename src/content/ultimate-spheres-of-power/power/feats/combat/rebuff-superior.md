@@ -1,8 +1,9 @@
 ---
-id: "rebuff-superior"
-name: "Rebuff, Superior"
+id: rebuff-superior
+name: Rebuff, Superior
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

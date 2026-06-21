@@ -1,8 +1,9 @@
 ---
-id: "mobile-tactics"
-name: "Mobile Tactics"
+id: mobile-tactics
+name: Mobile Tactics
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

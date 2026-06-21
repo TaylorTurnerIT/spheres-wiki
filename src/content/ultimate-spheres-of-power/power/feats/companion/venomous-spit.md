@@ -1,8 +1,9 @@
 ---
-id: "venomous-spit"
-name: "Venomous Spit"
+id: venomous-spit
+name: Venomous Spit
 sphere: conjuration
-tags: ["companion"]
+tags:
+  - companion
 tier: feat
 ---
 

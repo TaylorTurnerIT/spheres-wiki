@@ -1,8 +1,9 @@
 ---
-id: "precogniscent-resistance"
-name: "Precogniscent Resistance"
+id: precogniscent-resistance
+name: Precogniscent Resistance
 sphere: divination
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

@@ -3,6 +3,7 @@ id: dual-wielding-mystic-strike
 name: Dual Wielding Mystic Strike
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Dual Wielding Mystic Fusion.

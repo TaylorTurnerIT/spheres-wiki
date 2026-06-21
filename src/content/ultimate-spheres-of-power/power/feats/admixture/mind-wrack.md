@@ -1,8 +1,9 @@
 ---
-id: "mind-wrack"
-name: "Mind Wrack"
+id: mind-wrack
+name: Mind Wrack
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - admixture
 tier: feat
 ---
 

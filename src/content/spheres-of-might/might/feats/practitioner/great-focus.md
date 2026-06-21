@@ -4,6 +4,7 @@ name: Great Focus
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** 2 or more combat spheres, base attack bonus +6 or higher.

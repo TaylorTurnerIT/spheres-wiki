@@ -1,8 +1,9 @@
 ---
-id: "nebulous-admixture"
-name: "Nebulous Admixture"
+id: nebulous-admixture
+name: Nebulous Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - admixture
 tier: feat
 ---
 

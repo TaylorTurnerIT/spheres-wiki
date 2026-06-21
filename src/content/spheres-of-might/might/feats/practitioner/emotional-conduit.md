@@ -3,6 +3,8 @@ id: emotional-conduit
 name: Emotional Conduit
 tags:
   - practitioner
+sphere: leadership
+tier: feat
 ---
 
 **Prerequisites:** Leadership sphere, (cohort) package, emotion class feature.

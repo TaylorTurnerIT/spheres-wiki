@@ -1,8 +1,8 @@
 ---
-id: "counterweight"
-name: "Counterweight"
-sphere: telekinesis
-tags: ["protokinesis"]
+id: counterweight
+name: Counterweight
+tags:
+  - protokinesis
 tier: feat
 ---
 

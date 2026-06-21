@@ -3,6 +3,7 @@ id: consumptive-mutation
 name: Consumptive Mutation
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Consumptive Intuition, Improved Transformation, Transformation, character level 5th.

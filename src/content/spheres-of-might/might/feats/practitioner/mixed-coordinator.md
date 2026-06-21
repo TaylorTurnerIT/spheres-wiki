@@ -4,6 +4,8 @@ name: Mixed Coordinator
 tags:
   - combat
   - practitioner
+sphere: beastmastery
+tier: feat
 ---
 
 **Prerequisites:** Beastmastery sphere, (handle animal) package, Leadership sphere, (cohort) package.

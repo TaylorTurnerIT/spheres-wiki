@@ -4,6 +4,7 @@ name: Bolt from the Blue
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (cooldown), Destruction Sphere (Energy Satellite)

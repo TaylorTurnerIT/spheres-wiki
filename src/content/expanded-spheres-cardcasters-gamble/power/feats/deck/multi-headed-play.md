@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
   - squadron
+tier: feat
 ---
 
 **Prerequisites:** Card Casting, Squadron Commander

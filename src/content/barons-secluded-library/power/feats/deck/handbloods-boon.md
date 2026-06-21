@@ -1,9 +1,9 @@
 ---
 id: handbloods-boon
-name: Handblood’s Boon
+name: Handblood's Boon
 tags:
   - deck
-  - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Bleeding Hand x2), Handblood’s Advantage

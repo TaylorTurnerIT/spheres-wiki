@@ -4,6 +4,7 @@ name: Consumptive Play
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Cooldown, Mana Pool, Mana Graveyard)

@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
+import { getMarkdownFilesRecursively } from "./lib/content-files.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,25 +14,12 @@ const contentDir = path.resolve(__dirname, "../src/content");
 // Built-in synthetic tags from resolveEntries.ts — no definition file required.
 const BUILTIN_TAGS = new Set(["ex", "su", "sp", "advanced", "3pp", "sphere"]);
 
-function getFilesRecursively(dir) {
-  const results = [];
-  for (const file of fs.readdirSync(dir)) {
-    const filePath = path.join(dir, file);
-    if (fs.statSync(filePath).isDirectory()) {
-      results.push(...getFilesRecursively(filePath));
-    } else if (file.endsWith(".md")) {
-      results.push(filePath);
-    }
-  }
-  return results;
-}
-
 if (!fs.existsSync(contentDir)) {
   console.log("Content directory does not exist.");
   process.exit(0);
 }
 
-const allFiles = getFilesRecursively(contentDir);
+const allFiles = getMarkdownFilesRecursively(contentDir);
 
 // Collect all defined tag IDs.
 const definedTags = new Set();

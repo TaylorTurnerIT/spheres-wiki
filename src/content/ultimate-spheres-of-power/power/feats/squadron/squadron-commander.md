@@ -1,8 +1,10 @@
 ---
-id: "squadron-commander"
-name: "Squadron Commander"
+id: squadron-commander
+name: Squadron Commander
 sphere: war
-tags: ["extraordinary", "squadron"]
+tags:
+  - extraordinary
+  - squadron
 tier: feat
 ---
 

@@ -5,6 +5,7 @@ color: "var(--clr-brand)"
 priority: 210
 description: "Wild Magic feats modify wild magic chance or manipulate the result of a wild magic event."
 featCategory: true
+system: "power"
 sphere: "mana"
 ---
 

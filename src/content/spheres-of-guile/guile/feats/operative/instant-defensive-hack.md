@@ -4,6 +4,7 @@ name: Instant Defensive Hack
 sphere: spellhacking
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisites:** Associated skill 7 ranks, Spellhacking sphere, Prepared Hacking.

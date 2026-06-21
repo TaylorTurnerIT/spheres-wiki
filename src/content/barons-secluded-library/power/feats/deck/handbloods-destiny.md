@@ -1,9 +1,9 @@
 ---
 id: handbloods-destiny
-name: Handblood’s Destiny
+name: Handblood's Destiny
 tags:
   - deck
-  - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Bleeding Hand)

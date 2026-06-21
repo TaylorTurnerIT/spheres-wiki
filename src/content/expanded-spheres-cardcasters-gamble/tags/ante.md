@@ -4,6 +4,7 @@ label: Ante
 priority: 250
 description: Ante feats are dedicated to gambling with magical power.
 featCategory: true
+system: power
 color: var(--clr-brand)
 ---
 

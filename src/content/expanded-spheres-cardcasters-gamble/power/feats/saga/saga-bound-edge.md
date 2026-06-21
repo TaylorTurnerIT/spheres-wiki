@@ -3,6 +3,7 @@ id: saga-bound-edge
 name: Saga-Bound Edge
 tags:
   - saga
+tier: feat
 ---
 
 **Prerequisites:** Saga-Bound Fate

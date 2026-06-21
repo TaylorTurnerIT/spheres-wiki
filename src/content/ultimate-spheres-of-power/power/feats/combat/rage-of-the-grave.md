@@ -1,8 +1,9 @@
 ---
-id: "rage-of-the-grave"
-name: "Rage Of The Grave"
+id: rage-of-the-grave
+name: Rage Of The Grave
 sphere: death
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

@@ -5,6 +5,7 @@ color: "var(--clr-brand)"
 priority: 180
 description: "Squadron feats offer various ways for allies to help each other through the Squadron Commander feat."
 featCategory: true
+system: "power"
 sphere: "war"
 ---
 

@@ -4,6 +4,7 @@ name: Companion Trigger
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Animal Companion class feature, Mount class feature, or Beastmastery sphere.

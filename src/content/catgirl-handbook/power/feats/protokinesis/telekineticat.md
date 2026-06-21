@@ -1,8 +1,8 @@
 ---
-id: "telekineticat"
-name: "Telekineticat"
+id: telekineticat
+name: Telekineticat
 sphere: telekinesis
-tags: ["protokinesis"]
+tags: []
 tier: feat
 ---
 

@@ -1,8 +1,8 @@
 ---
-id: "poltergeists-fingers"
-name: "Poltergeist's Fingers"
+id: poltergeists-fingers
+name: Poltergeist's Fingers
 sphere: telekinesis
-tags: ["protokinesis"]
+tags: []
 tier: feat
 ---
 

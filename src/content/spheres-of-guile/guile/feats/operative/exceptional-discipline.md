@@ -4,6 +4,7 @@ name: Exceptional Discipline
 sphere: body-control
 tags:
   - operative
+tier: feat
 ---
 
 You have mastered your body so completely that you can control its processes without even a thought.

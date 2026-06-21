@@ -4,6 +4,8 @@ name: Ruthless Sneak
 tags:
   - combat
   - practitioner
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Sneak Attack +3d6

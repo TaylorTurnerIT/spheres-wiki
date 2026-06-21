@@ -4,6 +4,7 @@ name: Crashing Outburst
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting, Outburst Spell

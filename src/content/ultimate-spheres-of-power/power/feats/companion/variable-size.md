@@ -1,8 +1,9 @@
 ---
-id: "variable-size"
-name: "Variable Size"
+id: variable-size
+name: Variable Size
 sphere: conjuration
-tags: ["companion"]
+tags:
+  - companion
 tier: feat
 ---
 

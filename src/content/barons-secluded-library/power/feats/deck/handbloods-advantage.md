@@ -1,9 +1,9 @@
 ---
 id: handbloods-advantage
-name: Handblood’s Advantage
+name: Handblood's Advantage
 tags:
   - deck
-  - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Bleeding Hand)

@@ -1,8 +1,10 @@
 ---
-id: "introductory-admixture"
-name: "Introductory Admixture"
+id: introductory-admixture
+name: Introductory Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - 3pp
+  - admixture
 tier: feat
 ---
 

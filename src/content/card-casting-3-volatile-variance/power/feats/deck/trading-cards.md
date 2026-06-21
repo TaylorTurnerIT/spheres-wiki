@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
   - teamwork
+tier: feat
 ---
 
 **Prerequisites:** Card Casting

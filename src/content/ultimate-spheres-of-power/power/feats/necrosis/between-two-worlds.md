@@ -1,8 +1,9 @@
 ---
-id: "between-two-worlds"
-name: "Between Two Worlds"
+id: between-two-worlds
+name: Between Two Worlds
 sphere: death
-tags: ["necrosis"]
+tags:
+  - necrosis
 tier: feat
 ---
 

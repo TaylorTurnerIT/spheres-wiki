@@ -2,7 +2,9 @@
 id: mythic-play
 name: Mythic Play
 tags:
+  - 3pp
   - mythic
+tier: feat
 ---
 
 Prerequisites: Card Casting (mana pool, stagnant pool)

@@ -3,6 +3,7 @@ id: saga-bound-plentitude
 name: Saga-Bound Plentitude
 tags:
   - saga
+tier: feat
 ---
 
 **Prerequisites:** Saga-Bound Fate

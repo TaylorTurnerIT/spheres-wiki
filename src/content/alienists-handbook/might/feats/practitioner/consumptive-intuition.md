@@ -3,6 +3,7 @@ id: consumptive-intuition
 name: Consumptive Intuition
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisite:** Brain Consumption.

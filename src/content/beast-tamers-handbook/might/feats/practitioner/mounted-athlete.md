@@ -3,6 +3,8 @@ id: mounted-athlete
 name: Mounted Athlete
 tags:
   - practitioner
+sphere: athletics
+tier: feat
 ---
 
 The handler is often as athletic as the mount.

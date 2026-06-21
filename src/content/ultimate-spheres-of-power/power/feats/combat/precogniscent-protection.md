@@ -1,8 +1,9 @@
 ---
-id: "precogniscent-protection"
-name: "Precogniscent Protection"
+id: precogniscent-protection
+name: Precogniscent Protection
 sphere: divination
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

@@ -1,8 +1,9 @@
 ---
-id: "extradimensional-gullet"
-name: "Extradimensional Gullet"
-sphere: warp
-tags: ["combat"]
+id: extradimensional-gullet
+name: Extradimensional Gullet
+sphere: alteration
+tags:
+  - combat
 tier: feat
 ---
 **Prerequisites:** Swallow whole, Alteration sphere (Serpentine Transformation (transformation)), or Death sphere (Tomb Of Flesh); Warp sphere (Extradimensional Room (space)).

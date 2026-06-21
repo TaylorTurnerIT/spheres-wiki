@@ -1,8 +1,9 @@
 ---
-id: "shielded-formation"
-name: "Shielded Formation"
+id: shielded-formation
+name: Shielded Formation
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

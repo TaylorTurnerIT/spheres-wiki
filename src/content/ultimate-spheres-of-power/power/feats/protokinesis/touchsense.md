@@ -1,8 +1,8 @@
 ---
-id: "touchsense"
-name: "Touchsense"
-sphere: telekinesis
-tags: ["protokinesis"]
+id: touchsense
+name: Touchsense
+tags:
+  - protokinesis
 tier: feat
 ---
 

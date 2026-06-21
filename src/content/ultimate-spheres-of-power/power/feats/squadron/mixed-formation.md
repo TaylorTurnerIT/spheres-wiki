@@ -1,8 +1,9 @@
 ---
-id: "mixed-formation"
-name: "Mixed Formation"
+id: mixed-formation
+name: Mixed Formation
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

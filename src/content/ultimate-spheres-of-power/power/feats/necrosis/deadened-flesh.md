@@ -1,8 +1,9 @@
 ---
-id: "deadened-flesh"
-name: "Deadened Flesh"
+id: deadened-flesh
+name: Deadened Flesh
 sphere: death
-tags: ["necrosis"]
+tags:
+  - necrosis
 tier: feat
 ---
 

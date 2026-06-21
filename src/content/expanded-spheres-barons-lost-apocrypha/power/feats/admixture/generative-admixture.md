@@ -1,8 +1,10 @@
 ---
-id: "generative-admixture"
-name: "Generative Admixture"
+id: generative-admixture
+name: Generative Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - 3pp
+  - admixture
 tier: feat
 ---
 

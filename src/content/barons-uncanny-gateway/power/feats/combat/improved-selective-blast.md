@@ -1,8 +1,9 @@
 ---
-id: "improved-selective-blast"
-name: "Improved Selective Blast"
+id: improved-selective-blast
+name: Improved Selective Blast
 sphere: destruction
-tags: ["combat", "sm"]
+tags:
+  - sm
 tier: feat
 ---
 

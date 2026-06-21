@@ -19,8 +19,12 @@ export function getCanonicalFeatCategory(
   feat: FeatCategoryInput,
   tagMap: Map<string, TagEntry>,
 ): string {
-  if (feat.category) return feat.category;
-  return getFeatCategoryTagIds(feat, tagMap)[0] ?? feat.sphere ?? "general";
+  return (
+    feat.category ??
+    getFeatCategoryTagIds(feat, tagMap)[0] ??
+    feat.sphere ??
+    "general"
+  );
 }
 
 export function getFeatUrl(

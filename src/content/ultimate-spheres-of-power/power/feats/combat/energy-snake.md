@@ -1,8 +1,9 @@
 ---
-id: "energy-snake"
-name: "Energy Snake"
+id: energy-snake
+name: Energy Snake
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

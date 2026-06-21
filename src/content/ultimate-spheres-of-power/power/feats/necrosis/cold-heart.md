@@ -1,8 +1,9 @@
 ---
-id: "cold-heart"
-name: "Cold Heart"
+id: cold-heart
+name: Cold Heart
 sphere: death
-tags: ["necrosis"]
+tags:
+  - necrosis
 tier: feat
 ---
 

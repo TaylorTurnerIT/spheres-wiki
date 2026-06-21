@@ -1,8 +1,11 @@
 ---
-id: "inhuman-defiler"
-name: "Inhuman Defiler"
+id: inhuman-defiler
+name: Inhuman Defiler
 sphere: death
-tags: ["defiler", "drawback", "necrosis"]
+tags:
+  - defiler
+  - drawback
+  - necrosis
 tier: feat
 ---
 

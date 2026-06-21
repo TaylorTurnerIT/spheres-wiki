@@ -3,6 +3,7 @@ id: public-renown
 name: Public Renown
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Diplomacy 7 ranks.

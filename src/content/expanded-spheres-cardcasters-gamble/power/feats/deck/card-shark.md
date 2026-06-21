@@ -4,6 +4,7 @@ name: Card Shark
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisite:** Card Casting

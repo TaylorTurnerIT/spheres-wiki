@@ -3,6 +3,7 @@ id: extra-technical-insight
 name: Extra Technical Insight
 tags:
   - practitioner
+tier: feat
 ---
 
 Your experimentations have unlocked new insights.

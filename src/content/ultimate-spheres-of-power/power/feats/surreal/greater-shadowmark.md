@@ -1,8 +1,8 @@
 ---
-id: "greater-shadowmark"
-name: "Greater Shadowmark"
-sphere: illusion
-tags: ["surreal"]
+id: greater-shadowmark
+name: Greater Shadowmark
+tags:
+  - surreal
 tier: feat
 ---
 

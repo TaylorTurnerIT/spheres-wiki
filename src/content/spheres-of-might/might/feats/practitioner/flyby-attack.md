@@ -1,9 +1,10 @@
 ---
 id: flyby-attack
-name: Flyby Attack
+name: Flyby Attack*
 tags:
   - monster
   - practitioner
+tier: feat
 ---
 
 This creature can make an attack before and after it moves while flying.

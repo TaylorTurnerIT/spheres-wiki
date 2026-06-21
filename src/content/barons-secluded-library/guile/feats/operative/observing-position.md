@@ -3,6 +3,8 @@ id: observing-position
 name: Observing Position
 tags:
   - operative
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Navigation Sphere, Study Sphere

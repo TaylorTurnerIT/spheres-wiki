@@ -1,8 +1,9 @@
 ---
-id: "umbral-admixture"
-name: "Umbral Admixture"
-sphere: destruction
-tags: ["admixture"]
+id: umbral-admixture
+name: Umbral Admixture
+sphere: dark
+tags:
+  - admixture
 tier: feat
 ---
 

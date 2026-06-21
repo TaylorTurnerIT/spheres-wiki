@@ -1,9 +1,10 @@
 ---
-id: "sojourner"
-name: "Sojourner"
+id: sojourner
+name: Sojourner
 sphere: performance
 tags:
-  - "champion"
+  - champion
+tier: feat
 ---
 
 **Prerequisite:** Perform (dance) 3 ranks, Performance sphere ((dance) package); Athletics sphere or Warp sphere.

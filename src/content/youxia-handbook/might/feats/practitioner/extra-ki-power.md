@@ -3,6 +3,7 @@ id: extra-ki-power
 name: Extra Ki Power
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Cultivate Ki or ki power class feature.

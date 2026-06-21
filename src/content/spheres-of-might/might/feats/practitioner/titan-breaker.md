@@ -1,9 +1,10 @@
 ---
 id: titan-breaker
-name: Titan Breaker
+name: Titan Breaker*
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 You are the bane of those who believe they stand atop the world.

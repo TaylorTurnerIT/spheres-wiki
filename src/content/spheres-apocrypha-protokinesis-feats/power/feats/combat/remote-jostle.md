@@ -1,8 +1,8 @@
 ---
-id: "remote-jostle"
-name: "Remote Jostle"
+id: remote-jostle
+name: Remote Jostle
 sphere: telekinesis
-tags: ["combat", "protokinesis"]
+tags: []
 tier: feat
 ---
 

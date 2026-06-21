@@ -4,6 +4,7 @@ name: Flexible Targeting
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Destruction Sphere, Card Casting drawback

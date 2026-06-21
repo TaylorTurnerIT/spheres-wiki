@@ -6,29 +6,18 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
+import { getMarkdownFilesRecursively } from "./lib/content-files.mjs";
+import { inferFromPath } from "../src/lib/inferFromPath.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.resolve(__dirname, "../src/content");
-
-function getFilesRecursively(dir) {
-  const results = [];
-  for (const file of fs.readdirSync(dir)) {
-    const filePath = path.join(dir, file);
-    if (fs.statSync(filePath).isDirectory()) {
-      results.push(...getFilesRecursively(filePath));
-    } else if (file.endsWith(".md") && !file.startsWith("QUARANTINE-")) {
-      results.push(filePath);
-    }
-  }
-  return results;
-}
 
 if (!fs.existsSync(contentDir)) {
   console.log("Content directory does not exist.");
   process.exit(0);
 }
 
-const allFiles = getFilesRecursively(contentDir);
+const allFiles = getMarkdownFilesRecursively(contentDir, { skipQuarantine: true });
 const sphereBodies = new Map(); // sphereId -> { body, filePath }
 const baseTalents = []; // { id, name, sphere, filePath }
 
@@ -46,18 +35,25 @@ for (const filePath of allFiles) {
 
   if (!frontmatter) continue;
 
-  if (frontmatter.type === "sphere") {
+  const relPath = path.relative(contentDir, filePath);
+  const relPathFromBook = relPath.split(path.sep).slice(1).join(path.sep);
+  const inferred = inferFromPath(relPathFromBook);
+  const entryType = frontmatter.type ?? inferred.type;
+
+  if (entryType === "sphere") {
     const fmEnd = match.index + match[0].length;
-    sphereBodies.set(frontmatter.id, {
+    const sphereId = frontmatter.id ?? inferred.id;
+    if (!sphereId) continue;
+    sphereBodies.set(sphereId, {
       body: content.substring(fmEnd),
       filePath: path.relative(contentDir, filePath),
     });
   }
 
-  if (frontmatter.type === "talent" && frontmatter.tier === "base") {
+  if (entryType === "talent" && frontmatter.tier === "base") {
     // Derive sphere from path for entries where it's not in frontmatter.
     // Might entries follow the pattern: {book}/{system}/spheres/{sphere}/talents/{id}.md
-    let sphere = frontmatter.sphere;
+    let sphere = frontmatter.sphere ?? inferred.sphere;
     if (!sphere) {
       const parts = filePath.split(path.sep);
       // Find "spheres" in path, next segment is the sphere name

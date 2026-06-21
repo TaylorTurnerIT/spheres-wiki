@@ -1,8 +1,9 @@
 ---
-id: "magical-focus"
-name: "Magical Focus"
+id: magical-focus
+name: Magical Focus
 sphere: enhancement
-tags: ["drawback"]
+tags:
+  - drawback
 tier: feat
 ---
 

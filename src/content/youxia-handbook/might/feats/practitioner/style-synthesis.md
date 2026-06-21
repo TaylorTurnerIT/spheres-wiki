@@ -4,6 +4,7 @@ name: Style Synthesis
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Any (stance) talent, any style feat.

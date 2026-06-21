@@ -1,11 +1,11 @@
 ---
-id: "mechanized-magnificence"
+id: mechanized-magnificence
 name: Mechanized Magnificence
 sphere: performance
-dualSphere: tinker
 tags:
   - champion
   - gizmo
+tier: feat
 ---
 
 You blend metal and music into one another.

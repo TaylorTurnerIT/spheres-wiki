@@ -3,6 +3,7 @@ id: extra-skill-talent
 name: Extra Skill Talent
 tags:
   - operative
+tier: feat
 ---
 
 Your acumen and expertise are easily expanded.

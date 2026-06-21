@@ -4,6 +4,7 @@ name: Sparking Technique
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting, Sparking Printer

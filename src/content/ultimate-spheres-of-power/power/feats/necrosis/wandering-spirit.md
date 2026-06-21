@@ -1,8 +1,9 @@
 ---
-id: "wandering-spirit"
-name: "Wandering Spirit"
+id: wandering-spirit
+name: Wandering Spirit
 sphere: death
-tags: ["necrosis"]
+tags:
+  - necrosis
 tier: feat
 ---
 

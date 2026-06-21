@@ -4,6 +4,8 @@ name: Pouncing Sweep
 tags:
   - combat
   - practitioner
+sphere: athletics
+tier: feat
 ---
 
 **Prerequisites:** Athletics sphere, Open Hand sphere.

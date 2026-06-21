@@ -1,8 +1,9 @@
 ---
-id: "lightning-tactics"
-name: "Lightning Tactics"
+id: lightning-tactics
+name: Lightning Tactics
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

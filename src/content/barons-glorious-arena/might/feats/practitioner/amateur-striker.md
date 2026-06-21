@@ -2,8 +2,10 @@
 id: amateur-striker
 name: Amateur Striker
 tags:
+  - 3pp
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Con 13, No levels in a class that has the tension class feature.

@@ -4,6 +4,7 @@ name: Deck Rebirth
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Cooldown), Charged Spells

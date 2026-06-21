@@ -1,8 +1,10 @@
 ---
-id: "militant-admixture"
-name: "Militant Admixture"
+id: militant-admixture
+name: Militant Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - 3pp
+  - admixture
 tier: feat
 ---
 

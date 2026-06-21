@@ -4,6 +4,7 @@ name: Titanic Summons
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Mana Pool), Conjuration Sphere, one of Altered Summons, Exceptional Ally, or Fated Summons

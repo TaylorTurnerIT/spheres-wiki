@@ -1,8 +1,9 @@
 ---
-id: "careful-magic"
-name: "Careful Magic"
+id: careful-magic
+name: Careful Magic
 sphere: enhancement
-tags: ["drawback"]
+tags:
+  - drawback
 tier: feat
 ---
 

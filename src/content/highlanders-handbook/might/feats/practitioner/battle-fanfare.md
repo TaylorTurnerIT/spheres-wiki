@@ -4,6 +4,8 @@ name: Battle Fanfare
 tags:
   - combat
   - practitioner
+sphere: warleader
+tier: feat
 ---
 
 **Prerequisites:** Warleader sphere, bardic performance or raging song class feature.

@@ -1,8 +1,8 @@
 ---
-id: "kinetic-juggler"
-name: "Kinetic Juggler"
+id: kinetic-juggler
+name: Kinetic Juggler
 sphere: telekinesis
-tags: ["protokinesis"]
+tags: []
 tier: feat
 ---
 

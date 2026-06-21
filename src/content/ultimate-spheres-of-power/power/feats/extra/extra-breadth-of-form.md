@@ -1,8 +1,8 @@
 ---
-id: "extra-breadth-of-form"
-name: "Extra Breadth of Form"
-tags: ["extra"]
-sphere: alteration
+id: extra-breadth-of-form
+name: Extra Breadth of Form
+tags:
+  - extra
 tier: feat
 ---
 

@@ -1,8 +1,9 @@
 ---
-id: "enhancing-admixture"
-name: "Enhancing Admixture"
+id: enhancing-admixture
+name: Enhancing Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - admixture
 tier: feat
 ---
 

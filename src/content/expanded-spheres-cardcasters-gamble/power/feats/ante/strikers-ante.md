@@ -1,9 +1,10 @@
 ---
 id: strikers-ante
-name: Striker’s Ante
+name: Striker's Ante
 tags:
   - ante
   - combat
+tier: feat
 ---
 
 **Prerequisites:** Ante Up, Tension class feature

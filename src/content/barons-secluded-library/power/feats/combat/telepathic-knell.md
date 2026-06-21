@@ -1,8 +1,9 @@
 ---
-id: "telepathic-knell"
-name: "Telepathic Knell"
-sphere: mind
-tags: ["combat", "sm"]
+id: telepathic-knell
+name: Telepathic Knell
+tags:
+  - combat
+  - sm
 tier: feat
 ---
 

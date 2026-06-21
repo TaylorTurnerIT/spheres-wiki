@@ -1,9 +1,10 @@
 ---
 id: tug-the-heartstrings
 name: Tug The Heartstrings
-sphere: performance
+sphere: artifice
 tags:
   - operative
+tier: feat
 ---
 
 Your expressions of creativity possess a deeper meaning, making them harder to ignore to those who understand your experience.

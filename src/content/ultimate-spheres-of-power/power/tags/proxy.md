@@ -5,6 +5,7 @@ color: "var(--clr-brand)"
 priority: 150
 description: "Proxy feats represent enhanced ability to manipulate and take advantage of the Create Proxy enhancement."
 featCategory: true
+system: "power"
 sphere: "enhancement"
 ---
 

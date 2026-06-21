@@ -4,6 +4,7 @@ name: Societal Aptitude
 sphere: study
 tags:
   - operative
+tier: feat
 ---
 
 You have an intimate understanding of the many ways society can take shape, the ways that communities function, and the - sometimes unreliable - importance of history.

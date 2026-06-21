@@ -1,8 +1,9 @@
 ---
-id: "ranged-command"
-name: "Ranged Command"
+id: ranged-command
+name: Ranged Command
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

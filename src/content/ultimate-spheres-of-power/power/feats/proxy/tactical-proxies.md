@@ -1,8 +1,8 @@
 ---
-id: "tactical-proxies"
-name: "Tactical Proxies"
-sphere: enhancement
-tags: ["proxy"]
+id: tactical-proxies
+name: Tactical Proxies
+tags:
+  - proxy
 tier: feat
 ---
 

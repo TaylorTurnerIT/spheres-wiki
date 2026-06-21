@@ -1,9 +1,10 @@
 ---
 id: two-weapon-rend
-name: Two-Weapon Rend
+name: Two-Weapon Rend*
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 Striking with both of your weapons simultaneously, you can use them to deliver devastating wounds.

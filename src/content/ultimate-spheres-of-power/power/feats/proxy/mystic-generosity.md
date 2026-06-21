@@ -1,8 +1,8 @@
 ---
-id: "mystic-generosity"
-name: "Mystic Generosity"
-sphere: enhancement
-tags: ["proxy"]
+id: mystic-generosity
+name: Mystic Generosity
+tags:
+  - proxy
 tier: feat
 ---
 

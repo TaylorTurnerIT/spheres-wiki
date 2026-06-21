@@ -1,8 +1,9 @@
 ---
-id: "ghostly-admixture"
-name: "Ghostly Admixture"
-sphere: destruction
-tags: ["admixture"]
+id: ghostly-admixture
+name: Ghostly Admixture
+sphere: death
+tags:
+  - admixture
 tier: feat
 ---
 

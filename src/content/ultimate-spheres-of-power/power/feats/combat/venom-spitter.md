@@ -1,8 +1,9 @@
 ---
-id: "venom-spitter"
-name: "Venom Spitter"
+id: venom-spitter
+name: Venom Spitter
 sphere: alteration
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

@@ -4,6 +4,7 @@ name: Dual Pathing
 sphere: navigation
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisites:** Associated skill 10 ranks, Navigation sphere.

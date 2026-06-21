@@ -4,6 +4,7 @@ name: Industrious Engineer
 sphere: artifice
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisites:** Associated skill 3 ranks, Artifice sphere (Field Repair).

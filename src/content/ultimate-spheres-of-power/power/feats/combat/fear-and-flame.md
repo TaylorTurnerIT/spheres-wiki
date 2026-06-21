@@ -1,8 +1,9 @@
 ---
-id: "fear-and-flame"
-name: "Fear And Flame"
+id: fear-and-flame
+name: Fear And Flame
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

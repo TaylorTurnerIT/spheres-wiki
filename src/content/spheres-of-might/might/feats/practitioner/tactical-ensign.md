@@ -3,6 +3,8 @@ id: tactical-ensign
 name: Tactical Ensign
 tags:
   - practitioner
+sphere: warleader
+tier: feat
 ---
 
 **Prerequisites:** Diplomacy 10 ranks, Warleader sphere (Heraldry), banner class feature.

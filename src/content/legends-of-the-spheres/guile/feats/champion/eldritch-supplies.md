@@ -1,10 +1,11 @@
 ---
-id: "eldritch-supplies"
-name: "Eldritch Supplies"
+id: eldritch-supplies
+name: Eldritch Supplies
 sphere: faction
 tags:
-  - "champion"
-  - "drawback"
+  - champion
+  - drawback
+tier: feat
 ---
 
 **Prerequisites:** Faction sphere, casting class feature.

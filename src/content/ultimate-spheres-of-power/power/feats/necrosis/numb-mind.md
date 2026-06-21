@@ -1,8 +1,9 @@
 ---
-id: "numb-mind"
-name: "Numb Mind"
+id: numb-mind
+name: Numb Mind
 sphere: death
-tags: ["necrosis"]
+tags:
+  - necrosis
 tier: feat
 ---
 

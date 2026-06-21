@@ -4,6 +4,8 @@ name: Rolling Serpent
 tags:
   - combat
   - practitioner
+sphere: athletics
+tier: feat
 ---
 
 **Prerequisites:** Athletics sphere, Boxing sphere (Shoulder Roll).

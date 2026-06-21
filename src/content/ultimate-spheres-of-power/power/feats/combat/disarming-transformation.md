@@ -1,8 +1,9 @@
 ---
-id: "disarming-transformation"
-name: "Disarming Transformation"
+id: disarming-transformation
+name: Disarming Transformation
 sphere: alteration
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

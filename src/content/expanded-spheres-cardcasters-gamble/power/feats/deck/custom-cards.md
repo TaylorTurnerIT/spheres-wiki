@@ -4,6 +4,7 @@ name: Custom Cards
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting

@@ -1,8 +1,10 @@
 ---
-id: "spectacular-admixture"
-name: "Spectacular Admixture"
+id: spectacular-admixture
+name: Spectacular Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - 3pp
+  - admixture
 tier: feat
 ---
 

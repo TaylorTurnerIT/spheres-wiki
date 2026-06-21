@@ -1,8 +1,9 @@
 ---
-id: "sunlight-strike"
-name: "Sunlight Strike"
+id: sunlight-strike
+name: Sunlight Strike
 sphere: light
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

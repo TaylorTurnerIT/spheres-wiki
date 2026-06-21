@@ -4,6 +4,8 @@ name: Wiggling Footsies
 tags:
   - combat
   - practitioner
+sphere: fencing
+tier: feat
 ---
 
 **Prerequisites:** Fencing sphere (Footwork), Scout sphere (Calibrating Wiggle).

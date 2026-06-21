@@ -1,8 +1,7 @@
 ---
 id: deific-icon
 name: Deific Icon
-tags:
-  - operative
+tags: []
 ---
 
 **Prerequisites:** Artifice sphere ((artwork) package), Knowledge (religion) 3 ranks, must worship a deity (or similar creature).

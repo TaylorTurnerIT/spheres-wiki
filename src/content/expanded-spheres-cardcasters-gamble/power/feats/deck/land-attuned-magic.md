@@ -2,8 +2,10 @@
 id: land-attuned-magic
 name: Land-Attuned Magic
 tags:
+  - 3pp
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Area Bound or Terrain Casting

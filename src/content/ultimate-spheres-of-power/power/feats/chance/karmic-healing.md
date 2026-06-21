@@ -1,8 +1,8 @@
 ---
-id: "karmic-healing"
-name: "Karmic Healing"
-sphere: life
-tags: ["chance"]
+id: karmic-healing
+name: Karmic Healing
+tags:
+  - chance
 tier: feat
 ---
 

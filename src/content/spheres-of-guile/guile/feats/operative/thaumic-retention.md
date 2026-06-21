@@ -1,8 +1,7 @@
 ---
 id: thaumic-retention
 name: Thaumic Retention
-tags:
-  - operative
+tags: []
 ---
 
 **Prerequisites:** Associated skill 5 ranks, Artifice sphere ((artwork) package), Spellcraft 5 ranks.

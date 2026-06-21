@@ -4,6 +4,7 @@ name: Vigilant Gambler
 tags:
   - ante
   - combat
+tier: feat
 ---
 
 **Prerequisites:** Ante Up

@@ -3,6 +3,7 @@ id: remote-hacking
 name: Remote Hacking
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Tech sphere (Remote Control).

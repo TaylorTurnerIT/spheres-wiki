@@ -5,6 +5,7 @@ color: "var(--clr-brand)"
 priority: 140
 description: "Protokinesis feats represent innate telekinetic abilities usable with minimal thought and effort."
 featCategory: true
+system: "power"
 sphere: "telekinesis"
 ---
 

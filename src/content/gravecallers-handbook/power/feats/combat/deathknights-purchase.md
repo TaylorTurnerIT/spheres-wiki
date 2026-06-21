@@ -1,8 +1,8 @@
 ---
-id: "deathknights-purchase"
-name: "Deathknight's Purchase"
+id: deathknights-purchase
+name: Deathknight's Purchase
 sphere: death
-tags: ["combat", "necrosis"]
+tags: []
 tier: feat
 ---
 Their suffering is your salvation. Break their souls across the iron that is your will.

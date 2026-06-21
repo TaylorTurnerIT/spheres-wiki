@@ -4,6 +4,7 @@ name: Perfect Calm
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 **Prerequisite:** Martial focus.

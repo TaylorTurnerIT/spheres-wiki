@@ -1,8 +1,10 @@
 ---
-id: "suffer-by-proxy"
-name: "Suffer By Proxy"
+id: suffer-by-proxy
+name: Suffer By Proxy
 sphere: enhancement
-tags: ["drawback", "proxy"]
+tags:
+  - drawback
+  - proxy
 tier: feat
 ---
 

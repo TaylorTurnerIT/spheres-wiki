@@ -4,6 +4,7 @@ name: Catchy Tune
 sphere: performance
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisites:** Associated skill 5 ranks, Performance sphere ((lyric) package).

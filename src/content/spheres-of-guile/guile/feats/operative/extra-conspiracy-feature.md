@@ -3,6 +3,7 @@ id: extra-conspiracy-feature
 name: Extra Conspiracy Feature
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisites:** Base skill sphere granted by the chosen conspiracy, agent 1 or mastermind 1.

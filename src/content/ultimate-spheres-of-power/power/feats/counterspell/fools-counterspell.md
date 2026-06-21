@@ -1,8 +1,9 @@
 ---
-id: "fools-counterspell"
-name: "Fool's Counterspell"
-sphere: mind
-tags: ["counterspell"]
+id: fools-counterspell
+name: Fool's Counterspell
+sphere: illusion
+tags:
+  - counterspell
 tier: feat
 ---
 

@@ -4,6 +4,7 @@ name: Miraculous Draw
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting

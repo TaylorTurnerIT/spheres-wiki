@@ -4,6 +4,8 @@ name: Brutal Shatter
 tags:
   - combat
   - practitioner
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Berserker Sphere

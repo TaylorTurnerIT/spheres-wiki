@@ -1,8 +1,8 @@
 ---
-id: "telekinetic-trigger"
-name: "Telekinetic Trigger"
+id: telekinetic-trigger
+name: Telekinetic Trigger
 sphere: telekinesis
-tags: ["protokinesis"]
+tags: []
 tier: feat
 ---
 

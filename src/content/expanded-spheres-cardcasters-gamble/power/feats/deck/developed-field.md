@@ -4,6 +4,7 @@ name: Developed Field
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting drawback (Mana Pool), any metamagic feat

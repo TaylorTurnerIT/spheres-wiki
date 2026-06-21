@@ -1,8 +1,9 @@
 ---
-id: "shape-expert"
-name: "Shape Expert"
+id: shape-expert
+name: Shape Expert
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

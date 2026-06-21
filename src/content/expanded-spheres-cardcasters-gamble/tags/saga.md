@@ -4,6 +4,7 @@ label: Saga
 priority: 270
 description: Saga feats are built around the Saga Deck created by the Saga-Bound Fate feat.
 featCategory: true
+system: power
 color: var(--clr-brand)
 ---
 

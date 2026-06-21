@@ -1,8 +1,9 @@
 ---
-id: "squad-triangulation"
-name: "Squad Triangulation"
+id: squad-triangulation
+name: Squad Triangulation
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

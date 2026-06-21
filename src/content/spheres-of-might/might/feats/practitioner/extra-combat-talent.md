@@ -4,6 +4,7 @@ name: Extra Combat Talent
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 Your knowledge of combat is easily expanded.

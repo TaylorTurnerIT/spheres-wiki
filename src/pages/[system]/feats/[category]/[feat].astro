@@ -36,7 +36,16 @@ export async function getStaticPaths() {
 
       paths.push({
         params: { system, category, feat: feat.id },
-        props: { feat, sphere, collEntry: allCollEntries.get(`feat:${feat.id}`), sourceBook: bookMetaMap.get(feat.sourceBook), tagMap, bookMetaMap },
+        props: {
+          feat,
+          sphere,
+          collEntry:
+            allCollEntries.get(`feat:${feat.sourceBook}:${feat.id}`) ??
+            allCollEntries.get(`feat:${feat.id}`),
+          sourceBook: bookMetaMap.get(feat.sourceBook),
+          tagMap,
+          bookMetaMap,
+        },
       });
     }
   }

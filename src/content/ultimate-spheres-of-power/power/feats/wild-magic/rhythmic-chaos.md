@@ -1,8 +1,8 @@
 ---
-id: "rhythmic-chaos"
-name: "Rhythmic Chaos"
+id: rhythmic-chaos
+name: Rhythmic Chaos
 sphere: mana
-tags: ["wild-magic"]
+tags: []
 tier: feat
 ---
 

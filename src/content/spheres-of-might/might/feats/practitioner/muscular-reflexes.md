@@ -4,6 +4,7 @@ name: Muscular Reflexes
 tags:
   - combat
   - practitioner
+tier: feat
 ---
 
 You rely on muscle memory and strength to enhance your reflexes.

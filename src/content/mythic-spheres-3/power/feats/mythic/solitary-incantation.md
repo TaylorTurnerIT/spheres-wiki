@@ -1,8 +1,7 @@
 ---
 id: solitary-incantation
 name: Solitary Incantation
-tags:
-  - mythic
+tags: []
 ---
 
 **Prerequisites:** 5 ranks in any 1 skill, Solitary Incantation.

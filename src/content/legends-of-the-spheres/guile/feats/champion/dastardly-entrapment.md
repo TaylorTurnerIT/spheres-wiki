@@ -1,9 +1,10 @@
 ---
-id: "dastardly-entrapment"
-name: "Dastardly Entrapment"
+id: dastardly-entrapment
+name: Dastardly Entrapment
 sphere: infiltration
 tags:
-  - "champion"
+  - champion
+tier: feat
 ---
 
 **Prerequisites:** Infiltration sphere, Scoundrel sphere.

@@ -1,8 +1,9 @@
 ---
-id: "totemic-channeling"
-name: "Totemic Channeling"
+id: totemic-channeling
+name: Totemic Channeling
 sphere: war
-tags: ["channeling"]
+tags:
+  - channeling
 tier: feat
 ---
 

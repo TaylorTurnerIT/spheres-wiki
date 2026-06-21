@@ -4,6 +4,7 @@ name: Superior Mana Cards
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting (Mana Pool), Specialized Mana Cards deck manipulation

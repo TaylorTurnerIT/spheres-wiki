@@ -3,6 +3,7 @@ id: dual-wielding-mystic-fusion
 name: Dual Wielding Mystic Fusion
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Dual Wielding Sphere, Spherecasting.

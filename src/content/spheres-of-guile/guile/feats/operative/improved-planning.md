@@ -3,6 +3,7 @@ id: improved-planning
 name: Improved Planning
 tags:
   - operative
+tier: feat
 ---
 
 You layer strategies and preparations on top of each other

@@ -1,8 +1,9 @@
 ---
-id: "morphic-admixture"
-name: "Morphic Admixture"
-sphere: destruction
-tags: ["admixture"]
+id: morphic-admixture
+name: Morphic Admixture
+sphere: alteration
+tags:
+  - admixture
 tier: feat
 ---
 

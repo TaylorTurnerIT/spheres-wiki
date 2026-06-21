@@ -1,8 +1,9 @@
 ---
-id: "precogniscent-smite"
-name: "Precogniscent Smite"
+id: precogniscent-smite
+name: Precogniscent Smite
 sphere: divination
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

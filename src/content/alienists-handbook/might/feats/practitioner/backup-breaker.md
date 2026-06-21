@@ -4,6 +4,8 @@ name: Backup Breaker
 tags:
   - combat
   - practitioner
+sphere: boxing
+tier: feat
 ---
 
 **Prerequisites:** Boxing sphere, Dual Wielding sphere.

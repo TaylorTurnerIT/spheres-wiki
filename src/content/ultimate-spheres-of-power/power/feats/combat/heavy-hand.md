@@ -1,8 +1,9 @@
 ---
-id: "heavy-hand"
-name: "Heavy Hand"
+id: heavy-hand
+name: Heavy Hand
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

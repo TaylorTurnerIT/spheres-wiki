@@ -1,8 +1,9 @@
 ---
-id: "totem-tactics"
-name: "Totem Tactics"
+id: totem-tactics
+name: Totem Tactics
 sphere: war
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

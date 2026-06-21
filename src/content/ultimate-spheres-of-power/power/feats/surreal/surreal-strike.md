@@ -1,8 +1,8 @@
 ---
-id: "surreal-strike"
-name: "Surreal Strike"
-sphere: illusion
-tags: ["surreal"]
+id: surreal-strike
+name: Surreal Strike
+tags:
+  - surreal
 tier: feat
 ---
 

@@ -1,9 +1,10 @@
 ---
-id: "winded-by-words"
-name: "Winded By Words"
+id: winded-by-words
+name: Winded By Words
 sphere: bluster
 tags:
-  - "champion"
+  - champion
+tier: feat
 ---
 
 **Prerequisites:** Bluster sphere, ability to gain martial focus.

@@ -1,8 +1,9 @@
 ---
-id: "platoon-commander"
-name: "Platoon Commander"
+id: platoon-commander
+name: Platoon Commander
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

@@ -4,6 +4,8 @@ name: Morphing Trap Card
 tags:
   - deck
   - drawback
+sphere: enhancement
+tier: feat
 ---
 
 **Prerequisites:** Card Casting, Trap Card, Enhancement sphere (animate object)

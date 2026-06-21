@@ -1,9 +1,10 @@
 ---
-id: "unerring-eye"
-name: "Unerring Eye"
+id: unerring-eye
+name: Unerring Eye
 sphere: investigation
 tags:
-  - "champion"
+  - champion
+tier: feat
 ---
 
 **Prerequisites:** Sense Motive ranks 3, Investigation sphere; either the Divination sphere or Scout sphere.

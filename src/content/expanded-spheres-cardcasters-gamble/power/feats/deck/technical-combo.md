@@ -4,6 +4,7 @@ name: Technical Combo
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting, Technique Crafting

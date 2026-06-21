@@ -1,8 +1,9 @@
 ---
-id: "time-thiefs-admixture"
-name: "Time-Thief's Admixture"
+id: time-thiefs-admixture
+name: Time-Thief's Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - admixture
 tier: feat
 ---
 

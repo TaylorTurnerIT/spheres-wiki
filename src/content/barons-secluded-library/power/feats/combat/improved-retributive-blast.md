@@ -1,8 +1,9 @@
 ---
-id: "improved-retributive-blast"
-name: "Improved Retributive Blast"
-sphere: destruction
-tags: ["combat", "sm"]
+id: improved-retributive-blast
+name: Improved Retributive Blast
+tags:
+  - combat
+  - sm
 tier: feat
 ---
 

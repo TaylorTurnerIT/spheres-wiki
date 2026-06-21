@@ -3,6 +3,7 @@ id: shield-drone
 name: Shield Drone
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Tech sphere, Drone.

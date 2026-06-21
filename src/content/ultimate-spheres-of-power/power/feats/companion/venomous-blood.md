@@ -1,8 +1,9 @@
 ---
-id: "venomous-blood"
-name: "Venomous Blood"
+id: venomous-blood
+name: Venomous Blood
 sphere: conjuration
-tags: ["companion"]
+tags:
+  - companion
 tier: feat
 ---
 

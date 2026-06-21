@@ -1,8 +1,9 @@
 ---
-id: "tether-adept"
-name: "Tether Adept"
+id: tether-adept
+name: Tether Adept
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

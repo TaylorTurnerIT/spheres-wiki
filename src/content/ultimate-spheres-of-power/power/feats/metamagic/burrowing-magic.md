@@ -1,8 +1,9 @@
 ---
-id: "burrowing-magic"
-name: "Burrowing Magic"
+id: burrowing-magic
+name: Burrowing Magic
 sphere: warp
-tags: ["metamagic"]
+tags:
+  - metamagic
 tier: feat
 ---
 

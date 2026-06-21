@@ -1,8 +1,9 @@
 ---
-id: "two-headed-adept"
-name: "Two-Headed Adept"
+id: two-headed-adept
+name: Two-Headed Adept
 sphere: alteration
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

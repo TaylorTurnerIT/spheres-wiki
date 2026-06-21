@@ -4,87 +4,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
+import { getMarkdownFilesRecursively } from "./lib/content-files.mjs";
+import { inferFromPath } from "../src/lib/inferFromPath.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-// ── Inline path inference (mirrors inferFromPath.ts) ──────────────────────
-
-const KNOWN_SYSTEMS = new Set(["power", "might", "guile", "champions"]);
-
-function inferFromPath(relPathFromBook) {
-  let parts = relPathFromBook.replace(/\.mdx?$/, "").split(path.sep);
-  const result = {};
-  if (KNOWN_SYSTEMS.has(parts[0])) {
-    result.system = parts[0];
-    parts = parts.slice(1);
-  }
-  result.id = parts[parts.length - 1];
-  const last = result.id;
-  const prev = parts.length > 1 ? parts[parts.length - 2] : "";
-  const prev2 = parts.length > 2 ? parts[parts.length - 3] : "";
-  if (parts.length === 2) {
-    const MAP = {
-      talents: "talent",
-      feats: "feat",
-      spheres: "sphere",
-      classes: "class",
-      archetypes: "archetype",
-      "archetype-features": "archetype-feature",
-      articles: "article",
-      tags: "tag",
-    };
-    if (MAP[parts[0]]) {
-      result.type = MAP[parts[0]];
-      return result;
-    }
-  }
-  if (parts.length === 3) {
-    if (parts[0] === "class-features")
-      return { ...result, type: "class-feature" };
-    if (parts[0] === "class-traits") return { ...result, type: "class-trait" };
-    if (parts[0] === "archetype-features")
-      return { ...result, type: "archetype-feature" };
-  }
-  if (parts.length >= 4) {
-    if (
-      prev === "archetype-features" ||
-      (prev === "features" &&
-        parts[parts.length - 4]?.toLowerCase() === "archetypes")
-    )
-      return { ...result, type: "archetype-feature" };
-    if (
-      prev === "class-traits" ||
-      (prev === "traits" &&
-        parts[parts.length - 4]?.toLowerCase() === "features")
-    )
-      return { ...result, type: "class-trait" };
-  }
-  if (parts.length >= 3) {
-    if (prev === "class-features" || prev === "features")
-      return { ...result, type: "class-feature" };
-    if (
-      (prev2 === "archetypes" || prev2 === "Archetypes") &&
-      (last === prev ||
-        last === "index" ||
-        last.endsWith(`-${prev}`) ||
-        last.includes(prev))
-    )
-      return { ...result, type: "archetype", id: prev };
-    if (prev === "talents") return { ...result, type: "talent" };
-    if (prev === "feats") return { ...result, type: "feat" };
-    if (
-      parts[parts.length - 3] === "spheres" &&
-      (last === prev || last === "index")
-    )
-      return { ...result, type: "sphere", id: prev };
-  }
-  if (
-    parts[0]?.toLowerCase() === "classes" &&
-    (last === prev || last === "index")
-  )
-    return { ...result, type: "class", id: prev };
-  return result;
-}
 const contentDir = path.resolve(__dirname, "../src/content");
 
 const BUILTIN_TAGS = new Set([
@@ -100,25 +23,12 @@ function isSyntheticTag(tag) {
   return BUILTIN_TAGS.has(tag) || tag.endsWith("-sphere");
 }
 
-function getFilesRecursively(dir) {
-  const results = [];
-  for (const file of fs.readdirSync(dir)) {
-    const filePath = path.join(dir, file);
-    if (fs.statSync(filePath).isDirectory()) {
-      results.push(...getFilesRecursively(filePath));
-    } else if (file.endsWith(".md") && !file.startsWith("QUARANTINE-")) {
-      results.push(filePath);
-    }
-  }
-  return results;
-}
-
 if (!fs.existsSync(contentDir)) {
   console.log("Content directory does not exist.");
   process.exit(0);
 }
 
-const allFiles = getFilesRecursively(contentDir);
+const allFiles = getMarkdownFilesRecursively(contentDir, { skipQuarantine: true });
 const definedTags = new Set();
 const referencedTags = new Map(); // tagId -> [filePaths]
 const idMap = new Map(); // id -> [filePaths]

@@ -1,8 +1,8 @@
 ---
-id: "shadow-shield-improved"
-name: "Shadow Shield, Improved"
-sphere: illusion
-tags: ["surreal"]
+id: shadow-shield-improved
+name: Shadow Shield, Improved
+tags:
+  - surreal
 tier: feat
 ---
 

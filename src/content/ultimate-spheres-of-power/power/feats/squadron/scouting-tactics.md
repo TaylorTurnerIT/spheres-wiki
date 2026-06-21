@@ -1,8 +1,9 @@
 ---
-id: "scouting-tactics"
-name: "Scouting Tactics"
+id: scouting-tactics
+name: Scouting Tactics
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

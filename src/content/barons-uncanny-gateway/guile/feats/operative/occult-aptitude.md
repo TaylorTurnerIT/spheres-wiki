@@ -3,6 +3,9 @@ id: occult-aptitude
 name: Occult Aptitude
 tags:
   - operative
+  - sm
+sphere: study
+tier: feat
 ---
 
 You are exceptionally skilled at prying into dangerous or forbidden information.

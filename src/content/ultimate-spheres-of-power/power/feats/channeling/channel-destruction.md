@@ -1,8 +1,9 @@
 ---
-id: "channel-destruction"
-name: "Channel Destruction"
+id: channel-destruction
+name: Channel Destruction
 sphere: destruction
-tags: ["channeling"]
+tags:
+  - channeling
 tier: feat
 ---
 

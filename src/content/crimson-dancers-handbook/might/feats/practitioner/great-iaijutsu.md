@@ -3,6 +3,8 @@ id: great-iaijutsu
 name: Great Iaijutsu
 tags:
   - practitioner
+sphere: duelist
+tier: feat
 ---
 
 **Prerequisites:** Duelist sphere (Iai Slash (bleed)), base attack bonus +5.

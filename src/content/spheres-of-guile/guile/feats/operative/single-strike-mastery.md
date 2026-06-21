@@ -4,6 +4,7 @@ name: Single Strike Mastery
 tags:
   - combat
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Sneak attack +2d6.

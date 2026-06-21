@@ -4,6 +4,8 @@ name: Harmonious Swordplay
 tags:
   - combat
   - practitioner
+sphere: dual-wielding
+tier: feat
 ---
 
 **Prerequisites:** Dual Wielding sphere, Improved Unarmed Strike.

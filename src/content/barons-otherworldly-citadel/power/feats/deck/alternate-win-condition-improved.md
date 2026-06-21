@@ -5,6 +5,7 @@ tags:
   - aristeia
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Alternate Win Condition, Card Casting Drawback

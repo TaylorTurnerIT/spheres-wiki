@@ -4,6 +4,7 @@ name: Harmonizing Lyrics
 sphere: performance
 tags:
   - operative
+tier: feat
 ---
 
 **Prerequisite:** Performance sphere ((lyric) package).

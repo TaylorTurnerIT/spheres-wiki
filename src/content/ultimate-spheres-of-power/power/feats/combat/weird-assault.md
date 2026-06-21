@@ -1,8 +1,9 @@
 ---
-id: "weird-assault"
-name: "Weird Assault"
+id: weird-assault
+name: Weird Assault
 sphere: illusion
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

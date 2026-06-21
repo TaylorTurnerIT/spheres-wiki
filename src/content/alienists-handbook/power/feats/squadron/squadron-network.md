@@ -1,8 +1,9 @@
 ---
-id: "squadron-network"
-name: "Squadron Network"
+id: squadron-network
+name: Squadron Network
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander; character level 10th.

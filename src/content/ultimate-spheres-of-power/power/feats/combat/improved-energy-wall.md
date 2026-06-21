@@ -1,8 +1,9 @@
 ---
-id: "improved-energy-wall"
-name: "Improved Energy Wall"
+id: improved-energy-wall
+name: Improved Energy Wall
 sphere: destruction
-tags: ["combat"]
+tags:
+  - combat
 tier: feat
 ---
 

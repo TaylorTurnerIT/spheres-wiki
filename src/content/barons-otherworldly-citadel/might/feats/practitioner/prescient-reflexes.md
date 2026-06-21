@@ -4,6 +4,8 @@ name: Prescient Reflexes
 tags:
   - combat
   - practitioner
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Wis 13

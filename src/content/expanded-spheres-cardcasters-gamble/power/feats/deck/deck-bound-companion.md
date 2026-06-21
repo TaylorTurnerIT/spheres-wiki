@@ -5,6 +5,8 @@ tags:
   - companion
   - deck
   - drawback
+sphere: conjuration
+tier: feat
 ---
 
 **Prerequisites:** Card Casting, Conjuration sphere

@@ -1,8 +1,10 @@
 ---
-id: "unveiling-admixture"
-name: "Unveiling Admixture"
+id: unveiling-admixture
+name: Unveiling Admixture
 sphere: destruction
-tags: ["admixture"]
+tags:
+  - 3pp
+  - admixture
 tier: feat
 ---
 

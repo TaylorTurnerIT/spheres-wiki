@@ -3,6 +3,7 @@ id: extra-swarm-enhancement
 name: Extra Swarm Enhancement
 tags:
   - practitioner
+tier: feat
 ---
 
 **Prerequisite:** Swarm enhancement class feature.

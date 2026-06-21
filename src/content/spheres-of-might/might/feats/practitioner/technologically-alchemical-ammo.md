@@ -1,11 +1,11 @@
 ---
 id: technologically-alchemical-ammo
 name: Technologically Alchemical Ammo
-sphere: tech
-dualSphere: alchemy
+sphere: alchemy
 tags:
   - dual-sphere
   - practitioner
+tier: feat
 ---
 
 **Prerequisites:** Tech sphere, Ammo Spitter, Alchemy sphere (formulae) package.

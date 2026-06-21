@@ -4,6 +4,7 @@ name: Earthly Aptitude
 sphere: study
 tags:
   - operative
+tier: feat
 ---
 
 You possess a deep understanding of the natural world, and how it can be shaped, refined, and corrupted.

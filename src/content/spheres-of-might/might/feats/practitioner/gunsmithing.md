@@ -1,8 +1,9 @@
 ---
 id: gunsmithing
-name: Gunsmithing
+name: Gunsmithing*
 tags:
   - practitioner
+tier: feat
 ---
 
 You know the secrets of repairing and restoring firearms.

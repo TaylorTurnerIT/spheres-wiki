@@ -1,8 +1,9 @@
 ---
-id: "instructive-command"
-name: "Instructive Command"
+id: instructive-command
+name: Instructive Command
 sphere: war
-tags: ["squadron"]
+tags:
+  - squadron
 tier: feat
 ---
 

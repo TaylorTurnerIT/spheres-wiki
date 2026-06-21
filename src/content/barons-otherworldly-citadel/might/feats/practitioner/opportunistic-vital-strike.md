@@ -4,6 +4,8 @@ name: Opportunistic Vital Strike
 tags:
   - combat
   - practitioner
+  - sm
+tier: feat
 ---
 
 **Prerequisites:** Vital Strike

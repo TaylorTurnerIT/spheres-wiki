@@ -2,7 +2,9 @@
 id: oneiric-assault
 name: Oneiric Assault
 tags:
+  - general
   - mythic
+tier: feat
 ---
 
 **Prerequisite:** Dreamspace, Oneiric Assault, caster level 10th.

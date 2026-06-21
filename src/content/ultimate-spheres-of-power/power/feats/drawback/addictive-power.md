@@ -1,8 +1,9 @@
 ---
-id: "addictive-power"
-name: "Addictive Power"
+id: addictive-power
+name: Addictive Power
 sphere: enhancement
-tags: ["drawback"]
+tags:
+  - drawback
 tier: feat
 ---
 

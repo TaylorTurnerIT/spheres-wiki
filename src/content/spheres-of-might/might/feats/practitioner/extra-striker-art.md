@@ -3,6 +3,7 @@ id: extra-striker-art
 name: Extra Striker Art
 tags:
   - practitioner
+tier: feat
 ---
 
 You know how to better utilize your striker abilities.

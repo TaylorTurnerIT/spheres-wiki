@@ -4,6 +4,7 @@ name: Enhanced Play
 tags:
   - deck
   - drawback
+tier: feat
 ---
 
 **Prerequisites:** Card Casting drawback, any metamagic feat
