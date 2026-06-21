@@ -30,7 +30,10 @@ type RawTagEntry = {
   color?: string;
   priority: number;
   description: string;
+  featCategory?: boolean;
+  system?: "power" | "might" | "guile" | "champions";
   sphere?: string;
+  hidden?: boolean;
 };
 
 // ── Typed-map dispatch ───────────────────────────────────────────────────────
@@ -302,6 +305,7 @@ function processBookEntries(
     } else if (effectiveType !== undefined) {
       contentEntries.push(merged as AnyEntry);
       collEntries.push([`${effectiveType}:${raw.id as string}`, e]);
+      collEntries.push([`${effectiveType}:${slug}:${raw.id as string}`, e]);
     }
   }
 

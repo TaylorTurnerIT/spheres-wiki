@@ -1,7 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content';
 import ArticleTOC from '@/components/ArticleTOC.astro';
-import { buildTocTree, type TocNode } from '@/lib/articleToc';
+import { buildTocTree, type RenderedHeading } from '@/lib/articleToc';
 
 interface Tab {
   label: string;
@@ -22,28 +22,55 @@ interface Props {
 const { tabs, defaultTab, id = "tab-container", system = 'power' } = Astro.props;
 const initialTab = defaultTab || tabs[0].slug;
 
+function decodeHtmlEntities(text: string): string {
+  return text
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+}
+
+function extractHeadingsFromHtml(html: string): RenderedHeading[] {
+  const headings: RenderedHeading[] = [];
+  const headingRegex = /<h([1-6])\b[^>]*\bid=["']([^"']+)["'][^>]*>([\s\S]*?)<\/h\1>/gi;
+  let match: RegExpExecArray | null;
+
+  while ((match = headingRegex.exec(html)) !== null) {
+    headings.push({
+      depth: Number(match[1]),
+      slug: match[2],
+      text: decodeHtmlEntities(match[3].replace(/<[^>]*>/g, "").trim()),
+    });
+  }
+
+  return headings;
+}
+
 // Pre-render all tabs: article entries plus optional same-named slots.
 const renderedTabs = await Promise.all(
   tabs.map(async (tab) => {
     let Content = null;
-    let tocItems: TocNode[] = [];
+    let headings: RenderedHeading[] = [];
     let slotHtml: string | null = null;
 
     if (tab.articleId && tab.collection) {
       const entry = await getEntry(tab.collection as any, tab.articleId);
       if (entry) {
-        const { Content: RenderedContent, headings } = await render(entry);
+        const { Content: RenderedContent, headings: renderedHeadings } = await render(entry);
         Content = RenderedContent;
-
-        if (tab.showToc) {
-          tocItems = buildTocTree(headings);
-        }
+        headings = renderedHeadings;
       }
     }
 
     if (Astro.slots.has(tab.slug)) {
       slotHtml = await Astro.slots.render(tab.slug);
+      if (tab.showToc) {
+        headings = [...headings, ...extractHeadingsFromHtml(slotHtml)];
+      }
     }
+
+    const tocItems = tab.showToc ? buildTocTree(headings) : [];
 
     return { slug: tab.slug, Content, tocItems, slotHtml };
   })

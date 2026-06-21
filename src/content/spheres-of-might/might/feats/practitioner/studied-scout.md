@@ -1,0 +1,10 @@
+---
+id: studied-scout
+name: Studied Scout
+tags:
+  - practitioner
+---
+
+**Prerequisites:** Scout sphere, studied target or studied combat class feature.
+
+**Benefit:** When you use your studied target or studied combat class feature, you may use your scout ability on the same target as a free action.

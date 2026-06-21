@@ -1,7 +1,10 @@
 ---
 id: "ritual"
 label: "Ritual"
-color: "#4A235A"
-priority: 0
-description: "A mechanical descriptor identifying this as a ritual effect or talent."
+color: "var(--clr-brand)"
+priority: 170
+description: "Ritual feats focus on the use of Rituals, an optional subsystem."
+featCategory: true
 ---
+
+Ritual feats focus on the use of Rituals, an optional subsystem. These feats are not required for using rituals in the first place - instead, they make it easier to learn and use them.

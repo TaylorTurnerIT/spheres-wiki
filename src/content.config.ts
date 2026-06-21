@@ -223,7 +223,8 @@ export const entrySchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal("feat"),
     ...baseFields,
-    sphere: z.string(),
+    sphere: z.string().optional(),
+    category: z.string().optional(),
     dualSphere: z.string().optional(),
   }),
   z.object({
@@ -254,6 +255,8 @@ export const entrySchema = z.discriminatedUnion("type", [
     color: z.string().optional(),
     priority: z.number().int(),
     description: z.string(),
+    featCategory: z.boolean().optional(),
+    system: z.enum(["power", "might", "guile", "champions"]).optional(),
     sphere: z.string().optional(),
     hidden: z.boolean().optional(),
   }),

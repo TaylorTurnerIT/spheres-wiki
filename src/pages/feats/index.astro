@@ -1,0 +1,185 @@
+---
+import { render } from "astro:content";
+import WikiPage from "@/layouts/WikiPage.astro";
+import FeatsTabbedContent from "@/components/FeatsTabbedContent.astro";
+import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
+import { getCanonicalFeatCategory, getFeatUrl } from "@/lib/featCategories";
+import { url } from "@/lib/url";
+import type { FeatEntry, TagEntry } from "@/lib/types";
+
+const description =
+  "Browse every feat on the Spheres Wiki by category, including combat, champion, metamagic, sphere-focused, and dual-sphere feats.";
+
+const { featMap, tagMap, bookMetaMap, sphereMap } = await resolveEntries();
+const allCollEntries = await getCollEntriesMap();
+
+const byName = <T extends { id: string; name: string }>(a: T, b: T) =>
+  a.name.localeCompare(b.name) || a.id.localeCompare(b.id);
+const sourceTitle = (sourceBook: string) => bookMetaMap.get(sourceBook)?.title ?? sourceBook;
+const featKey = (feat: FeatEntry) => `${feat.sourceBook}:${feat.id}`;
+
+const categoryTags = [...tagMap.values()]
+  .filter((tag) => tag.featCategory === true)
+  .sort((a, b) => a.priority - b.priority || a.label.localeCompare(b.label));
+const categoryTagIdSet = new Set(categoryTags.map((tag) => tag.id));
+const sphereIds = new Set([...sphereMap.values()].map((sphere) => sphere.id));
+
+function categoryTagsFor(feat: FeatEntry): TagEntry[] {
+  return (feat.tags ?? [])
+    .map((tagId) => tagMap.get(tagId))
+    .filter((tag): tag is TagEntry => tag?.featCategory === true)
+    .sort((a, b) => a.priority - b.priority || a.id.localeCompare(b.id));
+}
+
+function systemScopeFor(feat: FeatEntry): "power" | "might" | "guile" | "champions" | undefined {
+  return categoryTagsFor(feat).find((tag) => tag.system)?.system;
+}
+
+const feats = [...featMap.values()].sort(byName);
+
+const featContentEntries = await Promise.all(
+  feats.map(async (feat) => {
+    const collEntry =
+      allCollEntries.get(`feat:${feat.sourceBook}:${feat.id}`) ??
+      allCollEntries.get(`feat:${feat.id}`);
+    if (!collEntry) return [featKey(feat), null] as const;
+    const { Content } = await render(collEntry);
+    return [featKey(feat), Content] as const;
+  }),
+);
+const featContentMap = new Map(featContentEntries);
+
+const categoryRuleEntries = await Promise.all(
+  categoryTags.map(async (tag) => {
+    const collEntry = allCollEntries.get(`tag:${tag.id}`);
+    if (!collEntry) return [tag.id, null] as const;
+    const { Content } = await render(collEntry);
+    return [tag.id, Content] as const;
+  }),
+);
+const categoryRuleMap = new Map(categoryRuleEntries);
+
+function featCard(feat: FeatEntry, system?: "power" | "might" | "guile" | "champions") {
+  return {
+    id: feat.id,
+    name: feat.name,
+    sourceBookTitle: sourceTitle(feat.sourceBook),
+    tagIds: feat.tags ?? [],
+    Content: featContentMap.get(featKey(feat)),
+    href: url(getFeatUrl(feat, tagMap)),
+    system,
+    filterKey: feat.sphere,
+  };
+}
+
+function hasCategoryTag(feat: FeatEntry): boolean {
+  return (feat.tags ?? []).some((tagId) => categoryTagIdSet.has(tagId));
+}
+
+const allFeatCards = feats.map((feat) => featCard(feat, systemScopeFor(feat)));
+
+const categoryTabData = categoryTags.map((tag) => ({
+  tag,
+  RulesContent: categoryRuleMap.get(tag.id),
+  items: feats
+    .filter((feat) => (feat.tags ?? []).includes(tag.id))
+    .map((feat) => featCard(feat, tag.system)),
+}));
+
+const generalFeatCards = feats
+  .filter((feat) => getCanonicalFeatCategory(feat, tagMap) === "general")
+  .map((feat) => featCard(feat, systemScopeFor(feat)));
+
+const sphereFocusedFeats = feats.filter((feat) => {
+  if (hasCategoryTag(feat)) return false;
+  return sphereIds.has(getCanonicalFeatCategory(feat, tagMap));
+});
+const sphereFocusedCards = sphereFocusedFeats.map((feat) => featCard(feat, systemScopeFor(feat)));
+const sphereFilterOptions = [...new Set(sphereFocusedFeats.map((feat) => feat.sphere).filter(Boolean) as string[])]
+  .map((sphereId) => ({
+    id: sphereId,
+    label: sphereMap.get(`sphere:${sphereId}`)?.name ?? sphereId,
+  }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
+const dualSphereCards = feats
+  .filter((feat) => feat.dualSphere)
+  .map((feat) => featCard(feat, systemScopeFor(feat)));
+
+const tabs = [
+  {
+    label: "All",
+    slug: "all",
+    description: "Every indexed feat, listed once.",
+    items: allFeatCards,
+  },
+  ...categoryTabData.map(({ tag, RulesContent, items }) => ({
+    label: tag.label,
+    slug: tag.id,
+    description: tag.description,
+    items,
+    RulesContent,
+    system: tag.system,
+    emptyMessage: `No ${tag.label.toLowerCase()} feats indexed yet.`,
+  })),
+  {
+    label: "General",
+    slug: "general",
+    description: "General feats have no category tag and are not associated with a specific sphere.",
+    items: generalFeatCards,
+    emptyMessage: "No general feats indexed yet.",
+  },
+  {
+    label: "Sphere-focused",
+    slug: "sphere-focused",
+    description: "Sphere-focused feats are organized by their associated sphere.",
+    items: sphereFocusedCards,
+    emptyMessage: "No sphere-focused feats indexed yet.",
+    sphereFilterOptions,
+  },
+  {
+    label: "Dual Sphere",
+    slug: "dual-sphere",
+    description: "Dual-sphere feats combine two spheres and are listed here as one flat reference.",
+    items: dualSphereCards,
+    emptyMessage: "No dual-sphere feats indexed yet.",
+  },
+];
+---
+
+<WikiPage title="Feats Index — Spheres Wiki" description={description}>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href={url("/")} data-astro-prefetch="hover">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Feats</span>
+  </nav>
+
+  <h1 class="page-title" id="overview">Feats Index</h1>
+  <hr class="page-title-rule" />
+
+  <div class="article-content entry-description">
+    <div class="article-layout">
+      <div class="content-body">
+        <p class="feats-intro">
+          {feats.length} feat{feats.length !== 1 ? "s" : ""} indexed across every Spheres system.
+        </p>
+
+        <FeatsTabbedContent tabs={tabs} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+      </div>
+
+      <aside class="article-sidebar" id="article-sidebar"></aside>
+    </div>
+  </div>
+</WikiPage>
+
+<script>
+  import "@/lib/articleTocClient";
+</script>
+
+<style>
+  .feats-intro {
+    font-size: var(--fs-sm);
+    color: var(--clr-text);
+    line-height: 1.55;
+  }
+</style>

@@ -33,13 +33,15 @@ const {
 const hasMetadata = metadata && Object.keys(metadata).length > 0;
 ---
 
-<div class="entry-card-block" id={id}>
+<div class="entry-card-block">
   <div class="talent-header">
     <div class="talent-header-top">
-      {href
-        ? <a href={href} class="talent-name" data-astro-prefetch="hover">{name}</a>
-        : <span class="talent-name">{name}</span>
-      }
+      <h3 class="entry-card-heading" id={id}>
+        {href
+          ? <a href={href} class="talent-name" data-astro-prefetch="hover">{name}</a>
+          : <span class="talent-name">{name}</span>
+        }
+      </h3>
       {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
     </div>
     {tagIds.length > 0 && (
@@ -105,6 +107,12 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
   .entry-card-block:hover,
   .entry-card-block:focus-within {
     z-index: 10;
+  }
+
+  .entry-card-heading {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
   }
 
   .entry-card-details {

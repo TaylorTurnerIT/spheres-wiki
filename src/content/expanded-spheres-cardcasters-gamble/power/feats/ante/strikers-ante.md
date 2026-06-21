@@ -1,0 +1,11 @@
+---
+id: strikers-ante
+name: Striker’s Ante
+tags:
+  - ante
+  - combat
+---
+
+**Prerequisites:** Ante Up, Tension class feature
+
+**Benefit:** Once per round, when you would increase your ante, you also gain tension equal to your ante increase.

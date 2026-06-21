@@ -5,13 +5,15 @@ import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
 import { buildOrderedTagIds } from "@/lib/tags";
+import { getFeatUrl } from "@/lib/featCategories";
 import type { TagEntry, BookMeta } from "@/lib/types";
 
 type EntryRow = {
   id: string;
   name: string;
   system: string;
-  sphereId: string;
+  href: string;
+  sphereId?: string;
   entryType: "talent" | "feat" | "sphere";
   sphereName: string;
   sourceBook: string;
@@ -66,6 +68,7 @@ export async function getStaticPaths() {
           id: talent.id,
           name: talent.name,
           system,
+          href: `/${system}/${talent.sphere}/${talent.id}/`,
           sphereId: talent.sphere,
           entryType: "talent",
           sphereName: sphere?.name ?? talent.sphere,
@@ -89,9 +92,10 @@ export async function getStaticPaths() {
           id: feat.id,
           name: feat.name,
           system,
+          href: getFeatUrl(feat, tagMap),
           sphereId: feat.sphere,
           entryType: "feat",
-          sphereName: sphere?.name ?? feat.sphere,
+          sphereName: sphere?.name ?? feat.sphere ?? "General",
           sourceBook: feat.sourceBook,
           tags: feat.tags,
         });
@@ -108,6 +112,7 @@ export async function getStaticPaths() {
           id: sphere.id,
           name: sphere.name,
           system,
+          href: `/${system}/${sphere.id}/`,
           sphereId: sphere.id,
           entryType: "sphere",
           sphereName: sphere.name,
@@ -191,7 +196,7 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
               <div class="tag-entry-row">
                 {row.entryType === "talent" && (
                   <a
-                    href={url(`/${row.system}/${row.sphereId}/${row.id}/`)}
+                    href={url(row.href)}
                     class="tag-entry-name"
                     data-astro-prefetch="hover"
                   >
@@ -200,7 +205,7 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
                 )}
                 {row.entryType === "feat" && (
                   <a
-                    href={url(`/${row.system}/${row.sphereId}/feats/${row.id}/`)}
+                    href={url(row.href)}
                     class="tag-entry-name"
                     data-astro-prefetch="hover"
                   >
@@ -209,7 +214,7 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
                 )}
                 {row.entryType === "sphere" && (
                   <a
-                    href={url(`/${row.system}/${row.id}/`)}
+                    href={url(row.href)}
                     class="tag-entry-name"
                     data-astro-prefetch="hover"
                   >

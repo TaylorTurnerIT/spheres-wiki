@@ -22,6 +22,7 @@ export type InferredFields = {
   className?: string;
   featureId?: string;
   archetypeId?: string;
+  category?: string;
   system?: string;
   drawbackKind?: "general" | "sphere" | "dual-sphere";
   traditionKind?: "standard" | "custom" | "card" | "variant";
@@ -53,11 +54,15 @@ function resolveSphereFlat(
   parts: string[],
   withSystem: WithSystem,
 ): InferredFields | undefined {
-  if (parts.length !== 2) return undefined;
   const [s0, s1] = parts;
-  if (s0 === "talents") return withSystem({ type: "talent", id: s1 });
-  if (s0 === "feats") return withSystem({ type: "feat", id: s1 });
-  if (s0 === "spheres") return withSystem({ type: "sphere", id: s1 });
+  if (parts.length === 2) {
+    if (s0 === "talents") return withSystem({ type: "talent", id: s1 });
+    if (s0 === "feats") return withSystem({ type: "feat", id: s1 });
+    if (s0 === "spheres") return withSystem({ type: "sphere", id: s1 });
+  }
+  if (parts.length === 3 && s0 === "feats") {
+    return withSystem({ type: "feat", category: s1, id: parts[2] });
+  }
   return undefined;
 }
 
@@ -341,7 +346,9 @@ export function inferFromPath(fileId: string): InferredFields {
     system !== undefined ? { ...fields, system } : fields;
 
   if (parts.length === 2 && parts[0] === "tags") {
-    return withSystem({ type: "tag", id: parts[1] });
+    // Tags may optionally declare a system in frontmatter for UI scoping, but
+    // their directory does not imply one. A Power book can define a neutral tag.
+    return { type: "tag", id: parts[1] };
   }
   if (parts[0] === "articles") {
     return withSystem({ type: "article", id: parts[parts.length - 1] });

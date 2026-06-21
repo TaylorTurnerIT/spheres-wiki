@@ -6,6 +6,7 @@
     "src/pages/**/*.astro",
     "src/components/TabbedContent.astro",
     "scripts/catalog.mjs",
+    "scripts/check-feat-category-tags.mjs",
     "scripts/generate-bestial-traits.mjs",
     "scripts/parse-wiki.test.mjs"
   ],

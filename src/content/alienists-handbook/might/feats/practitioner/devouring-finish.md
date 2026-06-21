@@ -1,0 +1,11 @@
+---
+id: devouring-finish
+name: Devouring Finish
+tags:
+  - combat
+  - practitioner
+---
+
+**Prerequisites:** Wrestling sphere, Brain Consumption.
+
+**Benefit:** Whenever you reduce a creature that you are grappling to 0 or fewer hit points or render it unconscious, you may devour its brain as a free action. This kills the creature if it does not possess some form of regeneration or other ability which would allow it to survive without a brain.

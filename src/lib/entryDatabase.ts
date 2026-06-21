@@ -3,6 +3,7 @@ import path from "node:path";
 import { StringDecoder } from "node:string_decoder";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
+import { getPathDerivedFeatUrl } from "./featCategories";
 import { inferFromPath } from "./inferFromPath";
 
 // Resolved relative to this module file so it works regardless of process.cwd()
@@ -267,8 +268,8 @@ function buildTalentUrl(entry: any, basePath: string): string | null {
 }
 
 function buildFeatUrl(entry: any, basePath: string): string | null {
-  if (!hasFields(entry, ["system", "sphere", "id"])) return null;
-  return `${basePath}/${entry.system}/${entry.sphere}/feats/${entry.id}/`;
+  if (!hasFields(entry, ["system", "id"])) return null;
+  return `${basePath}${getPathDerivedFeatUrl(entry)}`;
 }
 
 function buildSphereUrl(entry: any, basePath: string): string | null {

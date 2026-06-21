@@ -8,7 +8,7 @@ let activeScrollHandler: (() => void) | null = null;
 
 // ── DOM queries (extracted to bound cyclomatic complexity) ────────
 const PRIORITY_CLASSES = [
-  'talent-entry', 'base-ability-block', 'class-feature-block',
+  'talent-entry', 'entry-card-block', 'base-ability-block', 'class-feature-block',
   'archetype-feature-block', 'article-section', 'wiki-note',
 ];
 

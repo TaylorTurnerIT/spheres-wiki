@@ -5,6 +5,7 @@ import { url } from '@/lib/url';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { SYSTEMS } from '@/config/site';
+import { getFeatUrl } from '@/lib/featCategories';
 
 const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, drawbackMap, boonMap, traditionMap, tagMap, bookMetaMap } = await resolveEntries();
 
@@ -22,8 +23,8 @@ for (const t of talentMap.values()) {
 }
 for (const f of featMap.values()) {
   if (!SYSTEMS[f.system]) continue;
-  const sph = sphereMap.get(`sphere:${f.sphere}`);
-  manifest.push({ url: url(`/${f.system}/${f.sphere}/feats/${f.id}/`), title: f.name, system: SYSTEMS[f.system].label, type: 'feat', sphere: sph?.name ?? f.sphere, tags: buildOrderedTagIds(f, bookMetaMap, tagMap).join(', ') });
+  const sph = f.sphere ? sphereMap.get(`sphere:${f.sphere}`) : undefined;
+  manifest.push({ url: url(getFeatUrl(f, tagMap)), title: f.name, system: SYSTEMS[f.system].label, type: 'feat', sphere: sph?.name ?? f.sphere, tags: buildOrderedTagIds(f, bookMetaMap, tagMap).join(', ') });
 }
 for (const c of classMap.values()) {
   if (!SYSTEMS[c.system]) continue;

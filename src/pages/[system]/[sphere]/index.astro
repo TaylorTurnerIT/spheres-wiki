@@ -10,6 +10,7 @@ import { buildSections } from '@/lib/categorize';
 import type { SectionResult } from '@/lib/categorize';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
+import { getFeatUrl } from '@/lib/featCategories';
 import TagBadge from '@/components/TagBadge.astro';
 import EntryCard from '@/components/EntryCard.astro';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
@@ -238,7 +239,7 @@ const groups: TocGroup[] = sections.map(sec => ({
                           <div class="talent-header">
                             <div class="talent-header-top">
                               <a
-                                href={url(`/${system}/${sphere.id}/${talent ? '' : 'feats/'}${entry.id}/`)}
+                                href={url(talent ? `/${system}/${sphere.id}/${entry.id}/` : getFeatUrl(entry as FeatEntry, tagMap))}
                                 class="talent-name"
                                 data-astro-prefetch="hover"
                                 transition:name={`entry-title-${entry.id}`}

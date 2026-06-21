@@ -15,7 +15,7 @@ describe("Search Weight Verification", () => {
   });
 
   it('verifies that feat pages have data-pagefind-weight="2.0"', () => {
-    const featFiles = ["[system]/[sphere]/feats/[feat].astro"];
+    const featFiles = ["[system]/feats/[category]/[feat].astro"];
     for (const f of featFiles) {
       const p = path.join(pagesDir, f);
       const content = fs.readFileSync(p, "utf8");

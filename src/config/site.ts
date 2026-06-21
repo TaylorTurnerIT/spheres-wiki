@@ -3,6 +3,7 @@ export const SITE_TAGLINE = "A Quick Reference Site";
 
 export const HEADER_NAV = [
   { label: "About", href: "/about/" },
+  { label: "Feats", href: "/feats/" },
   { label: "Legal & OGL", href: "/legal/" },
   { label: "Recent Changes", href: "/recent-changes/" },
 ] as const;

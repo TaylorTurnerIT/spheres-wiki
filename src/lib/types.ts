@@ -293,6 +293,8 @@ export type TagEntry = {
   priority: number;
   description: string;
   sourceBook: string;
+  featCategory?: boolean;
+  system?: "power" | "might" | "guile" | "champions";
   sphere?: string;
   hidden?: boolean;
 };
@@ -303,7 +305,8 @@ export type FeatEntry = {
   system: string;
   name: string;
   sourceBook: string;
-  sphere: string;
+  sphere?: string;
+  category?: string;
   dualSphere?: string;
   tags: string[];
   modifies?: string;

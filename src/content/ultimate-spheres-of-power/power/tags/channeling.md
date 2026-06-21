@@ -1,7 +1,8 @@
 ---
 id: "channeling"
-description: "A mechanical descriptor identifying this as a channeling effect or talent."
-priority: 0
-color: "#4A235A"
 label: "Channeling"
+color: "var(--clr-brand)"
+priority: 95
+description: "Channeling feats modify or expand class features and sphere effects that channel energy."
+featCategory: true
 ---

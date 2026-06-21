@@ -1,0 +1,144 @@
+---
+import EntryCard from "@/components/EntryCard.astro";
+import type { BookMeta, TagEntry } from "@/lib/types";
+
+type BuilderAction = { entryId: string; kind: "drawback" | "sphere-drawback" | "boon" };
+
+type EntryCardListItem = {
+  id: string;
+  name: string;
+  sourceBookTitle?: string | null;
+  tagIds?: string[];
+  Content?: any;
+  href?: string;
+  metadata?: Record<string, string>;
+  entryLists?: { label: string; items: { name: string; href: string }[] }[];
+  builderActions?: BuilderAction[];
+  system?: "power" | "might" | "guile" | "champions";
+  filterKey?: string;
+};
+
+type EntryCardListSection = {
+  heading?: string;
+  items: EntryCardListItem[];
+  system?: "power" | "might" | "guile" | "champions";
+};
+
+interface Props {
+  summary?: string;
+  items?: EntryCardListItem[];
+  sections?: EntryCardListSection[];
+  emptyMessage?: string;
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
+  open?: boolean;
+}
+
+const {
+  summary,
+  items = [],
+  sections,
+  emptyMessage = "No entries yet.",
+  tagMap,
+  bookMetaMap,
+  open = true,
+} = Astro.props;
+
+const renderedSections = sections ?? [{ items }];
+const hasItems = renderedSections.some((section) => section.items.length > 0);
+---
+
+{summary ? (
+  <details class="entry-listing-toggle" open={open ? true : undefined}>
+    <summary>{summary}</summary>
+    <div class="entry-listing-cards">
+      {!hasItems && <p class="section-empty">{emptyMessage}</p>}
+      {renderedSections.map((section) => (
+        <>
+          {section.heading && <h3 class="entry-listing-section-heading">{section.heading}</h3>}
+          {section.items.map((item) => (
+            <div
+              class="entry-card-scope"
+              data-system={item.system ?? section.system}
+              data-filter-key={item.filterKey}
+            >
+              <EntryCard
+                id={item.id}
+                name={item.name}
+                sourceBookTitle={item.sourceBookTitle}
+                tagIds={item.tagIds ?? []}
+                Content={item.Content}
+                href={item.href}
+                metadata={item.metadata}
+                entryLists={item.entryLists ?? []}
+                tagMap={tagMap}
+                bookMetaMap={bookMetaMap}
+                builderActions={item.builderActions ?? []}
+              />
+            </div>
+          ))}
+        </>
+      ))}
+    </div>
+  </details>
+) : (
+  <div class="entry-listing-cards">
+    {!hasItems && <p class="section-empty">{emptyMessage}</p>}
+    {renderedSections.map((section) => (
+      <>
+        {section.heading && <h3 class="entry-listing-section-heading">{section.heading}</h3>}
+        {section.items.map((item) => (
+          <div
+            class="entry-card-scope"
+            data-system={item.system ?? section.system}
+            data-filter-key={item.filterKey}
+          >
+            <EntryCard
+              id={item.id}
+              name={item.name}
+              sourceBookTitle={item.sourceBookTitle}
+              tagIds={item.tagIds ?? []}
+              Content={item.Content}
+              href={item.href}
+              metadata={item.metadata}
+              entryLists={item.entryLists ?? []}
+              tagMap={tagMap}
+              bookMetaMap={bookMetaMap}
+              builderActions={item.builderActions ?? []}
+            />
+          </div>
+        ))}
+      </>
+    ))}
+  </div>
+)}
+
+<style>
+  .entry-listing-toggle {
+    margin: 1.5rem 0 0;
+    border-top: 1px solid var(--clr-border);
+    padding-top: 0.75rem;
+  }
+
+  .entry-listing-toggle summary {
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--clr-active);
+  }
+
+  .entry-listing-cards {
+    margin-top: 0.75rem;
+  }
+
+  .entry-listing-section-heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-active);
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--clr-border);
+  }
+</style>
