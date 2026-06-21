@@ -1458,19 +1458,19 @@ h6 {
 .talent-body li {
   margin-bottom: 0.25em;
 }
-.entry-description a,
-.talent-body a,
-.tag-tooltip-desc a,
-.tag-row-desc a {
+.entry-description a:not(.talent-tag),
+.talent-body a:not(.talent-tag),
+.tag-tooltip-desc a:not(.talent-tag),
+.tag-row-desc a:not(.talent-tag) {
   color: var(--clr-active);
   text-decoration: underline;
   text-decoration-color: var(--clr-border);
   text-underline-offset: 2px;
 }
-.entry-description a:hover,
-.talent-body a:hover,
-.tag-tooltip-desc a:hover,
-.tag-row-desc a:hover {
+.entry-description a:not(.talent-tag):hover,
+.talent-body a:not(.talent-tag):hover,
+.tag-tooltip-desc a:not(.talent-tag):hover,
+.tag-row-desc a:not(.talent-tag):hover {
   text-decoration-color: var(--clr-active);
 }
 
