@@ -127,6 +127,77 @@ const tocBySlug = new Map(
   </div>
 </div>
 
+<script is:inline>
+  (function() {
+    var hash = window.location.hash.slice(1);
+    var containers = document.querySelectorAll('.feats-tabbed-content:not([data-hash-processed])');
+    var sidebar = document.getElementById('article-sidebar');
+    
+    for (var i = 0; i < containers.length; i++) {
+      var container = containers[i];
+      container.setAttribute('data-hash-processed', 'true');
+      
+      // Dynamic sidebar clearance
+      function updateSidebarClearance() {
+        if (!sidebar) return;
+        var layout = sidebar.closest('.article-layout');
+        var nav = container.querySelector('.tab-nav');
+        if (layout && nav) {
+          var layoutTop = layout.getBoundingClientRect().top;
+          var navBottom = nav.getBoundingClientRect().bottom;
+          var clearance = Math.max(0, navBottom - layoutTop);
+          // 24px accounts for the 1.5rem margin-bottom on tab-nav
+          sidebar.style.setProperty('--tab-nav-clearance', (clearance + 24) + 'px');
+        }
+      }
+      
+      // Update immediately, and then hook into resize
+      if (window.ResizeObserver) {
+        new ResizeObserver(updateSidebarClearance).observe(container.querySelector('.tab-nav'));
+      } else {
+        window.addEventListener('resize', updateSidebarClearance);
+      }
+      // Fallback update after fonts load
+      requestAnimationFrame(updateSidebarClearance);
+      setTimeout(updateSidebarClearance, 100);
+
+      var activeSlug = hash || container.getAttribute('data-initial-tab');
+      if (!activeSlug) continue;
+
+      if (hash) {
+        var targetTab = container.querySelector('.tab[data-tab="' + hash + '"]');
+        var targetPanel = container.querySelector('.tab-panel[data-tab-panel="' + hash + '"]');
+        if (targetTab && targetPanel) {
+          var activeTab = container.querySelector('.tab.active');
+          var activePanel = container.querySelector('.tab-panel.active');
+          if (activeTab) {
+            activeTab.classList.remove('active');
+            activeTab.setAttribute('aria-selected', 'false');
+          }
+          if (activePanel) {
+            activePanel.classList.remove('active');
+            activePanel.hidden = true;
+          }
+
+          targetTab.classList.add('active');
+          targetTab.setAttribute('aria-selected', 'true');
+          targetPanel.classList.add('active');
+          targetPanel.hidden = false;
+        }
+      }
+
+      if (sidebar) {
+        var template = container.querySelector('template[data-toc-template="' + activeSlug + '"]');
+        if (template) {
+          var oldToc = sidebar.querySelector('.article-toc');
+          if (oldToc) oldToc.remove();
+          sidebar.prepend(template.content.cloneNode(true));
+        }
+      }
+    }
+  })();
+</script>
+
 <script>
   function initFeatsTabs(container: HTMLElement) {
     const tabs = container.querySelectorAll<HTMLButtonElement>(".tab");
@@ -267,6 +338,11 @@ const tocBySlug = new Map(
     background: color-mix(in srgb, var(--clr-active) 6%, transparent);
     padding: 0.85rem 1rem;
     margin: 1rem 0 1.25rem;
+  }
+
+  /* Sidebar clearance */
+  :global(.article-content:has(.feats-tabbed-content) .article-sidebar) {
+    margin-top: var(--tab-nav-clearance, 110px);
   }
 
   .feat-category-rules :global(:first-child) {

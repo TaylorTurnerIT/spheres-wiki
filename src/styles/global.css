@@ -1463,15 +1463,14 @@ h6 {
 .tag-tooltip-desc a:not(.talent-tag),
 .tag-row-desc a:not(.talent-tag) {
   color: var(--clr-active);
-  text-decoration: underline;
-  text-decoration-color: var(--clr-border);
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 .entry-description a:not(.talent-tag):hover,
 .talent-body a:not(.talent-tag):hover,
 .tag-tooltip-desc a:not(.talent-tag):hover,
 .tag-row-desc a:not(.talent-tag):hover {
-  text-decoration-color: var(--clr-active);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* ── Sidebar Link Reset ────────────────────────────────── */
@@ -2551,4 +2550,95 @@ h6 {
 /* ── Builder-active layout ─────────────────────────────── */
 .builder-active .article-sidebar {
   display: none;
+}
+
+/* ── Article Layout ────────────────────────────────────────── */
+.article-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.article-content .content-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.article-content {
+  --rail-w: 200px;
+  --content-gap: 2rem;
+}
+
+.article-content .article-sidebar {
+  width: var(--rail-w);
+  flex-shrink: 0;
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+/* BookCard fills sidebar width */
+.article-sidebar .store-card {
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 1000px) {
+  .article-layout {
+    flex-direction: column;
+  }
+  .article-content .article-sidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+/* ── Article prose headers ───────────────────────────────── */
+.article-content .content-body > h1,
+.article-content .content-body > h2,
+.article-content .tab-panel > h1,
+.article-content .tab-panel > h2 {
+  border-bottom: 1px solid var(--clr-border);
+  padding-bottom: 0.35rem;
+}
+
+.article-content .content-body > h1:first-child,
+.article-content .content-body > h2:first-child,
+.article-content .tab-panel > h1:first-child,
+.article-content .tab-panel > h2:first-child {
+  margin-top: 0;
+}
+
+/* ── Note boxes ──────────────────────────────────────────── */
+.article-content blockquote,
+.article-content .wiki-note {
+  background: color-mix(in srgb, var(--clr-active) 8%, transparent);
+  border-left: 3px solid var(--clr-active);
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: var(--fs-sm);
+  font-weight: 100;
+}
+
+.article-content blockquote > :first-child,
+.article-content .wiki-note > :first-child {
+  margin-top: 0;
+}
+
+.article-content blockquote > :last-child,
+.article-content .wiki-note p:last-child {
+  margin-bottom: 0;
+}
+
+.article-content blockquote h1,
+.article-content blockquote h2,
+.article-content blockquote h3,
+.article-content blockquote h4 {
+  border-bottom: 0;
+  padding-bottom: 0;
 }

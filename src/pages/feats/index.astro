@@ -137,6 +137,20 @@ const tabs = [
     emptyMessage: "No dual-sphere feats indexed yet.",
   },
 ];
+
+const systemOrder: Record<string, number> = {
+  "none": 0,
+  "might": 1,
+  "guile": 2,
+  "champions": 3,
+  "power": 4,
+};
+
+tabs.sort((a: any, b: any) => {
+  const sysA = a.system ?? "none";
+  const sysB = b.system ?? "none";
+  return systemOrder[sysA] - systemOrder[sysB];
+});
 ---
 
 <WikiPage title="Feats Index — Spheres Wiki" description={description}>

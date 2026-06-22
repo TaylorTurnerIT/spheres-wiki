@@ -93,6 +93,11 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
         <path d="M2 2h5.5l6.5 6.5-5.5 5.5L2 7.5V2z"/><circle cx="5" cy="5" r="1" fill="currentColor" stroke="none"/>
       </svg>
     </ResourceCard>
+    <ResourceCard name="Feats Index" description="Browse all feats" href={url("/feats/")}>
+      <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polygon points="8 1.5 10 6 15 6.5 11 10 12 15 8 12.5 4 15 5 10 1 6.5 6 6 8 1.5"/>
+      </svg>
+    </ResourceCard>
     <ResourceCard name="Community Resources" description="Discords, forums &amp; tools" href={url("/community-resources/")}>
       <svg slot="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="5.5" cy="5.5" r="2.5"/><path d="M1.5 13c0-2.5 2-4 4-4s4 1.5 4 4"/>
