@@ -7,13 +7,13 @@
 
 # AGENTS.md — Spheres Wiki
 
-Orientation for AI agents and new contributors working in this repo. This file explains **how the project is laid out and how to work in it**. For **what the project must do** — goal, constraints, interface contracts, invariants, the task backlog, and the bug log — read [`SPEC.md`](./SPEC.md), which is the source of truth. When code and SPEC.md disagree, that is a bug to reconcile.
+Orientation for AI agents & new contributors. Explains **how project laid out & how to work in it**. For **what project must do** — goal, constraints, interface contracts, invariants, task backlog, bug log — read [`SPEC.md`](./SPEC.md), source of truth. Code/SPEC.md disagreement → bug to reconcile.
 
 ## What this is
 
-A fast, static reference wiki for the **Spheres** tabletop RPG system (by Drop Dead Studios), replacing the legacy Wikidot site. It is **content-first**: nearly all game data lives as markdown + yaml under `src/content/`, and the site auto-discovers it — adding a book, sphere, or talent normally requires no code changes.
+Fast, static reference wiki for **Spheres** tabletop RPG system (Drop Dead Studios), replacing legacy Wikidot site. **Content-first**: nearly all game data lives as markdown + yaml under `src/content/`; site auto-discovers it — adding book, sphere, or talent requires no code changes.
 
-The four player-facing systems are **Power**, **Might**, **Guile**, and **Champions**. Pathfinder 1e base classes (`system: "pf1e"`) exist only as carriers for sphere archetypes and never appear on system index pages.
+Four player-facing systems: **Power**, **Might**, **Guile**, **Champions**. Pathfinder 1e base classes (`system: "pf1e"`) exist only as carriers for sphere archetypes; never appear on system index pages.
 
 ## Tech stack
 
@@ -25,8 +25,6 @@ The four player-facing systems are **Power**, **Might**, **Guile**, and **Champi
 - Self-hosted fonts via `@fontsource/cinzel` + `@fontsource/crimson-text` — **no external CDN, no analytics** (see SPEC V11/V12)
 - **Bun ≥ 1.1.0**
 - Deployed to **GitHub Pages** at base path `/spheres-wiki/` (`astro.config.mjs`)
-
-> Note: `README.md` still says "Astro 4.x" — stale; the real version is 6.x per `package.json`.
 
 ## Commands
 
@@ -42,9 +40,9 @@ bun run test           # unit tests (Vitest)
 bunx astro check       # Astro/Volar type check; must report 0 errors, 0 warnings, 0 hints
 ```
 
-`just` wraps the common ones: `just run` (the default) = `test → validate → build → preview`; also `just test`, `just validate`, `just build`, `just preview`.
+`just` wraps common ones: `just run` (default) = `test → validate → build → preview`; also `just test`, `just validate`, `just build`, `just preview`.
 
-CI (`.github/workflows/`): `test.yml` runs Vitest + content validation on push/PR; `deploy.yml` builds and publishes to GitHub Pages on push to `main`.
+CI (`.github/workflows/`): `test.yml` runs Vitest + content validation on push/PR; `deploy.yml` builds & publishes to GitHub Pages on push to `main`.
 
 ## Repository layout
 
@@ -71,7 +69,7 @@ docs/                 supporting docs
 
 ## Content model (read this before touching content)
 
-Books are **auto-discovered**: a folder under `src/content/` is registered as a collection iff it has both a `_book.yaml` **and** at least one `.md` entry (`content.config.ts`). `_book.yaml`-only folders are allowed as metadata/store placeholders, but they are not Astro collections and must not be passed to `getCollection()`.
+Books **auto-discovered**: folder under `src/content/` registered as collection iff has both `_book.yaml` **and** ≥1 `.md` entry (`content.config.ts`). `_book.yaml`-only folders allowed as metadata/store placeholders; not Astro collections, must not be passed to `getCollection()`.
 
 ```
 src/content/<book-slug>/
@@ -91,7 +89,7 @@ src/content/<book-slug>/
 
 Entry types (discriminated union on `type` in `entrySchema`): `sphere`, `talent`, `feat`, `class`, `class-feature`, `class-trait`, `article`, `archetype`, `archetype-feature`, `tag`. `entrySchema` uses direct `zod` import, not deprecated `astro:content` `z`.
 
-Frontmatter is intentionally minimal because `inferFromPath` fills in `type`/`sphere`/`system` from the file's location. **Do not add `system:` to entry frontmatter** — it is derived from the `{book}/{system}/` directory prefix (SPEC V26, C11). Example talent at `src/content/ultimate-spheres-of-power/power/spheres/alteration/talents/my-talent.md`:
+Frontmatter intentionally minimal — `inferFromPath` fills `type`/`sphere`/`system` from file location. **Do not add `system:` to entry frontmatter** — derived from `{book}/{system}/` directory prefix (SPEC V26, C11). Example talent at `src/content/ultimate-spheres-of-power/power/spheres/alteration/talents/*.md`:
 
 ```yaml
 ---
@@ -104,7 +102,7 @@ tags: ["transformation", "utility"]
 Talent body in markdown. Internal links resolve via the remarkEntryLinks plugin.
 ```
 
-> **Migration note**: Power entries under `ultimate-spheres-of-power/` still carry legacy `system: power` frontmatter (T54/T55 not done). That frontmatter is honoured as an explicit override but must not be added to new content.
+> **Migration note**: Power entries under `ultimate-spheres-of-power/` still carry legacy `system: power` frontmatter (T54/T55 not done). Legacy that needs fixing; must not be added to new content.
 
 **Class-family entry fields:**
 
@@ -116,76 +114,76 @@ Talent body in markdown. Internal links resolve via the remarkEntryLinks plugin.
 | `archetype` | `className`, `spheres?` (string[] for cross-referencing) |
 | `archetype-feature` | `archetypeId`, `level`, `replaces?`, `alters?`, `mutuallyExclusive?` (default true), `classOverrides?`, `isAlternateClassFeature?` |
 
-`class-traits/` files are organized per-class (e.g. `class-traits/shifter/shifter-bestial-rage.md`) and use `featureId` to link to their parent feature. `archetype-features/` follow the same per-class convention.
+`class-traits/` files organized per-class (e.g. `class-traits/shifter/shifter-bestial-rage.md`), use `featureId` to link to parent feature. `archetype-features/` follow same per-class convention.
 
 Special cases:
-- **`__built-in__/`** — house book holding cross-sphere / system tags (`type: tag`).
-- **Errata / patches** — an entry with a `modifies` field overrides another; patches apply in `publishedDate` order and must not alter the original `sourceBook` (SPEC V21–V23).
-- **PF1e classes** — `system: "pf1e"`; their archetypes carry the sphere system they grant; `"Spheres {Class}"` archetype sorts first (SPEC §I.content).
+- **`__built-in__/`** — house book holding cross-sphere/system tags (`type: tag`).
+- **Errata / patches** — entry with `modifies` field overrides another; patches apply in `publishedDate` order; must not alter original `sourceBook` (SPEC V21–V23).
+- **PF1e classes** — `system: "pf1e"`; archetypes carry sphere system they grant; `"Spheres {Class}"` archetype sorts first (SPEC §I.content).
 
-Adding content the supported way:
-- **New book** → create the folder + `_book.yaml` + one `.md`. Nothing else (SPEC V2).
-- **New sphere in an existing system** → add the content files; it appears site-wide automatically. The only code touch allowed is one `<symbol id="si-{name}">` in `SVGSprite.astro` for its icon (SPEC C6, V3, V19).
-- **New game system** → genuinely cross-cutting; touch `site.ts`, CSS, nav, pages (SPEC C7).
+Adding content:
+- **New book** → create folder + `_book.yaml` + one `.md`. Nothing else (SPEC V2).
+- **New sphere in existing system** → add content files; appears site-wide automatically. Only code touch allowed: one `<symbol id="si-{name}">` in `SVGSprite.astro` for icon (SPEC C6, V3, V19).
+- **New game system** → cross-cutting; touch `site.ts`, CSS, nav, pages (SPEC C7).
 
 ## Key files
 
 | File | Responsibility |
 |------|----------------|
 | `src/content.config.ts` | `entrySchema` (Zod) + auto-discovery of real book collections (`_book.yaml` + `.md`) |
-| `src/lib/inferFromPath.ts` | derives `type`/`sphere`/`system` from a content file's path |
-| `src/lib/resolveEntries.ts` | builds `ResolvedMaps`, applies errata patches, links entries; keeps `_book.yaml` metadata for all books, fetches only real Astro collections, exports `getCollEntriesMap()` for cached raw entries |
-| `src/lib/categorize.ts` | groups a sphere's talents/feats into display sections (+ "Other") |
+| `src/lib/inferFromPath.ts` | derives `type`/`sphere`/`system` from content file path |
+| `src/lib/resolveEntries.ts` | builds `ResolvedMaps`, applies errata patches, links entries; keeps `_book.yaml` metadata for all books; fetches only real Astro collections; exports `getCollEntriesMap()` for cached raw entries |
+| `src/lib/categorize.ts` | groups sphere's talents/feats into display sections (+ "Other") |
 | `src/lib/url.ts` | base-path-aware link helper — **use `url()` for every internal link** (SPEC C2) |
-| `src/lib/remarkEntryLinks.ts` | remark plugin turning explicit `@talent`/`@feat`/`@sphere`/`@class` refs and prerequisites into links during markdown build |
+| `src/lib/remarkEntryLinks.ts` | remark plugin: `@talent`/`@feat`/`@sphere`/`@class` refs & prerequisites → links during markdown build |
 | `src/lib/types.ts` | entry + `ResolvedMaps` TypeScript types |
-| `src/lib/tags.ts` | `buildOrderedTagIds()` — auto-injects system tags (talent, feat, sphere, class-trait, tiers) and sorts by tag priority |
+| `src/lib/tags.ts` | `buildOrderedTagIds()` — auto-injects system tags (talent, feat, sphere, class-trait, tiers), sorts by tag priority |
 | `src/lib/renderBody.ts` | Markdown rendering pipeline (unified) + `splitBodyOnMarkers()` for base-ability extraction |
 | `src/config/site.ts` | `SYSTEMS` registry: label, color, route, subtitle, etc. (single source — SPEC V4/V5) |
 | `src/lib/articleToc.ts` | `buildTocTree()` — builds nested TOC tree from rendered headings |
-| `src/lib/articleTocClient.ts` | client-side TOC highlight/scroll logic; imported via `<script>` in `ArticlePage.astro`. Exposes `window.reinitArticleToc` for `TabbedContent` to call after injecting a tab's TOC into the sidebar. Must be a standalone module (not inline in `ArticleTOC.astro`) because `ArticleTOC` is rendered inside `<template>` tags, where scripts are inert |
+| `src/lib/articleTocClient.ts` | client-side TOC highlight/scroll; imported via `<script>` in `ArticlePage.astro`. Exposes `window.reinitArticleToc` for `TabbedContent` after sidebar TOC inject. Must be standalone module (not inline in `ArticleTOC.astro`) — `ArticleTOC` renders inside `<template>` tags where scripts inert |
 | `src/components/SVGSprite.astro` | every sphere icon `<symbol>` (+ `si-fallback`) |
 | `scripts/class-parser.mjs` | Parses Wikidot class source → class/feature/trait `.md` files |
 | `scripts/generate-bestial-traits.mjs` | Parses Shifter Bestial Trait Wikidot source → trait `.md` files |
 
 ## Conventions & gotchas
 
-- **Internal links** must go through `url()` — hardcoded `/...` paths break under the `/spheres-wiki/` base (SPEC C2). Every nav/sidebar link must resolve to a real route; no dead links (SPEC V1/V9).
-- **Interactive JS** (search init, dropdowns, toasts) must (re)bind on the `astro:page-load` event, not `DOMContentLoaded` — View Transitions swap the DOM and otherwise drop listeners (SPEC V25; this was bug B1).
-- **System theming** comes from the `--clr-ns` custom property set by a `data-system` attribute — never add per-system accent blocks to `global.css` (SPEC V4/V10).
-- **Placeholders**: stub dates must be `1970-01-01` and stub strings conspicuously fake (`"PLACEHOLDER"`/`"TBD"`) — never plausible-but-wrong values (SPEC §P).
-- **Privacy**: no external requests, analytics, or tracking; document any `localStorage` key (name, purpose, retention, deletion path) and keep `/privacy/` accurate (SPEC V11–V14).
-- **IDs** are lowercase kebab-case and must equal the filename (SPEC C10/V16).
-- **Source attribution**: Never write `*Source: Book*` into markdown bodies. Source is shown via `.talent-source` label on headings (from `sourceBook` + `bookMetaMap`) and `SourceBookCallout` in sidebar. Existing `*Source:*` lines are stripped by `stripBodySource()` at render time.
-- **Class trait rendering**: Traits use the `.talent-header` pattern (top row: name + source; bottom row: `TagBadge` components via `buildOrderedTagIds()`). The `class-trait` tag is auto-injected — never hardcode a label span.
-- **Prerequisites**: On trait entries, `requires` frontmatter renders as `**Prerequisites:** {req}` below the heading — never inline `(requires ...)`.
-- **ACFs**: Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. They use `archetypeId: {class}-alternate-class-features` (virtual — no content file).
+- **Internal links** must go through `url()` — hardcoded `/...` paths break under `/spheres-wiki/` base (SPEC C2). Every nav/sidebar link must resolve to real route; no dead links (SPEC V1/V9).
+- **Interactive JS** (search init, dropdowns, toasts) must (re)bind on `astro:page-load`, not `DOMContentLoaded` — View Transitions swap DOM, drop listeners (SPEC V25; bug B1).
+- **System theming** comes from `--clr-ns` custom property set by `data-system` attribute — never add per-system accent blocks to `global.css` (SPEC V4/V10).
+- **Placeholders**: stub dates must be `1970-01-01`; stub strings conspicuously fake (`"PLACEHOLDER"`/`"TBD"`) — never plausible-but-wrong (SPEC §P).
+- **Privacy**: no external requests, analytics, or tracking; document any `localStorage` key (name, purpose, retention, deletion path); keep `/privacy/` accurate (SPEC V11–V14).
+- **IDs**: lowercase kebab-case, must equal filename (SPEC C10/V16).
+- **Source attribution**: Never write `*Source: Book*` into markdown bodies. Source shown via `.talent-source` label on headings (from `sourceBook` + `bookMetaMap`) and `SourceBookCallout` in sidebar. Existing `*Source:*` lines stripped by `stripBodySource()` at render.
+- **Class trait rendering**: Traits use `.talent-header` pattern (top row: name + source; bottom row: `TagBadge` via `buildOrderedTagIds()`). `class-trait` tag auto-injected — never hardcode label span.
+- **Prerequisites**: On trait entries, `requires` frontmatter renders as `**Prerequisites:** {req}` below heading — never inline `(requires ...)`.
+- **ACFs**: Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. Use `archetypeId: {class}-alternate-class-features` (virtual — no content file).
 - **Markdown config**: use `markdown.processor: unified({ remarkPlugins })` from `@astrojs/markdown-remark`. Do not use deprecated top-level `markdown.remarkPlugins`.
-- **Component scripts in `<template>` tags are inert**: If a component that defines `<script>` is rendered inside a `<template>` (e.g. `TabbedContent.astro`'s per-tab TOC templates), the script never executes. Client-side logic for such components must live in an external module imported via the layout's `<script>` block (see `articleTocClient.ts` imported by `ArticlePage.astro`).
-- **Build strictness**: `bun run build` must complete without Astro check diagnostics, Fallow findings, Vite warnings, unresolved remark links, or TOC audit failures. `vite.build.chunkSizeWarningLimit` is intentionally strict at 200KB.
-- **Build concurrency — two rules to follow in `getStaticPaths()`:**
-  1. Never loop book metadata slugs with sequential `await getCollection()`. Metadata-only `_book.yaml` folders are not collections. Use `getCollEntriesMap()` from `resolveEntries.ts` instead — it is built in the same parallel pass as `resolveEntries()` and shared across all page files.
-  2. When multiple independent async operations must run locally (e.g. `render()` calls for a set of entries), wrap them in `Promise.all([...])` rather than `await`-ing each in a loop.
+- **Component scripts in `<template>` tags inert**: Component with `<script>` rendered inside `<template>` (e.g. `TabbedContent.astro` per-tab TOC templates) — script never executes. Client-side logic must live in external module imported via layout's `<script>` block (see `articleTocClient.ts` imported by `ArticlePage.astro`).
+- **Build strictness**: `bun run build` must complete without Astro check diagnostics, Fallow findings, Vite warnings, unresolved remark links, or TOC audit failures. `vite.build.chunkSizeWarningLimit` intentionally strict at 200KB.
+- **Build concurrency — two rules in `getStaticPaths()`:**
+  1. Never loop book metadata slugs with sequential `await getCollection()`. Metadata-only `_book.yaml` folders not collections. Use `getCollEntriesMap()` from `resolveEntries.ts` — built in same parallel pass as `resolveEntries()`, shared across page files.
+  2. Multiple independent async ops (e.g. `render()` calls for set of entries) → wrap in `Promise.all([...])`, not `await` in loop.
 
 ## Scripts & content pipeline
 
-`scripts/` holds the Wikidot import/ETL and validators — not part of the runtime site:
+`scripts/` holds Wikidot import/ETL & validators — not part of runtime site:
 - `validate.mjs` (runs in `bun run build`), plus `validate-tags.mjs`, `validate-v2.mjs`, `check-links.mjs`, `purge-dead-links.mjs`
 - parsers/generators: `parse-wiki.mjs`, `class-parser.mjs`, `archetype-parser.mjs`, `generate-tags.mjs`, `generate-bestial-traits.mjs`, `catalog.mjs`, `migrate-to-nested.mjs`, `download_covers.py`
-- Fallow treats `scripts/catalog.mjs`, `scripts/generate-bestial-traits.mjs`, and `scripts/parse-wiki.test.mjs` as explicit entrypoints. Keep ETL helpers small enough to avoid complexity findings.
-- See `scripts/PARSE-WIKI.md` for the parsing workflow.
-- See `docs/lessons-learned.md` for recent operational lessons from performance, Biome, and Fallow fixes.
+- Fallow treats `scripts/catalog.mjs`, `scripts/generate-bestial-traits.mjs`, `scripts/parse-wiki.test.mjs` as explicit entrypoints. Keep ETL helpers small to avoid complexity findings.
+- See `scripts/PARSE-WIKI.md` for parsing workflow.
+- See `docs/lessons-learned.md` for operational lessons from performance, Biome, Fallow fixes.
 
 ## Might sphere migration (Wikidot → Markdown)
 
-The Spheres of Might content is migrated from Wikidot source files via a Rust parser in the sibling `ftml/` crate. The workflow is documented in `ftml/examples/CLAUDE.md` and the project spec at SPEC.md §M.
+Spheres of Might content migrated from Wikidot via Rust parser in sibling `ftml/` crate. Workflow documented in `ftml/examples/CLAUDE.md` and SPEC.md §M.
 
 ### Adding a new sphere
 
 1. Read raw source at `../spheresofpower-wikidot-archive/pages/<sphere>.txt`
 2. Inventory headings (H1 `+`, H2 `++`, H4 `++++`), bracket citation keys `[Key]`, paren tags `(tag)`
-3. Add new keys to `../ftml/conf/might-lexicon.toml` — never guess book slugs; use the legal page (`legal:start.txt`) or DriveThruRPG to verify
-4. Add `*_section_defs()` + `*_sphere_entry()` to `../ftml/examples/export_might.rs` and wire in `main()`
+3. Add new keys to `../ftml/conf/might-lexicon.toml` — never guess book slugs; verify via legal page (`legal:start.txt`) or DriveThruRPG
+4. Add `*_section_defs()` + `*_sphere_entry()` to `../ftml/examples/export_might.rs`, wire in `main()`
 5. Build: `LIBGIT2_NO_PKG_CONFIG=1 ... cargo build --example export_might`
 6. Validate: `cargo run --example export_might -- <source> --sphere <id> --lexicon ... --validate`
 7. Resolve quarantine: add missing lexicon entries OR acknowledge for manual creation
@@ -198,12 +196,12 @@ The Spheres of Might content is migrated from Wikidot source files via a Rust pa
 - Delete `QUARANTINE-<sphere>.md` from `src/content/spheres-of-might/` (blocks Astro build)
 - Delete non-talent H4 entries (e.g. `unarmed-combatants.md`, `table-practitioner-unarmed-damage.md` from unarmed spheres; `note-shields-and-shield-bonuses.md` from Shield)
 - Fix auto-generated `_book.yaml` titles — auto-generator drops colons from Apocrypha titles
-- Fix duplicate IDs across spheres (e.g. `smash` → `smash-brute`) — rename file and update `id` frontmatter
+- Fix duplicate IDs across spheres (e.g. `smash` → `smash-brute`) — rename file, update `id` frontmatter
 - Run `python3 sweep_formatting.py` and `python3 strip_html_blocks.py` against output dir
 
 ### Content routing
 
-The parser writes entries to `{book}/might/spheres/{sphere}/` based on the resolved citation key:
+Parser writes entries to `{book}/might/spheres/{sphere}/` based on resolved citation key:
 - `[Key] = "book-slug"` → `src/content/book-slug/might/...`
 - `[Apoc]` with body `Source:` → specific apoc book folder
 - `[3PP]` (`__DEFERRED__`, changed from `__SKIP__` 2026-06-11) → resolved via body source if available; quarantined otherwise
@@ -211,43 +209,30 @@ The parser writes entries to `{book}/might/spheres/{sphere}/` based on the resol
 
 ### Quarantine
 
-Quarantined entries are those the parser cannot route to a book:
+Quarantined entries: parser cannot route to book:
 - `[Apoc]`/`[DRS]`/`[SM—]`/`[3PP]` without body `Source:` line
 - Unknown bracket tokens not in `citation_keys` or `bracket_ability_tags`
 - Unknown paren tags not in `paren_tags`
 
 ## Guile sphere migration (Wikidot → Markdown)
 
-The Spheres of Guile content uses the same pipeline as Might: Rust parser `../ftml/examples/export_guile.rs` + `../ftml/conf/guile-lexicon.toml`. Detailed spec at `context/kits/cavekit-guile-conversion.md`.
-
-### Adding a new sphere
-
-1. Read raw source at `../spheresofpower-wikidot-archive/pages/<sphere>.txt`
-2. Inventory headings: `grep '^++ ' source.txt` (H2 sections), `grep '^++++ ' source.txt` (H4 entries), `grep '\[.*\]'` (bracket keys), `grep '\('` (paren tags)
-3. Add new keys to `../ftml/conf/guile-lexicon.toml` — citation_keys, apoc_body_sources, paren_tags, bracket_ability_tags
-4. Add `<sphere>_section_defs()` + `<sphere>_sphere_entry()` to `../ftml/examples/export_guile.rs` and wire in `main()`
-5. Build: `LIBGIT2_NO_PKG_CONFIG=1 ... cargo build --example export_guile`
-6. Validate: `cargo run --example export_guile -- <source> --sphere <id> --lexicon ... --validate`
-7. Resolve quarantine: add missing lexicon entries OR (for no-body-source 3PP) search Library of Metzofitz
-8. Force-write: `--force` generates `.md` files to temp; copy to `src/content/<book>/guile/spheres/<sphere>/`
-9. Create tag definitions: `src/content/spheres-of-guile/guile/tags/<tag>.md` (unless tag exists in Power/Might)
-10. Run `bun run validate` → `bun run build` — must pass cleanly with 0 errors/warnings/hints/findings
+Spheres of Guile uses same pipeline as Might: Rust parser `../ftml/examples/export_guile.rs` + `../ftml/conf/guile-lexicon.toml`. Detailed spec at `context/kits/cavekit-guile-conversion.md`.
 
 ### Critical rules (universal — applies to Might and Power too)
 
-**Section def heading matching:** `parse_heading_line()` strips parenthetical text like `(Ex)` from parsed heading names. Section def headings must match the stripped version. Use `"##4B0092|Acclimate ##"` not `"##4B0092|Acclimate (Ex)##"`.
+**Section def heading matching:** `parse_heading_line()` strips parentheticals like `(Ex)` from heading names. Section def headings must match stripped version. Use `"##4B0092|Acclimate ##"` not `"##4B0092|Acclimate (Ex)##"`.
 
-**Sentinel H2 sections:** Sections like "Sphere Packages" or "Drawbacks" should be sentinel H2 entries whose H4 children are the actual entries. The section heading itself must not produce an entry. Use `exclude_base` guard in `convert_sphere()`.
+**Sentinel H2 sections:** "Sphere Packages"/"Drawbacks"-style sections — sentinel H2 entries whose H4 children are actual entries. Section heading must not produce entry. Use `exclude_base` guard in `convert_sphere()`.
 
-**Body source extraction:** `extract_body_source_title()` now searches 10 lines after heading (not 1). Some entries have prereq/benefit text before the `^^Source:` line.
+**Body source extraction:** `extract_body_source_title()` searches 10 lines after heading (not 1). Some entries have prereq/benefit text before `^^Source:` line.
 
 **Count-match rule:** `grep -c '^++++ ' source.txt` = total H4 count. Subtract sentinel H4 entries (descriptive headings under sentinel sections). Result must equal parser's `Parsed:` count minus 1 (sphere entry). Documented at `context/kits/cavekit-guile-conversion.md` §V.
 
-**Body-diff rule:** Original sphere intro text (between end of Wikidot boilerplate and first H2) must match generated sphere body verbatim. Excludes Wikidot markup that the parser strips.
+**Body-diff rule:** Original sphere intro text (between end of Wikidot boilerplate and first H2) must match generated sphere body verbatim. Excludes Wikidot markup parser strips.
 
-**Tags across systems:** Tags existing in Power or Might must NOT be redefined in Guile (V37/V38). Check before creating. If a tag needs a better definition, update the existing one instead.
+**Tags across systems:** Tags in Power or Might must NOT be redefined in Guile (V37/V38). Check before creating. If tag needs better definition, update existing one.
 
-**Quarantine files:** `QUARANTINE-*.md` files anywhere in `src/content/` block Astro builds. Delete after resolution.
+**Quarantine files:** `QUARANTINE-*.md` anywhere in `src/content/` blocks Astro builds. Delete after resolution.
 
 **3PP entries:** Changed from `__SKIP__` to `__DEFERRED__` in all three lexicons (2026-06-11). Entries with body sources resolve; those without need Library of Metzofitz lookup.
 
@@ -257,26 +242,26 @@ The Spheres of Guile content uses the same pipeline as Might: Rust parser `../ft
 - Delete `QUARANTINE-<sphere>.md` from `src/content/` (blocks Astro build)
 - Delete non-talent H4 entries (sentinel headings that produced entries)
 - Delete nested book directories under `spheres-of-guile/guile/spheres/` (parser path quirk)
-- Check for duplicate tags across systems — use existing definitions where possible
+- Check duplicate tags across systems — use existing definitions where possible
 
-Quarantined entries are NOT auto-generated. They must be manually created in the correct book folder, or acknowledged and skipped.
+Quarantined entries NOT auto-generated. Must be manually created in correct book folder, or acknowledged and skipped.
 
 ## Testing
 
 - **Unit** (`tests/lib/`, Vitest): schema/resolution/categorize/tags/url/search/etc. Run with `bun run test`.
 
-When adding a feature or fixing a bug, prefer adding/extending a test. Run targeted tests, then `bun run build` before handoff; the build already includes content validation, Fallow, Astro check, Astro build, Pagefind, and TOC audit.
+When adding feature or fixing bug, prefer adding/extending test. Run targeted tests, then `bun run build` before handoff; build includes content validation, Fallow, Astro check, Astro build, Pagefind, TOC audit.
 
 ---
 
 <!-- fallow:setup-hooks:start -->
 ## Fallow local gate
 
-Before any `git commit` or `git push`, run `fallow audit --format json --quiet --explain --gate-marker agent`. If the verdict is `fail`, fix the reported findings before retrying. Treat JSON runtime errors like `{ "error": true, ... }` as non-blocking. The only dependency ignored in `.fallowrc.json` specifically for framework loading is `@astrojs/compiler-rs`; do not add broad ignores for code issues.
+Before `git commit` or `git push`, run `fallow audit --format json --quiet --explain --gate-marker agent`. If verdict `fail`, fix findings before retry. Treat JSON runtime errors like `{ "error": true, ... }` as non-blocking. Only dependency ignored in `.fallowrc.json` for framework loading is `@astrojs/compiler-rs`; do not add broad ignores for code issues.
 
-Audit defaults to `gate=new-only`: only findings introduced by the current changeset affect the verdict. Inherited findings on touched files are reported under `attribution` and annotated with `introduced: false`, but do not block the commit. Set `[audit] gate = "all"` in `fallow.toml` to gate every finding in changed files.
+Audit defaults `gate=new-only`: only findings from current changeset affect verdict. Inherited findings on touched files reported under `attribution` with `introduced: false`, do not block commit. Set `[audit] gate = "all"` in `fallow.toml` to gate every finding in changed files.
 
-For non-skill agents, treat the task map below as the local onboarding source: run the listed fallow command before destructive edits, before commits, and before pull request handoff.
+Non-skill agents: treat task map below as local onboarding source — run listed fallow command before destructive edits, commits, PR handoff.
 
 ## Fallow task map
 
