@@ -1,27 +1,7 @@
 ---
-import { getCollection, render } from "astro:content";
-import ArticlePage from "@/layouts/ArticlePage.astro";
-import { resolveEntries } from "@/lib/resolveEntries";
-import type { ArticleEntry } from "@/lib/types";
-
-const entries = await getCollection("ultimate-spheres-of-power");
-const entry = entries.find(
-  (e: any) => e.data.type === "article" && e.data.id === "using-spheres-of-power",
-);
-if (!entry) {
-  throw new Error(
-    "Missing article entry: ultimate-spheres-of-power/articles/using-spheres-of-power.md",
-  );
-}
-const { Content, headings } = await render(entry);
-const article = entry.data as ArticleEntry;
-
-const { bookMetaMap } = await resolveEntries();
-const book = bookMetaMap.get("ultimate-spheres-of-power");
+import BuiltInArticlePage from "@/components/BuiltInArticlePage.astro";
 
 const description =
   "How to use the Spheres of Power magic system: magic talents, caster level, casting ability modifier, spell points, save DCs, magic skill bonus, descriptors, transparency rules, and FAQ.";
 ---
-<ArticlePage article={article} book={book} description={description} headings={headings}>
-  <Content />
-</ArticlePage>
+<BuiltInArticlePage collection="ultimate-spheres-of-power" id="using-spheres-of-power" description={description} />

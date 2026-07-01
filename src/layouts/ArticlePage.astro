@@ -24,9 +24,9 @@ const {
   showToc = true,
 } = Astro.props;
 
-// Determine system for color-coding
-const sys = article.system || "power";
-const sysLabel = SYSTEMS[sys as keyof typeof SYSTEMS]?.label || "Power";
+// Articles outside a system should remain top-level pages.
+const sys = article.system;
+const sysLabel = sys ? SYSTEMS[sys as keyof typeof SYSTEMS]?.label : undefined;
 
 const tocItems = showToc ? buildTocTree(headings) : [];
 ---
@@ -36,7 +36,7 @@ const tocItems = showToc ? buildTocTree(headings) : [];
     <Breadcrumb
       crumbs={[
         { label: "Home", href: url("/") },
-        { label: sysLabel, href: url(`/${sys}/`) },
+        ...(sys && sysLabel ? [{ label: sysLabel, href: url(`/${sys}/`) }] : []),
         { label: article.name },
       ]}
       separator="/"
@@ -76,5 +76,3 @@ const tocItems = showToc ? buildTocTree(headings) : [];
   // inside <template> tags by TabbedContent, where scripts are inert.
   import '@/lib/articleTocClient';
 </script>
-
-</style>
