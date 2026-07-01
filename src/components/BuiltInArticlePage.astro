@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from "astro:content";
+import ArticlePage from "@/layouts/ArticlePage.astro";
+import { resolveEntries } from "@/lib/resolveEntries";
+import type { ArticleEntry } from "@/lib/types";
+
+type BuiltInArticleCollection = "__built-in__" | "ultimate-spheres-of-power";
+
+interface Props {
+  collection: BuiltInArticleCollection;
+  id: string;
+  description: string;
+}
+
+const { collection, id, description } = Astro.props;
+
+const entries = await getCollection(collection);
+const entry = entries.find((e) => {
+  const data = e.data as { type?: string; id?: string };
+  return data.type === "article" && data.id === id;
+});
+if (!entry) {
+  throw new Error(`Missing article entry: ${collection}/articles/${id}.md`);
+}
+
+const { Content, headings } = await render(entry);
+const article = entry.data as ArticleEntry;
+
+const { bookMetaMap } = await resolveEntries();
+const book = bookMetaMap.get(collection);
+---
+
+<ArticlePage article={article} book={book} description={description} headings={headings}>
+  <Content />
+</ArticlePage>

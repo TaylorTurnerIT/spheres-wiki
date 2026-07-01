@@ -23,9 +23,9 @@ const {
   showToc = true,
 } = Astro.props;
 
-// Determine system for color-coding
-const sys = article.system || "power";
-const sysLabel = SYSTEMS[sys as keyof typeof SYSTEMS]?.label || "Power";
+// Articles outside a system should remain top-level pages.
+const sys = article.system;
+const sysLabel = sys ? SYSTEMS[sys as keyof typeof SYSTEMS]?.label : undefined;
 
 const tocItems = showToc ? buildTocTree(headings) : [];
 ---
@@ -34,8 +34,12 @@ const tocItems = showToc ? buildTocTree(headings) : [];
   <div class="article-header">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href={url("/")}>Home</a>
-      <span class="sep">/</span>
-      <a href={url(`/${sys}/`)}>{sysLabel}</a>
+      {sys && sysLabel && (
+        <>
+          <span class="sep">/</span>
+          <a href={url(`/${sys}/`)}>{sysLabel}</a>
+        </>
+      )}
       <span class="sep">/</span>
       <span class="current">{article.name}</span>
     </nav>
@@ -71,5 +75,3 @@ const tocItems = showToc ? buildTocTree(headings) : [];
   // inside <template> tags by TabbedContent, where scripts are inert.
   import '@/lib/articleTocClient';
 </script>
-
-</style>

@@ -1,27 +1,7 @@
 ---
-import { getCollection, render } from "astro:content";
-import ArticlePage from "@/layouts/ArticlePage.astro";
-import { resolveEntries } from "@/lib/resolveEntries";
-import type { ArticleEntry } from "@/lib/types";
-
-const entries = await getCollection("__built-in__");
-const entry = entries.find(
-  (e: any) => e.data.type === "article" && e.data.id === "about",
-);
-if (!entry) {
-  throw new Error(
-    "Missing article entry: __built-in__/articles/about.md",
-  );
-}
-const { Content, headings } = await render(entry);
-const article = entry.data as ArticleEntry;
-
-const { bookMetaMap } = await resolveEntries();
-const book = bookMetaMap.get("__built-in__");
+import BuiltInArticlePage from "@/components/BuiltInArticlePage.astro";
 
 const description =
   "About the Spheres of Power Wiki — a quick-reference site for the Spheres system.";
 ---
-<ArticlePage article={article} book={book} description={description} headings={headings}>
-  <Content />
-</ArticlePage>
+<BuiltInArticlePage collection="__built-in__" id="about" description={description} />

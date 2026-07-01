@@ -249,7 +249,7 @@ export type ClassTraitEntry = {
 export type ArticleEntry = {
   type: "article";
   id: string;
-  system: string;
+  system?: string;
   name: string;
   sourceBook: string;
   tags: string[];

@@ -54,7 +54,16 @@ describe("ArticleTOC rename", () => {
     expect(content).toContain("tocItems.length >= 2");
   });
 
-  it("all 6 non-tab article pages pass headings through to ArticlePage", () => {
+  it("BuiltInArticlePage renders articles with headings passed through to ArticlePage", () => {
+    const content = read("src/components/BuiltInArticlePage.astro");
+    expect(content).toContain(
+      "const { Content, headings } = await render(entry);",
+    );
+    expect(content).toContain("headings={headings}");
+    expect(content).toContain("<ArticlePage");
+  });
+
+  it("all 6 non-tab article pages use the shared built-in article helper", () => {
     const pages = [
       "src/pages/about/index.astro",
       "src/pages/legal/index.astro",
@@ -65,10 +74,9 @@ describe("ArticleTOC rename", () => {
     ];
     for (const page of pages) {
       const content = read(page);
-      expect(content).toContain(
-        "const { Content, headings } = await render(entry);",
-      );
-      expect(content).toContain("headings={headings}");
+      expect(content).toContain("BuiltInArticlePage");
+      expect(content).not.toContain("await getCollection(");
+      expect(content).not.toContain("await render(entry)");
     }
   });
 });
