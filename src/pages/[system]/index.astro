@@ -3,6 +3,7 @@ import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import SphereBadgeGrid from '@/components/SphereBadgeGrid.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 import { getSystemPaths, resolveSystem } from '@/lib/systems';
 import type { SphereEntry, ClassEntry } from '@/lib/types';
 
@@ -247,11 +248,10 @@ const cards = [
     )}
   </div>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>{sysConfig.label}</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: sysConfig.label },
+  ]} />
 
   <h1 class={`page-title ${sysConfig.cssKey}`}>{sysConfig.label}</h1>
   <p>{content.intro}</p>

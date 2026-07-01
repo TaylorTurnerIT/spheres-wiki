@@ -2,6 +2,7 @@
 import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
 import { resolveEntries } from "@/lib/resolveEntries";
 
 const { tagMap, bookMetaMap, talentMap, featMap, sphereMap, classMap } = await resolveEntries();
@@ -75,11 +76,10 @@ const sphereGroups = [...sphereGroupMap.values()]
 ---
 
 <WikiPage title="Tags — Spheres Wiki" pagefindIgnore={true}>
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>Tags</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: "Tags" },
+  ]} />
 
   <h1 class="page-title" id="overview">Tags</h1>
   <hr class="page-title-rule" />

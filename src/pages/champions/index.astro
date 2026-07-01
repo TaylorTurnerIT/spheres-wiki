@@ -2,6 +2,7 @@
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 
 const { classMap } = await resolveEntries();
 
@@ -52,11 +53,10 @@ const classes = [...classMap.values()]
     </svg>
   </div>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>Champions of the Spheres</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: "Champions of the Spheres" },
+  ]} />
 
   <h1 class="page-title champ">Champions of the Spheres</h1>
   <p>Champions of the Spheres bridges the gap between magic and martial combat, providing classes and options that seamlessly integrate Spheres of Power and Spheres of Might.</p>

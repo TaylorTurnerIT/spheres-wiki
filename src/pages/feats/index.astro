@@ -2,6 +2,7 @@
 import { render } from "astro:content";
 import WikiPage from "@/layouts/WikiPage.astro";
 import FeatsTabbedContent from "@/components/FeatsTabbedContent.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
 import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
 import { getCanonicalFeatCategory, getFeatUrl } from "@/lib/featCategories";
 import { buildOrderedTagIds } from "@/lib/tags";
@@ -154,11 +155,10 @@ tabs.sort((a: any, b: any) => {
 ---
 
 <WikiPage title="Feats Index — Spheres Wiki" description={description}>
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>Feats</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: "Feats" },
+  ]} />
 
   <h1 class="page-title" id="overview">Feats Index</h1>
   <hr class="page-title-rule" />

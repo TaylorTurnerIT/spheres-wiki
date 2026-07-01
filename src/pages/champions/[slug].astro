@@ -2,6 +2,7 @@
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 import type { ClassEntry } from '@/lib/types';
 
 interface Props {
@@ -24,13 +25,11 @@ const { cls } = Astro.props;
 ---
 <WikiPage title={`${cls.name} — Champions of the Spheres Wiki`} activeNamespace="champions">
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href={url("/champions/")} data-astro-prefetch="hover">Champions of the Spheres</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>{cls.name}</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: "Champions of the Spheres", href: url("/champions/") },
+    { label: cls.name },
+  ]} />
 
         <span data-pagefind-meta={`title:${cls.name}`} hidden></span>
       <span data-pagefind-filter="type:class" hidden></span>
