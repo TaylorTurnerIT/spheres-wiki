@@ -96,7 +96,7 @@ const tocBySlug = new Map(
           data-system={tab.system}
         >
           <template data-toc-template={tab.slug}>
-            {tocItems.length > 0 && <ArticleTOC items={tocItems} system="power" />}
+            {tocItems.length > 0 && <ArticleTOC items={tocItems} system={tab.system ?? "power"} />}
           </template>
           {tab.description && <p class="feat-tab-description">{tab.description}</p>}
           {RulesContent && (
