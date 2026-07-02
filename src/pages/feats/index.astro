@@ -1,160 +1,51 @@
 ---
-import { render } from "astro:content";
 import WikiPage from "@/layouts/WikiPage.astro";
-import FeatsTabbedContent from "@/components/FeatsTabbedContent.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import TagBadge from "@/components/TagBadge.astro";
 import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
-import { getCanonicalFeatCategory, getFeatUrl } from "@/lib/featCategories";
-import { buildOrderedTagIds } from "@/lib/tags";
+import { buildFeatBrowseEntry, type FeatBrowseEntry } from "@/lib/featBrowse";
 import { url } from "@/lib/url";
-import type { FeatEntry, TagEntry } from "@/lib/types";
+import { SYSTEMS } from "@/config/site";
 
 const description =
-  "Browse every feat on the Spheres Wiki by category, including combat, champion, metamagic, sphere-focused, and dual-sphere feats.";
+  "Search and filter every feat on the Spheres Wiki by system, category, sphere, tag, or prerequisite.";
 
 const { featMap, tagMap, bookMetaMap, sphereMap } = await resolveEntries();
 const allCollEntries = await getCollEntriesMap();
 
-const byName = <T extends { id: string; name: string }>(a: T, b: T) =>
-  a.name.localeCompare(b.name) || a.id.localeCompare(b.id);
-const sourceTitle = (sourceBook: string) => bookMetaMap.get(sourceBook)?.title ?? sourceBook;
-const featKey = (feat: FeatEntry) => `${feat.sourceBook}:${feat.id}`;
-
-const categoryTags = [...tagMap.values()]
-  .filter((tag) => tag.featCategory === true)
-  .sort((a, b) => a.priority - b.priority || a.label.localeCompare(b.label));
-const categoryTagIdSet = new Set(categoryTags.map((tag) => tag.id));
-const sphereIds = new Set([...sphereMap.values()].map((sphere) => sphere.id));
-
-function categoryTagsFor(feat: FeatEntry): TagEntry[] {
-  return (feat.tags ?? [])
-    .map((tagId) => tagMap.get(tagId))
-    .filter((tag): tag is TagEntry => tag?.featCategory === true)
-    .sort((a, b) => a.priority - b.priority || a.id.localeCompare(b.id));
-}
-
-function systemScopeFor(feat: FeatEntry): "power" | "might" | "guile" | "champions" | undefined {
-  return categoryTagsFor(feat).find((tag) => tag.system)?.system;
-}
-
-const feats = [...featMap.values()].sort(byName);
-
-const featContentEntries = await Promise.all(
-  feats.map(async (feat) => {
-    const collEntry =
-      allCollEntries.get(`feat:${feat.sourceBook}:${feat.id}`) ??
-      allCollEntries.get(`feat:${feat.id}`);
-    if (!collEntry) return [featKey(feat), null] as const;
-    const { Content } = await render(collEntry);
-    return [featKey(feat), Content] as const;
-  }),
+const feats = [...featMap.values()].sort(
+  (a, b) => a.name.localeCompare(b.name) || a.id.localeCompare(b.id),
 );
-const featContentMap = new Map(featContentEntries);
 
-const categoryRuleEntries = await Promise.all(
-  categoryTags.map(async (tag) => {
-    const collEntry = allCollEntries.get(`tag:${tag.id}`);
-    if (!collEntry) return [tag.id, null] as const;
-    const { Content } = await render(collEntry);
-    return [tag.id, Content] as const;
-  }),
-);
-const categoryRuleMap = new Map(categoryRuleEntries);
+// Metadata-only manifest — never pulls a feat's rendered Content into this page.
+// `rawBody` (unrendered markdown source) is used only to derive a short excerpt
+// and the Prerequisites line; the full body stays on the canonical detail page.
+const manifest: FeatBrowseEntry[] = feats.map((feat) => {
+  const collEntry =
+    allCollEntries.get(`feat:${feat.sourceBook}:${feat.id}`) ??
+    allCollEntries.get(`feat:${feat.id}`);
+  return buildFeatBrowseEntry(feat, {
+    tagMap,
+    bookMetaMap,
+    sphereMap,
+    rawBody: collEntry?.body,
+    resolveUrl: url,
+  });
+});
 
-function featCard(feat: FeatEntry, system?: "power" | "might" | "guile" | "champions") {
-  return {
-    id: feat.id,
-    name: feat.name,
-    sourceBookTitle: sourceTitle(feat.sourceBook),
-    tagIds: buildOrderedTagIds(feat, bookMetaMap, tagMap, {
-      showHidden: !!(feat.dualSphere && feat.dualSphere !== "any"),
-    }),
-    Content: featContentMap.get(featKey(feat)),
-    href: url(getFeatUrl(feat, tagMap)),
-    system,
-    filterKey: feat.sphere,
-  };
-}
-
-function hasCategoryTag(feat: FeatEntry): boolean {
-  return (feat.tags ?? []).some((tagId) => categoryTagIdSet.has(tagId));
-}
-
-const allFeatCards = feats.map((feat) => featCard(feat, systemScopeFor(feat)));
-
-const categoryTabData = categoryTags.map((tag) => ({
-  tag,
-  RulesContent: categoryRuleMap.get(tag.id),
-  items: feats
-    .filter((feat) => (feat.tags ?? []).includes(tag.id))
-    .map((feat) => featCard(feat, systemScopeFor(feat))),
+const systemOptions = Object.entries(SYSTEMS).map(([key, cfg]) => ({
+  key,
+  label: cfg.label,
+  cssKey: cfg.cssKey,
 }));
+const systemLabelMap = Object.fromEntries(systemOptions.map((s) => [s.key, s.label]));
 
-const sphereFocusedFeats = feats.filter((feat) => {
-  if (hasCategoryTag(feat)) return false;
-  return sphereIds.has(getCanonicalFeatCategory(feat, tagMap));
-});
-const sphereFocusedCards = sphereFocusedFeats.map((feat) => featCard(feat, systemScopeFor(feat)));
-const sphereFilterOptions = [...new Set(sphereFocusedFeats.map((feat) => feat.sphere).filter(Boolean) as string[])]
-  .map((sphereId) => ({
-    id: sphereId,
-    label: sphereMap.get(`sphere:${sphereId}`)?.name ?? sphereId,
-  }))
-  .sort((a, b) => a.label.localeCompare(b.label));
-
-const dualSphereCards = feats
-  .filter((feat) => feat.dualSphere)
-  .map((feat) => featCard(feat, systemScopeFor(feat)));
-
-const tabs = [
-  {
-    label: "All",
-    slug: "all",
-    description: "Every indexed feat, listed once.",
-    items: allFeatCards,
-  },
-  ...categoryTabData.map(({ tag, RulesContent, items }) => ({
-    label: tag.label,
-    slug: tag.id,
-    description: tag.description,
-    items,
-    RulesContent,
-    system: tag.system,
-    emptyMessage: `No ${tag.label.toLowerCase()} feats indexed yet.`,
-  })),
-  {
-    label: "Sphere-focused",
-    slug: "sphere-focused",
-    description: "Sphere-focused feats are organized by their associated sphere.",
-    items: sphereFocusedCards,
-    emptyMessage: "No sphere-focused feats indexed yet.",
-    sphereFilterOptions,
-  },
-  {
-    label: "Dual Sphere",
-    slug: "dual-sphere",
-    description: "Dual-sphere feats combine two spheres and are listed here as one flat reference.",
-    items: dualSphereCards,
-    emptyMessage: "No dual-sphere feats indexed yet.",
-  },
-];
-
-const systemOrder: Record<string, number> = {
-  "none": 0,
-  "might": 1,
-  "guile": 2,
-  "champions": 3,
-  "power": 4,
-};
-
-tabs.sort((a: any, b: any) => {
-  const sysA = a.system ?? "none";
-  const sysB = b.system ?? "none";
-  return systemOrder[sysA] - systemOrder[sysB];
-});
+// Pre-render each unique tag badge once (not once per feat) — client JS clones
+// these by id instead of re-invoking the Astro component per row.
+const allTagIds = [...new Set(manifest.flatMap((entry) => entry.tags))];
 ---
 
-<WikiPage title="Feats Index — Spheres Wiki" description={description}>
+<WikiPage title="Feats Index — Spheres Wiki" description={description} pagefindIgnore={true}>
   <Breadcrumb crumbs={[
     { label: "Home", href: url("/") },
     { label: "Feats" },
@@ -163,29 +54,497 @@ tabs.sort((a: any, b: any) => {
   <h1 class="page-title" id="overview">Feats Index</h1>
   <hr class="page-title-rule" />
 
-  <div class="article-content entry-description">
-    <div class="article-layout">
-      <div class="content-body">
-        <p class="feats-intro">
-          {feats.length} feat{feats.length !== 1 ? "s" : ""} indexed across every Spheres system.
-        </p>
+  <p class="feats-intro">
+    Search {manifest.length} feats across every Spheres system by name, tag, sphere, or prerequisite.
+  </p>
 
-        <FeatsTabbedContent tabs={tabs} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+  <div class="feats-browse" id="feats-browse">
+    <div class="feats-search-bar">
+      <svg aria-hidden="true" class="feats-search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>
+      <input
+        id="feats-search-input"
+        type="search"
+        class="feats-search-input"
+        placeholder="Search feats, tags, spheres, or text…"
+        autocomplete="off"
+        aria-label="Search feats"
+      />
+    </div>
+
+    <div class="feats-filter-row">
+      <div class="feats-filter-group" role="group" aria-label="Filter by system">
+        <span class="feats-filter-label">System</span>
+        <div class="feats-pill-row" id="feats-system-pills">
+          <button type="button" class="feats-pill active" data-system-filter="" aria-pressed="true">All</button>
+          {systemOptions.map((s) => (
+            <button
+              type="button"
+              class="feats-pill"
+              data-system-filter={s.key}
+              aria-pressed="false"
+              style={`--pill-clr: var(--clr-${s.cssKey})`}
+            >
+              {s.label}
+            </button>
+          ))}
+        </div>
       </div>
+      <div class="feats-filter-group" id="feats-category-group" hidden>
+        <span class="feats-filter-label">Category</span>
+        <div class="feats-pill-row" id="feats-category-pills"></div>
+      </div>
+    </div>
 
-      <aside class="article-sidebar" id="article-sidebar"></aside>
+    <div class="feats-result-summary" id="feats-result-summary" aria-live="polite"></div>
+
+    <div class="feats-table-wrap">
+      <table class="feats-table" id="feats-table">
+        <thead>
+          <tr>
+            <th scope="col">Feat</th>
+            <th scope="col">System / Category</th>
+            <th scope="col">Tags</th>
+            <th scope="col">Prerequisites</th>
+            <th scope="col">Summary</th>
+          </tr>
+        </thead>
+        <tbody id="feats-table-body"></tbody>
+      </table>
+    </div>
+
+    <div class="feats-empty" id="feats-empty" hidden>
+      <p id="feats-empty-message">No feats match your search.</p>
+      <button type="button" class="feats-reset-btn" id="feats-reset">Clear search &amp; filters</button>
+    </div>
+
+    <div
+      id="feats-data"
+      data-manifest={JSON.stringify(manifest)}
+      data-system-labels={JSON.stringify(systemLabelMap)}
+      hidden
+    ></div>
+
+    <div id="feats-tag-templates" hidden>
+      {allTagIds.map((tagId) => (
+        <div data-tag-template={tagId}>
+          <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} asSpan={true} stripLinks={true} />
+        </div>
+      ))}
     </div>
   </div>
 </WikiPage>
 
-<script>
-  import "@/lib/articleTocClient";
-</script>
-
-<style>
+<style is:global>
   .feats-intro {
     font-size: var(--fs-sm);
     color: var(--clr-text);
     line-height: 1.55;
+    margin-bottom: var(--sp-4);
+  }
+
+  .feats-browse {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+  }
+
+  /* Search bar — dominant, first in tab order */
+  .feats-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+  }
+  .feats-search-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--clr-muted);
+    flex-shrink: 0;
+  }
+  .feats-search-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--clr-text);
+  }
+  .feats-search-input::placeholder {
+    color: var(--clr-muted);
+  }
+  .feats-search-bar:focus-within {
+    outline: 2px solid var(--clr-brand);
+    outline-offset: 1px;
+  }
+
+  /* Filter row */
+  .feats-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--sp-3) var(--sp-6);
+  }
+  .feats-filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .feats-filter-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+    white-space: nowrap;
+  }
+  .feats-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .feats-pill {
+    --pill-clr: var(--clr-brand);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--fs-xs);
+    background: var(--clr-bg);
+    border: 1px solid var(--pill-clr);
+    color: var(--pill-clr);
+    border-radius: 999px;
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
+  }
+  .feats-pill:hover {
+    background: color-mix(in srgb, var(--pill-clr) 12%, var(--clr-bg));
+  }
+  .feats-pill.active {
+    background: var(--pill-clr);
+    color: #fff;
+  }
+  .feats-pill:focus-visible {
+    outline: 2px solid var(--clr-brand);
+    outline-offset: 2px;
+  }
+
+  /* Result summary */
+  .feats-result-summary {
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+  }
+
+  /* Table */
+  .feats-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .feats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--fs-sm);
+  }
+  .feats-table th {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-3xs);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+    background: var(--clr-bg);
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid var(--clr-border);
+    white-space: nowrap;
+  }
+  .feats-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--clr-border);
+    vertical-align: top;
+  }
+  .feats-table tbody tr:hover {
+    background: color-mix(in srgb, var(--clr-active) 4%, var(--clr-surface));
+  }
+  .feat-name-link {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--clr-active);
+    text-decoration: none;
+  }
+  .feat-name-link:hover {
+    text-decoration: underline;
+  }
+  .feat-source {
+    display: block;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--fs-3xs);
+    color: var(--clr-muted);
+    margin-top: 2px;
+  }
+  .feat-system-badge {
+    --pill-clr: var(--clr-brand);
+    display: inline-block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-3xs);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--pill-clr);
+  }
+  .feat-category {
+    display: block;
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+  }
+  .feat-prereq,
+  .feat-excerpt {
+    color: var(--clr-text);
+    line-height: 1.45;
+  }
+  .feat-prereq-empty {
+    color: var(--clr-muted);
+  }
+  .feats-table .talent-header-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  /* Empty state */
+  .feats-empty {
+    text-align: center;
+    padding: var(--sp-6) 0;
+    color: var(--clr-muted);
+    font-size: var(--fs-sm);
+  }
+  .feats-reset-btn {
+    background: none;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    color: var(--clr-muted);
+    font-size: var(--fs-xs);
+    padding: 6px 14px;
+    cursor: pointer;
+    margin-top: var(--sp-2);
+  }
+  .feats-reset-btn:hover {
+    color: var(--clr-brand);
+    border-color: var(--clr-brand);
+  }
+
+  /* Mobile: table rows collapse into stacked cards, same data + order */
+  @media (max-width: 768px) {
+    .feats-table thead {
+      display: none;
+    }
+    .feats-table,
+    .feats-table tbody,
+    .feats-table tr,
+    .feats-table td {
+      display: block;
+      width: 100%;
+    }
+    .feats-table tr {
+      border: 1px solid var(--clr-border);
+      border-left: 3px solid var(--clr-active);
+      border-radius: var(--radius);
+      background: var(--clr-bg);
+      padding: var(--sp-3) var(--sp-4);
+      margin-bottom: var(--sp-3);
+    }
+    .feats-table td {
+      padding: 4px 0;
+      border-bottom: none;
+    }
+    .feats-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--fs-3xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--clr-muted);
+      margin-bottom: 2px;
+    }
+    .feats-table td[data-label="Feat"]::before {
+      display: none;
+    }
   }
 </style>
+
+<script>
+  import type { FeatBrowseEntry } from "@/lib/featBrowse";
+  import {
+    buildFeatBrowseSearch,
+    filterFeatEntries,
+    getCategoryOptions,
+    parseFeatBrowseParams,
+    shouldPrefetch,
+  } from "@/lib/featBrowseClient";
+
+  function escapeHtml(value: string): string {
+    return value
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    const root = document.getElementById("feats-browse");
+    const input = document.getElementById("feats-search-input") as HTMLInputElement | null;
+    if (!root || !input) return;
+
+    const dataEl = document.getElementById("feats-data") as HTMLElement | null;
+    const allEntries: FeatBrowseEntry[] = JSON.parse(dataEl?.dataset.manifest ?? "[]");
+    const systemLabels: Record<string, string> = JSON.parse(dataEl?.dataset.systemLabels ?? "{}");
+
+    const tagTemplates: Record<string, string> = {};
+    document.querySelectorAll("[data-tag-template]").forEach((el) => {
+      const key = el.getAttribute("data-tag-template");
+      if (key) tagTemplates[key] = el.innerHTML;
+    });
+
+    const tbody = document.getElementById("feats-table-body")!;
+    const summaryEl = document.getElementById("feats-result-summary")!;
+    const emptyEl = document.getElementById("feats-empty")!;
+    const emptyMessageEl = document.getElementById("feats-empty-message")!;
+    const resetBtn = document.getElementById("feats-reset")!;
+    const systemPillRow = document.getElementById("feats-system-pills")!;
+    const categoryGroup = document.getElementById("feats-category-group")!;
+    const categoryPillRow = document.getElementById("feats-category-pills")!;
+
+    let state = parseFeatBrowseParams(window.location.search);
+
+    function pushState() {
+      const qs = buildFeatBrowseSearch(state);
+      history.replaceState(null, "", qs ? `${window.location.pathname}${qs}` : window.location.pathname);
+    }
+
+    function renderSystemPills() {
+      systemPillRow.querySelectorAll<HTMLButtonElement>(".feats-pill").forEach((btn) => {
+        const key = btn.dataset.systemFilter ?? "";
+        const isActive = key === state.system;
+        btn.classList.toggle("active", isActive);
+        btn.setAttribute("aria-pressed", String(isActive));
+      });
+    }
+
+    function renderCategoryPills(scopedBySystem: FeatBrowseEntry[]) {
+      const options = getCategoryOptions(scopedBySystem);
+      if (options.length <= 1) {
+        categoryGroup.hidden = true;
+        state.category = "";
+        return;
+      }
+      categoryGroup.hidden = false;
+      categoryPillRow.innerHTML = [
+        `<button type="button" class="feats-pill${state.category === "" ? " active" : ""}" data-category-filter="" aria-pressed="${state.category === ""}">All (${scopedBySystem.length})</button>`,
+        ...options.map(
+          (opt) =>
+            `<button type="button" class="feats-pill${state.category === opt.id ? " active" : ""}" data-category-filter="${escapeHtml(opt.id)}" aria-pressed="${state.category === opt.id}">${escapeHtml(opt.label)} (${opt.count})</button>`,
+        ),
+      ].join("");
+    }
+
+    function renderRows(entries: FeatBrowseEntry[]) {
+      const prefetch = shouldPrefetch(entries.length);
+      tbody.innerHTML = entries
+        .map((entry) => {
+          const tagsHtml = entry.tags.map((t) => tagTemplates[t] ?? "").join("");
+          const systemLabel = systemLabels[entry.system] ?? entry.system;
+          const prereqHtml = entry.prerequisites
+            ? `<span class="feat-prereq">${escapeHtml(entry.prerequisites)}</span>`
+            : `<span class="feat-prereq-empty">—</span>`;
+          return `<tr data-href="${escapeHtml(entry.href)}">
+            <td data-label="Feat">
+              <a href="${escapeHtml(entry.href)}" class="feat-name-link"${prefetch ? ' data-astro-prefetch="hover"' : ""}>${escapeHtml(entry.name)}</a>
+              <span class="feat-source">${escapeHtml(entry.sourceBookTitle)}</span>
+            </td>
+            <td data-label="System / Category">
+              <span class="feat-system-badge" style="--pill-clr: var(--clr-${entry.system === "champions" ? "champ" : entry.system})">${escapeHtml(systemLabel)}</span>
+              <span class="feat-category">${escapeHtml(entry.categoryLabel)}</span>
+            </td>
+            <td data-label="Tags"><div class="talent-header-bottom">${tagsHtml}</div></td>
+            <td data-label="Prerequisites">${prereqHtml}</td>
+            <td data-label="Summary"><span class="feat-excerpt">${escapeHtml(entry.excerpt)}</span></td>
+          </tr>`;
+        })
+        .join("");
+    }
+
+    function render() {
+      const scopedBySystem = state.system ? allEntries.filter((e) => e.system === state.system) : allEntries;
+      renderCategoryPills(scopedBySystem);
+
+      const results = filterFeatEntries(allEntries, state);
+      renderSystemPills();
+      renderRows(results);
+
+      const total = allEntries.length;
+      if (results.length === 0) {
+        tbody.parentElement!.hidden = true;
+        emptyEl.hidden = false;
+        emptyMessageEl.textContent = state.q
+          ? `No feats match "${state.q}". Try a different keyword or clear your filters.`
+          : "No feats match the selected filters.";
+        summaryEl.textContent = "0 feats";
+      } else {
+        tbody.parentElement!.hidden = false;
+        emptyEl.hidden = true;
+        summaryEl.textContent =
+          results.length === total ? `${total} feats` : `${results.length} of ${total} feats`;
+      }
+    }
+
+    input.value = state.q;
+    render();
+
+    let debounceTimer: ReturnType<typeof setTimeout>;
+    input.addEventListener("input", () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        state = { ...state, q: input.value };
+        pushState();
+        render();
+      }, 150);
+    });
+
+    systemPillRow.addEventListener("click", (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>("[data-system-filter]");
+      if (!btn) return;
+      state = { ...state, system: btn.dataset.systemFilter ?? "", category: "" };
+      pushState();
+      render();
+    });
+
+    categoryPillRow.addEventListener("click", (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>("[data-category-filter]");
+      if (!btn) return;
+      const value = btn.dataset.categoryFilter ?? "";
+      state = { ...state, category: state.category === value ? "" : value };
+      pushState();
+      render();
+    });
+
+    resetBtn.addEventListener("click", () => {
+      state = { q: "", system: "", category: "" };
+      input.value = "";
+      pushState();
+      render();
+    });
+
+    tbody.addEventListener("click", (e) => {
+      if ((e.target as HTMLElement).closest("a")) return;
+      const row = (e.target as HTMLElement).closest<HTMLTableRowElement>("tr[data-href]");
+      if (row?.dataset.href) window.location.href = row.dataset.href;
+    });
+  });
+</script>
