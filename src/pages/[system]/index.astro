@@ -84,7 +84,7 @@ const classById = new Map(classes.map(c => [c.id, c]));
 
 const systemContent: Record<string, {
   intro: string;
-  card1Title: string; card1Desc: string; card1Href: string;
+  card1Title: string; card1Desc: string; card1Href?: string;
   card2Title: string; card2Desc: string; card2Href: string;
   card3Title: string; card3Desc: string; card3Href?: string;
 }> = {
@@ -126,7 +126,6 @@ const systemContent: Record<string, {
     intro: 'Champions of the Spheres bridges the gap between magic and martial combat, providing classes and options that seamlessly integrate Spheres of Power and Spheres of Might.',
     card1Title: 'Using Champions of the Spheres',
     card1Desc: 'Rules for combining magic and martial prowess in combat.',
-    card1Href: '/champions/using-champions/',
     card2Title: 'How to Build a Champion',
     card2Desc: 'A step-by-step guide to creating your first hybrid character.',
     card2Href: '/power/how-to-build-champion/',
@@ -470,15 +469,6 @@ const cards = [
             <h3 class="quick-links-heading">Rules</h3>
             <ul class="quick-links-list">
               <li><a href={url("/guile/using-spheres-of-guile/")}>Using Spheres of Guile</a></li>
-            </ul>
-          </div>
-        )}
-
-        {system === 'champions' && (
-          <div class="quick-links-group">
-            <h3 class="quick-links-heading">Rules</h3>
-            <ul class="quick-links-list">
-              <li><a href={url("/champions/using-champions/")}>Using Champions of the Spheres</a></li>
             </ul>
           </div>
         )}
