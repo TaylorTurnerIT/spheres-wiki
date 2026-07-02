@@ -3,6 +3,7 @@ import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import BookCard from "@/components/BookCard.astro";
 import ArticleTOC from "@/components/ArticleTOC.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
 import { SYSTEMS } from "@/config/site";
 import { buildTocTree, type RenderedHeading } from "@/lib/articleToc";
 import type { ArticleEntry, BookMeta } from "@/lib/types";
@@ -32,17 +33,17 @@ const tocItems = showToc ? buildTocTree(headings) : [];
 
 <WikiPage title={article.name} description={description} activeNamespace={sys}>
   <div class="article-header">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href={url("/")}>Home</a>
-      {sys && sysLabel && (
-        <>
-          <span class="sep">/</span>
-          <a href={url(`/${sys}/`)}>{sysLabel}</a>
-        </>
-      )}
-      <span class="sep">/</span>
-      <span class="current">{article.name}</span>
-    </nav>
+    <Breadcrumb
+      crumbs={[
+        { label: "Home", href: url("/") },
+        ...(sys && sysLabel ? [{ label: sysLabel, href: url(`/${sys}/`) }] : []),
+        { label: article.name },
+      ]}
+      separator="/"
+      separatorClass="sep"
+      currentClass="current"
+      prefetch={false}
+    />
 
     <h1 class="page-title">{article.name}</h1>
   </div>

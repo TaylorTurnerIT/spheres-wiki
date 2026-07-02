@@ -3,6 +3,7 @@ import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import SphereBadgeGrid from '@/components/SphereBadgeGrid.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 import { getSystemPaths, resolveSystem } from '@/lib/systems';
 import type { SphereEntry, ClassEntry } from '@/lib/types';
 
@@ -24,8 +25,6 @@ export async function getStaticPaths() {
   const paths = [];
 
   for (const { params: { system } } of getSystemPaths()) {
-    if (system === 'champions') continue;
-
     let spheres = [...sphereMap.values()]
       .filter(s => s.system === system)
       .sort((a, b) => a.name.localeCompare(b.name));
@@ -86,7 +85,7 @@ const classById = new Map(classes.map(c => [c.id, c]));
 
 const systemContent: Record<string, {
   intro: string;
-  card1Title: string; card1Desc: string; card1Href: string;
+  card1Title: string; card1Desc: string; card1Href?: string;
   card2Title: string; card2Desc: string; card2Href: string;
   card3Title: string; card3Desc: string; card3Href?: string;
 }> = {
@@ -123,6 +122,16 @@ const systemContent: Record<string, {
     card2Href: '/guile/how-to-build-operative/',
     card3Title: 'Trade Traditions',
     card3Desc: 'Tradition rules for skill training and professional focus.',
+  },
+  champions: {
+    intro: 'Champions of the Spheres bridges the gap between magic and martial combat, providing classes and options that seamlessly integrate Spheres of Power and Spheres of Might.',
+    card1Title: 'Using Champions of the Spheres',
+    card1Desc: 'Rules for combining magic and martial prowess in combat.',
+    card2Title: 'How to Build a Champion',
+    card2Desc: 'A step-by-step guide to creating your first hybrid character.',
+    card2Href: '/power/how-to-build-champion/',
+    card3Title: 'Unified Traditions',
+    card3Desc: 'Tradition rules for characters blending magic and martial training.',
   },
 };
 
@@ -245,13 +254,52 @@ const cards = [
         </g>
       </svg>
     )}
+    {system === 'champions' && (
+      <svg viewBox="0 0 800 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="champBannerGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#165A1C" stop-opacity="0.32"/>
+            <stop offset="100%" stop-color="#091E0C" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="800" height="140" fill="#091E0C"/>
+        <rect width="800" height="140" fill="url(#champBannerGlow)"/>
+
+        <g>
+          <path d="M -80 -20 L -80 -10 Q 200 45 400 4 Q 600 45 880 -10 L 880 -20 Z" fill="#0C2B12" opacity="0.9"/>
+          <path d="M -80 -20 L -80 -15 Q 200 35 400 2 Q 600 35 880 -15 L 880 -20 Z" fill="#123F1B" />
+        </g>
+
+        <g transform="scale(2, 1.75)">
+          <path d="M -20 -10 L 60 -10 C 40 25, 15 50, 30 85 L -20 85 Z" fill="#185625"/>
+          <path d="M -20 -10 L 40 -10 C 25 25, 5  50, 18 85 L -20 85 Z" fill="#123F1B"/>
+          <path d="M -20 -10 L 20 -10 C 10 25, -5 50, 6 85 L -20 85 Z" fill="#0C2B12"/>
+          <path d="M -10 45 Q 15 52 29 45 L 27 50 Q 15 56 -10 50 Z" fill="#40C054"/>
+        </g>
+
+        <g transform="translate(800, 0) scale(-2, 1.75)">
+          <path d="M -20 -10 L 60 -10 C 40 25, 15 50, 30 85 L -20 85 Z" fill="#185625"/>
+          <path d="M -20 -10 L 40 -10 C 25 25, 5  50, 18 85 L -20 85 Z" fill="#123F1B"/>
+          <path d="M -20 -10 L 20 -10 C 10 25, -5 50, 6 85 L -20 85 Z" fill="#0C2B12"/>
+          <path d="M -10 45 Q 15 52 29 45 L 27 50 Q 15 56 -10 50 Z" fill="#40C054"/>
+        </g>
+
+        <g transform="translate(400,70) scale(1.9) translate(-100,-40)">
+          <circle cx="100" cy="40" r="30" fill="#165A1C" opacity=".3"/>
+          <circle cx="100" cy="40" r="22" fill="#1E7028" opacity=".3"/>
+          <path d="M100 14 L107 32 L126 32 L111 43 L118 61 L100 50 L82 61 L89 43 L74 32 L93 32 Z" fill="#1A6E22" stroke="#40C054" stroke-width="1.2"/>
+          <circle cx="100" cy="40" r="9"  fill="#1E8030"/>
+          <circle cx="100" cy="40" r="5.5" fill="#30AA46"/>
+          <circle cx="98"  cy="38" r="2.2" fill="#90E8A0" opacity=".75"/>
+        </g>
+      </svg>
+    )}
   </div>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>{sysConfig.label}</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: sysConfig.label },
+  ]} />
 
   <h1 class={`page-title ${sysConfig.cssKey}`}>{sysConfig.label}</h1>
   <p>{content.intro}</p>
@@ -288,11 +336,15 @@ const cards = [
   </div>
   <hr class="page-title-rule" />
 
-  <div class="section-heading">
-    <span class="section-heading-text">{sysConfig.subtitle}</span>
-    <div class="section-heading-rule"></div>
-  </div>
-  <SphereBadgeGrid spheres={spheres} system={system} style={system !== 'power' ? 'margin-bottom: 24px;' : undefined} />
+  {spheres.length > 0 && (
+    <>
+      <div class="section-heading">
+        <span class="section-heading-text">{sysConfig.subtitle}</span>
+        <div class="section-heading-rule"></div>
+      </div>
+      <SphereBadgeGrid spheres={spheres} system={system} style={system !== 'power' ? 'margin-bottom: 24px;' : undefined} />
+    </>
+  )}
 
   <div class="classes-and-links">
     <div class="class-column">

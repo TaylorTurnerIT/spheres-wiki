@@ -27,7 +27,6 @@ describe("Search Weight Verification", () => {
     const primaryFiles = [
       "[system]/[sphere]/index.astro",
       "[system]/classes/[class].astro",
-      "champions/[slug].astro",
     ];
     for (const f of primaryFiles) {
       const p = path.join(pagesDir, f);
@@ -49,7 +48,7 @@ describe("Search Weight Verification", () => {
   });
 
   it("verifies that system index pages are ignored by pagefind", () => {
-    const systemIndexFiles = ["[system]/index.astro", "champions/index.astro"];
+    const systemIndexFiles = ["[system]/index.astro"];
     for (const f of systemIndexFiles) {
       const p = path.join(pagesDir, f);
       const content = fs.readFileSync(p, "utf8");

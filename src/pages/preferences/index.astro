@@ -1,6 +1,7 @@
 ---
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 
 const TOOLTIPS = {
   originalPower: "Legacy content published prior to Ultimate Spheres of Power.",
@@ -25,11 +26,10 @@ const STANDARD_TOGGLES = [
 ---
 <WikiPage title="Preferences — Spheres Wiki" activeNamespace="" pagefindIgnore={true}>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>Preferences</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: "Preferences" },
+  ]} />
 
   <h1 class="page-title">Preferences</h1>
   <p class="page-subtitle">Configure site-wide options and viewing preferences.</p>

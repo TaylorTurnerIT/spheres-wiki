@@ -4,6 +4,7 @@ import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import TagBadge from '@/components/TagBadge.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
@@ -70,15 +71,12 @@ const TalentContent = collEntry ? (await render(collEntry)).Content : null;
 ---
 <WikiPage title={`${talent.name} — ${sphere.name} — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href={url(`/${system}/`)} data-astro-prefetch="hover">{sysConfig.label}</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href={url(`/${system}/${sphere.id}/`)} data-astro-prefetch="hover">{sphere.name}</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>{talent.name}</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: sysConfig.label, href: url(`/${system}/`) },
+    { label: sphere.name, href: url(`/${system}/${sphere.id}/`) },
+    { label: talent.name },
+  ]} />
 
   <div class="content-columns">
     <div class="content-main">

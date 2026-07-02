@@ -29,7 +29,7 @@ for (const f of featMap.values()) {
 for (const c of classMap.values()) {
   if (!SYSTEMS[c.system]) continue;
   const clsUrl = c.system === 'power'      ? url(`/power/classes/${c.id}/`)
-               : c.system === 'champions'  ? url(`/champions/${c.id}/`)
+               : c.system === 'champions'  ? url(`/champions/classes/${c.id}/`)
                : null; // guile/might classes live on sphere pages — covered by sphere entries
   if (!clsUrl) continue;
   manifest.push({ url: clsUrl, title: c.name, system: SYSTEMS[c.system].label, type: 'class', tags: buildOrderedTagIds(c, bookMetaMap, tagMap).join(', ') });
@@ -502,7 +502,7 @@ function renderResults() {
       if (templateHtml) return templateHtml;
       // Fallback for tags without a pre-rendered template
       const style = tagColorMap[t] ? ` style="--tag-clr: ${tagColorMap[t]}"` : '';
-      const displayMap: Record<string, string> = { 'ex': 'Extraordinary', 'su': 'Supernatural', 'sp': 'Spell-like', 'base': 'Base Ability' };
+      const displayMap: Record<string, string> = { 'extraordinary': 'Extraordinary', 'supernatural': 'Supernatural', 'spell-like': 'Spell-Like', 'base': 'Base Ability' };
       const display = displayMap[t.toLowerCase()] || t;
       return `<span class="tag-wrapper"><span class="talent-tag" data-tag="${t}"${style}>${display}</span></span>`;
     }).join('');

@@ -2,14 +2,14 @@
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import ScrapeProof from '@/components/ScrapeProof.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 ---
 <WikiPage title="Contact — Spheres Wiki" pagefindIgnore={true}>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>Contact</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: "Contact" },
+  ]} />
 
   <h1 class="page-title" id="overview">Contact</h1>
   <hr class="page-title-rule" />

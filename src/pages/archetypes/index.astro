@@ -1,6 +1,7 @@
 ---
 import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
 import { resolveEntries } from "@/lib/resolveEntries";
 import type { ArchetypeEntry, ClassEntry } from "@/lib/types";
 
@@ -113,11 +114,10 @@ const SYS_LABEL: Record<string, string> = {
 ---
 <WikiPage title="Archetypes Index — Spheres Wiki" pagefindIgnore={true}>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>Archetypes</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: "Archetypes" },
+  ]} />
 
   <h1 class="page-title" id="overview">Archetypes</h1>
   <hr class="page-title-rule" />

@@ -4,6 +4,7 @@ import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import TagBadge from '@/components/TagBadge.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getCanonicalFeatCategory } from '@/lib/featCategories';
@@ -64,19 +65,12 @@ const FeatContent = collEntry ? (await render(collEntry)).Content : null;
 ---
 <WikiPage title={`${feat.name} — ${categoryLabel} — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href={url(`/${system}/`)} data-astro-prefetch="hover">{sysConfig.label}</a>
-    <span class="breadcrumb-sep">›</span>
-    {sphere && (
-      <>
-        <a href={url(`/${system}/${sphere.id}/`)} data-astro-prefetch="hover">{sphere.name}</a>
-        <span class="breadcrumb-sep">›</span>
-      </>
-    )}
-    <span>{feat.name}</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: sysConfig.label, href: url(`/${system}/`) },
+    ...(sphere ? [{ label: sphere.name, href: url(`/${system}/${sphere.id}/`) }] : []),
+    { label: feat.name },
+  ]} />
 
   <div class="content-columns">
     <div class="content-main">
