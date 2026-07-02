@@ -29,7 +29,7 @@ for (const f of featMap.values()) {
 for (const c of classMap.values()) {
   if (!SYSTEMS[c.system]) continue;
   const clsUrl = c.system === 'power'      ? url(`/power/classes/${c.id}/`)
-               : c.system === 'champions'  ? url(`/champions/${c.id}/`)
+               : c.system === 'champions'  ? url(`/champions/classes/${c.id}/`)
                : null; // guile/might classes live on sphere pages — covered by sphere entries
   if (!clsUrl) continue;
   manifest.push({ url: clsUrl, title: c.name, system: SYSTEMS[c.system].label, type: 'class', tags: buildOrderedTagIds(c, bookMetaMap, tagMap).join(', ') });
