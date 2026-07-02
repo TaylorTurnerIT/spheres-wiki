@@ -99,6 +99,6 @@ src/
 | Phase | Status | Scope |
 |------|--------|-------|
 | 1 — Foundation | ✅ Complete | Astro setup, content engine, layouts, design tokens |
-| 2 — Home page | ✅ Complete | IntroCards, RefCards, FeaturedRelease, full home page |
+| 2 — Home page | ✅ Complete | IntroCards, RefCards, full home page |
 | 3 — Inner pages | ✅ Complete | Namespace index, entry detail, store, side pages |
 | 4 — Search & Beta | ✅ Complete | Pagefind integration, beta toast, ranking optimization |
