@@ -8,6 +8,7 @@ import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
 import ClassProgressionTable from '@/components/ClassProgressionTable.astro';
 import ClassFeatureBlock from '@/components/ClassFeatureBlock.astro';
 import ArchetypeSwapper from '@/components/ArchetypeSwapper.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, ArchetypeEntry, ArchetypeFeatureEntry, BookMeta, TagEntry } from '@/lib/types';
@@ -322,13 +323,11 @@ const archetypeOptions = archetypes.map(arc => {
 ---
 <WikiPage title={`${cls.name} — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href={url(`/${system}/`)} data-astro-prefetch="hover">{sysConfig.label}</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>{cls.name}</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: sysConfig.label, href: url(`/${system}/`) },
+    { label: cls.name },
+  ]} />
 
   <div class="content-columns">
     <div class="content-main">

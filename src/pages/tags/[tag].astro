@@ -3,6 +3,7 @@ import { render } from 'astro:content';
 import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
 import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
 import { buildOrderedTagIds } from "@/lib/tags";
 import { getFeatUrl } from "@/lib/featCategories";
@@ -152,13 +153,11 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
 ---
 
 <WikiPage title={`${tag.label} — Tags — Spheres Wiki`} pagefindIgnore={true}>
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href={url("/tags/")} data-astro-prefetch="hover">Tags</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>{tag.label}</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: "Tags", href: url("/tags/") },
+    { label: tag.label },
+  ]} />
 
   <div class="content-main">
     <h1 class="page-title" id="overview">

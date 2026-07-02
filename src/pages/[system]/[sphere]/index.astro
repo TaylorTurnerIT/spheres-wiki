@@ -13,6 +13,7 @@ import { buildOrderedTagIds } from '@/lib/tags';
 import { getFeatUrl } from '@/lib/featCategories';
 import TagBadge from '@/components/TagBadge.astro';
 import EntryCard from '@/components/EntryCard.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { SphereEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
 
@@ -150,13 +151,11 @@ const groups: TocGroup[] = sections.map(sec => ({
 ---
 <WikiPage title={`${sphere.name} — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href={url(`/${system}/`)} data-astro-prefetch="hover">{sysConfig.label}</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>{sphere.name}</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: sysConfig.label, href: url(`/${system}/`) },
+    { label: sphere.name },
+  ]} />
 
   <div class="content-columns">
     <div class="content-main">

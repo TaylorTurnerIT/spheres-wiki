@@ -1,0 +1,39 @@
+---
+interface BreadcrumbCrumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  crumbs: BreadcrumbCrumb[];
+  separator?: string;
+  separatorClass?: string;
+  currentClass?: string;
+  prefetch?: boolean;
+}
+
+const {
+  crumbs,
+  separator = "›",
+  separatorClass = "breadcrumb-sep",
+  currentClass,
+  prefetch = true,
+} = Astro.props;
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  {crumbs.map((crumb, i) => (
+    <Fragment>
+      {crumb.href ? (
+        prefetch ? (
+          <a href={crumb.href} data-astro-prefetch="hover">{crumb.label}</a>
+        ) : (
+          <a href={crumb.href}>{crumb.label}</a>
+        )
+      ) : (
+        <span class={currentClass}>{crumb.label}</span>
+      )}
+      {i < crumbs.length - 1 && <span class={separatorClass}>{separator}</span>}
+    </Fragment>
+  ))}
+</nav>

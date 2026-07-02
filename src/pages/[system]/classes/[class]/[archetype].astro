@@ -5,6 +5,7 @@ import WikiPage from '@/layouts/WikiPage.astro';
 import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
 import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { ClassEntry, ArchetypeEntry, ArchetypeFeatureEntry, ClassTraitEntry, FeatEntry, BookMeta } from '@/lib/types';
@@ -208,15 +209,12 @@ const formatBaseFeatureName = (id: string) => {
 ---
 <WikiPage title={`${archetype.name} — ${cls.name} Archetype — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href={url("/")} data-astro-prefetch="hover">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href={url(`/${system}/`)} data-astro-prefetch="hover">{sysConfig.label}</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href={url(`/${system}/classes/${cls.id}/`)} data-astro-prefetch="hover">{cls.name}</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>{archetype.name}</span>
-  </nav>
+  <Breadcrumb crumbs={[
+    { label: "Home", href: url("/") },
+    { label: sysConfig.label, href: url(`/${system}/`) },
+    { label: cls.name, href: url(`/${system}/classes/${cls.id}/`) },
+    { label: archetype.name },
+  ]} />
 
   <div class="content-columns">
     <div class="content-main">
