@@ -1,0 +1,728 @@
+---
+import TagBadge from "@/components/TagBadge.astro";
+import { url } from "@/lib/url";
+import type { FeatBrowseRow } from "@/lib/featBrowse";
+import type { BookMeta, TagEntry } from "@/lib/types";
+
+interface Props {
+  rows: FeatBrowseRow[];
+  systemOptions: { key: string; label: string }[];
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
+}
+
+const { rows, systemOptions, tagMap, bookMetaMap } = Astro.props;
+
+const systemColorVar: Record<string, string> = {
+  power: "var(--clr-power)",
+  might: "var(--clr-might)",
+  guile: "var(--clr-guile)",
+  champions: "var(--clr-champ)",
+};
+
+const distinctTagIds = [...new Set(rows.flatMap((r) => r.tagIds))].sort();
+const tagLabels: Record<string, string> = {};
+for (const tagId of distinctTagIds) {
+  tagLabels[tagId] = tagMap.get(tagId)?.label ?? tagId;
+}
+---
+
+<div class="feats-browse" id="feats-browse">
+  <div class="feats-search-bar">
+    <svg aria-hidden="true" class="feats-search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>
+    <input
+      id="feats-search-input"
+      type="search"
+      class="feats-search-input"
+      placeholder="Search feats, tags, spheres, or text"
+      autocomplete="off"
+      aria-label="Search feats"
+    />
+  </div>
+
+  <div class="feats-filter-row">
+    <div class="feats-filter-group" role="group" aria-label="Filter by system" id="feats-system-group">
+      <button type="button" class="feats-pill" data-system-value="" aria-pressed="true">All</button>
+      {systemOptions.map((sys) => (
+        <button
+          type="button"
+          class="feats-pill"
+          data-system-value={sys.key}
+          aria-pressed="false"
+          style={`--pill-clr: ${systemColorVar[sys.key] ?? "var(--clr-brand)"}`}
+        >
+          {sys.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="feats-filter-group feats-category-group" role="group" aria-label="Filter by category" id="feats-category-group">
+      <button type="button" class="feats-chip" data-category-value="" aria-pressed="true">All categories</button>
+    </div>
+  </div>
+
+  <div class="feats-result-bar">
+    <div id="feats-status" class="feats-status" aria-live="polite"></div>
+    <div id="feats-chips" class="feats-active-chips"></div>
+  </div>
+
+  <div class="feats-table-wrap">
+    <table class="feats-table">
+      <caption class="sr-only">Feats matching the current search and filters</caption>
+      <thead>
+        <tr>
+          <th scope="col">Feat</th>
+          <th scope="col">Category</th>
+          <th scope="col">Prerequisites</th>
+          <th scope="col">Summary</th>
+          <th scope="col">Tags</th>
+        </tr>
+      </thead>
+      <tbody id="feats-tbody"></tbody>
+    </table>
+  </div>
+
+  <div id="feats-load-more" class="feats-load-more-sentinel" hidden></div>
+
+  <noscript>
+    <p class="feats-noscript">
+      This catalog needs JavaScript to search and filter. Use the <a href={url("/search/")}>site search</a> instead.
+    </p>
+  </noscript>
+
+  <div
+    id="feats-data"
+    data-rows={JSON.stringify(rows)}
+    data-tag-labels={JSON.stringify(tagLabels)}
+    data-systems={JSON.stringify(systemOptions)}
+    hidden
+  ></div>
+
+  <div id="feats-tag-templates" hidden>
+    {distinctTagIds.map((tagId) => (
+      <div data-tag-template={tagId}>
+        <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} asSpan={true} stripLinks={true} />
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  import type { FeatBrowseRow } from "@/lib/featBrowse";
+
+  const PAGE_SIZE = 60;
+  const PREFETCH_THRESHOLD = 80;
+  const DEBOUNCE_MS = 80;
+
+  type Row = FeatBrowseRow & { _haystack: string };
+
+  let allRows: Row[] = [];
+  let tagTemplates: Record<string, string> = {};
+  let activeSystem = "";
+  let activeCategory = "";
+  let query = "";
+  let displayCount = PAGE_SIZE;
+  let debounceTimer: ReturnType<typeof setTimeout>;
+
+  function getParams() {
+    const p = new URLSearchParams(window.location.search);
+    return {
+      q: p.get("q") ?? "",
+      system: p.get("system") ?? "",
+      category: p.get("category") ?? "",
+    };
+  }
+
+  function pushParams() {
+    const p = new URLSearchParams();
+    if (query) p.set("q", query);
+    if (activeSystem) p.set("system", activeSystem);
+    if (activeCategory) p.set("category", activeCategory);
+    const qs = p.toString();
+    history.replaceState(null, "", qs ? `?${qs}` : window.location.pathname);
+  }
+
+  function buildHaystack(
+    row: FeatBrowseRow,
+    tagLabels: Record<string, string>,
+    systemLabels: Record<string, string>,
+  ): string {
+    const tagText = row.tagIds.map((id) => tagLabels[id] ?? id).join(" ");
+    return [
+      row.name,
+      row.sourceBookTitle,
+      row.system,
+      systemLabels[row.system] ?? "",
+      row.categoryLabel,
+      row.sphereLabel ?? "",
+      tagText,
+      row.prerequisites,
+      row.excerpt,
+    ]
+      .join(" ")
+      .toLowerCase();
+  }
+
+  function systemFiltered(): Row[] {
+    return allRows.filter((r) => !activeSystem || r.system === activeSystem);
+  }
+
+  function categoryOptionsFor(system: string): { value: string; label: string; count: number }[] {
+    const source = system ? allRows.filter((r) => r.system === system) : allRows;
+    const counts = new Map<string, { label: string; count: number }>();
+    for (const row of source) {
+      const entry = counts.get(row.category);
+      if (entry) entry.count += 1;
+      else counts.set(row.category, { label: row.categoryLabel, count: 1 });
+    }
+    return [...counts.entries()]
+      .map(([value, { label, count }]) => ({ value, label, count }))
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  }
+
+  function renderCategoryChips() {
+    const group = document.getElementById("feats-category-group")!;
+    const options = categoryOptionsFor(activeSystem);
+    const validValues = new Set(options.map((o) => o.value));
+    if (activeCategory && !validValues.has(activeCategory)) {
+      activeCategory = "";
+    }
+
+    const chips = [
+      `<button type="button" class="feats-chip" data-category-value="" aria-pressed="${activeCategory === "" ? "true" : "false"}">All categories</button>`,
+      ...options.map(
+        (o) =>
+          `<button type="button" class="feats-chip" data-category-value="${o.value}" aria-pressed="${activeCategory === o.value ? "true" : "false"}">${o.label} <span class="feats-chip-count">${o.count}</span></button>`,
+      ),
+    ];
+    group.innerHTML = chips.join("");
+
+    group.querySelectorAll<HTMLButtonElement>("[data-category-value]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        activeCategory = btn.dataset.categoryValue ?? "";
+        displayCount = PAGE_SIZE;
+        renderCategoryChips();
+        pushParams();
+        renderAll();
+      });
+    });
+  }
+
+  function rank(row: Row, q: string): number {
+    const name = row.name.toLowerCase();
+    if (name === q) return 0;
+    if (name.startsWith(q)) return 1;
+    const tagText = row.tagIds.join(" ").toLowerCase();
+    if (
+      row.categoryLabel.toLowerCase().includes(q) ||
+      (row.sphereLabel ?? "").toLowerCase().includes(q) ||
+      tagText.includes(q)
+    ) {
+      return 2;
+    }
+    if (row.excerpt.toLowerCase().includes(q) || row.prerequisites.toLowerCase().includes(q)) {
+      return 3;
+    }
+    return 4;
+  }
+
+  function filteredRows(): Row[] {
+    const scoped = systemFiltered().filter((r) => !activeCategory || r.category === activeCategory);
+    const q = query.trim().toLowerCase();
+    if (!q) {
+      return [...scoped].sort((a, b) => a.name.localeCompare(b.name) || a.id.localeCompare(b.id));
+    }
+    const words = q.split(/\s+/).filter(Boolean);
+    return scoped
+      .filter((r) => words.every((w) => r._haystack.includes(w)))
+      .map((r) => ({ row: r, score: rank(r, q) }))
+      .sort((a, b) => a.score - b.score || a.row.name.localeCompare(b.row.name))
+      .map((e) => e.row);
+  }
+
+  function emptyStateHtml(total: number): string {
+    const q = query.trim();
+    if (total === 0 && q) {
+      return `<tr class="feats-empty-row"><td colspan="5"><div class="feats-empty">No feats match &ldquo;${escapeHtml(q)}&rdquo;. Try a shorter search or <button type="button" class="feats-reset-link" id="feats-reset-btn">clear filters</button>.</div></td></tr>`;
+    }
+    if (total === 0) {
+      return `<tr class="feats-empty-row"><td colspan="5"><div class="feats-empty">No feats match the current filters. <button type="button" class="feats-reset-link" id="feats-reset-btn">Clear filters</button> to see everything.</div></td></tr>`;
+    }
+    return "";
+  }
+
+  function escapeHtml(s: string): string {
+    return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+  }
+
+  function tagHtml(tagId: string): string {
+    return tagTemplates[tagId] ?? `<span class="tag-wrapper"><span class="talent-tag">${escapeHtml(tagId)}</span></span>`;
+  }
+
+  function rowHtml(row: Row, prefetch: boolean): string {
+    const scopeVar = row.system ? ` style="--clr-active: var(--clr-${row.system === "champions" ? "champ" : row.system});"` : "";
+    const tags = row.tagIds.map(tagHtml).join("");
+    const category = row.sphereLabel && row.sphereLabel !== row.categoryLabel
+      ? `${escapeHtml(row.categoryLabel)} <span class="feats-cell-muted">(${escapeHtml(row.sphereLabel)})</span>`
+      : escapeHtml(row.categoryLabel);
+    return `<tr class="feats-row" data-href="${row.href}"${scopeVar}>
+      <td class="feats-cell-name">
+        <a href="${row.href}" class="feats-name-link"${prefetch ? ' data-astro-prefetch="hover"' : ""}>${escapeHtml(row.name)}</a>
+        <span class="feats-source-label">${escapeHtml(row.sourceBookTitle)}</span>
+      </td>
+      <td data-label="Category">${category}</td>
+      <td data-label="Prerequisites">${row.prerequisites ? escapeHtml(row.prerequisites) : '<span class="feats-cell-muted">—</span>'}</td>
+      <td data-label="Summary" class="feats-cell-excerpt">${row.excerpt ? escapeHtml(row.excerpt) : '<span class="feats-cell-muted">—</span>'}</td>
+      <td data-label="Tags"><div class="feats-tag-row">${tags}</div></td>
+    </tr>`;
+  }
+
+  function renderTable() {
+    const tbody = document.getElementById("feats-tbody")!;
+    const statusEl = document.getElementById("feats-status")!;
+    const loadMoreEl = document.getElementById("feats-load-more")!;
+    const results = filteredRows();
+    const total = allRows.length;
+
+    if (results.length === 0) {
+      tbody.innerHTML = emptyStateHtml(0);
+      loadMoreEl.hidden = true;
+      document.getElementById("feats-reset-btn")?.addEventListener("click", resetFilters);
+    } else {
+      const showing = results.slice(0, displayCount);
+      const prefetch = results.length <= PREFETCH_THRESHOLD;
+      tbody.innerHTML = showing.map((r) => rowHtml(r, prefetch)).join("");
+      loadMoreEl.hidden = results.length <= displayCount;
+    }
+
+    statusEl.textContent =
+      results.length === total
+        ? `${total} feat${total === 1 ? "" : "s"}`
+        : `${results.length} of ${total} feat${total === 1 ? "" : "s"}`;
+  }
+
+  function renderChips() {
+    const chipsEl = document.getElementById("feats-chips")!;
+    const chips: string[] = [];
+    if (query.trim()) {
+      chips.push(`<button type="button" class="feats-active-chip" data-clear="q">“${escapeHtml(query.trim())}” ×</button>`);
+    }
+    if (activeSystem) {
+      const sys = allSystemLabel(activeSystem);
+      chips.push(`<button type="button" class="feats-active-chip" data-clear="system">${escapeHtml(sys)} ×</button>`);
+    }
+    if (activeCategory) {
+      const cat = categoryOptionsFor(activeSystem).find((o) => o.value === activeCategory);
+      chips.push(`<button type="button" class="feats-active-chip" data-clear="category">${escapeHtml(cat?.label ?? activeCategory)} ×</button>`);
+    }
+    if (chips.length > 1) {
+      chips.push(`<button type="button" class="feats-active-chip feats-clear-all" data-clear="all">Clear all</button>`);
+    }
+    chipsEl.innerHTML = chips.join("");
+    chipsEl.querySelectorAll<HTMLButtonElement>("[data-clear]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const which = btn.dataset.clear;
+        if (which === "q" || which === "all") {
+          query = "";
+          const input = document.getElementById("feats-search-input") as HTMLInputElement;
+          if (input) input.value = "";
+        }
+        if (which === "system" || which === "all") {
+          activeSystem = "";
+          syncSystemButtons();
+        }
+        if (which === "category" || which === "all") {
+          activeCategory = "";
+        }
+        displayCount = PAGE_SIZE;
+        renderCategoryChips();
+        pushParams();
+        renderAll();
+      });
+    });
+  }
+
+  function allSystemLabel(key: string): string {
+    const dataEl = document.getElementById("feats-data") as HTMLElement;
+    const systems: { key: string; label: string }[] = JSON.parse(dataEl?.dataset.systems ?? "[]");
+    return systems.find((s) => s.key === key)?.label ?? key;
+  }
+
+  function syncSystemButtons() {
+    document.querySelectorAll<HTMLButtonElement>("#feats-system-group [data-system-value]").forEach((btn) => {
+      const isActive = (btn.dataset.systemValue ?? "") === activeSystem;
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+  }
+
+  function resetFilters() {
+    query = "";
+    activeSystem = "";
+    activeCategory = "";
+    displayCount = PAGE_SIZE;
+    const input = document.getElementById("feats-search-input") as HTMLInputElement;
+    if (input) input.value = "";
+    syncSystemButtons();
+    renderCategoryChips();
+    pushParams();
+    renderAll();
+  }
+
+  function renderAll() {
+    renderTable();
+    renderChips();
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    const dataEl = document.getElementById("feats-data") as HTMLElement;
+    if (!dataEl) return;
+
+    const rawRows: FeatBrowseRow[] = JSON.parse(dataEl.dataset.rows ?? "[]");
+    const tagLabels: Record<string, string> = JSON.parse(dataEl.dataset.tagLabels ?? "{}");
+    const systemsList: { key: string; label: string }[] = JSON.parse(dataEl.dataset.systems ?? "[]");
+    const systemLabels: Record<string, string> = Object.fromEntries(systemsList.map((s) => [s.key, s.label]));
+    allRows = rawRows.map((r) => ({ ...r, _haystack: buildHaystack(r, tagLabels, systemLabels) }));
+
+    tagTemplates = {};
+    document.querySelectorAll("#feats-tag-templates [data-tag-template]").forEach((el) => {
+      const key = el.getAttribute("data-tag-template");
+      if (key) tagTemplates[key] = el.innerHTML;
+    });
+
+    const { q, system, category } = getParams();
+    query = q;
+    activeSystem = system;
+    activeCategory = category;
+    displayCount = PAGE_SIZE;
+
+    const input = document.getElementById("feats-search-input") as HTMLInputElement;
+    if (input) input.value = q;
+    syncSystemButtons();
+    renderCategoryChips();
+    renderAll();
+
+    document.querySelectorAll<HTMLButtonElement>("#feats-system-group [data-system-value]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        activeSystem = btn.dataset.systemValue ?? "";
+        displayCount = PAGE_SIZE;
+        syncSystemButtons();
+        renderCategoryChips();
+        pushParams();
+        renderAll();
+      });
+    });
+
+    input?.addEventListener("input", () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        query = input.value;
+        displayCount = PAGE_SIZE;
+        pushParams();
+        renderAll();
+      }, DEBOUNCE_MS);
+    });
+
+    const tbody = document.getElementById("feats-tbody")!;
+    tbody.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      if (target.closest("a, button")) return;
+      const row = target.closest<HTMLElement>("tr[data-href]");
+      if (row?.dataset.href) window.location.href = row.dataset.href;
+    });
+
+    const loadMoreEl = document.getElementById("feats-load-more");
+    if (loadMoreEl) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting && !loadMoreEl.hidden) {
+            displayCount += PAGE_SIZE;
+            renderTable();
+          }
+        },
+        { rootMargin: "600px" },
+      );
+      observer.observe(loadMoreEl);
+    }
+  });
+</script>
+
+<style>
+  .feats-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    margin-bottom: var(--sp-4);
+  }
+  .feats-search-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--clr-muted);
+    flex-shrink: 0;
+  }
+  .feats-search-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--clr-text);
+  }
+  .feats-search-input::placeholder {
+    color: var(--clr-muted);
+  }
+
+  .feats-filter-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    margin-bottom: var(--sp-3);
+  }
+
+  .feats-filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .feats-pill,
+  .feats-chip {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--fs-xs);
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--clr-border);
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    cursor: pointer;
+    transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+  }
+
+  .feats-pill {
+    border-color: var(--pill-clr, var(--clr-border));
+    color: var(--pill-clr, var(--clr-text));
+  }
+  .feats-pill[aria-pressed="true"] {
+    background: var(--pill-clr, var(--clr-brand));
+    color: #fff;
+  }
+  .feats-pill:hover:not([aria-pressed="true"]) {
+    background: color-mix(in srgb, var(--pill-clr, var(--clr-brand)) 12%, var(--clr-bg));
+  }
+
+  .feats-chip[aria-pressed="true"] {
+    background: var(--clr-active, var(--clr-brand));
+    border-color: var(--clr-active, var(--clr-brand));
+    color: #fff;
+  }
+  .feats-chip:hover:not([aria-pressed="true"]) {
+    background: var(--clr-surface);
+  }
+  .feats-chip-count {
+    opacity: 0.75;
+    font-size: 0.9em;
+  }
+
+  .feats-pill:focus-visible,
+  .feats-chip:focus-visible,
+  .feats-active-chip:focus-visible {
+    outline: 2px solid var(--clr-brand);
+    outline-offset: 2px;
+  }
+
+  .feats-result-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-2);
+    margin-bottom: var(--sp-3);
+  }
+
+  .feats-status {
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+  }
+
+  .feats-active-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .feats-active-chip {
+    font-size: var(--fs-2xs);
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--clr-border);
+    background: var(--clr-surface);
+    color: var(--clr-muted);
+    cursor: pointer;
+  }
+  .feats-active-chip:hover {
+    color: var(--clr-brand);
+    border-color: var(--clr-brand);
+  }
+  .feats-clear-all {
+    font-weight: 700;
+  }
+
+  .feats-table-wrap {
+    overflow-x: auto;
+  }
+
+  .feats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--fs-sm);
+  }
+
+  .feats-table thead th {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-3xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--clr-muted);
+    background: var(--clr-bg);
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--clr-border);
+    white-space: nowrap;
+  }
+
+  .feats-table tbody tr {
+    border-bottom: 1px solid var(--clr-border);
+  }
+  .feats-table tbody tr.feats-row:hover {
+    background: color-mix(in srgb, var(--clr-active, var(--clr-brand)) 4%, var(--clr-surface));
+  }
+
+  .feats-table td {
+    padding: 8px 10px;
+    vertical-align: top;
+    color: var(--clr-text);
+  }
+
+  .feats-cell-name {
+    min-width: 12rem;
+  }
+  .feats-name-link {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--clr-active, var(--clr-brand));
+    text-decoration: none;
+  }
+  .feats-name-link:hover {
+    text-decoration: underline;
+  }
+  .feats-source-label {
+    display: block;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--fs-3xs);
+    color: var(--clr-muted);
+    margin-top: 2px;
+  }
+
+  .feats-cell-muted {
+    color: var(--clr-muted);
+  }
+  .feats-cell-excerpt {
+    max-width: 26rem;
+  }
+
+  .feats-tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .feats-empty {
+    padding: var(--sp-6) var(--sp-3);
+    text-align: center;
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    font-style: italic;
+  }
+  .feats-reset-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-style: normal;
+    color: var(--clr-brand);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .feats-load-more-sentinel {
+    height: 1px;
+    margin-top: var(--sp-4);
+  }
+
+  .feats-noscript {
+    padding: var(--sp-3);
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    color: var(--clr-text);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 768px) {
+    .feats-table thead {
+      display: none;
+    }
+    .feats-table,
+    .feats-table tbody,
+    .feats-table tr,
+    .feats-table td {
+      display: block;
+      width: 100%;
+    }
+    .feats-table tbody tr.feats-row {
+      border: 1px solid var(--clr-border);
+      border-left: 3px solid var(--clr-active, var(--clr-brand));
+      border-radius: var(--radius);
+      background: var(--clr-bg);
+      margin-bottom: var(--sp-3);
+      padding: 10px 12px;
+    }
+    .feats-table td {
+      padding: 3px 0;
+      border: none;
+    }
+    .feats-table td[data-label]::before {
+      content: attr(data-label) ": ";
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--fs-3xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--clr-muted);
+    }
+    .feats-cell-excerpt {
+      max-width: none;
+    }
+  }
+</style>

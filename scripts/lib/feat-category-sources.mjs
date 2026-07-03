@@ -219,8 +219,13 @@ export function loadBookMetaMap() {
       continue;
     }
   }
-  for (const entry of fs.readdirSync(CONTENT_DIR, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
+  // Sorted for determinism: resolveSourceBookSlug() disambiguates same-titled
+  // books by last-write-wins, which must not depend on filesystem readdir order.
+  const dirEntries = fs
+    .readdirSync(CONTENT_DIR, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name));
+  for (const entry of dirEntries) {
     const yamlPath = path.join(CONTENT_DIR, entry.name, "_book.yaml");
     if (!fs.existsSync(yamlPath)) continue;
     meta.set(entry.name, parseYaml(fs.readFileSync(yamlPath, "utf8")) ?? {});

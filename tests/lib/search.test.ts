@@ -55,4 +55,10 @@ describe("Search Weight Verification", () => {
       expect(content).toContain("pagefindIgnore={true}");
     }
   });
+
+  it("verifies that the feats browse/catalog page is ignored by pagefind (canonical content lives on feat detail pages)", () => {
+    const p = path.join(pagesDir, "feats/index.astro");
+    const content = fs.readFileSync(p, "utf8");
+    expect(content).toContain("pagefindIgnore={true}");
+  });
 });
