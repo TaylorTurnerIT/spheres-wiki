@@ -219,30 +219,12 @@ const SYS_LABEL: Record<string, string> = {
 </WikiPage>
 
 <script>
+import { bindCollapseToggle } from '@/lib/collapseClient';
+
 document.addEventListener('astro:page-load', () => {
   document.querySelectorAll<HTMLButtonElement>('.arc-class-toggle').forEach(btn => {
-    const groupId = btn.dataset.groupId!;
-    const list = document.getElementById(`${groupId}-list`);
-    if (!list) return;
-
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      if (expanded) {
-        list.style.overflow = 'hidden';
-        list.style.maxHeight = list.scrollHeight + 'px';
-        requestAnimationFrame(() => { list.style.maxHeight = '0'; });
-      } else {
-        list.style.overflow = 'hidden';
-        list.style.maxHeight = list.scrollHeight + 'px';
-        list.addEventListener('transitionend', () => {
-          list.style.maxHeight = '';
-          list.style.overflow = 'visible';
-        }, { once: true });
-      }
-      btn.setAttribute('aria-expanded', String(!expanded));
-      btn.classList.toggle('is-collapsed', expanded);
-      list.setAttribute('aria-hidden', String(expanded));
-    });
+    const list = document.getElementById(`${btn.dataset.groupId!}-list`);
+    if (list) bindCollapseToggle(btn, list);
   });
 });
 </script>

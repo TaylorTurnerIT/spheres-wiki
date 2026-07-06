@@ -271,40 +271,16 @@ const groups: TocGroup[] = sections.map(sec => ({
 </WikiPage>
 
 <script>
+import { setCollapsibleState, bindCollapseToggle } from '@/lib/collapseClient';
+
 document.addEventListener('astro:page-load', () => {
-  function toggleSection(btn: HTMLButtonElement, expand: boolean) {
-    const catId = btn.dataset.catId!;
-    const entries = document.getElementById(`${catId}-entries`);
-    if (!entries) return;
-
-    if (!expand) {
-      entries.style.overflow = 'hidden';
-      entries.style.maxHeight = entries.scrollHeight + 'px';
-      requestAnimationFrame(() => { entries.style.maxHeight = '0'; });
-    } else {
-      entries.style.overflow = 'hidden';
-      entries.style.maxHeight = entries.scrollHeight + 'px';
-      entries.addEventListener('transitionend', () => {
-        entries.style.maxHeight = '';
-        entries.style.overflow = 'visible';
-      }, { once: true });
-    }
-
-    const willCollapse = !expand;
-    btn.setAttribute('aria-expanded', String(expand));
-    btn.classList.toggle('is-collapsed', willCollapse);
-    entries.setAttribute('aria-hidden', String(willCollapse));
-
-    document.dispatchEvent(new CustomEvent('class-feature-collapse', {
-      detail: { id: catId, collapsed: willCollapse },
-    }));
+  function sectionTarget(btn: HTMLButtonElement): HTMLElement | null {
+    return document.getElementById(`${btn.dataset.catId!}-entries`);
   }
 
   document.querySelectorAll<HTMLButtonElement>('.section-heading-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      toggleSection(btn, !isExpanded);
-    });
+    const entries = sectionTarget(btn);
+    if (entries) bindCollapseToggle(btn, entries, btn.dataset.catId);
   });
 
   const toggleAllBtn = document.getElementById('toggle-all-sections') as HTMLButtonElement | null;
@@ -313,7 +289,8 @@ document.addEventListener('astro:page-load', () => {
   toggleAllBtn.addEventListener('click', () => {
     const shouldExpand = toggleAllBtn.textContent?.trim() === 'Expand All';
     document.querySelectorAll<HTMLButtonElement>('.section-heading-toggle').forEach(btn => {
-      toggleSection(btn, shouldExpand);
+      const entries = sectionTarget(btn);
+      if (entries) setCollapsibleState(btn, entries, shouldExpand, btn.dataset.catId);
     });
     toggleAllBtn.textContent = shouldExpand ? 'Collapse All' : 'Expand All';
   });
