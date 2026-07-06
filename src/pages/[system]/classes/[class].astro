@@ -10,8 +10,10 @@ import ClassFeatureBlock from '@/components/ClassFeatureBlock.astro';
 import ArchetypeSwapper from '@/components/ArchetypeSwapper.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
+import { stripBodySource } from '@/lib/renderBody';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, ArchetypeEntry, ArchetypeFeatureEntry, BookMeta, TagEntry } from '@/lib/types';
+import { ordinal } from '@/lib/levelLabel';
 
 interface Props {
   cls: ClassEntry;
@@ -149,10 +151,6 @@ const searchFilter = getSystemSearchFilter(system);
 
 const ClassContent = classCollEntry ? (await render(classCollEntry)).Content : null;
 
-function stripBodySource(body: string): string {
-  return body.replace(/\n\*Source:.+$/m, '').trimEnd();
-}
-
 function sourceTitle(sb: string): string | null {
   return bookMetaMap.get(sb)?.title ?? null;
 }
@@ -192,15 +190,6 @@ const tocGroups: TocGroup[] = featureRendered.length > 0 ? [{
   }),
 }] : [];
 
-function ordinal(n: number): string {
-  if (n % 100 >= 11 && n % 100 <= 13) return 'th';
-  switch (n % 10) {
-    case 1: return 'st';
-    case 2: return 'nd';
-    case 3: return 'rd';
-    default: return 'th';
-  }
-}
 
 function computeBAB(level: number, progression: string): number {
   switch (progression) {

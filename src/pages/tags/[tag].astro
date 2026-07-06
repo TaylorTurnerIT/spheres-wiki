@@ -4,9 +4,12 @@ import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
 import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
+import { renderMarkdownFragment } from "@/lib/renderBody";
 import { buildOrderedTagIds } from "@/lib/tags";
 import { getFeatUrl } from "@/lib/featCategories";
+import { resolveSystem, buildSystemIdIndex, systemIdKey } from "@/lib/systems";
 import type { TagEntry, BookMeta } from "@/lib/types";
 
 type EntryRow = {
@@ -41,13 +44,8 @@ export async function getStaticPaths() {
     await resolveEntries();
   const allCollEntries = await getCollEntriesMap();
 
-  const SYSTEM_LABELS: Record<string, string> = {
-    power: "Spheres of Power",
-    might: "Spheres of Might",
-    guile: "Spheres of Guile",
-  };
-
   const paths = [];
+  const sphereIndex = buildSystemIdIndex(sphereMap.values());
 
   for (const [, tag] of tagMap) {
     const groups: SystemGroup[] = [];
@@ -62,9 +60,7 @@ export async function getStaticPaths() {
         });
         if (!entryTags.includes(tag.id)) continue;
 
-        const sphere = [...sphereMap.values()].find(
-          (s) => s.id === talent.sphere && s.system === system,
-        );
+        const sphere = sphereIndex.get(systemIdKey(system, talent.sphere ?? ""));
         rows.push({
           id: talent.id,
           name: talent.name,
@@ -86,9 +82,7 @@ export async function getStaticPaths() {
         });
         if (!entryTags.includes(tag.id)) continue;
 
-        const sphere = [...sphereMap.values()].find(
-          (s) => s.id === feat.sphere && s.system === system,
-        );
+        const sphere = sphereIndex.get(systemIdKey(system, feat.sphere ?? ""));
         rows.push({
           id: feat.id,
           name: feat.name,
@@ -125,7 +119,10 @@ export async function getStaticPaths() {
       rows.sort((a, b) => a.name.localeCompare(b.name));
 
       if (rows.length > 0) {
-        groups.push({ systemLabel: SYSTEM_LABELS[system], entries: rows });
+        groups.push({
+          systemLabel: resolveSystem(system)?.label ?? system,
+          entries: rows,
+        });
       }
     }
 
@@ -150,6 +147,13 @@ export async function getStaticPaths() {
 
 const { tag, groups, collEntry, bookTitle, tagMap, bookMetaMap } = Astro.props;
 const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
+
+// Tag descriptions go through the shared markdown pipeline; external links
+// keep the previous new-tab behavior.
+const descriptionHtml = (await renderMarkdownFragment(tag.description)).replace(
+  /<a href="(https?:[^"]+)"/g,
+  '<a href="$1" target="_blank" rel="noopener noreferrer"',
+);
 ---
 
 <WikiPage title={`${tag.label} — Tags — Spheres Wiki`} pagefindIgnore={true}>
@@ -167,7 +171,7 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
     
     {bookTitle && <p class="talent-source">{bookTitle}</p>}
 
-    <p class="entry-description" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
+    <div class="entry-description" set:html={descriptionHtml} />
 
     {
       TagBody && (
@@ -186,10 +190,7 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
     {
       groups.map((group) => (
         <div class="section-group">
-          <div class="section-group-header">
-            <span class="section-group-label">{group.systemLabel}</span>
-            <div class="section-group-rule" />
-          </div>
+          <SectionHeading label={group.systemLabel} />
           <div class="tag-entry-list">
             {group.entries.map((row) => (
               <div class="tag-entry-row">

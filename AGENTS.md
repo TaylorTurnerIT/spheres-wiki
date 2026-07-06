@@ -31,7 +31,7 @@ Four player-facing systems: **Power**, **Might**, **Guile**, **Champions**. Path
 ```bash
 bun install            # setup
 bun run dev            # dev server → http://localhost:4321
-bun run build          # validate → check-base → fallow-audit → astro check → astro build → pagefind → check-toc
+bun run build          # validate → check-idioms → check-base → fallow-audit → astro check → astro build → pagefind → check-toc
 bun run preview        # serve the production build locally
 bun run validate       # content validation only (scripts/validate.mjs)
 bun run fallow         # run comprehensive codebase audit (dead code, health, duplication)

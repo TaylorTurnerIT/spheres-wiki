@@ -2,6 +2,8 @@
 import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
+import { systemCssKey } from "@/lib/systems";
 import { resolveEntries } from "@/lib/resolveEntries";
 import type { ArchetypeEntry, ClassEntry } from "@/lib/types";
 
@@ -130,17 +132,11 @@ const SYS_LABEL: Record<string, string> = {
   <!-- ── Sphere Class Archetypes ─────────────────────────── -->
   {sphereGroups.length > 0 && (
     <section class="arc-section">
-      <div class="section-group-header" style="margin-top: 24px;">
-        <span class="section-group-label">Sphere Class Archetypes</span>
-        <div class="section-group-rule"></div>
-      </div>
+      <SectionHeading label="Sphere Class Archetypes" style="margin-top: 24px;" />
 
       {sphereGroups.map(sg => (
         <div class={`arc-system-block arc-system-${sg.system}`}>
-          <div class={`arc-system-heading section-heading`}>
-            <span class={`section-heading-text ${sg.system === 'champions' ? 'champ' : sg.system}`}>{sg.label}</span>
-            <div class="section-heading-rule"></div>
-          </div>
+          <SectionHeading level="eyebrow" label={sg.label} labelClass={systemCssKey(sg.system)} class="arc-system-heading" />
 
           {sg.groups.map(cg => (
             <div class="arc-class-group">
@@ -151,7 +147,7 @@ const SYS_LABEL: Record<string, string> = {
                 aria-controls={`sphere-${sg.system}-${cg.classId}-list`}
               >
                 <span class="section-heading-chevron" aria-hidden="true">▾</span>
-                <span class={`section-heading-text ${sg.system === 'champions' ? 'champ' : sg.system}`} id={`sphere-${sg.system}-${cg.classId}`}>
+                <span class={`section-heading-text ${systemCssKey(sg.system)}`} id={`sphere-${sg.system}-${cg.classId}`}>
                   {cg.className}
                 </span>
               </button>
@@ -160,8 +156,8 @@ const SYS_LABEL: Record<string, string> = {
                 {cg.arcs.map(({ arc, book, href }) => (
                   <div class="arc-entry">
                     {href
-                      ? <a href={href} class={`arc-name ${sg.system === 'champions' ? 'champ' : sg.system}`} data-astro-prefetch="hover">{arc.name}</a>
-                      : <span class={`arc-name arc-name--nolink ${sg.system === 'champions' ? 'champ' : sg.system}`}>{arc.name}</span>
+                      ? <a href={href} class={`arc-name ${systemCssKey(sg.system)}`} data-astro-prefetch="hover">{arc.name}</a>
+                      : <span class={`arc-name arc-name--nolink ${systemCssKey(sg.system)}`}>{arc.name}</span>
                     }
                     {book && <span class="arc-source">{book}</span>}
                   </div>
@@ -176,10 +172,7 @@ const SYS_LABEL: Record<string, string> = {
 
   <!-- ── Pathfinder 1e Archetypes ───────────────────────── -->
   <section class="arc-section">
-    <div class="section-group-header" style="margin-top: 32px;">
-      <span class="section-group-label">Pathfinder 1e Archetypes</span>
-      <div class="section-group-rule"></div>
-    </div>
+    <SectionHeading label="Pathfinder 1e Archetypes" style="margin-top: 32px;" />
 
     {pf1eGroups.length === 0 ? (
       <p class="section-empty">No Pathfinder 1e archetypes indexed yet.</p>
@@ -198,7 +191,7 @@ const SYS_LABEL: Record<string, string> = {
 
           <div class="arc-list" id={`pf1e-${cg.classId}-list`} aria-hidden="false">
             {cg.arcs.map(({ arc, book, href }) => {
-              const sysKey = arc.system === 'champions' ? 'champ' : arc.system;
+              const sysKey = systemCssKey(arc.system);
               return (
                 <div class="arc-entry">
                   {href
@@ -219,30 +212,12 @@ const SYS_LABEL: Record<string, string> = {
 </WikiPage>
 
 <script>
+import { bindCollapseToggle } from '@/lib/collapseClient';
+
 document.addEventListener('astro:page-load', () => {
   document.querySelectorAll<HTMLButtonElement>('.arc-class-toggle').forEach(btn => {
-    const groupId = btn.dataset.groupId!;
-    const list = document.getElementById(`${groupId}-list`);
-    if (!list) return;
-
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      if (expanded) {
-        list.style.overflow = 'hidden';
-        list.style.maxHeight = list.scrollHeight + 'px';
-        requestAnimationFrame(() => { list.style.maxHeight = '0'; });
-      } else {
-        list.style.overflow = 'hidden';
-        list.style.maxHeight = list.scrollHeight + 'px';
-        list.addEventListener('transitionend', () => {
-          list.style.maxHeight = '';
-          list.style.overflow = 'visible';
-        }, { once: true });
-      }
-      btn.setAttribute('aria-expanded', String(!expanded));
-      btn.classList.toggle('is-collapsed', expanded);
-      list.setAttribute('aria-hidden', String(expanded));
-    });
+    const list = document.getElementById(`${btn.dataset.groupId!}-list`);
+    if (list) bindCollapseToggle(btn, list);
   });
 });
 </script>
@@ -290,26 +265,18 @@ document.addEventListener('astro:page-load', () => {
     border-bottom: none;
   }
 
+  /* System class on the element sets --clr-ns (global.css) */
   .arc-name {
     font-size: var(--fs-sm);
     font-weight: 600;
     text-decoration: none;
     flex-shrink: 0;
+    color: var(--clr-ns, var(--clr-text));
   }
 
   a.arc-name:hover {
     text-decoration: underline;
   }
-
-  .arc-name--nolink {
-    color: var(--clr-text);
-  }
-
-  /* System-colored names */
-  .arc-name.power  { color: var(--clr-power); }
-  .arc-name.might  { color: var(--clr-might); }
-  .arc-name.guile  { color: var(--clr-guile); }
-  .arc-name.champ  { color: var(--clr-champ); }
 
   /* PF1e system badge */
   .arc-sys-badge {
@@ -321,12 +288,9 @@ document.addEventListener('astro:page-load', () => {
     padding: 1px 5px;
     border-radius: 3px;
     flex-shrink: 0;
+    background: color-mix(in srgb, var(--clr-ns) 12%, transparent);
+    color: var(--clr-ns);
   }
-
-  .arc-sys-badge.power { background: color-mix(in srgb, var(--clr-power) 12%, transparent); color: var(--clr-power); }
-  .arc-sys-badge.might { background: color-mix(in srgb, var(--clr-might) 12%, transparent); color: var(--clr-might); }
-  .arc-sys-badge.guile { background: color-mix(in srgb, var(--clr-guile) 12%, transparent); color: var(--clr-guile); }
-  .arc-sys-badge.champ { background: color-mix(in srgb, var(--clr-champ) 12%, transparent); color: var(--clr-champ); }
 
   .arc-source {
     font-size: var(--fs-xs);

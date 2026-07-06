@@ -1,0 +1,45 @@
+---
+/**
+ * Canonical section heading — the label + rule idiom that pages previously
+ * inlined in two variants:
+ *   level="group"   → .section-group-header / -label / -rule (page sections)
+ *   level="eyebrow" → .section-heading / -text / -rule (uppercase eyebrow)
+ * Styles live in global.css. Toggle-button headings (collapsible sections)
+ * remain the callers' concern — they pair with lib/collapseClient.
+ */
+interface Props {
+  label: string;
+  level?: "group" | "eyebrow";
+  /** id on the label element (TOC anchor) */
+  id?: string;
+  /** render the label as a link */
+  href?: string;
+  /** extra classes on the label element (e.g. system color class) */
+  labelClass?: string;
+  /** extra classes on the wrapper */
+  class?: string;
+  style?: string;
+}
+
+const {
+  label,
+  level = "group",
+  id,
+  href,
+  labelClass,
+  class: wrapperClass,
+  style,
+} = Astro.props;
+
+const wrapper = level === "group" ? "section-group-header" : "section-heading";
+const labelBase = level === "group" ? "section-group-label" : "section-heading-text";
+const rule = level === "group" ? "section-group-rule" : "section-heading-rule";
+---
+
+<div class:list={[wrapper, wrapperClass]} style={style}>
+  {href
+    ? <a href={href} class:list={[labelBase, labelClass]} id={id} data-astro-prefetch="hover">{label}</a>
+    : <span class:list={[labelBase, labelClass]} id={id}>{label}</span>
+  }
+  <div class={rule}></div>
+</div>

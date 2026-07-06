@@ -3,6 +3,7 @@ import EntryCard from "@/components/EntryCard.astro";
 import TraitCatalogSection from "@/components/TraitCatalogSection.astro";
 import { buildOrderedTagIds } from "@/lib/tags";
 import type { ClassFeatureEntry, ClassTraitEntry, TagEntry, BookMeta } from "@/lib/types";
+import { levelLabel } from '@/lib/levelLabel';
 
 interface RenderedTrait {
   trait: ClassTraitEntry;
@@ -27,20 +28,7 @@ interface Props {
 
 const { feature, Content, sourceBookTitle, traits, tagMap, bookMetaMap, systemId, className } = Astro.props;
 
-function levelLabel(level: number | number[]): string {
-  if (Array.isArray(level)) return level.map(l => `${l}${ordinal(l)}`).join(', ');
-  return `${level}${ordinal(level)}`;
-}
 
-function ordinal(n: number): string {
-  if (n % 100 >= 11 && n % 100 <= 13) return 'th';
-  switch (n % 10) {
-    case 1: return 'st';
-    case 2: return 'nd';
-    case 3: return 'rd';
-    default: return 'th';
-  }
-}
 ---
 
 <div

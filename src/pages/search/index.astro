@@ -355,16 +355,20 @@ const staticTags = [...tagMap.entries()]
 <script>
 import TomSelect from 'tom-select';
 import 'tom-select/dist/css/tom-select.css';
+import { SYSTEMS } from '@/config/site';
 
 const PAGE_SIZE = 40;
 const MAX_RESULTS = 500;
 
-const SYSTEM_MAP: Record<string, { label: string; key: string }> = {
-  'Spheres of Power':        { label: 'Spheres of Power',   key: 'power'     },
-  'Spheres of Might':        { label: 'Spheres of Might',   key: 'might'     },
-  'Spheres of Guile':        { label: 'Spheres of Guile',   key: 'guile'     },
-  'Champions of the Spheres':{ label: 'Champions',          key: 'champions' },
-};
+// Keyed by the Pagefind filter label; derived from the SYSTEMS registry (V53).
+// Champions gets a shortened display label for result cards.
+const SYSTEM_MAP: Record<string, { label: string; key: string; cssKey: string }> =
+  Object.fromEntries(
+    Object.entries(SYSTEMS).map(([id, sys]) => [
+      sys.label,
+      { label: id === 'champions' ? 'Champions' : sys.label, key: id, cssKey: sys.cssKey },
+    ]),
+  );
 
 const TYPE_LABELS: Record<string, string> = {
   sphere:        'Sphere',
@@ -471,14 +475,11 @@ function renderResults() {
     const type      = r.meta?.type ?? '';
     const sphere    = r.meta?.sphere ?? '';
     const sysEntry  = SYSTEM_MAP[system];
-    const sysKey    = sysEntry?.key ?? '';
     const typeLabel = TYPE_LABELS[type] ?? type;
     const tier      = r.meta?.tier ?? '';
 
     // Per-card system color — cascades to .talent-name (--clr-active) and tier tags (--clr-ns)
-    const cssColor = sysKey === 'champions' ? 'var(--clr-champ)'
-                   : sysKey ? `var(--clr-${sysKey})`
-                   : 'var(--clr-brand)';
+    const cssColor = sysEntry ? `var(--clr-${sysEntry.cssKey})` : 'var(--clr-brand)';
 
     // Source label: keep sphere names in the tag row so they can share system color.
     let sourceLabel = '';

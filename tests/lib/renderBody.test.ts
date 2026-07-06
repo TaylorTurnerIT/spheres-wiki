@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   renderMarkdownFragment,
   splitBodyOnMarkers,
+  stripBodySource,
 } from "../../src/lib/renderBody";
 
 describe("splitBodyOnMarkers", () => {
@@ -186,5 +187,23 @@ describe("renderMarkdownFragment", () => {
   it("converts inline code", async () => {
     const result = await renderMarkdownFragment("Use `const x = 1` here.");
     expect(result).toContain("<code>const x = 1</code>");
+  });
+});
+
+describe("stripBodySource", () => {
+  it("strips a trailing *Source: Book* line", () => {
+    expect(stripBodySource("Body text.\n*Source: Spheres of Might*")).toBe(
+      "Body text.",
+    );
+  });
+
+  it("leaves bodies without a source line unchanged", () => {
+    expect(stripBodySource("Body text.\nMore text.")).toBe(
+      "Body text.\nMore text.",
+    );
+  });
+
+  it("trims trailing whitespace after stripping", () => {
+    expect(stripBodySource("Body text.\n\n*Source: Book*")).toBe("Body text.");
   });
 });

@@ -9,6 +9,7 @@ import Breadcrumb from '@/components/Breadcrumb.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { ClassEntry, ArchetypeEntry, ArchetypeFeatureEntry, ClassTraitEntry, FeatEntry, BookMeta } from '@/lib/types';
+import { levelLabel, ordinal } from '@/lib/levelLabel';
 
 interface Props {
   archetype: ArchetypeEntry;
@@ -187,20 +188,7 @@ if (featsRendered.length > 0) {
   });
 }
 
-function levelLabel(level: number | number[]): string {
-  if (Array.isArray(level)) return level.map(l => `${l}${ordinal(l)}`).join(', ');
-  return `${level}${ordinal(level)}`;
-}
 
-function ordinal(n: number): string {
-  if (n % 100 >= 11 && n % 100 <= 13) return 'th';
-  switch (n % 10) {
-    case 1: return 'st';
-    case 2: return 'nd';
-    case 3: return 'rd';
-    default: return 'th';
-  }
-}
 
 const formatBaseFeatureName = (id: string) => {
   const clean = id.replace(/^[a-z0-9]+-/, '').replace(/-/g, ' ');

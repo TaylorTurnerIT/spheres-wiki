@@ -3,6 +3,8 @@ import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
+import { systemCssKey } from "@/lib/systems";
 import { resolveEntries } from "@/lib/resolveEntries";
 
 const { tagMap, bookMetaMap, talentMap, featMap, sphereMap, classMap } = await resolveEntries();
@@ -107,10 +109,7 @@ const sphereGroups = [...sphereGroupMap.values()]
 
   {builtinTags.length > 0 && (
     <div class="section-group" style="margin-top: 16px;">
-      <div class="section-group-header">
-        <span class="section-group-label">System Tags</span>
-        <div class="section-group-rule" />
-      </div>
+      <SectionHeading label="System Tags" />
       <div class="tag-table">
         {builtinTags.map(tag => {
           const s = stats.get(tag.id)!;
@@ -125,7 +124,7 @@ const sphereGroups = [...sphereGroupMap.values()]
                   <span class="tag-count">{s.total}</span>
                 )}
                 {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
-                  <span class={`tag-sys-pip ${sys === 'champions' ? 'champ' : sys}`}
+                  <span class={`tag-sys-pip ${systemCssKey(sys)}`}
                     title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
                     {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
                   </span>
@@ -144,16 +143,11 @@ const sphereGroups = [...sphereGroupMap.values()]
     <>
       {sphereGroups.map(group => (
         <div class="section-group" style="margin-top: 24px;">
-          <div class="section-group-header">
-            <a
-              href={url(`/power/${group.sphereId}/`)}
-              class={`section-group-label sphere-group-label ${group.sphereSystem}`}
-              data-astro-prefetch="hover"
-            >
-              {group.sphereName}
-            </a>
-            <div class="section-group-rule" />
-          </div>
+          <SectionHeading
+            label={group.sphereName}
+            href={url(`/power/${group.sphereId}/`)}
+            labelClass={`sphere-group-label ${systemCssKey(group.sphereSystem)}`}
+          />
           <div class="tag-table">
             {group.tags.map(tag => {
               const s = stats.get(tag.id)!;
@@ -166,7 +160,7 @@ const sphereGroups = [...sphereGroupMap.values()]
                   <div class="tag-row-stats">
                     {s.total > 0 && <span class="tag-count">{s.total}</span>}
                     {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
-                      <span class={`tag-sys-pip ${sys === 'champions' ? 'champ' : sys}`}
+                      <span class={`tag-sys-pip ${systemCssKey(sys)}`}
                         title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
                         {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
                       </span>
@@ -181,10 +175,7 @@ const sphereGroups = [...sphereGroupMap.values()]
 
       {unassignedTags.length > 0 && (
         <div class="section-group" style="margin-top: 24px;">
-          <div class="section-group-header">
-            <span class="section-group-label">General</span>
-            <div class="section-group-rule" />
-          </div>
+          <SectionHeading label="General" />
           <div class="tag-table">
             {unassignedTags.map(tag => {
               const s = stats.get(tag.id)!;
@@ -197,7 +188,7 @@ const sphereGroups = [...sphereGroupMap.values()]
                   <div class="tag-row-stats">
                     {s.total > 0 && <span class="tag-count">{s.total}</span>}
                     {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
-                      <span class={`tag-sys-pip ${sys === 'champions' ? 'champ' : sys}`}
+                      <span class={`tag-sys-pip ${systemCssKey(sys)}`}
                         title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
                         {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
                       </span>
@@ -321,6 +312,7 @@ const sphereGroups = [...sphereGroupMap.values()]
     white-space: nowrap;
   }
 
+  /* system class on the pip sets --clr-ns (global.css) */
   .tag-sys-pip {
     font-family: var(--font-display);
     font-size: 0.6rem;
@@ -330,23 +322,17 @@ const sphereGroups = [...sphereGroupMap.values()]
     padding: 1px 5px;
     border-radius: 3px;
     white-space: nowrap;
+    background: color-mix(in srgb, var(--clr-ns) 12%, transparent);
+    color: var(--clr-ns);
   }
 
-  .tag-sys-pip.power { background: color-mix(in srgb, var(--clr-power) 12%, transparent); color: var(--clr-power); }
-  .tag-sys-pip.might { background: color-mix(in srgb, var(--clr-might) 12%, transparent); color: var(--clr-might); }
-  .tag-sys-pip.guile { background: color-mix(in srgb, var(--clr-guile) 12%, transparent); color: var(--clr-guile); }
-  .tag-sys-pip.champ { background: color-mix(in srgb, var(--clr-champ) 12%, transparent); color: var(--clr-champ); }
-
-  a.sphere-group-label {
+  :global(a.sphere-group-label) {
     text-decoration: none;
+    color: var(--clr-ns);
   }
-  a.sphere-group-label:hover {
+  :global(a.sphere-group-label:hover) {
     text-decoration: underline;
   }
-  a.sphere-group-label.power { color: var(--clr-power); }
-  a.sphere-group-label.might { color: var(--clr-might); }
-  a.sphere-group-label.guile { color: var(--clr-guile); }
-  a.sphere-group-label.champions { color: var(--clr-champ); }
 
   @media (max-width: 600px) {
     .tag-row {

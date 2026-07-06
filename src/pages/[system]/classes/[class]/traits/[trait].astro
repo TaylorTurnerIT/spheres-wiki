@@ -1,13 +1,11 @@
 ---
 import { render } from 'astro:content';
 import { url } from "@/lib/url";
-import WikiPage from '@/layouts/WikiPage.astro';
-import SourceBookCallout from '@/components/SourceBookCallout.astro';
-import TagBadge from '@/components/TagBadge.astro';
-import Breadcrumb from '@/components/Breadcrumb.astro';
+import EntryDetailPage from '@/components/EntryDetailPage.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
+import { stripBodySource } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
-import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
+import { getSystemPaths, resolveSystem, getSystemSearchFilter, buildSystemIdIndex, systemIdKey } from '@/lib/systems';
 import type { ClassTraitEntry, ClassEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -24,11 +22,12 @@ export async function getStaticPaths() {
   const allCollEntries = await getCollEntriesMap();
 
   const paths = [];
+  const classIndex = buildSystemIdIndex(classMap.values());
   for (const { params: { system } } of getSystemPaths()) {
     for (const [, trait] of classTraitMap) {
       if (trait.system !== system) continue;
 
-      const cls = [...classMap.values()].find(c => c.id === trait.className && c.system === system);
+      const cls = classIndex.get(systemIdKey(system, trait.className ?? ""));
       if (!cls) continue;
 
       paths.push({
@@ -54,76 +53,31 @@ const { trait, cls, collEntry, sourceBook, tagMap, bookMetaMap } = Astro.props;
 const sysConfig = resolveSystem(system)!;
 const searchFilter = getSystemSearchFilter(system);
 
-function stripBodySource(body: string): string {
-  return body.replace(/\n\*Source:.+$/m, '').trimEnd();
-}
-
 const cleanBody = collEntry ? stripBodySource(collEntry.body || '') : null;
 const TraitContent = (collEntry && cleanBody !== null) ? (await render({ ...collEntry, body: cleanBody })).Content : null;
-
-const orderedTagIds = buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {});
 ---
-<WikiPage title={`${trait.name} — ${cls.name} — ${sysConfig.label} Wiki`} activeNamespace={system}>
-
-  <Breadcrumb crumbs={[
+<EntryDetailPage
+  system={system!}
+  title={`${trait.name} — ${cls.name} — ${sysConfig.label} Wiki`}
+  crumbs={[
     { label: "Home", href: url("/") },
     { label: sysConfig.label, href: url(`/${system}/`) },
     { label: cls.name, href: url(`/${system}/classes/${cls.id}/`) },
     { label: trait.name },
-  ]} />
-
-  <div class="content-columns">
-    <div class="content-main">
-      <span data-pagefind-meta={`title:${trait.name}`} hidden></span>
-      <span data-pagefind-filter="type:class-trait" hidden></span>
-      <span data-pagefind-filter={searchFilter} hidden></span>
-      <span data-pagefind-meta={`class:${cls.name}`} hidden></span>
-      <span data-pagefind-meta={`tags:${trait.tags.join(', ')}`} hidden></span>
-      <h1
-        class={`page-title ${sysConfig.cssKey}`}
-        id="overview"
-        data-pagefind-weight="2.0"
-      >
-        {trait.name}
-      </h1>
-      <span data-pagefind-meta="type:class-trait" hidden></span>
-      <span data-pagefind-meta={searchFilter} hidden></span>
-      <div class="trait-page-meta">
-        {orderedTagIds.map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)}
-      </div>
-
-      {trait.requires && (
-        <p class="trait-prerequisites-note">
-          <strong>Prerequisites:</strong> {trait.requires}
-        </p>
-      )}
-
-      {TraitContent
-        ? <div class="entry-description"><TraitContent /></div>
-        : <p class="entry-description"><em>Description coming soon.</em></p>
-      }
-    </div>
-
-    <aside class="right-rail" aria-label="Page contents">
-      <SourceBookCallout book={sourceBook} />
-    </aside>
-  </div>
-
-</WikiPage>
-
-<style>
-  .trait-page-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 0.5rem;
-    align-items: center;
-  }
-
-  .trait-prerequisites-note {
-    font-size: 0.9em;
-    font-style: italic;
-    color: var(--clr-muted);
-    margin: 0 0 1rem;
-  }
-</style>
+  ]}
+  name={trait.name}
+  tagIds={buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {})}
+  tagMap={tagMap}
+  bookMetaMap={bookMetaMap}
+  sourceBook={sourceBook}
+  Content={TraitContent}
+  prerequisites={trait.requires}
+  pagefindFilters={["type:class-trait", searchFilter]}
+  pagefindMeta={{
+    title: trait.name,
+    class: cls.name,
+    tags: trait.tags.join(", "),
+    type: "class-trait",
+    system: sysConfig.label,
+  }}
+/>

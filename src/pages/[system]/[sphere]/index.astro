@@ -11,9 +11,9 @@ import type { SectionResult } from '@/lib/categorize';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getFeatUrl } from '@/lib/featCategories';
-import TagBadge from '@/components/TagBadge.astro';
 import EntryCard from '@/components/EntryCard.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { SphereEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
 
@@ -209,10 +209,7 @@ const groups: TocGroup[] = sections.map(sec => ({
 
       {sections.map(sec => (
         <div class="section-group">
-          <div class="section-group-header">
-            <span class="section-group-label">{sec.label}</span>
-            <div class="section-group-rule"></div>
-          </div>
+          <SectionHeading label={sec.label} />
 
           {sec.categories.map(cat => (
             <div class="section-block">
@@ -234,27 +231,19 @@ const groups: TocGroup[] = sections.map(sec => ({
                       const entryBook = bookMetaMap.get(entry.sourceBook);
 
                       return (
-                        <div class="talent-entry" id={entry.id} data-pagefind-weight="0.5">
-                          <div class="talent-header">
-                            <div class="talent-header-top">
-                              <a
-                                href={url(talent ? `/${system}/${sphere.id}/${entry.id}/` : getFeatUrl(entry as FeatEntry, tagMap))}
-                                class="talent-name"
-                                data-astro-prefetch="hover"
-                                transition:name={`entry-title-${entry.id}`}
-                              >
-                                {entry.name}
-                              </a>
-                              {entryBook && <span class="talent-source">{entryBook.title}</span>}
-                            </div>
-                            <div class="talent-header-bottom">
-                              {buildOrderedTagIds(entry, bookMetaMap, tagMap, { currentSphereId: sphere.id })
-                                .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
-                              }
-                            </div>
-                          </div>
-                          {content && <div class="talent-body"><content.Content /></div>}
-                        </div>
+                        <EntryCard
+                          id={entry.id}
+                          anchorOn="block"
+                          pagefindWeight="0.5"
+                          transitionName={`entry-title-${entry.id}`}
+                          name={entry.name}
+                          href={url(talent ? `/${system}/${sphere.id}/${entry.id}/` : getFeatUrl(entry as FeatEntry, tagMap))}
+                          sourceBookTitle={entryBook?.title}
+                          tagIds={buildOrderedTagIds(entry, bookMetaMap, tagMap, { currentSphereId: sphere.id })}
+                          Content={content?.Content}
+                          tagMap={tagMap}
+                          bookMetaMap={bookMetaMap}
+                        />
                       );
                     })}
                   </div>
@@ -280,40 +269,16 @@ const groups: TocGroup[] = sections.map(sec => ({
 </WikiPage>
 
 <script>
+import { setCollapsibleState, bindCollapseToggle } from '@/lib/collapseClient';
+
 document.addEventListener('astro:page-load', () => {
-  function toggleSection(btn: HTMLButtonElement, expand: boolean) {
-    const catId = btn.dataset.catId!;
-    const entries = document.getElementById(`${catId}-entries`);
-    if (!entries) return;
-
-    if (!expand) {
-      entries.style.overflow = 'hidden';
-      entries.style.maxHeight = entries.scrollHeight + 'px';
-      requestAnimationFrame(() => { entries.style.maxHeight = '0'; });
-    } else {
-      entries.style.overflow = 'hidden';
-      entries.style.maxHeight = entries.scrollHeight + 'px';
-      entries.addEventListener('transitionend', () => {
-        entries.style.maxHeight = '';
-        entries.style.overflow = 'visible';
-      }, { once: true });
-    }
-
-    const willCollapse = !expand;
-    btn.setAttribute('aria-expanded', String(expand));
-    btn.classList.toggle('is-collapsed', willCollapse);
-    entries.setAttribute('aria-hidden', String(willCollapse));
-
-    document.dispatchEvent(new CustomEvent('class-feature-collapse', {
-      detail: { id: catId, collapsed: willCollapse },
-    }));
+  function sectionTarget(btn: HTMLButtonElement): HTMLElement | null {
+    return document.getElementById(`${btn.dataset.catId!}-entries`);
   }
 
   document.querySelectorAll<HTMLButtonElement>('.section-heading-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      toggleSection(btn, !isExpanded);
-    });
+    const entries = sectionTarget(btn);
+    if (entries) bindCollapseToggle(btn, entries, btn.dataset.catId);
   });
 
   const toggleAllBtn = document.getElementById('toggle-all-sections') as HTMLButtonElement | null;
@@ -322,7 +287,8 @@ document.addEventListener('astro:page-load', () => {
   toggleAllBtn.addEventListener('click', () => {
     const shouldExpand = toggleAllBtn.textContent?.trim() === 'Expand All';
     document.querySelectorAll<HTMLButtonElement>('.section-heading-toggle').forEach(btn => {
-      toggleSection(btn, shouldExpand);
+      const entries = sectionTarget(btn);
+      if (entries) setCollapsibleState(btn, entries, shouldExpand, btn.dataset.catId);
     });
     toggleAllBtn.textContent = shouldExpand ? 'Collapse All' : 'Expand All';
   });

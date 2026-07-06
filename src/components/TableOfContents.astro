@@ -68,17 +68,37 @@ const { overview, groups, system } = Astro.props;
 </nav>
 
 <script>
-let activeObserver: IntersectionObserver | null = null;
-let activeScrollHandler: (() => void) | null = null;
+import { createTocEngine, type TocEngine } from '@/lib/tocEngine';
+
+let engine: TocEngine | null = null;
 let activeCollapseHandler: ((e: Event) => void) | null = null;
 
+// Accordion presentation: expand the active category's sub-list unless its
+// page section is collapsed (live state read from the toggle button's
+// aria-expanded via data-feature-id / data-cat-id)
+function setActive(categories: HTMLElement[], active: HTMLElement | null) {
+  categories.forEach(cat => {
+    const subList = cat.querySelector<HTMLElement>('.toc-sub-list');
+    const inner = cat.querySelector<HTMLElement>('.toc-sub-inner');
+    const isActive = cat === active;
+
+    const btn = document.querySelector<HTMLButtonElement>(`[data-feature-id="${cat.dataset.tocSection}"], [data-cat-id="${cat.dataset.tocSection}"]`);
+    const isCollapsed = btn ? btn.getAttribute('aria-expanded') === 'false' : false;
+
+    cat.classList.toggle('is-active', isActive);
+    if (subList && inner) {
+      if (isCollapsed) {
+        subList.style.maxHeight = '0';
+      } else {
+        subList.style.maxHeight = isActive ? inner.scrollHeight + 'px' : '0';
+      }
+    }
+  });
+}
+
 document.addEventListener('astro:page-load', () => {
-  activeObserver?.disconnect();
-  activeObserver = null;
-  if (activeScrollHandler) {
-    window.removeEventListener('scroll', activeScrollHandler);
-    activeScrollHandler = null;
-  }
+  engine?.stop();
+  engine = null;
   if (activeCollapseHandler) {
     document.removeEventListener('class-feature-collapse', activeCollapseHandler);
     activeCollapseHandler = null;
@@ -87,99 +107,10 @@ document.addEventListener('astro:page-load', () => {
   const nav = document.querySelector<HTMLElement>('.toc');
   if (!nav) return;
 
-  const getTargetElement = (id: string): HTMLElement | null => {
-    try {
-      const cands = document.querySelectorAll(`[id="${CSS.escape(id)}"]`);
-      for (const cand of cands) {
-        if (['talent-entry', 'base-ability-block', 'class-feature-block', 'archetype-feature-block', 'section-heading-text', 'page-title', 'class-traits-section', 'article-section', 'equipment-section'].some(c => cand.classList.contains(c))) {
-          return cand as HTMLElement;
-        }
-      }
-      return cands[0] as HTMLElement | null;
-    } catch {
-      return document.getElementById(id);
-    }
-  };
+  engine = createTocEngine({ nav, applyActive: setActive });
+  if (!engine) return;
 
-  const categories = [...nav.querySelectorAll<HTMLElement>('[data-toc-section]')];
-  const headings = categories
-    .map(cat => ({
-      cat,
-      heading: getTargetElement(cat.dataset.tocSection!),
-      subLinks: [...cat.querySelectorAll<HTMLAnchorElement>('[data-toc-item]')],
-    }))
-    .filter((s): s is typeof s & { heading: HTMLElement } => s.heading !== null);
-
-  function setActive(active: HTMLElement | null) {
-    categories.forEach(cat => {
-      const subList = cat.querySelector<HTMLElement>('.toc-sub-list');
-      const inner = cat.querySelector<HTMLElement>('.toc-sub-inner');
-      const isActive = cat === active;
-      
-      // Read the live collapse state directly from the DOM
-      const btn = document.querySelector<HTMLButtonElement>(`[data-feature-id="${cat.dataset.tocSection}"], [data-cat-id="${cat.dataset.tocSection}"]`);
-      const isCollapsed = btn ? btn.getAttribute('aria-expanded') === 'false' : false;
-
-      cat.classList.toggle('is-active', isActive);
-      if (subList && inner) {
-        if (isCollapsed) {
-          subList.style.maxHeight = '0';
-        } else {
-          subList.style.maxHeight = isActive ? inner.scrollHeight + 'px' : '0';
-        }
-      }
-    });
-  }
-
-  const allSubLinks = [...nav.querySelectorAll<HTMLAnchorElement>('[data-toc-item]')];
-
-  function recalc() {
-    // Last category heading at or above 25% of viewport = active section
-    let current: HTMLElement | null = headings[0]?.cat ?? null;
-    for (const { cat, heading } of headings) {
-      if (heading.getBoundingClientRect().top <= window.innerHeight * 0.25) {
-        current = cat;
-      }
-    }
-    setActive(current);
-
-    // Last sub-item at or above 15% of viewport = currently reading
-    let activeSub: HTMLAnchorElement | null = null;
-    for (const { subLinks } of headings) {
-      for (const link of subLinks) {
-        const el = getTargetElement(link.dataset.tocItem!);
-        if (el && el.getBoundingClientRect().height > 0 && el.getBoundingClientRect().top <= window.innerHeight * 0.15) {
-          activeSub = link;
-        }
-      }
-    }
-    allSubLinks.forEach(l => l.classList.toggle('is-current', l === activeSub));
-  }
-
-  activeCollapseHandler = () => {
-    recalc();
-  };
+  activeCollapseHandler = () => engine?.recalc();
   document.addEventListener('class-feature-collapse', activeCollapseHandler);
-
-  // IO triggers recalc when category headings cross viewport boundary
-  activeObserver = new IntersectionObserver(recalc, {
-    rootMargin: '-5% 0px -5% 0px',
-    threshold: [0, 1],
-  });
-  headings.forEach(({ heading }) => activeObserver!.observe(heading));
-
-  // Scroll listener catches click-jump navigation that IO may miss
-  let rafPending = false;
-  activeScrollHandler = () => {
-    if (rafPending) return;
-    rafPending = true;
-    requestAnimationFrame(() => {
-      recalc();
-      rafPending = false;
-    });
-  };
-  window.addEventListener('scroll', activeScrollHandler, { passive: true });
-
-  recalc();
 });
 </script>

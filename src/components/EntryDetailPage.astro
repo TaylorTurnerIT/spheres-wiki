@@ -1,0 +1,105 @@
+---
+/**
+ * Canonical entry detail page shell — breadcrumb, Pagefind meta/filter spans,
+ * system-colored page title, tag row, optional prerequisites line, rendered
+ * body, and the source-book right rail. Talent, feat, and class-trait detail
+ * routes were three near-identical copies of this layout (SPEC V48/V49).
+ */
+import WikiPage from "@/layouts/WikiPage.astro";
+import SourceBookCallout from "@/components/SourceBookCallout.astro";
+import TagBadge from "@/components/TagBadge.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { resolveSystem } from "@/lib/systems";
+import type { BookMeta, TagEntry } from "@/lib/types";
+
+interface Props {
+  system: string;
+  /** Full document title passed to WikiPage */
+  title: string;
+  crumbs: { label: string; href?: string }[];
+  /** Entry display name (page h1) */
+  name: string;
+  /** View-transition name for the title (pairs with EntryCard transitionName) */
+  transitionName?: string;
+  tagIds: string[];
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
+  sourceBook?: BookMeta;
+  Content?: any;
+  /** data-pagefind-filter values, e.g. ["type:talent", "system:Spheres of Power"] */
+  pagefindFilters?: string[];
+  /** data-pagefind-meta pairs, e.g. { title, sphere, tier, tags, type } */
+  pagefindMeta?: Record<string, string>;
+  /** Renders as a "Prerequisites:" line below the title rule (V43) */
+  prerequisites?: string;
+}
+
+const {
+  system,
+  title,
+  crumbs,
+  name,
+  transitionName,
+  tagIds,
+  tagMap,
+  bookMetaMap,
+  sourceBook,
+  Content,
+  pagefindFilters = [],
+  pagefindMeta = {},
+  prerequisites,
+} = Astro.props;
+
+const sysConfig = resolveSystem(system)!;
+---
+
+<WikiPage title={title} activeNamespace={system}>
+
+  <Breadcrumb crumbs={crumbs} />
+
+  <div class="content-columns">
+    <div class="content-main">
+      {pagefindFilters.map(f => <span data-pagefind-filter={f} hidden></span>)}
+      {Object.entries(pagefindMeta).map(([k, v]) => (
+        <span data-pagefind-meta={`${k}:${v}`} hidden></span>
+      ))}
+      <h1
+        class={`page-title ${sysConfig.cssKey}`}
+        id="overview"
+        transition:name={transitionName}
+        data-pagefind-weight="2.0"
+      >
+        {name}
+      </h1>
+      <div class="talent-page-meta">
+        {tagIds.map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)}
+      </div>
+      <hr class="page-title-rule" />
+
+      {prerequisites && (
+        <p class="entry-prerequisites-note">
+          <strong>Prerequisites:</strong> {prerequisites}
+        </p>
+      )}
+
+      {Content
+        ? <div class="entry-description"><Content /></div>
+        : <p class="entry-description"><em>Description coming soon.</em></p>
+      }
+    </div>
+
+    <aside class="right-rail" aria-label="Page contents">
+      <SourceBookCallout book={sourceBook} />
+    </aside>
+  </div>
+
+</WikiPage>
+
+<style>
+  .entry-prerequisites-note {
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--clr-muted);
+    margin: 0 0 1rem;
+  }
+</style>

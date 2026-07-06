@@ -5,21 +5,25 @@ import { describe, expect, it } from "vitest";
 describe("Search Weight Verification", () => {
   const pagesDir = path.resolve(__dirname, "../../src/pages");
 
-  it('verifies that talent pages have data-pagefind-weight="2.0"', () => {
-    const talentFiles = ["[system]/[sphere]/[talent].astro"];
-    for (const f of talentFiles) {
-      const p = path.join(pagesDir, f);
-      const content = fs.readFileSync(p, "utf8");
-      expect(content).toContain('data-pagefind-weight="2.0"');
-    }
+  it('verifies that the entry detail shell has data-pagefind-weight="2.0"', () => {
+    const shellPath = path.resolve(
+      __dirname,
+      "../../src/components/EntryDetailPage.astro",
+    );
+    const content = fs.readFileSync(shellPath, "utf8");
+    expect(content).toContain('data-pagefind-weight="2.0"');
   });
 
-  it('verifies that feat pages have data-pagefind-weight="2.0"', () => {
-    const featFiles = ["[system]/feats/[category]/[feat].astro"];
-    for (const f of featFiles) {
+  it("verifies that talent and feat detail pages render through the shell", () => {
+    const detailFiles = [
+      "[system]/[sphere]/[talent].astro",
+      "[system]/feats/[category]/[feat].astro",
+      "[system]/classes/[class]/traits/[trait].astro",
+    ];
+    for (const f of detailFiles) {
       const p = path.join(pagesDir, f);
       const content = fs.readFileSync(p, "utf8");
-      expect(content).toContain('data-pagefind-weight="2.0"');
+      expect(content).toContain("EntryDetailPage");
     }
   });
 
