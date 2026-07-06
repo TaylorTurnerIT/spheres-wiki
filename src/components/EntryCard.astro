@@ -58,6 +58,7 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
       </div>
     )}
   </div>
+  <slot />
   {hasMetadata && (
     <div class="entry-card-details">
       {Object.entries(metadata!).map(([k, v]) => (

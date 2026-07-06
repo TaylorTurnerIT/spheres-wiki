@@ -1,5 +1,5 @@
 ---
-import TagBadge from "@/components/TagBadge.astro";
+import EntryCard from "@/components/EntryCard.astro";
 import { url } from "@/lib/url";
 import { buildOrderedTagIds } from "@/lib/tags";
 import type { ClassTraitEntry, TagEntry, BookMeta } from "@/lib/types";
@@ -38,30 +38,21 @@ const { featureId, featureName, entries, systemId, className, tagMap, bookMetaMa
 <div class="trait-catalog-wrapper" id={`${featureId}-traits`} aria-hidden="true">
   <div class="trait-catalog">
     {entries.map(({ trait, Content: TraitContent, sourceBookTitle }) => (
-      <div class="trait-catalog-entry" id={trait.id}>
-        <div class="talent-header">
-          <div class="talent-header-top">
-            <a
-              href={url(`/${systemId}/classes/${className}/traits/${trait.id}/`)}
-              class="talent-name"
-              data-astro-prefetch="hover"
-            >{trait.name}</a>
-            {sourceBookTitle && <span class="talent-source">{sourceBookTitle}</span>}
-          </div>
-          <div class="talent-header-bottom">
-            {buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {}).map(tagId => (
-              <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />
-            ))}
-          </div>
-        </div>
+      <EntryCard
+        id={trait.id}
+        anchorOn="block"
+        name={trait.name}
+        href={url(`/${systemId}/classes/${className}/traits/${trait.id}/`)}
+        sourceBookTitle={sourceBookTitle}
+        tagIds={buildOrderedTagIds(trait as any, bookMetaMap, tagMap, {})}
+        Content={TraitContent}
+        tagMap={tagMap}
+        bookMetaMap={bookMetaMap}
+      >
         {trait.requires && (
           <p class="trait-catalog-requires"><strong>Prerequisites:</strong> {trait.requires}</p>
         )}
-        {TraitContent
-          ? <div class="entry-description"><TraitContent /></div>
-          : null
-        }
-      </div>
+      </EntryCard>
     ))}
   </div>
 </div>
@@ -133,10 +124,16 @@ const { featureId, featureName, entries, systemId, className, tagMap, bookMetaMa
     background: color-mix(in srgb, var(--clr-active) 4%, var(--clr-surface));
   }
 
-  .trait-catalog-entry {
-    padding: 0.75rem 1rem 0.75rem 0.75rem;
+  /* Flatten EntryCard's boxed frame into the catalog's row look —
+     container concern; the card primitive itself stays canonical */
+  .trait-catalog :global(.entry-card-block) {
+    border: none;
     border-left: 3px solid var(--clr-active);
     border-top: 1px solid color-mix(in srgb, var(--clr-active) 15%, transparent);
+    border-radius: 0;
+    background: transparent;
+    margin: 0;
+    padding: 0.75rem 1rem 0.75rem 0.75rem;
   }
 
   .trait-catalog-requires {
