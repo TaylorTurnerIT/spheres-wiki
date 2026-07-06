@@ -1,7 +1,22 @@
 ---
 import { getEntry, render } from 'astro:content';
 import ArticleTOC from '@/components/ArticleTOC.astro';
+import EntryCardList from '@/components/EntryCardList.astro';
 import { buildTocTree, type RenderedHeading } from '@/lib/articleToc';
+import type { BookMeta, TagEntry } from '@/lib/types';
+
+type SystemScope = 'power' | 'might' | 'guile' | 'champions';
+
+type TabCardItem = {
+  id: string;
+  name: string;
+  sourceBookTitle?: string | null;
+  tagIds?: string[];
+  Content?: any;
+  href?: string;
+  system?: SystemScope;
+  filterKey?: string;
+};
 
 interface Tab {
   label: string;
@@ -10,6 +25,12 @@ interface Tab {
   collection?: string;
   showToc?: boolean;
   builder?: boolean;
+  system?: SystemScope;
+  description?: string;
+  RulesContent?: any;
+  items?: TabCardItem[];
+  emptyMessage?: string;
+  sphereFilterOptions?: { id: string; label: string }[];
 }
 
 interface Props {
@@ -17,9 +38,12 @@ interface Props {
   defaultTab?: string;
   id?: string;
   system?: string;
+  /** Required when any tab provides `items` (rendered via EntryCardList) */
+  tagMap?: Map<string, TagEntry>;
+  bookMetaMap?: Map<string, BookMeta>;
 }
 
-const { tabs, defaultTab, id = "tab-container", system = 'power' } = Astro.props;
+const { tabs, defaultTab, id = "tab-container", system = 'power', tagMap, bookMetaMap } = Astro.props;
 const initialTab = defaultTab || tabs[0].slug;
 
 function decodeHtmlEntities(text: string): string {
@@ -70,7 +94,14 @@ const renderedTabs = await Promise.all(
       }
     }
 
-    const tocItems = tab.showToc ? buildTocTree(headings) : [];
+    if (tab.items) {
+      headings = [
+        ...headings,
+        ...tab.items.map((item) => ({ depth: 3, slug: item.id, text: item.name })),
+      ];
+    }
+
+    const tocItems = (tab.showToc || tab.items) ? buildTocTree(headings) : [];
 
     return { slug: tab.slug, Content, tocItems, slotHtml };
   })
@@ -88,6 +119,7 @@ const renderedTabs = await Promise.all(
         id={`${id}-tab-${tab.slug}`}
         data-tab={tab.slug}
         data-tab-builder={tab.builder ? "true" : undefined}
+        data-system={tab.system}
       >
         {tab.label}
       </button>
@@ -110,11 +142,37 @@ const renderedTabs = await Promise.all(
           hidden={tab.slug !== initialTab}
           data-tab-panel={tab.slug}
           data-tab-builder={tab.builder ? "true" : undefined}
+          data-system={tab.system}
         >
           {/* TOC template for sidebar injection */}
           <template data-toc-template={tab.slug}>
-             {tocItems.length > 0 && <ArticleTOC items={tocItems} system={system} />}
+             {tocItems.length > 0 && <ArticleTOC items={tocItems} system={tab.system ?? system} />}
           </template>
+          {tab.description && <p class="tab-description">{tab.description}</p>}
+          {tab.RulesContent && (
+            <div class="tab-rules-callout">
+              <tab.RulesContent />
+            </div>
+          )}
+          {tab.sphereFilterOptions && tab.sphereFilterOptions.length > 0 && (
+            <label class="sphere-filter">
+              <span>Sphere</span>
+              <select data-sphere-feat-filter>
+                <option value="all">All spheres</option>
+                {tab.sphereFilterOptions.map((sphere) => (
+                  <option value={sphere.id}>{sphere.label}</option>
+                ))}
+              </select>
+            </label>
+          )}
+          {tab.items && tagMap && bookMetaMap && (
+            <EntryCardList
+              items={tab.items}
+              emptyMessage={tab.emptyMessage}
+              tagMap={tagMap}
+              bookMetaMap={bookMetaMap}
+            />
+          )}
           {Content && <Content />}
           {slotHtml && <Fragment set:html={slotHtml} />}
         </div>
@@ -264,6 +322,20 @@ const renderedTabs = await Promise.all(
       });
     });
 
+    // Sphere filter (bound once per select; hidden state persists across tab switches)
+    container.querySelectorAll<HTMLSelectElement>('[data-sphere-feat-filter]').forEach(select => {
+      const panel = select.closest('.tab-panel');
+      if (!panel) return;
+      const cards = [...panel.querySelectorAll<HTMLElement>('.entry-card-scope[data-filter-key]')];
+      const applyFilter = () => {
+        for (const card of cards) {
+          card.hidden = select.value !== 'all' && card.dataset.filterKey !== select.value;
+        }
+      };
+      select.addEventListener('change', applyFilter);
+      applyFilter();
+    });
+
     const hash = window.location.hash.slice(1);
     const initial = container.dataset.initialTab;
 
@@ -336,6 +408,51 @@ const renderedTabs = await Promise.all(
 
   .tab-panel:not(.active) {
     display: none;
+  }
+
+  .tab-description {
+    font-size: var(--fs-sm);
+    color: var(--clr-text);
+    line-height: 1.55;
+  }
+
+  .tab-rules-callout {
+    border-left: 3px solid var(--clr-active);
+    background: color-mix(in srgb, var(--clr-active) 6%, transparent);
+    padding: 0.85rem 1rem;
+    margin: 1rem 0 1.25rem;
+  }
+
+  .tab-rules-callout :global(:first-child) {
+    margin-top: 0;
+  }
+
+  .tab-rules-callout :global(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .sphere-filter {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    margin: 1rem 0 0.25rem;
+    font-size: var(--fs-sm);
+  }
+
+  .sphere-filter span {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--clr-active);
+  }
+
+  .sphere-filter select {
+    max-width: min(100%, 18rem);
+    padding: 0.35rem 0.5rem;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    font: inherit;
   }
 
   /* Sidebar clearance */

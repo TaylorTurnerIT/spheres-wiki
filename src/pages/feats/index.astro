@@ -1,7 +1,7 @@
 ---
 import { render } from "astro:content";
 import WikiPage from "@/layouts/WikiPage.astro";
-import FeatsTabbedContent from "@/components/FeatsTabbedContent.astro";
+import TabbedContent from "@/components/TabbedContent.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
 import { getCanonicalFeatCategory, getFeatUrl } from "@/lib/featCategories";
@@ -170,7 +170,7 @@ tabs.sort((a: any, b: any) => {
           {feats.length} feat{feats.length !== 1 ? "s" : ""} indexed across every Spheres system.
         </p>
 
-        <FeatsTabbedContent tabs={tabs} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+        <TabbedContent tabs={tabs} id="feats-tabs" tagMap={tagMap} bookMetaMap={bookMetaMap} />
       </div>
 
       <aside class="article-sidebar" id="article-sidebar"></aside>
