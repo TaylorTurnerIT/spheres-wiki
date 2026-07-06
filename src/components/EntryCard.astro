@@ -14,6 +14,9 @@ interface Props {
   tagMap: Map<string, TagEntry>;
   bookMetaMap: Map<string, BookMeta>;
   builderActions?: { entryId: string; kind: "drawback" | "sphere-drawback" | "boon" }[];
+  transitionName?: string;
+  pagefindWeight?: string;
+  anchorOn?: "heading" | "block";
 }
 
 const {
@@ -28,17 +31,20 @@ const {
   bookMetaMap,
   entryLists = [],
   builderActions = [],
+  transitionName,
+  pagefindWeight,
+  anchorOn = "heading",
 } = Astro.props;
 
 const hasMetadata = metadata && Object.keys(metadata).length > 0;
 ---
 
-<div class="entry-card-block">
+<div class="entry-card-block" id={anchorOn === "block" ? id : undefined} data-pagefind-weight={pagefindWeight}>
   <div class="talent-header">
     <div class="talent-header-top">
-      <h3 class="entry-card-heading" id={id}>
+      <h3 class="entry-card-heading" id={anchorOn === "heading" ? id : undefined}>
         {href
-          ? <a href={href} class="talent-name" data-astro-prefetch="hover">{name}</a>
+          ? <a href={href} class="talent-name" data-astro-prefetch="hover" transition:name={transitionName}>{name}</a>
           : <span class="talent-name">{name}</span>
         }
       </h3>
