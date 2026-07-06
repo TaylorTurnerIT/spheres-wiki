@@ -138,11 +138,19 @@ Adding content:
 | `src/lib/remarkEntryLinks.ts` | remark plugin: `@talent`/`@feat`/`@sphere`/`@class` refs & prerequisites → links during markdown build |
 | `src/lib/types.ts` | entry + `ResolvedMaps` TypeScript types |
 | `src/lib/tags.ts` | `buildOrderedTagIds()` — auto-injects system tags (talent, feat, sphere, class-trait, tiers), sorts by tag priority |
-| `src/lib/renderBody.ts` | Markdown rendering pipeline (unified) + `splitBodyOnMarkers()` for base-ability extraction |
+| `src/lib/renderBody.ts` | Markdown rendering pipeline (unified) + `splitBodyOnMarkers()` for base-ability extraction + `stripBodySource()` (V42) |
 | `src/config/site.ts` | `SYSTEMS` registry: label, color, route, subtitle, etc. (single source — SPEC V4/V5) |
+| `src/lib/systems.ts` | system helpers over `SYSTEMS`: `getSystemPaths()`, `resolveSystem()`, `getSystemSearchFilter()`, `systemCssKey()`, `buildSystemIdIndex()`/`systemIdKey()` |
+| `src/lib/levelLabel.ts` | `ordinal()`/`levelLabel()` — "1st", "3rd, 5th" class-feature level formatting |
+| `src/lib/tocEngine.ts` | shared sidebar TOC scroll-spy engine (`createTocEngine`) — sole scroll-spy implementation |
+| `src/lib/collapseClient.ts` | shared collapse/expand behavior (`bindCollapseToggle`, `setCollapsibleState`) — sole collapse implementation |
 | `src/lib/articleToc.ts` | `buildTocTree()` — builds nested TOC tree from rendered headings |
-| `src/lib/articleTocClient.ts` | client-side TOC highlight/scroll; imported via `<script>` in `ArticlePage.astro`. Exposes `window.reinitArticleToc` for `TabbedContent` after sidebar TOC inject. Must be standalone module (not inline in `ArticleTOC.astro`) — `ArticleTOC` renders inside `<template>` tags where scripts inert |
+| `src/lib/articleTocClient.ts` | thin adapter over `tocEngine` for article pages; imported via `<script>` in `ArticlePage.astro`. Exposes `window.reinitArticleToc` for `TabbedContent` after sidebar TOC inject. Must be standalone module (not inline in `ArticleTOC.astro`) — `ArticleTOC` renders inside `<template>` tags where scripts inert |
+| `src/components/EntryCard.astro` | canonical named-entry card (V70/V71) — every talent/feat/trait/drawback/boon/tradition card |
+| `src/components/EntryDetailPage.astro` | canonical detail-page shell (breadcrumb + title + tags + prerequisites + body + source rail) — talent/feat/trait detail routes are thin `getStaticPaths` wrappers around it |
+| `src/components/SectionHeading.astro` | group/eyebrow section headings — no inline `.section-group-header` markup |
 | `src/components/SVGSprite.astro` | every sphere icon `<symbol>` (+ `si-fallback`) |
+| `scripts/check-idioms.mjs` | build-blocking idiom guard (V72): EntryCard primitive, cssKey ternaries, per-system color vars |
 | `scripts/class-parser.mjs` | Parses Wikidot class source → class/feature/trait `.md` files |
 | `scripts/generate-bestial-traits.mjs` | Parses Shifter Bestial Trait Wikidot source → trait `.md` files |
 
@@ -155,22 +163,45 @@ Adding content:
 - **Privacy**: no external requests, analytics, or tracking; document any `localStorage` key (name, purpose, retention, deletion path); keep `/privacy/` accurate (SPEC V11–V14).
 - **IDs**: lowercase kebab-case, must equal filename (SPEC C10/V16).
 - **Source attribution**: Never write `*Source: Book*` into markdown bodies. Source shown via `.talent-source` label on headings (from `sourceBook` + `bookMetaMap`) and `SourceBookCallout` in sidebar. Existing `*Source:*` lines stripped by `stripBodySource()` at render.
-- **Class trait rendering**: Traits use `.talent-header` pattern (top row: name + source; bottom row: `TagBadge` via `buildOrderedTagIds()`). `class-trait` tag auto-injected — never hardcode label span.
+- **Class trait rendering**: Traits render via `EntryCard.astro` (name + source top row, `TagBadge` via `buildOrderedTagIds()` bottom row) — never inline the `.talent-header` pattern (V70, guard-enforced). `class-trait` tag auto-injected — never hardcode label span.
 - **Prerequisites**: On trait entries, `requires` frontmatter renders as `**Prerequisites:** {req}` below heading — never inline `(requires ...)`.
 - **ACFs**: Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. Use `archetypeId: {class}-alternate-class-features` (virtual — no content file).
 - **Markdown config**: use `markdown.processor: unified({ remarkPlugins })` from `@astrojs/markdown-remark`. Do not use deprecated top-level `markdown.remarkPlugins`.
 - **Component scripts in `<template>` tags inert**: Component with `<script>` rendered inside `<template>` (e.g. `TabbedContent.astro` per-tab TOC templates) — script never executes. Client-side logic must live in external module imported via layout's `<script>` block (see `articleTocClient.ts` imported by `ArticlePage.astro`).
-- **Build strictness**: `bun run build` must complete without Astro check diagnostics, Fallow findings, Vite warnings, unresolved remark links, or TOC audit failures. `vite.build.chunkSizeWarningLimit` intentionally strict at 200KB.
-- **Build concurrency — two rules in `getStaticPaths()`:**
+- **Build strictness**: `bun run build` must complete without Astro check diagnostics, Fallow findings, idiom-guard violations, Vite warnings, unresolved remark links, or TOC audit failures. `vite.build.chunkSizeWarningLimit` intentionally strict at 200KB.
+- **Build concurrency — three rules in `getStaticPaths()`:**
   1. Never loop book metadata slugs with sequential `await getCollection()`. Metadata-only `_book.yaml` folders not collections. Use `getCollEntriesMap()` from `resolveEntries.ts` — built in same parallel pass as `resolveEntries()`, shared across page files.
   2. Multiple independent async ops (e.g. `render()` calls for set of entries) → wrap in `Promise.all([...])`, not `await` in loop.
+  3. Never look up an entry by `id`+`system` with `[...map.values()].find(...)` inside a loop — O(n²) at build. Build `buildSystemIdIndex(map.values())` once before the loop and use `index.get(systemIdKey(system, id))` (`src/lib/systems.ts`).
+
+## Shared idioms — reuse, never reimplement
+
+One idiom = one home. Cohesion remediation (2026-07-06, SPEC B23/V70–V72) removed a dozen parallel reimplementations; `scripts/check-idioms.mjs` blocks the ones grep can catch, but the principle covers all of these:
+
+| Idea | Sole implementation | Never do |
+|---|---|---|
+| Named-entry card (talent/feat/trait/drawback/boon/…) | `EntryCard.astro` (V70/V71) | inline `.talent-header`/`.talent-header-top` markup (guard-enforced) |
+| Entry detail page | `EntryDetailPage.astro` shell | per-route breadcrumb + title + tag row + source rail bodies |
+| Section/group headings | `SectionHeading.astro` | inline `.section-group-header` eyebrow markup |
+| Tab panels (md entries or custom slots) | `TabbedContent.astro` | forking a per-page tabbed component (see deleted `FeatsTabbedContent`) |
+| System id → CSS class | `systemCssKey()` | `=== 'champions' ? 'champ'` ternaries (guard-enforced) |
+| System labels/colors/routes | `SYSTEMS` registry + `resolveSystem()` | local `SYSTEM_LABELS`-style parallel records (V5/V53) |
+| Per-system coloring in page/component styles | `--clr-ns`/`--clr-active` (set by global.css classes / `data-system`) | `var(--clr-power\|might\|guile\|champ)` in page styles (guard-enforced, V10) |
+| Sidebar TOC scroll-spy | `tocEngine.ts` | a second IntersectionObserver/scroll implementation |
+| Collapse/expand sections | `collapseClient.ts` | ad-hoc grid-rows toggle handlers |
+| Level ordinals ("3rd, 5th") | `levelLabel.ts` | inline `ordinal()` copies |
+| Tag badge + colors | `TagBadge` + tag entry `color` (SSR templates for client JS) | client-side tag-markup or color tables (V51) |
+| Source-line stripping | `stripBodySource()` in `renderBody.ts` | per-page regex copies |
+
+When extracting the next shared primitive: migrate **all** call sites in the same change (grep for the markup/pattern, not just known pages — that miss caused B23), then add a grep for the old pattern to `scripts/check-idioms.mjs` so it cannot come back. Extend the guard's allowlists deliberately, never to silence a violation.
 
 ## Scripts & content pipeline
 
 `scripts/` holds Wikidot import/ETL & validators — not part of runtime site:
-- `validate.mjs` (runs in `bun run build`), plus `validate-tags.mjs`, `validate-v2.mjs`, `check-links.mjs`, `purge-dead-links.mjs`
+- `validate.mjs` + `check-idioms.mjs` (both run in `bun run build`), plus `validate-tags.mjs`, `validate-v2.mjs`, `check-links.mjs`, `purge-dead-links.mjs`
 - parsers/generators: `parse-wiki.mjs`, `class-parser.mjs`, `archetype-parser.mjs`, `generate-tags.mjs`, `generate-bestial-traits.mjs`, `catalog.mjs`, `migrate-to-nested.mjs`, `download_covers.py`
-- Fallow treats `scripts/catalog.mjs`, `scripts/generate-bestial-traits.mjs`, `scripts/parse-wiki.test.mjs` as explicit entrypoints. Keep ETL helpers small to avoid complexity findings.
+- shared script helpers live in `scripts/lib/` (`content-files.mjs` `getMarkdownFilesRecursively`, `render.mjs`, `wikidot-markup.mjs`) — reuse before writing a new file walker or renderer
+- Fallow entrypoints are the `entry` array in `.fallowrc.json`; register any standalone script you touch there. Keep ETL helpers small to avoid complexity findings, and see the `--gate all` warning under "Fallow local gate" before editing the legacy parsers.
 - See `scripts/PARSE-WIKI.md` for parsing workflow.
 - See `docs/lessons-learned.md` for operational lessons from performance, Biome, Fallow fixes.
 
@@ -259,7 +290,9 @@ When adding feature or fixing bug, prefer adding/extending test. Run targeted te
 
 Before `git commit` or `git push`, run `fallow audit --format json --quiet --explain --gate-marker agent`. If verdict `fail`, fix findings before retry. Treat JSON runtime errors like `{ "error": true, ... }` as non-blocking. Only dependency ignored in `.fallowrc.json` for framework loading is `@astrojs/compiler-rs`; do not add broad ignores for code issues.
 
-Audit defaults `gate=new-only`: only findings from current changeset affect verdict. Inherited findings on touched files reported under `attribution` with `introduced: false`, do not block commit. Set `[audit] gate = "all"` in `fallow.toml` to gate every finding in changed files.
+Audit defaults `gate=new-only`: only findings from current changeset affect verdict. Inherited findings on touched files reported under `attribution` with `introduced: false`, do not block commit.
+
+**But the build gate is stricter**: `bun run fallow-audit` (inside `bun run build`) runs `fallow audit --max-crap 30 --fail-on-issues --explain --gate all` — **every** finding in a changed file blocks, including pre-existing ones the change didn't introduce. Consequence: adding even a one-line import to a legacy high-complexity script (e.g. the Wikidot parsers `parse-wiki.mjs`/`class-parser.mjs`/`archetype-parser.mjs`) marks the whole file "changed" and surfaces its inherited complexity findings as build failures. Before touching such a file, either budget for refactoring it fully under the thresholds, or leave it untouched and put shared code elsewhere. Standalone scripts also need an `entry` registration in `.fallowrc.json` once touched, or they gate as unused files.
 
 Non-skill agents: treat task map below as local onboarding source — run listed fallow command before destructive edits, commits, PR handoff.
 
