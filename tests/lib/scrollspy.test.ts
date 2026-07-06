@@ -13,6 +13,7 @@ describe("TOC Scrollspy & Collapsible Section Verification", () => {
     rootDir,
     "src/pages/[system]/[sphere]/index.astro",
   );
+  const collapseClientPath = path.join(rootDir, "src/lib/collapseClient.ts");
 
   it("verifies TableOfContents.astro queries both data-feature-id and data-cat-id", () => {
     const content = fs.readFileSync(tocPath, "utf8");
@@ -29,9 +30,17 @@ describe("TOC Scrollspy & Collapsible Section Verification", () => {
     );
   });
 
-  it("verifies that [system]/[sphere]/index.astro dispatches class-feature-collapse event", () => {
+  it("verifies that [system]/[sphere]/index.astro wires section toggles through collapseClient", () => {
     const content = fs.readFileSync(spherePath, "utf8");
+    expect(content).toContain("@/lib/collapseClient");
+    expect(content).toContain(
+      "bindCollapseToggle(btn, entries, btn.dataset.catId)",
+    );
+  });
+
+  it("verifies that collapseClient dispatches class-feature-collapse with the section id", () => {
+    const content = fs.readFileSync(collapseClientPath, "utf8");
     expect(content).toContain("class-feature-collapse");
-    expect(content).toContain("detail: { id: catId, collapsed: willCollapse }");
+    expect(content).toContain("detail: { id: sectionId, collapsed: !expand }");
   });
 });

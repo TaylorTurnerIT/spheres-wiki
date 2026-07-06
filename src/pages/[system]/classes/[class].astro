@@ -10,6 +10,7 @@ import ClassFeatureBlock from '@/components/ClassFeatureBlock.astro';
 import ArchetypeSwapper from '@/components/ArchetypeSwapper.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
+import { stripBodySource } from '@/lib/renderBody';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, ArchetypeEntry, ArchetypeFeatureEntry, BookMeta, TagEntry } from '@/lib/types';
 
@@ -148,10 +149,6 @@ const sysConfig = resolveSystem(system)!;
 const searchFilter = getSystemSearchFilter(system);
 
 const ClassContent = classCollEntry ? (await render(classCollEntry)).Content : null;
-
-function stripBodySource(body: string): string {
-  return body.replace(/\n\*Source:.+$/m, '').trimEnd();
-}
 
 function sourceTitle(sb: string): string | null {
   return bookMetaMap.get(sb)?.title ?? null;

@@ -14,6 +14,15 @@ export type BodySegment =
 // Case-insensitive so authors can write [Shapeshift] or [shapeshift].
 const MARKER_RE = /^\[([A-Za-z][A-Za-z0-9 -]*)\]\s*$/gm;
 
+/**
+ * Strips a trailing `*Source: Book*` line from a markdown body (V42).
+ * Source attribution renders via metadata labels and sidebar callouts,
+ * never inline in body text.
+ */
+export function stripBodySource(body: string): string {
+  return body.replace(/\n\*Source:.+$/m, "").trimEnd();
+}
+
 export function splitBodyOnMarkers(body: string | undefined): BodySegment[] {
   if (!body) return [];
   const segments: BodySegment[] = [];
