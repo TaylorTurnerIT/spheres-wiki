@@ -142,7 +142,7 @@ const sphereGroups = [...sphereGroupMap.values()]
   ) : (
     <>
       {sphereGroups.map(group => (
-        <div class="section-group" style="margin-top: 24px;">
+        <div class="section-group" data-system={group.sphereSystem} style="margin-top: 24px;">
           <SectionHeading
             label={group.sphereName}
             href={url(`/power/${group.sphereId}/`)}

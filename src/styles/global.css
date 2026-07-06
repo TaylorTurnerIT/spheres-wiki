@@ -1654,23 +1654,20 @@ h6 {
   letter-spacing: 0.04em;
   padding: 1px 6px;
   border-radius: 3px;
+  --tag-clr: var(--clr-ns, var(--clr-brand));
   background: color-mix(
     in srgb,
-    var(--tag-clr, var(--clr-brand)) 12%,
+    var(--tag-clr) 12%,
     transparent
   );
-  color: var(--tag-clr, var(--clr-brand));
+  color: var(--tag-clr);
   border: 1px solid
-    color-mix(in srgb, var(--tag-clr, var(--clr-brand)) 40%, transparent);
+    color-mix(in srgb, var(--tag-clr) 40%, transparent);
   white-space: nowrap;
 }
 .talent-tag[data-tag="3pp"] {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-}
-.talent-tag[data-tag="talent"],
-.talent-tag[data-tag="basic"] {
-  --tag-clr: var(--clr-ns);
 }
 .tag-wrapper {
   display: inline-block;

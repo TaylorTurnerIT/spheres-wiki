@@ -254,7 +254,6 @@ describe("buildTagMap", () => {
           {
             id: "combat",
             label: "Combat",
-            color: "#8f2d00",
             priority: 1,
             description: "Combat stuff.",
           },
@@ -556,7 +555,6 @@ describe("buildTagMap — negative priorities", () => {
             label: "Talent",
             priority: -10,
             description: "A magical ability.",
-            color: "var(--clr-power)",
           },
         ],
       },

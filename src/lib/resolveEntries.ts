@@ -326,7 +326,6 @@ function injectSphereTags(
         priority: 50,
         description: `Associated with the ${sphere.name} sphere.`,
         sourceBook: "__built-in__",
-        color: `var(--clr-${sphere.system})`,
       });
     }
   }

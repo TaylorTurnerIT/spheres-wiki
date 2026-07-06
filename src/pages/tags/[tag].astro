@@ -193,7 +193,7 @@ const descriptionHtml = (await renderMarkdownFragment(tag.description)).replace(
           <SectionHeading label={group.systemLabel} />
           <div class="tag-entry-list">
             {group.entries.map((row) => (
-              <div class="tag-entry-row">
+              <div class="tag-entry-row" data-system={row.system}>
                 {row.entryType === "talent" && (
                   <a
                     href={url(row.href)}

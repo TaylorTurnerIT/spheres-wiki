@@ -12,7 +12,6 @@ interface Props {
 
 const { tagId, tagMap, bookMetaMap, asSpan = false, stripLinks = false } = Astro.props;
 const tag = tagMap.get(tagId);
-const color = tag?.color ?? "var(--clr-brand)";
 const bookTitle =
   tag && tag.sourceBook !== "__built-in__"
     ? bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook
@@ -30,7 +29,6 @@ const ttDesc = tag
 
 <span
   class="tag-wrapper"
-  data-system={tag?.system}
   data-tt-name={tag?.label}
   data-tt-desc={ttDesc}
   data-tt-source={bookTitle}
@@ -39,7 +37,6 @@ const ttDesc = tag
     href={!asSpan ? url(`/tags/${tagId}/`) : undefined}
     class="talent-tag"
     data-tag={tagId}
-    style={tag ? `--tag-clr: ${color}` : undefined}
     data-astro-prefetch={!asSpan ? "hover" : undefined}
   >
     {tag?.label ?? tagId}

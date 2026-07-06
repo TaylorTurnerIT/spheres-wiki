@@ -15,6 +15,7 @@
     "scripts/check-idioms.mjs",
     "scripts/check-links.mjs",
     "scripts/purge-dead-links.mjs",
+    "scripts/purge-tag-colors.mjs",
     "scripts/validate-v2.mjs"
   ],
   "ignoreDependencies": [

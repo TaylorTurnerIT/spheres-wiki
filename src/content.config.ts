@@ -252,7 +252,6 @@ export const entrySchema = z.discriminatedUnion("type", [
     type: z.literal("tag"),
     id: z.string().regex(/^[a-z0-9-]+$/, "id must be lowercase kebab-case"),
     label: z.string(),
-    color: z.string().optional(),
     priority: z.number().int(),
     description: z.string(),
     featCategory: z.boolean().optional(),

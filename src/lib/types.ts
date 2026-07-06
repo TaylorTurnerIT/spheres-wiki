@@ -289,7 +289,6 @@ export type TagEntry = {
   type: "tag";
   id: string;
   label: string;
-  color?: string;
   priority: number;
   description: string;
   sourceBook: string;

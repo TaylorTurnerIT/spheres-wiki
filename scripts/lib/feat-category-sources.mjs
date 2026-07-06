@@ -434,7 +434,8 @@ function resolveSourceBookSlug(sourceSpec, entry, bookMetaMap) {
     ?.trim();
   if (bodySourceText) {
     const normalized = normalizeLookup(bodySourceText);
-    for (const [title, slug] of titleToSlug.entries()) {
+    const sortedTitles = [...titleToSlug.entries()].sort((a, b) => b[0].length - a[0].length);
+    for (const [title, slug] of sortedTitles) {
       if (normalized.includes(title)) return slug;
     }
   }

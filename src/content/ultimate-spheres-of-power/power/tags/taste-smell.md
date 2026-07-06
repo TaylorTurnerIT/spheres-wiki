@@ -2,7 +2,6 @@
 id: "taste-smell"
 description: "A specific rule or descriptor tag."
 priority: 0
-color: "#117A65"
 label: "Taste & Smell"
 sphere: "illusion"
 ---

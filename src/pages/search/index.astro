@@ -62,7 +62,7 @@ const typeKeys   = new Set(['sphere', 'talent', 'feat', 'class', 'archetype', 'c
 const staticTags = [...tagMap.entries()]
   .filter(([id]) => !sphereNamesLower.has(id) && !systemKeys.has(id) && !typeKeys.has(id))
   .sort((a, b) => (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0]))
-  .map(([id, tag]) => ({ value: id, text: tag.label || id, color: tag.color }));
+  .map(([id, tag]) => ({ value: id, text: tag.label || id }));
 ---
 <WikiPage title="Search — Spheres Wiki" pagefindIgnore={true}>
 
@@ -394,7 +394,6 @@ let activeSphere: string | null = null;
 let activeTag: string | null = null;
 let tsInstances: Record<string, any> = {};
 let browseAll = false;
-let tagColorMap: Record<string, string> = {};
 let tagTemplates: Record<string, string> = {};
 
 async function loadPagefind() {
@@ -502,10 +501,9 @@ function renderResults() {
       const templateHtml = tagTemplates[t];
       if (templateHtml) return templateHtml;
       // Fallback for tags without a pre-rendered template
-      const style = tagColorMap[t] ? ` style="--tag-clr: ${tagColorMap[t]}"` : '';
       const displayMap: Record<string, string> = { 'extraordinary': 'Extraordinary', 'supernatural': 'Supernatural', 'spell-like': 'Spell-Like', 'base': 'Base Ability' };
       const display = displayMap[t.toLowerCase()] || t;
-      return `<span class="tag-wrapper"><span class="talent-tag" data-tag="${t}"${style}>${display}</span></span>`;
+      return `<span class="tag-wrapper"><span class="talent-tag" data-tag="${t}">${display}</span></span>`;
     }).join('');
     const sphereTagHtml = sphere && type !== 'sphere'
       ? `<span class="tag-wrapper"><span class="talent-tag" data-tag="sphere-name" style="--tag-clr: var(--clr-ns)">${sphere}</span></span>`
@@ -625,20 +623,12 @@ document.addEventListener('astro:page-load', () => {
   // Read static build-time data
   const dataEl = document.getElementById('sp-data') as HTMLElement;
   const staticSpheres: string[]                       = JSON.parse(dataEl?.dataset.spheres   ?? '[]');
-  const staticTags: { value: string; text: string; color?: string }[] = JSON.parse(dataEl?.dataset.tags      ?? '[]');
+  const staticTags: { value: string; text: string }[] = JSON.parse(dataEl?.dataset.tags      ?? '[]');
   browseManifest = (JSON.parse(dataEl?.dataset.manifest ?? '[]') as any[]).map((e: any) => ({
     url: e.url,
     meta: { title: e.title, system: e.system, type: e.type, sphere: e.sphere ?? '', tags: e.tags ?? '' },
     excerpt: '',
   }));
-
-  tagColorMap = {};
-  staticTags.forEach(t => {
-    if (t.color) {
-      tagColorMap[t.text] = t.color;
-      tagColorMap[t.value] = t.color;
-    }
-  });
 
   tagTemplates = {};
   document.querySelectorAll('[data-tag-template]').forEach(el => {
