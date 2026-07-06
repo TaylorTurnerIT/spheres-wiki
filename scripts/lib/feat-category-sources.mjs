@@ -103,7 +103,7 @@ const SOURCE_KEY_TO_SLUG = {
   "Catgirl HB": "catgirl-handbook",
   Core: "pathfinder-core-rulebook",
   CrimDan: "crimson-dancers-handbook",
-  DbH: "damnation-by-hunger",
+  DbH: "diabolists-handbook",
   DRS: null,
   "Gravecaller's HB": "gravecallers-handbook",
   HMH: "high-magic-handbook",
