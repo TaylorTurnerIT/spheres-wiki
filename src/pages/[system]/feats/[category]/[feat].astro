@@ -1,10 +1,7 @@
 ---
 import { render } from 'astro:content';
 import { url } from "@/lib/url";
-import WikiPage from '@/layouts/WikiPage.astro';
-import SourceBookCallout from '@/components/SourceBookCallout.astro';
-import TagBadge from '@/components/TagBadge.astro';
-import Breadcrumb from '@/components/Breadcrumb.astro';
+import EntryDetailPage from '@/components/EntryDetailPage.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getCanonicalFeatCategory } from '@/lib/featCategories';
@@ -63,48 +60,28 @@ const categoryLabel = sphere?.name ?? tagMap.get(getCanonicalFeatCategory(feat, 
 
 const FeatContent = collEntry ? (await render(collEntry)).Content : null;
 ---
-<WikiPage title={`${feat.name} — ${categoryLabel} — ${sysConfig.label} Wiki`} activeNamespace={system}>
-
-  <Breadcrumb crumbs={[
+<EntryDetailPage
+  system={system!}
+  title={`${feat.name} — ${categoryLabel} — ${sysConfig.label} Wiki`}
+  crumbs={[
     { label: "Home", href: url("/") },
     { label: sysConfig.label, href: url(`/${system}/`) },
     ...(sphere ? [{ label: sphere.name, href: url(`/${system}/${sphere.id}/`) }] : []),
     { label: feat.name },
-  ]} />
-
-  <div class="content-columns">
-    <div class="content-main">
-      <span data-pagefind-meta={`title:${feat.name}`} hidden></span>
-      {sphere && <span data-pagefind-meta={`sphere:${sphere.name}`} hidden></span>}
-      <span data-pagefind-filter={searchFilter} hidden></span>
-      <span data-pagefind-filter="type:feat" hidden></span>
-      <span data-pagefind-meta={`tags:${feat.tags.join(', ')}`} hidden></span>
-      <h1
-        class={`page-title ${sysConfig.cssKey}`}
-        id="overview"
-        transition:name={`entry-title-${feat.id}`}
-        data-pagefind-weight="2.0"
-      >
-        {feat.name}
-      </h1>
-      <span data-pagefind-meta="type:feat" hidden></span>
-      <span data-pagefind-meta={searchFilter} hidden></span>
-      <div class="talent-page-meta">
-        {buildOrderedTagIds(feat, bookMetaMap, tagMap, { showHidden: !!(feat.dualSphere && feat.dualSphere !== "any"), currentSphereId: sphere?.id })
-          .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
-        }
-      </div>
-      <hr class="page-title-rule" />
-
-      {FeatContent
-        ? <div class="entry-description"><FeatContent /></div>
-        : <p class="entry-description"><em>Description coming soon.</em></p>
-      }
-    </div>
-
-    <aside class="right-rail" aria-label="Page contents">
-      <SourceBookCallout book={sourceBook} />
-    </aside>
-  </div>
-
-</WikiPage>
+  ]}
+  name={feat.name}
+  transitionName={`entry-title-${feat.id}`}
+  tagIds={buildOrderedTagIds(feat, bookMetaMap, tagMap, { showHidden: !!(feat.dualSphere && feat.dualSphere !== "any"), currentSphereId: sphere?.id })}
+  tagMap={tagMap}
+  bookMetaMap={bookMetaMap}
+  sourceBook={sourceBook}
+  Content={FeatContent}
+  pagefindFilters={[searchFilter, "type:feat"]}
+  pagefindMeta={{
+    title: feat.name,
+    ...(sphere ? { sphere: sphere.name } : {}),
+    tags: feat.tags.join(", "),
+    type: "feat",
+    system: sysConfig.label,
+  }}
+/>

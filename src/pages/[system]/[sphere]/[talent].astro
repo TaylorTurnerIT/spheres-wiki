@@ -1,10 +1,7 @@
 ---
 import { render } from 'astro:content';
 import { url } from "@/lib/url";
-import WikiPage from '@/layouts/WikiPage.astro';
-import SourceBookCallout from '@/components/SourceBookCallout.astro';
-import TagBadge from '@/components/TagBadge.astro';
-import Breadcrumb from '@/components/Breadcrumb.astro';
+import EntryDetailPage from '@/components/EntryDetailPage.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
@@ -69,49 +66,29 @@ const searchFilter = getSystemSearchFilter(system);
 
 const TalentContent = collEntry ? (await render(collEntry)).Content : null;
 ---
-<WikiPage title={`${talent.name} — ${sphere.name} — ${sysConfig.label} Wiki`} activeNamespace={system}>
-
-  <Breadcrumb crumbs={[
+<EntryDetailPage
+  system={system!}
+  title={`${talent.name} — ${sphere.name} — ${sysConfig.label} Wiki`}
+  crumbs={[
     { label: "Home", href: url("/") },
     { label: sysConfig.label, href: url(`/${system}/`) },
     { label: sphere.name, href: url(`/${system}/${sphere.id}/`) },
     { label: talent.name },
-  ]} />
-
-  <div class="content-columns">
-    <div class="content-main">
-      <span data-pagefind-meta={`title:${talent.name}`} hidden></span>
-      <span data-pagefind-meta={`sphere:${sphere.name}`} hidden></span>
-      <span data-pagefind-filter={searchFilter} hidden></span>
-      <span data-pagefind-filter="type:talent" hidden></span>
-      <span data-pagefind-meta={`tier:${talent.tier}`} hidden></span>
-      <span data-pagefind-meta={`tags:${talent.tags.join(', ')}`} hidden></span>
-      <h1
-        class={`page-title ${sysConfig.cssKey}`}
-        id="overview"
-        transition:name={`entry-title-${talent.id}`}
-        data-pagefind-weight="2.0"
-      >
-        {talent.name}
-      </h1>
-      <span data-pagefind-meta="type:talent" hidden></span>
-      <span data-pagefind-meta={searchFilter} hidden></span>
-      <div class="talent-page-meta">
-        {buildOrderedTagIds(talent, bookMetaMap, tagMap, { currentSphereId: sphere.id })
-          .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
-        }
-      </div>
-      <hr class="page-title-rule" />
-
-      {TalentContent
-        ? <div class="entry-description"><TalentContent /></div>
-        : <p class="entry-description"><em>Description coming soon.</em></p>
-      }
-    </div>
-
-    <aside class="right-rail" aria-label="Page contents">
-      <SourceBookCallout book={sourceBook} />
-    </aside>
-  </div>
-
-</WikiPage>
+  ]}
+  name={talent.name}
+  transitionName={`entry-title-${talent.id}`}
+  tagIds={buildOrderedTagIds(talent, bookMetaMap, tagMap, { currentSphereId: sphere.id })}
+  tagMap={tagMap}
+  bookMetaMap={bookMetaMap}
+  sourceBook={sourceBook}
+  Content={TalentContent}
+  pagefindFilters={[searchFilter, "type:talent"]}
+  pagefindMeta={{
+    title: talent.name,
+    sphere: sphere.name,
+    tier: talent.tier ?? "",
+    tags: talent.tags.join(", "),
+    type: "talent",
+    system: sysConfig.label,
+  }}
+/>
