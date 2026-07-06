@@ -9,15 +9,21 @@
  */
 
 function animate(target: HTMLElement, expand: boolean) {
-  target.style.overflow = 'hidden';
-  target.style.maxHeight = target.scrollHeight + 'px';
+  target.style.overflow = "hidden";
+  target.style.maxHeight = `${target.scrollHeight}px`;
   if (!expand) {
-    requestAnimationFrame(() => { target.style.maxHeight = '0'; });
+    requestAnimationFrame(() => {
+      target.style.maxHeight = "0";
+    });
   } else {
-    target.addEventListener('transitionend', () => {
-      target.style.maxHeight = '';
-      target.style.overflow = 'visible';
-    }, { once: true });
+    target.addEventListener(
+      "transitionend",
+      () => {
+        target.style.maxHeight = "";
+        target.style.overflow = "visible";
+      },
+      { once: true },
+    );
   }
 }
 
@@ -28,13 +34,15 @@ export function setCollapsibleState(
   sectionId?: string,
 ) {
   animate(target, expand);
-  btn.setAttribute('aria-expanded', String(expand));
-  btn.classList.toggle('is-collapsed', !expand);
-  target.setAttribute('aria-hidden', String(!expand));
+  btn.setAttribute("aria-expanded", String(expand));
+  btn.classList.toggle("is-collapsed", !expand);
+  target.setAttribute("aria-hidden", String(!expand));
   if (sectionId) {
-    document.dispatchEvent(new CustomEvent('class-feature-collapse', {
-      detail: { id: sectionId, collapsed: !expand },
-    }));
+    document.dispatchEvent(
+      new CustomEvent("class-feature-collapse", {
+        detail: { id: sectionId, collapsed: !expand },
+      }),
+    );
   }
 }
 
@@ -43,8 +51,8 @@ export function bindCollapseToggle(
   target: HTMLElement,
   sectionId?: string,
 ) {
-  btn.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.addEventListener("click", () => {
+    const expanded = btn.getAttribute("aria-expanded") === "true";
     setCollapsibleState(btn, target, !expanded, sectionId);
   });
 }
