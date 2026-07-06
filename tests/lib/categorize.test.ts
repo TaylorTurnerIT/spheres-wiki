@@ -15,6 +15,29 @@ function makeSphere(overrides: Partial<SphereEntry> = {}): SphereEntry {
   };
 }
 
+/** Sphere fixture with a Feats section split into sphere vs dual-sphere categories. */
+function makeDualSphereFeatsSphere() {
+  return makeSphere({
+    sectionDefinitions: [
+      {
+        label: "Feats",
+        categories: [
+          {
+            label: "Sphere Feats",
+            tiers: ["feat"],
+            excludeTags: ["dual-sphere"],
+          },
+          {
+            label: "Dual Sphere Feats",
+            tiers: ["feat"],
+            tags: ["dual-sphere"],
+          },
+        ],
+      },
+    ],
+  });
+}
+
 function makeTalent(
   id: string,
   tier: "basic" | "advanced",
@@ -221,25 +244,7 @@ describe("buildSections", () => {
 
   describe("dual-sphere tags (auto-injected from dualSphere field)", () => {
     it('dual-sphere feat matches tags: ["dual-sphere"] category', () => {
-      const sphere = makeSphere({
-        sectionDefinitions: [
-          {
-            label: "Feats",
-            categories: [
-              {
-                label: "Sphere Feats",
-                tiers: ["feat"],
-                excludeTags: ["dual-sphere"],
-              },
-              {
-                label: "Dual Sphere Feats",
-                tiers: ["feat"],
-                tags: ["dual-sphere"],
-              },
-            ],
-          },
-        ],
-      });
+      const sphere = makeDualSphereFeatsSphere();
       const feats = [
         makeFeat("alpha", [], { dualSphere: "other-sphere" }),
         makeFeat("beta", []),
@@ -284,25 +289,7 @@ describe("buildSections", () => {
     });
 
     it('dualSphere: "any" DOES inject the dual-sphere tag (universal pairing)', () => {
-      const sphere = makeSphere({
-        sectionDefinitions: [
-          {
-            label: "Feats",
-            categories: [
-              {
-                label: "Sphere Feats",
-                tiers: ["feat"],
-                excludeTags: ["dual-sphere"],
-              },
-              {
-                label: "Dual Sphere Feats",
-                tiers: ["feat"],
-                tags: ["dual-sphere"],
-              },
-            ],
-          },
-        ],
-      });
+      const sphere = makeDualSphereFeatsSphere();
       const feats = [makeFeat("universal", [], { dualSphere: "any" })];
       const sections = buildSections(sphere, [], feats);
 
@@ -348,25 +335,7 @@ describe("buildSections", () => {
     });
 
     it("dual-sphere feat with additional raw tags still works", () => {
-      const sphere = makeSphere({
-        sectionDefinitions: [
-          {
-            label: "Feats",
-            categories: [
-              {
-                label: "Sphere Feats",
-                tiers: ["feat"],
-                excludeTags: ["dual-sphere"],
-              },
-              {
-                label: "Dual Sphere Feats",
-                tiers: ["feat"],
-                tags: ["dual-sphere"],
-              },
-            ],
-          },
-        ],
-      });
+      const sphere = makeDualSphereFeatsSphere();
       const feats = [
         // Has both a raw tag AND dualSphere → effective tags = ["drawback", "dual-sphere"]
         makeFeat("special-dual", ["drawback"], { dualSphere: "other-sphere" }),
