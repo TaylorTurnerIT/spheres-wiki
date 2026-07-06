@@ -11,7 +11,6 @@ import type { SectionResult } from '@/lib/categorize';
 import { splitBodyOnMarkers, renderMarkdownFragment } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getFeatUrl } from '@/lib/featCategories';
-import TagBadge from '@/components/TagBadge.astro';
 import EntryCard from '@/components/EntryCard.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
@@ -234,27 +233,19 @@ const groups: TocGroup[] = sections.map(sec => ({
                       const entryBook = bookMetaMap.get(entry.sourceBook);
 
                       return (
-                        <div class="talent-entry" id={entry.id} data-pagefind-weight="0.5">
-                          <div class="talent-header">
-                            <div class="talent-header-top">
-                              <a
-                                href={url(talent ? `/${system}/${sphere.id}/${entry.id}/` : getFeatUrl(entry as FeatEntry, tagMap))}
-                                class="talent-name"
-                                data-astro-prefetch="hover"
-                                transition:name={`entry-title-${entry.id}`}
-                              >
-                                {entry.name}
-                              </a>
-                              {entryBook && <span class="talent-source">{entryBook.title}</span>}
-                            </div>
-                            <div class="talent-header-bottom">
-                              {buildOrderedTagIds(entry, bookMetaMap, tagMap, { currentSphereId: sphere.id })
-                                .map(tagId => <TagBadge tagId={tagId} tagMap={tagMap} bookMetaMap={bookMetaMap} />)
-                              }
-                            </div>
-                          </div>
-                          {content && <div class="talent-body"><content.Content /></div>}
-                        </div>
+                        <EntryCard
+                          id={entry.id}
+                          anchorOn="block"
+                          pagefindWeight="0.5"
+                          transitionName={`entry-title-${entry.id}`}
+                          name={entry.name}
+                          href={url(talent ? `/${system}/${sphere.id}/${entry.id}/` : getFeatUrl(entry as FeatEntry, tagMap))}
+                          sourceBookTitle={entryBook?.title}
+                          tagIds={buildOrderedTagIds(entry, bookMetaMap, tagMap, { currentSphereId: sphere.id })}
+                          Content={content?.Content}
+                          tagMap={tagMap}
+                          bookMetaMap={bookMetaMap}
+                        />
                       );
                     })}
                   </div>

@@ -91,7 +91,7 @@ document.addEventListener('astro:page-load', () => {
     try {
       const cands = document.querySelectorAll(`[id="${CSS.escape(id)}"]`);
       for (const cand of cands) {
-        if (['talent-entry', 'base-ability-block', 'class-feature-block', 'archetype-feature-block', 'section-heading-text', 'page-title', 'class-traits-section', 'article-section', 'equipment-section'].some(c => cand.classList.contains(c))) {
+        if (['talent-entry', 'entry-card-block', 'base-ability-block', 'class-feature-block', 'archetype-feature-block', 'section-heading-text', 'page-title', 'class-traits-section', 'article-section', 'equipment-section'].some(c => cand.classList.contains(c))) {
           return cand as HTMLElement;
         }
       }

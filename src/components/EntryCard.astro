@@ -115,6 +115,11 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
     z-index: 10;
   }
 
+  /* .talent-list spaces cards with its own gap */
+  :global(.talent-list) > .entry-card-block {
+    margin: 0;
+  }
+
   .entry-card-heading {
     font-size: inherit;
     line-height: inherit;
