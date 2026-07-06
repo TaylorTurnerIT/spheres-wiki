@@ -5,7 +5,7 @@ import EntryDetailPage from '@/components/EntryDetailPage.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { stripBodySource } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
-import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
+import { getSystemPaths, resolveSystem, getSystemSearchFilter, buildSystemIdIndex, systemIdKey } from '@/lib/systems';
 import type { ClassTraitEntry, ClassEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -22,11 +22,12 @@ export async function getStaticPaths() {
   const allCollEntries = await getCollEntriesMap();
 
   const paths = [];
+  const classIndex = buildSystemIdIndex(classMap.values());
   for (const { params: { system } } of getSystemPaths()) {
     for (const [, trait] of classTraitMap) {
       if (trait.system !== system) continue;
 
-      const cls = [...classMap.values()].find(c => c.id === trait.className && c.system === system);
+      const cls = classIndex.get(systemIdKey(system, trait.className ?? ""));
       if (!cls) continue;
 
       paths.push({

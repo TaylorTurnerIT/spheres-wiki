@@ -5,7 +5,7 @@ import EntryDetailPage from '@/components/EntryDetailPage.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getCanonicalFeatCategory } from '@/lib/featCategories';
-import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
+import { getSystemPaths, resolveSystem, getSystemSearchFilter, buildSystemIdIndex, systemIdKey } from '@/lib/systems';
 import type { FeatEntry, SphereEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -22,6 +22,7 @@ export async function getStaticPaths() {
   const allCollEntries = await getCollEntriesMap();
 
   const paths = [];
+  const sphereIndex = buildSystemIdIndex(sphereMap.values());
 
   for (const { params: { system } } of getSystemPaths()) {
     for (const [, feat] of featMap) {
@@ -29,7 +30,7 @@ export async function getStaticPaths() {
 
       const category = getCanonicalFeatCategory(feat, tagMap);
       const sphere = feat.sphere
-        ? [...sphereMap.values()].find(s => s.id === feat.sphere && s.system === system)
+        ? sphereIndex.get(systemIdKey(system, feat.sphere))
         : undefined;
 
       paths.push({

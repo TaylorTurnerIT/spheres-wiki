@@ -4,7 +4,7 @@ import { url } from "@/lib/url";
 import EntryDetailPage from '@/components/EntryDetailPage.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
-import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
+import { getSystemPaths, resolveSystem, getSystemSearchFilter, buildSystemIdIndex, systemIdKey } from '@/lib/systems';
 import type { TalentEntry, SphereEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -21,12 +21,13 @@ export async function getStaticPaths() {
   const allCollEntries = await getCollEntriesMap();
 
   const paths = [];
+  const sphereIndex = buildSystemIdIndex(sphereMap.values());
 
   for (const { params: { system } } of getSystemPaths()) {
     for (const [, talent] of talentMap) {
       if (talent.system !== system) continue;
 
-      const sphere = [...sphereMap.values()].find(s => s.id === talent.sphere && s.system === system);
+      const sphere = sphereIndex.get(systemIdKey(system, talent.sphere ?? ""));
       if (sphere) {
         paths.push({
           params: { system, sphere: sphere.id, talent: talent.id },
@@ -44,7 +45,7 @@ export async function getStaticPaths() {
           }
         }
       } else if (talent.dualSphere) {
-        const dualSphere = [...sphereMap.values()].find(s => s.id === talent.dualSphere && s.system === system);
+        const dualSphere = sphereIndex.get(systemIdKey(system, talent.dualSphere));
         if (dualSphere) {
           paths.push({
             params: { system, sphere: dualSphere.id, talent: talent.id },
