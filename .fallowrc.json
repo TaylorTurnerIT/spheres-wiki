@@ -12,6 +12,7 @@
     "scripts/repair-feat-category-membership.mjs",
     "scripts/generate-bestial-traits.mjs",
     "scripts/parse-wiki.test.mjs",
+    "scripts/check-idioms.mjs",
     "scripts/check-links.mjs",
     "scripts/purge-dead-links.mjs",
     "scripts/validate-v2.mjs"

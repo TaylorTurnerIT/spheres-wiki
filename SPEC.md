@@ -90,9 +90,9 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 ### I.build — strict local/build gate
 `bun run build` is the canonical acceptance gate:
 ```
-validate.mjs → check-base-abilities.mjs → fallow-audit → astro check → astro build → pagefind --site dist → check-toc.mjs
+validate.mjs → check-idioms.mjs → check-base-abilities.mjs → fallow-audit → astro check → astro build → pagefind --site dist → check-toc.mjs
 ```
-The gate must exit 0 and emit no actionable diagnostics: no Astro check errors/warnings/hints, no Fallow dead-code/complexity/duplication findings, no unresolved remark entry links, no Vite warnings, no Pagefind failures, and no TOC audit failures. `vite.build.chunkSizeWarningLimit` is 200KB by design.
+The gate must exit 0 and emit no actionable diagnostics: no Astro check errors/warnings/hints, no Fallow dead-code/complexity/duplication findings, no unresolved remark entry links, no Vite warnings, no Pagefind failures, no idiom-guard violations (V72), and no TOC audit failures. `vite.build.chunkSizeWarningLimit` is 200KB by design.
 
 ### I.layout — page shell
 `WikiPage.astro`: header + sidebar + tab nav + content slot; sets Pagefind indexing scope/weight per page. `Base.astro`: html shell, meta/OG tags, footer, self-hosted fonts + `global.css` load.
@@ -273,6 +273,10 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 
 - V70. `.talent-header` / `.talent-header-top` / `.talent-header-bottom` + `.entry-description` is the **canonical rendering primitive** for every named game entry: talents, feats, class traits, drawbacks, boons, traditions, and any future entry type that has a name, source attribution, tags, and body text. ⊥ per-type reimplementation of this layout. New entry types use this component; existing inlines are migration targets.
 - V71. A generalized `EntryCard.astro` component ! exist in `src/components/` encapsulating the canonical primitive (V70): accepts `name`, `sourceBookTitle`, `tagIds`, `Content` (rendered markdown), optional `href` (name becomes link), optional `metadata` (key-value pairs rendered between header and body — e.g. drawback value, boon cost, CAM). Tags rendered via `TagBadge`. All visual state driven by `--clr-active`/`--clr-ns` so per-system recoloring works automatically. No per-entry-type style variation except via metadata slots.
+
+**Idiom cohesion guard (V72)**
+
+- V72. Shared-idiom greps enforced at build (`scripts/check-idioms.mjs` ∈ `bun run build`): (a) `talent-header-top` markup ⊥ outside `EntryCard.astro` / `search/index.astro` / `global.css` (V70); (b) inline `'champions' ? 'champ'` cssKey ternary ⊥ in `src/pages|components` — use `systemCssKey()` (V53); (c) `var(--clr-power|might|guile|champ)` ⊥ in page styles — theme via `--clr-ns`/`--clr-active` (V10). Violation → build fail.
 
 ---
 
@@ -456,7 +460,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T109 | x      | Fix tradition rule engine (B19–B22): honor `tradition.cam` + drawback/tradition `rules` in `getAllowedCastingAbilities`; add `selectionFromTradition` hydrator; scope choice `addsDrawbackValue` to general drawbacks; read CAM rule `mode`. Test against real resolved maps (Blood Magic fixed-con, Demonology highest). | V67,V68,B19,B20,B21,B22 |
 | T110 | x      | Extract generalized `EntryCard.astro` component — props: `name`, `sourceBookTitle`, `tagIds`, `Content` (rendered md), optional `href` (name → link), optional `metadata` (Record<string,string> rendered as compact key-value row between header and body, e.g. "Drawback Value: 1", "Boon Cost: 1 slot"). Tags via `TagBadge`. CSS uses `.talent-header` / `.talent-header-top` / `.talent-header-bottom` / `.entry-description` pattern. Retire inline reimplementations in `[sphere]/index.astro` (base-ability blocks), `ClassFeatureBlock.astro` (trait blocks) and replace with `EntryCard`. | V49,V70,V71 |
 | T111 | x      | Replace inline talent/feat/base-ability card markup in `[sphere]/index.astro` and inline class-trait markup in `ClassFeatureBlock.astro` with `EntryCard.astro` — visual parity required, no regressions. Run `bun run build` + spot-check sphere and class pages. | V49,V70,T110 |
-| T112 | . | Finish V70 migration: EntryCard in sphere index talent list + `TraitCatalogSection.astro`; search client JS shares tag-color source. Add build guard: `talent-header-top` markup outside `EntryCard.astro`/search allowlist fails build | V70,V49,B23 |
+| T112 | x | Finish V70 migration: EntryCard in sphere index talent list + `TraitCatalogSection.astro`; search client JS shares tag-color source. Add build guard: `talent-header-top` markup outside `EntryCard.astro`/search allowlist fails build | V70,V49,B23 |
 
 **Recommended build order:**
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
