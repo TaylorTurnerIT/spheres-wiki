@@ -3,6 +3,7 @@ import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import SphereBadgeGrid from '@/components/SphereBadgeGrid.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import { getSystemPaths, resolveSystem } from '@/lib/systems';
 import type { SphereEntry, ClassEntry } from '@/lib/types';
@@ -338,10 +339,7 @@ const cards = [
 
   {spheres.length > 0 && (
     <>
-      <div class="section-heading">
-        <span class="section-heading-text">{sysConfig.subtitle}</span>
-        <div class="section-heading-rule"></div>
-      </div>
+      <SectionHeading level="eyebrow" label={sysConfig.subtitle} />
       <SphereBadgeGrid spheres={spheres} system={system} style={system !== 'power' ? 'margin-bottom: 24px;' : undefined} />
     </>
   )}
@@ -351,10 +349,7 @@ const cards = [
 
       {system === 'power' && (
         <>
-          <div class="section-heading" style="margin-top: 0;">
-            <span class="section-heading-text">{sysConfig.classLabel}</span>
-            <div class="section-heading-rule"></div>
-          </div>
+          <SectionHeading level="eyebrow" label={sysConfig.classLabel} style="margin-top: 0;" />
           <div class="class-lists">
             {classTiers.map(tier => {
               const tierClasses = tier.ids.map(id => classById.get(id)).filter(Boolean);
@@ -396,10 +391,7 @@ const cards = [
 
       {system !== 'power' && classes.length > 0 && (
         <>
-          <div class="section-heading" style="margin-top: 0;">
-            <span class="section-heading-text">{sysConfig.classLabel}</span>
-            <div class="section-heading-rule"></div>
-          </div>
+          <SectionHeading level="eyebrow" label={sysConfig.classLabel} style="margin-top: 0;" />
           <div class="class-lists">
             <div class="class-tier-group">
               <div class="class-tier-label">Classes</div>
@@ -420,10 +412,7 @@ const cards = [
     </div>
 
     <div class="quick-links-column">
-      <div class="section-heading" style="margin-top: 0;">
-        <span class="section-heading-text">Quick Links</span>
-        <div class="section-heading-rule"></div>
-      </div>
+      <SectionHeading level="eyebrow" label="Quick Links" style="margin-top: 0;" />
       <div class="quick-links-grid">
 
         {system === 'power' && (

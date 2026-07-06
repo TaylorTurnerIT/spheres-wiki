@@ -13,6 +13,7 @@ import { buildOrderedTagIds } from '@/lib/tags';
 import { getFeatUrl } from '@/lib/featCategories';
 import EntryCard from '@/components/EntryCard.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { SphereEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
 
@@ -208,10 +209,7 @@ const groups: TocGroup[] = sections.map(sec => ({
 
       {sections.map(sec => (
         <div class="section-group">
-          <div class="section-group-header">
-            <span class="section-group-label">{sec.label}</span>
-            <div class="section-group-rule"></div>
-          </div>
+          <SectionHeading label={sec.label} />
 
           {sec.categories.map(cat => (
             <div class="section-block">

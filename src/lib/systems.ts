@@ -22,3 +22,11 @@ export function getSystemSearchFilter(id: string): string {
   if (!system) return `system:${id}`;
   return `system:${system.label}`;
 }
+
+/**
+ * CSS class key for a system id ("champions" → "champ"), from the SYSTEMS
+ * registry (V53). Use instead of inline `=== 'champions' ? 'champ'` ternaries.
+ */
+export function systemCssKey(id: string): string {
+  return SYSTEMS[id]?.cssKey ?? id;
+}

@@ -4,6 +4,7 @@ import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
 import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
 import { buildOrderedTagIds } from "@/lib/tags";
 import { getFeatUrl } from "@/lib/featCategories";
@@ -186,10 +187,7 @@ const TagBody = collEntry?.body ? (await render(collEntry)).Content : null;
     {
       groups.map((group) => (
         <div class="section-group">
-          <div class="section-group-header">
-            <span class="section-group-label">{group.systemLabel}</span>
-            <div class="section-group-rule" />
-          </div>
+          <SectionHeading label={group.systemLabel} />
           <div class="tag-entry-list">
             {group.entries.map((row) => (
               <div class="tag-entry-row">
