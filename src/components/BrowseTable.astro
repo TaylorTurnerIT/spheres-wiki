@@ -1,0 +1,296 @@
+---
+/**
+ * BrowseTable — generalized, filterable, alphabetically grouped catalog table.
+ *
+ * Renders every row on load (spec §7.1) grouped under letter headers
+ * (`SectionHeading` eyebrow idiom), color-coded by system through the
+ * `--clr-ns` mechanism (a `.power|.might|.guile|.champ` class per row — never a
+ * raw system hex, and never color-only: the Tags column shows the system
+ * textually via `TagBadge showSystem`).
+ *
+ * The client module (`browseFilterClient.ts`) filters by toggling the `hidden`
+ * attribute on rows and letter groups — no scoped-CSS class is injected by JS,
+ * so no `:global()` gymnastics are needed (V50). Columns are fixed for feats
+ * (Name / Tags / Prerequisites / Summary); the row contract is generic so other
+ * entry types can feed it the same shape.
+ */
+import SectionHeading from "@/components/SectionHeading.astro";
+import TagBadge from "@/components/TagBadge.astro";
+import { SYSTEMS } from "@/config/site";
+import type { FeatBrowseRow } from "@/lib/featBrowse";
+import type { BookMeta, TagEntry } from "@/lib/types";
+
+interface Props {
+  rows: FeatBrowseRow[];
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
+  idPrefix?: string;
+}
+
+const { rows, tagMap, bookMetaMap, idPrefix = "browse" } = Astro.props;
+
+const EM_DASH = "—";
+
+function letterOf(name: string): string {
+  const ch = name.trim().charAt(0).toUpperCase();
+  return /[A-Z]/.test(ch) ? ch : "#";
+}
+
+// Group rows by first letter; `rows` arrives pre-sorted by name (deterministic).
+const groups = new Map<string, FeatBrowseRow[]>();
+for (const row of rows) {
+  const letter = letterOf(row.name);
+  (groups.get(letter) ?? groups.set(letter, []).get(letter)!).push(row);
+}
+const letters = [...groups.keys()].sort((a, b) =>
+  a === "#" ? 1 : b === "#" ? -1 : a.localeCompare(b),
+);
+
+// Combined lowercase haystack for the secondary (non-name) search fields.
+function searchText(row: FeatBrowseRow): string {
+  return [
+    row.tags.map((t) => tagMap.get(t)?.label ?? t).join(" "),
+    row.sphereLabel,
+    row.sourceBookTitle,
+    SYSTEMS[row.system]?.label ?? row.system,
+    row.categoryLabel,
+    row.summary,
+  ]
+    .join(" ")
+    .toLowerCase();
+}
+---
+
+<div class="browse-table-wrap" id={`${idPrefix}-table`} data-pagefind-ignore>
+  <table class="browse-table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Tags</th>
+        <th scope="col">Prerequisites</th>
+        <th scope="col">Summary</th>
+      </tr>
+    </thead>
+
+    {letters.map((letter) => (
+      <tbody class="browse-letter-group" data-letter={letter}>
+        <tr class="browse-letter-row" data-letter-header>
+          <td colspan="4">
+            <SectionHeading label={letter} level="eyebrow" />
+          </td>
+        </tr>
+        {groups.get(letter)!.map((row) => (
+          <tr
+            class:list={["browse-row", row.cssKey]}
+            data-name={row.name.toLowerCase()}
+            data-search={searchText(row)}
+            data-system={row.system}
+            data-category={row.category}
+            data-tags={row.tags.join(" ")}
+            data-href={row.href}
+          >
+            <td class="browse-cell browse-cell-name">
+              <span class="browse-cell-label">Name</span>
+              <a href={row.href} class="browse-name-link">{row.name}</a>
+            </td>
+            <td class="browse-cell browse-cell-tags">
+              <span class="browse-cell-label">Tags</span>
+              {row.tags.length > 0 ? (
+                <span class="browse-tag-list">
+                  {row.tags.map((tagId) => (
+                    <TagBadge
+                      tagId={tagId}
+                      tagMap={tagMap}
+                      bookMetaMap={bookMetaMap}
+                      showSystem={true}
+                    />
+                  ))}
+                </span>
+              ) : (
+                <span class="browse-blank">{EM_DASH}</span>
+              )}
+            </td>
+            <td class="browse-cell browse-cell-prereq">
+              <span class="browse-cell-label">Prerequisites</span>
+              {row.prerequisites || <span class="browse-blank">{EM_DASH}</span>}
+            </td>
+            <td class="browse-cell browse-cell-summary">
+              <span class="browse-cell-label">Summary</span>
+              {row.summary || <span class="browse-blank">{EM_DASH}</span>}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    ))}
+  </table>
+
+  <div class="browse-empty" id={`${idPrefix}-empty`} hidden>
+    <p class="browse-empty-msg"></p>
+    <button type="button" class="browse-reset" id={`${idPrefix}-reset`}>Reset filters</button>
+  </div>
+</div>
+
+<style is:global>
+  .browse-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .browse-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+  }
+  .browse-table thead th {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+    text-align: left;
+    padding: 6px 12px;
+    border-bottom: 1px solid var(--clr-border);
+    position: sticky;
+    top: 0;
+    background: var(--clr-surface);
+    z-index: 1;
+  }
+  .browse-letter-row td {
+    padding: var(--sp-4) 0 var(--sp-1);
+    border: none;
+  }
+  .browse-row {
+    border-bottom: 1px solid var(--clr-border);
+    border-left: 3px solid var(--clr-ns, var(--clr-border));
+  }
+  .browse-row:hover {
+    background: color-mix(in srgb, var(--clr-ns, var(--clr-active)) 5%, var(--clr-surface));
+  }
+  .browse-cell {
+    padding: 8px 12px;
+    font-size: var(--fs-sm);
+    color: var(--clr-text);
+    vertical-align: top;
+    line-height: 1.4;
+  }
+  .browse-cell-name {
+    white-space: nowrap;
+  }
+  .browse-name-link {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    color: var(--clr-ns, var(--clr-active));
+    text-decoration: none;
+  }
+  .browse-name-link:hover {
+    text-decoration: underline;
+  }
+  .browse-cell-prereq,
+  .browse-cell-summary {
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    min-width: 140px;
+  }
+  .browse-tag-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .browse-blank {
+    color: var(--clr-muted);
+    opacity: 0.6;
+  }
+  .browse-cell-label {
+    display: none;
+  }
+
+  .browse-empty {
+    text-align: center;
+    padding: var(--sp-8) 0;
+  }
+  .browse-empty-msg {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    font-style: italic;
+    margin-bottom: var(--sp-3);
+  }
+  .browse-reset {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--clr-muted);
+    background: transparent;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 6px 14px;
+    cursor: pointer;
+  }
+  .browse-reset:hover {
+    color: var(--clr-brand);
+    border-color: var(--clr-brand);
+  }
+
+  /* Mobile: collapse the table into stacked cards (§8). */
+  @media (max-width: 768px) {
+    .browse-table-wrap {
+      overflow-x: visible;
+    }
+    .browse-table thead {
+      display: none;
+    }
+    .browse-table,
+    .browse-table tbody,
+    .browse-table tr,
+    .browse-table td {
+      display: block;
+      width: 100%;
+    }
+    .browse-letter-row td {
+      padding: var(--sp-4) 0 var(--sp-1);
+    }
+    .browse-row {
+      border: 1px solid var(--clr-border);
+      border-left: 3px solid var(--clr-ns, var(--clr-border));
+      border-radius: var(--radius);
+      margin-bottom: var(--sp-2);
+      padding: var(--sp-2) 0;
+    }
+    .browse-cell {
+      display: flex;
+      gap: 8px;
+      padding: 4px 12px;
+      white-space: normal;
+    }
+    .browse-cell-label {
+      display: block;
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+      border: 0;
+      flex: 0 0 96px;
+      font-family: var(--font-display);
+      font-size: var(--fs-3xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--clr-muted);
+    }
+    .browse-cell-name .browse-cell-label {
+      display: none;
+    }
+    .browse-cell-name {
+      padding-bottom: var(--sp-1);
+    }
+    .browse-name-link {
+      font-size: var(--fs-md);
+    }
+  }
+</style>

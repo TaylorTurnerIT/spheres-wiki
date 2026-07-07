@@ -4,6 +4,7 @@
     "src/index.{ts,tsx,js,jsx}",
     "src/main.{ts,tsx,js,jsx}",
     "src/pages/**/*.astro",
+    "src/pages/**/*.ts",
     "src/components/TabbedContent.astro",
     "scripts/catalog.mjs",
     "scripts/check-feat-category-tags.mjs",
