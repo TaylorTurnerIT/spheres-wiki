@@ -134,3 +134,24 @@ describe("Content Audit", () => {
     });
   }
 });
+
+describe("Feat entry schema: optional summary field", () => {
+  const baseFeat = {
+    type: "feat",
+    id: "example-feat",
+    name: "Example Feat",
+  };
+
+  it("validates a feat entry with a summary string", () => {
+    const result = entrySchema.safeParse({
+      ...baseFeat,
+      summary: "A one-line description of what this feat does.",
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it("validates a feat entry without a summary field", () => {
+    const result = entrySchema.safeParse(baseFeat);
+    expect(result.success).toBe(true);
+  });
+});
