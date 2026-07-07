@@ -101,7 +101,7 @@ if (perSystemRules.length > 0) {
 
 const tomSelectReimpl = findMatches(
   srcFiles,
-  /new TomSelect\(/,
+  /new\s+TomSelect\s*\(/,
   TOM_SELECT_ALLOWLIST,
 );
 if (tomSelectReimpl.length > 0) {

@@ -47,8 +47,11 @@
 import TomSelect from "tom-select";
 import "tom-select/dist/css/tom-select.css";
 
-/** TomSelect settings passthrough. Loose by design — see the class's own typings. */
-export type TomSelectSettings = Record<string, unknown>;
+/** TomSelect settings passthrough — the constructor's own settings type. */
+export type TomSelectSettings = ConstructorParameters<typeof TomSelect>[1];
+
+/** The constructor's input type (`string | TomInput`). */
+type TomSelectTarget = ConstructorParameters<typeof TomSelect>[0];
 
 /** Tear down any live TomSelect instance already bound to `el` (safe re-init). */
 function destroyExisting(el: HTMLElement): void {
@@ -81,6 +84,5 @@ export function createTomSelect(
 
   // `create: false` is both existing call sites' behavior and TomSelect's own
   // default, so it is a no-op override the caller can still opt out of.
-  // biome-ignore lint/suspicious/noExplicitAny: TomSelect settings/target are loosely typed at call sites.
-  return new TomSelect(el as any, { create: false, ...settings } as any);
+  return new TomSelect(el as TomSelectTarget, { create: false, ...settings });
 }
