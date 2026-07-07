@@ -1,0 +1,271 @@
+{
+  "downloaded": [
+    {
+      "section": "Spherecasters",
+      "slug": "armorist",
+      "name": "Armorist",
+      "asset": "armorist.png",
+      "sourceUrl": "http://spheresofpower.wikidot.com/local--files/armorist/Armorist.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "elementalist",
+      "name": "Elementalist",
+      "asset": "elementalist.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/elementalist/Elementalist.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "eliciter",
+      "name": "Eliciter",
+      "asset": "eliciter.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/eliciter/Eliciter.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "fey-adept",
+      "name": "Fey Adept",
+      "asset": "fey-adept.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/fey-adept/Fey%20Adept.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "hedgewitch",
+      "name": "Hedgewitch",
+      "asset": "hedgewitch.png",
+      "sourceUrl": "http://spheresofpower.wikidot.com/local--files/hedgewitch/Hedgewitch.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "incanter",
+      "name": "Incanter",
+      "asset": "incanter.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/incanter/Incanter.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "mageknight",
+      "name": "Mageknight",
+      "asset": "mageknight.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/mageknight/Mageknight.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "shifter",
+      "name": "Shifter",
+      "asset": "shifter.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/shifter/Shifter.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "soul-weaver",
+      "name": "Soul Weaver",
+      "asset": "soul-weaver.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/soul-weaver/Soul%20Weaver.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "symbiat",
+      "name": "Symbiat",
+      "asset": "symbiat.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/symbiat/Symbiat.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "thaumaturge",
+      "name": "Thaumaturge",
+      "asset": "thaumaturge.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/thaumaturge/Thaumaturge.png"
+    },
+    {
+      "section": "Spherecasters",
+      "slug": "wraith",
+      "name": "Wraith",
+      "asset": "wraith.png",
+      "sourceUrl": "http://spheresofpower.wdfiles.com/local--files/wraith/Wraith.png"
+    },
+    {
+      "section": "Champions",
+      "slug": "crimson-dancer",
+      "name": "Crimson Dancer",
+      "asset": "crimson-dancer.png",
+      "sourceUrl": "http://spheresofpower.wikidot.com/local--files/crimson-dancer/Crimson%20Dancer.png"
+    }
+  ],
+  "missingPageImages": [
+    {
+      "section": "Operatives",
+      "slug": "agent",
+      "name": "Agent",
+      "pageUrl": "http://spheresofpower.wikidot.com/agent"
+    },
+    {
+      "section": "Operatives",
+      "slug": "courser",
+      "name": "Courser",
+      "pageUrl": "http://spheresofpower.wikidot.com/courser"
+    },
+    {
+      "section": "Operatives",
+      "slug": "envoy",
+      "name": "Envoy",
+      "pageUrl": "http://spheresofpower.wikidot.com/envoy"
+    },
+    {
+      "section": "Operatives",
+      "slug": "genius",
+      "name": "Genius",
+      "pageUrl": "http://spheresofpower.wikidot.com/genius"
+    },
+    {
+      "section": "Operatives",
+      "slug": "mastermind",
+      "name": "Mastermind",
+      "pageUrl": "http://spheresofpower.wikidot.com/mastermind"
+    },
+    {
+      "section": "Operatives",
+      "slug": "professional",
+      "name": "Professional",
+      "pageUrl": "http://spheresofpower.wikidot.com/professional"
+    },
+    {
+      "section": "Operatives",
+      "slug": "advisor",
+      "name": "Advisor",
+      "pageUrl": "http://spheresofpower.wikidot.com/advisor"
+    },
+    {
+      "section": "Operatives",
+      "slug": "conduit",
+      "name": "Conduit",
+      "pageUrl": "http://spheresofpower.wikidot.com/conduit"
+    },
+    {
+      "section": "Practitioners",
+      "slug": "armiger",
+      "name": "Armiger",
+      "pageUrl": "http://spheresofpower.wikidot.com/armiger"
+    },
+    {
+      "section": "Practitioners",
+      "slug": "blacksmith",
+      "name": "Blacksmith",
+      "pageUrl": "http://spheresofpower.wikidot.com/blacksmith"
+    },
+    {
+      "section": "Practitioners",
+      "slug": "commander",
+      "name": "Commander",
+      "pageUrl": "http://spheresofpower.wikidot.com/commander"
+    },
+    {
+      "section": "Practitioners",
+      "slug": "conscript",
+      "name": "Conscript",
+      "pageUrl": "http://spheresofpower.wikidot.com/conscript"
+    },
+    {
+      "section": "Practitioners",
+      "slug": "savant-class",
+      "name": "Savant",
+      "pageUrl": "http://spheresofpower.wikidot.com/savant-class"
+    },
+    {
+      "section": "Practitioners",
+      "slug": "scholar",
+      "name": "Scholar",
+      "pageUrl": "http://spheresofpower.wikidot.com/scholar"
+    },
+    {
+      "section": "Practitioners",
+      "slug": "sentinel",
+      "name": "Sentinel",
+      "pageUrl": "http://spheresofpower.wikidot.com/sentinel"
+    },
+    {
+      "section": "Practitioners",
+      "slug": "striker",
+      "name": "Striker",
+      "pageUrl": "http://spheresofpower.wikidot.com/striker"
+    },
+    {
+      "section": "Practitioners",
+      "slug": "technician",
+      "name": "Technician",
+      "pageUrl": "http://spheresofpower.wikidot.com/technician"
+    },
+    {
+      "section": "Champions",
+      "slug": "bravo",
+      "name": "Bravo",
+      "pageUrl": "http://spheresofpower.wikidot.com/bravo"
+    },
+    {
+      "section": "Champions",
+      "slug": "dissident",
+      "name": "Dissident",
+      "pageUrl": "http://spheresofpower.wikidot.com/dissident"
+    },
+    {
+      "section": "Champions",
+      "slug": "prodigy",
+      "name": "Prodigy",
+      "pageUrl": "http://spheresofpower.wikidot.com/prodigy"
+    },
+    {
+      "section": "Champions",
+      "slug": "sage",
+      "name": "Sage",
+      "pageUrl": "http://spheresofpower.wikidot.com/sage"
+    },
+    {
+      "section": "Champions",
+      "slug": "theorist",
+      "name": "Theorist",
+      "pageUrl": "http://spheresofpower.wikidot.com/theorist"
+    },
+    {
+      "section": "Champions",
+      "slug": "troubadour",
+      "name": "Troubadour",
+      "pageUrl": "http://spheresofpower.wikidot.com/troubadour"
+    },
+    {
+      "section": "Champions",
+      "slug": "warden-class",
+      "name": "Warden",
+      "pageUrl": "http://spheresofpower.wikidot.com/warden-class"
+    },
+    {
+      "section": "Champions",
+      "slug": "dragoon-class",
+      "name": "Dragoon",
+      "pageUrl": "http://spheresofpower.wikidot.com/dragoon-class"
+    },
+    {
+      "section": "Champions",
+      "slug": "mountebank",
+      "name": "Mountebank",
+      "pageUrl": "http://spheresofpower.wikidot.com/mountebank"
+    },
+    {
+      "section": "Champions",
+      "slug": "necros",
+      "name": "Necros",
+      "pageUrl": "http://spheresofpower.wikidot.com/necros"
+    },
+    {
+      "section": "Champions",
+      "slug": "raveler-class",
+      "name": "Raveler",
+      "pageUrl": "http://spheresofpower.wikidot.com/raveler-class"
+    },
+    {
+      "section": "Champions",
+      "slug": "reaper",
+      "name": "Reaper",
+      "pageUrl": "http://spheresofpower.wikidot.com/reaper"
+    }
+  ]
+}
