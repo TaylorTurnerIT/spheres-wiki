@@ -1,0 +1,295 @@
+---
+/**
+ * BrowseControls — generalized catalog control bar.
+ *
+ * Renders the dynamic browse heading, a prominently centered search input with
+ * its sort tool + description-match toggle, and a TomSelect filter row
+ * (system / category / tags). Entry-type-agnostic: the noun ("Feats"),
+ * placeholder, and the option lists are all props, so talent/archetype/tag
+ * browse pages can reuse it unchanged.
+ *
+ * The `<select>` options are server-rendered so the controls degrade to native
+ * selects without JS; the shared client module (`browseFilterClient.ts`)
+ * enhances them via `createTomSelect()` on `astro:page-load` (SPEC §5, V25).
+ */
+type Option = { value: string; text: string };
+
+interface Props {
+  /** Plural noun for the heading, e.g. "Feats" → "Browse All Feats". */
+  noun: string;
+  searchPlaceholder: string;
+  systemOptions: Option[];
+  categoryOptions: Option[];
+  tagOptions: Option[];
+  /** Shared id prefix; ties the controls to the table + client module. */
+  idPrefix?: string;
+}
+
+const {
+  noun,
+  searchPlaceholder,
+  systemOptions,
+  categoryOptions,
+  tagOptions,
+  idPrefix = "browse",
+} = Astro.props;
+---
+
+<div class="browse-controls" data-browse-root={idPrefix}>
+  <h2
+    class="browse-heading"
+    id={`${idPrefix}-heading`}
+    data-browse-noun={noun}
+    aria-live="polite"
+  >
+    Browse All {noun}
+  </h2>
+
+  <div class="browse-searchbar">
+    <div class="browse-search-input-wrap">
+      <svg aria-hidden="true" class="browse-search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"></circle><path d="M13 13l3.5 3.5"></path></svg>
+      <input
+        id={`${idPrefix}-search`}
+        type="search"
+        class="browse-search-input"
+        placeholder={searchPlaceholder}
+        autocomplete="off"
+        aria-label={`Search ${noun.toLowerCase()}`}
+      />
+    </div>
+
+    <div class="browse-search-tools">
+      <label class="browse-tool-label" for={`${idPrefix}-sort`}>Sort</label>
+      <select id={`${idPrefix}-sort`} class="browse-sort" autocomplete="off">
+        <option value="asc">Name A–Z</option>
+        <option value="desc">Name Z–A</option>
+      </select>
+
+      <label class="browse-desc-toggle">
+        <input id={`${idPrefix}-desc`} type="checkbox" />
+        <span>Match description text</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="browse-filters" id={`${idPrefix}-filters`}>
+    <div class="browse-filter-group">
+      <label for={`${idPrefix}-system`} class="browse-filter-label">System</label>
+      <select id={`${idPrefix}-system`} autocomplete="off">
+        {systemOptions.map((o) => <option value={o.value}>{o.text}</option>)}
+      </select>
+    </div>
+    <div class="browse-filter-group" id={`${idPrefix}-category-group`}>
+      <label for={`${idPrefix}-category`} class="browse-filter-label">Category</label>
+      <select id={`${idPrefix}-category`} autocomplete="off">
+        {categoryOptions.map((o) => <option value={o.value}>{o.text}</option>)}
+      </select>
+    </div>
+    <div class="browse-filter-group" id={`${idPrefix}-tag-group`}>
+      <label for={`${idPrefix}-tags`} class="browse-filter-label">Tags</label>
+      <select id={`${idPrefix}-tags`} multiple autocomplete="off">
+        {tagOptions.map((o) => <option value={o.value}>{o.text}</option>)}
+      </select>
+    </div>
+  </div>
+
+  <div class="browse-status" id={`${idPrefix}-status`} role="status" aria-live="polite"></div>
+</div>
+
+<style is:global>
+  .browse-controls {
+    margin-bottom: var(--sp-6);
+  }
+  .browse-heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--fs-xl);
+    letter-spacing: 0.02em;
+    color: var(--clr-active);
+    text-align: center;
+    margin-bottom: var(--sp-4);
+  }
+
+  /* Centered search bar with a comfortable max width (§12.1). */
+  .browse-searchbar {
+    max-width: 720px;
+    margin: 0 auto var(--sp-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+  .browse-search-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+  }
+  .browse-search-input-wrap:focus-within {
+    outline: 2px solid var(--clr-brand);
+    outline-offset: 1px;
+  }
+  .browse-search-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--clr-muted);
+    flex-shrink: 0;
+  }
+  .browse-search-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--clr-text);
+  }
+  .browse-search-input::placeholder {
+    color: var(--clr-muted);
+  }
+
+  .browse-search-tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  .browse-tool-label,
+  .browse-filter-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--clr-muted);
+    white-space: nowrap;
+  }
+  .browse-sort {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    color: var(--clr-text);
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  .browse-desc-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    cursor: pointer;
+  }
+  .browse-desc-toggle input {
+    accent-color: var(--clr-brand);
+    cursor: pointer;
+  }
+
+  /* Filter row — mirrors the /search/ TomSelect styling idiom. */
+  .browse-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 20px;
+  }
+  .browse-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .browse-filter-group .ts-wrapper {
+    width: 180px;
+    position: relative;
+  }
+  #browse-tag-group .ts-wrapper {
+    width: 220px;
+  }
+  .browse-filter-group .ts-control {
+    border-radius: var(--radius) !important;
+    border-color: var(--clr-border) !important;
+    background: var(--clr-bg) !important;
+    font-family: var(--font-body) !important;
+    font-size: var(--fs-xs) !important;
+    padding: 4px 28px 4px 8px !important;
+    min-height: unset !important;
+    box-shadow: none !important;
+    cursor: pointer;
+    color: var(--clr-text);
+  }
+  .browse-filter-group .ts-control.focus {
+    border-color: var(--clr-brand) !important;
+    box-shadow: 0 0 0 1px var(--clr-brand) !important;
+    outline: none !important;
+  }
+  .browse-filter-group .ts-control input {
+    font-family: var(--font-body) !important;
+    font-size: var(--fs-xs) !important;
+    color: var(--clr-text) !important;
+    min-width: 0 !important;
+  }
+  .browse-filter-group .ts-control input::placeholder {
+    color: var(--clr-muted) !important;
+  }
+  .browse-filter-group .ts-control .item {
+    color: var(--clr-text) !important;
+    font-size: var(--fs-xs) !important;
+  }
+  #browse-tag-group .ts-control .item {
+    background: color-mix(in srgb, var(--clr-brand) 10%, transparent) !important;
+    border: 1px solid var(--clr-border) !important;
+    border-radius: 3px !important;
+    padding: 0 4px !important;
+    margin: 1px !important;
+  }
+  .browse-filter-group .ts-dropdown {
+    border-radius: var(--radius) !important;
+    border-color: var(--clr-border) !important;
+    background: var(--clr-bg) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
+    font-family: var(--font-body) !important;
+    font-size: var(--fs-xs) !important;
+    color: var(--clr-text) !important;
+    margin-top: 2px !important;
+  }
+  .browse-filter-group .ts-dropdown .option {
+    padding: 6px 10px !important;
+    color: var(--clr-text) !important;
+  }
+  .browse-filter-group .ts-dropdown .option:hover,
+  .browse-filter-group .ts-dropdown .option.active {
+    background: color-mix(in srgb, var(--clr-brand) 10%, transparent) !important;
+    color: var(--clr-text) !important;
+  }
+  .browse-filter-group .ts-dropdown .option.selected {
+    background: color-mix(in srgb, var(--clr-brand) 16%, transparent) !important;
+    color: var(--clr-brand) !important;
+    font-weight: 600;
+  }
+
+  .browse-status {
+    text-align: center;
+    font-size: var(--fs-xs);
+    color: var(--clr-muted);
+    margin-top: var(--sp-3);
+  }
+
+  @media (max-width: 768px) {
+    .browse-filters {
+      justify-content: flex-start;
+    }
+    .browse-filter-group .ts-wrapper,
+    #browse-tag-group .ts-wrapper {
+      width: 100%;
+    }
+    .browse-filter-group {
+      width: 100%;
+    }
+  }
+</style>
