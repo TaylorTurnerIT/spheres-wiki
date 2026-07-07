@@ -7,6 +7,8 @@
 //      from src/lib/systems.ts (V53).
 //   c) per-system `var(--clr-power|might|guile|champ)` rules in page styles —
 //      theme through --clr-ns / --clr-active set by global.css (V10).
+//   d) bare `new TomSelect(` construction in pages/components — every dropdown
+//      must go through createTomSelect() in src/lib/tomSelectInit.ts (SPEC §5).
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -19,6 +21,10 @@ const ENTRY_CARD_ALLOWLIST = new Set([
   "src/pages/search/index.astro",
   "src/styles/global.css",
 ]);
+
+// The sole home for `new TomSelect(...)`. Every dropdown constructs its
+// instance through createTomSelect() (SPEC §5); the helper itself is exempt.
+const TOM_SELECT_ALLOWLIST = new Set(["src/lib/tomSelectInit.ts"]);
 
 function listSourceFiles(dir) {
   const results = [];
@@ -90,6 +96,18 @@ if (perSystemRules.length > 0) {
   failures.push(
     "V10: per-system color var in page styles — theme via --clr-ns/--clr-active:",
     ...perSystemRules,
+  );
+}
+
+const tomSelectReimpl = findMatches(
+  srcFiles,
+  /new TomSelect\(/,
+  TOM_SELECT_ALLOWLIST,
+);
+if (tomSelectReimpl.length > 0) {
+  failures.push(
+    "SPEC §5: bare `new TomSelect(` — construct dropdowns via createTomSelect() from src/lib/tomSelectInit.ts:",
+    ...tomSelectReimpl,
   );
 }
 
