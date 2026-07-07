@@ -190,9 +190,26 @@ function searchText(row: FeatBrowseRow): string {
     .browse-cell:last-child {
       border-right: none;
     }
+    /* Column widths on desktop */
+    .browse-cell-name {
+      width: 20%;
+      min-width: 150px;
+    }
+    .browse-cell-tags {
+      width: 15%;
+      min-width: 120px;
+    }
+    .browse-cell-prereq {
+      width: 25%;
+      min-width: 180px;
+    }
+    .browse-cell-summary {
+      width: 40%;
+      min-width: 280px;
+    }
   }
   .browse-cell-name {
-    white-space: nowrap;
+    white-space: normal;
   }
   .browse-name-link {
     font-family: var(--font-display);
@@ -208,7 +225,6 @@ function searchText(row: FeatBrowseRow): string {
   .browse-cell-summary {
     font-size: var(--fs-xs);
     color: var(--clr-muted);
-    min-width: 140px;
   }
   .browse-tag-list {
     display: inline-flex;
