@@ -4,12 +4,18 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 import {
+  ARCHIVE_DIR,
   FEAT_CATEGORY_SOURCE_MANIFEST,
   getAllFeatCategorySources,
 } from "./lib/feat-category-sources.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.resolve(__dirname, "../src/content");
+
+if (!fs.existsSync(ARCHIVE_DIR)) {
+  console.warn(`Skipping feat-category tags validation: archive directory not found at ${ARCHIVE_DIR}`);
+  process.exit(0);
+}
 
 const DESCRIPTION_SOURCES = Object.fromEntries(
   getAllFeatCategorySources().map((source) => [

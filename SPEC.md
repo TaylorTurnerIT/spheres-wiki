@@ -278,7 +278,12 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 
 - V72. Shared-idiom greps enforced at build (`scripts/check-idioms.mjs` ∈ `bun run build`): (a) `talent-header-top` markup ⊥ outside `EntryCard.astro` / `search/index.astro` / `global.css` (V70); (b) inline `'champions' ? 'champ'` cssKey ternary ⊥ in `src/pages|components` — use `systemCssKey()` (V53); (c) `var(--clr-power|might|guile|champ)` ⊥ in page styles — theme via `--clr-ns`/`--clr-active` (V10). Violation → build fail.
 
+**Validation & Build dependencies (V73)**
+
+- V73. Validation and build scripts must run cleanly without external file dependencies (directories outside the repository). If an external port directory (e.g. `spheresofpower-wikidot-archive`) is required for optional source comparison, the script must check for its existence and skip the comparison gracefully (exit 0) rather than failing.
+
 ---
+
 
 ## §M Might Sphere Migration (Wikidot → Markdown)
 
@@ -511,3 +516,5 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B21 | 2026-06-18 | `selectedChoiceDrawbackValue` sums `addsDrawbackValue` across all selected choices incl. boon/sphere-drawback choices into general boon currency; only general drawbacks fund boons | T109 |
 | B22 | 2026-06-18 | CAM rule `mode` (`if-higher-than-base` \| `always` \| `fixed` \| `highest`) never read in `applyCamRule`; Con allowed unconditionally vs source rule "only if higher than base CAM" | V68 / T109 |
 | B23 | 2026-07-06 | T110/T111 marked `x` while inline `.talent-header` reimpl survived in `[sphere]/index.astro` talent list, `TraitCatalogSection.astro`, `search/index.astro` client JS — parity gate checked pages, not grep for primitive | V70 / T112 |
+| B24 | 2026-07-07 | Feat category validation scripts crashed on CI due to missing external Wikidot archive directory | V73 |
+

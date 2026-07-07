@@ -1,9 +1,16 @@
 #!/usr/bin/env node
+import fs from "node:fs";
 import {
+  ARCHIVE_DIR,
   getExpectedCategoryMembership,
   loadFeatCategoryTagMeta,
   loadFeatEntries,
 } from "./lib/feat-category-sources.mjs";
+
+if (!fs.existsSync(ARCHIVE_DIR)) {
+  console.warn(`Skipping feat-category membership validation: archive directory not found at ${ARCHIVE_DIR}`);
+  process.exit(0);
+}
 
 const tagMeta = loadFeatCategoryTagMeta();
 const expectedMembership = getExpectedCategoryMembership(tagMeta);

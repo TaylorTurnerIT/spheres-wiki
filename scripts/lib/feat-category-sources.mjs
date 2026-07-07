@@ -7,7 +7,7 @@ import { cleanBody, normalizeQuotes } from "./wikidot-markup.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const ARCHIVE_DIR = path.resolve(
+export const ARCHIVE_DIR = path.resolve(
   __dirname,
   "../../../spheresofpower-wikidot-archive/pages",
 );
