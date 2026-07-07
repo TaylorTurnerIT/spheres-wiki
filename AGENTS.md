@@ -26,6 +26,10 @@ Four player-facing systems: **Power**, **Might**, **Guile**, **Champions**. Path
 - **Bun ≥ 1.1.0**
 - Deployed to **GitHub Pages** at base path `/spheres-wiki/` (`astro.config.mjs`)
 
+## Development Isolation
+
+All agents and contributors **MUST** use git worktrees for development isolation (e.g. `git worktree add -b <branch> .worktrees/<branch>`). Do not make active development changes or run scratch scripts directly in the root workspace. Always perform work in an isolated worktree branch and merge back.
+
 ## Commands
 
 ```bash
