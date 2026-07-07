@@ -7,7 +7,7 @@ import { cleanBody, normalizeQuotes } from "./wikidot-markup.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export const ARCHIVE_DIR = path.resolve(
+const ARCHIVE_DIR = path.resolve(
   __dirname,
   "../../../spheresofpower-wikidot-archive/pages",
 );
@@ -578,11 +578,7 @@ function getFeatCategorySource(tagId) {
   };
 }
 
-export function getAllFeatCategorySources() {
-  return FEAT_CATEGORY_SOURCE_MANIFEST.map((entry) =>
-    getFeatCategorySource(entry.tagId),
-  );
-}
+
 
 function getFeatCategorySourceEntries(tagId, knownTagIds = loadAllTagIds()) {
   const source = getFeatCategorySource(tagId);
@@ -811,32 +807,7 @@ export function getExpectedFeatPlacements(
   });
 }
 
-// Category membership is a many-to-many projection over merged expected placements.
-// fallow-ignore-next-line complexity
-export function getExpectedCategoryMembership(
-  tagMeta = loadFeatCategoryTagMeta(),
-) {
-  const membership = new Map();
-  for (const placement of getExpectedFeatPlacements()) {
-    for (const tagId of placement.tags.filter((tag) => tagMeta.has(tag))) {
-      if (!membership.has(tagId)) membership.set(tagId, []);
-      membership.get(tagId).push(placement);
-    }
-  }
 
-  for (const [tagId, placements] of membership.entries()) {
-    const deduped = new Map();
-    for (const placement of placements) {
-      deduped.set(placement.key, placement);
-    }
-    membership.set(
-      tagId,
-      [...deduped.values()].sort((a, b) => a.key.localeCompare(b.key)),
-    );
-  }
-
-  return membership;
-}
 
 function readFrontmatter(filePath) {
   const content = fs.readFileSync(filePath, "utf8");

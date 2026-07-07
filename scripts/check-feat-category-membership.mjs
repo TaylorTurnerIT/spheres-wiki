@@ -1,19 +1,20 @@
 #!/usr/bin/env node
 import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import {
-  ARCHIVE_DIR,
-  getExpectedCategoryMembership,
   loadFeatCategoryTagMeta,
   loadFeatEntries,
 } from "./lib/feat-category-sources.mjs";
 
-if (!fs.existsSync(ARCHIVE_DIR)) {
-  console.warn(`Skipping feat-category membership validation: archive directory not found at ${ARCHIVE_DIR}`);
-  process.exit(0);
-}
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const expectedFilePath = path.resolve(
+  __dirname,
+  "../src/config/expected-feat-categories.json",
+);
+const expectedMembership = JSON.parse(fs.readFileSync(expectedFilePath, "utf8"));
 
 const tagMeta = loadFeatCategoryTagMeta();
-const expectedMembership = getExpectedCategoryMembership(tagMeta);
 const feats = loadFeatEntries();
 
 let hasError = false;
@@ -23,7 +24,7 @@ for (const [tagId] of [...tagMeta.entries()].sort((a, b) => {
     (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0])
   );
 })) {
-  const expected = expectedMembership.get(tagId) ?? [];
+  const expected = expectedMembership[tagId] ?? [];
   const actual = feats.filter((feat) => feat.tags.includes(tagId));
 
   const expectedKeys = expected.map((entry) => entry.key);

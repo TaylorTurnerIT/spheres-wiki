@@ -1,0 +1,4694 @@
+{
+  "admixture": [
+    {
+      "key": "arcforge-players-compendium:power:digital-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:admixture-efficiency",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:augmenting-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:boundary-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:dispelling-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate | counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:curative-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:faerie-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:generative-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:introductory-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:militant-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:primal-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:soft-admixture-specialty",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:spectacular-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:unveiling-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:warding-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "initiates-handbook:power:spellshock-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:auspicious-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:blood-wrack",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:enhancing-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:ghostly-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:illuminating-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mind-wrack",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:morphic-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:nebulous-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:space-rending-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:telekinetic-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:time-thiefs-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:umbral-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate"
+    }
+  ],
+  "counterspell": [
+    {
+      "key": "arcforge-players-compendium:champions:hacking-counterspell",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "arcforge-players-compendium:power:harmonic-counter",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:saboteurs-reclamation",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:champions:dispelling-attack-improved",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:bargainers-counterspell",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:dispelling-admixture",
+      "sourceDescription": "admixture-feats.txt#tab:Ultimate | counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:imperious-counterspell",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:specialized-wipe",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:draining-surge",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:suppressive-counterspell",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:power:harmonic-counter",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:spell-absorption",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate | counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:hand-full-of-counters",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "spheres-apocrypha-battlefield-manipulation-talents:power:dominant-counterspell",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-battlefield-manipulation-talents:power:translocating-counterspell",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:arcane-grip",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate | counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:counterspell",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:counterspell-greater",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:counterspell-improved",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:counterspell-mastery",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:counterspelling-strike",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate | counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:fools-counterspell",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:magicians-trade",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:prepared-counter",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:spellthief",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    }
+  ],
+  "anathema": [
+    {
+      "key": "ultimate-spheres-of-power:power:anathema",
+      "sourceDescription": "anathema-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:empowered-anathema",
+      "sourceDescription": "anathema-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extended-anathema",
+      "sourceDescription": "anathema-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shaped-anathema",
+      "sourceDescription": "anathema-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:weaponized-anathema",
+      "sourceDescription": "anathema-feats.txt"
+    }
+  ],
+  "champion": [
+    {
+      "key": "alienists-handbook:champions:awesome-transformation",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:champions:noxious-fog",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:champions:poisonous-transformation",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:champions:venomfire",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "arcforge-players-compendium:champions:hacking-counterspell",
+      "sourceDescription": "counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "arcforge-players-compendium:champions:rush-of-magic",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:champions:building-performance",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:champions:dramaturgic-spectacle",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:champions:tool-transformation",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:champions:vitalized-fervency",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:champions:rapier-wit",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:champions:shock-to-senses",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:champions:amplifying-adjustment",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:champions:dream-team",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:champions:long-range-mapping",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:champions:raging-lucidity",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:champions:spell-maneuver",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:champions:surefire-coordination",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:champions:theorized-momentum",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-uncanny-gateway:champions:authentic-conviction",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-uncanny-gateway:champions:crimson-cabaret",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-uncanny-gateway:champions:explosive-chorus",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-uncanny-gateway:champions:focusing-control",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-uncanny-gateway:champions:poetry-of-form",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-uncanny-gateway:champions:regulated-metabolism",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "beast-tamers-handbook:champions:grappling-caster",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:darkrider",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:glamered-thievery",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:glimpse-the-flow",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:heavy-handed-force",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:hematic-impaler",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:kinematic-disarmer",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:phantom-of-the-colosseum",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:spirits-in-the-blood",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:champions:buffeting-blast",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:champions:dispelling-attack-improved",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:champions:improved-assistance",
+      "sourceDescription": "champion-feats.txt | combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:champions:ready-initiation",
+      "sourceDescription": "champion-feats.txt | combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:arcane-carnage",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:arcane-opening",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:bloodmonger",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:bruinous-temper",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:dimensional-archer",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:dimensional-athlete",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:dispelling-attack",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:dual-wielding-mystic-fusion",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:dual-wielding-mystic-strike",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:extra-adaptation",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:extra-empathy",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:extra-reinforcement",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:fairy-alchemy",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:furious-flare",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:guarded-attack",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:harnessed-virtue",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:harrying-hospitaler",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:i-will-save-you",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:life-taker",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:lights-lasting-fury",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:master-necroturge",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:mystic-focus",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:otherworldly-host",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:planar-commander",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:shielded-casting",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:shielding-ward",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:speak-with-animal-allies",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:spell-attack",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:spell-attack-whirlwind",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:spell-trap",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:sword-of-omens",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:through-the-long-night",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:unarmored-mastery",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:unique-creative-strike",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:unseelie-trapper",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:wardlord",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "crimson-dancers-handbook:champions:chymic-burst",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "crimson-dancers-handbook:champions:sanguine-magic",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diabolists-handbook:champions:goading-malediction",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diabolists-handbook:champions:mobile-caster",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diabolists-handbook:champions:portal-shield",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diabolists-handbook:champions:spell-slugger",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-harmony-and-discord:champions:fey-melodies",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-harmony-and-discord:champions:graveborn-expression",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-harmony-and-discord:champions:guarded-fane",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-harmony-and-discord:champions:mechanized-magnificence",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-harmony-and-discord:champions:primal-dancer",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-harmony-and-discord:champions:strategic-terrain",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-harmony-and-discord:champions:vicious-performer",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-hustle-and-bustle:champions:bard-of-booze",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-hustle-and-bustle:champions:battlebard",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-invention-and-ingenuity:champions:animist",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-invention-and-ingenuity:champions:horticulturist",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diamond-spheres-invention-and-ingenuity:champions:natural-sciences",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:champions:mystical-lorekeeper",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:champions:scorched-path",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "gravecallers-handbook:champions:exorcist",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "gravecallers-handbook:champions:unliving-chemister",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "jesters-handbook:champions:extra-blended-training-talent",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "jesters-handbook:champions:tactical-warping",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "jesters-handbook:champions:thunderbolts-and-lightning-very-very-frightening",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:augmented-wit",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:capoeirista",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:dastardly-entrapment",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:eldritch-supplies",
+      "sourceDescription": "champion-feats.txt | drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:elemental-rift",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:field-instruction",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:fight-choreography",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:grandiose-charms",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:guided-charm",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:insinuating-incantation",
+      "sourceDescription": "champion-feats.txt | drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:morphic-disguise",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:organized-following",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:sojourner",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:spatial-storage",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:tactical-hypothesis",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:theatrical-effects",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:time-crossed-plots",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:trailblazer",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:unerring-eye",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:winded-by-words",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "spheres-apocrypha-alchemy-poisons-2:champions:arcane-venin",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "spheres-apocrypha-banshees-gasp:champions:magical-terrorizer",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:champions:unified-focus",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-of-origin:champions:striking-ensnarement",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:champions:disciplined-casting",
+      "sourceDescription": "champion-feats.txt"
+    }
+  ],
+  "combat": [
+    {
+      "key": "alienists-handbook:might:backup-breaker",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:cerebrevores-ecstasy",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:combat-sphere-focus",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:determined-defense",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:devouring-finish",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:power:extradimensional-gullet",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "alienists-handbook:power:resolute-expertise",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "alienists-handbook:power:shifting-style",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:might:amateur-striker",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:might:dramatic-intensity",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:might:expanded-tension-technique",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:might:hold-the-note",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:might:intense-metamagic",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:power:collective-intensity",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-otherworldly-citadel:champions:rapier-wit",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:champions:shock-to-senses",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:brutal-shatter",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:deceptive-boast",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:erratic-vital-strike",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:onslaught-conversion",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:opportunistic-vital-strike",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:prescient-reflexes",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:ruthless-sneak",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:power:severing-critical",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:champions:spell-maneuver",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:champions:surefire-coordination",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:might:rampant-consumption",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:might:resist-consumption",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:power:arrow-of-inspiration",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:conduit-inversion",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:essence-plunder",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:improved-channel-smite",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:improved-retributive-blast",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:telepathic-knell",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:able-aiming",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:close-quarters-conduction",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:exposing-critical",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:persistent-onslaught",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "beast-tamers-handbook:champions:grappling-caster",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "beast-tamers-handbook:might:adrenaline-fueled-frenzy",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:glimpse-the-flow",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:heavy-handed-force",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:hematic-impaler",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "blood-and-portents:champions:kinematic-disarmer",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:pooled-potency",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:desensitized",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:hardened-psyche",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "catgirl-handbook:might:observant-oppurrtunist",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "catgirl-handbook:might:wiggling-footsies",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:champions:improved-assistance",
+      "sourceDescription": "champion-feats.txt | combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:champions:ready-initiation",
+      "sourceDescription": "champion-feats.txt | combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:power:tactical-aid",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:power:technique-crafting",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:power:warrior-disciple",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:arcane-carnage",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:harnessed-virtue",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:spell-attack",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:spell-attack-whirlwind",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "champions-of-the-spheres:champions:through-the-long-night",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "crimson-dancers-handbook:champions:sanguine-magic",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "diabolists-handbook:power:improved-chain-blast",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:portal-combat",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:spell-absorption",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate | counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diamond-spheres-hustle-and-bustle:guile:awesome-stunt",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-hustle-and-bustle:guile:cunning-accuracy",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:might:swooping-grapple",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:leveraged-magic",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:ace-in-the-hole",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:ante-up",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:lethal-gambit",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:raise-the-stakes",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:strikers-ante",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:vigilant-gambler",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:might:stance-adaptation",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:power:puncturing-strike",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "gravecallers-handbook:champions:exorcist",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "highlanders-handbook:might:battle-fanfare",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "legends-of-the-spheres:guile:skill-sphere-focus",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:judge-jury-executioner",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:lingering-opening",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:single-strike-mastery",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-might:might:combat-sphere-specialization",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:commanders-acumen",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:companion-trigger",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:desperate-focus",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:elemental-might",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-combat-talent",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:flawless-strategy",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:giantslayer",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:great-focus",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:heroic-resolve",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:iron-palm",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:mixed-coordinator",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:muscular-reflexes",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:overwatch",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:piranha-strike",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:practiced-interruption",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:sacrificial-augment",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:shared-rage",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:stinging-bee",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:through-the-long-night",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:titan-breaker",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:true-rage",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:two-weapon-rend",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:unorthodox-unarmed-training",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:abundant-adrenaline",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:airborne-aethermancer",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:aligned-attacks",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:arcane-grip",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate | counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:arcing-strike",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:armored-casting",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:armored-flight",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:augur-of-combat",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:calculated-shot",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cauldron-of-venom",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:champions-strike",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cherufe-chomp",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:counterspelling-strike",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate | counterspell-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cuazaj-breath",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cuazaj-breath-expanded",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cuazaj-breath-greater",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:deadly-targeting",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:destructive-counter",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:devourer",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:disarming-transformation",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:dodging-rally",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:elemental-touch",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:elicit-strike",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:energy-snake",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:fear-and-flame",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:frozen-to-the-bone",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:gritting-teeth",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:hardened-shell",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:heavy-hand",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:imbued-strike",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:improved-energy-leap",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:improved-energy-wall",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:improved-spell-combat",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:living-accumulator",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:martial-aegis",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:martial-presence",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:martial-reflexes",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:martial-totem",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:melee-caster",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:militant-animation",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mind-over-matter",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mixed-toxicity",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mystic-assault",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mystic-assault-improved",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:perpetual-sphere",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:pierce-the-veil",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:planar-strike",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:poison-spitter",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:practiced-claws",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:precision-bombardment",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:precogniscent-protection",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:precogniscent-resistance",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:precogniscent-smite",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:pressure-point-proficiency",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:pressure-point-pugilist",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:rage-of-the-grave",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:razor-beak",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:razor-talons",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:reach-blade",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:rebuff-improved",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:rebuff-superior",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shape-expert",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:skeletal-contortionist",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:steel-skeleton",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:sunlight-strike",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:swarm-coordination",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:swarming-strike",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:swift-warrior",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:tactile-density",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:tether-adept",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:totem-tactics",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:totemic-stamina",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:two-handed-fighting",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:two-handed-fighting-greater",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:two-handed-fighting-improved",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:two-handed-fighting-perfect",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:two-headed-adept",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:two-headed-sight",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:venom-spitter",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:venomous-ichor",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:venomous-soul",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:vined-limbs",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:warded-step",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:web-mastery",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate | companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:weird-assault",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:weird-defense",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:weird-motion",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "youxia-handbook:champions:disciplined-casting",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:booming-boast",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:cultivate-ki",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:extend-stance",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:forbidden-consumption-technique",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:harmonious-swordplay",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:perfect-calm",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:pouncing-sweep",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:rolling-serpent",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:style-synthesis",
+      "sourceDescription": "practitioner-feats.txt"
+    }
+  ],
+  "drawback": [
+    {
+      "key": "alienists-handbook:power:manifold-foci",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "alienists-handbook:power:off-in-a-blink",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "alienists-handbook:power:preserved-integrity",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "arcforge-players-compendium:champions:rush-of-magic",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "arcforge-players-compendium:power:planar-tether",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:bonded-alliance",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:coordinated-combo",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:inspired-learning",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:inspired-learning-improved",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:network-of-bonds",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:never-beyond-reach",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:spark-of-spontaneity",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-glorious-arena:power:sparking-printer",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-glorious-arena:power:sparking-technique",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-glorious-arena:power:sparkstorms-center",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-glorious-arena:power:spell-capacitor-agenda",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:thoughtbond",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-otherworldly-citadel:power:alternate-win-condition",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-otherworldly-citadel:power:alternate-win-condition-improved",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-otherworldly-citadel:power:rainbow-efficiency-improved",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-secluded-library:power:balatros-boons",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:beholden-to-the-uncanny",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:clarity-of-fortified-mind",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:debasing-exultation",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:devouring-defiling",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:localized-arcana",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:multifarious-strain",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:pawn-of-prophecy",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:perpetual-connection",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:preternatural-pizazz",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:secrets-of-the-land",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:spellburn-defiling",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:unnatural-company",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:whispers-from-beyond",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:at-will-powers",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:augmented-modulation",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:hucksters-hypothetical",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:in-too-deep",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:mental-metamagic",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:mental-modulation",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:minor-uncanniness-acclimation",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:practiced-concentration",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:spell-kicker",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:spell-kicker-improved",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:surrender-of-the-self",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:life-conversion",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:racing-ramp",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:unlocked-power",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:caging-spell",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:crashing-outburst",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:hucksters-gamble",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:hucksters-gamble-improved",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:mass-offerings",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:outburst-spell",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:superior-mana-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:trading-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "cataclysm-handbook:power:agonizing-defiling",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:backdoor-arcana",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:broken-earth",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:charged-despoilation",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:corrupted-form",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:defilers-channel",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate | drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:distant-defiling",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:environment-charge",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:inhuman-defiler",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:intense-defiling",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:poisoned-apple",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:power-of-fear",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:purging-despoilation",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:ruinous-defiling",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:sanctum-magic",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:soul-harvester",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:specialist-defiler",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:terrain-defiler",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:power:insidious-magic",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "crimson-dancers-handbook:power:bottled-salvage",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "crimson-dancers-handbook:power:burn-my-body",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:combat-recharge",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:no-cost-too-great",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:wishbound-casting",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:spells-to-life",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:bolt-from-the-blue",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:burn-the-deck",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:card-shark",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:combined-decks",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:consumptive-play",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:control-caster",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:custom-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:deck-bound-companion",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:developed-field",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:discard-march",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:enhanced-play",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:fates-deal",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:flexible-targeting",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:hand-full-of-counters",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:hand-sacrifice",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:heart-of-the-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:land-attuned-magic",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:latent-energies",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:lifedecking",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:miraculous-draw",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:morphing-trap-card",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:multi-headed-play",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:rainbow-efficiency",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:starting-spell",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:technical-combo",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:titanic-summons",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:trap-card",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:ultimate-play",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:power:combat-recharge-improved",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:power:deck-rebirth",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:power:mastery-of-many",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:power:refined-amplification",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:power:restorative-rush",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:eldritch-supplies",
+      "sourceDescription": "champion-feats.txt | drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "legends-of-the-spheres:champions:insinuating-incantation",
+      "sourceDescription": "champion-feats.txt | drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:champions:unified-focus",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:burst-of-concentration",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:combatant-caster",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:curse-mastery",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:fast-focus",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:habit-forming",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:instinctual-skittishness",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:powerful-focus",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:prepared-diagram",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:resistant-veins",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:witchwarped",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions:power:bottled-spells",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions:power:magic-runes",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions:power:power-of-friendship",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-of-origin:power:bloody-savage",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-of-origin:power:sanguinivorous",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:addictive-power",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:battlecry",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:careful-magic",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:hidden-heretic",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:ley-line-affinity",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:magical-focus",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mystic-choreography",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:pushpull-mastery",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:reinforced-structure",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:suffer-by-proxy",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:terrain-defiler",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:terrain-focus",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:thematic-augmentation",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:wild-casting",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    }
+  ],
+  "teamwork": [
+    {
+      "key": "barons-glorious-arena:power:bonded-alliance",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:coordinated-combo",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:never-beyond-reach",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:thoughtbond",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:champions:surefire-coordination",
+      "sourceDescription": "champion-feats.txt"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:trading-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:champions:ready-initiation",
+      "sourceDescription": "champion-feats.txt | combat-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cooperative-mind",
+      "sourceDescription": "teamwork-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cooperative-reanimate",
+      "sourceDescription": "teamwork-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cumulative-nimbus",
+      "sourceDescription": "teamwork-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:twilight-adept",
+      "sourceDescription": "teamwork-feats.txt"
+    }
+  ],
+  "chance": [
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:ace-in-the-hole",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:heart-of-the-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:channel-luck",
+      "sourceDescription": "chance-feats.txt | channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:defy-fate",
+      "sourceDescription": "chance-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:karmic-healing",
+      "sourceDescription": "chance-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:lucky-streak",
+      "sourceDescription": "chance-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:surge-of-fortune",
+      "sourceDescription": "chance-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:weighted-dice",
+      "sourceDescription": "chance-feats.txt"
+    }
+  ],
+  "channeling": [
+    {
+      "key": "barons-secluded-library:power:buffeting-channel",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:improved-channel-smite",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:pulsing-channel",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:defilers-channel",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate | drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:energized-appeasement",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "gravecallers-handbook:power:channeled-detonation",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:blessingblight-mastery",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:blessingblight-versatility",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:channel-destruction",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:channel-life",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:channel-luck",
+      "sourceDescription": "chance-feats.txt | channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:channel-resolve",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:totemic-channeling",
+      "sourceDescription": "channeling-feats.txt#tab:Ultimate"
+    }
+  ],
+  "companion": [
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:deck-bound-companion",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:armory",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:companion-concentration",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:hungry",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:manifestation",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:variable-armaments",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:variable-size",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:venomous-blood",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:venomous-focus",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:venomous-spit",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:watchful-companion",
+      "sourceDescription": "companion-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:web-mastery",
+      "sourceDescription": "combat-feats.txt#tab:Ultimate | companion-feats.txt"
+    }
+  ],
+  "metamagic": [
+    {
+      "key": "alienists-handbook:power:impossible-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "alienists-handbook:power:tempest-tossed-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:cascade-spell-improved",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:caging-spell",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:outburst-spell",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "diabolists-handbook:power:finishing-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:opportune-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:dueling-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:essence-linked-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:starting-spell",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "spheres-apocrypha-casting-traditions-2:power:habit-forming",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:align-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:aquatic-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:bouncing-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:brisk-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:burning-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:burrowing-magic",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cascade-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:coaxing-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:concussive-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:conditional-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:consecrate-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:contagious-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:contingent-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:dazing-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:delayed-magic",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:disruptive-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:ectoplasmic-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:elemental-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:empower-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:encouraging-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:enlarging-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extend-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:fearsome-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:flaring-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:fleeting-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:focusing-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:furious-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:horrifying-imagination",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:intuitive-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:lingering-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:logical-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:maximize-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:merciful-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:persistent-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:piercing-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:quicken-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:reach-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:rime-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:scarring-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:seeking-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:selective-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shadow-grasp",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:sickening-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:silent-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:snuffing-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:solar-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:still-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:studied-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:suppressed-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:tenacious-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:tenebrous-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:thanatopic-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:threnodic-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:thundering-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:toppling-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:toxic-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:traumatic-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:trick-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:umbral-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:widen-spell",
+      "sourceDescription": "metamagic-feats.txt#tab:Ultimate"
+    }
+  ],
+  "general": [
+    {
+      "key": "alienists-handbook:power:dreamwalking-initiate",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "alienists-handbook:power:oneiric-assault",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "alienists-handbook:power:transformation-eternal",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:inspired-learning",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:inspired-learning-improved",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:range-virtuoso",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:localized-arcana",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:rust-to-rust",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:spiteful-end",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:directed-instillation",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:terminating-conversion",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-2-counters-and-control:power:resist-expulsion",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:fortified-conversion",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "catgirl-handbook:power:beckon-and-pspsps",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "catgirl-handbook:power:catnip-connoisseur",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "catgirl-handbook:power:feline-heritage",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "champions-of-the-spheres-study-and-practice:power:harmonic-resilience",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:embraced-by-kindred",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:hexblade",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "diabolists-handbook:power:termination-clause",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:power:contingency-spread",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:harrowed-capability",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:harrowed-talents",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:sudden-recall",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:power:dimensional-tether",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "high-magic-handbook:power:cautious-incantation",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "high-magic-handbook:power:expedited-incantation",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "high-magic-handbook:power:favored-metamagic",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "high-magic-handbook:power:metamagic-aficionado",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "high-magic-handbook:power:ritualistic-perseverance",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "high-magic-handbook:power:solitary-incantation",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "legends-of-the-spheres:power:superior-salvage",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "spheres-of-origin:might:rigorous-student",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-origin:might:versed-student",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | practitioner-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:advanced-magic-training",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:aeolian-flautist",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:arcane-empowerment",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:armorist-training",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:armorist-trick",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:artificery",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:artificery-improved",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:basic-magic-training",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cantrips",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cantrips-improved",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:circle-casting",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:complex-harmony",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:contingency",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:contingency-enhanced",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:contingency-tampering",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cunning-caster",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:fool-magic",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:grenade-master",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:hubris-defiance",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:hubris-style",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:hubris-triumph",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:item-mastery",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:lurker-in-darkness",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:otherworldly-mind",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:pacified-strike",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:primal-emblem",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:realmwalker-adept",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:realmwalker-master",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:robustness",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:roiling-anger",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shared-magic",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shoulder-to-shoulder",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:soulfire",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:special-transport",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:sphere-focus",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:sphere-virtuoso",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:tenacity",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:tough-as-nails",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:transformation",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:transformation-hybrid",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:transformation-improved",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:triage",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:vigilant-skeptic",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:vital-magic",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:wand-charger",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:wand-wielder",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:wind-dancer",
+      "sourceDescription": "general-feats.txt#tab:Ultimate"
+    }
+  ],
+  "deck": [
+    {
+      "key": "barons-glorious-arena:power:spark-of-spontaneity",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-glorious-arena:power:sparking-printer",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-glorious-arena:power:sparking-technique",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-glorious-arena:power:sparkstorms-center",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-otherworldly-citadel:power:alternate-win-condition",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-otherworldly-citadel:power:alternate-win-condition-improved",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-otherworldly-citadel:power:rainbow-efficiency-improved",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-secluded-library:power:handbloods-advantage",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-secluded-library:power:handbloods-boon",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-secluded-library:power:handbloods-destiny",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-secluded-library:power:handbloods-guard",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-secluded-library:power:table-flipper",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:spell-kicker",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "barons-uncanny-gateway:power:spell-kicker-improved",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:caging-spell",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:crashing-outburst",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:mass-offerings",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:outburst-spell",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:superior-mana-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "card-casting-3-volatile-variance:power:trading-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:bolt-from-the-blue",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:burn-the-deck",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:card-shark",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:combined-decks",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:consumptive-play",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:control-caster",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:custom-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:deck-bound-companion",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:developed-field",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:discard-march",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:enhanced-play",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:fates-deal",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:flexible-targeting",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:hand-full-of-counters",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:hand-sacrifice",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:heart-of-the-cards",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:land-attuned-magic",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:latent-energies",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:lifedecking",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:miraculous-draw",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:morphing-trap-card",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:multi-headed-play",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:rainbow-efficiency",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:starting-spell",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:technical-combo",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:titanic-summons",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:trap-card",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:ultimate-play",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:power:deck-rebirth",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    }
+  ],
+  "proxy": [
+    {
+      "key": "ultimate-spheres-of-power:power:defensive-proxies",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:link-fate",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:maintain-proxy",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mystic-choreography",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mystic-generosity",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:proxy-counterspell",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:proxy-network",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:spell-proxy",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:spell-proxy-extended",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:spell-proxy-improved",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:spreading-magic",
+      "sourceDescription": "proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:suffer-by-proxy",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | proxy-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:tactical-proxies",
+      "sourceDescription": "proxy-feats.txt"
+    }
+  ],
+  "squadron": [
+    {
+      "key": "alienists-handbook:power:hive-mind",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "alienists-handbook:power:squad-triangulation",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "alienists-handbook:power:squadron-network",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-glorious-arena:power:collective-intensity",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:distributed-strain",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:perpetual-connection",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate | squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:multi-headed-play",
+      "sourceDescription": "card-and-deck-feats.txt#section:Deck Feats"
+    },
+    {
+      "key": "highlanders-handbook:power:infantry-formation",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "highlanders-handbook:power:troop-commander",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "legends-of-the-spheres:power:all-together-now",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "legends-of-the-spheres:power:coordinated-plot",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "legends-of-the-spheres:power:middle-man",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "legends-of-the-spheres:power:posse-commander",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "legends-of-the-spheres:power:rehearsed-performance",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:battlefield-tactics",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:close-formation",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:focused-fire-tactics",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:instructive-command",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:lightning-tactics",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mass-command",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mixed-formation",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mobile-tactics",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:phalanx-formation",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:pincer-formation",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:platoon-commander",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:ranged-command",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:requested-command",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:scouting-tactics",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shielded-formation",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:squadron-commander",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:vigilant-command",
+      "sourceDescription": "squadron-feats.txt#tab:Ultimate"
+    }
+  ],
+  "necrosis": [
+    {
+      "key": "cataclysm-handbook:power:inhuman-defiler",
+      "sourceDescription": "drawback-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:between-two-worlds",
+      "sourceDescription": "necrosis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cold-heart",
+      "sourceDescription": "necrosis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:deadened-flesh",
+      "sourceDescription": "necrosis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:hemomancy",
+      "sourceDescription": "necrosis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:numb-mind",
+      "sourceDescription": "necrosis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:wandering-spirit",
+      "sourceDescription": "necrosis-feats.txt"
+    }
+  ],
+  "extra": [
+    {
+      "key": "pathfinder-core-rulebook:power:extra-arsenal-trick",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-bestial-trait",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-emotion",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-invocations",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-magic-talent",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-mystic-combat",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-nexus-powers",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-psionics",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-secret",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-shadowstuff",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:extra-spell-points",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extra-breadth-of-form",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extra-divine-works",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extra-electrokinetic-stunt",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extra-iatrogen",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extra-swarm-powers",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extra-unseen-augmentation",
+      "sourceDescription": "extra-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extra-wraith-haunt",
+      "sourceDescription": "extra-feats.txt"
+    }
+  ],
+  "mythic": [
+    {
+      "key": "alienists-handbook:power:oneiric-assault",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "high-magic-handbook:power:cautious-incantation",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "high-magic-handbook:power:expedited-incantation",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "high-magic-handbook:power:mythic-crafting-expertise",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "high-magic-handbook:power:solitary-incantation",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:advanced-magic-training",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:advanced-tactics",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:aerial-trip",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:augmented-wit",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:basic-magic-training",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:combat-sphere-focus",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:combat-sphere-specialization",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:companion-trigger",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:contingency",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:customized-bond",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:dimensional-archer",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:dispelling-attack",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:dragons-tattoos",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:dual-wielding-mystic-fusion",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:dual-wielding-mystic-strike",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:extra-combat-talent",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:extra-skill-leverage",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:extra-skill-talent",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:focused-stamina",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:great-focus",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:heroic-resolve",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:improved-planning",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:insinuating-incantation",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:life-taker",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:muscular-reflexes",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:mystic-focus",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:mythic-play",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:practiced-interruption",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:prepared-hacking",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:public-renown",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:single-strike-mastery",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:skill-sphere-focus",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:spell-attack",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:sphere-focus",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:studied-scout",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:target-spotting",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:theoretical-initiate",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:transformation",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:tug-the-heartstrings",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:unarmored-mastery",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:utilitarian-dilettante",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "mythic-spheres-3:power:zodiac-tattoos",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    }
+  ],
+  "practitioner": [
+    {
+      "key": "alienists-handbook:might:backup-breaker",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:brain-consumption",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:cerebrevores-ecstasy",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:combat-sphere-focus",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:consumptive-intuition",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:consumptive-mutation",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:determined-defense",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "alienists-handbook:might:devouring-finish",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:might:amateur-striker",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:might:dramatic-intensity",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:might:expanded-tension-technique",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:might:hold-the-note",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-glorious-arena:might:intense-metamagic",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:brutal-shatter",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:deceptive-boast",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:erratic-vital-strike",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:onslaught-conversion",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:opportunistic-vital-strike",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:prescient-reflexes",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-otherworldly-citadel:might:ruthless-sneak",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:might:rampant-consumption",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "barons-secluded-library:might:resist-consumption",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "beast-tamers-handbook:might:adrenaline-fueled-frenzy",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "beast-tamers-handbook:might:defenders-bonds",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "beast-tamers-handbook:might:mounted-athlete",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "beast-tamers-handbook:might:unseen-terror",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "catgirl-handbook:might:catisthenics",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "catgirl-handbook:might:observant-oppurrtunist",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "catgirl-handbook:might:wiggling-footsies",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "crimson-dancers-handbook:might:bloodrunner",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "crimson-dancers-handbook:might:great-iaijutsu",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:might:agitating-scout",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "expanded-spheres-barons-lost-apocrypha:might:swooping-grapple",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "expanded-spheres-weaves-of-war:might:stance-adaptation",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "highlanders-handbook:might:battle-fanfare",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-apocrypha-alchemy-poisons-2:might:designer-drugs",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-apocrypha-dipsomania:might:projectile-vomit",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-apocrypha-swashbucklers:might:understand-thy-enemy",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-apocrypha-the-inheritor-and-improved-atavism-heritages:might:improved-atavism",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:adopt-animal-ally",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:aerial-trip",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:color-guard",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:combat-sphere-specialization",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:commanders-acumen",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:companion-trigger",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:craft-ooze",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:customized-bond",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:desperate-focus",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:dragons-tattoos",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:dual-wielding-mystic-fusion",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:dual-wielding-mystic-strike",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:elemental-might",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:emotional-conduit",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:escutcheon",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-battlefield-specialization",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-boon-of-purpose",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-combat-talent",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-prowess",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-scholars-knack",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-smithing-insight",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-striker-art",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-swarm-enhancement",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:extra-technical-insight",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:flawless-strategy",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:flyby-attack",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:focused-stamina",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:friends-in-close-places",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:giantslayer",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:great-focus",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:gunsmithing",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:harmony",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:heroic-resolve",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:inkbound-portents",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:iron-palm",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:mixed-coordinator",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:mobile-drone",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:mounted-protector",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:muscular-reflexes",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:overwatch",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:petrifying-pennant",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:piranha-strike",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:potent-pigments",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:practiced-interruption",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:receptive-to-grafts",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:reckless-drone",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:recon-drone",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:remote-hacking",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:sacrificial-augment",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:shared-rage",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:shield-drone",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:stinging-bee",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:studied-scout",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:tactical-ensign",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:target-spotting",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:technical-compatibility",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:technological-training",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:technologically-alchemical-ammo",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:through-the-long-night",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:titan-breaker",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:true-rage",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:two-weapon-rend",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:undetectable-hacking",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:unorthodox-unarmed-training",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:vaporized-formulae",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:vermin-master",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-might:might:zodiac-tattoos",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-origin:might:rigorous-student",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | practitioner-feats.txt"
+    },
+    {
+      "key": "spheres-of-origin:might:versed-student",
+      "sourceDescription": "general-feats.txt#tab:Ultimate | practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:booming-boast",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:cultivate-ki",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:extend-stance",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:extra-ki-power",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:forbidden-consumption-technique",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:harmonious-swordplay",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:perfect-calm",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:pouncing-sweep",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:rolling-serpent",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "youxia-handbook:might:style-synthesis",
+      "sourceDescription": "practitioner-feats.txt"
+    }
+  ],
+  "item-creation": [
+    {
+      "key": "barons-secluded-library:power:sphere-crafting-affinity",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:talent-crafting-affinity",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "cataclysm-handbook:power:eldritch-craft",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "high-magic-handbook:power:craft-magical-traps",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "high-magic-handbook:power:develop-spellzone",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "high-magic-handbook:power:etch-schematic",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "high-magic-handbook:power:mythic-crafting-expertise",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
+    },
+    {
+      "key": "spheres-of-might:might:craft-ooze",
+      "sourceDescription": "practitioner-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:capture-spell",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:craft-apparatus",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:craft-implement-of-power",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:craft-marvelous-item",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:craft-rituals",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:craft-spell-engine",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:distill-compound",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:forge-charm",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:forge-construct",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:smith-magical-weapons-and-armor",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:versatile-crafter",
+      "sourceDescription": "item-creation-feats.txt#tab:Ultimate"
+    }
+  ],
+  "operative": [
+    {
+      "key": "barons-secluded-library:guile:mechanical-aptitude",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "barons-secluded-library:guile:observing-position",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "barons-uncanny-gateway:guile:occult-aptitude",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-harmony-and-discord:guile:extra-advisor-lesson",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-hustle-and-bustle:guile:awesome-stunt",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-hustle-and-bustle:guile:cunning-accuracy",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-hustle-and-bustle:guile:song-in-your-soul",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-hustle-and-bustle:guile:spring-in-your-step",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-invention-and-ingenuity:guile:deific-icon",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-invention-and-ingenuity:guile:thaumic-retention",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-invention-and-ingenuity:guile:totemic-effigy",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-thaumic-potential:guile:dual-hack",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "diamond-spheres-thaumic-potential:guile:extra-conduit-wonder",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "legends-of-the-spheres:guile:extra-model",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "legends-of-the-spheres:guile:extra-nuance",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "legends-of-the-spheres:guile:public-renown",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "legends-of-the-spheres:guile:skill-sphere-focus",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "legends-of-the-spheres:guile:theoretical-initiate",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:advanced-tactics",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:catchy-tune",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:detailed-charting",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:dual-pathing",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:earthly-aptitude",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:exceptional-discipline",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:extra-conspiracy-feature",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:extra-courser-venture",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:extra-envoy-flair",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:extra-mastermind-trick",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:extra-skill-leverage",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:extra-skill-talent",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:harmonizing-lyrics",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:improved-planning",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:industrious-engineer",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:instant-defensive-hack",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:judge-jury-executioner",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:lingering-opening",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:mystical-aptitude",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:nebulous-preparation",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:practiced-refinement",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:prepared-hacking",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:single-strike-mastery",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:societal-aptitude",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:speculative-analysis",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:terrain-adaptation",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:tug-the-heartstrings",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    },
+    {
+      "key": "spheres-of-guile:guile:utilitarian-dilettante",
+      "sourceDescription": "operative-feats.txt#tab:Spheres of Guile"
+    }
+  ],
+  "protokinesis": [
+    {
+      "key": "ultimate-spheres-of-power:power:counterweight",
+      "sourceDescription": "protokinesis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:force-shield",
+      "sourceDescription": "protokinesis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:gravitic-anomaly",
+      "sourceDescription": "protokinesis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:kinetic-drift",
+      "sourceDescription": "protokinesis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mind-limb",
+      "sourceDescription": "protokinesis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:telekinetic-exoskeleton",
+      "sourceDescription": "protokinesis-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:touchsense",
+      "sourceDescription": "protokinesis-feats.txt"
+    }
+  ],
+  "racial": [
+    {
+      "key": "ultimate-spheres-of-power:power:abundant-adrenaline",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:airborne-aethermancer",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:alraun-nose",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:armored-flight",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cauldron-of-venom",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cecaelia-burst",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cherufe-chomp",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:climbing-claws",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cuazaj-breath",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cuazaj-breath-expanded",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:cuazaj-breath-greater",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:elemental-heart",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:elemental-rebirth",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:elemental-touch",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extra-planar-balancer",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:extra-venom",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:fey-interference",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:feylignment",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:focused-miasma",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:forest-roots",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:greater-created",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:hardened-shell",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:improved-ink-jet",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:linguistic-mastery",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:living-accumulator",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:mixed-toxicity",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:planar-strike",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:planar-swing",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:poison-spitter",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:poisonous-ink",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:practiced-claws",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:razor-beak",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:razor-talons",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:real-flight",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:steel-skeleton",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:tactile-density",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:talented-leaper",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:vegetalker",
+      "sourceDescription": "racial-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:vined-limbs",
+      "sourceDescription": "racial-feats.txt"
+    }
+  ],
+  "ritual": [
+    {
+      "key": "pathfinder-core-rulebook:power:ritual-caster",
+      "sourceDescription": "ritual-feats.txt"
+    },
+    {
+      "key": "pathfinder-core-rulebook:power:ritual-master",
+      "sourceDescription": "ritual-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:ritual-expert",
+      "sourceDescription": "ritual-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:spell-adept",
+      "sourceDescription": "ritual-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:spell-dabbler",
+      "sourceDescription": "ritual-feats.txt"
+    }
+  ],
+  "ante": [
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:ace-in-the-hole",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:ante-up",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:lethal-gambit",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:raise-the-stakes",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:strikers-ante",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:vigilant-gambler",
+      "sourceDescription": "card-and-deck-feats.txt#section:Ante Feats"
+    }
+  ],
+  "saga": [
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:saga-bound-doom",
+      "sourceDescription": "card-and-deck-feats.txt#section:Saga Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:saga-bound-edge",
+      "sourceDescription": "card-and-deck-feats.txt#section:Saga Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:saga-bound-fate",
+      "sourceDescription": "card-and-deck-feats.txt#section:Saga Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:saga-bound-plentitude",
+      "sourceDescription": "card-and-deck-feats.txt#section:Saga Feats"
+    },
+    {
+      "key": "expanded-spheres-cardcasters-gamble:power:saga-bound-suits",
+      "sourceDescription": "card-and-deck-feats.txt#section:Saga Feats"
+    }
+  ],
+  "surreal": [
+    {
+      "key": "barons-secluded-library:power:entranced-in-unreality",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "barons-secluded-library:power:gulf-in-reality",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:emulation-expert",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:gather-shadowstuff",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:greater-shadowmark",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shadow-magic",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shadow-shield",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shadow-shield-improved",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shadowblast",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shadowstuff-armament",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shadowy-slay",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:surreal-strike",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:violent-shadow",
+      "sourceDescription": "surreal-feats.txt#tab:Ultimate"
+    }
+  ],
+  "wild-magic": [
+    {
+      "key": "ultimate-spheres-of-power:power:blood-dampening",
+      "sourceDescription": "wild-magic-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:careful-caster",
+      "sourceDescription": "wild-magic-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:chaotic-counter",
+      "sourceDescription": "wild-magic-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:energy-shift",
+      "sourceDescription": "wild-magic-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:heedless-metamagic",
+      "sourceDescription": "wild-magic-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:inspired-surge",
+      "sourceDescription": "wild-magic-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:manipulate-result",
+      "sourceDescription": "wild-magic-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:overpower-resistance",
+      "sourceDescription": "wild-magic-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shift-cost",
+      "sourceDescription": "wild-magic-feats.txt"
+    },
+    {
+      "key": "ultimate-spheres-of-power:power:shift-effect",
+      "sourceDescription": "wild-magic-feats.txt"
+    }
+  ]
+}
