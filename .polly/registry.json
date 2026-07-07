@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    {
+      "id": "feats-browse-index",
+      "branch": "polly/feats-browse-index",
+      "worktree": "/var/home/taylort3450/ComputerScience/SpheresRemaster3/spheres-wiki/.worktrees/feats-browse-index",
+      "status": "running",
+      "worker": "claude_code",
+      "title": "feats-browse-index",
+      "conversation_id": "conv_8beac2218ffe49ad81482b56597c5140"
+    }
+  ]
+}
