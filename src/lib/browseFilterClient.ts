@@ -29,6 +29,7 @@ import { url } from "@/lib/url";
 
 const DEBOUNCE_MS = 220;
 const activeSelects = new Set<Selectable>();
+const activeContexts = new Set<Ctx>();
 
 type Selectable = {
   destroy(): void;
@@ -57,6 +58,7 @@ interface Ctx {
   instances: Record<string, Selectable | null>;
   descText: { value: Record<string, string> | null };
   debounce: ReturnType<typeof setTimeout> | null;
+  destroyed: boolean;
 }
 
 function trackSelect(instance: Selectable | null): Selectable | null {
@@ -70,7 +72,18 @@ function destroyActiveSelects(): void {
   activeSelects.clear();
 }
 
-document.addEventListener("astro:before-swap", destroyActiveSelects);
+function destroyActiveContexts(): void {
+  for (const ctx of activeContexts) {
+    ctx.destroyed = true;
+    clearDebounce(ctx);
+  }
+  activeContexts.clear();
+}
+
+document.addEventListener("astro:before-swap", () => {
+  destroyActiveContexts();
+  destroyActiveSelects();
+});
 
 function coreReady(els: BrowseEls): boolean {
   return Boolean(els.search && els.table && els.heading);
@@ -151,6 +164,7 @@ function updateHeading(ctx: Ctx, category: string): void {
 }
 
 function apply(ctx: Ctx): void {
+  if (ctx.destroyed) return;
   const state = currentState(ctx.els);
   let visible = 0;
   ctx.els.table
@@ -197,15 +211,29 @@ function applySort(els: BrowseEls, mode: string): void {
   }
 }
 
-async function loadDescText(ctx: Ctx): Promise<void> {
-  if (ctx.descText.value) return;
-  ctx.els.status.textContent = "Loading description text…";
+async function fetchDescText(): Promise<Record<string, string>> {
+  const res = await fetch(url("/feats/search-text.json"));
+  return await res.json();
+}
+
+function shouldSkipDescLoad(ctx: Ctx): boolean {
+  return ctx.destroyed || Boolean(ctx.descText.value);
+}
+
+async function fetchDescTextOrEmpty(): Promise<Record<string, string>> {
   try {
-    const res = await fetch(url("/feats/search-text.json"));
-    ctx.descText.value = await res.json();
+    return await fetchDescText();
   } catch {
-    ctx.descText.value = {};
+    return {};
   }
+}
+
+async function loadDescText(ctx: Ctx): Promise<void> {
+  if (shouldSkipDescLoad(ctx)) return;
+  ctx.els.status.textContent = "Loading description text…";
+  const descText = await fetchDescTextOrEmpty();
+  if (ctx.destroyed) return;
+  ctx.descText.value = descText;
 }
 
 function clearDebounce(ctx: Ctx): void {
@@ -301,7 +329,9 @@ function initBrowseFilter(): void {
     instances: {},
     descText: { value: null },
     debounce: null,
+    destroyed: false,
   };
+  activeContexts.add(ctx);
 
   buildFilters(ctx);
   clearSelections(ctx);

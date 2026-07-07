@@ -202,15 +202,7 @@ function searchText(row: FeatBrowseRow): string {
     opacity: 0.6;
   }
   .browse-cell-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    border: 0;
+    display: none;
   }
 
   .browse-empty {
@@ -273,6 +265,7 @@ function searchText(row: FeatBrowseRow): string {
       white-space: normal;
     }
     .browse-cell-label {
+      display: block;
       position: static;
       width: auto;
       height: auto;
