@@ -307,6 +307,7 @@ export type FeatEntry = {
   sphere?: string;
   category?: string;
   dualSphere?: string;
+  summary?: string;
   tags: string[];
   modifies?: string;
 };

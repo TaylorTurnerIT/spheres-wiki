@@ -353,8 +353,7 @@ const staticTags = [...tagMap.entries()]
 </style>
 
 <script>
-import TomSelect from 'tom-select';
-import 'tom-select/dist/css/tom-select.css';
+import { createTomSelect } from '@/lib/tomSelectInit';
 import { SYSTEMS } from '@/config/site';
 
 const PAGE_SIZE = 40;
@@ -554,9 +553,7 @@ function initTomSelects(
   tsInstances = {};
 
   const makeTs = (id: string, key: string, placeholder: string, opts: { value: string; text: string }[]) => {
-    const el = document.getElementById(id) as HTMLSelectElement | null;
-    if (!el) return;
-    const ts = new TomSelect(el, {
+    const ts = createTomSelect(id, {
       maxItems: 1,
       plugins: ['clear_button'],
       placeholder,
@@ -564,7 +561,7 @@ function initTomSelects(
       options: opts,
       onChange: makeOnChange(key),
     });
-    tsInstances[key] = ts;
+    if (ts) tsInstances[key] = ts;
   };
 
   const systemOpts = Object.values(SYSTEM_MAP).map(e => ({ value: e.key, text: e.label }));

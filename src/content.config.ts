@@ -226,6 +226,7 @@ export const entrySchema = z.discriminatedUnion("type", [
     sphere: z.string().optional(),
     category: z.string().optional(),
     dualSphere: z.string().optional(),
+    summary: z.string().optional(),
   }),
   z.object({
     type: z.literal("article"),

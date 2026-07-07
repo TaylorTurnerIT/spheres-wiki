@@ -134,3 +134,30 @@ describe("Content Audit", () => {
     });
   }
 });
+
+describe("Feat entry schema: optional summary field", () => {
+  const baseFeat = {
+    type: "feat",
+    id: "example-feat",
+    name: "Example Feat",
+  };
+
+  it("validates a feat entry with a summary string and retains the field", () => {
+    const summary = "A one-line description of what this feat does.";
+    const result = entrySchema.safeParse({ ...baseFeat, summary });
+    expect(result.success).toBe(true);
+    // Zod strips unknown keys silently, so success alone would pass even if
+    // the schema never declared `summary` — assert the value is retained.
+    if (result.success) {
+      expect(result.data).toHaveProperty("summary", summary);
+    }
+  });
+
+  it("validates a feat entry without a summary field", () => {
+    const result = entrySchema.safeParse(baseFeat);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data).not.toHaveProperty("summary");
+    }
+  });
+});

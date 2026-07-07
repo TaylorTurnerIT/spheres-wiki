@@ -56,8 +56,7 @@ const { options, archetypeFeatures, archetypeFeatureCollEntries } = Astro.props;
 })}
 
 <script>
-import TomSelect from 'tom-select';
-import 'tom-select/dist/css/tom-select.css';
+import { createTomSelect } from '@/lib/tomSelectInit';
 
 let activeTomSelect: any = null;
 
@@ -564,7 +563,7 @@ document.addEventListener('astro:page-load', () => {
 
   if (selectEl) {
     selectEl.classList.remove('ts-hidden-select');
-    activeTomSelect = new TomSelect(selectEl, {
+    activeTomSelect = createTomSelect(selectEl, {
       placeholder: 'Select Archetypes...',
       plugins: ['remove_button'],
       closeAfterSelect: true,
