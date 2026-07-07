@@ -35,18 +35,26 @@ function safeQuerySelectorAll(selector: string): Element[] {
   }
 }
 
-function findTargetElement(id: string): HTMLElement | null {
+function getElementByIdFallback(id: string): HTMLElement | null {
+  try {
+    return document.getElementById(id);
+  } catch {
+    return null;
+  }
+}
+
+function findPrioritizedCandidate(candidates: Element[]): HTMLElement | null {
+  const prioritized = candidates.find((el) => hasPriorityClass(el));
+  return prioritized ? (prioritized as HTMLElement) : null;
+}
+
+function findTargetElement(id: string | undefined): HTMLElement | null {
+  if (!id) return null;
   const candidates = safeQuerySelectorAll(`[id="${CSS.escape(id)}"]`);
   if (candidates.length === 0) {
-    try {
-      return document.getElementById(id);
-    } catch {
-      return null;
-    }
+    return getElementByIdFallback(id);
   }
-  const prioritized = candidates.find((el) => hasPriorityClass(el));
-  if (prioritized) return prioritized as HTMLElement;
-  return candidates[0] as HTMLElement;
+  return findPrioritizedCandidate(candidates) ?? (candidates[0] as HTMLElement);
 }
 
 interface HeadingEntry {
@@ -59,7 +67,7 @@ function resolveHeadings(categories: HTMLElement[]): HeadingEntry[] {
   return categories
     .map((cat) => ({
       cat,
-      heading: findTargetElement(cat.dataset.tocSection!),
+      heading: findTargetElement(cat.dataset.tocSection),
       subLinks: [...cat.querySelectorAll<HTMLAnchorElement>("[data-toc-item]")],
     }))
     .filter((s): s is HeadingEntry => s.heading !== null);
@@ -90,7 +98,7 @@ function findCurrentSubLink(
 ): HTMLAnchorElement | null {
   let active: HTMLAnchorElement | null = null;
   for (const link of headings.flatMap((h) => h.subLinks)) {
-    const el = findTargetElement(link.dataset.tocItem!);
+    const el = findTargetElement(link.dataset.tocItem);
     if (el && isSubLinkInViewport(el)) active = link;
   }
   return active;

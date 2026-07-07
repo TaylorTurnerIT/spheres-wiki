@@ -6,8 +6,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
-import { getMarkdownFilesRecursively } from "./lib/content-files.mjs";
 import { inferFromPath } from "../src/lib/inferFromPath.ts";
+import { getMarkdownFilesRecursively } from "./lib/content-files.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.resolve(__dirname, "../src/content");
@@ -17,7 +17,9 @@ if (!fs.existsSync(contentDir)) {
   process.exit(0);
 }
 
-const allFiles = getMarkdownFilesRecursively(contentDir, { skipQuarantine: true });
+const allFiles = getMarkdownFilesRecursively(contentDir, {
+  skipQuarantine: true,
+});
 const sphereBodies = new Map(); // sphereId -> { body, filePath }
 const baseTalents = []; // { id, name, sphere, filePath }
 

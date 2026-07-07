@@ -205,7 +205,8 @@ function trimBlankLines(lines) {
   const firstContent = lines.findIndex((line) => line.trim());
   if (firstContent === -1) return [];
   let lastContent = lines.length - 1;
-  while (lastContent > firstContent && !lines[lastContent].trim()) lastContent--;
+  while (lastContent > firstContent && !lines[lastContent].trim())
+    lastContent--;
   return lines.slice(firstContent, lastContent + 1);
 }
 

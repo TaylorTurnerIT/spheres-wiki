@@ -12,7 +12,9 @@ const feats = loadFeatEntries();
 let hasError = false;
 
 for (const [tagId] of [...tagMeta.entries()].sort((a, b) => {
-  return (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0]);
+  return (
+    (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0])
+  );
 })) {
   const expected = expectedMembership.get(tagId) ?? [];
   const actual = feats.filter((feat) => feat.tags.includes(tagId));
@@ -29,11 +31,13 @@ for (const [tagId] of [...tagMeta.entries()].sort((a, b) => {
   const unexpected = actual.filter(
     (feat) => !expectedSet.has(`${feat.bookSlug}:${feat.system}:${feat.id}`),
   );
-  const duplicateActualKeys = [...actual.reduce((map, feat) => {
-    const key = `${feat.bookSlug}:${feat.system}:${feat.id}`;
-    map.set(key, (map.get(key) ?? 0) + 1);
-    return map;
-  }, new Map())].filter(([, count]) => count > 1);
+  const duplicateActualKeys = [
+    ...actual.reduce((map, feat) => {
+      const key = `${feat.bookSlug}:${feat.system}:${feat.id}`;
+      map.set(key, (map.get(key) ?? 0) + 1);
+      return map;
+    }, new Map()),
+  ].filter(([, count]) => count > 1);
 
   if (
     missing.length > 0 ||

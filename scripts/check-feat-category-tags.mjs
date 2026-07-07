@@ -12,11 +12,17 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.resolve(__dirname, "../src/content");
 
 const DESCRIPTION_SOURCES = Object.fromEntries(
-  getAllFeatCategorySources().map((source) => [source.tagId, source.descriptionSource]),
+  getAllFeatCategorySources().map((source) => [
+    source.tagId,
+    source.descriptionSource,
+  ]),
 );
 
 const EXPECTED_SYSTEM_SCOPE = Object.fromEntries(
-  FEAT_CATEGORY_SOURCE_MANIFEST.map((source) => [source.tagId, source.tagSystem]),
+  FEAT_CATEGORY_SOURCE_MANIFEST.map((source) => [
+    source.tagId,
+    source.tagSystem,
+  ]),
 );
 
 function markdownFiles(dir) {
@@ -42,7 +48,11 @@ function readBody(filePath) {
 }
 
 function hasPlaceholderDescription(value) {
-  return typeof value !== "string" || value.trim() === "" || /\b(TBD|PLACEHOLDER)\b/i.test(value);
+  return (
+    typeof value !== "string" ||
+    value.trim() === "" ||
+    /\b(TBD|PLACEHOLDER)\b/i.test(value)
+  );
 }
 
 function hasSectionBleed(body) {
@@ -91,4 +101,6 @@ if (hasError) {
   process.exit(1);
 }
 
-console.log(`Feat-category tag validation passed. ${checked} category tags checked.`);
+console.log(
+  `Feat-category tag validation passed. ${checked} category tags checked.`,
+);

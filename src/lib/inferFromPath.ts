@@ -269,18 +269,34 @@ function resolveDrawbackEntry(
   withSystem: WithSystem,
 ): InferredFields | undefined {
   if (group === "general" && parts.length === 4) {
-    return withSystem({ type: "drawback", drawbackKind: "general", id: maybeId });
+    return withSystem({
+      type: "drawback",
+      drawbackKind: "general",
+      id: maybeId,
+    });
   }
   if (group === "spheres" && parts.length === 5) {
-    return withSystem({ type: "drawback", drawbackKind: "sphere", sphere: maybeId, id: maybeNestedId });
+    return withSystem({
+      type: "drawback",
+      drawbackKind: "sphere",
+      sphere: maybeId,
+      id: maybeNestedId,
+    });
   }
   if (group === "dual-spheres" && parts.length === 4) {
-    return withSystem({ type: "drawback", drawbackKind: "dual-sphere", id: maybeId });
+    return withSystem({
+      type: "drawback",
+      drawbackKind: "dual-sphere",
+      id: maybeId,
+    });
   }
   return undefined;
 }
 
-const TRADITION_KIND_BY_GROUP: Record<string, "standard" | "custom" | "card" | "variant"> = {
+const TRADITION_KIND_BY_GROUP: Record<
+  string,
+  "standard" | "custom" | "card" | "variant"
+> = {
   standard: "standard",
   custom: "custom",
   card: "card",
@@ -311,7 +327,13 @@ export function resolveCastingTraditionEntry(
     return withSystem({ type: "boon", id: group });
   }
   if (family === "drawbacks") {
-    return resolveDrawbackEntry(parts, group, maybeId, maybeNestedId, withSystem);
+    return resolveDrawbackEntry(
+      parts,
+      group,
+      maybeId,
+      maybeNestedId,
+      withSystem,
+    );
   }
   if (family === "traditions") {
     return resolveTraditionEntry(parts, group, maybeId, withSystem);

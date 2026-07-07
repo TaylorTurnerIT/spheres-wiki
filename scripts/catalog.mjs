@@ -395,7 +395,10 @@ const MIXED_CONTENT_TYPE_TESTS = [
 ];
 
 const POWER_MIGHT_SUBTYPE_TESTS = [
-  ["feat", (entry, content) => isFeatContent(content) || entry.title?.includes("Feat")],
+  [
+    "feat",
+    (entry, content) => isFeatContent(content) || entry.title?.includes("Feat"),
+  ],
   ["archetype", (entry) => entry.title?.includes("Archetype")],
   ["sphere", (_entry, content) => isSphereDefinition(content)],
 ];
@@ -462,11 +465,9 @@ function isTopLevelClassPage(entry) {
 }
 
 function hasMinimalClassFormatting(content) {
-  return [
-    /^\*\*Hit Die:\*\*/m,
-    /^\*\*Role:\*\*/m,
-    /^\+\+.*\|/m,
-  ].some((re) => re.test(content));
+  return [/^\*\*Hit Die:\*\*/m, /^\*\*Role:\*\*/m, /^\+\+.*\|/m].some((re) =>
+    re.test(content),
+  );
 }
 
 function assignTopLevelClass(entry, includeGuile) {
@@ -775,7 +776,10 @@ function printCountSection(title, entries, labelWidth, valueMapper = (v) => v) {
 
 function printTopBooks(catalog, existingMdByBook) {
   console.log(`\nTop Books (source files → existing .md):`);
-  for (const [book, count] of Object.entries(catalog.summary.byBook).slice(0, 25)) {
+  for (const [book, count] of Object.entries(catalog.summary.byBook).slice(
+    0,
+    25,
+  )) {
     const mdCount = existingMdByBook[book] || 0;
     console.log(
       `  ${book.padEnd(40)} ${String(count).padStart(4)} src → ${String(mdCount).padStart(4)} md`,
@@ -795,10 +799,19 @@ function printCatalogSummary(catalog, existingMdByBook) {
   console.log(
     `Existing .md files:   ${catalog.summary.totalExistingMd} in ${catalog.summary.booksWithContent} books`,
   );
-  printCountSection("By Type", Object.entries(catalog.summary.byType), 18, (info) => info.total);
+  printCountSection(
+    "By Type",
+    Object.entries(catalog.summary.byType),
+    18,
+    (info) => info.total,
+  );
   printCountSection("By System", Object.entries(catalog.summary.bySystem), 18);
   printTopBooks(catalog, existingMdByBook);
-  printCountSection("Top Parents", Object.entries(catalog.summary.byParent).slice(0, 20), 35);
+  printCountSection(
+    "Top Parents",
+    Object.entries(catalog.summary.byParent).slice(0, 20),
+    35,
+  );
   printUnmappedParents(catalog.summary.unmappedParents);
 }
 

@@ -584,7 +584,8 @@ describe("casting tradition builder logic", () => {
 
   // B20: selectionFromTradition pre-populates from tradition entry
   it("selectionFromTradition pre-populates drawbacks, boons, and choices", () => {
-    const tradition = data.traditions![0]; // spellscourged
+    const tradition = data.traditions?.[0]; // spellscourged
+    if (!tradition) throw new Error("tradition is undefined");
     const selection = selectionFromTradition(tradition, data);
     expect(selection.traditionId).toBe("spellscourged");
     expect(selection.drawbacks).toEqual([
@@ -726,18 +727,18 @@ describe("casting tradition integration (real content)", () => {
   });
 });
 
-// Phase 1-5 tests: builderHelpers, detailed export, manual adjustments, CAM override
-import {
-  filterByText,
-  groupBySphere,
-  formatIncompatibleName,
-  prerequisiteExcerpt,
-  canSelectEntry,
-  isSafeFix,
-} from "../../src/lib/castingTraditions/builderHelpers";
 import type {
   BuilderStore,
   SelectedIds,
+} from "../../src/lib/castingTraditions/builderHelpers";
+// Phase 1-5 tests: builderHelpers, detailed export, manual adjustments, CAM override
+import {
+  canSelectEntry,
+  filterByText,
+  formatIncompatibleName,
+  groupBySphere,
+  isSafeFix,
+  prerequisiteExcerpt,
 } from "../../src/lib/castingTraditions/builderHelpers";
 
 describe("builderHelpers", () => {
@@ -897,12 +898,11 @@ describe("builderHelpers", () => {
   });
 
   it("prerequisiteExcerpt returns human-readable text", () => {
-    expect(
-      prerequisiteExcerpt(
-        mockStore.drawbacks.find((d) => d.id === "prereq-target")! as any,
-        mockStore,
-      ),
-    ).toContain("Zebra Drawback");
+    const drawback = mockStore.drawbacks.find((d) => d.id === "prereq-target");
+    if (!drawback) throw new Error("drawback is undefined");
+    expect(prerequisiteExcerpt(drawback as any, mockStore)).toContain(
+      "Zebra Drawback",
+    );
     expect(
       prerequisiteExcerpt({ requires: { drawback: "d1" } }, mockStore),
     ).toBe("Zebra Drawback");

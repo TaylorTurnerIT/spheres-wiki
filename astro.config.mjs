@@ -1,9 +1,9 @@
 // astro.config.mjs
 
+import { EventEmitter } from "node:events";
 import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
-import { EventEmitter } from "node:events";
 import { parse as parseYaml } from "yaml";
 import remarkEntryLinks from "./src/lib/remarkEntryLinks.ts";
 import remarkStripTocFlags from "./src/lib/remarkStripTocFlags.ts";

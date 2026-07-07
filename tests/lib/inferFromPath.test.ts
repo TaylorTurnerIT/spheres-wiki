@@ -261,7 +261,9 @@ describe("inferFromPath", () => {
 
     it("power/casting-traditions/traditions/custom/{id}.md → custom tradition", () => {
       expect(
-        inferFromPath("power/casting-traditions/traditions/custom/blood-magic.md"),
+        inferFromPath(
+          "power/casting-traditions/traditions/custom/blood-magic.md",
+        ),
       ).toEqual({
         type: "tradition",
         traditionKind: "custom",

@@ -2,8 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
-import { cleanBody, normalizeQuotes } from "./wikidot-markup.mjs";
 import { kebab } from "./render.mjs";
+import { cleanBody, normalizeQuotes } from "./wikidot-markup.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -14,8 +14,23 @@ const ARCHIVE_DIR = path.resolve(
 export const CONTENT_DIR = path.resolve(__dirname, "../../src/content");
 
 export const FEAT_CATEGORY_SOURCE_MANIFEST = [
-  { tagId: "admixture", contentSystem: "power", tagSystem: "power", sourceFile: "admixture-feats.txt", tab: "Ultimate", featHeadingLevel: 3, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "anathema", contentSystem: "power", tagSystem: "power", sourceFile: "anathema-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
+  {
+    tagId: "admixture",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "admixture-feats.txt",
+    tab: "Ultimate",
+    featHeadingLevel: 3,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "anathema",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "anathema-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
   {
     tagId: "champion",
     contentSystem: "power",
@@ -25,13 +40,66 @@ export const FEAT_CATEGORY_SOURCE_MANIFEST = [
     featHeadingLevel: 4,
     defaultBookSlug: "champions-of-the-spheres",
   },
-  { tagId: "chance", contentSystem: "power", tagSystem: "power", sourceFile: "chance-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "channeling", contentSystem: "power", tagSystem: "power", sourceFile: "channeling-feats.txt", tab: "Ultimate", featHeadingLevel: 3, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "combat", contentSystem: "power", tagSystem: "power", sourceFile: "combat-feats.txt", tab: "Ultimate", featHeadingLevel: 3, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "companion", contentSystem: "power", tagSystem: "power", sourceFile: "companion-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "counterspell", contentSystem: "power", tagSystem: "power", sourceFile: "counterspell-feats.txt", tab: "Ultimate", featHeadingLevel: 3, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "drawback", contentSystem: "power", tagSystem: "power", sourceFile: "drawback-feats.txt", tab: "Ultimate", featHeadingLevel: 3, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "extra", contentSystem: "power", tagSystem: "power", sourceFile: "extra-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
+  {
+    tagId: "chance",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "chance-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "channeling",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "channeling-feats.txt",
+    tab: "Ultimate",
+    featHeadingLevel: 3,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "combat",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "combat-feats.txt",
+    tab: "Ultimate",
+    featHeadingLevel: 3,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "companion",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "companion-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "counterspell",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "counterspell-feats.txt",
+    tab: "Ultimate",
+    featHeadingLevel: 3,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "drawback",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "drawback-feats.txt",
+    tab: "Ultimate",
+    featHeadingLevel: 3,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "extra",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "extra-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
   {
     tagId: "general",
     contentSystem: "power",
@@ -41,7 +109,15 @@ export const FEAT_CATEGORY_SOURCE_MANIFEST = [
     featHeadingLevel: 3,
     defaultBookSlug: "ultimate-spheres-of-power",
   },
-  { tagId: "item-creation", contentSystem: "power", tagSystem: "power", sourceFile: "item-creation-feats.txt", tab: "Ultimate", featHeadingLevel: 3, defaultBookSlug: "ultimate-spheres-of-power" },
+  {
+    tagId: "item-creation",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "item-creation-feats.txt",
+    tab: "Ultimate",
+    featHeadingLevel: 3,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
   {
     tagId: "mythic",
     contentSystem: "power",
@@ -52,14 +128,72 @@ export const FEAT_CATEGORY_SOURCE_MANIFEST = [
     featHeadingLevel: 4,
     defaultBookSlug: "mythic-spheres-3",
   },
-  { tagId: "metamagic", contentSystem: "power", tagSystem: "power", sourceFile: "metamagic-feats.txt", tab: "Ultimate", featHeadingLevel: 3, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "necrosis", contentSystem: "power", tagSystem: "power", sourceFile: "necrosis-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "operative", contentSystem: "guile", tagSystem: "guile", sourceFile: "operative-feats.txt", tab: "Spheres of Guile", featHeadingLevel: 4, defaultBookSlug: "spheres-of-guile" },
-  { tagId: "practitioner", contentSystem: "might", tagSystem: "might", sourceFile: "practitioner-feats.txt", featHeadingLevel: 4, defaultBookSlug: "spheres-of-might" },
-  { tagId: "protokinesis", contentSystem: "power", tagSystem: "power", sourceFile: "protokinesis-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "proxy", contentSystem: "power", tagSystem: "power", sourceFile: "proxy-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "racial", contentSystem: "power", tagSystem: "power", sourceFile: "racial-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "ritual", contentSystem: "power", tagSystem: "power", sourceFile: "ritual-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
+  {
+    tagId: "metamagic",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "metamagic-feats.txt",
+    tab: "Ultimate",
+    featHeadingLevel: 3,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "necrosis",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "necrosis-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "operative",
+    contentSystem: "guile",
+    tagSystem: "guile",
+    sourceFile: "operative-feats.txt",
+    tab: "Spheres of Guile",
+    featHeadingLevel: 4,
+    defaultBookSlug: "spheres-of-guile",
+  },
+  {
+    tagId: "practitioner",
+    contentSystem: "might",
+    tagSystem: "might",
+    sourceFile: "practitioner-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "spheres-of-might",
+  },
+  {
+    tagId: "protokinesis",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "protokinesis-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "proxy",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "proxy-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "racial",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "racial-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "ritual",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "ritual-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
   {
     tagId: "ante",
     contentSystem: "power",
@@ -87,10 +221,40 @@ export const FEAT_CATEGORY_SOURCE_MANIFEST = [
     featHeadingLevel: 4,
     defaultBookSlug: "expanded-spheres-cardcasters-gamble",
   },
-  { tagId: "squadron", contentSystem: "power", tagSystem: "power", sourceFile: "squadron-feats.txt", tab: "Ultimate", featHeadingLevel: 3, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "surreal", contentSystem: "power", tagSystem: "power", sourceFile: "surreal-feats.txt", tab: "Ultimate", featHeadingLevel: 3, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "teamwork", contentSystem: "power", tagSystem: "power", sourceFile: "teamwork-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
-  { tagId: "wild-magic", contentSystem: "power", tagSystem: "power", sourceFile: "wild-magic-feats.txt", featHeadingLevel: 4, defaultBookSlug: "ultimate-spheres-of-power" },
+  {
+    tagId: "squadron",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "squadron-feats.txt",
+    tab: "Ultimate",
+    featHeadingLevel: 3,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "surreal",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "surreal-feats.txt",
+    tab: "Ultimate",
+    featHeadingLevel: 3,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "teamwork",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "teamwork-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
+  {
+    tagId: "wild-magic",
+    contentSystem: "power",
+    tagSystem: "power",
+    sourceFile: "wild-magic-feats.txt",
+    featHeadingLevel: 4,
+    defaultBookSlug: "ultimate-spheres-of-power",
+  },
 ];
 
 const STRUCTURAL_MARKERS = new Set(["combat", "dual sphere"]);
@@ -151,7 +315,10 @@ const EXPECTED_FEAT_OVERRIDES = {
 };
 
 function normalizeMarker(value) {
-  return value.toLowerCase().replace(/[\s-]+/g, " ").trim();
+  return value
+    .toLowerCase()
+    .replace(/[\s-]+/g, " ")
+    .trim();
 }
 
 function readFileLines(filePath) {
@@ -159,9 +326,7 @@ function readFileLines(filePath) {
 }
 
 function sliceTab(lines, tabName) {
-  const start = lines.findIndex(
-    (line) => line.trim() === `[[tab ${tabName}]]`,
-  );
+  const start = lines.findIndex((line) => line.trim() === `[[tab ${tabName}]]`);
   if (start === -1) {
     throw new Error(`Could not find tab "${tabName}" in source page.`);
   }
@@ -174,7 +339,9 @@ function sliceTab(lines, tabName) {
 
 // fallow-ignore-next-line complexity
 function sliceSection(lines, sectionHeading) {
-  const start = lines.findIndex((line) => line.trim() === sectionHeading.trim());
+  const start = lines.findIndex(
+    (line) => line.trim() === sectionHeading.trim(),
+  );
   if (start === -1) {
     throw new Error(`Could not find section heading "${sectionHeading}".`);
   }
@@ -215,8 +382,10 @@ export function loadAllTagIds() {
 export function loadBookMetaMap() {
   const meta = new Map();
   for (const filePath of walkMarkdownFiles(CONTENT_DIR)) {
-    if (!filePath.endsWith("_book.yaml") && path.basename(filePath) !== "_book.yaml") {
-      continue;
+    if (
+      !filePath.endsWith("_book.yaml") &&
+      path.basename(filePath) !== "_book.yaml"
+    ) {
     }
   }
   for (const entry of fs.readdirSync(CONTENT_DIR, { withFileTypes: true })) {
@@ -264,7 +433,11 @@ export function loadBookSystemMap() {
       .readdirSync(path.join(CONTENT_DIR, entry.name), { withFileTypes: true })
       .filter((child) => child.isDirectory())
       .map((child) => child.name)
-      .filter((name) => ["power", "might", "guile", "champions", "tags", "articles"].includes(name));
+      .filter((name) =>
+        ["power", "might", "guile", "champions", "tags", "articles"].includes(
+          name,
+        ),
+      );
     systems.set(
       entry.name,
       systemDirs.filter((name) =>
@@ -324,7 +497,9 @@ function parseSourceFeatHeadingWithTags(line, knownTagIds) {
 
 function extractRulesBody(lines, featHeadingLevel) {
   const featPattern = new RegExp(`^\\+{${featHeadingLevel}}\\s+`);
-  const firstFeatIndex = lines.findIndex((line) => featPattern.test(line.trim()));
+  const firstFeatIndex = lines.findIndex((line) =>
+    featPattern.test(line.trim()),
+  );
   return (firstFeatIndex === -1 ? lines : lines.slice(0, firstFeatIndex))
     .join("\n")
     .trim();
@@ -338,7 +513,12 @@ function extractExpectedEntries(lines, featHeadingLevel) {
 }
 
 // fallow-ignore-next-line complexity
-function extractExpectedEntriesWithBodies(lines, featHeadingLevel, pageTagId, knownTagIds) {
+function extractExpectedEntriesWithBodies(
+  lines,
+  featHeadingLevel,
+  pageTagId,
+  knownTagIds,
+) {
   const featPattern = new RegExp(`^\\+{${featHeadingLevel}}\\s+`);
   const entries = [];
 
@@ -348,12 +528,18 @@ function extractExpectedEntriesWithBodies(lines, featHeadingLevel, pageTagId, kn
     let end = index + 1;
     while (end < lines.length && !featPattern.test(lines[end].trim())) end++;
 
-    const parsed = parseSourceFeatHeadingWithTags(lines[index].trim(), knownTagIds);
+    const parsed = parseSourceFeatHeadingWithTags(
+      lines[index].trim(),
+      knownTagIds,
+    );
     const tags = [...new Set([pageTagId, ...parsed.tags])].sort();
     entries.push({
       ...parsed,
       tags,
-      rawBody: lines.slice(index + 1, end).join("\n").trim(),
+      rawBody: lines
+        .slice(index + 1, end)
+        .join("\n")
+        .trim(),
       headingLine: lines[index].trim(),
     });
 
@@ -370,7 +556,9 @@ export function renderExpectedEntryBody(entry) {
 // Source pages vary by tabs, sections, and heading depth.
 // fallow-ignore-next-line complexity
 function getFeatCategorySource(tagId) {
-  const spec = FEAT_CATEGORY_SOURCE_MANIFEST.find((entry) => entry.tagId === tagId);
+  const spec = FEAT_CATEGORY_SOURCE_MANIFEST.find(
+    (entry) => entry.tagId === tagId,
+  );
   if (!spec) {
     throw new Error(`Unknown feat-category source "${tagId}".`);
   }
@@ -391,7 +579,9 @@ function getFeatCategorySource(tagId) {
 }
 
 export function getAllFeatCategorySources() {
-  return FEAT_CATEGORY_SOURCE_MANIFEST.map((entry) => getFeatCategorySource(entry.tagId));
+  return FEAT_CATEGORY_SOURCE_MANIFEST.map((entry) =>
+    getFeatCategorySource(entry.tagId),
+  );
 }
 
 function getFeatCategorySourceEntries(tagId, knownTagIds = loadAllTagIds()) {
@@ -434,7 +624,9 @@ function resolveSourceBookSlug(sourceSpec, entry, bookMetaMap) {
     ?.trim();
   if (bodySourceText) {
     const normalized = normalizeLookup(bodySourceText);
-    const sortedTitles = [...titleToSlug.entries()].sort((a, b) => b[0].length - a[0].length);
+    const sortedTitles = [...titleToSlug.entries()].sort(
+      (a, b) => b[0].length - a[0].length,
+    );
     for (const [title, slug] of sortedTitles) {
       if (normalized.includes(title)) return slug;
     }
@@ -456,7 +648,8 @@ function inferSphereFields(entry, knownSphereIds = loadKnownSphereIds()) {
 
   for (const match of sourceText.matchAll(spherePattern)) {
     const sphereId = kebab(normalizeQuotes(match[1]));
-    if (!knownSphereIds.has(sphereId) || sphereMatches.includes(sphereId)) continue;
+    if (!knownSphereIds.has(sphereId) || sphereMatches.includes(sphereId))
+      continue;
     sphereMatches.push(sphereId);
   }
 
@@ -488,7 +681,10 @@ function inferEntrySystem(
     return sourceSpec.contentSystem;
   }
 
-  const sphereCandidates = [sphereFields.sphere, sphereFields.dualSphere].filter(Boolean);
+  const sphereCandidates = [
+    sphereFields.sphere,
+    sphereFields.dualSphere,
+  ].filter(Boolean);
   for (const sphereId of sphereCandidates) {
     const systems = [...(sphereSystemMap.get(sphereId) ?? [])];
     if (systems.length === 1) return systems[0];
@@ -497,7 +693,9 @@ function inferEntrySystem(
   const systemsForBook = bookSystemMap.get(bookSlug) ?? [];
   if (systemsForBook.length === 1) return systemsForBook[0];
 
-  return sourceSpec.tagId === "champion" ? "champions" : sourceSpec.contentSystem;
+  return sourceSpec.tagId === "champion"
+    ? "champions"
+    : sourceSpec.contentSystem;
 }
 
 function getCanonicalCategoryForExpectedEntry(entry, tagMeta) {
@@ -546,7 +744,10 @@ export function getExpectedFeatPlacements(
       };
       return {
         ...withFields,
-        canonicalCategory: getCanonicalCategoryForExpectedEntry(withFields, tagMeta),
+        canonicalCategory: getCanonicalCategoryForExpectedEntry(
+          withFields,
+          tagMeta,
+        ),
         homeCategory: source.tagId,
         sourceCategories: [source.tagId],
         key: `${bookSlug}:${system}:${entry.id}`,
@@ -560,11 +761,15 @@ export function getExpectedFeatPlacements(
     const current = aggregated.get(aggregateKey) ?? {
       ...placement,
       tags: new Set(placement.tags),
-      sourceCategories: new Set(placement.sourceCategories ?? [placement.sourceTagId]),
+      sourceCategories: new Set(
+        placement.sourceCategories ?? [placement.sourceTagId],
+      ),
       sourceDescriptions: new Set([placement.sourceDescription]),
     };
     for (const tagId of placement.tags) current.tags.add(tagId);
-    for (const sourceCategory of placement.sourceCategories ?? [placement.sourceTagId]) {
+    for (const sourceCategory of placement.sourceCategories ?? [
+      placement.sourceTagId,
+    ]) {
       current.sourceCategories.add(sourceCategory);
     }
     current.sourceDescriptions.add(placement.sourceDescription);
@@ -595,7 +800,10 @@ export function getExpectedFeatPlacements(
 
     return {
       ...withResolved,
-      canonicalCategory: getCanonicalCategoryForExpectedEntry(withResolved, tagMeta),
+      canonicalCategory: getCanonicalCategoryForExpectedEntry(
+        withResolved,
+        tagMeta,
+      ),
       key: `${placement.bookSlug}:${system}:${placement.id}`,
     };
   });
@@ -603,7 +811,9 @@ export function getExpectedFeatPlacements(
 
 // Category membership is a many-to-many projection over merged expected placements.
 // fallow-ignore-next-line complexity
-export function getExpectedCategoryMembership(tagMeta = loadFeatCategoryTagMeta()) {
+export function getExpectedCategoryMembership(
+  tagMeta = loadFeatCategoryTagMeta(),
+) {
   const membership = new Map();
   for (const placement of getExpectedFeatPlacements()) {
     for (const tagId of placement.tags.filter((tag) => tagMeta.has(tag))) {
@@ -617,7 +827,10 @@ export function getExpectedCategoryMembership(tagMeta = loadFeatCategoryTagMeta(
     for (const placement of placements) {
       deduped.set(placement.key, placement);
     }
-    membership.set(tagId, [...deduped.values()].sort((a, b) => a.key.localeCompare(b.key)));
+    membership.set(
+      tagId,
+      [...deduped.values()].sort((a, b) => a.key.localeCompare(b.key)),
+    );
   }
 
   return membership;
@@ -656,7 +869,11 @@ export function loadFeatEntries() {
 
     if (parts[2] === "feats" && parts.length === 5) {
       category = parts[3];
-    } else if (parts[2] === "spheres" && parts[4] === "feats" && parts.length === 6) {
+    } else if (
+      parts[2] === "spheres" &&
+      parts[4] === "feats" &&
+      parts.length === 6
+    ) {
       sphereFromPath = parts[3];
     } else if (parts[2] === "feats" && parts.length === 4) {
       category = undefined;

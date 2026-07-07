@@ -1,6 +1,14 @@
 import type { TraditionPredicate } from "../types";
-import type { TraditionSelection, TraditionData, TraditionDiagnostic } from "./types";
-import { buildTraditionState, validateTradition, calculateAvailableBoonSlots } from "./rules";
+import {
+  buildTraditionState,
+  calculateAvailableBoonSlots,
+  validateTradition,
+} from "./rules";
+import type {
+  TraditionData,
+  TraditionDiagnostic,
+  TraditionSelection,
+} from "./types";
 
 // ── Client-side entry types ─────────────────────────────────────────────────
 
@@ -62,7 +70,10 @@ export type SelectedIds = {
 
 // ── Filtering ───────────────────────────────────────────────────────────────
 
-export function filterByText<T extends { name: string }>(items: T[], query: string): T[] {
+export function filterByText<T extends { name: string }>(
+  items: T[],
+  query: string,
+): T[] {
   if (!query) return items;
   const q = query.toLowerCase();
   return items.filter((item) => item.name.toLowerCase().includes(q));
@@ -70,25 +81,38 @@ export function filterByText<T extends { name: string }>(items: T[], query: stri
 
 // ── Grouping ────────────────────────────────────────────────────────────────
 
-export function groupBySphere(drawbacks: ClientDrawback[]): Map<string, ClientDrawback[]> {
+export function groupBySphere(
+  drawbacks: ClientDrawback[],
+): Map<string, ClientDrawback[]> {
   const groups = new Map<string, ClientDrawback[]>();
   for (const d of drawbacks) {
     const sphere = d.sphere ?? (d.spheres ?? []).join("/") ?? "Other";
-    if (!groups.has(sphere)) groups.set(sphere, []);
-    groups.get(sphere)!.push(d);
+    let list = groups.get(sphere);
+    if (!list) {
+      list = [];
+      groups.set(sphere, list);
+    }
+    list.push(d);
   }
   // Sort each group by name
   for (const [, items] of groups) {
     items.sort((a, b) => a.name.localeCompare(b.name));
   }
   // Sort groups by sphere name
-  return new Map([...groups.entries()].sort((a, b) => a[0].localeCompare(b[0])));
+  return new Map(
+    [...groups.entries()].sort((a, b) => a[0].localeCompare(b[0])),
+  );
 }
 
 // ── Formatted names ─────────────────────────────────────────────────────────
 
-export function formatIncompatibleName(id: string, store: BuilderStore): string {
-  const found = store.drawbacks.find((d) => d.id === id) ?? store.boons.find((b) => b.id === id);
+export function formatIncompatibleName(
+  id: string,
+  store: BuilderStore,
+): string {
+  const found =
+    store.drawbacks.find((d) => d.id === id) ??
+    store.boons.find((b) => b.id === id);
   return found?.name ?? id;
 }
 
@@ -99,12 +123,20 @@ export function prerequisiteExcerpt(
   return predicateExcerpt(entry.requires, store);
 }
 
-function leafExcerpt(predicate: TraditionPredicate, store: BuilderStore): string {
+function leafExcerpt(
+  predicate: TraditionPredicate,
+  store: BuilderStore,
+): string {
   if ("drawback" in predicate) {
-    return store.drawbacks.find((d) => d.id === predicate.drawback)?.name ?? predicate.drawback;
+    return (
+      store.drawbacks.find((d) => d.id === predicate.drawback)?.name ??
+      predicate.drawback
+    );
   }
   if ("boon" in predicate) {
-    return store.boons.find((b) => b.id === predicate.boon)?.name ?? predicate.boon;
+    return (
+      store.boons.find((b) => b.id === predicate.boon)?.name ?? predicate.boon
+    );
   }
   if ("choice" in predicate) return `choice: ${predicate.choice}`;
   return "";
@@ -118,7 +150,8 @@ function predicateExcerpt(
   if ("drawback" in predicate || "boon" in predicate || "choice" in predicate) {
     return leafExcerpt(predicate, store);
   }
-  if ("not" in predicate) return `NOT ${predicateExcerpt(predicate.not, store)}`;
+  if ("not" in predicate)
+    return `NOT ${predicateExcerpt(predicate.not, store)}`;
   if ("all" in predicate) {
     return predicate.all.map((p) => predicateExcerpt(p, store)).join(" and ");
   }
@@ -136,10 +169,19 @@ function addEntryToHypothetical(
   kind: "drawback" | "sphere-drawback" | "boon",
 ): TraditionSelection {
   if (kind === "drawback") {
-    return { ...hypothetical, drawbacks: [...hypothetical.drawbacks, { id: entryId }] };
+    return {
+      ...hypothetical,
+      drawbacks: [...hypothetical.drawbacks, { id: entryId }],
+    };
   }
   if (kind === "sphere-drawback") {
-    return { ...hypothetical, sphereDrawbacks: [...(hypothetical.sphereDrawbacks ?? []), { id: entryId }] };
+    return {
+      ...hypothetical,
+      sphereDrawbacks: [
+        ...(hypothetical.sphereDrawbacks ?? []),
+        { id: entryId },
+      ],
+    };
   }
   return { ...hypothetical, boons: [...hypothetical.boons, { id: entryId }] };
 }
@@ -149,8 +191,10 @@ function isAlreadySelected(
   entryId: string,
   kind: "drawback" | "sphere-drawback" | "boon",
 ): boolean {
-  if (kind === "drawback") return hypothetical.drawbacks.some((r) => r.id === entryId);
-  if (kind === "sphere-drawback") return (hypothetical.sphereDrawbacks ?? []).some((r) => r.id === entryId);
+  if (kind === "drawback")
+    return hypothetical.drawbacks.some((r) => r.id === entryId);
+  if (kind === "sphere-drawback")
+    return (hypothetical.sphereDrawbacks ?? []).some((r) => r.id === entryId);
   return hypothetical.boons.some((r) => r.id === entryId);
 }
 
@@ -193,7 +237,10 @@ export function canSelectEntry(
     const boon = store.boons.find((b) => b.id === entryId);
     const cost = boon?.boonCost ?? 1;
     if (currentBoonSlots + cost > slots) {
-      return { allowed: false, reason: `Not enough boon slots (need ${cost}, have ${slots} total, ${slots - currentBoonSlots} remaining)` };
+      return {
+        allowed: false,
+        reason: `Not enough boon slots (need ${cost}, have ${slots} total, ${slots - currentBoonSlots} remaining)`,
+      };
     }
   }
 
@@ -231,7 +278,10 @@ function addMissingIdsToHypothetical(
       boons: store.boons as any[],
     };
     const state = buildTraditionState(
-      { drawbacks: result.drawbacks.map((id) => ({ id })), boons: result.boons.map((id) => ({ id })) },
+      {
+        drawbacks: result.drawbacks.map((id) => ({ id })),
+        boons: result.boons.map((id) => ({ id })),
+      },
       data,
     );
     if (totalCost > calculateAvailableBoonSlots(state)) return null;
@@ -248,12 +298,17 @@ export function isSafeFix(
   if (diagnostic.code !== "missing-prerequisite") return false;
 
   const entryId = diagnostic.sourceIds[0];
-  const entry = store.drawbacks.find((d) => d.id === entryId) ??
+  const entry =
+    store.drawbacks.find((d) => d.id === entryId) ??
     store.boons.find((b) => b.id === entryId);
   if (!entry?.requires) return false;
 
   const missingIds = collectRequiredIds(entry.requires as any);
-  const hypotheticalIds = addMissingIdsToHypothetical(missingIds, store, selectedIds);
+  const hypotheticalIds = addMissingIdsToHypothetical(
+    missingIds,
+    store,
+    selectedIds,
+  );
   if (!hypotheticalIds) return false;
 
   const traitData: TraditionData = {

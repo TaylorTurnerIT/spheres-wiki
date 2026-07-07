@@ -5,11 +5,11 @@ import { parse as parseYaml, stringify as stringifyYaml } from "yaml";
 import {
   CONTENT_DIR,
   getExpectedFeatPlacements,
-  loadFeatCategoryTagMeta,
-  loadFeatEntries,
   loadAllTagIds,
   loadBookMetaMap,
   loadBookSystemMap,
+  loadFeatCategoryTagMeta,
+  loadFeatEntries,
   loadSphereSystemMap,
   renderExpectedEntryBody,
 } from "./lib/feat-category-sources.mjs";
@@ -84,7 +84,8 @@ function ensureBookStub(expected) {
   const yamlPath = path.join(bookDir, "_book.yaml");
   if (fs.existsSync(yamlPath)) return null;
 
-  const title = STUB_TITLES[expected.bookSlug] ?? titleFromSlug(expected.bookSlug);
+  const title =
+    STUB_TITLES[expected.bookSlug] ?? titleFromSlug(expected.bookSlug);
   const bodySourceMatch = expected.rawBody.match(
     /\^\^\s*\*?\*?Source:\*?\*?\s*(.+?)\s*\^\^/i,
   );
@@ -181,7 +182,9 @@ function moveAndRewriteFeat(filePath, expected, tags) {
 // fallow-ignore-next-line complexity
 function chooseCandidate(expected, feats, claimedPaths) {
   const available = feats.filter((feat) => !claimedPaths.has(feat.filePath));
-  const sameBook = available.filter((feat) => feat.bookSlug === expected.bookSlug);
+  const sameBook = available.filter(
+    (feat) => feat.bookSlug === expected.bookSlug,
+  );
 
   const exactKey = sameBook.find(
     (feat) => feat.system === expected.system && feat.id === expected.id,
@@ -212,7 +215,11 @@ function chooseCandidate(expected, feats, claimedPaths) {
   );
   if (crossBookTagged.length === 1) return crossBookTagged[0];
 
-  if (sameBookSameSystemName.length > 1 || sameBookSameId.length > 1 || sameBookSameName.length > 1) {
+  if (
+    sameBookSameSystemName.length > 1 ||
+    sameBookSameId.length > 1 ||
+    sameBookSameName.length > 1
+  ) {
     throw new Error(
       `Ambiguous existing feat match for ${expected.key}: ${sameBookSameName.map((feat) => feat.relativePath).join(" | ")}`,
     );
@@ -238,7 +245,9 @@ function buildExpectedTagMap() {
       sourceCategories: new Set(),
     };
     for (const tagId of expected.tags) bucket.tags.add(tagId);
-    for (const sourceCategory of expected.sourceCategories ?? [expected.sourceTagId]) {
+    for (const sourceCategory of expected.sourceCategories ?? [
+      expected.sourceTagId,
+    ]) {
       bucket.sourceCategories.add(sourceCategory);
     }
     map.set(expected.key, bucket);
@@ -264,13 +273,19 @@ const tagMeta = loadFeatCategoryTagMeta();
 const expectedTagMap = buildExpectedTagMap();
 // Projection preserves source-category unions for later routing and tag sync.
 // fallow-ignore-next-line complexity
-const EXPECTED_PLACEMENTS = [...expectedTagMap.values()].map(({ expected, tags, homeCategory, sourceCategories }) => ({
-  ...expected,
-  tags: [...tags].sort(),
-  homeCategory,
-  sourceCategories: [...sourceCategories].sort(),
-  canonicalCategory: canonicalCategoryForTags(tags, expected.sphere, expected.category),
-}));
+const EXPECTED_PLACEMENTS = [...expectedTagMap.values()].map(
+  ({ expected, tags, homeCategory, sourceCategories }) => ({
+    ...expected,
+    tags: [...tags].sort(),
+    homeCategory,
+    sourceCategories: [...sourceCategories].sort(),
+    canonicalCategory: canonicalCategoryForTags(
+      tags,
+      expected.sphere,
+      expected.category,
+    ),
+  }),
+);
 
 const created = [];
 const moved = [];
@@ -396,7 +411,8 @@ console.log(`Tag updates: ${tagUpdates.length}`);
 for (const update of tagUpdates.slice(0, 120)) {
   console.log(`  ~ ${update.file} -> [${update.tags.join(", ")}]`);
 }
-if (tagUpdates.length > 120) console.log(`  ... ${tagUpdates.length - 120} more`);
+if (tagUpdates.length > 120)
+  console.log(`  ... ${tagUpdates.length - 120} more`);
 
 console.log(`Moves: ${moved.length}`);
 for (const move of moved.slice(0, 120)) {

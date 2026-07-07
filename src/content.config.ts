@@ -1,7 +1,7 @@
 import { defineCollection } from "astro:content";
-import { z } from "zod";
 import { EventEmitter } from "node:events";
 import { glob } from "astro/loaders";
+import { z } from "zod";
 import { inferFromPath } from "./lib/inferFromPath";
 
 // Increase listener limit because Astro creates a watcher per book collection

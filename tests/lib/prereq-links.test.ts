@@ -71,7 +71,7 @@ describe("parsePrerequisiteText — parenthetical talent refs", () => {
       stubResolvers,
     );
     expect(nodes).not.toBeNull();
-    const links = nodes!.filter((n: any) => n.type === "link");
+    const links = nodes?.filter((n: any) => n.type === "link") ?? [];
     expect(links).toHaveLength(2);
     expect(links[0].url).toBe("/power/destruction/");
     expect(links[1].url).toBe("/power/destruction/blast/");
@@ -175,7 +175,7 @@ describe("parsePrerequisiteText — text structure", () => {
       stubResolvers,
     );
     expect(nodes).not.toBeNull();
-    const textNodes = nodes!.filter((n: any) => n.type === "text");
+    const textNodes = nodes?.filter((n: any) => n.type === "text") ?? [];
     const textContent = textNodes.map((n: any) => n.value).join("");
     expect(textContent).toContain(", 5 ranks.");
   });

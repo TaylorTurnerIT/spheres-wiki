@@ -78,12 +78,14 @@ svg {
   --fs-lg: 1.125rem; /* 18px        — prose h2                */
   --fs-body: clamp(
     1rem,
-    0.95rem + 0.25vw,
+    0.95rem +
+    0.25vw,
     1.125rem
   ); /* 16→18px fluid — body prose      */
   --fs-md: clamp(
     0.9375rem,
-    0.9rem + 0.25vw,
+    0.9rem +
+    0.25vw,
     1rem
   ); /* 15→16px fluid — talent, nav     */
   --fs-base: 0.875rem; /* 14px        — compact nav links       */
@@ -1655,14 +1657,9 @@ h6 {
   padding: 1px 6px;
   border-radius: 3px;
   --tag-clr: var(--clr-ns, var(--clr-brand));
-  background: color-mix(
-    in srgb,
-    var(--tag-clr) 12%,
-    transparent
-  );
+  background: color-mix(in srgb, var(--tag-clr) 12%, transparent);
   color: var(--tag-clr);
-  border: 1px solid
-    color-mix(in srgb, var(--tag-clr) 40%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tag-clr) 40%, transparent);
   white-space: nowrap;
 }
 .talent-tag[data-tag="3pp"] {
@@ -1687,8 +1684,8 @@ h6 {
 /* Portal tooltip — Popover API places this in the top layer, above all z-index */
 #global-tag-tooltip {
   position: fixed;
-  inset: auto;   /* override UA popover default (inset: 0) */
-  margin: 0;     /* override UA popover default (margin: auto) */
+  inset: auto; /* override UA popover default (inset: 0) */
+  margin: 0; /* override UA popover default (margin: auto) */
   pointer-events: none;
   opacity: 0;
   transition: opacity 150ms ease;
@@ -1700,7 +1697,9 @@ h6 {
 }
 /* Fade-in from 0 on open (requires @starting-style — Chrome 117+, Firefox 129+, Safari 17.5+) */
 @starting-style {
-  #global-tag-tooltip:popover-open { opacity: 0; }
+  #global-tag-tooltip:popover-open {
+    opacity: 0;
+  }
 }
 /* Fallback for browsers without popover API */
 #global-tag-tooltip.is-visible {

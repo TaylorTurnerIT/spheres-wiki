@@ -4,9 +4,9 @@ import type {
   EntryRef,
   TraditionChoice,
   TraditionChoiceOption,
+  TraditionEntry,
   TraditionPredicate,
   TraditionRule,
-  TraditionEntry,
 } from "../types";
 import type {
   ResolvedTraditionState,
@@ -52,7 +52,9 @@ function appendUniqueRefs(refs: EntryRef[], additions: EntryRef[]): EntryRef[] {
   return result;
 }
 
-function choiceOptionsById(choices: TraditionChoice[]): Map<string, TraditionChoiceOption> {
+function choiceOptionsById(
+  choices: TraditionChoice[],
+): Map<string, TraditionChoiceOption> {
   const options = new Map<string, TraditionChoiceOption>();
   for (const choice of choices) {
     for (const option of choice.options) {
@@ -73,7 +75,9 @@ function collectChoiceDefinitions(
     : undefined;
   const choices = [
     ...(tradition?.choices ?? []),
-    ...selection.drawbacks.flatMap((ref) => drawbackMap.get(ref.id)?.choices ?? []),
+    ...selection.drawbacks.flatMap(
+      (ref) => drawbackMap.get(ref.id)?.choices ?? [],
+    ),
     ...(selection.sphereDrawbacks ?? []).flatMap(
       (ref) => drawbackMap.get(ref.id)?.choices ?? [],
     ),
@@ -176,10 +180,12 @@ export function buildTraditionState(
       const entry = drawbackMap.get(ref.id);
       return entry ? [{ ref, entry }] : [];
     }),
-    sphereDrawbacks: (expandedSelection.sphereDrawbacks ?? []).flatMap((ref) => {
-      const entry = drawbackMap.get(ref.id);
-      return entry ? [{ ref, entry }] : [];
-    }),
+    sphereDrawbacks: (expandedSelection.sphereDrawbacks ?? []).flatMap(
+      (ref) => {
+        const entry = drawbackMap.get(ref.id);
+        return entry ? [{ ref, entry }] : [];
+      },
+    ),
     boons: expandedSelection.boons.flatMap((ref) => {
       const entry = boonMap.get(ref.id);
       return entry ? [{ ref, entry }] : [];
@@ -342,7 +348,9 @@ function initialAllowedCams(
   }
   const mode = traditionCamMode(tradition.cam.mode);
   return new Map(
-    tradition.cam.abilities.map((a) => [a, mode] as [AbilityScore, AllowedCam["mode"]]),
+    tradition.cam.abilities.map(
+      (a) => [a, mode] as [AbilityScore, AllowedCam["mode"]],
+    ),
   );
 }
 
@@ -560,7 +568,9 @@ function knownChoiceDiagnostics(
   ];
 }
 
-function choiceDiagnostics(state: ResolvedTraditionState): TraditionDiagnostic[] {
+function choiceDiagnostics(
+  state: ResolvedTraditionState,
+): TraditionDiagnostic[] {
   const selected = state.selection.choices ?? {};
 
   return [
