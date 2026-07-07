@@ -14,11 +14,11 @@
  * (Name / Tags / Prerequisites / Summary); the row contract is generic so other
  * entry types can feed it the same shape.
  */
-import SectionHeading from "@/components/SectionHeading.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import { SYSTEMS } from "@/config/site";
 import type { FeatBrowseRow } from "@/lib/featBrowse";
 import type { BookMeta, TagEntry } from "@/lib/types";
+import { url } from "@/lib/url";
 
 interface Props {
   rows: FeatBrowseRow[];
@@ -28,6 +28,14 @@ interface Props {
 }
 
 const { rows, tagMap, bookMetaMap, idPrefix = "browse" } = Astro.props;
+
+const systemLabelMap: Record<string, string> = {
+  power: "Power",
+  might: "Might",
+  guile: "Guile",
+  champions: "Champions",
+  champ: "Champions",
+};
 
 const EM_DASH = "—";
 
@@ -74,11 +82,6 @@ function searchText(row: FeatBrowseRow): string {
 
     {letters.map((letter) => (
       <tbody class="browse-letter-group" data-letter={letter}>
-        <tr class="browse-letter-row" data-letter-header>
-          <td colspan="4">
-            <SectionHeading label={letter} level="eyebrow" />
-          </td>
-        </tr>
         {groups.get(letter)!.map((row) => (
           <tr
             class:list={["browse-row", row.cssKey]}
@@ -95,20 +98,20 @@ function searchText(row: FeatBrowseRow): string {
             </td>
             <td class="browse-cell browse-cell-tags">
               <span class="browse-cell-label">Tags</span>
-              {row.tags.length > 0 ? (
-                <span class="browse-tag-list">
-                  {row.tags.map((tagId) => (
-                    <TagBadge
-                      tagId={tagId}
-                      tagMap={tagMap}
-                      bookMetaMap={bookMetaMap}
-                      showSystem={true}
-                    />
-                  ))}
+              <span class="browse-tag-list">
+                <span class="tag-wrapper">
+                  <a href={url(SYSTEMS[row.system]?.route || "/")} class="talent-tag">
+                    {systemLabelMap[row.system] || row.system}
+                  </a>
                 </span>
-              ) : (
-                <span class="browse-blank">{EM_DASH}</span>
-              )}
+                {row.tags.map((tagId) => (
+                  <TagBadge
+                    tagId={tagId}
+                    tagMap={tagMap}
+                    bookMetaMap={bookMetaMap}
+                  />
+                ))}
+              </span>
             </td>
             <td class="browse-cell browse-cell-prereq">
               <span class="browse-cell-label">Prerequisites</span>
@@ -146,22 +149,21 @@ function searchText(row: FeatBrowseRow): string {
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--clr-muted);
+    color: var(--clr-text);
     text-align: left;
-    padding: 6px 12px;
-    border-bottom: 1px solid var(--clr-border);
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--clr-border);
     position: sticky;
     top: 0;
-    background: var(--clr-surface);
+    background: var(--clr-bg);
     z-index: 1;
-  }
-  .browse-letter-row td {
-    padding: var(--sp-4) 0 var(--sp-1);
-    border: none;
   }
   .browse-row {
     border-bottom: 1px solid var(--clr-border);
     border-left: 3px solid var(--clr-ns, var(--clr-border));
+  }
+  .browse-row:nth-child(even) {
+    background: color-mix(in srgb, var(--clr-muted) 3%, transparent);
   }
   .browse-row:hover {
     background: color-mix(in srgb, var(--clr-ns, var(--clr-active)) 5%, var(--clr-surface));
@@ -173,8 +175,41 @@ function searchText(row: FeatBrowseRow): string {
     vertical-align: top;
     line-height: 1.4;
   }
+
+  /* Desktop-specific layout: vertical column borders */
+  @media (min-width: 769px) {
+    .browse-table thead th {
+      border-right: 1px solid var(--clr-border);
+    }
+    .browse-table thead th:last-child {
+      border-right: none;
+    }
+    .browse-cell {
+      border-right: 1px solid var(--clr-border);
+    }
+    .browse-cell:last-child {
+      border-right: none;
+    }
+    /* Column widths on desktop */
+    .browse-cell-name {
+      width: 20%;
+      min-width: 150px;
+    }
+    .browse-cell-tags {
+      width: 15%;
+      min-width: 120px;
+    }
+    .browse-cell-prereq {
+      width: 25%;
+      min-width: 180px;
+    }
+    .browse-cell-summary {
+      width: 40%;
+      min-width: 280px;
+    }
+  }
   .browse-cell-name {
-    white-space: nowrap;
+    white-space: normal;
   }
   .browse-name-link {
     font-family: var(--font-display);
@@ -189,8 +224,7 @@ function searchText(row: FeatBrowseRow): string {
   .browse-cell-prereq,
   .browse-cell-summary {
     font-size: var(--fs-xs);
-    color: var(--clr-muted);
-    min-width: 140px;
+    color: var(--clr-text);
   }
   .browse-tag-list {
     display: inline-flex;

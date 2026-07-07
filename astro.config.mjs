@@ -65,6 +65,9 @@ export default defineConfig({
       watch: {
         ignored: ["**/.claude/**", "**/.cave/**", "**/node_modules/**"],
       },
+      fs: {
+        allow: [".", "../.."],
+      },
     },
   },
 });

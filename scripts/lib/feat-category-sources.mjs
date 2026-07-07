@@ -295,12 +295,12 @@ const EXPECTED_FEAT_OVERRIDES = {
     homeCategory: "champion",
   },
   "legends-of-the-spheres:eldritch-supplies": {
-    system: "guile",
+    system: "champions",
     homeCategory: "champion",
     sphere: "faction",
   },
   "legends-of-the-spheres:insinuating-incantation": {
-    system: "guile",
+    system: "champions",
     homeCategory: "champion",
     sphere: "bluster",
   },
@@ -782,7 +782,9 @@ export function getExpectedFeatPlacements(
     const tags = [...placement.tags].sort();
     const sourceCategories = [...placement.sourceCategories].sort();
     const sphere = override?.sphere ?? placement.sphere;
-    const system = override?.system ?? placement.system;
+    const system = tags.includes("champion")
+      ? "champions"
+      : (override?.system ?? placement.system);
     const homeCategory =
       override?.homeCategory ??
       sourceCategories[0] ??

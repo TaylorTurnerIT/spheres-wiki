@@ -44,7 +44,6 @@ interface BrowseEls {
   category: HTMLSelectElement;
   tags: HTMLSelectElement;
   heading: HTMLElement;
-  status: HTMLElement;
   table: HTMLElement;
   empty: HTMLElement;
   emptyMsg: HTMLElement;
@@ -105,7 +104,6 @@ function collectEls(): BrowseEls | null {
     category: id<HTMLSelectElement>("category"),
     tags: id<HTMLSelectElement>("tags"),
     heading: id<HTMLElement>("heading"),
-    status: id<HTMLElement>("status"),
     table: id<HTMLElement>("table"),
     empty,
     emptyMsg: empty.querySelector(".browse-empty-msg") as HTMLElement,
@@ -173,7 +171,6 @@ function apply(ctx: Ctx): void {
       visible += applyGroup(g, state, ctx.descText.value);
     });
   updateHeading(ctx, state.category);
-  ctx.els.status.textContent = countLabel(visible, ctx.noun.toLowerCase());
   ctx.els.empty.hidden = visible !== 0;
   ctx.els.emptyMsg.textContent = `No ${ctx.noun.toLowerCase()} match your search and filters.`;
   history.replaceState(null, "", queryFor(state));
@@ -230,7 +227,6 @@ async function fetchDescTextOrEmpty(): Promise<Record<string, string>> {
 
 async function loadDescText(ctx: Ctx): Promise<void> {
   if (shouldSkipDescLoad(ctx)) return;
-  ctx.els.status.textContent = "Loading description text…";
   const descText = await fetchDescTextOrEmpty();
   if (ctx.destroyed) return;
   ctx.descText.value = descText;

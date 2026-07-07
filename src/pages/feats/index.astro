@@ -30,18 +30,18 @@ const tagOptions = featTagOptions(rows, maps.tagMap);
   <h1 class="page-title" id="overview">Feats Index</h1>
   <hr class="page-title-rule" />
 
-  <p class="feats-intro">
-    A searchable catalog of every feat across the Spheres systems. Filter, sort,
-    and open any feat's full page.
-  </p>
-
   <BrowseControls
     noun="Feats"
     searchPlaceholder="Search feats, tags, spheres, or text…"
     systemOptions={systemOptions}
     categoryOptions={categoryOptions}
     tagOptions={tagOptions}
-  />
+  >
+    <p class="feats-intro" slot="intro">
+      A searchable catalog of every feat across the Spheres systems. Filter, sort,
+      and open any feat's full page.
+    </p>
+  </BrowseControls>
 
   <BrowseTable rows={rows} tagMap={maps.tagMap} bookMetaMap={maps.bookMetaMap} />
 </WikiPage>

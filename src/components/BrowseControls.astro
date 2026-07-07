@@ -44,6 +44,7 @@ const {
   >
     Browse All {noun}
   </h2>
+  <slot name="intro" />
 
   <div class="browse-searchbar">
     <div class="browse-search-input-wrap">
@@ -56,19 +57,6 @@ const {
         autocomplete="off"
         aria-label={`Search ${noun.toLowerCase()}`}
       />
-    </div>
-
-    <div class="browse-search-tools">
-      <label class="browse-tool-label" for={`${idPrefix}-sort`}>Sort</label>
-      <select id={`${idPrefix}-sort`} class="browse-sort" autocomplete="off">
-        <option value="asc">Name A–Z</option>
-        <option value="desc">Name Z–A</option>
-      </select>
-
-      <label class="browse-desc-toggle">
-        <input id={`${idPrefix}-desc`} type="checkbox" />
-        <span>Match description text</span>
-      </label>
     </div>
   </div>
 
@@ -91,9 +79,20 @@ const {
         {tagOptions.map((o) => <option value={o.value}>{o.text}</option>)}
       </select>
     </div>
+    <div class="browse-filter-group">
+      <label for={`${idPrefix}-sort`} class="browse-filter-label">Sort</label>
+      <select id={`${idPrefix}-sort`} class="browse-sort" autocomplete="off">
+        <option value="asc">Name A–Z</option>
+        <option value="desc">Name Z–A</option>
+      </select>
+    </div>
+    <div class="browse-filter-group">
+      <label class="browse-desc-toggle">
+        <input id={`${idPrefix}-desc`} type="checkbox" />
+        <span>Match description text</span>
+      </label>
+    </div>
   </div>
-
-  <div class="browse-status" id={`${idPrefix}-status`} role="status" aria-live="polite"></div>
 </div>
 
 <style is:global>
@@ -103,11 +102,11 @@ const {
   .browse-heading {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: var(--fs-xl);
+    font-size: 2.25rem;
     letter-spacing: 0.02em;
     color: var(--clr-active);
     text-align: center;
-    margin-bottom: var(--sp-4);
+    margin-bottom: var(--sp-5);
   }
 
   /* Centered search bar with a comfortable max width (§12.1). */
@@ -150,14 +149,6 @@ const {
     color: var(--clr-muted);
   }
 
-  .browse-search-tools {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-  }
-  .browse-tool-label,
   .browse-filter-label {
     font-family: var(--font-display);
     font-size: var(--fs-3xs);
@@ -271,13 +262,6 @@ const {
     background: color-mix(in srgb, var(--clr-brand) 16%, transparent) !important;
     color: var(--clr-brand) !important;
     font-weight: 600;
-  }
-
-  .browse-status {
-    text-align: center;
-    font-size: var(--fs-xs);
-    color: var(--clr-muted);
-    margin-top: var(--sp-3);
   }
 
   @media (max-width: 768px) {
