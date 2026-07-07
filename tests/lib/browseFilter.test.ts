@@ -3,6 +3,8 @@ import {
   type BrowseRowData,
   type BrowseState,
   compareLetters,
+  compareNames,
+  countLabel,
   EMPTY_STATE,
   parseBrowseParams,
   rowMatches,
@@ -26,7 +28,13 @@ function state(overrides: Partial<BrowseState> = {}): BrowseState {
 
 describe("parse/serialize browse params", () => {
   it("round-trips full state", () => {
-    const s = state({ q: "ability", system: "power", category: "counterspell", tags: ["a", "b"], desc: true });
+    const s = state({
+      q: "ability",
+      system: "power",
+      category: "counterspell",
+      tags: ["a", "b"],
+      desc: true,
+    });
     const qs = serializeBrowseParams(s);
     expect(parseBrowseParams(`?${qs}`)).toEqual(s);
   });
@@ -45,8 +53,12 @@ describe("rowPassesFilters", () => {
   });
   it("filters by system, category, and tags (AND)", () => {
     expect(rowPassesFilters(row, state({ system: "might" }))).toBe(false);
-    expect(rowPassesFilters(row, state({ category: "counterspell" }))).toBe(true);
-    expect(rowPassesFilters(row, state({ tags: ["counterspell", "feat"] }))).toBe(true);
+    expect(rowPassesFilters(row, state({ category: "counterspell" }))).toBe(
+      true,
+    );
+    expect(
+      rowPassesFilters(row, state({ tags: ["counterspell", "feat"] })),
+    ).toBe(true);
     expect(rowPassesFilters(row, state({ tags: ["missing"] }))).toBe(false);
   });
 });
@@ -61,19 +73,48 @@ describe("rowPassesQuery", () => {
   it("only matches body text when desc mode is on", () => {
     const desc = { "/power/feats/counterspell/x/": "hidden body keyword" };
     expect(rowPassesQuery(row, state({ q: "keyword" }), desc)).toBe(false);
-    expect(rowPassesQuery(row, state({ q: "keyword", desc: true }), desc)).toBe(true);
+    expect(rowPassesQuery(row, state({ q: "keyword", desc: true }), desc)).toBe(
+      true,
+    );
   });
 });
 
 describe("rowMatches", () => {
   it("requires both filters and query to pass", () => {
-    expect(rowMatches(row, state({ q: "ability", system: "power" }), null)).toBe(true);
-    expect(rowMatches(row, state({ q: "ability", system: "might" }), null)).toBe(false);
+    expect(
+      rowMatches(row, state({ q: "ability", system: "power" }), null),
+    ).toBe(true);
+    expect(
+      rowMatches(row, state({ q: "ability", system: "might" }), null),
+    ).toBe(false);
   });
 });
 
 describe("compareLetters", () => {
   it("sorts alphabetically with # last", () => {
     expect(["#", "B", "A"].sort(compareLetters)).toEqual(["A", "B", "#"]);
+  });
+});
+
+describe("compareNames", () => {
+  it("sorts names ascending and descending", () => {
+    const names = ["Zeta Feat", "Alpha Feat", "Beta Feat"];
+    expect([...names].sort((a, b) => compareNames(a, b, "asc"))).toEqual([
+      "Alpha Feat",
+      "Beta Feat",
+      "Zeta Feat",
+    ]);
+    expect([...names].sort((a, b) => compareNames(a, b, "desc"))).toEqual([
+      "Zeta Feat",
+      "Beta Feat",
+      "Alpha Feat",
+    ]);
+  });
+});
+
+describe("countLabel", () => {
+  it("singularizes simple plural nouns for one item", () => {
+    expect(countLabel(1, "feats")).toBe("1 feat");
+    expect(countLabel(2, "feats")).toBe("2 feats");
   });
 });

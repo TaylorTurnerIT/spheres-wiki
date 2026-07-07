@@ -85,7 +85,7 @@ const {
         {categoryOptions.map((o) => <option value={o.value}>{o.text}</option>)}
       </select>
     </div>
-    <div class="browse-filter-group" id={`${idPrefix}-tag-group`}>
+    <div class="browse-filter-group browse-filter-group-tags" id={`${idPrefix}-tag-group`}>
       <label for={`${idPrefix}-tags`} class="browse-filter-label">Tags</label>
       <select id={`${idPrefix}-tags`} multiple autocomplete="off">
         {tagOptions.map((o) => <option value={o.value}>{o.text}</option>)}
@@ -208,7 +208,7 @@ const {
     width: 180px;
     position: relative;
   }
-  #browse-tag-group .ts-wrapper {
+  .browse-filter-group-tags .ts-wrapper {
     width: 220px;
   }
   .browse-filter-group .ts-control {
@@ -241,7 +241,7 @@ const {
     color: var(--clr-text) !important;
     font-size: var(--fs-xs) !important;
   }
-  #browse-tag-group .ts-control .item {
+  .browse-filter-group-tags .ts-control .item {
     background: color-mix(in srgb, var(--clr-brand) 10%, transparent) !important;
     border: 1px solid var(--clr-border) !important;
     border-radius: 3px !important;
@@ -285,7 +285,7 @@ const {
       justify-content: flex-start;
     }
     .browse-filter-group .ts-wrapper,
-    #browse-tag-group .ts-wrapper {
+    .browse-filter-group-tags .ts-wrapper {
       width: 100%;
     }
     .browse-filter-group {

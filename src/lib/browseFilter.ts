@@ -60,7 +60,10 @@ export function serializeBrowseParams(state: BrowseState): string {
 }
 
 /** Do the discrete (system/category/tags) filters admit this row? */
-export function rowPassesFilters(row: BrowseRowData, state: BrowseState): boolean {
+export function rowPassesFilters(
+  row: BrowseRowData,
+  state: BrowseState,
+): boolean {
   if (state.system && row.system !== state.system) return false;
   if (state.category && row.category !== state.category) return false;
   return state.tags.every((t) => row.tags.includes(t));
@@ -93,4 +96,27 @@ export function compareLetters(a: string, b: string): number {
   if (a === "#") return 1;
   if (b === "#") return -1;
   return a.localeCompare(b);
+}
+
+/**
+ * Direction-aware name comparator for row sorting. Always compares the names
+ * themselves (never current DOM order), so switching back to ascending after a
+ * descending sort restores true A→Z order.
+ */
+export function compareNames(
+  a: string,
+  b: string,
+  direction: "asc" | "desc",
+): number {
+  const cmp = a.localeCompare(b);
+  return direction === "desc" ? -cmp : cmp;
+}
+
+/** Singular/plural count label, e.g. "1 feat" / "32 feats". */
+export function countLabel(count: number, pluralNoun: string): string {
+  const noun =
+    count === 1 && pluralNoun.endsWith("s")
+      ? pluralNoun.slice(0, -1)
+      : pluralNoun;
+  return `${count} ${noun}`;
 }

@@ -18,13 +18,17 @@ import {
   type BrowseRowData,
   type BrowseState,
   compareLetters,
+  compareNames,
+  countLabel,
   parseBrowseParams,
   rowMatches,
   serializeBrowseParams,
 } from "@/lib/browseFilter";
 import { createTomSelect } from "@/lib/tomSelectInit";
+import { url } from "@/lib/url";
 
 const DEBOUNCE_MS = 220;
+const activeSelects = new Set<Selectable>();
 
 type Selectable = {
   destroy(): void;
@@ -52,7 +56,21 @@ interface Ctx {
   categoryLabels: Map<string, string>;
   instances: Record<string, Selectable | null>;
   descText: { value: Record<string, string> | null };
+  debounce: ReturnType<typeof setTimeout> | null;
 }
+
+function trackSelect(instance: Selectable | null): Selectable | null {
+  if (!instance) return null;
+  activeSelects.add(instance);
+  return instance;
+}
+
+function destroyActiveSelects(): void {
+  for (const instance of activeSelects) instance.destroy();
+  activeSelects.clear();
+}
+
+document.addEventListener("astro:before-swap", destroyActiveSelects);
 
 function coreReady(els: BrowseEls): boolean {
   return Boolean(els.search && els.table && els.heading);
@@ -141,7 +159,7 @@ function apply(ctx: Ctx): void {
       visible += applyGroup(g, state, ctx.descText.value);
     });
   updateHeading(ctx, state.category);
-  ctx.els.status.textContent = `${visible} ${ctx.noun.toLowerCase()}`;
+  ctx.els.status.textContent = countLabel(visible, ctx.noun.toLowerCase());
   ctx.els.empty.hidden = visible !== 0;
   ctx.els.emptyMsg.textContent = `No ${ctx.noun.toLowerCase()} match your search and filters.`;
   history.replaceState(null, "", queryFor(state));
@@ -164,7 +182,10 @@ function orderedGroups(els: BrowseEls, mode: string): HTMLElement[] {
 
 function rowsInOrder(group: HTMLElement, mode: string): HTMLElement[] {
   const rows = Array.from(group.querySelectorAll<HTMLElement>(".browse-row"));
-  return mode === "desc" ? rows.reverse() : rows;
+  const direction = mode === "desc" ? "desc" : "asc";
+  return rows.sort((a, b) =>
+    compareNames(a.dataset.name ?? "", b.dataset.name ?? "", direction),
+  );
 }
 
 function applySort(els: BrowseEls, mode: string): void {
@@ -180,32 +201,47 @@ async function loadDescText(ctx: Ctx): Promise<void> {
   if (ctx.descText.value) return;
   ctx.els.status.textContent = "Loading description text…";
   try {
-    const res = await fetch(`${import.meta.env.BASE_URL}feats/search-text.json`);
+    const res = await fetch(url("/feats/search-text.json"));
     ctx.descText.value = await res.json();
   } catch {
     ctx.descText.value = {};
   }
 }
 
+function clearDebounce(ctx: Ctx): void {
+  if (!ctx.debounce) return;
+  clearTimeout(ctx.debounce);
+  ctx.debounce = null;
+}
+
 function buildFilters(ctx: Ctx): void {
-  const onChange = () => apply(ctx);
-  ctx.instances.system = createTomSelect(ctx.els.system, {
-    maxItems: 1,
-    plugins: ["clear_button"],
-    placeholder: "Any system…",
-    onChange,
-  });
-  ctx.instances.category = createTomSelect(ctx.els.category, {
-    maxItems: 1,
-    plugins: ["clear_button"],
-    placeholder: "All categories…",
-    onChange,
-  });
-  ctx.instances.tags = createTomSelect(ctx.els.tags, {
-    plugins: ["remove_button"],
-    placeholder: "Any tags…",
-    onChange,
-  });
+  const onChange = () => {
+    clearDebounce(ctx);
+    apply(ctx);
+  };
+  ctx.instances.system = trackSelect(
+    createTomSelect(ctx.els.system, {
+      maxItems: 1,
+      plugins: ["clear_button"],
+      placeholder: "Any system…",
+      onChange,
+    }),
+  );
+  ctx.instances.category = trackSelect(
+    createTomSelect(ctx.els.category, {
+      maxItems: 1,
+      plugins: ["clear_button"],
+      placeholder: "All categories…",
+      onChange,
+    }),
+  );
+  ctx.instances.tags = trackSelect(
+    createTomSelect(ctx.els.tags, {
+      plugins: ["remove_button"],
+      placeholder: "Any tags…",
+      onChange,
+    }),
+  );
 }
 
 function clearSelections(ctx: Ctx): void {
@@ -227,19 +263,22 @@ function restoreSelections(ctx: Ctx, state: BrowseState): void {
 }
 
 function bindEvents(ctx: Ctx): void {
-  let debounce: ReturnType<typeof setTimeout>;
   ctx.els.search.addEventListener("input", () => {
-    clearTimeout(debounce);
-    debounce = setTimeout(() => apply(ctx), DEBOUNCE_MS);
+    clearDebounce(ctx);
+    ctx.debounce = setTimeout(() => apply(ctx), DEBOUNCE_MS);
   });
-  ctx.els.sort.addEventListener("change", () =>
-    applySort(ctx.els, ctx.els.sort.value),
-  );
+  ctx.els.sort.addEventListener("change", () => {
+    clearDebounce(ctx);
+    applySort(ctx.els, ctx.els.sort.value);
+    apply(ctx);
+  });
   ctx.els.desc.addEventListener("change", async () => {
+    clearDebounce(ctx);
     if (ctx.els.desc.checked) await loadDescText(ctx);
     apply(ctx);
   });
   ctx.els.reset.addEventListener("click", () => {
+    clearDebounce(ctx);
     ctx.els.search.value = "";
     ctx.els.desc.checked = false;
     clearSelections(ctx);
@@ -261,6 +300,7 @@ function initBrowseFilter(): void {
     categoryLabels,
     instances: {},
     descText: { value: null },
+    debounce: null,
   };
 
   buildFilters(ctx);

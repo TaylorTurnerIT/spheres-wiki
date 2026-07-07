@@ -49,7 +49,7 @@ interface BrowseMaps {
 /** Strip inline markdown (links, emphasis) to plain text for a table cell. */
 export function stripMarkdownInline(text: string): string {
   return text
-    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/\[([^\]]+)\]\((?:[^()\\]|\\.|\([^()]*\))*\)/g, "$1")
     .replace(/[*_`]/g, "")
     .replace(/\s+/g, " ")
     .trim();
@@ -62,7 +62,9 @@ export function stripMarkdownInline(text: string): string {
  */
 export function extractPrerequisites(body: string | undefined): string {
   if (!body) return "";
-  const match = body.match(/\*\*Prerequisites?:\*\*\s*(.+)/i);
+  const match = body.match(
+    /(?:^|\n)\*\*Prerequisites?:\*\*\s*([\s\S]*?)(?=\n\s*\n|\n\*\*[^*\n]+:\*\*|$)/i,
+  );
   return match ? stripMarkdownInline(match[1]) : "";
 }
 
@@ -126,7 +128,9 @@ function featToBrowseRow(
     tags: buildOrderedTagIds(feat, maps.bookMetaMap, maps.tagMap, {
       showHidden: !!(feat.dualSphere && feat.dualSphere !== "any"),
     }),
-    prerequisites: extractPrerequisites(collEntryFor(feat, collEntriesMap)?.body),
+    prerequisites: extractPrerequisites(
+      collEntryFor(feat, collEntriesMap)?.body,
+    ),
     summary: feat.summary ?? "",
     href,
   };
