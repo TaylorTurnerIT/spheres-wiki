@@ -1,5 +1,6 @@
 ---
 import { url } from "@/lib/url";
+import { resolveSystem } from "@/lib/systems";
 import type { TagEntry, BookMeta } from "@/lib/types";
 
 interface Props {
@@ -8,14 +9,24 @@ interface Props {
   bookMetaMap: Map<string, BookMeta>;
   asSpan?: boolean;
   stripLinks?: boolean;
+  showSystem?: boolean;
 }
 
-const { tagId, tagMap, bookMetaMap, asSpan = false, stripLinks = false } = Astro.props;
+const {
+  tagId,
+  tagMap,
+  bookMetaMap,
+  asSpan = false,
+  stripLinks = false,
+  showSystem = false,
+} = Astro.props;
 const tag = tagMap.get(tagId);
 const bookTitle =
   tag && tag.sourceBook !== "__built-in__"
     ? bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook
     : undefined;
+const systemLabel =
+  showSystem && tag?.system ? resolveSystem(tag.system)?.label : undefined;
 
 const TagElement = asSpan ? 'span' : 'a';
 
@@ -39,7 +50,9 @@ const ttDesc = tag
     data-tag={tagId}
     data-astro-prefetch={!asSpan ? "hover" : undefined}
   >
-    {tag?.label ?? tagId}
+    {tag?.label ?? tagId}{systemLabel && (
+      <span class="talent-tag-system"> · {systemLabel}</span>
+    )}
   </TagElement>
 </span>
 
@@ -50,5 +63,10 @@ const ttDesc = tag
   }
   .talent-tag:hover {
     filter: brightness(1.1);
+  }
+  .talent-tag-system {
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.75;
   }
 </style>
