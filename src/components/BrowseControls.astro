@@ -63,19 +63,19 @@ const {
   <div class="browse-filters" id={`${idPrefix}-filters`}>
     <div class="browse-filter-group">
       <label for={`${idPrefix}-system`} class="browse-filter-label">System</label>
-      <select id={`${idPrefix}-system`} autocomplete="off">
+      <select id={`${idPrefix}-system`} class="ts-hidden-select" autocomplete="off">
         {systemOptions.map((o) => <option value={o.value}>{o.text}</option>)}
       </select>
     </div>
     <div class="browse-filter-group" id={`${idPrefix}-category-group`}>
       <label for={`${idPrefix}-category`} class="browse-filter-label">Category</label>
-      <select id={`${idPrefix}-category`} autocomplete="off">
+      <select id={`${idPrefix}-category`} class="ts-hidden-select" autocomplete="off">
         {categoryOptions.map((o) => <option value={o.value}>{o.text}</option>)}
       </select>
     </div>
     <div class="browse-filter-group browse-filter-group-tags" id={`${idPrefix}-tag-group`}>
       <label for={`${idPrefix}-tags`} class="browse-filter-label">Tags</label>
-      <select id={`${idPrefix}-tags`} multiple autocomplete="off">
+      <select id={`${idPrefix}-tags`} class="ts-hidden-select" multiple autocomplete="off">
         {tagOptions.map((o) => <option value={o.value}>{o.text}</option>)}
       </select>
     </div>
