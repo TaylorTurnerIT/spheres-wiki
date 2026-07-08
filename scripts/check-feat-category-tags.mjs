@@ -3,9 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
-import {
-  FEAT_CATEGORY_SOURCE_MANIFEST,
-} from "./lib/feat-category-sources.mjs";
+import { FEAT_CATEGORY_SOURCE_MANIFEST } from "./lib/feat-category-sources.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.resolve(__dirname, "../src/content");

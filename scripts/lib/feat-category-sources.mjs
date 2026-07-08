@@ -578,8 +578,6 @@ function getFeatCategorySource(tagId) {
   };
 }
 
-
-
 function getFeatCategorySourceEntries(tagId, knownTagIds = loadAllTagIds()) {
   const source = getFeatCategorySource(tagId);
   let lines = readFileLines(path.join(ARCHIVE_DIR, source.sourceFile));
@@ -806,8 +804,6 @@ export function getExpectedFeatPlacements(
     };
   });
 }
-
-
 
 function readFrontmatter(filePath) {
   const content = fs.readFileSync(filePath, "utf8");

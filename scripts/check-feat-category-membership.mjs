@@ -12,7 +12,9 @@ const expectedFilePath = path.resolve(
   __dirname,
   "../src/config/expected-feat-categories.json",
 );
-const expectedMembership = JSON.parse(fs.readFileSync(expectedFilePath, "utf8"));
+const expectedMembership = JSON.parse(
+  fs.readFileSync(expectedFilePath, "utf8"),
+);
 
 const tagMeta = loadFeatCategoryTagMeta();
 const feats = loadFeatEntries();

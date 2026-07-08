@@ -19,7 +19,6 @@ import {
   type BrowseState,
   compareLetters,
   compareNames,
-  countLabel,
   parseBrowseParams,
   rowMatches,
   serializeBrowseParams,
@@ -151,6 +150,7 @@ function applyGroup(
   });
   const header = group.querySelector<HTMLElement>("[data-letter-header]");
   if (header) header.hidden = visible === 0;
+  group.hidden = visible === 0;
   return visible;
 }
 

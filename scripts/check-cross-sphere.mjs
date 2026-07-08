@@ -25,7 +25,9 @@ const dualSphereEntries = new Set(
 console.log(`Expected dual-spheres: ${dualSphereEntries.size} entries loaded.`);
 
 // ── 2. Parse current codebase for talents/feats ──────────────────────────
-const allFiles = getMarkdownFilesRecursively(contentDir, { skipQuarantine: true });
+const allFiles = getMarkdownFilesRecursively(contentDir, {
+  skipQuarantine: true,
+});
 
 let hasError = false;
 

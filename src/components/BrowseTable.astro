@@ -73,10 +73,10 @@ function searchText(row: FeatBrowseRow): string {
   <table class="browse-table">
     <thead>
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Tags</th>
-        <th scope="col">Prerequisites</th>
-        <th scope="col">Summary</th>
+        <th scope="col" class="browse-cell-name">Name</th>
+        <th scope="col" class="browse-cell-tags">Tags</th>
+        <th scope="col" class="browse-cell-prereq">Prerequisites</th>
+        <th scope="col" class="browse-cell-summary">Summary</th>
       </tr>
     </thead>
 
@@ -142,6 +142,10 @@ function searchText(row: FeatBrowseRow): string {
     width: 100%;
     border-collapse: collapse;
     font-family: var(--font-body);
+  }
+  .browse-table tr[hidden],
+  .browse-table tbody[hidden] {
+    display: none !important;
   }
   .browse-table thead th {
     font-family: var(--font-display);
