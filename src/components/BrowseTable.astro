@@ -184,6 +184,9 @@ function searchText(row: FeatBrowseRow): string {
 
   /* Desktop-specific layout: vertical column borders */
   @media (min-width: 769px) {
+    .browse-table thead tr {
+      border-left: 1px solid var(--clr-border);
+    }
     .browse-table thead th {
       border-right: 1px solid var(--clr-border);
     }

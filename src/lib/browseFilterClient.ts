@@ -266,16 +266,6 @@ function buildFilters(ctx: Ctx): void {
       onChange,
     }),
   );
-  ctx.instances.sort = trackSelect(
-    createTomSelect(ctx.els.sort, {
-      maxItems: 1,
-      onChange: () => {
-        clearDebounce(ctx);
-        applySort(ctx.els, ctx.els.sort.value);
-        apply(ctx);
-      },
-    }),
-  );
 }
 
 function clearSelections(ctx: Ctx): void {
@@ -300,6 +290,11 @@ function bindEvents(ctx: Ctx): void {
   ctx.els.search.addEventListener("input", () => {
     clearDebounce(ctx);
     ctx.debounce = setTimeout(() => apply(ctx), DEBOUNCE_MS);
+  });
+  ctx.els.sort.addEventListener("change", () => {
+    clearDebounce(ctx);
+    applySort(ctx.els, ctx.els.sort.value);
+    apply(ctx);
   });
   ctx.els.desc.addEventListener("change", async () => {
     clearDebounce(ctx);
