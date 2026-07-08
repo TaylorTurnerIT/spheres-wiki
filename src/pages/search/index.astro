@@ -85,19 +85,19 @@ const staticTags = [...tagMap.entries()]
     <div class="search-page-filters" id="sp-filters">
       <div class="sp-filter-group" id="sp-system-group">
         <label for="sp-system-select" class="sp-filter-label">System</label>
-        <select id="sp-system-select" class="ts-hidden-select" autocomplete="off"></select>
+        <select id="sp-system-select" autocomplete="off"></select>
       </div>
       <div class="sp-filter-group">
         <label for="sp-type-select" class="sp-filter-label">Type</label>
-        <select id="sp-type-select" class="ts-hidden-select" autocomplete="off"></select>
+        <select id="sp-type-select" autocomplete="off"></select>
       </div>
       <div class="sp-filter-group" id="sp-sphere-group">
         <label for="sp-sphere-select" class="sp-filter-label">Sphere</label>
-        <select id="sp-sphere-select" class="ts-hidden-select" autocomplete="off"></select>
+        <select id="sp-sphere-select" autocomplete="off"></select>
       </div>
       <div class="sp-filter-group" id="sp-tag-group">
         <label for="sp-tag-select" class="sp-filter-label">Tag</label>
-        <select id="sp-tag-select" class="ts-hidden-select" autocomplete="off"></select>
+        <select id="sp-tag-select" autocomplete="off"></select>
       </div>
     </div>
 
@@ -181,14 +181,17 @@ const staticTags = [...tagMap.entries()]
   }
 
   /* TomSelect overrides — scoped to filter groups */
-  .sp-filter-group .ts-wrapper {
+  .sp-filter-group .ts-wrapper,
+  .sp-filter-group select {
     width: 130px;
     position: relative;
   }
-  #sp-system-group .ts-wrapper {
+  #sp-system-group .ts-wrapper,
+  #sp-system-group select {
     width: 172px;
   }
-  #sp-sphere-group .ts-wrapper {
+  #sp-sphere-group .ts-wrapper,
+  #sp-sphere-group select {
     width: 155px;
   }
   .sp-filter-group .ts-control {
