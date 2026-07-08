@@ -173,7 +173,7 @@ function apply(ctx: Ctx): void {
   updateHeading(ctx, state.category);
   ctx.els.empty.hidden = visible !== 0;
   ctx.els.emptyMsg.textContent = `No ${ctx.noun.toLowerCase()} match your search and filters.`;
-  history.replaceState(null, "", queryFor(state));
+  history.replaceState(history.state, "", queryFor(state));
 }
 
 function queryFor(state: BrowseState): string {

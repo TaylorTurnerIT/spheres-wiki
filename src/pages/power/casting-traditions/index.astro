@@ -1222,7 +1222,7 @@ const boonCards = boons.map((b) => ({
       const url = new URL(window.location.href);
       for (const [k, v] of params) url.searchParams.set(k, v);
       url.hash = "builder";
-      window.history.replaceState({}, "", url);
+      window.history.replaceState(window.history.state, "", url);
     }
 
     function loadFromUrl() {

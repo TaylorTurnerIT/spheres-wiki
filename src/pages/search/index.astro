@@ -422,7 +422,7 @@ function pushParams(q: string, system: string, type: string, sphere: string, tag
   if (sphere) p.set('sphere', sphere);
   if (tag)    p.set('tag', tag);
   const qs = p.toString();
-  history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname);
+  history.replaceState(history.state, '', qs ? `?${qs}` : window.location.pathname);
 }
 
 function systemKeyToMeta(key: string): string {

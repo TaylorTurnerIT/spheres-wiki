@@ -311,7 +311,7 @@ const renderedTabs = await Promise.all(
       if (updateHash) {
         const url = new URL(window.location.href);
         url.hash = slug;
-        window.history.replaceState({}, '', url);
+        window.history.replaceState(window.history.state, '', url);
       }
     }
 
