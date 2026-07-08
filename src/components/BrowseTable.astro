@@ -156,6 +156,7 @@ function searchText(row: FeatBrowseRow): string {
     color: var(--clr-text);
     text-align: left;
     padding: 8px 12px;
+    border-top: 1px solid var(--clr-border);
     border-bottom: 2px solid var(--clr-border);
     position: sticky;
     top: 0;
@@ -182,9 +183,6 @@ function searchText(row: FeatBrowseRow): string {
 
   /* Desktop-specific layout: vertical column borders */
   @media (min-width: 769px) {
-    .browse-table thead tr {
-      border-left: 3px solid var(--clr-brand);
-    }
     .browse-table thead th {
       border-right: 1px solid var(--clr-border);
     }
