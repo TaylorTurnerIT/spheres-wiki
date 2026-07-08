@@ -182,17 +182,14 @@ function searchText(row: FeatBrowseRow): string {
 
   /* Desktop-specific layout: vertical column borders */
   @media (min-width: 769px) {
+    .browse-table thead tr {
+      border-left: 3px solid var(--clr-brand);
+    }
     .browse-table thead th {
       border-right: 1px solid var(--clr-border);
     }
-    .browse-table thead th:last-child {
-      border-right: none;
-    }
     .browse-cell {
       border-right: 1px solid var(--clr-border);
-    }
-    .browse-cell:last-child {
-      border-right: none;
     }
     /* Column widths on desktop */
     .browse-cell-name {
@@ -200,16 +197,16 @@ function searchText(row: FeatBrowseRow): string {
       min-width: 150px;
     }
     .browse-cell-tags {
-      width: 15%;
-      min-width: 120px;
+      width: 20%;
+      min-width: 150px;
     }
     .browse-cell-prereq {
       width: 25%;
       min-width: 180px;
     }
     .browse-cell-summary {
-      width: 40%;
-      min-width: 280px;
+      width: 35%;
+      min-width: 250px;
     }
   }
   .browse-cell-name {
