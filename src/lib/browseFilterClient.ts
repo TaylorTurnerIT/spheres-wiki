@@ -310,6 +310,12 @@ function bindEvents(ctx: Ctx): void {
   });
 }
 
+function removePlaceholders(els: BrowseEls): void {
+  document.getElementById(`${els.system.id}-placeholder`)?.remove();
+  document.getElementById(`${els.category.id}-placeholder`)?.remove();
+  document.getElementById(`${els.tags.id}-placeholder`)?.remove();
+}
+
 function initBrowseFilter(): void {
   const els = collectEls();
   if (!els) return;
@@ -334,6 +340,7 @@ function initBrowseFilter(): void {
 
   const state = parseBrowseParams(window.location.search);
   restoreSelections(ctx, state);
+  removePlaceholders(els);
   bindEvents(ctx);
 
   const start = async () => {

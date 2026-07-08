@@ -33,6 +33,20 @@ const {
   tagOptions,
   idPrefix = "browse",
 } = Astro.props;
+
+const system = Astro.url.searchParams.get("system") ?? "";
+const systemText = systemOptions.find((o) => o.value === system)?.text ?? "Any system…";
+
+const category = Astro.url.searchParams.get("category") ?? "";
+const categoryText = categoryOptions.find((o) => o.value === category)?.text ?? "All categories…";
+
+const tagsParam = Astro.url.searchParams.get("tags") ?? "";
+const activeTags = tagsParam
+  ? tagsParam
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean)
+  : [];
 ---
 
 <div class="browse-controls" data-browse-root={idPrefix}>
@@ -63,20 +77,46 @@ const {
   <div class="browse-filters" id={`${idPrefix}-filters`}>
     <div class="browse-filter-group">
       <label for={`${idPrefix}-system`} class="browse-filter-label">System</label>
-      <select id={`${idPrefix}-system`} autocomplete="off">
-        {systemOptions.map((o) => <option value={o.value}>{o.text}</option>)}
+      <div class="ts-wrapper single plugin-clear_button ts-placeholder-wrapper" id={`${idPrefix}-system-placeholder`}>
+        <div class="ts-control">
+          {system ? <div class="item">{systemText}</div> : null}
+          <input type="select-one" autocomplete="off" placeholder={system ? "" : "Any system…"} readonly />
+        </div>
+      </div>
+      <select id={`${idPrefix}-system`} class="ts-hidden-select" autocomplete="off">
+        {systemOptions.map((o) => <option value={o.value} selected={o.value === system}>{o.text}</option>)}
       </select>
     </div>
     <div class="browse-filter-group" id={`${idPrefix}-category-group`}>
       <label for={`${idPrefix}-category`} class="browse-filter-label">Category</label>
-      <select id={`${idPrefix}-category`} autocomplete="off">
-        {categoryOptions.map((o) => <option value={o.value}>{o.text}</option>)}
+      <div class="ts-wrapper single plugin-clear_button ts-placeholder-wrapper" id={`${idPrefix}-category-placeholder`}>
+        <div class="ts-control">
+          {category ? <div class="item">{categoryText}</div> : null}
+          <input type="select-one" autocomplete="off" placeholder={category ? "" : "All categories…"} readonly />
+        </div>
+      </div>
+      <select id={`${idPrefix}-category`} class="ts-hidden-select" autocomplete="off">
+        {categoryOptions.map((o) => <option value={o.value} selected={o.value === category}>{o.text}</option>)}
       </select>
     </div>
     <div class="browse-filter-group browse-filter-group-tags" id={`${idPrefix}-tag-group`}>
       <label for={`${idPrefix}-tags`} class="browse-filter-label">Tags</label>
-      <select id={`${idPrefix}-tags`} multiple autocomplete="off">
-        {tagOptions.map((o) => <option value={o.value}>{o.text}</option>)}
+      <div class="ts-wrapper multi plugin-remove_button ts-placeholder-wrapper" id={`${idPrefix}-tags-placeholder`}>
+        <div class="ts-control">
+          {activeTags.map((tagVal) => {
+            const tagText = tagOptions.find((o) => o.value === tagVal)?.text ?? tagVal;
+            return (
+              <div class="item" data-value={tagVal}>
+                {tagText}
+                <a href="javascript:void(0)" class="remove" tabindex="-1" title="Remove this item">×</a>
+              </div>
+            );
+          })}
+          <input type="select-multiple" autocomplete="off" placeholder={activeTags.length ? "" : "Any tags…"} readonly />
+        </div>
+      </div>
+      <select id={`${idPrefix}-tags`} class="ts-hidden-select" multiple autocomplete="off">
+        {tagOptions.map((o) => <option value={o.value} selected={activeTags.includes(o.value)}>{o.text}</option>)}
       </select>
     </div>
     <div class="browse-filter-group">
