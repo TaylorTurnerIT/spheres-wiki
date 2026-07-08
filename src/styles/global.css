@@ -2640,7 +2640,7 @@ h6 {
 }
 
 /* ── FOUC guard for TomSelect enhanced select elements ────── */
-.ts-hidden-select {
+select.ts-hidden-select {
   opacity: 0 !important;
   position: absolute !important;
   pointer-events: none !important;
