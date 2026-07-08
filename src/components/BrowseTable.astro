@@ -166,6 +166,7 @@ function searchText(row: FeatBrowseRow): string {
   .browse-row {
     border-bottom: 1px solid var(--clr-border);
     border-left: 3px solid var(--clr-ns, var(--clr-border));
+    transition: background-color 0.15s ease;
   }
   .browse-row:nth-child(even) {
     background: color-mix(in srgb, var(--clr-muted) 3%, transparent);
@@ -260,8 +261,10 @@ function searchText(row: FeatBrowseRow): string {
     border-radius: var(--radius);
     padding: 6px 14px;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
   .browse-reset:hover {
+    background-color: color-mix(in srgb, var(--clr-brand) 6%, transparent);
     color: var(--clr-brand);
     border-color: var(--clr-brand);
   }

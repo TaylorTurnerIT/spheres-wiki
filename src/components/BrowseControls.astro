@@ -125,10 +125,12 @@ const {
     border: 1px solid var(--clr-border);
     border-radius: var(--radius);
     padding: 10px 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
   .browse-search-input-wrap:focus-within {
-    outline: 2px solid var(--clr-brand);
-    outline-offset: 1px;
+    border-color: var(--clr-brand);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--clr-brand) 15%, transparent);
+    outline: none;
   }
   .browse-search-icon {
     width: 18px;
@@ -176,10 +178,18 @@ const {
     font-size: var(--fs-xs);
     color: var(--clr-muted);
     cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .browse-desc-toggle:hover {
+    color: var(--clr-text);
   }
   .browse-desc-toggle input {
     accent-color: var(--clr-brand);
     cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .browse-desc-toggle:hover input {
+    transform: scale(1.1);
   }
 
   /* Filter row — mirrors the /search/ TomSelect styling idiom. */
