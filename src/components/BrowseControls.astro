@@ -80,7 +80,7 @@ const activeTags = tagsParam
       <div class="ts-wrapper single plugin-clear_button ts-placeholder-wrapper" id={`${idPrefix}-system-placeholder`}>
         <div class="ts-control">
           {system ? <div class="item">{systemText}</div> : null}
-          <input type="select-one" autocomplete="off" placeholder={system ? "" : "Any system…"} readonly />
+          <input type="text" autocomplete="off" placeholder={system ? "" : "Any system…"} readonly />
         </div>
       </div>
       <select id={`${idPrefix}-system`} class="ts-hidden-select" autocomplete="off">
@@ -92,7 +92,7 @@ const activeTags = tagsParam
       <div class="ts-wrapper single plugin-clear_button ts-placeholder-wrapper" id={`${idPrefix}-category-placeholder`}>
         <div class="ts-control">
           {category ? <div class="item">{categoryText}</div> : null}
-          <input type="select-one" autocomplete="off" placeholder={category ? "" : "All categories…"} readonly />
+          <input type="text" autocomplete="off" placeholder={category ? "" : "All categories…"} readonly />
         </div>
       </div>
       <select id={`${idPrefix}-category`} class="ts-hidden-select" autocomplete="off">
@@ -112,7 +112,7 @@ const activeTags = tagsParam
               </div>
             );
           })}
-          <input type="select-multiple" autocomplete="off" placeholder={activeTags.length ? "" : "Any tags…"} readonly />
+          <input type="text" autocomplete="off" placeholder={activeTags.length ? "" : "Any tags…"} readonly />
         </div>
       </div>
       <select id={`${idPrefix}-tags`} class="ts-hidden-select" multiple autocomplete="off">
