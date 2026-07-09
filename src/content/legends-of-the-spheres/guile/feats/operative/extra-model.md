@@ -4,7 +4,8 @@ name: Extra Model
 tags:
   - operative
 tier: feat
-summary: ""
+
+summary: "Gain an additional theorist model to use with hypothesis dice."
 ---
 
 **Prerequisite:** Model class feature or Theoretical Initiate.

@@ -4,7 +4,8 @@ name: Backdoor Control
 sphere: mind
 dualSphere: enhancement
 tier: feat
-summary: ""
+
+summary: "When using a charm on a creature or object you have bestowed intelligence upon, requests against their nature are merely treated as things they would not normally do."
 ---
 
 **Prerequisites:** Enhancement sphere (Bestow Intelligence (enhance)), Mind sphere (Expanded Charm).

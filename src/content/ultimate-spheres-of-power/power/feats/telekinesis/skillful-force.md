@@ -4,7 +4,8 @@ name: "Skillful Force"
 sphere: telekinesis
 tags: []
 tier: feat
-summary: ""
+
+summary: "You remove the -5 penalty when using telekinesis for Finesse or Steal skill checks, and gain a +2 circumstance bonus when using Telekinetic Tools."
 ---
 
 **Prerequisites:** Telekinesis sphere (Finesse, Steal, or Telekinetic Tools).

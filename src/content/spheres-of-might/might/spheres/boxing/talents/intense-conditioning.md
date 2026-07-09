@@ -4,7 +4,7 @@ name: "Intense Conditioning"
 tier: "advanced"
 tags:
   - "counter"
-summary: "Expend martial focus on a successful counter punch to force the target to make Will saves to repeat the triggering action for 1 minute."
+
 ---
 
 **Prerequisites:** Boxing sphere, counter punch ability, base attack bonus +5.

@@ -4,7 +4,8 @@ name: Smith Magical Weapons And Armor
 tags:
   - item-creation
 tier: feat
-summary: ""
+
+summary: "You can craft magical weapons and armor using your MSB to determine the maximum caster level."
 ---
 **Prerequisites:** Magic skill bonus +3.
 

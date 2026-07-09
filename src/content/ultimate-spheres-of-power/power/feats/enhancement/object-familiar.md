@@ -4,7 +4,8 @@ name: "Object Familiar"
 sphere: enhancement
 tags: []
 tier: feat
-summary: ""
+
+summary: "You may choose a Tiny animated object as your familiar that benefits from your Animate Object feats, and can become a Small object at 5th level with Improved Familiar."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), ability to acquire a familiar.

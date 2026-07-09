@@ -4,7 +4,8 @@ name: Swift Demise
 sphere: time
 dualSphere: death
 tier: feat
-summary: ""
+
+summary: "Use Slow and Haste as ghost strikes, and apply Haste to newly reanimated undead as a free action or maintain it with the same concentration action."
 ---
 
 Your chronomantic power extends to blurring the moment between life and death.

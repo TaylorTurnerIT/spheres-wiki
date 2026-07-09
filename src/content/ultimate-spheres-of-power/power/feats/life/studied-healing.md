@@ -4,7 +4,8 @@ name: "Studied Healing"
 sphere: life
 tags: []
 tier: feat
-summary: ""
+
+summary: "Increases your effective caster level for the cure ability based on your ranks in the Heal skill."
 ---
 
 **Prerequisites:** Heal 1 rank, Life sphere.

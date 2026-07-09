@@ -4,7 +4,7 @@ name: "Grease"
 tier: "basic"
 tags:
   - "formulae"
-summary: "Create an alchemical grease that buffs escape checks when applied, or penalizes Acrobatics, CMD, and fire saves and hinders standing from prone when thrown."
+
 ---
 
 **Craft DC:** 20

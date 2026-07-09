@@ -4,7 +4,8 @@ name: Primal Blast
 sphere: nature
 dualSphere: destruction
 tier: feat
-summary: ""
+
+summary: "You may replace your normal attack and damage modifiers with your casting ability modifier when using destructive blasts that match your geomancing talents."
 ---
 
 **Prerequisites:** Destruction sphere (any (blast type) talent), Nature sphere (any package).

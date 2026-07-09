@@ -4,7 +4,8 @@ name: Fool Magic
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "Succeeding on a Will save against magic doesn't alert the caster, allowing you to Bluff them into believing you failed and optionally accept supplementary effects to maintain the ruse."
 ---
 **Prerequisites:** Bluff 3 ranks; Deceitful or Skill Focus (Bluff); Iron Will.
 

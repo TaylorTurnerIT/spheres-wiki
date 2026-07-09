@@ -5,7 +5,8 @@ tags:
   - defiler
   - drawback
 tier: feat
-summary: ""
+
+summary: "You can increase the radius of your corrupted area and its recovery time to decrease the spell point cost of applied metamagic feats."
 ---
 You can increase the damage to the land around you to amplify your power.
 

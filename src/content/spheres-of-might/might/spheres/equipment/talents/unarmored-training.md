@@ -3,7 +3,7 @@ id: "unarmored-training"
 name: "Unarmored Training"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 Your deft movements, physical conditioning, and expert use of your chosen weapons allow you to create a protective barrier around yourself as effective as any true suit of armor. When unarmored and unencumbered, you gain a +3 armor bonus to your AC. This bonus increases by +1 for every 3 points of base attack bonus you possess. Characters who gain Acrobatics as a class skill may instead choose to have the armor bonus increase by +1 for every 3 ranks in the Acrobatics skill they possess.

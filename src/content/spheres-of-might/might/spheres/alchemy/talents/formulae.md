@@ -3,7 +3,7 @@ id: "formulae"
 name: "Formulae"
 tier: "base"
 tags: []
-summary: "Gain one formulae talent and the ability to craft a limited number of temporary, free alchemical items."
+
 ---
 
 Some Alchemy talents have the (formulae) descriptor; these are improved or original versions of alchemical items you can only create once you’ve learned the talent. All formulae have a base crafting DC as noted in their descriptor, and their saving throw DCs, if any, are determined using the normal formula for combat sphere talents, using the practitioner’s ranks in Craft (alchemy) in place of their base attack bonus. The necessary ingredients for creating formulae are gathered over the course of a given day; there is no monetary cost to creating a formulae. You may craft any item whose formulae you know in 30 minutes, or 15 minutes if you have access to an alchemist’s lab or alchemist’s crafting kit, but due to the volatile nature of the enhanced formulae you cannot have more formulae prepared at one time than a number equal to 1/2 your ranks in Craft (alchemy) (minimum 1) + the number of formulae talents you possess. For every 4 ranks in Craft (alchemy) you possess, you may craft 1 additional formulae as part of the same 30/15 minute time period.

@@ -3,7 +3,7 @@ id: "impale"
 name: "Impale"
 tier: "base"
 tags: []
-summary: ""
+
 ---
 
 When making a melee attack with the attack action that deals lethal damage, you can take a -2 penalty on the attack roll; if the attack is successful, your weapon impales the creature, forcing it into a square within your reach if it was not already. An impaled creature cannot move and is battered for as long as it remains impaled. An impaled creature who attempts to cast a spell or use a spell-like ability must make a concentration check (DC 10 + your CMB + spell level), or lose the spell. Weapons used to impale a creature cannot be used for attacks except for those against the impaled creature (you cannot impale more than a single creature with your unarmed strikes), ignoring armor, natural armor, and shield bonuses to AC. A creature can only be impaled by a single weapon; attempting to impale an already impaled creature automatically fails. Controlling an impaling weapon requires the same amount of hands as wielding the weapon does.

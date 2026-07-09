@@ -3,7 +3,7 @@ id: "nova-blast"
 name: "Nova Blast"
 tier: "advanced"
 tags: []
-summary: "Expend all a weapon's remaining charges on a successful attack to deal extra damage based on its enhancement bonus and number of charges spent."
+
 ---
 
 **Prerequisite:** Equipment sphere.

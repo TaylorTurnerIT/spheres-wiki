@@ -5,7 +5,8 @@ tags:
   - defiler
   - drawback
 tier: feat
-summary: ""
+
+summary: "Blighting an area allows you to use a counterspell as a free action against magical effects within the blighted terrain."
 ---
 Your destructive magics nullify magical workings.
 

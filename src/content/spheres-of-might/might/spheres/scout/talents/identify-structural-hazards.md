@@ -4,7 +4,7 @@ name: "Identify Structural Hazards"
 tier: "basic"
 tags:
   - "utility"
-summary: ""
+
 ---
 
 You may use Perception in place of Knowledge (dungeoneering) to identify underground hazards, in place of Knowledge (engineering) to identify dangerous construction or determine a structure’s weakness, and in place of Knowledge (nature) to identify a natural hazard.

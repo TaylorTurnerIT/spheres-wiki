@@ -17,7 +17,7 @@ sectionDefinitions:
         tags: ["smash"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Gain the Brutal Breaker, Hard Drinker, and Smash abilities, and scale improvised weapon damage by size."
+
 ---
 
 Barroom practitioners specialize in using whatever is available to them, willing to swing table legs, chairs, and anything else as they chug down a fresh brew.

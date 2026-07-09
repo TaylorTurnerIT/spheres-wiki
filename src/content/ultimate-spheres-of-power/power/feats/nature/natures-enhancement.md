@@ -4,7 +4,8 @@ name: Nature's Enhancement
 sphere: nature
 dualSphere: enhancement
 tier: feat
-summary: ""
+
+summary: "You can imbue a target with a non-instantaneous spirit ability when enhancing them and maintain concentration on both with a single action."
 ---
 
 **Prerequisites:** Enhancement sphere, Nature sphere (any (spirit) talent).

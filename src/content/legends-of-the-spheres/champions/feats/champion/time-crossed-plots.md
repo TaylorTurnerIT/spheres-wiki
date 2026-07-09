@@ -4,7 +4,8 @@ name: Time-Crossed Plots
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Spend a spell point to reveal a plan that functions even if you had no conceivable way or time to previously prepare it."
 ---
 **Prerequisites:** Divination or Time sphere, any one [plan] talent.
 

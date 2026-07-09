@@ -4,7 +4,8 @@ name: Chaotic Counter
 tags:
   - wild-magic
 tier: feat
-summary: ""
+
+summary: "Successfully counterspelling increases the target's wild magic chance."
 ---
 **Prerequisites:** Counterspell or the ability to cast dispel magic.
 

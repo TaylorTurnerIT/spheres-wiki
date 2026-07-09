@@ -4,7 +4,8 @@ name: Real Flight
 tags:
   - racial
 tier: feat
-summary: ""
+
+summary: "Your breezeflight grants you weightlessness and a 30 ft. fly speed with average maneuverability, but increases your CMB and CMD penalties to -4."
 ---
 Flying comes as naturally to you as breathing and your airborne talents are often the source of great envy among your peers.
 

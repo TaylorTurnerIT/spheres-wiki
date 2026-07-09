@@ -5,7 +5,8 @@ sphere: open-hand
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "You can move at half speed while prone, apply dance talents toward your unarmed damage progression, and gain an attack bonus to unarmed strikes while maintaining a dance."
 ---
 
 **Prerequisites:** Open Hand sphere, Performance sphere ((dance) package).

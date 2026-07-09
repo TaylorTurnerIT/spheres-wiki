@@ -4,7 +4,8 @@ name: "Deceptive Advisor"
 sphere: mind
 tags: []
 tier: feat
-summary: ""
+
+summary: "As a swift action, you can force a target to attempt a Will save or have your Bluff statements treated as one step more reasonable and be treated as one stage friendlier for Diplomacy."
 ---
 
 **Prerequisite:** Mind sphere.

@@ -4,7 +4,8 @@ name: Shift Effect
 tags:
   - wild-magic
 tier: feat
-summary: ""
+
+summary: "Spend a spell point to modify a wild magic event's result by rolling 1d20."
 ---
 **Prerequisites:** Spell point pool or casting class feature.
 

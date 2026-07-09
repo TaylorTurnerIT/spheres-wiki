@@ -4,7 +4,8 @@ name: Alloy Enhancement
 sphere: nature
 dualSphere: enhancement
 tier: feat
-summary: ""
+
+summary: "You can spend 1 additional spell point to enhance metal you create or affect with metal geomancing abilities as part of the same action."
 ---
 
 **Prerequisites:** Enhancement sphere, Nature sphere ((metal) package).

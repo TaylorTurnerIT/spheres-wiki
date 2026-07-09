@@ -5,7 +5,7 @@ tier: "advanced"
 tags:
   - "leap"
   - "run"
-summary: "Jump in mid-air, run on air, and balance on fragile surfaces."
+
 ---
 
 **Prerequisites:** Athletics sphere, Wall Stunt, Acrobatics 5 ranks.

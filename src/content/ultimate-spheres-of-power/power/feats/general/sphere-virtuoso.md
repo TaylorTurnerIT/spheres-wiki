@@ -4,7 +4,8 @@ name: Sphere Virtuoso
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "Possessing two descriptor-specific talents from separate spheres grants you access to all other talents with that same descriptor."
 ---
 **Prerequisites:** Casting class feature; two or more talents from any sphere that both have the instill, mass, range or strike descriptors.
 

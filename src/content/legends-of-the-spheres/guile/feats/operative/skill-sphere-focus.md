@@ -5,7 +5,8 @@ tags:
   - combat
   - operative
 tier: feat
-summary: ""
+
+summary: "Gain a +1 bonus to saving throw and target's skill check DCs for abilities from a chosen skill sphere."
 ---
 
 **Benefit:** Choose a skill sphere. You gain a +1 bonus to saving throw and target’s skill check DCs for all abilities from that sphere.

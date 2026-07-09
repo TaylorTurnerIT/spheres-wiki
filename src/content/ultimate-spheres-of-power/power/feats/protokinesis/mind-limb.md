@@ -4,7 +4,8 @@ name: Mind Limb
 tags:
   - protokinesis
 tier: feat
-summary: ""
+
+summary: "You gain an extra telekinetic limb that can perform non-offensive item manipulation and retrieval actions as a swift action."
 ---
 
 **Prerequisite:** Telekinesis sphere.

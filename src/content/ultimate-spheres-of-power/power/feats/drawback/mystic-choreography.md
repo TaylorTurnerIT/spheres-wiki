@@ -6,7 +6,8 @@ tags:
   - drawback
   - proxy
 tier: feat
-summary: ""
+
+summary: "Allow a creature under your Create Proxy effect to use an immediate action to fulfill one of your casting component drawbacks, ending the proxy effect in the process."
 ---
 
 **Prerequisites:** Enhancement sphere; at least one of the Skilled Casting, Somatic Casting, or Verbal Casting drawbacks; Circle Casting, Spell Proxy.

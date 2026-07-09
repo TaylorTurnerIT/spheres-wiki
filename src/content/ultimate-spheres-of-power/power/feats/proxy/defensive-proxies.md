@@ -4,7 +4,8 @@ name: Defensive Proxies
 tags:
   - proxy
 tier: feat
-summary: ""
+
+summary: "A creature under your Create Proxy effect can spend an immediate action and end the proxy effect to let you reroll a failed saving throw against a sphere effect."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Spell Proxy.

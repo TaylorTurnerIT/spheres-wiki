@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "Your cuazaj lightning breath weapon doubles in size to a 30-foot cone, or a 60-foot cone if this feat is taken twice."
 ---
 **Prerequisites:** Draconic subtype, cuazaj lightning racial trait, Cuazaj Breath.
 

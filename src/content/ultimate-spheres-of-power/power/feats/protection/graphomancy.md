@@ -4,7 +4,8 @@ name: "Graphomancy"
 sphere: protection
 tags: []
 tier: feat
-summary: ""
+
+summary: "Increase your caster level when creating wards by half your ranks in Craft (calligraphy)."
 ---
 **Prerequisites:** Craft (calligraphy) 1 rank, Protection sphere.
 

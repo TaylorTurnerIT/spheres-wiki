@@ -3,7 +3,7 @@ id: "elemental-disruption"
 name: "Elemental Disruption"
 tier: "basic"
 tags: []
-summary: "Apply a scaling secondary effect based on the energy type when dealing energy damage with a weapon attack."
+
 ---
 
 When you deal one or more types of energy damage with a weapon attack, you may apply one of the following effects to the attack.

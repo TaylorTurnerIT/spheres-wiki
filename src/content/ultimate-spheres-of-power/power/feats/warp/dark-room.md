@@ -4,7 +4,8 @@ name: Dark Room
 sphere: warp
 dualSphere: dark
 tier: feat
-summary: ""
+
+summary: "Your extradimensional room entrance appears as a deep shadow requiring an active Perception check to spot, while still allowing you to see out unhindered."
 ---
 
 **Prerequisites:** Dark sphere, Warp sphere (Extradimensional Room (space)).

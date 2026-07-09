@@ -4,7 +4,8 @@ name: Telekineticat
 sphere: telekinesis
 tags: []
 tier: feat
-summary: ""
+
+summary: "You manifest a telekinetic cat familiar made of force that uses your Telekinesis caster level to determine its abilities and can interact with incorporeal targets, though it is limited to your telekinesis range."
 ---
 
 With all your cosmic power and wisdom, you decided to form your raw and potent telekinetic power into the shape of a cat.

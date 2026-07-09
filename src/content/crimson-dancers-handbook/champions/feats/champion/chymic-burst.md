@@ -5,7 +5,8 @@ sphere: blood
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "You can spend an additional spell point when using the Cystic Growth blood art to inflict a toxin instead of a disease, potentially spreading it to adjacent creatures if the target is already afflicted."
 ---
 **Prerequisites:** Blood sphere (Cystic Growth (blood art, still)), Alchemy sphere.
 

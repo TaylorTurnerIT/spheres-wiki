@@ -4,7 +4,8 @@ name: Maintain Proxy
 tags:
   - proxy
 tier: feat
-summary: ""
+
+summary: "You can spend 1 spell point to prevent a Create Proxy effect from ending when triggered by a Proxy feat."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, at least one Proxy feat.

@@ -3,7 +3,7 @@ id: "go-limp"
 name: "Go Limp"
 tier: "advanced"
 tags: []
-summary: "Convert half of incoming damage into nonlethal damage while you have the drunk status."
+
 ---
 
 **Prerequisite:** Barroom sphere, base attack bonus +5.

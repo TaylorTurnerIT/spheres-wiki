@@ -4,7 +4,8 @@ name: Shoulder To Shoulder
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "Spend grit, luck, or panache to share a War sphere mandate with an adjacent ally, allowing you to regain points from their actions."
 ---
 
 **Prerequisite:** Grit, luck pool or panache class feature.

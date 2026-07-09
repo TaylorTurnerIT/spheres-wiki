@@ -4,7 +4,7 @@ name: "Flash Step"
 tier: "advanced"
 tags:
   - "motion"
-summary: "Expend martial focus as a swift action to teleport to any space you could normally move to."
+
 ---
 
 **Prerequisites:** Athletics sphere, 5 ranks in either Acrobatics, Climb, or Fly.

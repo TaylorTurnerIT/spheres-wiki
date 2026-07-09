@@ -4,7 +4,8 @@ name: Cumulative Nimbus
 tags:
   - teamwork
 tier: feat
-summary: ""
+
+summary: "When a creature is affected by Weather shrouds from multiple casters with this feat, the saving throw DC for all such shrouds becomes the highest DC among them."
 ---
 
 **Prerequisites:** Weather sphere (any (shroud) talent), magic skill bonus +5.

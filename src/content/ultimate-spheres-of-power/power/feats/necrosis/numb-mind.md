@@ -5,7 +5,8 @@ sphere: death
 tags:
   - necrosis
 tier: feat
-summary: ""
+
+summary: "Gain +1 spell point and the ability to spend a spell point as an immediate action to gain a bonus on saving throws against various debilitating conditions."
 ---
 
 Your emotional and reflex responses fade, allowing you to shrug off distracting conditions.

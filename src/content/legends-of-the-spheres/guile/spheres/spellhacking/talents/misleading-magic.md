@@ -4,7 +4,7 @@ name: "Misleading Magic"
 tier: "basic"
 tags:
   - "utility"
-summary: ""
+
 ---
 
 You can modify a magical effect as you produce it in cosmetic and misleading ways. Spells, magic items you activate, and the effects of magic spheres are all subject to this talent. Observers can realize the true effect regardless of how you modified it with this talent by succeeding at a single Perception or Spellcraft check against DC 15 + your ranks in the associated skill. You make one of the following changes, plus another change per 5 ranks you have in the associated skill.

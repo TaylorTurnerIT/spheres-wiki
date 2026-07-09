@@ -4,7 +4,7 @@ name: "Spell Sunder"
 tier: "advanced"
 tags:
   - "exertion"
-summary: "Attempt a sunder combat maneuver to suppress or dispel an ongoing spell effect."
+
 ---
 
 **Prerequisites:** Berserker sphere, base attack bonus +6.

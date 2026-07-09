@@ -4,7 +4,8 @@ name: Benevolence
 sphere: protection
 dualSphere: life
 tier: feat
-summary: ""
+
+summary: "Spend a spell point as an immediate action to heal an ally protected by your aegis using your fount of life when they take damage."
 ---
 **Prerequisites:** Life sphere (Fount Of Life), Protection sphere.
 

@@ -3,7 +3,7 @@ id: "manifold-grip"
 name: "Manifold Grip"
 tier: "advanced"
 tags: []
-summary: "Wield melee weapons with more than two hands to add half your Strength modifier to damage per extra hand."
+
 ---
 
 **Prerequisite:** Equipment sphere.

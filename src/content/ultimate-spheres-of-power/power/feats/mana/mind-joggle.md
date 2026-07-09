@@ -4,7 +4,8 @@ name: "Mind Joggle"
 sphere: mana
 tags: []
 tier: feat
-summary: ""
+
+summary: "You can forego dealing spell point damage with Mana sphere abilities to instead force a target to lose their martial focus, and at 10th level can spend a spell point to temporarily prevent them from expending or regaining it."
 ---
 
 **Prerequisite:** Mana sphere.

@@ -4,7 +4,8 @@ name: "Savagery"
 sphere: war
 tags: []
 tier: feat
-summary: ""
+
+summary: "Share your active animal focuses with one ally you share a mandate with."
 ---
 
 **Prerequisites:** War sphere, animal focus class feature.

@@ -4,7 +4,8 @@ name: Climbing Claws
 tags:
   - racial
 tier: feat
-summary: ""
+
+summary: "You gain a +2 racial bonus to Climb checks per free hand, and a 15-foot climb speed if all four hands are free."
 ---
 Less rude than shoving them into living things, but still less refined than most would prefer, your sharp claws make fine climbing tools.
 

@@ -4,7 +4,7 @@ name: "Painful Venin"
 tier: "basic"
 tags:
   - "toxin"
-summary: "Add damage equal to half your Craft (alchemy) ranks to a poison, and taking it twice applies this extra damage to all your poisons."
+
 ---
 
 In addition to making the target fatigued, the target also suffers damage equal to 1/2 your ranks in Craft (alchemy) (minimum 1). This damage happens before resolving the effect of the poison.

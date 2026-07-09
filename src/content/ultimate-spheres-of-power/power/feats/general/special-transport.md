@@ -5,7 +5,8 @@ tags:
   - 3pp
   - general
 tier: feat
-summary: ""
+
+summary: "Your teleport beacon creatures count as conjuration companions for certain talents and can be summoned in place of one."
 ---
 **Prerequisites:** Conjuration Sphere, Warp Sphere (Teleport Beacon)
 

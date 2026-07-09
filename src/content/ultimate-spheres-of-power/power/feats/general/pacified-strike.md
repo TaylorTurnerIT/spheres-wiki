@@ -4,7 +4,8 @@ name: Pacified Strike
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "You can choose to deal no damage with a [strike] sphere effect to gain an attack roll bonus equal to your caster level."
 ---
 **Prerequisites:** Casting class feature, one talent from any sphere that has the strike descriptor, caster level 3rd
 

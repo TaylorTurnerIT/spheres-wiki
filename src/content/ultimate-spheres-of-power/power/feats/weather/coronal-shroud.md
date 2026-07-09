@@ -4,7 +4,8 @@ name: Coronal Shroud
 sphere: weather
 dualSphere: light
 tier: feat
-summary: ""
+
+summary: "Cause creatures glowing with bright light to count as under the effect of your mantle or an additional weather shroud."
 ---
 
 **Prerequisites:** Light sphere, Weather sphere (at least one (mantle) or (shroud) talent).

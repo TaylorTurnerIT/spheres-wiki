@@ -4,7 +4,8 @@ name: Primal Emblem
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "Your banner can passively produce the effects of a chosen War sphere totem for a limited number of rounds per day."
 ---
 **Prerequisite:** Banner class feature.
 

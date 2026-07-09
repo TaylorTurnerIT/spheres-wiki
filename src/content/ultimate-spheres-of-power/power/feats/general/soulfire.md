@@ -4,7 +4,8 @@ name: Soulfire
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "You can take Constitution burn to gain temporary spell points which can be used to deal untyped damage that bypasses spell resistance."
 ---
 **Prerequisite:** Caster level 5th.
 

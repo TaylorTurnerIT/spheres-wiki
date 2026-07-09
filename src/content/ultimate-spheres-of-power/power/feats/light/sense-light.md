@@ -4,7 +4,8 @@ name: "Sense Light"
 sphere: light
 tags: []
 tier: feat
-summary: ""
+
+summary: "By spending a swift action in dim or brighter light, you can see with your eyes closed, granting immunity to blindness, dazzling, and gaze attacks."
 ---
 
 **Prerequisites:** Perception 5 ranks, Light sphere.

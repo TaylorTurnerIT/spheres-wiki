@@ -4,7 +4,8 @@ name: Artificery, Improved
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "You can craft magic items without meeting their base sphere prerequisites by increasing the skill check DC by +5."
 ---
 **Prerequisites:** Any Craft or Profession 10 ranks, Artificery.
 

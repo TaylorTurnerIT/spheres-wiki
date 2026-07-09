@@ -5,7 +5,8 @@ sphere: war
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "Squadron members ignore cover and shooting-into-melee penalties when attacking enemies engaged exclusively with other squadron members."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

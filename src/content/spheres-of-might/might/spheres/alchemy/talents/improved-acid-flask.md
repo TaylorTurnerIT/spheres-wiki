@@ -4,7 +4,7 @@ name: "Improved Acid Flask"
 tier: "basic"
 tags:
   - "formulae"
-summary: ""
+
 ---
 
 **Craft DC:** 15

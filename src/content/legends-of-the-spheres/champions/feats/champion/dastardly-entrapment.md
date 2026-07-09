@@ -5,7 +5,8 @@ sphere: infiltration
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "You can apply a sabotage talent in place of a trick talent whenever you succeed at a dirty trick or steal combat maneuver."
 ---
 
 **Prerequisites:** Infiltration sphere, Scoundrel sphere.

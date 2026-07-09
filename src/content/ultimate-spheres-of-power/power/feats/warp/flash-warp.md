@@ -4,7 +4,8 @@ name: Flash Warp
 sphere: warp
 dualSphere: light
 tier: feat
-summary: ""
+
+summary: "When teleporting, you can trigger a brief, bright Light sphere glow effect at your starting location or destination."
 ---
 
 **Prerequisites:** Light sphere, Warp sphere.

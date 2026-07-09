@@ -3,7 +3,7 @@ id: "relentless-carnage"
 name: "Relentless Carnage"
 tier: "advanced"
 tags: []
-summary: "Advancing Carnage targets do not need to be adjacent, and its maximum number of additional attacks increases to your base attack bonus."
+
 ---
 
 **Prerequisites:** Berserker sphere (Advancing Carnage x2), base attack bonus +10.

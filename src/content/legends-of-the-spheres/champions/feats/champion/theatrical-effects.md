@@ -5,7 +5,8 @@ sphere: illusion
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Once per round, an illusion figment you are concentrating on can contribute to an active scene as if it were an ally."
 ---
 
 **Prerequisites:** Illusion sphere, Performance sphere ((act) package).

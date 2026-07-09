@@ -4,7 +4,8 @@ name: Imbue With Nature
 sphere: nature
 dualSphere: destruction
 tier: feat
-summary: ""
+
+summary: "You can increase casting time or spend an extra spell point to make a destructive blast that corresponds to your geomancing talents bypass spell resistance."
 ---
 
 **Prerequisites:** Destruction sphere, Nature sphere (any (geomancing) talent).

@@ -5,7 +5,8 @@ sphere: performance
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Combine Performance dances with the Warp sphere to teleport during the dance, or with the Athletics sphere to apply a motion talent to all dancers."
 ---
 
 **Prerequisite:** Perform (dance) 3 ranks, Performance sphere ((dance) package); Athletics sphere or Warp sphere.

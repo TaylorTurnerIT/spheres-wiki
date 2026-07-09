@@ -4,7 +4,7 @@ name: "Shark Swim"
 tier: "advanced"
 tags:
   - "swim"
-summary: "Swim at full speed, take 10 on Swim checks, ignore swim fatigue, and improve breath holding."
+
 ---
 
 **Prerequisites:** Athletics sphere.

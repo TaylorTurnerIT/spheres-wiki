@@ -4,7 +4,8 @@ name: Careful Caster
 tags:
   - wild-magic
 tier: feat
-summary: ""
+
+summary: "Increase the casting time of a sphere effect to reduce its wild magic chance."
 ---
 **Prerequisites:** Casting class feature.
 

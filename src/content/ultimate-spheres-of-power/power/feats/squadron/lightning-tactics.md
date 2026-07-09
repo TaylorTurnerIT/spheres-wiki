@@ -5,7 +5,8 @@ sphere: war
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "By spending a spell point or martial focus after rolling initiative, your squadron members can substitute your natural d20 roll for their own."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander; character level 10th.

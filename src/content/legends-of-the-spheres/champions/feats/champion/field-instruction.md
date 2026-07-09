@@ -5,7 +5,8 @@ sphere: navigation
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "You can begin or maintain a tactic as a free action when you use pathing, expanding the tactic to match the pathing's area."
 ---
 
 **Prerequisites:** Navigation sphere, Warleader sphere.

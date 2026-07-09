@@ -4,7 +4,7 @@ name: "Dabbler Retainer"
 tier: "basic"
 tags:
   - "retainer"
-summary: ""
+
 ---
 
 You can choose a magical dabbler as your faction retainer. You can choose either for them to gain spell slots or magic talents. They gain spell slots as an adept (NPC class in the Pathfinder Roleplaying Game Core Rulebook) using their Hit Dice as their adept level. If you have the (supply) package, you can request a dabbler who can cast the same kind of spells that your spellcasting services provide instead of using the adept spell list (although they still use the adept’s spell slots). Alternatively, they gain two of the magic spheres that your faction offers as spellcasting services, have a caster level and spell pool each equal to half their Hit Dice, and gain one magic talent for every two Hit Dice they have. You can share magic talents in place of skill talents with the dabbler retainer.

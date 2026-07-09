@@ -4,7 +4,8 @@ name: "Smolder Resin"
 sphere: nature
 tags: []
 tier: feat
-summary: ""
+
+summary: "Your Pummel geomancing ability deals additional fire damage equal to your casting ability modifier on successful hits."
 ---
 
 **Prerequisites:** Nature sphere ((fire) package and (plant) package).

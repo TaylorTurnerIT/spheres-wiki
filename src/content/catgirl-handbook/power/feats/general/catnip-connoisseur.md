@@ -4,7 +4,8 @@ name: Catnip Connoisseur
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "Successfully saving against drug addiction prevents ability damage from that drug, and consuming catnip allows you to avoid its secondary effects."
 ---
 **Prerequisite:** Character level 3rd.
 

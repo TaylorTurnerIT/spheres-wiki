@@ -4,7 +4,8 @@ name: Defensive Vigilance
 sphere: war
 dualSphere: protection
 tier: feat
-summary: ""
+
+summary: "You can rally allies within your wards, and sacrifice their aegis to reduce the rally cost."
 ---
 
 **Prerequisites:** Protection sphere, War sphere.

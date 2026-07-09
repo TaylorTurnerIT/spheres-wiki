@@ -4,7 +4,8 @@ name: "Mind Against Body"
 sphere: telekinesis
 tags: []
 tier: feat
-summary: ""
+
+summary: "You may substitute your CMD with 10 plus your Telekinesis sphere caster level and casting ability modifier."
 ---
 
 **Prerequisites:** Telekinesis sphere (Telekinetic Maneuver).

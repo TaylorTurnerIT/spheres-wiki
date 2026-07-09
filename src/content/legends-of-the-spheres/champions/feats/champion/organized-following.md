@@ -5,7 +5,8 @@ sphere: faction
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Your Leadership cohorts can select skill talents instead of combat or magic talents, and you can spend authorizations to boost follower recruitment."
 ---
 
 **Prerequisites:** Faction sphere, Leadership sphere.

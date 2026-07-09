@@ -4,7 +4,8 @@ name: Spell Adept
 tags:
   - ritual
 tier: feat
-summary: ""
+
+summary: "By spending an hour preparing, you can prepare multiple daily rituals using the Spell Dabbler feat, up to four per ritual level."
 ---
 Your ability to use rituals has grown to great power.
 

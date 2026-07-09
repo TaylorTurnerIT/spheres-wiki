@@ -4,7 +4,8 @@ name: Shadow Cage
 sphere: protection
 dualSphere: dark
 tier: feat
-summary: ""
+
+summary: "Spend a spell point to fill your ward with darkness, allowing your melds to function within its area."
 ---
 **Prerequisites:** Dark sphere, Protection sphere.
 

@@ -5,7 +5,8 @@ sphere: divination
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "You gain an insight bonus to attack and damage rolls based on your active Divination senses, and can dismiss a sense to partially ignore miss chance for one round."
 ---
 
 **Prerequisites:** Divination sphere (one or more (sense) talents or abilities).

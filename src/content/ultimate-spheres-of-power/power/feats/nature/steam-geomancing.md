@@ -4,7 +4,8 @@ name: "Steam Geomancing"
 sphere: nature
 tags: []
 tier: feat
-summary: ""
+
+summary: "Change the damage of any Nature sphere ability that deals cold or fire damage to half cold and half fire."
 ---
 
 **Prerequisites:** Nature sphere ((fire) package and (water) package).

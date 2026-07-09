@@ -5,7 +5,8 @@ sphere: war
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "You can use your base attack bonus in place of your War caster level to determine the numerical effects of your totems."
 ---
 
 **Prerequisites:** War sphere, base attack bonus +1.

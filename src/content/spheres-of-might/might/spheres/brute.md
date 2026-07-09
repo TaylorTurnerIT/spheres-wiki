@@ -14,7 +14,7 @@ sectionDefinitions:
         tags: ["manhandle"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Gain Improved Unarmed Strike, the Shove ability, and increased unarmed strike damage based on your number of talents."
+
 ---
 
 Brutes like to throw their weight around, jostling and battering foes to move them about the battlefield. Brute practitioners are unarmed fighters who deal additional damage with their unarmed strikes as described in the unarmed strike practitioner table. **Associated Feat:** Improved Unarmed Strike.

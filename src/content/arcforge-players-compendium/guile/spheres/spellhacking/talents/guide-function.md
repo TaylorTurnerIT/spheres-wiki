@@ -4,7 +4,7 @@ name: "Guide Function"
 tier: "basic"
 tags:
   - "hack"
-summary: "Force the user of a magic item to roll twice for its next attack roll or magic skill check, and you choose the result."
+
 ---
 
 **Target:** one magic item

@@ -4,7 +4,7 @@ name: "Magehunter’s Vision"
 tier: "advanced"
 tags:
   - "utility"
-summary: ""
+
 ---
 
 **Prerequisite:** Scout sphere, Heightened Awareness, Knowledge (arcana) 3 ranks, Perception 3 ranks.

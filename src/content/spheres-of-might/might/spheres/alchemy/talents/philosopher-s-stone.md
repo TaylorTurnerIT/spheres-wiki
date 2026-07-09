@@ -4,7 +4,7 @@ name: "Philosopher’s Stone"
 tier: "advanced"
 tags:
   - "formulae"
-summary: "Once per month, create a philosopher's stone that can transmute base metals into silver or gold, or act as a true resurrection."
+
 ---
 
 **Prerequisites:** Alchemy sphere (formulae) package, Craft (alchemy) 20 ranks

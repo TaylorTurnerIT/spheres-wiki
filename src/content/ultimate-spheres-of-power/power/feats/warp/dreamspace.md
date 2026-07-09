@@ -4,7 +4,8 @@ name: Dreamspace
 sphere: warp
 dualSphere: mind
 tier: feat
-summary: ""
+
+summary: "You can project your mind and items into a customizable, quasi-real extradimensional space while you sleep."
 ---
 
 **Prerequisites:** Mind sphere, Warp sphere.

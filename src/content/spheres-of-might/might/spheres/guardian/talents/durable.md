@@ -3,7 +3,7 @@ id: "durable"
 name: "Durable"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 When targeted by a natural, extraordinary or supernatural ability that inflicts ability damage, ability drain, disease, negative levels, poison or any of the following conditions: (blinded, confused, cowering, dazed, dazzled, entangled, exhausted, fascinated, fatigued, frightened, nauseated, panicked, paralyzed, petrified, shaken, sickened, staggered, stunned, unconscious) you may delay the onset of its effects until the end of your next turn. Each effect is treated as if it were an amount of hit point damage equal to the attacking creature’s Hit Dice for determining the capacity of your delayed damage pool. If you do not have enough space remaining in the delayed damage pool, you may not delay the effect.

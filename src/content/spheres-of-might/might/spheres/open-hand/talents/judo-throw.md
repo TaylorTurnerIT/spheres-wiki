@@ -3,7 +3,7 @@ id: "judo-throw"
 name: "Judo Throw"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 As long as you have martial focus, you may make a trip attempt as a standard action which does not provoke an attack of opportunity. If this trip attempt is successful, you may choose for the creature to land in any square adjacent to you.

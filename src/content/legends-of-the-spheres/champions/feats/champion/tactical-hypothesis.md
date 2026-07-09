@@ -5,7 +5,8 @@ sphere: scout
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Successfully scouting a creature as at least a swift action lets you begin a theory regarding them as a free action."
 ---
 **Prerequisites:** Scout sphere, Study sphere.
 

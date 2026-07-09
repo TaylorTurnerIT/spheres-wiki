@@ -4,7 +4,8 @@ name: Planar Swing
 tags:
   - racial
 tier: feat
-summary: ""
+
+summary: "You can spend a swift action and a round of planar balancer to make a mid-air jump in any direction using an Acrobatics check."
 ---
 Using your miraculous ability to create a static point between dimensions, you can temporarily bend gravity to swing yourself upward.
 

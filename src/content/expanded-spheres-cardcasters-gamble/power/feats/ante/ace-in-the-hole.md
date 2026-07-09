@@ -6,7 +6,8 @@ tags:
   - chance
   - combat
 tier: feat
-summary: ""
+
+summary: "Spend kismet when suffering ante backlash to reduce your effective ante by 1 per point spent before the penalty is calculated."
 ---
 
 **Prerequisites:** Ante Up

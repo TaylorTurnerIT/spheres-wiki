@@ -5,7 +5,8 @@ sphere: destruction
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "When concluding your Energy Leap movement, you can deal your destructive blast damage in a burst centered on your ending square."
 ---
 
 **Prerequisites:** Destruction sphere (Energy Leap (blast shape), Explosive Orb (blast shape)).

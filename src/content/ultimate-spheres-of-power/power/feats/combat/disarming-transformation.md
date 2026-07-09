@@ -5,7 +5,8 @@ sphere: alteration
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "You can spend a spell point to briefly transform an attacker's weapon into an animal to disarm them, or animate a manufactured weapon to strike its wielder instead."
 ---
 
 **Prerequisites:** Alteration sphere (Transform Object).

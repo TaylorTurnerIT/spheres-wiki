@@ -5,7 +5,8 @@ sphere: war
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "You can transfer your actions to members of your squadron."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

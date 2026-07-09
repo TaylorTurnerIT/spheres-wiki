@@ -3,7 +3,7 @@ id: "master-of-deception"
 name: "Master Of Deception"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Fencing sphere, Expert Feint, Bluff 10 ranks.

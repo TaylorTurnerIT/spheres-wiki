@@ -5,7 +5,8 @@ sphere: death
 tags:
   - teamwork
 tier: feat
-summary: ""
+
+summary: "You can command undead controlled by an ally with this feat and automatically transfer control of your undead to them if you are knocked unconscious or reduced to 0 or fewer hit points."
 ---
 
 Undead you and your allies create resonate with each of your souls.

@@ -3,7 +3,7 @@ id: "discern-condition"
 name: "Discern Condition"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 You may use the scout ability to determine the relative health and condition of a creature within line of sight and effect in addition to the normal information provided by your scout ability. You determine the creature’s condition based on the list below:

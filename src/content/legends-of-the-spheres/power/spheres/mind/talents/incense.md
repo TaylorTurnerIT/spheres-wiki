@@ -3,7 +3,7 @@ id: "incense"
 name: "Incense"
 tier: basic
 tags: ["charm"]
-summary: ""
+
 ---
 
 You stoke the target's anger into a raging inferno.

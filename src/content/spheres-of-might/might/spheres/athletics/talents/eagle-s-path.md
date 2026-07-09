@@ -4,7 +4,7 @@ name: "Eagle’s Path"
 tier: "advanced"
 tags:
   - "fly"
-summary: "Increase fly speed to equal base speed and improve maneuverability to average."
+
 ---
 
 **Prerequisites:** Athletics sphere, Sparrow’s Path, Fly 9 ranks.

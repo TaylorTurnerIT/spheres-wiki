@@ -4,7 +4,7 @@ name: "Singularity"
 tier: "advanced"
 tags:
   - "zone"
-summary: ""
+
 ---
 
 **Prerequisites:** Guardian sphere, base attack bonus +5.

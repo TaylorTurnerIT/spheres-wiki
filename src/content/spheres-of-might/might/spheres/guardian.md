@@ -14,7 +14,7 @@ sectionDefinitions:
         tags: ["zone"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Gain a delayed damage pool to postpone incoming damage until the end of your turn, and choose the Challenge or Patrol package."
+
 ---
 
 Guardians specialize in protecting their allies and drawing the ire of their enemies.

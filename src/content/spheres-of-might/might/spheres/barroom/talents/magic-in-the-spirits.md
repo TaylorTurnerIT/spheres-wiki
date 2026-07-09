@@ -3,7 +3,7 @@ id: "magic-in-the-spirits"
 name: "Magic In The Spirits"
 tier: "advanced"
 tags: []
-summary: "While drunk, weapons you wield gain an enhancement bonus based on your base attack bonus."
+
 ---
 
 **Prerequisite:** Barroom sphere, base attack bonus +4.

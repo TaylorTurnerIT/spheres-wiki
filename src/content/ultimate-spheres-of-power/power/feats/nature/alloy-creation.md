@@ -4,7 +4,8 @@ name: Alloy Creation
 sphere: nature
 dualSphere: creation
 tier: feat
-summary: ""
+
+summary: "You can use Creation abilities on metal summoned by Recover Ore without Expanded Materials, and treat metal as one size larger for size-limited geomancing abilities."
 ---
 
 **Prerequisites:** Creation sphere, Nature sphere ((metal) package).

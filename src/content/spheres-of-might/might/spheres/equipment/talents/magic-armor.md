@@ -3,7 +3,7 @@ id: "magic-armor"
 name: "Magic Armor"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Equipment sphere.

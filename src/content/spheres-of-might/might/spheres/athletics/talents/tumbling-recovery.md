@@ -4,7 +4,7 @@ name: "Tumbling Recovery"
 tier: "basic"
 tags:
   - "run"
-summary: "Drop prone as a free action, move as an immediate action when becoming prone to gain defensive bonuses, and expend martial focus to stand up as an immediate action."
+
 ---
 
 You may drop prone as a free action, even when it is not your turn. Whenever you are knocked prone or drop prone, you may spend an immediate action to move up to 10 ft. in any direction. If used to avoid an attack or area effect, this talent grants you a dodge bonus to AC and Reflex saves equal to half your ranks in Acrobatics (minimum 1). You may expend your martial focus to perform this movement without provoking attacks of opportunity. For every 5 ranks in Acrobatics you possess, you may move an additional 5 ft. with this talent.

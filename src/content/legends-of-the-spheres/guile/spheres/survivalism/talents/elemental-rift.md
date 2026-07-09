@@ -4,7 +4,7 @@ name: "Elemental Rift"
 tier: "advanced"
 tags:
   - "champion"
-summary: ""
+
 ---
 
 **Prerequisites:** Destruction sphere (any one (blast type) talent), Survivalism sphere ((dredge) package, Hazardous Terrain).

@@ -29,7 +29,7 @@ sectionDefinitions:
         tags: ["swim"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Gain an Athletics package and ranks in its associated skill."
+
 ---
 
 When you gain the Athletics sphere, you gain one of the following packages with its included abilities. You may take the Expanded Training talent to gain additional packages.

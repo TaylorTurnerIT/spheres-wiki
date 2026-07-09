@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "Your weapons empowered by Arcane Strike gain the ghost touch property for that round."
 ---
 You can swing your blade with so murderous an intent that it cleaves between dimensions.
 

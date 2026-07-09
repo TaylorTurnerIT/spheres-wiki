@@ -5,7 +5,8 @@ tags:
   - 3pp
   - mythic
 tier: feat
-summary: ""
+
+summary: "Spend mythic power as a free action to refund all spell points spent since the start of your turn, though spent Mana Point Cards are not restored."
 ---
 
 Prerequisites: Card Casting (mana pool, stagnant pool)

@@ -3,7 +3,7 @@ id: "specialized-venom"
 name: "Specialized Venom"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 You select 1 creature type (or subtype) from the ranger favored enemy list; your poisons may affect creatures of that type even if they would normally be immune to poison (or ignore any racial bonuses they may possess to saving throws against poison). For every 4 ranks in Craft (alchemy) you possess, you may select another creature type (or subtype).

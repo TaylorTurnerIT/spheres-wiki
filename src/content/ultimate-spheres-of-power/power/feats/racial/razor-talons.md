@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "You gain two primary talon attacks usable only while airborne that deal standard damage for your size."
 ---
 Though not built for fine manipulation, your talons can serve well enough as a last line of defense.
 

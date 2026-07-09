@@ -4,7 +4,8 @@ name: Invisible Friend
 sphere: illusion
 dualSphere: conjuration
 tier: feat
-summary: ""
+
+summary: "Your concentrated shadow companion is invisible, and you can spend a spell point to fully manifest it with a different form talent."
 ---
 
 **Prerequisites:** Illusion sphere (Suppression (glamer)), Conjuration sphere (Shadow Creature (form)).

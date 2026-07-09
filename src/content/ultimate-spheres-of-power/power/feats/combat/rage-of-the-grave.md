@@ -5,7 +5,8 @@ sphere: death
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Expend your remaining rage when killed to temporarily reanimate as a fast zombie to fight your killers, returning to life at -1 hit points when the rage expires."
 ---
 
 Your revenant-like anger fuels you even in death, granting you one last chance to take down your killers.

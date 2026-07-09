@@ -4,7 +4,8 @@ name: "Extradimensional Shadow"
 sphere: warp
 tags: []
 tier: feat
-summary: ""
+
+summary: "You combine your Extradimensional Storage and Shadow Stash into a single, deeper shadow portal with combined capacity that remains accessible even if your shadow is stolen."
 ---
 
 **Prerequisites:** Dark sphere (Shadow Stash), Warp sphere (Extradimensional Storage).

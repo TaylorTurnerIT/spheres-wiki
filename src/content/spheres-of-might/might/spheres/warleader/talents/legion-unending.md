@@ -4,7 +4,7 @@ name: "Legion Unending"
 tier: "advanced"
 tags:
   - "tactic"
-summary: ""
+
 ---
 
 **Prerequisites:** Warleader sphere, Rousing Claxon, Diplomacy 10 ranks.

@@ -4,7 +4,7 @@ name: "Improved Thunderstone"
 tier: "basic"
 tags:
   - "formulae"
-summary: "Craft a thrown alchemical stone that deafens creatures in a 10-foot radius, with scalable Craft DCs to increase the duration, radius, and sonic damage."
+
 ---
 
 **Craft DC:** 25

@@ -4,7 +4,8 @@ name: Proxy Network
 tags:
   - proxy
 tier: feat
-summary: ""
+
+summary: "You can have a touch-range sphere effect originate from a creature under your Create Proxy effect, immediately ending the proxy on them."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Spell Proxy.

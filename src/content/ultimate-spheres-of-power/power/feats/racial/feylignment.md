@@ -4,7 +4,8 @@ name: Feylignment
 tags:
   - racial
 tier: feat
-summary: ""
+
+summary: "You can spend an immediate action to temporarily shift your apparent alignment by one step for one minute, affecting how you interact with alignment-based effects."
 ---
 Using the gifts of your fey bloodline you can hide the true nature of your soul.
 

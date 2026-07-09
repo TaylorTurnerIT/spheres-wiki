@@ -4,7 +4,8 @@ name: Shade
 sphere: illusion
 dualSphere: dark
 tier: feat
-summary: ""
+
+summary: "You can create darkness alongside figments, and your illusions always count as occupying your darkness."
 ---
 
 **Prerequisites:** Dark sphere, Illusion sphere.

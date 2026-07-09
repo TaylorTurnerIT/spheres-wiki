@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "Whenever you hit with your bite attack, you can make a free grapple combat maneuver check that does not provoke attacks of opportunity."
 ---
 The strength of your jaws is uncanny and once you sink your teeth in you can hold on like a steel vice.
 

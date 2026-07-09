@@ -4,7 +4,7 @@ name: "Improved Itching Powder"
 tier: "basic"
 tags:
   - "formulae"
-summary: "Craft a thrown powder that inflicts a -2 penalty on attacks, saves, and checks on a failed Fortitude save."
+
 ---
 
 **Craft DC:** 25

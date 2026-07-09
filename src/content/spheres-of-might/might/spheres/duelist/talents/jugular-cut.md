@@ -4,7 +4,7 @@ name: "Jugular Cut"
 tier: "advanced"
 tags:
   - "bleed"
-summary: ""
+
 ---
 
 **Prerequisites:** Duelist sphere, Bleed Air, base attack bonus +15.

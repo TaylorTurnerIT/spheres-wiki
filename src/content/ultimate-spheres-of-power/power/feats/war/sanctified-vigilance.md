@@ -4,7 +4,8 @@ name: Sanctified Vigilance
 sphere: war
 dualSphere: fate
 tier: feat
-summary: ""
+
+summary: "You can rally allies within your consecrations regardless of mandates or totems."
 ---
 
 **Prerequisites:** Fate sphere, War sphere (any (rally) talent).

@@ -4,7 +4,8 @@ name: Ley Line Affinity
 tags:
   - drawback
 tier: feat
-summary: ""
+
+summary: "Bond to and treat attuned ley lines as bonded areas for the Area Bound drawback regardless of location type, and gain a bonus on Spellcraft checks to attune to them."
 ---
 Your magic naturally bonds to the overflowing power of ley lines, granting you strength even in regions your magic would not flourish.
 

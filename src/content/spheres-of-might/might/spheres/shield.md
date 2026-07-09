@@ -14,7 +14,7 @@ sectionDefinitions:
         tags: ["deflect"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Use shields and items that act like shields to protect yourself and allies while bashing foes."
+
 ---
 
 Shield practitioners specialize in defensive techniques, using their shields to protect themselves and allies while bashing foes.

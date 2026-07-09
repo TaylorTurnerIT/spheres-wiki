@@ -4,7 +4,8 @@ name: Might Of The Grave
 sphere: enhancement
 dualSphere: death
 tier: feat
-summary: ""
+
+summary: "You can enhance corpses as part of the action to reanimate them, with the enhancement lasting until the undead is destroyed or the base reanimation duration ends."
 ---
 
 When you reanimate a body, you can grant it magical enhancements for a short time.

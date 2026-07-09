@@ -4,7 +4,7 @@ name: "Launching Uppercut"
 tier: "basic"
 tags:
   - "counter"
-summary: "Expend martial focus on a successful counter punch to free-action bull rush a target, optionally launching enemies vertically for falling damage or allies for a plunging attack bonus."
+
 ---
 
 Whenever you successfully attack with your counter punch, you may expend your martial focus to attempt a bull rush against the creature as a free action even while it is not your turn without provoking an attack of opportunity. A successful bull rush forces the creature an additional 5 ft. further than normal, and you may choose to force the creature to move vertically rather than horizontally (this movement does not provoke attacks of opportunity). If you choose to force the creature vertically, that creature begins to descend on the end of their current turn (creatures that can fly may attempt to do so); upon landing, they must make a successful Reflex save or fall prone, taking falling damage as appropriate (on a successful Reflex save, they take 1/2 the total amount of falling damage and do not fall prone).

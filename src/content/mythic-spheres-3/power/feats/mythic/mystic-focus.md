@@ -4,7 +4,8 @@ name: Mystic Focus
 tags:
   - mythic
 tier: feat
-summary: ""
+
+summary: "Spend mythic power to use Mystic Focus as a free action instead of a swift action."
 ---
 
 You may expend one use of mythic power to use Mystic Focus as a free action instead of a swift action. This does not allow you to regain martial focus more than once per round.

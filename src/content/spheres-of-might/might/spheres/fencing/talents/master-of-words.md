@@ -4,7 +4,7 @@ name: "Master Of Words"
 tier: "advanced"
 tags:
   - "utility"
-summary: ""
+
 ---
 
 **Prerequisites:** Fencing sphere, Gladiator sphere, Warleader sphere, Bluff 3 ranks, Diplomacy 3 ranks, Intimidate 3 ranks.

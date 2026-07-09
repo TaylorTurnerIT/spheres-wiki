@@ -4,7 +4,8 @@ name: Overpower Resistance
 tags:
   - wild-magic
 tier: feat
-summary: ""
+
+summary: "Increase your wild magic chance to gain a bonus on checks to overcome spell resistance."
 ---
 **Prerequisites:** Casting class feature.
 

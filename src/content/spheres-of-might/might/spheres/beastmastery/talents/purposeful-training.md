@@ -4,7 +4,7 @@ name: "Purposeful Training"
 tier: "basic"
 tags:
   - "handle-animal"
-summary: "Automatically grant tamed creatures a general purpose and bonus tricks, and rapidly retrain the feats, skills, and tricks of animal allies."
+
 ---
 
 When you tame a creature, you may automatically grant them one general purpose from the Handle Animal skill. For every 4 ranks in Handle Animal you possess, you can teach tamed creatures 1 additional trick using the Handle Animal skill. In addition, any trick learned from a general purpose does not count against the maximum number of tricks a tamed creature can learn. If you possess the Broad Skills talent, you do not increase the Handle Animal DC to teach a trick or grant a general purpose to a creature that does not possess the animal type.

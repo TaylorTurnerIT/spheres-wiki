@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "You gain secondary claw attacks on your secondary arms that deal 1d4 damage."
 ---
 Working on your coordination and your martial technique, you are able to use your secondary limbs to strike more rapidly.
 

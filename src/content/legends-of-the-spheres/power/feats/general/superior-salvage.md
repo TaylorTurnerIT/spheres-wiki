@@ -4,7 +4,8 @@ name: Superior Salvage
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "You can increase the DC to salvage a magic item by 5 to yield raw materials equal to its full creation cost instead of the normal two-thirds."
 ---
 **Prerequisites:** Any item creation feat, character level 5th.
 

@@ -4,7 +4,7 @@ name: "Improved Sneezing Powder"
 tier: "basic"
 tags:
   - "formulae"
-summary: "Craft a single-use thrown powder that staggers creatures in an area on a failed Fortitude save."
+
 ---
 
 **Craft DC:** 25

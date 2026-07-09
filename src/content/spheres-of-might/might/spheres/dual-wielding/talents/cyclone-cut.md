@@ -3,7 +3,7 @@ id: "cyclone-cut"
 name: "Cyclone Cut"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Dual Wielding sphere, base attack bonus +5.

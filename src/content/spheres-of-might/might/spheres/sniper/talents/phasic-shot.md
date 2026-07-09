@@ -3,7 +3,7 @@ id: "phasic-shot"
 name: "Phasic Shot"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Sniper sphere, Perfect Shot, base attack bonus +15.

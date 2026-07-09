@@ -4,7 +4,8 @@ name: Sylvan Necromancy
 sphere: nature
 dualSphere: death
 tier: feat
-summary: ""
+
+summary: "Use (plant) geomancing abilities on corpses and reanimate dead plant life as zombies or skeletons with the grab special ability."
 ---
 
 Plant and animal matter are equally suitable focuses for your magic.

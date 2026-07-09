@@ -4,7 +4,8 @@ name: Exceptional Ally
 sphere: enhancement
 dualSphere: conjuration
 tier: feat
-summary: ""
+
+summary: "You can spend a spell point to enhance a summoned companion as part of the summoning action, causing the enhancement to last for the full duration of the summon."
 ---
 
 **Prerequisites:** Conjuration sphere, Enhancement sphere (at least one (enhance) talent).

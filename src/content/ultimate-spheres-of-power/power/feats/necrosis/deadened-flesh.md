@@ -5,7 +5,8 @@ sphere: death
 tags:
   - necrosis
 tier: feat
-summary: ""
+
+summary: "Gain +1 spell point and the ability to spend a spell point as an immediate action to gain a natural armor bonus and damage reduction."
 ---
 
 Your nerves fail, increasing your pain tolerance and general resilience.

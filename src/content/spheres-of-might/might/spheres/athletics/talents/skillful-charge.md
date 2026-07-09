@@ -3,7 +3,7 @@ id: "skillful-charge"
 name: "Skillful Charge"
 tier: "basic"
 tags: []
-summary: "Use the charge rules to make a thrown weapon attack."
+
 ---
 
 You may make an attack action at the end of a charge in place of the normally granted attack. You may not combine this attack with the pounce ability. Abilities that multiply damage dealt on a charge, such as the Spirited Charge feat or wielding a lance while making a mounted charge, may not be used with this talent.

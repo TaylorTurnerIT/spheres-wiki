@@ -4,7 +4,7 @@ name: "Recall Spirit"
 tier: "advanced"
 tags:
   - "shout"
-summary: ""
+
 ---
 
 **Prerequisites:** Warleader sphere, Rousing Claxon, Diplomacy 10 ranks.

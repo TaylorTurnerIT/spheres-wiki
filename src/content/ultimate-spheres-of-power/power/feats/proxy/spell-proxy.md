@@ -4,7 +4,8 @@ name: Spell Proxy
 tags:
   - proxy
 tier: feat
-summary: ""
+
+summary: "You gain the Create Proxy enhancement, which allows targets to act as aiding casters for Circle Casting regardless of their own magical abilities."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting.

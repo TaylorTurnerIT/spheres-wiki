@@ -4,7 +4,8 @@ name: "Precocious Creation"
 sphere: creation
 tags: []
 tier: feat
-summary: ""
+
+summary: "Spend an additional spell point to treat your caster level as 5 higher solely for determining the types of material you can affect when creating or altering them."
 ---
 
 **Prerequisites:** Creation sphere (any (material) talent).

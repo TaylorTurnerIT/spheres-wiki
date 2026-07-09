@@ -5,7 +5,7 @@ tier: "base"
 tags:
   - "package"
   - "champion"
-summary: ""
+
 ---
 
 **Prerequisites:** Alteration or Illusion sphere, Subterfuge sphere.

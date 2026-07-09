@@ -5,7 +5,8 @@ sphere: divination
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "You gain a resistance bonus to saving throws based on your active Divination senses, and can dismiss an active sense to reroll a failed saving throw."
 ---
 
 **Prerequisites:** Divination sphere (one or more (sense) talents or abilities).

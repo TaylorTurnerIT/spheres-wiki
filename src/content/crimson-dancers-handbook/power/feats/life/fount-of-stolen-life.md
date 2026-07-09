@@ -4,7 +4,8 @@ name: Fount Of Stolen Life
 sphere: life
 dualSphere: blood
 tier: feat
-summary: ""
+
+summary: "As a move action, deal 2 Constitution burn to creatures you have blood control with to add healing to your fount of life based on their Hit Dice."
 ---
 
 **Prerequisites:** Blood sphere, Life sphere (Fount Of Life).

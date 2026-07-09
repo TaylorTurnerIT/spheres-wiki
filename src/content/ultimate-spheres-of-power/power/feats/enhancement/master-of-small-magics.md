@@ -4,7 +4,8 @@ name: "Master Of Small Magics"
 sphere: enhancement
 tags: []
 tier: feat
-summary: ""
+
+summary: "While under your own enhancement, you can improve your Cantrips' range, duration, or affected matter, or use enhanced targets as the origin point for your Cantrips."
 ---
 
 **Prerequisites:** Enhancement sphere, Cantrips.

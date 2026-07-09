@@ -4,7 +4,8 @@ name: Dragon's Tattoos
 tags:
   - mythic
 tier: feat
-summary: ""
+
+summary: "Consume weapon forging materials to treat your unarmed strikes as that material for overcoming damage reduction."
 ---
 
 By consuming one pound of any material that can be used to forge weapons, you may treat your unarmed strikes as if they were made from that material. For example, if you consume cold iron, you can bypass DR/cold iron. Consuming the material is always harmless to you and it disappears when consumed. Eating a new type of material replaces the old material.

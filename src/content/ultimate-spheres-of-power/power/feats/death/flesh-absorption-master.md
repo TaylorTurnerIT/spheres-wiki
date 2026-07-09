@@ -4,7 +4,8 @@ name: "Flesh Absorption Master"
 sphere: death
 tags: []
 tier: feat
-summary: ""
+
+summary: "Increase your Tomb of Flesh capacity and defenses against absorbed creatures, while gaining the ability to consume corpses to extend Necrotic Feeding durations."
 ---
 
 Your body reaches peak conditioning for digesting prey and holding corpses for fodder.

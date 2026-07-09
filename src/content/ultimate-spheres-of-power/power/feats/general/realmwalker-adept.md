@@ -4,7 +4,8 @@ name: Realmwalker Adept
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "You automatically identify your current plane and can spend an hour attuning to it to gain bonuses on initiative, related skills, and checks against its planar traits and hazards."
 ---
 Your experiences and travels help you gain new insights in terrains, surviving their natural dangers and navigating with greater ease.
 

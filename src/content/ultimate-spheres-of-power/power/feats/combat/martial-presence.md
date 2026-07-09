@@ -4,7 +4,8 @@ name: Martial Presence
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "You can spend 5 stamina points to project a basic War sphere totem effect as a 30-foot aura for 1 minute, using your base attack bonus as your caster level."
 ---
 
 **Prerequisites:** Combat Stamina, base attack bonus +1.

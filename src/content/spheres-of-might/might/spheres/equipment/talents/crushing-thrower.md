@@ -3,7 +3,7 @@ id: "crushing-thrower"
 name: "Crushing Thrower"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 You may choose to treat your ranged attacks with thrown weapons as melee attacks, using your melee attack bonus, including Strength bonus, feats, and other modifiers to determine your attack bonus as normal, but applying standard modifiers for range penalties. Attacking into melee, through cover, and other situations that penalize ranged attacks incurs the standard penalties. In addition, you may apply 1-1/2 times your Strength bonus to damage if you wield the thrown weapon with two hands, and you can use the Power Attack feat with your thrown weapon attacks.

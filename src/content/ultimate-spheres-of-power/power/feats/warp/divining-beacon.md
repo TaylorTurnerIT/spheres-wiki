@@ -4,7 +4,8 @@ name: Divining Beacon
 sphere: warp
 dualSphere: divination
 tier: feat
-summary: ""
+
+summary: "You can sense movements near your teleport beacons and scry through them regardless of distance."
 ---
 
 **Prerequisites:** Divination sphere, Warp sphere (Teleport Beacon (space)).

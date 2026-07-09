@@ -3,7 +3,7 @@ id: "punishment"
 name: "Punishment"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Guardian sphere, base attack bonus +5.

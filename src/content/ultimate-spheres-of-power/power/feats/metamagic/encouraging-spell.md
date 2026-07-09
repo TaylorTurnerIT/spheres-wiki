@@ -4,7 +4,8 @@ name: Encouraging Spell
 tags:
   - metamagic
 tier: feat
-summary: ""
+
+summary: "For +1 spell point, increase any morale bonus granted by an encouraging talent by 1."
 ---
 **Prerequisites:** Cha 13, Diplomacy 6 ranks.
 

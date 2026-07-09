@@ -4,7 +4,8 @@ name: Prepared Counter
 tags:
   - counterspell
 tier: feat
-summary: ""
+
+summary: "When readying Counterspell against a specific sphere, you can either reduce its spell point cost by 1 or roll twice and take the higher result on the dispel attempt."
 ---
 **Prerequisites:** Counterspell, casting class feature, magic skill bonus +5.
 

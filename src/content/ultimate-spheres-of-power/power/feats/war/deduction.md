@@ -4,7 +4,8 @@ name: "Deduction"
 sphere: war
 tags: []
 tier: feat
-summary: ""
+
+summary: "Share your studied combat bonuses and triggering abilities with one ally via your mandate."
 ---
 
 **Prerequisites:** War sphere, studied combat class feature.

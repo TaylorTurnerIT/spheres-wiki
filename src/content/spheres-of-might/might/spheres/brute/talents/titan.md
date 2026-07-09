@@ -3,7 +3,7 @@ id: "titan"
 name: "Titan"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Brute sphere, Muscular Surge, Giant, base attack bonus +10.

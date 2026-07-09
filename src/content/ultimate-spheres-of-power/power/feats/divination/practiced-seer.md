@@ -4,7 +4,8 @@ name: "Practiced Seer"
 sphere: divination
 tags: []
 tier: feat
-summary: ""
+
+summary: "Use the higher of your magic skill bonus or caster level for the duration of Divination (sense) talents or abilities."
 ---
 
 **Prerequisite:** Divination sphere.

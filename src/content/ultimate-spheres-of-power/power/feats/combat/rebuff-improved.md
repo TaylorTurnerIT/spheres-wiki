@@ -5,7 +5,8 @@ sphere: destruction
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Spend a spell point as an immediate action to make an opposed attack roll with a destructive blast to destroy an incoming non-massive ranged projectile."
 ---
 
 **Prerequisites:** Destruction sphere (Rebuff (blast shape)).

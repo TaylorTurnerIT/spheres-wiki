@@ -4,7 +4,7 @@ name: "Firearm Proficiency"
 tier: "basic"
 tags:
   - "discipline"
-summary: ""
+
 ---
 
 You gain proficiency with all firearms (except siege weapons) and the Gunsmithing feat.

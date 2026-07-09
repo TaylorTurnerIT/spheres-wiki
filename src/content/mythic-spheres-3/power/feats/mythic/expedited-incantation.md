@@ -1,8 +1,11 @@
 ---
 id: expedited-incantation
 name: Expedited Incantation
-tags: []
-summary: ""
+tier: feat
+tags:
+  - mythic
+  - 3pp
+summary: "Perform an incantation in half the time without increasing DCs, or spend mythic power to reduce time to 1/10th."
 ---
 
 You do not need to increase the DCs of an incantation to perform it in half the time. If you spend a number of points of mythic power equal to the level of the incantation, you may reduce the casting time to 1/10th of the original casting time (minimum 1 minute).

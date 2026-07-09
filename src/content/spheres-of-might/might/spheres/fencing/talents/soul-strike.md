@@ -4,7 +4,7 @@ name: "Soul Strike"
 tier: "advanced"
 tags:
   - "exploit"
-summary: ""
+
 ---
 
 **Prerequisites:** Fencing sphere.

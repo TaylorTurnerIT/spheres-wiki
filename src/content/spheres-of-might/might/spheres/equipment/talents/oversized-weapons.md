@@ -3,7 +3,7 @@ id: "oversized-weapons"
 name: "Oversized Weapons"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Equipment sphere, base attack bonus +6.

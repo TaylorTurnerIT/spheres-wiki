@@ -4,7 +4,8 @@ name: Sphere Focus
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "You gain a +1 bonus to the saving throw DCs of abilities from a chosen sphere."
 ---
 **Prerequisite:** Casting class feature.
 

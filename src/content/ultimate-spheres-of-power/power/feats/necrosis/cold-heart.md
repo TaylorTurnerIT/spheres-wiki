@@ -5,7 +5,8 @@ sphere: death
 tags:
   - necrosis
 tier: feat
-summary: ""
+
+summary: "Gain +1 spell point and the ability to spend a spell point as an immediate action to gain cold and electricity resistance based on your necrosis feats."
 ---
 
 Your blood flow slows and heartbeat grows erratic without significant harm to you, increasing your ability to survive freezing temperatures and electric shocks.

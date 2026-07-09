@@ -4,7 +4,8 @@ name: Proxy Counterspell
 tags:
   - proxy
 tier: feat
-summary: ""
+
+summary: "A creature under your Create Proxy effect can spend an immediate action and end the proxy to allow you to end an additional effect when you Counterspell."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Counterspell, Spell Proxy.

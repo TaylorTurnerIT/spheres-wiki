@@ -5,7 +5,8 @@ tags:
   - deck
   - drawback
 tier: feat
-summary: ""
+
+summary: "You can shuffle active self-affecting cards into your deck at the end of combat, allowing you to replay them later for free to utilize their remaining duration."
 ---
 
 **Prerequisites:** Card Casting drawback

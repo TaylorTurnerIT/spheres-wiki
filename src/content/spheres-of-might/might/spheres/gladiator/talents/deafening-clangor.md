@@ -3,7 +3,7 @@ id: "deafening-clangor"
 name: "Deafening Clangor"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Gladiator sphere, Strike Fear (demoralization), Shield sphere, Intimidate 5 ranks.

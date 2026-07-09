@@ -4,7 +4,8 @@ name: Superpositioned
 sphere: warp
 dualSphere: illusion
 tier: feat
-summary: ""
+
+summary: "While suppressed you can teleport as a move action, and whenever you teleport you can leave behind or appear with a temporary illusionary decoy."
 ---
 
 **Prerequisites:** Illusion sphere (Decoy (glamer), Suppression (glamer)), Warp sphere, caster level 5th.

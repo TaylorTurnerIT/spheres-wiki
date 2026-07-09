@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "You can spit your poison as a ranged touch attack with a 10-foot range increment that deals 1 acid damage and delivers the poison."
 ---
 Flexing glands near your jaw, you can spit your poison directly at enemies in a foul corrosive mixture.
 

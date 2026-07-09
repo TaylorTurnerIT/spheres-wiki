@@ -3,7 +3,7 @@ id: "true-sight"
 name: "True Sight"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Scout sphere, Discern Illusions, Piercing Eye, Perception 15 ranks.

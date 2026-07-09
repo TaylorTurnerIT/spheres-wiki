@@ -4,7 +4,7 @@ name: "Petrifying Poison"
 tier: "advanced"
 tags:
   - "toxin"
-summary: "Your poison staggers creatures instead of fatiguing them, immobilizing them on two consecutive failed saves and petrifying them on three."
+
 ---
 
 **Prerequisites:** Alchemy sphere, Craft (alchemy) 10 ranks.

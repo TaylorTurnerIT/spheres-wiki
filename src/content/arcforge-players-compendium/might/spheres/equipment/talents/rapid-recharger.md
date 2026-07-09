@@ -3,7 +3,7 @@ id: "rapid-recharger"
 name: "Rapid Recharger"
 tier: "advanced"
 tags: []
-summary: "Recharge non-firearm aethertech devices as a move action and insert or eject their batteries as a swift action."
+
 ---
 
 **Prerequisite:** Equipment sphere.

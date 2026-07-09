@@ -4,7 +4,8 @@ name: Blood Dampening
 tags:
   - wild-magic
 tier: feat
-summary: ""
+
+summary: "You may take Constitution burn to negate a triggered wild magic event."
 ---
 **Prerequisites:** Casting class feature.
 

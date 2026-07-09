@@ -5,7 +5,8 @@ sphere: destruction
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "You can alter the damage type and effects of your Hazardous Terrain in a dredged area by applying a blast type talent to it."
 ---
 **Prerequisites:** Destruction sphere (any one (blast type) talent), Survivalism sphere ((dredge) package, Hazardous Terrain).
 

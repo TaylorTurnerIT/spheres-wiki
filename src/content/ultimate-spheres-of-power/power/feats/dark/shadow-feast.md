@@ -4,7 +4,8 @@ name: "Shadow Feast"
 sphere: dark
 tags: []
 tier: feat
-summary: ""
+
+summary: "Consume your shadow once per day as a free action to gain 1 spell point for every 2 points of casting ability score burn you accept."
 ---
 
 **Prerequisite:** Dark sphere.

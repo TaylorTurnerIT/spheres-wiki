@@ -4,7 +4,8 @@ name: "Animated Arsenal"
 sphere: enhancement
 tags: []
 tier: feat
-summary: ""
+
+summary: "Animated objects made from weapons can change a slam attack to piercing or slashing, copy this damage type to other slams for free, and purchase their first ranged attack for 1 CP."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), base attack bonus +1.

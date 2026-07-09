@@ -5,7 +5,8 @@ sphere: communication
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "Squadron members can assume the same approach as another member for as long as it is maintained."
 ---
 **Prerequisites:** Communication sphere, Posse Commander.
 

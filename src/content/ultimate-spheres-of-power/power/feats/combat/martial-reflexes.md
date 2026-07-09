@@ -4,7 +4,8 @@ name: Martial Reflexes
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "You can rally yourself using a basic talent by spending martial resource points instead of spell points, treating it as an extraordinary ability and using your base attack bonus as your caster level."
 ---
 **Prerequisites:** Combat Stamina or a grit pool, ki pool, luck pool, or panache class feature; base attack bonus +1.
 

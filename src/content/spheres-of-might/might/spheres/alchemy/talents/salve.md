@@ -4,7 +4,7 @@ name: "Salve"
 tier: "basic"
 tags:
   - "formulae"
-summary: "Create a poultice that heals a target based on your Craft (alchemy) ranks and practitioner modifier, with limited uses per creature per day."
+
 ---
 
 **Craft DC:** 15

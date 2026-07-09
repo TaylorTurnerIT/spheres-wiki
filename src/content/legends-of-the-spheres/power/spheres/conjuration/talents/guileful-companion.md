@@ -3,7 +3,7 @@ id: "guileful-companion"
 name: "Guileful Companion"
 tier: basic
 tags: []
-summary: ""
+
 ---
 
 A guileful companion may combine skill spheres and talents to perform unique actions. A guileful companion gains Trade Expertise as a bonus talent.

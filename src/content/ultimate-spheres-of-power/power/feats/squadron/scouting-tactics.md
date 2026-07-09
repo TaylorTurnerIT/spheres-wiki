@@ -5,7 +5,8 @@ sphere: war
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "Spend a spell point or martial focus as a swift action after damaging an enemy to negate their concealment and stealth against your squadron until your next turn."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

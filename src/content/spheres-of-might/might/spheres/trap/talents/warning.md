@@ -3,7 +3,7 @@ id: "warning"
 name: "Warning"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 Allies who can see and hear you never trigger your traps unless they choose to.

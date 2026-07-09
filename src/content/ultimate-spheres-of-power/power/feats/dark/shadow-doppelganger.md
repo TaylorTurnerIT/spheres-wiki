@@ -4,7 +4,8 @@ name: Shadow Doppelganger
 sphere: dark
 dualSphere: illusion
 tier: feat
-summary: ""
+
+summary: "Apply an Illusionary Disguise to your shadow lurks or shadow double at no cost, making them look and sound like you until the illusion is broken."
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow)), Illusion sphere (Illusionary Disguise ability).

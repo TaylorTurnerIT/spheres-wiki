@@ -4,7 +4,8 @@ name: "Jump Scare"
 sphere: warp
 tags: []
 tier: feat
-summary: ""
+
+summary: "You can attempt an Intimidate check to demoralize an opponent as a free action immediately after teleporting."
 ---
 
 **Prerequisites:** Intimidate 5 ranks, Warp sphere.

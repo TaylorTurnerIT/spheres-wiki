@@ -3,7 +3,7 @@ id: "shove"
 name: "Shove"
 tier: "base"
 tags: []
-summary: ""
+
 ---
 
 As a move action, you may move up to half your speed and make a melee touch attack against a creature. If successful, the target takes bludgeoning damage equal to your Strength modifier (or whichever attribute was used to make the check) and gains the battered condition until the end of your next turn. You may perform a shove in place of the attack granted by a charge, although this does not grant the extra movement.

@@ -4,7 +4,7 @@ name: "Earth-Shattering Slam"
 tier: "advanced"
 tags:
   - "slam"
-summary: ""
+
 ---
 
 **Prerequisites:** Berserker sphere, Shatter Earth, Wrestling sphere, base attack bonus +6.

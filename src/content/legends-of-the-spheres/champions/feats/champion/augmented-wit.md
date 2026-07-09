@@ -4,7 +4,8 @@ name: Augmented Wit
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "You can spend a spell point or martial focus to outwit a disoriented or impressed creature an additional time per day."
 ---
 **Prerequisite:** Casting class feature or ability to gain martial focus.
 

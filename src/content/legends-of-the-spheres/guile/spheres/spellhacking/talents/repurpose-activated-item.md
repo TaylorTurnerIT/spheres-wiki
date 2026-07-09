@@ -4,7 +4,7 @@ name: "Repurpose Activated Item"
 tier: "basic"
 tags:
   - "hack"
-summary: ""
+
 ---
 
 **Target:** A magic item

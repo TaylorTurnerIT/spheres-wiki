@@ -4,7 +4,7 @@ name: "Improved Fuse Grenade"
 tier: "basic"
 tags:
   - "formulae"
-summary: ""
+
 ---
 
 **Craft DC:** 25

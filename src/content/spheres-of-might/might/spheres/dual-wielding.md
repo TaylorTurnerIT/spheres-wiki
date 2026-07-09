@@ -10,7 +10,7 @@ sectionDefinitions:
         tiers: ["basic"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Wield double weapons or two weapons simultaneously."
+
 ---
 
 Dual wielders train in ambidextrous techniques that allow them to wield double weapons or two weapons simultaneously. Whether blending sword and dagger or spinning a double-bladed sword through a dazzling attack routine, few warriors are as awesome to behold as practitioners of the Dual Wielding sphere.

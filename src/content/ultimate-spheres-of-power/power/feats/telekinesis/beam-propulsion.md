@@ -4,7 +4,8 @@ name: Beam Propulsion
 sphere: telekinesis
 dualSphere: light
 tier: feat
-summary: ""
+
+summary: "You can simultaneously lift a target with telekinesis when making it glow with the Light sphere by increasing the casting time, allowing you to maintain both effects with a single concentration action."
 ---
 
 **Prerequisites:** Light sphere, Telekinesis sphere.

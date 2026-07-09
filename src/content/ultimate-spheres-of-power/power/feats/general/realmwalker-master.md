@@ -4,7 +4,8 @@ name: Realmwalker Master
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "You can instantly attune to your current plane to treat it as your native plane, gain energy resistance and immunity to its natural hazards, ignore its difficult terrain, and gain increased speed."
 ---
 "And so you walk our path too, and shall experience and be a great many things, be you a traveler, wanderer, savior, or scourge to those you will cross paths with." – A Realmwalker's Initiation
 

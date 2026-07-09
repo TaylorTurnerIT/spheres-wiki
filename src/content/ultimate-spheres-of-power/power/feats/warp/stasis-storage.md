@@ -4,7 +4,8 @@ name: Stasis Storage
 sphere: warp
 dualSphere: time
 tier: feat
-summary: ""
+
+summary: "By spending a minute, you can place the contents of your extradimensional storage into stasis, halting aging, wear, and time limits on effects until unlocked."
 ---
 
 **Prerequisites:** Time sphere, Warp sphere (Extradimensional Storage (space)).

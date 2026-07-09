@@ -4,7 +4,8 @@ name: Enhanced Vigilance
 sphere: war
 dualSphere: enhancement
 tier: feat
-summary: ""
+
+summary: "You can rally an ally currently affected by one of your enhancements."
 ---
 
 **Prerequisites:** Enhancement sphere, War sphere.

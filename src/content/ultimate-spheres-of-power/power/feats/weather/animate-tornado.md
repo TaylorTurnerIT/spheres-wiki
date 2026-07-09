@@ -4,7 +4,8 @@ name: Animate Tornado
 sphere: weather
 dualSphere: enhancement
 tier: feat
-summary: ""
+
+summary: "Animate a tornado, whirlwind, or dust-devil as a Huge animated object with the whirlwind ability during severity level 4 or higher winds."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), Weather sphere (Tornado Lord, Wind Lord).

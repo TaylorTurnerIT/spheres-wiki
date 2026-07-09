@@ -3,7 +3,7 @@ id: "stable-shooter"
 name: "Stable Shooter"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Equipment sphere, Firearm Proficiency or Mechanical Training, base attack bonus +6.

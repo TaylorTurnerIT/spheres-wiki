@@ -3,7 +3,7 @@ id: "soul-pierce"
 name: "Soul Pierce"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Lancer sphere, impale ability, base attack bonus +10.

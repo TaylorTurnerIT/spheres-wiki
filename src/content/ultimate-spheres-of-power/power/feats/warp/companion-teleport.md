@@ -4,7 +4,8 @@ name: "Companion Teleport"
 sphere: warp
 tags: []
 tier: feat
-summary: ""
+
+summary: "When you teleport, you may bring along a touched creature you have a strong bond with, treating both of you as a single target for Mass Teleport."
 ---
 
 **Prerequisite:** Warp sphere.

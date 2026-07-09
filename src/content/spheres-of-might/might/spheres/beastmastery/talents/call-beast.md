@@ -4,7 +4,7 @@ name: "Call Beast"
 tier: "advanced"
 tags:
   - "utility"
-summary: "Call all animal allies to your side as a swift action."
+
 ---
 
 **Prerequisites:** Beastmastery sphere.

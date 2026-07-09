@@ -4,7 +4,8 @@ name: Manipulate Result
 tags:
   - wild-magic
 tier: feat
-summary: ""
+
+summary: "Spend an immediate action to roll twice for a wild magic event and choose the result."
 ---
 **Prerequisites:** Spell point pool or casting class feature.
 

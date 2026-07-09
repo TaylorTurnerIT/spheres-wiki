@@ -5,7 +5,8 @@ sphere: light
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Hitting a light-vulnerable enemy with a weapon imbued by Arcane or Imbued Strike deals an extra 1d6 damage and forces a Fortitude save to avoid being staggered."
 ---
 
 **Prerequisites:** Light sphere; Arcane Strike or Imbued Strike.

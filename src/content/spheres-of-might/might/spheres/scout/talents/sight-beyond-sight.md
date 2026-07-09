@@ -3,7 +3,7 @@ id: "sight-beyond-sight"
 name: "Sight Beyond Sight"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 You may spend a move action to grant yourself blindsense out to 10 ft. for one round. You may expend your martial focus when activating this ability to instead gain blindsight for the same duration. At 10 ranks in Perception, this distance increases to 15 ft.

@@ -5,7 +5,8 @@ tags:
   - defiler
   - drawback
 tier: feat
-summary: ""
+
+summary: "Blighting an area with the Terrain Casting drawback makes it difficult terrain, and with enough Defiler feats, deals piercing damage to moving creatures."
 ---
 Your magic shatters the ground, transforming into hazardous terrain.
 

@@ -4,7 +4,8 @@ name: Surreinforcement
 sphere: illusion
 dualSphere: creation
 tier: feat
-summary: ""
+
+summary: "Your created objects gain automatic self-repair, while shadowstuff objects gain scaling hardness and can adopt other material properties."
 ---
 
 **Prerequisites:** Creation sphere; Illusion sphere (Shadow Infusion) or create reality class feature.

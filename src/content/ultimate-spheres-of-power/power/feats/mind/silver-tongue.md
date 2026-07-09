@@ -4,7 +4,8 @@ name: "Silver Tongue"
 sphere: mind
 tags: []
 tier: feat
-summary: ""
+
+summary: "As an immediate action, you may spend a spell point to reroll a Bluff, Diplomacy, or Intimidate check with an enhancement bonus."
 ---
 
 **Prerequisite:** Mind sphere.

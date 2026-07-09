@@ -5,7 +5,8 @@ sphere: war
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "Squadron members do not provoke attacks of opportunity when moving out of a square adjacent to another squadron member."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

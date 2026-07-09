@@ -4,7 +4,8 @@ name: Mystic Generosity
 tags:
   - proxy
 tier: feat
-summary: ""
+
+summary: "You can spend a spell point when using Create Proxy to temporarily grant the target the Basic Magic Training or Extra Magic Talent feat."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Spell Proxy.

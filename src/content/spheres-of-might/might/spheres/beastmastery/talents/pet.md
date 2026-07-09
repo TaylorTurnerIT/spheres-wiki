@@ -3,7 +3,7 @@ id: "pet"
 name: "Pet"
 tier: "basic"
 tags: []
-summary: "Gain a limited familiar with an effective level equal to your base attack bonus or Handle Animal ranks."
+
 ---
 
 You gain a familiar as the wizard class feature with an effective arcane spellcaster level equal to the highest between your base attack bonus or your ranks in Handle Animal. A familiar chosen with this talent must have the animal type and retains the animal type rather than becoming a magical beast, and does not gain an Intelligence bonus or the deliver touch spells, scry on familiar, share spells, speak with animals of its kind, or spell resistance special abilities. This familiar always counts as an animal ally.

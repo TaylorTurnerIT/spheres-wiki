@@ -5,7 +5,8 @@ sphere: conjuration
 tags:
   - companion
 tier: feat
-summary: ""
+
+summary: "Your Battle Creature companion gains one additional weapon, plus another for every four caster levels."
 ---
 
 **Prerequisites:** Conjuration sphere (Battle Creature (form)).

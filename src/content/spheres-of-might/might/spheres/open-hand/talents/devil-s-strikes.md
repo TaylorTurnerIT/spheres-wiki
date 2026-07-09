@@ -3,7 +3,7 @@ id: "devil-s-strikes"
 name: "Devil’s Strikes"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Open Hand sphere, base attack bonus +6.

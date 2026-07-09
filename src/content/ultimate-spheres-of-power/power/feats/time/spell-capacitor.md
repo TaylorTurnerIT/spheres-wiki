@@ -4,7 +4,8 @@ name: "Spell Capacitor"
 sphere: time
 tags: []
 tier: feat
-summary: ""
+
+summary: "Store multiple sphere effects in a temporary rift and release them all simultaneously as a 1-round action."
 ---
 
 **Prerequisite:** Time sphere.

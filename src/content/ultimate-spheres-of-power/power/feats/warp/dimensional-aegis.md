@@ -4,7 +4,8 @@ name: Dimensional Aegis
 sphere: warp
 dualSphere: protection
 tier: feat
-summary: ""
+
+summary: "You can teleport to swap places with an ally who bears an aegis by sacrificing it, potentially redirecting an attack targeting them to yourself."
 ---
 **Prerequisites:** Protection sphere, Warp sphere.
 

@@ -5,7 +5,8 @@ sphere: mind
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Creatures that fail a saving throw against your charms become impressed, distracted, or completely oblivious to everything but you."
 ---
 
 **Prerequisites:** Mind sphere, either Bluster or Performance sphere.

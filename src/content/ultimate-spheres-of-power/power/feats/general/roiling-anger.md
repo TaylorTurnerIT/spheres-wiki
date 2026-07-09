@@ -5,7 +5,8 @@ tags:
   - 3pp
   - general
 tier: feat
-summary: ""
+
+summary: "Spending ki while raging extends your rage duration, and you gain an extra ki point and 3 rounds of rage per day."
 ---
 *Our anger is a glorious wave which rolls and churns like the ocean's tide.*
 

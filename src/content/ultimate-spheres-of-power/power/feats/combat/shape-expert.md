@@ -5,7 +5,8 @@ sphere: destruction
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Increases the baseline size of your Energy Wall and Explosive Orb blast shapes when used without spending a spell point."
 ---
 
 **Prerequisites:** Destruction sphere (Energy Wall (blast shape) or Explosive Orb (blast shape)).

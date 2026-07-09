@@ -4,7 +4,8 @@ name: Aurora
 sphere: weather
 dualSphere: light
 tier: feat
-summary: ""
+
+summary: "Increase the light level in the area when you use control weather."
 ---
 
 **Prerequisites:** Light sphere, Weather sphere.

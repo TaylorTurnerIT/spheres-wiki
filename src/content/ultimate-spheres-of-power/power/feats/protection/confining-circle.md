@@ -4,7 +4,8 @@ name: "Confining Circle"
 sphere: protection
 tags: []
 tier: feat
-summary: ""
+
+summary: "Invert a Repel ward to allow creatures of the chosen alignment to enter freely while requiring a Will save to leave."
 ---
 **Prerequisites:** Protection sphere (Repel Chaos/Evil/Good/Law (ward)).
 

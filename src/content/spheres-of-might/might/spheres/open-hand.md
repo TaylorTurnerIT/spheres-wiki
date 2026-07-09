@@ -10,7 +10,7 @@ sectionDefinitions:
         tiers: ["basic"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Gain Improved Unarmed Strike and scaling unarmed strike damage based on unarmed talents possessed."
+
 ---
 
 Practitioners of the Open Hand sphere are unarmed fighters who deal additional damage with their unarmed strikes as described in the unarmed strike practitioner table. **Associated Feat:** Improved Unarmed Strike.## Unarmed Combatants

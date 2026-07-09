@@ -4,7 +4,7 @@ name: "Rock Toss"
 tier: "basic"
 tags:
   - "discipline"
-summary: ""
+
 ---
 
 As long as you have martial focus, you can catch thrown or falling rocks (or projectiles of similar shape) that are no larger than your current size. Once per round, when you would normally be hit by a rock, you can make a Reflex save to catch it as a free action. The DC is 25 for a rock of your current size, -5 for each size category it is smaller than you. If the projectile has a magical bonus on attack rolls, the DC increases by that amount. You must be aware of the attack in order to make a rock catching attempt.

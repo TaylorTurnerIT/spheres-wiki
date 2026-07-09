@@ -3,7 +3,7 @@ id: "berserking"
 name: "Berserking"
 tier: "base"
 tags: []
-summary: "Take a -2 penalty to AC each turn to gain 3 temporary hit points plus your base attack bonus."
+
 ---
 
 As a free action at the start of each turn, you may choose to take a -2 penalty to AC in exchange for 3 temporary hit points. The penalty and the temporary hit points end at the start of your next turn. For every point of base attack bonus you have, the granted temporary hit points increase by 1.

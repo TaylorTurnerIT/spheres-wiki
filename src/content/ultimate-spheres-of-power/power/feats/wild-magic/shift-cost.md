@@ -4,7 +4,8 @@ name: Shift Cost
 tags:
   - wild-magic
 tier: feat
-summary: ""
+
+summary: "Increase your wild magic chance to reduce the spell point cost of an effect."
 ---
 **Prerequisites:** Spell point pool.
 

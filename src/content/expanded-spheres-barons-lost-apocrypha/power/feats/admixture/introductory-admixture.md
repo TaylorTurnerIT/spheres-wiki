@@ -6,7 +6,8 @@ tags:
   - 3pp
   - admixture
 tier: feat
-summary: ""
+
+summary: "When using Admixture, you may spend an additional spell point to summon one or more creatures adjacent to an affected square."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Conjuration sphere.

@@ -4,7 +4,8 @@ name: Piecemeal Animation
 sphere: telekinesis
 dualSphere: death
 tier: feat
-summary: ""
+
+summary: "You can reanimate and hold together incomplete or pieced-together corpses using telekinesis."
 ---
 
 **Prerequisites:** Death sphere, Telekinesis sphere (Divided Mind).

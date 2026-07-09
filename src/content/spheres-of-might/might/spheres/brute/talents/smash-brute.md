@@ -3,7 +3,7 @@ id: "smash-brute"
 name: "Smash"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 Whenever you successfully perform a bull rush, drag, overrun, or reposition maneuver against a creature (other than with maneuvers performed as a free action), that creature suffers damage equal to your unarmed strike or a light weapon you are wielding. This qualifies your bull rush, drag, overrun, and reposition maneuvers for feats and talents such as Power Attack, suffering a penalty to your CMB in exchange for increased damage.

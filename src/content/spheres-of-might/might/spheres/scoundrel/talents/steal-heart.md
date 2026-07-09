@@ -4,7 +4,7 @@ name: "Steal Heart"
 tier: "advanced"
 tags:
   - "trick"
-summary: ""
+
 ---
 
 **Prerequisites:** Scoundrel sphere, Sleight of Hand 7 ranks.

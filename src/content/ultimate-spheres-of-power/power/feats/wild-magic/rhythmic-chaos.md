@@ -4,7 +4,8 @@ name: Rhythmic Chaos
 sphere: mana
 tags: []
 tier: feat
-summary: ""
+
+summary: "Spend a spell point with an (expunge) talent to temporarily increase the target's wild magic chance."
 ---
 
 **Prerequisite:** Mana sphere.

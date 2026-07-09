@@ -3,7 +3,7 @@ id: "cone-of-death"
 name: "Cone Of Death"
 tier: "advanced"
 tags: []
-summary: "Expend martial focus as a full-round action to make a single ranged attack against every creature in a cone."
+
 ---
 
 **Prerequisite:** Barrage sphere, base attack bonus +5.

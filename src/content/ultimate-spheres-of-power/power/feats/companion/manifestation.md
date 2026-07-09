@@ -5,7 +5,8 @@ sphere: conjuration
 tags:
   - companion
 tier: feat
-summary: ""
+
+summary: "Your Shadow Creature companion can spend a move action to manifest, allowing it to deal and take full damage against corporeal creatures."
 ---
 **Prerequisites:** Conjuration sphere, Shadow Creature.
 

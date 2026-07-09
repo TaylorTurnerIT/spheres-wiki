@@ -4,7 +4,8 @@ name: Shadow Grasp
 tags:
   - metamagic
 tier: feat
-summary: ""
+
+summary: "Creatures within the area of your darkness talents become entangled unless they succeed on a saving throw."
 ---
 **Prerequisites:** Tenebrous Spell, Umbral Spell.
 

@@ -4,7 +4,8 @@ name: "Lightshow"
 sphere: light
 tags: []
 tier: feat
-summary: ""
+
+summary: "When you activate or maintain a bardic performance, you can cause an affected ally to glow."
 ---
 
 **Prerequisites:** Light sphere, bardic performance class ability.

@@ -4,7 +4,7 @@ name: "Terrain Glide"
 tier: "advanced"
 tags:
   - "swim"
-summary: "Gain a 10 ft. burrow speed, or increase an existing burrow speed by 5 ft."
+
 ---
 
 **Prerequisites:** Athletics sphere, Swim 5 ranks.

@@ -3,7 +3,7 @@ id: "iron-liver"
 name: "Iron Liver"
 tier: "basic"
 tags: []
-summary: "Double your alcohol tolerance, gain immunity to alcohol addiction, and receive a scaling bonus on Fortitude saves against poisons, sickness, and nausea."
+
 ---
 
 Double the number of drinks you can consume before gaining the sickened condition. You cannot develop an addiction to alcohol.

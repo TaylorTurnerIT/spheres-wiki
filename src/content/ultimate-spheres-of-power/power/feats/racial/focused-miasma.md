@@ -4,7 +4,8 @@ name: Focused Miasma
 tags:
   - racial
 tier: feat
-summary: ""
+
+summary: "You can spend a standard action to focus your odor of susceptibility onto a single target within 20 feet, increasing its penalty to -2."
 ---
 By focusing your naturally disruptive odor you are able to sap another creature of its willpower.
 

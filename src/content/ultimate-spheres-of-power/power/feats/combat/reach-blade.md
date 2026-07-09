@@ -5,7 +5,8 @@ sphere: destruction
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "You can optionally add the reach property each time you shape your destructive blade."
 ---
 **Prerequisites:** Destruction sphere, destructive blade class feature.
 

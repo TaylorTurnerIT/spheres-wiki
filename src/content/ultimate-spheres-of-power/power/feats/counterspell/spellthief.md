@@ -4,7 +4,8 @@ name: Spellthief
 tags:
   - counterspell
 tier: feat
-summary: ""
+
+summary: "Successfully counterspelling an effect targeting a creature or object allows you to reassign its targets and take control of its concentration instead of ending it."
 ---
 **Prerequisite:** Counterspell.
 

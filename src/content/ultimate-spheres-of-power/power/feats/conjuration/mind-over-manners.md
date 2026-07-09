@@ -4,7 +4,8 @@ name: "Mind Over Manners"
 sphere: conjuration
 tags: []
 tier: feat
-summary: ""
+
+summary: "Use your casting ability modifier in place of Charisma for Charisma checks and opposed checks when using the Call Planar Creature advanced talent."
 ---
 
 **Prerequisites:** Conjuration sphere (Call Planar Creature).

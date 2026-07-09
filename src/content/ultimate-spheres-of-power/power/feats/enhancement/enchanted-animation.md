@@ -4,7 +4,8 @@ name: "Enchanted Animation"
 sphere: enhancement
 tags: []
 tier: feat
-summary: ""
+
+summary: "By spending an extra spell point when animating an object, you can grant it a single use of one of your sphere abilities."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)).

@@ -6,7 +6,8 @@ tags:
   - champion
   - drawback
 tier: feat
-summary: ""
+
+summary: "You can use Faction sphere resources to pay for the material costs of spells, rituals, and magic item crafting."
 ---
 
 **Prerequisites:** Faction sphere, casting class feature.

@@ -4,7 +4,7 @@ name: "Rope Swing"
 tier: "basic"
 tags:
   - "climb"
-summary: "Secure a rope or flexible weapon to move up to 30 feet without provoking attacks of opportunity by succeeding on a Climb check, or to perform drag and reposition maneuvers against attached creatures."
+
 ---
 
 If you have a secured rope, a set piton, thrown a grappling hook, or wrapped a whip or similar weapon around a point, you may use the attached rope or weapon to spring around the battlefield.

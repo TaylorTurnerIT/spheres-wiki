@@ -3,7 +3,7 @@ id: "bullet-cyclone"
 name: "Bullet Cyclone"
 tier: "advanced"
 tags: []
-summary: "Expend martial focus to make a scatter weapon attack a burst centered on yourself instead of a cone."
+
 ---
 
 **Prerequisite:** Equipment sphere.

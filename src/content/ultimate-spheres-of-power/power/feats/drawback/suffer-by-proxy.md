@@ -6,7 +6,8 @@ tags:
   - drawback
   - proxy
 tier: feat
-summary: ""
+
+summary: "Transfer the nonlethal damage from the Draining Casting drawback to a single creature currently under your Create Proxy effect."
 ---
 
 **Prerequisites:** Enhancement sphere, Draining Casting drawback, Circle Casting, Spell Proxy.

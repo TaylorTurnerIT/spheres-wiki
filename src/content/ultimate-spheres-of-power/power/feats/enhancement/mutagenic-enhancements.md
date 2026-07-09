@@ -4,7 +4,8 @@ name: Mutagenic Enhancements
 sphere: enhancement
 dualSphere: alteration
 tier: feat
-summary: ""
+
+summary: "You can add an Alteration sphere trait to your enhancements, turning them into polymorph effects that do not count towards your shapeshift trait limit."
 ---
 
 **Prerequisites:** Alteration sphere, Enhancement sphere (any (enhance) ability).

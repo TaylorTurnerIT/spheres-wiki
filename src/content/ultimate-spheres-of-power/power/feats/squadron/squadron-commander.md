@@ -6,7 +6,8 @@ tags:
   - extraordinary
   - squadron
 tier: feat
-summary: ""
+
+summary: "Form a designated squadron of allies who receive an additional +1 or higher bonus to d20 rolls and target numbers from your totems."
 ---
 
 **Prerequisite:** War sphere.

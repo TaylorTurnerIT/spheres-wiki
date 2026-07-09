@@ -5,7 +5,8 @@ sphere: mind
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Your successful unarmed strikes inflict a -1 penalty on the target's Will saves until the end of your next turn."
 ---
 
 **Prerequisites:** Mind sphere, Improved Unarmed Strike.

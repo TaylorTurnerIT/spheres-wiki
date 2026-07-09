@@ -3,7 +3,7 @@ id: "tombstone-burial"
 name: "Tombstone Burial"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Berserker sphere, Shatter Earth, Wrestling sphere, Earth-Shattering Slam, base attack bonus +10.

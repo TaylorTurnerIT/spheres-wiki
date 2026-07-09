@@ -3,7 +3,7 @@ id: "yoga-strikes"
 name: "Yoga Strikes"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Open Hand sphere, base attack bonus +5.

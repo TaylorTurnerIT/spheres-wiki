@@ -4,7 +4,8 @@ name: Forceful Creation
 sphere: telekinesis
 dualSphere: creation
 tier: feat
-summary: ""
+
+summary: "You can initiate and optionally maintain telekinetic Sustained Force or Bludgeon on an object as part of the action to create it."
 ---
 
 **Prerequisites:** Creation sphere, Telekinesis sphere.

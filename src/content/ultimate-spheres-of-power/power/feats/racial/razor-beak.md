@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "You gain a bite natural attack that deals standard damage for your size."
 ---
 Your beak isn't just for speaking and grasping, but for defense as well.
 

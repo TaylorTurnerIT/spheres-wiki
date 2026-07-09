@@ -5,7 +5,8 @@ sphere: enhancement
 tags:
   - drawback
 tier: feat
-summary: ""
+
+summary: "Maintain concentration on an enhancement applied to your focus or Galvanized weapon without spending a spell point, limited to one effect at a time."
 ---
 
 **Prerequisites:** Enhancement sphere; Focus Casting drawback or Galvanized drawback.

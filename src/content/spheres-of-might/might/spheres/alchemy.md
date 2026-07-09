@@ -17,7 +17,7 @@ sectionDefinitions:
         tags: ["toxin"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Gain ranks in Craft (alchemy) based on talents spent in the sphere, and choose either the Formulae or Poison package."
+
 ---
 
 Training in the Alchemy combat sphere teaches you how to quickly and efficiently combine volatile chemicals for new or enhanced effects.

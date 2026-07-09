@@ -17,7 +17,7 @@ sectionDefinitions:
         tags: ["snare"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Create and place mechanical traps, snares, and darts to control the battlefield."
+
 ---
 
 Practitioners of the Trap sphere excel at creating and placing mechanical traps, snares, and darts to control the battlefield.[Tripwire]

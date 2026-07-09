@@ -5,7 +5,8 @@ sphere: communication
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "Form a squadron of allies to grant them permanent rapport, increased rapport bonuses, and the ability to share skill leverage."
 ---
 **Prerequisite:** Communication sphere.
 

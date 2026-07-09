@@ -4,7 +4,8 @@ name: "Mantled Caster"
 sphere: weather
 tags: []
 tier: feat
-summary: ""
+
+summary: "Always count as being under the effect of your mantle and treat the weather as one step more severe for your mantle talents."
 ---
 
 **Prerequisites:** Weather sphere, any (mantle) talent, magic skill bonus +5.

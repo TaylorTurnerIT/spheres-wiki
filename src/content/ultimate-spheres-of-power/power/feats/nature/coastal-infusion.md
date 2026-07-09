@@ -4,7 +4,8 @@ name: "Coastal Infusion"
 sphere: nature
 tags: []
 tier: feat
-summary: ""
+
+summary: "You gain a +2 bonus to your caster level for earth and water geomancing abilities when near both land and a substantial body of water."
 ---
 
 **Prerequisites:** Nature sphere ((earth) package and (water) package).

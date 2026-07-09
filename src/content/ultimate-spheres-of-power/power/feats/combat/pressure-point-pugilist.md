@@ -5,7 +5,8 @@ sphere: mind
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Hitting a target a second time in a round increases the penalty from Pressure Point Proficiency to -2."
 ---
 
 **Prerequisites:** Mind sphere, Improved Unarmed Strike, Pressure Point Proficiency, character level 5th.

@@ -5,7 +5,8 @@ sphere: death
 tags:
   - necrosis
 tier: feat
-summary: ""
+
+summary: "Gain +1 spell point and the ability to spend a spell point as an immediate action to reverse how positive and negative energy affect you."
 ---
 
 You can reverse the flow of your body's energies, changing what will heal and harm you.

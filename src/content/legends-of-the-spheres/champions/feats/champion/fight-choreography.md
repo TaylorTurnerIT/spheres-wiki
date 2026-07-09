@@ -5,7 +5,8 @@ sphere: performance
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "You can freely synchronize beginning and maintaining your performance acts or dances with the activation and maintenance of your warleader tactics."
 ---
 
 **Prerequisites:** Performance sphere ((act) or (dance) package), Warleader sphere.

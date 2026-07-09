@@ -4,7 +4,8 @@ name: Material Infusion
 sphere: nature
 dualSphere: destruction
 tier: feat
-summary: ""
+
+summary: "Your physical destructive blasts can count as cold iron or silver for overcoming damage reduction, and adamantine at 15th caster level."
 ---
 
 **Prerequisites:** Destruction sphere, Nature sphere ((metal) package).

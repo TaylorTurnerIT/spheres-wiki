@@ -4,7 +4,7 @@ name: "Temporal Snare"
 tier: "advanced"
 tags:
   - "snare"
-summary: ""
+
 ---
 
 **Prerequisites:** Trap sphere, Craft (traps) 15 ranks.

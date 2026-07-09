@@ -3,7 +3,7 @@ id: "flexible-item-repurposing"
 name: "Flexible Item Repurposing"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Spellhacking sphere (Repurpose Activated Item).

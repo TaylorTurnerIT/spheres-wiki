@@ -5,7 +5,8 @@ sphere: mind
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "You can outwit a target as part of casting a charm to impose a penalty on their saving throw against the effect."
 ---
 **Prerequisite:** Mind sphere.
 

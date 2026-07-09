@@ -4,7 +4,8 @@ name: Piercing Spell
 tags:
   - metamagic
 tier: feat
-summary: ""
+
+summary: "For +1 spell point, the modified talent treats the target's spell resistance as 5 lower."
 ---
 **Benefit:** When you cast a piercing talent against a target with spell resistance, it treats the spell resistance of the target as 5 lower than its actual spell resistance.
 

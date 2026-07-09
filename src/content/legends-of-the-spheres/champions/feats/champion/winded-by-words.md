@@ -5,7 +5,8 @@ sphere: bluster
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Successfully affecting a creature with a Bluster quip or having them fail a save against it causes them to become battered for 1 round."
 ---
 
 **Prerequisites:** Bluster sphere, ability to gain martial focus.

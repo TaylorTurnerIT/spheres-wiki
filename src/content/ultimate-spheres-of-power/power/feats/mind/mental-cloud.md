@@ -4,7 +4,8 @@ name: "Mental Cloud"
 sphere: mind
 tags: []
 tier: feat
-summary: ""
+
+summary: "You may spend 2 spell points to manifest a charm as a lingering cloud that affects any creature that enters or starts its turn within it."
 ---
 
 **Prerequisites:** Mind sphere (Mass Charm).

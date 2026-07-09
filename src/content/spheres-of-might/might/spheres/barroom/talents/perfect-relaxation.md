@@ -3,7 +3,7 @@ id: "perfect-relaxation"
 name: "Perfect Relaxation"
 tier: "advanced"
 tags: []
-summary: "Gain improved evasion while using Nice and Loose, and end your Escape Artist bonus for 1 round of freedom of movement."
+
 ---
 
 **Prerequisites:** Barroom sphere, Nice and Loose, base attack bonus +10.

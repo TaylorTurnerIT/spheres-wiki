@@ -4,7 +4,8 @@ name: "Shadow Swap"
 sphere: dark
 tags: []
 tier: feat
-summary: ""
+
+summary: "Swap places with your shadow lurk as a move action up to the range of your Step Through Darkness talent, even outside areas of darkness."
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow), Step Through Darkness (meld)).

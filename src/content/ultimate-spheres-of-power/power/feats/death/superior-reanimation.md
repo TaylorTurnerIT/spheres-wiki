@@ -4,7 +4,8 @@ name: "Superior Reanimation"
 sphere: death
 tags: []
 tier: feat
-summary: ""
+
+summary: "Creatures you reanimate gain superior enhancement bonuses to their Strength and Dexterity, superseding the bonuses from Empowered Reanimate."
 ---
 
 Undead you create are even stronger than usual.

@@ -4,7 +4,8 @@ name: Solid Illusions
 sphere: illusion
 dualSphere: enhancement
 tier: feat
-summary: ""
+
+summary: "You can apply Enhancement sphere effects to your illusions as if they were real, with their enhanced damage usually being nonlethal."
 ---
 
 **Prerequisites:** Enhancement sphere, Illusion sphere (Illusionary Touch (sensory, touch) x2).

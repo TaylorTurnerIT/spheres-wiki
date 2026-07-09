@@ -5,7 +5,8 @@ sphere: illusion
 tags:
   - metamagic
 tier: feat
-summary: ""
+
+summary: "For +2 spell points, reduce the manifestation of a spell, requiring targets to pass a Perception check to notice its presence and source."
 ---
 
 **Prerequisites:** Illusion sphere (Suppression (glamer)).

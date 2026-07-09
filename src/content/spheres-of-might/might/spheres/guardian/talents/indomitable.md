@@ -3,7 +3,7 @@ id: "indomitable"
 name: "Indomitable"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Guardian sphere, delayed damage pool, base attack bonus +6.

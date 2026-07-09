@@ -4,7 +4,8 @@ name: "Photosynthesis"
 sphere: light
 tags: []
 tier: feat
-summary: ""
+
+summary: "While in bright light, you can heal hit points as a move action and gain daily nourishment."
 ---
 
 **Prerequisites:** Con 13, Survival 3 ranks, Light sphere.

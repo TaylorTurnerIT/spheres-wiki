@@ -5,7 +5,8 @@ sphere: illusion
 tags:
   - surreal
 tier: feat
-summary: ""
+
+summary: "Spend a shadow point when mimicking a sphere effect to treat it as both its original sphere and the Illusion sphere, allowing you to apply bonuses and talents from both."
 ---
 
 **Prerequisites:** Illusion sphere (Manipulate Aura (sensory, magic)); Illusion sphere (Shadow Infusion) or shadow pool; Shadow Magic or create reality class feature.

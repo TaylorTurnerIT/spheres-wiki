@@ -4,7 +4,7 @@ name: "Sparrow’s Path"
 tier: "advanced"
 tags:
   - "fly"
-summary: "Gain a clumsy fly speed equal to half your base speed that only functions during your turn unless you deal melee damage, becoming permanent at 8 Fly ranks."
+
 ---
 
 **Prerequisites:** Athletics sphere, Fly 3 ranks.

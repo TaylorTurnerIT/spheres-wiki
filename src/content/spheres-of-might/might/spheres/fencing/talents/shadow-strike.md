@@ -4,7 +4,7 @@ name: "Shadow Strike"
 tier: "basic"
 tags:
   - "exploit"
-summary: ""
+
 ---
 
 **Prerequisites:** Fencing sphere.

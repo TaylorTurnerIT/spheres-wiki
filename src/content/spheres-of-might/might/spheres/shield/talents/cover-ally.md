@@ -3,7 +3,7 @@ id: "cover-ally"
 name: "Cover Ally"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 As long as you have martial focus, you may use active defense to benefit an ally when an ally within your shield’s reach is targeted by an attack.

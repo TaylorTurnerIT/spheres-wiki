@@ -3,7 +3,7 @@ id: "lurker"
 name: "Lurker"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 Creatures using unusual forms of sensory perception such as blindsight, greensight, or tremorsense cannot automatically foil your use of Stealth; such creatures must make a Perception check as normal to detect you when you make use of the Stealth skill.

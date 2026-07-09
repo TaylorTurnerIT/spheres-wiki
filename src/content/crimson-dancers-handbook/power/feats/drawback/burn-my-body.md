@@ -4,7 +4,8 @@ name: Burn My Body
 tags:
   - drawback
 tier: feat
-summary: ""
+
+summary: "Voluntarily fail a drawback saving throw to increase a sphere effect's caster level by +1 and reduce its spell point cost by 1."
 ---
 You fuel your magic with your body with purpose, refining it more than ever before.
 

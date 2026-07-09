@@ -5,7 +5,8 @@ tags:
   - defiler
   - drawback
 tier: feat
-summary: ""
+
+summary: "You may center your Terrain Casting blight effect on a space within close range instead of your own space."
 ---
 You can draw magic beyond that which is around you.
 

@@ -4,7 +4,8 @@ name: Endless Possibilities
 sphere: life
 dualSphere: fate
 tier: feat
-summary: ""
+
+summary: "Grants allies targeted by your Life sphere abilities a scaling luck bonus to attack rolls, saving throws, and checks for one round."
 ---
 
 **Prerequisites:** Fate sphere, Life sphere.

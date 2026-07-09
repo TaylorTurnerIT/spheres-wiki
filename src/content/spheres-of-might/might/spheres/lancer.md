@@ -14,7 +14,7 @@ sectionDefinitions:
         tags: ["impale"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Gain the Impale ability."
+
 ---
 
 All practitioners of the Lancer sphere gain the following ability:

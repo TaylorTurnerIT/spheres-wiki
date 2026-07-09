@@ -4,7 +4,7 @@ name: "Improved Bottled Lightning"
 tier: "basic"
 tags:
   - "formulae"
-summary: ""
+
 ---
 
 **Craft DC:** 25

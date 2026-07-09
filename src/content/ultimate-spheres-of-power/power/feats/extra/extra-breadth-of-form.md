@@ -4,7 +4,8 @@ name: Extra Breadth of Form
 tags:
   - extra
 tier: feat
-summary: ""
+
+summary: "Gain two additional uses of your breadth of form class feature per day."
 ---
 
 **Prerequisite:** Breadth of form class feature.

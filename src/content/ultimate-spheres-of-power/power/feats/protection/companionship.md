@@ -4,7 +4,8 @@ name: "Companionship"
 sphere: protection
 tags: ["warden"]
 tier: feat
-summary: ""
+
+summary: "Treat allies affected by your aegis as being within 5 feet of you for your supernatural paladin abilities."
 ---
 **Prerequisites:** Protection sphere, 3rd-level paladin.
 

@@ -4,7 +4,8 @@ name: "Seraphic Glow"
 sphere: light
 tags: []
 tier: feat
-summary: ""
+
+summary: "Evil creatures that enter or begin their turn in your glow must succeed on a Will save or become shaken for one minute."
 ---
 
 **Prerequisites:** Light sphere, good alignment.

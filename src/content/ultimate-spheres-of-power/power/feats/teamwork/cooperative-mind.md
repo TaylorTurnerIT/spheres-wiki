@@ -4,7 +4,8 @@ name: Cooperative Mind
 tags:
   - teamwork
 tier: feat
-summary: ""
+
+summary: "When under the Fusion advanced talent with an ally possessing this feat, you can each take a standard action at the cost of a full-round action, share combat feats, and choose who attempts Will saves."
 ---
 **Prerequisites:** Must have been subject to the Fusion advanced talent, 5th character level or higher.
 

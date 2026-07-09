@@ -4,7 +4,8 @@ name: Shadowblast
 tags:
   - surreal
 tier: feat
-summary: ""
+
+summary: "Spend a shadow point when using your shadowmark to change it from a ranged touch attack into a close-ranged cone that allows a Reflex save for half damage."
 ---
 
 **Prerequisite:** Shadowmark class feature.

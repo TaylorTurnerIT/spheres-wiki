@@ -5,7 +5,8 @@ sphere: communication
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "Reveal a plan to share performance-based effects with all squadron members regardless of range or line of sight."
 ---
 **Prerequisites:** Communication sphere; one of Performance sphere ((dance) package), bardic performance, psionics, or raging song; Posse Commander.
 

@@ -4,7 +4,8 @@ name: Asymmetrical Warfare
 sphere: war
 dualSphere: illusion
 tier: feat
-summary: ""
+
+summary: "You can rally allies affected by your glamers or within your figments as if they were in your totems."
 ---
 
 **Prerequisites:** Illusion sphere, War sphere.

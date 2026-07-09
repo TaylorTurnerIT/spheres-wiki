@@ -4,7 +4,8 @@ name: Spirit Form
 sphere: nature
 dualSphere: alteration
 tier: feat
-summary: ""
+
+summary: "You can imbue a non-instantaneous spirit ability when using shapeshift on a creature, counting it against your maximum granted shapeshift traits."
 ---
 
 **Prerequisites:** Alteration sphere, Nature sphere (any (spirit) talent).

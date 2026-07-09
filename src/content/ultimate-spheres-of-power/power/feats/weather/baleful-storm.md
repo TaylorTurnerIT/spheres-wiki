@@ -4,7 +4,8 @@ name: Baleful Storm
 sphere: weather
 dualSphere: death
 tier: feat
-summary: ""
+
+summary: "Reanimate corpses as a move action without paying the base spell point cost when controlling severity 4 or higher precipitation."
 ---
 
 When thunder rolls and lightning cracks, your minions rise.

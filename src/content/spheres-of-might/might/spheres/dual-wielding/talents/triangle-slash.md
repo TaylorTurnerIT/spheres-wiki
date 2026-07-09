@@ -3,7 +3,7 @@ id: "triangle-slash"
 name: "Triangle Slash"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Dual Wielding sphere, Three-Sword Style, base attack bonus +16.

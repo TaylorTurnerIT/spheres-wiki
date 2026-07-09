@@ -4,7 +4,7 @@ name: "Arsenal Of Upgrades"
 tier: "advanced"
 tags:
   - "supply"
-summary: "Requisition cybertech or grafts and have a faction doctor install them."
+
 ---
 
 **Prerequisite:** Faction sphere.

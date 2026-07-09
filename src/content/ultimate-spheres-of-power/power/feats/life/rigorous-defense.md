@@ -4,7 +4,8 @@ name: "Rigorous Defense"
 sphere: life
 tags: []
 tier: feat
-summary: ""
+
+summary: "Allows you to invigorate yourself as part of the same action when using the inspiration class feature."
 ---
 
 **Prerequisites:** Life sphere, inspiration class feature.

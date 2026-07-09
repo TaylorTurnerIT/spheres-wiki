@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "Ingesting another's poison increases the save DC of your own poison by +2 per 500 gp of the ingested poison's value on your next use."
 ---
 You are not only nourished by drinking poisons other than your own, your venom becomes more potent as well.
 

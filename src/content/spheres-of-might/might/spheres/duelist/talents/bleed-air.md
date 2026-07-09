@@ -4,7 +4,7 @@ name: "Bleed Air"
 tier: "advanced"
 tags:
   - "bleed"
-summary: ""
+
 ---
 
 **Prerequisites:** Duelist sphere, base attack bonus +10.

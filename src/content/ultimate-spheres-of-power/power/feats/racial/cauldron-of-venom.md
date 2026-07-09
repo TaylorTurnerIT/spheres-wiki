@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "You can expend twice as many daily uses of your poison to change its delivery type or use it as an inhalation poison that persists in a 5-foot square."
 ---
 You've carefully developed your poison for greater versatility.
 

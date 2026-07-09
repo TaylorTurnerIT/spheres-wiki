@@ -3,7 +3,7 @@ id: "giant"
 name: "Giant"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Brute sphere, Muscular Surge.

@@ -3,7 +3,7 @@ id: "thunderous-clap"
 name: "Thunderous Clap"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Brute sphere, base attack bonus +5.

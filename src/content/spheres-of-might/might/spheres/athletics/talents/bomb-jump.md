@@ -4,7 +4,7 @@ name: "Bomb Jump"
 tier: "advanced"
 tags:
   - "leap"
-summary: "Jump as a free action when affected by an area attack, and substitute an Acrobatics check for a Reflex save when targeting your own space."
+
 ---
 
 **Prerequisites:** Athletics sphere, Acrobatics 3 ranks.

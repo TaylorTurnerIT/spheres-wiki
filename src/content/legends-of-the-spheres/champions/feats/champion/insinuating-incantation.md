@@ -6,7 +6,8 @@ tags:
   - champion
   - drawback
 tier: feat
-summary: ""
+
+summary: "You can spend additional spell points when creating a magic sphere effect to simultaneously target affected creatures with a quip."
 ---
 
 **Prerequisites:** Bluster sphere, caster level 1st.

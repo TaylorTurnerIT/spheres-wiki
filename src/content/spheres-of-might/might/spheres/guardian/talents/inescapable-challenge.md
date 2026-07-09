@@ -3,7 +3,7 @@ id: "inescapable-challenge"
 name: "Inescapable Challenge"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Guardian sphere ((challenge) package), base attack bonus +7.

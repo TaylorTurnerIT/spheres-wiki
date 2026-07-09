@@ -4,7 +4,8 @@ name: "Plague Lord"
 sphere: death
 tags: []
 tier: feat
-summary: ""
+
+summary: "Failing a save against your Inflict Disease forces the target to immediately save against all their current diseases or suffer their effects."
 ---
 
 Diseases you inflict fester at an alarming rate.

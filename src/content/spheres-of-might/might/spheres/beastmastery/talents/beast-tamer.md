@@ -4,7 +4,7 @@ name: "Beast Tamer"
 tier: "advanced"
 tags:
   - "handle-animal"
-summary: "Expend martial focus to force a tameable creature to temporarily become helpful and serve you on a failed Will save."
+
 ---
 
 **Prerequisites:** Handle Animal 5 ranks, Beastmastery sphere ((handle animal) package).

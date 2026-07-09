@@ -3,7 +3,7 @@ id: "flabbergast"
 name: "Flabbergast"
 tier: basic
 tags: ["charm"]
-summary: ""
+
 ---
 
 You bombard the target with shocking revelations and displays which leave them reeling.

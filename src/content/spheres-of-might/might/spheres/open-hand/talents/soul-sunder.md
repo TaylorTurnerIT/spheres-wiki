@@ -3,7 +3,7 @@ id: "soul-sunder"
 name: "Soul Sunder"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Open Hand sphere, Mystic Fists, base attack bonus +15.

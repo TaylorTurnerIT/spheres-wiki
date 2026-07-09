@@ -4,7 +4,8 @@ name: Atmospheric Imbuement
 sphere: weather
 dualSphere: destruction
 tier: feat
-summary: ""
+
+summary: "Your specific destructive blasts bypass spell resistance during severity 4 or higher rain and wind."
 ---
 
 **Prerequisites:** Destruction sphere, Weather sphere.

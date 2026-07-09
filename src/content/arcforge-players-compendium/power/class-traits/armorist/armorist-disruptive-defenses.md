@@ -3,7 +3,7 @@ id: "armorist-disruptive-defenses"
 name: "Disruptive Defenses"
 tags: []
 featureId: arsenal-trick
-summary: "Add gleaming, murmuring, and greater murmuring to the list of special abilities for bound and summoned armor and shields."
+
 ---
 
 The armorist adds gleaming (+3) to the list of special abilities she may add to her bound and summoned armor and greater murmuring (+2) and murmuring (+1) to the list of special abilities she may add to her bound and summoned armor and shields.

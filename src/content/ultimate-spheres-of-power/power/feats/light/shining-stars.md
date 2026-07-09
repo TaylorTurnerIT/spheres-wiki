@@ -4,7 +4,8 @@ name: "Shining Stars"
 sphere: light
 tags: []
 tier: feat
-summary: ""
+
+summary: "You can apply the effects of your Glory talent to a glow created with Dancing Lights."
 ---
 
 **Prerequisites:** Light sphere (Dancing Lights, Glory).

@@ -4,7 +4,8 @@ name: Counterweight
 tags:
   - protokinesis
 tier: feat
-summary: ""
+
+summary: "You can stand and balance on surfaces that could not normally support your weight and add your casting ability modifier as a bonus to Acrobatics checks."
 ---
 
 **Prerequisites:** Acrobatics 3 ranks, Telekinesis sphere.

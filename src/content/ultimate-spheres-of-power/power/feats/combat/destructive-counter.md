@@ -5,7 +5,8 @@ sphere: creation
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "You can spend a spell point as an immediate action and succeed on a magic skill check to damage projectiles or reduce the damage and save DC of spell effects targeting you or passing through your square."
 ---
 
 **Prerequisites:** Creation sphere (any (material) talent).

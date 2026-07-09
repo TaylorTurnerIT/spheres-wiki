@@ -4,7 +4,8 @@ name: Spreading Magic
 tags:
   - proxy
 tier: feat
-summary: ""
+
+summary: "A creature under your Create Proxy effect can end the proxy to become an additional target of a sphere ability you use that targets a creature."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Spell Proxy.

@@ -4,7 +4,8 @@ name: Swarming Strike
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Expend three rounds of psionic effects to receive the coordination damage bonus from a number of allies up to your casting ability modifier."
 ---
 **Prerequisites:** Coordination class feature, psionics class feature.
 

@@ -4,7 +4,8 @@ name: Advanced Magic Training
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "Treat non-spherecasting Hit Dice and class levels as Low-Casting for your caster level, magic skill bonus, and defense, and gain a basic spell point pool if you lack one."
 ---
 **Prerequisite:** Basic Magic Training or casting class feature.
 

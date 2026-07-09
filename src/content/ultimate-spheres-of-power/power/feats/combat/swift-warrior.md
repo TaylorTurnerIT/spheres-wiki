@@ -5,7 +5,8 @@ sphere: time
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Gain a scaling bonus to your caster level when targeting only yourself with an alter time effect, capped by your Hit Dice."
 ---
 
 **Prerequisite:** Time sphere.

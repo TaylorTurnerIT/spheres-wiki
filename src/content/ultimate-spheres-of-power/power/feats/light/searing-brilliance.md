@@ -4,7 +4,8 @@ name: "Searing Brilliance"
 sphere: light
 tags: []
 tier: feat
-summary: ""
+
+summary: "Your Searing Light deals additional untyped damage per round, dealing even more damage to undead, oozes, and daylight-sensitive creatures."
 ---
 
 **Prerequisites:** Light sphere (Searing Light (light)), caster level 5th.

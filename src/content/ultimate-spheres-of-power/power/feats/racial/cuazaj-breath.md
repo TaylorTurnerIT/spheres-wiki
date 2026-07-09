@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "Your cuazaj lightning breath weapon damage increases to 1d6 per 2 character levels."
 ---
 **Prerequisites:** Draconic subtype, cuazaj lightning racial trait.
 

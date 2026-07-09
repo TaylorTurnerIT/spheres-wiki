@@ -4,7 +4,8 @@ name: Necrotic Heart
 sphere: death
 tags: []
 tier: feat
-summary: ""
+
+summary: "Spend an immediate action to add your Charisma modifier to a Fortitude save, which becomes a passive bonus and unlocks an emergency temporary hit point shield when you possess four Necrosis feats."
 ---
 
 Your body is sustained by necromantic power.

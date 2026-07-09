@@ -4,7 +4,8 @@ name: Public Renown
 tags:
   - operative
 tier: feat
-summary: ""
+
+summary: "Gain the influence and rapid persuasion abilities of the envoy class."
 ---
 
 **Prerequisite:** Diplomacy 7 ranks.

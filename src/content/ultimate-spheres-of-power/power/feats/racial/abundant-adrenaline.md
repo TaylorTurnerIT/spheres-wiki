@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "Once per hour, you can gain an extra swift (or standard, if taken twice) action for two turns at the cost of receiving no actions of that type for the following three turns."
 ---
 The designs of your creators left your adrenal glands on overdrive, granting you incredible swiftness for a short period of time.
 

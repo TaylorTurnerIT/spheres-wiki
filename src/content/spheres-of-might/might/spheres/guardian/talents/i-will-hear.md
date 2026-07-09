@@ -4,7 +4,7 @@ name: "I Will Hear"
 tier: "advanced"
 tags:
   - "utility"
-summary: ""
+
 ---
 
 **Prerequisites:** Guardian sphere, Defend Other.

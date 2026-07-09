@@ -5,7 +5,8 @@ sphere: war
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "You can spend an additional spell point when using a single-target sphere ability on a squadron member to instead target any number of squadron members."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander, casting class feature.

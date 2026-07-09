@@ -4,7 +4,8 @@ name: Hubris Defiance
 tags:
   - general
 tier: feat
-summary: ""
+
+summary: "Roll twice and take the better result on saving throws against compulsions and dictating effects, and upon succeeding, roll twice on attacks and checks against the effect's source for 1 round."
 ---
 *To defy and reject the orders of the universe and carve your own way, as the first water created the rivers and then the canyons. Your steps march forward, putting down those that would tell you to turn aside.*
 

@@ -14,7 +14,7 @@ sectionDefinitions:
         tags: ["blitz"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Gain the Melee Archer and Barrage abilities."
+
 ---
 
 Barrage practitioners specialize in using ranged weapons to make fast shots, often from the middle of the melee itself.

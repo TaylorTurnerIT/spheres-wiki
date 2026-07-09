@@ -4,7 +4,8 @@ name: Reinforced Structure
 tags:
   - drawback
 tier: feat
-summary: ""
+
+summary: "Increase the AC, hardness, and hit points of objects created with the Substantial Magic drawback, and improve the sunder CMD of created worn items."
 ---
 The magic objects that you create can be reinforced to be stronger.
 

@@ -4,7 +4,8 @@ name: Extra Nuance
 tags:
   - operative
 tier: feat
-summary: ""
+
+summary: "Gain an additional dissident nuance."
 ---
 
 **Prerequisite:** 5th-level dissident.

@@ -4,7 +4,8 @@ name: Poltergeist's Malice
 sphere: telekinesis
 dualSphere: death
 tier: feat
-summary: ""
+
+summary: "You gain a CMB bonus equal to your Poltergeist penalty when making Telekinetic Maneuver attempts against creatures affected by your Poltergeist strike."
 ---
 
 Every mistake your foes make brings them closer to your service.

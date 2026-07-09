@@ -5,7 +5,8 @@ sphere: investigation
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Enhance your Investigation analysis to simultaneously gather Divination information or perform a Scout sphere check, granting improved minimum rolls for scrutinized targets."
 ---
 
 **Prerequisites:** Sense Motive ranks 3, Investigation sphere; either the Divination sphere or Scout sphere.

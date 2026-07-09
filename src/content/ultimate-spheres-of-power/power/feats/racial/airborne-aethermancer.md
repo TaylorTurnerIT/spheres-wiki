@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "Your caster level increases by 1 when using breezeflight to cast a spell or use a sphere ability that deals acid or lightning damage."
 ---
 You were not just born to be in the air, but to possess a mastery of it that enhances magic you cast while in flight.
 

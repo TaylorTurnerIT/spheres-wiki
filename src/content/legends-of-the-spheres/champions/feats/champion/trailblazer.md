@@ -5,7 +5,8 @@ sphere: athletics
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Moving more than 5 feet using an Athletics package movement mode allows you to apply your Navigation pathing ability to all squares you enter."
 ---
 
 **Prerequisites:** Athletics sphere, Navigation sphere.

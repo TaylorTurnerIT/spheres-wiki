@@ -4,7 +4,7 @@ name: "Hard Whip"
 tier: "basic"
 tags:
   - "slam"
-summary: ""
+
 ---
 
 You may end the grapple to force the grappled creature to move up to 10 ft. in a direction of your choice except upwards. This movement does not provoke an attack of opportunity, although if the creature’s movement would force them to enter one of your ally’s squares, they provoke an attack of opportunity from that ally and their movement is stopped before entering that ally’s square (if two or more of your allies share the same square, only a single ally of your choice may make an attack of opportunity due to this talent); for every 5 ft. the creature was forced to travel, your ally’s attack of opportunity gains a +2 circumstance bonus to damage. If this movement would cause a creature to collide with a solid object, they take damage equal to 1d6 + the modifier of the attribute used to determine your combat maneuver bonus for the maneuver. This damage is increased by +1d6 for every 5-ft. square the target would have traveled beyond the wall or object.

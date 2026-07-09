@@ -5,7 +5,8 @@ sphere: subterfuge
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Apply an Alteration shapeshift or Illusion glamer while using fast disguise to ignore certain penalties, and spend spell points to dynamically alter your active disguise."
 ---
 **Prerequisites:** Alteration or Illusion sphere, Subterfuge sphere.
 

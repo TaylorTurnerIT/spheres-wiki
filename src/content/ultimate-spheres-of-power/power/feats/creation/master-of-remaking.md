@@ -4,7 +4,8 @@ name: "Master Of Remaking"
 sphere: creation
 tags: []
 tier: feat
-summary: ""
+
+summary: "Treat your character level as your caster level when determining the types of objects you can alter and the damage dealt or healed by Repair or Destroy."
 ---
 
 **Prerequisite:** Creation sphere.

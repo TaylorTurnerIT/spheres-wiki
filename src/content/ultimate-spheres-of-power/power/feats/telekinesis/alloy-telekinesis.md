@@ -4,7 +4,8 @@ name: Alloy Telekinesis
 sphere: telekinesis
 dualSphere: nature
 tier: feat
-summary: ""
+
+summary: "You can simultaneously Bludgeon a target with ore recovered via the Nature sphere, with the option to use your caster level and casting ability modifier for the attack by increasing the casting time."
 ---
 
 **Prerequisites:** Telekinesis sphere, Nature sphere ((metal) package).

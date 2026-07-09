@@ -5,7 +5,8 @@ sphere: alteration
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "While in Swarm Shape, you can perform combat maneuvers instead of dealing swarm damage, hold objects, and threaten the squares you occupy."
 ---
 
 **Prerequisites:** Alteration sphere (Swarm Shape).

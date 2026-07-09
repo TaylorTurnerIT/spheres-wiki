@@ -5,7 +5,8 @@ sphere: communication
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "A squadron member can grant the benefits of a revealed plan to another member instead of themselves."
 ---
 **Prerequisites:** Communication sphere, Posse Commander.
 

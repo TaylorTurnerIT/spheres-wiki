@@ -4,7 +4,8 @@ name: Spell Proxy, Improved
 tags:
   - proxy
 tier: feat
-summary: ""
+
+summary: "When you use Create Proxy, you can transfer concentration of one sphere effect to the targets, allowing them to spend their own spell points to maintain it without concentration."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Spell Proxy.

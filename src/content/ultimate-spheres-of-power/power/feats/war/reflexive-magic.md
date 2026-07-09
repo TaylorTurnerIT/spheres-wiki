@@ -4,7 +4,8 @@ name: "Reflexive Magic"
 sphere: war
 tags: []
 tier: feat
-summary: ""
+
+summary: "You gain two regenerating spell points dedicated solely to rallying yourself."
 ---
 
 **Prerequisites:** War sphere, base attack bonus +11.

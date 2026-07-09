@@ -5,7 +5,8 @@ sphere: illusion
 tags:
   - surreal
 tier: feat
-summary: ""
+
+summary: "Spend a shadow point to temporarily grant yourself a magic sphere or talent you do not possess, shaping it out of shadowstuff."
 ---
 
 Prerequisites: Illusion sphere (Shadow Infusion) or shadow pool.

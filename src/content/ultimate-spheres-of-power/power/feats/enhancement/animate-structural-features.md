@@ -4,7 +4,8 @@ name: "Animate Structural Features"
 sphere: enhancement
 tags: []
 tier: feat
-summary: ""
+
+summary: "You can animate parts of a structure, giving them the Immobile flaw and reduced reach, but allowing them to attack enemies within reach of their surfaces."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)).

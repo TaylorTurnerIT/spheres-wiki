@@ -4,7 +4,8 @@ name: "Mystical Reinforcement"
 sphere: war
 tags: []
 tier: feat
-summary: ""
+
+summary: "You can aid spellcasters in your totems or mandates with circle casting as if they had the feat."
 ---
 
 **Prerequisites:** War sphere, Circle Casting.

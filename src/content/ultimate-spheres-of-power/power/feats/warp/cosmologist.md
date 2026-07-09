@@ -4,7 +4,8 @@ name: "Cosmologist"
 sphere: warp
 tags: []
 tier: feat
-summary: ""
+
+summary: "You can add the Portal, Time, Alignment, Bountiful, and Weather traits to your demiplane without meeting their normal prerequisites."
 ---
 
 **Prerequisites:** Knowledge (planes) 15 ranks, Warp sphere (Create Demiplane, Extradimensional Room (space)).

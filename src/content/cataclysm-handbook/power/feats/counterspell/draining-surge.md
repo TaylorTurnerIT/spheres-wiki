@@ -4,7 +4,8 @@ name: Draining Surge
 tags:
   - counterspell
 tier: feat
-summary: ""
+
+summary: "Take unmitigable nonlethal damage to roll twice and take the higher result on a magic skill check to counterspell."
 ---
 You push yourself into your counterspells to assure their success.
 

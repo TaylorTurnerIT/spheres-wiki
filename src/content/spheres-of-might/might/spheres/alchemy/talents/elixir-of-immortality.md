@@ -4,7 +4,7 @@ name: "Elixir Of Immortality"
 tier: "advanced"
 tags:
   - "formulae"
-summary: "Create an elixir that restores a creature to young adulthood, removing physical age penalties while keeping mental age bonuses."
+
 ---
 
 **Prerequisites:** Alchemy sphere, Craft (alchemy) 12 ranks.

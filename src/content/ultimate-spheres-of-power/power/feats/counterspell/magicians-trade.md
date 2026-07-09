@@ -5,7 +5,8 @@ sphere: enhancement
 tags:
   - counterspell
 tier: feat
-summary: ""
+
+summary: "When using Counterspell, you may end your own non-concentration enhancements to increase the number of magical effects you can end by one per enhancement dismissed."
 ---
 
 **Prerequisites:** Enhancement sphere, Counterspell.

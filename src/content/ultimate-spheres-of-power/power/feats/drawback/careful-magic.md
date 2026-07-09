@@ -5,7 +5,8 @@ sphere: enhancement
 tags:
   - drawback
 tier: feat
-summary: ""
+
+summary: "Add your casting ability modifier to your MSD against dispel attempts, and optionally spend a spell point to force dispellers to roll twice and take the lower result."
 ---
 
 **Prerequisites:** Enhancement sphere, Extended Casting drawback.

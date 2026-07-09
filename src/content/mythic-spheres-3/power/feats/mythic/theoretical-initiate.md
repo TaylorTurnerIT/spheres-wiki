@@ -4,7 +4,8 @@ name: Theoretical Initiate
 tags:
   - mythic
 tier: feat
-summary: ""
+
+summary: "Double the number of hypothesis dice granted by the Theoretical Initiate feat."
 ---
 
 Double the number of hypothesis dice granted by Theoretical Initiate.

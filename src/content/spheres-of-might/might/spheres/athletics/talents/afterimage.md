@@ -4,7 +4,7 @@ name: "Afterimage"
 tier: "advanced"
 tags:
   - "motion"
-summary: "Moving leaves behind afterimages that have a chance to be targeted instead of you by attacks requiring an attack roll."
+
 ---
 
 **Prerequisites:** Athletics sphere.

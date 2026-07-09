@@ -3,7 +3,7 @@ id: "get-over-here"
 name: "Get Over Here!"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Equipment sphere, Lancer sphere, Ranged Impale, proficiency with grappling hook, harpoon, or rope dart.

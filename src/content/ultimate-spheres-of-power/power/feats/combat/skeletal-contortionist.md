@@ -5,7 +5,8 @@ sphere: death
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Expend a use of charmed life as an immediate action to temporarily reduce physical damage, boost combat maneuvers, or ignore the penalties of being prone."
 ---
 You have extreme control over your bones and joints, allowing you to respond to a variety of physical threats.
 

@@ -4,7 +4,8 @@ name: "Spirit Beacon"
 sphere: war
 tags: []
 tier: feat
-summary: ""
+
+summary: "Transform your totem into a massive glowing pillar, affecting anyone who sees it within range."
 ---
 
 **Prerequisite:** War sphere.

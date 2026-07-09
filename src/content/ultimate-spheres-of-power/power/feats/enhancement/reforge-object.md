@@ -4,7 +4,8 @@ name: Reforge Object
 sphere: enhancement
 dualSphere: creation
 tier: feat
-summary: ""
+
+summary: "You can freely reassign a construction point when altering an animated object's material or shape and do not need to spend an extra spell point to alter it."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), Creation sphere (Potent Alteration).

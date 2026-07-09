@@ -5,7 +5,8 @@ sphere: war
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "Increases the maximum size of your squadron based on your caster level or Diplomacy ranks, and allows inclusion of troop or crew creatures."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

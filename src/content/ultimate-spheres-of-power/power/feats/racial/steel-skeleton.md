@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "You reduce your movement speeds by 5 ft. and double your weight to gain a +1 natural armor bonus, a +1 racial bonus to CMB and CMD, and treat your Strength as 2 higher for carrying capacity and Strength-based checks."
 ---
 A solid frame can easily make the difference in a fight, and few are as firm bodied as you are—welded steel bars are hidden throughout your body, making you extraordinarily tough.
 

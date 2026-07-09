@@ -4,7 +4,8 @@ name: Spell Proxy, Extended
 tags:
   - proxy
 tier: feat
-summary: ""
+
+summary: "Increases the range of your proxy feat benefits from 30 feet to 60 feet."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, at least one Proxy feat.

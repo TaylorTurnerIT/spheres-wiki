@@ -4,7 +4,8 @@ name: Force Shield
 tags:
   - protokinesis
 tier: feat
-summary: ""
+
+summary: "As a swift action, you can use a free hand to create a field of telekinetic force that grants a scaling shield bonus to your armor class without imposing any penalties."
 ---
 
 **Prerequisite:** Telekinesis sphere.

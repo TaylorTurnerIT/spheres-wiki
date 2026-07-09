@@ -14,7 +14,7 @@ sectionDefinitions:
         tags: ["discipline"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
-summary: "Gain one Equipment talent."
+
 ---
 
 The Equipment sphere handles what equipment you are trained to use and how you use it. When you first gain the Equipment sphere, choose one Equipment talent of your choice and gain it for free.

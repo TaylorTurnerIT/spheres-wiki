@@ -4,7 +4,7 @@ name: "High-Tech Facilities"
 tier: "advanced"
 tags:
   - "supply"
-summary: "Expand item requisition to include pharmaceuticals, technological items, technological armor, and technological weapons."
+
 ---
 
 **Prerequisite:** Faction sphere.

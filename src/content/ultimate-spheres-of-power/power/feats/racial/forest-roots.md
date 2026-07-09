@@ -4,7 +4,8 @@ name: Forest Roots
 tags:
   - racial
 tier: feat
-summary: ""
+
+summary: "As a full-round action while in a forest or swamp, you can gain tremorsense within a designated 50-foot radius area at medium range."
 ---
 Focusing deeply and setting yourself down into the dirt, you can use the woods around you to sense the world at range.
 

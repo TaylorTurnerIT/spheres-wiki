@@ -3,7 +3,7 @@ id: "dimensional-pierce"
 name: "Dimensional Pierce"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Lancer sphere, impale ability, base attack bonus +15.

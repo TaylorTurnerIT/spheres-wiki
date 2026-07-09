@@ -4,7 +4,8 @@ name: Eldritch Craft
 tags:
   - item-creation
 tier: feat
-summary: ""
+
+summary: "Magic items you craft gain the benefits of any casting boons you possess."
 ---
 Your strange magics bleed into the devices you forge.
 

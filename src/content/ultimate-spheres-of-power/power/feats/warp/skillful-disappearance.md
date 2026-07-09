@@ -4,7 +4,8 @@ name: "Skillful Disappearance"
 sphere: warp
 tags: []
 tier: feat
-summary: ""
+
+summary: "When teleporting, you can simultaneously attempt a Disguise check, create a sensory flourish, demoralize an opponent to prevent attacks of opportunity, or make a Stealth check to vanish unnoticed."
 ---
 
 **Prerequisites:** Warp sphere.

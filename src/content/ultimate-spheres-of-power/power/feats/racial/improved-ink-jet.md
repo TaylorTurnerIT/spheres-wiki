@@ -4,7 +4,8 @@ name: Improved Ink Jet
 tags:
   - racial
 tier: feat
-summary: ""
+
+summary: "You can use your ink jet racial ability once per hour instead of once per day."
 ---
 Over time you've carefully tended your ink glands to produce far more than they normally would.
 

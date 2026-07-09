@@ -5,7 +5,8 @@ sphere: communication
 tags:
   - squadron
 tier: feat
-summary: ""
+
+summary: "You can grant your Faction sphere requisitions to a squadron member, and they can requisition using your talents and resource budgets."
 ---
 **Prerequisites:** Communication sphere, Faction sphere, Posse Commander.
 

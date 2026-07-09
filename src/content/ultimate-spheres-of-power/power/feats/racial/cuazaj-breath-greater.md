@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "You can use your cuazaj lightning breath weapon once every 1d4 rounds."
 ---
 **Prerequisites:** Draconic subtype, cuazaj lightning racial trait, Cuazaj Breath.
 

@@ -4,7 +4,8 @@ name: "Mark Of Magical Ineptitude"
 sphere: mana
 tags: []
 tier: feat
-summary: ""
+
+summary: "Your Mark of Instability talent also prevents the target from casting magic or expending spell points or spell slots."
 ---
 
 **Prerequisites:** Mana sphere (Mark Of Instability, Mark Of Incompetency), caster level 7th.

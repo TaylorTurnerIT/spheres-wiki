@@ -4,7 +4,7 @@ name: "Tactical Hypothesis"
 tier: "advanced"
 tags:
   - "champion"
-summary: ""
+
 ---
 
 **Prerequisites:** Scout sphere, Study sphere.

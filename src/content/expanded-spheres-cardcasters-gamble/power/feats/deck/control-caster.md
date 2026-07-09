@@ -6,7 +6,8 @@ tags:
   - drawback
 sphere: blood
 tier: feat
-summary: ""
+
+summary: "You gain a suite of sphere-dependent abilities that allow you to manipulate, discard, or exile cards from the hands and decks of other characters using the Card Casting drawback."
 ---
 
 **Prerequisites:** Card Casting

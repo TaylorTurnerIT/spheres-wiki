@@ -4,7 +4,8 @@ name: Black Totem
 sphere: war
 dualSphere: dark
 tier: feat
-summary: ""
+
+summary: "You can spend a spell point to add a darkness effect to your totem, allowing melds to function within it."
 ---
 
 **Prerequisites:** Dark sphere, War sphere.

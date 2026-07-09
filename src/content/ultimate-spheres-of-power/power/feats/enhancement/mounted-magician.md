@@ -4,7 +4,8 @@ name: "Mounted Magician"
 sphere: enhancement
 tags: []
 tier: feat
-summary: ""
+
+summary: "Enhancing yourself also grants the enhancement's benefits to your mount for as long as you remain mounted together."
 ---
 **Prerequisites:** Handle Animal 3 ranks, Ride 3 ranks, Enhancement sphere, casting class feature.
 

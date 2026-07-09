@@ -4,7 +4,8 @@ name: Poisonous Ink
 tags:
   - racial
 tier: feat
-summary: ""
+
+summary: "Your ink jet becomes a contact poison that deals Constitution damage in addition to blinding targets."
 ---
 The ink you produce in quantity can do more than blind opponents, sometimes sickening or even killing foes.
 

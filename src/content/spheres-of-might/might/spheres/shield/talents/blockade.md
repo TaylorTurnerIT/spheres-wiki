@@ -3,7 +3,7 @@ id: "blockade"
 name: "Blockade"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 When affected by an area attack, you may spend your martial focus as an immediate action to use your shield to cushion the blow, granting you the benefits of the evasion ability (regardless of armor worn), and adding your shield bonus (but not your active defense bonus) to your Reflex saving throw against the triggering effect. If you already possesses evasion, you instead gain improved evasion.

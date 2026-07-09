@@ -3,7 +3,7 @@ id: "perfect-set-up"
 name: "Perfect Set-Up"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 As long as you have martial focus, as part of an attack action you may make a touch attack with your main-hand weapon which deals only the weapon’s damage die. If this attack is successful, the next attack you make with your off-hand weapon gains a +2 bonus to its damage roll and targets the creature’s flat-footed AC (the target is not actually flat-footed for this attack), ignoring cover or concealment as long as that attack is made before the end of your next round. For every 4 points of base attack bonus you possess, this bonus damage increases by +2.

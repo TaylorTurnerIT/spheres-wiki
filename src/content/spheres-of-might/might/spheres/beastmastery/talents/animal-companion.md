@@ -3,7 +3,7 @@ id: "animal-companion"
 name: "Animal Companion"
 tier: "basic"
 tags: []
-summary: "Gain an animal companion whose level is based on your base attack bonus, Handle Animal ranks, or Ride ranks."
+
 ---
 
 You gain an animal companion as the druid class feature. Your effective druid level for this companion is the highest between your base attack bonus, Handle Animal ranks, or Ride ranks - 3 (minimum 1). Your companion always counts as an animal ally. If you possess the Broad Skills talent, you may instead choose a plant or vermin companion.

@@ -4,7 +4,8 @@ name: Blurred Boundary
 sphere: protection
 dualSphere: illusion
 tier: feat
-summary: ""
+
+summary: "Apply a glamer to creatures within your barrier when an attack breaks it, or attach an aegis effect to a non-trick glamer."
 ---
 
 **Prerequisites:** Illusion sphere (any (glamer) talent), Protection sphere.

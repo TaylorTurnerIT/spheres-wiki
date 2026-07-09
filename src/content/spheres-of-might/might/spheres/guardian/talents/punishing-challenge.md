@@ -3,7 +3,7 @@ id: "punishing-challenge"
 name: "Punishing Challenge"
 tier: "advanced"
 tags: []
-summary: ""
+
 ---
 
 **Prerequisites:** Guardian sphere ((challenge) package), base attack bonus +5.

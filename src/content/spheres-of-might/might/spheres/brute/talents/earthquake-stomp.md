@@ -3,7 +3,7 @@ id: "earthquake-stomp"
 name: "Earthquake Stomp"
 tier: "basic"
 tags: []
-summary: ""
+
 ---
 
 As a full-round action, you can stomp the ground so furiously that nearby creatures fall prone. You may expend your martial focus to perform an earthquake stomp as a standard action.

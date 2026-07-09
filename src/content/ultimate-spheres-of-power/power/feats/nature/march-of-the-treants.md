@@ -4,7 +4,8 @@ name: March Of The Treants
 sphere: nature
 dualSphere: enhancement
 tier: feat
-summary: ""
+
+summary: "Spend an additional spell point when casting Pummel to allow the targeted tree to uproot itself and move around for the duration of the effect."
 ---
 
 **Prerequisites:** Enhancement sphere, Nature sphere ((plant) package).

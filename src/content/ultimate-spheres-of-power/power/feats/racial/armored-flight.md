@@ -5,7 +5,8 @@ tags:
   - combat
   - racial
 tier: feat
-summary: ""
+
+summary: "You can fly in medium or heavy armor, or while encumbered."
 ---
 You have long practiced the ability to fly with greater loads.
 

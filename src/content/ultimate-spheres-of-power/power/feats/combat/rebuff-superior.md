@@ -5,7 +5,8 @@ sphere: destruction
 tags:
   - combat
 tier: feat
-summary: ""
+
+summary: "Allies who receive cover from your Rebuff talent are also granted the benefits of improved evasion."
 ---
 
 **Prerequisites:** Destruction sphere (Rebuff (blast shape)), Improved Rebuff, improved evasion class feature.

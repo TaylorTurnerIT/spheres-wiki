@@ -4,7 +4,8 @@ name: Spell Dabbler
 tags:
   - ritual
 tier: feat
-summary: ""
+
+summary: "Spend spell points and 15 minutes of preparation to prepare one ritual each day that you can cast instantly like a normal spell later that day."
 ---
 You have learned to hold rituals in your memory to a minor degree.
 

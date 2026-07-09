@@ -4,7 +4,8 @@ name: "Ecumenicism"
 sphere: fate
 tags: []
 tier: feat
-summary: ""
+
+summary: "When using a word or consecration, you may determine its effect as if you had an alignment within one step of your own."
 ---
 
 **Prerequisite:** Fate sphere.

@@ -5,7 +5,8 @@ sphere: artifice
 tags:
   - champion
 tier: feat
-summary: ""
+
+summary: "Spend spell points to enhance Artifice flourishes to drastically improve storage capabilities with extradimensional spaces and link containers together."
 ---
 
 **Prerequisites:** Artifice sphere (Storage Enhancement), Warp sphere (Extradimensional Storage).

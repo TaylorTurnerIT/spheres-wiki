@@ -4,7 +4,7 @@ name: "Cutting Comeback"
 tier: "advanced"
 tags:
   - "counter"
-summary: "Ready demoralize, a shout, or a feint as a counter punch to deal twice your counter punch bonus damage as nonlethal damage."
+
 ---
 
 **Prerequisites:** Boxing sphere, counter punch ability, Diplomacy or Intimidate or Bluff 5 ranks.

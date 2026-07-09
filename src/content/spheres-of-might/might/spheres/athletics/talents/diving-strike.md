@@ -5,7 +5,7 @@ tier: "basic"
 tags:
   - "fly"
   - "leap"
-summary: "Add falling damage to attacks when charging from above and take reduced falling damage on a hit."
+
 ---
 
 You may charge an enemy by rapidly descending from above them (such as when jumping out of a tree or deliberately entering a fall while flying or gliding). You may fly above the target or use the Acrobatics skill to leap as part of this charge.

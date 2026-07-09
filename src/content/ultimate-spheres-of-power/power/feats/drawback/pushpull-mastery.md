@@ -5,7 +5,8 @@ sphere: telekinesis
 tags:
   - drawback
 tier: feat
-summary: ""
+
+summary: "Use telekinesis to push or pull objects directly towards or away from you, or apply the movement to yourself by targeting stationary objects to move or fly."
 ---
 
 **Prerequisites:** Telekinesis sphere (Directional Control drawback).
