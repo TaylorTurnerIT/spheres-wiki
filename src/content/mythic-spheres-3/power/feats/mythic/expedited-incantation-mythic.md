@@ -1,6 +1,6 @@
 ---
-id: expedited-incantation
-name: Expedited Incantation
+id: expedited-incantation-mythic
+name: Expedited Incantation (Mythic)
 tier: feat
 tags:
   - mythic

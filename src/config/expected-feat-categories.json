@@ -3423,6 +3423,10 @@
       "sourceDescription": "general-feats.txt#tab:Ultimate | mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
     },
     {
+      "key": "mythic-spheres-3:power:expedited-incantation-mythic",
+      "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats (Decoupled)"
+    },
+    {
       "key": "high-magic-handbook:power:mythic-crafting-expertise",
       "sourceDescription": "mythic-spheres-3.txt#tab:Mythic Feats#section:Mythic Feats"
     },
