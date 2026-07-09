@@ -4,6 +4,7 @@ name: Arcane Empowerment
 tags:
   - general
 tier: feat
+summary: "Spend 1 spell point when casting a traditional spell to increase its caster level or DC by 2."
 ---
 **Prerequisites:** Spell pool; the ability to cast arcane, divine, or psychic spells.
 

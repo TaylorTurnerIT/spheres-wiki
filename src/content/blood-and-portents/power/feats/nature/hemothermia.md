@@ -4,6 +4,7 @@ name: Hemothermia
 sphere: nature
 dualSphere: blood
 tier: feat
+summary: "Gain blood arts that superheat or freeze a target's blood, with added effects from the fire or water packages."
 ---
 
 **Prerequisites:** Blood sphere (any (blood art)), Nature sphere.

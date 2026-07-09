@@ -5,6 +5,7 @@ tags:
   - channeling
   - sm
 tier: feat
+summary: "Make channel energy use Fortitude saves instead of Will saves, including against undead."
 ---
 **Prerequisites:** Channel Energy
 

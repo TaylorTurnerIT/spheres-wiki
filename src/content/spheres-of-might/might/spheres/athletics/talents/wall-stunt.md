@@ -5,6 +5,7 @@ tier: "basic"
 tags:
   - "leap"
   - "run"
+summary: "Use adjacent surfaces or creatures to run along walls, perform swift action jumps, and gain additional movement benefits based on your packages."
 ---
 
 If you possess the (leap) package, when jumping or falling, you may make an Acrobatics check to jump as a swift action, provided there is a solid surface other than a ceiling (wall, floor, etc.) adjacent to you at that point. You may treat spaces occupied by creatures of your size or larger as containing such an object but your movement provokes attacks of opportunity as normal. Any fall damage that would be incurred is calculated after removing the height of the swift action jump.

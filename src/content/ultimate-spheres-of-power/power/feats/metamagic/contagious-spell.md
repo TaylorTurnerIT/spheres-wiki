@@ -4,6 +4,7 @@ name: Contagious Spell
 tags:
   - metamagic
 tier: feat
+summary: "Your harmful targeted talents spread to any creature that fails a magic skill check to dispel or remove them by 5 or more."
 ---
 **Benefit:** You can apply this effect only to targeted talents that are harmful to their target and do not have a range of personal; a contagious talent never spreads to someone who would benefit from being the target of the talent.
 

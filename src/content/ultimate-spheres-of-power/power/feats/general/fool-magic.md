@@ -4,6 +4,7 @@ name: Fool Magic
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Bluff 3 ranks; Deceitful or Skill Focus (Bluff); Iron Will.
 

@@ -5,6 +5,7 @@ tags:
   - defiler
   - drawback
 tier: feat
+summary: ""
 ---
 Your destructive magics nullify magical workings.
 

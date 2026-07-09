@@ -4,6 +4,7 @@ name: "Fortified Healing"
 sphere: life
 tags: []
 tier: feat
+summary: "Allies regain 1 point of stamina for every 5 hit points or temporary hit points granted by your Life sphere abilities."
 ---
 
 **Prerequisites:** Life sphere, Combat Stamina.

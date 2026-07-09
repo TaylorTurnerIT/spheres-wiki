@@ -4,6 +4,7 @@ name: Embraced By Kindred
 tags:
   - general
 tier: feat
+summary: "Lose the native subtype, stop aging or needing food, and gain relevant outsider subtypes while becoming harder to resurrect normally."
 ---
 Your abilities and commitments have been recognized by immortal features.
 

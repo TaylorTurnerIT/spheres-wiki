@@ -4,6 +4,7 @@ name: Hungry
 tags:
   - companion
 tier: feat
+summary: "Your companion can attempt to use its swallow whole ability as a free action while grappling and gains a +2 bonus to related grapple checks."
 ---
 
 **Prerequisites:** Ravenous Companion, caster level 10th.

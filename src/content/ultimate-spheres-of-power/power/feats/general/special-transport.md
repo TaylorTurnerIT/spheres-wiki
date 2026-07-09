@@ -5,6 +5,7 @@ tags:
   - 3pp
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Conjuration Sphere, Warp Sphere (Teleport Beacon)
 

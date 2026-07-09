@@ -5,6 +5,7 @@ sphere: conjuration
 tags:
   - companion
 tier: feat
+summary: "You may pass concentration on a sphere effect to your companion as a swift action."
 ---
 
 **Prerequisite:** Conjuration sphere.

@@ -4,6 +4,7 @@ name: "Reflexive Magic"
 sphere: war
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** War sphere, base attack bonus +11.

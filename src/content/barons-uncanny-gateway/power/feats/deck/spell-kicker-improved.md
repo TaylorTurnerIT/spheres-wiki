@@ -6,6 +6,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Select up to three kicker effects for each card or charge instead of one."
 ---
 
 **Prerequisites:** Spell Kicker, Card Casting or Charged Spells drawback

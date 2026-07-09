@@ -4,6 +4,7 @@ name: Power of Friendship
 tags:
   - drawback
 tier: feat
+summary: "Roll concentration checks twice and take the higher result when under an emotion effect from an ally."
 ---
 **Prerequisites:** Emotional Casting.
 

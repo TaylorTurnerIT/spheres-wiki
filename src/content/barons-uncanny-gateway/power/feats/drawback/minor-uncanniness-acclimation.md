@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Ignore strain from 0-spell-point magic sphere effects and gain +2 Will saves until your next turn when creating them."
 ---
 **Prerequisites:** Unsettling Casting drawback
 

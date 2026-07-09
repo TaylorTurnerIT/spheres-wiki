@@ -6,6 +6,7 @@ tags:
   - operative
 sphere: vocation
 tier: feat
+summary: "Substitute your Profession (barrister) ranks for your base attack bonus against a creature determined guilty by your crime sense, and deal bonus damage on your first hit each day against them."
 ---
 
 *The letter of law often leaves little room for justice.*

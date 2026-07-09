@@ -4,6 +4,7 @@ name: Asymmetrical Warfare
 sphere: war
 dualSphere: illusion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Illusion sphere, War sphere.

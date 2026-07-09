@@ -4,6 +4,7 @@ name: "Suffused Blasts"
 sphere: destruction
 tags: ["sm"]
 tier: feat
+summary: "Sicken opposite-alignment targets damaged by qualifying aligned destructive blasts and combine Paradigm Blast and Smiting Blast damage types."
 ---
 
 **Prerequisites:** Destruction sphere (Paradigm Blast (blast type) or Smiting Blast (blast type)).

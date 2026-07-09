@@ -6,6 +6,7 @@ tags:
   - champion
   - drawback
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Faction sphere, casting class feature.

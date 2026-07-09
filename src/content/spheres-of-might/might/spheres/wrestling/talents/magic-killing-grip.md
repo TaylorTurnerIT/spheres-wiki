@@ -4,6 +4,7 @@ name: "Magic Killing Grip"
 tier: "advanced"
 tags:
   - "slam"
+summary: ""
 ---
 
 **Prerequisites:** Wrestling sphere, base attack bonus +10.

@@ -4,6 +4,7 @@ name: Whole-Set Blast
 sphere: fate
 dualSphere: destruction
 tier: feat
+summary: "Gain a +1 bonus to MSB checks to bypass spell resistance with your destructive blast for each different damage die size used beyond the first."
 ---
 
 **Prerequisites:** Destruction Sphere (Conflagrant Cluster), Fate Sphere

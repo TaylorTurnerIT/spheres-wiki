@@ -4,6 +4,7 @@ name: Destructive Radiance
 sphere: light
 dualSphere: destruction
 tier: feat
+summary: "Your destructive blast can bypass line of effect restrictions, but is blocked by anything that affects normal sight."
 ---
 
 **Prerequisites:** Destruction sphere, Light sphere.

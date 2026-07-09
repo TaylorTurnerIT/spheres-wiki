@@ -4,6 +4,7 @@ name: "Limb Ripper"
 tier: "advanced"
 tags:
   - "slam"
+summary: ""
 ---
 
 **Prerequisites:** Wrestling sphere, base attack bonus +10.

@@ -4,6 +4,7 @@ name: Forceful Hand
 sphere: telekinesis
 dualSphere: protection
 tier: feat
+summary: "Sacrifice an aegis to defend its bearer with a telekinetic Catch or Push."
 ---
 **Prerequisites:** Protection sphere, Telekinesis sphere.
 

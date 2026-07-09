@@ -4,6 +4,7 @@ name: Tough As Nails
 tags:
   - general
 tier: feat
+summary: "Gain temporary hit points equal to your character level for 1 minute whenever you spend a point of grit, luck, or panache."
 ---
 **Prerequisite:** Grit, luck, or panache pool.
 

@@ -4,6 +4,7 @@ name: Vigilant Skeptic
 tags:
   - general
 tier: feat
+summary: "You automatically interact with nearby figments and gain a bonus to Perception and Sense Motive checks against targets benefiting from glamers."
 ---
 **Prerequisites:** Perception 5 ranks and Sense Motive 5 ranks; or Alertness.
 

@@ -4,6 +4,7 @@ name: Powerful Focus
 tags:
   - drawback
 tier: feat
+summary: "Expend your mental focus to increase the saving throw DC of a sphere effect by 1."
 ---
 **Prerequisites:** Mental Focus.
 

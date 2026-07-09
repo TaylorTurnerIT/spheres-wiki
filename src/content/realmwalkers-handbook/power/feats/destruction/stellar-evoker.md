@@ -4,6 +4,7 @@ name: "Stellar Evoker"
 sphere: destruction
 tags: []
 tier: feat
+summary: "Increase the maximum number of satellites you may maintain by 1 and recapture missed blasts as satellites."
 ---
 
 Your magics orbit you creating an orrery of color and power around your person.

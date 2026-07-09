@@ -4,6 +4,7 @@ name: Remote Hacking
 tags:
   - practitioner
 tier: feat
+summary: "Take control of foreign gadgets using an opposed Craft (mechanical) check or by forcing a Will save."
 ---
 
 **Prerequisites:** Tech sphere (Remote Control).

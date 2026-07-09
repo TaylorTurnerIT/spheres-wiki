@@ -5,6 +5,7 @@ sphere: fate
 dualSphere: divination
 tags: ["sm"]
 tier: feat
+summary: "End a sense talent on yourself instead of a motif when discharging a motif talent."
 ---
 
 **Prerequisites:** Divination Sphere, Fate Sphere

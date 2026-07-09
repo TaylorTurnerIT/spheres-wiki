@@ -4,6 +4,7 @@ name: Fan The Flame
 sphere: nature
 dualSphere: destruction
 tier: feat
+summary: "Creatures set on fire by your fire blast take damage equal to the largest fire you may affect."
 ---
 
 **Prerequisites:** Destruction sphere (Fire Blast (blast type, fire)), Nature sphere ((fire) package), caster level 3rd.

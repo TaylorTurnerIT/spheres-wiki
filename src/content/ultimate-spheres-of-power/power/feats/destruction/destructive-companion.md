@@ -4,6 +4,7 @@ name: Destructive Companion
 sphere: destruction
 dualSphere: conjuration
 tier: feat
+summary: "Apply a (blast type) talent to an explosive companion to alter its damage and add the blast's additional effects upon detonation."
 ---
 
 **Prerequisites:** Conjuration sphere (Explosive Companion (form)), Destruction sphere.

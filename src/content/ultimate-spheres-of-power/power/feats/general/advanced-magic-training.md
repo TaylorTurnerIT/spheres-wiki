@@ -4,6 +4,7 @@ name: Advanced Magic Training
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisite:** Basic Magic Training or casting class feature.
 

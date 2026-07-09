@@ -4,6 +4,7 @@ name: Manifestation
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Let a shadow creature companion manifest as a move action to fully affect and be affected by corporeal creatures."
 ---
 **Prerequisites:** Conjuration sphere (Shadow Creature (form)).
 

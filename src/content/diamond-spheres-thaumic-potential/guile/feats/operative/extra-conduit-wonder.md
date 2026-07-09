@@ -4,6 +4,7 @@ name: Extra Conduit Wonder
 tags:
   - operative
 tier: feat
+summary: "Gain an additional conduit wonder for which you qualify."
 ---
 
 **Prerequisite:** Conduit 5.

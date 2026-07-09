@@ -4,6 +4,7 @@ name: Termination Clause
 tags:
   - general
 tier: feat
+summary: "Set a contingency that dismisses a Fleeting Spell effect and apply Fleeting Spell to permanent non-instantaneous effects."
 ---
 The gifts you bestow can be taken away should their recipients fail to serve you.
 

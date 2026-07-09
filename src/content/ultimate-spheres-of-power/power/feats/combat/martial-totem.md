@@ -5,6 +5,7 @@ sphere: war
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** War sphere, base attack bonus +1.

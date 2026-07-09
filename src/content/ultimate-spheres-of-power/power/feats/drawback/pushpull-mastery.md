@@ -5,6 +5,7 @@ sphere: telekinesis
 tags:
   - drawback
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Telekinesis sphere (Directional Control drawback).

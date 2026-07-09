@@ -4,6 +4,7 @@ name: Reforge Object
 sphere: enhancement
 dualSphere: creation
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), Creation sphere (Potent Alteration).

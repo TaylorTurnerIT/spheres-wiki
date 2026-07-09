@@ -6,6 +6,7 @@ tags:
   - 3pp
   - admixture
 tier: feat
+summary: "Spend an additional spell point when using Admixture to place a viewing sensor in an affected square or apply Sensory Overload to a target damaged by the blast."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Divination Sphere (Sensory Overload or Viewing).

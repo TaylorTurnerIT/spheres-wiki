@@ -4,6 +4,7 @@ name: Analyze Caster
 sphere: mana
 dualSphere: divination
 tier: feat
+summary: "Use Detect Spellcaster faster and for free, then spend a spell point to deeply analyze a caster's spheres, spell points, or spellcasting details."
 ---
 **Prerequisites:** Mana sphere, Divination sphere (Detect Spellcaster (divine)), caster level 9th.
 

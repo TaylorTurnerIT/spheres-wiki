@@ -4,6 +4,7 @@ name: Illustrious Light
 sphere: light
 dualSphere: illusion
 tier: feat
+summary: "Apply your glow to a figment or glamer as part of the same action and share the concentration and spell point costs to maintain both."
 ---
 
 **Prerequisites:** Illusion sphere, Light sphere.

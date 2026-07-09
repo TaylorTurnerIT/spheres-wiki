@@ -6,6 +6,7 @@ dualSphere: performance
 tags:
   - champion
 tier: feat
+summary: "Use Enchanting Music songs as though they were a Performance sphere instrumental."
 ---
 
 **Prerequisite:** Fallen Fey sphere (Enchanting Music (fey-blessing)), Performance sphere (instrumental) package.

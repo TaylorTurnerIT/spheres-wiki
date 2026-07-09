@@ -4,6 +4,7 @@ name: Extra Planar Balancer
 tags:
   - racial
 tier: feat
+summary: "Use your planar balancer ability an additional 3 rounds per day."
 ---
 **Prerequisites:** Fey type or subtype, planar balancer racial trait.
 

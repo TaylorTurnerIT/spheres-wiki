@@ -4,6 +4,7 @@ name: Careful Caster
 tags:
   - wild-magic
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Casting class feature.
 

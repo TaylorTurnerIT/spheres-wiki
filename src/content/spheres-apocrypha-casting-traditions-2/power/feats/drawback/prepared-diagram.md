@@ -4,6 +4,7 @@ name: Prepared Diagram
 tags:
   - drawback
 tier: feat
+summary: "Prepare a reusable, portable diagram that grants a +1 competence bonus to saving throw DCs for a chosen sphere."
 ---
 **Prerequisites:** Diagram Magic.
 

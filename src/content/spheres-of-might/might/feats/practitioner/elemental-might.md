@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: fencing
 tier: feat
+summary: "Expend martial focus to add 1d6 plus your base attack bonus in energy damage to an attack, or convert combat sphere bonus damage to energy damage, and count as having Elemental Fist."
 ---
 
 You channel the elements through decisive strikes and furtive determination.

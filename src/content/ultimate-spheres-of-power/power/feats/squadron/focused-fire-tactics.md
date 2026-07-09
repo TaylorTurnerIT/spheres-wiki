@@ -5,6 +5,7 @@ sphere: war
 tags:
   - squadron
 tier: feat
+summary: "Designate a target to grant your squadron a stacking +1 bonus to attack and damage against it each time a member hits it."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

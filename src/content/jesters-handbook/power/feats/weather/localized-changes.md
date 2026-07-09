@@ -4,6 +4,7 @@ name: Localized Changes
 sphere: weather
 dualSphere: time
 tier: feat
+summary: "Adjust the weather inside a Time of the Season effect's area."
 ---
 
 **Prerequisites:** Time sphere (Time Of The Season (time)), Weather sphere.

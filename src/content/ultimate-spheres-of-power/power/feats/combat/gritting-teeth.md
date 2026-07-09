@@ -4,6 +4,7 @@ name: Gritting Teeth
 tags:
   - combat
 tier: feat
+summary: "Spend 3 stamina points as a swift action to gain resistance to one energy type for 1 minute."
 ---
 **Prerequisite:** Combat Stamina.
 

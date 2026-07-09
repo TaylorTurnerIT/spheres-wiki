@@ -4,6 +4,7 @@ name: Benevolence
 sphere: protection
 dualSphere: life
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Life sphere (Fount Of Life), Protection sphere.
 

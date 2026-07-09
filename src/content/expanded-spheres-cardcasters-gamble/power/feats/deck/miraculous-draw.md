@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Reveal the first card drawn on your turn to reduce its spell point cost by 1 (minimum 1) until the end of your turn."
 ---
 
 **Prerequisites:** Card Casting

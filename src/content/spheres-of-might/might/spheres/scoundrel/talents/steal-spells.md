@@ -4,6 +4,7 @@ name: "Steal Spells"
 tier: "advanced"
 tags:
   - "trick"
+summary: ""
 ---
 
 **Prerequisites:** Scoundrel sphere, Sleight of Hand 9 ranks.

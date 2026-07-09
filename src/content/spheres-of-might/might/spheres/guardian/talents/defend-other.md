@@ -3,6 +3,7 @@ id: "defend-other"
 name: "Defend Other"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 When an ally within your threatened area is the target of an attack roll, you may spend an immediate action to grant them a competence bonus to their armor class equal to 1/2 your base attack bonus (rounded down, minimum +1) against that attack. If this attack would still hit, you may choose to take the damage in your ally’s place.

@@ -4,6 +4,7 @@ name: Extended Anathema
 tags:
   - anathema
 tier: feat
+summary: "Increase the range of your anathema."
 ---
 **Prerequisites:** Anathema
 

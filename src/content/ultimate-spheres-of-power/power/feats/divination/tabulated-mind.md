@@ -4,6 +4,7 @@ name: "Tabulated Mind"
 sphere: divination
 tags: []
 tier: feat
+summary: "You are no longer flat-footed while concentrating on divine effects, can take swift or immediate actions, and may spend a spell point to reduce the required concentration action by one step."
 ---
 
 **Prerequisite:** Divination sphere.

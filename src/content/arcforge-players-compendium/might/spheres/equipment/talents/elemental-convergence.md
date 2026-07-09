@@ -3,6 +3,7 @@ id: "elemental-convergence"
 name: "Elemental Convergence"
 tier: "advanced"
 tags: []
+summary: "Apply up to two Elemental Disruption effects when an attack deals multiple types of energy damage."
 ---
 
 **Prerequisites:** Equipment sphere (Elemental Disruption).

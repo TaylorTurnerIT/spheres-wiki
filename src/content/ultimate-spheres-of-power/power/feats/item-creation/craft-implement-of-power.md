@@ -4,6 +4,7 @@ name: Craft Implement Of Power
 tags:
   - item-creation
 tier: feat
+summary: "You can craft magical implements that grant enhancement bonuses to a wielder's caster level with a particular sphere."
 ---
 **Prerequisites:** Magic skill bonus +3.
 

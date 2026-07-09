@@ -4,6 +4,7 @@ name: Alloy Telekinesis
 sphere: telekinesis
 dualSphere: nature
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Telekinesis sphere, Nature sphere ((metal) package).

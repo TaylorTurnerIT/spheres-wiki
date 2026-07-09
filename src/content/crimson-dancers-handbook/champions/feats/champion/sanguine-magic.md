@@ -6,6 +6,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "You do not provoke attacks of opportunity from bleeding opponents when using spells or sphere effects, and can apply your blooded strike and a (bleed) talent when using your Bleeding Wounds ghost strike or Bleed (quicken) ability."
 ---
 **Prerequisites:** Duelist sphere (one (bleed) talent); Blood sphere (Hemorrhage) or Death sphere (Bleeding Wounds (ghost strike)).
 

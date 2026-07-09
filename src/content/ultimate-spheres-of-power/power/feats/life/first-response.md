@@ -4,6 +4,7 @@ name: "First Response"
 sphere: life
 tags: []
 tier: feat
+summary: "Take 10 on concentration checks when using a Life sphere ability on an ally as a standard action."
 ---
 
 **Prerequisite:** Life sphere.

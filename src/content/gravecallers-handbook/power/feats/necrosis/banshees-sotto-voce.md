@@ -4,6 +4,7 @@ name: Banshee's Sotto Voce
 sphere: death
 tags: []
 tier: feat
+summary: "Gain +1 spell point, broadcast your voice to bypass mundane silencing, and add verbal components to specific sphere effects to penalize listeners' attack rolls."
 ---
 Whisper your lamentations to the world.
 

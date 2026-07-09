@@ -5,6 +5,7 @@ sphere: shield
 tags:
   - champion
 tier: feat
+summary: "Employ wards that grant a shield bonus to AC as a physical shield for Shield sphere abilities and shield bashes."
 ---
 **Prerequisites:** Shield sphere, ability to cast a spell or magic sphere effect that grants a shield bonus to AC.
 

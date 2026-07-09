@@ -4,6 +4,7 @@ name: Recon Drone
 tags:
   - practitioner
 tier: feat
+summary: "Your drones gain the Scout sphere or a bonus talent from it, along with Perception, Sense Motive, and Stealth as class skills."
 ---
 
 **Prerequisites:** Tech sphere, Drone.

@@ -4,6 +4,7 @@ name: Spirit Form
 sphere: nature
 dualSphere: alteration
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Alteration sphere, Nature sphere (any (spirit) talent).

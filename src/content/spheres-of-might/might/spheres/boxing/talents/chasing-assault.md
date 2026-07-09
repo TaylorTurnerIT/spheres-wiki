@@ -3,6 +3,7 @@ id: "chasing-assault"
 name: "Chasing Assault"
 tier: "advanced"
 tags: []
+summary: "Jump after a target launched by Launching Uppercut to make an attack of opportunity that knocks them prone and deals falling damage."
 ---
 
 **Prerequisites:** Boxing sphere, counter punch ability, Launching Uppercut.

@@ -4,6 +4,7 @@ name: Link Fate
 tags:
   - proxy
 tier: feat
+summary: "Treat Fate Magnet as Create Proxy for Proxy feats, and take an immediate action to redirect words targeting you to a proxy."
 ---
 **Prerequisites:** Fate Magnet, Spell Proxy.
 

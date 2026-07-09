@@ -4,6 +4,7 @@ name: "Sever"
 tier: "advanced"
 tags:
   - "disarm"
+summary: ""
 ---
 
 **Prerequisites:** Duelist sphere, base attack bonus +11.

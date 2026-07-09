@@ -3,6 +3,7 @@ id: "brace-weapon"
 name: "Brace Weapon"
 tier: "basic"
 tags: []
+summary: "Add shield or two-handed weapon bonuses to overrun and shove maneuvers."
 ---
 
 You may use a shield or a weapon held in two hands to perform an overrun maneuver. If using a shield, you may add the shield’s AC bonus to your CMB. If using a weapon held in two hands, you may add the weapon’s enhancement bonus, as well as bonuses to attack from spells or feats such as Weapon Focus, to your CMB. You may choose to use a shield bash as your weapon for this purpose, in which case the shield’s attack bonus, rather than its AC bonus, is used.

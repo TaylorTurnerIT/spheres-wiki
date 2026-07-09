@@ -4,6 +4,7 @@ name: Shadow Shield, Improved
 tags:
   - surreal
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Shadow Shield.

@@ -4,6 +4,7 @@ name: Enhanced Vigilance
 sphere: war
 dualSphere: enhancement
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, War sphere.

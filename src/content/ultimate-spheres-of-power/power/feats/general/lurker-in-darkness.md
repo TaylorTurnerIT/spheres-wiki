@@ -4,6 +4,7 @@ name: Lurker In Darkness
 tags:
   - general
 tier: feat
+summary: "Force creatures using unusual senses or indirect detection to make a Perception check to detect you when using Stealth."
 ---
 **Prerequisite:** Stealth 6 ranks.
 

@@ -4,6 +4,7 @@ name: Undetectable Hacking
 tags:
   - practitioner
 tier: feat
+summary: "Force a second Will save when hacking a gadget to keep it unaware of the attempt."
 ---
 
 **Prerequisites:** Tech sphere (Remote Control), Remote Hacking.

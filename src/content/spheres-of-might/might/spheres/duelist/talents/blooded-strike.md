@@ -3,6 +3,7 @@ id: "blooded-strike"
 name: "Blooded Strike"
 tier: "base"
 tags: []
+summary: ""
 ---
 
 Whenever you use the attack action or an attack of opportunity to attack or disarm a creature, you deal an additional 1 point of bleed damage to the target on a successful attempt, +1 for every 3 points of base attack bonus you possess; this stacks with any other bleed damage you are capable of dealing. Practitioners of the Duelist sphere never provoke attacks of opportunity when attempting combat maneuvers against a target currently taking bleed damage.

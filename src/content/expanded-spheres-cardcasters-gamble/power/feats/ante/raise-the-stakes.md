@@ -5,6 +5,7 @@ tags:
   - ante
   - combat
 tier: feat
+summary: "Store a sphere effect as a swift action that triggers upon a successful attack or sphere effect against a hostile creature."
 ---
 
 **Prerequisites:** Ante Up, caster level 3rd.

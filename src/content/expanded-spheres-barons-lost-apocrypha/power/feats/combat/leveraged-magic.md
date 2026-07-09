@@ -5,6 +5,7 @@ tags:
   - 3pp
   - combat
 tier: feat
+summary: "Use your base attack bonus and Strength modifier in place of your caster level and casting ability modifier to calculate your Combat Maneuver Bonus for combat maneuvers delivered via spell effects."
 ---
 **Prerequisites:** Base attack bonus +1
 

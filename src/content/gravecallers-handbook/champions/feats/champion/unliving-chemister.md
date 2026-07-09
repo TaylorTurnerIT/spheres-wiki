@@ -5,6 +5,7 @@ sphere: death
 tags:
   - champion
 tier: feat
+summary: "You can expend alchemical items to grant reanimated undead the alchemy-implanted template, receive alchemy crafting bonuses from your undead, and alter formulae to bypass undead immunities."
 ---
 You've seen enough of the cycle of life that, in a flash of mad inspiration, you realized your years at medical school hadn't gone to waste.
 

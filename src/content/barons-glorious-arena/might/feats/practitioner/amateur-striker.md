@@ -6,6 +6,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Gain a small amount of tension and a single tension technique."
 ---
 
 **Prerequisites:** Con 13, No levels in a class that has the tension class feature.

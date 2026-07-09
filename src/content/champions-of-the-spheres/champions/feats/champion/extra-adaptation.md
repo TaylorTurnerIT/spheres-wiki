@@ -4,6 +4,7 @@ name: Extra Adaptation
 tags:
   - champion
 tier: feat
+summary: "Gain 2 additional uses of adaptation per day."
 ---
 **Prerequisites:** Adaptation class feature.
 

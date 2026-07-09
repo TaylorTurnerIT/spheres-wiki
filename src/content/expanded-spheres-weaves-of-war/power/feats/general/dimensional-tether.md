@@ -5,6 +5,7 @@ tags:
   - 3pp
   - general
 tier: feat
+summary: "Creatures affected by your energy tether or hardened bond must succeed at a magical skill check against you to teleport or cross planes."
 ---
 
 **Prerequisite**: Destruction Sphere (energy tether) or Mana Sphere (hardened bond)

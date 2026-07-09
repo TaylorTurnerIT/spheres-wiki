@@ -4,6 +4,7 @@ name: "Focusing Formula"
 tier: "basic"
 tags:
   - "formulae"
+summary: "Craft a consumable that restores martial focus as a move action, gaining additional uses at higher Craft DCs."
 ---
 
 **Craft DC:** 15

@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Gain a DC bonus while you have a greater severance and improve No Cost Too Great's caster level bonus if you possess it."
 ---
 **Prerequisites:** Unsettling Casting
 

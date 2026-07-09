@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Assign a third (and potentially fourth and fifth) color to a magic effect card to further reduce its spell point cost."
 ---
 
 **Prerequisites:** Rainbow Efficiency, Card Casting (Mana Pool and Colored Mana)

@@ -4,6 +4,7 @@ name: "Improved Tanglefoot Bag"
 tier: "basic"
 tags:
   - "formulae"
+summary: "Craft a thrown bag that entangles and immobilizes a target, with an optional area of effect for a higher Craft DC."
 ---
 
 **Craft DC:** 25

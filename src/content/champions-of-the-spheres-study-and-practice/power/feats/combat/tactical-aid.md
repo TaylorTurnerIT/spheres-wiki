@@ -4,6 +4,7 @@ name: Tactical Aid
 tags:
   - combat
 tier: feat
+summary: "Use aid another to grant +2 base attack bonus instead of the normal aid another benefit."
 ---
 Your aid fortifies your ally's martial capabilities.
 

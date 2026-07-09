@@ -4,6 +4,7 @@ name: Bottled Spells
 tags:
   - drawback
 tier: feat
+summary: "Imbue a consumable item with a charged sphere ability."
 ---
 **Prerequisites:** Charged Spells.
 

@@ -6,6 +6,7 @@ tags:
   - drawback
   - teamwork
 tier: feat
+summary: "Exchange cards with eligible allies after resting and use the traded cards until the next rest."
 ---
 
 **Prerequisites:** Card Casting

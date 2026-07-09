@@ -4,6 +4,7 @@ name: Focused Miasma
 tags:
   - racial
 tier: feat
+summary: ""
 ---
 By focusing your naturally disruptive odor you are able to sap another creature of its willpower.
 

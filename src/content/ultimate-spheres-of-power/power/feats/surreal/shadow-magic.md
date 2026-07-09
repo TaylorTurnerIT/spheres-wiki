@@ -5,6 +5,7 @@ sphere: illusion
 tags:
   - surreal
 tier: feat
+summary: ""
 ---
 
 Prerequisites: Illusion sphere (Shadow Infusion) or shadow pool.

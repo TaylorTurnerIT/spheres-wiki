@@ -4,6 +4,7 @@ name: "Tribal Rhythm"
 sphere: war
 tags: []
 tier: feat
+summary: "You can attach totems to your bardic performance or raging song, granting their effects to all influenced allies and allowing you to maintain the totem without concentration for the song's duration."
 ---
 
 **Prerequisites:** War sphere; bardic performance or raging song class feature.

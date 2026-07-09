@@ -4,6 +4,7 @@ name: "Fount Of Mercy"
 sphere: life
 tags: []
 tier: feat
+summary: "Allies within close range may spend a standard action to heal themselves using your fount of life."
 ---
 
 **Prerequisites:** Life sphere (Fount Of Life).

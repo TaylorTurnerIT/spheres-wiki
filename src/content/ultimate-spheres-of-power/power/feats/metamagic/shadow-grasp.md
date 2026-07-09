@@ -4,6 +4,7 @@ name: Shadow Grasp
 tags:
   - metamagic
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Tenebrous Spell, Umbral Spell.
 

@@ -4,6 +4,7 @@ name: "Summon Capacitor"
 sphere: time
 tags: []
 tier: feat
+summary: "Release spell capacitor effects onto companions as part of summoning them, delaying their actions until your next turn."
 ---
 
 **Prerequisites:** Conjuration Sphere, Time Sphere, Spell Capacitor

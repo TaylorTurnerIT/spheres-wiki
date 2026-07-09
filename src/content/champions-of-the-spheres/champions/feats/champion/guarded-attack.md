@@ -4,6 +4,7 @@ name: Guarded Attack
 tags:
   - champion
 tier: feat
+summary: "Casting a sphere effect as part of the Spell Attack feat does not provoke attacks of opportunity."
 ---
 **Prerequisite:** Spell Attack.
 

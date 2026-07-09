@@ -3,6 +3,7 @@ id: "counter-punch"
 name: "Counter Punch"
 tier: "base"
 tags: []
+summary: "Ready an action to make a preemptive attack with a light melee weapon against a triggering enemy, gaining scaling bonus damage and optionally applying a counter talent."
 ---
 
 You may ready an action to make an attack with a light melee weapon against the next enemy who makes a non-maneuver melee attack roll against you before the beginning of your next turn; this attack is treated as an attack action for the purposes of talents as well as the Vital Strike feat and occurs before the attack that triggers it, gaining a +2 competence bonus to damage rolls. For every 4 points of base attack bonus you possess, this bonus increases by +2. Using this ability does not change your place in the initiative order.

@@ -5,6 +5,7 @@ sphere: mind
 tags:
   - combat
 tier: feat
+summary: "You can spend spell points to temporarily delay incoming damage or alter metabolic functions."
 ---
 
 **Prerequisites:** Mind sphere, caster level 5th.

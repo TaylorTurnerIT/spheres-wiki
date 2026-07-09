@@ -4,6 +4,7 @@ name: Flash Warp
 sphere: warp
 dualSphere: light
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Light sphere, Warp sphere.

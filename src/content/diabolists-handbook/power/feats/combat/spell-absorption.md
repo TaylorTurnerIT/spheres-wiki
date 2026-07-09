@@ -6,6 +6,7 @@ tags:
   - combat
   - counterspell
 tier: feat
+summary: "Roll twice to counterspell effects that target only you and counterspell spells redirected with Defend Other."
 ---
 You may bind yourself to an oncoming spell at great risk.
 

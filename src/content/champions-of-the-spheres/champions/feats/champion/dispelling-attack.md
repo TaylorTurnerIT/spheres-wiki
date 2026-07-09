@@ -4,6 +4,7 @@ name: Dispelling Attack
 tags:
   - champion
 tier: feat
+summary: "Expend martial focus to use Counterspell when damaging a creature with an attack action, and gain a +1 bonus to your MSB for counterspelling."
 ---
 **Prerequisites:** Counterspell feat, ability to gain martial focus.
 

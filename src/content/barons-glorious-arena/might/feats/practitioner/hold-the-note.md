@@ -6,6 +6,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Spend tension points instead of rounds of bardic performance, psionics, or raging song, and gain the tempo keeper song to generate tension."
 ---
 
 **Prerequisites:** tension pool, one of bardic performance, psionics, or raging song

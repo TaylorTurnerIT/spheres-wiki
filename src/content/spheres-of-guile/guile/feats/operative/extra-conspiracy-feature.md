@@ -4,6 +4,7 @@ name: Extra Conspiracy Feature
 tags:
   - operative
 tier: feat
+summary: "Gain the features of a class conspiracy that you do not have but already possess the base sphere for."
 ---
 
 **Prerequisites:** Base skill sphere granted by the chosen conspiracy, agent 1 or mastermind 1.

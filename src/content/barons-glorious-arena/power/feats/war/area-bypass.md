@@ -4,6 +4,7 @@ name: "Area Bypass"
 sphere: war
 tags: []
 tier: feat
+summary: "Allies can spend momentum to let you attempt an MSB check to let them bypass a sphere effect's area."
 ---
 
 **Prerequisites:** Divination Sphere, War Sphere (any momentum talent)

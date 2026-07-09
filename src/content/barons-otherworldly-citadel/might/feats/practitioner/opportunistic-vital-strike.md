@@ -6,6 +6,7 @@ tags:
   - practitioner
   - sm
 tier: feat
+summary: "Apply Vital Strike to an attack of opportunity once per round, and attempt a free combat maneuver on a critical hit."
 ---
 
 **Prerequisites:** Vital Strike

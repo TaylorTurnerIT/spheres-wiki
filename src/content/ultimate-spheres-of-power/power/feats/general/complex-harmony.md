@@ -4,6 +4,7 @@ name: Complex Harmony
 tags:
   - general
 tier: feat
+summary: "You can maintain two bardic performances simultaneously at the cost of additional bardic performance rounds."
 ---
 **Prerequisites:** Bardic performance class feature, character level 10th.
 

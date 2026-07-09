@@ -4,6 +4,7 @@ name: Shoulder To Shoulder
 tags:
   - general
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Grit, luck pool or panache class feature.

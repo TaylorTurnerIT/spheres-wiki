@@ -4,6 +4,7 @@ name: "Deceptive Advisor"
 sphere: mind
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Mind sphere.

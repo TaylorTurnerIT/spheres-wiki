@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: boxing
 tier: feat
+summary: "Retain competence bonus to damage on counter punches and gain an insight bonus to Reflex saves while using Floating Butterfly stance."
 ---
 
 **Prerequisites:** Boxing sphere (Floating Butterfly (stance)), base attack bonus +4.

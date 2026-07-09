@@ -14,6 +14,7 @@ sectionDefinitions:
         tags: ["exploit"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
+summary: "Gain 5 ranks in the Bluff skill for each talent spent in the Fencing sphere."
 ---
 
 Fencers are quick fighters who use nimble footwork and expert feints to open up their target before landing a fatal blow.

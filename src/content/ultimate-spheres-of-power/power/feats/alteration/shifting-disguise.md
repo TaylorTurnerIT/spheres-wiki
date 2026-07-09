@@ -4,6 +4,7 @@ name: "Shifting Disguise"
 sphere: alteration
 tags: []
 tier: feat
+summary: "You can reshape your body to mimic a creature of your size, gaining a +10 bonus on Disguise checks."
 ---
 
 **Prerequisite:** Alteration sphere.

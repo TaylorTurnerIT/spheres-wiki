@@ -4,6 +4,7 @@ name: Utilitarian Dilettante
 tags:
   - operative
 tier: feat
+summary: "Gain two bonus skill talents with the [utility] tag."
 ---
 
 **Prerequisite:** Extra Skill Talent.

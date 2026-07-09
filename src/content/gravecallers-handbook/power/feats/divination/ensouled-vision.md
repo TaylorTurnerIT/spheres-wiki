@@ -4,6 +4,7 @@ name: "Ensouled Vision"
 sphere: divination
 tags: []
 tier: feat
+summary: "Share perception with your souls and expend a soul to create a patrolling bound sensor that constantly divines its surroundings."
 ---
 **Prerequisites:** Divination sphere, bound nexus class feature.
 

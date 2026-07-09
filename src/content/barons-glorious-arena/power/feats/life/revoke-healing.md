@@ -4,6 +4,7 @@ name: "Revoke Healing"
 sphere: life
 tags: []
 tier: feat
+summary: "Spend a spell point to undo a single Life sphere effect you have cast on a target."
 ---
 
 **Prerequisites:** Life Sphere (Affliction)

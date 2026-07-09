@@ -4,6 +4,7 @@ name: Consumptive Intuition
 tags:
   - practitioner
 tier: feat
+summary: "After consuming a brain, temporarily gain a combat or magic talent the creature possessed once per day."
 ---
 
 **Prerequisite:** Brain Consumption.

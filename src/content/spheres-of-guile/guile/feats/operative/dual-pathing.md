@@ -5,6 +5,7 @@ sphere: navigation
 tags:
   - operative
 tier: feat
+summary: "Apply two pathing talents to an area at once."
 ---
 
 **Prerequisites:** Associated skill 10 ranks, Navigation sphere.

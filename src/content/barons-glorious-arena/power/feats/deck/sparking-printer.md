@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Forgo confirming a critical hit or allow an enemy's natural 1 to hit you to create a spell card and add it to your hand."
 ---
 
 **Prerequisites:** Card Casting

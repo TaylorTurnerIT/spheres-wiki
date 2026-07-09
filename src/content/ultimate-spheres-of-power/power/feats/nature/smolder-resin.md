@@ -4,6 +4,7 @@ name: "Smolder Resin"
 sphere: nature
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Nature sphere ((fire) package and (plant) package).

@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: guardian
 tier: feat
+summary: "Treat the area threatened by Covering Fire as a patrol for Guardian sphere talents, without gaining out-of-turn movement."
 ---
 
 **Prerequisites:** Covering Fire talent, Guardian sphere (patrol package)

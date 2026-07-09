@@ -4,6 +4,7 @@ name: "Mental Aura"
 sphere: mind
 tags: []
 tier: feat
+summary: "Create a creature-centered aura that applies one lesser charm to creatures entering or starting their turn in it."
 ---
 
 Your very presence can be enough to exert your inhuman will on others.

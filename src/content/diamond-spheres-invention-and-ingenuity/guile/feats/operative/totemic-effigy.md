@@ -6,6 +6,7 @@ tags:
   - supernatural
 sphere: survivalism
 tier: feat
+summary: "Confer the benefits of a talisman to creatures within a dredged area."
 ---
 
 **Prerequisites:** Survivalism sphere ((dredge) and (harvest) package).

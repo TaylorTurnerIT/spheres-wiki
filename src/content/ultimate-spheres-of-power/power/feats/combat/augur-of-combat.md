@@ -4,6 +4,7 @@ name: Augur Of Combat
 tags:
   - combat
 tier: feat
+summary: "Use your Intelligence modifier on attack rolls when you are last in the initiative count."
 ---
 **Prerequisite:** Int 13.
 

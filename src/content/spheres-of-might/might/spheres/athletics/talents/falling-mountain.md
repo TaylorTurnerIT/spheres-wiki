@@ -3,6 +3,7 @@ id: "falling-mountain"
 name: "Falling Mountain"
 tier: "advanced"
 tags: []
+summary: "Combine Diving Strike with Shatter Earth or Earthquake Stomp, scaling the area of effect based on falling damage."
 ---
 
 **Prerequisites:** Athletics sphere, Diving Strike, either Shatter Earth from the Berserker sphere or Earthquake Stomp from the Brute sphere, base attack bonus +5.

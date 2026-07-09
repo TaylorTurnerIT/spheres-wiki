@@ -5,6 +5,7 @@ tags:
   - champion
   - sm
 tier: feat
+summary: "Apply a blast type talent to Resonating Chorus, changing its damage type and adding blast effects."
 ---
 **Prerequisites:** Destruction Sphere (any (blast type) talent), Warleader Sphere (resonating chorus)
 

@@ -4,6 +4,7 @@ name: Umbral Spell
 tags:
   - metamagic
 tier: feat
+summary: "An umbral talent gains the darkness descriptor and causes the affected creature or object to radiate darkness in a 10-foot radius that reduces illumination."
 ---
 **Benefit:** An umbral talent gains the darkness descriptor. As long as the talent is in effect, the creature or object affected radiates darkness in a 10-foot radius, reducing illumination similar to the effects of the basic effect of the Dark sphere. Nonmagical sources of light, such as torches or lanterns, do not increase the light level in this area.
 

@@ -4,6 +4,7 @@ name: Dragon's Tattoos
 tags:
   - practitioner
 tier: feat
+summary: "Treat your unarmed strikes, natural attacks, and grapples as masterwork weapons that can be enhanced."
 ---
 
 Etching your limbs with exquisite art, your body truly becomes a weapon.

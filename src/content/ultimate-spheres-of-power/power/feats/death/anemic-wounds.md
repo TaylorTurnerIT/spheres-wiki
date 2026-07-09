@@ -4,6 +4,7 @@ name: "Anemic Wounds"
 sphere: death
 tags: []
 tier: feat
+summary: "Your bleed effects require a magical skill check to be stopped by magical healing, and the DC to remove them with the Heal skill increases by your caster level."
 ---
 
 Foes find the wounds you inflict hard to heal.

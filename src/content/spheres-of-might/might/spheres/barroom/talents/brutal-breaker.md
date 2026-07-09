@@ -3,6 +3,7 @@ id: "brutal-breaker"
 name: "Brutal Breaker"
 tier: "base"
 tags: []
+summary: "Take no penalty with improvised weapons, grab and attack with them in a single action, treat them as manufactured and fragile, and ignore self-inflicted broken penalties."
 ---
 
 You do not suffer any penalty when using an improvised weapon, be it ranged or melee, and may treat improvised weapons you are wielding as manufactured weapons for the purpose of being able to be targeted by spells and other effects. You may grab an unattended object within your natural reach and make an attack action with it as part of the same standard action.

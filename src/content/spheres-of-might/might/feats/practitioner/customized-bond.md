@@ -4,6 +4,7 @@ name: Customized Bond
 tags:
   - practitioner
 tier: feat
+summary: "Customize bound weapons, summon them as a free action, and stack half your armiger and armorist levels for enhancement bonuses."
 ---
 
 **Prerequisites:** Bound equipment class feature, customized weapons class feature.

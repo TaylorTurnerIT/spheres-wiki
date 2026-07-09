@@ -4,6 +4,7 @@ name: Homeguard Magic
 sphere: protection
 dualSphere: mana
 tier: feat
+summary: "Create a shuffle inside a ward and maintain both with the same concentration action."
 ---
 **Prerequisites:** Mana sphere, Protection sphere.
 

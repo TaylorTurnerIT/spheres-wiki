@@ -4,6 +4,7 @@ name: "Reservoir"
 sphere: blood
 tags: []
 tier: feat
+summary: "Collect blood points from slain affected creatures to reduce Blood sphere Constitution damage, bleed, or blood loss."
 ---
 
 **Prerequisite:** Blood sphere.

@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Reduce the spell point cost of Combat Recharge and treat concentration checks to cast the recharged effect as a roll of 15."
 ---
 **Prerequisites:** Charged Spells, Combat Recharge
 

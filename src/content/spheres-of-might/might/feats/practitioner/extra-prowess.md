@@ -4,6 +4,7 @@ name: Extra Prowess
 tags:
   - practitioner
 tier: feat
+summary: "Gain an additional prowess."
 ---
 
 You know how to better utilize your armiger abilities.

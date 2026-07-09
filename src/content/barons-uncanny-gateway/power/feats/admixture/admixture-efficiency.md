@@ -5,6 +5,7 @@ tags:
   - admixture
   - sm
 tier: feat
+summary: "Remove the extra spell point cost for applying non-Destruction sphere effects through Admixture feats."
 ---
 
 **Prerequisites:** Destruction Sphere (Admixture), any Admixture feat, MSB +7

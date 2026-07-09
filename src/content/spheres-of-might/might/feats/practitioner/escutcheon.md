@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: shield
 tier: feat
+summary: "Use a shield as your banner without needing a free hand."
 ---
 
 **Prerequisites:** Banner class feature or Warleader sphere (Heraldry), Shield sphere.

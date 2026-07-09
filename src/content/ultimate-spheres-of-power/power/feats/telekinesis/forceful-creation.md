@@ -4,6 +4,7 @@ name: Forceful Creation
 sphere: telekinesis
 dualSphere: creation
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Creation sphere, Telekinesis sphere.

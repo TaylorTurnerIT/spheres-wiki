@@ -5,6 +5,7 @@ sphere: creation
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Creation sphere (any (material) talent).

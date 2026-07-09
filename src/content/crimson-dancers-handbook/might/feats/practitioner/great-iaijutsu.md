@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: duelist
 tier: feat
+summary: "Expend martial focus when using Iai Slash to apply an additional (bleed) talent to one or all struck creatures."
 ---
 
 **Prerequisites:** Duelist sphere (Iai Slash (bleed)), base attack bonus +5.

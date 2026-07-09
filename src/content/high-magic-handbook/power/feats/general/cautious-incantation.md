@@ -5,6 +5,7 @@ tags:
   - general
   - mythic
 tier: feat
+summary: "You do not suffer the effects of backlash when successfully performing an incantation that involves a chosen skill."
 ---
 **Prerequisite:** 3 ranks in any 1 skill.
 

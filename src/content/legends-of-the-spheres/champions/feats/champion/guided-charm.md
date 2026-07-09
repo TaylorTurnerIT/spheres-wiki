@@ -5,6 +5,7 @@ sphere: mind
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 **Prerequisite:** Mind sphere.
 

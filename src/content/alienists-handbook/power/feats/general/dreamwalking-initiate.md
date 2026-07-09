@@ -4,6 +4,7 @@ name: Dreamwalking Initiate
 tags:
   - general
 tier: feat
+summary: "Gain the acolyte dreaming hedgewitch secret and use character level as effective hedgewitch level if needed."
 ---
 **Prerequisite:** Dreamspace.
 

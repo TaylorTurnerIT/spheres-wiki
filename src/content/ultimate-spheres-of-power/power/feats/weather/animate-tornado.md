@@ -4,6 +4,7 @@ name: Animate Tornado
 sphere: weather
 dualSphere: enhancement
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), Weather sphere (Tornado Lord, Wind Lord).

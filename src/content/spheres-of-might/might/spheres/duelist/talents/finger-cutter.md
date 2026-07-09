@@ -4,6 +4,7 @@ name: "Finger Cutter"
 tier: "basic"
 tags:
   - "disarm"
+summary: ""
 ---
 
 Whenever you succeed at a disarm attempt against a creature, they take 1 additional point of bleed damage, +1 additional point for every 3 points of base attack bonus you possess. This stacks with other bleed damage granted by the Duelist sphere.

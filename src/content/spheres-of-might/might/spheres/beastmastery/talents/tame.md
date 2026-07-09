@@ -3,6 +3,7 @@ id: "tame"
 name: "Tame"
 tier: "base"
 tags: []
+summary: "Tame multiple animals whose total Hit Dice do not exceed your ranks in Handle Animal."
 ---
 
 You may attempt to train an animal to readily obey your commands in and out of combat. This requires 8 hours and a creature of the animal type that has an attitude toward you of indifferent or better. This time may be divided as per the magic item crafting rules. You may only train one creature at a time with this ability. At the end of this period, make a Handle Animal check with a DC of 10 + the creature’s Hit Dice. If successful, the creature is now considered tame.

@@ -5,6 +5,7 @@ tags:
   - defiler
   - drawback
 tier: feat
+summary: "Increase the radius of your Terrain Casting corruption to raise the DC of the blighting effect and feats affecting creatures within the area."
 ---
 You enlarge the area of your despoilation to amplify its effects.
 

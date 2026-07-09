@@ -5,6 +5,7 @@ tags:
   - 3pp
   - general
 tier: feat
+summary: "Count as possessing all range talents a number of times equal to the most times you have selected a single range talent."
 ---
 **Prerequisites:** Sphere Virtuoso, must have taken at least one range talent at least twice.
 **Benefits:** You count as possessing a number of all range talents equal to the number of instances you have selected a single range talent

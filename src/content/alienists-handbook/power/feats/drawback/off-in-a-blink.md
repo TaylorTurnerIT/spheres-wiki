@@ -4,6 +4,7 @@ name: Off In A Blink
 tags:
   - drawback
 tier: feat
+summary: "Delay a magic sphere effect created while observed until you are no longer observed, avoiding the normal Coy Caster penalties."
 ---
 **Prerequisite:** Coy Caster.
 

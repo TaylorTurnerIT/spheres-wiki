@@ -5,6 +5,7 @@ sphere: artifice
 tags:
   - operative
 tier: feat
+summary: "Create a deific artwork that grants bonuses to saving throws and skill checks."
 ---
 
 **Prerequisites:** Artifice sphere ((artwork) package), Knowledge (religion) 3 ranks, must worship a deity (or similar creature).

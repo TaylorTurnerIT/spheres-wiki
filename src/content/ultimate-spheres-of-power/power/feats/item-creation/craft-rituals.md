@@ -4,6 +4,7 @@ name: Craft Rituals
 tags:
   - item-creation
 tier: feat
+summary: "You gain the ability to research rituals."
 ---
 **Prerequisite:** Ritual Caster, casting class feature.
 

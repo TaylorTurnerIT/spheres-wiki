@@ -4,6 +4,7 @@ name: Backdoor Arcana
 tags:
   - drawback
 tier: feat
+summary: "Spend an additional spell point to ignore dead magic or wild magic zones for a talent's effect."
 ---
 Your strange magic grants a degree of consistency in tumultuous situations.
 

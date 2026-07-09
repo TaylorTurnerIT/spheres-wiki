@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 You have long practiced the ability to fly with greater loads.
 

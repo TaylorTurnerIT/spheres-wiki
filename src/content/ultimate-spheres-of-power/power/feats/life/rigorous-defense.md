@@ -4,6 +4,7 @@ name: "Rigorous Defense"
 sphere: life
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Life sphere, inspiration class feature.

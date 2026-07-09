@@ -5,6 +5,7 @@ sphere: berserker
 tags:
   - champion
 tier: feat
+summary: "Shed light while berserking, and forgo berserking while below 0 hp to invigorate allies within the light."
 ---
 Deep from within, there is a light that fills you, and you show the world that death is owed nothing.
 

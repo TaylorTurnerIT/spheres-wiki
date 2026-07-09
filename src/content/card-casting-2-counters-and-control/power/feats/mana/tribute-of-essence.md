@@ -4,6 +4,7 @@ name: "Tribute of Essence"
 sphere: mana
 tags: []
 tier: feat
+summary: "Use Essentialize on yourself as a free action and treat subordinate-creating effects as self effects for Essentialize."
 ---
 
 **Prerequisites:** Mana Sphere (Essentialize)

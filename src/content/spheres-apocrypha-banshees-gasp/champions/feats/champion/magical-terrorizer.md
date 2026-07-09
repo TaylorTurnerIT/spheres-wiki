@@ -5,6 +5,7 @@ sphere: gladiator
 tags:
   - champion
 tier: feat
+summary: "Affect creatures with your Hear Their Screams talent when you cause them to become shakened, frightened, or panicked."
 ---
 **Prerequisites:** Gladiator sphere (Hear Their Screams), casting class feature, character level 5th.
 

@@ -4,6 +4,7 @@ name: Wand Charger
 tags:
   - general
 tier: feat
+summary: "Spend spell points up to half your caster level per day to recharge a spell engine, and treat your caster level as 4 higher when determining which engines you can recharge."
 ---
 **Prerequisites:** Craft Spell Engine, caster level 4th.
 

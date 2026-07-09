@@ -4,6 +4,7 @@ name: "Whirlwind Draw"
 tier: "basic"
 tags:
   - "disarm"
+summary: ""
 ---
 
 Whenever you succeed at a disarm attempt, you may immediately sheathe your weapon as a free action.

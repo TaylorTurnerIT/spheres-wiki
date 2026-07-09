@@ -5,6 +5,7 @@ sphere: war
 tags:
   - squadron
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

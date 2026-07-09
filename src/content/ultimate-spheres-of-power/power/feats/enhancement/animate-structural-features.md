@@ -4,6 +4,7 @@ name: "Animate Structural Features"
 sphere: enhancement
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)).

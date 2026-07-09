@@ -5,6 +5,7 @@ sphere: protection
 dualSphere: creation
 tags: ["sm"]
 tier: feat
+summary: "Apply a ward to a creature bound by your Restrictive Casing object for as long as the object lasts."
 ---
 
 **Prerequisites:** Creation Sphere (Restrictive Casting), Protection Sphere (Distant Protection)

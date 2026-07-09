@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - general
 tier: feat
+summary: "Gain the supernatural ability to shapeshift into a specific creature form corresponding to a chosen Alteration sphere transformation talent as a full-round action."
 ---
 *Errata:* The Transformation feat (Ultimate Spheres of Power pg. 487) has received an errata, clarifying some interactions and allowing the feat to be taken more than once.
 

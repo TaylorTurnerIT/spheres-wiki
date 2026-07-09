@@ -4,6 +4,7 @@ name: Terrain Defiler
 tags:
   - drawback
 tier: feat
+summary: "Increase the radius of Terrain Casting corruption to reduce the spell point cost of any metamagic feat by 1."
 ---
 **Prerequisites:** Terrain Casting drawback, non-good alignment.
 

@@ -4,6 +4,7 @@ name: Circle Casting
 tags:
   - general
 tier: feat
+summary: "Spend a standard action to grant an allied spellcaster with this feat a bonus to their caster level and access to your spell points and talents."
 ---
 **Prerequisites:** Casting class feature, magic skill bonus +10.
 

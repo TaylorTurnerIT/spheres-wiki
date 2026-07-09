@@ -4,6 +4,7 @@ name: "Lifebound Auspician"
 sphere: life
 tags: []
 tier: feat
+summary: "You can substitute living or undead for alignment in Fate sphere effects, and modify the Serendipity consecration to specifically buff either living or undead creatures."
 ---
 You bend the forces of the cosmos to the heartbeat of mortality.
 **Prerequisites:** Fate sphere; Death sphere or Life sphere; caster level 3rd.

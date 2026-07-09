@@ -4,6 +4,7 @@ name: Shadow Cage
 sphere: protection
 dualSphere: dark
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Dark sphere, Protection sphere.
 

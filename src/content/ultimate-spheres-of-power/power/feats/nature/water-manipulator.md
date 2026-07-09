@@ -4,6 +4,7 @@ name: Water Manipulator
 sphere: nature
 dualSphere: fallen-fey
 tier: feat
+summary: "Gain the benefits of Water Creature as a (spirit) talent usable at any time, using your geomancing range and the higher of your Nature (water) or Fallen Fey caster level."
 ---
 
 **Prerequisites:** Fallen Fey sphere (Water Creature (fey-blessing)), Nature sphere ((water) package).

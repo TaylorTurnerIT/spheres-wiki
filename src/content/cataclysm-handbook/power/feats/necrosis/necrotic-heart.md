@@ -4,6 +4,7 @@ name: Necrotic Heart
 sphere: death
 tags: []
 tier: feat
+summary: ""
 ---
 
 Your body is sustained by necromantic power.

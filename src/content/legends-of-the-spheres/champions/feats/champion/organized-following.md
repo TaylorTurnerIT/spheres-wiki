@@ -5,6 +5,7 @@ sphere: faction
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Faction sphere, Leadership sphere.

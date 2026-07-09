@@ -4,6 +4,7 @@ name: "Powerful Wings"
 tier: "basic"
 tags:
   - "fly"
+summary: "Hover and ascend vertically without Fly checks, and create a concealing debris cloud if Large or larger."
 ---
 
 While flying, you may ascend vertically without making a Fly check.

@@ -6,6 +6,7 @@ tags:
   - 3pp
   - admixture
 tier: feat
+summary: "You may spend an additional spell point when using Admixture to center a totem effect on an affected square or apply a totemic aura to a damaged target."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), War sphere.

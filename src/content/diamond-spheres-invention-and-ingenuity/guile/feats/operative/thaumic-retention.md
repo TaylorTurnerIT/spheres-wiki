@@ -5,6 +5,7 @@ sphere: artifice
 tags:
   - operative
 tier: feat
+summary: "Create an artwork that stores and casts a magical sphere ability or spell."
 ---
 
 **Prerequisites:** Associated skill 5 ranks, Artifice sphere ((artwork) package), Spellcraft 5 ranks.

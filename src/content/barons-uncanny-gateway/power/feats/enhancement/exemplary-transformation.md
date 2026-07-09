@@ -5,6 +5,7 @@ sphere: enhancement
 dualSphere: alteration
 tags: ["sm"]
 tier: feat
+summary: "Modify select enhancements on targets with Outsider Body traits to stack aligned damage reduction or grant sacred or profane ability bonuses."
 ---
 
 **Prerequisites:** Alteration Sphere (outsider body), Enhancement Sphere (emphasize belief, mental enhancement, or physical enhancement)

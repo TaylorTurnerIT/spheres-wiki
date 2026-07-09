@@ -3,6 +3,7 @@ id: "soul-link"
 name: "Soul Link"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Lancer sphere, impale ability, base attack bonus +5.

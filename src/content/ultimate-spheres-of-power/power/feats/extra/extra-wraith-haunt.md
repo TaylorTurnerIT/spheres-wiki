@@ -4,6 +4,7 @@ name: Extra Wraith Haunt
 tags:
   - extra
 tier: feat
+summary: "Gain an additional wraith haunt"
 ---
 **Prerequisites:** Wraith haunt class feature.
 

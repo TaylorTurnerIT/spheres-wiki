@@ -5,6 +5,7 @@ tier: "basic"
 tags:
   - "handle-animal"
   - "utility"
+summary: "Use Handle Animal instead of Diplomacy to improve an animal's attitude."
 ---
 
 You can improve the attitude of an animal. This ability functions just like a Diplomacy check made to improve the attitude of a person, using your Handle Animal skill in place of Diplomacy. If you possess the wild empathy class feature, you may add your Handle Animal ranks to your levels in the class that grants the class feature (with a maximum equal to your Hit Dice) to determine the result.

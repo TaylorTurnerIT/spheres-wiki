@@ -5,6 +5,7 @@ sphere: telekinesis
 tags:
   - counterspell
 tier: feat
+summary: "Lift and move a successfully counterspelled effect using the Telekinesis sphere."
 ---
 **Prerequisites:** Telekinesis sphere, Counterspell.
 

@@ -4,6 +4,7 @@ name: "Reprogram Power"
 sphere: mana
 tags: []
 tier: feat
+summary: "Learn a Mana manipulation that temporarily swaps a wielded magic weapon's special ability for another of the same enhancement cost."
 ---
 **Prerequisites:** Mana sphere, Enhancement sphere, magic skill bonus +3.
 

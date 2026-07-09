@@ -4,6 +4,7 @@ name: Elicit Strike
 tags:
   - combat
 tier: feat
+summary: "Deliver a touch emotion power as a swift action after a successful melee attack."
 ---
 **Prerequisite:** Emotion class feature.
 

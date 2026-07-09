@@ -4,6 +4,7 @@ name: Spell Proxy
 tags:
   - proxy
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting.

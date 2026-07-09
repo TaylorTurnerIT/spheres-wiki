@@ -4,6 +4,7 @@ name: Tribal Fortification
 sphere: war
 dualSphere: protection
 tier: feat
+summary: "Spend a spell point when creating a ward to add a totem effect to it, causing the entire ward area to function as your totem."
 ---
 **Prerequisites:** Protection sphere, War sphere.
 

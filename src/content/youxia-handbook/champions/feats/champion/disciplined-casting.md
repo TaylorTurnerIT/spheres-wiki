@@ -6,6 +6,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Avoid provoking attacks of opportunity when delivering a magical sphere effect with an unarmed melee touch attack or unarmed strike."
 ---
 **Prerequisites:** Open Hand sphere, casting.
 

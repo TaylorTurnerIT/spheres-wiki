@@ -4,6 +4,7 @@ name: Reinforced Structure
 tags:
   - drawback
 tier: feat
+summary: ""
 ---
 The magic objects that you create can be reinforced to be stronger.
 

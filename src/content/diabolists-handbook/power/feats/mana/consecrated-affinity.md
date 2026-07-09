@@ -4,6 +4,7 @@ name: Consecrated Affinity
 sphere: mana
 dualSphere: fate
 tier: feat
+summary: "Create manabonds with qualifying creatures inside your consecration without concentrating while they remain there."
 ---
 
 Your presence warps the fabric of magic, binding creatures together.

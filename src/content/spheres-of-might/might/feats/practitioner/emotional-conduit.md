@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: leadership
 tier: feat
+summary: "Channel your emotion class feature through a cohort to treat it as the origin of the effect."
 ---
 
 **Prerequisites:** Leadership sphere, (cohort) package, emotion class feature.

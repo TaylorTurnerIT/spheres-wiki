@@ -5,6 +5,7 @@ sphere: guardian
 tags:
   - champion
 tier: feat
+summary: "Cure or restore a creature that called you with I Will Come, taking damage that can be placed in your delayed damage pool."
 ---
 **Prerequisites:** Guardian sphere (Defend Other, I Will Hear, I Will Come), Life sphere (Empathic Healing), Harrying Hospitaler, base attack bonus +10, caster level 10th.
 

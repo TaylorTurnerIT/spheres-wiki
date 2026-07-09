@@ -4,6 +4,7 @@ name: Cunning Caster
 tags:
   - general
 tier: feat
+summary: "You can attempt a Bluff check to conceal your actions when creating a magical sphere effect."
 ---
 **Prerequisites:** Deceitful, caster level 1st.
 

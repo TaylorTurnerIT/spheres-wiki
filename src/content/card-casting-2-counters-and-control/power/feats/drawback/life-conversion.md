@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Increase Draining Casting damage to reduce a spell point cost by 1, with an alternate card recovery option for Card Casting."
 ---
 **Prerequisites:** Draining Casting
 

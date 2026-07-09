@@ -5,6 +5,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "After hitting a smited creature, project your class-feature auras from that creature's space until your next turn."
 ---
 **Prerequisites:** ability to smite creatures (such as through smite evil or smite good), class feature that creates a continual aura (such as aura of courage or aura of fear)
 

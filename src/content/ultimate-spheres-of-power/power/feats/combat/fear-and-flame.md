@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: "Force creatures set on fire by your destructive blast to make a Will save each round or suffer progressively worsening fear conditions."
 ---
 
 **Prerequisites:** Destruction sphere (Fire Blast (blast type, fire)).

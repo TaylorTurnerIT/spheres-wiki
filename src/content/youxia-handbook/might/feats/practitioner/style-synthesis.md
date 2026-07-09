@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Activate a style feat as part of the action used to activate a stance talent."
 ---
 
 **Prerequisites:** Any (stance) talent, any style feat.

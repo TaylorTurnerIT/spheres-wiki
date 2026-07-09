@@ -6,6 +6,7 @@ tags:
   - 3pp
   - champion
 tier: feat
+summary: "Gain tension from performance sphere actions and spend tension to reduce their action cost."
 ---
 **Prerequisites:** Performance sphere, tension pool 
 

@@ -4,6 +4,7 @@ name: Harmonic Resilience
 tags:
   - general
 tier: feat
+summary: "Apply your spell or power resistance and immunities against magic from any source and, when relevant, psionics."
 ---
 Miracles of any shape fail to penetrate your defenses.
 

@@ -4,6 +4,7 @@ name: Manabond Versatility
 sphere: mana
 dualSphere: "any"
 tier: feat
+summary: "Let costly targeted talents from a chosen non-Mana sphere form manabonds with willing or failed-save targets."
 ---
 
 Magic can be woven and bound in all of its myriad forms.

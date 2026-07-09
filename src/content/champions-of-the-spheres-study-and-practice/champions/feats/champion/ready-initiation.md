@@ -6,6 +6,7 @@ tags:
   - combat
   - teamwork
 tier: feat
+summary: "Let multi-character techniques performed by participants with this feat occur on the highest participant initiative count."
 ---
 When one of your allies primes a technique, you respond immediately.
 

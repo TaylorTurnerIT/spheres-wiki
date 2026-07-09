@@ -6,6 +6,7 @@ tags:
   - sm
   - squadron
 tier: feat
+summary: "Allow willing squadron members to take strain damage for another squadron member."
 ---
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Hive Mind, Troop Commander: caster level 5th or 5 ranks in Diplomacy.
 

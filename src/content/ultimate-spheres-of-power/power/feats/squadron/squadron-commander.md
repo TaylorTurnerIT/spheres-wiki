@@ -6,6 +6,7 @@ tags:
   - extraordinary
   - squadron
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** War sphere.

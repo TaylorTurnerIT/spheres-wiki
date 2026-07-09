@@ -4,6 +4,7 @@ name: Saga-Bound Suits
 tags:
   - saga
 tier: feat
+summary: "Assign an ability score suit to each Saga Deck card to gain a +2 luck bonus when playing a card for a d20 roll that uses its corresponding ability modifier."
 ---
 
 **Prerequisites:** Saga-Bound Fate

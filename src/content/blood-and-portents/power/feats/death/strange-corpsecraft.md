@@ -4,6 +4,7 @@ name: "Strange Corpsecraft"
 sphere: death
 tags: []
 tier: feat
+summary: "Reanimate selected variant undead with Expanded Necromancy by meeting their special corpse and sphere requirements."
 ---
 
 **Prerequisites:** Death sphere (Expanded Necromancy), caster level 3rd.

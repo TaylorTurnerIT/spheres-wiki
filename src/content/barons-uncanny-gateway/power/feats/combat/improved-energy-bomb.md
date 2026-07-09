@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - sm
 tier: feat
+summary: "Increase energy bomb splash radius and throw bombs as part of instilling them with a standard or full-round action."
 ---
 
 **Prerequisites:** Destruction Sphere (energy bomb)

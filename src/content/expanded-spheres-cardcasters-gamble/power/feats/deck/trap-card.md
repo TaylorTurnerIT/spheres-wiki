@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Place a card face-down to ready a spell effect that triggers when a specified condition occurs."
 ---
 
 **Prerequisite:** Card Casting drawback

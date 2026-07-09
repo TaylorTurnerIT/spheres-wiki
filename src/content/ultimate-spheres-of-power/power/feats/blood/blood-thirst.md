@@ -4,6 +4,7 @@ name: "Blood Thirst"
 sphere: blood
 tags: ["extraordinary"]
 tier: feat
+summary: "You gain the blood drain universal monster ability with your bite attack and heal hit points when you inflict Constitution damage."
 ---
 
 **Prerequisites:** Blood sphere, bite attack.

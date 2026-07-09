@@ -4,6 +4,7 @@ name: Shield Drone
 tags:
   - practitioner
 tier: feat
+summary: "Grant your drones shield proficiency and a bonus talent from the Guardian or Shield sphere."
 ---
 
 **Prerequisites:** Tech sphere, Drone.

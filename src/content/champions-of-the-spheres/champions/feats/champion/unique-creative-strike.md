@@ -5,6 +5,7 @@ tags:
   - 3pp
   - champion
 tier: feat
+summary: "Use creative strike with ranged weapons properly sized for you and count as having Point-Blank Shot for prerequisites."
 ---
 **Prerequisite:** Creative strike class feature.
 

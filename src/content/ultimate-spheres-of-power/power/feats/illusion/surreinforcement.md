@@ -4,6 +4,7 @@ name: Surreinforcement
 sphere: illusion
 dualSphere: creation
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Creation sphere; Illusion sphere (Shadow Infusion) or create reality class feature.

@@ -3,6 +3,7 @@ id: "alchemical-dragon"
 name: "Alchemical Dragon"
 tier: "advanced"
 tags: []
+summary: "Drink a liquid alchemical weapon to spit it out as a damaging cone."
 ---
 
 **Prerequisites:** Alchemy sphere, Barroom sphere.

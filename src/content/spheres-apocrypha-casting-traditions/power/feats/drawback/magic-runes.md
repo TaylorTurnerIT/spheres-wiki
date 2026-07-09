@@ -4,6 +4,7 @@ name: Magic Runes
 tags:
   - drawback
 tier: feat
+summary: "Imbue your diagrams with magic that triggers at a later time."
 ---
 **Prerequisites:** Diagram Magic.
 

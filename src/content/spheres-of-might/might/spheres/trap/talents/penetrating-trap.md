@@ -3,6 +3,7 @@ id: "penetrating-trap"
 name: "Penetrating Trap"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Trap sphere, Craft (traps) 4 ranks.

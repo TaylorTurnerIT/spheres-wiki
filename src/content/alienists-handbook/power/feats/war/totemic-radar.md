@@ -4,6 +4,7 @@ name: Totemic Radar
 sphere: war
 dualSphere: divination
 tier: feat
+summary: "Extend Blindfolded Oracle blindsense to your totem's area while your eyes are closed within it."
 ---
 **Prerequisites:** Divination sphere (Blindfolded Oracle (sense)), War sphere.
 

@@ -5,6 +5,7 @@ sphere: performance
 tags:
   - champion
 tier: feat
+summary: "Regain martial focus through your Performance sphere abilities."
 ---
 **Prerequisites:** Performance sphere, ability to maintain martial focus.
 

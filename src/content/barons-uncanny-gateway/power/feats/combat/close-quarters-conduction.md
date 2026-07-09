@@ -5,6 +5,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Resolve electricity destructive blasts against creatures in your reach with a melee attack roll instead of a Reflex save."
 ---
 
 **Prerequisites:** Destruction Sphere (at least one (blast type) talent that deals electricity damage)

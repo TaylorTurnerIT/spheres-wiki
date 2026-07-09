@@ -4,6 +4,7 @@ name: Spell Dabbler
 tags:
   - ritual
 tier: feat
+summary: ""
 ---
 You have learned to hold rituals in your memory to a minor degree.
 

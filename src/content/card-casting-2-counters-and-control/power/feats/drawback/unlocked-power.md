@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Gain three magic talents that become usable on the 3rd, 5th, and 7th rounds of combat."
 ---
 **Prerequisites:** Ramp Up
 

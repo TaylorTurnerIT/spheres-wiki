@@ -4,6 +4,7 @@ name: "Skillful Force"
 sphere: telekinesis
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Telekinesis sphere (Finesse, Steal, or Telekinetic Tools).

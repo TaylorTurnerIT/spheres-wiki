@@ -6,6 +6,7 @@ tags:
   - drawback
   - general
 tier: feat
+summary: "Attempt to temporarily remember a magic talent you do not know once per day."
 ---
 **Prerequisites:** MSB +1
 

@@ -3,6 +3,7 @@ id: "steal-talent"
 name: "Steal Talent"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Scoundrel sphere, Steal Skill, Sleight of Hand 7 ranks.

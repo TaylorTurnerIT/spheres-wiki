@@ -5,6 +5,7 @@ tags:
   - chance
   - channeling
 tier: feat
+summary: "Spend a kismet point when channeling energy to apply a luck bonus or penalty to the next saving throw of all affected creatures."
 ---
 **Prerequisites:** Channel energy.
 

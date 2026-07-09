@@ -5,6 +5,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Spend a spell point when a recent Mind sphere target drops to 0 hit points to deal mind-affecting area damage."
 ---
 
 **Prerequisites:** Mind Sphere

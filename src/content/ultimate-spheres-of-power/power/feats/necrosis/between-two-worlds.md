@@ -5,6 +5,7 @@ sphere: death
 tags:
   - necrosis
 tier: feat
+summary: ""
 ---
 
 You can reverse the flow of your body's energies, changing what will heal and harm you.

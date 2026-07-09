@@ -4,6 +4,7 @@ name: "Healing Touch"
 sphere: life
 tags: []
 tier: feat
+summary: "Use invigorate or restore as part of the same action when healing a creature with lay on hands or fervor."
 ---
 
 **Prerequisites:** Life sphere; lay on hands or fervor class feature.

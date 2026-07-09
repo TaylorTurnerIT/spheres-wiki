@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Treat your base attack bonus as higher for the effects of one combat sphere."
 ---
 
 Your knowledge of one particular combat sphere is without peer.

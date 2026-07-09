@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "You may assign two colors to a magic effect card to reduce its spell point cost by 1."
 ---
 
 **Prerequisites:** Card Casting (Mana Pool and Colored Mana)

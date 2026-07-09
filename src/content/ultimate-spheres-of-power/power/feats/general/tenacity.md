@@ -4,6 +4,7 @@ name: Tenacity
 tags:
   - general
 tier: feat
+summary: "Gain temporary hit points equal to your Hit Dice plus your casting ability modifier the first time you activate a specific judgment each day."
 ---
 **Prerequisite:** Judgment class ability.
 

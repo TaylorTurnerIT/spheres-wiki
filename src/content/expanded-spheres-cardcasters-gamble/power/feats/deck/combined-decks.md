@@ -6,6 +6,7 @@ tags:
   - drawback
   - theurge
 tier: feat
+summary: "Combine cards from multiple casting traditions into a single deck."
 ---
 
 **Prerequisites:** At least two casting traditions with Card Casting

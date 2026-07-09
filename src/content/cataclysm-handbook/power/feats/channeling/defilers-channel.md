@@ -6,6 +6,7 @@ tags:
   - defiler
   - drawback
 tier: feat
+summary: "Drain an area of its nutrients to increase the number of dice used with your channel energy."
 ---
 You draw life energy directly from your environment.
 

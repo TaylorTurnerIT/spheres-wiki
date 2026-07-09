@@ -4,6 +4,7 @@ name: Locked Bond
 sphere: warp
 dualSphere: mana
 tier: feat
+summary: "Spend an extra spell point when creating a manabond to apply dimensional anchor to both linked creatures while it lasts."
 ---
 **Prerequisites:** Mana sphere, Warp sphere (Plane Manipulator).
 

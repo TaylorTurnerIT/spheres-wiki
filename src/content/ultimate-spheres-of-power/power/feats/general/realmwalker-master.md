@@ -4,6 +4,7 @@ name: Realmwalker Master
 tags:
   - general
 tier: feat
+summary: ""
 ---
 "And so you walk our path too, and shall experience and be a great many things, be you a traveler, wanderer, savior, or scourge to those you will cross paths with." – A Realmwalker's Initiation
 

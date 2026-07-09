@@ -4,6 +4,7 @@ name: "Transfusion"
 sphere: blood
 tags: []
 tier: feat
+summary: "You can use Absorb Blood to deal Dexterity or Strength damage instead of Constitution damage, and can optionally heal your own ability damage of the same type instead of hit points."
 ---
 
 **Prerequisites:** Blood sphere (Absorb Blood), caster level 5th.

@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: alchemy
 tier: feat
+summary: "Increase the Craft DC of a formulae by 10 to change its Reflex save to a Fortitude save, or turn a single-target formulae into a thrown 5-foot radius burst."
 ---
 
 **Prerequisites:** Alchemy sphere ((formulae) package)

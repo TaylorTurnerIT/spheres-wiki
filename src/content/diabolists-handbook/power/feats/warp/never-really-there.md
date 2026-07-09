@@ -4,6 +4,7 @@ name: Never Really There
 sphere: warp
 dualSphere: mind
 tier: feat
+summary: "Teleport when using the Amnesia charm."
 ---
 
 Your escape masks any memory of your presence.

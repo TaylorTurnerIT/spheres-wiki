@@ -4,6 +4,7 @@ name: Ritualistic Perseverance
 tags:
   - general
 tier: feat
+summary: "Take 10 on a single skill check for two chosen skills during an incantation, even if it has a backlash component."
 ---
 **Prerequisite:** 3 ranks in any 2 skills.
 

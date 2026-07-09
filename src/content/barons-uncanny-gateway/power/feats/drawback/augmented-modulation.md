@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Regain mental focus to change choices for aegis or enhancement effects you created on yourself."
 ---
 **Prerequisites:** Mental Focus drawback, Enhancement or Protection Sphere
 

@@ -6,6 +6,7 @@ tags:
   - drawback
 sphere: blood
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Card Casting

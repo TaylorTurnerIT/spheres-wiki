@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Reduce the caster level penalty of an (amp) talent by 1 for every 10 by which you exceed the Skilled Casting skill check DC."
 ---
 **Prerequisites:** Mana Sphere (any (amp) talent), Skilled Casting drawback
 

@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: alchemy
 tier: feat
+summary: "Use a prepared war paint to cast the Augury (divine) Divination talent or another (divine) talent you possess."
 ---
 
 Whether through acts of charlatanism or infusing your paints with latent magic, you’ve become skilled with using your paints to depict cryptic, almost prophetic imagery.

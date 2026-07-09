@@ -3,6 +3,7 @@ id: "remote-trigger"
 name: "Remote Trigger"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 As an immediate action, when a creature comes within the area of effect of one of your traps, you may trigger a trap. Additionally, when a creature succeeds on a Reflex save to avoid triggering one of your snare traps, you may force them to reroll the save as an immediate action. You must be within close range (25 ft. plus 5 ft. per 2 ranks in Craft (traps)) of the trap to use either ability.

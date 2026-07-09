@@ -6,6 +6,7 @@ tags:
   - practitioner
   - sm
 tier: feat
+summary: "Perform a feint against a target as a boast."
 ---
 
 **Prerequisites:** Fencing Sphere, Gladiator Sphere

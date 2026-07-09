@@ -6,6 +6,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Gain a temporary spell point when a damaged creature fails a concentration check on a resource-spending effect."
 ---
 
 **Prerequisites:** Mana sphere

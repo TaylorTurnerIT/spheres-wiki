@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: warleader
 tier: feat
+summary: "Maintain a tactic as part of a bardic performance or raging song without spending additional actions."
 ---
 
 **Prerequisites:** Warleader sphere, bardic performance or raging song class feature.

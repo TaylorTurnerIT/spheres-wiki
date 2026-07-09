@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Discard cards as an immediate action to prevent an effect you created from being dispelled."
 ---
 
 **Prerequisites:** Card Casting (Cooldown)

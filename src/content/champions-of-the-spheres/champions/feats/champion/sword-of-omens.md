@@ -5,6 +5,7 @@ sphere: fate
 tags:
   - champion
 tier: feat
+summary: "Concentrate on consecrations as a faster action, easily pass concentration checks, and make enemies provoke attacks of opportunity in the consecration area."
 ---
 **Prerequisites:** Fate sphere, Guardian sphere, base attack bonus +5.
 

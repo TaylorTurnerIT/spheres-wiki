@@ -4,6 +4,7 @@ name: Extra Spell Points
 tags:
   - extra
 tier: feat
+summary: "Your spell pool total increases by 2."
 ---
 **Prerequisite:** Spell Pool. 
 

@@ -4,6 +4,7 @@ name: Unseen Terror
 tags:
   - practitioner
 tier: feat
+summary: "Gain bonuses to Intimidate and Stealth and demoralize creatures that fail to notice you."
 ---
 
 The hunter stalks its prey. The prey knows, but can only run from the scraping, rattling, and growling noises which chase them.

@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: alchemy
 tier: feat
+summary: "Increase both the benefits and penalties of your Alchemy sphere poisons by 2."
 ---
 
 You can fine tune your alchemical poisons to your own biology to get the most bang for your buck.

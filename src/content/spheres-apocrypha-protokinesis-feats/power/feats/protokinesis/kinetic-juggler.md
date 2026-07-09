@@ -4,6 +4,7 @@ name: Kinetic Juggler
 sphere: telekinesis
 tags: []
 tier: feat
+summary: "Cause a weapon to float in mid-air, allowing you to free your hands without dropping it."
 ---
 
 **Prerequisites:** Telekinesis sphere, base attack bonus +1.

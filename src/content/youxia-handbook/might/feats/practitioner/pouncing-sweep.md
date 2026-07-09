@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: athletics
 tier: feat
+summary: "Move before performing a trip when using the sweep ability of the Open Hand sphere."
 ---
 
 **Prerequisites:** Athletics sphere, Open Hand sphere.

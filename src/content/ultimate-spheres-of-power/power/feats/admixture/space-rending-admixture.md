@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "You can spend a spell point to apply Unwilling Teleport to targets damaged by your Admixture."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Warp sphere (Unwilling Teleport).

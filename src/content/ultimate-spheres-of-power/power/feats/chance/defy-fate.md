@@ -4,6 +4,7 @@ name: Defy Fate
 tags:
   - chance
 tier: feat
+summary: "As long as you have at least one kismet point, you automatically succeed on Constitution checks to stabilize and may roll twice on saving throws against effects that would kill you outright."
 ---
 **Prerequisites:** Kismet pool.
 

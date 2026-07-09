@@ -4,6 +4,7 @@ name: Black Totem
 sphere: war
 dualSphere: dark
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Dark sphere, War sphere.

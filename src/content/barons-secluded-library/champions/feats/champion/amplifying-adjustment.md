@@ -6,6 +6,7 @@ tags:
   - champion
   - sm
 tier: feat
+summary: "Apply an (amp) talent as part of the same action when applying a (hack) talent to a magic effect or item."
 ---
 **Prerequisites:** Mana sphere (any (amp) talent), Spellhacking sphere
 

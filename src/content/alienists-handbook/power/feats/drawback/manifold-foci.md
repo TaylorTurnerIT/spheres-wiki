@@ -4,6 +4,7 @@ name: Manifold Foci
 tags:
   - drawback
 tier: feat
+summary: "Use multiple foci or centers of power, gaining defensive casting bonuses from intact ones and caster level penalties from damaged ones."
 ---
 **Prerequisite:** Center Of Power or Focus Casting.
 

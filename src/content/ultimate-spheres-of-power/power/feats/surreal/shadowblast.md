@@ -4,6 +4,7 @@ name: Shadowblast
 tags:
   - surreal
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Shadowmark class feature.

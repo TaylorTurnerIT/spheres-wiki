@@ -5,6 +5,7 @@ sphere: fate
 tags:
   - champion
 tier: feat
+summary: "Challenge creatures as part of targeting them with Fate sphere word talents."
 ---
 Your words inspire more than simple ire in your targets.
 

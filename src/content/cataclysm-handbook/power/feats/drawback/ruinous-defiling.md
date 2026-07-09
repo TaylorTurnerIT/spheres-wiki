@@ -5,6 +5,7 @@ tags:
   - defiler
   - drawback
 tier: feat
+summary: "Deal negative energy damage to other creatures in areas you blight, corrupt, or drain using the Terrain Casting drawback."
 ---
 Your despoilation inflicts pain on those caught in your path.
 

@@ -4,6 +4,7 @@ name: Harmonic Counter
 tags:
   - counterspell
 tier: feat
+summary: "Counter Alien Source effects without penalty and apply magic suppression or countering abilities across magic sources and technological equipment."
 ---
 Miracles of all sorts buckle before your might.
 

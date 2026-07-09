@@ -5,6 +5,7 @@ tags:
   - channeling
   - sm
 tier: feat
+summary: "Spend two channel energy uses to channel reduced energy as free actions within 10 feet for 1 minute."
 ---
 **Prerequisites:** Channel Energy 4d6
 

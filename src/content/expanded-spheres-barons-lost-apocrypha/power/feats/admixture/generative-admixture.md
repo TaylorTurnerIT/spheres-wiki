@@ -6,6 +6,7 @@ tags:
   - 3pp
   - admixture
 tier: feat
+summary: "When using Admixture, you can spend an additional spell point to apply an alter effect to a damaged target or create an object in an affected square."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Creation sphere.

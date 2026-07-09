@@ -4,6 +4,7 @@ name: "Deadcaller"
 sphere: death
 tags: []
 tier: feat
+summary: "Your undead Conjuration companion counts as an undead you control for Death sphere talents, and you can consume a recently slain corpse to reduce the cost of Call the Departed."
 ---
 The otherworldly are called like the departed, for little distinguishes the transient soul.
 

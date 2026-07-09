@@ -4,6 +4,7 @@ name: Extra Mystic Combat
 tags:
   - extra
 tier: feat
+summary: "Gain an extra mystic combat ability for which you qualify."
 ---
 **Prerequisite:** Mystic Combat class feature.
 

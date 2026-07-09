@@ -4,6 +4,7 @@ name: Alraun Nose
 tags:
   - racial
 tier: feat
+summary: ""
 ---
 Your sense of smell if even more developed, allowing you to pick out many more odors than just the smell of blood.
 

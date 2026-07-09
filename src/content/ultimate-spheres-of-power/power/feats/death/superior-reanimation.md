@@ -4,6 +4,7 @@ name: "Superior Reanimation"
 sphere: death
 tags: []
 tier: feat
+summary: ""
 ---
 
 Undead you create are even stronger than usual.

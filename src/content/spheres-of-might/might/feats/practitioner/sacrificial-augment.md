@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: guardian
 tier: feat
+summary: "As an immediate action, redirect damage from an emptying delayed damage pool to an augment, implant, or innate gadget, bypassing hardness and damage reduction."
 ---
 
 **Prerequisite:** Guardian sphere.

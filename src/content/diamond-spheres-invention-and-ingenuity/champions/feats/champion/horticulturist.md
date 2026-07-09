@@ -6,6 +6,7 @@ dualSphere: alchemy
 tags:
   - champion
 tier: feat
+summary: "Imbue your alchemical toxins and concoctions with special effects using herbs."
 ---
 **Prerequisite:** Associated ranks 3, Herbalism sphere ((herbal) package); either the Alchemy sphere ((poison) package) or Creation sphere.
 

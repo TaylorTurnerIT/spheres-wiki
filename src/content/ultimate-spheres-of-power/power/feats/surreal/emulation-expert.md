@@ -5,6 +5,7 @@ sphere: illusion
 tags:
   - surreal
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Illusion sphere (Manipulate Aura (sensory, magic)); Illusion sphere (Shadow Infusion) or shadow pool; Shadow Magic or create reality class feature.

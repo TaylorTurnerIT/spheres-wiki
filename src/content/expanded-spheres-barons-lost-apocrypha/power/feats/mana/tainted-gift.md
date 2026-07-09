@@ -4,6 +4,7 @@ name: "Tainted Gift"
 sphere: mana
 tags: []
 tier: feat
+summary: "When using Gift of Knowledge, you can simultaneously apply an additional non-harmless sphere effect to the target, though they lose the gift's benefits if they resist it."
 ---
 
 **Prerequisite:** Mana Sphere (Gift of Knowledge)

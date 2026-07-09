@@ -6,6 +6,7 @@ tags:
   - 3pp
   - admixture
 tier: feat
+summary: "When using Admixture, you can spend an additional spell point to apply a fey-link to a target damaged by your destructive blast instead of a second blast type."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Fallen Fey Sphere (Share Link).

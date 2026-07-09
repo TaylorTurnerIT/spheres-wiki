@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Discard cards from the top of your deck as a swift or immediate action to gain temporary hit points."
 ---
 
 **Prerequisites:** Card Casting (Cooldown, Deckout), Life Sphere

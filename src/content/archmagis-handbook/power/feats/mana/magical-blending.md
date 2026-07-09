@@ -4,6 +4,7 @@ name: "Magical Blending"
 sphere: mana
 tags: []
 tier: feat
+summary: "Gain new amp effects tied to your Death, Destruction, Mind, or Nature sphere access."
 ---
 **Prerequisites:** Mana sphere; Death sphere, Destruction sphere, Mind sphere, or Nature sphere ((water) package).
 

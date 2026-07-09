@@ -4,6 +4,7 @@ name: "Master Of Small Magics"
 sphere: enhancement
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, Cantrips.

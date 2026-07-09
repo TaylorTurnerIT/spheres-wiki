@@ -4,6 +4,7 @@ name: Extra Mastermind Trick
 tags:
   - operative
 tier: feat
+summary: "Gain an additional mastermind trick."
 ---
 
 **Prerequisite:** Mastermind 7.

@@ -4,6 +4,7 @@ name: Guarded Step
 sphere: warp
 dualSphere: protection
 tier: feat
+summary: "Reduce the action required to teleport yourself or your group into a ward you created by one step."
 ---
 **Prerequisites:** Protection sphere, Warp sphere.
 

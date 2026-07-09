@@ -4,6 +4,7 @@ name: Invigorating Rally
 sphere: war
 dualSphere: life
 tier: feat
+summary: "Invigorate an ally whenever you rally them."
 ---
 
 **Prerequisites:** Life sphere, War sphere.

@@ -4,6 +4,7 @@ name: Fey Interference
 tags:
   - racial
 tier: feat
+summary: "Force a creature within 30 ft. to reroll a natural 20 as an immediate action."
 ---
 When you deem it so, you can grace the Material Realm with the briefest touch of the meddling Fey Lords.
 

@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Increase your Giantslayer combat maneuver bonus against larger foes and use combat maneuvers against targets two size categories larger than normally allowed."
 ---
 
 You are the bane of those who believe they stand atop the world.

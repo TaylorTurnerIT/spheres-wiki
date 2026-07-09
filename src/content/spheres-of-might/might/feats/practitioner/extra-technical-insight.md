@@ -4,6 +4,7 @@ name: Extra Technical Insight
 tags:
   - practitioner
 tier: feat
+summary: "Gain an additional technical insight."
 ---
 
 Your experimentations have unlocked new insights.

@@ -5,6 +5,7 @@ tags:
   - champion
   - sm
 tier: feat
+summary: "Spend notions from your current theory in place of momentum points when the effect applies to the subject of your theory."
 ---
 **Prerequisites:** Study Sphere, War Sphere
 

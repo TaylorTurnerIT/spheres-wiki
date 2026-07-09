@@ -4,6 +4,7 @@ name: "Enchanting Performance"
 sphere: fallen-fey
 tags: []
 tier: feat
+summary: "Use Beckoning Call or Enchanting Music in place of a bardic performance or raging song."
 ---
 
 **Prerequisites:** Fallen Fey sphere (Beckoning Call (fey-blessing) or Enchanting Music (fey-blessing)); bardic performance or raging song class feature.

@@ -4,6 +4,7 @@ name: Extra Bestial Trait
 tags:
   - extra
 tier: feat
+summary: "Gain an additional bestial trait for which you meet the prerequisites."
 ---
 **Prerequisite:** Bestial Trait class feature.
 

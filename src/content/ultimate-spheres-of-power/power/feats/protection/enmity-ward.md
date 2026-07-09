@@ -4,6 +4,7 @@ name: "Enmity Ward"
 sphere: protection
 tags: []
 tier: feat
+summary: "Create a ward that repels your favored enemies and adds your favored enemy attack bonus to its DC."
 ---
 
 **Prerequisites:** Protection sphere, favored enemy class feature.

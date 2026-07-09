@@ -6,6 +6,7 @@ tags:
   - practitioner
   - sm
 tier: feat
+summary: "Roll a die to determine how many instances of a weapon's base damage dice you gain when using Vital Strike instead of a fixed multiplier."
 ---
 
 **Prerequisites:** Vital Strike

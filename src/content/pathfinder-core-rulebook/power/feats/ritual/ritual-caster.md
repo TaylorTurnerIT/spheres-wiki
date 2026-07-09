@@ -4,6 +4,7 @@ name: Ritual Caster
 tags:
   - ritual
 tier: feat
+summary: "Use a ritual even if you do not possess its base sphere."
 ---
 **Prerequisite:** Casting class feature.
 

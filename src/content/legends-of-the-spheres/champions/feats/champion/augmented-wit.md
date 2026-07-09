@@ -4,6 +4,7 @@ name: Augmented Wit
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 **Prerequisite:** Casting class feature or ability to gain martial focus.
 

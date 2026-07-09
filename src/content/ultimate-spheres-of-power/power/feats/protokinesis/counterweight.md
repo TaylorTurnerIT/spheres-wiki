@@ -4,6 +4,7 @@ name: Counterweight
 tags:
   - protokinesis
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Acrobatics 3 ranks, Telekinesis sphere.

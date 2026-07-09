@@ -4,6 +4,7 @@ name: Deathknight's Purchase
 sphere: death
 tags: []
 tier: feat
+summary: "Gain +1 spell point and you can spend a spell point to gain temporary hit points when a nearby creature fails a saving throw against a death or negative energy effect."
 ---
 Their suffering is your salvation. Break their souls across the iron that is your will.
 

@@ -6,6 +6,7 @@ tags:
   - 3pp
   - admixture
 tier: feat
+summary: "Spend an extra spell point with Admixture to place a ward or glyph or apply an aegis to damaged targets."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Protection sphere

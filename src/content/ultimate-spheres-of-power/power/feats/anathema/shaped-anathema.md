@@ -4,6 +4,7 @@ name: Shaped Anathema
 tags:
   - anathema
 tier: feat
+summary: "You can shape your anathema into a line, cone, or burst."
 ---
 **Prerequisites:** Anathema
 

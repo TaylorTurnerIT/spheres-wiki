@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Improve No Cost Too Great's caster level bonus while under non-dormant lesser or greater severance."
 ---
 **Prerequisites:** No Cost Too Great, Unsettling Casting drawback
 

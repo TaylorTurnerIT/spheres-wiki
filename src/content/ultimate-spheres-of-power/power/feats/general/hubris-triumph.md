@@ -4,6 +4,7 @@ name: Hubris Triumph
 tags:
   - general
 tier: feat
+summary: "Bypass the 24-hour immunity on successful saves against Hubris Style, apply new conditions instead of difficult terrain, and gain bonuses against affected foes."
 ---
 *Once all that would stop you, slow you down, or tell you to move aside have been surpassed, your achievement is where you stand and to stand proud. Now you show others.*
 

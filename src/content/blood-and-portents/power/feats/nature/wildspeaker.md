@@ -4,6 +4,7 @@ name: "Wildspeaker"
 sphere: nature
 tags: []
 tier: feat
+summary: "Make Speak With Wildlife constant and gain optional animal-focused Divination, Illusion, or Mind sphere effects."
 ---
 
 **Prerequisites:** Nature sphere (Speak With Wildlife (spirit)).

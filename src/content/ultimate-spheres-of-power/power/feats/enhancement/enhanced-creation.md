@@ -4,6 +4,7 @@ name: Enhanced Creation
 sphere: enhancement
 dualSphere: creation
 tier: feat
+summary: "Apply an enhancement to an object created with the Creation sphere or Shadowstuff Armament as part of the same action used to create it."
 ---
 
 **Prerequisites:** Creation sphere or Shadowstuff Armament, Enhancement sphere.

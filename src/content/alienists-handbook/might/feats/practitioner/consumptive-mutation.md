@@ -4,6 +4,7 @@ name: Consumptive Mutation
 tags:
   - practitioner
 tier: feat
+summary: "After consuming a brain, exchange Improved Transformation traits for qualifying traits tied to the consumed creature."
 ---
 
 **Prerequisites:** Consumptive Intuition, Improved Transformation, Transformation, character level 5th.

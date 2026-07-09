@@ -4,6 +4,7 @@ name: Extra Shadowstuff
 tags:
   - extra
 tier: feat
+summary: "Increase the number of shadow points you possess by 2."
 ---
 **Prerequisite:** Shadowstuff class feature.
 

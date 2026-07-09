@@ -4,6 +4,7 @@ name: "Dragoon Leap"
 tier: "advanced"
 tags:
   - "leap"
+summary: "Expend martial focus as a full-round action to jump vast distances with drastically reduced DCs."
 ---
 
 **Prerequisites:** Athletics sphere, Air Stunt, Wall Stunt, Acrobatics 9 ranks.

@@ -4,6 +4,7 @@ name: Saga-Bound Edge
 tags:
   - saga
 tier: feat
+summary: "Play an additional card with a value of 2 from your Saga Deck hand to add its value as a circumstance bonus when replacing a d20 roll."
 ---
 
 **Prerequisites:** Saga-Bound Fate

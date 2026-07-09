@@ -4,6 +4,7 @@ name: Insidious Magic
 tags:
   - drawback
 tier: feat
+summary: "Make your magic harder for Divination effects to detect unless they use the same Alien Source."
 ---
 Your magic is subtle and difficult to detect.
 

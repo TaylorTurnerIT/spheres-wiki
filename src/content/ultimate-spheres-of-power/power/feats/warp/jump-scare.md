@@ -4,6 +4,7 @@ name: "Jump Scare"
 sphere: warp
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Intimidate 5 ranks, Warp sphere.

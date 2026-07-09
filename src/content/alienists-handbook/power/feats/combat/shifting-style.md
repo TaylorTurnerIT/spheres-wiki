@@ -4,6 +4,7 @@ name: Shifting Style
 tags:
   - combat
 tier: feat
+summary: "Assign forms to customized weapons and shift into the matching form when swapping to that weapon."
 ---
 **Prerequisites:** Transformation, customized weapons class feature.
 

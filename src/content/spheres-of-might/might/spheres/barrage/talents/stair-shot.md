@@ -4,6 +4,7 @@ name: "Stair Shot"
 tier: "advanced"
 tags:
   - "utility"
+summary: "Expend 10 pieces of ammunition to create a staircase of arrows on a vertical surface up to 5 feet per point of base attack bonus."
 ---
 
 **Prerequisite:** Barrage sphere.

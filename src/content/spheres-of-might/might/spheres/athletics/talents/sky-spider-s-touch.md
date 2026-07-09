@@ -4,6 +4,7 @@ name: "Sky Spider’s Touch"
 tier: "advanced"
 tags:
   - "climb"
+summary: "Climb at full speed, always take 10 on Climb checks, halve Climb DCs, and climb impossible surfaces including air."
 ---
 
 **Prerequisites:** Athletics sphere, Climb 5 ranks.

@@ -14,6 +14,7 @@ sectionDefinitions:
         tags: ["slam"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
+summary: "Gain Improved Unarmed Strike and scaling unarmed strike damage based on talents, or increase existing unarmed damage by one size category."
 ---
 
 Practitioners of the Wrestling sphere are unarmed fighters who deal additional damage with their unarmed strikes and specialize in grappling and throwing their opponents. **Associated Feat:** Improved Unarmed Strike.

@@ -6,6 +6,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Regain mental focus to exchange a Mind sphere effect on yourself for another eligible effect, paying any spell point difference."
 ---
 **Prerequisites:** Mental Focus drawback, Mind sphere
 

@@ -5,6 +5,7 @@ sphere: conjuration
 tags:
   - companion
 tier: feat
+summary: "As a standard action, suppress your companion's Altered Size and Greater Altered Size talents."
 ---
 
 **Prerequisites:** Conjuration sphere (Altered Size (form)).

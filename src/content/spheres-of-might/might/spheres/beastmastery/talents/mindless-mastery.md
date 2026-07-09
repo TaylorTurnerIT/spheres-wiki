@@ -4,6 +4,7 @@ name: "Mindless Mastery"
 tier: "advanced"
 tags:
   - "handle-animal"
+summary: "Tame mindless creatures of any type, bypassing their mind-affecting immunities."
 ---
 
 **Prerequisites:** Beastmastery sphere, Broad Skills.

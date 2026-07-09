@@ -4,6 +4,7 @@ name: "Spell Saga"
 sphere: time
 tags: []
 tier: feat
+summary: "Delay Cascade Spell component effects as ordered time motes and ignore Cascade Spell targeting restrictions."
 ---
 
 **Prerequisites:** Cascade Spell, Pawstpone

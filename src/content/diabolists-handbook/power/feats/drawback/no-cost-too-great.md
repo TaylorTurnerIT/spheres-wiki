@@ -4,6 +4,7 @@ name: No Cost Too Great
 tags:
   - drawback
 tier: feat
+summary: "Double Draining Casting or Unsettling Casting damage to gain +1 caster level on the effect."
 ---
 Success sometimes necessitates losing more than you bargained for.
 

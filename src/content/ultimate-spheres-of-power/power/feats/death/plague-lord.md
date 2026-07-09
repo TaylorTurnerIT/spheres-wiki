@@ -4,6 +4,7 @@ name: "Plague Lord"
 sphere: death
 tags: []
 tier: feat
+summary: ""
 ---
 
 Diseases you inflict fester at an alarming rate.

@@ -3,6 +3,7 @@ id: "unstoppable"
 name: "Unstoppable"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 When making a charge, you can push your way through obstacles blocking your path, be they creatures, objects, or others.

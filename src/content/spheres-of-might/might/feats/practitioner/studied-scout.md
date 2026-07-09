@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: scout
 tier: feat
+summary: "Use your scout ability as a free action when using studied target or studied combat."
 ---
 
 **Prerequisites:** Scout sphere, studied target or studied combat class feature.

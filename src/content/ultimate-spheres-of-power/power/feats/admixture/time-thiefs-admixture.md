@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "Spend an additional spell point when using Admixture to apply an alter time effect to damaged targets."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Time sphere.

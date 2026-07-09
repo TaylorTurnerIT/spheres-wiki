@@ -4,6 +4,7 @@ name: "Worked Match"
 tier: "basic"
 tags:
   - "utility"
+summary: ""
 ---
 
 If you are adjacent to a willing ally, you may make an Intimidate check as a full-round action against all hostile creatures watching you to influence their attitude, using dangerous looking moves against your ally while not dealing any actual damage to them. You gain a +2 to this Intimidate check for every 4 points of base attack bonus you possess. Creatures who have their attitude shifted by this talent have their attitude reverted to neutral rather than unfriendly, and any creature whose attitude is shifted by this talent takes a -2 penalty to saving throws against fear effects which originate from you for 1 day.

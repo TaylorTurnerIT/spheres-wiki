@@ -4,6 +4,7 @@ name: "Thrum Of Rain"
 sphere: weather
 tags: []
 tier: feat
+summary: "You can activate and maintain your control weather ability as part of a bardic performance or raging song without needing to concentrate or spend spell points."
 ---
 
 **Prerequisites:** Weather sphere; bardic performance or raging song class feature.

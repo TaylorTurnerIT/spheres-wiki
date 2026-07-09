@@ -4,6 +4,7 @@ name: Suppressive Counterspell
 tags:
   - counterspell
 tier: feat
+summary: "Instead of a normal counterspell, you can magically suppress a target for 1 round, requiring them to spend an additional spell point to cast spells and allowing you to suppress one of their magic drawbacks."
 ---
 Your magic prevents foes from exploiting idiosyncrasies in their magic.
 

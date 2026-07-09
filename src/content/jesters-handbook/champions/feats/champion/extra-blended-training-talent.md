@@ -4,6 +4,7 @@ name: Extra Blended Training Talent
 tags:
   - champion
 tier: feat
+summary: "Gain one additional magic or combat sphere or a talent from a sphere you possess."
 ---
 **Prerequisites:** Casting class feature, martial focus.
 

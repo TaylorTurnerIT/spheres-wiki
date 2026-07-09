@@ -3,6 +3,7 @@ id: "fragmenting-shot"
 name: "Fragmenting Shot"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Sniper sphere, base attack bonus +7.

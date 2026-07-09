@@ -4,6 +4,7 @@ name: "Enhanced Contingency"
 sphere: enhancement
 tags: []
 tier: feat
+summary: "Enhance a contingency effect, and optionally spend an additional spell point to delay the enhancement's duration countdown until the contingency triggers."
 ---
 
 **Prerequisites:** Enhancement sphere, Contingency.

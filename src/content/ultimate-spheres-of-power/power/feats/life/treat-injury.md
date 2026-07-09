@@ -4,6 +4,7 @@ name: "Treat Injury"
 sphere: life
 tags: []
 tier: feat
+summary: "You may use restore on a target for one less spell point once per day when treating their deadly wounds."
 ---
 
 **Prerequisites:** Heal 1 rank, Life sphere.

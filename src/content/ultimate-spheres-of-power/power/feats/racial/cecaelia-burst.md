@@ -4,6 +4,7 @@ name: Cecaelia Burst
 tags:
   - racial
 tier: feat
+summary: ""
 ---
 When the time to withdraw into the depths comes, you are able to retreat with preternatural quickness.
 

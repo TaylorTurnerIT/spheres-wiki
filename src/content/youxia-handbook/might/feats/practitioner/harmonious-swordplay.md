@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: dual-wielding
 tier: feat
+summary: "Remove the attack penalty from dual attack for one manufactured weapon and add your full Strength bonus to unarmed strikes."
 ---
 
 **Prerequisites:** Dual Wielding sphere, Improved Unarmed Strike.

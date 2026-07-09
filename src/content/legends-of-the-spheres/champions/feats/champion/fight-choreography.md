@@ -5,6 +5,7 @@ sphere: performance
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Performance sphere ((act) or (dance) package), Warleader sphere.

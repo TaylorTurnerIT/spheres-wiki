@@ -5,6 +5,7 @@ sphere: death
 tags:
   - channeling
 tier: feat
+summary: "You can spend a use of channel energy to detonate a controlled mindless undead, causing your channel energy to burst from its location and increase its damage or healing by 1 per the undead's Hit Die."
 ---
 
 You can overcharge your connection with your undead using your channel energy ability.

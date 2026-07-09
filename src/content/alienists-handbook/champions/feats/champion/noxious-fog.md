@@ -5,6 +5,7 @@ sphere: alchemy
 tags:
   - champion
 tier: feat
+summary: "Spend an extra spell point when creating fog to spread an inhaled poison through it using your Nature sphere DC."
 ---
 **Prerequisites:** Alchemy sphere ((poison) package), Nature sphere ((water) package).
 

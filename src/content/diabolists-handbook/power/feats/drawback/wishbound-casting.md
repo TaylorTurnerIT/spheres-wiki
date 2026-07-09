@@ -4,6 +4,7 @@ name: Wishbound Casting
 tags:
   - drawback
 tier: feat
+summary: "Use another creature's wish as your verbal component and reduced Extended Casting burden, or force a wish with a spell point."
 ---
 The desires of others can ease the burdens of your magic.
 

@@ -4,6 +4,7 @@ name: Shape Quintessence
 sphere: time
 dualSphere: creation
 tier: feat
+summary: "Create objects from quintessence using your Time caster level for the quintessence scholar material imposition."
 ---
 **Prerequisites:** Creation sphere (Expanded Materials (material)), Time sphere.
 

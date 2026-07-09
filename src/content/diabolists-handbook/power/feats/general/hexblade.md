@@ -4,6 +4,7 @@ name: Hexblade
 tags:
   - general
 tier: feat
+summary: "Use a hex as a swift action after hitting a creature with a melee attack action once per round."
 ---
 Your attacks channel your fell will.
 

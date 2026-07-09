@@ -4,6 +4,7 @@ name: Extra Divine Works
 tags:
   - extra
 tier: feat
+summary: "Gain an additional divine work."
 ---
 **Prerequisites:** Divine works class feature.
 

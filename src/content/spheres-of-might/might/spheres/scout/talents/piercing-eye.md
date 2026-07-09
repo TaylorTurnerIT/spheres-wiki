@@ -3,6 +3,7 @@ id: "piercing-eye"
 name: "Piercing Eye"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 You have learned to see through obscuring effects and to spot the subtle patterns in defensive illusions. You may spend a move action to reduce your miss chance due to concealment on a single creature by 5% until the start of your next turn (this cannot reduce your miss chance due to concealment below 0).

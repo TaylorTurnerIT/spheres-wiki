@@ -6,6 +6,7 @@ tags:
   - drawback
   - metamagic
 tier: feat
+summary: "Use metamagic so an ongoing effect prevents nearby discard pile cards from leaving discard piles."
 ---
 
 **Prerequisites:** Card Casting (Cooldown), Control Caster

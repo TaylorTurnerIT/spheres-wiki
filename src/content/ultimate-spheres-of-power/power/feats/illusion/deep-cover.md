@@ -4,6 +4,7 @@ name: Deep Cover
 sphere: illusion
 dualSphere: alteration
 tier: feat
+summary: "Apply an illusionary disguise to your shapeshift in place of an Alteration trait, removing the Will save to negate and allowing you to assume the form of specific individuals."
 ---
 
 **Prerequisites:** Alteration sphere, Illusion sphere.

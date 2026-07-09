@@ -4,6 +4,7 @@ name: Instinctual Skittishness
 tags:
   - drawback
 tier: feat
+summary: "Avoid making concentration checks when hiding from observing creatures and gain a +2 circumstance bonus to Stealth checks."
 ---
 **Prerequisites:** Coy Caster.
 

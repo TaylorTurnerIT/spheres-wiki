@@ -5,6 +5,7 @@ tags:
   - defiler
   - drawback
 tier: feat
+summary: "Creatures in an area defiled by your Terrain Casting drawback must succeed at a Fortitude save or become sickened."
 ---
 Your powers drain the energies of those around you.
 

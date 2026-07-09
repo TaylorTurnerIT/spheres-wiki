@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 Your beak isn't just for speaking and grasping, but for defense as well.
 

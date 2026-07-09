@@ -3,6 +3,7 @@ id: "battlefield-scavenger"
 name: "Battlefield Scavenger"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 When collecting non-firearm ammunition after it has been used in combat, you have a 85% chance of retrieving the ammo in good condition such that it can be used again, rather than 50%. You may draw a thrown weapon or a piece of non-firearm ammunition from the environment or a dead creature as part of the same action used to make a ranged attack with it.

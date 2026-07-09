@@ -4,6 +4,7 @@ name: Striking Ensnarement
 tags:
   - champion
 tier: feat
+summary: "Use a strike talent in conjunction with a troop attack, swarm attack, constrict, engulf, or swallow whole."
 ---
 **Prerequisites:** Constrict, engulf, swallow whole, troop attack, or swarm attack; any one strike talent.
 

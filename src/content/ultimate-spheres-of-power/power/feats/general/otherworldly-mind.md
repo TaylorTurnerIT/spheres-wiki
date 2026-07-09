@@ -4,6 +4,7 @@ name: Otherworldly Mind
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Benefit:** Due to some quirk of your consciousness or oddity in your background, your heart and mind are like that of another realm entirely. Scrying to locate your Dreamscape now treats your Dreamscape as if it is on another Plane rather than on the same Plane as your physical form, granting a +5 bonus to your Will save to avoid the scrying attempt. In addition, any effect that numerically boosts the difficulty of getting into your Dreamscape or moving within it is increased by 1.
 

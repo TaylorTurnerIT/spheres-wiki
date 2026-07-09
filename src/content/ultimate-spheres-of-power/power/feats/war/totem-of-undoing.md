@@ -4,6 +4,7 @@ name: "Totem Of Undoing"
 sphere: war
 tags: []
 tier: feat
+summary: "Spend 2 spell points to create a totem that causes enemies within to become faded on a failed Fortitude save, halving their damage and penalizing their Strength-related checks."
 ---
 
 **Prerequisites:** War sphere, caster level 10th.

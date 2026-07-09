@@ -4,6 +4,7 @@ name: "Vampiric Disruption"
 sphere: life
 tags: []
 tier: feat
+summary: "Use a Life sphere ability on yourself as a swift action after successfully using the Affliction talent."
 ---
 
 **Prerequisites:** Life sphere (Affliction).

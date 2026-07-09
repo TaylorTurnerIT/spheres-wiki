@@ -4,6 +4,7 @@ name: "Seraphic Glow"
 sphere: light
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Light sphere, good alignment.

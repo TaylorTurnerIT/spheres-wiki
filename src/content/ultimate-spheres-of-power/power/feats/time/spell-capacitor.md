@@ -4,6 +4,7 @@ name: "Spell Capacitor"
 sphere: time
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Time sphere.

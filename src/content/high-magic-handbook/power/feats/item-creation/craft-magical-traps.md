@@ -4,6 +4,7 @@ name: Craft Magical Traps
 tags:
   - item-creation
 tier: feat
+summary: "You can increase a marvelous item's complexity by 3 to build it as an automatically activating magic trap."
 ---
 **Prerequisites:** Contingency; Craft Apparatus or Craft Marvelous Item.
 

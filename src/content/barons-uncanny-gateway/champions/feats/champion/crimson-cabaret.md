@@ -5,6 +5,7 @@ tags:
   - champion
   - sm
 tier: feat
+summary: "Gain package-specific interactions between Performance sphere abilities and vitae or bloodletting."
 ---
 **Prerequisites:** Performance Sphere, Vitae class feature
 

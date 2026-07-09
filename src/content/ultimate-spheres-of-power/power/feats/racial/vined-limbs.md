@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: "Increases your reach when making melee touch attacks by 5 feet."
 ---
 Your control over the woven vines extending from your body is extreme, and when wrapped around your arm can be quite dangerous.
 

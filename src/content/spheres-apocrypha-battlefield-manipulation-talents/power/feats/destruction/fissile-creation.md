@@ -4,6 +4,7 @@ name: Fissile Creation
 sphere: destruction
 dualSphere: creation
 tier: feat
+summary: "Alter or create objects that explode when they hit a target, take damage, or when the spell effect ends."
 ---
 
 **Prerequisites:** Creation sphere, Destruction sphere (Explosive Orb (blast shape)).

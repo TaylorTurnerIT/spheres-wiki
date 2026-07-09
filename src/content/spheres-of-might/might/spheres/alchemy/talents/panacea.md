@@ -4,6 +4,7 @@ name: "Panacea"
 tier: "basic"
 tags:
   - "formulae"
+summary: "Create a potion that removes a single negative condition based on the Craft DC."
 ---
 
 You create a vial of liquid that can be used as a potion, removing a single negative condition the drinker is currently suffering from. The conditions that a panacea can remove are determined by the Craft DC used for its creation:

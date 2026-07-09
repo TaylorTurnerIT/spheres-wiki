@@ -4,6 +4,7 @@ name: "Practiced Seer"
 sphere: divination
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Divination sphere.

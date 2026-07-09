@@ -4,6 +4,7 @@ name: Hubris Style
 tags:
   - general
 tier: feat
+summary: "Ignore difficult terrain to gain a speed bonus, and force struck targets to save or treat their movement as difficult terrain."
 ---
 *The universe said to slow down, and stop. But your feet pressed on, faster and more determined.*
 

@@ -5,6 +5,7 @@ tags:
   - champion
   - sm
 tier: feat
+summary: "Summon magical simulacra known as dream retainers into your dreamspace using authorizations."
 ---
 **Prerequisites:** Dreamspace, Faction Sphere
 

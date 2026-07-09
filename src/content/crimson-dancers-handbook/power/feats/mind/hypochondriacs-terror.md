@@ -4,6 +4,7 @@ name: Hypochondriac's Terror
 sphere: mind
 dualSphere: blood
 tier: feat
+summary: "When you establish blood control, you can spend a spell point to force a Will save or inflict a chosen ailment on the target at the start of each of its turns."
 ---
 
 When you take over a creature's bodily functions, you may also blend in your mental manipulation to torture them from the inside out.

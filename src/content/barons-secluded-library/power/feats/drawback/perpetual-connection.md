@@ -7,6 +7,7 @@ tags:
   - sm
   - squadron
 tier: feat
+summary: "Choose a permanent squadron member who does not count against your limit and can receive solo Squadron feat effects without resource costs."
 ---
 **Prerequisites:** Communication sphere, Posse Commander; or War sphere, Squadron Commander; or Warleader sphere, Troop Commander.
 

@@ -6,6 +6,7 @@ tags:
   - chance
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Ante Up

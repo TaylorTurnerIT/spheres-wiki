@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Casting (word) or (motif) Fate sphere talents in conjunction with Card Casting does not provoke attacks of opportunity."
 ---
 
 **Prerequisites:** Fate Sphere, Card Casting drawback

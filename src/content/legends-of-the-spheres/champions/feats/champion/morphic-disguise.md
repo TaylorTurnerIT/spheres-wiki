@@ -5,6 +5,7 @@ sphere: subterfuge
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Alteration or Illusion sphere, Subterfuge sphere.
 

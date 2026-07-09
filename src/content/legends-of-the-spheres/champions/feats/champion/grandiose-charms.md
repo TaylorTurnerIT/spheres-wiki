@@ -5,6 +5,7 @@ sphere: mind
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Mind sphere, either Bluster or Performance sphere.

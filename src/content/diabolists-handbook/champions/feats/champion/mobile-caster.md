@@ -5,6 +5,7 @@ sphere: athletics
 tags:
   - champion
 tier: feat
+summary: "Move up to your speed and use a standard-action magic sphere effect as a full-round action."
 ---
 Frantic battlefields necessitate the ability to cast on your feet.
 

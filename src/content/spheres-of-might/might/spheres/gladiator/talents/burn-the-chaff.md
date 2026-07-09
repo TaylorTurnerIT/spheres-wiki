@@ -3,6 +3,7 @@ id: "burn-the-chaff"
 name: "Burn The Chaff"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Gladiator sphere, base attack bonus +10.

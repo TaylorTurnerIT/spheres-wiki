@@ -5,6 +5,7 @@ tags:
   - 3pp
   - counterspell
 tier: feat
+summary: "Spend a spell point to take control of successfully counterspelled subordinates instead of dispelling them."
 ---
 **Prerequisites:** Counterspell
 

@@ -4,6 +4,7 @@ name: Animating Possession
 sphere: enhancement
 dualSphere: death
 tier: feat
+summary: "You can possess objects you animate and shift the concentration of an Enhancement sphere effect to an undead you control."
 ---
 
 You can project your soul into an object to give it a semblance of life.

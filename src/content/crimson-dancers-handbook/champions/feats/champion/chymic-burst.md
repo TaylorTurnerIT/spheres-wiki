@@ -5,6 +5,7 @@ sphere: blood
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Blood sphere (Cystic Growth (blood art, still)), Alchemy sphere.
 

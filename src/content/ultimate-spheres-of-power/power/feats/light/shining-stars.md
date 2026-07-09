@@ -4,6 +4,7 @@ name: "Shining Stars"
 sphere: light
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Light sphere (Dancing Lights, Glory).

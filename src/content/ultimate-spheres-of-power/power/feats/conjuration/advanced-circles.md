@@ -4,6 +4,7 @@ name: "Advanced Circles"
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Reduce the time required to create a diagram and gain the ability to imbue it with additional effects from the Mind or Protection spheres."
 ---
 
 **Prerequisites:** Conjuration sphere (Diagram).

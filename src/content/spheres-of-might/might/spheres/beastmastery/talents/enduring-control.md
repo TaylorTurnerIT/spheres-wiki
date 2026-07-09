@@ -4,6 +4,7 @@ name: "Enduring Control"
 tier: "advanced"
 tags:
   - "handle-animal"
+summary: "Increase Beast Tamer duration to 1 hour per rank in Handle Animal."
 ---
 
 **Prerequisites:** Handle Animal 5 ranks, Beastmastery sphere, Beast Tamer.

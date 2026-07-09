@@ -5,6 +5,7 @@ sphere: illusion
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Illusion sphere, Performance sphere ((act) package).

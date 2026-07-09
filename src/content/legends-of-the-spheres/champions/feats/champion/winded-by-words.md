@@ -5,6 +5,7 @@ sphere: bluster
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Bluster sphere, ability to gain martial focus.

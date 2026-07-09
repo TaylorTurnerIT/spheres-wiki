@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: boxing
 tier: feat
+summary: "Split a readied dual-attack counter punch across separate triggers before your next turn while applying counter punch damage to both attacks."
 ---
 
 **Prerequisites:** Boxing sphere, Dual Wielding sphere.

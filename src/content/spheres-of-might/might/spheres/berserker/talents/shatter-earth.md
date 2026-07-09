@@ -3,6 +3,7 @@ id: "shatter-earth"
 name: "Shatter Earth"
 tier: "basic"
 tags: []
+summary: "Attack the ground to create difficult terrain in an area, battering creatures within it or knocking them prone if already battered."
 ---
 
 You may attack the ground around you with a savage blow. You may make a brutal strike against the corner of a square within your reach as a full-round action. You may reduce this to a standard action by expending martial focus. This attack automatically hits and deals damage normally. If you manage to deal more damage than the floor’s hardness, you cause a 5 ft. radius, 10 ft. cone, or 15 ft. line (your choice) to become difficult terrain. Radius’ increase by 5 ft. per 10 base attack bonus, cones by 5 ft. per 5 base attack bonus, and lines by 10 ft. per 5 base attack bonus. A square can be cleared as a standard action (provoking an attack of opportunity) or repaired with a spell or effect such as the mending spell or the repair ability of the Creation sphere to no longer be difficult terrain.

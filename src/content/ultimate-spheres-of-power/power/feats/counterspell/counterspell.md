@@ -4,6 +4,7 @@ name: Counterspell
 tags:
   - counterspell
 tier: feat
+summary: "Spend a spell point and succeed at a magic skill check to dispel an existing magical effect or counter a spell as it is being cast."
 ---
 **Prerequisites:** Casting class feature, magic skill bonus +5.
 

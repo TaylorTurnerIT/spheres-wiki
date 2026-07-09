@@ -4,6 +4,7 @@ name: Force Shield
 tags:
   - protokinesis
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Telekinesis sphere.

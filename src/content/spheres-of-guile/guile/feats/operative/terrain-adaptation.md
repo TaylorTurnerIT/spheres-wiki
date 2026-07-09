@@ -4,6 +4,7 @@ name: Terrain Adaptation
 tags:
   - operative
 tier: feat
+summary: "Treat an analyzed area as your favored terrain, receiving the maximum bonuses your favored terrain feature grants."
 ---
 
 **Prerequisites:** Investigation Sphere, favored terrain class feature.

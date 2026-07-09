@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Add item cards to your deck to activate your magic items' sphere effects with reduced casting times by spending item uses instead of spell points."
 ---
 
 **Prerequisites:** Card Casting

@@ -5,6 +5,7 @@ tags:
   - defiler
   - drawback
 tier: feat
+summary: "Trigger the Terrain Casting drawback when preparing a spell charge to avoid blighting the terrain when casting the charged effect."
 ---
 You are capable of keeping your ruinous powers hidden.
 

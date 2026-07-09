@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: berserker
 tier: feat
+summary: "Once per round while berserking and below 0 hit points, use an ability that costs martial focus without expending it."
 ---
 
 **Prerequisites:** Berserker sphere (Deathless).

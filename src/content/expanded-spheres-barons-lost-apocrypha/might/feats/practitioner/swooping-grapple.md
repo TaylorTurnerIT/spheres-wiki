@@ -6,6 +6,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Grapple or use Snag during Mobile Striker, and move with a successfully grappled target up to your remaining speed."
 ---
 
 **Prerequisites:** Athletics Sphere (Mobile Striker), Wrestling Sphere

@@ -4,6 +4,7 @@ name: Smith Magical Weapons And Armor
 tags:
   - item-creation
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Magic skill bonus +3.
 

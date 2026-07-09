@@ -4,6 +4,7 @@ name: Hardened Psyche
 tags:
   - combat
 tier: feat
+summary: "Add your Constitution score to your strain score, use your Constitution modifier for your strain threshold, and attempt Fortitude saves instead of Will saves against strain damage."
 ---
 Your experience with violence renders you resistant to mental stress.
 

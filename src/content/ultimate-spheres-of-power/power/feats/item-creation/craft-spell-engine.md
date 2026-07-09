@@ -4,6 +4,7 @@ name: Craft Spell Engine
 tags:
   - item-creation
 tier: feat
+summary: "You can create spell-trigger items which casters can use as if they were their own sphere abilities."
 ---
 **Prerequisites:** Caster level 1st.
 

@@ -4,6 +4,7 @@ name: Improved Ink Jet
 tags:
   - racial
 tier: feat
+summary: ""
 ---
 Over time you've carefully tended your ink glands to produce far more than they normally would.
 

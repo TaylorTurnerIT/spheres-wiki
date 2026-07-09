@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Card Casting drawback

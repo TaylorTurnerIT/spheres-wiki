@@ -4,6 +4,7 @@ name: Luminous Flame
 sphere: nature
 dualSphere: light
 tier: feat
+summary: "Make your Create Fire or Affect Fire abilities glow, maintaining concentration on both effects with a single action."
 ---
 
 **Prerequisites:** Light sphere, Nature sphere ((fire) package).

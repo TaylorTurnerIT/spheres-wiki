@@ -6,6 +6,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Use telekinesis to lift disarmed items and pull a dropped item back to your hand when disarmed."
 ---
 **Prerequisites:** Duelist sphere, Telekinesis sphere.
 

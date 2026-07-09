@@ -4,6 +4,7 @@ name: Coaxing Spell
 tags:
   - metamagic
 tier: feat
+summary: "Your mind-affecting effects can affect mindless oozes and vermin as if they were not mindless, but have no effect on other creature types."
 ---
 **Prerequisites:** Knowledge (Dungeoneering) 6 ranks, Sphere Focus (Mind).
 

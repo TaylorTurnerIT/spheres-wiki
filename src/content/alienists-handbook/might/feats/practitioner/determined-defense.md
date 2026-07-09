@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Ignore Combat Expertise's melee attack penalty on your first attack each turn."
 ---
 
 **Prerequisite:** Combat Expertise.

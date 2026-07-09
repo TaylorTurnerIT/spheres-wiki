@@ -5,6 +5,7 @@ sphere: creation
 tags:
   - combat
 tier: feat
+summary: "You treat dropping created objects and attacking with Created Momentum as ranged weapon attacks to apply feats."
 ---
 
 **Prerequisites:** Creation sphere (Created Momentum).

@@ -4,6 +4,7 @@ name: Dual Wielding Mystic Strike
 tags:
   - mythic
 tier: feat
+summary: ""
 ---
 
 When using Dual Wielding Mystic Strike, your sphere ability may use your weapon’s threat range (to a maximum of 18-20) instead of its own.

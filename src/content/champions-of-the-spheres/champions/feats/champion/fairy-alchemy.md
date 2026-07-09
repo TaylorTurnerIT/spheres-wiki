@@ -5,6 +5,7 @@ sphere: alchemy
 tags:
   - champion
 tier: feat
+summary: "Use fairy dust as a poison or throw it as a splash weapon if you possess the relevant Alchemy sphere packages."
 ---
 
 **Prerequisites:** Alchemy sphere, Fallen Fey sphere (Fairy Dust (fey-blessing)).

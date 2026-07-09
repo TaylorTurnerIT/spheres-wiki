@@ -4,6 +4,7 @@ name: Extra Skill Talent
 tags:
   - mythic
 tier: feat
+summary: ""
 ---
 
 You gain a mythic sphere mastery for any base skill sphere you have.

@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: "Add 1d6 fire or cold damage to melee weapon attacks."
 ---
 The elemental energies within you can escape through your attacks, helping express your fury.
 

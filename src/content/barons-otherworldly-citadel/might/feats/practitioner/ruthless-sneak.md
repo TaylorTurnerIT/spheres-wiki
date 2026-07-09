@@ -6,6 +6,7 @@ tags:
   - practitioner
   - sm
 tier: feat
+summary: "Deal additional damage per sneak attack die when dealing sneak attack damage while maintaining martial focus."
 ---
 
 **Prerequisites:** Sneak Attack +3d6

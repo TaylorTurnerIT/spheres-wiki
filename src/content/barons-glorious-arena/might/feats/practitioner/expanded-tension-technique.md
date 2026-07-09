@@ -6,6 +6,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Gain a tension technique you do not possess."
 ---
 
 **Prerequisites:** tension pool

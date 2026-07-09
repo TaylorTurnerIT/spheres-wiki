@@ -4,6 +4,7 @@ name: Encouraging Spell
 tags:
   - metamagic
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Cha 13, Diplomacy 6 ranks.
 

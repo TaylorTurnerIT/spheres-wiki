@@ -3,6 +3,7 @@ id: "mageguard"
 name: "Mageguard"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 When a hostile creature within your threatened area attempts to cast a spell defensively, they take a penalty to their concentration check equal to 1/2 your base attack bonus (minimum 1). The creature is aware of this penalty. This ability stacks with the Disruptive feat and similar effects.

@@ -4,6 +4,7 @@ name: Wild Casting
 tags:
   - drawback
 tier: feat
+summary: "Allows you to supply somatic and verbal components even when in a form not normally able to do so."
 ---
 **Prerequisite:** Somatic Casting drawback or Verbal Casting drawback.
 

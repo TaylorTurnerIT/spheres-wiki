@@ -4,6 +4,7 @@ name: Channel Resolve
 tags:
   - channeling
 tier: feat
+summary: "Expend a use of channel energy to grant targets within range a single immediate attack that gains a damage bonus based on your channel energy dice."
 ---
 **Prerequisite:** Channel energy class feature.
 

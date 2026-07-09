@@ -4,6 +4,7 @@ name: Resolute Expertise
 tags:
   - combat
 tier: feat
+summary: "Gain a scaling competence bonus to saving throws while benefiting from Combat Expertise's dodge bonus."
 ---
 **Prerequisite:** Combat Expertise.
 

@@ -4,6 +4,7 @@ name: "Unending Loyalty"
 tier: "advanced"
 tags:
   - "shout"
+summary: ""
 ---
 
 **Prerequisites:** Warleader sphere, Recall Spirit, Rousing Claxon, Legion Unending, Diplomacy 15 ranks.

@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Draconic subtype, cuazaj lightning racial trait, Cuazaj Breath.
 

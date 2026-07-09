@@ -3,6 +3,7 @@ id: "ruinous-tread"
 name: "Ruinous Tread"
 tier: "advanced"
 tags: []
+summary: "Create difficult terrain in squares you leave if your base attack bonus exceeds the surface's hardness."
 ---
 
 **Prerequisites:** Berserker sphere, Shatter Earth.

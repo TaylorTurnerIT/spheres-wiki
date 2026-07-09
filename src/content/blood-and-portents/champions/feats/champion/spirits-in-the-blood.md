@@ -5,6 +5,7 @@ sphere: barroom
 tags:
   - champion
 tier: feat
+summary: "Increase alcohol tolerance and gain blood control effects that intoxicate targets or make their blood flammable."
 ---
 **Prerequisites:** Barroom sphere, Blood sphere.
 

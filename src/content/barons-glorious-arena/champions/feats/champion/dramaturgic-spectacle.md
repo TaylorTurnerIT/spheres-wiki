@@ -5,6 +5,7 @@ tags:
   - 3pp
   - champion
 tier: feat
+summary: "Creatures in your act can activate a temporal mote you created as a scene."
 ---
 **Prerequisites:** Pawstpone, Time Sphere, Performance Sphere (act package)
 

@@ -4,6 +4,7 @@ name: Plexing Boon
 sphere: protection
 dualSphere: enhancement
 tier: feat
+summary: "When you would activate a Plexing aegis, you may instead create a single enhance effect."
 ---
 
 **Prerequisites:** Enhancement Sphere, Protection Sphere (Plexing Aegis)

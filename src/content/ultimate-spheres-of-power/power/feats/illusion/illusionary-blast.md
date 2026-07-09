@@ -4,6 +4,7 @@ name: Illusionary Blast
 sphere: illusion
 dualSphere: destruction
 tier: feat
+summary: "Spend an additional spell point to make a destructive blast deal nonlethal damage and ignore line of sight and line of effect."
 ---
 
 **Prerequisites:** Destruction sphere, Illusion sphere (Illusionary Touch (sensory, touch) x2).

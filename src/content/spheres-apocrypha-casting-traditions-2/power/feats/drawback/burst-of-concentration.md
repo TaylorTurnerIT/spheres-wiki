@@ -4,6 +4,7 @@ name: Burst of Concentration
 tags:
   - drawback
 tier: feat
+summary: "Expend your mental focus to treat a concentration check as if you rolled a 15."
 ---
 **Prerequisites:** Mental Focus.
 

@@ -4,6 +4,7 @@ name: Spellthief
 tags:
   - counterspell
 tier: feat
+summary: ""
 ---
 **Prerequisite:** Counterspell.
 

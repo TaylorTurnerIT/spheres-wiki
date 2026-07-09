@@ -4,6 +4,7 @@ name: Extra Unseen Augmentation
 tags:
   - extra
 tier: feat
+summary: "Gain an additional unseen augmentation."
 ---
 **Prerequisites:** Unseen Forces class feature
 

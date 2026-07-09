@@ -4,6 +4,7 @@ name: Inspired Surge
 tags:
   - wild-magic
 tier: feat
+summary: "Increase the wild magic chance of a sphere effect by 100% to add a talent you do not possess to the effect."
 ---
 **Prerequisites:** Casting class feature.
 

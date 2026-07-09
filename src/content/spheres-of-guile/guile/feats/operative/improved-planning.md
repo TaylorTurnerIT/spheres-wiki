@@ -4,6 +4,7 @@ name: Improved Planning
 tags:
   - operative
 tier: feat
+summary: "Have 2 additional plans available at once."
 ---
 
 You layer strategies and preparations on top of each other

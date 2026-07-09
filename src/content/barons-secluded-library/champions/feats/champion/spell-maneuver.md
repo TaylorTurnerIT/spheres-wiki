@@ -6,6 +6,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Attempt a combat maneuver in place of a weapon attack when using a strike talent, delivering the magic effect on a success."
 ---
 **Prerequisites:** Casting class feature; any talent with the strike descriptor.
 

@@ -4,6 +4,7 @@ name: "Favored Form"
 sphere: alteration
 tags: []
 tier: feat
+summary: "Increase the number of traits granted by a chosen Alteration transformation talent by 1."
 ---
 
 **Prerequisite:** Alteration sphere.

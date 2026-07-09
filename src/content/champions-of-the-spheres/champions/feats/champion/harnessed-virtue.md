@@ -5,6 +5,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Expend martial focus when activating imbued strike to align your attacks and the next attack of an ally against an opposite aligned creature."
 ---
 **Prerequisites:** Imbued Strike, ability to gain martial focus, casting class feature, caster level 1st, non-neutral alignment.
 

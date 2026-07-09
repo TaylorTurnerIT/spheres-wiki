@@ -4,6 +4,7 @@ name: Reckless Drone
 tags:
   - practitioner
 tier: feat
+summary: "Your drones gain bonus hit points equal to twice their base attack bonus and a bonus talent from the Berserker or Brute sphere."
 ---
 
 **Prerequisites:** Tech sphere, Drone.

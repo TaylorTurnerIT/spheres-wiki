@@ -4,6 +4,7 @@ name: "Courier’s Dash"
 tier: "basic"
 tags:
   - "tactic"
+summary: ""
 ---
 
 All allies that start their turn within the radius of this tactic gain a +5 ft enhancement bonus to their base land speed. An ally who begins or ends their turn outside of this tactic’s affected area loses its benefits until they once more start their turn within its radius. For every 5 ranks in Diplomacy you possess, this enhancement bonus is increased by an additional 5 ft.

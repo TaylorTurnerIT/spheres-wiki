@@ -4,6 +4,7 @@ name: Eldritch Craft
 tags:
   - item-creation
 tier: feat
+summary: ""
 ---
 Your strange magics bleed into the devices you forge.
 

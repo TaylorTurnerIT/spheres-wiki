@@ -4,6 +4,7 @@ name: Bottled Salvage
 tags:
   - drawback
 tier: feat
+summary: "You can bottle a creature's blood to drink later, granting a morale bonus on saving throws and counting as having drained them."
 ---
 **Prerequisite:** Vampiric Casting drawback.
 

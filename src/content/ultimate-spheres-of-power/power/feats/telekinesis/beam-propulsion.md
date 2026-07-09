@@ -4,6 +4,7 @@ name: Beam Propulsion
 sphere: telekinesis
 dualSphere: light
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Light sphere, Telekinesis sphere.

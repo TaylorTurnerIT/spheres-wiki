@@ -5,6 +5,7 @@ tags:
   - general
   - sm
 tier: feat
+summary: "Let a creature in line of effect immediately draw and consume an instilled liquid you created."
 ---
 **Prerequisites:** Any (instill) talent
 

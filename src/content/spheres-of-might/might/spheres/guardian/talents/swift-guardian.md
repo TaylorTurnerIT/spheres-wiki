@@ -3,6 +3,7 @@ id: "swift-guardian"
 name: "Swift Guardian"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 If you possess the (challenge) package, you reduce the required action to use challenge by 1 step (move to swift, swift to free).

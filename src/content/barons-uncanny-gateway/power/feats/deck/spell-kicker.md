@@ -6,6 +6,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Add a kicker effect to cards or charges that can be used when another qualifying sphere effect reduces its action cost."
 ---
 
 **Prerequisites:** Card Casting or Charged Spells drawback

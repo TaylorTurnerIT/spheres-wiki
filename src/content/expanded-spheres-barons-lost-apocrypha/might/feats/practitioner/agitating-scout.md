@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: scout
 tier: feat
+summary: "You can challenge a creature as part of the same swift action used to scout it."
 ---
 
 **Prerequisites:** Guardian Sphere (challenge package, Swift Guardian), Scout sphere

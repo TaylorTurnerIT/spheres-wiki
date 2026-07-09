@@ -4,6 +4,7 @@ name: Superpositioned
 sphere: warp
 dualSphere: illusion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Illusion sphere (Decoy (glamer), Suppression (glamer)), Warp sphere, caster level 5th.

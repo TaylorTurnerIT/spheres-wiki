@@ -4,6 +4,7 @@ name: "Undead Animal Companion"
 sphere: death
 tags: []
 tier: feat
+summary: "You can gain an undead animal companion that retains its feats, tricks, skills, and special abilities while counting as both an animal and undead."
 ---
 
 Your animal companions serve you beyond the grave.

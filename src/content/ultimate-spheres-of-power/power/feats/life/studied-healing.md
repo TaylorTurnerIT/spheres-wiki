@@ -4,6 +4,7 @@ name: "Studied Healing"
 sphere: life
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Heal 1 rank, Life sphere.

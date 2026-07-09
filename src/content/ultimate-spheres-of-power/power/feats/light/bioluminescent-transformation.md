@@ -4,6 +4,7 @@ name: Bioluminescent Transformation
 sphere: light
 dualSphere: alteration
 tier: feat
+summary: "You can cause a shapeshifted target to glow, maintaining concentration on both effects with a single action and applying light talents as shapeshifting traits."
 ---
 
 **Prerequisites:** Alteration sphere, Light sphere.

@@ -4,6 +4,7 @@ name: "Damning Darkness"
 sphere: dark
 tags: []
 tier: feat
+summary: "Good creatures entering or starting their turn in your darkness must succeed at a Fortitude save or become sickened for one minute, even if normally immune."
 ---
 
 **Prerequisites:** Dark sphere, evil alignment.

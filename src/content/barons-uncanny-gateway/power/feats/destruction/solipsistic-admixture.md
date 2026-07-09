@@ -4,6 +4,7 @@ name: "Solipsistic Admixture"
 sphere: destruction
 tags: ["sm"]
 tier: feat
+summary: "Have Admixture effects from your destructive blast affect you instead of or in addition to their normal targets."
 ---
 
 **Prerequisites:** Selective Admixture, Destruction sphere (Admixture, Selective Blast), any one Admixture feat.

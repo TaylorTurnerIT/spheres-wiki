@@ -6,6 +6,7 @@ tags:
   - practitioner
   - sm
 tier: feat
+summary: "Spend a move action to make a single attack at a -5 penalty if you miss all attacks made as an attack action."
 ---
 
 **Prerequisites:** Base Attack Bonus +6

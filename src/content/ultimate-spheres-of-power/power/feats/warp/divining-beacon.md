@@ -4,6 +4,7 @@ name: Divining Beacon
 sphere: warp
 dualSphere: divination
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Divination sphere, Warp sphere (Teleport Beacon (space)).

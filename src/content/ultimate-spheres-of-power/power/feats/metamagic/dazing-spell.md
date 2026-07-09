@@ -4,6 +4,7 @@ name: Dazing Spell
 tags:
   - metamagic
 tier: feat
+summary: "You can modify a talent to daze creatures damaged by it for a number of rounds equal to half the talent's caster level."
 ---
 **Benefit:** You can modify a talent to daze a creature damaged by it. When a creature takes damage from this spell, they become dazed for a number of rounds equal to half the caster level of the talent (minimum 1). If the talent allows a saving throw, a successful save negates the daze effect.
 

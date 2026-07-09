@@ -4,6 +4,7 @@ name: Parts And Pieces
 sphere: enhancement
 dualSphere: death
 tier: feat
+summary: "Treat your piecemeal undead as animated objects for Enhancement sphere abilities, granting them construction point abilities while counting them against both control limits."
 ---
 "Arms and legs make perfectly acceptable furniture, minions, and anything in between." – Kul'thiran, Master Necrotaxidermist
 

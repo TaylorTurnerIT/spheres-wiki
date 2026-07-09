@@ -4,6 +4,7 @@ name: "Flesh Absorption Master"
 sphere: death
 tags: []
 tier: feat
+summary: ""
 ---
 
 Your body reaches peak conditioning for digesting prey and holding corpses for fodder.

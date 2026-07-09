@@ -5,6 +5,7 @@ tags:
   - 3pp
   - general
 tier: feat
+summary: "Spend spell points to keep a subordinate from being banished or dispelled for additional rounds."
 ---
 **Prerequisites:** Casting class feature
 

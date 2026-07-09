@@ -4,6 +4,7 @@ name: Aligned Attacks
 tags:
   - combat
 tier: feat
+summary: "Your natural attacks count as one of your non-neutral alignments for the purpose of overcoming damage reduction."
 ---
 **Prerequisites:** Non-neutral alignment, caster level 5th.
 

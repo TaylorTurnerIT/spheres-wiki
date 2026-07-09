@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 You've carefully developed your poison for greater versatility.
 

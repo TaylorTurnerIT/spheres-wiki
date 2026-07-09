@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Gain a caster-level-based enhancement bonus to your next Intimidate or Perform check after creating a Magical Signs sphere effect."
 ---
 **Prerequisites:** Magical Signs
 

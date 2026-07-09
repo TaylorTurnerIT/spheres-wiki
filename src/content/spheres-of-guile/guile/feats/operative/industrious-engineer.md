@@ -5,6 +5,7 @@ sphere: artifice
 tags:
   - operative
 tier: feat
+summary: "Use Field Repair as a swift action without tools or provoking attacks of opportunity for temporary hit points that last a limited duration, and allow Field Repair to heal constructs."
 ---
 
 **Prerequisites:** Associated skill 3 ranks, Artifice sphere (Field Repair).

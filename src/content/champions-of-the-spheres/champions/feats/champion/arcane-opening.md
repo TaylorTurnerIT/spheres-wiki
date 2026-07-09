@@ -4,6 +4,7 @@ name: Arcane Opening
 tags:
   - champion
 tier: feat
+summary: "Treat a sphere effect as an attack action for the purpose of Cohort Attack or Coordinated Attack."
 ---
 **Prerequisites:** Casting and either Leadership sphere and Cohort Attack or Beastmastery sphere and Coordinated Attack.
 

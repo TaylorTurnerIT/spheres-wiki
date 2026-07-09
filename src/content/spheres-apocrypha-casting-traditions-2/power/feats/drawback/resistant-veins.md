@@ -4,6 +4,7 @@ name: Resistant Veins
 tags:
   - drawback
 tier: feat
+summary: "Gain a natural armor bonus based on your magic skill bonus."
 ---
 **Prerequisites:** Anemic.
 

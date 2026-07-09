@@ -5,6 +5,7 @@ sphere: blood
 tags:
   - practitioner
 tier: feat
+summary: "You ignore penalties from bloody terrain, gain a +2 bonus on saving throws against bleed and Blood sphere effects, and can identify creatures by their blood."
 ---
 
 **Prerequisites:** Blood sphere or Duelist sphere, character level 7th.

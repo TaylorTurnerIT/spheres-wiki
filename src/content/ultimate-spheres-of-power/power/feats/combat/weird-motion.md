@@ -5,6 +5,7 @@ sphere: illusion
 tags:
   - combat
 tier: feat
+summary: "Add your casting ability modifier to AC against attacks of opportunity when charging or making ranged attacks, and combine a ranged or charge attack with Mage Feint as a full-round action."
 ---
 
 **Prerequisites:** Illusion sphere (Mage Feint), base attack bonus +3.

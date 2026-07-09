@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - combat
 tier: feat
+summary: "You do not take two-weapon fighting penalties when you have more than one head."
 ---
 
 **Prerequisites:** Alteration sphere (Additional Limbs) or multiple heads.

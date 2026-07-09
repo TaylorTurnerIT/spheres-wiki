@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "Spend an extra spell point with Admixture to generate sprites inside eligible targets damaged by your destructive blast."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Technomancy sphere.

@@ -4,6 +4,7 @@ name: Crimson Theurgy
 sphere: death
 dualSphere: blood
 tier: feat
+summary: "You may use the longer of your blood control and ghost strike ranges for both effects, and can spend a spell point as a move action to target a creature damaged by your Bleeding Wounds with blood control."
 ---
 
 **Prerequisites:** Blood sphere, Death sphere.

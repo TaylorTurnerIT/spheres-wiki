@@ -4,6 +4,7 @@ name: Coronal Shroud
 sphere: weather
 dualSphere: light
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Light sphere, Weather sphere (at least one (mantle) or (shroud) talent).

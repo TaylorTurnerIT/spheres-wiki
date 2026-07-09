@@ -4,6 +4,7 @@ name: "Attuned Dreamer"
 sphere: mind
 tags: ["sm"]
 tier: feat
+summary: "Use character level for dreamwalker path secrets and qualify for Extra Secret selections from that path."
 ---
 
 **Prerequisites:** Dreamspace, either Dreamwalking Initiate or dreamwalker hedgewitch path power

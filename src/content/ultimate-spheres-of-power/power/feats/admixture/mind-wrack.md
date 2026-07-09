@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "You can spend an additional spell point to apply a charm to targets damaged by your Admixture."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Mind sphere.

@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "Spend an extra spell point with Admixture to apply cure, invigorate, or restore to damaged targets."
 ---
 
 Ruinous and restorative power alike flow from your will.

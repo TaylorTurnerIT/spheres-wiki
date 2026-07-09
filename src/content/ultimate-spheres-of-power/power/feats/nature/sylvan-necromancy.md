@@ -4,6 +4,7 @@ name: Sylvan Necromancy
 sphere: nature
 dualSphere: death
 tier: feat
+summary: ""
 ---
 
 Plant and animal matter are equally suitable focuses for your magic.

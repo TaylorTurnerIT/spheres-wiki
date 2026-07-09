@@ -6,6 +6,7 @@ tags:
   - practitioner
   - sm
 tier: feat
+summary: "Gain additional attacks of opportunity equal to your Wisdom bonus and make them while flat-footed."
 ---
 
 **Prerequisites:** Wis 13

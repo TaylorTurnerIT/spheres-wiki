@@ -4,6 +4,7 @@ name: Extra Ki Power
 tags:
   - practitioner
 tier: feat
+summary: "Gain an additional ki power for which you qualify."
 ---
 
 **Prerequisites:** Cultivate Ki or ki power class feature.

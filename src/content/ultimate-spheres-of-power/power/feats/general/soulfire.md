@@ -4,6 +4,7 @@ name: Soulfire
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisite:** Caster level 5th.
 

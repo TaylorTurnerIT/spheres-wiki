@@ -4,6 +4,7 @@ name: Alloy Creation
 sphere: nature
 dualSphere: creation
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Creation sphere, Nature sphere ((metal) package).

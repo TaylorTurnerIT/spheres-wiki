@@ -5,6 +5,7 @@ tags:
   - operative
 sphere: spellhacking
 tier: feat
+summary: "Hack two targets instead of one when using hack magic."
 ---
 
 **Prerequisite:** Spellhacking sphere.

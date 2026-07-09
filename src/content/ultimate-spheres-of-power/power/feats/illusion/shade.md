@@ -4,6 +4,7 @@ name: Shade
 sphere: illusion
 dualSphere: dark
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Dark sphere, Illusion sphere.

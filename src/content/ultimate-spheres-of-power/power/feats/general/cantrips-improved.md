@@ -4,6 +4,7 @@ name: Cantrips, Improved
 tags:
   - general
 tier: feat
+summary: "Expand the variety of effects you can create with cantrips and increase their range."
 ---
 **Prerequisites:** Basic Magic Training or casting class feature, Cantrips.
 

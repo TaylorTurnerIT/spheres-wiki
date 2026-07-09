@@ -5,6 +5,7 @@ tags:
   - item-creation
   - practitioner
 tier: feat
+summary: "Use alchemy to create ooze creatures."
 ---
 
 You can use alchemy to create dangerous ooze creatures.

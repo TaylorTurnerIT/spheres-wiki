@@ -4,6 +4,7 @@ name: Cooperative Mind
 tags:
   - teamwork
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Must have been subject to the Fusion advanced talent, 5th character level or higher.
 

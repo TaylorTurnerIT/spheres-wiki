@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "You may play a magic effect card as a number of Mana Point Cards equal to its spell point cost, and optionally place it on the bottom of your deck instead of shuffling."
 ---
 
 **Prerequisites:** Card Casting (Cooldown, Mana Pool, Mana Graveyard)

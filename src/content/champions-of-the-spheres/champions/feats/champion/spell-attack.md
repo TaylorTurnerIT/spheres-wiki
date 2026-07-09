@@ -5,6 +5,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Treat a talent with the strike descriptor as a special attack action that can benefit from Vital Strike and attack action augmentations."
 ---
 **Prerequisites:** Casting class feature; any talent with the strike descriptor.
 

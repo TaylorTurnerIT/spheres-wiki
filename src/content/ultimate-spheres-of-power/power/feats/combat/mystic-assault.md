@@ -4,6 +4,7 @@ name: Mystic Assault
 tags:
   - combat
 tier: feat
+summary: "You can spend a spell point to replace the first attack of a full attack with a standard action sphere or supernatural ability requiring an attack roll."
 ---
 **Prerequisites:** Casting class feature, base attack bonus +6.
 

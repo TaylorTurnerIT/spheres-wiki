@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: "Replace the Reflex save with a Fortitude save when using a cold damage destructive blast."
 ---
 
 **Prerequisites:** Destruction sphere (at least one (blast type) talent that deals cold damage).

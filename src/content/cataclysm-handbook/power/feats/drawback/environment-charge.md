@@ -4,6 +4,7 @@ name: Environment Charge
 tags:
   - drawback
 tier: feat
+summary: "Determine the effects of location-based casting drawbacks and boons based on where you charged the spell rather than where you cast it."
 ---
 You maintain the power of a location even as you depart it.
 

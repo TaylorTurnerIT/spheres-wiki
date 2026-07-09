@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Increase Divine Future's die while you have a severance, and increase it further with a greater severance."
 ---
 **Prerequisites:** Unsettling Casting, Divination Sphere (Divine Future)
 

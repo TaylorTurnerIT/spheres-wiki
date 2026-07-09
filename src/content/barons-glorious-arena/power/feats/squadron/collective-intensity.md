@@ -7,6 +7,7 @@ tags:
   - combat
   - squadron
 tier: feat
+summary: "Allow an ally in your squadron to use your tension pool and tension abilities until the end of the turn as an immediate action."
 ---
 **Prerequisites:** tension pool, Communication Sphere, Posse Commander; War sphere, Squadron Commander; or Warleader sphere, Troop Commander.
 

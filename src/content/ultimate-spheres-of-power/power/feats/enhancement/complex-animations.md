@@ -4,6 +4,7 @@ name: "Complex Animations"
 sphere: enhancement
 tags: []
 tier: feat
+summary: "Animated objects you create with the Animate Object enhancement gain an additional construction point."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)).

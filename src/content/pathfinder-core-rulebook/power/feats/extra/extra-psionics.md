@@ -4,6 +4,7 @@ name: Extra Psionics
 tags:
   - extra
 tier: feat
+summary: "Use psionics an extra 6 rounds per day."
 ---
 **Prerequisite:** Psionics class feature.
 

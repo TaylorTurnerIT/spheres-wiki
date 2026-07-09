@@ -4,6 +4,7 @@ name: Stasis Storage
 sphere: warp
 dualSphere: time
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Time sphere, Warp sphere (Extradimensional Storage (space)).

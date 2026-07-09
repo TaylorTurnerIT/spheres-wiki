@@ -4,6 +4,7 @@ name: Brisk Spell
 tags:
   - metamagic
 tier: feat
+summary: "Increase the speed of a movement type granted by a talent by 10 feet."
 ---
 **Prerequisite:** Dex 13.
 

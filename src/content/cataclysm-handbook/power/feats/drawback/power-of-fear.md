@@ -4,6 +4,7 @@ name: Power Of Fear
 tags:
   - drawback
 tier: feat
+summary: "Gain a competence bonus to your caster level when nearby creatures are affected by a fear effect."
 ---
 The terror in your foes powers your magic.
 

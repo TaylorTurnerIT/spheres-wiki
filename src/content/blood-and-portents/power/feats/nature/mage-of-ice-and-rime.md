@@ -4,6 +4,7 @@ name: "Mage Of Ice And Rime"
 sphere: nature
 tags: []
 tier: feat
+summary: "Gain cold resistance or healing from cold immunity and replace several water package effects with ice-themed benefits."
 ---
 
 **Prerequisites:** Nature sphere ((water) package, Water Mastery).

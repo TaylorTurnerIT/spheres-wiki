@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Expend martial focus as a move action to temporarily suppress or downgrade a negative condition."
 ---
 
 **Prerequisites:** Ability to gain martial focus, Constitution 13 or higher.

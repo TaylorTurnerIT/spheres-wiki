@@ -4,6 +4,7 @@ name: Night Sky
 sphere: light
 dualSphere: dark
 tier: feat
+summary: "Fill darkness effects with twinkling starlight that dazzles instead of altering light levels."
 ---
 
 It was no longer dark, for the twinkling lights danced and distracted in their own new ways.

@@ -3,6 +3,7 @@ id: "companion-aethership"
 name: "Companion Aethership"
 tier: "advanced"
 tags: []
+summary: "Gain a companion aethership."
 ---
 
 **Prerequisites:** Athletics sphere ((fly) package or Ace Pilot).

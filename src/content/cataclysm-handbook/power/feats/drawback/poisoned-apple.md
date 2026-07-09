@@ -4,6 +4,7 @@ name: Poisoned Apple
 tags:
   - drawback
 tier: feat
+summary: "You can choose to have a consumable item imbued with Bottled Spells target and automatically hit any creature that attempts to use it."
 ---
 Your charged spells can react violently to interlopers.
 

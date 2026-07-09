@@ -4,6 +4,7 @@ name: Aeolian Flautist
 tags:
   - general
 tier: feat
+summary: "Treat your relevant class level and Perform (wind) ranks as higher when producing a bardic performance or raging song in areas of wind."
 ---
 **Prerequisite:** Bardic performance or raging song class feature.
 

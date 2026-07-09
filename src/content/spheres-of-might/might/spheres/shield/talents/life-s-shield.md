@@ -3,6 +3,7 @@ id: "life-s-shield"
 name: "Life’s Shield"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Shield sphere, Sacrificial Shield, base attack bonus +5.

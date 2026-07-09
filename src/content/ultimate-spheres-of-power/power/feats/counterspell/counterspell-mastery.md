@@ -4,6 +4,7 @@ name: Counterspell Mastery
 tags:
   - counterspell
 tier: feat
+summary: "Spend an additional spell point to perform a counterspell as an immediate action and gain a +2 bonus to magical skill checks when using the Counterspell feat."
 ---
 **Prerequisites:** Counterspell, magic skill bonus +7.
 

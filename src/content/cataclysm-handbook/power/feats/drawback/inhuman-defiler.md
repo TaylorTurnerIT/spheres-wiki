@@ -7,6 +7,7 @@ tags:
   - drawback
   - necrosis
 tier: feat
+summary: "Treat Defiler feats as Necrosis feats and vice versa when determining how many of each type you possess, and gain bonus spell points based on your total."
 ---
 
 Your destructive powers and undead ambitions feed into each other.

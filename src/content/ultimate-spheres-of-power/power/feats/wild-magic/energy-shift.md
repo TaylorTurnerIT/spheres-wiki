@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - wild-magic
 tier: feat
+summary: "Change the damage type of a destructive blast or evocation spell by increasing your wild magic chance."
 ---
 **Prerequisites:** Destruction sphere or at least 2 evocation spells known.
 

@@ -5,6 +5,7 @@ sphere: performance
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Perform (dance) 3 ranks, Performance sphere ((dance) package); Athletics sphere or Warp sphere.

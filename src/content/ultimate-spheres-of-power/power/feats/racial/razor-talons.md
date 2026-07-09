@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 Though not built for fine manipulation, your talons can serve well enough as a last line of defense.
 

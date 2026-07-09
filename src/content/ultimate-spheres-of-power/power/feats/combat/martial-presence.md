@@ -4,6 +4,7 @@ name: Martial Presence
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Combat Stamina, base attack bonus +1.

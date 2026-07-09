@@ -5,6 +5,7 @@ tags:
   - deck
   - sm
 tier: feat
+summary: "Gain Control Caster-style abilities for interfering with characters who have the Card Casting drawback."
 ---
 
 **Prerequisites:** casting class feature, does not possess the Card Casting drawback

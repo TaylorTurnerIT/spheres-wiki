@@ -4,6 +4,7 @@ name: Extra Iatrogen
 tags:
   - extra
 tier: feat
+summary: "Gain an additional iatrogen."
 ---
 **Prerequisites:** Iatrogen class feature.
 

@@ -5,6 +5,7 @@ sphere: fallen-fey
 tags:
   - champion
 tier: feat
+summary: "Place Trap sphere snares instead of the snare from your Snare Setter fey-blessing without needing a trap bag."
 ---
 
 **Prerequisites:** Fallen Fey sphere (Snare Setter (fey-blessing)), Trap sphere.

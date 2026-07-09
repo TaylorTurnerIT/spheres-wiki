@@ -4,6 +4,7 @@ name: Catnip Connoisseur
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisite:** Character level 3rd.
 

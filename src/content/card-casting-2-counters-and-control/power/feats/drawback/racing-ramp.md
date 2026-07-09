@@ -6,6 +6,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Gain stacking speed increases each combat round while affected by one of your alter time effects."
 ---
 **Prerequisites:** Ramp Up, Time sphere
 

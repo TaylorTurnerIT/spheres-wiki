@@ -4,6 +4,7 @@ name: Extra Empathy
 tags:
   - champion
 tier: feat
+summary: "Gain 2 additional uses of empathic link per day."
 ---
 **Prerequisite:** Empathic link class feature.
 

@@ -4,6 +4,7 @@ name: Soul Harvester
 tags:
   - drawback
 tier: feat
+summary: "When a creature dies within close range, you can spend spell points as an immediate action to replenish a recently cast charged spell."
 ---
 Death replenishes your magical abilities.
 

@@ -4,6 +4,7 @@ name: "Spell Capacitor, Focused"
 sphere: time
 tags: []
 tier: feat
+summary: "Reduce the casting time of storing magic effects with Spell Capacitor by one step, but you may only target yourself when releasing them."
 ---
 
 **Prerequisites:** Spell Capacitor

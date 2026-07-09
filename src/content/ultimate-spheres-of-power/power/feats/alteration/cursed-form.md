@@ -4,6 +4,7 @@ name: "Cursed Form"
 sphere: alteration
 tags: []
 tier: feat
+summary: "You can add the curse descriptor to your shapeshift effects, making them removable only by specific powerful magic such as remove curse or break enchantment."
 ---
 
 **Prerequisites:** Alteration sphere, caster level 5th.

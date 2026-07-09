@@ -6,6 +6,7 @@ tags:
   - drawback
   - proxy
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, Draining Casting drawback, Circle Casting, Spell Proxy.

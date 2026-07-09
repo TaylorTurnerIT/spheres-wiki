@@ -4,6 +4,7 @@ name: "Favorite Boost"
 sphere: mana
 tags: []
 tier: feat
+summary: "Reduce the spell point cost or caster level penalty of one selected amp effect when you use it."
 ---
 **Prerequisites:** Mana sphere (at least one (amp) talent), caster level 9th.
 

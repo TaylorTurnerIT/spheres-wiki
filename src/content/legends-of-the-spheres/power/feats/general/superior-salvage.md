@@ -4,6 +4,7 @@ name: Superior Salvage
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Any item creation feat, character level 5th.
 

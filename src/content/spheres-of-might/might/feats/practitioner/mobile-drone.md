@@ -4,6 +4,7 @@ name: Mobile Drone
 tags:
   - practitioner
 tier: feat
+summary: "Drones you create gain the Athletics sphere or a bonus Athletics talent, plus Acrobatics, Climb, Fly, and Swim as class skills."
 ---
 
 **Prerequisites:** Tech sphere, Drone.

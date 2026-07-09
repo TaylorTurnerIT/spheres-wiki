@@ -4,6 +4,7 @@ name: Hubris Defiance
 tags:
   - general
 tier: feat
+summary: ""
 ---
 *To defy and reject the orders of the universe and carve your own way, as the first water created the rivers and then the canyons. Your steps march forward, putting down those that would tell you to turn aside.*
 

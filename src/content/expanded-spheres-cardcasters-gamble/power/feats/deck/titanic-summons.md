@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "You may cast any number of magic sphere effects targeting only your companion as part of summoning it for one additional spell point each."
 ---
 
 **Prerequisites:** Card Casting (Mana Pool), Conjuration Sphere, one of Altered Summons, Exceptional Ally, or Fated Summons

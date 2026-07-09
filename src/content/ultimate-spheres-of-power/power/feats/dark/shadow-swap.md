@@ -4,6 +4,7 @@ name: "Shadow Swap"
 sphere: dark
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow), Step Through Darkness (meld)).

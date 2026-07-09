@@ -4,6 +4,7 @@ name: Thematic Augmentation
 tags:
   - drawback
 tier: feat
+summary: "Change the sensory manifestation of your spells to a chosen theme, increasing the DC to identify them, granting a bonus against dispelling, and boosting the caster level of themed illusions."
 ---
 **Prerequisite:** Magical Signs drawback.
 

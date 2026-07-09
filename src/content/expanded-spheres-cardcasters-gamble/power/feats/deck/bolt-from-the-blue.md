@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Spend a spell point to discharge an energy satellite even if you do not have one formed."
 ---
 
 **Prerequisites:** Card Casting (cooldown), Destruction Sphere (Energy Satellite)

@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: barroom
 tier: feat
+summary: "Gain doubled-duration drunk status after consuming a brain or ending a Brain Consumption bonus talent."
 ---
 
 **Prerequisites:** Barroom sphere, Brain Consumption.

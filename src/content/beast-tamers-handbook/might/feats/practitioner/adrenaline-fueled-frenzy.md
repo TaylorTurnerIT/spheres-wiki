@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: berserker
 tier: feat
+summary: "Gain an adrenaline talent during Bloodied Shark's Frenzy and enter blood frenzy after a bleeding brutal strike."
 ---
 
 The shark’s frenzy turns to a churning rage.

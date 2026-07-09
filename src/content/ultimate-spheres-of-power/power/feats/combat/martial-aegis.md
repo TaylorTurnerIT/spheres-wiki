@@ -5,6 +5,7 @@ sphere: protection
 tags:
   - combat
 tier: feat
+summary: "You may use your base attack bonus as your caster level for the effects of an aegis and succor placed on yourself."
 ---
 **Prerequisites:** Protection sphere, base attack bonus +1.
 

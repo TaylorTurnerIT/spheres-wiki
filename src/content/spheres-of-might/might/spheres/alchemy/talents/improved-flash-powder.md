@@ -4,6 +4,7 @@ name: "Improved Flash Powder"
 tier: "basic"
 tags:
   - "formulae"
+summary: ""
 ---
 
 **Craft DC:** 20

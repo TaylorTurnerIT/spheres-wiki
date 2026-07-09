@@ -5,6 +5,7 @@ sphere: guardian
 tags:
   - champion
 tier: feat
+summary: "Apply the effects of an area-based magic sphere ability to your patrol area."
 ---
 **Prerequisite:** Guardian sphere ((patrol) package), any magical sphere (see text).
 

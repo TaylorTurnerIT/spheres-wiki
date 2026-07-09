@@ -4,6 +4,7 @@ name: "Expanding Presence"
 sphere: war
 tags: []
 tier: feat
+summary: "Increase the range of your antipaladin or paladin auras to match an attached totemic aura."
 ---
 
 **Prerequisites:** War sphere (Totemic Aura); antipaladin or paladin.

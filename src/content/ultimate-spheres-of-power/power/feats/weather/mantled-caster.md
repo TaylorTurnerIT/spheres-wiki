@@ -4,6 +4,7 @@ name: "Mantled Caster"
 sphere: weather
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Weather sphere, any (mantle) talent, magic skill bonus +5.

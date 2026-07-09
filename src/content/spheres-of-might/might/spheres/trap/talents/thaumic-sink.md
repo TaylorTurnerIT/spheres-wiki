@@ -5,6 +5,7 @@ tier: "advanced"
 tags:
   - "dart"
   - "snare"
+summary: ""
 ---
 
 **Prerequisites:** Trap sphere, Craft (traps) 15 ranks.

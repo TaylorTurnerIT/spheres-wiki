@@ -5,6 +5,7 @@ sphere: time
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Time sphere.

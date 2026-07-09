@@ -4,6 +4,7 @@ name: Spacetime Drift
 sphere: warp
 dualSphere: time
 tier: feat
+summary: "Teleport a creature you affect with an alter time effect."
 ---
 
 **Prerequisites:** Time sphere, Warp sphere.

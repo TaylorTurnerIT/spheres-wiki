@@ -5,6 +5,7 @@ sphere: performance
 tags:
   - operative
 tier: feat
+summary: "Allow your lyrics to stack with lyrics from other sources, and allow affected allies to impart lyric benefits to another creature for 1 round."
 ---
 
 **Prerequisite:** Performance sphere ((lyric) package).

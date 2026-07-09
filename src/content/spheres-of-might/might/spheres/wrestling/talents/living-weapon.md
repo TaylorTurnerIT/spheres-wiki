@@ -4,6 +4,7 @@ name: "Living Weapon"
 tier: "basic"
 tags:
   - "slam"
+summary: ""
 ---
 
 If the target of your grapple has been pinned and is no larger than you are, you may wield the creature as if they were a melee weapon you are proficient with until the end of your next turn, or until they successfully break your grapple, whichever comes first. If you do not spend the necessary action to maintain the grapple on your next turn, the grapple ends with your turn. You may make a single attack action with the grappled creature in place of the options normally available when maintaining a grapple.

@@ -6,6 +6,7 @@ dualSphere: alchemy
 tags:
   - champion
 tier: feat
+summary: "Alter the effects of your alchemical formulae or imbue concoctions with primal magic using herbs."
 ---
 **Prerequisite:** Associated ranks 3, Herbalism sphere ((herbal) package); either the Alchemy sphere ((formulae) package) or Nature sphere.
 

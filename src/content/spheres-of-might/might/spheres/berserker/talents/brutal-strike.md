@@ -3,6 +3,7 @@ id: "brutal-strike"
 name: "Brutal Strike"
 tier: "base"
 tags: []
+summary: "Make a melee attack that inflicts the battered condition, optionally expending martial focus for extra damage and applying an exertion talent."
 ---
 
 As a special attack action, you may make a melee attack against a target. Creatures damaged by a brutal strike gain the battered condition until the end of your next turn. You may expend martial focus to have the attack deal additional damage equal to twice your base attack bonus.

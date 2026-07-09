@@ -3,6 +3,7 @@ id: "inimical-gaze"
 name: "Inimical Gaze"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Scout sphere, Perception 5 ranks.

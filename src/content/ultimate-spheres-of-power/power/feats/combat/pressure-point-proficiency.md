@@ -5,6 +5,7 @@ sphere: mind
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Mind sphere, Improved Unarmed Strike.

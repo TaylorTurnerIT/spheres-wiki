@@ -4,6 +4,7 @@ name: "Elemental Blood"
 sphere: blood
 tags: []
 tier: feat
+summary: "Infuse your blood with an energy type that harms attackers and empowers hemokinesis, weapons, and Gory Armaments."
 ---
 
 **Prerequisites:** Blood sphere; ability to cast any sphere effect, spell, or spell-like ability with the acid, cold, electricity, or fire descriptor.

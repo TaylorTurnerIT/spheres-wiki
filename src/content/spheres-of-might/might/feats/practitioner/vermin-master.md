@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: beastmastery
 tier: feat
+summary: "Swarms and vermin no longer count as double their Hit Dice toward your tamed limit."
 ---
 
 **Prerequisites:** Beastmastery sphere (Bee Keeper), able to tame creatures of the vermin type.

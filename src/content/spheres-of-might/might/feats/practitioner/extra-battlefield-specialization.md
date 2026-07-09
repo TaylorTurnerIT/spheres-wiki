@@ -4,6 +4,7 @@ name: Extra Battlefield Specialization
 tags:
   - practitioner
 tier: feat
+summary: "Gain an additional battlefield specialization."
 ---
 
 Your expertise extends to a new battlefield environment.

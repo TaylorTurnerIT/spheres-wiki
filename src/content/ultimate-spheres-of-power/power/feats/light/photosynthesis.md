@@ -4,6 +4,7 @@ name: "Photosynthesis"
 sphere: light
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Con 13, Survival 3 ranks, Light sphere.

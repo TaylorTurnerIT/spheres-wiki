@@ -17,6 +17,7 @@ sectionDefinitions:
         tags: ["ride"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
+summary: "Choose either the Handle Animal or Ride package to gain scaling skill ranks, a bonus talent, and specialized abilities for taming or riding creatures."
 ---
 
 The beastmastery sphere is used to tame and ride animals, as well as bond with a special companion. When you gain the Beastmastery sphere, you may choose to gain either the Handle Animal package or the Ride package.

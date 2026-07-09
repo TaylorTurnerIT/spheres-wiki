@@ -3,6 +3,7 @@ id: "improved-boost"
 name: "Improved Boost"
 tier: "advanced"
 tags: []
+summary: "Boosting and kicking abilities apply to a second attack and can be activated as a free action by expending martial focus."
 ---
 
 **Prerequisite:** Equipment sphere.

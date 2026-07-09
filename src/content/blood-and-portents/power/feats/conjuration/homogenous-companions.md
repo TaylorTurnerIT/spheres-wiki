@@ -4,6 +4,7 @@ name: "Homogenous Companions"
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Share one eligible Conjuration companion form or type talent among your other companions and reselect it after resting."
 ---
 
 **Prerequisites:** Conjuration sphere (Extra Companion, any (form) or (type) talent).

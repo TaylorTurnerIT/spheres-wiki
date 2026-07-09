@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Expend your martial focus to treat a Will saving throw or concentration check as if you rolled a 13."
 ---
 
 **Prerequisite:** Martial focus.

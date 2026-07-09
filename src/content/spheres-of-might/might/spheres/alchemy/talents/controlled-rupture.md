@@ -3,6 +3,7 @@ id: "controlled-rupture"
 name: "Controlled Rupture"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 Whenever you throw a splash weapon, you can select a number of squares equal to your practitioner modifier that are not affected by the splash damage from it. If the splash weapon misses, this talent has no effect.

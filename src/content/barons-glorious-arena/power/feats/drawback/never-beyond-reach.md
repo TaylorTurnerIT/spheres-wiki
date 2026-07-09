@@ -6,6 +6,7 @@ tags:
   - drawback
   - teamwork
 tier: feat
+summary: "Gain a constant manabond with your bonded creature that does not require concentration."
 ---
 **Prerequisites:** Bonded Casting, Mana Sphere
 

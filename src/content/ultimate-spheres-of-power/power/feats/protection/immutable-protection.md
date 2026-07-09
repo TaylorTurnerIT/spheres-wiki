@@ -4,6 +4,7 @@ name: "Immutable Protection"
 sphere: protection
 tags: []
 tier: feat
+summary: "Gain a +4 insight bonus to MSB and MSD for magical skill checks made by your wards."
 ---
 **Prerequisite:** Protection sphere.
 

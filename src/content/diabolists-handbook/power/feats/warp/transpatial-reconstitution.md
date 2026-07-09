@@ -4,6 +4,7 @@ name: Transpatial Reconstitution
 sphere: warp
 dualSphere: life
 tier: feat
+summary: "Target a teleported creature with a Life sphere effect."
 ---
 
 Your form in this particular world is one of many. Material from beyond can replace any damaged components.

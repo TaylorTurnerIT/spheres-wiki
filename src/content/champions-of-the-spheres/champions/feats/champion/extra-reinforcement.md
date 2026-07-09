@@ -5,6 +5,7 @@ tags:
   - champion
   - warden
 tier: feat
+summary: "Gain an additional reinforcement that you qualify for."
 ---
 **Prerequisite:** Warden 5.
 

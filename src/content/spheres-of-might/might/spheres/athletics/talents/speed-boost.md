@@ -4,6 +4,7 @@ name: "Speed Boost"
 tier: "advanced"
 tags:
   - "run"
+summary: "Increase your run speed multiplier, gain a +8 bonus to running jumps, and expend focus for a temporary 50-foot speed boost."
 ---
 
 **Prerequisites:** Athletics sphere.

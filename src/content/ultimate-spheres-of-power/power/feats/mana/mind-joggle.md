@@ -4,6 +4,7 @@ name: "Mind Joggle"
 sphere: mana
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Mana sphere.

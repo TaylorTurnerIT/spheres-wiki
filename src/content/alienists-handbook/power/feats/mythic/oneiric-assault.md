@@ -5,6 +5,7 @@ tags:
   - general
   - mythic
 tier: feat
+summary: "After using Oneiric Assault, move directly between known dreamscapes to target additional creatures without elapsed time."
 ---
 
 **Prerequisite:** Dreamspace, Oneiric Assault, caster level 10th.

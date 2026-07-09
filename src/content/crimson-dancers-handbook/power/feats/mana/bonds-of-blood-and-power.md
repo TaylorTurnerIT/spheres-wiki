@@ -4,6 +4,7 @@ name: Bonds Of Blood And Power
 sphere: mana
 dualSphere: blood
 tier: feat
+summary: "Spend an additional spell point when establishing blood control to simultaneously create a manabond that shares concentration and counts as blood control."
 ---
 
 **Prerequisites:** Blood sphere, Mana sphere.

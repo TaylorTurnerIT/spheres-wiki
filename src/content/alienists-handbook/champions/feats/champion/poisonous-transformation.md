@@ -5,6 +5,7 @@ sphere: alchemy
 tags:
   - champion
 tier: feat
+summary: "Apply a prepared poison to a shapeshifted creature or its natural attacks, with martial focus expanding the poison to three natural attacks."
 ---
 **Prerequisites:** Alchemy sphere (poison package); Alteration sphere or Transformation
 

@@ -5,6 +5,7 @@ sphere: performance
 tags:
   - operative
 tier: feat
+summary: "Delay the effects of a lyric for up to 1 hour per rank in Perform."
 ---
 
 **Prerequisites:** Associated skill 5 ranks, Performance sphere ((lyric) package).

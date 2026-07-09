@@ -5,6 +5,7 @@ sphere: blood
 tags:
   - admixture
 tier: feat
+summary: "You can spend an additional spell point when using Admixture to subject a damaged creature to your blood control or an associated ability."
 ---
 
 **Prerequisites:** Blood sphere, Destruction sphere (Admixture).

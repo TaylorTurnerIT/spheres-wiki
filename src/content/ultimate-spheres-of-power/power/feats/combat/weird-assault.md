@@ -5,6 +5,7 @@ sphere: illusion
 tags:
   - combat
 tier: feat
+summary: "Suppress two decoys to use the Mage Feint talent as a swift action, or dismiss Weird Defense to use it without an action."
 ---
 
 **Prerequisites:** Illusion sphere (Decoy (glamer), Mage Feint), base attack bonus +3.

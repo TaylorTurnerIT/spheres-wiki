@@ -6,6 +6,7 @@ tags:
   - practitioner
   - sm
 tier: feat
+summary: "Spend martial focus to make a sunder attempt a brutal strike when using a swift action or attack of opportunity."
 ---
 
 **Prerequisites:** Berserker Sphere

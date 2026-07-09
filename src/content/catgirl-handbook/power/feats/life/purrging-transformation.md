@@ -4,6 +4,7 @@ name: Purrging Transformation
 sphere: life
 dualSphere: alteration
 tier: feat
+summary: "Apply a beneficial Life sphere effect to targets of your shapeshift ability by spending an additional spell point, and treat shapeshift as a Life ability for (vitality) talents."
 ---
 
 **Prerequisites:** Alteration sphere, Life sphere.

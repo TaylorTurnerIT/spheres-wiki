@@ -5,6 +5,7 @@ sphere: death
 tags:
   - necrosis
 tier: feat
+summary: ""
 ---
 
 Your nerves fail, increasing your pain tolerance and general resilience.

@@ -3,6 +3,7 @@ id: "iron-wall"
 name: "Iron Wall"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 If you possess the (challenge) package, any time a creature under the effects of your challenge attacks an ally within Close range of you (25 ft + 5 ft. per 2 base attack bonus), that attack suffers a 20% miss chance.

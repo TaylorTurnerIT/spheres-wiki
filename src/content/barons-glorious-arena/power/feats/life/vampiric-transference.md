@@ -4,6 +4,7 @@ name: "Vampiric Transference"
 sphere: life
 tags: []
 tier: feat
+summary: "Spend a spell point to use the Life sphere ability from Vampiric Disruption as a free action, and target any creature within range."
 ---
 
 **Prerequisites:** Life Sphere (Affliction), Vampiric Disruption

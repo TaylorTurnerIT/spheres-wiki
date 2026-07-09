@@ -5,6 +5,7 @@ sphere: alchemy
 tags:
   - champion
 tier: feat
+summary: "Afflict creatures with a magical effect of your creation instead of making them fatigued when using poison."
 ---
 You can create magical poisons that vex their target with your hexes when the poison hits their biological complexes.
 

@@ -4,6 +4,7 @@ name: Saga-Bound Fate
 tags:
   - saga
 tier: feat
+summary: "Replace your d20 rolls with cards drawn from a 40-card deck numbered 1 through 20."
 ---
 
 **Benefits:** Create a 40-card deck where each card has a whole number written on it between 1 and 20 (including those numbers). The final deck must be composed of exactly 2 cards with every value written between 1 and 20 on it. This deck is known as your Saga Deck

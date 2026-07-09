@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Destruction sphere (any one (blast type) talent), Survivalism sphere ((dredge) package, Hazardous Terrain).
 

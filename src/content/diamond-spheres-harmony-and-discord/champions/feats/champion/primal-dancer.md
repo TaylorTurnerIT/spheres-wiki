@@ -6,6 +6,7 @@ dualSphere: destruction
 tags:
   - champion
 tier: feat
+summary: "Gain an energy veil or primal rhythm based on the spheres you possess when you dance."
 ---
 
 **Prerequisite:** Perform (dance) 3 ranks, Performance sphere ((dance) package); either the Berserker sphere or Destruction sphere (one (blast type) talent that deals energy damage or Energy Aura talent).

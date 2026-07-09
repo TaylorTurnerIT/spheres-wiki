@@ -5,6 +5,7 @@ sphere: fate
 dualSphere: divination
 tags: ["sm"]
 tier: feat
+summary: "Discharge motifs to improve Augury or Divine Future and use a word or consecration as part of those effects."
 ---
 
 **Prerequisites:** Divination Sphere (augury or divine future), Fate Sphere

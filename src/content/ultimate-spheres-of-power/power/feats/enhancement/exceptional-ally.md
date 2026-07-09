@@ -4,6 +4,7 @@ name: Exceptional Ally
 sphere: enhancement
 dualSphere: conjuration
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Conjuration sphere, Enhancement sphere (at least one (enhance) talent).

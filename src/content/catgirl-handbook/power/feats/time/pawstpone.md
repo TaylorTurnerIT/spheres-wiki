@@ -4,6 +4,7 @@ name: "Pawstpone"
 sphere: time
 tags: []
 tier: feat
+summary: "You can delay the activation of a sphere effect to trigger after a set duration or when specific conditions are met."
 ---
 
 **Prerequisites:** Time sphere, caster level 5th.

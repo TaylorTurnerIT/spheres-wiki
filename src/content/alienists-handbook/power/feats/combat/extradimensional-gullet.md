@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - combat
 tier: feat
+summary: "Send swallowed or Tomb of Flesh-trapped creatures into your extradimensional room, increasing capacity and making escape harder."
 ---
 **Prerequisites:** Swallow whole, Alteration sphere (Serpentine Transformation (transformation)), or Death sphere (Tomb Of Flesh); Warp sphere (Extradimensional Room (space)).
 

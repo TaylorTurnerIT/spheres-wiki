@@ -4,6 +4,7 @@ name: Kinetic Creation
 sphere: telekinesis
 dualSphere: creation
 tier: feat
+summary: "Create simple, weightless items out of telekinetic force instead of matter."
 ---
 
 **Prerequisites:** Creation sphere, Telekinesis sphere, caster level 7th.

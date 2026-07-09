@@ -5,6 +5,7 @@ tags:
   - operative
 sphere: performance
 tier: feat
+summary: "Gain the benefits of a chosen dance talent as a constant effect."
 ---
 
 **Prerequisites:** Performance sphere ((dance) package), associated ranks 10.

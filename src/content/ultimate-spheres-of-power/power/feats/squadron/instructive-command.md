@@ -5,6 +5,7 @@ sphere: war
 tags:
   - squadron
 tier: feat
+summary: "Share your ranks and skill unlocks in one chosen skill with your squadron."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

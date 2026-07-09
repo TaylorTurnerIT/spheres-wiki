@@ -5,6 +5,7 @@ tags:
   - combat
   - operative
 tier: feat
+summary: "Increase the duration of your incredible stunts and avoid fatigue."
 ---
 
 **Prerequisites:** Incredible stunt class feature.

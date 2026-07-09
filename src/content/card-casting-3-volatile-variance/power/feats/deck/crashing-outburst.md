@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Designate effect cards that cannot be cast normally but count as 2 spell points cheaper for Outburst Spell."
 ---
 
 **Prerequisites:** Card Casting, Outburst Spell

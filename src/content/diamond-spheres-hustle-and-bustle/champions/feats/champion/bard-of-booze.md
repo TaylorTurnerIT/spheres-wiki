@@ -5,6 +5,7 @@ sphere: barroom
 tags:
   - champion
 tier: feat
+summary: "Retrieve and drink an alcoholic beverage as part of using or maintaining a Performance sphere ability."
 ---
 **Prerequisites:** Barroom sphere and Performance sphere.
 

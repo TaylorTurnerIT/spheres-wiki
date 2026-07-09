@@ -3,6 +3,7 @@ id: "soul-s-shield"
 name: "Soul’s Shield"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Shield sphere, base attack bonus +5.

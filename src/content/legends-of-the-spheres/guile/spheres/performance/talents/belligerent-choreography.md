@@ -4,6 +4,7 @@ name: "Belligerent Choreography"
 tier: "basic"
 tags:
   - "dance"
+summary: ""
 ---
 
 Enemies that begin their turn or move within the threatened area of a dancer suffer 1d6 points of bludgeoning damage and become battered for 1 round. A successful Reflex save negates this damage and the battered condition; a creature may only be damaged once per turn in this way.

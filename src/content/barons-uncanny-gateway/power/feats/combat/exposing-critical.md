@@ -5,6 +5,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Apply a saving throw penalty to targets you critically hit until the end of your next turn."
 ---
 **Prerequisites:** Critical Focus, BAB +11
 

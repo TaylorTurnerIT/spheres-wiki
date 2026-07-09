@@ -5,6 +5,7 @@ sphere: beastmastery
 tags:
   - champion
 tier: feat
+summary: "Communicate with your animal allies as if under the Speak With Animals talent, and reduce the talent's spell point cost at 5th level."
 ---
 **Prerequisites:** Beastmastery sphere, Nature sphere, Speak With Animals.
 

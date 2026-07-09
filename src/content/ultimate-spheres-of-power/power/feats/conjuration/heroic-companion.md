@@ -4,6 +4,7 @@ name: "Heroic Companion"
 sphere: conjuration
 tags: ["luck"]
 tier: feat
+summary: "Your companions, familiars, and eidolons can spend your hero points."
 ---
 
 **Prerequisite:** Beastmastery sphere, Conjuration sphere, animal companion, familiar, or eidolon.

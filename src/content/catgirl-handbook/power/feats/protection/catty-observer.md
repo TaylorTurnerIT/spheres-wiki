@@ -4,6 +4,7 @@ name: "Catty Observer"
 sphere: protection
 tags: []
 tier: feat
+summary: "Attempt information-gathering skill checks from the location of a target affected by your Diagnose or Status talents."
 ---
 
 "She brings the food on a regular basis, delivering the fine dry cubes of nourishment to my bowl. She is worth protecting." – Meowlin the Omnicatster

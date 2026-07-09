@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 You are not only nourished by drinking poisons other than your own, your venom becomes more potent as well.
 

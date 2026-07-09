@@ -4,6 +4,7 @@ name: Two-Handed Fighting, Perfect
 tags:
   - combat
 tier: feat
+summary: "Increase the Strength bonus on your first two-handed attack each round, and enhance sweeping strikes to target up to 4 spaces and include extra weapon damage dice."
 ---
 **Prerequisite:** Str 23, Power Attack, Two-Handed Fighting, Improved Two-Handed Fighting, Greater Two-Handed Fighting, base attack bonus +21. 
 

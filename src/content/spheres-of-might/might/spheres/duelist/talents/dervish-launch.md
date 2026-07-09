@@ -4,6 +4,7 @@ name: "Dervish Launch"
 tier: "advanced"
 tags:
   - "disarm"
+summary: ""
 ---
 
 **Prerequisites:** Duelist sphere, base attack bonus +6.

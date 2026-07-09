@@ -4,6 +4,7 @@ name: "Crimson Flash"
 sphere: light
 tags: []
 tier: feat
+summary: "As a swift action, you can spend a spell point to allow one ally to use your initiative in place of their own, or to remove their surprised condition."
 ---
 
 **Prerequisite:** Light sphere.

@@ -5,6 +5,7 @@ sphere: illusion
 tags:
   - combat
 tier: feat
+summary: "As a swift action, grant yourself a miss chance based on your caster level until the start of your next turn or until an attack misses due to this feat."
 ---
 
 **Prerequisites:** Illusion sphere (Blur (glamer), Decoy (glamer)).

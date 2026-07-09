@@ -4,6 +4,7 @@ name: "Dark Portal"
 sphere: dark
 tags: []
 tier: feat
+summary: "Using your Step Through Darkness (meld) talent leaves a portal open until your next turn that allows any creature to follow you to your destination."
 ---
 
 **Prerequisites:** Dark sphere (Step Through Darkness (meld)).

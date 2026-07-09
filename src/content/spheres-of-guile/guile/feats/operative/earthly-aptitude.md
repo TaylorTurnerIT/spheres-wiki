@@ -5,6 +5,7 @@ sphere: study
 tags:
   - operative
 tier: feat
+summary: "Automatically predict natural weather and gain immediate Knowledge checks to notice natural hazards or secret openings; add new methods and breakthroughs to theories."
 ---
 
 You possess a deep understanding of the natural world, and how it can be shaped, refined, and corrupted.

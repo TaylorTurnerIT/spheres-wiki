@@ -5,6 +5,7 @@ tags:
   - item-creation
   - mythic
 tier: feat
+summary: "Expend mythic power to instantly accomplish eight hours of magic item crafting or temporarily change the magical properties of an item you possess."
 ---
 
 **Prerequisites:** Any item creation feat.

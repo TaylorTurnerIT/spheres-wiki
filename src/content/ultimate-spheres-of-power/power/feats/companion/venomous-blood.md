@@ -5,6 +5,7 @@ sphere: conjuration
 tags:
   - companion
 tier: feat
+summary: "Your companion sprays poison on attackers that critically hit it with a non-reach piercing or slashing melee weapon, and can take damage to apply poison to its own attacks as a swift action."
 ---
 
 **Prerequisites:** Conjuration sphere (Monstrous Attacks (form) with poison option).

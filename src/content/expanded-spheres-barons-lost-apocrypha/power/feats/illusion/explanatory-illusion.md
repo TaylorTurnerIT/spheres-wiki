@@ -4,6 +4,7 @@ name: Explanatory Illusion
 sphere: illusion
 dualSphere: divination
 tier: feat
+summary: "As a free action, create an illusory representation of anything you perceive using your divine abilities."
 ---
 
 **Prerequisites:** Divination Sphere, Illusion Sphere

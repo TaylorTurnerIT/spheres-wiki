@@ -5,6 +5,7 @@ tags:
   - defiler
   - drawback
 tier: feat
+summary: ""
 ---
 Your magic shatters the ground, transforming into hazardous terrain.
 

@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Gain one additional temporary talent when using a temporary talent ability in your Area Casting location."
 ---
 **Prerequisites:** Area Casting drawback 
 

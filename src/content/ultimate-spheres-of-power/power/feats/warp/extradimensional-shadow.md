@@ -4,6 +4,7 @@ name: "Extradimensional Shadow"
 sphere: warp
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Dark sphere (Shadow Stash), Warp sphere (Extradimensional Storage).

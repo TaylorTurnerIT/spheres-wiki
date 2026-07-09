@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: scout
 tier: feat
+summary: "Your first attack of opportunity each round against a scouted target does not expend an attack of opportunity, and you may scout an unscouted target after a successful attack."
 ---
 
 The soft paws pace around their target, slowly analyzing and waiting for the moment to pounce.

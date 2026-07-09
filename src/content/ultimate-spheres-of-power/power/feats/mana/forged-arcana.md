@@ -4,6 +4,7 @@ name: "Forged Arcana"
 sphere: mana
 tags: []
 tier: feat
+summary: "Increase your caster level when using expunge, manipulate, or manabond."
 ---
 
 **Prerequisites:** Spellcraft 1 rank, Mana sphere.

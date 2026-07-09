@@ -4,6 +4,7 @@ name: Vudu
 sphere: illusion
 dualSphere: death
 tier: feat
+summary: "Your ghost strikes deal additional Illusionary Touch damage, and your reanimated undead appear as they did when they were alive."
 ---
 
 **Prerequisites:** Death sphere, Illusion sphere (Illusionary Touch (sensory, touch) x2, Illusionary Disguise ability).

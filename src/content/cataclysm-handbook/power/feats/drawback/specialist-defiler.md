@@ -5,6 +5,7 @@ tags:
   - defiler
   - drawback
 tier: feat
+summary: "Increase your caster level by 1 when using Terrain Casting to blight a chosen favored terrain."
 ---
 You draw extra energy from certain environments.
 

@@ -4,6 +4,7 @@ name: Warded Bones
 sphere: protection
 dualSphere: death
 tier: feat
+summary: "You may apply an aegis to an undead creature when you reanimate it by paying the aegis's spell point cost."
 ---
 
 Undead that you create are even harder to destroy than normal.

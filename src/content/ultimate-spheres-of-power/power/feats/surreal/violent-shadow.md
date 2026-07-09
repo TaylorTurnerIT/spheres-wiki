@@ -4,6 +4,7 @@ name: Violent Shadow
 tags:
   - surreal
 tier: feat
+summary: "Spend a shadow point to make melee touch attacks with your shadowmark at a 10-foot reach, allowing multiple attacks and attacks of opportunity until your next turn."
 ---
 
 **Prerequisites:** Shadowmark 3d6, shadow pool.

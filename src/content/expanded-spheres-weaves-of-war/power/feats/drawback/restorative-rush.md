@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Choose two methods to restore charges to your charged spells and gain a temporary +1 bonus to attack rolls when you do so."
 ---
 **Prerequisites:** Charged Spells
 

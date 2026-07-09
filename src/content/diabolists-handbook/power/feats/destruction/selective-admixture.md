@@ -4,6 +4,7 @@ name: "Selective Admixture"
 sphere: destruction
 tags: []
 tier: feat
+summary: "Apply an Admixture effect to creatures omitted by Selective Blast instead of creatures damaged by the blast."
 ---
 
 Amidst ruin, you have learned to support those whom you favor.

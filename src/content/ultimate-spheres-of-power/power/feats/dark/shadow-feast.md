@@ -4,6 +4,7 @@ name: "Shadow Feast"
 sphere: dark
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Dark sphere.

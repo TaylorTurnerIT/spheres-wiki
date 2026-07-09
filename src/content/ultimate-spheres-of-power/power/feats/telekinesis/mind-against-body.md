@@ -4,6 +4,7 @@ name: "Mind Against Body"
 sphere: telekinesis
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Telekinesis sphere (Telekinetic Maneuver).

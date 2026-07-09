@@ -4,6 +4,7 @@ name: "Tethered Mana"
 sphere: mana
 tags: []
 tier: feat
+summary: "Create Hardened Bonds at manabond range, link their ends between targets, and use them as tethers for qualifying abilities."
 ---
 **Prerequisites:** Mana sphere (Hardened Bond).
 

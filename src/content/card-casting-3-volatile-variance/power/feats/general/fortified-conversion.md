@@ -5,6 +5,7 @@ tags:
   - 3pp
   - general
 tier: feat
+summary: "Spend a spell point as a free action outside your turn to gain a temporary stamina point."
 ---
 **Prerequisites:** Casting Tradition, Combat Stamina
 

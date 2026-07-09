@@ -5,6 +5,7 @@ sphere: protection
 tags:
   - champion
 tier: feat
+summary: "Expend martial focus to apply a shout or tactic to allies in your ward, and add half your Diplomacy ranks to your caster level for wards."
 ---
 **Prerequisites:** Protection sphere, Warleader sphere.
 

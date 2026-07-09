@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Gain a +1 bonus to CMB and CMD per size category difference against larger foes, and use combat maneuvers against targets one size larger than normally allowed."
 ---
 
 Your martial training and natural heartiness are the only tools you need to tackle even the mightiest foes.

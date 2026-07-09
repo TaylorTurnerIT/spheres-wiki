@@ -4,6 +4,7 @@ name: Blurred Boundary
 sphere: protection
 dualSphere: illusion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Illusion sphere (any (glamer) talent), Protection sphere.

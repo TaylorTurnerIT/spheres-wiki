@@ -5,6 +5,7 @@ sphere: war
 tags:
   - combat
 tier: feat
+summary: "Spend a stamina point each round to maintain a totem or mandate as a free action."
 ---
 
 **Prerequisites:** War sphere, Combat Stamina.

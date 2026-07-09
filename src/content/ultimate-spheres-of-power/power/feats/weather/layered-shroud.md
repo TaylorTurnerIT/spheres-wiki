@@ -4,6 +4,7 @@ name: "Layered Shroud"
 sphere: weather
 tags: []
 tier: feat
+summary: "Spend a spell point when using a shroud to apply a second, different shroud to the same target as a swift action."
 ---
 
 **Prerequisites:** Weather sphere (one (shroud) talent), caster level 10th.

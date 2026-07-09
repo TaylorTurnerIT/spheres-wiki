@@ -4,6 +4,7 @@ name: Preserved Integrity
 tags:
   - drawback
 tier: feat
+summary: "Ignore later caster level or save DC penalties when using a sphere effect prepared as a charge before those penalties applied."
 ---
 **Prerequisite:** Charged Spells.
 

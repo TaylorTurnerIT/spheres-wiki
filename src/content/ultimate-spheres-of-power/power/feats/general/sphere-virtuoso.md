@@ -4,6 +4,7 @@ name: Sphere Virtuoso
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Casting class feature; two or more talents from any sphere that both have the instill, mass, range or strike descriptors.
 

@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - sm
 tier: feat
+summary: "Exempt any number of creatures from selective blast and filter exemptions by Protection glyph parameters."
 ---
 
 **Prerequisites:** Destruction Sphere (selective blast)

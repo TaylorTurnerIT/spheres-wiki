@@ -5,6 +5,7 @@ sphere: athletics
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Athletics sphere, Navigation sphere.

@@ -3,6 +3,7 @@ id: "perfect-redirection"
 name: "Perfect Redirection"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Shield sphere, Deflecting Shield, Redirecting Shield, base attack bonus +7.

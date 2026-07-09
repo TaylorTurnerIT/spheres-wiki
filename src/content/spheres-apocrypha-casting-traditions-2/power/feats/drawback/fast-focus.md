@@ -4,6 +4,7 @@ name: Fast Focus
 tags:
   - drawback
 tier: feat
+summary: "Regain mental focus as a move action."
 ---
 **Prerequisites:** Mental Focus.
 

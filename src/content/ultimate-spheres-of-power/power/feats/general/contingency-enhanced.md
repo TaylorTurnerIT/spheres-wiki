@@ -5,6 +5,7 @@ sphere: enhancement
 tags:
   - general
 tier: feat
+summary: "You can apply an enhancement to a contingency effect and optionally spend an additional spell point to delay the enhancement's duration until the contingency is triggered."
 ---
 **Prerequisites:** Enhancement sphere, Contingency.
 

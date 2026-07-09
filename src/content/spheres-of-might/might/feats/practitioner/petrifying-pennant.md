@@ -4,6 +4,7 @@ name: Petrifying Pennant
 tags:
   - practitioner
 tier: feat
+summary: "Enemies within range of your banner take a -2 penalty on saves against fear effects, and the DC to demoralize them is reduced by 2."
 ---
 
 **Prerequisites:** Base attack bonus +8 or Diplomacy 8 ranks, banner class feature or Warleader sphere (Heraldry).

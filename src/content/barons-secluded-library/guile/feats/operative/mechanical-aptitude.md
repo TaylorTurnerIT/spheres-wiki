@@ -6,6 +6,7 @@ tags:
   - sm
 sphere: study
 tier: feat
+summary: "Begin technology-focused theories with a notion and gain mechanical breakthroughs for skill checks, combat maneuvers, and hardness bypass."
 ---
 
 You possess a deep understanding of machinery and how people use it.

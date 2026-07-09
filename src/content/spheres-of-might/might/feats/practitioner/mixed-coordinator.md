@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: beastmastery
 tier: feat
+summary: "Treat a creature as both an animal ally and a cohort."
 ---
 
 **Prerequisites:** Beastmastery sphere, (handle animal) package, Leadership sphere, (cohort) package.

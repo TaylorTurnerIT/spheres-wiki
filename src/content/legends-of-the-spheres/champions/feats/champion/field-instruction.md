@@ -5,6 +5,7 @@ sphere: navigation
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Navigation sphere, Warleader sphere.

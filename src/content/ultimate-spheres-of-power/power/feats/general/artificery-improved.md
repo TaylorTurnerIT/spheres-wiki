@@ -4,6 +4,7 @@ name: Artificery, Improved
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Any Craft or Profession 10 ranks, Artificery.
 

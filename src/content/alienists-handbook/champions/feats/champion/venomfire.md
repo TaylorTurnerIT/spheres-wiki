@@ -5,6 +5,7 @@ sphere: alchemy
 tags:
   - champion
 tier: feat
+summary: "Spend a spell point when creating a poison to boost Painful Venin damage to your Destruction caster level and apply blast type effects."
 ---
 **Prerequisites:** Alchemy sphere (Painful Venin x2), Destruction sphere.
 

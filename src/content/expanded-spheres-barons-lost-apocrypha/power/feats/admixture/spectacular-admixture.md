@@ -6,6 +6,7 @@ tags:
   - 3pp
   - admixture
 tier: feat
+summary: "When using Admixture, spend an additional spell point to apply a glamer effect to damaged targets or center a figment on an affected square instead of a second blast type."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Illusion sphere.

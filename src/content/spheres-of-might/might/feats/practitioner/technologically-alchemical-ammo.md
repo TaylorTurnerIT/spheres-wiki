@@ -6,6 +6,7 @@ tags:
   - dual-sphere
   - practitioner
 tier: feat
+summary: "Your ammo spitter can create alchemical or complex ammunition costing 50 gp or less."
 ---
 
 **Prerequisites:** Tech sphere, Ammo Spitter, Alchemy sphere (formulae) package.

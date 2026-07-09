@@ -3,6 +3,7 @@ id: "armies-of-the-dead"
 name: "Armies Of The Dead"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Warleader sphere, Diplomacy 6 ranks.

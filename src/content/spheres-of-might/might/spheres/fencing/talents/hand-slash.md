@@ -4,6 +4,7 @@ name: "Hand Slash"
 tier: "basic"
 tags:
   - "exploit"
+summary: ""
 ---
 
 Make a disarm combat maneuver against the target as a free action. This disarm does not provoke an attack of opportunity.

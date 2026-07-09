@@ -4,6 +4,7 @@ name: Tides Of War
 sphere: war
 dualSphere: mana
 tier: feat
+summary: "Create manabonds as part of rallies, mandates, or totems, and use totem concentration for manabond talents."
 ---
 **Prerequisites:** Mana sphere (Magical Conduit), War sphere.
 

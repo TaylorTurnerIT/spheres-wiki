@@ -4,6 +4,7 @@ name: Catisthenics
 tags:
   - practitioner
 tier: feat
+summary: "Gain a pool of dice that can be spent to add +1d6 to Strength- or Dexterity-based skill checks."
 ---
 
 **Prerequisite:** 1 rank in any Strength- or Dexterity-based skill.

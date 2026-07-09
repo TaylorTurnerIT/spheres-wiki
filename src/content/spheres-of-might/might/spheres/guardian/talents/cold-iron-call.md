@@ -3,6 +3,7 @@ id: "cold-iron-call"
 name: "Cold Iron Call"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 When targeted by a spell or spell-like ability, you may delay the onset of its effects until the end of your next turn as if it were damage. Each effect is treated as if it were an amount of hit point damage equal to its caster level for the purpose of your delayed damage pool. If you do not have enough space remaining in the delayed damage pool, you may not delay the effect.

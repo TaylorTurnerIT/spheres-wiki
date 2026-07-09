@@ -14,6 +14,7 @@ sectionDefinitions:
         tags: ["snipe"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
+summary: "Gain the deadly shot ability."
 ---
 
 Snipers are masters of ranged combat who specialize in making a single, devastating shot. Practitioners of the Sniper sphere gain the deadly shot ability.

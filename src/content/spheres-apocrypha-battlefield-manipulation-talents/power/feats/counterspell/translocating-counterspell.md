@@ -5,6 +5,7 @@ sphere: warp
 tags:
   - counterspell
 tier: feat
+summary: "Teleport a successfully counterspelled effect to another location."
 ---
 **Prerequisites:** Warp sphere, Counterspell.
 

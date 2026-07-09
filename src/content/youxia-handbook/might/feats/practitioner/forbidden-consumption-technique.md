@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Take nonlethal damage instead of expending martial focus."
 ---
 
 **Prerequisite:** Base attack bonus +5.

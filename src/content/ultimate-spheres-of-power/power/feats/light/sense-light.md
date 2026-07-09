@@ -4,6 +4,7 @@ name: "Sense Light"
 sphere: light
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Perception 5 ranks, Light sphere.

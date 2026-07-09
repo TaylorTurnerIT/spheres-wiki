@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Gain one ki power from the unchained monk's list of ki powers."
 ---
 
 **Prerequisites:** Improved Unarmed Strike, base attack bonus +4, martial focus.

@@ -6,6 +6,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Avoid defiling terrain when enough creatures fail saves against your Agonizing, Ruinous, or Spellburn Defiling effects."
 ---
 **Prerequisites:** Terrain Casting drawback, one of Agonizing Defiling, Ruinous Defiling, or Spellburn Defiling
 

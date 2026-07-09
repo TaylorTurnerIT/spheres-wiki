@@ -4,6 +4,7 @@ name: Handblood's Boon
 tags:
   - deck
 tier: feat
+summary: "Assign feats to cards by category and discard matching cards to add those feats or talents to a played card's effect."
 ---
 
 **Prerequisites:** Card Casting (Bleeding Hand x2), Handblood’s Advantage

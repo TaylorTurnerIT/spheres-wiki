@@ -4,6 +4,7 @@ name: Flexible Ghost Strike
 sphere: destruction
 dualSphere: death
 tier: feat
+summary: "Apply blast shape talents to ghost strikes."
 ---
 
 You can make ghost strikes in a variety of configurations.

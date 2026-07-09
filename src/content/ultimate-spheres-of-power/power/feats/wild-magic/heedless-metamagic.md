@@ -4,6 +4,7 @@ name: Heedless Metamagic
 tags:
   - wild-magic
 tier: feat
+summary: "Ignore the casting time increase of metamagic feats by increasing your wild magic chance by 50% per feat."
 ---
 **Prerequisites:** 1 or more metamagic feats.
 

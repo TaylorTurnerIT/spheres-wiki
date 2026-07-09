@@ -4,6 +4,7 @@ name: Aurora
 sphere: weather
 dualSphere: light
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Light sphere, Weather sphere.

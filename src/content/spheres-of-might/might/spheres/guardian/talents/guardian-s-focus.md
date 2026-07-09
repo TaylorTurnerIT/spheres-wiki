@@ -3,6 +3,7 @@ id: "guardian-s-focus"
 name: "Guardian’s Focus"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 When a creature affected by your challenge is reduced to 0 or fewer hit points or you succeed on a combat maneuver check made on an attack of opportunity while you have a patrol set up, you may regain martial focus as an immediate action.

@@ -5,6 +5,7 @@ sphere: warp
 tags:
   - champion
 tier: feat
+summary: "Gain techniques to prevent targets from teleporting, reload while teleporting, and bypass cover with ranged attacks using warp magic."
 ---
 
 **Prerequisites:** Warp sphere, +3 base attack bonus.

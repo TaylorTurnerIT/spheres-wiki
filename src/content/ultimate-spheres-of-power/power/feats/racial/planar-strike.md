@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 You can swing your blade with so murderous an intent that it cleaves between dimensions.
 

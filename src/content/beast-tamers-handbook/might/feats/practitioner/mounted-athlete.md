@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: athletics
 tier: feat
+summary: "Use your Athletics skill checks and sphere talents through your mount while mounted."
 ---
 
 The handler is often as athletic as the mount.

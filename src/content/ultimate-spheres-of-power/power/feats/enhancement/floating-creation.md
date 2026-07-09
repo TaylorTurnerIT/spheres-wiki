@@ -4,6 +4,7 @@ name: Floating Creation
 sphere: enhancement
 dualSphere: creation
 tier: feat
+summary: "Make an object weightless as the Lighten talent when you create it."
 ---
 
 **Prerequisites:** Creation sphere, Enhancement sphere (Lighten (enhance)).

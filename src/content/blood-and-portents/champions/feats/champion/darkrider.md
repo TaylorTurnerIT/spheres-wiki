@@ -5,6 +5,7 @@ sphere: beastmastery
 tags:
   - champion
 tier: feat
+summary: "Share your Dark melds with your mount and attach darkness effects to animal allies."
 ---
 **Prerequisites:** Beastmastery sphere, Dark sphere.
 

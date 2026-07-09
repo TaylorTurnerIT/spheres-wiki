@@ -4,6 +4,7 @@ name: "Lightshow"
 sphere: light
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Light sphere, bardic performance class ability.

@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Make two nonjoker cards wild for Huckster's Gamble and reduce the spell point cost to draw extra cards."
 ---
 **Prerequisites:** Huckster's Gamble
 

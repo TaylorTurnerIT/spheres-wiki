@@ -4,6 +4,7 @@ name: Combat Recharge
 tags:
   - drawback
 tier: feat
+summary: "Spend spell points when expending a charge to regain that charge after 1d4 rounds."
 ---
 Your expensive and painstaking miracles can be salvaged should the situation require.
 

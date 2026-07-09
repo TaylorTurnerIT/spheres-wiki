@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Maintain a second independent martial focus."
 ---
 
 **Prerequisites:** 2 or more combat spheres, base attack bonus +6 or higher.

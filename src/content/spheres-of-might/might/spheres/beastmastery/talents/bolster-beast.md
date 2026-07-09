@@ -4,6 +4,7 @@ name: "Bolster Beast"
 tier: "basic"
 tags:
   - "handle-animal"
+summary: "Grant a tame creature a bonus Hit Die for each hour of training and a successful Handle Animal check."
 ---
 
 You may increase the power of a tame creature through intense training. You may grant a tame creature 1 bonus Hit Die for every hour you spend training it with a Handle Animal check with a DC of 10 + the creature’s new Hit Dice total. These additional Hit Dice count against your Hit Dice cap for the trainer ability as normal and cannot cause the creature’s Hit Dice to exceed your ranks in Handle Animal. These additional Hit Dice are multiplied as normal for companions that have their Hit Dice doubled for the purposes of determining how many creatures you may have tame. If a creature is released from the tame condition, these bonus Hit Dice are lost immediately.

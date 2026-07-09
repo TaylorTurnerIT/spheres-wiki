@@ -5,6 +5,7 @@ sphere: gladiator
 tags:
   - champion
 tier: feat
+summary: "Move illusions when boasting or using Strike Fear and center Strike Fear on an illusion while casting it."
 ---
 **Prerequisites:** Intimidate 3 ranks, Gladiator sphere, Illusion sphere.
 

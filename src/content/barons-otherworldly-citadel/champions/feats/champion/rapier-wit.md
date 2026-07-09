@@ -7,6 +7,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Outwit a target as a cost to perform a feint or demoralize them as part of a quip, and spend martial focus to ignore penalties from previous uses."
 ---
 **Prerequisites:** Bluster sphere, either Fencing or Gladiator sphere
 

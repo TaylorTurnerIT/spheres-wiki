@@ -4,6 +4,7 @@ name: Defensive Vigilance
 sphere: war
 dualSphere: protection
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Protection sphere, War sphere.

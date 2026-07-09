@@ -4,6 +4,7 @@ name: Armored Casting
 tags:
   - combat
 tier: feat
+summary: "Add the armor bonus from armor you are proficient with to concentration checks made to cast defensively or while grappled."
 ---
 **Prerequisite:** Light Armor Proficiency.
 

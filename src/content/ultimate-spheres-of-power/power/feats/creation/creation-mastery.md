@@ -4,6 +4,7 @@ name: "Creation Mastery"
 sphere: creation
 tags: []
 tier: feat
+summary: "Treat your character level as your caster level when determining the types of materials you can create."
 ---
 
 **Prerequisites:** Creation sphere (any (material) talent).

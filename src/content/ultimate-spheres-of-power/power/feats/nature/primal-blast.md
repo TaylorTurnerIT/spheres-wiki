@@ -4,6 +4,7 @@ name: Primal Blast
 sphere: nature
 dualSphere: destruction
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Destruction sphere (any (blast type) talent), Nature sphere (any package).

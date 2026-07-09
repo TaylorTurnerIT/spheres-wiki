@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - combat
 tier: feat
+summary: "Increase the DC of your granted poison by +2 and require an additional save to cure it."
 ---
 
 **Prerequisites:** Alteration sphere (Serpentine Transformation (transformation) or Vermin Transformation (transformation)), poison bestial trait, or racial poison ability.

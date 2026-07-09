@@ -4,6 +4,7 @@ name: "Soul-Scorching Blast"
 sphere: destruction
 tags: []
 tier: feat
+summary: "Use a Will save instead of a Reflex save for qualifying aligned destructive blasts."
 ---
 
 Rather than their body, you attack the very essence of your foes.

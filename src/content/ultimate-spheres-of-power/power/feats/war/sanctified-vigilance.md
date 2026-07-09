@@ -4,6 +4,7 @@ name: Sanctified Vigilance
 sphere: war
 dualSphere: fate
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Fate sphere, War sphere (any (rally) talent).

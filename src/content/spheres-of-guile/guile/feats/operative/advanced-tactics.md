@@ -4,6 +4,7 @@ name: Advanced Tactics
 tags:
   - operative
 tier: feat
+summary: "Roll 1d6 instead of 1d4 when using change tactics, with a chance to not expend skill leverage on success and guaranteed retention on failure."
 ---
 
 **Prerequisites:** 4 ranks in any skill, skill leverage.

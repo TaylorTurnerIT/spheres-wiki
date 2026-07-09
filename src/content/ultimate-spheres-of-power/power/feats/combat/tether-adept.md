@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: "You can anchor your Energy Tether to a wall or ceiling and make an Acrobatics check to move to other squares within its reach as a move action."
 ---
 
 **Prerequisites:** Destruction sphere (Energy Tether (blast shape)).

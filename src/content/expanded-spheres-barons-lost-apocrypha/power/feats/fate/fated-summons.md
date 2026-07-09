@@ -4,6 +4,7 @@ name: Fated Summons
 sphere: fate
 dualSphere: conjuration
 tier: feat
+summary: "Spend one spell point when summoning a companion to apply a word or motif to them as part of the same standard action."
 ---
 
 **Prerequisites:** Conjuration Sphere, Fate Sphere

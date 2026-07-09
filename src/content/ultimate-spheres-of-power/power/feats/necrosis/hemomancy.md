@@ -5,6 +5,7 @@ sphere: death
 tags:
   - necrosis
 tier: feat
+summary: "Gain +1 spell point, blindsense against bleeding creatures, and the ability to spend a spell point to afflict them with ghost strikes regardless of line of sight or effect."
 ---
 
 **Prerequisite:** Death sphere.

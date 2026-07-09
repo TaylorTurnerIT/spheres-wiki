@@ -4,6 +4,7 @@ name: "Adaptive Resistance"
 sphere: alteration
 tags: []
 tier: feat
+summary: "Spend a spell point as an immediate action to swap a shapeshift trait for a qualifying damage reduction, resistance, or immunity trait before damage resolves."
 ---
 **Prerequisites:** Alteration sphere (Protean Mastery (body)).
 

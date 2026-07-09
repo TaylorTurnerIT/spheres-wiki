@@ -2,6 +2,7 @@
 id: deific-icon
 name: Deific Icon
 tags: []
+summary: "Create an artwork honoring your deity that grants bonuses to saving throws and skill checks, and potentially shares Obedience feat benefits."
 ---
 
 **Prerequisites:** Artifice sphere ((artwork) package), Knowledge (religion) 3 ranks, must worship a deity (or similar creature).

@@ -5,6 +5,7 @@ sphere: life
 tags:
   - channeling
 tier: feat
+summary: "You can spend spell points to augment your channel energy with Life sphere abilities, allowing you to target any creature affected by the channel regardless of normal range limits."
 ---
 
 **Prerequisites:** Life sphere, channel energy class feature.

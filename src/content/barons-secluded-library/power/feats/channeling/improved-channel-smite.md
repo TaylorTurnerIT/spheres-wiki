@@ -6,6 +6,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Apply Channel Smite to one additional attack before your next turn and activate it after seeing an attack roll."
 ---
 **Prerequisites:** Channel Smite
 

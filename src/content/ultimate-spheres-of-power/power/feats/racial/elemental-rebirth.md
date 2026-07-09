@@ -4,6 +4,7 @@ name: Elemental Rebirth
 tags:
   - racial
 tier: feat
+summary: "Revive as per raise dead if your body is immersed in your resisted element within a day of death, or automatically if slain by it."
 ---
 Like the phoenixes of legend, you are difficult to keep down.
 

@@ -5,6 +5,7 @@ tier: "basic"
 tags:
   - "dart"
   - "snare"
+summary: ""
 ---
 
 When used as a dart, the target must make a Reflex save or suffer a 20% miss chance on all attack rolls for 1 round and dazzled for a number of rounds equal to your ranks in Craft (traps). At 10 ranks in Craft (traps), it may inflict the blinded condition rather than a miss chance.

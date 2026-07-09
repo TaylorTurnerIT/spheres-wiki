@@ -5,6 +5,7 @@ sphere: survivalism
 tags:
   - operative
 tier: feat
+summary: "Have an additional refined component active if it came from a favored enemy, and combine creature types during refinement."
 ---
 
 **Prerequisites:** Associated skill 5 ranks, Survivalism sphere ((harvest) package), favored enemy class feature.

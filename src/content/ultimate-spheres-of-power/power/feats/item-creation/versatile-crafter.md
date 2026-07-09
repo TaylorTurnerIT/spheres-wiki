@@ -4,6 +4,7 @@ name: Versatile Crafter
 tags:
   - item-creation
 tier: feat
+summary: "You can bypass missing base spheres, caster level, or MSB when creating magic items by increasing the crafting DC by +5 per requirement bypassed."
 ---
 **Prerequisite:** Any item creation feat.
 

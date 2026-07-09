@@ -6,6 +6,7 @@ tags:
   - practitioner
   - sm
 tier: feat
+summary: "Use Forbidden Consumption Technique additional times when performing a technique, scaling with base attack bonus."
 ---
 
 **Prerequisites:** Forbidden Consumption Technique, Knowledge of at least one technique

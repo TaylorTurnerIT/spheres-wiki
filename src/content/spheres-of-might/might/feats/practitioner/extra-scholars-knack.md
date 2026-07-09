@@ -4,6 +4,7 @@ name: Extra Scholar's Knack
 tags:
   - practitioner
 tier: feat
+summary: "Gain an additional scholar's knack."
 ---
 
 Research and study lead you to new academic discoveries.

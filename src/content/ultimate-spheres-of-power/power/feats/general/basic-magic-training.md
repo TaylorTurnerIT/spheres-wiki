@@ -4,6 +4,7 @@ name: Basic Magic Training
 tags:
   - general
 tier: feat
+summary: "Gain access to a basic magic sphere, an effective caster level of 1, a spell pool of 1, and the casting class feature."
 ---
 **Prerequisite:** No casting class feature.
 

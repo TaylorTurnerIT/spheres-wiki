@@ -4,6 +4,7 @@ name: Piecemeal Animation
 sphere: telekinesis
 dualSphere: death
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Death sphere, Telekinesis sphere (Divided Mind).

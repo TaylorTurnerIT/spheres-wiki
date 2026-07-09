@@ -4,6 +4,7 @@ name: Vegetalker
 tags:
   - racial
 tier: feat
+summary: "You may constantly speak with plants with a caster level equal to your hit dice."
 ---
 The forests of Khrone speak to you as plainly as any other living creature.
 

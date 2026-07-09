@@ -5,6 +5,7 @@ sphere: enhancement
 tags:
   - combat
 tier: feat
+summary: "You can grant bonus combat feats to your animated objects."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), base attack bonus +1.

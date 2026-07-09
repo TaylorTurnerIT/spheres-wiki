@@ -6,6 +6,7 @@ tags:
   - drawback
   - squadron
 tier: feat
+summary: "Combine the spell decks, hands, and discard piles of squadron members with the Card Casting drawback, allowing any member to play cards using their own statistics."
 ---
 
 **Prerequisites:** Card Casting, Squadron Commander

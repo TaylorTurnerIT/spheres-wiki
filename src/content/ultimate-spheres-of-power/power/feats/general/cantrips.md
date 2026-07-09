@@ -4,6 +4,7 @@ name: Cantrips
 tags:
   - general
 tier: feat
+summary: "You can create a variety of small magical effects."
 ---
 **Prerequisite:** Basic Magic Training or casting class feature.
 

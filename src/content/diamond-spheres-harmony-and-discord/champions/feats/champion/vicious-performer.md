@@ -6,6 +6,7 @@ dualSphere: war
 tags:
   - champion
 tier: feat
+summary: "Treat creatures affected by your performance as if inside a totem's radius."
 ---
 
 **Prerequisite:** Performance sphere; either the Gladiator sphere or War sphere.

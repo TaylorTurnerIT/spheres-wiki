@@ -4,6 +4,7 @@ name: Cooperative Destruction
 sphere: destruction
 dualSphere: creation
 tier: feat
+summary: "Use your Repair ability to increase the caster level of your own or an ally's electric or fire destructive blasts."
 ---
 
 **Prerequisites:** Creation sphere (Plasma Production (material), Potent Alteration), Destruction sphere.

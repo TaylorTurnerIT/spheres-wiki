@@ -4,6 +4,7 @@ name: Ley Line Affinity
 tags:
   - drawback
 tier: feat
+summary: ""
 ---
 Your magic naturally bonds to the overflowing power of ley lines, granting you strength even in regions your magic would not flourish.
 

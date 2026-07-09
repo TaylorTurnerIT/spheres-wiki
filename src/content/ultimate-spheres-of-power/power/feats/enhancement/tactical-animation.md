@@ -4,6 +4,7 @@ name: "Tactical Animation"
 sphere: enhancement
 tags: []
 tier: feat
+summary: "Grant your animated objects a bonus Teamwork feat, and optionally spend a spell point to grant an additional one."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)).

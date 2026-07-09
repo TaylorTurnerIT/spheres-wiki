@@ -4,6 +4,7 @@ name: Saga-Bound Plentitude
 tags:
   - saga
 tier: feat
+summary: "Draw one additional card from your Saga Deck at the start of the day."
 ---
 
 **Prerequisites:** Saga-Bound Fate

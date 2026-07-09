@@ -4,6 +4,7 @@ name: "Soul Seer"
 sphere: death
 tags: []
 tier: feat
+summary: "Identify creatures' life states at a glance and improve Gravetongue or Summon Spirit interactions if you possess those talents."
 ---
 **Prerequisites:** Death sphere, caster level 5th.
 

@@ -4,6 +4,7 @@ name: Aggressive Mind Limb
 sphere: telekinesis
 tags: []
 tier: feat
+summary: "Make attacks with your telekinetic limb using your casting ability modifier."
 ---
 
 **Prerequisites:** Telekinesis sphere, Mind Limb, base attack bonus +5.

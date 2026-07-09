@@ -5,6 +5,7 @@ sphere: war
 tags:
   - squadron
 tier: feat
+summary: "Always know squadron members' relative positions and treat them as in line of sight for Squadron feat abilities at increased action cost when unseen."
 ---
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.
 

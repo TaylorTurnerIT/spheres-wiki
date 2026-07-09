@@ -4,6 +4,7 @@ name: Contingency
 tags:
   - general
 tier: feat
+summary: "Prepare a sphere effect to activate automatically when a predetermined condition is met."
 ---
 **Prerequisites:** Casting class feature, caster level 10th.
 

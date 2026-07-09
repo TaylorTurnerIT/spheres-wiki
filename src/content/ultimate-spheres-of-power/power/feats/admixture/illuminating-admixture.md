@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "You may cause a single creature damaged by an Admixture to glow."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Light sphere.

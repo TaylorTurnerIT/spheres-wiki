@@ -4,6 +4,7 @@ name: Bloody Savage
 tags:
   - drawback
 tier: feat
+summary: "Drain blood from creatures you hit with a chosen natural attack or grapple."
 ---
 **Prerequisites:** Vampiric Casting drawback
 

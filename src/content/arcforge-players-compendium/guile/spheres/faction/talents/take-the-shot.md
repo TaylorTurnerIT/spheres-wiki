@@ -4,6 +4,7 @@ name: "Take The Shot"
 tier: "advanced"
 tags:
   - "plan"
+summary: "Spend 3 authorizations to reveal a retainer who immediately takes a standard action."
 ---
 
 **Prerequisites:** Faction sphere (Armed Retainer (retainer), Logistical Genius  (plan)).

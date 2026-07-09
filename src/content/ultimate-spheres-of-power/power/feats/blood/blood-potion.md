@@ -4,6 +4,7 @@ name: "Blood Potion"
 sphere: blood
 tags: []
 tier: feat
+summary: "You can create potions or formulae within your own blood that target only you and can be activated as a swift or standard mental action."
 ---
 
 **Prerequisites:** Blood sphere; Brew Potion or the Alchemy sphere (formulae) package.

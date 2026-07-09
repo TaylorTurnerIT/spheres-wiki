@@ -4,6 +4,7 @@ name: Mind Limb
 tags:
   - protokinesis
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Telekinesis sphere.

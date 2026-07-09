@@ -5,6 +5,7 @@ tags:
   - combat
   - counterspell
 tier: feat
+summary: "Spend a spell point as an immediate action to attempt to dispel magical effects on a target you strike with a weapon attack."
 ---
 **Prerequisites:** Counterspell, casting class feature, magic skill bonus +5.
 

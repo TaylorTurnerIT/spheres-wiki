@@ -4,6 +4,7 @@ name: Overpower Resistance
 tags:
   - wild-magic
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Casting class feature.
 

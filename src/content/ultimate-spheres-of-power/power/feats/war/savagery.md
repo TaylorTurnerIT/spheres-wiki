@@ -4,6 +4,7 @@ name: "Savagery"
 sphere: war
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** War sphere, animal focus class feature.

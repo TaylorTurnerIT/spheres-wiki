@@ -4,6 +4,7 @@ name: "Witch Hunt"
 sphere: war
 tags: []
 tier: feat
+summary: "Share your active judgments with up to one ally who shares your mandate."
 ---
 
 **Prerequisites:** War sphere, judgment class feature.

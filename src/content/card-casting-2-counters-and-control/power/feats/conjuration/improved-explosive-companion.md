@@ -4,6 +4,7 @@ name: "Improved Explosive Companion"
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Trigger Explosive Companion on dismissal or summoning and apply destructive admixture options to the explosion."
 ---
 
 **Prerequisites:** Conjuration sphere (Explosive Companion)

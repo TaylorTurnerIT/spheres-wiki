@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Track Unsettling Casting strain by sphere for severances and gain saving throw bonuses against spheres based on accumulated strain."
 ---
 **Prerequisites:** Unsettling Casting
 

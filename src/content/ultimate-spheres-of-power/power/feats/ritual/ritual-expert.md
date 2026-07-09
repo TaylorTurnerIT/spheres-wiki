@@ -4,6 +4,7 @@ name: Ritual Expert
 tags:
   - ritual
 tier: feat
+summary: ""
 ---
 You have learned much of ritual magic, and can call upon a wider variety as your needs dictate.
 

@@ -4,6 +4,7 @@ name: "Concealed Command"
 sphere: illusion
 tags: []
 tier: feat
+summary: "Make your charm and curse effects harder to detect and removable only by break enchantment or similarly powerful magic."
 ---
 
 Your agents are abnormally difficult to shake from your grip.

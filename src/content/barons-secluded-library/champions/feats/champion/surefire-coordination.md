@@ -7,6 +7,7 @@ tags:
   - sm
   - teamwork
 tier: feat
+summary: "Allow participants in a multi-character technique with this feat to roll on d20s and use the highest result."
 ---
 **Prerequisite:** Knowledge of at least one technique.
 

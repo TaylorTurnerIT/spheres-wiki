@@ -5,6 +5,7 @@ sphere: war
 tags:
   - squadron
 tier: feat
+summary: "Telepathically communicate with squadron members regardless of range and share threat awareness through the squadron."
 ---
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander; caster level 5th or 5 ranks in Diplomacy.
 

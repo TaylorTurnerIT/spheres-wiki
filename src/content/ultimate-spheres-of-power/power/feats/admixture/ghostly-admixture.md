@@ -5,6 +5,7 @@ sphere: death
 tags:
   - admixture
 tier: feat
+summary: "Spend an additional spell point when using Admixture to apply a ghost strike effect to a target damaged by your destructive blast instead of a second blast type."
 ---
 
 **Prerequisites:** Death sphere, Destruction sphere (Admixture).

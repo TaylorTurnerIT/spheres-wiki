@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: berserker
 tier: feat
+summary: "Retain temporary hit points from berserking when using an adrenaline talent."
 ---
 
 Your mastery over adrenaline walks hand in hand with anger.

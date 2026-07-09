@@ -4,6 +4,7 @@ name: Telekinetic Exoskeleton
 tags:
   - protokinesis
 tier: feat
+summary: "As a swift action, you can indefinitely gain either temporary hit points, increased movement speed, or a bonus to Strength, Climb, and Swim checks, maintaining only one benefit at a time."
 ---
 
 **Prerequisites:** Telekinesis sphere, character level 3rd.

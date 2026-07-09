@@ -4,6 +4,7 @@ name: Extra Striker Art
 tags:
   - practitioner
 tier: feat
+summary: "Gain an additional striker art."
 ---
 
 You know how to better utilize your striker abilities.

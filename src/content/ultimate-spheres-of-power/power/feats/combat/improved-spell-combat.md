@@ -4,6 +4,7 @@ name: Improved Spell Combat
 tags:
   - combat
 tier: feat
+summary: "Spend a spell point to deliver a strike talent through the first successful attack of a full attack."
 ---
 **Prerequisites:** Casting class feature; any talent with the strike descriptor.
 

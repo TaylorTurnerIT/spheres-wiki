@@ -5,6 +5,7 @@ sphere: trap
 tags:
   - champion
 tier: feat
+summary: "Imbue a trap from the Trap sphere with a sphere effect that triggers when the trap strikes or snares a creature."
 ---
 **Prerequisites:** Trap sphere, casting.
 

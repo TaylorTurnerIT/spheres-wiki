@@ -4,6 +4,7 @@ name: "Durable Objects"
 sphere: enhancement
 tags: []
 tier: feat
+summary: "Animated objects you create gain bonus hit points as if they were one size category larger."
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)).

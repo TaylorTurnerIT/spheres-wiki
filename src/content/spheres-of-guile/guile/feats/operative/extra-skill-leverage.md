@@ -4,6 +4,7 @@ name: Extra Skill Leverage
 tags:
   - operative
 tier: feat
+summary: "Increase your skill leverage maximum by 2."
 ---
 
 **Prerequisite:** Skill leverage.

@@ -4,6 +4,7 @@ name: Sanguinivorous
 tags:
   - drawback
 tier: feat
+summary: "Gain sustenance and a damage bonus only from draining blood."
 ---
 **Prerequisites:** Bloody Savage, Vampiric Casting drawback.
 

@@ -4,6 +4,7 @@ name: "Minor Charm Specialist"
 sphere: mind
 tags: ["warden"]
 tier: feat
+summary: "Target an individual creature with a lesser charm an additional number of times per day."
 ---
 
 **Prerequisite:** Mind sphere.

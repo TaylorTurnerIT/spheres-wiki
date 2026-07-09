@@ -4,6 +4,7 @@ name: Transformation, Hybrid
 tags:
   - general
 tier: feat
+summary: "Assume a hybrid form that blends your base and transformation forms, retaining limbs and abilities from both without changing your basic shape or melding your equipment."
 ---
 **Prerequisite:** Transformation.
 

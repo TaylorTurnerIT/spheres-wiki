@@ -4,6 +4,7 @@ name: "Cosmologist"
 sphere: warp
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Knowledge (planes) 15 ranks, Warp sphere (Create Demiplane, Extradimensional Room (space)).

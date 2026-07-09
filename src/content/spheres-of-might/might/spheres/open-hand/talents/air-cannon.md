@@ -3,6 +3,7 @@ id: "air-cannon"
 name: "Air Cannon"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Open Hand sphere, base attack bonus +5.

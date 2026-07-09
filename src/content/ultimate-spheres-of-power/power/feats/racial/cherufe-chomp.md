@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 The strength of your jaws is uncanny and once you sink your teeth in you can hold on like a steel vice.
 

@@ -4,6 +4,7 @@ name: Climbing Claws
 tags:
   - racial
 tier: feat
+summary: ""
 ---
 Less rude than shoving them into living things, but still less refined than most would prefer, your sharp claws make fine climbing tools.
 

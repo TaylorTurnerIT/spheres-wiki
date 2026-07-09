@@ -4,6 +4,7 @@ name: "Energy Reflection"
 sphere: protection
 tags: []
 tier: feat
+summary: "Deal damage to attackers equal to the amount reduced by your Energy Resistance aegis."
 ---
 **Prerequisites:** Protection sphere (Energy Resistance (aegis, ward)).
 

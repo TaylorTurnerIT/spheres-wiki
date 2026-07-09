@@ -4,6 +4,7 @@ name: Endless Possibilities
 sphere: life
 dualSphere: fate
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Fate sphere, Life sphere.

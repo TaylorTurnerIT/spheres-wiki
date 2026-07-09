@@ -5,6 +5,7 @@ sphere: light
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Light sphere; Arcane Strike or Imbued Strike.

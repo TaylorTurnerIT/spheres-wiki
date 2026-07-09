@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "As a swift action, discard cards from your deck to reroll damage dice."
 ---
 
 **Prerequisites:** Card Casting drawback (Cooldown)

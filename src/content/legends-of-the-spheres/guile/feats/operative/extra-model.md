@@ -4,6 +4,7 @@ name: Extra Model
 tags:
   - operative
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Model class feature or Theoretical Initiate.

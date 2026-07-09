@@ -17,6 +17,7 @@ sectionDefinitions:
         tags: ["exertion"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
+summary: "Gain the Berserking and Brutal Strike abilities."
 ---
 
 Berserkers are indomitable warriors with boundless reservoirs of endurance and unmatched destructive potential. Practitioners of the Berserker sphere gain the following abilities:

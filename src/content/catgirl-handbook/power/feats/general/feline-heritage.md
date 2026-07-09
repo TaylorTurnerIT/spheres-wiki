@@ -4,6 +4,7 @@ name: Feline Heritage
 tags:
   - general
 tier: feat
+summary: "You count as a catfolk for race-related effects and gain your choice of one feline ability, such as low-light vision, speaking with cats, a prehensile tail, or increased speed."
 ---
 You didn't see anything wrong with calling your mother "maw", but everyone always looked concerned about calling your father "paw", given his… paws.
 

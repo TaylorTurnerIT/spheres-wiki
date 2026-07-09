@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 A solid frame can easily make the difference in a fight, and few are as firm bodied as you are—welded steel bars are hidden throughout your body, making you extraordinarily tough.
 

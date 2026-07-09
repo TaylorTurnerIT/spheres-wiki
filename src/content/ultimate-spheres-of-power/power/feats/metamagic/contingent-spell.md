@@ -5,6 +5,7 @@ sphere: life
 tags:
   - metamagic
 tier: feat
+summary: "Infuse a target with a dormant healing or restorative talent that automatically triggers when a specific condition is met."
 ---
 **Prerequisite:** Life sphere.
 

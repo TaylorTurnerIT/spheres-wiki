@@ -3,6 +3,7 @@ id: "walk-unseen"
 name: "Walk Unseen"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Scout sphere, Lurker, Stealth 7 ranks.

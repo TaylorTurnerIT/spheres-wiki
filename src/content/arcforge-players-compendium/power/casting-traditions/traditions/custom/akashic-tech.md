@@ -21,5 +21,6 @@ boons:
   - id: essence-pool
     option: 2 drawbacks
     sourceBook: spheres-of-akasha
+summary: "Gain a metaphysical tool that augments abilities."
 ---
 Akasha on Vandara represents a refined integration of technological and magical knowledge, a tool metaphysically sculpted onto its user to augment their abilities.

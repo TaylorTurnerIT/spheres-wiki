@@ -4,6 +4,7 @@ name: "Skillful Disappearance"
 sphere: warp
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Warp sphere.

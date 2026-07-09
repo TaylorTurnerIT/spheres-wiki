@@ -5,6 +5,7 @@ tags:
   - 3pp
   - combat
 tier: feat
+summary: "Trade bonuses on d20 rolls for added dice or larger altered dice, with repeated selections allowing more dice."
 ---
 **Benefits:** Whenever you would roll a d20 with any sort of bonus you may reduce the bonus by the listed amount to add a bonus to the result equal to the corresponding die on the Added Die column of Table: Pooled Potency Die or replace the d20 with the corresponding die on the Altered Die column. You may not reduce the total of bonuses below 0, but may apply multiple penalties or multiple instances of the same penalty to apply up to two dice to the roll. Using a larger die does not change the weapon's critical threat range (it does not threaten a critical hit on a 21 or any other number higher than 20)
 

@@ -5,6 +5,7 @@ tier: "basic"
 tags:
   - "climb"
   - "motion"
+summary: "Climb onto a larger creature to move with it, rendering it flat-footed to your attacks and penalizing its attacks against you."
 ---
 
 You may, as a move action, make a Climb check against the CMD of a creature within your natural reach that is at least one size larger than you to climb onto that creature, entering its space without provoking an attack of opportunity; failure on this check means that you provoke an attack of opportunity and fail to scale the creature, remaining in your current space. For every size the creature is larger than you, you gain a +3 bonus on your Climb check against that creature. You can climb with only one hand as part of using this ability, but you must have at least one hand free.

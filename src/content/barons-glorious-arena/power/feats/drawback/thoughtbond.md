@@ -6,6 +6,7 @@ tags:
   - drawback
   - teamwork
 tier: feat
+summary: "Communicate telepathically and use aid another on your bonded creature at a distance."
 ---
 **Prerequisites:** Bonded Casting
 

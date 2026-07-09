@@ -6,6 +6,7 @@ tags:
   - champion
   - drawback
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Bluster sphere, caster level 1st.

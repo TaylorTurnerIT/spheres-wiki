@@ -5,6 +5,7 @@ sphere: war
 tags:
   - combat
 tier: feat
+summary: "Allies inside your totems or sharing a mandate with you count as having your teamwork feats for the purpose of granting you their bonuses."
 ---
 
 **Prerequisite:** War sphere.

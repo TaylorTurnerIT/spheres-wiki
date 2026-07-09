@@ -4,6 +4,7 @@ name: Color Guard
 tags:
   - practitioner
 tier: feat
+summary: "Reduce the time required to wave a banner by one step."
 ---
 
 **Prerequisites:** Banner class feature, character level 10th.

@@ -3,6 +3,7 @@ id: "parry-anything"
 name: "Parry Anything"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Fencing sphere, Parry and Riposte, base attack bonus +5.

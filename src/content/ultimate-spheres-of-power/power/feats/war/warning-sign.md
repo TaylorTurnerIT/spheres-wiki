@@ -4,6 +4,7 @@ name: Warning Sign
 sphere: war
 dualSphere: protection
 tier: feat
+summary: "Allies receive a stacking +1 circumstance bonus to initiative per aegis they bear that you created."
 ---
 **Prerequisites:** Protection sphere, War sphere.
 

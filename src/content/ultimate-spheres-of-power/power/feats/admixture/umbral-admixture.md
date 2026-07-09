@@ -5,6 +5,7 @@ sphere: dark
 tags:
   - admixture
 tier: feat
+summary: "Spend an additional spell point when using Admixture to center a darkness or blot effect on an affected square."
 ---
 
 **Prerequisites:** Dark sphere, Destruction sphere (Admixture).

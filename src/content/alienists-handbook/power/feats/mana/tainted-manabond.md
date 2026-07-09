@@ -4,6 +4,7 @@ name: "Tainted Manabond"
 sphere: mana
 tags: []
 tier: feat
+summary: "Create tainted manabonds that let bonded allies use your forbidden lore, with any backlash affecting only you."
 ---
 **Prerequisites:** Mana sphere, forbidden lore class feature.
 

@@ -4,6 +4,7 @@ name: "Blood Construct Mastery"
 sphere: blood
 tags: []
 tier: feat
+summary: "Improve your blood constructs and gain blood arts to create, repair, or bolster them with your own blood."
 ---
 
 **Prerequisites:** Blood sphere (Extract Blood Construct), Blood sphere caster level 5th.

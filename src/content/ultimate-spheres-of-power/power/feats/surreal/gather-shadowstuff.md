@@ -4,6 +4,7 @@ name: Gather Shadowstuff
 tags:
   - surreal
 tier: feat
+summary: "Use shadowmark as a full-round action instead of spending a shadow point."
 ---
 
 **Prerequisite:** Shadowmark class feature.

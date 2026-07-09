@@ -4,6 +4,7 @@ name: Melee Caster
 tags:
   - combat
 tier: feat
+summary: "Casting a magic sphere effect as a melee attack does not provoke an attack of opportunity."
 ---
 **Prerequisite:** Combat Casting.
 

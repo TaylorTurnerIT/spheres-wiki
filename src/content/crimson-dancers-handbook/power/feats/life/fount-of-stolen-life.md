@@ -4,6 +4,7 @@ name: Fount Of Stolen Life
 sphere: life
 dualSphere: blood
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Blood sphere, Life sphere (Fount Of Life).

@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - combat
 tier: feat
+summary: "You may attempt to use swallow whole as a free action once per round while grappling and gain a +2 bonus to related grapple checks."
 ---
 
 **Prerequisites:** Alteration sphere (Serpentine Transformation (transformation)) or swallow whole ability, character level 10th.

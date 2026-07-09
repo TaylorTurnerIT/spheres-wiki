@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "When using Sparking Printer, you can create and use a card with a single feat or talent you don't possess."
 ---
 
 **Prerequisites:** Card Casting, Sparking Printer

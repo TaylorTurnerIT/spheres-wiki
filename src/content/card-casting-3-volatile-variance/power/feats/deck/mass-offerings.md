@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Cast companion-only effects with temporary Tribute of Essence spell points as part of summoning your companion."
 ---
 
 **Prerequisites:** Card Casting, Conjuration Sphere, Mana Sphere (Essentialize), Tribute of Essence, one of Altered Summons, Exceptional Ally, or Fated Summons

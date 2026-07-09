@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Destruction sphere, destructive blade class feature.
 

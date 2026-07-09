@@ -4,6 +4,7 @@ name: Pierce The Veil
 tags:
   - combat
 tier: feat
+summary: "You can take a penalty to your attack roll to reduce magical miss chance."
 ---
 **Prerequisites:** Wis 13, base attack bonus +2.
 

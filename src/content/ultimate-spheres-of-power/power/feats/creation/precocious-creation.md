@@ -4,6 +4,7 @@ name: "Precocious Creation"
 sphere: creation
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Creation sphere (any (material) talent).

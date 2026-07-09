@@ -5,6 +5,7 @@ sphere: nature
 tags:
   - drawback
 tier: feat
+summary: "Gain a +2 insight bonus to caster level with the Nature sphere while in a chosen terrain."
 ---
 
 **Prerequisites:** Nature sphere, Terrain Casting drawback.

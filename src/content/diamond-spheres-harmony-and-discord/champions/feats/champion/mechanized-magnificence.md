@@ -6,6 +6,7 @@ tags:
   - champion
   - gizmo
 tier: feat
+summary: "Create or modify gizmos using metal and music."
 ---
 
 You blend metal and music into one another.

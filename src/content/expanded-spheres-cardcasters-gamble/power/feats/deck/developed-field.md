@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Metamagic spell points do not count toward the number of Mana Point cards needed for Card Casting, and the spell point cost increase of metamagic feats used with this drawback is reduced by 1."
 ---
 
 **Prerequisites:** Card Casting drawback (Mana Pool), any metamagic feat

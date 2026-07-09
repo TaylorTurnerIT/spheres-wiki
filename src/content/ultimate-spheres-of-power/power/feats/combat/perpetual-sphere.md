@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: "Dealing damage with your energy sphere extends its duration by 1 round, up to your Destruction caster level."
 ---
 
 **Prerequisites:** Destruction sphere (Energy Sphere (blast shape)).

@@ -3,6 +3,7 @@ id: "vanish"
 name: "Vanish"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Scout sphere, Lurker, Walk Unseen, Stealth 10 ranks.

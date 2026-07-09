@@ -5,6 +5,7 @@ tags:
   - ante
   - combat
 tier: feat
+summary: "Increase your ante when readying an action to add half your ante to a d20 roll, risking backlash if the action fails to trigger."
 ---
 
 **Prerequisites:** Ante Up

@@ -6,6 +6,7 @@ tags:
   - drawback
   - teamwork
 tier: feat
+summary: "Grant your bonded creature a teamwork feat you possess."
 ---
 **Prerequisites:** Bonded Casting
 

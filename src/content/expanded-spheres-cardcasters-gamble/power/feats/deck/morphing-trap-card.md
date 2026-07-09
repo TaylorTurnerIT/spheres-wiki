@@ -6,6 +6,7 @@ tags:
   - drawback
 sphere: enhancement
 tier: feat
+summary: "Spend spell points when placing a Trap Card to create an animated object that can serve as the point of origin for the card's effect."
 ---
 
 **Prerequisites:** Card Casting, Trap Card, Enhancement sphere (animate object)

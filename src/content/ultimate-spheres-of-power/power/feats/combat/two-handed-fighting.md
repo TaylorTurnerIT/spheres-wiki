@@ -4,6 +4,7 @@ name: Two-Handed Fighting
 tags:
   - combat
 tier: feat
+summary: "Increase your Strength bonus on damage rolls when wielding a weapon in two hands and gain the ability to perform sweeping strikes to damage additional targets in a chosen space."
 ---
 **Prerequisites:** Str 15, Power Attack, base attack bonus +3.
 

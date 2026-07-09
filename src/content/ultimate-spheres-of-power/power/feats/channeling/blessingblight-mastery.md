@@ -4,6 +4,7 @@ name: Blessing/Blight Mastery
 tags:
   - channeling
 tier: feat
+summary: "Spend an additional use of channel energy to apply a blessing or blight to one creature affected by your channeling."
 ---
 **Prerequisites:** Blessing/blight class feature, channel energy class feature.
 

@@ -3,6 +3,7 @@ id: "i-will-come"
 name: "I Will Come"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Guardian sphere, I Will Hear, Defend Other, base attack bonus +10.

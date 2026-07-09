@@ -4,6 +4,7 @@ name: Armorist Training
 tags:
   - general
 tier: feat
+summary: "Add the armorist's weapon and armor special abilities to the options available for your arcane pool, divine bond, sacred armor, or sacred weapon class features."
 ---
 **Prerequisites:** One or more of the following class features: arcane pool, divine bond, sacred armor, sacred weapon.
 

@@ -4,6 +4,7 @@ name: Saga-Bound Doom
 tags:
   - saga
 tier: feat
+summary: "You can designate cards in your Saga Deck as Doom cards that count as all suits, but they are given to the GM who can later return them to penalize your rolls."
 ---
 
 **Prerequisites:** Saga-Bound Fate, Saga-Bound Suits

@@ -4,6 +4,7 @@ name: Extra Breadth of Form
 tags:
   - extra
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Breadth of form class feature.

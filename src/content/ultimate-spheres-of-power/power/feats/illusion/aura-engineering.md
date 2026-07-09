@@ -4,6 +4,7 @@ name: Aura Engineering
 sphere: illusion
 dualSphere: divination
 tier: feat
+summary: "Attempt Use Magic Device checks on objects within close range, take 10 or 20 on the checks, and add your Deceive Dweomer bonus."
 ---
 
 **Prerequisites:** Divination sphere, Illusion sphere (Deceive Dweomer, Manipulate Aura (sensory, magic)).

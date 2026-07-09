@@ -3,6 +3,7 @@ id: "alter-terrain"
 name: "Alter Terrain"
 tier: "advanced"
 tags: []
+summary: "Create a 5-foot hole that can knock targets prone and optionally raise adjacent terrain when destroying ground with Shatter Earth."
 ---
 
 **Prerequisites:** Berserker sphere, Shatter Earth, base attack bonus +7.

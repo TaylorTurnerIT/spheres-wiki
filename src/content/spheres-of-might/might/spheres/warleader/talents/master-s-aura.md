@@ -5,6 +5,7 @@ tier: "advanced"
 tags:
   - "tactic"
   - "utility"
+summary: ""
 ---
 
 **Prerequisites:** Warleader sphere, Diplomacy 7 ranks.

@@ -5,6 +5,7 @@ tags:
   - combat
   - operative
 tier: feat
+summary: "Dealing discerning strike or expose vulnerability damage leaves an opening, allowing you to deal extra precision damage on subsequent triggers in the same round."
 ---
 
 **Prerequisite:** Discerning strike or expose vulnerability class feature.

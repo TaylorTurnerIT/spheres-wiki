@@ -6,6 +6,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Your Aristeia feats count as Deck Feats for granting Deck Manipulations, and while in Aristeia, you can create a magic sphere effect from playing a card as a free action once per round."
 ---
 
 **Prerequisites:** Card Casting

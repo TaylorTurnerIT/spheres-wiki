@@ -4,6 +4,7 @@ name: Baleful Storm
 sphere: weather
 dualSphere: death
 tier: feat
+summary: ""
 ---
 
 When thunder rolls and lightning cracks, your minions rise.

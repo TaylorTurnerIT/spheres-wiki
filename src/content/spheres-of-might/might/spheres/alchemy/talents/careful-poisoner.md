@@ -3,6 +3,7 @@ id: "careful-poisoner"
 name: "Careful Poisoner"
 tier: "basic"
 tags: []
+summary: "Grant a number of creatures immunity to poisons you create based on your Craft (alchemy) ranks."
 ---
 
 Whenever you create a poison, you can select 1 creature; that creature is immune to your poison. For every 4 ranks in Craft (alchemy) you possess, you can select an additional creature to be immune to your poison.

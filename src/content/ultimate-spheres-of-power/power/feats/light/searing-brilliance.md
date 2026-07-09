@@ -4,6 +4,7 @@ name: "Searing Brilliance"
 sphere: light
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Light sphere (Searing Light (light)), caster level 5th.

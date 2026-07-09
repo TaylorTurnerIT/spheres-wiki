@@ -5,6 +5,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Aid the performer of a multi-character technique as part of initiating it, using technique range."
 ---
 You add a bit of extra aid when coordinating a technique.
 

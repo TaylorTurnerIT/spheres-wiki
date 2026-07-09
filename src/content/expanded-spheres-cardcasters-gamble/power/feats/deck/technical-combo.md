@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Create and play Technique Combo cards to reduce the complexity cost of an associated technique by 1 per card."
 ---
 
 **Prerequisites:** Card Casting, Technique Crafting

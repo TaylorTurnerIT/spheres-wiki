@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Use cards drawn with Huckster's Gamble to assign values to your hypothesis dice pool."
 ---
 **Prerequisites:** Catastrophic Failure drawback, Huckster's Gamble, Hypothesis Dice class feature
 

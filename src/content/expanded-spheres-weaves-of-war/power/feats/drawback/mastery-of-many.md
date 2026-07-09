@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Gain a +1 bonus to damage rolls for every 2 magic spheres among your prepared charged spells."
 ---
 **Prerequisites:** Charged Spells
 

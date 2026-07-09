@@ -5,6 +5,7 @@ sphere: guardian
 tags:
   - champion
 tier: feat
+summary: "Cure or restore an ally as part of granting them an AC bonus with Defend Other, taking an equal amount of damage."
 ---
 **Prerequisites:** Guardian sphere (Defend Other), Life sphere (Empathic Healing).
 

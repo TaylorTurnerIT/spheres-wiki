@@ -3,6 +3,7 @@ id: "uncanny-dodge"
 name: "Uncanny Dodge"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 You gain the ability to react to danger before your senses would normally allow you to do so. You cannot be caught flat-footed, nor do you lose your Dexterity bonus to AC if the attacker is invisible. You still lose your Dexterity bonus to AC if immobilized. You can still lose your Dexterity bonus to AC if a creature successfully uses the feint action against you. You may take this talent twice; the second time you take it, you can no longer be flanked. This defense denies a creature the ability to sneak attack you by flanking you, unless the attacker is at least four levels higher or has at least 4 more Hit Dice than you. If you have already gained uncanny dodge from another source, such as the rogue talent, the first instance of this talent instead gives you the benefits of improved uncanny dodge.

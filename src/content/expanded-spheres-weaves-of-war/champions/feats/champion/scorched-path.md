@@ -5,6 +5,7 @@ tags:
   - 3pp
   - champion
 tier: feat
+summary: "Spend an additional spell point when targeting an area with a destructive blast to use your pathing within the affected spaces as part of the same action."
 ---
 
 **Prerequisites:** Destruction Sphere, Navigation Sphere

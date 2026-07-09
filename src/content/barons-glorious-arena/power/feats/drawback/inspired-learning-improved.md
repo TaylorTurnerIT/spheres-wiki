@@ -6,6 +6,7 @@ tags:
   - drawback
   - general
 tier: feat
+summary: "Subtract 20 from d% rolls for Inspired Learning or Unreliable Training, and increase the maximum number of talents learned by 1."
 ---
 **Prerequisites:** Inspired Learning
 

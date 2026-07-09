@@ -4,6 +4,7 @@ name: Hard Light
 sphere: light
 dualSphere: creation
 tier: feat
+summary: "Create objects out of hardened light that shed bright light and have half their normal weight."
 ---
 
 **Prerequisites:** Creation sphere, Light sphere.

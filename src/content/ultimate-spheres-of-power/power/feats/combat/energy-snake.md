@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: "You can spend 1 spell point to make your Energy Sphere grow by one 5-foot square each time it damages a target."
 ---
 
 **Prerequisites:** Destruction sphere (Energy Sphere (blast shape)).

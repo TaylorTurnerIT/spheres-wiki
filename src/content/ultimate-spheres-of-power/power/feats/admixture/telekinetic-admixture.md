@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "Spend an additional spell point when using Admixture to perform a Hostile Lift on a creature damaged by your blast."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Telekinesis sphere.

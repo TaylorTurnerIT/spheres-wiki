@@ -4,6 +4,7 @@ name: "Terrain Strider"
 sphere: nature
 tags: []
 tier: feat
+summary: "Gain a +4 circumstance bonus to saving throws against any Nature sphere talents or abilities from a package you possess."
 ---
 
 **Prerequisite:** Nature sphere.

@@ -4,6 +4,7 @@ name: Talented Leaper
 tags:
   - racial
 tier: feat
+summary: "When calculating jump height, divide your Acrobatics roll by 2 instead of 4."
 ---
 Your uncannily strong legs can send you soaring through the air.
 

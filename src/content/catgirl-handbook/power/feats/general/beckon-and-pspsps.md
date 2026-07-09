@@ -4,6 +4,7 @@ name: Beckon And Pspsps
 tags:
   - general
 tier: feat
+summary: "Spend 1 spell point to regain a use of maker's call or phantom recall, and summon your eidolon or phantom as a full-round action."
 ---
 **Prerequisites:** Maker's call class feature, phantom recall class feature, or other similar ability; spherecasting.
 

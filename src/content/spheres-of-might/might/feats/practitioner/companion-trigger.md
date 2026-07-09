@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Expend martial focus to apply your feats and talents to a mount or companion's successful combat maneuver."
 ---
 
 **Prerequisites:** Animal Companion class feature, Mount class feature, or Beastmastery sphere.

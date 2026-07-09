@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: scout
 tier: feat
+summary: "Expend martial focus to treat a scouted enemy as a favored enemy with maximum bonuses."
 ---
 
 **Prerequisites:** Scout sphere, favored enemy class feature.

@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Create a spell capacitor as a physical object and spend momentum to activate it automatically."
 ---
 **Prerequisites:** Time Sphere, War Sphere (any momentum talent), Substantial Magic drawback, Spell Capacitor
 

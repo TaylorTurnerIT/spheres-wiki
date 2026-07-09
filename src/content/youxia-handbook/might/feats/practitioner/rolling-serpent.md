@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: athletics
 tier: feat
+summary: "Use shoulder roll against a melee attack while using a movement mode without it counting towards your usage per round."
 ---
 
 **Prerequisites:** Athletics sphere, Boxing sphere (Shoulder Roll).

@@ -4,6 +4,7 @@ name: "Mark Of Magical Ineptitude"
 sphere: mana
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Mana sphere (Mark Of Instability, Mark Of Incompetency), caster level 7th.

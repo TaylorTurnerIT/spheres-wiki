@@ -5,6 +5,7 @@ tags:
   - ante
   - combat
 tier: feat
+summary: "You gain a circumstance bonus on damage rolls equal to your ante and can reduce your ante to zero to apply powerful effects to an attack."
 ---
 
 **Prerequisites:** Ante Up

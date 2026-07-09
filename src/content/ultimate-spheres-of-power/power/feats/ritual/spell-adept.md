@@ -4,6 +4,7 @@ name: Spell Adept
 tags:
   - ritual
 tier: feat
+summary: ""
 ---
 Your ability to use rituals has grown to great power.
 

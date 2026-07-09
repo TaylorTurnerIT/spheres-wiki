@@ -4,6 +4,7 @@ name: "Aura Of Fear"
 tier: "advanced"
 tags:
   - "demoralization"
+summary: ""
 ---
 
 **Prerequisites:** Gladiator sphere, Intimidate 7 ranks.

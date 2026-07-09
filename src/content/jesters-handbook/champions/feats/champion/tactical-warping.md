@@ -5,6 +5,7 @@ sphere: fencing
 tags:
   - champion
 tier: feat
+summary: "Attempt a feint as a swift action when teleporting adjacent to a creature."
 ---
 "Teleporting behind them. They never expect that."
 

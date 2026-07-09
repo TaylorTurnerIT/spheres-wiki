@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Gain an additional deck manipulation."
 ---
 
 **Prerequisite:** Card Casting

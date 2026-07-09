@@ -4,6 +4,7 @@ name: Capture Spell
 tags:
   - item-creation
 tier: feat
+summary: "You can create magic scrolls using either ritual magic or the talent-based item creation system."
 ---
 **Prerequisites:** Caster level 1st.
 

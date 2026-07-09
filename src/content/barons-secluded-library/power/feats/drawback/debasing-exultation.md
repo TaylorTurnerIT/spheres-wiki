@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Gain a temporary spell point for 1 minute whenever you take strain damage from a source other than Unsettling Casting."
 ---
 **Prerequisites:** Unsettling Casting
 

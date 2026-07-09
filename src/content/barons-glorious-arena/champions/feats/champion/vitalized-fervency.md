@@ -5,6 +5,7 @@ tags:
   - 3pp
   - champion
 tier: feat
+summary: "Spend a spell point to apply a (Vitality) talent when granting temporary hit points with combat or skill sphere abilities."
 ---
 **Prerequisites:** Life Sphere (any (Vitality) talent), ability to gain martial focus or use skill leverage
 

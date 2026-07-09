@@ -5,6 +5,7 @@ sphere: boxing
 tags:
   - champion
 tier: feat
+summary: "Replace a triggered counter punch with a standard-action magic sphere effect once per round."
 ---
 You deploy your magic as you would a well-prepared blow.
 

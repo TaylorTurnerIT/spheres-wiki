@@ -3,6 +3,7 @@ id: "net-master"
 name: "Net Master"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 You take no penalties for using a net that has not been folded and apply any enhancement bonus to attack rolls that the net possesses to all your Strength checks against a creature entangled by the net, and to the DC of Strength checks to burst your nets. You add half your base attack bonus to the escape artist DC to escape your nets.

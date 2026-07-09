@@ -4,6 +4,7 @@ name: "Fleshwarp Adept"
 sphere: alteration
 tags: []
 tier: feat
+summary: "Add new traits to your shapeshift attempts to exhaust, disable, or weaken targets."
 ---
 **Prerequisites:** Alteration sphere (Twisted Shapeshift), caster level 5th.
 

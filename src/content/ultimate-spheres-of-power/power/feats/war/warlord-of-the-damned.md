@@ -4,6 +4,7 @@ name: Warlord Of The Damned
 sphere: war
 dualSphere: death
 tier: feat
+summary: "As a free action, you can shift concentration of an active totem to a controlled undead, and your controlled undead can benefit from morale bonuses granted by your totems and rallies."
 ---
 
 You can rally the hearts of your people - even after they have stopped beating.

@@ -4,6 +4,7 @@ name: Cumulative Nimbus
 tags:
   - teamwork
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Weather sphere (any (shroud) talent), magic skill bonus +5.

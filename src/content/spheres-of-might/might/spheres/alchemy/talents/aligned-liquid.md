@@ -4,6 +4,7 @@ name: "Aligned Liquid"
 tier: "basic"
 tags:
   - "formulae"
+summary: ""
 ---
 
 **Craft DC:** 20

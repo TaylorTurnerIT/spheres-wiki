@@ -6,6 +6,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Use blood control to control impaled weapons, hinder their removal, and trigger blood control when bleeding creatures lose the impaled condition."
 ---
 **Prerequisites:** Blood sphere, Lancer sphere.
 

@@ -4,6 +4,7 @@ name: "Toxic Webs"
 sphere: alteration
 tags: []
 tier: feat
+summary: "Targets entangled by your web are exposed to your poison."
 ---
 
 **Prerequisites:** Alteration sphere (Vermin Transformation (transformation)) or web bestial trait; poison bestial trait or racial poison ability.

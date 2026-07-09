@@ -5,6 +5,7 @@ sphere: warp
 tags:
   - combat
 tier: feat
+summary: "Gain offensive and defensive portal options such as adhesive, slicing, and thrown portals when you meet their requirements."
 ---
 
 Magical gateways are tools you can weaponize.

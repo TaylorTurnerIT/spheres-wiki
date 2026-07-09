@@ -5,6 +5,7 @@ sphere: leadership
 tags:
   - champion
 tier: feat
+summary: "Undead cohorts count as controlled undead for Death sphere abilities, and reanimated mindless undead count as cohorts for Leadership talents."
 ---
 **Prerequisites:** Leadership sphere, (cohort) package, Death sphere, master's presence (dominion), reanimate.
 

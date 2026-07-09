@@ -5,6 +5,7 @@ sphere: illusion
 tags:
   - counterspell
 tier: feat
+summary: "When you successfully counter a spell, the caster may believe it succeeded."
 ---
 
 **Prerequisites:** Illusion sphere or Mind sphere; Counterspell.

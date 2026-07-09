@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - combat
 tier: feat
+summary: "Spray your poison on attackers that critically hit you with non-reach melee weapons, and take minor damage to swiftly apply poison to your weapons using your own blood."
 ---
 
 **Prerequisites:** Alteration sphere (Serpentine Transformation (transformation) or Vermin Transformation (transformation)), poison bestial trait, or racial poison ability.

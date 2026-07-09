@@ -4,6 +4,7 @@ name: "Fastidious Mercy"
 sphere: fate
 tags: ["sm"]
 tier: feat
+summary: "Use Mercy on yourself for free as a free action and choose which targets take lethal or nonlethal damage from Mercy-limited multi-target damage."
 ---
 
 **Prerequisites:** Fate Sphere (Mercy)

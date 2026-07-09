@@ -5,6 +5,7 @@ sphere: war
 tags:
   - squadron
 tier: feat
+summary: "You can rally yourself and any visible or long-range ally in your squadron, ignoring totem range requirements."
 ---
 
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander.

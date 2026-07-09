@@ -4,6 +4,7 @@ name: Proxy Counterspell
 tags:
   - proxy
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Counterspell, Spell Proxy.

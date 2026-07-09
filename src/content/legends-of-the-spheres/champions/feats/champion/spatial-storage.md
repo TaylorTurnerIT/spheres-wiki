@@ -5,6 +5,7 @@ sphere: artifice
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Artifice sphere (Storage Enhancement), Warp sphere (Extradimensional Storage).

@@ -3,6 +3,7 @@ id: "rift-strike"
 name: "Rift Strike"
 tier: "advanced"
 tags: []
+summary: "Teleport yourself and willing creatures up to 100 miles per point of base attack bonus as a full-round action, becoming exhausted for 1 hour."
 ---
 
 **Prerequisites:** Berserker sphere, base attack bonus +11.

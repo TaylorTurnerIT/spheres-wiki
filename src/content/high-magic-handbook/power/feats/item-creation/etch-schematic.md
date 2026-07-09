@@ -4,6 +4,7 @@ name: Etch Schematic
 tags:
   - item-creation
 tier: feat
+summary: "You may create and modify schematics."
 ---
 **Prerequisite:** Caster level 1st.
 

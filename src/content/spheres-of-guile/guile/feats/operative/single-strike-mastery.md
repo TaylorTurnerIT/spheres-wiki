@@ -5,6 +5,7 @@ tags:
   - combat
   - operative
 tier: feat
+summary: "Once per round, increase the sneak attack damage dice by one size when using a standard attack action."
 ---
 
 **Prerequisite:** Sneak attack +2d6.

@@ -4,6 +4,7 @@ name: "Constellation"
 sphere: light
 tags: []
 tier: feat
+summary: "Spend a spell point when creating a glow effect to manifest it as multiple smaller, controllable motes of light instead of a single source."
 ---
 
 **Prerequisites:** Light sphere (Dancing Lights), caster level 5th.

@@ -4,6 +4,7 @@ name: Energized Appeasement
 tags:
   - channeling
 tier: feat
+summary: "Trade channel energy uses to prevent spirit influence or accept spirit influence instead of spending channel energy."
 ---
 The powers of the beyond are sufficient to appease the bound force within.
 

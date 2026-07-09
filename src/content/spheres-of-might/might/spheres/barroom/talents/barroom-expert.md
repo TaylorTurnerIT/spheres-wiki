@@ -3,6 +3,7 @@ id: "barroom-expert"
 name: "Barroom Expert"
 tier: "basic"
 tags: []
+summary: "Increase improvised weapon damage by one size category, improve their critical threat range, and grant them changeable special weapon features."
 ---
 
 You may treat an improvised weapon as though it had one of the following special features (chosen upon first picking up an improvised weapon and may be changed once per round as a free action): blocking, brace, deadly, disarm, distracting, double (this may not be applied to improvised light weapons), grapple, nonlethal, performance, reach (this may only be applied to two handed improvised weapons), sunder, or trip. If the GM chooses, he may pose reasonable limitations on which items can gain which special features (for example, a sack of flour wouldn’t have reach, while a sandwich wouldn’t have deadly).

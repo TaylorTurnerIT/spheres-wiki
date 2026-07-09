@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Activate Sparking Printer on a natural 19 or 20 attack roll, or when an enemy rolls a natural 1 or 2 when attacking you."
 ---
 
 **Prerequisites:** Card Casting, Sparking Printer

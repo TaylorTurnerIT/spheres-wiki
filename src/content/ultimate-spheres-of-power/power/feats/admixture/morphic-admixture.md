@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - admixture
 tier: feat
+summary: "You can spend a spell point when using Admixture to force damaged targets to save against a hostile shapeshift."
 ---
 
 **Prerequisites:** Alteration sphere, Destruction sphere (Admixture).

@@ -4,6 +4,7 @@ name: "Piercing Fear"
 tier: "basic"
 tags:
   - "demoralization"
+summary: ""
 ---
 
 You may expend martial focus as part of an Intimidate check to demoralize to overcome a creature’s defenses, treating immunity to fear and mind-affecting effects as a +5 DC increase to the check’s DC (the DC only increases by +5 once, regardless of if the creature has immunity to both fear and mind-affecting effects).

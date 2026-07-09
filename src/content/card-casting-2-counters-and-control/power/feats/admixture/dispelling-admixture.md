@@ -7,6 +7,7 @@ tags:
   - admixture
   - counterspell
 tier: feat
+summary: "Spend extra spell points with Admixture to counterspell damaged targets instead of adding a second blast type."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Counterspell

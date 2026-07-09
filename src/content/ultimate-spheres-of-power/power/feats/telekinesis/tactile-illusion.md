@@ -4,6 +4,7 @@ name: Tactile Illusion
 sphere: telekinesis
 dualSphere: illusion
 tier: feat
+summary: "Allow your illusions to exert telekinetic force to support weight, block movement, and deal lethal damage, which can be bypassed by disbelieving the illusion."
 ---
 
 **Prerequisites:** Illusion sphere (Illusionary Touch (sensory, touch) x2), Telekinesis sphere (Finesse).

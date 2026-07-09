@@ -5,6 +5,7 @@ sphere: study
 tags:
   - operative
 tier: feat
+summary: "Begin a theory as a free action when identifying a magical technique or planar origin, and gain new methods and breakthroughs to theories."
 ---
 
 You are well-informed on many phenomena, the essence and functions of the planes, and the foundations of arcana.

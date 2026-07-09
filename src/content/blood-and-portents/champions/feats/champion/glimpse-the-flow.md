@@ -6,6 +6,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Trade a counter punch trigger for a sense talent and divine creatures damaged by your counter punch."
 ---
 **Prerequisites:** Boxing sphere, Divination sphere (any (sense) talent), Divination sphere caster level 6th.
 

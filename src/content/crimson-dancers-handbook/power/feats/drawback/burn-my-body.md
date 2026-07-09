@@ -4,6 +4,7 @@ name: Burn My Body
 tags:
   - drawback
 tier: feat
+summary: ""
 ---
 You fuel your magic with your body with purpose, refining it more than ever before.
 

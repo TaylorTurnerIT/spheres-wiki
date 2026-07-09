@@ -4,6 +4,7 @@ name: Focused Stamina
 tags:
   - practitioner
 tier: feat
+summary: "Spend 5 stamina points instead of expending martial focus."
 ---
 
 **Prerequisites:** Martial focus, combat stamina.

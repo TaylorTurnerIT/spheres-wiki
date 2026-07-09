@@ -4,6 +4,7 @@ name: Survey of your Realm
 sphere: warp
 dualSphere: divination
 tier: feat
+summary: "Keep a constant viewing sensor in your Extradimensional Room."
 ---
 
 When you create a realm, you are sure to keep a close eye on it.

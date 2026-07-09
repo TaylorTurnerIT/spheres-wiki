@@ -4,6 +4,7 @@ name: "Aura Of Mystery"
 sphere: dark
 tags: []
 tier: feat
+summary: "Gain the benefits of the Obfuscation talent as a constant effect whenever you are in an area of dim light or darkness."
 ---
 
 **Prerequisites:** Dark sphere (Obfuscation).

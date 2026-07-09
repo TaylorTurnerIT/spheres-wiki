@@ -4,6 +4,7 @@ name: Dark Room
 sphere: warp
 dualSphere: dark
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Dark sphere, Warp sphere (Extradimensional Room (space)).

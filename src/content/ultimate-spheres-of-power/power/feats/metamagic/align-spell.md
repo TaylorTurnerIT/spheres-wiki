@@ -4,6 +4,7 @@ name: Align Spell
 tags:
   - metamagic
 tier: feat
+summary: "You can alter an aligned spell to increase its numerical effects or saving throw DC against creatures of a specific alignment component while decreasing them against the opposite alignment, or vice versa."
 ---
 **Benefit:** When you select this feat, choose a non-neutral component of your alignment. When you prepare (if you are a prepared caster) or cast (if you are a spontaneous caster or spherecaster) an aligned spell, choose weal or woe. If you choose weal, all variable, numeric effects of the spell are decreased by half (including bonuses to those dice rolls) for creatures of that alignment and increased by half (including bonuses to those dice rolls) for creatures of the opposite alignment.
 

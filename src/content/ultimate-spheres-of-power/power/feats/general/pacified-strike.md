@@ -4,6 +4,7 @@ name: Pacified Strike
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Casting class feature, one talent from any sphere that has the strike descriptor, caster level 3rd
 

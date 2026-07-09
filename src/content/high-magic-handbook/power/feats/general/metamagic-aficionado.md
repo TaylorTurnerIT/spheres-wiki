@@ -4,6 +4,7 @@ name: Metamagic Aficionado
 tags:
   - general
 tier: feat
+summary: "The benefits of Favored Metamagic apply to all metamagic feats you possess."
 ---
 **Prerequisites:** Favored Metamagic (any three metamagic feats), caster level 15th.
 

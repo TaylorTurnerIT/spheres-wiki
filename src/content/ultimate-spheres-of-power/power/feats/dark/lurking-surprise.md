@@ -4,6 +4,7 @@ name: "Lurking Surprise"
 sphere: dark
 tags: []
 tier: feat
+summary: "Allow your shadow lurk to cast a single Dark sphere effect, destroying itself in the process."
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow), Sinister Surprise).

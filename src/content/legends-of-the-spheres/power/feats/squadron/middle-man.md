@@ -5,6 +5,7 @@ sphere: communication
 tags:
   - squadron
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Communication sphere, Faction sphere, Posse Commander.
 

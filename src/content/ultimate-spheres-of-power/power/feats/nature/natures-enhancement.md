@@ -4,6 +4,7 @@ name: Nature's Enhancement
 sphere: nature
 dualSphere: enhancement
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, Nature sphere (any (spirit) talent).

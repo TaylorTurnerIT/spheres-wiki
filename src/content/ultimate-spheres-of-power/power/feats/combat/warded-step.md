@@ -4,6 +4,7 @@ name: Warded Step
 tags:
   - combat
 tier: feat
+summary: "You ignore difficult terrain within your area sphere effects and gain a +4 circumstance bonus to AC against attacks of opportunity provoked by moving through them."
 ---
 **Prerequisite:** Casting class feature.
 

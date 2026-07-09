@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Let mana point cards have two Specialized Mana Cards abilities instead of one."
 ---
 
 **Prerequisites:** Card Casting (Mana Pool), Specialized Mana Cards deck manipulation

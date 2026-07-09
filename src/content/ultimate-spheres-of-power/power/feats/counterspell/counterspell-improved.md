@@ -4,6 +4,7 @@ name: Counterspell, Improved
 tags:
   - counterspell
 tier: feat
+summary: "You can spend an additional spell point when using the Counterspell feat to target multiple magical effects on a single target or affect all effects within a 20-foot burst."
 ---
 **Prerequisites:** Casting class feature, Counterspell, magic skill bonus +10.
 

@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - channeling
 tier: feat
+summary: "Imbue your channel energy with a blast type talent to harm all creatures in its area with the blast's damage type and effects."
 ---
 
 **Prerequisites:** Destruction sphere, channel energy class feature.

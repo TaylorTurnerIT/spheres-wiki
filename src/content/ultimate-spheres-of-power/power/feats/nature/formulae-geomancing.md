@@ -4,6 +4,7 @@ name: "Formulae Geomancing"
 sphere: nature
 tags: []
 tier: feat
+summary: "Create extracts from an alchemist's formulae book using your Nature caster level and spell points."
 ---
 
 **Prerequisites:** Nature sphere (three or more packages).

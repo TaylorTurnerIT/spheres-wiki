@@ -4,6 +4,7 @@ name: "Greater Link"
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Receive full sensory input from one of your companions as a full-round action."
 ---
 
 **Prerequisites:** Conjuration sphere (Link).

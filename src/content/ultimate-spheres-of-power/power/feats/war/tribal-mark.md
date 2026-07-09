@@ -4,6 +4,7 @@ name: Tribal Mark
 sphere: war
 dualSphere: enhancement
 tier: feat
+summary: "You can create enhancements that duplicate the effect of being within a totem for the target creature or the bearer of an enhanced object."
 ---
 
 **Prerequisites:** Enhancement sphere, War sphere.

@@ -3,6 +3,7 @@ id: "shift-weight"
 name: "Shift Weight"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 When a creature fails on an attack roll or combat maneuver check against you, you may expend your focus to perform a bull rush, drag, or reposition combat maneuver against that creature as an immediate action.

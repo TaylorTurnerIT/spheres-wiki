@@ -4,6 +4,7 @@ name: Material Infusion
 sphere: nature
 dualSphere: destruction
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Destruction sphere, Nature sphere ((metal) package).

@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: warleader
 tier: feat
+summary: "Allies benefiting from your shared teamwork feat and tactic receive half the benefits of your challenge."
 ---
 
 When all the pieces come together to make something amazing.

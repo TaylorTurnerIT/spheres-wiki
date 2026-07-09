@@ -4,6 +4,7 @@ name: Sphere Focus
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisite:** Casting class feature.
 

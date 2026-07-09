@@ -4,6 +4,7 @@ name: Extra Skill Talent
 tags:
   - operative
 tier: feat
+summary: "Gain an additional skill sphere or skill talent."
 ---
 
 Your acumen and expertise are easily expanded.

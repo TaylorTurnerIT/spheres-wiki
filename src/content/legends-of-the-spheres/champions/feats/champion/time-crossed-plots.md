@@ -4,6 +4,7 @@ name: Time-Crossed Plots
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Divination or Time sphere, any one [plan] talent.
 

@@ -4,6 +4,7 @@ name: Wave-Particle Duality
 sphere: light
 dualSphere: illusion
 tier: feat
+summary: "Your bright light becomes a spread rather than an emanation, allowing it to move around corners and slowly penetrate non-airtight gaps."
 ---
 
 **Prerequisites:** Illusion sphere, Light sphere.

@@ -6,6 +6,7 @@ tags:
   - practitioner
   - sm
 tier: feat
+summary: "Ignore damage or ability burn from every third instance of Forbidden Consumption Technique taken in the same turn."
 ---
 
 **Prerequisites:** Forbidden Consumption Technique

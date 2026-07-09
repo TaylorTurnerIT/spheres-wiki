@@ -4,6 +4,7 @@ name: "Deep Spellburn"
 sphere: mana
 tags: []
 tier: feat
+summary: "Spend an additional spell point to increase the initial and ongoing spell point damage dealt by Spellburn."
 ---
 
 **Prerequisites:** Mana sphere, caster level 9th.

@@ -4,6 +4,7 @@ name: Warrior-Disciple
 tags:
   - combat
 tier: feat
+summary: "Let prestige class levels that advance casting also advance the Hit Die, base attack bonus, and caster level progression of the advanced class."
 ---
 In spite of your diverse magical training, your armed discipline still remains.
 

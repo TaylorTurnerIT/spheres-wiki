@@ -4,6 +4,7 @@ name: Life Taker
 tags:
   - champion
 tier: feat
+summary: "Gain a +2 bonus to caster level for 1 round when reducing a creature of sufficient CR to 0 hp or less with a weapon or natural attack."
 ---
 **Prerequisites:** Casting class feature.
 

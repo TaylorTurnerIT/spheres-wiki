@@ -4,6 +4,7 @@ name: "Focused Blast Type Group"
 sphere: destruction
 tags: []
 tier: feat
+summary: "Increase your caster level for a chosen blast type group."
 ---
 
 **Prerequisite:** Destruction sphere.

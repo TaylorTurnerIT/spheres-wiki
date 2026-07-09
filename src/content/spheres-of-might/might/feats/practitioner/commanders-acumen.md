@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: warleader
 tier: feat
+summary: "Begin a tactic as part of the same action as your tactician ability."
 ---
 
 Your intricate plans come into motion faster.

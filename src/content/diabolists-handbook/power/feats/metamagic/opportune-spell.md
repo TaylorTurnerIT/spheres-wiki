@@ -4,6 +4,7 @@ name: Opportune Spell
 tags:
   - metamagic
 tier: feat
+summary: "Replace an attack of opportunity with an immediate touch or strike-compatible magic sphere effect."
 ---
 Incredible power waits to strike any who would cross you.
 

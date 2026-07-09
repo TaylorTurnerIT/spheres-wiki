@@ -3,6 +3,7 @@ id: "follow-through"
 name: "Follow-Through"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 Whenever you hit a target with an attack action, you may make a bull rush or reposition maneuver against the target as a free action that does not provoke an attack of opportunity.

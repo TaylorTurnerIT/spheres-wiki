@@ -5,6 +5,7 @@ tier: "advanced"
 tags:
   - "trick"
   - "utility"
+summary: ""
 ---
 
 **Prerequisites:** Scoundrel sphere.

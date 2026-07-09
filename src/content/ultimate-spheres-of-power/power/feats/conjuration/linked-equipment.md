@@ -4,6 +4,7 @@ name: "Linked Equipment"
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Transfer the benefits of your worn magic items to a summoned companion."
 ---
 
 **Prerequisite:** Conjuration sphere.

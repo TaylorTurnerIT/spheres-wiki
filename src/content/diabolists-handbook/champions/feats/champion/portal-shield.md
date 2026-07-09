@@ -5,6 +5,7 @@ sphere: shield
 tags:
   - champion
 tier: feat
+summary: "Shape a portal into a shield and use it to maintain, drag, force passage, or redirect deflection effects."
 ---
 You may move your dimensional rifts, using it to protect yourself.
 

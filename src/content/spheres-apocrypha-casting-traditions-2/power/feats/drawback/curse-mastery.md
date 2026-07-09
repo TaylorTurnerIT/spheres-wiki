@@ -4,6 +4,7 @@ name: Curse Mastery
 tags:
   - drawback
 tier: feat
+summary: "Gain all the benefits of your oracle curse."
 ---
 **Prerequisites:** Innate Curse.
 

@@ -4,6 +4,7 @@ name: "Dispatch The Weak"
 sphere: death
 tags: []
 tier: feat
+summary: "Fatigued or exhausted creatures take a -2 penalty on saving throws against your death effects."
 ---
 
 Weakened bodies make for easy targets for your death effects.

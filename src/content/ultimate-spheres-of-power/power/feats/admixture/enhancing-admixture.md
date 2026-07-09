@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "You can spend an additional spell point to apply an enhancement effect to creatures damaged by your Admixture."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Enhancement sphere.

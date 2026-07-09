@@ -4,6 +4,7 @@ name: Distill Compound
 tags:
   - item-creation
 tier: feat
+summary: "You can create single-use magical compounds such as potions, oils, and powders that store magical effects."
 ---
 **Prerequisites:** Caster level 1st.
 

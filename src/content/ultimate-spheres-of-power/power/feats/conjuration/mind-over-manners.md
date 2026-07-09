@@ -4,6 +4,7 @@ name: "Mind Over Manners"
 sphere: conjuration
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Conjuration sphere (Call Planar Creature).

@@ -4,6 +4,7 @@ name: Dual Wielding Mystic Fusion
 tags:
   - practitioner
 tier: feat
+summary: "Replace your first offhand weapon attack during a Dual Attack or Combo Maneuver with a sphere ability."
 ---
 
 **Prerequisites:** Dual Wielding Sphere, Spherecasting.

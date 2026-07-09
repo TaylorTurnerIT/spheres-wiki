@@ -4,6 +4,7 @@ name: Prepared Counter
 tags:
   - counterspell
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Counterspell, casting class feature, magic skill bonus +5.
 

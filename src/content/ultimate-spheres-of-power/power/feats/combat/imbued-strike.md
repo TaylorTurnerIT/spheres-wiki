@@ -4,6 +4,7 @@ name: Imbued Strike
 tags:
   - combat
 tier: feat
+summary: "As a swift action, treat your weapons as magic and deal additional damage based on your magic skill bonus, counting as the Arcane Strike feat."
 ---
 **Prerequisites:** Casting class feature, caster level 1st.
 

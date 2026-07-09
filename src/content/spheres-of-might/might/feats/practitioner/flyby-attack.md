@@ -5,6 +5,7 @@ tags:
   - monster
   - practitioner
 tier: feat
+summary: "Take a standard action at any point during a flying move."
 ---
 
 This creature can make an attack before and after it moves while flying.

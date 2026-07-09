@@ -4,6 +4,7 @@ name: Propulsive Creation
 sphere: telekinesis
 dualSphere: creation
 tier: feat
+summary: "Cause an object, gas, or liquid you alter or create to possess a powerful attractive or repelling force."
 ---
 
 **Prerequisites:** Creation sphere, Telekinesis sphere (Gravity Ward/Well).

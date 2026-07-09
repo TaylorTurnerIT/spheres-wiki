@@ -4,6 +4,7 @@ name: "Companionship"
 sphere: protection
 tags: ["warden"]
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Protection sphere, 3rd-level paladin.
 

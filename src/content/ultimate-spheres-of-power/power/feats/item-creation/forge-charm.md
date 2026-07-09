@@ -4,6 +4,7 @@ name: Forge Charm
 tags:
   - item-creation
 tier: feat
+summary: "Add permanent magical enhancements and effects to items."
 ---
 **Prerequisites:** Magic skill bonus +1.
 

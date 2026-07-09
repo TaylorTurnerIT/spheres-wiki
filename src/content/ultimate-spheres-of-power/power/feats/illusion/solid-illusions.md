@@ -4,6 +4,7 @@ name: Solid Illusions
 sphere: illusion
 dualSphere: enhancement
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, Illusion sphere (Illusionary Touch (sensory, touch) x2).

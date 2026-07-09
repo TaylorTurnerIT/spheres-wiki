@@ -4,6 +4,7 @@ name: Might Of The Grave
 sphere: enhancement
 dualSphere: death
 tier: feat
+summary: ""
 ---
 
 When you reanimate a body, you can grant it magical enhancements for a short time.

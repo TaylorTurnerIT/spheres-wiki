@@ -4,6 +4,7 @@ name: Gravitic Anomaly
 tags:
   - protokinesis
 tier: feat
+summary: "Move on walls, ceilings, and other surfaces as if they were the ground."
 ---
 
 **Prerequisites:** Telekinesis sphere, Counterweight.

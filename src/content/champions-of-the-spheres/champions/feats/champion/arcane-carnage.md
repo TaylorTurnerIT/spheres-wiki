@@ -6,6 +6,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "When using Spell Attack with Advancing Carnage, apply the sphere effect to each creature damaged during the attacks."
 ---
 **Prerequisites:** Berserker sphere (Advancing Carnage), Spell Attack, casting class feature; any talent with the strike descriptor
 

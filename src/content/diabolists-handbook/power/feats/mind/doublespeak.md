@@ -4,6 +4,7 @@ name: Doublespeak
 sphere: mind
 dualSphere: fate
 tier: feat
+summary: "Spend an extra spell point so creatures of a chosen alignment receive a different charm, cloud, or word effect."
 ---
 
 What might spell doom for one listener brings the greatest of joy to another.

@@ -4,6 +4,7 @@ name: Contingency Tampering
 tags:
   - general
 tier: feat
+summary: "You may spend a spell point to grant a contingency an additional trigger condition or remove its existing trigger condition for the duration."
 ---
 **Prerequisite:** Enhanced Contingency (see Enhancement feats).
 

@@ -4,6 +4,7 @@ name: "Versatile Feeding"
 sphere: death
 tags: []
 tier: feat
+summary: "You can use your Necrotic Feeding ghost strike to consume a controlled mindless undead or grant its bonuses to an undead you control."
 ---
 You have learned the art of funneling necromantic power between yourself and your minions.
 

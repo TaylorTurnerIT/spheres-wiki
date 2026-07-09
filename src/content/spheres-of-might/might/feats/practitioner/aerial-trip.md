@@ -4,6 +4,7 @@ name: Aerial Trip
 tags:
   - practitioner
 tier: feat
+summary: "Trip flying opponents, causing them to become entangled and fall."
 ---
 
 **Prerequisites:** Base attack bonus +5, Improved Trip or a combat talent that allows you to perform a trip without provoking an attack of opportunity.

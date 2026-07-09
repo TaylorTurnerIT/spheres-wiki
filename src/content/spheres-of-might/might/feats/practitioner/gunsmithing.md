@@ -4,6 +4,7 @@ name: Gunsmithing*
 tags:
   - practitioner
 tier: feat
+summary: "Craft and repair firearms and ammunition without Craft checks at reduced material costs."
 ---
 
 You know the secrets of repairing and restoring firearms.

@@ -4,6 +4,7 @@ name: Item Mastery
 tags:
   - general
 tier: feat
+summary: "Add your casting ability modifier to the save DCs and sphere effects of magic items you activate."
 ---
 **Prerequisite:** Caster level 10th.
 

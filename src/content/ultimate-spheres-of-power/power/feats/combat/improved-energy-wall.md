@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: "You can spend an additional spell point on Energy Wall to grant concealment and destroy or penalize incoming projectiles."
 ---
 
 **Prerequisites:** Destruction sphere (Energy Wall (blast shape)).

@@ -5,6 +5,7 @@ sphere: weather
 dualSphere: life
 tags: ["warden"]
 tier: feat
+summary: "Stabilize dying creatures and end bleed effects when creating precipitation."
 ---
 
 **Prerequisite:** Life sphere (Stabilizing Invigoration), Weather sphere.

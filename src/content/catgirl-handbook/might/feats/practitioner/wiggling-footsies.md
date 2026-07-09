@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: fencing
 tier: feat
+summary: "You can scout an attacker when using the Footwork talent, gain bonus precision damage if you avoid their attack, and regain martial focus when dealing that bonus damage."
 ---
 
 **Prerequisites:** Fencing sphere (Footwork), Scout sphere (Calibrating Wiggle).

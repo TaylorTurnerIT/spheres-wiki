@@ -5,6 +5,7 @@ sphere: athletics
 tags:
   - champion
 tier: feat
+summary: "Treat teleportation as movement for Athletics (motion) talents and apply Mobility AC bonuses to teleportation attacks of opportunity."
 ---
 
 **Prerequisites:** Athletics sphere, Warp sphere.

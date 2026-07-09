@@ -6,6 +6,7 @@ tags:
   - champion
   - counterspell
 tier: feat
+summary: "Use Dispelling Attack as a free action with attack actions and create area dispels with improved counterspell feats."
 ---
 **Prerequisites:** Counterspell, Dispelling Attack
 

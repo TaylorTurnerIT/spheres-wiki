@@ -5,6 +5,7 @@ tags:
   - 3pp
   - counterspell
 tier: feat
+summary: "Destroying a magic item or physical sphere effect by sundering allows you to treat it as dispelled for Counterspell feats."
 ---
 **Prerequisites:** Counterspell, Base Attack Bonus +6
 

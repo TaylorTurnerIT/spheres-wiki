@@ -3,6 +3,7 @@ id: "blazewater"
 name: "Blazewater"
 tier: "advanced"
 tags: []
+summary: "Expend an alcoholic beverage to grant a weapon the extraordinary flaming burst property for one minute."
 ---
 
 **Prerequisite:** Barroom sphere, base attack bonus +7.

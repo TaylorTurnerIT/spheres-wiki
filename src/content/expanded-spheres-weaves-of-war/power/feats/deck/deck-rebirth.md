@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Spend spell points to recharge recently cast charged sphere effects when shuffling your discard pile into an empty deck, gaining bonus damage on your next attack."
 ---
 
 **Prerequisites:** Card Casting (Cooldown), Charged Spells

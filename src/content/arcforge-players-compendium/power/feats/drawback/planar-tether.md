@@ -4,6 +4,7 @@ name: Planar Tether
 tags:
   - drawback
 tier: feat
+summary: "Use abilities that interact with or travel to your Planebound Magic plane from any plane."
 ---
 **Prerequisite:** Planebound Magic.
 

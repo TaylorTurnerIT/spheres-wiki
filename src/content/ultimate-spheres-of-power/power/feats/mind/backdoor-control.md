@@ -4,6 +4,7 @@ name: Backdoor Control
 sphere: mind
 dualSphere: enhancement
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere (Bestow Intelligence (enhance)), Mind sphere (Expanded Charm).

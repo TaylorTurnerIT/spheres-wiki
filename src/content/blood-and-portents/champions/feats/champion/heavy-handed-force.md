@@ -6,6 +6,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Use telekinesis to shove creatures and add Bludgeon damage to manhandle effects."
 ---
 Creating leverage is an art.
 

@@ -4,6 +4,7 @@ name: "Necrotic Poison"
 tier: "advanced"
 tags:
   - "toxin"
+summary: ""
 ---
 
 **Prerequisites:** Alchemy sphere, Craft (alchemy) 10 ranks.

@@ -2,6 +2,7 @@
 id: "deathless"
 name: "Deathless"
 tier: "basic"
+summary: "Double your negative hit point limit and choose to act as disabled instead of dying when below 0 hit points."
 ---
 
 As long as you have martial focus, the number of hit points you can be reduced to below 0 without dying is doubled and you may choose to act as if you were disabled, rather than dying. You must make this decision as soon as you are reduced to negative hit points (even if it isn't your turn). If you do not choose to act as if you were disabled, you immediately fall unconscious.

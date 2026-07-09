@@ -5,6 +5,7 @@ sphere: enhancement
 tags:
   - counterspell
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, Counterspell.

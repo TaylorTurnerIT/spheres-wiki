@@ -4,6 +4,7 @@ name: Dual Wielding Mystic Strike
 tags:
   - champion
 tier: feat
+summary: "Deliver a sphere ability with a melee weapon attack when using Dual Wielding Mystic Fusion."
 ---
 **Prerequisites:** Dual Wielding Mystic Fusion.
 

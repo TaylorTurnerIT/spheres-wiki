@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: warleader
 tier: feat
+summary: "Allies benefiting from your tactics are considered within range of your banner."
 ---
 
 **Prerequisites:** Diplomacy 10 ranks, Warleader sphere (Heraldry), banner class feature.

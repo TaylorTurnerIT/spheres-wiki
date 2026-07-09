@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: berserker
 tier: feat
+summary: "Gain two additional abilities associated with your heritage while benefiting from the Atavism adrenaline talent."
 ---
 
 Your powers are long known with stories untold. You have unlocked more of your latent bloodline’s potentials, harnessing the might of those who stood before you.

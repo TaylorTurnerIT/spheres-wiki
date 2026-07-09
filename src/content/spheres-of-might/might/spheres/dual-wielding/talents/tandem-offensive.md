@@ -3,6 +3,7 @@ id: "tandem-offensive"
 name: "Tandem Offensive"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 As long as you have martial focus, if you successfully use the attack action to strike a creature with your main-hand weapon, your off-hand weapon gains any enhancement bonus your mainhand weapon possesses until the beginning of your next turn, replacing any enhancement bonuses your off-hand may possess.

@@ -5,6 +5,7 @@ tags:
   - 3pp
   - counterspell
 tier: feat
+summary: "Double an area dispel's radius by limiting it to one magic sphere or school."
 ---
 **Prerequisites:** Improved Counterspell
 

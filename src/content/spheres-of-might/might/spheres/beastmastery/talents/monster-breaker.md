@@ -4,6 +4,7 @@ name: "Monster Breaker"
 tier: "advanced"
 tags:
   - "ride"
+summary: "Use Bronco Buster on any suitable mount, but intelligent creatures get a free Will save each turn to resist and can only be directed to move."
 ---
 
 **Prerequisites:** Beastmastery sphere, Broad Skills, Bronco Buster, Ride 7 ranks.

@@ -4,6 +4,7 @@ name: Equal and Opposite
 sphere: telekinesis
 tags: []
 tier: feat
+summary: "Perform an opposed bull rush check using your caster level to push away an attacking creature."
 ---
 
 **Prerequisites:** Telekinesis sphere, character level 5th.

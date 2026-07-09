@@ -6,6 +6,7 @@ tags:
   - 3pp
   - admixture
 tier: feat
+summary: "Spend an additional spell point when using Admixture to replace the second blast type with a geomancing or spirit effect."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Nature sphere.

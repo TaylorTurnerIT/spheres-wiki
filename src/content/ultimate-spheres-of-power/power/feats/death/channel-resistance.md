@@ -4,6 +4,7 @@ name: "Channel Resistance"
 sphere: death
 tags: []
 tier: feat
+summary: "You and all undead you reanimate gain channel resistance +2."
 ---
 
 You and undead you create are resistant to channeled energies.

@@ -4,6 +4,7 @@ name: Artificery
 tags:
   - general
 tier: feat
+summary: "Use your ranks in a chosen Craft or Profession skill as your caster level and magic skill bonus to qualify for item creation feats and craft magic items."
 ---
 **Prerequisite:** Any Craft or Profession 5 ranks.
 

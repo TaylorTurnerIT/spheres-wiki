@@ -4,6 +4,7 @@ name: Poltergeist's Malice
 sphere: telekinesis
 dualSphere: death
 tier: feat
+summary: ""
 ---
 
 Every mistake your foes make brings them closer to your service.

@@ -5,6 +5,7 @@ tags:
   - champion
   - sm
 tier: feat
+summary: "Ignore the AC penalty from berserking or raging abilities as long as you have a meditation active."
 ---
 **Prerequisites:** Body Control Sphere; Berserker Sphere or one of bloodrage, rage, or raging song class feature.
 

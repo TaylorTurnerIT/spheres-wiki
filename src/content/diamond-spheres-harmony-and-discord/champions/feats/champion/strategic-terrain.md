@@ -6,6 +6,7 @@ dualSphere: warleader
 tags:
   - champion
 tier: feat
+summary: "Apply the effects of a tactic to a dredged area."
 ---
 **Prerequisite:** Survivalism sphere ((dredge) package), Warleader sphere.
 

@@ -5,6 +5,7 @@ tags:
   - 3pp
   - champion
 tier: feat
+summary: "Transformed creatures can function as a single trinket, trap, or refined component."
 ---
 **Prerequisites:** Alteration Sphere (Object Transformation), one of Artifice, Survivalism, or Trap Spheres
 

@@ -6,6 +6,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Gain a +1 competence bonus to caster level with terrain-associated sphere effects, and spend a spell point as a swift action to temporarily gain an associated sphere talent."
 ---
 
 **Prerequisites:** Area Bound or Terrain Casting

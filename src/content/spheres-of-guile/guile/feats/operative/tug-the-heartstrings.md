@@ -5,6 +5,7 @@ sphere: artifice
 tags:
   - operative
 tier: feat
+summary: "Impose a penalty to saves and checks on creatures that share a motivation you chose when creating an artwork or using a performance ability."
 ---
 
 Your expressions of creativity possess a deeper meaning, making them harder to ignore to those who understand your experience.

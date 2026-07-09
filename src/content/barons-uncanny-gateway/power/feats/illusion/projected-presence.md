@@ -5,6 +5,7 @@ sphere: illusion
 dualSphere: divination
 tags: ["sm"]
 tier: feat
+summary: "Make viewing sensors take illusion forms that move and create sensations like your illusions."
 ---
 
 **Prerequisites:** Divination Sphere (Viewing), Illusion Sphere

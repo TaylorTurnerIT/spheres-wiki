@@ -5,6 +5,7 @@ tags:
   - defiler
   - drawback
 tier: feat
+summary: ""
 ---
 You can increase the damage to the land around you to amplify your power.
 

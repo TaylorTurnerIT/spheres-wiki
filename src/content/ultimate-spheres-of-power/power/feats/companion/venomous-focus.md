@@ -5,6 +5,7 @@ sphere: conjuration
 tags:
   - companion
 tier: feat
+summary: "Your companion's poison gains a scaling bonus to its DC and requires an additional save to cure."
 ---
 
 **Prerequisites:** Conjuration sphere (Monstrous Attacks (form) with poison option).

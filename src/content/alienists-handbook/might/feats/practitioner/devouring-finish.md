@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: wrestling
 tier: feat
+summary: "Devour a grappled creature's brain as a free action when you reduce it to 0 hit points or render it unconscious."
 ---
 
 **Prerequisites:** Wrestling sphere, Brain Consumption.

@@ -3,6 +3,7 @@ id: "optimize-magic-weapon"
 name: "Optimize Magic Weapon"
 tier: "advanced"
 tags: []
+summary: "Increase a magic weapon's effective enhancement bonus for special abilities based on your base attack bonus."
 ---
 
 **Prerequisite:** Equipment sphere.

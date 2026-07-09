@@ -4,6 +4,7 @@ name: "World In Miniature"
 sphere: warp
 tags: []
 tier: feat
+summary: "Your extradimensional spaces become a tiny world that generates natural elements and resources based on your known geomancing packages."
 ---
 
 **Prerequisites:** Nature sphere, Warp sphere (Extradimensional Room (space) or Extradimensional Storage (space)).

@@ -5,6 +5,7 @@ tags:
   - 3pp
   - counterspell
 tier: feat
+summary: "When counterspelling multiple effects from one creature, let the caster keep one group of effects to refund a spell point."
 ---
 **Prerequisites:** Improved Counterspell
 

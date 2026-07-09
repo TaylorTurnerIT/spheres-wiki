@@ -4,6 +4,7 @@ name: Infantry Formation
 tags:
   - squadron
 tier: feat
+summary: "Give squad members a free move action to form a cone, line, or square."
 ---
 **Prerequisite:** Squadron Commander or Troop Commander.
 

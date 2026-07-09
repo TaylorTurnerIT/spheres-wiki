@@ -4,6 +4,7 @@ name: Touchsense
 tags:
   - protokinesis
 tier: feat
+summary: "Gain tremorsense 15 ft., or add 15 ft. to the tremorsense range provided by the Kinetic Sense talent."
 ---
 
 **Prerequisites:** Perception 5 ranks, Telekinesis sphere.

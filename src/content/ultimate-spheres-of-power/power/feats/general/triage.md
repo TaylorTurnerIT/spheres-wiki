@@ -4,6 +4,7 @@ name: Triage
 tags:
   - general
 tier: feat
+summary: "Spend a spell point or ki point to treat deadly wounds as a full-round action, bypassing the daily limit per creature."
 ---
 Prerequisites: Heal 1 rank; casting class feature or ki pool class feature
 

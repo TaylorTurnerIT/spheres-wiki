@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Ignore casting ability score damage, drain, or penalties for magic sphere effects while under non-dormant severance."
 ---
 **Prerequisites:** Unsettling Casting drawback
 

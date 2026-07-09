@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - combat
 tier: feat
+summary: "You can spit your poison as a ranged touch attack with a 20-foot range, treating it as a contact poison."
 ---
 
 **Prerequisites:** Alteration sphere (Serpentine Transformation (transformation) or Vermin Transformation (transformation)), poison bestial trait, or racial poison ability.

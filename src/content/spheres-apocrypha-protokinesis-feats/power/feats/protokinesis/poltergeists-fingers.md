@@ -4,6 +4,7 @@ name: Poltergeist's Fingers
 sphere: telekinesis
 tags: []
 tier: feat
+summary: "Use your telekinetic limb to perform steal combat maneuvers and make Sleight of Hand checks unnoticed."
 ---
 
 **Prerequisites:** Sleight of Hand 3 ranks, Telekinesis sphere, Mind Limb.

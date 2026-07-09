@@ -6,6 +6,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Spend 2 tension points per metamagic feat to ignore casting time increases for sphere effects."
 ---
 
 **Prerequisites:** tension pool, any metamagic feat

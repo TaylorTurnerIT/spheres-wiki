@@ -4,6 +4,7 @@ name: Chaotic Counter
 tags:
   - wild-magic
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Counterspell or the ability to cast dispel magic.
 

@@ -4,6 +4,7 @@ name: Remote Jostle
 sphere: telekinesis
 tags: []
 tier: feat
+summary: "Push a creature off balance as a swift action, imposing penalties or causing them to lose an attack of opportunity."
 ---
 
 **Prerequisite:** Telekinesis sphere.

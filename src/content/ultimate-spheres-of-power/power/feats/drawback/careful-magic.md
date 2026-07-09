@@ -5,6 +5,7 @@ sphere: enhancement
 tags:
   - drawback
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, Extended Casting drawback.

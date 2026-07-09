@@ -3,6 +3,7 @@ id: "three-sword-style"
 name: "Three-Sword Style"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Dual Wielding sphere, base attack bonus +6.

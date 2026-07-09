@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Extend the duration of an active stance talent by 1 round when you successfully damage a creature."
 ---
 
 **Prerequisite:** Any (stance) talent.

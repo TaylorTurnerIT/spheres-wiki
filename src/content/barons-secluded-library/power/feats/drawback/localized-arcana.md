@@ -6,6 +6,7 @@ tags:
   - general
   - sm
 tier: feat
+summary: "Add your favored terrain bonus to concentration and spell resistance checks while in favored terrain."
 ---
 **Prerequisites:** Favored Terrain class feature
 

@@ -5,6 +5,7 @@ tags:
   - operative
   - plan
 tier: feat
+summary: "Leave a spell slot or extract unprepared as a plan to later finish preparing it as a full-round action."
 ---
 
 You know how to prepare spells or extracts most of the way, and then finish the process at the last moment.

@@ -4,6 +4,7 @@ name: Extra Swarm Enhancement
 tags:
   - practitioner
 tier: feat
+summary: "Gain an additional swarm enhancement."
 ---
 
 **Prerequisite:** Swarm enhancement class feature.

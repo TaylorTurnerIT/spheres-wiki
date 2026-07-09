@@ -4,6 +4,7 @@ name: Primal Emblem
 tags:
   - general
 tier: feat
+summary: ""
 ---
 **Prerequisite:** Banner class feature.
 

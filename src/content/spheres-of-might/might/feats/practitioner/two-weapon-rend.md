@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Deal an additional 1d10 damage plus 1-1/2 times your Strength modifier once per round when you hit an opponent with both weapons."
 ---
 
 Striking with both of your weapons simultaneously, you can use them to deliver devastating wounds.

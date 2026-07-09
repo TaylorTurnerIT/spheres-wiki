@@ -4,6 +4,7 @@ name: Linguistic Mastery
 tags:
   - racial
 tier: feat
+summary: "Gain a +2 bonus to Linguistics checks and learn two languages per rank of Linguistics instead of one."
 ---
 Some believe that to know your potential foe is to have won before the battle begins.
 

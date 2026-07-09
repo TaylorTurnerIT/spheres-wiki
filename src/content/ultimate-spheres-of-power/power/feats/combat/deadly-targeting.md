@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Destruction sphere.

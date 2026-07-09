@@ -4,6 +4,7 @@ name: Wound Manipulator
 sphere: life
 dualSphere: alteration
 tier: feat
+summary: "Spend a spell point when shapeshifting a creature to heal them for 1 hit point per Hit Die, plus an additional hit point per Hit Die for each (cure) talent you possess."
 ---
 
 **Prerequisites:** Alteration sphere, Life sphere.

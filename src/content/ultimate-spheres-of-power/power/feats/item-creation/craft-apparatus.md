@@ -4,6 +4,7 @@ name: Craft Apparatus
 tags:
   - item-creation
 tier: feat
+summary: "Create talent-based magic items that require no activation except to hold, wear, or carry them."
 ---
 **Prerequisites:** Caster level 1st.
 

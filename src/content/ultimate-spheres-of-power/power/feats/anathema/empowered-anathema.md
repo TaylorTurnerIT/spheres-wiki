@@ -4,6 +4,7 @@ name: Empowered Anathema
 tags:
   - anathema
 tier: feat
+summary: "Deal +1 damage per die when using your anathema."
 ---
 **Prerequisites:** Anathema
 

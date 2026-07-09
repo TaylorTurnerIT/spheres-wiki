@@ -4,6 +4,7 @@ name: Telekinetic Trigger
 sphere: telekinesis
 tags: []
 tier: feat
+summary: "Activate any command word, spell trigger, or spell completion magical item held in your telekinetic limb."
 ---
 
 **Prerequisites:** Use Magic Device 3 ranks, Telekinesis sphere, Mind Limb.

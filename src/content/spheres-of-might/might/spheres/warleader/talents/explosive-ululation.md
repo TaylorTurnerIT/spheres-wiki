@@ -4,6 +4,7 @@ name: "Explosive Ululation"
 tier: "advanced"
 tags:
   - "shout"
+summary: ""
 ---
 
 **Prerequisites:** Warleader sphere, Diplomacy 1 rank.

@@ -5,6 +5,7 @@ sphere: duelist
 tags:
   - champion
 tier: feat
+summary: "Target suffers a -1 penalty to saving throws against your spells and sphere effects if you possess their blood."
 ---
 **Prerequisites:** Casting class feature, Duelist sphere.
 

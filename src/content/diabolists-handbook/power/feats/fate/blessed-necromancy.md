@@ -4,6 +4,7 @@ name: Blessed Necromancy
 sphere: fate
 dualSphere: death
 tier: feat
+summary: "Use word abilities as ghost strikes and apply a word as a free action when reanimating undead."
 ---
 
 Your power over the dead extends to influence over their destiny.

@@ -5,6 +5,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Ignore penalties from Combat Expertise, Deadly Aim, Piranha Strike, or Power Attack on your second attack each turn."
 ---
 **Prerequisites:** Able Aiming, Determined Defense or Furious Focus
 

@@ -4,6 +4,7 @@ name: Unarmored Mastery
 tags:
   - champion
 tier: feat
+summary: "Retain the benefits of Unarmored Training even when under a polymorph effect."
 ---
 **Prerequisites:** Unarmored Training, +8 base attack bonus or 8 ranks in Acrobatics.
 

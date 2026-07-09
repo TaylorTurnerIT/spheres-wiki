@@ -4,6 +4,7 @@ name: Corrupted Form
 tags:
   - drawback
 tier: feat
+summary: "Gain additional Witchwarped traits while suffering from a madness or addiction caused by a casting drawback."
 ---
 Your magic overtakes your body, blessing you with an advanced physiology as you sink deeper into depravity.
 

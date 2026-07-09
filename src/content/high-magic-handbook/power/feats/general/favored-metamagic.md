@@ -4,6 +4,7 @@ name: Favored Metamagic
 tags:
   - general
 tier: feat
+summary: "Applying one chosen metamagic feat does not increase casting time."
 ---
 **Prerequisite:** Any metamagic feat.
 

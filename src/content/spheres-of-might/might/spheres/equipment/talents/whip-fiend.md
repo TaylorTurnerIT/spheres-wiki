@@ -3,6 +3,7 @@ id: "whip-fiend"
 name: "Whip Fiend"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 You can deal lethal damage with a whip and can also damage creatures regardless of their armor or natural armor bonus. In addition, you threaten all spaces within 5 ft. of yourself and do not provoke an attack of opportunity while making an attack with a whip.

@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "You may write down two blast shapes for a destructive blast effect card and choose which one to use when creating the effect."
 ---
 
 **Prerequisites:** Destruction Sphere, Card Casting drawback

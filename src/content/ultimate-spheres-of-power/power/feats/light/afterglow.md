@@ -4,6 +4,7 @@ name: "Afterglow"
 sphere: light
 tags: []
 tier: feat
+summary: "You can cause a creature to glow when you affect them with a positive energy ability."
 ---
 
 **Prerequisite:** Light sphere.

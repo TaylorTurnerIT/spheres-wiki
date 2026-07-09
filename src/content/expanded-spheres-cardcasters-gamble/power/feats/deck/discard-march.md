@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Gain a competence bonus to damage rolls on your first attack each round based on the number of cards in your discard pile."
 ---
 
 **Prerequisites:** Card Casting drawback (Cooldown)

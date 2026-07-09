@@ -5,6 +5,7 @@ sphere: illusion
 tags:
   - champion
 tier: feat
+summary: "Gain Sleight of Hand bonuses while glamered and cast a discounted glamer after a successful steal or dirty trick."
 ---
 **Prerequisites:** Illusion sphere, Scoundrel sphere, Illusion sphere caster level 5th.
 

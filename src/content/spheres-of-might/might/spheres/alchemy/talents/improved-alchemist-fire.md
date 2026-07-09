@@ -4,6 +4,7 @@ name: "Improved Alchemist Fire"
 tier: "basic"
 tags:
   - "formulae"
+summary: "Craft an alchemist's fire that deals scaling fire damage based on your Craft ranks and ignites targets within an expandable splash radius."
 ---
 
 **Craft DC:** 20

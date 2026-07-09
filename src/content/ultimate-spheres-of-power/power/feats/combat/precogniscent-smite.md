@@ -5,6 +5,7 @@ sphere: divination
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Divination sphere (one or more (sense) talents or abilities).

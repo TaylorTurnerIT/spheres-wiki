@@ -6,6 +6,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Spend spell points to enter aristeia level 1 by meeting specific niche conditions without spending a hero point."
 ---
 
 **Prerequisites:** Card Casting Drawback

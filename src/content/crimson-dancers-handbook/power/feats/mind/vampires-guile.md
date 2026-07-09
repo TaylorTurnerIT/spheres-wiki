@@ -4,6 +4,7 @@ name: Vampire's Guile
 sphere: mind
 dualSphere: blood
 tier: feat
+summary: "Bleeding creatures take a -2 penalty on saves against your Mind sphere abilities, and creatures under your non-harmless Mind sphere effects count as being below half hit points against your Blood sphere abilities."
 ---
 
 **Prerequisites:** Blood sphere, Mind sphere.

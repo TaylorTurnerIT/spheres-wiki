@@ -4,6 +4,7 @@ name: "Haboob Lord"
 sphere: weather
 tags: []
 tier: feat
+summary: "Create a dust storm when using control weather to create severe wind in an arid area, even without sand or dust present."
 ---
 
 **Prerequisites:** Weather sphere, caster level 5th.

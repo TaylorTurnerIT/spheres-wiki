@@ -4,6 +4,7 @@ name: Combatant Caster
 tags:
   - drawback
 tier: feat
+summary: "Count proficient weapons towards Galvanized requirements and gain a bonus on concentration checks while wielding them."
 ---
 **Prerequisites:** Galvanized.
 

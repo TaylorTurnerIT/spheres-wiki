@@ -4,6 +4,7 @@ name: "Ecumenicism"
 sphere: fate
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Fate sphere.

@@ -4,6 +4,7 @@ name: Extra Magic Talent
 tags:
   - extra
 tier: feat
+summary: "Gain an additional sphere or a talent from a sphere you possess."
 ---
 **Prerequisite:** Basic Magic Training or Casting class feature.
 

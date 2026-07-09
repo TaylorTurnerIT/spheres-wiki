@@ -4,6 +4,7 @@ name: Shift Effect
 tags:
   - wild-magic
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Spell point pool or casting class feature.
 

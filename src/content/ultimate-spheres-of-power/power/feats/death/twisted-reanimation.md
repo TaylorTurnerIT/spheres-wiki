@@ -4,6 +4,7 @@ name: Twisted Reanimation
 sphere: death
 dualSphere: alteration
 tier: feat
+summary: "Grant a single Alteration sphere trait to undead you reanimate, which can be changed with a standard action touch."
 ---
 
 When you reanimate a corpse, its remains shift to suit your purposes.

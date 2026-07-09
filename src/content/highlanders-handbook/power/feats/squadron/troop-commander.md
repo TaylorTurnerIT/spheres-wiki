@@ -5,6 +5,7 @@ sphere: warleader
 tags:
   - squadron
 tier: feat
+summary: "Increase the bonuses granted by your tactics to your squadron members."
 ---
 **Prerequisite:** Warleader sphere.
 

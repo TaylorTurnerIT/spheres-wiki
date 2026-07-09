@@ -5,6 +5,7 @@ tags:
   - operative
 sphere: performance
 tier: feat
+summary: "Gain the benefits of a chosen instrumental or lyric as a constant effect."
 ---
 
 **Prerequisites:** Performance sphere ((instrumental or lyric) package), associated ranks 10.

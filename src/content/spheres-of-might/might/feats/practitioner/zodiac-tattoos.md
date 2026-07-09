@@ -4,6 +4,7 @@ name: Zodiac Tattoos*
 tags:
   - practitioner
 tier: feat
+summary: "Enchant your skin with armor special abilities as if it were +1 leather armor."
 ---
 
 Mystical tattoos ward you from harm and transform your skin into protective armor.

@@ -5,6 +5,7 @@ tier: "advanced"
 tags:
   - "handle-animal"
   - "utility"
+summary: "Gain the ability to speak with animals."
 ---
 
 **Prerequisites:** Beastmastery sphere, Handle Animal 5 ranks.

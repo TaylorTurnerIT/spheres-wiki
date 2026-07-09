@@ -4,6 +4,7 @@ name: Anathema
 tags:
   - anathema
 tier: feat
+summary: "Expend a use of your positive energy class feature, fervor, or lay on hands to deal positive energy damage to an evil creature with a melee touch or ray attack."
 ---
 **Prerequisites:** Channel positive energy class feature, fervor, or lay on hands class feature.
 

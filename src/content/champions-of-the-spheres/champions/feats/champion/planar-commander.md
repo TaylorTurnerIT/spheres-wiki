@@ -5,6 +5,7 @@ sphere: conjuration
 tags:
   - champion
 tier: feat
+summary: "Activate a tactic as part of the same standard action used to summon a companion."
 ---
 **Prerequisites:** Conjuration sphere, Warleader sphere.
 

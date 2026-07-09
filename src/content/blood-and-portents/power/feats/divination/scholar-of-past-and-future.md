@@ -4,6 +4,7 @@ name: "Scholar Of Past And Future"
 sphere: divination
 tags: []
 tier: feat
+summary: "Gain a Knowledge history bonus and increase your divine caster level based on your Knowledge history ranks."
 ---
 
 **Prerequisites:** Knowledge (history) 1 rank, Divination sphere.

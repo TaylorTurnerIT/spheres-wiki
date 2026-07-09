@@ -4,6 +4,7 @@ name: Handblood's Advantage
 tags:
   - deck
 tier: feat
+summary: "Assign each card a Physical, Mental, or Spiritual category that grants a +2 luck bonus when discarded as part of an action."
 ---
 
 **Prerequisites:** Card Casting (Bleeding Hand)

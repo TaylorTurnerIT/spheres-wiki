@@ -5,6 +5,7 @@ tier: "basic"
 tags:
   - "run"
   - "swim"
+summary: "Gain a bonus on saves against inhalation and suffocation, and multiply your Constitution for running and breath-holding durations."
 ---
 
 You are practiced at quickly collecting a deep breath, drawing in more air in less time. You gain a circumstance bonus on any save against an effect that requires inhalation or causes suffocation equal to your half your ranks in Acrobatics or Swim (whichever is higher).

@@ -4,6 +4,7 @@ name: Malediction
 sphere: protection
 dualSphere: fate
 tier: feat
+summary: "Use Punishment to apply a discounted word instead of damage and end a word or motif instead of an aegis."
 ---
 
 **Prerequisites:** Fate sphere, Protection sphere (Punishment)

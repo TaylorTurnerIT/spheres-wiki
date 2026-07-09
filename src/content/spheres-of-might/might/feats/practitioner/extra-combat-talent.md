@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Gain an additional combat sphere or talent."
 ---
 
 Your knowledge of combat is easily expanded.

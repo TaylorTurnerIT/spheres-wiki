@@ -4,6 +4,7 @@ name: Develop Spellzone
 tags:
   - item-creation
 tier: feat
+summary: "You may create and modify spellzones."
 ---
 **Prerequisite:** Caster level 5th.
 

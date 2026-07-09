@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "When using Admixture, you can spend an additional spell point to apply a word effect to a target damaged by your destructive blast instead of a second blast type."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Fate sphere.

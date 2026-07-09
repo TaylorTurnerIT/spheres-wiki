@@ -5,6 +5,7 @@ sphere: war
 tags:
   - squadron
 tier: feat
+summary: "Treat members of your squadron members' squadrons as members of your own squadron."
 ---
 **Prerequisites:** War sphere, Squadron Commander; or Warleader sphere, Troop Commander; character level 10th.
 

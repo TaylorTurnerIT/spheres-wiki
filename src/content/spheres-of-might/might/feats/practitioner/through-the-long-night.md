@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Suppress a condition with Heroic Resolve for rounds equal to your Charisma or Constitution modifier, and activate it as a swift action if the source is evil."
 ---
 
 The night is hard and the night is long, but you know deep down, you can brave it.

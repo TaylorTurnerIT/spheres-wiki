@@ -6,6 +6,7 @@ tags:
   - champion
   - drawback
 tier: feat
+summary: "Spending a spell point grants the drunk status, allowing you to ignore addiction penalties while it lasts."
 ---
 **Prerequisites:** Barroom sphere (Chasing The Dragon), Addictive Casting.
 

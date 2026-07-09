@@ -3,6 +3,7 @@ id: "eternal-buzz"
 name: "Eternal Buzz"
 tier: "advanced"
 tags: []
+summary: "Gain the drunk status as a swift action, and creatures that swallow you must save or become sickened."
 ---
 
 **Prerequisite:** Barroom sphere, High on Fumes, Iron Liver, base attack bonus +15.

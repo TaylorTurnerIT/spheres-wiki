@@ -5,6 +5,7 @@ tags:
   - sm
   - surreal
 tier: feat
+summary: "Spend a shadow point when creating a glamer to make another affected creature or object unreal to the glamered creature."
 ---
 **Prerequisites:** Illusion Sphere (Selective Illusions, Suppression)
 

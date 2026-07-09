@@ -4,6 +4,7 @@ name: Imbue With Nature
 sphere: nature
 dualSphere: destruction
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Destruction sphere, Nature sphere (any (geomancing) talent).

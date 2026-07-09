@@ -5,6 +5,7 @@ tags:
   - combat
   - operative
 tier: feat
+summary: "Reduce miss chances by expending an attack of opportunity and dodge pool increments."
 ---
 
 **Prerequisites:** Cunning celerity class feature.

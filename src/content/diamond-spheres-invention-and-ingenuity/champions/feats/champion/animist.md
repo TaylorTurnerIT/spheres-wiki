@@ -6,6 +6,7 @@ dualSphere: nature
 tags:
   - champion
 tier: feat
+summary: "Place traps, dredge areas with geomancing, or confer spirit talents with talismans."
 ---
 **Prerequisite:** Survival 3 ranks, Survivalism sphere; Nature sphere or Trap sphere.
 

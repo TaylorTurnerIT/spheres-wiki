@@ -4,6 +4,7 @@ name: "Shuffling Array"
 sphere: mana
 tags: []
 tier: feat
+summary: "Add sphere-dependent shuffle options that alter magical attack rolls, range through the shuffle area, or perceived alignment."
 ---
 **Prerequisites:** Mana sphere (Flexible Shuffle).
 

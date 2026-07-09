@@ -5,6 +5,7 @@ sphere: conjuration
 tags:
   - companion
 tier: feat
+summary: "Your Battle Creature or Shield Bearer companion can substitute its granted enhancement bonuses for armorist weapon and shield special abilities."
 ---
 
 **Prerequisites:** Conjuration sphere (Battle Creature (form) or Shield Bearer (form)), companion with 6 or more Hit Dice.

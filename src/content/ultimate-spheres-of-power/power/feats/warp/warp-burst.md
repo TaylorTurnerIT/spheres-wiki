@@ -4,6 +4,7 @@ name: Warp Burst
 sphere: warp
 dualSphere: destruction
 tier: feat
+summary: "When teleporting yourself, you may increase the casting time and spend a spell point to target your destination square with an Explosive Orb destructive blast."
 ---
 
 **Prerequisites:** Destruction sphere (Explosive Orb (blast shape)), Warp sphere.

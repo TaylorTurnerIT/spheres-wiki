@@ -4,6 +4,7 @@ name: "Focusing Direction"
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Allow a Conjuration companion to touch creatures warded by protection from alignment and similar effects."
 ---
 
 **Prerequisite:** Conjuration sphere.

@@ -6,6 +6,7 @@ dualSphere: performance
 tags:
   - champion
 tier: feat
+summary: "Undead creatures under your control can benefit from your Performance sphere abilities."
 ---
 
 **Prerequisite:** Death sphere, Performance sphere.

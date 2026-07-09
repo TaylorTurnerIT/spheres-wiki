@@ -5,6 +5,7 @@ sphere: spellhacking
 tags:
   - operative
 tier: feat
+summary: "Take a move action to prepare yourself to hack a magic effect, item, or trap as it activates."
 ---
 
 **Prerequisite:** Spellhacking sphere.

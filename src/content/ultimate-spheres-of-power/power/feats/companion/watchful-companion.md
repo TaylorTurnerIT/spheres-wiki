@@ -5,6 +5,7 @@ sphere: conjuration
 tags:
   - companion
 tier: feat
+summary: "Your 1-day summoned companion persists when you rest, can be renewed while you are unconscious, and can wake you up."
 ---
 
 **Prerequisites:** Conjuration sphere (Greater Summoning, Lingering Companion (form)).

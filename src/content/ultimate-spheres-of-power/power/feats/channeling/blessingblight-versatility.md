@@ -4,6 +4,7 @@ name: Blessing/Blight Versatility
 tags:
   - channeling
 tier: feat
+summary: "You can apply blights instead of blessings, or vice versa, treating your soul weaver level as two lower for the alternative."
 ---
 **Prerequisites:** Versatile Channeler, blessing/blight class feature, channel energy class feature.
 

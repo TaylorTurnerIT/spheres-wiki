@@ -4,6 +4,7 @@ name: "Extradimensional Pouch"
 sphere: warp
 tags: []
 tier: feat
+summary: "Connect your hidden storage to your extradimensional storage."
 ---
 
 **Prerequisites:** Form sphere (Hidden Storage [auxiliary]), Warp sphere (Extradimensional Storage x2).

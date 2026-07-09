@@ -6,6 +6,7 @@ tags:
   - champion
   - sm
 tier: feat
+summary: "Gain vitae once per round when ending a meditation after recently gaining vitae, and begin a meditation when using metabolize."
 ---
 **Prerequisites:** Body Control sphere, vitae class feature
 

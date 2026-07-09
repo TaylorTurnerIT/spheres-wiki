@@ -4,6 +4,7 @@ name: Technique Crafting
 tags:
   - combat
 tier: feat
+summary: "Gain the ability to create techniques."
 ---
 You have learned how to create elaborate and unique actions.
 

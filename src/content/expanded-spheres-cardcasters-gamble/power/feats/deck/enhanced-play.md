@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "You can apply metamagic feats to effect cards as they are played, and playing cards with pre-written metamagic does not increase their casting time."
 ---
 
 **Prerequisites:** Card Casting drawback, any metamagic feat

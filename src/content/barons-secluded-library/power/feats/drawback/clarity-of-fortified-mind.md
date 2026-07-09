@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Choose a sphere whose spell point strain you avoid, but cannot use while severed, and dismiss its active effects to reduce strain."
 ---
 **Prerequisites:** Unsettling Casting, at least two magic spheres 
 

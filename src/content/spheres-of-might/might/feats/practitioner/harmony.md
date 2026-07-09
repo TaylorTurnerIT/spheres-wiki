@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: leadership
 tier: feat
+summary: "Allow a cohort to maintain your bardic or raging performance so you can initiate a second one simultaneously."
 ---
 
 **Prerequisites:** Leadership sphere, (cohort) package, bard song or raging song class feature.

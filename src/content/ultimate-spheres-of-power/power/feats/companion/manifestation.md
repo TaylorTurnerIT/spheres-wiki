@@ -5,6 +5,7 @@ sphere: conjuration
 tags:
   - companion
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Conjuration sphere, Shadow Creature.
 

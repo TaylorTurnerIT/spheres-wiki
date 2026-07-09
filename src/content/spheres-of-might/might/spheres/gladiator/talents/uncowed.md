@@ -3,6 +3,7 @@ id: "uncowed"
 name: "Uncowed"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 You gain a morale bonus equal to 1/2 your ranks in Intimidate to the DC of any check to demoralize you (minimum 1) and gain a +1 morale bonus on all saves against fear effects. For every 5 points of base attack bonus you possess, the bonus on saves against fear effects increases by +1.

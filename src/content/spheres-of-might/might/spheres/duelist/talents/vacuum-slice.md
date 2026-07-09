@@ -3,6 +3,7 @@ id: "vacuum-slice"
 name: "Vacuum Slice"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Duelist sphere, Vacuum Cut, base attack bonus +11.

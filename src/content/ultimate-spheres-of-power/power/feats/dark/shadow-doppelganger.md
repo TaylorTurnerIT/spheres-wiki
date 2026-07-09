@@ -4,6 +4,7 @@ name: Shadow Doppelganger
 sphere: dark
 dualSphere: illusion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow)), Illusion sphere (Illusionary Disguise ability).

@@ -4,6 +4,7 @@ name: "Spirit Beacon"
 sphere: war
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** War sphere.

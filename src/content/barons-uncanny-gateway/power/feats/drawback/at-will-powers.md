@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Prevent 0-spell-point magic sphere effects from consuming charges and gain +10 concentration on those effects."
 ---
 **Prerequisites:** Charged Spells drawback
 

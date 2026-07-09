@@ -5,6 +5,7 @@ tags:
   - ante
   - combat
 tier: feat
+summary: "Once per round, when you increase your ante, you also gain an equal amount of tension."
 ---
 
 **Prerequisites:** Ante Up, Tension class feature

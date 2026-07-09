@@ -4,6 +4,7 @@ name: "Cerebral Severance"
 tier: "advanced"
 tags:
   - "bleed"
+summary: "Prevent bleeding targets from using telepathy or mind-linking abilities."
 ---
 
 **Prerequisite:** Duelist sphere.

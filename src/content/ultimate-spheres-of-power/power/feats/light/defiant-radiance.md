@@ -4,6 +4,7 @@ name: "Defiant Radiance"
 sphere: light
 tags: []
 tier: feat
+summary: "Gain a +2 bonus to your MSB and MSD for Light sphere effects, which doubles when opposing magical darkness."
 ---
 
 **Prerequisite:** Light sphere.

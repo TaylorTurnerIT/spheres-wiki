@@ -3,6 +3,7 @@ id: "god-hand"
 name: "God Hand"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Open Hand sphere, Mystic Fists, base attack bonus +10.

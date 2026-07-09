@@ -3,6 +3,7 @@ id: "ghost-touch-trap"
 name: "Ghost-Touch Trap"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Trap sphere.

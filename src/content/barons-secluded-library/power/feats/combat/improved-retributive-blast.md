@@ -5,6 +5,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Spend extra spell points with Retributive Blast to damage attackers who miss after being blasted or to blast attackers who hit."
 ---
 
 **Prerequisites:** Destruction Sphere (Retributive Blast)

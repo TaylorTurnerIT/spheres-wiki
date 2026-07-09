@@ -4,6 +4,7 @@ name: Kinetic Drift
 tags:
   - protokinesis
 tier: feat
+summary: "Hover slightly above the ground to ignore difficult terrain and safely control your descent to negate falling damage."
 ---
 
 **Prerequisites:** Telekinesis sphere, Counterweight, character level 5th.

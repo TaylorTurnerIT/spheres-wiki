@@ -6,6 +6,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Use 3 tension points in place of a grit, luck, or panache point."
 ---
 
 **Prerequisites:** tension pool, one of a grit, luck, or panache pool

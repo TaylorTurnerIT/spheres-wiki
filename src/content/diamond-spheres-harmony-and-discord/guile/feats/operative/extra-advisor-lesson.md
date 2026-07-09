@@ -4,6 +4,7 @@ name: Extra Advisor Lesson
 tags:
   - operative
 tier: feat
+summary: "Gain an additional advisor lesson for which you qualify."
 ---
 
 **Prerequisite:** Advisor 5.

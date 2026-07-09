@@ -4,6 +4,7 @@ name: Technical Compatibility
 tags:
   - practitioner
 tier: feat
+summary: "Treat independent inventions and drones as interchangeable for effects and activation, use drones as an invention base form, and apply technical improvements to drones."
 ---
 
 **Prerequisites:** Independent Invention, Tech sphere, Drone.

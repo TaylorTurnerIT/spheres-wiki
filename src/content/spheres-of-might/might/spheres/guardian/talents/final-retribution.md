@@ -3,6 +3,7 @@ id: "final-retribution"
 name: "Final Retribution"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Guardian sphere, Indomitable, Punishment, base attack bonus +10.

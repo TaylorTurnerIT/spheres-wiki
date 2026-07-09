@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Alteration sphere (Transform Object).

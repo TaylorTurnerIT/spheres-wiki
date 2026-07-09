@@ -10,6 +10,7 @@ sectionDefinitions:
         tiers: ["basic"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
+summary: "Specialize in reconnaissance, stealth, and striking from the shadows."
 ---
 
 Scouts specialize in reconnaissance, stealth, and striking from the shadows.

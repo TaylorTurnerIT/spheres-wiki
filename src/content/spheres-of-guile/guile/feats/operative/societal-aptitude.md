@@ -5,6 +5,7 @@ sphere: study
 tags:
   - operative
 tier: feat
+summary: "Recall a source of information when failing a Knowledge check, and gain new methods and breakthroughs to theories related to society and history."
 ---
 
 You have an intimate understanding of the many ways society can take shape, the ways that communities function, and the - sometimes unreliable - importance of history.

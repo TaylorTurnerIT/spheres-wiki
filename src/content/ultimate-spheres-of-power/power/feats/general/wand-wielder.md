@@ -4,6 +4,7 @@ name: Wand Wielder
 tags:
   - general
 tier: feat
+summary: "Substitute your caster level for a wielded spell engine's caster level if yours is higher."
 ---
 **Prerequisite:** Caster level 10th.
 

@@ -5,6 +5,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Suppress a condition with heroic resolve for a number of rounds based on Charisma or Constitution, or activate it as a swift action against evil conditions."
 ---
 The night is hard and the night is long, but you know deep down, you can brave it.
 

@@ -4,6 +4,7 @@ name: Two-Handed Fighting, Improved
 tags:
   - combat
 tier: feat
+summary: "Increase the Strength bonus to damage on your first Two-Handed Fighting attack each round, and expand your sweeping strikes to target up to two spaces and include your weapon's enhancement bonus to damage."
 ---
 **Prerequisite:** Str 17, Power Attack, Two-Handed Fighting, base attack bonus +6. 
 

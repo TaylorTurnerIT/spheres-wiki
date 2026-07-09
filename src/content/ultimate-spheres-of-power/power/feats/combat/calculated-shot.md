@@ -4,6 +4,7 @@ name: Calculated Shot
 tags:
   - combat
 tier: feat
+summary: "You can use Focused Shot with any ranged weapon and gain a +2 bonus on attack and damage rolls when doing so."
 ---
 Attack smarter, not harder.
 

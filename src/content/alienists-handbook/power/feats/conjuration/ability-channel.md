@@ -4,6 +4,7 @@ name: "Ability Channel"
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Use a companion within Spell Conduit range as the origin point for class abilities that require attack rolls."
 ---
 **Prerequisites:** Conjuration sphere (Spell Conduit), Spell Channel.
 

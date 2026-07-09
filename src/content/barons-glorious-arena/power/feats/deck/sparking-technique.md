@@ -5,6 +5,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "When using Sparking Printer, you may create a technique and a corresponding spell card without a check."
 ---
 
 **Prerequisites:** Card Casting, Sparking Printer

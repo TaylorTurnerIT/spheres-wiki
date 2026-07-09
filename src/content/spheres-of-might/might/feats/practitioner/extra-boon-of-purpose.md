@@ -4,6 +4,7 @@ name: Extra Boon Of Purpose
 tags:
   - practitioner
 tier: feat
+summary: "Use your boon of purpose class feature one additional time per day."
 ---
 
 **Prerequisite:** Boon of purpose class feature.

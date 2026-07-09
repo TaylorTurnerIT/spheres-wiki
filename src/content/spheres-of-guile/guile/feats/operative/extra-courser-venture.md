@@ -4,6 +4,7 @@ name: Extra Courser Venture
 tags:
   - operative
 tier: feat
+summary: "Gain an additional courser venture."
 ---
 
 **Prerequisite:** Courser 5.

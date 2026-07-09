@@ -4,6 +4,7 @@ name: "Silver Tongue"
 sphere: mind
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Mind sphere.

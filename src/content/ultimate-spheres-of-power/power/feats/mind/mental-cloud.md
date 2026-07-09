@@ -4,6 +4,7 @@ name: "Mental Cloud"
 sphere: mind
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Mind sphere (Mass Charm).

@@ -5,6 +5,7 @@ sphere: illusion
 tags:
   - metamagic
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Illusion sphere (Suppression (glamer)).

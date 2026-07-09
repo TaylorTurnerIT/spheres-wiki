@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Ignore spellcasters and magically affected creatures as observers for Coy Caster and gain MSB against other spellcasters' sphere abilities while observed."
 ---
 **Prerequisites:** Coy Caster
 

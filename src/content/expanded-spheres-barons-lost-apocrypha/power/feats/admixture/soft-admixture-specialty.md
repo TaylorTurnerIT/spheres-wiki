@@ -6,6 +6,7 @@ tags:
   - 3pp
   - admixture
 tier: feat
+summary: "When using Admixture with Damage Control, you avoid Admixture's additional costs and affected creatures still trigger Admixture feats despite taking no damage."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture, Damage Control)

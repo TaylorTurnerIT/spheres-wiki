@@ -3,6 +3,7 @@ id: "poison"
 name: "Poison"
 tier: "base"
 tags: []
+summary: "Create a poison that inflicts fatigue on a failed Fortitude save and can be modified with a single toxin talent."
 ---
 
 You may create a special poison as a standard action, or a move action if you have access to an alchemist’s lab or alchemist’s crafting kit. This special poison forces the opponent to make a successful Fortitude save against it (saving throw DCs are determined using the normal formula for combat sphere talents but substituting ranks in Craft (alchemy) for base attack bonus) or become fatigued for 1 minute. This poison may be contact, ingested, inhaled, or injury (chosen when created), but you cannot increase its DC by using multiple doses.

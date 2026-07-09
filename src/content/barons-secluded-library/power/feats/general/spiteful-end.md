@@ -5,6 +5,7 @@ tags:
   - general
   - sm
 tier: feat
+summary: "Cast a curse sphere effect as an immediate action against a creature that renders you helpless or kills you."
 ---
 
 **Prerequisites:** Death or Fate sphere

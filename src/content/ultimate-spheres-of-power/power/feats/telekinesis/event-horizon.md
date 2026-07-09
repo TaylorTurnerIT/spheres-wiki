@@ -4,6 +4,7 @@ name: Event Horizon
 sphere: telekinesis
 dualSphere: dark
 tier: feat
+summary: "Use the Gravity Well, Gravity Shift, and Gravity Manipulation talents as (darkness) or (blot) talents."
 ---
 
 **Prerequisites:** Dark sphere, Telekinesis sphere (Gravity Well).

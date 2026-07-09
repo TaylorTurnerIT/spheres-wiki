@@ -5,6 +5,7 @@ sphere: investigation
 tags:
   - operative
 tier: feat
+summary: "Analyze an area or target and apply pathing to a location in that area with the same standard action."
 ---
 
 **Prerequisites:** Investigation sphere, Navigation sphere.

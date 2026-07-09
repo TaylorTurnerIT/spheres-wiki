@@ -5,6 +5,7 @@ sphere: warp
 tags:
   - metamagic
 tier: feat
+summary: "You allow a magic effect to function even without line of effect, transporting its effects through barriers that would normally impede it."
 ---
 
 **Prerequisite:** Warp sphere.

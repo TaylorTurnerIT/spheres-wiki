@@ -5,6 +5,7 @@ tags:
   - 3pp
   - metamagic
 tier: feat
+summary: "Spend additional spell points with Cascade Spell to raise individual and combined caster level limits."
 ---
 **Prerequisites:** Cascade Spell
 

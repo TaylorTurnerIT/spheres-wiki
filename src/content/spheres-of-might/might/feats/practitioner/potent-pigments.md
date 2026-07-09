@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: alchemy
 tier: feat
+summary: "Increase your effective Craft (alchemy) ranks by 5, or 10 if you already have 10 or more ranks, for the effects of self-applied war paints."
 ---
 
 You’ve learned to mix your paints to be exceptionally vibrant, increasing their effects.

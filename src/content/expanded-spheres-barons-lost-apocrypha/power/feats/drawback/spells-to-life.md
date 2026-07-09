@@ -6,6 +6,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Animate objects created with Substantial Magic, allowing associated area effects to move with them and targeted effects to affect creatures sharing their space."
 ---
 **Prerequisites:** Enhancement sphere (animate object), Substantial Magic
 

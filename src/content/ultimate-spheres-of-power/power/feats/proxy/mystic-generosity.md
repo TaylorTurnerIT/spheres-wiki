@@ -4,6 +4,7 @@ name: Mystic Generosity
 tags:
   - proxy
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Spell Proxy.

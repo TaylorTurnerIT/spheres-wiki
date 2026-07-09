@@ -4,6 +4,7 @@ name: Technical Companion
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Let a chosen companion count as having your talents and feats for performing your known techniques."
 ---
 
 **Prerequisites:** Conjuration Sphere, Technique Crafting

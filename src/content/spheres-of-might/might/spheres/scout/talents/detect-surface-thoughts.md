@@ -4,6 +4,7 @@ name: "Detect Surface Thoughts"
 tier: "advanced"
 tags:
   - "utility"
+summary: ""
 ---
 
 **Prerequisites:** Scout sphere, Perception 5 ranks.

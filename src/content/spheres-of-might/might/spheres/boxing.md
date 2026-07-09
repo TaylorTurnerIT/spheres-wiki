@@ -14,6 +14,7 @@ sectionDefinitions:
         tags: ["counter"]
       - label: "Legendary Talents"
         tiers: ["advanced"]
+summary: "Gain Improved Unarmed Strike, scaling unarmed strike damage based on talents, and the Counter Punch ability."
 ---
 
 Boxers specialize in fighting with their fists, using their punches and upper bodies to batter their way across the battlefield. Boxing practitioners are unarmed fighters who deal additional damage with their unarmed strikes as described in the unarmed strike practitioner table. **Associated Feat:** Improved Unarmed Strike.

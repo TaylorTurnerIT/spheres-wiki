@@ -4,6 +4,7 @@ name: Invisible Friend
 sphere: illusion
 dualSphere: conjuration
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Illusion sphere (Suppression (glamer)), Conjuration sphere (Shadow Creature (form)).

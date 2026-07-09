@@ -4,6 +4,7 @@ name: Manipulate Result
 tags:
   - wild-magic
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Spell point pool or casting class feature.
 

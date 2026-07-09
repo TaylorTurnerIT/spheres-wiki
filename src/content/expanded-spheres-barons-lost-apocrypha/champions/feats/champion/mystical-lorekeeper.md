@@ -5,6 +5,7 @@ tags:
   - 3pp
   - champion
 tier: feat
+summary: "You may grant combat or skill talents in place of magic talents when using Gift of Knowledge, and steal them if you possess Knowledge Drain."
 ---
 **Prerequisites:** Mana Sphere (Gift of Knowledge)
 

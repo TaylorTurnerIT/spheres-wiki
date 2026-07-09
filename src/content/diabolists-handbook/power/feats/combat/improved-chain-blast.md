@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: "Increase Chain Blast targets and optionally make targets attempt Reflex saves for half damage instead of attack rolls."
 ---
 
 **Prerequisites:** Destruction sphere (Chain Blast (blast shape)).

@@ -5,6 +5,7 @@ tags:
   - general
   - sm
 tier: feat
+summary: "Dismiss an active spell while casting to avoid increasing casting time from metamagic feats."
 ---
 **Prerequisites:** At least one metamagic feat
 

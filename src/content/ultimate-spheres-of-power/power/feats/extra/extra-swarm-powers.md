@@ -4,6 +4,7 @@ name: Extra Swarm Powers
 tags:
   - extra
 tier: feat
+summary: "Gain an additional swarm power you qualify for."
 ---
 **Prerequisites:** Swarm powers class feature.
 

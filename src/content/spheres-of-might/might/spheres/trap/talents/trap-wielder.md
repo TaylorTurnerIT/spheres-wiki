@@ -3,6 +3,7 @@ id: "trap-wielder"
 name: "Trap Wielder"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 Sometimes the heat of battle does not allow one to properly set and camouflage a trap. Instead of placing a trap, you may attempt to immediately apply it to a creature. Doing so requires the normal action for placing the trap. As the trap is never set, creatures do not gain any bonus to AC or saves for seeing you set the trap. You may poison a trap used in this way by spending the required action to poison a weapon no more than 1 round prior to using this talent.

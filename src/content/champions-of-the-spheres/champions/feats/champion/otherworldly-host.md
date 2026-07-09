@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - champion
 tier: feat
+summary: "Allies in your threatened area gain an Outsider Body trait matching your alignment, and enemies of opposed alignment take additional damage."
 ---
 **Prerequisites:** Alteration sphere (Outsider Body), Guardian sphere.
 

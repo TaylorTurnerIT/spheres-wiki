@@ -5,6 +5,7 @@ sphere: infiltration
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Infiltration sphere, Scoundrel sphere.

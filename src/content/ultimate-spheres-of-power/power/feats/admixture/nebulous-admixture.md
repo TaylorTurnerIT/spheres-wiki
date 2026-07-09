@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - admixture
 tier: feat
+summary: "You can replace an Admixture's second blast type with a shroud effect for an extra spell point."
 ---
 
 **Prerequisites:** Destruction sphere (Admixture), Weather sphere.

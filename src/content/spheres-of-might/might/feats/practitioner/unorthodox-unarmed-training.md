@@ -6,6 +6,7 @@ tags:
   - practitioner
   - warden
 tier: feat
+summary: "Count talents from two chosen combat spheres towards unarmed damage progression."
 ---
 
 **Prerequisite:** Improved Unarmed Strike, base attack bonus +4.

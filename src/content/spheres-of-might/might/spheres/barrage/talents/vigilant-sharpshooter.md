@@ -3,6 +3,7 @@ id: "vigilant-sharpshooter"
 name: "Vigilant Sharpshooter"
 tier: "basic"
 tags: []
+summary: "Threaten squares within 5 feet with a ranged weapon and make ranged attacks of opportunity without provoking."
 ---
 
 As long as you have martial focus, you threaten all squares within 5 ft. of yourself with your ranged or thrown weapon. When making an attack of opportunity with a ranged weapon, you do not provoke an attack of opportunity with your ranged attack.

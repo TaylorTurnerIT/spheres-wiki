@@ -4,6 +4,7 @@ name: Armorist Trick
 tags:
   - general
 tier: feat
+summary: "Select an armorist's arsenal trick to add its provided special abilities to the options available when enhancing weapons or armor with your arcane pool, divine bond, sacred armor, or sacred weapon class features."
 ---
 **Prerequisites:** One or more of the following class features: arcane pool, divine bond, sacred armor, sacred weapon.
 

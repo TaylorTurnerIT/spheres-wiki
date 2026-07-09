@@ -4,6 +4,7 @@ name: "Star Scraper"
 tier: "advanced"
 tags:
   - "snipe"
+summary: ""
 ---
 
 **Prerequisites:** Sniper sphere, Perfect Shot, base attack bonus +10.

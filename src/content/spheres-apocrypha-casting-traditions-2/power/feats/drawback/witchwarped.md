@@ -4,6 +4,7 @@ name: Witchwarped
 tags:
   - drawback
 tier: feat
+summary: "Gain a trait from the Blank Form ability of the Alteration sphere as a permanent supernatural ability."
 ---
 **Benefit:** You are infused with the traits of something else other than just your being.
 

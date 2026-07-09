@@ -7,6 +7,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "When using Terrain Casting to defile an area, force other creatures in it to save or take spell point damage."
 ---
 **Prerequisites:** Terrain Casting drawback, Mana sphere
 

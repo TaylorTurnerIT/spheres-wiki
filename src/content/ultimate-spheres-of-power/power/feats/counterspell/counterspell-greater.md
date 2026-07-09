@@ -4,6 +4,7 @@ name: Counterspell, Greater
 tags:
   - counterspell
 tier: feat
+summary: "Spend 2 additional spell points when counterspelling to target all magic within a 40-foot burst or to permanently destroy a single magic item."
 ---
 **Prerequisites:** Casting class feature, Counterspell, Improved Counterspell, magic skill bonus +15.
 

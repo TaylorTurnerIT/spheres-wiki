@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: barroom
 tier: feat
+summary: "Vomit in a cone to sicken or nauseate creatures instead of the normal area."
 ---
 
 **Prerequisites:** Barroom sphere (Purge), base attack bonus +5.

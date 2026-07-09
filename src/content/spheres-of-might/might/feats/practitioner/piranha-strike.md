@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Take a penalty on melee attack rolls to gain a bonus on melee damage rolls when wielding a light weapon."
 ---
 
 You make a combination of quick strikes, sacrificing accuracy for multiple, minor wounds that prove exceptionally deadly.

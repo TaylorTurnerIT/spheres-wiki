@@ -6,6 +6,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Use Counterspell Mastery as a free action once per round instead of an immediate action, with an additional use at MSB 10."
 ---
 
 **Prerequisites:** Card Casting drawback (cooldown), Counterspell Mastery

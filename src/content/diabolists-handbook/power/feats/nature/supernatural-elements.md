@@ -4,6 +4,7 @@ name: Supernatural Elements
 sphere: nature
 dualSphere: destruction
 tier: feat
+summary: "Change the damage type of your geomancing or spirit effects to match any Destruction sphere blast type talent you possess."
 ---
 
 The diverse powers of nature are yours to distort.

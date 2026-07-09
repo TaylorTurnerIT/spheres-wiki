@@ -4,6 +4,7 @@ name: "Before Creation Comes Destruction"
 sphere: creation
 tags: []
 tier: feat
+summary: "Destroying an object with the alter ability grants temporary spell points that can only be used to create objects of equal or smaller size."
 ---
 
 **Prerequisite:** Creation sphere.

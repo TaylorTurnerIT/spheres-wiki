@@ -4,6 +4,7 @@ name: Extra Electrokinetic Stunt
 tags:
   - extra
 tier: feat
+summary: "Gain an additional electrokinetic stunt."
 ---
 **Prerequisites:** Electrokinetic Stunt class feature
 

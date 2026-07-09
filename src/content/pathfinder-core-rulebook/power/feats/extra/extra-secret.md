@@ -4,6 +4,7 @@ name: Extra Secret
 tags:
   - extra
 tier: feat
+summary: "Gain an extra secret for which you qualify."
 ---
 **Prerequisite:** Secrets class feature.
 

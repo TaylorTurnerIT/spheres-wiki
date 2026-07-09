@@ -4,6 +4,7 @@ name: Dimensional Aegis
 sphere: warp
 dualSphere: protection
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Protection sphere, Warp sphere.
 

@@ -6,6 +6,7 @@ tags:
   - drawback
   - teamwork
 tier: feat
+summary: "Allow your bonded creature to add a link to your sequence instead of their own, or grant your bonded creature tension instead of gaining it yourself."
 ---
 **Prerequisites:** Bonded Casting, sequence or tension class feature
 

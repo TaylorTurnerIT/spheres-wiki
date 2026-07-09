@@ -4,6 +4,7 @@ name: "Crescendo"
 sphere: life
 tags: []
 tier: feat
+summary: "You may invigorate targets affected by your bardic performance or raging song, and can spend a spell point to do so as a swift action."
 ---
 
 **Prerequisites:** Life sphere; bardic performance or raging song class feature.

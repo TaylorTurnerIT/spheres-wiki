@@ -7,6 +7,7 @@ tags:
   - warden
 sphere: shield
 tier: feat
+summary: "Treat a free hand as a shield for active defense and count Shield sphere talents toward unarmed damage progression."
 ---
 
 **Prerequisite:** Shield sphere, Improved Unarmed Strike.

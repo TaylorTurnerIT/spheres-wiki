@@ -5,6 +5,7 @@ tags:
   - champion
   - sm
 tier: feat
+summary: "Apply a flourish to an object when you enhance it, lasting for the enhancement's duration."
 ---
 **Prerequisites:** Artifice Sphere, Enhancement Sphere 
 

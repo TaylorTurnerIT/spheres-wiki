@@ -4,6 +4,7 @@ name: Eyes Of Battle
 sphere: war
 dualSphere: divination
 tier: feat
+summary: "Reduce the casting time of divine talents targeting spaces or creatures within your totem by one step."
 ---
 **Prerequisites:** Divination sphere, War sphere
 

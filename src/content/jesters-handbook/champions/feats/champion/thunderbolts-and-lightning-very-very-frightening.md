@@ -5,6 +5,7 @@ sphere: gladiator
 tags:
   - champion
 tier: feat
+summary: "Attempt an Intimidate check as a free action against creatures that fail their save against your lightning bolts."
 ---
 As a wise inventor once said.
 

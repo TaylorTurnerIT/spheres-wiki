@@ -5,6 +5,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Apply a sphere effect to each creature hit when using Spell Attack with Whirlwind Attack."
 ---
 **Prerequisites:** Spell Attack; Whirlwind Attack feat or Whirl of Blows mystic combat; casting class feature; any talent with the strike descriptor.
 

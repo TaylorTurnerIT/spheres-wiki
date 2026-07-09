@@ -4,6 +4,7 @@ name: Realmwalker Adept
 tags:
   - general
 tier: feat
+summary: ""
 ---
 Your experiences and travels help you gain new insights in terrains, surviving their natural dangers and navigating with greater ease.
 

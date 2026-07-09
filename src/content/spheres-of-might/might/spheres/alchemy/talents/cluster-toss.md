@@ -3,6 +3,7 @@ id: "cluster-toss"
 name: "Cluster Toss"
 tier: "basic"
 tags: []
+summary: "Expend martial focus to use multiple alchemical items as a single standard action with cumulative penalties."
 ---
 
 You may expend your martial focus to use up to two alchemical items that can normally be used as a standard action as part of the same standard action but you take a -2 penalty on your attack roll (if any) and creatures affected by the items gain a +2 circumstance bonus to their saving throws against their effects (if any); using this ability includes all actions necessary to use the items, including drawing them (but not creating them).

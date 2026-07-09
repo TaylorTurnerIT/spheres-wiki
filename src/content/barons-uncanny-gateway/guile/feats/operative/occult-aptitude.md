@@ -6,6 +6,7 @@ tags:
   - sm
 sphere: study
 tier: feat
+summary: "Begin occult-focused theories with a notion and gain breakthroughs for reducing mental harm, spellcraft mishaps, and backlash."
 ---
 
 You are exceptionally skilled at prying into dangerous or forbidden information.

@@ -4,6 +4,7 @@ name: Toxic Spell
 tags:
   - metamagic
 tier: feat
+summary: "For 1 additional spell point, you can add a dose of poison to a talent requiring a Fortitude save, forcing one target who fails the talent's save to immediately save against the poison."
 ---
 **Benefit:** You can use 1 dose of contact, ingested, inhaled, or injury poison as an additional material component for a talent you cast. This talent gains the poison descriptor. Select a single creature affected by the talent. If that creature fails its saving throw against the talent, it must also attempt a saving throw against the poison used as a material component. If the target fails the save against the poison, the poison takes effect immediately, ignoring any onset time.
 

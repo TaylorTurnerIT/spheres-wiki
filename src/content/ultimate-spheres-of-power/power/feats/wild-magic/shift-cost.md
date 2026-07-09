@@ -4,6 +4,7 @@ name: Shift Cost
 tags:
   - wild-magic
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Spell point pool.
 

@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: "By spending a spell point, your destructive blast ignores the AC bonus and miss chance granted by anything less than total cover and total concealment."
 ---
 
 **Prerequisites:** Destruction sphere (Guided Strike (blast shape)), caster level 11th.

@@ -6,6 +6,7 @@ tags:
   - drawback
   - metamagic
 tier: feat
+summary: "Use metamagic to reveal an affordable effect card and potentially cast it as a swift action with a reduced cost."
 ---
 
 **Prerequisites:** Card Casting

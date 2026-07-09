@@ -5,6 +5,7 @@ tags:
   - combat
   - counterspell
 tier: feat
+summary: "You may use the Counterspell feat as a free action when initiating a grapple, resolving it before effects like freedom of movement apply."
 ---
 **Prerequisites:** Counterspell, Improved Grapple.
 

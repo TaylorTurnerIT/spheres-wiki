@@ -4,6 +4,7 @@ name: Atmospheric Imbuement
 sphere: weather
 dualSphere: destruction
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Destruction sphere, Weather sphere.

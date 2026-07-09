@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Modify selected Huckster's Gamble cards to grant bonuses, damage die increases, or temporary spell points."
 ---
 **Prerequisites:** Catastrophic Failure drawback, Huckster's Gamble feat
 

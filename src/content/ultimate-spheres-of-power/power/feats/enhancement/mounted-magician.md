@@ -4,6 +4,7 @@ name: "Mounted Magician"
 sphere: enhancement
 tags: []
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Handle Animal 3 ranks, Ride 3 ranks, Enhancement sphere, casting class feature.
 

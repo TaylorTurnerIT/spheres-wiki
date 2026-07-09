@@ -7,6 +7,7 @@ tags:
   - drawback
 sphere: conjuration
 tier: feat
+summary: "Cast two chosen sphere effects without their requisite cards while your companion is summoned, and allow your companion to perform your deck manipulations in your place."
 ---
 
 **Prerequisites:** Card Casting, Conjuration sphere

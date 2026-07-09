@@ -4,6 +4,7 @@ name: "Extradimensional Assembly"
 sphere: warp
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Telekinesis sphere (Whirlwind Assembly), Warp sphere (Extradimensional Storage (space)).

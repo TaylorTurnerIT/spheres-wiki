@@ -6,6 +6,7 @@ tags:
   - combat
   - companion
 tier: feat
+summary: "Increase the uses of your web abilities and render web-entangled creatures within reach helpless as a full-round action."
 ---
 
 **Prerequisites:** Alteration sphere (Vermin Transformation (transformation)) or web bestial trait.

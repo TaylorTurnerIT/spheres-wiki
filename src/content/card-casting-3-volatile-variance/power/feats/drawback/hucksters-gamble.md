@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Draw a poker hand instead of rolling certain casting-related checks or saves to determine bonuses or penalties."
 ---
 **Prerequisites:** Catastrophic Failure
 

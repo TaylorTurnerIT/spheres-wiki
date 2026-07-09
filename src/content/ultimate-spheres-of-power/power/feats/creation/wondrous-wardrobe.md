@@ -4,6 +4,7 @@ name: "Wondrous Wardrobe"
 sphere: creation
 tags: []
 tier: feat
+summary: "Create or alter non-magical clothing, fake jewelry, and other mundane disguises without spending a spell point, and designate created objects to disappear under specific conditions."
 ---
 
 **Prerequisites:** Creation sphere (Expanded Materials (material)).

@@ -4,6 +4,7 @@ name: Implausible Deniability
 sphere: mind
 dualSphere: illusion
 tier: feat
+summary: "Give your illusions and glamered targets a false mind to deceive mind-reading effects and turn insight bonuses into penalties."
 ---
 
 **Prerequisites:** Illusion sphere (Manipulate Aura (sensory, magic), Programmed Illusion), Mind sphere.

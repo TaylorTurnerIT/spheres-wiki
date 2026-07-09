@@ -3,6 +3,7 @@ id: "nightmare-fuel"
 name: "Nightmare Fuel"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Gladiator sphere, Intimidate 10 ranks.

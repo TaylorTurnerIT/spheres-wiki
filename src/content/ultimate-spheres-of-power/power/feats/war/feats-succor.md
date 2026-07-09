@@ -4,6 +4,7 @@ name: Succor
 sphere: war
 tags: []
 tier: feat
+summary: "Spend a spell point to rally an ally and use lay on hands on them regardless of normal range."
 ---
 
 **Prerequisites:** War sphere, lay on hands class feature.

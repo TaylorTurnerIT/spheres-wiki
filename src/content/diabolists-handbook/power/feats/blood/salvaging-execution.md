@@ -4,6 +4,7 @@ name: "Salvaging Execution"
 sphere: blood
 tags: []
 tier: feat
+summary: "Move a slain controlled target's body and equipment and spend a spell point to immediately manipulate its blood, corpse, or gear."
 ---
 
 Death is not the end of your wrath.

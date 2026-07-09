@@ -6,6 +6,7 @@ tags:
   - practitioner
 sphere: leadership
 tier: feat
+summary: "Share your rage with your cohorts by spending your own rage rounds."
 ---
 
 **Prerequisites:** Leadership sphere, (cohort) package, rage or bloodrage class feature.

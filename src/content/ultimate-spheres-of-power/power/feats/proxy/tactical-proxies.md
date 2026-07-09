@@ -4,6 +4,7 @@ name: Tactical Proxies
 tags:
   - proxy
 tier: feat
+summary: "Treat creatures under your Create Proxy as sharing your teamwork feats, and optionally grant them the benefits of one with Improved Spell Proxy."
 ---
 
 **Prerequisites:** Enhancement sphere, Circle Casting, Spell Proxy, any one teamwork feat.

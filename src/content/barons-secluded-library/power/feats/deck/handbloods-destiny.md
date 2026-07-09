@@ -4,6 +4,7 @@ name: Handblood's Destiny
 tags:
   - deck
 tier: feat
+summary: "Discard cards with actions to cumulatively increase your initiative count for the encounter."
 ---
 
 **Prerequisites:** Card Casting (Bleeding Hand)

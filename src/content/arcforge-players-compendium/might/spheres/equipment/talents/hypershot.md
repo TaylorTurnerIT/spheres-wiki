@@ -3,6 +3,7 @@ id: "hypershot"
 name: "Hypershot"
 tier: "advanced"
 tags: []
+summary: "Expend martial focus to make a bow attack against all creatures in a line or cone."
 ---
 
 **Prerequisites:** Equipment sphere (SplitshotSoM), base attack bonus +5.

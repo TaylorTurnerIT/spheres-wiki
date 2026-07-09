@@ -4,6 +4,7 @@ name: Battlecry
 tags:
   - drawback
 tier: feat
+summary: "Using a sphere ability grants a circumstance bonus to Intimidate checks equal to half your caster level until the end of your next turn."
 ---
 **Prerequisite:** Verbal Casting drawback.
 

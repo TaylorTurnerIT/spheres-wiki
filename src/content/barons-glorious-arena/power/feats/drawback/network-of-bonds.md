@@ -5,6 +5,7 @@ tags:
   - 3pp
   - drawback
 tier: feat
+summary: "Select an additional creature as your bonded creature."
 ---
 **Prerequisite:** Bonded Casting
 

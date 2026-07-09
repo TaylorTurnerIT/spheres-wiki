@@ -4,6 +4,7 @@ name: "Companion Merger"
 sphere: alteration
 tags: []
 tier: feat
+summary: "Merge with your animal companion or familiar to become a single creature that combines the physical form and traits of one with the mental attributes, feats, and class abilities of the other."
 ---
 
 **Prerequisites:** Alteration sphere (Mass Alteration); animal companion or familiar.

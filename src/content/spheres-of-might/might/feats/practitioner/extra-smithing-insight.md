@@ -4,6 +4,7 @@ name: Extra Smithing Insight
 tags:
   - practitioner
 tier: feat
+summary: "Gain an additional smithing insight."
 ---
 
 Your experience and skill unlock new insights into the smith’s craft.

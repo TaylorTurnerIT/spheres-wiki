@@ -4,6 +4,7 @@ name: Extra Envoy Flair
 tags:
   - operative
 tier: feat
+summary: "Gain an additional envoy flair."
 ---
 
 **Prerequisite:** Envoy 5.

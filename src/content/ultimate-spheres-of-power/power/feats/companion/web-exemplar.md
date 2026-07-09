@@ -4,6 +4,7 @@ name: Web Exemplar
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Your companion can use its web ability a number of times per minute equal to its Constitution modifier and can spend a full-round action to render an entangled creature helpless."
 ---
 
 **Prerequisites:** Conjuration sphere (Web Spinner (form)).

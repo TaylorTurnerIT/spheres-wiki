@@ -4,6 +4,7 @@ name: Force Shield, Improved
 sphere: telekinesis
 tags: []
 tier: feat
+summary: "Increase the shield bonus of your force shield and treat it as a light shield."
 ---
 
 **Prerequisites:** Telekinesis sphere, Force Shield, character level 5th.

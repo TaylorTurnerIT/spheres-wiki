@@ -6,6 +6,7 @@ tags:
   - champion
   - counterspell
 tier: feat
+summary: "Apply a (hack) talent to a successfully counterspelled effect instead of dispelling it."
 ---
 **Prerequisites:** Spellhacking sphere, Counterspell, casting class feature, magic skill bonus +5.
 

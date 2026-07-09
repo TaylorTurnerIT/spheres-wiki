@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Expend mental focus to ignore a metamagic casting time increase or reduce one metamagic spell point cost by 1."
 ---
 **Prerequisites:** Mental Focus drawback, any metamagic feat
 

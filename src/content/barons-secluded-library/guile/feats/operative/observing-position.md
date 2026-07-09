@@ -5,6 +5,7 @@ tags:
   - operative
   - sm
 tier: feat
+summary: "Gain one extra notion the first time each round your theory subject within your pathing would add a notion."
 ---
 
 **Prerequisites:** Navigation Sphere, Study Sphere

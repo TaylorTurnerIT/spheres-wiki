@@ -4,6 +4,7 @@ name: "Dynamic Wallcrafter"
 sphere: protection
 tags: ["sm"]
 tier: feat
+summary: "Move and reshape an energy wall or barrier you created as a move action."
 ---
 
 **Prerequisites:** Destruction Sphere (energy wall) or Protection Sphere (greater barrier)

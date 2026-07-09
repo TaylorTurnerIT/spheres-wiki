@@ -4,6 +4,7 @@ name: Swift Demise
 sphere: time
 dualSphere: death
 tier: feat
+summary: ""
 ---
 
 Your chronomantic power extends to blurring the moment between life and death.

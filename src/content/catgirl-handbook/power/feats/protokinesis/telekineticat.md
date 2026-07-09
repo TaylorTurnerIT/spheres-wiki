@@ -4,6 +4,7 @@ name: Telekineticat
 sphere: telekinesis
 tags: []
 tier: feat
+summary: ""
 ---
 
 With all your cosmic power and wisdom, you decided to form your raw and potent telekinetic power into the shape of a cat.

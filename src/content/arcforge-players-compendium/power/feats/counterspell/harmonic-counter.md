@@ -4,6 +4,7 @@ name: Harmonic Counter
 tags:
   - counterspell
 tier: feat
+summary: "Use Countergizmo and Counterspell interchangeably against magic, gizmos, alien-source effects, and qualifying technology."
 ---
 The following version of Harmonic Counter was updated to function with the Tinker sphere.
 

@@ -5,6 +5,7 @@ sphere: berserker
 tags:
   - champion
 tier: feat
+summary: "Apply penalties to battered creatures' AC and saves against your Bear sphere abilities while under bear spirit, and spend a spell point to use an adrenaline talent as a bearacteristic."
 ---
 **Prerequisites:** Bear sphere, Berserker sphere, Bear sphere caster level 5th.
 

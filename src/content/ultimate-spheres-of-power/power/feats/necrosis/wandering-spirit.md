@@ -5,6 +5,7 @@ sphere: death
 tags:
   - necrosis
 tier: feat
+summary: "You gain +1 spell point and can create a phylactery to temporarily hold your soul when you would die, allowing you to return to life if your body is healed."
 ---
 
 Your soul begins to loosen its grip on your body, preparing itself to flee if threatened.

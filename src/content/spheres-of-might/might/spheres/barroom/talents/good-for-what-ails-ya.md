@@ -3,6 +3,7 @@ id: "good-for-what-ails-ya"
 name: "Good For What Ails Ya"
 tier: "advanced"
 tags: []
+summary: "Heal hit points equal to your base attack bonus when drinking non-magical alcohol, up to a limit."
 ---
 
 **Prerequisite:** Barroom sphere.

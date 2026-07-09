@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Gain an exchangeable magic talent that causes Unsettling Casting strain when used in a sphere effect."
 ---
 **Prerequisites:** Unsettling Casting
 

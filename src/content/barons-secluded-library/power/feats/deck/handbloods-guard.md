@@ -4,6 +4,7 @@ name: Handblood's Guard
 tags:
   - deck
 tier: feat
+summary: "Discard cards to gain luck bonuses to AC, or to saving throws if you have Handblood's Advantage."
 ---
 
 **Prerequisites:** Card Casting (Bleeding Hand)

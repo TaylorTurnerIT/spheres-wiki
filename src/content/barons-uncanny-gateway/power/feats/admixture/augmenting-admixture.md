@@ -6,6 +6,7 @@ tags:
   - admixture
   - sm
 tier: feat
+summary: "Spend an extra spell point with Admixture to apply an enhancement effect to objects damaged by your blast."
 ---
 
 **Prerequisites:** Destruction Sphere (Admixture), Enhancement sphere.

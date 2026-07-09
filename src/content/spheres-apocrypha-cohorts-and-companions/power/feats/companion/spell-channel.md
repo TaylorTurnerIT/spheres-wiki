@@ -4,6 +4,7 @@ name: Spell Channel
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Treat your companion as the point of origin for any spell that you cast."
 ---
 
 **Prerequisites:** Conjuration sphere (Spell Conduit).

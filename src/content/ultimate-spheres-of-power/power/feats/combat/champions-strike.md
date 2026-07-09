@@ -4,6 +4,7 @@ name: Champion's Strike
 tags:
   - combat
 tier: feat
+summary: "Your Arcane Strike or Imbued Strike is always active and grants an increased damage bonus on single-target attack actions based on your base attack bonus."
 ---
 **Prerequisite:** Arcane Strike or Imbued Strike.
 

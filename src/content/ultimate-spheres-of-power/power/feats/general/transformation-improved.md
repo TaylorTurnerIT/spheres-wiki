@@ -4,6 +4,7 @@ name: Transformation, Improved
 tags:
   - general
 tier: feat
+summary: "Gain permanent Alteration sphere traits for your Transformation form based on your character level and reduce the time required to change shape to a swift action."
 ---
 **Prerequisites:** Transformation, character level 5th.
 

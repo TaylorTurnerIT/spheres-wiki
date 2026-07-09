@@ -4,6 +4,7 @@ name: "Siphoning Invigoration"
 sphere: life
 tags: []
 tier: feat
+summary: "Spend a spell point to increase the temporary hit points from Invigorate to match the damage of the attack triggering Taste of Victory."
 ---
 
 **Prerequisites:** Life Sphere (Greater Invigorate, Taste of Victory)

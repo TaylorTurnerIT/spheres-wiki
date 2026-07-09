@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: beastmastery
 tier: feat
+summary: "Replace a dead companion with a tame creature in 1 hour without the normal mourning period."
 ---
 
 **Prerequisites:** Beastmastery sphere (handle animal) package, an animal or vermin companion.

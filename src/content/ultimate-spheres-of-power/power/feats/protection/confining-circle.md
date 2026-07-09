@@ -4,6 +4,7 @@ name: "Confining Circle"
 sphere: protection
 tags: []
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Protection sphere (Repel Chaos/Evil/Good/Law (ward)).
 

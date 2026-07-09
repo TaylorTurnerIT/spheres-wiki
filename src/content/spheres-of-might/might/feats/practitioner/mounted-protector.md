@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: beastmastery
 tier: feat
+summary: "While mounted, use your mount's movement for your patrol and allow it to make attacks of opportunity in your place."
 ---
 
 Your protective might is delivered on the swift heels of your mount.

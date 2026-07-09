@@ -4,6 +4,7 @@ name: Hidden Heretic
 tags:
   - drawback
 tier: feat
+summary: "Conceal your witchmark for 24 hours and make a concentration check to use magic without revealing it."
 ---
 **Prerequisite:** Witchmarked drawback.
 

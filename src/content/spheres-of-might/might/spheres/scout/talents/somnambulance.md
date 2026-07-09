@@ -4,6 +4,7 @@ name: "Somnambulance"
 tier: "basic"
 tags:
   - "utility"
+summary: ""
 ---
 
 Your acute senses have been trained to their peak, making you difficult to catch unaware even while sleeping. You no longer increase the DC of Perception checks made while you are sleeping, and falling unconscious or going to sleep no longer causes you to lose martial focus. In addition, you are no longer considered helpless while sleeping as your heightened senses allow you to react to threats your conscious mind is unaware of.

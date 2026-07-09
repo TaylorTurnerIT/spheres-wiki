@@ -5,6 +5,7 @@ sphere: communication
 tags:
   - squadron
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Communication sphere; one of Performance sphere ((dance) package), bardic performance, psionics, or raging song; Posse Commander.
 

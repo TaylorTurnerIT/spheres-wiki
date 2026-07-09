@@ -5,6 +5,7 @@ sphere: spellhacking
 tags:
   - operative
 tier: feat
+summary: "Outwit a creature to use hack magic as an immediate action to alter a magical effect that targets you or includes you in its area."
 ---
 
 **Prerequisites:** Associated skill 7 ranks, Spellhacking sphere, Prepared Hacking.

@@ -4,6 +4,7 @@ name: "Universal Bonding"
 sphere: mana
 tags: []
 tier: feat
+summary: "Apply Protection, Mind, War, or Life sphere benefits to any manabond you create when you possess the associated ability."
 ---
 **Prerequisites:** Mana sphere; Protection sphere, War sphere, Life sphere (Diagnose) or Mind sphere (Project Thoughts).
 

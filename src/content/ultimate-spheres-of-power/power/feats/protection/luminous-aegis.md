@@ -4,6 +4,7 @@ name: Luminous Aegis
 sphere: protection
 dualSphere: light
 tier: feat
+summary: "Make an ally bearing your aegis glow as a swift action."
 ---
 **Prerequisites:** Light sphere, Protection sphere.
 

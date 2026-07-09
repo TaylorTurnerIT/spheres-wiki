@@ -3,6 +3,7 @@ id: "shock-and-awe"
 name: "Shock And Awe"
 tier: "advanced"
 tags: []
+summary: "Demoralize multiple enemies you damaged this turn as a swift action."
 ---
 
 **Prerequisites:** Gladiator sphere (Cow Enemy (demoralization)).

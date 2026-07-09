@@ -4,6 +4,7 @@ name: "Two Minds"
 sphere: alteration
 tags: []
 tier: feat
+summary: "Spend a spell point to reroll a Will save against a mind-affecting ability if you have more than one head."
 ---
 
 **Prerequisites:** Alteration sphere (Additional Limbs) or multiple heads.

@@ -5,6 +5,7 @@ sphere: scout
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 **Prerequisites:** Scout sphere, Study sphere.
 

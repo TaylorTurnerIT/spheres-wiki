@@ -5,6 +5,7 @@ sphere: enhancement
 tags:
   - drawback
 tier: feat
+summary: "Relinquishing concentration on an enhancement targeting yourself delays your addiction penalties until its duration expires, and you gain a +1 bonus to all saving throws while suffering those penalties."
 ---
 
 **Prerequisites:** Enhancement sphere, Addictive Casting drawback.

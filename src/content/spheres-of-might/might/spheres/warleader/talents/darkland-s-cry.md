@@ -4,6 +4,7 @@ name: "Darkland’s Cry"
 tier: "advanced"
 tags:
   - "shout"
+summary: ""
 ---
 
 **Prerequisites:** Warleader sphere, Diplomacy 15 ranks.

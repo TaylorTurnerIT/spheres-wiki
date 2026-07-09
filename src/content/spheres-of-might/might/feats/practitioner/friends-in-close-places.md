@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: leadership
 tier: feat
+summary: "Halve the arrival time of called specialists and grant your followers a +2 or +4 bonus when using your Diplomacy."
 ---
 
 Your retinue of followers has attracted some skilled individuals you can call on in a time of need.

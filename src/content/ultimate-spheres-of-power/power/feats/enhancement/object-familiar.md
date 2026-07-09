@@ -4,6 +4,7 @@ name: "Object Familiar"
 sphere: enhancement
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), ability to acquire a familiar.

@@ -5,6 +5,7 @@ tags:
   - 3pp
   - general
 tier: feat
+summary: "Spend 3 additional spell points to apply a Contingency effect to multiple targets using a [mass] talent."
 ---
 **Prerequisites:** Contingency, any [mass] talent
 

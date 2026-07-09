@@ -4,6 +4,7 @@ name: Greater Earth Creature
 sphere: conjuration
 tags: []
 tier: feat
+summary: "Your companion gains the earth glide ability."
 ---
 
 **Prerequisites:** Conjuration sphere (Earth Creature (form)), caster level 5th.

@@ -5,6 +5,7 @@ tags:
   - 3pp
   - mythic
 tier: feat
+summary: ""
 ---
 
 Prerequisites: Card Casting (mana pool, stagnant pool)

@@ -5,6 +5,7 @@ sphere: alteration
 tags:
   - combat
 tier: feat
+summary: "You are immune to flanking when you have more than one head."
 ---
 
 **Prerequisites:** Alteration sphere (Additional Limbs) or multiple heads.

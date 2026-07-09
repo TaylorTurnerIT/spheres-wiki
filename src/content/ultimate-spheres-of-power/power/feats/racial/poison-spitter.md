@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: ""
 ---
 Flexing glands near your jaw, you can spit your poison directly at enemies in a foul corrosive mixture.
 

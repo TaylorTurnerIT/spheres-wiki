@@ -5,6 +5,7 @@ tags:
   - general
   - mythic
 tier: feat
+summary: "You may perform an incantation without the required secondary casters by increasing the DC of all associated skill checks by 2 for each omitted caster."
 ---
 **Prerequisite:** 5 ranks in any 1 skill.
 

@@ -4,6 +4,7 @@ name: "Tornado Companion"
 sphere: weather
 tags: []
 tier: feat
+summary: "Allows you to select a tornado to serve as your animal companion."
 ---
 
 **Prerequisites:** Weather sphere; animal companion with an effective druid level of 7.

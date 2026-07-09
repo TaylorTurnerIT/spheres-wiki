@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Gain additional attacks of opportunity equal to your Strength bonus and make them while flat-footed."
 ---
 
 You rely on muscle memory and strength to enhance your reflexes.

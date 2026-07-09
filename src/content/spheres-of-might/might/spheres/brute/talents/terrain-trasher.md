@@ -3,6 +3,7 @@ id: "terrain-trasher"
 name: "Terrain Trasher"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisite:** Brute sphere, base attack bonus +5.

@@ -5,6 +5,7 @@ sphere: investigation
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Sense Motive ranks 3, Investigation sphere; either the Divination sphere or Scout sphere.

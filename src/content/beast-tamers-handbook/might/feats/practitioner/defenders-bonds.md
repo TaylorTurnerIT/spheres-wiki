@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: beastmastery
 tier: feat
+summary: "Extend part of your lay on hands or reserve healing to a nearby animal ally and share class-based damage reduction with healed animal allies."
 ---
 
 The bonds between a warrior and his faithful companions shine in combat.

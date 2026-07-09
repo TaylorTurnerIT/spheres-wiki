@@ -4,6 +4,7 @@ name: Poisonous Ink
 tags:
   - racial
 tier: feat
+summary: ""
 ---
 The ink you produce in quantity can do more than blind opponents, sometimes sickening or even killing foes.
 

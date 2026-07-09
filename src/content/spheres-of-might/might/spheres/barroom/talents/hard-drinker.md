@@ -3,6 +3,7 @@ id: "hard-drinker"
 name: "Hard Drinker"
 tier: "base"
 tags: []
+summary: "Retrieve and drink alcohol, potions, or elixirs as a move action without provoking attacks of opportunity, and gain the drunk status from alcohol."
 ---
 
 Whenever you imbibe an alcoholic drink (normally a standard action), you gain the drunk status for a number of rounds equal to your Constitution modifier (minimum 1; creatures without a Constitution score cannot gain this status). As a move action, you may retrieve an alcoholic drink, elixir, or potion (but not extract) from your person or grab one within your natural reach and drink it, all without provoking an attack of opportunity. For every 4 points of base attack bonus you possess, the drunk status last for one additional round.

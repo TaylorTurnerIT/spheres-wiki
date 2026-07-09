@@ -4,6 +4,7 @@ name: "Deduction"
 sphere: war
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** War sphere, studied combat class feature.

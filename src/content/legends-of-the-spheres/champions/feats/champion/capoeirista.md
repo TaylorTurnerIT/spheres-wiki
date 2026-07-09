@@ -5,6 +5,7 @@ sphere: open-hand
 tags:
   - champion
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Open Hand sphere, Performance sphere ((dance) package).

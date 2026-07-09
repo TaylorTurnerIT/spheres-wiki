@@ -6,6 +6,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Cast more effectively while grappling, including avoiding checks while in control and imposing save penalties with Talented Tie-Up."
 ---
 Your very grip is a conduit of your magic, allowing you to more deftly cast when entangled with your foes.
 

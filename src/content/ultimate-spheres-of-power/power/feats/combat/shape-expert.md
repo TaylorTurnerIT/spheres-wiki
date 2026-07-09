@@ -5,6 +5,7 @@ sphere: destruction
 tags:
   - combat
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Destruction sphere (Energy Wall (blast shape) or Explosive Orb (blast shape)).

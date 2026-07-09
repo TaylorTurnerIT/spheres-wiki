@@ -4,6 +4,7 @@ name: Extra Arsenal Trick
 tags:
   - extra
 tier: feat
+summary: "Gain an arsenal trick for which you meet the prerequisites."
 ---
 **Prerequisite:** Arsenal Trick class feature.
 

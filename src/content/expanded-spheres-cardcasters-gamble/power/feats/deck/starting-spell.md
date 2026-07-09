@@ -6,6 +6,7 @@ tags:
   - drawback
   - metamagic
 tier: feat
+summary: "Cast a revealed magic effect card affected by Starting Spell as a free action on your first turn without needing Mana Point Cards."
 ---
 
 **Prerequisites:** Card Casting

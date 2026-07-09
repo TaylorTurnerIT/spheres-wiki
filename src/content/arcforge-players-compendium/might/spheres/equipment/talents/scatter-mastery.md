@@ -3,6 +3,7 @@ id: "scatter-mastery"
 name: "Scatter Mastery"
 tier: "basic"
 tags: []
+summary: "Exclude one or more creatures from a scatter weapon's area of effect while maintaining martial focus."
 ---
 
 As long as you have martial focus, when attacking with a weapon with the scatter weapon quality, you may choose not to attack a single creature in the area. You may choose not to attack an additional creature for every 4 points of base attack bonus you possess.

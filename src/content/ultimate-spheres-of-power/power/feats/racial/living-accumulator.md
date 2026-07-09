@@ -5,6 +5,7 @@ tags:
   - combat
   - racial
 tier: feat
+summary: "Charge a cuazite weapon with electricity as a swift action, or increase its additional electricity damage to 1d8."
 ---
 By focusing and unleashing your innate electrical powers, you can charge the remains of your kin with lightning.
 

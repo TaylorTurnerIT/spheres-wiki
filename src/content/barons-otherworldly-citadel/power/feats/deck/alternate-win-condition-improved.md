@@ -6,6 +6,7 @@ tags:
   - deck
   - drawback
 tier: feat
+summary: "Increase the aristeia level you may enter using Alternate Win Condition to your normal maximum."
 ---
 
 **Prerequisites:** Alternate Win Condition, Card Casting Drawback

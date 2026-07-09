@@ -3,6 +3,7 @@ id: "ladder-strike"
 name: "Ladder Strike"
 tier: "basic"
 tags: []
+summary: ""
 ---
 
 Whenever you are within melee range of a battered creature, you can make a single roll as a standard action; this roll is treated both as an Acrobatics check to jump vertically or horizontally (being treated as though you had a running start) and an attack action against that creature which must be made with an unarmed strike. Any movement from this talent does not provoke an attack of opportunity from the creature.

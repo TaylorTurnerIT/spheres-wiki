@@ -5,6 +5,7 @@ sphere: nature
 dualSphere: divination
 tags: ["sm"]
 tier: feat
+summary: "Reduce a viewing sensor's spell point cost by anchoring its appearance and movement to a nearby element you command."
 ---
 
 **Prerequisites:** Divination Sphere (viewing), Nature Sphere

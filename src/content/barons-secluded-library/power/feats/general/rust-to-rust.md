@@ -5,6 +5,7 @@ tags:
   - general
   - sm
 tier: feat
+summary: "Let negative energy damage ignore construct and object immunity."
 ---
 **Prerequisites:** Ability to deal negative energy damage
 

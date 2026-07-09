@@ -4,6 +4,7 @@ name: Greater Created
 tags:
   - racial
 tier: feat
+summary: "Gain 1 creation point."
 ---
 Your creators invested greatly into your creation.
 

@@ -6,5 +6,6 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "End the battered condition on a target as a cost to outwit them."
 ---
 **Benefit:** You may end the battered condition on a target as a cost to outwit them.

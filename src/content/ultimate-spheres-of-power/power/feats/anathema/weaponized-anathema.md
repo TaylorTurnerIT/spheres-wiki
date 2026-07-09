@@ -4,6 +4,7 @@ name: Weaponized Anathema
 tags:
   - anathema
 tier: feat
+summary: "Once per round, you can deliver your anathema as a free action when you hit with a weapon attack."
 ---
 **Prerequisites:** Anathema
 

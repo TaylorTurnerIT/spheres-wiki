@@ -4,6 +4,7 @@ name: Craft Marvelous Item
 tags:
   - item-creation
 tier: feat
+summary: "You can create marvelous items, which are activated magical devices that use the talent-based method of magic item creation."
 ---
 **Prerequisites:** Caster level 1st.
 

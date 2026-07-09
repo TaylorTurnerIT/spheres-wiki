@@ -4,6 +4,7 @@ name: Desensitized
 tags:
   - combat
 tier: feat
+summary: "Reduce strain damage taken by 1 for every lesser severance and 3 for every greater severance you possess, to a minimum of 1."
 ---
 Your experience with the horrific dulls the impact of atrocities.
 

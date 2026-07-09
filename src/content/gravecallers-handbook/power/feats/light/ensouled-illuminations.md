@@ -4,6 +4,7 @@ name: "Ensouled Illuminations"
 sphere: light
 tags: []
 tier: feat
+summary: "Your souls can shed light that negates dazzled penalties for allies, carry Light sphere effects, and be expended to allow a creature to roll twice on an attack while blind."
 ---
 They linger, float and dance like lanterns in the evening sky.
 

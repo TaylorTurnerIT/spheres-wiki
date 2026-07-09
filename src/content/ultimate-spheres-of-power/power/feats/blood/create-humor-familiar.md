@@ -4,6 +4,7 @@ name: "Create Humor Familiar"
 sphere: blood
 tags: []
 tier: feat
+summary: "Gain a Tiny blood construct or humoral ooze as a familiar that can be absorbed into your body."
 ---
 
 **Prerequisite:** Blood sphere.

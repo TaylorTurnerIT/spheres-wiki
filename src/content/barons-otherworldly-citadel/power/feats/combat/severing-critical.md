@@ -5,6 +5,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Temporarily prevent a spellcaster from casting spells or using magical abilities when you confirm a critical hit against them."
 ---
 **Prerequisites:** Critical Focus, Base Attack Bonus +10
 

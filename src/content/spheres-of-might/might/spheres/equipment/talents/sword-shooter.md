@@ -3,6 +3,7 @@ id: "sword-shooter"
 name: "Sword Shooter"
 tier: "advanced"
 tags: []
+summary: ""
 ---
 
 **Prerequisites:** Equipment sphere, base attack bonus +6.

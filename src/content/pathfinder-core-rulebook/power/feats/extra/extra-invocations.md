@@ -4,6 +4,7 @@ name: Extra Invocations
 tags:
   - extra
 tier: feat
+summary: "Increase the number of times per day you may use Invocations by 2."
 ---
 **Prerequisite:** Invocations class feature.
 

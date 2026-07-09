@@ -5,6 +5,7 @@ tags:
   - drawback
   - sm
 tier: feat
+summary: "Concentrate on a magic sphere effect as a free action once per round."
 ---
 **Prerequisites:** Conscious Linked x2
 

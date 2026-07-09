@@ -4,6 +4,7 @@ name: "Construct Armor"
 sphere: blood
 tags: []
 tier: feat
+summary: "You can create a blood construct around a willing target, granting them the construct's physical attributes and defenses while the construct absorbs damage in their place."
 ---
 
 **Prerequisites:** Blood sphere (Extract Blood Construct), caster level 5th.

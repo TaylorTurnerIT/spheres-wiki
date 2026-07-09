@@ -4,6 +4,7 @@ name: Finishing Spell
 tags:
   - metamagic
 tier: feat
+summary: "Give low-hit-point targets a saving throw penalty against the affected magic sphere effect."
 ---
 Your magic is not troubled by the endeavors of the weak.
 

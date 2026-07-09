@@ -5,6 +5,7 @@ sphere: divination
 tags:
   - combat
 tier: feat
+summary: "You gain an AC bonus from active Divination senses and can dismiss one to turn a critical hit into a regular hit."
 ---
 
 **Prerequisites:** Divination sphere (one or more (sense) talents or abilities).

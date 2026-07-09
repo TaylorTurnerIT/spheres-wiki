@@ -5,6 +5,7 @@ sphere: war
 tags:
   - channeling
 tier: feat
+summary: "Spend a spell point when channeling energy to affect all allies or all enemies within a totem you control instead of a radius."
 ---
 
 **Prerequisites:** War sphere, channel energy class feature.

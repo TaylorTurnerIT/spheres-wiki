@@ -5,6 +5,7 @@ sphere: berserker
 tags:
   - champion
 tier: feat
+summary: "Convert brutal strike additional damage into an energy type matching a Destruction sphere blast type."
 ---
 **Prerequisites:** Berserker sphere, Destruction sphere (any (blast type) talent).
 

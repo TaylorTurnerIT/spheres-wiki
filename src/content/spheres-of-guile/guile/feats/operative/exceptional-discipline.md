@@ -5,6 +5,7 @@ sphere: body-control
 tags:
   - operative
 tier: feat
+summary: "Permanently gain the effects of a single (control) talent, which can be suppressed or reactivated as a free action."
 ---
 
 You have mastered your body so completely that you can control its processes without even a thought.

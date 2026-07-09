@@ -4,6 +4,7 @@ name: "Shifting Mastery"
 sphere: alteration
 tags: []
 tier: feat
+summary: "You do not provoke attacks of opportunity when targeting yourself with a shapeshift effect and can take 10 on Alteration concentration checks."
 ---
 
 **Prerequisite:** Combat Casting.

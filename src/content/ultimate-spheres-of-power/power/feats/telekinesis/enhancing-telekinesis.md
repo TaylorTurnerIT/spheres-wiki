@@ -4,6 +4,7 @@ name: Enhancing Telekinesis
 sphere: telekinesis
 dualSphere: enhancement
 tier: feat
+summary: "Apply an enhancement to a single object as part of the same action used to telekinetically lift it, and maintain both effects with a single concentration action."
 ---
 
 **Prerequisites:** Enhancement sphere, Telekinesis sphere.

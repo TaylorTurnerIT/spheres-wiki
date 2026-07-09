@@ -5,6 +5,7 @@ tags:
   - practitioner
 sphere: fencing
 tier: feat
+summary: "Use parry and riposte against a scouted creature without costing martial focus, an attack of opportunity, or a panache point."
 ---
 
 **Prerequisites:** Fencing sphere (Read Foe, Parry And Riposte) or Fencing sphere (Read Foe) and opportune parry and riposte deed, Scout sphere.

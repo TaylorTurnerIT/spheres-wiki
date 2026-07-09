@@ -4,6 +4,7 @@ name: Body Double
 sphere: illusion
 dualSphere: dark
 tier: feat
+summary: "Spend an extra spell point to summon a shadow lurk combat decoy that has a 50% chance to intercept attacks from opponents who fail to see through its disguise."
 ---
 
 **Prerequisites:** Dark sphere (Shadow Lurk (shadow)), Illusion sphere, ability to create glamers.

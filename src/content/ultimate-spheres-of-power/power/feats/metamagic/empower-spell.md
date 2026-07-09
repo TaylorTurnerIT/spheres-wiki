@@ -4,6 +4,7 @@ name: Empower Spell
 tags:
   - metamagic
 tier: feat
+summary: "Increase all variable, numeric effects of a talent by half."
 ---
 **Benefit:** All variable, numeric effects of an empowered talent are increased by half, including bonuses to those dice rolls. Saving throws and opposed rolls are not affected, nor are talents without random variables.
 

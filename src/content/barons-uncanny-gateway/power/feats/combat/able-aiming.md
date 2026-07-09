@@ -5,6 +5,7 @@ tags:
   - combat
   - sm
 tier: feat
+summary: "Ignore Deadly Aim or Piranha Strike's attack penalty on your first attack each turn."
 ---
 **Prerequisites:** Deadly Aim or Piranha Strike 
 **Benefits:** While you are using the Deadly Aim or Piranha Strike feat, you do not suffer the feat's penalty on attack rolls on the first attack you make each turn. You still suffer the penalty on any additional attacks, including attacks of opportunity.

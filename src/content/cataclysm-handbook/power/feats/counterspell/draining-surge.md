@@ -4,6 +4,7 @@ name: Draining Surge
 tags:
   - counterspell
 tier: feat
+summary: ""
 ---
 You push yourself into your counterspells to assure their success.
 

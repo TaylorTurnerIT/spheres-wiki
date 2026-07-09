@@ -4,6 +4,7 @@ name: "Surgeon's Trade Secrets"
 sphere: blood
 tags: []
 tier: feat
+summary: "Gain bonuses to Heal checks on blood-controlled targets, end bleed with blood arts, and grant a new save against poison or disease."
 ---
 
 Sometimes the bloodied battlefield looks tame compared to the surgeons' tents.

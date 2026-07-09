@@ -5,6 +5,7 @@ tags:
   - combat
   - practitioner
 tier: feat
+summary: "Expend martial focus to ready an attack to disrupt spellcasting as a move action, or a swift action if taken twice."
 ---
 
 You are adept at anticipating and interrupting spellcasters.

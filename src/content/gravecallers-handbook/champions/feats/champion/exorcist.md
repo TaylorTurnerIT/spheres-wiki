@@ -5,6 +5,7 @@ tags:
   - champion
   - combat
 tier: feat
+summary: "Gain bonuses against incorporeal and undead creatures, and expend martial focus or a spell point to temporarily gain ghost touch, defend against incorporeal attacks, and reroll certain checks against them."
 ---
 **Prerequisites:** Knowledge (religion) 3 ranks; casting class feature or martial focus.
 

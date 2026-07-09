@@ -5,6 +5,7 @@ tags:
   - champion
   - sm
 tier: feat
+summary: "Combine Communication and Fate effects to form rapports through motifs or words and adjust affected creatures' alignment treatment."
 ---
 **Prerequisites:** Communication Sphere, Fate Sphere
 

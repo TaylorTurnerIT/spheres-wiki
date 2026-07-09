@@ -5,6 +5,7 @@ sphere: investigation
 tags:
   - operative
 tier: feat
+summary: "Begin a theory as a free action when successfully analyzing a target, and gain an insight bonus to analyze checks against the subject based on the number of notions."
 ---
 
 **Prerequisite:** Investigation sphere, Study sphere.

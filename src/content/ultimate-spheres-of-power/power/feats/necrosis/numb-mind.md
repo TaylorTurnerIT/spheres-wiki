@@ -5,6 +5,7 @@ sphere: death
 tags:
   - necrosis
 tier: feat
+summary: ""
 ---
 
 Your emotional and reflex responses fade, allowing you to shrug off distracting conditions.

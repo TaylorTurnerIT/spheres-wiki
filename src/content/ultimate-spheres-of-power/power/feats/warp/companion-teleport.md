@@ -4,6 +4,7 @@ name: "Companion Teleport"
 sphere: warp
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisite:** Warp sphere.

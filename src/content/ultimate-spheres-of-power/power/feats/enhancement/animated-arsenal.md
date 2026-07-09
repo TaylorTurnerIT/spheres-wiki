@@ -4,6 +4,7 @@ name: "Animated Arsenal"
 sphere: enhancement
 tags: []
 tier: feat
+summary: ""
 ---
 
 **Prerequisites:** Enhancement sphere (Animate Object (enhance)), base attack bonus +1.
