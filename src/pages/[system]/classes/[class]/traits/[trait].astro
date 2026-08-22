@@ -30,16 +30,20 @@ export async function getStaticPaths() {
       const cls = classIndex.get(systemIdKey(system, trait.className ?? ""));
       if (!cls) continue;
 
+      const collEntry = allCollEntries.get(`class-trait:${trait.id}`);
+      const cacheKey = collEntry?.digest as string | undefined;
+
       paths.push({
         params: { system, class: cls.id, trait: trait.id },
         props: {
           trait,
           cls,
-          collEntry: allCollEntries.get(`class-trait:${trait.id}`),
+          collEntry,
           sourceBook: bookMetaMap.get(trait.sourceBook),
           tagMap,
           bookMetaMap,
         },
+        ...(cacheKey ? { cacheKey } : {}),
       });
     }
   }

@@ -105,11 +105,21 @@ export async function getStaticPaths() {
         if (entry) archetypeCollEntries.set(a.id, entry);
       }
 
+      const classCollEntry = allCollEntries.get(`class:${cls.id}`);
+      const digests = [
+        classCollEntry?.digest,
+        ...featureEntries.map(f => featureCollEntries.get(f.id)?.digest),
+        ...traitEntries.map(t => traitCollEntries.get(t.id)?.digest),
+        ...classArchetypes.map(a => archetypeCollEntries.get(a.id)?.digest),
+        ...classArchetypeFeatures.map(f => archetypeFeatureCollEntries.get(f.id)?.digest),
+      ].filter(Boolean);
+      const cacheKey = digests.length > 0 ? digests.join(":") : undefined;
+
       paths.push({
         params: { system, class: cls.id },
         props: {
           cls,
-          classCollEntry: allCollEntries.get(`class:${cls.id}`),
+          classCollEntry,
           featureEntries,
           featureCollEntries,
           traitEntries,
@@ -122,6 +132,7 @@ export async function getStaticPaths() {
           archetypeFeatures: classArchetypeFeatures,
           archetypeFeatureCollEntries,
         },
+        ...(cacheKey ? { cacheKey } : {}),
       });
     }
   }
@@ -146,8 +157,8 @@ const {
   archetypeFeatureCollEntries = new Map(),
 } = Astro.props;
 
-const sysConfig = resolveSystem(system)!;
-const searchFilter = getSystemSearchFilter(system);
+const sysConfig = resolveSystem(system!)!;
+const searchFilter = getSystemSearchFilter(system!);
 
 const ClassContent = classCollEntry ? (await render(classCollEntry)).Content : null;
 

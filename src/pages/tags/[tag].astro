@@ -126,12 +126,18 @@ export async function getStaticPaths() {
       }
     }
 
+    const collEntry = allCollEntries.get(`tag:${tag.id}`);
+    const cacheKey = [
+      collEntry?.digest ?? tag.id,
+      groups.map((g) => g.entries.map((e) => e.id).join(",")).join(";"),
+    ].join("::");
+
     paths.push({
       params: { tag: tag.id },
       props: {
         tag,
         groups,
-        collEntry: allCollEntries.get(`tag:${tag.id}`),
+        collEntry,
         bookTitle:
           tag.sourceBook === "__built-in__"
             ? "Built-in"
@@ -139,6 +145,7 @@ export async function getStaticPaths() {
         tagMap,
         bookMetaMap,
       },
+      cacheKey,
     });
   }
 
@@ -168,7 +175,7 @@ const descriptionHtml = (await renderMarkdownFragment(tag.description)).replace(
       <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
     </h1>
     <hr class="page-title-rule" />
-    
+
     {bookTitle && <p class="talent-source">{bookTitle}</p>}
 
     <div class="entry-description" set:html={descriptionHtml} />

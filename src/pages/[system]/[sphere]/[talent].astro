@@ -27,11 +27,15 @@ export async function getStaticPaths() {
     for (const [, talent] of talentMap) {
       if (talent.system !== system) continue;
 
+      const collEntry = allCollEntries.get(`talent:${talent.id}`);
+      const cacheKey = collEntry?.digest as string | undefined;
+
       const sphere = sphereIndex.get(systemIdKey(system, talent.sphere ?? ""));
       if (sphere) {
         paths.push({
           params: { system, sphere: sphere.id, talent: talent.id },
-          props: { talent, sphere, collEntry: allCollEntries.get(`talent:${talent.id}`), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+          props: { talent, sphere, collEntry, sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+          ...(cacheKey ? { cacheKey } : {}),
         });
       }
 
@@ -40,7 +44,8 @@ export async function getStaticPaths() {
           if (s.system === system && s.id !== talent.sphere) {
             paths.push({
               params: { system, sphere: s.id, talent: talent.id },
-              props: { talent, sphere: s, collEntry: allCollEntries.get(`talent:${talent.id}`), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+              props: { talent, sphere: s, collEntry, sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+              ...(cacheKey ? { cacheKey } : {}),
             });
           }
         }
@@ -49,7 +54,8 @@ export async function getStaticPaths() {
         if (dualSphere) {
           paths.push({
             params: { system, sphere: dualSphere.id, talent: talent.id },
-            props: { talent, sphere: dualSphere, collEntry: allCollEntries.get(`talent:${talent.id}`), sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+            props: { talent, sphere: dualSphere, collEntry, sourceBook: bookMetaMap.get(talent.sourceBook), tagMap, bookMetaMap },
+            ...(cacheKey ? { cacheKey } : {}),
           });
         }
       }

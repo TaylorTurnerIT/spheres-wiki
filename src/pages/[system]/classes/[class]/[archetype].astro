@@ -87,11 +87,20 @@ export async function getStaticPaths() {
         if (entry) associatedFeatsColl.set(f.id, entry);
       }
 
+      const archetypeCollEntry = allCollEntries.get(`archetype:${archetype.id}`);
+      const digests = [
+        archetypeCollEntry?.digest,
+        ...features.map(f => featureCollEntries.get(f.id)?.digest),
+        ...associatedTraits.map(t => associatedTraitsColl.get(t.id)?.digest),
+        ...associatedFeats.map(f => associatedFeatsColl.get(f.id)?.digest),
+      ].filter(Boolean);
+      const cacheKey = digests.length > 0 ? digests.join(":") : undefined;
+
       paths.push({
         params: { system, class: cls.id, archetype: archetype.id },
         props: {
           archetype,
-          archetypeCollEntry: allCollEntries.get(`archetype:${archetype.id}`),
+          archetypeCollEntry,
           cls,
           features,
           featureCollEntries,
@@ -101,6 +110,7 @@ export async function getStaticPaths() {
           associatedFeatsColl,
           sourceBook: bookMetaMap.get(archetype.sourceBook),
         },
+        ...(cacheKey ? { cacheKey } : {}),
       });
     }
   }
@@ -122,8 +132,8 @@ const {
   sourceBook,
 } = Astro.props;
 
-const sysConfig = resolveSystem(system)!;
-const searchFilter = getSystemSearchFilter(system);
+const sysConfig = resolveSystem(system!)!;
+const searchFilter = getSystemSearchFilter(system!);
 
 const ArchetypeContent = archetypeCollEntry ? (await render(archetypeCollEntry)).Content : null;
 

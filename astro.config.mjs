@@ -50,8 +50,7 @@ export default defineConfig({
     concurrency: 6,
   },
   experimental: {
-    rustCompiler: true,
-    contentIntellisense: true,
+    incrementalBuild: true,
   },
   vite: {
     build: {

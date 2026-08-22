@@ -33,18 +33,22 @@ export async function getStaticPaths() {
         ? sphereIndex.get(systemIdKey(system, feat.sphere))
         : undefined;
 
+      const collEntry =
+        allCollEntries.get(`feat:${feat.sourceBook}:${feat.id}`) ??
+        allCollEntries.get(`feat:${feat.id}`);
+      const cacheKey = collEntry?.digest as string | undefined;
+
       paths.push({
         params: { system, category, feat: feat.id },
         props: {
           feat,
           sphere,
-          collEntry:
-            allCollEntries.get(`feat:${feat.sourceBook}:${feat.id}`) ??
-            allCollEntries.get(`feat:${feat.id}`),
+          collEntry,
           sourceBook: bookMetaMap.get(feat.sourceBook),
           tagMap,
           bookMetaMap,
         },
+        ...(cacheKey ? { cacheKey } : {}),
       });
     }
   }
@@ -55,8 +59,8 @@ export async function getStaticPaths() {
 const { system } = Astro.params;
 const { feat, sphere, collEntry, sourceBook, tagMap, bookMetaMap } = Astro.props;
 
-const sysConfig = resolveSystem(system)!;
-const searchFilter = getSystemSearchFilter(system);
+const sysConfig = resolveSystem(system!)!;
+const searchFilter = getSystemSearchFilter(system!);
 const categoryLabel = sphere?.name ?? tagMap.get(getCanonicalFeatCategory(feat, tagMap))?.label ?? "General";
 
 const FeatContent = collEntry ? (await render(collEntry)).Content : null;

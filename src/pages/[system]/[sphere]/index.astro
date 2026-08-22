@@ -59,6 +59,14 @@ export async function getStaticPaths() {
         if (entry) featCollEntries.set(f.id, entry);
       }
 
+      const mainCollEntry = allCollEntries.get(`sphere:${sphere.id}`);
+      const digests = [
+        mainCollEntry?.digest,
+        ...allTalents.map(t => talentCollEntries.get(t.id)?.digest),
+        ...feats.map(f => featCollEntries.get(f.id)?.digest),
+      ].filter(Boolean);
+      const cacheKey = digests.length > 0 ? digests.join(":") : undefined;
+
       paths.push({
         params: { system, sphere: sphere.id },
         props: {
@@ -67,13 +75,14 @@ export async function getStaticPaths() {
           allTalents,
           feats,
           sections,
-          mainCollEntry: allCollEntries.get(`sphere:${sphere.id}`),
+          mainCollEntry,
           talentCollEntries,
           featCollEntries,
           sourceBook: bookMetaMap.get(sphere.sourceBook),
           bookMetaMap,
           tagMap,
         },
+        ...(cacheKey ? { cacheKey } : {}),
       });
     }
   }
@@ -84,8 +93,8 @@ export async function getStaticPaths() {
 const { system } = Astro.params;
 const { sphere, base, allTalents, feats, sections, mainCollEntry, talentCollEntries, featCollEntries, sourceBook, bookMetaMap, tagMap } = Astro.props;
 
-const sysConfig = resolveSystem(system)!;
-const searchFilter = getSystemSearchFilter(system);
+const sysConfig = resolveSystem(system!)!;
+const searchFilter = getSystemSearchFilter(system!);
 
 const talentById = new Map(allTalents.map(t => [t.id, t]));
 const featById = new Map(feats.map(f => [f.id, f]));
