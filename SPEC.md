@@ -275,6 +275,7 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V76. Post-build route/link checks resolve every internal href and fragment against `dist`; identity, cross-sphere, TOC, and performance checks fail non-zero on drift or budget violations.
 - V77. View Transition page state owns abort/teardown for listeners, observers, timers, async searches, and widgets; the mobile sidebar alone uses modal/`aria-hidden` semantics.
 - V78. Budgeted route classes stay within `docs/performance-budget.md`; retained migration artifacts are documented before removal.
+- V79. Cross-route View Transitions ! keep root old/new compositing `normal` (⊥ `plus-lighter`); browser smoke test ! observe ordered preparation/swap/page-load phases, styled target DOM, and no blank or unstyled viewport sample.
 
 ---
 
@@ -466,9 +467,10 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T116 | x | Add View Transition teardown, sidebar semantics, combobox/listbox semantics, and system-derived preference keys; repair token and responsive selector mismatches | V77 |
 | T117 | x | Add DOM behavior coverage for sidebar, collapse, and TOC lifecycle plus mobile Lighthouse route/config coverage; browser smoke remains a CI/runtime verification surface | V77 |
 | T118 | x | Reconcile SPEC/AGENTS/README/package/CI and document measured performance budgets and retained migration artifacts | V78 |
+| T119 | x | Add browser regression probe for cross-route View Transition flash; normalize root compositing and record lifecycle/style evidence | V77,V79 |
 
 **Recommended build order:**
-Audit remediation batch: T113→T114→T115→T116→T117→T118. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
+Audit remediation batch: T113→T114→T115→T116→T117→T118→T119. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
 Then broken routes (T1→T2→T9→T25→T3→T4→T5→T6→T7→T8).
 Then stubs (T11→T12→T13→T14→T15→T10).
@@ -523,3 +525,4 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B27 | 2026-08-28 | Authoritative fragment checking exposed migrated base markers beside headings and unresolved casting references rendered as dead anchors | V76 |
 | B28 | 2026-08-28 | New audit-script refactor missed repository formatter layout and stopped build during lint | V63 |
 | B29 | 2026-08-28 | Route audit found three generated TOC anchors for base markers whose migrated source used inline or apostrophe forms outside marker normalization | V76 |
+| B30 | 2026-08-28 | Chrome default root View Transition uses additive `plus-lighter` compositing; different route backgrounds briefly wash together and resemble FOUC | V79 — normalize root compositing; browser transition probe |

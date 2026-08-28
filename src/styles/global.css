@@ -11,6 +11,46 @@ svg {
   display: block;
 }
 
+/* ── View Transition compositing ───────────────────────── */
+/*
+ * Chrome's default root transition uses an animated `plus-lighter` blend mode.
+ * That brightens the overlap when routes use different system surfaces, which
+ * reads as a brief flash even though both documents are styled. Replace the
+ * root animation with an ordinary alpha crossfade instead.
+ */
+@keyframes spheres-view-transition-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes spheres-view-transition-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+::view-transition-old(root) {
+  animation-name: spheres-view-transition-fade-out;
+}
+
+::view-transition-new(root) {
+  animation-name: spheres-view-transition-fade-in;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  mix-blend-mode: normal;
+}
+
 /* ── Skip navigation ────────────────────────────────────── */
 .skip-link {
   position: absolute;
