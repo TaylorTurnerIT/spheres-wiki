@@ -272,6 +272,10 @@ const descriptionHtml = (await renderMarkdownFragment(tag.description)).replace(
     display: flex;
     align-items: center;
     gap: 8px;
+    /* Preserve every tag entry in the static document without laying out all
+       thousands of off-screen rows up front. */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 32px;
   }
   .tag-entry-name {
     font-size: var(--fs-sm);

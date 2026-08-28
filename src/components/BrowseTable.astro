@@ -167,6 +167,10 @@ function searchText(row: FeatBrowseRow): string {
     border-bottom: 1px solid var(--clr-border);
     border-left: 3px solid var(--clr-ns, var(--clr-border));
     transition: background-color 0.15s ease;
+    /* Keep the complete filterable table in the DOM while deferring layout
+       and paint for rows that are far below the viewport. */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 72px;
   }
   .browse-row:nth-child(even) {
     background: color-mix(in srgb, var(--clr-muted) 3%, transparent);
