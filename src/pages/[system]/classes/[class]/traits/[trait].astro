@@ -7,6 +7,7 @@ import { stripBodySource } from '@/lib/renderBody';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter, buildSystemIdIndex, systemIdKey } from '@/lib/systems';
 import type { ClassTraitEntry, ClassEntry, BookMeta, TagEntry } from '@/lib/types';
+import { contentEntryKey } from '@/lib/entryIdentity';
 
 interface Props {
   trait: ClassTraitEntry;
@@ -17,6 +18,7 @@ interface Props {
   bookMetaMap: Map<string, BookMeta>;
 }
 
+// fallow-ignore-next-line complexity
 export async function getStaticPaths() {
   const { classTraitMap, classMap, bookMetaMap, tagMap } = await resolveEntries();
   const allCollEntries = await getCollEntriesMap();
@@ -30,7 +32,9 @@ export async function getStaticPaths() {
       const cls = classIndex.get(systemIdKey(system, trait.className ?? ""));
       if (!cls) continue;
 
-      const collEntry = allCollEntries.get(`class-trait:${trait.id}`);
+      const collEntry = allCollEntries.get(
+        contentEntryKey('class-trait', trait.system, trait.id),
+      );
       const cacheKey = collEntry?.digest as string | undefined;
 
       paths.push({

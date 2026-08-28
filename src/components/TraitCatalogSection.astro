@@ -35,7 +35,7 @@ const { featureId, featureName, entries, systemId, className, tagMap, bookMetaMa
   <span class="trait-catalog-toggle-chevron" aria-hidden="true">▾</span>
 </button>
 
-<div class="trait-catalog-wrapper" id={`${featureId}-traits`} aria-hidden="true">
+<div class="trait-catalog-wrapper" id={`${featureId}-traits`} aria-hidden="true" inert>
   <div class="trait-catalog">
     {entries.map(({ trait, Content: TraitContent, sourceBookTitle }) => (
       <EntryCard

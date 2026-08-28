@@ -22,6 +22,9 @@ const TALENTS: Record<string, string> = {
   "energy blast": "/power/destruction/energy-blast/",
   "aligned liquid": "/might/alchemy/aligned-liquid/",
   "billowing poison": "/might/alchemy/billowing-poison/",
+  "two-handed combat": "/might/equipment/two-handed-combat/",
+  "fool’s retreat": "/might/athletics/fool-s-retreat/",
+  "grey hawk's gambit": "/power/time/grey-hawks-gambit/",
 };
 
 const stubResolvers: EntryResolvers = {
@@ -164,6 +167,21 @@ describe("parsePrerequisiteText — bare talent names", () => {
   it("does not link stopwords: Any", () => {
     const nodes = parsePrerequisiteText("Any talent.", "/", stubResolvers);
     expect(nodes).toBeNull();
+  });
+
+  it("keeps hyphens and apostrophes in talent names", () => {
+    const nodes = parsePrerequisiteText(
+      "Two-Handed Combat, Fool’s Retreat, and Grey Hawk's Gambit.",
+      "/",
+      stubResolvers,
+    );
+    const links = filterLinks(nodes);
+
+    expect(links.map((link: any) => link.children[0].value)).toEqual([
+      "Two-Handed Combat",
+      "Fool’s Retreat",
+      "Grey Hawk's Gambit",
+    ]);
   });
 });
 

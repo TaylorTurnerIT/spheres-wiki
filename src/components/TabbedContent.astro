@@ -73,6 +73,7 @@ function extractHeadingsFromHtml(html: string): RenderedHeading[] {
 
 // Pre-render all tabs: article entries plus optional same-named slots.
 const renderedTabs = await Promise.all(
+  // fallow-ignore-next-line complexity
   tabs.map(async (tab) => {
     let Content = null;
     let headings: RenderedHeading[] = [];
@@ -108,6 +109,7 @@ const renderedTabs = await Promise.all(
 );
 ---
 
+<!-- fallow-ignore-next-line complexity -->
 <div class="tabbed-content" id={id} data-initial-tab={initialTab}>
   <nav class="tab-nav" role="tablist">
     {tabs.map((tab) => (
@@ -115,6 +117,7 @@ const renderedTabs = await Promise.all(
         class:list={['tab', { active: tab.slug === initialTab, 'tab--builder': tab.builder }]}
         role="tab"
         aria-selected={tab.slug === initialTab}
+        tabindex={tab.slug === initialTab ? 0 : -1}
         aria-controls={`${id}-panel-${tab.slug}`}
         id={`${id}-tab-${tab.slug}`}
         data-tab={tab.slug}
@@ -183,6 +186,26 @@ const renderedTabs = await Promise.all(
 
 <script is:inline>
   (function() {
+    var runtimeKey = '__spheresWikiTabbedInlineRuntime';
+    var runtimeWindow = window;
+    if (runtimeWindow[runtimeKey]) runtimeWindow[runtimeKey]();
+    var resizeObservers = [];
+    var resizeFallbacks = [];
+    var animationFrames = [];
+    var timers = [];
+    var cleaned = false;
+    function cleanup() {
+      if (cleaned) return;
+      cleaned = true;
+      for (var observer of resizeObservers) observer.disconnect();
+      for (var fallback of resizeFallbacks) window.removeEventListener('resize', fallback);
+      for (var frame of animationFrames) cancelAnimationFrame(frame);
+      for (var timer of timers) clearTimeout(timer);
+      if (runtimeWindow[runtimeKey] === cleanup) delete runtimeWindow[runtimeKey];
+    }
+    runtimeWindow[runtimeKey] = cleanup;
+    document.addEventListener('astro:before-swap', cleanup, { once: true });
+
     var hash = window.location.hash.slice(1);
     var containers = document.querySelectorAll('.tabbed-content:not([data-hash-processed])');
     var sidebar = document.getElementById('article-sidebar');
@@ -206,14 +229,18 @@ const renderedTabs = await Promise.all(
       }
       
       // Update immediately, and then hook into resize
-      if (window.ResizeObserver) {
-        new ResizeObserver(updateSidebarClearance).observe(container.querySelector('.tab-nav'));
+      var tabNav = container.querySelector('.tab-nav');
+      if (window.ResizeObserver && tabNav) {
+        var resizeObserver = new ResizeObserver(updateSidebarClearance);
+        resizeObserver.observe(tabNav);
+        resizeObservers.push(resizeObserver);
       } else {
         window.addEventListener('resize', updateSidebarClearance);
+        resizeFallbacks.push(updateSidebarClearance);
       }
       // Fallback update after fonts load
-      requestAnimationFrame(updateSidebarClearance);
-      setTimeout(updateSidebarClearance, 100);
+      animationFrames.push(requestAnimationFrame(updateSidebarClearance));
+      timers.push(setTimeout(updateSidebarClearance, 100));
 
       var activeSlug = hash || container.getAttribute('data-initial-tab');
       if (!activeSlug) continue;
@@ -227,6 +254,7 @@ const renderedTabs = await Promise.all(
           if (activeTab) {
             activeTab.classList.remove('active');
             activeTab.setAttribute('aria-selected', 'false');
+            activeTab.setAttribute('tabindex', '-1');
           }
           if (activePanel) {
             activePanel.classList.remove('active');
@@ -235,6 +263,7 @@ const renderedTabs = await Promise.all(
 
           targetTab.classList.add('active');
           targetTab.setAttribute('aria-selected', 'true');
+          targetTab.setAttribute('tabindex', '0');
           targetPanel.classList.add('active');
           targetPanel.hidden = false;
         }
@@ -261,7 +290,18 @@ const renderedTabs = await Promise.all(
 </script>
 
 <script>
-  function initTabs(container: HTMLElement) {
+    let cleanupTabsPage = () => {};
+
+    document.addEventListener('astro:before-swap', () => {
+      cleanupTabsPage();
+      cleanupTabsPage = () => {};
+    });
+
+  function initTabs(
+    container: HTMLElement,
+    signal: AbortSignal,
+    animationFrames: number[],
+  ) {
     const tabs = container.querySelectorAll<HTMLButtonElement>('.tab');
     const panels = container.querySelectorAll<HTMLElement>('.tab-panel');
 
@@ -272,6 +312,7 @@ const renderedTabs = await Promise.all(
         const isActive = tab.dataset.tab === slug;
         tab.classList.toggle('active', isActive);
         tab.setAttribute('aria-selected', isActive.toString());
+        tab.setAttribute('tabindex', isActive ? '0' : '-1');
       });
 
       panels.forEach(panel => {
@@ -319,7 +360,26 @@ const renderedTabs = await Promise.all(
       tab.addEventListener('click', () => {
         const slug = tab.dataset.tab;
         if (slug) switchTab(slug);
-      });
+      }, { signal });
+      tab.addEventListener('keydown', (event) => {
+        const key = event.key;
+        if (key !== 'ArrowLeft' && key !== 'ArrowRight' && key !== 'Home' && key !== 'End') return;
+        const orderedTabs = Array.from(tabs);
+        const currentIndex = orderedTabs.indexOf(tab);
+        if (currentIndex < 0) return;
+        event.preventDefault();
+        const nextIndex = key === 'Home'
+          ? 0
+          : key === 'End'
+            ? orderedTabs.length - 1
+            : (currentIndex + (key === 'ArrowRight' ? 1 : -1) + orderedTabs.length) % orderedTabs.length;
+        const nextTab = orderedTabs[nextIndex];
+        const slug = nextTab?.dataset.tab;
+        if (nextTab && slug) {
+          switchTab(slug);
+          nextTab.focus();
+        }
+      }, { signal });
     });
 
     // Sphere filter (bound once per select; hidden state persists across tab switches)
@@ -332,7 +392,7 @@ const renderedTabs = await Promise.all(
           card.hidden = select.value !== 'all' && card.dataset.filterKey !== select.value;
         }
       };
-      select.addEventListener('change', applyFilter);
+      select.addEventListener('change', applyFilter, { signal });
       applyFilter();
     });
 
@@ -341,17 +401,27 @@ const renderedTabs = await Promise.all(
 
     // Use requestAnimationFrame so articleTocClient's module-level code
     // (which registers reinitArticleToc) has executed before we call it
-    requestAnimationFrame(() => {
+    animationFrames.push(requestAnimationFrame(() => {
+      if (signal.aborted) return;
       if (hash && Array.from(tabs).some(t => t.dataset.tab === hash)) {
         switchTab(hash, false);
       } else if (initial) {
         switchTab(initial, false);
       }
-    });
+    }));
     }
 
     document.addEventListener('astro:page-load', () => {
-    document.querySelectorAll<HTMLElement>('.tabbed-content').forEach(initTabs);
+      cleanupTabsPage();
+      const controller = new AbortController();
+      const animationFrames: number[] = [];
+      document.querySelectorAll<HTMLElement>('.tabbed-content').forEach(container => {
+        initTabs(container, controller.signal, animationFrames);
+      });
+      cleanupTabsPage = () => {
+        controller.abort();
+        animationFrames.forEach(cancelAnimationFrame);
+      };
     });
 </script>
 

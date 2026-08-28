@@ -2,6 +2,7 @@
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
+import { SYSTEMS } from '@/config/site';
 
 const TOOLTIPS = {
   originalPower: "Legacy content published prior to Ultimate Spheres of Power.",
@@ -12,11 +13,9 @@ const TOOLTIPS = {
   aprilFools: "Joke or non-serious content, typically published on April 1st.",
 };
 
-const SYSTEMS = [
-  { id: 'might', name: 'Spheres of Might' },
-  { id: 'guile', name: 'Spheres of Guile' },
-  { id: 'champ', name: 'Champions' }
-];
+const PREFERENCE_SYSTEMS = Object.entries(SYSTEMS)
+  .filter(([id]) => id !== 'power')
+  .map(([id, system]) => ({ id, name: system.label, cssKey: system.cssKey }));
 
 const STANDARD_TOGGLES = [
   { type: 'polished', label: 'Polished', tip: TOOLTIPS.polished },
@@ -58,7 +57,7 @@ const STANDARD_TOGGLES = [
     <button class="reset-btn" id="resetPrefsBtn">Restore Defaults</button>
   </div>
 
-  <div class="intro-cards pref-grid">
+  <div class="intro-cards pref-grid" data-pref-systems={JSON.stringify(Object.keys(SYSTEMS))}>
     <div class="intro-card power">
       <div class="intro-card-body">
         <div class="intro-card-name">Spheres of Power</div>
@@ -96,8 +95,8 @@ const STANDARD_TOGGLES = [
       </div>
     </div>
 
-    {SYSTEMS.map(sys => (
-      <div class={`intro-card ${sys.id}`}>
+    {PREFERENCE_SYSTEMS.map(sys => (
+      <div class={`intro-card ${sys.cssKey}`}>
         <div class="intro-card-body">
           <div class="intro-card-name">{sys.name}</div>
           <div class="pref-toggles">
@@ -499,28 +498,31 @@ const STANDARD_TOGGLES = [
    * Retention: Indefinite
    * Deletion Path: "Restore Defaults" button on this page.
    *
-   * Key: pref:power-polished, pref:might-polished, pref:guile-polished, pref:champ-polished
+   * Key: pref:<system>-polished for every system in SYSTEMS
    * Purpose: Tracks whether "Polished" (DRS) content is enabled for the respective system.
    * Retention: Indefinite
    * Deletion Path: "Restore Defaults" button on this page.
    */
+  let cleanupPreferencesPage = () => {};
+  document.addEventListener('astro:before-swap', () => {
+    cleanupPreferencesPage();
+    cleanupPreferencesPage = () => {};
+  });
+
   document.addEventListener('astro:page-load', () => {
-    const defaultPrefs = {
+    cleanupPreferencesPage();
+    const systemIds = JSON.parse(
+      document.querySelector<HTMLElement>('[data-pref-systems]')?.dataset.prefSystems ?? '[]',
+    ) as string[];
+    const defaultPrefs: Record<string, boolean> = {
       'power-original': false,
       'power-ultimate': true,
-      'power-polished': true,
-      'might-polished': true,
-      'guile-polished': true,
-      'champ-polished': true,
-      'power-third-party': true,
-      'power-april-fools': true,
-      'might-third-party': true,
-      'might-april-fools': true,
-      'guile-third-party': true,
-      'guile-april-fools': true,
-      'champ-third-party': true,
-      'champ-april-fools': true,
     };
+    for (const system of systemIds) {
+      defaultPrefs[`${system}-polished`] = true;
+      defaultPrefs[`${system}-third-party`] = true;
+      defaultPrefs[`${system}-april-fools`] = true;
+    }
 
     let currentPrefs: Record<string, boolean> = { ...defaultPrefs };
 
@@ -533,7 +535,18 @@ const STANDARD_TOGGLES = [
     });
 
     const buttons = document.querySelectorAll('.pref-toggle');
-    if (!buttons.length) return; // Exit if not on the preferences page
+    if (!buttons.length) {
+      cleanupPreferencesPage = () => {};
+      return;
+    } // Exit if not on the preferences page
+
+    const controller = new AbortController();
+    const { signal } = controller;
+    const animationFrames: number[] = [];
+    cleanupPreferencesPage = () => {
+      controller.abort();
+      animationFrames.forEach(cancelAnimationFrame);
+    };
 
     function renderState() {
       buttons.forEach(btn => {
@@ -574,7 +587,7 @@ const STANDARD_TOGGLES = [
     function updateMasterStates() {
       const groups = ['polished', 'third-party', 'april-fools'];
       groups.forEach(group => {
-        const keys = ['power', 'might', 'guile', 'champ'].map(s => s + '-' + group);
+        const keys = systemIds.map(s => s + '-' + group);
         const allOn = keys.every(k => currentPrefs[k]);
         const masterBtn = document.querySelector('.pref-toggle[data-master="' + group + '"]');
         if (!masterBtn) return;
@@ -600,7 +613,7 @@ const STANDARD_TOGGLES = [
         localStorage.setItem('pref:' + pref, String(currentPrefs[pref]));
 
         renderState();
-      });
+      }, { signal });
     });
 
     // Reset button logic
@@ -612,14 +625,14 @@ const STANDARD_TOGGLES = [
         });
         currentPrefs = { ...defaultPrefs };
         renderState();
-      });
+      }, { signal });
     }
 
     const masterToggles = document.querySelectorAll('.pref-toggle[data-master]');
     masterToggles.forEach(btn => {
       btn.addEventListener('click', () => {
         const group = btn.getAttribute('data-master');
-        const keys = ['power', 'might', 'guile', 'champ'].map(s => s + '-' + group);
+        const keys = systemIds.map(s => s + '-' + group);
         const allOn = keys.every(k => currentPrefs[k]);
         const newState = !allOn;
         keys.forEach(k => {
@@ -627,7 +640,7 @@ const STANDARD_TOGGLES = [
           localStorage.setItem('pref:' + k, String(newState));
         });
         renderState();
-      });
+      }, { signal });
     });
 
 
@@ -647,7 +660,7 @@ const STANDARD_TOGGLES = [
           localStorage.setItem('pref:power-original', String(currentPrefs['power-original']));
           localStorage.setItem('pref:power-ultimate', String(currentPrefs['power-ultimate']));
           renderState();
-        });
+        }, { signal });
       });
     }
 
@@ -657,10 +670,11 @@ const STANDARD_TOGGLES = [
     renderState();
 
     // Force a reflow, then remove the class to re-enable transitions
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
+    animationFrames.push(requestAnimationFrame(() => {
+      animationFrames.push(requestAnimationFrame(() => {
+        if (signal.aborted) return;
         document.body.classList.remove('preload-transitions');
-      });
-    });
+      }));
+    }));
   });
 </script>

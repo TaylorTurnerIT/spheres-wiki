@@ -18,7 +18,7 @@ Fast static wiki for the Spheres tabletop RPG (Power/Might/Guile/Champions) by D
 - C5. OGL compliance — all content under Open Game License; legal page must exist
 - C6. New sphere in existing system must appear site-wide with only content files added (no component edits) — except icon SVG which requires one `<symbol>` addition to SVGSprite.astro
 - C7. New game system requires coordinated changes across config, CSS, nav, pages — this is acceptable but must be documented in §I
-- C8. Toolchain pinned — Astro 6.x SSG + TypeScript, Bun ≥ 1.1.0; `astro.config.mjs` enables `experimental.rustCompiler` and `experimental.contentIntellisense`
+- C8. Toolchain pinned — Astro 7.x SSG + TypeScript, Bun ≥ 1.1.0; compiler and content-loader settings live in `astro.config.mjs` and `content.config.ts`
 - C9. Entry metadata path-encoded — `src/content/<book>/<system>/<type>/*.md`; `type`+`sphere` inferred from path by `inferFromPath` (I.content); `system` derived from directory, not frontmatter
 - C10. All entry `id`s are lowercase kebab-case (`^[a-z0-9-]+$`), enforced by `entrySchema`
 - C11. `system:` field ⊥ in entry frontmatter — always derived from `{book}/{system}` directory prefix; ∃ only in `_system.yaml` at `{book}/{system}/`
@@ -52,9 +52,11 @@ Collection discovery rule: a book folder is an Astro collection iff it contains 
 **PF1e base class convention:** PF1e base classes (Fighter, Rogue, etc.) stored as `ClassEntry` with `system: "pf1e"`. Their archetypes use `system: "power"|"might"|"guile"|"champions"` to indicate which sphere system they grant. Archetype named `"Spheres {ClassName}"` (e.g. `"Spheres Fighter"`) is the canonical base conversion and always sorts first in its class group. PF1e classes never appear on system index pages (filtered by system ∈ power/might/guile/champions only).
 
 ### I.resolveEntries — data API
-`resolveEntries()` → `ResolvedMaps`: sphereMap, talentMap, featMap, classMap, classFeatureMap, classTraitMap, articleMap, archetypeMap, archetypeFeatureMap, tagMap, bookMetaMap, entrySourceBook.
+`resolveEntries()` → `ResolvedMaps`: sphereMap, talentMap, featMap, classMap, classFeatureMap, classTraitMap, articleMap, archetypeMap, archetypeFeatureMap, tagMap, bookMetaMap, entrySourceBook, entryPatchSourceBooks.
 
 `bookMetaMap` includes every `_book.yaml`, including metadata-only folders. Raw Astro content entries are fetched only for real collections (`_book.yaml` + `.md`) and cached behind `getCollEntriesMap()` for `getStaticPaths()` consumers.
+
+Resolved entry maps and raw-entry caches use `system:id` keys within each entry type. `entrySourceBook` preserves the original source; `entryPatchSourceBooks` records errata provenance separately.
 
 ### I.book-metadata — `_book.yaml` verification contract
 `_book.yaml` is canonical site metadata for a source book: title, publisher, publishedDate, price, buyUrl, and local cover reference. These fields affect store display, source attribution, collection discovery, and errata patch ordering, so real-looking values must be verified before commit.
@@ -82,7 +84,7 @@ Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
 `SVGSprite.astro` defines `<symbol id="si-{name}">` for each sphere icon name. Sphere entries reference by `icon: {name}` field. `si-fallback` symbol must exist as default.
 
 ### I.categorize — section builder
-`src/lib/categorize.ts`: groups a sphere's talents/feats into display sections from the sphere's `categoryDefinitions`/`sectionDefinitions`. Unmatched entries fall into an "Other" catch-all. Each entry is claimed by the first matching category (see V24).
+`src/lib/categorize.ts`: groups a sphere's talents/feats into display sections from the sphere's `categoryDefinitions`/`sectionDefinitions`. Unmatched entries fall into an "Other" catch-all. Each type-scoped entry is claimed by the first matching category (see V24).
 
 ### I.pagefind — search index + ranking
 Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight is marked in `WikiPage.astro`. Result ranking weights primary entries (spheres, classes) above talents/feats (see V18).
@@ -90,9 +92,9 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 ### I.build — strict local/build gate
 `bun run build` is the canonical acceptance gate:
 ```
-validate.mjs → check-idioms.mjs → check-base-abilities.mjs → fallow-audit → astro check → astro build → pagefind --site dist → check-toc.mjs
+test → lint → validate.mjs → check-cross-sphere.mjs → check-identity-collisions.mjs → check-idioms.mjs → check-base-abilities.mjs → fallow-audit → astro check → astro build → pagefind --site dist → check-content-routes.mjs → check-links.mjs → check-toc.mjs → check-performance.mjs
 ```
-The gate must exit 0 and emit no actionable diagnostics: no Astro check errors/warnings/hints, no Fallow dead-code/complexity/duplication findings, no unresolved remark entry links, no Vite warnings, no Pagefind failures, no idiom-guard violations (V72), and no TOC audit failures. `vite.build.chunkSizeWarningLimit` is 200KB by design.
+The gate must exit 0 and emit no actionable diagnostics: no test failures, lint errors, Astro check errors/warnings/hints, Fallow dead-code/complexity/duplication findings, unresolved remark entry links, missing content routes, broken internal links/anchors, Vite warnings, Pagefind failures, idiom-guard violations (V72), TOC audit failures, or performance-budget violations. `vite.build.chunkSizeWarningLimit` is 200KB by design.
 
 ### I.layout — page shell
 `WikiPage.astro`: header + sidebar + tab nav + content slot; sets Pagefind indexing scope/weight per page. `Base.astro`: html shell, meta/OG tags, footer, self-hosted fonts + `global.css` load.
@@ -102,14 +104,14 @@ Class pages (`[class].astro`) render:
 - **Class info block**: Alignment, Hit Die, Starting Wealth, Class Skills, Skill Ranks — each wrapped in `<span id="class-val-{key}">` for archetype override hot-swapping.
 - **Progression table**: Dynamically generated level 1–20 grid. Columns: Level, BAB, Fort, Ref, Will, Special, Caster Level (computed from `casterTier`), Magic Talents (computed; level 1 shows `(+2)` bonus with tooltip), Spell Pool (`{level} + CAM` with tooltip). Extra class-specific columns from `classTable` JSON. CAM has a muted dotted-underline tooltip: "Casting Ability Modifier".
 - **Class features**: `<h2>` heading with name, level badge, `|` separator, source-book label (`.talent-source`). Content rendered from markdown.
-- **Class traits**: Rendered per-feature inside or outside a trait catalog toggle. Each trait uses `.talent-header` / `.talent-header-top` / `.talent-header-bottom` pattern matching talent page design: name + source on top row, tags (`TagBadge`) on bottom row. `class-trait` tag auto-injected by `buildOrderedTagIds()`.
+- **Class traits**: Rendered per-feature inside or outside a trait catalog toggle through `EntryCard.astro`. The card owns the `.talent-header` / `.talent-header-top` / `.talent-header-bottom` pattern: name + source on top row, tags (`TagBadge`) on bottom row. `class-trait` tag auto-injected by `buildOrderedTagIds()`.
 - **Trait catalog**: For `isTraitContainer` features (e.g. Bestial Trait), a collapsible grid with toggle button. Open state adds a subtle background. Traits have a 3px `var(--clr-active)` left border. Prerequisites render as `**Prerequisites:**` line below the heading.
 - **Trait detail pages** (`[trait].astro`): Full-page view for individual traits with breadcrumb, tag badges, source-book sidebar callout.
 
 **Source attribution:** `*Source: Book*` lines in markdown bodies are stripped before rendering (`stripBodySource()`). Source is shown via metadata: `.talent-source` label on headings + `SourceBookCallout` in sidebar.
 
-### I.archetype — inline archetype selector + ACFs
-The archetype system runs entirely inline on the class page via TomSelect multi-select:
+### I.archetype — standalone pages, inline selector + ACFs
+Every archetype has a standalone detail page at `/{system}/classes/{class}/{archetype}/` and is also selectable inline on its class page via TomSelect multi-select:
 - **Selector**: Dropdown lists all archetypes for the class. Options show name + description excerpt. Selected archetypes are persisted in URL query params (`?archetypes=...`).
 - **Compatibility**: `isCompatible()` checks replaces/alters/mutuallyExclusive fields. Incompatible selections are greyed out in the dropdown. Hard conflicts show a warning banner.
 - **Hot-swap**: `updateArchetypes()` replaces feature cards, appends alteration blocks, inserts new features in level order, updates the progression table Special column (feature name → archetype feature name), and updates the ToC links — all client-side. Base state is stashed in `dataset.originalHtml` for clean restore.
@@ -121,51 +123,35 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 - The class template auto-injects one virtual `ArchetypeEntry` per ACF — name prefixed "Alternate Class Feature:", description derived from `replaces` via feature name lookup. No content file needed for the parent.
 - ACFs use `replaces` to specify the swapped feature. They plug into the same compatibility, hot-swap, and table/ToC update logic as regular archetypes.
 
-### I.pages — route map (current + target)
+### I.pages — route map (current)
 ```
-/                              home
-/power/                        power index
-/power/[sphere]/               sphere detail
-/power/[sphere]/[talent]/      talent detail
-/power/[sphere]/feats/[feat]/  feat detail
-/power/classes/[class]/        class detail (full — features, traits, progression table, inline archetype selector)
-/power/classes/[class]/traits/[trait]/  trait detail (exists)
-/power/using-spheres-of-power/ intro article (exists)
-/power/casting-traditions/      rules article (exists)
-/might/                        might index
-/might/[sphere]/               sphere detail
-/might/[sphere]/[talent]/      talent detail
-/might/[sphere]/feats/[feat]/  feat detail
-/might/classes/[class]/        class detail (MISSING — T1)
-/might/using-spheres-of-might/ intro article (MISSING — T14)
-/guile/                        guile index
-/guile/[sphere]/               sphere detail
-/guile/[sphere]/[talent]/      talent detail
-/guile/[sphere]/feats/[feat]/  feat detail
-/guile/classes/[class]/        class detail (MISSING — T2)
-/guile/using-spheres-of-guile/ intro article (MISSING — T14)
-/champions/                    champions index
-/champions/[slug]/             class detail (stub — T11)
-/champions/using-champions/    intro article (MISSING — T14)
-/search/                       full search + filters
-/tags/                         tag index
-/tags/[tag]/                   tag detail
-/store/                        book store
-/about/                        about
-/legal/                        OGL legal
-/recent-changes/               changelog (stub — T10)
-/contact/                      contact (MISSING — T7)
-/archetypes/                   archetypes index (MISSING — T3)
-/bb-code-template/             BB code template (MISSING — T4)
-/community-resources/          community links (MISSING — T5)
-/citations-guide/              citation guide (REMOVED)
-/power/how-to-build-spherecaster/ guide (exists)
-/power/how-to-build-champion/      guide (MISSING — T8)
-/power/how-to-build-practitioner/    guide (MISSING — T8)
-/guile/how-to-build-operative/       guide (MISSING — T8)
-/preferences/                  preferences config page (stub — T40)
-404                            custom 404 page (MISSING — T18)
+/                                  home
+/{system}/                          dynamic system index (power|might|guile|champions)
+/{system}/[sphere]/                 sphere detail
+/{system}/[sphere]/[talent]/        talent detail
+/{system}/feats/[category]/[feat]/ feat detail
+/{system}/classes/[class]/          class detail + inline archetype selector
+/{system}/classes/[class]/traits/[trait]/ trait detail
+/{system}/classes/[class]/[archetype]/ archetype detail
+/{system}/articles/[article]/       every system-scoped article
+/articles/[article]/                every systemless article
+/search/                            full search + filters
+/tags/                              tag index
+/tags/[tag]/                        tag detail
+/store/                             book store
+/about/                             about
+/legal/                             OGL legal
+/privacy/                           privacy
+/contact/                           contact
+/community-resources/               community links
+/archetypes/                        archetype index
+/preferences/                       content preference controls
+/power/casting-traditions/          rules, entries, and builder
+/power/how-to-build-spherecaster/   authored guide alias
+/power/using-spheres-of-power/      authored article alias
+/recent-changes/                    reserved route (currently placeholder content)
 ```
+`class-feature`, `archetype-feature`, `drawback`, `boon`, and `tradition` entries are rendered through their owning class/casting-traditions surfaces rather than receiving standalone detail routes. All other public entry types have a route checked by `check-content-routes.mjs`; authored aliases may coexist with the generic article route.
 
 ---
 
@@ -208,7 +194,7 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 - V21. Errata patches (`modifies` field) applied in chronological order of books' `publishedDate` ascending
 - V22. Errata patches do not change original `sourceBook` attribution
 - V23. Errata patches do not leak `modifies` field onto resolved entry
-- V24. Each entry claimed by first matching category definition. Entries sorted by `id` ascending
+- V24. Each type-scoped entry claimed by first matching category definition. Category/exclusion tags compare normalized lowercase ids. Entries sorted by `id` ascending
 - V25. Interactive component initializations and event listeners must run on `astro:page-load` to support Astro View Transitions
 - V26. `system:` frontmatter field ⊥ in entry `.md` files — must be derived from path `{book}/{system}` directory prefix
 - V27. Core system book ! have `_system.yaml` at `{book}/{system}/` defining system metadata (id, name). Companion books (apocrypha, handbooks) ! NOT have `_system.yaml` — they contribute to the same system without redefining it.
@@ -281,6 +267,14 @@ The archetype system runs entirely inline on the class page via TomSelect multi-
 **Validation & Build dependencies (V73)**
 
 - V73. Validation and build scripts must run cleanly without external file dependencies (directories outside the repository). If an external port directory (e.g. `spheresofpower-wikidot-archive`) is required for optional source comparison, the script must check for its existence and skip the comparison gracefully (exit 0) rather than failing.
+
+**Audit remediation (V74–V78)**
+
+- V74. Public identity = `type + system + id`. For duplicate legacy `type:id` values within one system, the oldest deterministic record keeps the bare id; later records receive clean lowercase source-book-initial suffixes (then `-2`, `-3`, ... on collision). No entry is dropped.
+- V75. Every article entry has exactly one generic route: `/{system}/articles/{id}/` when system-scoped, `/articles/{id}/` otherwise. Missing raw collection entries fail the build.
+- V76. Post-build route/link checks resolve every internal href and fragment against `dist`; identity, cross-sphere, TOC, and performance checks fail non-zero on drift or budget violations.
+- V77. View Transition page state owns abort/teardown for listeners, observers, timers, async searches, and widgets; the mobile sidebar alone uses modal/`aria-hidden` semantics.
+- V78. Budgeted route classes stay within `docs/performance-budget.md`; retained migration artifacts are documented before removal.
 
 ---
 
@@ -368,7 +362,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T12 | .      | Wire might/guile index card descriptions (currently "wired in R1-6" stubs) | V3 |
 | T13 | .      | Add ErrataNotice to sphere/talent detail pages           | V1            |
 | T14 | .      | Create using-spheres intro pages for might, guile, champions | V1,I.pages |
-| T15 | x      | Create article page route — `ArticlePage.astro` renderer + thin per-article page pattern (first entry: USoP `using-spheres-of-power`) | V3,I.content  |
+| T15 | x      | Create generic article routes for every system-scoped and systemless article — `ArticlePage.astro` renderer + thin dynamic-route wrappers; authored aliases may coexist | V3,V75,I.content  |
 | T16 | x      | Consolidate `site.ts` into single `SYSTEMS` record; delete NAMESPACE_COLORS, NAMESPACE_LABELS, TAB_ORDER | V4,V5,I.config |
 | T17 | x      | Refactor `global.css` accent rules to use `--clr-ns` custom property via `data-system` attribute | V4,V10 |
 | T18 | x      | Drive TabNav from SYSTEMS config; derive currentTab() from route field | V5,I.config |
@@ -460,14 +454,21 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T104 | .      | Unify dual-sphere: eliminate `dual-sphere` tag/`dualSphere` duplication. `dualSphere` field = single source of truth. Tag auto-derived by tags.ts. Support `dualSphere:"any"` for universal pairing (Manabond Versatility). See `docs/cavekit-dual-sphere-refactor.md` | V58 |
 | T105 | x      | Create generalized `TabbedContent.astro` component — supports rendering content from `.md` entries (via `render()`) OR custom `.astro` content via named slots. Reusable across the wiki. | V48,V49 |
 | T106 | x      | Define custom schemas for `drawback`, `boon`, and `tradition` entries in `src/content.config.ts`. | I.content |
-| T107 | x      | Implement interactive Casting Tradition Builder component — cost calculation, validation, and export (Markdown/Foundry). Pure logic + tests done (`src/lib/castingTraditions/`); UI + page wiring absent. | V69,I.layout |
-| T108 | x      | Surface structured casting-tradition entries — render `drawback`/`boon`/`tradition` listing sections on casting-traditions tabs using `EntryCard.astro` (T110); add to search manifest; Pagefind-index. Today 364 entries resolve into maps but are rendered nowhere and excluded from search. | V65,V7,V70,V71,T110,I.pages |
+| T107 | x      | Implement and wire the interactive Casting Tradition Builder — cost calculation, validation, selection hydration, and Markdown/Foundry export on the Builder tab | V66,V67,V68,V69,I.layout |
+| T108 | x      | Surface structured casting-tradition entries on rules/tradition/drawback/boon tabs through `EntryCard.astro`; add them to the browse/search manifest and Pagefind scope | V65,V7,V70,V71,T110,I.pages |
 | T109 | x      | Fix tradition rule engine (B19–B22): honor `tradition.cam` + drawback/tradition `rules` in `getAllowedCastingAbilities`; add `selectionFromTradition` hydrator; scope choice `addsDrawbackValue` to general drawbacks; read CAM rule `mode`. Test against real resolved maps (Blood Magic fixed-con, Demonology highest). | V67,V68,B19,B20,B21,B22 |
 | T110 | x      | Extract generalized `EntryCard.astro` component — props: `name`, `sourceBookTitle`, `tagIds`, `Content` (rendered md), optional `href` (name → link), optional `metadata` (Record<string,string> rendered as compact key-value row between header and body, e.g. "Drawback Value: 1", "Boon Cost: 1 slot"). Tags via `TagBadge`. CSS uses `.talent-header` / `.talent-header-top` / `.talent-header-bottom` / `.entry-description` pattern. Retire inline reimplementations in `[sphere]/index.astro` (base-ability blocks), `ClassFeatureBlock.astro` (trait blocks) and replace with `EntryCard`. | V49,V70,V71 |
 | T111 | x      | Replace inline talent/feat/base-ability card markup in `[sphere]/index.astro` and inline class-trait markup in `ClassFeatureBlock.astro` with `EntryCard.astro` — visual parity required, no regressions. Run `bun run build` + spot-check sphere and class pages. | V49,V70,T110 |
 | T112 | x | Finish V70 migration: EntryCard in sphere index talent list + `TraitCatalogSection.astro`; search client JS shares tag-color source. Add build guard: `talent-header-top` markup outside `EntryCard.astro`/search allowlist fails build | V70,V49,B23 |
+| T113 | x | Enforce deterministic scoped identities and source-book suffixes for same-system duplicates; preserve every entry and emit `docs/identity-collision-report.json` | V74,I.resolveEntries |
+| T114 | x | Route every article through the generic system-scoped or systemless article route and fail when its raw collection entry is missing | V75,I.pages |
+| T115 | x | Make identity, cross-sphere, route/link, TOC, and performance checks canonical build gates | V76,I.build |
+| T116 | x | Add View Transition teardown, sidebar semantics, combobox/listbox semantics, and system-derived preference keys; repair token and responsive selector mismatches | V77 |
+| T117 | x | Add DOM behavior coverage for sidebar, collapse, and TOC lifecycle plus mobile Lighthouse route/config coverage; browser smoke remains a CI/runtime verification surface | V77 |
+| T118 | x | Reconcile SPEC/AGENTS/README/package/CI and document measured performance budgets and retained migration artifacts | V78 |
 
 **Recommended build order:**
+Audit remediation batch: T113→T114→T115→T116→T117→T118. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
 Then broken routes (T1→T2→T9→T25→T3→T4→T5→T6→T7→T8).
 Then stubs (T11→T12→T13→T14→T15→T10).
@@ -517,4 +518,8 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B22 | 2026-06-18 | CAM rule `mode` (`if-higher-than-base` \| `always` \| `fixed` \| `highest`) never read in `applyCamRule`; Con allowed unconditionally vs source rule "only if higher than base CAM" | V68 / T109 |
 | B23 | 2026-07-06 | T110/T111 marked `x` while inline `.talent-header` reimpl survived in `[sphere]/index.astro` talent list, `TraitCatalogSection.astro`, `search/index.astro` client JS — parity gate checked pages, not grep for primitive | V70 / T112 |
 | B24 | 2026-07-07 | Feat category validation scripts crashed on CI due to missing external Wikidot archive directory | V73 |
-
+| B25 | 2026-08-28 | New route-link audit helper exceeded the Fallow complexity gate and stopped the build before route verification | V63 |
+| B26 | 2026-08-28 | Collision-aware sphere rendering and archetype metadata formatting introduced Fallow complexity findings during the audit build | V63 |
+| B27 | 2026-08-28 | Authoritative fragment checking exposed migrated base markers beside headings and unresolved casting references rendered as dead anchors | V76 |
+| B28 | 2026-08-28 | New audit-script refactor missed repository formatter layout and stopped build during lint | V63 |
+| B29 | 2026-08-28 | Route audit found three generated TOC anchors for base markers whose migrated source used inline or apostrophe forms outside marker normalization | V76 |

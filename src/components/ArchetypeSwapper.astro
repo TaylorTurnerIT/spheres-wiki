@@ -57,14 +57,14 @@ const { options, archetypeFeatures, archetypeFeatureCollEntries } = Astro.props;
 
 <script>
 import { createTomSelect } from '@/lib/tomSelectInit';
+import { ordinal } from '@/lib/levelLabel';
 
 let activeTomSelect: any = null;
+let cleanupArchetypePage = () => {};
 
 document.addEventListener('astro:before-swap', () => {
-  if (activeTomSelect) {
-    activeTomSelect.destroy();
-    activeTomSelect = null;
-  }
+  cleanupArchetypePage();
+  cleanupArchetypePage = () => {};
 });
 
 function replaceInTextNodes(
@@ -98,6 +98,16 @@ function replaceInTextNodes(
 }
 
 document.addEventListener('astro:page-load', () => {
+  cleanupArchetypePage();
+  const controller = new AbortController();
+  const { signal } = controller;
+  cleanupArchetypePage = () => {
+    controller.abort();
+    if (activeTomSelect) {
+      activeTomSelect.destroy();
+      activeTomSelect = null;
+    }
+  };
 
   // ──── TRAIT CATALOG TOGGLE ──────────────────────────────────────────────
   document.querySelectorAll<HTMLButtonElement>('.trait-catalog-toggle').forEach(btn => {
@@ -112,11 +122,12 @@ document.addEventListener('astro:page-load', () => {
       btn.setAttribute('aria-expanded', (!willCollapse).toString());
       btn.classList.toggle('is-collapsed', willCollapse);
       wrapper.setAttribute('aria-hidden', willCollapse.toString());
+      wrapper.inert = willCollapse;
       wrapper.classList.toggle('is-open', !willCollapse);
       document.dispatchEvent(new CustomEvent('class-feature-collapse', {
         detail: { id: featureId, collapsed: willCollapse },
       }));
-    });
+    }, { signal });
   });
 
   function rebindTraitToggles() {
@@ -135,11 +146,12 @@ document.addEventListener('astro:page-load', () => {
         newBtn.setAttribute('aria-expanded', (!willCollapse).toString());
         newBtn.classList.toggle('is-collapsed', willCollapse);
         wrapper.setAttribute('aria-hidden', willCollapse.toString());
+        wrapper.inert = willCollapse;
         wrapper.classList.toggle('is-open', !willCollapse);
         document.dispatchEvent(new CustomEvent('class-feature-collapse', {
           detail: { id: featureId, collapsed: willCollapse },
         }));
-      });
+      }, { signal });
     });
   }
 
@@ -231,16 +243,6 @@ document.addEventListener('astro:page-load', () => {
   }
 
   // ── Full update flow (T-007) ──────────────────────────────────────────────
-
-  function ordinal(n: number): string {
-    if (n % 100 >= 11 && n % 100 <= 13) return 'th';
-    switch (n % 10) {
-      case 1: return 'st';
-      case 2: return 'nd';
-      case 3: return 'rd';
-      default: return 'th';
-    }
-  }
 
   function updateArchetypes(selectedArcIds: string[]) {
     // 1. Reset all base cards
@@ -577,6 +579,7 @@ document.addEventListener('astro:page-load', () => {
         }
       },
       onChange: function(values: string[]) {
+        if (signal.aborted) return;
         const urlParams = new URLSearchParams(window.location.search);
         if (values && values.length > 0) {
           urlParams.set('archetypes', values.join(','));
@@ -686,7 +689,7 @@ document.addEventListener('astro:page-load', () => {
 
   :global(.ts-dropdown .option.active) {
     background-color: color-mix(in srgb, var(--clr-active) 8%, transparent) !important;
-    color: var(--clr-body) !important;
+    color: var(--clr-text) !important;
   }
 
   :global(.ts-dropdown .option[aria-disabled="true"]) {

@@ -1,0 +1,27 @@
+---
+import { render } from "astro:content";
+import ArticlePage from "@/layouts/ArticlePage.astro";
+import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
+import { buildArticlePaths } from "@/lib/articleRoutes";
+import type { ArticleEntry } from "@/lib/types";
+
+interface Props {
+  article: ArticleEntry;
+  collEntry: any;
+  book: any;
+}
+
+export async function getStaticPaths() {
+  const { articleMap, bookMetaMap } = await resolveEntries();
+  const allCollEntries = await getCollEntriesMap();
+  return buildArticlePaths(articleMap.values(), allCollEntries, bookMetaMap)
+    .filter((path) => !path.params.system);
+}
+
+const { article, collEntry, book } = Astro.props as Props;
+const { Content, headings } = await render(collEntry);
+---
+
+<ArticlePage article={article} book={book} headings={headings}>
+  <Content />
+</ArticlePage>

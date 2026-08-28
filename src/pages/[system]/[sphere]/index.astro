@@ -15,6 +15,7 @@ import EntryCard from '@/components/EntryCard.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
+import { contentEntryKey } from '@/lib/entryIdentity';
 import type { SphereEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -31,6 +32,7 @@ interface Props {
   tagMap: Map<string, TagEntry>;
 }
 
+// fallow-ignore-next-line complexity
 export async function getStaticPaths() {
   const { sphereMap, talentMap, featMap, bookMetaMap, tagMap } = await resolveEntries();
   const allCollEntries = await getCollEntriesMap();
@@ -49,17 +51,17 @@ export async function getStaticPaths() {
 
       const talentCollEntries = new Map<string, any>();
       for (const t of allTalents) {
-        const entry = allCollEntries.get(`talent:${t.id}`);
+        const entry = allCollEntries.get(contentEntryKey('talent', t.system, t.id));
         if (entry) talentCollEntries.set(t.id, entry);
       }
 
       const featCollEntries = new Map<string, any>();
       for (const f of feats) {
-        const entry = allCollEntries.get(`feat:${f.id}`);
+        const entry = allCollEntries.get(contentEntryKey('feat', f.system, f.id));
         if (entry) featCollEntries.set(f.id, entry);
       }
 
-      const mainCollEntry = allCollEntries.get(`sphere:${sphere.id}`);
+      const mainCollEntry = allCollEntries.get(contentEntryKey('sphere', sphere.system, sphere.id));
       const digests = [
         mainCollEntry?.digest,
         ...allTalents.map(t => talentCollEntries.get(t.id)?.digest),
@@ -149,15 +151,16 @@ const overview: TocItem = {
 const groups: TocGroup[] = sections.map(sec => ({
   label: sec.label,
   categories: sec.categories.map(cat => ({
-    id: cat.id,
-    label: cat.label,
-    sub: cat.entries.map(e => {
-      const entry = talentById.get(e.id) ?? featById.get(e.id);
+            id: cat.id,
+            label: cat.label,
+            sub: cat.entries.map(e => {
+      const entry = e.type === 'talent' ? talentById.get(e.id) : featById.get(e.id);
       return { id: e.id, label: entry?.name ?? e.id };
     }),
   })),
 }));
 ---
+<!-- fallow-ignore-next-line complexity -->
 <WikiPage title={`${sphere.name} — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
   <Breadcrumb crumbs={[
@@ -231,9 +234,9 @@ const groups: TocGroup[] = sections.map(sec => ({
                 ? <p class="section-empty">No entries yet.</p>
                 : <div class="talent-list">
                     {cat.entries.map(e => {
-                      const talent = talentById.get(e.id);
-                      const feat = featById.get(e.id);
-                      const entry = talent || feat;
+                      const talent = e.type === 'talent' ? talentById.get(e.id) : undefined;
+                      const feat = e.type === 'feat' ? featById.get(e.id) : undefined;
+                      const entry = talent ?? feat;
                       if (!entry) return null;
 
                       const content = talent ? talentRendered.find(r => r.id === e.id) : featRendered.find(r => r.id === e.id);

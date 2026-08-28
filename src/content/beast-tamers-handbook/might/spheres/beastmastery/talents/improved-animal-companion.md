@@ -15,4 +15,4 @@ An improved companion chosen with this talent gains additional abilities and bon
 
 **Associated Feats:** Beast Speaker, Beast Speaker Mastery, Monstrous Mount, Monstrous Mount Mastery.
 
-**Wiki Note:** Some improved animal companions can be found in the [Sphere Bestiary](/sphere-bestiary), including in the Monster Collections.
+**Wiki Note:** Some improved animal companions can be found in the Sphere Bestiary, including in the Monster Collections. That legacy collection is not mirrored in this wiki yet.

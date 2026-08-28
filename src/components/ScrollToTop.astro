@@ -69,16 +69,21 @@
   }
 
   /* Support for system coloring based on data-system attribute */
-  .scroll-to-top[data-system="Spheres of Power"] { --clr-active: var(--clr-power); }
-  .scroll-to-top[data-system="Spheres of Might"] { --clr-active: var(--clr-might); }
-  .scroll-to-top[data-system="Spheres of Guile"] { --clr-active: var(--clr-guile); }
-  .scroll-to-top[data-system="Champions of the Spheres"] { --clr-active: var(--clr-champ); }
+  .scroll-to-top[data-system="power"] { --clr-active: var(--clr-power); }
+  .scroll-to-top[data-system="might"] { --clr-active: var(--clr-might); }
+  .scroll-to-top[data-system="guile"] { --clr-active: var(--clr-guile); }
+  .scroll-to-top[data-system="champions"] { --clr-active: var(--clr-champ); }
 </style>
 
 <script>
+  let cleanupScrollPage = () => {};
+
   function initScrollToTop() {
+    cleanupScrollPage();
     const btn = document.getElementById('scroll-to-top');
     if (!btn) return;
+    const controller = new AbortController();
+    const { signal } = controller;
 
     // Detect system from content area to apply appropriate accent color
     const contentArea = document.querySelector('.content-area');
@@ -104,12 +109,13 @@
 
     let isScrolling = false;
 
-    window.addEventListener('scroll', () => {
+    const onScroll = () => {
       if (window.scrollY === 0) {
         isScrolling = false;
       }
       toggleVisibility();
-    }, { passive: true });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true, signal });
 
     btn.addEventListener('click', () => {
       if (isScrolling) return;
@@ -118,11 +124,17 @@
         top: 0,
         behavior: 'smooth'
       });
-    });
+    }, { signal });
 
     // Initial check in case we're already scrolled down (e.g., after a refresh)
     toggleVisibility();
+    cleanupScrollPage = () => controller.abort();
   }
+
+  document.addEventListener('astro:before-swap', () => {
+    cleanupScrollPage();
+    cleanupScrollPage = () => {};
+  });
 
   // Bind on both initial load and view transition navigation
   document.addEventListener('astro:page-load', initScrollToTop);

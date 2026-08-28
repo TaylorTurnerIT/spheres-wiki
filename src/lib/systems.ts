@@ -39,7 +39,8 @@ export function systemIdKey(system: string, id: string): string {
 /**
  * Builds a "{system}:{id}" index over resolved entries so getStaticPaths
  * loops can replace repeated `[...map.values()].find(...)` linear scans
- * with O(1) lookups. First entry wins on collisions, matching find semantics.
+ * with O(1) lookups. Duplicate identities are a data error; silently keeping
+ * the first entry would reintroduce the content-hiding bug this index guards.
  */
 export function buildSystemIdIndex<T extends { id: string; system: string }>(
   entries: Iterable<T>,
@@ -47,7 +48,10 @@ export function buildSystemIdIndex<T extends { id: string; system: string }>(
   const index = new Map<string, T>();
   for (const entry of entries) {
     const key = systemIdKey(entry.system, entry.id);
-    if (!index.has(key)) index.set(key, entry);
+    if (index.has(key)) {
+      throw new Error(`Duplicate system identity: ${key}`);
+    }
+    index.set(key, entry);
   }
   return index;
 }

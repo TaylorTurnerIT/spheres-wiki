@@ -1,7 +1,7 @@
 # Spheres Wiki (BETA)
 
 Static reference wiki for the Spheres tabletop RPG system by Drop Dead Studios.
-Built with Astro 6.x + TypeScript. Replaces the existing Wikidot site with a fast, searchable static experience.
+Built with Astro 7.x + TypeScript. Replaces the existing Wikidot site with a fast, searchable static experience.
 
 ## Status: Beta
 The website is currently in **Beta**. Some content and functionality may be incomplete.
@@ -38,6 +38,7 @@ bunx astro check
 The build process automatically generates a search index using Pagefind.
 ```bash
 bun run build
+# runs tests, validation, static checks, Astro, Pagefind, route/link/TOC audits, and performance budgets
 # output in dist/
 
 # Preview the build locally

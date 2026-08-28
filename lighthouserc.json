@@ -2,8 +2,29 @@
   "ci": {
     "collect": {
       "staticDistDir": "./dist",
-      "url": ["/", "/power/", "/power/alteration/", "/might/", "/guile/"],
-      "numberOfRuns": 2
+      "url": [
+        "/",
+        "/search/",
+        "/power/",
+        "/power/alteration/",
+        "/power/classes/shifter/",
+        "/power/casting-traditions/",
+        "/might/",
+        "/guile/",
+        "/archetypes/",
+        "/tags/talent/"
+      ],
+      "numberOfRuns": 2,
+      "settings": {
+        "formFactor": "mobile",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 390,
+          "height": 844,
+          "deviceScaleFactor": 1
+        },
+        "throttlingMethod": "simulate"
+      }
     },
     "assert": {
       "assertions": {

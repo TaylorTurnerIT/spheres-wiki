@@ -287,7 +287,7 @@ function calculateBoonCost(state: ResolvedTraditionState): number {
 export function calculateAvailableBoonSlots(
   state: ResolvedTraditionState,
 ): number {
-  return Math.floor(calculateGeneralDrawbackValue(state) / 2);
+  return Math.max(0, Math.floor(calculateGeneralDrawbackValue(state) / 2));
 }
 
 export function calculateUnspentDrawbackValue(

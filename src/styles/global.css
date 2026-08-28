@@ -1540,17 +1540,17 @@ h6 {
 }
 
 /* ── Sphere button styling ──────────────────────────────── */
-.sphere-grid {
+.sphere-badge-grid {
   grid-template-columns: repeat(4, 1fr);
 }
 
 @media (max-width: 900px) {
-  .sphere-grid {
+  .sphere-badge-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 600px) {
-  .sphere-grid {
+  .sphere-badge-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -2641,5 +2641,5 @@ h6 {
 
 /* ── FOUC guard for TomSelect enhanced select elements ────── */
 select.ts-hidden-select {
-  display: none !important;
+  display: none;
 }

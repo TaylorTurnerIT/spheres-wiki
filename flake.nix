@@ -21,6 +21,7 @@
           ] ++ lib.optionals stdenv.isLinux [
             vips               # sharp (optional Astro dep) builds against this
             pkg-config
+            chromium           # Lighthouse/Puppeteer browser
           ];
 
           shellHook = ''
@@ -32,6 +33,10 @@
             fi
 
             export PATH="$PWD/node_modules/.bin:$PATH"
+
+            if command -v chromium >/dev/null 2>&1; then
+              export CHROME_PATH="$(command -v chromium)"
+            fi
           '';
         };
       }

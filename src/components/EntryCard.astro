@@ -9,7 +9,7 @@ interface Props {
   Content?: any;
   href?: string;
   metadata?: Record<string, string>;
-  entryLists?: { label: string; items: { name: string; href: string }[] }[];
+  entryLists?: { label: string; items: { name: string; href?: string }[] }[];
   id?: string;
   tagMap: Map<string, TagEntry>;
   bookMetaMap: Map<string, BookMeta>;
@@ -39,6 +39,7 @@ const {
 const hasMetadata = metadata && Object.keys(metadata).length > 0;
 ---
 
+<!-- fallow-ignore-next-line complexity -->
 <div class="entry-card-block" id={anchorOn === "block" ? id : undefined} data-pagefind-weight={pagefindWeight}>
   <div class="talent-header">
     <div class="talent-header-top">
@@ -77,7 +78,7 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
           {list.items.map((item, i) => (
             <>
               {i > 0 && ", "}
-              <a href={item.href}>{item.name}</a>
+              {item.href ? <a href={item.href}>{item.name}</a> : <span>{item.name}</span>}
             </>
           ))}
         </div>

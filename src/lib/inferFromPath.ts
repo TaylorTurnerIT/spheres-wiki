@@ -368,9 +368,9 @@ export function inferFromPath(fileId: string): InferredFields {
     system !== undefined ? { ...fields, system } : fields;
 
   if (parts.length === 2 && parts[0] === "tags") {
-    // Tags may optionally declare a system in frontmatter for UI scoping, but
-    // their directory does not imply one. A Power book can define a neutral tag.
-    return { type: "tag", id: parts[1] };
+    // A system directory scopes its tag definitions; tags in a neutral book
+    // remain systemless and may declare an explicit frontmatter system.
+    return withSystem({ type: "tag", id: parts[1] });
   }
   if (parts[0] === "articles") {
     return withSystem({ type: "article", id: parts[parts.length - 1] });

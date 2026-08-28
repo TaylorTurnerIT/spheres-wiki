@@ -10,6 +10,7 @@ interface Props {
   asSpan?: boolean;
   stripLinks?: boolean;
   showSystem?: boolean;
+  showTooltip?: boolean;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   asSpan = false,
   stripLinks = false,
   showSystem = false,
+  showTooltip = true,
 } = Astro.props;
 const tag = tagMap.get(tagId);
 const bookTitle =
@@ -40,9 +42,9 @@ const ttDesc = tag
 
 <span
   class="tag-wrapper"
-  data-tt-name={tag?.label}
-  data-tt-desc={ttDesc}
-  data-tt-source={bookTitle}
+  data-tt-name={showTooltip ? tag?.label : undefined}
+  data-tt-desc={showTooltip ? ttDesc : undefined}
+  data-tt-source={showTooltip ? bookTitle : undefined}
 >
   <TagElement
     href={!asSpan ? url(`/tags/${tagId}/`) : undefined}

@@ -86,6 +86,16 @@ const data: TraditionData = {
     },
     {
       type: "drawback",
+      id: "negative-adjustment",
+      system: "power",
+      name: "Negative Adjustment",
+      sourceBook: "ultimate-spheres-of-power",
+      tags: [],
+      drawbackKind: "general",
+      drawbackValue: -3,
+    },
+    {
+      type: "drawback",
       id: "card-casting",
       system: "power",
       name: "Card Casting",
@@ -246,6 +256,16 @@ describe("casting tradition builder logic", () => {
     );
 
     expect(calculateGeneralDrawbackValue(state)).toBe(2);
+  });
+
+  it("never exposes negative boon slots", () => {
+    const state = buildTraditionState(
+      { drawbacks: [{ id: "negative-adjustment" }], boons: [] },
+      data,
+    );
+
+    expect(calculateGeneralDrawbackValue(state)).toBe(-3);
+    expect(calculateAvailableBoonSlots(state)).toBe(0);
   });
 
   it("counts selected choice drawback values", () => {

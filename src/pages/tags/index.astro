@@ -4,10 +4,12 @@ import WikiPage from "@/layouts/WikiPage.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
-import { systemCssKey } from "@/lib/systems";
+import { buildSystemIdIndex, systemCssKey, systemIdKey } from "@/lib/systems";
+import { SYSTEMS } from "@/config/site";
 import { resolveEntries } from "@/lib/resolveEntries";
 
 const { tagMap, bookMetaMap, talentMap, featMap, sphereMap, classMap } = await resolveEntries();
+const sphereIndex = buildSystemIdIndex(sphereMap.values());
 
 // Count explicit tag usage per tag id, with per-system breakdown
 type TagStats = {
@@ -34,10 +36,7 @@ for (const f of featMap.values())    tally(f.tags, f.system);
 for (const s of sphereMap.values())  tally(s.tags, s.system);
 for (const c of classMap.values())   tally(c.tags, c.system);
 
-const SYSTEM_LABELS: Record<string, string> = {
-  power: "Power", might: "Might", guile: "Guile", champions: "Champ",
-};
-const SYSTEM_ORDER = ["power", "might", "guile", "champions"];
+const SYSTEM_ORDER = Object.keys(SYSTEMS);
 
 // Split + sort: system tags by priority, user tags by priority then alpha
 const builtinTags = [...tagMap.values()]
@@ -61,16 +60,20 @@ const unassignedTags: typeof userTags = [];
 
 for (const tag of userTags) {
   if (!tag.sphere) { unassignedTags.push(tag); continue; }
-  const sphereEntry = sphereMap.get(`sphere:${tag.sphere}`);
-  if (!sphereGroupMap.has(tag.sphere)) {
-    sphereGroupMap.set(tag.sphere, {
+  const sphereEntry = sphereIndex.get(
+    systemIdKey(tag.system ?? "power", tag.sphere),
+  );
+  const sphereSystem = sphereEntry?.system ?? tag.system ?? "power";
+  const sphereGroupKey = sphereSystem + ":" + tag.sphere;
+  if (!sphereGroupMap.has(sphereGroupKey)) {
+    sphereGroupMap.set(sphereGroupKey, {
       sphereId: tag.sphere,
       sphereName: sphereEntry?.name ?? tag.sphere,
-      sphereSystem: sphereEntry?.system ?? "power",
+      sphereSystem,
       tags: [],
     });
   }
-  sphereGroupMap.get(tag.sphere)!.tags.push(tag);
+  sphereGroupMap.get(sphereGroupKey)!.tags.push(tag);
 }
 
 const sphereGroups = [...sphereGroupMap.values()]
@@ -125,8 +128,8 @@ const sphereGroups = [...sphereGroupMap.values()]
                 )}
                 {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
                   <span class={`tag-sys-pip ${systemCssKey(sys)}`}
-                    title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
-                    {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
+                    title={`${s.bySystem[sys]} ${SYSTEMS[sys].label} entries`}>
+                    {SYSTEMS[sys].label} {s.bySystem[sys]}
                   </span>
                 ))}
               </div>
@@ -145,7 +148,7 @@ const sphereGroups = [...sphereGroupMap.values()]
         <div class="section-group" data-system={group.sphereSystem} style="margin-top: 24px;">
           <SectionHeading
             label={group.sphereName}
-            href={url(`/power/${group.sphereId}/`)}
+            href={url(`/${group.sphereSystem}/${group.sphereId}/`)}
             labelClass={`sphere-group-label ${systemCssKey(group.sphereSystem)}`}
           />
           <div class="tag-table">
@@ -161,8 +164,8 @@ const sphereGroups = [...sphereGroupMap.values()]
                     {s.total > 0 && <span class="tag-count">{s.total}</span>}
                     {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
                       <span class={`tag-sys-pip ${systemCssKey(sys)}`}
-                        title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
-                        {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
+                        title={`${s.bySystem[sys]} ${SYSTEMS[sys].label} entries`}>
+                        {SYSTEMS[sys].label} {s.bySystem[sys]}
                       </span>
                     ))}
                   </div>
@@ -188,9 +191,9 @@ const sphereGroups = [...sphereGroupMap.values()]
                   <div class="tag-row-stats">
                     {s.total > 0 && <span class="tag-count">{s.total}</span>}
                     {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
-                      <span class={`tag-sys-pip ${systemCssKey(sys)}`}
-                        title={`${s.bySystem[sys]} ${SYSTEM_LABELS[sys]} entries`}>
-                        {SYSTEM_LABELS[sys]} {s.bySystem[sys]}
+                    <span class={`tag-sys-pip ${systemCssKey(sys)}`}
+                      title={`${s.bySystem[sys]} ${SYSTEMS[sys].label} entries`}>
+                      {SYSTEMS[sys].label} {s.bySystem[sys]}
                       </span>
                     ))}
                   </div>

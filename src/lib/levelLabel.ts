@@ -15,3 +15,14 @@ export function levelLabel(level: number | number[]): string {
     return level.map((l) => `${l}${ordinal(l)}`).join(", ");
   return `${level}${ordinal(level)}`;
 }
+
+function minimumLevel(level: number | number[]): number {
+  return Array.isArray(level) ? Math.min(...level) : level;
+}
+
+export function compareByLevel(
+  a: { level: number | number[] },
+  b: { level: number | number[] },
+): number {
+  return minimumLevel(a.level) - minimumLevel(b.level);
+}

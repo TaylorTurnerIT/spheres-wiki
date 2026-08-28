@@ -10,6 +10,8 @@ import { renderMarkdownFragment } from "@/lib/renderBody";
 import { buildOrderedTagIds } from "@/lib/tags";
 import { getFeatUrl } from "@/lib/featCategories";
 import { resolveSystem, buildSystemIdIndex, systemIdKey } from "@/lib/systems";
+import { contentEntryKey } from "@/lib/entryIdentity";
+import { SYSTEMS } from "@/config/site";
 import type { TagEntry, BookMeta } from "@/lib/types";
 
 type EntryRow = {
@@ -39,6 +41,7 @@ interface Props {
   bookMetaMap: Map<string, BookMeta>;
 }
 
+// fallow-ignore-next-line complexity
 export async function getStaticPaths() {
   const { tagMap, talentMap, featMap, sphereMap, bookMetaMap } =
     await resolveEntries();
@@ -50,7 +53,7 @@ export async function getStaticPaths() {
   for (const [, tag] of tagMap) {
     const groups: SystemGroup[] = [];
 
-    for (const system of ["power", "might", "guile"] as const) {
+    for (const system of Object.keys(SYSTEMS)) {
       const rows: EntryRow[] = [];
 
       for (const [, talent] of talentMap) {
@@ -126,7 +129,7 @@ export async function getStaticPaths() {
       }
     }
 
-    const collEntry = allCollEntries.get(`tag:${tag.id}`);
+    const collEntry = allCollEntries.get(contentEntryKey("tag", undefined, tag.id));
     const cacheKey = [
       collEntry?.digest ?? tag.id,
       groups.map((g) => g.entries.map((e) => e.id).join(",")).join(";"),
@@ -245,6 +248,7 @@ const descriptionHtml = (await renderMarkdownFragment(tag.description)).replace(
                     tagId={tagId}
                     tagMap={tagMap}
                     bookMetaMap={bookMetaMap}
+                    showTooltip={false}
                   />
                 ))}
                 <span class="tag-entry-sphere">{row.sphereName}</span>{" "}

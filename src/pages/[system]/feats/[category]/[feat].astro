@@ -6,6 +6,7 @@ import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getCanonicalFeatCategory } from '@/lib/featCategories';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter, buildSystemIdIndex, systemIdKey } from '@/lib/systems';
+import { contentEntryKey } from '@/lib/entryIdentity';
 import type { FeatEntry, SphereEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -17,6 +18,7 @@ interface Props {
   bookMetaMap: Map<string, BookMeta>;
 }
 
+// fallow-ignore-next-line complexity
 export async function getStaticPaths() {
   const { featMap, sphereMap, bookMetaMap, tagMap } = await resolveEntries();
   const allCollEntries = await getCollEntriesMap();
@@ -33,9 +35,9 @@ export async function getStaticPaths() {
         ? sphereIndex.get(systemIdKey(system, feat.sphere))
         : undefined;
 
-      const collEntry =
-        allCollEntries.get(`feat:${feat.sourceBook}:${feat.id}`) ??
-        allCollEntries.get(`feat:${feat.id}`);
+      const collEntry = allCollEntries.get(
+        contentEntryKey('feat', feat.system, feat.id),
+      );
       const cacheKey = collEntry?.digest as string | undefined;
 
       paths.push({

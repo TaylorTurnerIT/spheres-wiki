@@ -158,12 +158,14 @@ export function createTocEngine(opts: TocEngineOptions): TocEngine | null {
   for (const { heading } of headings) observer.observe(heading);
 
   let rafPending = false;
+  let rafId: number | null = null;
   const scrollHandler = () => {
     if (rafPending) return;
     rafPending = true;
-    requestAnimationFrame(() => {
+    rafId = requestAnimationFrame(() => {
       recalc();
       rafPending = false;
+      rafId = null;
     });
   };
   window.addEventListener("scroll", scrollHandler, { passive: true });
@@ -174,6 +176,9 @@ export function createTocEngine(opts: TocEngineOptions): TocEngine | null {
     stop() {
       observer.disconnect();
       window.removeEventListener("scroll", scrollHandler);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+      rafPending = false;
+      rafId = null;
     },
   };
 }

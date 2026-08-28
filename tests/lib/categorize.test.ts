@@ -220,6 +220,47 @@ describe("buildSections", () => {
     expect(cats[1].entries).toHaveLength(0);
   });
 
+  it("claims same-id talents and feats independently", () => {
+    const sphere = makeSphere({
+      sectionDefinitions: [
+        {
+          label: "Entries",
+          categories: [{ label: "All", tiers: ["basic", "feat"] }],
+        },
+      ],
+    });
+    const sections = buildSections(
+      sphere,
+      [makeTalent("shared", "basic")],
+      [makeFeat("shared")],
+    );
+
+    expect(sections[0].categories[0].entries).toEqual([
+      { id: "shared", type: "talent" },
+      { id: "shared", type: "feat" },
+    ]);
+  });
+
+  it("normalizes category tag definitions before matching", () => {
+    const sphere = makeSphere({
+      sectionDefinitions: [
+        {
+          label: "Entries",
+          categories: [{ label: "Body", tiers: ["basic"], tags: ["BODY"] }],
+        },
+      ],
+    });
+    const sections = buildSections(
+      sphere,
+      [makeTalent("arm", "basic", ["body"])],
+      [],
+    );
+
+    expect(sections[0].categories[0].entries).toEqual([
+      { id: "arm", type: "talent" },
+    ]);
+  });
+
   it("entry matched in one section cannot appear in a later section", () => {
     const sphere = makeSphere({
       sectionDefinitions: [

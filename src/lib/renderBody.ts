@@ -11,8 +11,17 @@ export type BodySegment =
   | { type: "base-ability"; id: string };
 
 // Matches a standalone paragraph that is only [SomeName] — the base ability marker.
+// Legacy migrated spheres can place an H2 immediately after the marker
+// (`[Ability]## Shared Rules`), so the lookahead accepts that form too.
 // Case-insensitive so authors can write [Shapeshift] or [shapeshift].
-const MARKER_RE = /^\[([A-Za-z][A-Za-z0-9 -]*)\]\s*$/gm;
+const MARKER_RE = /^\[([\p{L}][^\]\r\n]*)\](?=\s*(?:##|$))/gmu;
+
+function markerId(label: string): string {
+  return label
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 /**
  * Strips a trailing `*Source: Book*` line from a markdown body (V42).
@@ -35,7 +44,7 @@ export function splitBodyOnMarkers(body: string | undefined): BodySegment[] {
     if (before) segments.push({ type: "markdown", text: before });
     segments.push({
       type: "base-ability",
-      id: match[1].toLowerCase().replace(/\s+/g, "-"),
+      id: markerId(match[1]),
     });
     lastIndex = match.index + match[0].length;
   }

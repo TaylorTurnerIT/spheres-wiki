@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { SYSTEMS } from "../src/config/site.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(__dirname, "../dist");
@@ -14,7 +15,29 @@ if (!fs.existsSync(distDir)) {
   process.exit(1);
 }
 
-// Only check sphere pages (power/might/guile/champ/spheres/*/index.html)
+// The current file-based route is /{system}/{sphere}/, so generated output is
+// /{system}/{sphere}/index.html (not /{system}/spheres/{sphere}/index.html).
+const SPHERE_TYPES = new Set(Object.keys(SYSTEMS));
+
+function isIndexFile(entry) {
+  return entry.isFile() && entry.name === "index.html";
+}
+
+function hasSphereRouteShape(fullPath) {
+  const parts = path.relative(distDir, fullPath).split(path.sep);
+  return (
+    parts.length === 3 &&
+    SPHERE_TYPES.has(parts[0]) &&
+    parts[2] === "index.html"
+  );
+}
+
+function isSphereIndex(entry, fullPath) {
+  return isIndexFile(entry) && hasSphereRouteShape(fullPath);
+}
+
+// Keep this check tied to the actual route shape so an empty page selection
+// cannot produce a false-green audit.
 function findSpherePages(dir) {
   const results = [];
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -22,31 +45,19 @@ function findSpherePages(dir) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       results.push(...findSpherePages(fullPath));
-    } else if (entry.name === "index.html") {
-      // Check if parent path matches {system}/spheres/{sphere}/
-      const parent = path.dirname(fullPath);
-      const grandparent = path.dirname(parent);
-      if (grandparent.endsWith("spheres") || parent.endsWith("spheres")) {
-        results.push(fullPath);
-      }
+      continue;
     }
+    if (isSphereIndex(entry, fullPath)) results.push(fullPath);
   }
   return results;
 }
 
-const SPHERE_TYPES = new Set(["power", "might", "guile", "champ"]);
-const SPHERE_PAGES = findSpherePages(distDir).filter((f) => {
-  // filter to sphere pages: matches {system}/spheres/{sphere}/index.html
-  const parts = f.split(path.sep);
-  const idx = parts.indexOf("spheres");
-  if (idx === -1) return false;
-  const system = parts[idx - 1];
-  return SPHERE_TYPES.has(system);
-});
+const SPHERE_PAGES = findSpherePages(distDir);
 
 // Feature blocks that should have TOC items matching their id
 const TRACKED_CLASSES = [
   "talent-entry",
+  "entry-card-block",
   "base-ability-block",
   "class-feature-block",
   "archetype-feature-block",
@@ -86,9 +97,18 @@ for (const pagePath of SPHERE_PAGES) {
   }
 }
 
-if (totalOrphans > 0) {
-  console.warn(`\n${totalOrphans} TOC-orphaned item(s) found.`);
-} else {
-  console.log("TOC audit passed — no orphaned items.");
+if (SPHERE_PAGES.length === 0) {
+  console.error(
+    "TOC audit failed — no generated sphere pages matched the route shape.",
+  );
+  process.exit(1);
 }
-process.exit(0);
+
+if (totalOrphans > 0) {
+  console.error(`\n${totalOrphans} TOC-orphaned item(s) found.`);
+  process.exit(1);
+} else {
+  console.log(
+    `TOC audit passed across ${SPHERE_PAGES.length} sphere pages — no orphaned items.`,
+  );
+}

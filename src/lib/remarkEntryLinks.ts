@@ -5,6 +5,39 @@ interface Options {
   base?: string;
 }
 
+const ENTRY_TYPES =
+  "talent|feat|sphere|class|ability|article|archetype|class-trait|tag";
+
+function prefixInternalPath(value: string, base: string): string {
+  if (!value.startsWith("/") || value.startsWith(base)) return value;
+  const basePath = base.endsWith("/") ? base.slice(0, -1) : base;
+  return `${basePath}${value}`;
+}
+
+function resolveExplicitEntryLink(value: string, base: string): string | null {
+  const match = value.match(new RegExp(`^@(?:(\\w+):)?(${ENTRY_TYPES}):(.+)$`));
+  if (!match) return null;
+
+  const [, system, rawType, rawId] = match;
+  const type = rawType === "ability" ? "talent" : rawType;
+  const [id, fragment] = rawId.split("#", 2);
+  const resolved = getEntryUrl(type, id, base, system);
+  return resolved && fragment ? `${resolved}#${fragment}` : resolved;
+}
+
+function replaceEntryAndInternalLinks(value: string, base: string): string {
+  return value.replace(/href=(["'])([^"']*)\1/g, (_attribute, quote, href) => {
+    if (href.startsWith("@")) {
+      const resolved = resolveExplicitEntryLink(href, base);
+      if (!resolved) {
+        throw new Error(`[remarkEntryLinks] Unresolved entry link: ${href}`);
+      }
+      return `href=${quote}${resolved}${quote}`;
+    }
+    return `href=${quote}${prefixInternalPath(href, base)}${quote}`;
+  });
+}
+
 // Injectable resolvers — pass stubs for unit tests to avoid filesystem scan
 export interface EntryResolvers {
   resolveSphere: (name: string, base: string) => string | null;
@@ -25,22 +58,28 @@ export default function remarkEntryLinks(options: Options = {}) {
     // Pass 1: resolve explicit @type:id links
     visit(tree, "link", (node: any) => {
       if (node.url?.startsWith("@")) {
-        const match = node.url.match(
-          /^@(talent|feat|sphere|class|ability):(.+)$/,
-        );
-        if (match) {
-          const type = match[1] === "ability" ? "talent" : match[1];
-          const id = match[2];
-          const url = getEntryUrl(type, id, base);
-          if (url) {
-            node.url = url;
-          } else {
-            console.warn(
-              `[remarkEntryLinks] Unresolved entry link: ${node.url}`,
-            );
-            node.url = "#";
-          }
+        const original = node.url;
+        const resolved = resolveExplicitEntryLink(original, base);
+        if (resolved) {
+          node.url = resolved;
+        } else if (
+          new RegExp(`^@(?:(\\w+):)?(${ENTRY_TYPES}):`).test(original)
+        ) {
+          throw new Error(
+            `[remarkEntryLinks] Unresolved entry link: ${original}`,
+          );
         }
+      } else if (typeof node.url === "string") {
+        const original = node.url;
+        node.url = prefixInternalPath(original, base);
+      }
+    });
+
+    // Raw HTML is parsed after remark plugins by rehype-raw, so explicit refs
+    // inside imported HTML anchors need the same conversion here.
+    visit(tree, "html", (node: any) => {
+      if (typeof node.value === "string") {
+        node.value = replaceEntryAndInternalLinks(node.value, base);
       }
     });
 
@@ -102,6 +141,7 @@ interface TextSegment {
   text: string;
 }
 
+// fallow-ignore-next-line complexity
 export function parsePrerequisiteText(
   text: string,
   base: string,
@@ -253,6 +293,7 @@ const STOPWORDS = new Set([
   "both",
 ]);
 
+// fallow-ignore-next-line complexity
 function findBareTalents(
   text: string,
   offset: number,
@@ -261,7 +302,8 @@ function findBareTalents(
   base: string,
   resolvers: EntryResolvers,
 ) {
-  const wordRegex = /[A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+)*(?:\s+\d+)?/g;
+  const wordRegex =
+    /\p{Lu}[\p{L}]*(?:[-'’][\p{L}]+)*(?:\s+\p{Lu}[\p{L}]*(?:[-'’][\p{L}]+)*)*(?:\s+\d+)?/gu;
   let match: RegExpExecArray | null;
 
   while ((match = wordRegex.exec(text)) !== null) {

@@ -17,9 +17,9 @@ Four player-facing systems: **Power**, **Might**, **Guile**, **Champions**. Path
 
 ## Tech stack
 
-- **Astro 6.x** static site generator + **TypeScript** (no server runtime)
-  - `experimental.rustCompiler: true` with `@astrojs/compiler-rs`
-  - `experimental.contentIntellisense: true`
+- **Astro 7.x** static site generator + **TypeScript** (no server runtime)
+  - Markdown uses the unified processor configured in `astro.config.mjs`
+  - Incremental content builds are enabled in `astro.config.mjs`
 - **Pagefind** for client-side search (index built at deploy)
 - **TomSelect** for select/dropdown UI; vanilla CSS (`src/styles/global.css`), no framework
 - Self-hosted fonts via `@fontsource/cinzel` + `@fontsource/crimson-text` — **no external CDN, no analytics** (see SPEC V11/V12)
@@ -35,7 +35,7 @@ All agents and contributors **MUST** use git worktrees for development isolation
 ```bash
 bun install            # setup
 bun run dev            # dev server → http://localhost:4321
-bun run build          # validate → check-idioms → check-base → fallow-audit → astro check → astro build → pagefind → check-toc
+bun run build          # test → lint → validate → identity/cross-sphere checks → Fallow → Astro → Pagefind → route/link/TOC/performance audits
 bun run preview        # serve the production build locally
 bun run validate       # content validation only (scripts/validate.mjs)
 bun run fallow         # run comprehensive codebase audit (dead code, health, duplication)
@@ -137,6 +137,10 @@ Adding content:
 | `src/content.config.ts` | `entrySchema` (Zod) + auto-discovery of real book collections (`_book.yaml` + `.md`) |
 | `src/lib/inferFromPath.ts` | derives `type`/`sphere`/`system` from content file path |
 | `src/lib/resolveEntries.ts` | builds `ResolvedMaps`, applies errata patches, links entries; keeps `_book.yaml` metadata for all books; fetches only real Astro collections; exports `getCollEntriesMap()` for cached raw entries |
+| `src/lib/entryIdentity.ts` | deterministic type/system identity assignment, source-book suffixes, and collision reports |
+| `src/lib/entryNormalization.ts` | one path-derived frontmatter normalization policy shared by Astro loading, resolution, and audits |
+| `src/lib/articleRoutes.ts` | generic system-scoped/systemless article route policy |
+| `src/lib/classProgression.ts` | shared class BAB/save/caster/talent progression calculations |
 | `src/lib/categorize.ts` | groups sphere's talents/feats into display sections (+ "Other") |
 | `src/lib/url.ts` | base-path-aware link helper — **use `url()` for every internal link** (SPEC C2) |
 | `src/lib/remarkEntryLinks.ts` | remark plugin: `@talent`/`@feat`/`@sphere`/`@class` refs & prerequisites → links during markdown build |
@@ -150,11 +154,15 @@ Adding content:
 | `src/lib/collapseClient.ts` | shared collapse/expand behavior (`bindCollapseToggle`, `setCollapsibleState`) — sole collapse implementation |
 | `src/lib/articleToc.ts` | `buildTocTree()` — builds nested TOC tree from rendered headings |
 | `src/lib/articleTocClient.ts` | thin adapter over `tocEngine` for article pages; imported via `<script>` in `ArticlePage.astro`. Exposes `window.reinitArticleToc` for `TabbedContent` after sidebar TOC inject. Must be standalone module (not inline in `ArticleTOC.astro`) — `ArticleTOC` renders inside `<template>` tags where scripts inert |
+| `src/lib/sidebarSemantics.ts` | shared responsive sidebar modal/focus semantics for View Transition pages |
 | `src/components/EntryCard.astro` | canonical named-entry card (V70/V71) — every talent/feat/trait/drawback/boon/tradition card |
 | `src/components/EntryDetailPage.astro` | canonical detail-page shell (breadcrumb + title + tags + prerequisites + body + source rail) — talent/feat/trait detail routes are thin `getStaticPaths` wrappers around it |
 | `src/components/SectionHeading.astro` | group/eyebrow section headings — no inline `.section-group-header` markup |
 | `src/components/SVGSprite.astro` | every sphere icon `<symbol>` (+ `si-fallback`) |
 | `scripts/check-idioms.mjs` | build-blocking idiom guard (V72): EntryCard primitive, cssKey ternaries, per-system color vars |
+| `scripts/check-identity-collisions.mjs` | build-blocking scoped identity/collision policy check and report generator |
+| `scripts/check-content-routes.mjs` | post-build assertion that public content entries have generated detail routes |
+| `scripts/check-performance.mjs` | post-build HTML budgets for the largest route classes |
 | `scripts/class-parser.mjs` | Parses Wikidot class source → class/feature/trait `.md` files |
 | `scripts/generate-bestial-traits.mjs` | Parses Shifter Bestial Trait Wikidot source → trait `.md` files |
 
@@ -172,7 +180,7 @@ Adding content:
 - **ACFs**: Alternate Class Features are `archetype-feature` entries with `isAlternateClassFeature: true`. Use `archetypeId: {class}-alternate-class-features` (virtual — no content file).
 - **Markdown config**: use `markdown.processor: unified({ remarkPlugins })` from `@astrojs/markdown-remark`. Do not use deprecated top-level `markdown.remarkPlugins`.
 - **Component scripts in `<template>` tags inert**: Component with `<script>` rendered inside `<template>` (e.g. `TabbedContent.astro` per-tab TOC templates) — script never executes. Client-side logic must live in external module imported via layout's `<script>` block (see `articleTocClient.ts` imported by `ArticlePage.astro`).
-- **Build strictness**: `bun run build` must complete without Astro check diagnostics, Fallow findings, idiom-guard violations, Vite warnings, unresolved remark links, or TOC audit failures. `vite.build.chunkSizeWarningLimit` intentionally strict at 200KB.
+- **Build strictness**: `bun run build` must complete without test/lint/validation failures, Astro check diagnostics, Fallow findings, idiom-guard violations, Vite warnings, unresolved remark links, missing content routes, broken links/anchors, TOC failures, or performance-budget violations. `vite.build.chunkSizeWarningLimit` intentionally strict at 200KB.
 - **Build concurrency — three rules in `getStaticPaths()`:**
   1. Never loop book metadata slugs with sequential `await getCollection()`. Metadata-only `_book.yaml` folders not collections. Use `getCollEntriesMap()` from `resolveEntries.ts` — built in same parallel pass as `resolveEntries()`, shared across page files.
   2. Multiple independent async ops (e.g. `render()` calls for set of entries) → wrap in `Promise.all([...])`, not `await` in loop.

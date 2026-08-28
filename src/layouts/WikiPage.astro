@@ -28,7 +28,7 @@ const {
   <div class="layout">
     <Sidebar />
 
-    <main class="main" id="main-content">
+    <main class="main" id="main-content" tabindex="-1">
       <TabNav />
       <div
         class="content-area"
@@ -45,7 +45,11 @@ const {
 </Base>
 
 <script>
+import { setSidebarSemantics } from '@/lib/sidebarSemantics';
+
 const FOCUSABLE = 'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+let cleanupSidebarPage = () => {};
 
 function trapFocus(sidebar: HTMLElement, e: KeyboardEvent) {
   const focusable = [...sidebar.querySelectorAll<HTMLElement>(FOCUSABLE)];
@@ -59,42 +63,74 @@ function trapFocus(sidebar: HTMLElement, e: KeyboardEvent) {
   }
 }
 
+document.addEventListener('astro:before-swap', () => {
+  cleanupSidebarPage();
+  cleanupSidebarPage = () => {};
+});
+
 document.addEventListener('astro:page-load', () => {
+  cleanupSidebarPage();
   const toggle  = document.getElementById('sidebar-toggle');
   const sidebar = document.getElementById('site-sidebar') as HTMLElement | null;
   const close   = document.getElementById('sidebar-close');
+  if (!sidebar) return;
+  const sidebarEl = sidebar;
+
+  const controller = new AbortController();
+  const media = window.matchMedia('(max-width: 1024px)');
+  let wasOpen = false;
+  let restoreFocus: HTMLElement | null = null;
+
+  function syncSemantics() {
+    const mobile = media.matches;
+    if (!mobile && wasOpen) {
+      closeSidebar(false);
+      wasOpen = false;
+    }
+    setSidebarSemantics(sidebarEl, mobile, wasOpen);
+  }
 
   function openSidebar() {
-    if (!sidebar) return;
-    sidebar.classList.add('open');
-    sidebar.removeAttribute('aria-hidden');
+    if (!media.matches) return;
+    restoreFocus = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
+    wasOpen = true;
+    sidebarEl.classList.add('open');
+    setSidebarSemantics(sidebarEl, true, true);
     toggle?.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
     // Move focus to first focusable element inside
-    const first = sidebar.querySelector<HTMLElement>(FOCUSABLE);
+    const first = sidebarEl.querySelector<HTMLElement>(FOCUSABLE);
     first?.focus();
-    sidebar.addEventListener('keydown', handleKey);
   }
 
-  function closeSidebar() {
-    if (!sidebar) return;
-    sidebar.classList.remove('open');
-    sidebar.setAttribute('aria-hidden', 'true');
+  function closeSidebar(returnFocus = true) {
+    wasOpen = false;
+    sidebarEl.classList.remove('open');
+    setSidebarSemantics(sidebarEl, media.matches, false);
     toggle?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
-    sidebar.removeEventListener('keydown', handleKey);
-    toggle?.focus();
+    if (returnFocus) (restoreFocus ?? toggle)?.focus();
+    restoreFocus = null;
   }
 
   function handleKey(e: KeyboardEvent) {
     if (e.key === 'Escape') { closeSidebar(); return; }
-    if (e.key === 'Tab' && sidebar) trapFocus(sidebar, e);
+    if (e.key === 'Tab' && wasOpen) trapFocus(sidebarEl, e);
   }
 
-  toggle?.addEventListener('click', openSidebar);
-  close?.addEventListener('click', closeSidebar);
-  sidebar?.addEventListener('click', e => {
-    if (e.target === sidebar) closeSidebar();
-  });
+  toggle?.setAttribute('aria-controls', 'site-sidebar');
+  toggle?.addEventListener('click', openSidebar, { signal: controller.signal });
+  close?.addEventListener('click', () => closeSidebar(), { signal: controller.signal });
+  sidebarEl.addEventListener('keydown', handleKey, { signal: controller.signal });
+  sidebarEl.addEventListener('click', e => {
+    if (e.target === sidebarEl) closeSidebar();
+  }, { signal: controller.signal });
+  media.addEventListener('change', syncSemantics, { signal: controller.signal });
+  syncSemantics();
+
+  cleanupSidebarPage = () => {
+    controller.abort();
+    closeSidebar(false);
+  };
 });
 </script>

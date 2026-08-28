@@ -3,12 +3,20 @@ import path from "node:path";
 import { StringDecoder } from "node:string_decoder";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
+import {
+  assignSystemUniqueIds,
+  contentEntryKey,
+  type IdentityRecord,
+} from "./entryIdentity";
+import { normalizeEntryData } from "./entryNormalization";
 import { getPathDerivedFeatUrl } from "./featCategories";
-import { inferFromPath } from "./inferFromPath";
 
-// Resolved relative to this module file so it works regardless of process.cwd()
+// Prefer the source tree so bundled Astro prerender chunks can resolve content.
 const _moduleDir = path.dirname(fileURLToPath(import.meta.url));
-const DEFAULT_CONTENT_DIR = path.resolve(_moduleDir, "../content");
+const SOURCE_CONTENT_DIR = path.resolve(process.cwd(), "src/content");
+const DEFAULT_CONTENT_DIR = fs.existsSync(SOURCE_CONTENT_DIR)
+  ? SOURCE_CONTENT_DIR
+  : path.resolve(_moduleDir, "../content");
 const FRONTMATTER_CHUNK_SIZE = 4096;
 const MAX_FRONTMATTER_BYTES = 256 * 1024;
 const ENTRY_FRONTMATTER_KEYS = new Set([
@@ -17,11 +25,16 @@ const ENTRY_FRONTMATTER_KEYS = new Set([
   "sphere",
   "system",
   "type",
+  "modifies",
 ]);
 
 let dbCache: Map<string, any> | null = null;
 let nameIndex: Map<string, any> | null = null;
-const bookYamlCache = new Map<string, { system?: string }>();
+const unscopedIdIndex = new Map<string, any[]>();
+const bookYamlCache = new Map<
+  string,
+  { system?: string; title?: string; publishedDate?: string }
+>();
 
 interface EntryCache {
   entries: Map<string, any>;
@@ -142,7 +155,7 @@ function parseUnquotedScalar(value: string): string {
   return (commentIndex === -1 ? value : value.slice(0, commentIndex)).trim();
 }
 
-function readLegacyBookSystem(contentDir: string, bookSlug: string) {
+function readBookMeta(contentDir: string, bookSlug: string) {
   if (!bookYamlCache.has(bookSlug)) {
     try {
       const bookYamlPath = path.join(contentDir, bookSlug, "_book.yaml");
@@ -160,6 +173,11 @@ function readLegacyBookSystem(contentDir: string, bookSlug: string) {
   return bookYamlCache.get(bookSlug)?.system;
 }
 
+function getBookMeta(contentDir: string, bookSlug: string) {
+  readBookMeta(contentDir, bookSlug);
+  return bookYamlCache.get(bookSlug) ?? {};
+}
+
 function createCache(contentDir: string): EntryCache {
   const cache: EntryCache = {
     entries: new Map(),
@@ -168,44 +186,65 @@ function createCache(contentDir: string): EntryCache {
 
   if (!fs.existsSync(contentDir)) return cache;
 
-  for (const filePath of getFilesRecursively(contentDir)) {
-    const entry = readEntry(contentDir, filePath);
-    if (entry) addEntryToCache(cache, entry);
+  const records: IdentityRecord[] = [];
+  for (const [sourceIndex, filePath] of getFilesRecursively(
+    contentDir,
+  ).entries()) {
+    const scanned = readEntry(contentDir, filePath);
+    if (!scanned) continue;
+    records.push({ ...scanned, sourceIndex });
+  }
+
+  for (const record of assignSystemUniqueIds(records)) {
+    if (!record.entry.modifies) addEntryToCache(cache, record.entry);
   }
 
   return cache;
 }
 
-function readEntry(contentDir: string, filePath: string): any | null {
+function readEntry(
+  contentDir: string,
+  filePath: string,
+): (IdentityRecord & { entry: any }) | null {
   const relPath = path.relative(contentDir, filePath);
   const parts = relPath.split(path.sep);
   const bookSlug = parts[0];
   const entryPath = parts.slice(1).join("/");
-  const inferred = inferFromPath(entryPath);
   const frontmatter = readFrontmatter(filePath);
-  const entryType = frontmatter.type || inferred.type;
-  const entryId = frontmatter.id || inferred.id;
+  const bookMeta = getBookMeta(contentDir, bookSlug);
+  const normalized = normalizeEntryData(
+    frontmatter,
+    entryPath,
+    bookMeta.system,
+  );
+  const entryType =
+    typeof normalized.type === "string" ? normalized.type : null;
+  const entryId = typeof normalized.id === "string" ? normalized.id : null;
   if (!entryType || !entryId) return null;
 
-  const system =
-    frontmatter.system ??
-    inferred.system ??
-    readLegacyBookSystem(contentDir, bookSlug);
-
   return {
-    ...inferred,
-    ...frontmatter,
-    type: entryType,
-    id: entryId,
-    // explicit system wins; fall back to inferred.system (path-derived) if undefined
-    ...(system ? { system } : {}),
+    sourceBook: bookSlug,
+    sourceBookTitle: bookMeta.title,
+    publishedDate: bookMeta.publishedDate ?? "1970-01-01",
+    sourceIndex: 0,
+    entry: {
+      ...normalized,
+      type: entryType,
+      id: entryId,
+    },
   };
 }
 
 function addEntryToCache(cache: EntryCache, entry: any): void {
-  cache.entries.set(`${entry.type}:${entry.id}`, entry);
+  cache.entries.set(contentEntryKey(entry.type, entry.system, entry.id), entry);
+  const unscopedKey = `${entry.type}:${entry.id}`;
+  const unscoped = unscopedIdIndex.get(unscopedKey) ?? [];
+  unscoped.push(entry);
+  unscopedIdIndex.set(unscopedKey, unscoped);
   if (!entry.name) return;
 
+  const systemNameKey = `${entry.type}:${entry.system ?? "_"}:${entry.name.toLowerCase()}`;
+  if (!cache.names.has(systemNameKey)) cache.names.set(systemNameKey, entry);
   const nameKey = `${entry.type}:${entry.name.toLowerCase()}`;
   // First entry wins (errata handled elsewhere)
   if (!cache.names.has(nameKey)) {
@@ -224,9 +263,12 @@ export function getEntryUrl(
   type: string,
   id: string,
   base: string = "/",
+  system?: string,
 ): string | null {
   ensureCache();
-  const entry = dbCache?.get(`${type}:${id}`);
+  const entry = system
+    ? dbCache?.get(contentEntryKey(type, system, id))
+    : unscopedIdIndex.get(`${type}:${id}`)?.[0];
   if (!entry) return null;
   return buildEntryUrl(entry, base);
 }
@@ -235,9 +277,13 @@ export function getEntryUrlByName(
   type: string,
   name: string,
   base: string = "/",
+  system?: string,
 ): string | null {
   ensureCache();
-  const entry = nameIndex?.get(`${type}:${name.toLowerCase()}`);
+  const entry =
+    nameIndex?.get(
+      `${type}:${system ?? ""}${system ? ":" : ""}${name.toLowerCase()}`,
+    ) ?? nameIndex?.get(`${type}:${name.toLowerCase()}`);
   if (!entry) return null;
   return buildEntryUrl(entry, base);
 }
@@ -256,6 +302,10 @@ const ENTRY_URL_BUILDERS: Record<
   feat: buildFeatUrl,
   sphere: buildSphereUrl,
   class: buildClassUrl,
+  article: buildArticleUrl,
+  archetype: buildArchetypeUrl,
+  "class-trait": buildClassTraitUrl,
+  tag: buildTagUrl,
 };
 
 function hasFields(entry: any, fields: string[]): boolean {
@@ -280,4 +330,26 @@ function buildSphereUrl(entry: any, basePath: string): string | null {
 function buildClassUrl(entry: any, basePath: string): string | null {
   if (!hasFields(entry, ["system", "id"])) return null;
   return `${basePath}/${entry.system}/classes/${entry.id}/`;
+}
+
+function buildArticleUrl(entry: any, basePath: string): string | null {
+  if (!hasFields(entry, ["id"])) return null;
+  return entry.system
+    ? `${basePath}/${entry.system}/articles/${entry.id}/`
+    : `${basePath}/articles/${entry.id}/`;
+}
+
+function buildArchetypeUrl(entry: any, basePath: string): string | null {
+  if (!hasFields(entry, ["system", "className", "id"])) return null;
+  return `${basePath}/${entry.system}/classes/${entry.className}/${entry.id}/`;
+}
+
+function buildClassTraitUrl(entry: any, basePath: string): string | null {
+  if (!hasFields(entry, ["system", "className", "id"])) return null;
+  return `${basePath}/${entry.system}/classes/${entry.className}/traits/${entry.id}/`;
+}
+
+function buildTagUrl(entry: any, basePath: string): string | null {
+  if (!hasFields(entry, ["id"])) return null;
+  return `${basePath}/tags/${entry.id}/`;
 }

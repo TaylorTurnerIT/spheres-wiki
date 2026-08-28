@@ -6,10 +6,15 @@ import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
 import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
+import EntryCard from '@/components/EntryCard.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
+import { buildSystemIdIndex, systemIdKey } from '@/lib/systems';
+import { contentEntryKey } from '@/lib/entryIdentity';
+import { buildOrderedTagIds } from '@/lib/tags';
+import { getFeatUrl } from '@/lib/featCategories';
 import type { ClassEntry, ArchetypeEntry, ArchetypeFeatureEntry, ClassTraitEntry, FeatEntry, BookMeta } from '@/lib/types';
-import { levelLabel, ordinal } from '@/lib/levelLabel';
+import { compareByLevel, levelLabel, ordinal } from '@/lib/levelLabel';
 
 interface Props {
   archetype: ArchetypeEntry;
@@ -22,11 +27,15 @@ interface Props {
   associatedFeats: FeatEntry[];
   associatedFeatsColl: Map<string, any>;
   sourceBook: BookMeta | undefined;
+  tagMap: Map<string, import('@/lib/types').TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
 }
 
+// fallow-ignore-next-line complexity
 export async function getStaticPaths() {
-  const { classMap, archetypeMap, archetypeFeatureMap, classTraitMap, featMap, bookMetaMap } = await resolveEntries();
+  const { classMap, archetypeMap, archetypeFeatureMap, classTraitMap, featMap, bookMetaMap, tagMap } = await resolveEntries();
   const allCollEntries = await getCollEntriesMap();
+  const classIndex = buildSystemIdIndex(classMap.values());
 
   const paths = [];
 
@@ -34,20 +43,20 @@ export async function getStaticPaths() {
     for (const [, archetype] of archetypeMap) {
       if (archetype.system !== system) continue;
 
-      const cls = classMap.get(`class:${archetype.className}`);
+      const cls =
+        classIndex.get(systemIdKey(system, archetype.className)) ??
+        classIndex.get(systemIdKey('pf1e', archetype.className));
       if (!cls) continue;
 
       const features = [...archetypeFeatureMap.values()]
-        .filter(f => f.archetypeId === archetype.id)
-        .sort((a, b) => {
-          const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
-          const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
-          return aMin - bMin;
-        });
+        .filter(f => f.system === system && f.archetypeId === archetype.id)
+        .sort(compareByLevel);
 
       const featureCollEntries = new Map<string, any>();
       for (const f of features) {
-        const entry = allCollEntries.get(`archetype-feature:${f.id}`);
+        const entry = allCollEntries.get(
+          contentEntryKey('archetype-feature', f.system, f.id),
+        );
         if (entry) featureCollEntries.set(f.id, entry);
       }
 
@@ -68,7 +77,9 @@ export async function getStaticPaths() {
 
       const associatedTraitsColl = new Map<string, any>();
       for (const t of associatedTraits) {
-        const entry = allCollEntries.get(`class-trait:${t.id}`);
+        const entry = allCollEntries.get(
+          contentEntryKey('class-trait', t.system, t.id),
+        );
         if (entry) associatedTraitsColl.set(t.id, entry);
       }
 
@@ -83,11 +94,15 @@ export async function getStaticPaths() {
 
       const associatedFeatsColl = new Map<string, any>();
       for (const f of associatedFeats) {
-        const entry = allCollEntries.get(`feat:${f.id}`);
+        const entry = allCollEntries.get(
+          contentEntryKey('feat', f.system, f.id),
+        );
         if (entry) associatedFeatsColl.set(f.id, entry);
       }
 
-      const archetypeCollEntry = allCollEntries.get(`archetype:${archetype.id}`);
+      const archetypeCollEntry = allCollEntries.get(
+        contentEntryKey('archetype', archetype.system, archetype.id),
+      );
       const digests = [
         archetypeCollEntry?.digest,
         ...features.map(f => featureCollEntries.get(f.id)?.digest),
@@ -109,6 +124,8 @@ export async function getStaticPaths() {
           associatedFeats,
           associatedFeatsColl,
           sourceBook: bookMetaMap.get(archetype.sourceBook),
+          tagMap,
+          bookMetaMap,
         },
         ...(cacheKey ? { cacheKey } : {}),
       });
@@ -130,6 +147,8 @@ const {
   associatedFeats,
   associatedFeatsColl,
   sourceBook,
+  tagMap,
+  bookMetaMap,
 } = Astro.props;
 
 const sysConfig = resolveSystem(system!)!;
@@ -138,28 +157,31 @@ const searchFilter = getSystemSearchFilter(system!);
 const ArchetypeContent = archetypeCollEntry ? (await render(archetypeCollEntry)).Content : null;
 
 type RenderedFeature = { feature: ArchetypeFeatureEntry; Content: any };
-const featureRendered: RenderedFeature[] = [];
-for (const feature of features) {
-  const collEntry = featureCollEntries.get(feature.id);
-  const { Content } = collEntry ? await render(collEntry) : { Content: null };
-  featureRendered.push({ feature, Content });
-}
+const featureRendered: RenderedFeature[] = await Promise.all(
+  features.map(async (feature) => {
+    const collEntry = featureCollEntries.get(feature.id);
+    const { Content } = collEntry ? await render(collEntry) : { Content: null };
+    return { feature, Content };
+  }),
+);
 
 type RenderedTrait = { trait: ClassTraitEntry; Content: any };
-const traitsRendered: RenderedTrait[] = [];
-for (const trait of associatedTraits) {
-  const collEntry = associatedTraitsColl.get(trait.id);
-  const { Content } = collEntry ? await render(collEntry) : { Content: null };
-  traitsRendered.push({ trait, Content });
-}
+const traitsRendered: RenderedTrait[] = await Promise.all(
+  associatedTraits.map(async (trait) => {
+    const collEntry = associatedTraitsColl.get(trait.id);
+    const { Content } = collEntry ? await render(collEntry) : { Content: null };
+    return { trait, Content };
+  }),
+);
 
 type RenderedFeat = { feat: FeatEntry; Content: any };
-const featsRendered: RenderedFeat[] = [];
-for (const feat of associatedFeats) {
-  const collEntry = associatedFeatsColl.get(feat.id);
-  const { Content } = collEntry ? await render(collEntry) : { Content: null };
-  featsRendered.push({ feat, Content });
-}
+const featsRendered: RenderedFeat[] = await Promise.all(
+  associatedFeats.map(async (feat) => {
+    const collEntry = associatedFeatsColl.get(feat.id);
+    const { Content } = collEntry ? await render(collEntry) : { Content: null };
+    return { feat, Content };
+  }),
+);
 
 const tocOverview: TocItem = { id: 'overview', label: 'Overview' };
 const tocGroups: TocGroup[] = [];
@@ -204,13 +226,28 @@ const formatBaseFeatureName = (id: string) => {
   const clean = id.replace(/^[a-z0-9]+-/, '').replace(/-/g, ' ');
   return clean.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 };
+
+// fallow-ignore-next-line complexity
+function featureMetadata(feature: ArchetypeFeatureEntry): Record<string, string> {
+  return {
+    Level: levelLabel(feature.level),
+    ...(feature.replaces?.length
+      ? { Replaces: feature.replaces.map(formatBaseFeatureName).join(', ') }
+      : {}),
+    ...(feature.alters?.length
+      ? { Alters: feature.alters.map(formatBaseFeatureName).join(', ') }
+      : {}),
+  };
+}
 ---
 <WikiPage title={`${archetype.name} — ${cls.name} Archetype — ${sysConfig.label} Wiki`} activeNamespace={system}>
 
   <Breadcrumb crumbs={[
     { label: "Home", href: url("/") },
     { label: sysConfig.label, href: url(`/${system}/`) },
-    { label: cls.name, href: url(`/${system}/classes/${cls.id}/`) },
+    ...(cls.system === system
+      ? [{ label: cls.name, href: url(`/${system}/classes/${cls.id}/`) }]
+      : [{ label: cls.name }]),
     { label: archetype.name },
   ]} />
 
@@ -241,28 +278,16 @@ const formatBaseFeatureName = (id: string) => {
       )}
 
       {featureRendered.map(({ feature, Content: FeatureContent }) => (
-        <div class="class-feature" id={feature.id}>
-          <h3 class="class-feature-heading">
-            {feature.name}
-            <span class="class-feature-level"> ({levelLabel(feature.level)})</span>
-          </h3>
-
-          {((feature.replaces && feature.replaces.length > 0) || (feature.alters && feature.alters.length > 0)) && (
-            <div class="archetype-mod-info">
-              {feature.replaces && feature.replaces.length > 0 && (
-                <span class="info-replace"><strong>Replaces:</strong> {feature.replaces.map(formatBaseFeatureName).join(', ')}</span>
-              )}
-              {feature.alters && feature.alters.length > 0 && (
-                <span class="info-alter"><strong>Alters:</strong> {feature.alters.map(formatBaseFeatureName).join(', ')}</span>
-              )}
-            </div>
-          )}
-
-          {FeatureContent
-            ? <div class="entry-description"><FeatureContent /></div>
-            : null
-          }
-        </div>
+        <EntryCard
+          id={feature.id}
+          name={feature.name}
+          sourceBookTitle={bookMetaMap.get(feature.sourceBook)?.title}
+          tagIds={buildOrderedTagIds(feature, bookMetaMap, tagMap, {})}
+          Content={FeatureContent}
+          metadata={featureMetadata(feature)}
+          tagMap={tagMap}
+          bookMetaMap={bookMetaMap}
+        />
       ))}
 
       {traitsRendered.length > 0 && (
@@ -270,18 +295,17 @@ const formatBaseFeatureName = (id: string) => {
           <h2 class="section-title" id="associated-traits">Associated Bestial Traits</h2>
           <div class="associated-section">
             {traitsRendered.map(({ trait, Content: TraitContent }) => (
-              <div class="class-trait" id={trait.id}>
-                <h3 class="class-trait-name">
-                  {trait.name}
-                  {trait.requires && (
-                    <span class="class-trait-requires"> (requires {trait.requires})</span>
-                  )}
-                </h3>
-                {TraitContent
-                  ? <div class="entry-description"><TraitContent /></div>
-                  : null
-                }
-              </div>
+              <EntryCard
+                id={trait.id}
+                name={trait.name}
+                href={url(`/${system}/classes/${cls.id}/traits/${trait.id}/`)}
+                sourceBookTitle={bookMetaMap.get(trait.sourceBook)?.title}
+                tagIds={buildOrderedTagIds(trait, bookMetaMap, tagMap, {})}
+                Content={TraitContent}
+                metadata={trait.requires ? { Prerequisites: trait.requires } : undefined}
+                tagMap={tagMap}
+                bookMetaMap={bookMetaMap}
+              />
             ))}
           </div>
         </>
@@ -292,15 +316,16 @@ const formatBaseFeatureName = (id: string) => {
           <h2 class="section-title" id="associated-feats">Associated Feats</h2>
           <div class="associated-section">
             {featsRendered.map(({ feat, Content: FeatContent }) => (
-              <div class="class-feat" id={feat.id}>
-                <h3 class="class-trait-name">
-                  {feat.name}
-                </h3>
-                {FeatContent
-                  ? <div class="entry-description"><FeatContent /></div>
-                  : null
-                }
-              </div>
+              <EntryCard
+                id={feat.id}
+                name={feat.name}
+                href={url(getFeatUrl(feat, tagMap))}
+                sourceBookTitle={bookMetaMap.get(feat.sourceBook)?.title}
+                tagIds={buildOrderedTagIds(feat, bookMetaMap, tagMap, {})}
+                Content={FeatContent}
+                tagMap={tagMap}
+                bookMetaMap={bookMetaMap}
+              />
             ))}
           </div>
         </>
@@ -328,80 +353,9 @@ const formatBaseFeatureName = (id: string) => {
     padding-bottom: 0.5rem;
   }
 
-  .class-feature {
-    margin-top: 2rem;
-    position: relative;
-  }
-
-  .class-feature-heading {
-    font-family: var(--font-display);
-    font-size: var(--fs-lg);
-    font-weight: 700;
-    color: var(--clr-active);
-    letter-spacing: 0.02em;
-    margin-bottom: 0.4em;
-    padding-bottom: 0.25em;
-    border-bottom: 1px solid var(--clr-border);
-    line-height: 1.2;
-  }
-
-  .class-feature-level {
-    font-size: 0.75em;
-    font-weight: 600;
-    opacity: 0.75;
-    letter-spacing: 0;
-  }
-
-  .archetype-mod-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-    margin: 0 0 0.65rem;
-    font-size: var(--fs-xs);
-    font-family: var(--font-display);
-  }
-
-  .info-replace {
-    color: var(--clr-active);
-    letter-spacing: 0.02em;
-  }
-
-  .info-replace::before { content: "▸ "; }
-
-  .info-alter {
-    color: var(--clr-brand);
-    letter-spacing: 0.02em;
-  }
-
-  .info-alter::before { content: "▸ "; }
-
-  .info-replace strong, .info-alter strong { font-weight: 700; }
-
   .associated-section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
-
-  .class-trait, .class-feat {
-    padding: 1.25rem;
-    background: color-mix(in srgb, var(--clr-brand) 3%, transparent);
-    border-left: 3px solid var(--clr-brand);
-    border-radius: 6px;
-  }
-
-  .class-trait-name {
-    font-family: var(--font-display);
-    font-size: var(--fs-md);
-    font-weight: 700;
-    color: var(--clr-brand);
-    margin: 0 0 0.5rem 0;
-  }
-
-  .class-trait-requires {
-    font-size: 0.85em;
-    font-weight: normal;
-    font-style: italic;
-    opacity: 0.75;
   }
 </style>

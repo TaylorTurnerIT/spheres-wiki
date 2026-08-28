@@ -326,7 +326,8 @@ export type AnyEntry =
   | BoonEntry
   | TraditionEntry;
 
-export type EntryKey = string; // "type:id"
+/** Key used by a typed map: "system:id" (the map supplies the type). */
+export type EntryKey = string;
 
 export type ResolvedMaps = {
   sphereMap: Map<EntryKey, SphereEntry>;
@@ -341,7 +342,10 @@ export type ResolvedMaps = {
   drawbackMap: Map<EntryKey, DrawbackEntry>;
   boonMap: Map<EntryKey, BoonEntry>;
   traditionMap: Map<EntryKey, TraditionEntry>;
-  entrySourceBook: Map<EntryKey, string>;
+  /** Keyed by "type:system:id" so source provenance cannot collide. */
+  entrySourceBook: Map<string, string>;
+  /** Patch books are retained separately from the resolved entry's source. */
+  entryPatchSourceBooks: Map<string, string[]>;
   bookMetaMap: Map<string, BookMeta>;
   tagMap: Map<string, TagEntry>;
 };

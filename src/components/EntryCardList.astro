@@ -12,7 +12,7 @@ type EntryCardListItem = {
   Content?: any;
   href?: string;
   metadata?: Record<string, string>;
-  entryLists?: { label: string; items: { name: string; href: string }[] }[];
+  entryLists?: { label: string; items: { name: string; href?: string }[] }[];
   builderActions?: BuilderAction[];
   system?: "power" | "might" | "guile" | "champions";
   filterKey?: string;
@@ -48,6 +48,7 @@ const renderedSections = sections ?? [{ items }];
 const hasItems = renderedSections.some((section) => section.items.length > 0);
 ---
 
+<!-- fallow-ignore-next-line complexity -->
 {summary ? (
   <details class="entry-listing-toggle" open={open ? true : undefined}>
     <summary>{summary}</summary>

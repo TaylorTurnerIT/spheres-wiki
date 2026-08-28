@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { buildResolvedMaps, buildTagMap } from "../../src/lib/resolveEntries";
+import { contentEntryKey } from "../../src/lib/entryIdentity";
+import {
+  buildResolvedMaps,
+  buildTagMap,
+  fetchBookCollections,
+} from "../../src/lib/resolveEntries";
+import { systemIdKey } from "../../src/lib/systems";
 import type {
   AnyEntry,
   BoonEntry,
@@ -73,55 +79,72 @@ const errataBook: BookInput = {
 };
 
 describe("buildResolvedMaps", () => {
-  it('adds sphere entries under "sphere:id" key', () => {
+  it("adds sphere entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([baseBook]);
-    expect(maps.sphereMap.has("sphere:alteration")).toBe(true);
-    expect(maps.sphereMap.get("sphere:alteration")?.name).toBe("Alteration");
+    const key = systemIdKey("power", "alteration");
+    expect(maps.sphereMap.has(key)).toBe(true);
+    expect(maps.sphereMap.get(key)?.name).toBe("Alteration");
   });
 
-  it('adds talent entries under "talent:id" key', () => {
+  it("adds talent entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([baseBook]);
-    expect(maps.talentMap.has("talent:alter-shape")).toBe(true);
-    expect(maps.talentMap.get("talent:alter-shape")?.name).toBe("Alter Shape");
+    const key = systemIdKey("power", "alter-shape");
+    expect(maps.talentMap.has(key)).toBe(true);
+    expect(maps.talentMap.get(key)?.name).toBe("Alter Shape");
   });
 
-  it('adds class entries under "class:id" key', () => {
+  it("adds class entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([baseBook]);
-    expect(maps.classMap.has("class:shifter")).toBe(true);
-    expect(maps.classMap.get("class:shifter")?.name).toBe("Shifter");
+    const key = systemIdKey("power", "shifter");
+    expect(maps.classMap.has(key)).toBe(true);
+    expect(maps.classMap.get(key)?.name).toBe("Shifter");
   });
 
   it("records the source book for each entry", () => {
     const maps = buildResolvedMaps([baseBook]);
-    expect(maps.entrySourceBook.get("talent:alter-shape")).toBe(
-      "spheres-of-power-core",
-    );
+    expect(
+      maps.entrySourceBook.get(
+        contentEntryKey("talent", "power", "alter-shape"),
+      ),
+    ).toBe("spheres-of-power-core");
   });
 
   it("applies errata patch: later book replaces name", () => {
     const maps = buildResolvedMaps([baseBook, errataBook]);
-    expect(maps.talentMap.get("talent:alter-shape")?.name).toBe(
+    expect(maps.talentMap.get(systemIdKey("power", "alter-shape"))?.name).toBe(
       "Alter Shape (Corrected)",
     );
   });
 
   it("errata does not change the source book attribution", () => {
     const maps = buildResolvedMaps([baseBook, errataBook]);
-    expect(maps.entrySourceBook.get("talent:alter-shape")).toBe(
-      "spheres-of-power-core",
-    );
+    expect(
+      maps.entrySourceBook.get(
+        contentEntryKey("talent", "power", "alter-shape"),
+      ),
+    ).toBe("spheres-of-power-core");
+  });
+
+  it("retains errata provenance separately from the resolved source", () => {
+    const maps = buildResolvedMaps([baseBook, errataBook]);
+
+    expect(
+      maps.entryPatchSourceBooks.get(
+        contentEntryKey("talent", "power", "alter-shape"),
+      ),
+    ).toEqual(["errata-2024-01"]);
   });
 
   it("errata applied in publishedDate order regardless of array order", () => {
     const maps = buildResolvedMaps([errataBook, baseBook]);
-    expect(maps.talentMap.get("talent:alter-shape")?.name).toBe(
+    expect(maps.talentMap.get(systemIdKey("power", "alter-shape"))?.name).toBe(
       "Alter Shape (Corrected)",
     );
   });
 
   it("errata patch does not leak modifies field onto resolved entry", () => {
     const maps = buildResolvedMaps([baseBook, errataBook]);
-    const resolved = maps.talentMap.get("talent:alter-shape");
+    const resolved = maps.talentMap.get(systemIdKey("power", "alter-shape"));
     expect(resolved).toBeDefined();
     expect(
       (resolved as Record<string, unknown> | undefined)?.modifies,
@@ -129,7 +152,7 @@ describe("buildResolvedMaps", () => {
     expect(resolved?.id).toBe("alter-shape");
   });
 
-  it("silently skips errata patch when base entry does not exist", () => {
+  it("rejects an errata patch when base entry does not exist", () => {
     const orphanErrata: BookInput = {
       slug: "orphan-errata",
       publishedDate: "2024-06-01",
@@ -147,9 +170,9 @@ describe("buildResolvedMaps", () => {
         },
       ],
     };
-    expect(() => buildResolvedMaps([orphanErrata])).not.toThrow();
-    const maps = buildResolvedMaps([orphanErrata]);
-    expect(maps.talentMap.size).toBe(0);
+    expect(() => buildResolvedMaps([orphanErrata])).toThrow(
+      "Patch target not found",
+    );
   });
 
   it("does not cross-contaminate types: talent:alter-shape != sphere:alter-shape", () => {
@@ -169,9 +192,43 @@ describe("buildResolvedMaps", () => {
       ],
     };
     const maps = buildResolvedMaps([bookWithCollision]);
-    expect(maps.talentMap.get("talent:alter-shape")?.name).toBe("Alter Shape");
-    expect(maps.sphereMap.get("sphere:alter-shape")?.name).toBe(
+    expect(maps.talentMap.get(systemIdKey("power", "alter-shape"))?.name).toBe(
+      "Alter Shape",
+    );
+    expect(maps.sphereMap.get(systemIdKey("power", "alter-shape"))?.name).toBe(
       "Should Not Patch",
+    );
+  });
+
+  it("uses the slug as a deterministic tie-breaker for equal book dates", () => {
+    const entry = (name: string, sourceBook: string) => ({
+      type: "talent" as const,
+      id: "same-name",
+      sphere: "alteration",
+      system: "power",
+      tier: "basic" as const,
+      name,
+      sourceBook,
+      tags: [],
+    });
+    const maps = buildResolvedMaps([
+      {
+        slug: "book-z",
+        publishedDate: "1970-01-01",
+        entries: [entry("Later by slug", "book-z")],
+      },
+      {
+        slug: "book-a",
+        publishedDate: "1970-01-01",
+        entries: [entry("Earlier by slug", "book-a")],
+      },
+    ]);
+
+    expect(maps.talentMap.get(systemIdKey("power", "same-name"))?.name).toBe(
+      "Earlier by slug",
+    );
+    expect(maps.talentMap.get(systemIdKey("power", "same-name-bz"))?.name).toBe(
+      "Later by slug",
     );
   });
 });
@@ -205,13 +262,13 @@ describe("classFeatureMap and classTraitMap", () => {
     entries: [...baseBook.entries, featureEntry, traitEntry],
   };
 
-  it('adds class-feature entries under "class-feature:id" key', () => {
+  it("adds class-feature entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([bookWithFeatures]);
     expect(
-      maps.classFeatureMap.has("class-feature:shifter-bestial-trait"),
+      maps.classFeatureMap.has(systemIdKey("power", "shifter-bestial-trait")),
     ).toBe(true);
     expect(
-      maps.classFeatureMap.get("class-feature:shifter-bestial-trait")
+      maps.classFeatureMap.get(systemIdKey("power", "shifter-bestial-trait"))
         ?.className,
     ).toBe("shifter");
   });
@@ -219,29 +276,36 @@ describe("classFeatureMap and classTraitMap", () => {
   it("stores level as array when provided as array", () => {
     const maps = buildResolvedMaps([bookWithFeatures]);
     const feature = maps.classFeatureMap.get(
-      "class-feature:shifter-bestial-trait",
+      systemIdKey("power", "shifter-bestial-trait"),
     );
     const level = feature?.level;
     expect(Array.isArray(level)).toBe(true);
     expect((level as number[])[0]).toBe(2);
   });
 
-  it('adds class-trait entries under "class-trait:id" key', () => {
+  it("adds class-trait entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([bookWithFeatures]);
-    expect(maps.classTraitMap.has("class-trait:shifter-adaptation")).toBe(true);
     expect(
-      maps.classTraitMap.get("class-trait:shifter-adaptation")?.featureId,
+      maps.classTraitMap.has(systemIdKey("power", "shifter-adaptation")),
+    ).toBe(true);
+    expect(
+      maps.classTraitMap.get(systemIdKey("power", "shifter-adaptation"))
+        ?.featureId,
     ).toBe("shifter-bestial-trait");
   });
 
   it("class-feature and class-trait recorded in entrySourceBook", () => {
     const maps = buildResolvedMaps([bookWithFeatures]);
     expect(
-      maps.entrySourceBook.get("class-feature:shifter-bestial-trait"),
+      maps.entrySourceBook.get(
+        contentEntryKey("class-feature", "power", "shifter-bestial-trait"),
+      ),
     ).toBe("spheres-of-power-core");
-    expect(maps.entrySourceBook.get("class-trait:shifter-adaptation")).toBe(
-      "spheres-of-power-core",
-    );
+    expect(
+      maps.entrySourceBook.get(
+        contentEntryKey("class-trait", "power", "shifter-adaptation"),
+      ),
+    ).toBe("spheres-of-power-core");
   });
 });
 
@@ -411,22 +475,27 @@ describe("archetypeMap and archetypeFeatureMap", () => {
     entries: [archetypeEntry, featureEntry],
   };
 
-  it('adds archetype entries under "archetype:id" key', () => {
+  it("adds archetype entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([bookWithArchetypes]);
-    expect(maps.archetypeMap.has("archetype:apex-shifter")).toBe(true);
-    expect(maps.archetypeMap.get("archetype:apex-shifter")?.className).toBe(
-      "shifter",
+    expect(maps.archetypeMap.has(systemIdKey("power", "apex-shifter"))).toBe(
+      true,
     );
+    expect(
+      maps.archetypeMap.get(systemIdKey("power", "apex-shifter"))?.className,
+    ).toBe("shifter");
   });
 
-  it('adds archetype-feature entries under "archetype-feature:id" key', () => {
+  it("adds archetype-feature entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([bookWithArchetypes]);
     expect(
-      maps.archetypeFeatureMap.has("archetype-feature:apex-shifter-knowledge"),
+      maps.archetypeFeatureMap.has(
+        systemIdKey("power", "apex-shifter-knowledge"),
+      ),
     ).toBe(true);
     expect(
-      maps.archetypeFeatureMap.get("archetype-feature:apex-shifter-knowledge")
-        ?.replaces,
+      maps.archetypeFeatureMap.get(
+        systemIdKey("power", "apex-shifter-knowledge"),
+      )?.replaces,
     ).toContain("shifter-endurance");
   });
 });
@@ -503,28 +572,38 @@ describe("casting tradition maps", () => {
     entries: [drainingCasting, lycanthropic, fortifiedCasting, bloodMagic],
   };
 
-  it('adds drawback entries under "drawback:id" key', () => {
+  it("adds drawback entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([bookWithTraditions]);
-    expect(maps.drawbackMap.has("drawback:draining-casting")).toBe(true);
-    expect(maps.drawbackMap.get("drawback:lycanthropic")?.sphere).toBe(
-      "alteration",
+    expect(maps.drawbackMap.has(systemIdKey("power", "draining-casting"))).toBe(
+      true,
     );
+    expect(
+      maps.drawbackMap.get(systemIdKey("power", "lycanthropic"))?.sphere,
+    ).toBe("alteration");
   });
 
-  it('adds boon entries under "boon:id" key', () => {
+  it("adds boon entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([bookWithTraditions]);
-    expect(maps.boonMap.has("boon:fortified-casting")).toBe(true);
-    expect(maps.boonMap.get("boon:fortified-casting")?.rules?.[0]).toEqual({
+    expect(maps.boonMap.has(systemIdKey("power", "fortified-casting"))).toBe(
+      true,
+    );
+    expect(
+      maps.boonMap.get(systemIdKey("power", "fortified-casting"))?.rules?.[0],
+    ).toEqual({
       op: "allow-cam",
       ability: "con",
       mode: "if-higher-than-base",
     });
   });
 
-  it('adds tradition entries under "tradition:id" key', () => {
+  it("adds tradition entries under a system-scoped key", () => {
     const maps = buildResolvedMaps([bookWithTraditions]);
-    expect(maps.traditionMap.has("tradition:blood-magic")).toBe(true);
-    expect(maps.traditionMap.get("tradition:blood-magic")?.cam).toEqual({
+    expect(maps.traditionMap.has(systemIdKey("power", "blood-magic"))).toBe(
+      true,
+    );
+    expect(
+      maps.traditionMap.get(systemIdKey("power", "blood-magic"))?.cam,
+    ).toEqual({
       mode: "fixed",
       abilities: ["con"],
     });
@@ -532,15 +611,21 @@ describe("casting tradition maps", () => {
 
   it("records casting tradition entries in entrySourceBook", () => {
     const maps = buildResolvedMaps([bookWithTraditions]);
-    expect(maps.entrySourceBook.get("drawback:draining-casting")).toBe(
-      "ultimate-spheres-of-power",
-    );
-    expect(maps.entrySourceBook.get("boon:fortified-casting")).toBe(
-      "ultimate-spheres-of-power",
-    );
-    expect(maps.entrySourceBook.get("tradition:blood-magic")).toBe(
-      "ultimate-spheres-of-power",
-    );
+    expect(
+      maps.entrySourceBook.get(
+        contentEntryKey("drawback", "power", "draining-casting"),
+      ),
+    ).toBe("ultimate-spheres-of-power");
+    expect(
+      maps.entrySourceBook.get(
+        contentEntryKey("boon", "power", "fortified-casting"),
+      ),
+    ).toBe("ultimate-spheres-of-power");
+    expect(
+      maps.entrySourceBook.get(
+        contentEntryKey("tradition", "power", "blood-magic"),
+      ),
+    ).toBe("ultimate-spheres-of-power");
   });
 });
 
@@ -560,5 +645,18 @@ describe("buildTagMap — negative priorities", () => {
       },
     ]);
     expect(map.get("talent")?.priority).toBe(-10);
+  });
+});
+
+describe("fetchBookCollections", () => {
+  it("preserves the failing book slug when a collection loader rejects", async () => {
+    await expect(
+      fetchBookCollections(["healthy-book", "broken-book"], async (slug) => {
+        if (slug === "broken-book") throw new Error("invalid frontmatter");
+        return [];
+      }),
+    ).rejects.toThrow(
+      'Failed to load content collection "broken-book": invalid frontmatter',
+    );
   });
 });

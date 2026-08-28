@@ -3,22 +3,15 @@ import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
-import { systemCssKey } from "@/lib/systems";
+import { buildSystemIdIndex, systemIdKey, systemCssKey } from "@/lib/systems";
 import { resolveEntries } from "@/lib/resolveEntries";
+import { SYSTEMS } from "@/config/site";
 import type { ArchetypeEntry, ClassEntry } from "@/lib/types";
 
 const { archetypeMap, classMap, bookMetaMap } = await resolveEntries();
 
-// Systems that have their own sphere-class archetype detail pages
-const SPHERE_SYSTEMS = new Set(["power", "might", "guile", "champions"]);
-const SPHERE_SYSTEM_LABELS: Record<string, string> = {
-  power:     "Spheres of Power",
-  might:     "Spheres of Might",
-  guile:     "Spheres of Guile",
-  champions: "Champions of the Spheres",
-};
-// Only power has [class]/[archetype] detail pages right now
-const SYSTEMS_WITH_ARCHETYPE_PAGES = new Set(["power"]);
+// Every registered system exposes the same class/archetype detail route.
+const SPHERE_SYSTEMS = new Set(Object.keys(SYSTEMS));
 
 type ArcRow = {
   arc: ArchetypeEntry;
@@ -38,10 +31,14 @@ type SystemGroup = {
   groups: ClassGroup[];
 };
 
-// Build a fast class lookup: id → ClassEntry
-const classById = new Map<string, ClassEntry>();
-for (const cls of classMap.values()) {
-  classById.set(cls.id, cls);
+// Class ids can be reused by different systems, so resolve them with the
+// same system-scoped identity used by the content maps.
+const classIndex = buildSystemIdIndex(classMap.values());
+function classForArchetype(arc: ArchetypeEntry): ClassEntry | undefined {
+  return (
+    classIndex.get(systemIdKey(arc.system, arc.className)) ??
+    classIndex.get(systemIdKey("pf1e", arc.className))
+  );
 }
 
 // Separate archetypes into sphere-class vs pf1e
@@ -49,13 +46,13 @@ const sphereBySystem = new Map<string, Map<string, ArcRow[]>>();
 const pf1eByClass = new Map<string, ArcRow[]>();
 
 for (const [, arc] of archetypeMap) {
-  const cls = classById.get(arc.className);
+  const cls = classForArchetype(arc);
   const book = bookMetaMap.get(arc.sourceBook)?.title;
 
   if (cls && SPHERE_SYSTEMS.has(cls.system)) {
     // Sphere class archetype
-    const href = SYSTEMS_WITH_ARCHETYPE_PAGES.has(cls.system)
-      ? url(`/${cls.system}/classes/${cls.id}/${arc.id}/`)
+    const href = SYSTEMS[arc.system]
+      ? url(`/${arc.system}/classes/${arc.className}/${arc.id}/`)
       : null;
     const row: ArcRow = { arc, book, href };
 
@@ -66,7 +63,9 @@ for (const [, arc] of archetypeMap) {
 
   } else if (cls?.system === "pf1e" || !cls) {
     // PF1e base class archetype (or unknown class — treat as pf1e)
-    const href = null; // no pf1e archetype detail pages yet
+    const href = SYSTEMS[arc.system]
+      ? url(`/${arc.system}/classes/${arc.className}/${arc.id}/`)
+      : null;
     const row: ArcRow = { arc, book, href };
     const key = arc.className;
     if (!pf1eByClass.has(key)) pf1eByClass.set(key, []);
@@ -77,42 +76,40 @@ for (const [, arc] of archetypeMap) {
 // Sort archetypes within each class group alphabetically,
 // but "Spheres {ClassName}" always first
 function sortArcs(arcs: ArcRow[], className: string): ArcRow[] {
-  const baseConversionName = `Spheres ${classById.get(className)?.name ?? className}`;
-  return [...arcs].sort((a, b) => {
-    const aIsBase = a.arc.name === baseConversionName;
-    const bIsBase = b.arc.name === baseConversionName;
-    if (aIsBase && !bIsBase) return -1;
-    if (!aIsBase && bIsBase) return 1;
-    return a.arc.name.localeCompare(b.arc.name);
-  });
+  const classEntry = arcs.map(({ arc }) => classForArchetype(arc)).find(Boolean);
+  const baseConversionName = `Spheres ${classEntry?.name ?? className}`;
+  return [...arcs].sort((a, b) => compareArcRows(a, b, baseConversionName));
+}
+
+function compareArcRows(a: ArcRow, b: ArcRow, baseConversionName: string): number {
+  const aPriority = Number(a.arc.name !== baseConversionName);
+  const bPriority = Number(b.arc.name !== baseConversionName);
+  return aPriority - bPriority || a.arc.name.localeCompare(b.arc.name);
 }
 
 // Build final sphere groups in system order
-const SYSTEM_ORDER = ["power", "might", "guile", "champions"];
+const SYSTEM_ORDER = Object.keys(SYSTEMS);
 const sphereGroups: SystemGroup[] = SYSTEM_ORDER
   .filter(sys => sphereBySystem.has(sys))
   .map(sys => {
     const byClass = sphereBySystem.get(sys)!;
     const groups: ClassGroup[] = [...byClass.entries()].map(([classId, arcs]) => ({
       classId,
-      className: classById.get(classId)?.name ?? classId,
+      className: classForArchetype(arcs[0].arc)?.name ?? classId,
       arcs: sortArcs(arcs, classId),
     })).sort((a, b) => a.className.localeCompare(b.className));
-    return { system: sys, label: SPHERE_SYSTEM_LABELS[sys], groups };
+    return { system: sys, label: SYSTEMS[sys].label, groups };
   });
 
 // Build pf1e groups sorted by class name, "Spheres X" first within each
 const pf1eGroups: ClassGroup[] = [...pf1eByClass.entries()].map(([classId, arcs]) => ({
   classId,
-  className: classById.get(classId)?.name ?? classId,
+  className: classForArchetype(arcs[0].arc)?.name ?? classId,
   arcs: sortArcs(arcs, classId),
 })).sort((a, b) => a.className.localeCompare(b.className));
 
 const totalCount = archetypeMap.size;
 
-const SYS_LABEL: Record<string, string> = {
-  power: 'Power', might: 'Might', guile: 'Guile', champ: 'Champions',
-};
 ---
 <WikiPage title="Archetypes Index — Spheres Wiki" pagefindIgnore={true}>
 
@@ -198,7 +195,7 @@ const SYS_LABEL: Record<string, string> = {
                     ? <a href={href} class={`arc-name ${sysKey}`} data-astro-prefetch="hover">{arc.name}</a>
                     : <span class={`arc-name arc-name--nolink`}>{arc.name}</span>
                   }
-                  <span class={`arc-sys-badge ${sysKey}`}>{SYS_LABEL[sysKey] ?? arc.system}</span>
+                  <span class={`arc-sys-badge ${sysKey}`}>{SYSTEMS[arc.system]?.label ?? arc.system}</span>
                   {book && <span class="arc-source">{book}</span>}
                 </div>
               );

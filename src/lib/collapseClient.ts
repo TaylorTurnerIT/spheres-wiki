@@ -37,6 +37,7 @@ export function setCollapsibleState(
   btn.setAttribute("aria-expanded", String(expand));
   btn.classList.toggle("is-collapsed", !expand);
   target.setAttribute("aria-hidden", String(!expand));
+  target.inert = !expand;
   if (sectionId) {
     document.dispatchEvent(
       new CustomEvent("class-feature-collapse", {
@@ -51,6 +52,7 @@ export function bindCollapseToggle(
   target: HTMLElement,
   sectionId?: string,
 ) {
+  target.inert = target.getAttribute("aria-hidden") === "true";
   btn.addEventListener("click", () => {
     const expanded = btn.getAttribute("aria-expanded") === "true";
     setCollapsibleState(btn, target, !expanded, sectionId);

@@ -113,4 +113,13 @@ document.addEventListener('astro:page-load', () => {
   activeCollapseHandler = () => engine?.recalc();
   document.addEventListener('class-feature-collapse', activeCollapseHandler);
 });
+
+document.addEventListener('astro:before-swap', () => {
+  engine?.stop();
+  engine = null;
+  if (activeCollapseHandler) {
+    document.removeEventListener('class-feature-collapse', activeCollapseHandler);
+    activeCollapseHandler = null;
+  }
+});
 </script>

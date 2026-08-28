@@ -14,9 +14,6 @@ import "@fontsource/crimson-text/600-italic.css";
 
 import cinzel700 from '@fontsource/cinzel/files/cinzel-latin-700-normal.woff2?url';
 import crimson400 from '@fontsource/crimson-text/files/crimson-text-latin-400-normal.woff2?url';
-import crimson400i from '@fontsource/crimson-text/files/crimson-text-latin-400-italic.woff2?url';
-import crimson600 from '@fontsource/crimson-text/files/crimson-text-latin-600-normal.woff2?url';
-import crimson600i from '@fontsource/crimson-text/files/crimson-text-latin-600-italic.woff2?url';
 
 interface Props {
   title?: string;
@@ -40,9 +37,6 @@ const {
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="preload" href={cinzel700} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={crimson400} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={crimson400i} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={crimson600} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={crimson600i} as="font" type="font/woff2" crossorigin />
     <title>{title}</title>
     <ClientRouter />
     <style is:inline>
@@ -59,7 +53,7 @@ const {
     <SVGSprite />
     <slot />
     <ScrollToTop />
-    <div id="global-tag-tooltip" popover="manual" class="tag-tooltip" role="tooltip">
+    <div id="global-tag-tooltip" popover="manual" class="tag-tooltip" role="tooltip" aria-hidden="true">
       <span class="tag-tooltip-name"></span>
       <span class="tag-tooltip-desc"></span>
       <span class="tag-tooltip-source"></span>
@@ -69,28 +63,38 @@ const {
     // Global tag tooltip — uses Popover API (top layer) so it's above all z-index/stacking contexts.
     // Falls back to .is-visible class on browsers without popover support.
     const hasPopover = 'showPopover' in HTMLElement.prototype;
+    const tooltipRuntimeKey = '__spheresWikiTooltipRuntime';
+    const windowWithTooltipRuntime = window as typeof window & {
+      [tooltipRuntimeKey]?: { cleanup: () => void };
+    };
+    windowWithTooltipRuntime[tooltipRuntimeKey]?.cleanup();
 
-    let tooltip: HTMLElement;
-    let nameEl: HTMLElement;
-    let descEl: HTMLElement;
-    let sourceEl: HTMLElement;
+    let tooltip: HTMLElement | null = null;
+    let nameEl: HTMLElement | null = null;
+    let descEl: HTMLElement | null = null;
+    let sourceEl: HTMLElement | null = null;
     let activeWrapper: Element | null = null;
+    let positionFrame = 0;
+    const controller = new AbortController();
+    const { signal } = controller;
 
     function cacheRefs() {
-      tooltip  = document.getElementById('global-tag-tooltip') as HTMLElement;
-      nameEl   = tooltip.querySelector<HTMLElement>('.tag-tooltip-name')!;
-      descEl   = tooltip.querySelector<HTMLElement>('.tag-tooltip-desc')!;
-      sourceEl = tooltip.querySelector<HTMLElement>('.tag-tooltip-source')!;
+      tooltip  = document.getElementById('global-tag-tooltip');
+      nameEl   = tooltip?.querySelector<HTMLElement>('.tag-tooltip-name') ?? null;
+      descEl   = tooltip?.querySelector<HTMLElement>('.tag-tooltip-desc') ?? null;
+      sourceEl = tooltip?.querySelector<HTMLElement>('.tag-tooltip-source') ?? null;
       activeWrapper = null;
     }
 
     function openTooltip() {
+      if (!tooltip) return;
       if (hasPopover) (tooltip as any).showPopover();
       else tooltip.classList.add('is-visible');
       tooltip.setAttribute('aria-hidden', 'false');
     }
 
     function closeTooltip() {
+      if (!tooltip) return;
       if (hasPopover) {
         try { (tooltip as any).hidePopover(); } catch {}
       } else {
@@ -102,7 +106,7 @@ const {
 
     function showAt(wrapper: Element) {
       const d = (wrapper as HTMLElement).dataset;
-      if (!d.ttName) return;
+      if (!d.ttName || !tooltip || !nameEl || !descEl || !sourceEl) return;
       nameEl.textContent = d.ttName;
       descEl.innerHTML = d.ttDesc || '';
       sourceEl.textContent = d.ttSource || '';
@@ -116,7 +120,9 @@ const {
       activeWrapper = wrapper;
       openTooltip();
 
-      requestAnimationFrame(() => {
+      cancelAnimationFrame(positionFrame);
+      positionFrame = requestAnimationFrame(() => {
+        if (!tooltip) return;
         const tr = tooltip.getBoundingClientRect();
         if (tr.top < 8) {
           tooltip.style.top = `${rect.bottom + 6}px`;
@@ -131,49 +137,80 @@ const {
       });
     }
 
-    // Re-cache refs on each page load (View Transitions swaps the DOM)
-    document.addEventListener('astro:page-load', cacheRefs);
+    function beforeSwap() {
+      cancelAnimationFrame(positionFrame);
+      closeTooltip();
+      tooltip = null;
+      nameEl = null;
+      descEl = null;
+      sourceEl = null;
+    }
 
-    // Event delegation — registered once, works across all navigations
+    // Re-cache refs on each page load (View Transitions swap the DOM).
+    // The delegated listeners are installed once and survive body swaps.
+    document.addEventListener('astro:page-load', cacheRefs, { signal });
+    document.addEventListener('astro:before-swap', beforeSwap, { signal });
+
+    // Event delegation — registered once, works across all navigations.
     document.addEventListener('mouseover', (e) => {
       if (!tooltip || tooltip.contains(e.target as Node)) return;
       const w = (e.target as Element).closest?.('.tag-wrapper[data-tt-name]') ?? null;
       if (w && w !== activeWrapper) showAt(w);
       else if (!w && activeWrapper) closeTooltip();
-    });
+    }, { signal });
 
     document.addEventListener('mouseout', (e) => {
-      if (!activeWrapper) return;
+      if (!activeWrapper || !tooltip) return;
       const rel = (e as MouseEvent).relatedTarget as Node | null;
       if (!rel || (!activeWrapper.contains(rel) && !tooltip.contains(rel))) closeTooltip();
-    });
+    }, { signal });
 
     document.addEventListener('focusin', (e) => {
       const w = (e.target as Element).closest?.('.tag-wrapper[data-tt-name]') ?? null;
       if (w) showAt(w);
-    });
+    }, { signal });
 
     document.addEventListener('focusout', (e) => {
       if (!activeWrapper) return;
       const rel = (e as FocusEvent).relatedTarget as Element | null;
       if (!activeWrapper.contains(rel) && !tooltip?.contains(rel)) closeTooltip();
-    });
+    }, { signal });
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && activeWrapper) closeTooltip();
-    });
+    }, { signal });
 
-    window.addEventListener('scroll', () => { if (activeWrapper) closeTooltip(); }, { passive: true });
+    window.addEventListener('scroll', () => { if (activeWrapper) closeTooltip(); }, { passive: true, signal });
+
+    cacheRefs();
+    windowWithTooltipRuntime[tooltipRuntimeKey] = {
+      cleanup: () => {
+        beforeSwap();
+        controller.abort();
+        if (windowWithTooltipRuntime[tooltipRuntimeKey]?.cleanup === runtime.cleanup) {
+          delete windowWithTooltipRuntime[tooltipRuntimeKey];
+        }
+      },
+    };
+    const runtime = windowWithTooltipRuntime[tooltipRuntimeKey]!;
   </script>
   <script>
+    const scrollRuntimeKey = '__spheresWikiScrollRuntime';
+    const windowWithScrollRuntime = window as typeof window & {
+      [scrollRuntimeKey]?: { save: () => void };
+    };
+    if (!windowWithScrollRuntime[scrollRuntimeKey]) {
+      const saveScroll = () => {
+        sessionStorage.setItem('scroll-y', String(window.scrollY));
+      };
+      window.addEventListener('scroll', saveScroll, { passive: true });
+      windowWithScrollRuntime[scrollRuntimeKey] = { save: saveScroll };
+    }
+
     const saved = sessionStorage.getItem('scroll-y');
     if (saved) {
       window.scrollTo(0, +saved);
       document.documentElement.classList.remove('scroll-restoring');
     }
-
-    window.addEventListener('scroll', () => {
-      sessionStorage.setItem('scroll-y', String(window.scrollY));
-    }, { passive: true });
   </script>
 </html>

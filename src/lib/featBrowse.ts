@@ -12,8 +12,9 @@
  * a generic row contract, not feat-specific fields.
  */
 import { SYSTEMS } from "@/config/site";
+import { contentEntryKey } from "@/lib/entryIdentity";
 import { getCanonicalFeatCategory, getFeatUrl } from "@/lib/featCategories";
-import { systemCssKey } from "@/lib/systems";
+import { systemCssKey, systemIdKey } from "@/lib/systems";
 import { buildOrderedTagIds } from "@/lib/tags";
 import type { BookMeta, FeatEntry, SphereEntry, TagEntry } from "@/lib/types";
 import { url } from "@/lib/url";
@@ -78,10 +79,7 @@ function collEntryFor(
   feat: FeatEntry,
   collEntriesMap: Map<string, { body?: string }>,
 ): { body?: string } | undefined {
-  return (
-    collEntriesMap.get(`feat:${feat.sourceBook}:${feat.id}`) ??
-    collEntriesMap.get(`feat:${feat.id}`)
-  );
+  return collEntriesMap.get(contentEntryKey("feat", feat.system, feat.id));
 }
 
 function browsableFeats(maps: BrowseMaps): FeatEntry[] {
@@ -90,17 +88,25 @@ function browsableFeats(maps: BrowseMaps): FeatEntry[] {
     .sort((a, b) => a.name.localeCompare(b.name) || a.id.localeCompare(b.id));
 }
 
-function categoryLabelFor(category: string, maps: BrowseMaps): string {
+function categoryLabelFor(
+  category: string,
+  system: string,
+  maps: BrowseMaps,
+): string {
   return (
-    maps.sphereMap.get(`sphere:${category}`)?.name ??
+    maps.sphereMap.get(systemIdKey(system, category))?.name ??
     maps.tagMap.get(category)?.label ??
     category
   );
 }
 
-function sphereLabelFor(sphere: string, maps: BrowseMaps): string {
+function sphereLabelFor(
+  sphere: string,
+  system: string,
+  maps: BrowseMaps,
+): string {
   if (!sphere) return "";
-  return maps.sphereMap.get(`sphere:${sphere}`)?.name ?? sphere;
+  return maps.sphereMap.get(systemIdKey(system, sphere))?.name ?? sphere;
 }
 
 /** Map a single feat entry to its body-free browse row. */
@@ -119,9 +125,9 @@ function featToBrowseRow(
     system: feat.system,
     cssKey: systemCssKey(feat.system),
     category,
-    categoryLabel: categoryLabelFor(category, maps),
+    categoryLabel: categoryLabelFor(category, feat.system, maps),
     sphere,
-    sphereLabel: sphereLabelFor(sphere, maps),
+    sphereLabel: sphereLabelFor(sphere, feat.system, maps),
     sourceBook: feat.sourceBook,
     sourceBookTitle:
       maps.bookMetaMap.get(feat.sourceBook)?.title ?? feat.sourceBook,

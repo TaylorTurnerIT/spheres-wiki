@@ -6,8 +6,9 @@ import { resolveEntries } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { SYSTEMS } from '@/config/site';
 import { getFeatUrl } from '@/lib/featCategories';
+import { systemIdKey } from '@/lib/systems';
 
-const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, drawbackMap, boonMap, traditionMap, tagMap, bookMetaMap } = await resolveEntries();
+const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, articleMap, drawbackMap, boonMap, traditionMap, tagMap, bookMetaMap } = await resolveEntries();
 
 type ManifestEntry = { url: string; title: string; system: string; type: string; sphere?: string; tags?: string };
 const manifest: ManifestEntry[] = [];
@@ -18,25 +19,31 @@ for (const s of sphereMap.values()) {
 }
 for (const t of talentMap.values()) {
   if (!SYSTEMS[t.system]) continue;
-  const sph = sphereMap.get(`sphere:${t.sphere}`);
+  const sph = sphereMap.get(systemIdKey(t.system, t.sphere));
   manifest.push({ url: url(`/${t.system}/${t.sphere}/${t.id}/`), title: t.name, system: SYSTEMS[t.system].label, type: 'talent', sphere: sph?.name ?? t.sphere, tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
 }
 for (const f of featMap.values()) {
   if (!SYSTEMS[f.system]) continue;
-  const sph = f.sphere ? sphereMap.get(`sphere:${f.sphere}`) : undefined;
+  const sph = f.sphere ? sphereMap.get(systemIdKey(f.system, f.sphere)) : undefined;
   manifest.push({ url: url(getFeatUrl(f, tagMap)), title: f.name, system: SYSTEMS[f.system].label, type: 'feat', sphere: sph?.name ?? f.sphere, tags: buildOrderedTagIds(f, bookMetaMap, tagMap).join(', ') });
 }
 for (const c of classMap.values()) {
   if (!SYSTEMS[c.system]) continue;
-  const clsUrl = c.system === 'power'      ? url(`/power/classes/${c.id}/`)
-               : c.system === 'champions'  ? url(`/champions/classes/${c.id}/`)
-               : null; // guile/might classes live on sphere pages — covered by sphere entries
+  const clsUrl = SYSTEMS[c.system]
+    ? url(`/${c.system}/classes/${c.id}/`)
+    : null;
   if (!clsUrl) continue;
   manifest.push({ url: clsUrl, title: c.name, system: SYSTEMS[c.system].label, type: 'class', tags: buildOrderedTagIds(c, bookMetaMap, tagMap).join(', ') });
 }
 for (const a of archetypeMap.values()) {
-  if (a.system !== 'power') continue;
-  manifest.push({ url: url(`/power/classes/${a.className}/${a.id}/`), title: a.name, system: SYSTEMS['power'].label, type: 'archetype', tags: buildOrderedTagIds(a, bookMetaMap, tagMap).join(', ') });
+  if (!SYSTEMS[a.system]) continue;
+  manifest.push({ url: url(`/${a.system}/classes/${a.className}/${a.id}/`), title: a.name, system: SYSTEMS[a.system].label, type: 'archetype', tags: buildOrderedTagIds(a, bookMetaMap, tagMap).join(', ') });
+}
+for (const a of articleMap.values()) {
+  const articleUrl = a.system
+    ? url(`/${a.system}/articles/${a.id}/`)
+    : url(`/articles/${a.id}/`);
+  manifest.push({ url: articleUrl, title: a.name, system: a.system && SYSTEMS[a.system] ? SYSTEMS[a.system].label : 'General', type: 'article', tags: buildOrderedTagIds(a as any, bookMetaMap, tagMap).join(', ') });
 }
 for (const t of classTraitMap.values()) {
   if (!SYSTEMS[t.system]) continue;
@@ -58,7 +65,7 @@ for (const t of traditionMap.values()) {
 const staticSpheres = [...new Set([...sphereMap.values()].map(s => s.name))].sort();
 const sphereNamesLower = new Set(staticSpheres.map(s => s.toLowerCase()));
 const systemKeys = new Set(Object.keys(SYSTEMS));
-const typeKeys   = new Set(['sphere', 'talent', 'feat', 'class', 'archetype', 'class-trait', 'drawback', 'boon', 'tradition']);
+const typeKeys   = new Set(['sphere', 'talent', 'feat', 'class', 'archetype', 'class-trait', 'article', 'drawback', 'boon', 'tradition']);
 const staticTags = [...tagMap.entries()]
   .filter(([id]) => !sphereNamesLower.has(id) && !systemKeys.has(id) && !typeKeys.has(id))
   .sort((a, b) => (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0]))
@@ -79,6 +86,11 @@ const staticTags = [...tagMap.entries()]
         placeholder="Search spheres, classes, talents, feats…"
         autocomplete="off"
         aria-label="Search"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-controls="sp-results"
+        aria-expanded="false"
+        aria-haspopup="listbox"
       />
     </div>
 
@@ -110,7 +122,7 @@ const staticTags = [...tagMap.entries()]
     ></div>
 
     <div id="sp-status" class="sp-status" hidden></div>
-    <div id="sp-results" class="sp-results"></div>
+    <div id="sp-results" class="sp-results" role="listbox" aria-label="Search results" aria-live="polite"></div>
     <div id="sp-load-more" class="sp-load-more-sentinel" hidden></div>
 
     <div id="sp-tag-templates" hidden>
@@ -148,10 +160,15 @@ const staticTags = [...tagMap.entries()]
     flex: 1;
     background: none;
     border: none;
-    outline: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
     font-family: var(--font-body);
     font-size: var(--fs-md);
     color: var(--clr-text);
+  }
+  .search-page-input:focus-visible {
+    outline-color: var(--clr-active);
+    border-radius: 3px;
   }
   .search-page-input::placeholder {
     color: var(--clr-muted);
@@ -321,12 +338,17 @@ const staticTags = [...tagMap.entries()]
     color: var(--clr-text);
     transition: background 0.12s, box-shadow 0.12s;
   }
-  .sp-result:hover,
-  .sp-result:focus {
+  .sp-result:hover {
     background: color-mix(in srgb, var(--clr-active) 4%, var(--clr-surface));
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     text-decoration: none;
-    outline: none;
+  }
+  .sp-result:focus-visible {
+    background: color-mix(in srgb, var(--clr-active) 4%, var(--clr-surface));
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-decoration: none;
+    outline: 2px solid var(--clr-active);
+    outline-offset: 2px;
   }
   .sp-result-excerpt {
     font-size: var(--fs-xs);
@@ -378,13 +400,14 @@ const TYPE_LABELS: Record<string, string> = {
   feat:          'Feat',
   class:         'Class',
   archetype:     'Archetype',
+  article:       'Article',
   'class-trait': 'Trait',
   drawback:      'Drawback',
   boon:          'Boon',
   tradition:     'Tradition',
 };
 
-const TYPE_ORDER = ['sphere','talent','feat','class','archetype','class-trait','drawback','boon','tradition'];
+const TYPE_ORDER = ['sphere','talent','feat','class','archetype','article','class-trait','drawback','boon','tradition'];
 
 let pagefind: any;
 let browseManifest: any[] = [];
@@ -453,18 +476,22 @@ function renderResults() {
   const loadMoreEl = document.getElementById('sp-load-more')!;
 
   const total   = allData.length;
+  const filteredTotal = results.length;
   const showing = results.slice(0, displayCount);
   const hasMore = results.length > displayCount;
 
   statusEl.className = 'sp-status';
   statusEl.hidden = false;
-  statusEl.textContent = total === 0
+  statusEl.textContent = filteredTotal === 0
     ? 'No results found.'
-    : results.length === total
+    : filteredTotal === total
       ? `${total} result${total === 1 ? '' : 's'}`
-      : `${results.length} of ${total} result${total === 1 ? '' : 's'}`;
+      : `${filteredTotal} of ${total} result${total === 1 ? '' : 's'}`;
 
-  if (total === 0) {
+  const input = document.getElementById('sp-input');
+  input?.setAttribute('aria-expanded', String(showing.length > 0));
+
+  if (filteredTotal === 0) {
     resultsEl.innerHTML = `<div class="sp-empty">No results for this query.</div>`;
     loadMoreEl.hidden = true;
     return;
@@ -512,7 +539,7 @@ function renderResults() {
       : '';
     const headerTagHtml = `${sphereTagHtml}${tagHtml}`;
 
-    return `<a href="${r.url}" class="sp-result" style="--clr-active: ${cssColor}; --clr-ns: ${cssColor}">
+    return `<a href="${r.url}" class="sp-result" role="option" style="--clr-active: ${cssColor}; --clr-ns: ${cssColor}">
       <div class="talent-header">
         <div class="talent-header-top">
           <span class="talent-name">${title}</span>
@@ -543,7 +570,7 @@ function makeOnChange(key: string) {
       renderResults();
     } else {
       // No query — browse-all with current filters (or all pages if none)
-      search(null);
+      void search(null, activeSearchSignal ?? undefined);
     }
   };
 }
@@ -577,7 +604,12 @@ function initTomSelects(
   makeTs('sp-tag-select',    'tag',    'Any tag…',     staticTags);
 }
 
-async function search(query: string | null) {
+let searchSerial = 0;
+let activeSearchSignal: AbortSignal | null = null;
+
+async function search(query: string | null, signal?: AbortSignal) {
+  const requestSerial = ++searchSerial;
+  if (signal?.aborted) return;
   const statusEl  = document.getElementById('sp-status')!;
   const resultsEl = document.getElementById('sp-results')!;
   browseAll = query === null;
@@ -589,6 +621,7 @@ async function search(query: string | null) {
   document.getElementById('sp-load-more')!.hidden = true;
 
   if (browseAll) {
+    if (signal?.aborted || requestSerial !== searchSerial) return;
     allData = browseManifest;
     displayCount = PAGE_SIZE;
     renderResults();
@@ -596,9 +629,12 @@ async function search(query: string | null) {
   }
 
   await loadPagefind();
+  if (signal?.aborted || requestSerial !== searchSerial) return;
   const result = await pagefind.search(query);
+  if (signal?.aborted || requestSerial !== searchSerial) return;
   const top    = result.results.slice(0, MAX_RESULTS);
   const data   = await Promise.all(top.map((r: any) => r.data()));
+  if (signal?.aborted || requestSerial !== searchSerial) return;
   // Filter out the `#overview` sub-results which duplicate the main page result
   allData      = data.filter((r: any) => !r.url.endsWith('#overview'));
   displayCount = PAGE_SIZE;
@@ -606,11 +642,27 @@ async function search(query: string | null) {
   renderResults();
 }
 
-let debounceTimer: ReturnType<typeof setTimeout>;
+let cleanupSearchPage = () => {};
+
+document.addEventListener('astro:before-swap', () => {
+  cleanupSearchPage();
+  cleanupSearchPage = () => {};
+});
 
 document.addEventListener('astro:page-load', () => {
+  cleanupSearchPage();
   const input = document.getElementById('sp-input') as HTMLInputElement;
-  if (!input) return;
+  if (!input) {
+    activeSearchSignal = null;
+    return;
+  }
+
+  const controller = new AbortController();
+  const { signal } = controller;
+  activeSearchSignal = signal;
+  let debounceTimer: ReturnType<typeof setTimeout> | null = null;
+  let fastFollowTimer: ReturnType<typeof setTimeout> | null = null;
+  let observer: IntersectionObserver | null = null;
 
   // Reset state on each navigation
   activeSystem = null;
@@ -649,29 +701,29 @@ document.addEventListener('astro:page-load', () => {
 
   if (q) {
     input.value = q;
-    search(q);
+    void search(q, signal);
   } else {
-    search(null);
+    void search(null, signal);
   }
 
   input.addEventListener('input', () => {
-    clearTimeout(debounceTimer);
+    if (debounceTimer) clearTimeout(debounceTimer);
     const val = input.value.trim();
     pushParams(val, activeSystem ?? '', activeType ?? '', activeSphere ?? '', activeTag ?? '');
     if (val.length < 2) {
-      clearTimeout(debounceTimer);
-      search(null); // browse-all with current filters (or all pages)
+      if (debounceTimer) clearTimeout(debounceTimer);
+      void search(null, signal); // browse-all with current filters (or all pages)
       return;
     }
-    debounceTimer = setTimeout(() => search(val), 220);
-  });
+    debounceTimer = setTimeout(() => void search(val, signal), 220);
+  }, { signal });
 
   input.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       (document.querySelector('.sp-result') as HTMLAnchorElement | null)?.focus();
     }
-  });
+  }, { signal });
 
   document.getElementById('sp-results')!.addEventListener('keydown', (e) => {
     if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
@@ -686,17 +738,19 @@ document.addEventListener('astro:page-load', () => {
       if (idx <= 0) input.focus();
       else items[idx - 1].focus();
     }
-  });
+  }, { signal });
 
   const loadMoreEl = document.getElementById('sp-load-more');
   if (loadMoreEl) {
-    const observer = new IntersectionObserver((entries) => {
+    observer = new IntersectionObserver((entries) => {
+      if (signal.aborted) return;
       if (entries[0].isIntersecting && !loadMoreEl.hidden) {
         displayCount += PAGE_SIZE;
         renderResults();
         
         // Fast-follow check in case one chunk isn't enough to push sentinel off-screen
-        setTimeout(() => {
+        fastFollowTimer = setTimeout(() => {
+          if (signal.aborted) return;
           if (!loadMoreEl.hidden && loadMoreEl.getBoundingClientRect().top < window.innerHeight + 800) {
             displayCount += PAGE_SIZE;
             renderResults();
@@ -706,5 +760,16 @@ document.addEventListener('astro:page-load', () => {
     }, { rootMargin: '800px' });
     observer.observe(loadMoreEl);
   }
+
+  cleanupSearchPage = () => {
+    searchSerial += 1;
+    controller.abort();
+    if (debounceTimer) clearTimeout(debounceTimer);
+    if (fastFollowTimer) clearTimeout(fastFollowTimer);
+    observer?.disconnect();
+    Object.values(tsInstances).forEach(ts => { try { ts.destroy(); } catch {} });
+    tsInstances = {};
+    if (activeSearchSignal === signal) activeSearchSignal = null;
+  };
 });
 </script>

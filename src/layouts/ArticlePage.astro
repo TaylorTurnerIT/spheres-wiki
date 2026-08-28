@@ -48,6 +48,7 @@ const tocItems = showToc ? buildTocTree(headings) : [];
     <h1 class="page-title">{article.name}</h1>
   </div>
 
+  <span data-pagefind-meta="type:article" hidden></span>
   <span data-pagefind-meta="type:guide" hidden></span>
   {sys && <span data-pagefind-meta={`system:${sysLabel}`} hidden></span>}
   <hr class="page-title-rule" />

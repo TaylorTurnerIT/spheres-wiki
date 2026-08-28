@@ -20,4 +20,6 @@ sectionDefinitions:
 
 ---
 
-Practitioners of the Trap sphere excel at creating and placing mechanical traps, snares, and darts to control the battlefield.[Tripwire]
+Practitioners of the Trap sphere excel at creating and placing mechanical traps, snares, and darts to control the battlefield.
+
+[Tripwire]

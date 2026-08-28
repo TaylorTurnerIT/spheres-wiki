@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { contentEntryKey } from "../../src/lib/entryIdentity";
 import {
   bodyToSearchText,
   buildFeatBrowseRows,
@@ -112,7 +113,7 @@ describe("bodyToSearchText", () => {
 describe("buildFeatBrowseRows", () => {
   const featMap = new Map<string, FeatEntry>([
     [
-      "feat:spheres-of-power-core:zeta",
+      "power:zeta",
       feat({
         id: "zeta",
         name: "Zeta Feat",
@@ -121,7 +122,7 @@ describe("buildFeatBrowseRows", () => {
       }),
     ],
     [
-      "feat:spheres-of-power-core:alpha",
+      "power:alpha",
       feat({
         id: "alpha",
         name: "Alpha Feat",
@@ -129,11 +130,11 @@ describe("buildFeatBrowseRows", () => {
         category: "counterspell",
       }),
     ],
-    ["feat:pf1e:ghost", feat({ id: "ghost", name: "Ghost", system: "pf1e" })],
+    ["pf1e:ghost", feat({ id: "ghost", name: "Ghost", system: "pf1e" })],
   ]);
   const collEntriesMap = new Map<string, { body?: string }>([
     [
-      "feat:spheres-of-power-core:zeta",
+      contentEntryKey("feat", "power", "zeta"),
       { body: "**Prerequisites:** Counterspell\n\nBenefit." },
     ],
   ]);
@@ -181,7 +182,7 @@ describe("option builders", () => {
     {
       featMap: new Map([
         [
-          "feat:spheres-of-power-core:a",
+          "power:a",
           feat({ id: "a", name: "A", system: "power", tags: ["counterspell"] }),
         ],
       ]),

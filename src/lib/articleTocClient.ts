@@ -56,6 +56,8 @@ document.addEventListener("article-toc:reinit", () => {
   (window as any).reinitArticleToc();
 });
 
+document.addEventListener("astro:before-swap", cleanup);
+
 document.addEventListener("astro:page-load", () => {
   cleanup();
   const nav = document.querySelector<HTMLElement>(".article-toc");

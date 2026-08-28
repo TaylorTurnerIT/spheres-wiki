@@ -29,12 +29,13 @@ describe("buildSystemIdIndex", () => {
     expect(index.get(systemIdKey("guile", "alteration"))).toBeUndefined();
   });
 
-  it("keeps the first entry on collisions, matching find() semantics", () => {
-    const index = buildSystemIdIndex([
-      { id: "smash", system: "might", name: "first" },
-      { id: "smash", system: "might", name: "second" },
-    ]);
-    expect(index.get(systemIdKey("might", "smash"))?.name).toBe("first");
+  it("rejects collisions instead of silently hiding the later entry", () => {
+    expect(() =>
+      buildSystemIdIndex([
+        { id: "smash", system: "might", name: "first" },
+        { id: "smash", system: "might", name: "second" },
+      ]),
+    ).toThrow("Duplicate system identity: might:smash");
   });
 });
 

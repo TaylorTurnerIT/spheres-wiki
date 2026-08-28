@@ -146,10 +146,28 @@ After second.`;
     });
   });
 
+  it("normalizes apostrophes in marker names to slug separators", () => {
+    const result = splitBodyOnMarkers("[Physician's Efficacy]\nBody after.");
+    expect(result[0]).toEqual({
+      type: "base-ability",
+      id: "physician-s-efficacy",
+    });
+  });
+
   it("handles markers with digits in name", () => {
     const body = "[Ability 2]\nBody after.";
     const result = splitBodyOnMarkers(body);
     expect(result[0]).toEqual({ type: "base-ability", id: "ability-2" });
+  });
+
+  it("handles a legacy marker immediately before an H2", () => {
+    const body = "Intro.\n\n[Counter Punch]## Unarmed Combatants\n\nRules.";
+    const result = splitBodyOnMarkers(body);
+    expect(result).toEqual([
+      { type: "markdown", text: "Intro." },
+      { type: "base-ability", id: "counter-punch" },
+      { type: "markdown", text: "## Unarmed Combatants\n\nRules." },
+    ]);
   });
 });
 

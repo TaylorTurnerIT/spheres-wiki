@@ -1,0 +1,1570 @@
+{
+  "generatedAt": "2026-08-28",
+  "source": "src/content",
+  "records": 6019,
+  "legacyDuplicateKeyCount": 64,
+  "sameSystemDuplicateKeyCount": 14,
+  "policy": {
+    "scopedIdentity": "type + system + id",
+    "oldestKeepsBareId": true,
+    "laterDuplicatesUseSourceBookInitials": true,
+    "initials": "NFKD ASCII word initials, lowercase alphanumeric",
+    "explicitIdsReservedBeforeGeneratedSuffixes": true
+  },
+  "collisions": [
+    {
+      "legacyKey": "class-feature:weapon-and-armor-proficiency",
+      "scopedKey": "class-feature:power:weapon-and-armor-proficiency",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 3819,
+          "originalId": "weapon-and-armor-proficiency",
+          "assignedId": "weapon-and-armor-proficiency"
+        },
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1876,
+          "originalId": "weapon-and-armor-proficiency",
+          "assignedId": "weapon-and-armor-proficiency"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:advanced-magic-training",
+      "scopedKey": "feat:power:advanced-magic-training",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 4291,
+          "originalId": "advanced-magic-training",
+          "assignedId": "advanced-magic-training"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1584,
+          "originalId": "advanced-magic-training",
+          "assignedId": "advanced-magic-training-msogfaf"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:advanced-tactics",
+      "scopedKey": "feat:guile:advanced-tactics",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1904,
+          "originalId": "advanced-tactics",
+          "assignedId": "advanced-tactics"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1585,
+          "originalId": "advanced-tactics",
+          "assignedId": "advanced-tactics"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:aerial-trip",
+      "scopedKey": "feat:might:aerial-trip",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2625,
+          "originalId": "aerial-trip",
+          "assignedId": "aerial-trip"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1586,
+          "originalId": "aerial-trip",
+          "assignedId": "aerial-trip"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:augmented-wit",
+      "scopedKey": "feat:champions:augmented-wit",
+      "entries": [
+        {
+          "sourceBook": "legends-of-the-spheres",
+          "sourceBookTitle": "Legends of the Spheres",
+          "system": "champions",
+          "publishedDate": "2023-08-01",
+          "sourceIndex": 1515,
+          "originalId": "augmented-wit",
+          "assignedId": "augmented-wit"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1587,
+          "originalId": "augmented-wit",
+          "assignedId": "augmented-wit"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:basic-magic-training",
+      "scopedKey": "feat:power:basic-magic-training",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 4298,
+          "originalId": "basic-magic-training",
+          "assignedId": "basic-magic-training"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1588,
+          "originalId": "basic-magic-training",
+          "assignedId": "basic-magic-training-msogfaf"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:cautious-incantation",
+      "scopedKey": "feat:power:cautious-incantation",
+      "entries": [
+        {
+          "sourceBook": "high-magic-handbook",
+          "sourceBookTitle": "The High Magic Handbook",
+          "system": "power",
+          "publishedDate": "2021-03-11",
+          "sourceIndex": 1412,
+          "originalId": "cautious-incantation",
+          "assignedId": "cautious-incantation"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1589,
+          "originalId": "cautious-incantation",
+          "assignedId": "cautious-incantation-msogfaf"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:combat-sphere-focus",
+      "scopedKey": "feat:might:combat-sphere-focus",
+      "entries": [
+        {
+          "sourceBook": "alienists-handbook",
+          "sourceBookTitle": "The Alienist's Handbook",
+          "system": "might",
+          "publishedDate": "2021-06-11",
+          "sourceIndex": 11,
+          "originalId": "combat-sphere-focus",
+          "assignedId": "combat-sphere-focus"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1590,
+          "originalId": "combat-sphere-focus",
+          "assignedId": "combat-sphere-focus"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:combat-sphere-specialization",
+      "scopedKey": "feat:might:combat-sphere-specialization",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2627,
+          "originalId": "combat-sphere-specialization",
+          "assignedId": "combat-sphere-specialization"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1591,
+          "originalId": "combat-sphere-specialization",
+          "assignedId": "combat-sphere-specialization"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:companion-trigger",
+      "scopedKey": "feat:might:companion-trigger",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2629,
+          "originalId": "companion-trigger",
+          "assignedId": "companion-trigger"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1592,
+          "originalId": "companion-trigger",
+          "assignedId": "companion-trigger"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:contingency",
+      "scopedKey": "feat:power:contingency",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 4305,
+          "originalId": "contingency",
+          "assignedId": "contingency"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1593,
+          "originalId": "contingency",
+          "assignedId": "contingency-msogfaf"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:customized-bond",
+      "scopedKey": "feat:might:customized-bond",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2631,
+          "originalId": "customized-bond",
+          "assignedId": "customized-bond"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1594,
+          "originalId": "customized-bond",
+          "assignedId": "customized-bond"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:deific-icon",
+      "scopedKey": "feat:guile:deific-icon",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1906,
+          "originalId": "deific-icon",
+          "assignedId": "deific-icon"
+        },
+        {
+          "sourceBook": "diamond-spheres-invention-and-ingenuity",
+          "sourceBookTitle": "Diamond Spheres: Invention & Ingenuity",
+          "system": "guile",
+          "publishedDate": "2024-12-13",
+          "sourceIndex": 1013,
+          "originalId": "deific-icon",
+          "assignedId": "deific-icon-dsii"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:dimensional-archer",
+      "scopedKey": "feat:champions:dimensional-archer",
+      "entries": [
+        {
+          "sourceBook": "champions-of-the-spheres",
+          "sourceBookTitle": "Champions of the Spheres",
+          "system": "champions",
+          "publishedDate": "2017-11-30",
+          "sourceIndex": 686,
+          "originalId": "dimensional-archer",
+          "assignedId": "dimensional-archer"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1595,
+          "originalId": "dimensional-archer",
+          "assignedId": "dimensional-archer"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:dispelling-attack",
+      "scopedKey": "feat:champions:dispelling-attack",
+      "entries": [
+        {
+          "sourceBook": "champions-of-the-spheres",
+          "sourceBookTitle": "Champions of the Spheres",
+          "system": "champions",
+          "publishedDate": "2017-11-30",
+          "sourceIndex": 688,
+          "originalId": "dispelling-attack",
+          "assignedId": "dispelling-attack"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1596,
+          "originalId": "dispelling-attack",
+          "assignedId": "dispelling-attack"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:dragons-tattoos",
+      "scopedKey": "feat:might:dragons-tattoos",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2633,
+          "originalId": "dragons-tattoos",
+          "assignedId": "dragons-tattoos"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1597,
+          "originalId": "dragons-tattoos",
+          "assignedId": "dragons-tattoos"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:dual-wielding-mystic-fusion",
+      "scopedKey": "feat:might:dual-wielding-mystic-fusion",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2634,
+          "originalId": "dual-wielding-mystic-fusion",
+          "assignedId": "dual-wielding-mystic-fusion"
+        },
+        {
+          "sourceBook": "champions-of-the-spheres",
+          "sourceBookTitle": "Champions of the Spheres",
+          "system": "champions",
+          "publishedDate": "2017-11-30",
+          "sourceIndex": 689,
+          "originalId": "dual-wielding-mystic-fusion",
+          "assignedId": "dual-wielding-mystic-fusion"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1598,
+          "originalId": "dual-wielding-mystic-fusion",
+          "assignedId": "dual-wielding-mystic-fusion"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:dual-wielding-mystic-strike",
+      "scopedKey": "feat:might:dual-wielding-mystic-strike",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2635,
+          "originalId": "dual-wielding-mystic-strike",
+          "assignedId": "dual-wielding-mystic-strike"
+        },
+        {
+          "sourceBook": "champions-of-the-spheres",
+          "sourceBookTitle": "Champions of the Spheres",
+          "system": "champions",
+          "publishedDate": "2017-11-30",
+          "sourceIndex": 690,
+          "originalId": "dual-wielding-mystic-strike",
+          "assignedId": "dual-wielding-mystic-strike"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1599,
+          "originalId": "dual-wielding-mystic-strike",
+          "assignedId": "dual-wielding-mystic-strike"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:extra-combat-talent",
+      "scopedKey": "feat:might:extra-combat-talent",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2641,
+          "originalId": "extra-combat-talent",
+          "assignedId": "extra-combat-talent"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1601,
+          "originalId": "extra-combat-talent",
+          "assignedId": "extra-combat-talent"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:extra-skill-leverage",
+      "scopedKey": "feat:guile:extra-skill-leverage",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1915,
+          "originalId": "extra-skill-leverage",
+          "assignedId": "extra-skill-leverage"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1602,
+          "originalId": "extra-skill-leverage",
+          "assignedId": "extra-skill-leverage"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:extra-skill-talent",
+      "scopedKey": "feat:guile:extra-skill-talent",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1916,
+          "originalId": "extra-skill-talent",
+          "assignedId": "extra-skill-talent"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1603,
+          "originalId": "extra-skill-talent",
+          "assignedId": "extra-skill-talent"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:focused-stamina",
+      "scopedKey": "feat:might:focused-stamina",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2650,
+          "originalId": "focused-stamina",
+          "assignedId": "focused-stamina"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1604,
+          "originalId": "focused-stamina",
+          "assignedId": "focused-stamina"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:great-focus",
+      "scopedKey": "feat:might:great-focus",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2653,
+          "originalId": "great-focus",
+          "assignedId": "great-focus"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1605,
+          "originalId": "great-focus",
+          "assignedId": "great-focus"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:harmonic-counter",
+      "scopedKey": "feat:power:harmonic-counter",
+      "entries": [
+        {
+          "sourceBook": "champions-of-the-spheres-study-and-practice",
+          "sourceBookTitle": "Champions of the Spheres: Study and Practice",
+          "system": "power",
+          "publishedDate": "2019-11-26",
+          "sourceIndex": 679,
+          "originalId": "harmonic-counter",
+          "assignedId": "harmonic-counter"
+        },
+        {
+          "sourceBook": "arcforge-players-compendium",
+          "sourceBookTitle": "Arcforge Players Compendium",
+          "system": "power",
+          "publishedDate": "2025-05-21",
+          "sourceIndex": 185,
+          "originalId": "harmonic-counter",
+          "assignedId": "harmonic-counter-apc"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:heroic-resolve",
+      "scopedKey": "feat:might:heroic-resolve",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2656,
+          "originalId": "heroic-resolve",
+          "assignedId": "heroic-resolve"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1606,
+          "originalId": "heroic-resolve",
+          "assignedId": "heroic-resolve"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:improved-planning",
+      "scopedKey": "feat:guile:improved-planning",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1918,
+          "originalId": "improved-planning",
+          "assignedId": "improved-planning"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1607,
+          "originalId": "improved-planning",
+          "assignedId": "improved-planning"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:insinuating-incantation",
+      "scopedKey": "feat:champions:insinuating-incantation",
+      "entries": [
+        {
+          "sourceBook": "legends-of-the-spheres",
+          "sourceBookTitle": "Legends of the Spheres",
+          "system": "champions",
+          "publishedDate": "2023-08-01",
+          "sourceIndex": 1524,
+          "originalId": "insinuating-incantation",
+          "assignedId": "insinuating-incantation"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1608,
+          "originalId": "insinuating-incantation",
+          "assignedId": "insinuating-incantation"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:life-taker",
+      "scopedKey": "feat:champions:life-taker",
+      "entries": [
+        {
+          "sourceBook": "champions-of-the-spheres",
+          "sourceBookTitle": "Champions of the Spheres",
+          "system": "champions",
+          "publishedDate": "2017-11-30",
+          "sourceIndex": 700,
+          "originalId": "life-taker",
+          "assignedId": "life-taker"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1609,
+          "originalId": "life-taker",
+          "assignedId": "life-taker"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:muscular-reflexes",
+      "scopedKey": "feat:might:muscular-reflexes",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2662,
+          "originalId": "muscular-reflexes",
+          "assignedId": "muscular-reflexes"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1610,
+          "originalId": "muscular-reflexes",
+          "assignedId": "muscular-reflexes"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:mystic-focus",
+      "scopedKey": "feat:champions:mystic-focus",
+      "entries": [
+        {
+          "sourceBook": "champions-of-the-spheres",
+          "sourceBookTitle": "Champions of the Spheres",
+          "system": "champions",
+          "publishedDate": "2017-11-30",
+          "sourceIndex": 703,
+          "originalId": "mystic-focus",
+          "assignedId": "mystic-focus"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1611,
+          "originalId": "mystic-focus",
+          "assignedId": "mystic-focus"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:practiced-interruption",
+      "scopedKey": "feat:might:practiced-interruption",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2667,
+          "originalId": "practiced-interruption",
+          "assignedId": "practiced-interruption"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1613,
+          "originalId": "practiced-interruption",
+          "assignedId": "practiced-interruption"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:prepared-hacking",
+      "scopedKey": "feat:guile:prepared-hacking",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1926,
+          "originalId": "prepared-hacking",
+          "assignedId": "prepared-hacking"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1614,
+          "originalId": "prepared-hacking",
+          "assignedId": "prepared-hacking"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:public-renown",
+      "scopedKey": "feat:guile:public-renown",
+      "entries": [
+        {
+          "sourceBook": "legends-of-the-spheres",
+          "sourceBookTitle": "Legends of the Spheres",
+          "system": "guile",
+          "publishedDate": "2023-08-01",
+          "sourceIndex": 1537,
+          "originalId": "public-renown",
+          "assignedId": "public-renown"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1615,
+          "originalId": "public-renown",
+          "assignedId": "public-renown"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:single-strike-mastery",
+      "scopedKey": "feat:guile:single-strike-mastery",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1927,
+          "originalId": "single-strike-mastery",
+          "assignedId": "single-strike-mastery"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1616,
+          "originalId": "single-strike-mastery",
+          "assignedId": "single-strike-mastery"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:skill-sphere-focus",
+      "scopedKey": "feat:guile:skill-sphere-focus",
+      "entries": [
+        {
+          "sourceBook": "legends-of-the-spheres",
+          "sourceBookTitle": "Legends of the Spheres",
+          "system": "guile",
+          "publishedDate": "2023-08-01",
+          "sourceIndex": 1538,
+          "originalId": "skill-sphere-focus",
+          "assignedId": "skill-sphere-focus"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1617,
+          "originalId": "skill-sphere-focus",
+          "assignedId": "skill-sphere-focus"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:solitary-incantation",
+      "scopedKey": "feat:power:solitary-incantation",
+      "entries": [
+        {
+          "sourceBook": "high-magic-handbook",
+          "sourceBookTitle": "The High Magic Handbook",
+          "system": "power",
+          "publishedDate": "2021-03-11",
+          "sourceIndex": 1417,
+          "originalId": "solitary-incantation",
+          "assignedId": "solitary-incantation"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1618,
+          "originalId": "solitary-incantation",
+          "assignedId": "solitary-incantation-msogfaf"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:spell-attack",
+      "scopedKey": "feat:champions:spell-attack",
+      "entries": [
+        {
+          "sourceBook": "champions-of-the-spheres",
+          "sourceBookTitle": "Champions of the Spheres",
+          "system": "champions",
+          "publishedDate": "2017-11-30",
+          "sourceIndex": 710,
+          "originalId": "spell-attack",
+          "assignedId": "spell-attack"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1619,
+          "originalId": "spell-attack",
+          "assignedId": "spell-attack"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:sphere-focus",
+      "scopedKey": "feat:power:sphere-focus",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 4325,
+          "originalId": "sphere-focus",
+          "assignedId": "sphere-focus"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1620,
+          "originalId": "sphere-focus",
+          "assignedId": "sphere-focus-msogfaf"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:studied-scout",
+      "scopedKey": "feat:might:studied-scout",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2676,
+          "originalId": "studied-scout",
+          "assignedId": "studied-scout"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1621,
+          "originalId": "studied-scout",
+          "assignedId": "studied-scout"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:target-spotting",
+      "scopedKey": "feat:might:target-spotting",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2678,
+          "originalId": "target-spotting",
+          "assignedId": "target-spotting"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1622,
+          "originalId": "target-spotting",
+          "assignedId": "target-spotting"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:terrain-defiler",
+      "scopedKey": "feat:power:terrain-defiler",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 4261,
+          "originalId": "terrain-defiler",
+          "assignedId": "terrain-defiler"
+        },
+        {
+          "sourceBook": "cataclysm-handbook",
+          "sourceBookTitle": "The Cataclysm Handbook",
+          "system": "power",
+          "publishedDate": "2020-08-28",
+          "sourceIndex": 640,
+          "originalId": "terrain-defiler",
+          "assignedId": "terrain-defiler-tch"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:thaumic-retention",
+      "scopedKey": "feat:guile:thaumic-retention",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1931,
+          "originalId": "thaumic-retention",
+          "assignedId": "thaumic-retention"
+        },
+        {
+          "sourceBook": "diamond-spheres-invention-and-ingenuity",
+          "sourceBookTitle": "Diamond Spheres: Invention & Ingenuity",
+          "system": "guile",
+          "publishedDate": "2024-12-13",
+          "sourceIndex": 1014,
+          "originalId": "thaumic-retention",
+          "assignedId": "thaumic-retention-dsii"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:theoretical-initiate",
+      "scopedKey": "feat:guile:theoretical-initiate",
+      "entries": [
+        {
+          "sourceBook": "legends-of-the-spheres",
+          "sourceBookTitle": "Legends of the Spheres",
+          "system": "guile",
+          "publishedDate": "2023-08-01",
+          "sourceIndex": 1539,
+          "originalId": "theoretical-initiate",
+          "assignedId": "theoretical-initiate"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1623,
+          "originalId": "theoretical-initiate",
+          "assignedId": "theoretical-initiate"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:through-the-long-night",
+      "scopedKey": "feat:might:through-the-long-night",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2682,
+          "originalId": "through-the-long-night",
+          "assignedId": "through-the-long-night"
+        },
+        {
+          "sourceBook": "champions-of-the-spheres",
+          "sourceBookTitle": "Champions of the Spheres",
+          "system": "champions",
+          "publishedDate": "2017-11-30",
+          "sourceIndex": 713,
+          "originalId": "through-the-long-night",
+          "assignedId": "through-the-long-night"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:transformation",
+      "scopedKey": "feat:power:transformation",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 4331,
+          "originalId": "transformation",
+          "assignedId": "transformation"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1624,
+          "originalId": "transformation",
+          "assignedId": "transformation-msogfaf"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:tug-the-heartstrings",
+      "scopedKey": "feat:guile:tug-the-heartstrings",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1932,
+          "originalId": "tug-the-heartstrings",
+          "assignedId": "tug-the-heartstrings"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1625,
+          "originalId": "tug-the-heartstrings",
+          "assignedId": "tug-the-heartstrings"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:unarmored-mastery",
+      "scopedKey": "feat:champions:unarmored-mastery",
+      "entries": [
+        {
+          "sourceBook": "champions-of-the-spheres",
+          "sourceBookTitle": "Champions of the Spheres",
+          "system": "champions",
+          "publishedDate": "2017-11-30",
+          "sourceIndex": 714,
+          "originalId": "unarmored-mastery",
+          "assignedId": "unarmored-mastery"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1626,
+          "originalId": "unarmored-mastery",
+          "assignedId": "unarmored-mastery"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:utilitarian-dilettante",
+      "scopedKey": "feat:guile:utilitarian-dilettante",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 1933,
+          "originalId": "utilitarian-dilettante",
+          "assignedId": "utilitarian-dilettante"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1627,
+          "originalId": "utilitarian-dilettante",
+          "assignedId": "utilitarian-dilettante"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:whole-set-blast",
+      "scopedKey": "feat:power:whole-set-blast",
+      "entries": [
+        {
+          "sourceBook": "expanded-spheres-barons-lost-apocrypha",
+          "sourceBookTitle": "Expanded Spheres: Baron's Lost Apocrypha",
+          "system": "power",
+          "publishedDate": "2022-10-06",
+          "sourceIndex": 1240,
+          "originalId": "whole-set-blast",
+          "assignedId": "whole-set-blast"
+        },
+        {
+          "sourceBook": "card-casting-3-volatile-variance",
+          "sourceBookTitle": "Card Casting 3: Volatile Variance",
+          "system": "power",
+          "publishedDate": "2024-01-12",
+          "sourceIndex": 594,
+          "originalId": "whole-set-blast",
+          "assignedId": "whole-set-blast-cc3vv"
+        }
+      ]
+    },
+    {
+      "legacyKey": "feat:zodiac-tattoos",
+      "scopedKey": "feat:might:zodiac-tattoos",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2690,
+          "originalId": "zodiac-tattoos",
+          "assignedId": "zodiac-tattoos"
+        },
+        {
+          "sourceBook": "mythic-spheres-3",
+          "sourceBookTitle": "Mythic Spheres of Guile: Features and Feats",
+          "system": "power",
+          "publishedDate": "2025-09-02",
+          "sourceIndex": 1628,
+          "originalId": "zodiac-tattoos",
+          "assignedId": "zodiac-tattoos"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:bully",
+      "scopedKey": "talent:power:bully",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 4668,
+          "originalId": "bully",
+          "assignedId": "bully"
+        },
+        {
+          "sourceBook": "diamond-spheres-hustle-and-bustle",
+          "sourceBookTitle": "Diamond Spheres: Hustle & Bustle",
+          "system": "guile",
+          "publishedDate": "2025-08-18",
+          "sourceIndex": 913,
+          "originalId": "bully",
+          "assignedId": "bully"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:commander",
+      "scopedKey": "talent:power:commander",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 5737,
+          "originalId": "commander",
+          "assignedId": "commander"
+        },
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 2554,
+          "originalId": "commander",
+          "assignedId": "commander"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:conflagrant-cluster",
+      "scopedKey": "talent:power:conflagrant-cluster",
+      "entries": [
+        {
+          "sourceBook": "expanded-spheres-barons-lost-apocrypha",
+          "sourceBookTitle": "Expanded Spheres: Baron's Lost Apocrypha",
+          "system": "power",
+          "publishedDate": "2022-10-06",
+          "sourceIndex": 1252,
+          "originalId": "conflagrant-cluster",
+          "assignedId": "conflagrant-cluster"
+        },
+        {
+          "sourceBook": "card-casting-3-volatile-variance",
+          "sourceBookTitle": "Card Casting 3: Volatile Variance",
+          "system": "power",
+          "publishedDate": "2024-01-12",
+          "sourceIndex": 604,
+          "originalId": "conflagrant-cluster",
+          "assignedId": "conflagrant-cluster-cc3vv"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:crowd-pleaser",
+      "scopedKey": "talent:might:crowd-pleaser",
+      "entries": [
+        {
+          "sourceBook": "spheres-apocrypha-tricks-and-traps",
+          "sourceBookTitle": "Spheres Apocrypha: Tricks and Traps",
+          "system": "might",
+          "publishedDate": "2019-07-27",
+          "sourceIndex": 1845,
+          "originalId": "crowd-pleaser",
+          "assignedId": "crowd-pleaser"
+        },
+        {
+          "sourceBook": "diamond-spheres-harmony-and-discord",
+          "sourceBookTitle": "Diamond Spheres: Harmony & Discord",
+          "system": "guile",
+          "publishedDate": "2024-08-23",
+          "sourceIndex": 901,
+          "originalId": "crowd-pleaser",
+          "assignedId": "crowd-pleaser"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:deathless",
+      "scopedKey": "talent:might:deathless",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2879,
+          "originalId": "deathless",
+          "assignedId": "deathless"
+        },
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 5587,
+          "originalId": "deathless",
+          "assignedId": "deathless"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:disrupt-focus",
+      "scopedKey": "talent:power:disrupt-focus",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 5486,
+          "originalId": "disrupt-focus",
+          "assignedId": "disrupt-focus"
+        },
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 2240,
+          "originalId": "disrupt-focus",
+          "assignedId": "disrupt-focus"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:flight",
+      "scopedKey": "talent:power:flight",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 5651,
+          "originalId": "flight",
+          "assignedId": "flight"
+        },
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 2508,
+          "originalId": "flight",
+          "assignedId": "flight"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:grey-hawks-gambit",
+      "scopedKey": "talent:power:grey-hawks-gambit",
+      "entries": [
+        {
+          "sourceBook": "expanded-spheres-barons-lost-apocrypha",
+          "sourceBookTitle": "Expanded Spheres: Baron's Lost Apocrypha",
+          "system": "power",
+          "publishedDate": "2022-10-06",
+          "sourceIndex": 1272,
+          "originalId": "grey-hawks-gambit",
+          "assignedId": "grey-hawks-gambit"
+        },
+        {
+          "sourceBook": "card-casting-3-volatile-variance",
+          "sourceBookTitle": "Card Casting 3: Volatile Variance",
+          "system": "power",
+          "publishedDate": "2024-01-12",
+          "sourceIndex": 605,
+          "originalId": "grey-hawks-gambit",
+          "assignedId": "grey-hawks-gambit-cc3vv"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:hazardous-terrain",
+      "scopedKey": "talent:power:hazardous-terrain",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 5539,
+          "originalId": "hazardous-terrain",
+          "assignedId": "hazardous-terrain"
+        },
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 2510,
+          "originalId": "hazardous-terrain",
+          "assignedId": "hazardous-terrain"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:mobility",
+      "scopedKey": "talent:might:mobility",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 2753,
+          "originalId": "mobility",
+          "assignedId": "mobility"
+        },
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 5761,
+          "originalId": "mobility",
+          "assignedId": "mobility"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:polyglot",
+      "scopedKey": "talent:power:polyglot",
+      "entries": [
+        {
+          "sourceBook": "spheres-apocrypha-cognition-talents",
+          "sourceBookTitle": "Spheres Apocrypha: Cognition Talents",
+          "system": "power",
+          "publishedDate": "2019-10-26",
+          "sourceIndex": 1754,
+          "originalId": "polyglot",
+          "assignedId": "polyglot"
+        },
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 2104,
+          "originalId": "polyglot",
+          "assignedId": "polyglot"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:punishment",
+      "scopedKey": "talent:might:punishment",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 3161,
+          "originalId": "punishment",
+          "assignedId": "punishment"
+        },
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 5620,
+          "originalId": "punishment",
+          "assignedId": "punishment"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:shadow-strike",
+      "scopedKey": "talent:might:shadow-strike",
+      "entries": [
+        {
+          "sourceBook": "spheres-of-might",
+          "sourceBookTitle": "Spheres of Might",
+          "system": "might",
+          "publishedDate": "2017-10-12",
+          "sourceIndex": 3101,
+          "originalId": "shadow-strike",
+          "assignedId": "shadow-strike"
+        },
+        {
+          "sourceBook": "expanded-spheres-barons-lost-apocrypha",
+          "sourceBookTitle": "Expanded Spheres: Baron's Lost Apocrypha",
+          "system": "power",
+          "publishedDate": "2022-10-06",
+          "sourceIndex": 1251,
+          "originalId": "shadow-strike",
+          "assignedId": "shadow-strike"
+        }
+      ]
+    },
+    {
+      "legacyKey": "talent:ventriloquism",
+      "scopedKey": "talent:power:ventriloquism",
+      "entries": [
+        {
+          "sourceBook": "ultimate-spheres-of-power",
+          "sourceBookTitle": "Ultimate Spheres of Power",
+          "system": "power",
+          "publishedDate": "2019-12-12",
+          "sourceIndex": 5200,
+          "originalId": "ventriloquism",
+          "assignedId": "ventriloquism"
+        },
+        {
+          "sourceBook": "spheres-of-guile",
+          "sourceBookTitle": "Spheres of Guile",
+          "system": "guile",
+          "publishedDate": "2023-04-02",
+          "sourceIndex": 2377,
+          "originalId": "ventriloquism",
+          "assignedId": "ventriloquism"
+        }
+      ]
+    }
+  ]
+}

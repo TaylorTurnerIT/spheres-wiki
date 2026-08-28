@@ -46,8 +46,8 @@ export const SYSTEMS: Record<string, SystemConfig> = {
     classLabel: "Practitioner Classes",
     description:
       "For martial characters. Craft fighters, archers, brawlers, and commanders from talents instead of rigid feat trees.",
-    introLinkText: "Using Spheres of Might →",
-    buildText: "How to Build a Practitioner →",
+    introLinkText: "Explore Spheres of Might →",
+    buildText: "Browse Practitioner Classes →",
     buildHref: "/might/",
   },
   guile: {
@@ -60,8 +60,8 @@ export const SYSTEMS: Record<string, SystemConfig> = {
     classLabel: "Operative Classes",
     description:
       "The skills system. Run organizations, craft masterworks, infiltrate networks — with real mechanical weight.",
-    introLinkText: "Using Spheres of Guile →",
-    buildText: "How to Build an Operative →",
+    introLinkText: "Explore Spheres of Guile →",
+    buildText: "Browse Operative Classes →",
     buildHref: "/guile/",
   },
   champions: {
@@ -74,8 +74,8 @@ export const SYSTEMS: Record<string, SystemConfig> = {
     classLabel: "Champion Classes",
     description:
       "Blend magic and martial together. Bridge both systems for characters who fight and cast in equal measure.",
-    introLinkText: "Using Champions →",
-    buildText: "How to Build a Champion →",
+    introLinkText: "Explore Champions →",
+    buildText: "Browse Champion Classes →",
     buildHref: "/champions/",
   },
 };

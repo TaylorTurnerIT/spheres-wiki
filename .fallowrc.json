@@ -15,6 +15,9 @@
     "scripts/parse-wiki.test.mjs",
     "scripts/check-idioms.mjs",
     "scripts/check-links.mjs",
+    "scripts/check-identity-collisions.mjs",
+    "scripts/check-content-routes.mjs",
+    "scripts/check-performance.mjs",
     "scripts/purge-dead-links.mjs",
     "scripts/purge-tag-colors.mjs",
     "scripts/validate-v2.mjs"

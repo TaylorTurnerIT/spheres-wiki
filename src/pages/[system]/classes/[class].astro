@@ -13,7 +13,19 @@ import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { stripBodySource } from '@/lib/renderBody';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, ArchetypeEntry, ArchetypeFeatureEntry, BookMeta, TagEntry } from '@/lib/types';
-import { ordinal } from '@/lib/levelLabel';
+import { compareByLevel, ordinal } from '@/lib/levelLabel';
+import {
+  buildFeaturesByLevel,
+  computeBAB,
+  computeCasterLevel,
+  computeMagicTalents,
+  computeSave,
+  formatBAB,
+  formatSave,
+  levelOrdinal,
+  parseClassTable,
+} from '@/lib/classProgression';
+import { contentEntryKey } from '@/lib/entryIdentity';
 
 interface Props {
   cls: ClassEntry;
@@ -31,6 +43,7 @@ interface Props {
   bookMetaMap: Map<string, BookMeta>;
 }
 
+// fallow-ignore-next-line complexity
 export async function getStaticPaths() {
   const { classMap, classFeatureMap, classTraitMap, archetypeMap, archetypeFeatureMap, bookMetaMap, tagMap } = await resolveEntries();
   const allCollEntries = await getCollEntriesMap();
@@ -43,11 +56,7 @@ export async function getStaticPaths() {
 
       const featureEntries = [...classFeatureMap.values()]
         .filter(f => f.className === cls.id)
-        .sort((a, b) => {
-          const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
-          const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
-          return aMin - bMin;
-        });
+        .sort(compareByLevel);
 
       const traitEntries = [...classTraitMap.values()]
         .filter(t => t.className === cls.id)
@@ -55,23 +64,27 @@ export async function getStaticPaths() {
 
       const featureCollEntries = new Map<string, any>();
       for (const f of featureEntries) {
-        const entry = allCollEntries.get(`class-feature:${f.id}`);
+        const entry = allCollEntries.get(
+          contentEntryKey('class-feature', f.system, f.id),
+        );
         if (entry) featureCollEntries.set(f.id, entry);
       }
 
       const traitCollEntries = new Map<string, any>();
       for (const t of traitEntries) {
-        const entry = allCollEntries.get(`class-trait:${t.id}`);
+        const entry = allCollEntries.get(
+          contentEntryKey('class-trait', t.system, t.id),
+        );
         if (entry) traitCollEntries.set(t.id, entry);
       }
 
       const classArchetypes = [...archetypeMap.values()]
-        .filter(a => a.className === cls.id);
+        .filter(a => a.system === cls.system && a.className === cls.id);
 
       const featureNameById = new Map(featureEntries.map(f => [f.id, f.name]));
 
       const acfFeatures = [...archetypeFeatureMap.values()]
-        .filter(f => f.isAlternateClassFeature && f.archetypeId === `${cls.id}-alternate-class-features`);
+        .filter(f => f.system === cls.system && f.isAlternateClassFeature && f.archetypeId === `${cls.id}-alternate-class-features`);
       const acfArchetypes = acfFeatures.map(af => ({
         id: af.id,
         name: `Alternate Class Feature: ${af.name}`,
@@ -86,26 +99,28 @@ export async function getStaticPaths() {
       const allArchetypes = [...classArchetypes, ...acfArchetypes];
 
       const classArchetypeFeatures = [...archetypeFeatureMap.values()]
-        .filter(f => allArchetypes.some(a => a.id === f.archetypeId) || f.isAlternateClassFeature)
-        .sort((a, b) => {
-          const aMin = Array.isArray(a.level) ? Math.min(...a.level) : a.level;
-          const bMin = Array.isArray(b.level) ? Math.min(...b.level) : b.level;
-          return aMin - bMin;
-        });
+        .filter(f => f.system === cls.system && (allArchetypes.some(a => a.id === f.archetypeId) || f.isAlternateClassFeature))
+        .sort(compareByLevel);
 
       const archetypeFeatureCollEntries = new Map<string, any>();
       for (const f of classArchetypeFeatures) {
-        const entry = allCollEntries.get(`archetype-feature:${f.id}`);
+        const entry = allCollEntries.get(
+          contentEntryKey('archetype-feature', f.system, f.id),
+        );
         if (entry) archetypeFeatureCollEntries.set(f.id, entry);
       }
 
       const archetypeCollEntries = new Map<string, any>();
       for (const a of classArchetypes) {
-        const entry = allCollEntries.get(`archetype:${a.id}`);
+        const entry = allCollEntries.get(
+          contentEntryKey('archetype', a.system, a.id),
+        );
         if (entry) archetypeCollEntries.set(a.id, entry);
       }
 
-      const classCollEntry = allCollEntries.get(`class:${cls.id}`);
+      const classCollEntry = allCollEntries.get(
+        contentEntryKey('class', cls.system, cls.id),
+      );
       const digests = [
         classCollEntry?.digest,
         ...featureEntries.map(f => featureCollEntries.get(f.id)?.digest),
@@ -169,23 +184,34 @@ function sourceTitle(sb: string): string | null {
 type RenderedTrait = { trait: ClassTraitEntry; Content: any; sourceBookTitle: string | null };
 type RenderedFeature = { feature: ClassFeatureEntry; Content: any; traits: RenderedTrait[]; sourceBookTitle: string | null };
 
-const featureRendered: RenderedFeature[] = [];
-for (const feature of featureEntries) {
-  const collEntry = featureCollEntries.get(feature.id);
-  const cleanBody = collEntry ? stripBodySource(collEntry.body || '') : null;
-  const { Content } = (collEntry && cleanBody !== null) ? await render({ ...collEntry, body: cleanBody }) : { Content: null };
-
-  const featureTraits = traitEntries.filter(t => t.featureId === feature.id);
-  const traits: RenderedTrait[] = [];
-  for (const trait of featureTraits) {
-    const traitCollEntry = traitCollEntries.get(trait.id);
-    const traitCleanBody = traitCollEntry ? stripBodySource(traitCollEntry.body || '') : null;
-    const { Content: TraitContent } = (traitCollEntry && traitCleanBody !== null) ? await render({ ...traitCollEntry, body: traitCleanBody }) : { Content: null };
-    traits.push({ trait, Content: TraitContent, sourceBookTitle: sourceTitle(trait.sourceBook) });
-  }
-
-  featureRendered.push({ feature, Content, traits, sourceBookTitle: sourceTitle(feature.sourceBook) });
+async function renderEntryContent(collEntry: any): Promise<any> {
+  if (!collEntry) return null;
+  const cleanBody = stripBodySource(collEntry.body || '');
+  return (await render({ ...collEntry, body: cleanBody })).Content;
 }
+
+async function renderClassTrait(trait: ClassTraitEntry): Promise<RenderedTrait> {
+  return {
+    trait,
+    Content: await renderEntryContent(traitCollEntries.get(trait.id)),
+    sourceBookTitle: sourceTitle(trait.sourceBook),
+  };
+}
+
+async function renderClassFeature(feature: ClassFeatureEntry): Promise<RenderedFeature> {
+  const featureTraits = traitEntries.filter((trait) => trait.featureId === feature.id);
+  const traits = await Promise.all(featureTraits.map(renderClassTrait));
+  return {
+    feature,
+    Content: await renderEntryContent(featureCollEntries.get(feature.id)),
+    traits,
+    sourceBookTitle: sourceTitle(feature.sourceBook),
+  };
+}
+
+const featureRendered: RenderedFeature[] = await Promise.all(
+  featureEntries.map(renderClassFeature),
+);
 
 const tocOverview: TocItem = { id: 'overview', label: 'Overview' };
 const tocGroups: TocGroup[] = featureRendered.length > 0 ? [{
@@ -202,72 +228,8 @@ const tocGroups: TocGroup[] = featureRendered.length > 0 ? [{
 }] : [];
 
 
-function computeBAB(level: number, progression: string): number {
-  switch (progression) {
-    case "full": return level;
-    case "3/4": return Math.floor(level * 0.75);
-    case "half": return Math.floor(level * 0.5);
-    default: return Math.floor(level * 0.75);
-  }
-}
-
-function computeSave(level: number, progression: string): number {
-  switch (progression) {
-    case "good": return 2 + Math.floor(level / 2);
-    case "poor": return Math.floor(level / 3);
-    default: return Math.floor(level / 3);
-  }
-}
-
-function formatBAB(bab: number): string {
-  const attacks: string[] = [];
-  let val = bab;
-  while (val > 0 && attacks.length < 4) {
-    attacks.push(`+${val}`);
-    val -= 5;
-  }
-  if (attacks.length === 0) return "+0";
-  return attacks.join("/");
-}
-
-function formatSave(val: number): string { return `+${val}`; }
-function levelOrdinal(level: number): string { return `${level}${ordinal(level)}`; }
-
-function parseClassTable(raw: string | undefined): { extraHeaders: string[]; specialSource: Record<number, string>; extraRowData: Record<number, string[]> } | null {
-  if (!raw) return null;
-  try {
-    const parsed = JSON.parse(raw);
-    if (typeof parsed === "string") return JSON.parse(parsed);
-    return parsed;
-  } catch { return null; }
-}
-
 const classTable = parseClassTable(cls.classTable as string | undefined);
-
-const CL_MID = [0,1,2,3,3,4,5,6,6,7,8,9,9,10,11,12,12,13,14,15];
-const CL_LOW = [0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10];
-
-function computeCasterLevel(level: number, tier: string): number {
-  if (tier === "high") return level;
-  if (tier === "mid") return CL_MID[level - 1];
-  if (tier === "low") return CL_LOW[level - 1];
-  return 0;
-}
-
-function computeMagicTalents(level: number, tier: string): number {
-  if (tier === "high") return level + 2;
-  if (tier === "mid") return Math.floor(3 * level / 4) + 2;
-  return Math.floor(level / 2) + 2;
-}
-
-const featuresByLevel: Record<number, { name: string; id: string }[]> = {};
-for (const f of featureEntries) {
-  const levels = Array.isArray(f.level) ? f.level : [f.level];
-  for (const lvl of levels) {
-    if (!featuresByLevel[lvl]) featuresByLevel[lvl] = [];
-    featuresByLevel[lvl].push({ name: f.name, id: f.id });
-  }
-}
+const featuresByLevel = buildFeaturesByLevel(featureEntries);
 
 const hasCasting = cls.casterTier && cls.casterTier !== "none";
 
@@ -310,16 +272,24 @@ for (let lvl = 1; lvl <= 20; lvl++) {
   });
 }
 
-// Pre-compute archetype selector options for ArchetypeSwapper
-const archetypeOptions = archetypes.map(arc => {
+function cleanArchetypeDescription(rawText: string): string {
+  return rawText.trim().split('\n')[0].replace(/<[^>]+>/g, '').substring(0, 150) + (rawText.length > 150 ? '...' : '');
+}
+
+function getArchetypeDescription(replaces: string | undefined, rawText: string, fallback: string): string {
+  if (replaces) return `Replaces: ${replaces}`;
+  return cleanArchetypeDescription(rawText) || fallback;
+}
+
+function buildArchetypeOption(arc: ArchetypeEntry) {
   const collEntry = archetypeCollEntries.get(arc.id);
   const rawText = collEntry?.body || '';
   const acfReplacesDesc = (arc as any)._acfReplacesDesc as string | undefined;
-  const desc = acfReplacesDesc
-    ? `Replaces: ${acfReplacesDesc}`
-    : (rawText.trim().split('\n')[0].replace(/<[^>]+>/g, '').substring(0, 150) + (rawText.length > 150 ? '...' : ''));
-  return { id: arc.id, name: arc.name, desc: desc || arc.name };
-});
+  return { id: arc.id, name: arc.name, desc: getArchetypeDescription(acfReplacesDesc, rawText, arc.name) };
+}
+
+// Pre-compute archetype selector options for ArchetypeSwapper
+const archetypeOptions = archetypes.map(buildArchetypeOption);
 ---
 <WikiPage title={`${cls.name} — ${sysConfig.label} Wiki`} activeNamespace={system}>
 

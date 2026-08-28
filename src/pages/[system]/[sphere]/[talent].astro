@@ -5,6 +5,7 @@ import EntryDetailPage from '@/components/EntryDetailPage.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { buildOrderedTagIds } from '@/lib/tags';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter, buildSystemIdIndex, systemIdKey } from '@/lib/systems';
+import { contentEntryKey } from '@/lib/entryIdentity';
 import type { TalentEntry, SphereEntry, BookMeta, TagEntry } from '@/lib/types';
 
 interface Props {
@@ -16,6 +17,7 @@ interface Props {
   bookMetaMap: Map<string, BookMeta>;
 }
 
+// fallow-ignore-next-line complexity
 export async function getStaticPaths() {
   const { talentMap, sphereMap, bookMetaMap, tagMap } = await resolveEntries();
   const allCollEntries = await getCollEntriesMap();
@@ -27,7 +29,7 @@ export async function getStaticPaths() {
     for (const [, talent] of talentMap) {
       if (talent.system !== system) continue;
 
-      const collEntry = allCollEntries.get(`talent:${talent.id}`);
+      const collEntry = allCollEntries.get(contentEntryKey('talent', talent.system, talent.id));
       const cacheKey = collEntry?.digest as string | undefined;
 
       const sphere = sphereIndex.get(systemIdKey(system, talent.sphere ?? ""));

@@ -2,7 +2,7 @@ import { defineCollection } from "astro:content";
 import { EventEmitter } from "node:events";
 import { glob } from "astro/loaders";
 import { z } from "zod";
-import { inferFromPath } from "./lib/inferFromPath";
+import { normalizeEntryData } from "./lib/entryNormalization";
 
 // Increase listener limit because Astro creates a watcher per book collection
 EventEmitter.defaultMaxListeners = 150;
@@ -22,19 +22,40 @@ function spheresLoader(options: Parameters<typeof glob>[0] & { base: string }) {
 
         if (idx !== -1) {
           const relativePath = args.filePath.substring(idx + pathPrefix.length);
-          const inferred = inferFromPath(relativePath);
-          args.data = { ...args.data, ...inferred };
+          args.data = normalizeEntryData(args.data, relativePath);
         } else {
           // Fallback if somehow pathPrefix isn't found
-          const inferred = inferFromPath(args.id);
-          args.data = { ...args.data, ...inferred };
+          args.data = normalizeEntryData(args.data, args.id);
         }
 
         return originalParseData(args);
       };
-      return baseLoader.load(context);
+      await baseLoader.load(context);
+      await rerenderEntries(context);
     },
   };
+}
+
+async function rerenderEntries(context: any): Promise<void> {
+  const entries = context.store.values();
+  const renderedEntries = await Promise.all(
+    entries.map(async (entry: any) => {
+      if (typeof entry.body !== "string") return { entry, rendered: undefined };
+      return {
+        entry,
+        rendered: await context.renderMarkdown(entry.body),
+      };
+    }),
+  );
+
+  for (const { entry, rendered } of renderedEntries) {
+    if (!rendered) continue;
+    context.store.set({
+      ...entry,
+      rendered,
+      assetImports: rendered.metadata?.imagePaths ?? entry.assetImports,
+    });
+  }
 }
 
 const baseFields = {

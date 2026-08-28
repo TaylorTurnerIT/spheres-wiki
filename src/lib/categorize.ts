@@ -33,6 +33,10 @@ function getEffectiveTags(entry: TalentEntry | FeatEntry): Set<string> {
   return tags;
 }
 
+function claimedKey(type: "talent" | "feat", id: string): string {
+  return `${type}:${id}`;
+}
+
 function claimMatching(
   def: TalentCategory,
   pool: Array<TalentEntry | FeatEntry>,
@@ -42,14 +46,17 @@ function claimMatching(
   entries: Array<{ id: string; type: "talent" | "feat" }>,
 ): void {
   for (const e of pool) {
-    if (usedIds.has(e.id)) continue;
+    if (usedIds.has(claimedKey(type, e.id))) continue;
     const effTags = getEffectiveTags(e);
     const tierMatch = !def.tiers || def.tiers.includes(tier);
-    const tagMatch = !def.tags || def.tags.some((tag) => effTags.has(tag));
-    const excludeMatch = !def.excludeTags?.some((tag) => effTags.has(tag));
+    const tagMatch =
+      !def.tags || def.tags.some((tag) => effTags.has(tag.toLowerCase()));
+    const excludeMatch = !def.excludeTags?.some((tag) =>
+      effTags.has(tag.toLowerCase()),
+    );
     if (tierMatch && tagMatch && excludeMatch) {
       entries.push({ id: e.id, type });
-      usedIds.add(e.id);
+      usedIds.add(claimedKey(type, e.id));
     }
   }
 }
@@ -130,17 +137,17 @@ function buildOtherSection(
   const categories = [
     toOtherCategory(
       "Basic Talents",
-      basicTalents.filter((t) => !usedIds.has(t.id)),
+      basicTalents.filter((t) => !usedIds.has(claimedKey("talent", t.id))),
       "talent",
     ),
     toOtherCategory(
       "Advanced Talents",
-      advancedTalents.filter((t) => !usedIds.has(t.id)),
+      advancedTalents.filter((t) => !usedIds.has(claimedKey("talent", t.id))),
       "talent",
     ),
     toOtherCategory(
       "General Feats",
-      feats.filter((f) => !usedIds.has(f.id)),
+      feats.filter((f) => !usedIds.has(claimedKey("feat", f.id))),
       "feat",
     ),
   ].filter((c): c is CategoryResult => c !== null);
