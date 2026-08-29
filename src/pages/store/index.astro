@@ -4,6 +4,7 @@ import BookCard from '@/components/BookCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import StoreCarousel from '@/components/StoreCarousel.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import type { BookMeta } from '@/lib/types';
 
 const { bookMetaMap } = await resolveEntries();
 const allBooks = [...bookMetaMap.values()];
@@ -29,15 +30,16 @@ const isVisibleThirdParty = (book: any) => {
 // Helper to sort by date descending
 const sortByDate = (a: any, b: any) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
 
-// Featured Core Books (with placeholders for missing)
-const featuredCoreBooks = CORE_SLUGS.map(slug => {
+// Featured Core Books (with "Coming Soon" placeholders for missing)
+type FeaturedBook = BookMeta & { isComingSoon?: boolean };
+const featuredCoreBooks: FeaturedBook[] = CORE_SLUGS.map(slug => {
   const existing = allBooks.find(b => b.slug === slug);
   if (existing) return existing;
-  // Placeholder
   return {
     title: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
     publisher: 'Drop Dead Studios',
     slug,
+    publishedDate: '1970-01-01',
     isComingSoon: true
   };
 });
@@ -97,17 +99,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
       
       <StoreCarousel>
         {featuredCoreBooks.map(book => (
-          ('isComingSoon' in book && book.isComingSoon) ? (
-             <div class="store-card coming-soon-card">
-               <div class="store-card-cover-placeholder">
-                 <span>Coming Soon</span>
-               </div>
-               <div class="store-title">{book.title}</div>
-               <div class="store-publisher">{book.publisher}</div>
-             </div>
-          ) : (
-            <BookCard book={book as any} />
-          )
+          <BookCard book={book} comingSoon={!!book.isComingSoon} />
         ))}
       </StoreCarousel>
     </div>
@@ -193,23 +185,6 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
     background: var(--clr-surface);
     color: var(--clr-text);
     border: 0.5px solid var(--clr-border);
-  }
-
-  .coming-soon-card {
-    opacity: 0.6;
-    cursor: default;
-    box-shadow: none !important;
-    transform: none !important;
-  }
-  .coming-soon-card .store-card-cover-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--clr-muted);
-    font-size: var(--fs-xs);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
 
   .store-empty {

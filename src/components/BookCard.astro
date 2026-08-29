@@ -4,13 +4,15 @@ import type { BookMeta } from '@/lib/types';
 
 interface Props {
   book: BookMeta;
+  /** Unreleased book: renders a dimmed, non-link card with a "Coming Soon" cover */
+  comingSoon?: boolean;
 }
 
-const { book } = Astro.props;
-const CardTag = book.buyUrl ? 'a' : 'div';
-const cardProps = book.buyUrl
+const { book, comingSoon = false } = Astro.props;
+const CardTag = book.buyUrl && !comingSoon ? 'a' : 'div';
+const cardProps = book.buyUrl && !comingSoon
   ? { href: book.buyUrl, target: "_blank", rel: "noopener noreferrer", class: "store-card is-link", "aria-label": `${book.title} — buy on DriveThruRPG (opens in new tab)` }
-  : { class: "store-card" };
+  : { class: `store-card${comingSoon ? ' coming-soon-card' : ''}` };
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/covers/*.{jpeg,jpg,png,gif,webp}');
 let coverImg;
@@ -22,13 +24,15 @@ if (book.coverImage) {
 }
 ---
 <CardTag {...cardProps}>
-  {coverImg
-    ? <Image src={coverImg} alt={book.title} class="store-card-cover" loading="lazy" />
-    : <div class="store-card-cover-placeholder" aria-hidden="true"></div>
+  {comingSoon
+    ? <div class="store-card-cover-placeholder"><span>Coming Soon</span></div>
+    : coverImg
+      ? <Image src={coverImg} alt={book.title} class="store-card-cover" loading="lazy" />
+      : <div class="store-card-cover-placeholder" aria-hidden="true"></div>
   }
   <div class="store-title">{book.title}</div>
   <div class="store-publisher">{book.publisher}</div>
-  {book.price && (
+  {book.price && !comingSoon && (
     <div class="store-buy">
       <span class="store-price">{book.price}</span>
       <div class="shop-btn">
@@ -42,3 +46,22 @@ if (book.coverImage) {
     </div>
   )}
 </CardTag>
+
+<style>
+  .coming-soon-card {
+    opacity: 0.6;
+    cursor: default;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coming-soon-card .store-card-cover-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-muted);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>

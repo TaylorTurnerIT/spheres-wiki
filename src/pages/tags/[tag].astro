@@ -204,33 +204,9 @@ const descriptionHtml = (await renderMarkdownFragment(tag.description)).replace(
           <div class="tag-entry-list">
             {group.entries.map((row) => (
               <div class="tag-entry-row" data-system={row.system}>
-                {row.entryType === "talent" && (
-                  <a
-                    href={url(row.href)}
-                    class="tag-entry-name"
-                    data-astro-prefetch="hover"
-                  >
-                    {row.name}
-                  </a>
-                )}
-                {row.entryType === "feat" && (
-                  <a
-                    href={url(row.href)}
-                    class="tag-entry-name"
-                    data-astro-prefetch="hover"
-                  >
-                    {row.name}
-                  </a>
-                )}
-                {row.entryType === "sphere" && (
-                  <a
-                    href={url(row.href)}
-                    class="tag-entry-name"
-                    data-astro-prefetch="hover"
-                  >
-                    {row.name}
-                  </a>
-                )}
+                <a href={url(row.href)} class="tag-entry-name" data-astro-prefetch="hover">
+                  {row.name}
+                </a>
                 {buildOrderedTagIds(
                   {
                     type: row.entryType,
