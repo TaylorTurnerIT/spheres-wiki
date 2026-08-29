@@ -456,6 +456,14 @@ a:hover {
 .section-heading-rule {
   display: none;
 }
+/* Larger page-section eyebrow (SectionHeading size="md") */
+.section-heading-md {
+  border-bottom-width: 2px;
+}
+.section-heading-md .section-heading-text {
+  color: var(--clr-text);
+  font-size: var(--fs-base);
+}
 .section-heading-toggle::after {
   display: none;
 }

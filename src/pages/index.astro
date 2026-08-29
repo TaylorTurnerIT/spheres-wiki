@@ -5,6 +5,7 @@ import IntroCard from '@/components/IntroCard.astro';
 import StoreBar from '@/components/StoreBar.astro';
 import RefCard from '@/components/RefCard.astro';
 import ResourceCard from '@/components/ResourceCard.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { ANNOUNCEMENT, SYSTEMS } from '@/config/site';
 import type { BookMeta } from '@/lib/types';
@@ -46,18 +47,12 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
     </div>
   )}
 
-  <div class="section-heading">
-    <span class="section-heading-text">About the Spheres</span>
-    <div class="section-heading-rule"></div>
-  </div>
+  <SectionHeading label="About the Spheres" />
   <p class="intro-description">
     The Spheres are a collection of three optional rule systems for the Pathfinder Roleplaying Game, published mainly by Drop Dead Studios and supported by other third-party companies. In these systems, players may choose from a range of martial, magical, and skill spheres, spending Talents to create a uniquely customized character. The Spheres rules are very flexible and allow players to build to an idea, rather than a specific class.
   </p>
 
-  <div class="section-heading">
-    <span class="section-heading-text">New to Spheres? Choose a system to start</span>
-    <div class="section-heading-rule"></div>
-  </div>
+  <SectionHeading label="New to Spheres? Choose a system to start" />
   <div class="intro-cards">
     {systemData.map(({ id }) => <IntroCard system={id} />)}
   </div>
@@ -71,10 +66,7 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
     }
   </style>
 
-  <div class="section-heading">
-    <span class="section-heading-text">Quick Reference — All Spheres</span>
-    <div class="section-heading-rule"></div>
-  </div>
+  <SectionHeading label="Quick Reference — All Spheres" />
 
   <div class="ref-grid">
     {systemData.map(({ id, spheres, classes }) => (

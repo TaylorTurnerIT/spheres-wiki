@@ -19,6 +19,8 @@ interface Props {
   /** extra classes on the wrapper */
   class?: string;
   style?: string;
+  /** "md" renders the larger page-section eyebrow (store-page variant) */
+  size?: "sm" | "md";
 }
 
 const {
@@ -29,6 +31,7 @@ const {
   labelClass,
   class: wrapperClass,
   style,
+  size = "sm",
 } = Astro.props;
 
 const wrapper = level === "group" ? "section-group-header" : "section-heading";
@@ -36,7 +39,7 @@ const labelBase = level === "group" ? "section-group-label" : "section-heading-t
 const rule = level === "group" ? "section-group-rule" : "section-heading-rule";
 ---
 
-<div class:list={[wrapper, wrapperClass]} style={style}>
+<div class:list={[wrapper, wrapperClass, size === "md" && "section-heading-md"]} style={style}>
   {href
     ? <a href={href} class:list={[labelBase, labelClass]} id={id} data-astro-prefetch="hover">{label}</a>
     : <span class:list={[labelBase, labelClass]} id={id}>{label}</span>

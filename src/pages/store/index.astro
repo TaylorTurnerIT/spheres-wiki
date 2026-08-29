@@ -1,6 +1,7 @@
 ---
 import WikiPage from '@/layouts/WikiPage.astro';
 import BookCard from '@/components/BookCard.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
 import StoreCarousel from '@/components/StoreCarousel.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 
@@ -72,10 +73,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
     {/* New Arrivals */}
     <div class="store-top-col">
       {(latestFirstParty || latestThirdParty) && (
-        <div class="section-heading" style="margin-top: 10px; border-bottom-width: 2px;">
-          <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">New Arrivals</span>
-          <div class="section-heading-rule"></div>
-        </div>
+        <SectionHeading label="New Arrivals" size="md" style="margin-top: 10px;" />
       )}
       <div style="display: flex; gap: 14px; padding: 12px 8px 16px 0; margin-top: -12px;">
         {latestFirstParty && (
@@ -95,10 +93,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
 
     {/* Featured Releases */}
     <div class="store-top-col">
-      <div class="section-heading" style="margin-top: 10px; border-bottom-width: 2px;">
-        <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Featured Core Releases</span>
-        <div class="section-heading-rule"></div>
-      </div>
+      <SectionHeading label="Featured Core Releases" size="md" style="margin-top: 10px;" />
       
       <StoreCarousel>
         {featuredCoreBooks.map(book => (
@@ -119,16 +114,10 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
   </div>
 
   {/* Official Section */}
-  <div class="section-heading" style="margin-top: 20px; border-bottom-width: 2px;">
-    <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Official Publishers</span>
-    <div class="section-heading-rule"></div>
-  </div>
+  <SectionHeading label="Official Publishers" size="md" style="margin-top: 20px;" />
 
   <div style="margin-top: 15px;">
-    <div class="section-heading">
-      <span class="section-heading-text">Drop Dead Studios</span>
-      <div class="section-heading-rule"></div>
-    </div>
+    <SectionHeading label="Drop Dead Studios" />
     {ddsBooks.length > 0 ? (
       <StoreCarousel>
         {ddsBooks.map(book => <BookCard book={book} />)}
@@ -137,10 +126,7 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
   </div>
 
   <div style="margin-top: 15px;">
-    <div class="section-heading">
-      <span class="section-heading-text">Diamond Recreational Studios</span>
-      <div class="section-heading-rule"></div>
-    </div>
+    <SectionHeading label="Diamond Recreational Studios" />
     {diamondBooks.length > 0 ? (
       <StoreCarousel>
         {diamondBooks.map(book => <BookCard book={book} />)}
@@ -151,17 +137,11 @@ const sortedTPGroups = Object.entries(thirdPartyGroups)
   {/* Third Party Section */}
   {sortedTPGroups.length > 0 && (
     <>
-      <div class="section-heading" style="margin-top: 20px; border-bottom-width: 2px;">
-        <span class="section-heading-text" style="color: var(--clr-text); font-size: var(--fs-base);">Third Party Content</span>
-        <div class="section-heading-rule"></div>
-      </div>
+      <SectionHeading label="Third Party Content" size="md" style="margin-top: 20px;" />
 
       {sortedTPGroups.map(group => (
         <div style="margin-top: 15px;">
-          <div class="section-heading">
-            <span class="section-heading-text">{group.name}</span>
-            <div class="section-heading-rule"></div>
-          </div>
+          <SectionHeading label={group.name} />
           <StoreCarousel>
             {group.books.map(book => <BookCard book={book} />)}
           </StoreCarousel>
