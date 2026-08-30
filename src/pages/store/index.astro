@@ -4,35 +4,22 @@ import BookCard from '@/components/BookCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import StoreCarousel from '@/components/StoreCarousel.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
+import {
+  CORE_BOOK_SLUGS,
+  bookPublisher,
+  isVisibleThirdParty,
+  isOfficialPublisher,
+  byNewestFirst,
+  latestBook,
+  groupByPublisher,
+} from '@/lib/bookCuration';
 import type { BookMeta } from '@/lib/types';
-
 const { bookMetaMap } = await resolveEntries();
 const allBooks = [...bookMetaMap.values()];
 
-// Core Slugs
-const CORE_SLUGS = [
-  'ultimate-spheres-of-power',
-  'spheres-of-might',
-  'spheres-of-guile',
-  'champions-of-the-spheres'
-];
-
-const OFFICIAL_PUBLISHERS = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
-const getPublisher = (book: any) =>
-  typeof book.publisher === 'string' && book.publisher.trim() !== ''
-    ? book.publisher
-    : 'Unknown';
-const isVisibleThirdParty = (book: any) => {
-  const publisher = getPublisher(book);
-  return !OFFICIAL_PUBLISHERS.has(publisher) && publisher !== 'Unknown' && !publisher.startsWith('__');
-};
-
-// Helper to sort by date descending
-const sortByDate = (a: any, b: any) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
-
 // Featured Core Books (with "Coming Soon" placeholders for missing)
 type FeaturedBook = BookMeta & { isComingSoon?: boolean };
-const featuredCoreBooks: FeaturedBook[] = CORE_SLUGS.map(slug => {
+const featuredCoreBooks: FeaturedBook[] = CORE_BOOK_SLUGS.map(slug => {
   const existing = allBooks.find(b => b.slug === slug);
   if (existing) return existing;
   return {
@@ -44,27 +31,14 @@ const featuredCoreBooks: FeaturedBook[] = CORE_SLUGS.map(slug => {
   };
 });
 
-// Groupings (Core system content now in respective publishers, so we just filter by publisher)
-const diamondBooks = allBooks.filter(b => getPublisher(b) === 'Diamond Recreational Studios').sort(sortByDate);
-const ddsBooks = allBooks.filter(b => getPublisher(b) === 'Drop Dead Studios').sort(sortByDate);
+// Groupings by publisher (newest-first within group, groups by size)
+const sortedTPGroups = groupByPublisher(allBooks.filter(isVisibleThirdParty));
+const ddsBooks = allBooks.filter(b => bookPublisher(b) === 'Drop Dead Studios').sort(byNewestFirst);
+const diamondBooks = allBooks.filter(b => bookPublisher(b) === 'Diamond Recreational Studios').sort(byNewestFirst);
 
 // Latest arrivals
-const latestFirstParty = allBooks.filter(b => OFFICIAL_PUBLISHERS.has(getPublisher(b))).sort(sortByDate)[0];
-const latestThirdParty = allBooks.filter(isVisibleThirdParty).sort(sortByDate)[0];
-
-const thirdPartyGroups = allBooks
-  .filter(isVisibleThirdParty)
-  .reduce((acc, book) => {
-    const publisher = getPublisher(book);
-    if (!acc[publisher]) acc[publisher] = [];
-    acc[publisher].push(book);
-    return acc;
-  }, {} as Record<string, typeof allBooks>);
-
-// Sort each TP group by date and sort groups by book count descending
-const sortedTPGroups = Object.entries(thirdPartyGroups)
-  .map(([name, group]) => ({ name, books: group.sort(sortByDate) }))
-  .sort((a, b) => b.books.length - a.books.length);
+const latestFirstParty = latestBook(allBooks, isOfficialPublisher);
+const latestThirdParty = allBooks.filter(isVisibleThirdParty).sort(byNewestFirst)[0];
 ---
 <WikiPage title="Store — Spheres Wiki">
 

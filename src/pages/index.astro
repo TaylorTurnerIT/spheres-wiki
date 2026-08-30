@@ -8,27 +8,23 @@ import ResourceCard from '@/components/ResourceCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { ANNOUNCEMENT, SYSTEMS } from '@/config/site';
-import type { BookMeta } from '@/lib/types';
+import {
+  isOfficialPublisher,
+  isVisibleThirdParty,
+  latestBook,
+  coreBooksOf,
+  CORE_BOOK_SLUGS,
+} from '@/lib/bookCuration';
 
 const { sphereMap, classMap, bookMetaMap } = await resolveEntries();
 
-const FIRST_PARTY = new Set(['Drop Dead Studios', 'Diamond Recreational Studios']);
-const CORE_SLUGS = ['ultimate-spheres-of-power', 'spheres-of-might', 'spheres-of-guile', 'champions-of-the-spheres'];
-const EXCLUDED = new Set([...CORE_SLUGS, 'unknown-source']);
-const sortByDate = (a: BookMeta, b: BookMeta) =>
-  new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
+const allBooks = [...bookMetaMap.values()];
+const EXCLUDED = new Set([...CORE_BOOK_SLUGS, 'unknown-source']);
 
-const latestFirstParty = [...bookMetaMap.values()]
-  .filter(b => FIRST_PARTY.has(b.publisher) && !EXCLUDED.has(b.slug))
-  .sort(sortByDate)[0];
+const latestFirstParty = latestBook(allBooks, b => isOfficialPublisher(b) && !EXCLUDED.has(b.slug));
+const latestThirdParty = latestBook(allBooks, b => isVisibleThirdParty(b) && !EXCLUDED.has(b.slug));
 
-const latestThirdParty = [...bookMetaMap.values()]
-  .filter(b => !FIRST_PARTY.has(b.publisher) && b.publisher !== 'Unknown' && !EXCLUDED.has(b.slug))
-  .sort(sortByDate)[0];
-
-const coreBooks = CORE_SLUGS
-  .map(slug => bookMetaMap.get(slug))
-  .filter((b): b is BookMeta => b !== undefined);
+const coreBooks = coreBooksOf(bookMetaMap);
 
 const systemData = Object.keys(SYSTEMS).map(id => ({
   id,
