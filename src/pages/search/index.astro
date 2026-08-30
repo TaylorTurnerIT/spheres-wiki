@@ -317,13 +317,10 @@ const staticTags = [...tagMap.entries()]
     flex-direction: column;
     gap: 2px;
   }
+  /* frame + padding from the shared .accent-card utility */
   .sp-result {
     display: block;
-    padding: 12px 14px;
-    background: var(--clr-bg);
-    border: 1px solid var(--clr-border);
-    border-left: 3px solid var(--clr-active);
-    border-radius: var(--radius);
+    margin: 0;
     text-decoration: none;
     color: var(--clr-text);
     transition: background 0.12s, box-shadow 0.12s;
@@ -529,7 +526,7 @@ function renderResults() {
       : '';
     const headerTagHtml = `${sphereTagHtml}${tagHtml}`;
 
-    return `<a href="${r.url}" class="sp-result" role="option" style="--clr-active: ${cssColor}; --clr-ns: ${cssColor}">
+    return `<a href="${r.url}" class="sp-result accent-card" role="option" style="--clr-active: ${cssColor}; --clr-ns: ${cssColor}">
       <div class="talent-header">
         <div class="talent-header-top">
           <span class="talent-name">${title}</span>

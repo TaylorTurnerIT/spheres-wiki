@@ -1638,18 +1638,29 @@ h6 {
   flex-shrink: 0;
 }
 
-/* ── Base ability block ─────────────────────────────────── */
-.base-ability-block {
+/* ── Utility: accent-left card frame ────────────────────── */
+/* The canonical "boxed entry" frame: hairline border + 3px accent left
+   bar. EntryCard renders it via .accent-card; .base-ability-block /
+   .talent-entry are the markdown-body aliases of the same frame.
+   Standalone .accent-card also carries the vertical margin — list
+   containers (.talent-list, .sp-results) space with their own gap. */
+.accent-card,
+.base-ability-block,
+.talent-entry {
   border: 1px solid var(--clr-border);
   border-left: 3px solid var(--clr-active);
   border-radius: var(--radius);
   background: var(--clr-bg);
   padding: 12px 14px;
-  margin: 14px 0;
   position: relative;
 }
+.accent-card { margin: 14px 0; }
+.accent-card:hover,
+.accent-card:focus-within,
 .base-ability-block:hover,
-.base-ability-block:focus-within {
+.base-ability-block:focus-within,
+.talent-entry:hover,
+.talent-entry:focus-within {
   z-index: 10;
 }
 .base-ability-header {
@@ -1680,18 +1691,6 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-.talent-entry {
-  border: 1px solid var(--clr-border);
-  border-left: 3px solid var(--clr-active);
-  border-radius: var(--radius);
-  background: var(--clr-bg);
-  padding: 12px 14px;
-  position: relative;
-}
-.talent-entry:hover,
-.talent-entry:focus-within {
-  z-index: 10;
 }
 .talent-header {
   display: flex;

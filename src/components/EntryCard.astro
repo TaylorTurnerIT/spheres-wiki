@@ -40,7 +40,7 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
 ---
 
 <!-- fallow-ignore-next-line complexity -->
-<div class="entry-card-block" id={anchorOn === "block" ? id : undefined} data-pagefind-weight={pagefindWeight}>
+<div class="entry-card-block accent-card" id={anchorOn === "block" ? id : undefined} data-pagefind-weight={pagefindWeight}>
   <div class="talent-header">
     <div class="talent-header-top">
       <h3 class="entry-card-heading" id={anchorOn === "heading" ? id : undefined}>
@@ -102,22 +102,8 @@ const hasMetadata = metadata && Object.keys(metadata).length > 0;
 </div>
 
 <style>
-  .entry-card-block {
-    border: 1px solid var(--clr-border);
-    border-left: 3px solid var(--clr-active);
-    border-radius: var(--radius);
-    background: var(--clr-bg);
-    padding: 12px 14px;
-    margin: 14px 0;
-    position: relative;
-  }
-
-  .entry-card-block:hover,
-  .entry-card-block:focus-within {
-    z-index: 10;
-  }
-
-  /* .talent-list spaces cards with its own gap */
+  /* frame + hover z-index come from the shared .accent-card utility;
+     .talent-list spaces cards with its own gap */
   :global(.talent-list) > .entry-card-block {
     margin: 0;
   }
