@@ -42,7 +42,7 @@ const defaultRevealLabel = type === 'email' ? 'Show email address' : `Show invit
 ---
 
 {reveal
-  ? <button id={uid} class={`sp-reveal-btn${cls ? ' ' + cls : ''}`}>{revealLabel ?? defaultRevealLabel}</button>
+  ? <button id={uid} class={`btn sp-reveal-btn${cls ? ' ' + cls : ''}`}>{revealLabel ?? defaultRevealLabel}</button>
   : <span id={uid}></span>
 }
 <script is:inline set:html={script}></script>

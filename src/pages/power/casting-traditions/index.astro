@@ -504,9 +504,9 @@ const boonCards = boons.map((b) => ({
           </div>
           <div class="builder-save-area">
             <div class="builder-save-row">
-              <button id="tb-save-btn" class="builder-save-btn">Save</button>
-              <button id="tb-copy-btn" class="builder-copy-btn">Copy</button>
-              <button id="tb-reset-btn" class="builder-reset-btn">Reset to Defaults</button>
+              <button id="tb-save-btn" class="btn btn--solid">Save</button>
+              <button id="tb-copy-btn" class="btn btn--solid">Copy</button>
+              <button id="tb-reset-btn" class="btn">Reset to Defaults</button>
             </div>
             <div class="builder-save-row builder-save-row--divider">
               <select id="tb-saved-traditions" class="builder-select">
@@ -517,8 +517,8 @@ const boonCards = boons.map((b) => ({
               </button>
             </div>
             <div class="builder-catalog-row">
-              <button id="tb-export-catalog" class="builder-catalog-btn">Export Catalog</button>
-              <button id="tb-import-catalog" class="builder-catalog-btn" type="button">Import Catalog</button>
+              <button id="tb-export-catalog" class="btn">Export Catalog</button>
+              <button id="tb-import-catalog" class="btn" type="button">Import Catalog</button>
               <input type="file" id="tb-import-file" accept=".json" hidden />
               <span class="builder-catalog-info" title="Clearing browser data will remove saved traditions unless you export a backup.">
                 <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1" fill="none"/><path d="M6 5v3M6 3.5v.5" stroke="currentColor" stroke-width="1.2"/></svg>
@@ -1723,26 +1723,6 @@ const boonCards = boons.map((b) => ({
     resize: vertical;
   }
 
-  .builder-copy-btn {
-    font-family: var(--font-display);
-    font-size: var(--fs-3xs);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    border: 0.5px solid var(--clr-active);
-    border-radius: var(--radius);
-    background: var(--clr-active);
-    color: var(--clr-bg);
-    cursor: pointer;
-    transition: opacity 0.15s;
-    white-space: nowrap;
-  }
-
-  .builder-copy-btn:hover {
-    opacity: 0.85;
-  }
-
   /* ── Save / Load ───────────────────────────────────── */
   .builder-save-area {
     margin-top: var(--sp-3);
@@ -1758,25 +1738,6 @@ const boonCards = boons.map((b) => ({
   .builder-save-row--divider {
     padding-top: var(--sp-3);
     border-top: 0.5px solid var(--clr-border);
-  }
-
-  .builder-save-btn {
-    font-family: var(--font-display);
-    font-size: var(--fs-3xs);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    border: 0.5px solid var(--clr-active);
-    border-radius: var(--radius);
-    background: var(--clr-active);
-    color: var(--clr-bg);
-    cursor: pointer;
-    white-space: nowrap;
-  }
-
-  .builder-save-btn:hover {
-    opacity: 0.85;
   }
 
   .builder-save-status {
@@ -1800,49 +1761,11 @@ const boonCards = boons.map((b) => ({
     color: #cc0000;
   }
 
-  .builder-reset-btn {
-    font-family: var(--font-display);
-    font-size: var(--fs-3xs);
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    border: 0.5px solid var(--clr-border);
-    border-radius: var(--radius);
-    background: transparent;
-    color: var(--clr-muted);
-    cursor: pointer;
-  }
-
-  .builder-reset-btn:hover {
-    color: var(--clr-brand);
-    border-color: var(--clr-brand);
-  }
-
   .builder-catalog-row {
     display: flex;
     gap: var(--sp-2);
     align-items: center;
     margin-top: var(--sp-2);
-  }
-
-  .builder-catalog-btn {
-    font-family: var(--font-display);
-    font-size: var(--fs-3xs);
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border: 0.5px solid var(--clr-border);
-    border-radius: var(--radius);
-    background: transparent;
-    color: var(--clr-muted);
-    cursor: pointer;
-  }
-
-  .builder-catalog-btn:hover {
-    color: var(--clr-active);
-    border-color: var(--clr-active);
   }
 
   .builder-catalog-info {

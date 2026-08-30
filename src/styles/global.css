@@ -541,21 +541,49 @@ a:hover {
   justify-content: flex-end;
   margin-bottom: 8px;
 }
-.toggle-all-btn {
+
+/* ── Button utilities: shared small-button family ───────── */
+/* One home for the ghost/solid small buttons that pages previously
+   re-styled per site (.toggle-all-btn, .browse-reset, .reset-btn,
+   .builder-save/copy/reset/catalog-btn, .sp-reveal-btn). */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: none;
   border: 1px solid var(--clr-border);
   border-radius: var(--radius);
   color: var(--clr-muted);
   cursor: pointer;
-  font-size: var(--fs-xs);
-  padding: 3px 10px;
+  font-family: var(--font-display);
+  font-size: var(--fs-3xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  text-decoration: none;
+  white-space: nowrap;
   transition:
-    color 0.15s,
-    border-color 0.15s;
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    opacity 0.15s;
 }
-.toggle-all-btn:hover {
+.btn:hover {
+  background: color-mix(in srgb, var(--clr-brand) 6%, transparent);
   color: var(--clr-brand);
   border-color: var(--clr-brand);
+}
+.btn--solid {
+  background: var(--clr-active);
+  border-color: var(--clr-active);
+  color: var(--clr-bg);
+}
+.btn--solid:hover {
+  background: var(--clr-active);
+  border-color: var(--clr-active);
+  color: var(--clr-bg);
+  opacity: 0.85;
 }
 
 /* ── Header extras ──────────────────────────────────────── */

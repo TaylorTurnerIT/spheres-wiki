@@ -129,7 +129,7 @@ function searchText(row: FeatBrowseRow): string {
 
   <div class="browse-empty" id={`${idPrefix}-empty`} hidden>
     <p class="browse-empty-msg"></p>
-    <button type="button" class="browse-reset" id={`${idPrefix}-reset`}>Reset filters</button>
+    <button type="button" class="browse-reset btn" id={`${idPrefix}-reset`}>Reset filters</button>
   </div>
 </div>
 
@@ -256,26 +256,6 @@ function searchText(row: FeatBrowseRow): string {
     font-style: italic;
     margin-bottom: var(--sp-3);
   }
-  .browse-reset {
-    font-family: var(--font-display);
-    font-size: var(--fs-3xs);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--clr-muted);
-    background: transparent;
-    border: 1px solid var(--clr-border);
-    border-radius: var(--radius);
-    padding: 6px 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  }
-  .browse-reset:hover {
-    background-color: color-mix(in srgb, var(--clr-brand) 6%, transparent);
-    color: var(--clr-brand);
-    border-color: var(--clr-brand);
-  }
-
   /* Mobile: collapse the table into stacked cards (§8). */
   @media (max-width: 768px) {
     .browse-table-wrap {

@@ -83,34 +83,14 @@ import Breadcrumb from '@/components/Breadcrumb.astro';
     text-decoration: underline;
   }
 
-  /* reveal buttons — in DOM at build time so scoped CSS works, but :global for symmetry */
-  :global(.sp-reveal-btn) {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: none;
-    border: 1px solid var(--clr-border);
-    border-radius: var(--radius);
-    padding: 5px 12px;
-    font-size: var(--fs-sm);
-    font-family: var(--font-display);
-    font-weight: 600;
-    color: var(--clr-muted);
-    cursor: pointer;
-    transition: border-color 0.15s, color 0.15s;
-  }
-
-  :global(.sp-reveal-btn:hover) {
-    border-color: var(--clr-brand);
-    color: var(--clr-brand);
-  }
-
+  /* Discord-colored reveal buttons — compose over the shared .btn utility */
   :global(.sp-reveal-btn.contact-discord-link) {
     color: #5865F2;
     border-color: color-mix(in srgb, #5865F2 40%, transparent);
   }
 
   :global(.sp-reveal-btn.contact-discord-link:hover) {
+    background: none;
     border-color: #5865F2;
     color: #5865F2;
   }
