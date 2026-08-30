@@ -9,6 +9,13 @@
 //      theme through --clr-ns / --clr-active set by global.css (V10).
 //   d) bare `new TomSelect(` construction in pages/components — every dropdown
 //      must go through createTomSelect() in src/lib/tomSelectInit.ts (SPEC §5).
+//   e) inline `.section-heading` markup in pages — use SectionHeading /
+//      CollapsibleSectionHeading (V70–V72).
+//   f) retired per-site button classes — compose the shared .btn utility
+//      (builder save/copy/reset/catalog, toggle-all).
+//   g) inline tag-row markup in pages — use TagRow.astro.
+//   h) per-system decorative art `<svg viewBox="0 0 800 140"` / `0 0 200 80`
+//      in pages/components — use SystemArt.astro.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -108,6 +115,44 @@ if (tomSelectReimpl.length > 0) {
   failures.push(
     "SPEC §5: bare `new TomSelect(` — construct dropdowns via createTomSelect() from src/lib/tomSelectInit.ts:",
     ...tomSelectReimpl,
+  );
+}
+
+// Inline section-heading markup in pages — use SectionHeading /
+// CollapsibleSectionHeading (V70–V72). Components may emit the classes.
+const inlineSectionHeading = findMatches(
+  pageFiles,
+  /class="section-heading[ "]|class=\{?\[`?section-heading/,
+);
+if (inlineSectionHeading.length > 0) {
+  failures.push(
+    "V72: inline .section-heading markup in a page — use SectionHeading.astro (CollapsibleSectionHeading for toggles):",
+    ...inlineSectionHeading,
+  );
+}
+
+// Retired per-site small-button classes — use the shared .btn utilities.
+const retiredBtnClasses = findMatches(
+  pageAndComponentFiles,
+  /class=["'{`=]*(?:[^"'`]*\s)?(toggle-all-btn|builder-save-btn|builder-copy-btn|builder-reset-btn|builder-catalog-btn)\b/,
+);
+if (retiredBtnClasses.length > 0) {
+  failures.push(
+    "V72: retired button class — use the shared .btn/.btn--solid utilities (global.css):",
+    ...retiredBtnClasses,
+  );
+}
+
+// Inline tag-row markup in pages — use TagRow.astro.
+const inlineTagRow = findMatches(
+  pageAndComponentFiles.filter((f) => !f.endsWith("TagRow.astro")),
+  /class="tag-row"|tag-row-desc/,
+  new Set(["src/components/TagRow.astro"]),
+);
+if (inlineTagRow.length > 0) {
+  failures.push(
+    "tags-index idiom: inline tag-row markup — use TagRow.astro:",
+    ...inlineTagRow,
   );
 }
 
