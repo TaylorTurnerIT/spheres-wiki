@@ -1,0 +1,179 @@
+---
+/**
+ * SystemArt — per-system decorative SVG in two variants:
+ *   variant="banner" → 800×140 page-header art (system index pages)
+ *   variant="card"   → 200×80 card art (IntroCard)
+ * One home replaces the two hand-copied SVG sets. Star fields are
+ * generated with a seeded PRNG so the art is deterministic across builds.
+ */
+interface Props {
+  system: string;
+  variant?: "card" | "banner";
+  class?: string;
+}
+
+const { system, variant = "card", class: cls } = Astro.props;
+const isBanner = variant === "banner";
+const W = isBanner ? 800 : 200;
+const H = isBanner ? 140 : 80;
+
+// Deterministic PRNG (mulberry32) so stars don't shift between builds.
+function makeStars(seed: number, count: number): { cx: number; cy: number; r: number; fill: string; o: number }[] {
+  const w = W, h = H;
+  let a = seed;
+  const rand = () => {
+    a |= 0; a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  return Array.from({ length: count }, () => {
+    const r = Math.round((0.8 + rand() * 0.4) * 10) / 10;
+    return {
+      cx: Math.round((rand() * w) * 10) / 10,
+      cy: Math.round(rand() * h * 10) / 10,
+      r,
+      fill: rand() > 0.5 ? "#7AABFF" : "#9ABFFF",
+      o: Math.round((0.35 + r * 0.22) * 100) / 100,
+    };
+  });
+}
+
+const bannerGlow: Record<string, { stop: string; bg: string }> = {
+  power: { stop: "#1E60BE", bg: "#0D2850" },
+  might: { stop: "#8f2d00", bg: "#3D1200" },
+  guile: { stop: "#5A2D96", bg: "#180B2E" },
+  champions: { stop: "#165A1C", bg: "#091E0C" },
+};
+const glow = bannerGlow[system] ?? { stop: "#888", bg: "#111" };
+const scale = isBanner
+  ? ({ power: 1.9, might: 1.6, guile: 2.2, champions: 1.9 } as Record<string, number>)[system]
+  : ({ power: 0.9, might: 0.75, guile: 1.05, champions: 0.9 } as Record<string, number>)[system];
+const cx = W / 2;
+const cy = H / 2;
+const stars = system === "power" ? makeStars(isBanner ? 0x50f3 : 0x51f7, isBanner ? 29 : 15) : [];
+---
+<!-- fallow-ignore-next-line complexity -->
+<svg viewBox={`0 0 ${W} ${H}`} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" class={cls} aria-hidden="true">
+  <defs>
+    {isBanner && (
+      <radialGradient id={`sysglow-${system}`} cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color={glow.stop} stop-opacity="0.32"/>
+        <stop offset="100%" stop-color={glow.bg} stop-opacity="0"/>
+      </radialGradient>
+    )}
+    {system === "might" && (
+      <pattern id={`mightpattern-${system}`} width="20" height="20" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="20" x2="20" y2="0" stroke="#6B2200" stroke-width="1.5"/>
+      </pattern>
+    )}
+  </defs>
+
+  <rect width={W} height={H} fill={glow.bg} />
+  {isBanner && system === "might" && <rect width={W} height={H} fill={`url(#mightpattern-${system})`} opacity="0.3" />}
+  {isBanner && system !== "might" && <rect width={W} height={H} fill={`url(#sysglow-${system})`} />}
+
+  {system === "power" && (
+    <>
+      <g transform={`translate(${cx},${cy}) scale(${scale}) translate(-100,-40)`}>
+        <circle cx="100" cy="40" r="30" fill="#174B93" opacity=".35"/>
+        <circle cx="100" cy="40" r="22" fill="#1E60BE" opacity=".4"/>
+        <path d="M 76 40 A 24 9 0 0 1 124 40" fill="none" stroke="#5B8ED4" stroke-width="1" opacity=".45" transform="rotate(-35 100 40)"/>
+        <circle cx="100" cy="40" r="13" fill="#2E6FD6" opacity=".95"/>
+        <circle cx="100" cy="40" r="8"  fill="#4A90E8"/>
+        <circle cx="97"  cy="37" r="3"  fill="#A0CCFF" opacity=".7"/>
+        <path d="M 124 40 A 24 9 0 0 1 76 40" fill="none" stroke="#5B8ED4" stroke-width="1" opacity=".45" transform="rotate(-35 100 40)"/>
+      </g>
+      <g>
+        {stars.map((st) => <circle cx={st.cx} cy={st.cy} r={st.r} fill={st.fill} opacity={st.o} />)}
+      </g>
+    </>
+  )}
+
+  {system === "might" && (
+    <>
+      {!isBanner && <rect width={W} height={H} fill={`url(#mightpattern-${system})`} opacity="0.3" />}
+      <g transform={`translate(${cx},${cy}) scale(${scale}) translate(-100,-40)`}>
+        <path d="M100 8 L134 20 L134 46 Q134 67 100 74 Q66 67 66 46 L66 20 Z" fill="#7A2400" opacity=".75"/>
+        <path d="M100 8 L134 20 L134 46 Q134 67 100 74 Q66 67 66 46 L66 20 Z" fill="none" stroke="#D04800" stroke-width="1.5" opacity=".8"/>
+        <line x1="82" y1="22" x2="118" y2="58" stroke="#F07848" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="118" y1="22" x2="82" y2="58" stroke="#F07848" stroke-width="2.5" stroke-linecap="round"/>
+        <g transform="translate(113,27) scale(1.2) translate(-12,-10)">
+          <path d="m12 2l10 6c0 4-2 6-6 7l-3-5l-4-4z" fill="#C84A00" stroke="#F07848" stroke-width="1.2" opacity="1"/>
+        </g>
+        <g transform="translate(87,27) scale(-1.2,1.2) translate(-12,-10)">
+          <path d="m12 2l10 6c0 4-2 6-6 7l-3-5l-4-4z" fill="#C84A00" stroke="#F07848" stroke-width="1.2" opacity="1"/>
+        </g>
+        <circle cx="100" cy="40" r="9" fill="#C84A00"/>
+        <circle cx="100" cy="40" r="5.5" fill="#FF8050"/>
+        <circle cx="98" cy="38" r="2.2" fill="#FFDAC0" opacity=".85"/>
+      </g>
+    </>
+  )}
+
+  {system === "guile" && (
+    <g transform={`translate(${cx},${cy}) scale(${scale}) translate(-100,-40)`}>
+      <line x1="100" y1="40" x2={isBanner ? -272 : -86} y2={isBanner ? -152 : -56} stroke="#7A4EC0" stroke-width=".8" opacity=".5"/>
+      <line x1="100" y1="40" x2={isBanner ? 472 : 286} y2={isBanner ? -152 : -56} stroke="#7A4EC0" stroke-width=".8" opacity=".5"/>
+      <line x1="100" y1="40" x2={isBanner ? -392 : -146} y2={isBanner ? 112 : 76} stroke="#7A4EC0" stroke-width=".8" opacity=".4"/>
+      <line x1="100" y1="40" x2={isBanner ? 592 : 346} y2={isBanner ? 112 : 76} stroke="#7A4EC0" stroke-width=".8" opacity=".4"/>
+      <line x1="100" y1="40" x2={isBanner ? -152 : -26} y2={isBanner ? 280 : 160} stroke="#7A4EC0" stroke-width=".8" opacity=".4"/>
+      <line x1="100" y1="40" x2={isBanner ? 352 : 226} y2={isBanner ? 280 : 160} stroke="#7A4EC0" stroke-width=".8" opacity=".4"/>
+      <line x1="100" y1="40" x2="100" y2={isBanner ? -176 : -68} stroke="#7A4EC0" stroke-width=".8" opacity=".45"/>
+      <line x1="100" y1="40" x2="100" y2={isBanner ? 256 : 148} stroke="#7A4EC0" stroke-width=".8" opacity=".4"/>
+      <path d="M100 12 L130 40 L100 68 L70 40 Z" fill="none" stroke="#6A3AAA" stroke-width="1" opacity=".4"/>
+      <path d="M100 22 L118 40 L100 58 L82 40 Z" fill="#2E1260" stroke="#8A52D0" stroke-width="1.2" opacity=".85"/>
+      <ellipse cx="100" cy="40" rx="16" ry="10" fill="#200A40"/>
+      <ellipse cx="100" cy="40" rx="16" ry="10" fill="none" stroke="#9060D8" stroke-width="1.5"/>
+      <circle cx="100" cy="40" r="6"  fill="#6B38C0"/>
+      <circle cx="100" cy="40" r="3"  fill="#B07AEE"/>
+      <circle cx="98"  cy="38.5" r="1.2" fill="#DFC8FF" opacity=".8"/>
+    </g>
+  )}
+
+  {system === "champions" && (
+    <>
+      {isBanner ? (
+        <>
+          <g transform="scale(1)">
+            <path d="M -80 -20 L -80 -10 Q 200 45 400 4 Q 600 45 880 -10 L 880 -20 Z" fill="#0C2B12" opacity="0.9"/>
+            <path d="M -80 -20 L -80 -15 Q 200 35 400 2 Q 600 35 880 -15 L 880 -20 Z" fill="#123F1B"/>
+          </g>
+          <g transform="scale(2, 1.75)">
+            <path d="M -20 -10 L 60 -10 C 40 25, 15 50, 30 85 L -20 85 Z" fill="#185625"/>
+            <path d="M -20 -10 L 40 -10 C 25 25, 5  50, 18 85 L -20 85 Z" fill="#123F1B"/>
+            <path d="M -20 -10 L 20 -10 C 10 25, -5 50, 6 85 L -20 85 Z" fill="#0C2B12"/>
+            <path d="M -10 45 Q 15 52 29 45 L 27 50 Q 15 56 -10 50 Z" fill="#40C054"/>
+          </g>
+          <g transform="translate(800, 0) scale(-2, 1.75)">
+            <path d="M -20 -10 L 60 -10 C 40 25, 15 50, 30 85 L -20 85 Z" fill="#185625"/>
+            <path d="M -20 -10 L 40 -10 C 25 25, 5  50, 18 85 L -20 85 Z" fill="#123F1B"/>
+            <path d="M -20 -10 L 20 -10 C 10 25, -5 50, 6 85 L -20 85 Z" fill="#0C2B12"/>
+            <path d="M -10 45 Q 15 52 29 45 L 27 50 Q 15 56 -10 50 Z" fill="#40C054"/>
+          </g>
+        </>
+      ) : (
+        <>
+          <path d="M -20 -10 L -20 5 Q 50 20 100 8 Q 150 20 220 5 L 220 -10 Z" fill="#0C2B12" opacity="0.9"/>
+          <path d="M -20 -10 L -20 0 Q 50 12 100 0 Q 150 12 220 0 L 220 -10 Z" fill="#123F1B" />
+          <path d="M -20 -10 L 60 -10 C 40 25, 15 50, 30 85 L -20 85 Z" fill="#185625"/>
+          <path d="M -20 -10 L 40 -10 C 25 25, 5  50, 18 85 L -20 85 Z" fill="#123F1B"/>
+          <path d="M -20 -10 L 20 -10 C 10 25, -5 50, 6 85 L -20 85 Z" fill="#0C2B12"/>
+          <path d="M 220 -10 L 140 -10 C 160 25, 185 50, 170 85 L 220 85 Z" fill="#185625"/>
+          <path d="M 220 -10 L 160 -10 C 175 25, 195 50, 182 85 L 220 85 Z" fill="#123F1B"/>
+          <path d="M 220 -10 L 180 -10 C 190 25, 205 50, 194 85 L 220 85 Z" fill="#0C2B12"/>
+          <path d="M -10 45 Q 15 52 29 45 L 27 50 Q 15 56 -10 50 Z" fill="#40C054"/>
+          <path d="M 210 45 Q 185 52 171 45 L 173 50 Q 185 56 210 50 Z" fill="#40C054"/>
+        </>
+      )}
+      <g transform={`translate(${cx},${cy}) scale(${scale}) translate(-100,-40)`}>
+        <circle cx="100" cy="40" r="30" fill="#165A1C" opacity=".3"/>
+        <circle cx="100" cy="40" r="22" fill="#1E7028" opacity=".3"/>
+        <path d="M100 14 L107 32 L126 32 L111 43 L118 61 L100 50 L82 61 L89 43 L74 32 L93 32 Z" fill="#1A6E22" stroke="#40C054" stroke-width="1.2"/>
+        <circle cx="100" cy="40" r="9"  fill="#1E8030"/>
+        <circle cx="100" cy="40" r="5.5" fill="#30AA46"/>
+        <circle cx="98"  cy="38" r="2.2" fill="#90E8A0" opacity=".75"/>
+      </g>
+    </>
+  )}
+</svg>
