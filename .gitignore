@@ -56,3 +56,6 @@ docs/superpowers/
 .claude/hooks/*
 !.claude/hooks/fallow-gate.sh
 .fallow/
+
+# Local perf-probing Chrome (not part of the project)
+/chrome/

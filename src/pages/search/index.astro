@@ -70,7 +70,107 @@ const staticTags = [...tagMap.entries()]
   .filter(([id]) => !sphereNamesLower.has(id) && !systemKeys.has(id) && !typeKeys.has(id))
   .sort((a, b) => (a[1].priority ?? 999) - (b[1].priority ?? 999) || a[0].localeCompare(b[0]))
   .map(([id, tag]) => ({ value: id, text: tag.label || id }));
+
+// ── Server-rendered first page ───────────────────────────
+// The static HTML ships a few "browse all" cards so the page starts
+// taller than the viewport; otherwise the footer begins inside the
+// viewport and shifts when the client renders the list after load
+// (measured CLS 0.19 on the perf-budget URL). Card count is capped: the
+// search page also embeds the browse manifest JSON, and shipping too much
+// markup pushes FCP past its 2s budget (12 cards = FCP 2.27s, 6 cards
+// keeps it under 2s while still holding the footer below the fold).
+// Markup mirrors the client renderer (same tag-template spans, same
+// sphere pseudo-tag, same card frame), so the client's re-render on
+// astro:page-load is layout-neutral.
+const PAGE_SIZE_SSR = 6;
+
+const TYPE_LABELS_SSR: Record<string, string> = {
+  sphere: 'Sphere', talent: 'Talent', feat: 'Feat', class: 'Class',
+  archetype: 'Archetype', article: 'Article', 'class-trait': 'Trait',
+  drawback: 'Drawback', boon: 'Boon', tradition: 'Tradition',
+};
+
+const SYSTEM_META_BY_LABEL: Record<string, { label: string; cssKey: string }> = Object.fromEntries(
+  Object.entries(SYSTEMS).map(([, sys]) => [sys.label, { label: sys.label, cssKey: sys.cssKey }]),
+);
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// Tag badges: the client resolves them from #sp-tag-templates (TagBadge asSpan
+// with tooltip data). Render the identical span server-side.
+// fallow-ignore-next-line complexity
+function tagTooltipAttrs(tagId: string): string {
+  const tag = tagMap.get(tagId);
+  if (!tag) return '';
+  const label = tag.label || tagId;
+  let source = '';
+  if (tag.sourceBook !== '__built-in__') {
+    source = bookMetaMap.get(tag.sourceBook)?.title ?? tag.sourceBook;
+  }
+  return ` data-tt-name="${escapeHtml(label)}"`
+    + ` data-tt-desc="${escapeHtml(tag.description)}"`
+    + ` data-tt-source="${escapeHtml(source)}"`;
+}
+
+function tagBadgeHtml(tagId: string): string {
+  const tag = tagMap.get(tagId);
+  const label = tag ? tag.label || tagId : tagId;
+  const attrs = tagTooltipAttrs(tagId);
+  return `<span class="tag-wrapper talent-tag" data-tag="${escapeHtml(tagId)}"${attrs}>${escapeHtml(label)}</span>`;
+}
+
+// fallow-ignore-next-line complexity
+function cardSourceLabel(entry: ManifestEntry, typeLabel: string): string {
+  const sysEntry = SYSTEM_META_BY_LABEL[entry.system ?? ''];
+  if (entry.type === 'sphere') return sysEntry?.label ?? '';
+  if (entry.sphere) return typeLabel;
+  if (sysEntry) return `${sysEntry.label} · ${typeLabel}`;
+  return typeLabel;
+}
+
+// fallow-ignore-next-line complexity
+function cardTagRowHtml(entry: ManifestEntry, type: string): string {
+  let html = '';
+  if (entry.sphere && type !== 'sphere') {
+    html += `<span class="tag-wrapper"><span class="talent-tag" data-tag="sphere-name" style="--tag-clr: var(--clr-ns)">${escapeHtml(entry.sphere)}</span></span>`;
+  }
+  const tagIds = (entry.tags ?? '').split(',').map(t => t.trim()).filter(Boolean);
+  html += tagIds.map(t => tagBadgeHtml(t)).join('');
+  if (!html) return '';
+  return `<div class="talent-header-bottom">${html}</div>`;
+}
+
+// fallow-ignore-next-line complexity
+function renderSsrCard(entry: ManifestEntry): string {
+  const title = entry.title ?? 'Untitled';
+  const type = entry.type ?? '';
+  const sysEntry = SYSTEM_META_BY_LABEL[entry.system ?? ''];
+  const typeLabel = TYPE_LABELS_SSR[type] ?? type;
+  let cssColor = 'var(--clr-brand)';
+  if (sysEntry?.cssKey) cssColor = `var(--clr-${sysEntry.cssKey})`;
+
+  const sourceLabel = cardSourceLabel(entry, typeLabel);
+  const sourceHtml = sourceLabel
+    ? `<span class="talent-source">${escapeHtml(sourceLabel)}</span>`
+    : '';
+  const tagRow = cardTagRowHtml(entry, type);
+
+  return `<a href="${entry.url}" class="sp-result accent-card" role="option" style="--clr-active: ${cssColor}; --clr-ns: ${cssColor}">
+    <div class="talent-header">
+      <div class="talent-header-top">
+        <span class="talent-name">${escapeHtml(title)}</span>
+        ${sourceHtml}
+      </div>
+      ${tagRow}
+    </div>
+  </a>`;
+}
+
+const initialResultsHtml = manifest.slice(0, PAGE_SIZE_SSR).map(renderSsrCard).join(' ');
 ---
+<!-- fallow-ignore-next-line complexity -->
 <WikiPage title="Search — Spheres Wiki" pagefindIgnore={true}>
 
   <h1 class="page-title">Search</h1>
@@ -97,19 +197,39 @@ const staticTags = [...tagMap.entries()]
     <div class="search-page-filters" id="sp-filters">
       <div class="sp-filter-group" id="sp-system-group">
         <label for="sp-system-select" class="sp-filter-label eyebrow">System</label>
-        <select id="sp-system-select" autocomplete="off"></select>
+        <div class="ts-wrapper single plugin-clear_button ts-placeholder-wrapper" id="sp-system-select-placeholder">
+          <div class="ts-control">
+            <input type="text" autocomplete="off" placeholder="Any system…" readonly />
+          </div>
+        </div>
+        <select id="sp-system-select" class="ts-hidden-select" autocomplete="off"></select>
       </div>
       <div class="sp-filter-group">
         <label for="sp-type-select" class="sp-filter-label eyebrow">Type</label>
-        <select id="sp-type-select" autocomplete="off"></select>
+        <div class="ts-wrapper single plugin-clear_button ts-placeholder-wrapper" id="sp-type-select-placeholder">
+          <div class="ts-control">
+            <input type="text" autocomplete="off" placeholder="Any type…" readonly />
+          </div>
+        </div>
+        <select id="sp-type-select" class="ts-hidden-select" autocomplete="off"></select>
       </div>
       <div class="sp-filter-group" id="sp-sphere-group">
         <label for="sp-sphere-select" class="sp-filter-label eyebrow">Sphere</label>
-        <select id="sp-sphere-select" autocomplete="off"></select>
+        <div class="ts-wrapper single plugin-clear_button ts-placeholder-wrapper" id="sp-sphere-select-placeholder">
+          <div class="ts-control">
+            <input type="text" autocomplete="off" placeholder="Any sphere…" readonly />
+          </div>
+        </div>
+        <select id="sp-sphere-select" class="ts-hidden-select" autocomplete="off"></select>
       </div>
       <div class="sp-filter-group" id="sp-tag-group">
         <label for="sp-tag-select" class="sp-filter-label eyebrow">Tag</label>
-        <select id="sp-tag-select" autocomplete="off"></select>
+        <div class="ts-wrapper single plugin-clear_button ts-placeholder-wrapper" id="sp-tag-select-placeholder">
+          <div class="ts-control">
+            <input type="text" autocomplete="off" placeholder="Any tag…" readonly />
+          </div>
+        </div>
+        <select id="sp-tag-select" class="ts-hidden-select" autocomplete="off"></select>
       </div>
     </div>
 
@@ -121,8 +241,10 @@ const staticTags = [...tagMap.entries()]
       hidden
     ></div>
 
-    <div id="sp-status" class="sp-status" hidden></div>
-    <div id="sp-results" class="sp-results" role="listbox" aria-label="Search results" aria-live="polite"></div>
+    <div id="sp-status" class="sp-status">{manifest.length} results</div>
+    <div id="sp-results" class="sp-results" role="listbox" aria-label="Search results" aria-live="polite">
+      <Fragment set:html={initialResultsHtml} />
+    </div>
     <div id="sp-load-more" class="sp-load-more-sentinel" hidden></div>
 
     <div id="sp-tag-templates" hidden>
@@ -589,6 +711,12 @@ function initTomSelects(
   makeTs('sp-type-select',   'type',   'Any type…',    typeOpts);
   makeTs('sp-sphere-select', 'sphere', 'Any sphere…',  sphereOpts);
   makeTs('sp-tag-select',    'tag',    'Any tag…',     staticTags);
+
+  // Swap the server-rendered stand-in wrappers for the real TomSelect
+  // controls in the same tick — same geometry, no layout shift (V-CLS).
+  for (const id of ['sp-system-select', 'sp-type-select', 'sp-sphere-select', 'sp-tag-select']) {
+    document.getElementById(`${id}-placeholder`)?.remove();
+  }
 }
 
 let searchSerial = 0;

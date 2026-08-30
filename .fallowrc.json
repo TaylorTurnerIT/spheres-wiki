@@ -28,6 +28,7 @@
     "@astrojs/compiler-rs"
   ],
   "duplicates": {
-    "minOccurrences": 3
+    "minOccurrences": 3,
+    "ignore": ["src/styles/fonts.css"]
   }
 }
