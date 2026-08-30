@@ -2,6 +2,7 @@
 import { url } from "@/lib/url";
 import WikiPage from '@/layouts/WikiPage.astro';
 import ScrapeProof from '@/components/ScrapeProof.astro';
+import ContactCard from '@/components/ContactCard.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 ---
 <WikiPage title="Contact — Spheres Wiki" pagefindIgnore={true}>
@@ -16,68 +17,35 @@ import Breadcrumb from '@/components/Breadcrumb.astro';
 
   <div class="contact-blocks">
 
-    <div class="contact-card">
-      <div class="contact-card-icon" aria-hidden="true">
-        <svg viewBox="0 0 16 16" fill="currentColor">
-          <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.384 8.384 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
-        </svg>
-      </div>
-      <div class="contact-card-body">
-        <h2 class="contact-card-heading">Contact the Staff</h2>
-        <p class="contact-card-desc">
-          Join the Drop Dead Studios Discord and reach out to <strong>@Chef</strong> for technical concerns or <strong>@Rednal</strong> for content issues.
-        </p>
-        <ScrapeProof type="discord" value="EfDKxcH" label="Join DDS Discord →" class="contact-discord-link" reveal={true} revealLabel="Show DDS invite link" />
-      </div>
-    </div>
+    <ContactCard heading="Contact the Staff" icon="discord">
+      <p slot="description">
+        Join the Drop Dead Studios Discord and reach out to <strong>@Chef</strong> for technical concerns or <strong>@Rednal</strong> for content issues.
+      </p>
+      <ScrapeProof slot="action" type="discord" value="EfDKxcH" label="Join DDS Discord →" class="contact-discord-link" reveal={true} revealLabel="Show DDS invite link" />
+    </ContactCard>
 
-    <div class="contact-card">
-      <div class="contact-card-icon contact-card-icon--discord" aria-hidden="true">
-        <svg viewBox="0 0 16 16" fill="currentColor">
-          <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.384 8.384 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
-        </svg>
-      </div>
-      <div class="contact-card-body">
-        <h2 class="contact-card-heading">Drop Dead Studios Discord</h2>
-        <p class="contact-card-desc">
-          Official DDS server. Best place for rules questions — community and developers are active.
-        </p>
-        <ScrapeProof type="discord" value="EfDKxcH" label="Join DDS Discord →" class="contact-discord-link" reveal={true} revealLabel="Show DDS invite link" />
-      </div>
-    </div>
+    <ContactCard heading="Drop Dead Studios Discord" icon="discord">
+      <p slot="description">
+        Official DDS server. Best place for rules questions — community and developers are active.
+      </p>
+      <ScrapeProof slot="action" type="discord" value="EfDKxcH" label="Join DDS Discord →" class="contact-discord-link" reveal={true} revealLabel="Show DDS invite link" />
+    </ContactCard>
 
-    <div class="contact-card">
-      <div class="contact-card-icon contact-card-icon--discord" aria-hidden="true">
-        <svg viewBox="0 0 16 16" fill="currentColor">
-          <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.384 8.384 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
-        </svg>
-      </div>
-      <div class="contact-card-body">
-        <h2 class="contact-card-heading">Diamond Recreational Studios Discord</h2>
-        <p class="contact-card-desc">
-          The newer server run by the official successors to Drop Dead Studios. Still worth joining both — the communities are active on each.
-        </p>
-        <ScrapeProof type="discord" value="Q89NBmmK6a" label="Join DRS Discord →" class="contact-discord-link" reveal={true} revealLabel="Show DRS invite link" />
-      </div>
-    </div>
+    <ContactCard heading="Diamond Recreational Studios Discord" icon="discord">
+      <p slot="description">
+        The newer server run by the official successors to Drop Dead Studios. Still worth joining both — the communities are active on each.
+      </p>
+      <ScrapeProof slot="action" type="discord" value="Q89NBmmK6a" label="Join DRS Discord →" class="contact-discord-link" reveal={true} revealLabel="Show DRS invite link" />
+    </ContactCard>
 
-    <div class="contact-card contact-card--note">
-      <div class="contact-card-icon" aria-hidden="true">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="8" cy="8" r="6.5"/>
-          <path d="M8 7v4M8 5.5v.5"/>
-        </svg>
-      </div>
-      <div class="contact-card-body">
-        <h2 class="contact-card-heading">Rules Questions?</h2>
-        <p class="contact-card-desc">
-          Please use the public Discord channels for rules questions. The staff tags provided above are for technical wiki issues or content corrections only.
-        </p>
-        <a href={url("/community-resources/")} class="contact-community-link" data-astro-prefetch="hover">
-          Find Discord &amp; community links →
-        </a>
-      </div>
-    </div>
+    <ContactCard heading="Rules Questions?" icon="info">
+      <p slot="description">
+        Please use the public Discord channels for rules questions. The staff tags provided above are for technical wiki issues or content corrections only.
+      </p>
+      <a slot="action" href={url("/community-resources/")} class="contact-community-link" data-astro-prefetch="hover">
+        Find Discord &amp; community links →
+      </a>
+    </ContactCard>
 
   </div>
 
@@ -90,59 +58,6 @@ import Breadcrumb from '@/components/Breadcrumb.astro';
     gap: 16px;
     max-width: 560px;
     margin-top: 8px;
-  }
-
-  .contact-card {
-    display: flex;
-    gap: 16px;
-    padding: 20px;
-    border: 1px solid var(--clr-border);
-    border-radius: var(--radius);
-  }
-
-  .contact-card--note {
-    background: color-mix(in srgb, var(--clr-border) 30%, transparent);
-  }
-
-  .contact-card-icon {
-    flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    color: var(--clr-brand);
-    margin-top: 2px;
-  }
-
-  .contact-card-icon svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .contact-card--note .contact-card-icon {
-    color: var(--clr-muted);
-  }
-
-  .contact-card-icon--discord {
-    color: #5865F2;
-  }
-
-  .contact-card-body {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .contact-card-heading {
-    font-family: var(--font-display);
-    font-size: var(--fs-md);
-    font-weight: 700;
-    margin: 0 0 6px;
-    color: var(--clr-text);
-  }
-
-  .contact-card-desc {
-    font-size: var(--fs-sm);
-    color: var(--clr-muted);
-    margin: 0 0 10px;
-    line-height: 1.5;
   }
 
   /* :global needed — these classes are applied to <a> tags created by JS at runtime */
