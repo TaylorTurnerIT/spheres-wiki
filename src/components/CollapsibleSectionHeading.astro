@@ -1,0 +1,47 @@
+---
+/**
+ * CollapsibleSectionHeading — the toggle-button variant of the section
+ * heading, pairing with lib/collapseClient (bindCollapseToggle). Renders
+ * the `.section-heading section-heading-toggle` button with chevron that
+ * pages previously inlined; callers bind with bindCollapseToggle(btn,
+ * target, sectionId) on astro:page-load. Styles live in global.css
+ * (.section-heading-toggle).
+ */
+interface Props {
+  label: string;
+  /** id of the collapsible target (aria-controls) */
+  controls: string;
+  /** id on the label span (TOC anchor) */
+  id?: string;
+  /** dataset key the page wiring script reads (data-cat-id / data-group-id) */
+  dataKey?: "catId" | "groupId";
+  /** value for dataKey */
+  dataValue?: string;
+  /** extra classes on the button */
+  class?: string;
+  /** extra classes on the label span (e.g. system color class) */
+  labelClass?: string;
+  defaultExpanded?: boolean;
+}
+
+const {
+  label,
+  id,
+  controls,
+  dataKey,
+  dataValue,
+  class: btnClass,
+  labelClass,
+  defaultExpanded = true,
+} = Astro.props;
+---
+<button
+  class:list={["section-heading", "section-heading-toggle", btnClass]}
+  aria-expanded={defaultExpanded ? "true" : "false"}
+  aria-controls={controls}
+  data-cat-id={dataKey === "catId" ? dataValue : undefined}
+  data-group-id={dataKey === "groupId" ? dataValue : undefined}
+>
+  <span class="section-heading-chevron" aria-hidden="true">▾</span>
+  <span class:list={["section-heading-text", labelClass]} id={id}>{label}</span>
+</button>

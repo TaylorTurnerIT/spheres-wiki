@@ -3,6 +3,7 @@ import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
+import CollapsibleSectionHeading from "@/components/CollapsibleSectionHeading.astro";
 import { buildSystemIdIndex, systemIdKey, systemCssKey } from "@/lib/systems";
 import { resolveEntries } from "@/lib/resolveEntries";
 import { SYSTEMS } from "@/config/site";
@@ -137,17 +138,15 @@ const totalCount = archetypeMap.size;
 
           {sg.groups.map(cg => (
             <div class="arc-class-group">
-              <button
-                class="section-heading section-heading-toggle arc-class-toggle"
-                data-group-id={`sphere-${sg.system}-${cg.classId}`}
-                aria-expanded="true"
-                aria-controls={`sphere-${sg.system}-${cg.classId}-list`}
-              >
-                <span class="section-heading-chevron" aria-hidden="true">▾</span>
-                <span class={`section-heading-text ${systemCssKey(sg.system)}`} id={`sphere-${sg.system}-${cg.classId}`}>
-                  {cg.className}
-                </span>
-              </button>
+              <CollapsibleSectionHeading
+                label={cg.className}
+                id={`sphere-${sg.system}-${cg.classId}`}
+                controls={`sphere-${sg.system}-${cg.classId}-list`}
+                dataKey="groupId"
+                dataValue={`sphere-${sg.system}-${cg.classId}`}
+                class="arc-class-toggle"
+                labelClass={systemCssKey(sg.system)}
+              />
 
               <div class="arc-list" id={`sphere-${sg.system}-${cg.classId}-list`} aria-hidden="false">
                 {cg.arcs.map(({ arc, book, href }) => (
@@ -176,15 +175,14 @@ const totalCount = archetypeMap.size;
     ) : (
       pf1eGroups.map(cg => (
         <div class="arc-class-group">
-          <button
-            class="section-heading section-heading-toggle arc-class-toggle"
-            data-group-id={`pf1e-${cg.classId}`}
-            aria-expanded="true"
-            aria-controls={`pf1e-${cg.classId}-list`}
-          >
-            <span class="section-heading-chevron" aria-hidden="true">▾</span>
-            <span class="section-heading-text" id={`pf1e-${cg.classId}`}>{cg.className}</span>
-          </button>
+          <CollapsibleSectionHeading
+            label={cg.className}
+            id={`pf1e-${cg.classId}`}
+            controls={`pf1e-${cg.classId}-list`}
+            dataKey="groupId"
+            dataValue={`pf1e-${cg.classId}`}
+            class="arc-class-toggle"
+          />
 
           <div class="arc-list" id={`pf1e-${cg.classId}-list`} aria-hidden="false">
             {cg.arcs.map(({ arc, book, href }) => {

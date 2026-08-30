@@ -14,6 +14,7 @@ import { getFeatUrl } from '@/lib/featCategories';
 import EntryCard from '@/components/EntryCard.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
+import CollapsibleSectionHeading from '@/components/CollapsibleSectionHeading.astro';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
 import { contentEntryKey } from '@/lib/entryIdentity';
 import type { SphereEntry, TalentEntry, FeatEntry, BookMeta, TagEntry } from '@/lib/types';
@@ -225,10 +226,13 @@ const groups: TocGroup[] = sections.map(sec => ({
 
           {sec.categories.map(cat => (
             <div class="section-block">
-              <button class="section-heading section-heading-toggle" data-cat-id={cat.id} aria-expanded="true" aria-controls={`${cat.id}-entries`}>
-                <span class="section-heading-chevron" aria-hidden="true">▾</span>
-                <span class="section-heading-text" id={cat.id}>{cat.label}</span>
-              </button>
+              <CollapsibleSectionHeading
+                label={cat.label}
+                id={cat.id}
+                controls={`${cat.id}-entries`}
+                dataKey="catId"
+                dataValue={cat.id}
+              />
               <div class="section-entries" id={`${cat.id}-entries`} aria-hidden="false">
               {cat.entries.length === 0
                 ? <p class="section-empty">No entries yet.</p>
