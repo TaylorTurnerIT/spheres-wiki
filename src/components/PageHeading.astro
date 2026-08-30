@@ -1,0 +1,41 @@
+---
+/**
+ * PageHeading — canonical listing-page title cluster: hidden Pagefind
+ * meta/filter spans, system-colored h1, and the title rule. EntryDetailPage
+ * covers detail routes; this covers the listing pages (class, archetype,
+ * sphere index) that hand-rolled the same cluster.
+ */
+import { resolveSystem } from "@/lib/systems";
+
+interface Props {
+  name: string;
+  system: string;
+  /** e.g. "type:class", "type:archetype", "type:sphere" */
+  type: string;
+  /** System search filter, rendered as both filter and meta */
+  searchFilter?: string;
+  /** Sphere icon id → renders #si-{icon} in the title */
+  icon?: string;
+  /** Pagefind heading weight (default "10") */
+  weight?: string;
+  /** View-transition name */
+  transitionName?: string;
+}
+
+const { name, system, type, searchFilter, icon, weight = "10", transitionName } = Astro.props;
+const sysConfig = resolveSystem(system)!;
+---
+<span data-pagefind-meta={`title:${name}`} hidden></span>
+<span data-pagefind-filter={type} hidden></span>
+{searchFilter && <span data-pagefind-filter={searchFilter} hidden></span>}
+<h1
+  class={`page-title ${sysConfig.cssKey}`}
+  id="overview"
+  data-pagefind-weight={weight}
+  transition:name={transitionName}
+>
+  {icon && <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${icon}`} /></svg>}
+  {name}
+</h1>
+<span data-pagefind-meta={type} hidden></span>
+{searchFilter && <span data-pagefind-meta={searchFilter} hidden></span>}

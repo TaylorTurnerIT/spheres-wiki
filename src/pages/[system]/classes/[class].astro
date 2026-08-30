@@ -9,6 +9,8 @@ import ClassProgressionTable from '@/components/ClassProgressionTable.astro';
 import ClassFeatureBlock from '@/components/ClassFeatureBlock.astro';
 import ArchetypeSwapper from '@/components/ArchetypeSwapper.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
+import PageHeading from '@/components/PageHeading.astro';
+import ClassInfoBlock from '@/components/ClassInfoBlock.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { stripBodySource } from '@/lib/renderBody';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
@@ -303,18 +305,7 @@ const archetypeOptions = archetypes.map(buildArchetypeOption);
     <div class="content-main">
 
       <div class="class-header-row">
-        <span data-pagefind-meta={`title:${cls.name}`} hidden></span>
-        <span data-pagefind-filter="type:class" hidden></span>
-        <span data-pagefind-filter={searchFilter} hidden></span>
-        <h1
-          class={`page-title ${sysConfig.cssKey}`}
-          id="overview"
-          data-pagefind-weight="10"
-        >
-          {cls.name}
-        </h1>
-        <span data-pagefind-meta="type:class" hidden></span>
-        <span data-pagefind-meta={searchFilter} hidden></span>
+        <PageHeading name={cls.name} system={system} type="type:class" searchFilter={searchFilter} />
         <ArchetypeSwapper
           options={archetypeOptions}
           archetypeFeatures={archetypeFeatures}
@@ -328,13 +319,7 @@ const archetypeOptions = archetypes.map(buildArchetypeOption);
         : <p class="entry-description"><em>Description coming soon.</em></p>
       }
 
-      <div class="class-info-block" style="margin-bottom: 1.5rem; padding: 1rem; background: var(--clr-surface); border-radius: 8px; border: 1px solid var(--clr-border);">
-        <p style="margin: 0.25rem 0;"><strong>Alignment:</strong> <span id="class-val-alignment">{cls.alignment}</span></p>
-        <p style="margin: 0.25rem 0;"><strong>Hit Die:</strong> d<span id="class-val-hitDie">{cls.hitDie}</span></p>
-        <p style="margin: 0.25rem 0;"><strong>Starting Wealth:</strong> <span id="class-val-startingWealth">{cls.startingWealth}</span></p>
-        <p style="margin: 0.25rem 0;"><strong>Class Skills:</strong> <span id="class-val-classSkills">{cls.classSkills.join(", ")}</span></p>
-        <p style="margin: 0.25rem 0;"><strong>Skill Ranks per Level:</strong> <span id="class-val-skillRanks">{cls.skillRanks}</span> + Int modifier</p>
-      </div>
+      <ClassInfoBlock cls={cls} />
 
       {tableRows.length > 0 && (
         <ClassProgressionTable clsName={cls.name} allHeaders={allHeaders} tableRows={tableRows} />

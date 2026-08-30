@@ -13,6 +13,7 @@ import { buildOrderedTagIds } from '@/lib/tags';
 import { getFeatUrl } from '@/lib/featCategories';
 import EntryCard from '@/components/EntryCard.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
+import PageHeading from '@/components/PageHeading.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import CollapsibleSectionHeading from '@/components/CollapsibleSectionHeading.astro';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
@@ -173,19 +174,7 @@ const groups: TocGroup[] = sections.map(sec => ({
   <div class="content-columns">
     <div class="content-main">
 
-      <span data-pagefind-meta={`title:${sphere.name}`} hidden></span>
-      <span data-pagefind-filter="type:sphere" hidden></span>
-      <span data-pagefind-filter={searchFilter} hidden></span>
-      <h1
-        class={`page-title ${sysConfig.cssKey}`}
-        id="overview"
-        data-pagefind-weight="10"
-      >
-        <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${sphere.icon}`} /></svg>
-        {sphere.name}
-      </h1>
-      <span data-pagefind-meta="type:sphere" hidden></span>
-      <span data-pagefind-meta={searchFilter} hidden></span>
+      <PageHeading name={sphere.name} system={system} type="type:sphere" searchFilter={searchFilter} icon={sphere.icon} />
       <hr class="page-title-rule" />
 
       {mainCollEntry?.data?.description && (

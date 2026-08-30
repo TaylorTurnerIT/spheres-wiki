@@ -1,0 +1,35 @@
+---
+/**
+ * ClassInfoBlock — the boxed stat list under the class description
+ * (alignment, hit die, wealth, skills, ranks). The `class-val-*` spans are
+ * ArchetypeSwapper's live-update hooks and must keep their ids.
+ */
+import type { ClassEntry } from "@/lib/types";
+
+interface Props {
+  cls: ClassEntry;
+}
+
+const { cls } = Astro.props;
+---
+<div class="class-info-block">
+  <p><strong>Alignment:</strong> <span id="class-val-alignment">{cls.alignment}</span></p>
+  <p><strong>Hit Die:</strong> d<span id="class-val-hitDie">{cls.hitDie}</span></p>
+  <p><strong>Starting Wealth:</strong> <span id="class-val-startingWealth">{cls.startingWealth}</span></p>
+  <p><strong>Class Skills:</strong> <span id="class-val-classSkills">{cls.classSkills.join(", ")}</span></p>
+  <p><strong>Skill Ranks per Level:</strong> <span id="class-val-skillRanks">{cls.skillRanks}</span> + Int modifier</p>
+</div>
+
+<style>
+  .class-info-block {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--clr-surface);
+    border-radius: 8px;
+    border: 1px solid var(--clr-border);
+  }
+
+  .class-info-block p {
+    margin: 0.25rem 0;
+  }
+</style>

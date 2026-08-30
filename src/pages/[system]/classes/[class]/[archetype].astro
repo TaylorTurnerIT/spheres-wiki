@@ -6,6 +6,7 @@ import SourceBookCallout from '@/components/SourceBookCallout.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
 import type { TocItem, TocGroup } from '@/components/TableOfContents.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
+import PageHeading from '@/components/PageHeading.astro';
 import EntryCard from '@/components/EntryCard.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
@@ -254,18 +255,7 @@ function featureMetadata(feature: ArchetypeFeatureEntry): Record<string, string>
   <div class="content-columns">
     <div class="content-main">
 
-      <span data-pagefind-meta={`title:${archetype.name}`} hidden></span>
-      <span data-pagefind-filter="type:archetype" hidden></span>
-      <span data-pagefind-filter={searchFilter} hidden></span>
-      <h1
-        class={`page-title ${sysConfig.cssKey}`}
-        id="overview"
-        data-pagefind-weight="10"
-      >
-        {archetype.name}
-      </h1>
-      <span data-pagefind-meta="type:archetype" hidden></span>
-      <span data-pagefind-meta={searchFilter} hidden></span>
+      <PageHeading name={archetype.name} system={system} type="type:archetype" searchFilter={searchFilter} />
       <hr class="page-title-rule" />
 
       {ArchetypeContent
