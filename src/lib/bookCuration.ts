@@ -14,7 +14,7 @@ export const CORE_BOOK_SLUGS = [
   "champions-of-the-spheres",
 ];
 
-export const OFFICIAL_PUBLISHERS = new Set([
+const OFFICIAL_PUBLISHERS = new Set([
   "Drop Dead Studios",
   "Diamond Recreational Studios",
 ]);
