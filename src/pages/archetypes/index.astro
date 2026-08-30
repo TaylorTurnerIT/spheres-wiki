@@ -193,7 +193,7 @@ const totalCount = archetypeMap.size;
                     ? <a href={href} class={`arc-name ${sysKey}`} data-astro-prefetch="hover">{arc.name}</a>
                     : <span class={`arc-name arc-name--nolink`}>{arc.name}</span>
                   }
-                  <span class={`arc-sys-badge ${sysKey}`}>{SYSTEMS[arc.system]?.label ?? arc.system}</span>
+                  <span class={`sys-pill arc-sys-badge ${sysKey}`}>{SYSTEMS[arc.system]?.label ?? arc.system}</span>
                   {book && <span class="arc-source">{book}</span>}
                 </div>
               );
@@ -273,18 +273,9 @@ document.addEventListener('astro:page-load', () => {
     text-decoration: underline;
   }
 
-  /* PF1e system badge */
+  /* PF1e system badge — layout only; visuals from the shared .sys-pill */
   .arc-sys-badge {
-    font-family: var(--font-display);
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 1px 5px;
-    border-radius: 3px;
     flex-shrink: 0;
-    background: color-mix(in srgb, var(--clr-ns) 12%, transparent);
-    color: var(--clr-ns);
   }
 
   .arc-source {

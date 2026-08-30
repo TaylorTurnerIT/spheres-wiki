@@ -29,7 +29,7 @@ const { tag, stats, systemOrder, tagMap, bookMetaMap } = Astro.props;
   <div class="tag-row-stats">
     {stats.total > 0 && <span class="tag-count">{stats.total}</span>}
     {systemOrder.filter(sys => stats.bySystem[sys]).map(sys => (
-      <span class={`tag-sys-pip ${systemCssKey(sys)}`}
+      <span class={`sys-pill tag-sys-pip ${systemCssKey(sys)}`}
         title={`${stats.bySystem[sys]} ${SYSTEMS[sys].label} entries`}>
         {SYSTEMS[sys].label} {stats.bySystem[sys]}
       </span>
@@ -94,20 +94,6 @@ const { tag, stats, systemOrder, tagMap, bookMetaMap } = Astro.props;
     padding: 1px 6px;
     border-radius: 99px;
     white-space: nowrap;
-  }
-
-  /* system class on the pip sets --clr-ns (global.css) */
-  .tag-sys-pip {
-    font-family: var(--font-display);
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 1px 5px;
-    border-radius: 3px;
-    white-space: nowrap;
-    background: color-mix(in srgb, var(--clr-ns) 12%, transparent);
-    color: var(--clr-ns);
   }
 
   @media (max-width: 600px) {

@@ -46,7 +46,7 @@ const STANDARD_TOGGLES = [
   </div>
 
   <div class="master-toggles-bar">
-    <div class="master-toggles-title">Global Filters:</div>
+    <div class="master-toggles-title eyebrow">Global Filters:</div>
     <div class="master-toggles-switches">
       {STANDARD_TOGGLES.map(t => (
         <button class="pref-toggle compact" data-master={t.type} role="switch" aria-checked="true">
@@ -169,11 +169,7 @@ const STANDARD_TOGGLES = [
   }
   .master-toggles-title {
     font-size: var(--fs-sm);
-    font-weight: 700;
     color: var(--clr-text);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
   }
   .master-toggles-switches {
     display: flex;

@@ -535,6 +535,36 @@ a:hover {
   transition: max-height 0.3s ease;
 }
 
+/* ── Utility: system-tinted pill (label + count/status) ── */
+/* One home for the tiny uppercase system pill (tag-sys-pip, arc-sys-badge,
+   and friends). Color comes from --clr-ns via the system cssKey class. */
+.sys-pill {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 1px 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  background: color-mix(in srgb, var(--clr-ns) 12%, transparent);
+  color: var(--clr-ns);
+}
+
+/* ── Utility: eyebrow micro-label ───────────────────────── */
+/* One home for the tiny uppercase display-font label (filter labels,
+   group headers, toc titles). Pages previously re-styled this recipe
+   per site. */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xs);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  white-space: nowrap;
+}
+
 /* ── Page actions bar (expand/collapse all, etc.) ───────── */
 .page-actions {
   display: flex;

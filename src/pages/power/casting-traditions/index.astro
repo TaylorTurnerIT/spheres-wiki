@@ -854,7 +854,7 @@ const boonCards = boons.map((b) => ({
       const grouped = groupBySphere(filtered as ClientDrawback[]);
       let html = "";
       for (const [sphereName, items] of grouped) {
-        html += `<div class="bcl-group-header">${sphereName}</div>`;
+        html += `<div class="bcl-group-header eyebrow">${sphereName}</div>`;
         for (const d of items) {
           const checked = selSphereDrawbacks.includes(d.id) ? "checked" : "";
           html += `<label class="builder-check-item" title="${escapeHtml(d.bodyPlain.slice(0, 200))}">
@@ -1492,12 +1492,6 @@ const boonCards = boons.map((b) => ({
   }
 
   :global(.bcl-group-header) {
-    font-family: var(--font-display);
-    font-size: var(--fs-3xs);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--clr-muted);
     padding: 4px 6px 2px;
     border-bottom: 0.5px solid var(--clr-border);
     margin-bottom: 2px;
