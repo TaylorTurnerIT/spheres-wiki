@@ -47,7 +47,9 @@ export function byNewestFirst(
   a: Pick<BookMeta, "publishedDate">,
   b: Pick<BookMeta, "publishedDate">,
 ): number {
-  return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
+  return (
+    new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+  );
 }
 
 /** Newest book matching the predicate, or undefined. */
@@ -59,20 +61,25 @@ export function latestBook(
 }
 
 /** Core system books in canonical order (missing slugs omitted). */
-export function coreBooksOf(
-  bookMetaMap: Map<string, BookMeta>,
-): BookMeta[] {
+export function coreBooksOf(bookMetaMap: Map<string, BookMeta>): BookMeta[] {
   return CORE_BOOK_SLUGS.map((slug) => bookMetaMap.get(slug)).filter(
     (b): b is BookMeta => b !== undefined,
   );
 }
 
 /** Group books by normalized publisher, groups sorted by size (desc), books newest-first. */
-export function groupByPublisher(books: BookMeta[]): { name: string; books: BookMeta[] }[] {
+export function groupByPublisher(
+  books: BookMeta[],
+): { name: string; books: BookMeta[] }[] {
   const groups = new Map<string, BookMeta[]>();
   for (const book of books) {
     const publisher = bookPublisher(book);
-    (groups.get(publisher) ?? groups.set(publisher, []).get(publisher)!).push(book);
+    let group = groups.get(publisher);
+    if (!group) {
+      group = [];
+      groups.set(publisher, group);
+    }
+    group.push(book);
   }
   return [...groups.entries()]
     .map(([name, group]) => ({ name, books: group.sort(byNewestFirst) }))

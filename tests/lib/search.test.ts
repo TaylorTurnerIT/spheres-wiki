@@ -32,7 +32,9 @@ describe("Search Weight Verification", () => {
   it('verifies that primary sphere and class pages retain weight="10"', () => {
     // The weight lives in the shared PageHeading component (default "10");
     // the primary pages must route their h1 through it.
-    expect(fs.readFileSync(pageHeadingPath(), "utf8")).toContain('weight = "10"');
+    expect(fs.readFileSync(pageHeadingPath(), "utf8")).toContain(
+      'weight = "10"',
+    );
     const primaryFiles = [
       "[system]/[sphere]/index.astro",
       "[system]/classes/[class].astro",

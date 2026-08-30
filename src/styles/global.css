@@ -1654,7 +1654,9 @@ h6 {
   padding: 12px 14px;
   position: relative;
 }
-.accent-card { margin: 14px 0; }
+.accent-card {
+  margin: 14px 0;
+}
 .accent-card:hover,
 .accent-card:focus-within,
 .base-ability-block:hover,

@@ -1,13 +1,13 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import {
-  CORE_BOOK_SLUGS,
   bookPublisher,
-  isOfficialPublisher,
-  isVisibleThirdParty,
   byNewestFirst,
-  latestBook,
+  CORE_BOOK_SLUGS,
   coreBooksOf,
   groupByPublisher,
+  isOfficialPublisher,
+  isVisibleThirdParty,
+  latestBook,
 } from "@/lib/bookCuration";
 import type { BookMeta } from "@/lib/types";
 
@@ -26,13 +26,21 @@ describe("bookCuration", () => {
   });
 
   it("classifies official vs visible third party", () => {
-    expect(isOfficialPublisher(book({ publisher: "Drop Dead Studios" }))).toBe(true);
-    expect(isOfficialPublisher(book({ publisher: "Diamond Recreational Studios" }))).toBe(true);
+    expect(isOfficialPublisher(book({ publisher: "Drop Dead Studios" }))).toBe(
+      true,
+    );
+    expect(
+      isOfficialPublisher(book({ publisher: "Diamond Recreational Studios" })),
+    ).toBe(true);
     expect(isOfficialPublisher(book({ publisher: "Acme" }))).toBe(false);
     expect(isVisibleThirdParty(book({ publisher: "Acme Press" }))).toBe(true);
-    expect(isVisibleThirdParty(book({ publisher: "Drop Dead Studios" }))).toBe(false);
+    expect(isVisibleThirdParty(book({ publisher: "Drop Dead Studios" }))).toBe(
+      false,
+    );
     expect(isVisibleThirdParty(book({ publisher: "Unknown" }))).toBe(false);
-    expect(isVisibleThirdParty(book({ publisher: "__internal__" }))).toBe(false);
+    expect(isVisibleThirdParty(book({ publisher: "__internal__" }))).toBe(
+      false,
+    );
   });
 
   it("sorts newest first", () => {
@@ -55,9 +63,12 @@ describe("bookCuration", () => {
   it("returns core books in canonical order, omitting missing", () => {
     const map = new Map<string, BookMeta>([
       ["spheres-of-might", book({ slug: "spheres-of-might" })],
-      ["ultimate-spheres-of-power", book({ slug: "ultimate-spheres-of-power" })],
+      [
+        "ultimate-spheres-of-power",
+        book({ slug: "ultimate-spheres-of-power" }),
+      ],
     ]);
-    expect(coreBooksOf(map).map(b => b.slug)).toEqual([
+    expect(coreBooksOf(map).map((b) => b.slug)).toEqual([
       "ultimate-spheres-of-power",
       "spheres-of-might",
     ]);
