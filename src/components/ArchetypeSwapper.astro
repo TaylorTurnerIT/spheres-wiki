@@ -792,25 +792,8 @@ document.addEventListener('astro:page-load', () => {
     font-size: var(--fs-md);
   }
 
-  :global(.table-archetype-feature) {
-    background-color: color-mix(in srgb, var(--clr-active) 15%, transparent);
-    color: var(--clr-active);
-    padding: 0.1rem 0.35rem;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 0.9em;
-    border-bottom: 1px solid var(--clr-active);
-  }
-
-  :global(.table-altered-badge) {
-    font-size: 0.75em;
-    color: var(--clr-brand);
-    background: color-mix(in srgb, var(--clr-brand) 10%, transparent);
-    padding: 0 3px;
-    border-radius: 3px;
-    font-weight: 600;
-  }
-
+  /* .table-archetype-feature / .table-altered-badge styles live in
+     ClassProgressionTable (owner of the progression table cells). */
   :global(.toc-archetype-text) {
     color: var(--clr-active);
     font-weight: bold;
