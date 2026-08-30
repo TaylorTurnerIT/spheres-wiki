@@ -1,7 +1,7 @@
 ---
 import { url } from "@/lib/url";
 import WikiPage from "@/layouts/WikiPage.astro";
-import TagBadge from "@/components/TagBadge.astro";
+import TagRow from "@/components/TagRow.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
 import { buildSystemIdIndex, systemCssKey, systemIdKey } from "@/lib/systems";
@@ -114,28 +114,9 @@ const sphereGroups = [...sphereGroupMap.values()]
     <div class="section-group" style="margin-top: 16px;">
       <SectionHeading label="System Tags" />
       <div class="tag-table">
-        {builtinTags.map(tag => {
-          const s = stats.get(tag.id)!;
-          return (
-            <div class="tag-row">
-              <div class="tag-row-badge">
-                <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
-              </div>
-              <div class="tag-row-desc" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
-              <div class="tag-row-stats">
-                {s.total > 0 && (
-                  <span class="tag-count">{s.total}</span>
-                )}
-                {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
-                  <span class={`tag-sys-pip ${systemCssKey(sys)}`}
-                    title={`${s.bySystem[sys]} ${SYSTEMS[sys].label} entries`}>
-                    {SYSTEMS[sys].label} {s.bySystem[sys]}
-                  </span>
-                ))}
-              </div>
-            </div>
-          );
-        })}
+        {builtinTags.map(tag => (
+          <TagRow tag={tag} stats={stats.get(tag.id)!} systemOrder={SYSTEM_ORDER} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+        ))}
       </div>
     </div>
   )}
@@ -152,26 +133,9 @@ const sphereGroups = [...sphereGroupMap.values()]
             labelClass={`sphere-group-label ${systemCssKey(group.sphereSystem)}`}
           />
           <div class="tag-table">
-            {group.tags.map(tag => {
-              const s = stats.get(tag.id)!;
-              return (
-                <div class="tag-row">
-                  <div class="tag-row-badge">
-                    <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
-                  </div>
-                  <div class="tag-row-desc" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
-                  <div class="tag-row-stats">
-                    {s.total > 0 && <span class="tag-count">{s.total}</span>}
-                    {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
-                      <span class={`tag-sys-pip ${systemCssKey(sys)}`}
-                        title={`${s.bySystem[sys]} ${SYSTEMS[sys].label} entries`}>
-                        {SYSTEMS[sys].label} {s.bySystem[sys]}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+            {group.tags.map(tag => (
+              <TagRow tag={tag} stats={stats.get(tag.id)!} systemOrder={SYSTEM_ORDER} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+            ))}
           </div>
         </div>
       ))}
@@ -180,26 +144,9 @@ const sphereGroups = [...sphereGroupMap.values()]
         <div class="section-group" style="margin-top: 24px;">
           <SectionHeading label="General" />
           <div class="tag-table">
-            {unassignedTags.map(tag => {
-              const s = stats.get(tag.id)!;
-              return (
-                <div class="tag-row">
-                  <div class="tag-row-badge">
-                    <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
-                  </div>
-                  <div class="tag-row-desc" set:html={tag.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')} />
-                  <div class="tag-row-stats">
-                    {s.total > 0 && <span class="tag-count">{s.total}</span>}
-                    {SYSTEM_ORDER.filter(sys => s.bySystem[sys]).map(sys => (
-                    <span class={`tag-sys-pip ${systemCssKey(sys)}`}
-                      title={`${s.bySystem[sys]} ${SYSTEMS[sys].label} entries`}>
-                      {SYSTEMS[sys].label} {s.bySystem[sys]}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+            {unassignedTags.map(tag => (
+              <TagRow tag={tag} stats={stats.get(tag.id)!} systemOrder={SYSTEM_ORDER} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+            ))}
           </div>
         </div>
       )}
@@ -257,78 +204,6 @@ const sphereGroups = [...sphereGroupMap.values()]
     border-radius: var(--radius);
   }
 
-  .tag-row {
-    display: grid;
-    grid-template-columns: 160px 1fr auto;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 12px;
-    border-bottom: 0.5px solid var(--clr-border);
-    position: relative;
-  }
-
-  .tag-row:first-child {
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
-  }
-
-  .tag-row:last-child {
-    border-bottom: none;
-    border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
-  }
-
-  .tag-row:hover,
-  .tag-row:focus-within {
-    background: color-mix(in srgb, var(--clr-brand) 4%, transparent);
-    z-index: 10;
-  }
-
-  .tag-row-badge {
-    display: flex;
-    align-items: center;
-  }
-
-  .tag-row-desc {
-    font-size: var(--fs-sm);
-    color: var(--clr-muted);
-    line-height: 1.4;
-  }
-
-  .tag-row-stats {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    min-width: 0;
-  }
-
-  .tag-count {
-    font-family: var(--font-display);
-    font-size: var(--fs-xs);
-    font-weight: 700;
-    color: var(--clr-muted);
-    background: color-mix(in srgb, var(--clr-border) 60%, transparent);
-    padding: 1px 6px;
-    border-radius: 99px;
-    white-space: nowrap;
-  }
-
-  /* system class on the pip sets --clr-ns (global.css) */
-  .tag-sys-pip {
-    font-family: var(--font-display);
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 1px 5px;
-    border-radius: 3px;
-    white-space: nowrap;
-    background: color-mix(in srgb, var(--clr-ns) 12%, transparent);
-    color: var(--clr-ns);
-  }
-
   :global(a.sphere-group-label) {
     text-decoration: none;
     color: var(--clr-ns);
@@ -337,13 +212,4 @@ const sphereGroups = [...sphereGroupMap.values()]
     text-decoration: underline;
   }
 
-  @media (max-width: 600px) {
-    .tag-row {
-      grid-template-columns: 1fr;
-      gap: 6px;
-    }
-    .tag-row-stats {
-      justify-content: flex-start;
-    }
-  }
 </style>

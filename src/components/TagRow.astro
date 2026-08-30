@@ -1,0 +1,122 @@
+---
+/**
+ * TagRow — one row of the tags-index table: badge, linkified description,
+ * and usage stats (total count + per-system pips). Was three byte-identical
+ * inline blocks in tags/index.astro; the stats shape is computed by the
+ * caller (per-tag tally with per-system breakdown).
+ */
+import TagBadge from "@/components/TagBadge.astro";
+import { systemCssKey } from "@/lib/systems";
+import { mdLinksToHtml } from "@/lib/mdLinks";
+import { SYSTEMS } from "@/config/site";
+import type { TagEntry, BookMeta } from "@/lib/types";
+
+interface Props {
+  tag: TagEntry;
+  stats: { total: number; bySystem: Record<string, number> };
+  systemOrder: string[];
+  tagMap: Map<string, TagEntry>;
+  bookMetaMap: Map<string, BookMeta>;
+}
+
+const { tag, stats, systemOrder, tagMap, bookMetaMap } = Astro.props;
+---
+<div class="tag-row">
+  <div class="tag-row-badge">
+    <TagBadge tagId={tag.id} tagMap={tagMap} bookMetaMap={bookMetaMap} />
+  </div>
+  <div class="tag-row-desc" set:html={mdLinksToHtml(tag.description)} />
+  <div class="tag-row-stats">
+    {stats.total > 0 && <span class="tag-count">{stats.total}</span>}
+    {systemOrder.filter(sys => stats.bySystem[sys]).map(sys => (
+      <span class={`tag-sys-pip ${systemCssKey(sys)}`}
+        title={`${stats.bySystem[sys]} ${SYSTEMS[sys].label} entries`}>
+        {SYSTEMS[sys].label} {stats.bySystem[sys]}
+      </span>
+    ))}
+  </div>
+</div>
+
+<style>
+  .tag-row {
+    display: grid;
+    grid-template-columns: 160px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-bottom: 0.5px solid var(--clr-border);
+    position: relative;
+  }
+
+  .tag-row:first-child {
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+  }
+
+  .tag-row:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+  }
+
+  .tag-row:hover,
+  .tag-row:focus-within {
+    background: color-mix(in srgb, var(--clr-brand) 4%, transparent);
+    z-index: 10;
+  }
+
+  .tag-row-badge {
+    display: flex;
+    align-items: center;
+  }
+
+  .tag-row-desc {
+    font-size: var(--fs-sm);
+    color: var(--clr-muted);
+    line-height: 1.4;
+  }
+
+  .tag-row-stats {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .tag-count {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--clr-muted);
+    background: color-mix(in srgb, var(--clr-border) 60%, transparent);
+    padding: 1px 6px;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+
+  /* system class on the pip sets --clr-ns (global.css) */
+  .tag-sys-pip {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    background: color-mix(in srgb, var(--clr-ns) 12%, transparent);
+    color: var(--clr-ns);
+  }
+
+  @media (max-width: 600px) {
+    .tag-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .tag-row-stats {
+      justify-content: flex-start;
+    }
+  }
+</style>

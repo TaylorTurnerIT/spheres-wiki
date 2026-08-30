@@ -1,6 +1,7 @@
 ---
 import { url } from "@/lib/url";
 import { resolveSystem } from "@/lib/systems";
+import { mdLinksToHtml } from "@/lib/mdLinks";
 import type { TagEntry, BookMeta } from "@/lib/types";
 
 interface Props {
@@ -32,12 +33,7 @@ const systemLabel =
 
 const TagElement = asSpan ? 'span' : 'a';
 
-const ttDesc = tag
-  ? tag.description.replace(
-      /\[([^\]]+)\]\(([^)]+)\)/g,
-      stripLinks ? '$1' : '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
-    )
-  : undefined;
+const ttDesc = tag ? mdLinksToHtml(tag.description, { stripLinks }) : undefined;
 ---
 
 <TagElement
