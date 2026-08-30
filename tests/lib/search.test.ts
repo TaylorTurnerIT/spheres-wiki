@@ -4,6 +4,8 @@ import { describe, expect, it } from "vitest";
 
 describe("Search Weight Verification", () => {
   const pagesDir = path.resolve(__dirname, "../../src/pages");
+  const pageHeadingPath = () =>
+    path.resolve(__dirname, "../../src/components/PageHeading.astro");
 
   it('verifies that the entry detail shell has data-pagefind-weight="2.0"', () => {
     const shellPath = path.resolve(
@@ -28,6 +30,10 @@ describe("Search Weight Verification", () => {
   });
 
   it('verifies that primary sphere and class pages retain weight="10"', () => {
+    // The weight lives in the shared PageHeading component (default "10");
+    // the primary pages must route their h1 through it.
+    const pageHeading = path.join(process.cwd(), "src/components/PageHeading.astro");
+    expect(fs.readFileSync(pageHeadingPath(), "utf8")).toContain('weight = "10"');
     const primaryFiles = [
       "[system]/[sphere]/index.astro",
       "[system]/classes/[class].astro",
@@ -35,7 +41,7 @@ describe("Search Weight Verification", () => {
     for (const f of primaryFiles) {
       const p = path.join(pagesDir, f);
       const content = fs.readFileSync(p, "utf8");
-      expect(content).toContain('data-pagefind-weight="10"');
+      expect(content).toContain("<PageHeading");
     }
   });
 
