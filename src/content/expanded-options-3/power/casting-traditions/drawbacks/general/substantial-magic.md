@@ -20,5 +20,4 @@ Magic objects can be identified as being the source of a magic sphere effect (bu
 
 **Note:** Unique to the Substantial Magic casting drawback is that it is incompatible with some sphere-specific drawbacks. Characters cannot select these sphere-specific drawbacks and, if they would possess them, cannot use those sphere effects. Characters may buy back those drawbacks as normal to regain use of those sphere effects.
 
-*Addendum* [SM—]
-If you select this drawback a second time, the item created with this drawback can be removed from its location or target as a standard action (if the target is willing to have the item removed) or a successful steal combat maneuver. Once removed from its owner or location, the item vanishes and its effects end.
+**Addendum:** If you select this drawback a second time, the item created with this drawback can be removed from its location or target as a standard action (if the target is willing to have the item removed) or a successful steal combat maneuver. Once removed from its owner or location, the item vanishes and its effects end.

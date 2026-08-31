@@ -13,9 +13,7 @@ This drawback counts as 2 drawbacks for the purposes of determining boons. Tempo
 
 **Incompatible:** Diagram Magic, Prepared Casting
 
-*Addendum* [SM-]
-<div class="source-tag">Source: Baron's Otherworldly Citadel</div>
-If you have the Charged Spells drawback, you may apply one or both of the following additional conditions. Each condition counts as one additional drawback.
+**Addendum:** If you have the Charged Spells drawback, you may apply one or both of the following additional conditions. Each condition counts as one additional drawback. <sup>**Source:** Baron's Otherworldly Citadel</sup>
 
 **Daily Power:** Once you have prepared a charge that requires 3 or more spell points, you cannot prepare any charges that use the same combination of spell point cost and use of talents, feats, class abilities, and any other modifiers or variables until you rest to regain spell points. Any magic sphere effects you use that cost 2 or fewer spell points have their duration reduced to 1 minute if they would normally be higher.
 
