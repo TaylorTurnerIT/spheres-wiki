@@ -18,6 +18,10 @@ const testWorkflow = readFileSync(
   new URL("../../.github/workflows/test.yml", import.meta.url),
   "utf8",
 );
+const deployWorkflow = readFileSync(
+  new URL("../../.github/workflows/deploy.yml", import.meta.url),
+  "utf8",
+);
 
 describe("Lighthouse CI deployment-path configuration", () => {
   it("targets Astro Preview under the deployed base path", () => {
@@ -48,5 +52,14 @@ describe("Lighthouse CI deployment-path configuration", () => {
   it("uses the real Preview server without rewriting the build tree", () => {
     expect(testWorkflow).toContain("bun run preview -- --host 127.0.0.1");
     expect(testWorkflow).not.toContain("ln -sfn . dist/spheres-wiki");
+  });
+
+  it("makes full CI builds independent of shallow PR checkouts", () => {
+    for (const workflow of [testWorkflow, deployWorkflow]) {
+      expect(workflow).toContain("fetch-depth: 0");
+      expect(workflow).toContain(
+        `FALLOW_AUDIT_BASE=origin/\${GITHUB_BASE_REF:-main}`,
+      );
+    }
   });
 });
