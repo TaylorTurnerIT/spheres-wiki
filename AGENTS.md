@@ -46,7 +46,7 @@ bunx astro check       # Astro/Volar type check; must report 0 errors, 0 warning
 
 `just` wraps common ones: `just run` (default) = `test → validate → build → preview`; also `just test`, `just validate`, `just build`, `just preview`.
 
-CI (`.github/workflows/`): `test.yml` runs Vitest + content validation on push/PR; `deploy.yml` builds & publishes to GitHub Pages on push to `main`.
+CI (`.github/workflows/`): `test.yml` runs Vitest + content validation on push/PR; `deploy.yml` runs the production build on push/PR and publishes to GitHub Pages on `main` pushes or manual dispatch.
 
 ## Repository layout
 

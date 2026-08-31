@@ -526,3 +526,4 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B28 | 2026-08-28 | New audit-script refactor missed repository formatter layout and stopped build during lint | V63 |
 | B29 | 2026-08-28 | Route audit found three generated TOC anchors for base markers whose migrated source used inline or apostrophe forms outside marker normalization | V76 |
 | B30 | 2026-08-28 | Chrome default root View Transition uses additive `plus-lighter` compositing; different route backgrounds briefly wash together and resemble FOUC | V79 — normalize root compositing; browser transition probe |
+| B31 | 2026-08-31 | Local worktree build ran against unhydrated Git LFS pointer files because `git-lfs` was absent from shell | C12 — run build with `git-lfs`; hydrate LFS assets |
