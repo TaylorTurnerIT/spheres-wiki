@@ -278,6 +278,7 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V79. Cross-route View Transitions ! keep root old/new compositing `normal` (⊥ `plus-lighter`); browser smoke test ! observe ordered preparation/swap/page-load phases, styled target DOM, and no blank or unstyled viewport sample.
 - V80. ∀ files under `src/assets/` consumed by build ! be materialized assets; Git LFS pointer text ⊥ reaches Astro.
 - V81. Client-rendered tag-tail rows preserve server row metadata and escape fetched values before HTML insertion; View Transition swap aborts tail fetches and disconnects observers.
+- V82. CI PR build ! fetch base refs and set `FALLOW_AUDIT_BASE` explicitly before `bun run build`; detached checkout ⊥ relies on auto-detection.
 
 ---
 
@@ -472,9 +473,10 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T119 | x | Add browser regression probe for cross-route View Transition flash; normalize root compositing and record lifecycle/style evidence | V77,V79 |
 | T120 | x | Fail early when Git LFS pointer stubs remain under `src/assets/` | V80,I.build |
 | T121 | x | Harden lazy tag-detail tails: preserve system metadata, escape injected values, and tear down fetch/observer state on swap | V77,V81 |
+| T122 | x | Make PR Lighthouse checkout fetch full refs and set explicit Fallow base; add workflow contract test | V82,I.build |
 
 **Recommended build order:**
-Audit remediation batch: T113→T114→T115→T116→T117→T118→T119. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
+Audit remediation batch: T113→T114→T115→T116→T117→T118→T119→T120→T121→T122. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
 Then broken routes (T1→T2→T9→T25→T3→T4→T5→T6→T7→T8).
 Then stubs (T11→T12→T13→T14→T15→T10).
@@ -532,3 +534,4 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B30 | 2026-08-28 | Chrome default root View Transition uses additive `plus-lighter` compositing; different route backgrounds briefly wash together and resemble FOUC | V79 — normalize root compositing; browser transition probe |
 | B31 | 2026-08-31 | Worktree checkout without Git LFS left tracked image pointers; Astro attempted image metadata on pointer text | V80 — pre-build asset integrity check; `git lfs pull` remediation |
 | B32 | 2026-08-31 | Lazy tag-detail tails omitted system metadata, interpolated fetched values unescaped, and left observer/fetch work alive across View Transitions | V77,V81 — include system in the tail contract; escape HTML; abort and disconnect on swap |
+| B33 | 2026-08-31 | Detached PR checkout hid base ref; Fallow auto-detection exited 2 during Lighthouse build | V82 — fetch-depth 0 and set FALLOW_AUDIT_BASE=origin/${GITHUB_BASE_REF:-main} |
