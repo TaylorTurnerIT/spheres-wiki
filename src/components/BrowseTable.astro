@@ -16,7 +16,7 @@
  */
 import TagBadge from "@/components/TagBadge.astro";
 import { SYSTEMS } from "@/config/site";
-import type { FeatBrowseRow } from "@/lib/featBrowse";
+import { browseSearchText, type FeatBrowseRow } from "@/lib/featBrowse";
 import type { BookMeta, TagEntry } from "@/lib/types";
 import { url } from "@/lib/url";
 
@@ -54,19 +54,7 @@ const letters = [...groups.keys()].sort((a, b) =>
   a === "#" ? 1 : b === "#" ? -1 : a.localeCompare(b),
 );
 
-// Combined lowercase haystack for the secondary (non-name) search fields.
-function searchText(row: FeatBrowseRow): string {
-  return [
-    row.tags.map((t) => tagMap.get(t)?.label ?? t).join(" "),
-    row.sphereLabel,
-    row.sourceBookTitle,
-    SYSTEMS[row.system]?.label ?? row.system,
-    row.categoryLabel,
-    row.summary,
-  ]
-    .join(" ")
-    .toLowerCase();
-}
+
 ---
 
 <div class="browse-table-wrap" id={`${idPrefix}-table`} data-pagefind-ignore>
@@ -86,7 +74,7 @@ function searchText(row: FeatBrowseRow): string {
           <tr
             class:list={["browse-row", row.cssKey]}
             data-name={row.name.toLowerCase()}
-            data-search={searchText(row)}
+            data-search={browseSearchText(row, tagMap)}
             data-system={row.system}
             data-category={row.category}
             data-tags={row.tags.join(" ")}
@@ -109,6 +97,8 @@ function searchText(row: FeatBrowseRow): string {
                     tagId={tagId}
                     tagMap={tagMap}
                     bookMetaMap={bookMetaMap}
+                    showTooltip={false}
+                    prefetch={false}
                   />
                 ))}
               </span>

@@ -19,6 +19,36 @@ import { buildOrderedTagIds } from "@/lib/tags";
 import type { BookMeta, FeatEntry, SphereEntry, TagEntry } from "@/lib/types";
 import { url } from "@/lib/url";
 
+/** The lowercase haystack behind each row's data-search attribute — shared
+    by the SSR table and the tail endpoint so both filter identically. */
+export function browseSearchText(
+  row: Pick<
+    FeatBrowseRow,
+    | "tags"
+    | "sphereLabel"
+    | "sourceBookTitle"
+    | "system"
+    | "categoryLabel"
+    | "summary"
+  >,
+  tagMap: Map<string, TagEntry>,
+): string {
+  return [
+    row.tags.map((t) => tagMap.get(t)?.label ?? t).join(" "),
+    row.sphereLabel,
+    row.sourceBookTitle,
+    SYSTEMS[row.system]?.label ?? row.system,
+    row.categoryLabel,
+    row.summary,
+  ]
+    .join(" ")
+    .toLowerCase();
+}
+
+/** Rows rendered into the static HTML; the tail is served by
+    feats/data.json and rendered client-side (lib/browseFilterClient). */
+export const BROWSE_SSR_CAP = 300;
+
 export interface FeatBrowseRow {
   /** Unique row key — the canonical href, guaranteed distinct per feat. */
   key: string;

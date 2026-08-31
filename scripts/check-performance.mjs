@@ -11,17 +11,17 @@ const PLAYER_SYSTEMS = new Set(Object.keys(SYSTEMS));
 const budgets = [
   {
     label: "search",
-    max: 2_500_000,
+    max: 400_000,
     matches: (file) => file === "search/index.html",
   },
   {
     label: "feat catalog",
-    max: 3_000_000,
+    max: 800_000,
     matches: (file) => file === "feats/index.html",
   },
   {
     label: "tag catalog",
-    max: 6_500_000,
+    max: 800_000,
     matches: (file) => file.startsWith("tags/"),
   },
   {

@@ -14,6 +14,8 @@
  *  - text input debounced at 220ms to match `/search/`
  *  - full state (q, system, category, tags, desc) lives in query params (§10)
  */
+
+import { SYSTEMS } from "@/config/site";
 import {
   type BrowseRowData,
   type BrowseState,
@@ -57,6 +59,8 @@ interface Ctx {
   descText: { value: Record<string, string> | null };
   debounce: ReturnType<typeof setTimeout> | null;
   destroyed: boolean;
+  tailLoaded: boolean;
+  systemRoutes: Record<string, string>;
 }
 
 function trackSelect(instance: Selectable | null): Selectable | null {
@@ -316,6 +320,122 @@ function removePlaceholders(els: BrowseEls): void {
   document.getElementById(`${els.tags.id}-placeholder`)?.remove();
 }
 
+/** Escape a string for safe interpolation into an HTML attribute. */
+function attr(v: string): string {
+  return v.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+}
+
+/** Build one tail row matching the BrowseTable SSR row contract. */
+function tailRowHtml(
+  row: TailRow,
+  labels: Record<string, string>,
+  systemRoutes: Record<string, string>,
+): string {
+  const badges = row.t
+    .map(
+      (id) =>
+        `<a href="${url(`/tags/${id}/`)}" class="tag-wrapper talent-tag" data-tag="${attr(id)}">${attr(labels[id] ?? id)}</a>`,
+    )
+    .join("");
+  const dash = '<span class="browse-blank">—</span>';
+  return (
+    `<tr class="browse-row ${row.k}" data-name="${attr(row.n.toLowerCase())}"` +
+    ` data-search="${attr(row.q)}" data-system="${attr(row.sys)}"` +
+    ` data-category="${attr(row.cat)}" data-tags="${attr(row.t.join(" "))}"` +
+    ` data-href="${attr(row.u)}">` +
+    `<td class="browse-cell browse-cell-name"><span class="browse-cell-label">Name</span>` +
+    `<a href="${url(row.u)}" class="browse-name-link">${attr(row.n)}</a></td>` +
+    `<td class="browse-cell browse-cell-tags"><span class="browse-cell-label">Tags</span>` +
+    `<span class="browse-tag-list"><span class="tag-wrapper">` +
+    `<a href="${url(systemRoutes[row.sys] ?? "/")}" class="talent-tag">${attr(row.sl)}</a></span>${badges}</span></td>` +
+    `<td class="browse-cell browse-cell-prereq"><span class="browse-cell-label">Prerequisites</span>${row.p ? attr(row.p) : dash}</td>` +
+    `<td class="browse-cell browse-cell-summary"><span class="browse-cell-label">Summary</span>${row.m ? attr(row.m) : dash}</td>` +
+    `</tr>`
+  );
+}
+
+type TailRow = {
+  n: string;
+  u: string;
+  sys: string;
+  k: string;
+  sl: string;
+  cat: string;
+  cl: string;
+  t: string[];
+  p: string;
+  m: string;
+  q: string;
+};
+
+const letterOf = (name: string): string => {
+  const ch = name.trim().charAt(0).toUpperCase();
+  return /[A-Z]/.test(ch) ? ch : "#";
+};
+
+const yieldToMain = () => new Promise((r) => setTimeout(r, 0));
+
+/** Fetch and append the tail rows, chunked to keep main-thread tasks short.
+    After appending, re-run the active filters over the full table. */
+// fallow-ignore-next-line complexity
+async function loadBrowseTail(ctx: Ctx): Promise<void> {
+  if (ctx.tailLoaded || ctx.destroyed) return;
+  ctx.tailLoaded = true;
+  const status = document.querySelector<HTMLElement>(
+    "[data-browse-tail-status]",
+  );
+  try {
+    const res = await fetch(url("/feats/data.json"));
+    if (!res.ok) return;
+    const data = await res.json();
+    const table = ctx.els.table.querySelector("table");
+    if (!table) return;
+
+    const CHUNK = 300;
+    for (let i = 0; i < data.tail.length; i += CHUNK) {
+      if (ctx.destroyed) return;
+      const chunk = data.tail.slice(i, i + CHUNK);
+      const byLetter = new Map<string, string[]>();
+      for (const row of chunk) {
+        const letter = letterOf(row.n);
+        const bucket =
+          byLetter.get(letter) ?? byLetter.set(letter, []).get(letter)!;
+        bucket.push(tailRowHtml(row, data.labels ?? {}, ctx.systemRoutes));
+      }
+      for (const [letter, rows] of byLetter) {
+        let group = ctx.els.table.querySelector<HTMLElement>(
+          `.browse-letter-group[data-letter="${letter}"]`,
+        );
+        if (!group) {
+          group = document.createElement("tbody");
+          group.className = "browse-letter-group";
+          group.dataset.letter = letter;
+          table.appendChild(group);
+        }
+        const tpl = document.createElement("template");
+        tpl.innerHTML = rows.join("");
+        group.appendChild(tpl.content);
+      }
+      if (status) {
+        status.textContent = `Showing ${Math.min(
+          i + CHUNK + data.cap,
+          data.total,
+        )} of ${data.total} feats`;
+      }
+      await yieldToMain();
+    }
+    if (status) {
+      status.textContent = `${data.total} feats`;
+      status.dataset.state = "done";
+    }
+    apply(ctx);
+  } catch {
+    if (status)
+      status.textContent =
+        "Showing the first entries — the rest could not be loaded.";
+  }
+}
+
 function initBrowseFilter(): void {
   const els = collectEls();
   if (!els) return;
@@ -332,6 +452,10 @@ function initBrowseFilter(): void {
     descText: { value: null },
     debounce: null,
     destroyed: false,
+    tailLoaded: false,
+    systemRoutes: Object.fromEntries(
+      Object.entries(SYSTEMS).map(([id, sys]) => [id, sys.route]),
+    ),
   };
   activeContexts.add(ctx);
 
@@ -346,6 +470,13 @@ function initBrowseFilter(): void {
   const start = async () => {
     if (state.desc) await loadDescText(ctx);
     apply(ctx);
+    const idle = (cb: () => void) =>
+      "requestIdleCallback" in window
+        ? (window as any).requestIdleCallback(cb, { timeout: 2000 })
+        : setTimeout(cb, 200);
+    idle(() => {
+      if (!ctx.destroyed) void loadBrowseTail(ctx);
+    });
   };
   void start();
 }

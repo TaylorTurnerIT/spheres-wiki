@@ -9,6 +9,7 @@ import {
   featSystemOptions,
   featTagOptions,
 } from "@/lib/featBrowse";
+import { BROWSE_SSR_CAP } from "@/lib/featBrowse";
 import { getCollEntriesMap, resolveEntries } from "@/lib/resolveEntries";
 import { url } from "@/lib/url";
 
@@ -18,7 +19,12 @@ const description =
 const maps = await resolveEntries();
 const collEntriesMap = await getCollEntriesMap();
 
-const rows = buildFeatBrowseRows(maps, collEntriesMap);
+const allRows = buildFeatBrowseRows(maps, collEntriesMap);
+// Server-render the first BROWSE_SSR_CAP rows; the tail is fetched from
+// feats/data.json and appended on idle (see lib/browseFilterClient) so the
+// catalog HTML stays light. Rows arrive pre-sorted by name.
+const rows = allRows.slice(0, BROWSE_SSR_CAP);
+const tailCount = allRows.length - rows.length;
 const systemOptions = featSystemOptions(rows);
 const categoryOptions = featCategoryOptions(rows, maps.tagMap);
 const tagOptions = featTagOptions(rows, maps.tagMap);
@@ -44,6 +50,18 @@ const tagOptions = featTagOptions(rows, maps.tagMap);
   </BrowseControls>
 
   <BrowseTable rows={rows} tagMap={maps.tagMap} bookMetaMap={maps.bookMetaMap} />
+
+  {
+    tailCount > 0 && (
+      <p
+        class="feats-tail-status section-empty"
+        data-browse-tail-status
+        data-browse-tail-total={allRows.length}
+      >
+        Showing first {rows.length} of {allRows.length} feats — loading the rest…
+      </p>
+    )
+  }
 </WikiPage>
 
 <script>
