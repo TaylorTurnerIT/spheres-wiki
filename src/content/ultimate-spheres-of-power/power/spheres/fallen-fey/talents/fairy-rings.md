@@ -16,15 +16,16 @@ Fairy rings can be broken if a section of them is destroyed. Each 5-ft. square t
 The region of faerie the ring opens into is not apparent before crossing through, though the local fey are usually knowledgeable (if accurate information can be obtained from them) and may even be willing to open the way to favored persons. The connection point of a given ring may drift with time; using the same ring days apart is reliable, but over the course of a month it may change somewhat (roll 1d3; on a 1, move the random location result up one entry, on a 2 it is unchanged, on a 3 move down one entry) and over a year it may change significantly (re-roll).
 
 **Table 7.1 Land-based Fairy ring random connection table**
-||~ d100 ||~ Roll Result ||
-|| 1-5 || Island. Roll 1d20; on a roll of 20, there is a fairy ring to your destination within 1 mile on the island, otherwise reaching another ring requires crossing 1d6 miles of water. ||
-|| 6-20 || Seelie forest ||
-|| 21-25 || Unseelie forest ||
-|| 26-35 || Seelie plains ||
-|| 36-45 || Unseelie plains ||
-|| 46-55 || Seelie caverns ||
-|| 56-65 || Unseelie caverns ||
-|| 66-75 || Frozen wastes ||
-|| 76-85 || Mistlands ||
-|| 86-95 || Swamp ||
-|| 96-100 || Lake ||
+| d100 | Roll Result |
+| --- | --- |
+| 1-5 | Island. Roll 1d20; on a roll of 20, there is a fairy ring to your destination within 1 mile on the island, otherwise reaching another ring requires crossing 1d6 miles of water. |
+| 6-20 | Seelie forest |
+| 21-25 | Unseelie forest |
+| 26-35 | Seelie plains |
+| 36-45 | Unseelie plains |
+| 46-55 | Seelie caverns |
+| 56-65 | Unseelie caverns |
+| 66-75 | Frozen wastes |
+| 76-85 | Mistlands |
+| 86-95 | Swamp |
+| 96-100 | Lake |

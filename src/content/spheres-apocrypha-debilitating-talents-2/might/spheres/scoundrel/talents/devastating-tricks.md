@@ -9,10 +9,11 @@ tags: ["trick"]
 
 Whenever you use the Savage Tricks talent to inflict a greater condition upon a creature, you may choose to inflict an even more intense condition when expending your martial focus.
 
-||~ Original Condition ||~ New Condition ||
-|| Battered || Stunned ||
-|| Dazzled || Dazed ||
-|| Entangled || Pinned ||
-|| Fatigued || Exhausted ||
-|| Shaken || Panicked ||
-|| Sickened || Nauseated ||
+| Original Condition | New Condition |
+| --- | --- |
+| Battered | Stunned |
+| Dazzled | Dazed |
+| Entangled | Pinned |
+| Fatigued | Exhausted |
+| Shaken | Panicked |
+| Sickened | Nauseated |

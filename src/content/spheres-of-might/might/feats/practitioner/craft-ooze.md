@@ -18,12 +18,13 @@ Oozes created with this feat are mindless and uncontrolled, and even normally in
 
 While ooze creatures cannot normally be purchased in traditional marketplaces, GMs who wish to include such an option in their games—perhaps with oozes sold as black market commodities— need only double the construction cost of a specific ooze creature in order to figure out a fair market price. The following table lists some of the most commonly crafted oozes and their creation requirements. At the GM’s discretion, other types of ooze creatures can be created with this feat.
 
-||~ Ooze Type ||~ Cost (gp) ||~ Craft (alchemy) DC ||
-|| Gelatinous cube || 1,600 || 16 ||
-|| Gray ooze || 3,600 || 18 ||
-|| Slithering tracker || 3,600 || 18 ||
-|| Ochre jelly || 4,900 || 20 ||
-|| Black pudding || 8,100 || 24 ||
-|| Magma ooze || 8,100 || 24 ||
-|| Deathtrap ooze || 8,100 || 26 ||
-|| Carnivorous crystal || 16,900 || 32 ||
+| Ooze Type | Cost (gp) | Craft (alchemy) DC |
+| --- | --- | --- |
+| Gelatinous cube | 1,600 | 16 |
+| Gray ooze | 3,600 | 18 |
+| Slithering tracker | 3,600 | 18 |
+| Ochre jelly | 4,900 | 20 |
+| Black pudding | 8,100 | 24 |
+| Magma ooze | 8,100 | 24 |
+| Deathtrap ooze | 8,100 | 26 |
+| Carnivorous crystal | 16,900 | 32 |

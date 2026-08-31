@@ -12,17 +12,19 @@ Once in Faerie, the travelers must locate a fairy ring that connects to a spot n
 Once the fairy ring has been reached, it may be opened by the same methods and passing through will deposit you near your target destination, with the distance determined by how successful you were in selecting it. See the below table:
 
 **Table 7.2 Distance from destination**
-||~ Destination Accuracy ||~ Distance ||
-|| Correctly Identified || 1d6 miles ||
-|| Close || 1d6 miles per mile traveled in fairy ||
-|| Random || 1d20 miles per mile traveled in fairy ||
-|| Malicious Misinformation || 1d100 miles per mile traveled in fairy ||
+| Destination Accuracy | Distance |
+| --- | --- |
+| Correctly Identified | 1d6 miles |
+| Close | 1d6 miles per mile traveled in fairy |
+| Random | 1d20 miles per mile traveled in fairy |
+| Malicious Misinformation | 1d100 miles per mile traveled in fairy |
 
 Be aware that time travels differently in Faerie. Consult the following table to determine how much time has passed:
 
 **Table 7.3 Time Difference**
-||~ d10 Roll ||~ Time ||
-|| 1 || 1 day passed per hour in Faerie ||
-|| 2-5 || Twice as much time passed as you were in Faerie ||
-|| 6-9 || Half as much time passed as you were in Faerie ||
-|| 10 || 1 minute passed per hour in Faerie ||
+| d10 Roll | Time |
+| --- | --- |
+| 1 | 1 day passed per hour in Faerie |
+| 2-5 | Twice as much time passed as you were in Faerie |
+| 6-9 | Half as much time passed as you were in Faerie |
+| 10 | 1 minute passed per hour in Faerie |

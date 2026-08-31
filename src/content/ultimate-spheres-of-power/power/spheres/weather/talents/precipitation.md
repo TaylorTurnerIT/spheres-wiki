@@ -14,14 +14,15 @@ Severity of the snow or storm effects depends on the severity of the Precipitati
 **Note:** While water freezes at Cold severity 3, magic cannot cause rain to instantly become snow as it falls until severity level 4, since the magical water/cold is only augmenting the natural process, not replacing it.
 
 **Table: Precipitation Severity**
-||~ Level ||~ Rain Effects ||~ Combined with Cold 4 and higher (Snow Effects) ||~ Combined with Winds 4 and higher (Storm Effects) ||
-|| 1 || None || None || None ||
-|| 2 || Mist || Light frost || Mist ||
-|| 3 || Light/fog || Snow || Light storm ||
-|| 4 || Moderate || Heavy snow || Storm ||
-|| 5 || Heavy || Blizzard || Powerful storm ||
-|| 6 || Flash flood || Great blizzard || Monsoon ||
-|| 7 || Great flood || Avalanche || Typhoon ||
+| Level | Rain Effects | Combined with Cold 4 and higher (Snow Effects) | Combined with Winds 4 and higher (Storm Effects) |
+| --- | --- | --- | --- |
+| 1 | None | None | None |
+| 2 | Mist | Light frost | Mist |
+| 3 | Light/fog | Snow | Light storm |
+| 4 | Moderate | Heavy snow | Storm |
+| 5 | Heavy | Blizzard | Powerful storm |
+| 6 | Flash flood | Great blizzard | Monsoon |
+| 7 | Great flood | Avalanche | Typhoon |
 
 **Rain Effects**
 **Mist:** Mist grants all creatures concealment from any creatures over 100 feet away (all attacks suffer a 20% miss chance).

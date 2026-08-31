@@ -10,4 +10,10 @@ The things you create have specific, functional uses, and typically need to be h
 
 **Associated Skill:** Craft (alchemy, armor, blacksmithing, bows, clothing, firearms, leather, shoes, traps, or weapons).
 
-||~ Weapon Type ||~ Size Adjustment (From Size of Intended Wielder) || || Shuriken, needles, etc. || Four sizes smaller || || Daggers || Three sizes smaller || || Light weapons || Two sizes smaller || || One-handed weapons || One size smaller || || Two-handed weapons || Same size ||
+| Weapon Type | Size Adjustment (From Size of Intended Wielder) |
+| --- | --- |
+| Shuriken, needles, etc. | Four sizes smaller |
+| Daggers | Three sizes smaller |
+| Light weapons | Two sizes smaller |
+| One-handed weapons | One size smaller |
+| Two-handed weapons | Same size |

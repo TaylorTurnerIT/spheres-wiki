@@ -14,13 +14,16 @@ As a standard action, you can touch or visually study an item, place, or creatur
 
 **Table: Resonance Aura Power**
 
-|  | Aura Power |
-|---|---|
 | Spell or Object | Faint | Moderate | Strong | Overwhelming |
-
-
-|| Magic item (caster level) || 5th or lower || 6th-11th || 12th-20th || 21st+ (artifact) ||
+| --- | --- | --- | --- | --- |
+| Functioning spell (spell level) | 3rd or lower | 4th-6th | 7th-9th | 10th+ (deity-level) |
+| Magic item (caster level) | 5th or lower | 6th-11th | 12th-20th | 21st+ (artifact) |
 
 **Lingering Aura:** A magical aura lingers after a spell ends or a magic item is destroyed. If you examine such a location, you sense an aura strength of dim (even weaker than a faint aura). How long the dim aura lingers depends on its original power:
 
-||~ Original Strength ||~ Duration of Lingering Aura || || Faint || 1d6 rounds || || Moderate || 1d6 minutes || || Strong || 1d6 x 10 minutes || || Overwhelming || 1d6 days ||
+| Original Strength | Duration of Lingering Aura |
+| --- | --- |
+| Faint | 1d6 rounds |
+| Moderate | 1d6 minutes |
+| Strong | 1d6 x 10 minutes |
+| Overwhelming | 1d6 days |
