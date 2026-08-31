@@ -8,7 +8,7 @@ tier: feat
 summary: "You can use Creation abilities on metal summoned by Recover Ore without Expanded Materials, and treat metal as one size larger for size-limited geomancing abilities."
 ---
 
-**Prerequisites:** Creation sphere, Nature sphere ((metal) package).
+**Prerequisites:** Creation sphere, Nature sphere (metal) package.
 
 **Benefit:** When using your Creation sphere abilities, you may create and alter objects made from metals you can summon with your Recover Ore Nature sphere ability, even if you do not possess the Expanded Materials Creation talent.
 

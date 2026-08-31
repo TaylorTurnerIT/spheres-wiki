@@ -7,7 +7,7 @@ tags:
   - "supernatural"
 ---
 
-**Prerequisites:** Associated skill 10 ranks, Survivalism sphere ((dredge) package, (harvest) package, Cursed Effigy (exceptional)).
+**Prerequisites:** Associated skill 10 ranks, Survivalism sphere (dredge) package, (harvest) package, Cursed Effigy (exceptional).
 
 You can spend 1 use of skill leverage and expend a refined curse to dredge using a mixture of salt, cold iron, or a similar mixture, you help ward off those that would harm your efforts. The amount of squares you can dredge when using this talent is halved. As part of dredging, choose an end of the alignment spectrum (good, evil, lawful, chaotic); you must choose an alignment that you possess. Creatures with the subtype of that alignment's opposite (good for evil, lawful for chaotic, etc.) cannot enter the dredged area, and attacks made by them against creatures within the dredged area must be rolled twice and take the lowest result.
 

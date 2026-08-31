@@ -5,7 +5,7 @@ tier: advanced
 tags: ["water", "geomancing"]
 ---
 
-**Prerequisites:** Nature sphere ((water) package, Manipulate Nature (geomancing)), caster level 15th.
+**Prerequisites:** Nature sphere (water) package, Manipulate Nature (geomancing), caster level 15th.
 
 As a concentration effect, you spend 2 spell points to create a wave of water 10 feet deep, 10 feet wide per caster level, and 2 feet tall per caster level. This wave moves in a straight line at 60 feet per round over water (30 feet per round over land), and if not combined with Create Water, must originate from a large body of water. It travels perpendicular to its width, and may be maintained for no more than 5 rounds.
 

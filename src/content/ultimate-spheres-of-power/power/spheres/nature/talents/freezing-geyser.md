@@ -5,7 +5,7 @@ tier: advanced
 tags: ["fire", "water", "geomancing"]
 ---
 
-**Prerequisites:** Nature sphere ((fire) and (water) package, Create Nature (geomancing), Temperature (fire, geomancing)), caster level 15th.
+**Prerequisites:** Nature sphere (fire) and (water) package, Create Nature (geomancing), Temperature (fire, geomancing), caster level 15th.
 
 This creates a burst of boiling water that snap-freezes once it has covered its targets. As a concentration effect, you may spend 2 spell points to create an eruption coming from a 10- foot square of solid ground within range. This deals 1d6 fire damage per caster level per round to all creatures within the 10-foot square and up to 30 feet above it. A successful Reflex save halves the damage, but creatures with evasion still suffer 3d6 fire damage on a successful save.
 

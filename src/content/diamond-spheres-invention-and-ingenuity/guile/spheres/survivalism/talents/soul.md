@@ -7,7 +7,7 @@ tags:
   - "supernatural"
 ---
 
-**Prerequisites:** Survivalism sphere ((harvest) package), associated skill 15 ranks.
+**Prerequisites:** Survivalism sphere (harvest) package, associated skill 15 ranks.
 
 **Refinement DC:** 25
 

@@ -6,7 +6,7 @@ tags:
   - "ride"
 ---
 
-**Prerequisites:** Athletics sphere, Beastmastery sphere ((ride) package), Mounted Athlete.
+**Prerequisites:** Athletics sphere, Beastmastery sphere (ride) package, Mounted Athlete.
 
 While mounted, you may share any effect that allows you to move or alters how you move (such as a talent, feat, class feature, or other effect) with your mount, provided your mount could benefit from the effect normally. If a movement effect requires you to attempt a check (such as a skill check or ability check), you attempt that check for both you and your mount.
 

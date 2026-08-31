@@ -7,7 +7,7 @@ tags:
   - "gear"
 ---
 
-**Prerequisites:** Artifice sphere ((gear) package).
+**Prerequisites:** Artifice sphere (gear) package.
 
 Your trinkets can replicate alchemical tools with a Craft DC of 15 + 1 per rank in this package’s associated skill. If the alchemical item requires a saving throw, use your Artifice sphere DC.
 

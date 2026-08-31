@@ -7,7 +7,7 @@ tags:
   - "supernatural"
 ---
 
-**Prerequisites:** Associated skill 8 ranks, Performance sphere ((act) package).
+**Prerequisites:** Associated skill 8 ranks, Performance sphere (act) package.
 
 You recount a tale of a lone and recluse individual, learning to open themselves up to others and the trials and tribulations they endured to remain empathetic.
 

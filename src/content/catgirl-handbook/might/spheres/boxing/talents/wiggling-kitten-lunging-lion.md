@@ -6,7 +6,7 @@ tags:
   - "stance"
 ---
 
-**Prerequisites:** Acrobatics 3 ranks, Athletics sphere ((leap) package), Boxing sphere (Gazelle Punch).
+**Prerequisites:** Acrobatics 3 ranks, Athletics sphere (leap) package, Boxing sphere (Gazelle Punch).
 
 While in this stance, as part of readying a counterpunch, you may attempt an Acrobatics check to jump (DC 10 + distance traveled), moving in a straight line up to that distance (half distance for vertical movement). A jump made this way cannot exceed your land speed.
 

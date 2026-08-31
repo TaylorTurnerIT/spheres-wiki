@@ -9,7 +9,7 @@ tier: feat
 summary: "Gain an energy veil or primal rhythm based on the spheres you possess when you dance."
 ---
 
-**Prerequisite:** Perform (dance) 3 ranks, Performance sphere ((dance) package); either the Berserker sphere or Destruction sphere (one (blast type) talent that deals energy damage or Energy Aura talent).
+**Prerequisite:** Perform (dance) 3 ranks, Performance sphere (dance) package; either the Berserker sphere or Destruction sphere (one (blast type) talent that deals energy damage or Energy Aura talent).
 
 **Benefit:** You gain the following abilities based on the spheres you possess:
 

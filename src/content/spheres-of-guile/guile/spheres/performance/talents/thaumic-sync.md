@@ -7,7 +7,7 @@ tags:
   - "supernatural"
 ---
 
-**Prerequisites:** Associated skill 10 ranks, Performance sphere ((dance) package).
+**Prerequisites:** Associated skill 10 ranks, Performance sphere (dance) package.
 
 As long as a dancer is benefiting from a magical effect that lasts for more than 2 rounds, another dancer can spend a swift action to gain that effect for 1 round. Plus, all dancers are considered to be within natural reach of each other when determining the range of their spells and abilities.
 

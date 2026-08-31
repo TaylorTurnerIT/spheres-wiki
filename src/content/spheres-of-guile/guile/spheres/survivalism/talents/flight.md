@@ -6,7 +6,7 @@ tags:
   - "harvest"
 ---
 
-**Prerequisites:** Associated skill 5 ranks, Survivalism sphere ((harvest) package).
+**Prerequisites:** Associated skill 5 ranks, Survivalism sphere (harvest) package.
 
 **Refinement DC:** 20
 

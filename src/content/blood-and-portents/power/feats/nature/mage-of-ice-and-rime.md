@@ -7,7 +7,7 @@ tier: feat
 summary: "Gain cold resistance or healing from cold immunity and replace several water package effects with ice-themed benefits."
 ---
 
-**Prerequisites:** Nature sphere ((water) package, Water Mastery).
+**Prerequisites:** Nature sphere (water) package, Water Mastery.
 
 **Benefit:** You gain resistance to cold equal to 1/2 your MSB (rounded down, this stacks with any other cold resistance you have). If you are immune to cold damage, you may spend a spell point whenever your immunity prevents you from taking cold damage. If you do, you heal a number of hit points equal to the damage you would have taken from the effect if you were not immune, to a maximum of 5 hit points healed per Hit Dice you possess.
 

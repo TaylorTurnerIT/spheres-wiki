@@ -6,7 +6,7 @@ tags:
   - "act"
 ---
 
-**Prerequisites:** Performance sphere ((act) package), Perform (act) ranks 10.
+**Prerequisites:** Performance sphere (act) package, Perform (act) ranks 10.
 
 You act out a strange and unassuming tale of an individual coming to terms with their mortality, reality, and the community they struggle to connect with. The simple and mundane shifts to the eclectic and bizarre, and eventually… reality becomes a malleable clay within their fingertips.
 

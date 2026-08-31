@@ -7,7 +7,7 @@ tags:
   - "supply"
 ---
 
-**Prerequisites:** Associated skill 5 ranks, Faction sphere ((retainer) package, (supply) package, Scroll Cache, Wand Supply).
+**Prerequisites:** Associated skill 5 ranks, Faction sphere (retainer) package, (supply) package, Scroll Cache, Wand Supply.
 
 You can requisition a war wizard or other magical mercenary as your retainer.
 

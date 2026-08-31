@@ -6,7 +6,7 @@ tags:
   - "ground"
 ---
 
-**Prerequisites:** Survivalism sphere ((dredge) package).
+**Prerequisites:** Survivalism sphere (dredge) package.
 
 When you use dredge, you can use light sources or shade (a natural effect) or strange geometry (a supernatural effect) to create one of the following options to apply to the area. The penalty or bonuses granted by these options apply even to perceive things outside the area and increase by 1 for every 4 ranks in the associated skill you possess.
 

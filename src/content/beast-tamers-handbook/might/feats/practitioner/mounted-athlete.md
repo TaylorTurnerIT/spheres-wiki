@@ -10,7 +10,7 @@ summary: "Use your Athletics skill checks and sphere talents through your mount 
 
 The handler is often as athletic as the mount.
 
-**Prerequisites:** Athletics sphere, Beastmastery sphere ((ride) package).
+**Prerequisites:** Athletics sphere, Beastmastery sphere (ride) package.
 
 **Benefit:** Whenever your mount would attempt a skill check associated with an Athletics sphere package you possess, you may attempt that skill check for your mount, using your bonus in that skill. For example, if you possess the (leap) or (run) packages, you may attempt Acrobatics checks for your mount whenever your mount would attempt such a check.
 

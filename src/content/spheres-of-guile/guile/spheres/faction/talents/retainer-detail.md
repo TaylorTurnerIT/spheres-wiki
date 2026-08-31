@@ -6,7 +6,7 @@ tags:
   - "retainer"
 ---
 
-**Prerequisites:** Associated skill 3 ranks, Faction sphere ((retainer) package, any talent granting a retainer profession with a combatant role).
+**Prerequisites:** Associated skill 3 ranks, Faction sphere (retainer) package, any talent granting a retainer profession with a combatant role.
 
 You can requisition two combatant retainers at a time. You must pay the authorization costs for each retainer, and the maximum level or Hit Dice for each one is reduced by 1 while you have two of them.
 

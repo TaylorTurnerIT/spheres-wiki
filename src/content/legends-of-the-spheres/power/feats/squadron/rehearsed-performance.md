@@ -8,6 +8,6 @@ tier: feat
 
 summary: "Reveal a plan to share performance-based effects with all squadron members regardless of range or line of sight."
 ---
-**Prerequisites:** Communication sphere; one of Performance sphere ((dance) package), bardic performance, psionics, or raging song; Posse Commander.
+**Prerequisites:** Communication sphere; one of Performance sphere (dance) package, bardic performance, psionics, or raging song; Posse Commander.
 
 **Benefit:** Whenever you start a dance, bardic performance, psionics, or raging song, you may reveal a plan to allow all allies in your posse to benefit from the effects regardless of range or line of sight.

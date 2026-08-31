@@ -5,7 +5,7 @@ tier: advanced
 tags: ["plant", "geomancing"]
 ---
 
-**Prerequisites:** Nature sphere ((plant) package, Create Nature (geomancing)), caster level 15th.
+**Prerequisites:** Nature sphere (plant) package, Create Nature (geomancing), caster level 15th.
 
 You may spend 3 spell points to create a massive growth of plantlife. This affects up to a 1/2 mile radius area in one of the following ways:
 

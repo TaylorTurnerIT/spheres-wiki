@@ -8,7 +8,7 @@ tier: feat
 summary: "Create a deific artwork that grants bonuses to saving throws and skill checks."
 ---
 
-**Prerequisites:** Artifice sphere ((artwork) package), Knowledge (religion) 3 ranks, must worship a deity (or similar creature).
+**Prerequisites:** Artifice sphere (artwork) package, Knowledge (religion) 3 ranks, must worship a deity (or similar creature).
 
 **Benefit:** As an artwork, you create something in honor to your deity, granting creatures that engage with the artwork a +1 morale bonus to saving throws and skill checks for 1 hour; if the creature worships this deity, this instead becomes a sacred or profane bonus (chosen when the artwork is created, but is usually dependant on the alignment of the deity). This bonus increases by 1 for every 10 ranks in the associated skill you possess.
 

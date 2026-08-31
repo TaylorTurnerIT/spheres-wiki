@@ -10,7 +10,7 @@ summary: "Impose a penalty to saves and checks on creatures that share a motivat
 
 Your expressions of creativity possess a deeper meaning, making them harder to ignore to those who understand your experience.
 
-**Prerequisites:** Artifice sphere ((artwork) package) or Performance sphere.
+**Prerequisites:** Artifice sphere (artwork) package or Performance sphere.
 
 **Benefit:** Whenever you create an Artifice sphere artwork or use a Performance sphere ability, choose a motivation, even if you do not possess the motivation. Creatures who perceive the sphere ability or engage with the artwork that possess a similar (or the same) motivation must succeed at a Will saving throw or suffer a -2 penalty to any saving throws or checks associated with the sphere ability or artwork.
 

@@ -8,7 +8,7 @@ tier: feat
 summary: "Gain the benefits of a chosen instrumental or lyric as a constant effect."
 ---
 
-**Prerequisites:** Performance sphere ((instrumental or lyric) package), associated ranks 10.
+**Prerequisites:** Performance sphere (instrumental or lyric) package, associated ranks 10.
 
 **Benefit:** Choose a single (instrumental) or (lyric) talent that you possess and have the appropriate package for—you gain the benefits of the chosen instrumental or lyric as a constant effect.
 

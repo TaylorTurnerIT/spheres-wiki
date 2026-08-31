@@ -5,7 +5,7 @@ tags: []
 summary: "Create an artwork that stores a magical sphere ability or spell, which is cast upon any creature that engages with the artwork."
 ---
 
-**Prerequisites:** Associated skill 5 ranks, Artifice sphere ((artwork) package), Spellcraft 5 ranks.
+**Prerequisites:** Associated skill 5 ranks, Artifice sphere (artwork) package, Spellcraft 5 ranks.
 
 You gain the following *artwork*:
 

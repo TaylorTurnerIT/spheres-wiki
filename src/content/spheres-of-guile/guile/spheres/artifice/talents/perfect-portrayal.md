@@ -9,7 +9,7 @@ tags:
   - "utility"
 ---
 
-**Prerequisites:** Associated skill 10 ranks, Artifice sphere ((artwork) package).
+**Prerequisites:** Associated skill 10 ranks, Artifice sphere (artwork) package.
 
 The created artwork must include your likeness in some discernible fashion. You can spend a standard action to transfer your consciousness into an artwork with this flourish that you created, allowing you to observe (and in some cases, interact with) an area up to close range around the artwork. This allows you to observe with all of your normal senses (but not special senses such as blindsight), although the DC of any Perception checks are increased by 10 when observing in this way.
 

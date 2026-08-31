@@ -6,7 +6,7 @@ tags:
   - "retainer"
 ---
 
-**Prerequisites:** Knowledge (nature) 10 ranks or Perform (any one skill) 10 ranks; Faction sphere ((retainer) package).
+**Prerequisites:** Knowledge (nature) 10 ranks or Perform (any one skill) 10 ranks; Faction sphere (retainer) package.
 
 Your faction secures the service of a creature from the fey realm conjured through entice fey (Pathfinder Roleplaying Game: Ultimate Intrigue) or similar magic. Your faction retainer can be a conjured fey or giant.
 

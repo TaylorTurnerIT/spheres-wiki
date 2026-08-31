@@ -7,7 +7,7 @@ tags:
   - "lyric"
 ---
 
-**Prerequisites:** Performance sphere ((instrumental) package or (lyric) package).
+**Prerequisites:** Performance sphere (instrumental) package or (lyric) package.
 
 Enemies affected by this instrumental or lyric become sickened.
 

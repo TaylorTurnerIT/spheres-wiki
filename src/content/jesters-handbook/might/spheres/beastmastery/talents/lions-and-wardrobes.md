@@ -6,7 +6,7 @@ tags:
   - "utility"
 ---
 
-**Prerequisites:** Disguise 1 rank, Beastmastery sphere ((handle animal) package).
+**Prerequisites:** Disguise 1 rank, Beastmastery sphere (handle animal) package.
 
 You may use Handle Animal to teach an animal a unique trick:
 

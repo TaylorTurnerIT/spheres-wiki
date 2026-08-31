@@ -8,7 +8,7 @@ tier: feat
 summary: "Gain the benefits of a chosen dance talent as a constant effect."
 ---
 
-**Prerequisites:** Performance sphere ((dance) package), associated ranks 10.
+**Prerequisites:** Performance sphere (dance) package, associated ranks 10.
 
 **Benefit:** Choose a single (dance) talent that you possess—you gain the benefits of the chosen (dance) talent as a constant effect, treating your dance area as being your threatened area if the talent relies on it.
 

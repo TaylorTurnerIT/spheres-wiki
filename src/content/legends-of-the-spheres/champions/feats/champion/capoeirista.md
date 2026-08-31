@@ -9,7 +9,7 @@ tier: feat
 summary: "You can move at half speed while prone, apply dance talents toward your unarmed damage progression, and gain an attack bonus to unarmed strikes while maintaining a dance."
 ---
 
-**Prerequisites:** Open Hand sphere, Performance sphere ((dance) package).
+**Prerequisites:** Open Hand sphere, Performance sphere (dance) package.
 
 **Benefit:** While you are prone, you can move at half speed (provoking attacks of opportunity as normal); this can be done as part of beginning a Performance sphere dance if you choose. Additionally, any non-utility (dance) talents you possess within the Performance sphere counts towards your unarmed damage progression (this includes the talent spent gaining the Performance sphere, but not the bonus (dance) talent when gaining the (dance) package).
 

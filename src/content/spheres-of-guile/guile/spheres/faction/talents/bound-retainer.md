@@ -6,7 +6,7 @@ tags:
   - "retainer"
 ---
 
-**Prerequisites:** Knowledge (arcana) or Knowledge (religion) 10 ranks, Faction sphere ((retainer) package).
+**Prerequisites:** Knowledge (arcana) or Knowledge (religion) 10 ranks, Faction sphere (retainer) package.
 
 Your faction secures the service of an outsider to be your retainer through planar binding, planar ally, or similar magic.
 

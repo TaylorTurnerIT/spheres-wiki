@@ -8,6 +8,6 @@ tier: feat
 summary: "You gain a +2 bonus to your caster level for earth and water geomancing abilities when near both land and a substantial body of water."
 ---
 
-**Prerequisites:** Nature sphere ((earth) package and (water) package).
+**Prerequisites:** Nature sphere (earth) package and (water) package.
 
 **Benefit:** When using either the (earth) package or the (water) package within close range of both land and a substantial body of water (such as a lake, river, ocean, or sea), you gain a +2 bonus to your caster level for those geomancing abilities.

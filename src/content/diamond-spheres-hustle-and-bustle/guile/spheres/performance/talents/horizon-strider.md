@@ -6,7 +6,7 @@ tags:
   - "dance"
 ---
 
-**Prerequisites:** Performance sphere ((dance) package), associated skill 8 ranks.
+**Prerequisites:** Performance sphere (dance) package, associated skill 8 ranks.
 
 You gain a +10-feet enhancement bonus to the speed of all of your movement modes (excluding land speed) while maintaining this dance; you must already possess such a movement mode to gain this benefit.
 

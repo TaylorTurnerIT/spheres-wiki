@@ -8,7 +8,7 @@ tier: feat
 
 summary: "You can alter the damage type and effects of your Hazardous Terrain in a dredged area by applying a blast type talent to it."
 ---
-**Prerequisites:** Destruction sphere (any one (blast type) talent), Survivalism sphere ((dredge) package, Hazardous Terrain).
+**Prerequisites:** Destruction sphere (any one (blast type) talent), Survivalism sphere (dredge) package, Hazardous Terrain.
 
 **Benefit:** When you use the Hazardous Terrain talent in a dredged area, you can apply a single (blast type) talent to the dredged area, changing the damage type dealt from piercing damage to the damage dealt by the (blast type) talent.
 

@@ -8,7 +8,7 @@ tags:
   - "supernatural"
 ---
 
-**Prerequisites:** Associated skill 15 ranks, Artifice sphere ((artwork) package).
+**Prerequisites:** Associated skill 15 ranks, Artifice sphere (artwork) package.
 
 When creating this artwork, you can increase the Craft DC by 10 and spend 2 uses of skill leverage to create an artwork that bonds flesh and soul to itself. If a creature engages with the artwork, they must succeed at a Will saving throw or be magically transported within the artwork itself, bringing along their equipment (which becomes non-functional while within the demiplane).
 

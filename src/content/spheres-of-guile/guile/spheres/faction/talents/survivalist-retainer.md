@@ -7,7 +7,7 @@ tags:
   - "supply"
 ---
 
-**Prerequisites:** Associated skill 3 ranks, Faction sphere ((retainer) package, (supply) package, Magical Armory).
+**Prerequisites:** Associated skill 3 ranks, Faction sphere (retainer) package, (supply) package, Magical Armory.
 
 You can choose an explorer, skilled hunter, priest of nature, herbalist, or other wilderness traveler as your faction retainer.
 

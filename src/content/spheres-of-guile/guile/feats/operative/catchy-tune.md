@@ -8,7 +8,7 @@ tier: feat
 summary: "Delay the effects of a lyric for up to 1 hour per rank in Perform."
 ---
 
-**Prerequisites:** Associated skill 5 ranks, Performance sphere ((lyric) package).
+**Prerequisites:** Associated skill 5 ranks, Performance sphere (lyric) package.
 
 **Benefit:** Whenever you would use a lyric on a creature, you may spend 1 use of skill leverage to delay its effects for up to a number of hours equal to your ranks in Perform (comedy, oratory, or sing).
 

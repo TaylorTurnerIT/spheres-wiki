@@ -12,7 +12,7 @@ You gain an ability depending on the chosen specialty skill:
 
 **Ameliorate Health—Profession (midwife):** Whenever you successfully administer first aid, the target heals an amount of hit points equal to your operative modifier + your associated ranks if they were at a negative hit point total (although this cannot restore a creature beyond 1 hit point), or equal to the amount of bleed damage they have suffered within the last round.
 
-**Special**—This is considered as a (remedy) talent for the purposes of the Herbalism sphere ((remedy) package).
+**Special**—This is considered as a (remedy) talent for the purposes of the Herbalism sphere (remedy) package.
 
 **Herbal Tea—Profession (herbalist):** You can spend 1 hour brewing a herbal tea that can sustain a number of creatures equal to 3 + 1/2 your associated ranks. A creature that spends 1 round drinking the tea gains a +2 alchemical bonus to saving throws against negative energy and effects that cause ability damage or drain. Additionally, the tea causes 1 point of ability drain from a single ability score (chosen by the creature imbibing the tea) to become ability damage, +1 point per 10 associated ranks. The benefits of herbal tea only last for 24 hours, and a creature can only convert ability drain to ability damage once per day.
 

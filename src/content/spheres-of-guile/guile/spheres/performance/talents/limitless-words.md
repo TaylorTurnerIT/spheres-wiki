@@ -6,7 +6,7 @@ tags:
   - "supernatural"
 ---
 
-**Prerequisites:** Associated skill 5 ranks, Performance sphere ((lyric) package).
+**Prerequisites:** Associated skill 5 ranks, Performance sphere (lyric) package.
 
 Your lyrics use tone, empathy, or similar methods of conveying meaning without language, no longer treating them as language-dependent effects, in addition to allowing you to use either verbal or visual components for your lyrics.
 

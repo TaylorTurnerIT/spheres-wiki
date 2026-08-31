@@ -6,7 +6,7 @@ tags: []
 
 ---
 
-**Prerequisites:** Athletics sphere ((fly) package or Ace Pilot).
+**Prerequisites:** Athletics sphere (fly) package or Ace Pilot.
 
 You gain a companion aethership as the aethertech pilot cavalier class feature. Your effective cavalier level for this companion is the highest between your base attack bonus, Fly ranks, or Profession (pilot) ranks - 3 (minimum 1).
 

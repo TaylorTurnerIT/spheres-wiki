@@ -15,7 +15,7 @@ You may reanimate the following variant undead:
 
 - **Beheaded:** You may reanimate beheaded (Pathfinder Bestiary 4) using an intact head. **Associated Sphere:** Telekinesis.
 - **Exoskeleton:** You may reanimate exoskeletons (Pathfinder Bestiary 6) using a mostly intact vermin corpse that has an exoskeleton, such as arachnids, crustaceans, insects, and mollusks, but not soft-bodied vermin such as jellyfish and leeches. **Associated Sphere:** Creation.
-- **Frostfallen:** You may reanimate frostfallen (Pathfinder #51: The Hungry Storm) using an intact corpse and a source of water, snow, or ice sufficient for Nature sphere (water) package sphere effects. **Associated Sphere:** Nature ((water) package).
+- **Frostfallen:** You may reanimate frostfallen (Pathfinder #51: The Hungry Storm) using an intact corpse and a source of water, snow, or ice sufficient for Nature sphere (water) package sphere effects. **Associated Sphere:** Nature (water) package.
 - **Isitoq:** You may reanimate isitoqs (Pathfinder Bestiary 4) using the head of a Small or Medium corpse that has at least one intact eye. **Associated Sphere:** Divination.
 - **Sunbaked:** You may reanimate sunbaked zombies (Pathfinder #80: Empty Graves) using an intact corpse. **Associated Sphere:** Light.
 

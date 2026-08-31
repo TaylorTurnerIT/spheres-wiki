@@ -8,7 +8,7 @@ tags:
   - "supernatural"
 ---
 
-**Prerequisites:** Performance sphere ((instrumental) package or (lyric) package).
+**Prerequisites:** Performance sphere (instrumental) package or (lyric) package.
 
 When used as an instrumental, allies within the area gain a +2 circumstance bonus to saving throws against the deafened condition, in addition to sonic and language-dependent effects. These bonuses increase by 1 per 4 ranks in this package’s associated skill you possess. If the instrumental is maintained on the subsequent turn from starting it, the affected allies also gain sonic resistance equal to your ranks in this package’s associated skill.
 

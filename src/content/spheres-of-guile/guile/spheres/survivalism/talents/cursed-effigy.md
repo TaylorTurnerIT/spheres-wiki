@@ -7,7 +7,7 @@ tags:
   - "supernatural"
 ---
 
-**Prerequisites:** Survival ranks 7, Survivalism sphere ((harvest) package).
+**Prerequisites:** Survival ranks 7, Survivalism sphere (harvest) package.
 
 **Refinement DC:** 25
 

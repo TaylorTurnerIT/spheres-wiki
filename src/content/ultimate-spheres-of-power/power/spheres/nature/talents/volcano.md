@@ -5,7 +5,7 @@ tier: advanced
 tags: ["fire", "geomancing"]
 ---
 
-**Prerequisites:** Nature sphere ((fire) package, Manipulate Nature (geomancing)), caster level 15th.
+**Prerequisites:** Nature sphere (fire) package, Manipulate Nature (geomancing), caster level 15th.
 
 As a concentration effect, you may spend 2 spell points to call lava up from deep within the earth. This lava bursts from a 10 feet wide hole in the ground centered within range and creates a spout 10 feet high per 2 caster levels. Any creature in this area or who enters this area takes 10d6 points of fire damage and is hurled into the air and then tossed to the ground, suffering falling damage based upon the height of the volcanic spray (e.g., if the volcano is 80 feet tall, the creature takes 8d6 falling damage) and lands prone in a random square adjacent to the spout. A successful Reflex saving throw halves the fire damage and the creature is not tossed into the air, instead moving to the closest square adjacent to the geyser (Large-sized or larger creatures are moved enough so that they are not on top of the geyser but still adjacent to it). This movement does not provoke attacks of opportunity and does not count toward the creature's normal movement.
 

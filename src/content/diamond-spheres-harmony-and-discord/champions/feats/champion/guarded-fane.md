@@ -7,7 +7,7 @@ tags:
 tier: feat
 summary: "Apply the effects of an area-based magic sphere ability to your patrol area."
 ---
-**Prerequisite:** Guardian sphere ((patrol) package), any magical sphere (see text).
+**Prerequisite:** Guardian sphere (patrol) package, any magical sphere (see text).
 
 **Benefit:** As a unique (zone) talent, you can spend 1 spell point to apply the effects of an area-based magic sphere ability you possess to your patrol area. The sphere effect must have a duration that lasts longer than 1 round, and must have a casting time equal to or shorter than the action cost spent to patrol. 
 

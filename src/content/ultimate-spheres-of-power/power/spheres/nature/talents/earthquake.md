@@ -5,7 +5,7 @@ tier: advanced
 tags: ["earth", "geomancing"]
 ---
 
-**Prerequisites:** Nature sphere ((earth) package, Manipulate Nature (geomancing)), caster level 15th.
+**Prerequisites:** Nature sphere (earth) package, Manipulate Nature (geomancing), caster level 15th.
 
 As an instantaneous effect, you may spend 3 spell points to create an earthquake, affecting an 80-foot radius area. The powerful shockwave created by this ability knocks creatures down, collapses structures, opens cracks in the ground, and more. The effect lasts for 1 round, during which time creatures on the ground cannot move or attack. A caster on the ground must succeed at a Concentration check (DC 20 + 1/2 the caster level) or lose any spell or sphere effect they try to cast. The earthquake affects all terrain, vegetation, structures, and creatures in the area. The specific effect of an earthquake depends on the nature of the terrain where it is created.
 

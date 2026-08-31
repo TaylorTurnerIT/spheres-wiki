@@ -7,7 +7,7 @@ tags:
   - "supply"
 ---
 
-**Prerequisites:** Associated skill 3 ranks, Faction sphere ((retainer) package, (supply) package, Magical Armory, either Armed Retainer or Roguish Retainer).
+**Prerequisites:** Associated skill 3 ranks, Faction sphere (retainer) package, (supply) package, Magical Armory, either Armed Retainer or Roguish Retainer.
 
 You can choose an assassin, bounty hunter, or other skilled combatant as your faction retainer.
 

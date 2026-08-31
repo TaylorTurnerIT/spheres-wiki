@@ -7,7 +7,7 @@ tags:
   - "supply"
 ---
 
-**Prerequisites:** Faction sphere ((retainer) package, (supply) package, Roguish Retainer)).
+**Prerequisites:** Faction sphere (retainer) package, (supply) package, Roguish Retainer).
 
 You can requisition an experienced detective, spy, or other broadly-skilled character as your faction retainer.
 

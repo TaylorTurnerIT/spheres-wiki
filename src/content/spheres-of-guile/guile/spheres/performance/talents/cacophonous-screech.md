@@ -8,7 +8,7 @@ tags:
   - "supernatural"
 ---
 
-**Prerequisites:** Associated skill 5 ranks, Performance sphere ((instrumental) package or (lyric) package).
+**Prerequisites:** Associated skill 5 ranks, Performance sphere (instrumental) package or (lyric) package.
 
 Enemies affected by this instrumental or lyric suffer 1d6 sonic damage at the start of each of their turns, plus 1d6 per 5 ranks in this package’s associated skill you possess; affected creatures attempt a Fortitude saving throw (instead of a Will save) each round to halve this damage. This is a sonic effect.
 

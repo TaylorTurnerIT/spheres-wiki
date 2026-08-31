@@ -7,7 +7,7 @@ tags: []
 
 You channel the wicked cruelty of the worg, demanding the attention of the mighty and cowing the meek.
 
-**Prerequisites:** Guardian sphere ((challenge) package), base attack bonus +5.
+**Prerequisites:** Guardian sphere (challenge) package, base attack bonus +5.
 
 You may challenge creatures with no Intelligence score (Intelligence score of (–)).
 
