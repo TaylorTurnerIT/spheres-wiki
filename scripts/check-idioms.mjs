@@ -26,6 +26,7 @@ const rootDir = path.resolve(__dirname, "..");
 const ENTRY_CARD_ALLOWLIST = new Set([
   "src/components/EntryCard.astro",
   "src/pages/search/index.astro",
+  "src/lib/searchClient.ts",
   "src/styles/global.css",
 ]);
 

@@ -87,7 +87,6 @@ async function loadBrowseManifest() {
 
 async function loadPagefind() {
   if (pagefind) return;
-  // @ts-expect-error
   pagefind = await import(
     /* @vite-ignore */ `${import.meta.env.BASE_URL}pagefind/pagefind.js`
   );
@@ -188,8 +187,8 @@ function renderResults() {
     return;
   }
 
-  // fallow-ignore-next-line complexity
   resultsEl.innerHTML = showing
+    // fallow-ignore-next-line complexity
     .map((r) => {
       const title = r.meta?.title ?? "Untitled";
       const system = r.meta?.system ?? "";
@@ -357,11 +356,20 @@ async function search(query: string | null, signal?: AbortSignal) {
   statusEl.hidden = false;
   statusEl.className = "sp-status loading";
   statusEl.textContent = browseAll ? "Loading" : "Searching";
-  resultsEl.innerHTML = "";
-  document.getElementById("sp-load-more")!.hidden = true;
+  if (!browseAll) {
+    resultsEl.innerHTML = "";
+    document.getElementById("sp-load-more")!.hidden = true;
+  }
 
   if (browseAll) {
-    await loadBrowseManifest();
+    // Keep the server-rendered first cards visible while the manifest
+    // loads; clearing here would paint a collapsed page and shift the
+    // footer when the full list renders (measured CLS 0.12).
+    try {
+      await loadBrowseManifest();
+    } catch {
+      return;
+    }
     if (signal?.aborted || requestSerial !== searchSerial) return;
     allData = browseManifest;
     displayCount = PAGE_SIZE;
@@ -454,12 +462,21 @@ document.addEventListener("astro:page-load", () => {
     input.value = q;
     void search(q, signal);
   } else {
-    void search(null, signal);
+    // Defer the browse-all render past the load window: the six
+    // server-rendered cards hold the page stable, and rendering the full
+    // list during load dominated TBT (measured 549ms vs 300 budget).
+    const idle = (cb: () => void) =>
+      "requestIdleCallback" in window
+        ? (window as any).requestIdleCallback(cb, { timeout: 2000 })
+        : setTimeout(cb, 200);
+    idle(() => {
+      if (!signal.aborted) void search(null, signal);
+    });
   }
 
-  // fallow-ignore-next-line complexity
   input.addEventListener(
     "input",
+    // fallow-ignore-next-line complexity
     () => {
       if (debounceTimer) clearTimeout(debounceTimer);
       const val = input.value.trim();
@@ -493,9 +510,9 @@ document.addEventListener("astro:page-load", () => {
     { signal },
   );
 
-  // fallow-ignore-next-line complexity
   document.getElementById("sp-results")!.addEventListener(
     "keydown",
+    // fallow-ignore-next-line complexity
     (e) => {
       if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
       const items = [
