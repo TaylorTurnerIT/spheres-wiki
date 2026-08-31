@@ -276,6 +276,7 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V77. View Transition page state owns abort/teardown for listeners, observers, timers, async searches, and widgets; the mobile sidebar alone uses modal/`aria-hidden` semantics.
 - V78. Budgeted route classes stay within `docs/performance-budget.md`; retained migration artifacts are documented before removal.
 - V79. Cross-route View Transitions ! keep root old/new compositing `normal` (⊥ `plus-lighter`); browser smoke test ! observe ordered preparation/swap/page-load phases, styled target DOM, and no blank or unstyled viewport sample.
+- V80. Lighthouse CI ! target the Astro Preview deployment URL under the configured base path; required CSS/JS responses ! have successful status + expected MIME, and asset/console or CLS assertion failures ! stop the check.
 
 ---
 
@@ -468,6 +469,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T117 | x | Add DOM behavior coverage for sidebar, collapse, and TOC lifecycle plus mobile Lighthouse route/config coverage; browser smoke remains a CI/runtime verification surface | V77 |
 | T118 | x | Reconcile SPEC/AGENTS/README/package/CI and document measured performance budgets and retained migration artifacts | V78 |
 | T119 | x | Add browser regression probe for cross-route View Transition flash; normalize root compositing and record lifecycle/style evidence | V77,V79 |
+| T120 | x | Make Lighthouse CI base-path setup self-validating: target the real Astro Preview URL, remove the dist symlink workaround, and guard asset/MIME + CLS assertions | V80,I.build |
 
 **Recommended build order:**
 Audit remediation batch: T113→T114→T115→T116→T117→T118→T119. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
@@ -527,3 +529,4 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B29 | 2026-08-28 | Route audit found three generated TOC anchors for base markers whose migrated source used inline or apostrophe forms outside marker normalization | V76 |
 | B30 | 2026-08-28 | Chrome default root View Transition uses additive `plus-lighter` compositing; different route backgrounds briefly wash together and resemble FOUC | V79 — normalize root compositing; browser transition probe |
 | B31 | 2026-08-31 | Local worktree build ran against unhydrated Git LFS pointer files because `git-lfs` was absent from shell | C12 — run build with `git-lfs`; hydrate LFS assets |
+| B32 | 2026-08-31 | LHCI FallbackServer mounted `dist` at `/` while Astro emitted `/spheres-wiki/` assets, so CSS returned HTML and mobile CLS was falsely attributed to the static sidebar | V80 / T120 |

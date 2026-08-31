@@ -1,18 +1,17 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./dist",
       "url": [
-        "/",
-        "/search/",
-        "/power/",
-        "/power/alteration/",
-        "/power/classes/shifter/",
-        "/power/casting-traditions/",
-        "/might/",
-        "/guile/",
-        "/archetypes/",
-        "/tags/talent/"
+        "http://127.0.0.1:4321/spheres-wiki/",
+        "http://127.0.0.1:4321/spheres-wiki/search/",
+        "http://127.0.0.1:4321/spheres-wiki/power/",
+        "http://127.0.0.1:4321/spheres-wiki/power/alteration/",
+        "http://127.0.0.1:4321/spheres-wiki/power/classes/shifter/",
+        "http://127.0.0.1:4321/spheres-wiki/power/casting-traditions/",
+        "http://127.0.0.1:4321/spheres-wiki/might/",
+        "http://127.0.0.1:4321/spheres-wiki/guile/",
+        "http://127.0.0.1:4321/spheres-wiki/archetypes/",
+        "http://127.0.0.1:4321/spheres-wiki/tags/talent/"
       ],
       "numberOfRuns": 2,
       "settings": {
