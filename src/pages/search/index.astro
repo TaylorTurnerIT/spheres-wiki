@@ -1,66 +1,13 @@
 ---
 import WikiPage from '@/layouts/WikiPage.astro';
 import TagBadge from '@/components/TagBadge.astro';
-import { url } from '@/lib/url';
 import { resolveEntries } from '@/lib/resolveEntries';
-import { buildOrderedTagIds } from '@/lib/tags';
 import { SYSTEMS } from '@/config/site';
-import { getFeatUrl } from '@/lib/featCategories';
-import { systemIdKey } from '@/lib/systems';
+import { buildSearchManifest, type ManifestEntry } from '@/lib/searchManifest';
 
-const { sphereMap, talentMap, featMap, classMap, archetypeMap, classTraitMap, articleMap, drawbackMap, boonMap, traditionMap, tagMap, bookMetaMap } = await resolveEntries();
+const { sphereMap, tagMap, bookMetaMap } = await resolveEntries();
 
-type ManifestEntry = { url: string; title: string; system: string; type: string; sphere?: string; tags?: string };
-const manifest: ManifestEntry[] = [];
-
-for (const s of sphereMap.values()) {
-  if (!SYSTEMS[s.system]) continue;
-  manifest.push({ url: url(`/${s.system}/${s.id}/`), title: s.name, system: SYSTEMS[s.system].label, type: 'sphere', tags: buildOrderedTagIds(s, bookMetaMap, tagMap).join(', ') });
-}
-for (const t of talentMap.values()) {
-  if (!SYSTEMS[t.system]) continue;
-  const sph = sphereMap.get(systemIdKey(t.system, t.sphere));
-  manifest.push({ url: url(`/${t.system}/${t.sphere}/${t.id}/`), title: t.name, system: SYSTEMS[t.system].label, type: 'talent', sphere: sph?.name ?? t.sphere, tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
-}
-for (const f of featMap.values()) {
-  if (!SYSTEMS[f.system]) continue;
-  const sph = f.sphere ? sphereMap.get(systemIdKey(f.system, f.sphere)) : undefined;
-  manifest.push({ url: url(getFeatUrl(f, tagMap)), title: f.name, system: SYSTEMS[f.system].label, type: 'feat', sphere: sph?.name ?? f.sphere, tags: buildOrderedTagIds(f, bookMetaMap, tagMap).join(', ') });
-}
-for (const c of classMap.values()) {
-  if (!SYSTEMS[c.system]) continue;
-  const clsUrl = SYSTEMS[c.system]
-    ? url(`/${c.system}/classes/${c.id}/`)
-    : null;
-  if (!clsUrl) continue;
-  manifest.push({ url: clsUrl, title: c.name, system: SYSTEMS[c.system].label, type: 'class', tags: buildOrderedTagIds(c, bookMetaMap, tagMap).join(', ') });
-}
-for (const a of archetypeMap.values()) {
-  if (!SYSTEMS[a.system]) continue;
-  manifest.push({ url: url(`/${a.system}/classes/${a.className}/${a.id}/`), title: a.name, system: SYSTEMS[a.system].label, type: 'archetype', tags: buildOrderedTagIds(a, bookMetaMap, tagMap).join(', ') });
-}
-for (const a of articleMap.values()) {
-  const articleUrl = a.system
-    ? url(`/${a.system}/articles/${a.id}/`)
-    : url(`/articles/${a.id}/`);
-  manifest.push({ url: articleUrl, title: a.name, system: a.system && SYSTEMS[a.system] ? SYSTEMS[a.system].label : 'General', type: 'article', tags: buildOrderedTagIds(a as any, bookMetaMap, tagMap).join(', ') });
-}
-for (const t of classTraitMap.values()) {
-  if (!SYSTEMS[t.system]) continue;
-  manifest.push({ url: url(`/${t.system}/classes/${t.className}/traits/${t.id}/`), title: t.name, system: SYSTEMS[t.system].label, type: 'class-trait', tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
-}
-for (const d of drawbackMap.values()) {
-  if (d.system !== 'power') continue;
-  manifest.push({ url: url(`/power/casting-traditions/#${d.id}`), title: d.name, system: SYSTEMS['power'].label, type: 'drawback', tags: buildOrderedTagIds(d, bookMetaMap, tagMap).join(', ') });
-}
-for (const b of boonMap.values()) {
-  if (b.system !== 'power') continue;
-  manifest.push({ url: url(`/power/casting-traditions/#${b.id}`), title: b.name, system: SYSTEMS['power'].label, type: 'boon', tags: buildOrderedTagIds(b, bookMetaMap, tagMap).join(', ') });
-}
-for (const t of traditionMap.values()) {
-  if (t.system !== 'power') continue;
-  manifest.push({ url: url(`/power/casting-traditions/#${t.id}`), title: t.name, system: SYSTEMS['power'].label, type: 'tradition', tags: buildOrderedTagIds(t, bookMetaMap, tagMap).join(', ') });
-}
+const manifest = await buildSearchManifest();
 
 const staticSpheres = [...new Set([...sphereMap.values()].map(s => s.name))].sort();
 const sphereNamesLower = new Set(staticSpheres.map(s => s.toLowerCase()));
@@ -237,7 +184,6 @@ const initialResultsHtml = manifest.slice(0, PAGE_SIZE_SSR).map(renderSsrCard).j
       id="sp-data"
       data-spheres={JSON.stringify(staticSpheres)}
       data-tags={JSON.stringify(staticTags)}
-      data-manifest={JSON.stringify(manifest)}
       hidden
     ></div>
 
@@ -530,6 +476,24 @@ let tsInstances: Record<string, any> = {};
 let browseAll = false;
 let tagTemplates: Record<string, string> = {};
 
+let browseManifestPromise: Promise<void> | null = null;
+
+async function loadBrowseManifest() {
+  if (browseManifest.length > 0) return;
+  if (!browseManifestPromise) {
+    browseManifestPromise = fetch(`${import.meta.env.BASE_URL}search/data.json`)
+      .then((r) => r.json())
+      .then((entries: any[]) => {
+        browseManifest = entries.map((e: any) => ({
+          url: e.url,
+          meta: { title: e.title, system: e.system, type: e.type, sphere: e.sphere ?? '', tags: e.tags ?? '' },
+          excerpt: '',
+        }));
+      });
+  }
+  await browseManifestPromise;
+}
+
 async function loadPagefind() {
   if (pagefind) return;
   // @ts-ignore
@@ -736,6 +700,7 @@ async function search(query: string | null, signal?: AbortSignal) {
   document.getElementById('sp-load-more')!.hidden = true;
 
   if (browseAll) {
+    await loadBrowseManifest();
     if (signal?.aborted || requestSerial !== searchSerial) return;
     allData = browseManifest;
     displayCount = PAGE_SIZE;
@@ -791,11 +756,6 @@ document.addEventListener('astro:page-load', () => {
   const dataEl = document.getElementById('sp-data') as HTMLElement;
   const staticSpheres: string[]                       = JSON.parse(dataEl?.dataset.spheres   ?? '[]');
   const staticTags: { value: string; text: string }[] = JSON.parse(dataEl?.dataset.tags      ?? '[]');
-  browseManifest = (JSON.parse(dataEl?.dataset.manifest ?? '[]') as any[]).map((e: any) => ({
-    url: e.url,
-    meta: { title: e.title, system: e.system, type: e.type, sphere: e.sphere ?? '', tags: e.tags ?? '' },
-    excerpt: '',
-  }));
 
   tagTemplates = {};
   document.querySelectorAll('[data-tag-template]').forEach(el => {
