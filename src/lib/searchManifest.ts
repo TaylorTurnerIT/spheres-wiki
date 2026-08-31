@@ -43,7 +43,7 @@ export async function buildSearchManifest(): Promise<ManifestEntry[]> {
   add(
     manifest,
     sphereMap.values(),
-    (s, m) => {
+    (s) => {
       if (!SYSTEMS[s.system]) return null;
       return {
         url: url(`/${s.system}/${s.id}/`),
@@ -77,11 +77,10 @@ export async function buildSearchManifest(): Promise<ManifestEntry[]> {
   add(
     manifest,
     maps.featMap.values(),
+    // fallow-ignore-next-line complexity
     (f, m) => {
       if (!SYSTEMS[f.system]) return null;
-      const sph = f.sphere
-        ? m.sphereMap.get(systemIdKey(f.system, f.sphere))
-        : undefined;
+      const sph = m.sphereMap.get(systemIdKey(f.system, f.sphere ?? ""));
       return {
         url: url(getFeatUrl(f, tagMap)),
         title: f.name,
