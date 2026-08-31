@@ -22,7 +22,7 @@ Additionally, you can add one of the following options, plus one per 3 associate
 - *Destructive*: The damage dealt bypasses an amount of hardness equal to your 2 + your operative modifier (minimum 1). If the splash weapon deals energy damage, it deals full damage to objects (although hardness still applies).
 - *Explosive*: The splash radius increases by +5 feet.
 - *Persistent*: Creature’s that suffer at least 2 points of damage from the initial attack suffer half the total damage again the following round.
-- *Potent**: The damage dealt increases by +1d6.
+- *Potent:* The damage dealt increases by +1d6.
 - *Powerful*: The splash damage dealt instead deals damage as if it were a direct hit (but is otherwise not treated as a direct hit for other purposes); on a true direct hit, the damage is maximized.
 - *Volatile*: On a direct hit, the creature must succeed at a Fortitude save or become deafened for 1 minute, sickened for 1 round, catch fire, or treat all creatures as having concealment for 1 round.
 
