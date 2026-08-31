@@ -398,8 +398,11 @@ async function loadBrowseTail(ctx: Ctx): Promise<void> {
       const byLetter = new Map<string, string[]>();
       for (const row of chunk) {
         const letter = letterOf(row.n);
-        const bucket =
-          byLetter.get(letter) ?? byLetter.set(letter, []).get(letter)!;
+        let bucket = byLetter.get(letter);
+        if (!bucket) {
+          bucket = [];
+          byLetter.set(letter, bucket);
+        }
         bucket.push(tailRowHtml(row, data.labels ?? {}, ctx.systemRoutes));
       }
       for (const [letter, rows] of byLetter) {

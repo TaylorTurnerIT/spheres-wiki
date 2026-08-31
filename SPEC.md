@@ -92,7 +92,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 ### I.build — strict local/build gate
 `bun run build` is the canonical acceptance gate:
 ```
-test → lint → validate.mjs → check-cross-sphere.mjs → check-identity-collisions.mjs → check-idioms.mjs → check-base-abilities.mjs → fallow-audit → astro check → astro build → pagefind --site dist → check-content-routes.mjs → check-links.mjs → check-toc.mjs → check-performance.mjs
+test → lint → validate.mjs → check-assets.mjs → check-cross-sphere.mjs → check-identity-collisions.mjs → check-idioms.mjs → check-base-abilities.mjs → fallow-audit → astro check → astro build → pagefind --site dist → check-content-routes.mjs → check-links.mjs → check-toc.mjs → check-performance.mjs
 ```
 The gate must exit 0 and emit no actionable diagnostics: no test failures, lint errors, Astro check errors/warnings/hints, Fallow dead-code/complexity/duplication findings, unresolved remark entry links, missing content routes, broken internal links/anchors, Vite warnings, Pagefind failures, idiom-guard violations (V72), TOC audit failures, or performance-budget violations. `vite.build.chunkSizeWarningLimit` is 200KB by design.
 
@@ -276,6 +276,8 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V77. View Transition page state owns abort/teardown for listeners, observers, timers, async searches, and widgets; the mobile sidebar alone uses modal/`aria-hidden` semantics.
 - V78. Budgeted route classes stay within `docs/performance-budget.md`; retained migration artifacts are documented before removal.
 - V79. Cross-route View Transitions ! keep root old/new compositing `normal` (⊥ `plus-lighter`); browser smoke test ! observe ordered preparation/swap/page-load phases, styled target DOM, and no blank or unstyled viewport sample.
+- V80. ∀ files under `src/assets/` consumed by build ! be materialized assets; Git LFS pointer text ⊥ reaches Astro.
+- V81. Client-rendered tag-tail rows preserve server row metadata and escape fetched values before HTML insertion; View Transition swap aborts tail fetches and disconnects observers.
 
 ---
 
@@ -468,6 +470,8 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T117 | x | Add DOM behavior coverage for sidebar, collapse, and TOC lifecycle plus mobile Lighthouse route/config coverage; browser smoke remains a CI/runtime verification surface | V77 |
 | T118 | x | Reconcile SPEC/AGENTS/README/package/CI and document measured performance budgets and retained migration artifacts | V78 |
 | T119 | x | Add browser regression probe for cross-route View Transition flash; normalize root compositing and record lifecycle/style evidence | V77,V79 |
+| T120 | x | Fail early when Git LFS pointer stubs remain under `src/assets/` | V80,I.build |
+| T121 | x | Harden lazy tag-detail tails: preserve system metadata, escape injected values, and tear down fetch/observer state on swap | V77,V81 |
 
 **Recommended build order:**
 Audit remediation batch: T113→T114→T115→T116→T117→T118→T119. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
@@ -526,3 +530,5 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B28 | 2026-08-28 | New audit-script refactor missed repository formatter layout and stopped build during lint | V63 |
 | B29 | 2026-08-28 | Route audit found three generated TOC anchors for base markers whose migrated source used inline or apostrophe forms outside marker normalization | V76 |
 | B30 | 2026-08-28 | Chrome default root View Transition uses additive `plus-lighter` compositing; different route backgrounds briefly wash together and resemble FOUC | V79 — normalize root compositing; browser transition probe |
+| B31 | 2026-08-31 | Worktree checkout without Git LFS left tracked image pointers; Astro attempted image metadata on pointer text | V80 — pre-build asset integrity check; `git lfs pull` remediation |
+| B32 | 2026-08-31 | Lazy tag-detail tails omitted system metadata, interpolated fetched values unescaped, and left observer/fetch work alive across View Transitions | V77,V81 — include system in the tail contract; escape HTML; abort and disconnect on swap |
