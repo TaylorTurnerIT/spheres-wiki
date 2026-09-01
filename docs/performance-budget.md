@@ -37,6 +37,12 @@ served URL so CSS and JavaScript are returned with their real status and MIME
 types. The CI job starts Preview before the browser smoke test and Lighthouse
 run. There is no `dist/spheres-wiki` symlink or alternate static file server.
 
+The casting-traditions route keeps inactive tab bodies in base-path-aware
+static fragments and loads the Builder catalog as JSON. The initial document
+retains the active Rules tab, the lightweight Builder controls, and anchor
+markers; tab activation hydrates the selected fragment before restoring its
+TOC and hash target.
+
 The run exercises desktop-independent mobile settings across home, search, a
 sphere, a class, the archetype index, the casting builder, and a large tag
 catalog. If a route class grows beyond its budget, the build fails before

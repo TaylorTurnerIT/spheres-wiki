@@ -22,6 +22,17 @@ const deployWorkflow = readFileSync(
   new URL("../../.github/workflows/deploy.yml", import.meta.url),
   "utf8",
 );
+const tabbedContent = readFileSync(
+  new URL("../../src/components/TabbedContent.astro", import.meta.url),
+  "utf8",
+);
+const castingTraditionsPage = readFileSync(
+  new URL(
+    "../../src/pages/power/casting-traditions/index.astro",
+    import.meta.url,
+  ),
+  "utf8",
+);
 
 describe("Lighthouse CI deployment-path configuration", () => {
   it("targets Astro Preview under the deployed base path", () => {
@@ -61,5 +72,27 @@ describe("Lighthouse CI deployment-path configuration", () => {
         `FALLOW_AUDIT_BASE=origin/\${GITHUB_BASE_REF:-main}`,
       );
     }
+  });
+
+  it("keeps large casting-tradition payloads behind base-path routes", () => {
+    expect(tabbedContent).toContain("data-tab-content-src");
+    expect(tabbedContent).toContain("deferredTabs");
+    expect(tabbedContent).toContain("tab-content:loaded");
+    expect(tabbedContent).toContain("DOMContentLoaded");
+    expect(tabbedContent).toContain("setTimeout(activateInitialTab, 0)");
+    expect(tabbedContent).toContain("document.readyState !== 'loading'");
+    expect(tabbedContent).toContain("initializedContainers");
+    expect(tabbedContent).toContain("containers.every");
+    expect(castingTraditionsPage).toContain(
+      'deferredContentBase={url("/power/casting-traditions/tabs")}',
+    );
+    expect(castingTraditionsPage).toContain(
+      'data-builder-data-src={url("/power/casting-traditions/builder-data.json")}',
+    );
+    expect(castingTraditionsPage).toContain("DOMContentLoaded");
+    expect(castingTraditionsPage).toContain(
+      'document.readyState !== "loading"',
+    );
+    expect(castingTraditionsPage).not.toContain("tradition-builder-data");
   });
 });

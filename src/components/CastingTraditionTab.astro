@@ -1,0 +1,100 @@
+---
+import EntryCardList from "@/components/EntryCardList.astro";
+import type {
+  CastingTraditionCard,
+  CastingTraditionPageData,
+} from "@/lib/castingTraditions/pageData";
+
+type TabSlug =
+  | "standard"
+  | "custom"
+  | "general-drawbacks"
+  | "sphere-drawbacks"
+  | "boons";
+
+interface Props {
+  slug: TabSlug;
+  hrefPrefix?: string;
+  data: Pick<
+    CastingTraditionPageData,
+    | "bookMetaMap"
+    | "tagMap"
+    | "standardTraditionCards"
+    | "customTraditionCards"
+    | "generalDrawbackCards"
+    | "sphereDrawbackSections"
+    | "boonCards"
+  >;
+}
+
+const { slug, hrefPrefix = "", data } = Astro.props;
+
+function prefixCardLinks(cards: CastingTraditionCard[]): CastingTraditionCard[] {
+  if (!hrefPrefix) return cards;
+  return cards.map((card) => ({
+    ...card,
+    entryLists: card.entryLists?.map((list) => ({
+      ...list,
+      items: list.items.map((item) => ({
+        ...item,
+        href: item.href?.startsWith("#")
+          ? `${hrefPrefix}${item.href}`
+          : item.href,
+      })),
+    })),
+  }));
+}
+
+const standardTraditionCards = prefixCardLinks(data.standardTraditionCards);
+const customTraditionCards = prefixCardLinks(data.customTraditionCards);
+const generalDrawbackCards = prefixCardLinks(data.generalDrawbackCards);
+const sphereDrawbackSections = data.sphereDrawbackSections.map((section) => ({
+  ...section,
+  items: prefixCardLinks(section.items),
+}));
+const boonCards = prefixCardLinks(data.boonCards);
+---
+
+<!-- fallow-ignore-next-line complexity -->
+{slug === "standard" && (
+  <EntryCardList
+    summary="Standard traditions"
+    items={standardTraditionCards}
+    emptyMessage="No standard traditions defined yet."
+    tagMap={data.tagMap}
+    bookMetaMap={data.bookMetaMap}
+  />
+)}
+{slug === "custom" && (
+  <EntryCardList
+    summary="Custom traditions"
+    items={customTraditionCards}
+    emptyMessage="No custom traditions defined yet."
+    tagMap={data.tagMap}
+    bookMetaMap={data.bookMetaMap}
+  />
+)}
+{slug === "general-drawbacks" && (
+  <EntryCardList
+    summary="General drawbacks"
+    items={generalDrawbackCards}
+    tagMap={data.tagMap}
+    bookMetaMap={data.bookMetaMap}
+  />
+)}
+{slug === "sphere-drawbacks" && (
+  <EntryCardList
+    summary="Sphere-Specific drawbacks"
+    sections={sphereDrawbackSections}
+    tagMap={data.tagMap}
+    bookMetaMap={data.bookMetaMap}
+  />
+)}
+{slug === "boons" && (
+  <EntryCardList
+    summary="Boons"
+    items={boonCards}
+    tagMap={data.tagMap}
+    bookMetaMap={data.bookMetaMap}
+  />
+)}
