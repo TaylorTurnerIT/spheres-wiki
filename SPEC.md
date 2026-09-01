@@ -92,7 +92,7 @@ Pagefind index built at deploy (`pagefind --site dist`). Indexing scope/weight i
 ### I.build — strict local/build gate
 `bun run build` is the canonical acceptance gate:
 ```
-test → lint → validate.mjs → check-cross-sphere.mjs → check-identity-collisions.mjs → check-idioms.mjs → check-base-abilities.mjs → fallow-audit → astro check → astro build → pagefind --site dist → check-content-routes.mjs → check-links.mjs → check-toc.mjs → check-performance.mjs
+test → lint → validate.mjs → check-assets.mjs → check-cross-sphere.mjs → check-identity-collisions.mjs → check-idioms.mjs → check-base-abilities.mjs → fallow-audit → astro check → astro build → pagefind --site dist → check-content-routes.mjs → check-links.mjs → check-toc.mjs → check-performance.mjs
 ```
 The gate must exit 0 and emit no actionable diagnostics: no test failures, lint errors, Astro check errors/warnings/hints, Fallow dead-code/complexity/duplication findings, unresolved remark entry links, missing content routes, broken internal links/anchors, Vite warnings, Pagefind failures, idiom-guard violations (V72), TOC audit failures, or performance-budget violations. `vite.build.chunkSizeWarningLimit` is 200KB by design.
 
@@ -276,8 +276,11 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V77. View Transition page state owns abort/teardown for listeners, observers, timers, async searches, and widgets; the mobile sidebar alone uses modal/`aria-hidden` semantics.
 - V78. Budgeted route classes stay within `docs/performance-budget.md`; retained migration artifacts are documented before removal.
 - V79. Cross-route View Transitions ! keep root old/new compositing `normal` (⊥ `plus-lighter`); browser smoke test ! observe ordered preparation/swap/page-load phases, styled target DOM, and no blank or unstyled viewport sample.
-- V80. Lighthouse CI ! target the Astro Preview deployment URL under the configured base path; required CSS/JS responses ! have successful status + expected MIME, and asset/console or CLS assertion failures ! stop the check.
-- V81. Large tabbed views ! keep inactive tab bodies and tab-specific datasets out of initial HTML; selecting a tab ! fetch and hydrate its base-path fragment/data before interaction or anchor scrolling.
+- V80. ∀ files under `src/assets/` consumed by build ! be materialized assets; Git LFS pointer text ⊥ reaches Astro.
+- V81. Client-rendered tag-tail rows preserve server row metadata and escape fetched values before HTML insertion; View Transition swap aborts tail fetches and disconnects observers.
+- V82. CI PR build ! fetch base refs and set `FALLOW_AUDIT_BASE` explicitly before `bun run build`; detached checkout ⊥ relies on auto-detection.
+- V83. Lighthouse CI ! target the Astro Preview deployment URL under the configured base path; required CSS/JS responses ! have successful status + expected MIME, and asset/console or CLS assertion failures ! stop the check.
+- V84. Large tabbed views ! keep inactive tab bodies and tab-specific datasets out of initial HTML; selecting a tab ! fetch and hydrate its base-path fragment/data before interaction or anchor scrolling.
 
 ---
 
@@ -470,11 +473,14 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T117 | x | Add DOM behavior coverage for sidebar, collapse, and TOC lifecycle plus mobile Lighthouse route/config coverage; browser smoke remains a CI/runtime verification surface | V77 |
 | T118 | x | Reconcile SPEC/AGENTS/README/package/CI and document measured performance budgets and retained migration artifacts | V78 |
 | T119 | x | Add browser regression probe for cross-route View Transition flash; normalize root compositing and record lifecycle/style evidence | V77,V79 |
-| T120 | x | Make Lighthouse CI base-path setup self-validating: target the real Astro Preview URL, remove the dist symlink workaround, and guard asset/MIME + CLS assertions | V80,I.build |
-| T121 | x | Defer inactive casting-tradition tab bodies and Builder data behind base-path routes; retain initial anchors and hydrate tab content before scroll-spy/Builder activation | V81,V76 |
+| T120 | x | Fail early when Git LFS pointer stubs remain under `src/assets/` | V80,I.build |
+| T121 | x | Harden lazy tag-detail tails: preserve system metadata, escape injected values, and tear down fetch/observer state on swap | V77,V81 |
+| T122 | x | Make PR Lighthouse checkout fetch full refs and set explicit Fallow base; add workflow contract test | V82,I.build |
+| T123 | x | Make Lighthouse CI base-path setup self-validating: target the real Astro Preview URL, remove the dist symlink workaround, and guard asset/MIME + CLS assertions | V83,I.build |
+| T124 | x | Defer inactive casting-tradition tab bodies and Builder data behind base-path routes; retain initial anchors and hydrate tab content before scroll-spy/Builder activation | V84,V76 |
 
 **Recommended build order:**
-Audit remediation batch: T113→T114→T115→T116→T117→T118→T119. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
+Audit remediation batch: T113→T114→T115→T116→T117→T118→T119→T120→T121→T122→T123→T124. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
 Then broken routes (T1→T2→T9→T25→T3→T4→T5→T6→T7→T8).
 Then stubs (T11→T12→T13→T14→T15→T10).
@@ -530,6 +536,8 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B28 | 2026-08-28 | New audit-script refactor missed repository formatter layout and stopped build during lint | V63 |
 | B29 | 2026-08-28 | Route audit found three generated TOC anchors for base markers whose migrated source used inline or apostrophe forms outside marker normalization | V76 |
 | B30 | 2026-08-28 | Chrome default root View Transition uses additive `plus-lighter` compositing; different route backgrounds briefly wash together and resemble FOUC | V79 — normalize root compositing; browser transition probe |
-| B31 | 2026-08-31 | Local worktree build ran against unhydrated Git LFS pointer files because `git-lfs` was absent from shell | C12 — run build with `git-lfs`; hydrate LFS assets |
-| B32 | 2026-08-31 | LHCI FallbackServer mounted `dist` at `/` while Astro emitted `/spheres-wiki/` assets, so CSS returned HTML and mobile CLS was falsely attributed to the static sidebar | V80 / T120 |
-| B33 | 2026-09-01 | Once Lighthouse reached the real Astro Preview, the casting-traditions page exceeded mobile FCP/LCP/TBT budgets because inactive tab bodies and Builder data were still embedded in the initial document | V81 / T121 |
+| B31 | 2026-08-31 | Worktree checkout without Git LFS left tracked image pointers; Astro attempted image metadata on pointer text | V80 — pre-build asset integrity check; `git lfs pull` remediation |
+| B32 | 2026-08-31 | Lazy tag-detail tails omitted system metadata, interpolated fetched values unescaped, and left observer/fetch work alive across View Transitions | V77,V81 — include system in the tail contract; escape HTML; abort and disconnect on swap |
+| B33 | 2026-08-31 | Detached PR checkout hid base ref; Fallow auto-detection exited 2 during Lighthouse build | V82 — fetch-depth 0 and set FALLOW_AUDIT_BASE=origin/${GITHUB_BASE_REF:-main} |
+| B34 | 2026-08-31 | LHCI FallbackServer mounted `dist` at `/` while Astro emitted `/spheres-wiki/` assets, so CSS returned HTML and mobile CLS was falsely attributed to the static sidebar | V83 / T123 |
+| B35 | 2026-09-01 | Once Lighthouse reached the real Astro Preview, the casting-traditions page exceeded mobile FCP/LCP/TBT budgets because inactive tab bodies and Builder data were still embedded in the initial document | V84 / T124 |

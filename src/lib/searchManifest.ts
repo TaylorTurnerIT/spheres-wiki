@@ -168,7 +168,7 @@ export async function buildSearchManifest(): Promise<ManifestEntry[]> {
       return {
         url: url(`/power/casting-traditions/#${d.id}`),
         title: d.name,
-        system: SYSTEMS["power"].label,
+        system: SYSTEMS.power.label,
         type: "drawback",
         tags: tags(d),
       };
@@ -184,7 +184,7 @@ export async function buildSearchManifest(): Promise<ManifestEntry[]> {
       return {
         url: url(`/power/casting-traditions/#${b.id}`),
         title: b.name,
-        system: SYSTEMS["power"].label,
+        system: SYSTEMS.power.label,
         type: "boon",
         tags: tags(b),
       };
@@ -200,7 +200,7 @@ export async function buildSearchManifest(): Promise<ManifestEntry[]> {
       return {
         url: url(`/power/casting-traditions/#${t.id}`),
         title: t.name,
-        system: SYSTEMS["power"].label,
+        system: SYSTEMS.power.label,
         type: "tradition",
         tags: tags(t),
       };

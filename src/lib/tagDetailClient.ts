@@ -9,10 +9,21 @@ import { url } from "@/lib/url";
 
 const CHUNK = 250;
 const STATUS_DONE = "done";
+const HTML_ESCAPES: Record<string, string> = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#39;",
+};
+
+function escapeHtml(value: unknown): string {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => HTML_ESCAPES[char]);
+}
 
 function badgeHtml(tagId: string, labels: Record<string, string>): string {
   const label = labels[tagId] ?? tagId;
-  return `<a href="${url(`/tags/${tagId}/`)}" class="tag-wrapper talent-tag" data-tag="${tagId}">${label}</a>`;
+  return `<a href="${escapeHtml(url(`/tags/${tagId}/`))}" class="tag-wrapper talent-tag" data-tag="${escapeHtml(tagId)}">${escapeHtml(label)}</a>`;
 }
 
 function rowHtml(row: any, labels: Record<string, string>): string {
@@ -20,16 +31,24 @@ function rowHtml(row: any, labels: Record<string, string>): string {
     .map((id: string) => badgeHtml(id, labels))
     .join("");
   return (
-    `<div class="tag-entry-row" data-system="${row.sys}">` +
-    `<a href="${url(row.u)}" class="tag-entry-name">${row.n}</a>` +
+    `<div class="tag-entry-row" data-system="${escapeHtml(row.sys)}">` +
+    `<a href="${escapeHtml(url(row.u))}" class="tag-entry-name">${escapeHtml(row.n)}</a>` +
     badges +
-    `<span class="tag-entry-sphere">${row.s}</span>` +
+    `<span class="tag-entry-sphere">${escapeHtml(row.s)}</span>` +
     `</div>`
   );
 }
 
+let cleanupActiveTail = () => {};
+
+function cleanupTagDetailTail(): void {
+  cleanupActiveTail();
+  cleanupActiveTail = () => {};
+}
+
 // fallow-ignore-next-line complexity
 export function initTagDetailTail(): void {
+  cleanupTagDetailTail();
   const status = document.querySelector<HTMLElement>("[data-tag-tail-status]");
   if (!status || status.dataset.state === STATUS_DONE) return;
 
@@ -39,6 +58,8 @@ export function initTagDetailTail(): void {
 
   let data: any = null;
   let cursor = 0;
+  const controller = new AbortController();
+  let observer: IntersectionObserver | null = null;
 
   // fallow-ignore-next-line complexity
   const renderChunk = (): boolean => {
@@ -70,12 +91,15 @@ export function initTagDetailTail(): void {
   };
 
   const load = async (): Promise<void> => {
-    const res = await fetch(url(`/tags/${tagId}/data.json`));
+    const res = await fetch(url(`/tags/${tagId}/data.json`), {
+      signal: controller.signal,
+    });
     if (!res.ok) return;
     data = await res.json();
   };
 
   const advance = async (): Promise<void> => {
+    if (controller.signal.aborted) return;
     if (!data) {
       try {
         await load();
@@ -83,6 +107,7 @@ export function initTagDetailTail(): void {
         return; // keep the server-rendered head; status stays honest
       }
     }
+    if (controller.signal.aborted) return;
     const more = renderChunk();
     if (more) void advance();
     else finish();
@@ -93,14 +118,22 @@ export function initTagDetailTail(): void {
     return;
   }
 
-  const observer = new IntersectionObserver(
+  observer = new IntersectionObserver(
     (entries) => {
+      if (controller.signal.aborted) return;
       if (entries.some((e) => e.isIntersecting)) {
-        observer.disconnect();
+        observer?.disconnect();
         void advance();
       }
     },
     { rootMargin: "800px" },
   );
   observer.observe(status);
+  cleanupActiveTail = () => {
+    controller.abort();
+    observer?.disconnect();
+    observer = null;
+  };
 }
+
+document.addEventListener("astro:before-swap", cleanupTagDetailTail);
