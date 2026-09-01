@@ -1,0 +1,50 @@
+---
+import CastingTraditionTab from "@/components/CastingTraditionTab.astro";
+import {
+  getCastingTraditionPageData,
+  type CastingTraditionPageData,
+} from "@/lib/castingTraditions/pageData";
+import { url } from "@/lib/url";
+
+type TabSlug =
+  | "standard"
+  | "custom"
+  | "general-drawbacks"
+  | "sphere-drawbacks"
+  | "boons";
+
+export async function getStaticPaths() {
+  const tabSlugs: TabSlug[] = [
+    "standard",
+    "custom",
+    "general-drawbacks",
+    "sphere-drawbacks",
+    "boons",
+  ];
+  const data = await getCastingTraditionPageData();
+  return tabSlugs.map((slug) => ({
+    params: { slug },
+    props: { data },
+  }));
+}
+
+const { data } = Astro.props as { data: CastingTraditionPageData };
+const slug = Astro.params.slug as TabSlug;
+if (![
+  "standard",
+  "custom",
+  "general-drawbacks",
+  "sphere-drawbacks",
+  "boons",
+].includes(slug)) {
+  throw new Error(`Unknown casting tradition tab: ${slug}`);
+}
+---
+
+<div data-pagefind-ignore>
+  <CastingTraditionTab
+    slug={slug}
+    data={data}
+    hrefPrefix={url("/power/casting-traditions/")}
+  />
+</div>

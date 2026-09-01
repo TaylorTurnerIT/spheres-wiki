@@ -279,6 +279,8 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V80. ∀ files under `src/assets/` consumed by build ! be materialized assets; Git LFS pointer text ⊥ reaches Astro.
 - V81. Client-rendered tag-tail rows preserve server row metadata and escape fetched values before HTML insertion; View Transition swap aborts tail fetches and disconnects observers.
 - V82. CI PR build ! fetch base refs and set `FALLOW_AUDIT_BASE` explicitly before `bun run build`; detached checkout ⊥ relies on auto-detection.
+- V83. Lighthouse CI ! target the Astro Preview deployment URL under the configured base path; required CSS/JS responses ! have successful status + expected MIME, and asset/console or CLS assertion failures ! stop the check.
+- V84. Large tabbed views ! keep inactive tab bodies and tab-specific datasets out of initial HTML; selecting a tab ! fetch and hydrate its base-path fragment/data before interaction or anchor scrolling.
 
 ---
 
@@ -474,9 +476,11 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T120 | x | Fail early when Git LFS pointer stubs remain under `src/assets/` | V80,I.build |
 | T121 | x | Harden lazy tag-detail tails: preserve system metadata, escape injected values, and tear down fetch/observer state on swap | V77,V81 |
 | T122 | x | Make PR Lighthouse checkout fetch full refs and set explicit Fallow base; add workflow contract test | V82,I.build |
+| T123 | x | Make Lighthouse CI base-path setup self-validating: target the real Astro Preview URL, remove the dist symlink workaround, and guard asset/MIME + CLS assertions | V83,I.build |
+| T124 | x | Defer inactive casting-tradition tab bodies and Builder data behind base-path routes; retain initial anchors and hydrate tab content before scroll-spy/Builder activation | V84,V76 |
 
 **Recommended build order:**
-Audit remediation batch: T113→T114→T115→T116→T117→T118→T119→T120→T121→T122. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
+Audit remediation batch: T113→T114→T115→T116→T117→T118→T119→T120→T121→T122→T123→T124. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
 Refactor batch (T16→T17→T18→T19→T20→T21→T22) first — single cohesive session, no user-visible change.
 Then broken routes (T1→T2→T9→T25→T3→T4→T5→T6→T7→T8).
 Then stubs (T11→T12→T13→T14→T15→T10).
@@ -535,3 +539,5 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B31 | 2026-08-31 | Worktree checkout without Git LFS left tracked image pointers; Astro attempted image metadata on pointer text | V80 — pre-build asset integrity check; `git lfs pull` remediation |
 | B32 | 2026-08-31 | Lazy tag-detail tails omitted system metadata, interpolated fetched values unescaped, and left observer/fetch work alive across View Transitions | V77,V81 — include system in the tail contract; escape HTML; abort and disconnect on swap |
 | B33 | 2026-08-31 | Detached PR checkout hid base ref; Fallow auto-detection exited 2 during Lighthouse build | V82 — fetch-depth 0 and set FALLOW_AUDIT_BASE=origin/${GITHUB_BASE_REF:-main} |
+| B34 | 2026-08-31 | LHCI FallbackServer mounted `dist` at `/` while Astro emitted `/spheres-wiki/` assets, so CSS returned HTML and mobile CLS was falsely attributed to the static sidebar | V83 / T123 |
+| B35 | 2026-09-01 | Once Lighthouse reached the real Astro Preview, the casting-traditions page exceeded mobile FCP/LCP/TBT budgets because inactive tab bodies and Builder data were still embedded in the initial document | V84 / T124 |

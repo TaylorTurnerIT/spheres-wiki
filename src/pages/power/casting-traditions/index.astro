@@ -1,9 +1,10 @@
 ---
-import { getEntry, render } from "astro:content";
+import { getEntry } from "astro:content";
 import ArticlePage from "@/layouts/ArticlePage.astro";
 import TabbedContent from "@/components/TabbedContent.astro";
 import EntryCardList from "@/components/EntryCardList.astro";
-import { resolveEntries, getCollEntriesMap } from "@/lib/resolveEntries";
+import { url } from "@/lib/url";
+import { getCastingTraditionPageData } from "@/lib/castingTraditions/pageData";
 import {
   buildTraditionState,
   selectionFromTradition,
@@ -12,9 +13,7 @@ import {
 import {
   exportTraditionMarkdown,
 } from "@/lib/castingTraditions/export";
-import { renderMarkdownFragment } from "@/lib/renderBody";
 import type { ArticleEntry } from "@/lib/types";
-import { contentEntryKey } from "@/lib/entryIdentity";
 
 const entry = await getEntry(
   "ultimate-spheres-of-power",
@@ -28,124 +27,21 @@ if (!entry) {
 const article = entry.data as ArticleEntry;
 
 const {
-  drawbackMap,
-  boonMap,
-  traditionMap,
-  sphereMap,
+  book,
   bookMetaMap,
   tagMap,
-} = await resolveEntries();
-const allCollEntries = await getCollEntriesMap();
-const book = bookMetaMap.get("ultimate-spheres-of-power");
+  allPowerDrawbacks,
+  allPowerBoons,
+  allPowerTraditions,
+  standardTraditionCards,
+  customTraditionCards,
+  generalDrawbackCards,
+  sphereDrawbackSections,
+  boonCards,
+} = await getCastingTraditionPageData();
 
 const description =
   "Define how your magic works in Ultimate Spheres of Power with casting traditions, drawbacks, and boons.";
-const byName = <T extends { name: string }>(a: T, b: T) => a.name.localeCompare(b.name);
-
-// Filter to Power entries, sorted by name
-const generalDrawbacks = [...drawbackMap.values()]
-  .filter((d) => d.drawbackKind === "general" && d.system === "power")
-  .sort(byName);
-const sphereDrawbacksList = [...drawbackMap.values()]
-  .filter((d) => d.drawbackKind === "sphere" && d.system === "power")
-  .sort(byName);
-const dualDrawbacks = [...drawbackMap.values()]
-  .filter((d) => d.drawbackKind === "dual-sphere" && d.system === "power")
-  .sort(byName);
-const boons = [...boonMap.values()]
-  .filter((b) => b.system === "power")
-  .sort(byName);
-const standardTraditions = [...traditionMap.values()]
-  .filter((t) => t.system === "power" && t.traditionKind === "standard")
-  .sort(byName);
-const customTraditions = [...traditionMap.values()]
-  .filter((t) => t.system === "power" && t.traditionKind !== "standard")
-  .sort(byName);
-const allPowerTraditions = [...traditionMap.values()].filter(
-  (t) => t.system === "power",
-).sort(byName);
-const allPowerDrawbacks = [...drawbackMap.values()].filter(
-  (d) => d.system === "power",
-);
-const allPowerBoons = [...boonMap.values()].filter((b) => b.system === "power");
-
-const drawbackNameMap = new Map(allPowerDrawbacks.map((d) => [d.id, d.name]));
-const boonNameMap = new Map(allPowerBoons.map((b) => [b.id, b.name]));
-const sphereNameMap = new Map([...sphereMap.values()].filter((s) => s.system === "power").map((s) => [s.id, s.name]));
-
-// Pre-group sphere drawbacks by sphere name for the listing tab
-// fallow-ignore-next-line complexity
-const sphereDrawbackGroups = (() => {
-  const g = new Map<string, typeof sphereDrawbacksList>();
-  for (const d of sphereDrawbacksList) {
-    const key = sphereNameMap.get(d.sphere ?? "") ?? d.sphere ?? "Other";
-    if (!g.has(key)) g.set(key, []);
-    g.get(key)!.push(d);
-  }
-  return [...g.entries()].sort(([a], [b]) => a.localeCompare(b));
-})();
-
-function resolveNames(ids: { id: string }[] | undefined, map: Map<string, string>): { name: string; href?: string }[] {
-  return ids?.map((r) => ({
-    name: map.get(r.id) ?? r.id,
-    ...(map.has(r.id) ? { href: `#${r.id}` } : {}),
-  })) ?? [];
-}
-function buildEntryLists(t: { drawbacks?: { id: string }[]; sphereDrawbacks?: { id: string }[]; boons?: { id: string }[] }) {
-  const lists: { label: string; items: { name: string; href?: string }[] }[] = [];
-  const dr = resolveNames(t.drawbacks, drawbackNameMap);
-  if (dr.length) lists.push({ label: "Drawbacks", items: dr });
-  const sdr = resolveNames(t.sphereDrawbacks, drawbackNameMap);
-  if (sdr.length) lists.push({ label: "Sphere Drawbacks", items: sdr });
-  const bo = resolveNames(t.boons, boonNameMap);
-  if (bo.length) lists.push({ label: "Boons", items: bo });
-  return lists;
-}
-
-function buildIncompatibles(incompatible: string[] | undefined) {
-  return resolveNames(incompatible?.map((id) => ({ id })), drawbackNameMap);
-}
-
-// Render markdown bodies and raw text in parallel
-async function getContent(type: string, id: string) {
-  const collEntry = allCollEntries.get(contentEntryKey(type, "power", id));
-  if (!collEntry) return null;
-  const { Content } = await render(collEntry);
-  return Content;
-}
-
-const allDrawbacksForRender = [
-  ...generalDrawbacks,
-  ...sphereDrawbacksList,
-  ...dualDrawbacks,
-];
-const traditionsForRender = [...standardTraditions, ...customTraditions];
-
-// Render markdown bodies and HTML in parallel
-const drawbackContents = await Promise.all(allDrawbacksForRender.map((d) => getContent("drawback", d.id)));
-const boonContents = await Promise.all(boons.map((b) => getContent("boon", b.id)));
-const traditionContents = await Promise.all(traditionsForRender.map((t) => getContent("tradition", t.id)));
-const drawbackHtmlBodies = await Promise.all(allDrawbacksForRender.map(async (d) => {
-  const collEntry = allCollEntries.get(contentEntryKey("drawback", "power", d.id));
-  return collEntry?.body ? renderMarkdownFragment(collEntry.body) : "";
-}));
-const boonHtmlBodies = await Promise.all(boons.map(async (b) => {
-  const collEntry = allCollEntries.get(contentEntryKey("boon", "power", b.id));
-  return collEntry?.body ? renderMarkdownFragment(collEntry.body) : "";
-}));
-
-// Strip HTML tags for plain text
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim();
-}
-
-const drawbackContentMap = new Map(
-  allDrawbacksForRender.map((d, i) => [d.id, drawbackContents[i]]),
-);
-const boonContentMap = new Map(boons.map((b, i) => [b.id, boonContents[i]]));
-const traditionContentMap = new Map(
-  traditionsForRender.map((t, i) => [t.id, traditionContents[i]]),
-);
 
 // Use rules/export functions at build time — satisfies V66 production import requirement
 const _tradData = {
@@ -154,7 +50,7 @@ const _tradData = {
   traditions: allPowerTraditions,
 };
 // Validate standard traditions at build time (production use of validateTradition)
-for (const t of standardTraditions) {
+for (const t of allPowerTraditions.filter((tradition) => tradition.traditionKind === "standard")) {
   const sel = selectionFromTradition(t, _tradData);
   validateTradition(sel, _tradData);
 }
@@ -169,54 +65,6 @@ const _exampleExport = exportTraditionMarkdown(
 );
 void _exampleState;
 void _exampleExport;
-
-// Serialize builder data for client-side hydration
-const builderData = JSON.stringify({
-  // fallow-ignore-next-line complexity
-  drawbacks: allDrawbacksForRender.map((d, i) => ({
-    id: d.id,
-    name: d.name,
-    drawbackKind: d.drawbackKind,
-    drawbackValue: d.drawbackValue,
-    sphere: d.sphere ?? null,
-    spheres: d.spheres ?? null,
-    sourceBookTitle: bookMetaMap.get(d.sourceBook)?.title ?? d.sourceBook,
-    tags: d.tags ?? [],
-    bodyHtml: drawbackHtmlBodies[i] ?? "",
-    bodyPlain: stripHtml(drawbackHtmlBodies[i] ?? ""),
-    choices: d.choices ?? null,
-    requires: d.requires ?? null,
-    incompatible: d.incompatible ?? null,
-    rules: d.rules ?? null,
-    buyoff: d.buyoff ?? null,
-  })),
-  // fallow-ignore-next-line complexity
-  boons: boons.map((b, i) => ({
-    id: b.id,
-    name: b.name,
-    boonCost: b.boonCost,
-    sourceBookTitle: bookMetaMap.get(b.sourceBook)?.title ?? b.sourceBook,
-    tags: b.tags ?? [],
-    bodyHtml: boonHtmlBodies[i] ?? "",
-    bodyPlain: stripHtml(boonHtmlBodies[i] ?? ""),
-    choices: b.choices ?? null,
-    requires: b.requires ?? null,
-    incompatible: b.incompatible ?? null,
-    rules: b.rules ?? null,
-  })),
-  // fallow-ignore-next-line complexity
-  traditions: allPowerTraditions.map((t) => ({
-    id: t.id,
-    name: t.name,
-    traditionKind: t.traditionKind,
-    cam: t.cam,
-    drawbacks: t.drawbacks ?? [],
-    sphereDrawbacks: t.sphereDrawbacks ?? [],
-    boons: t.boons ?? [],
-    choices: t.choices ?? null,
-    choiceSelections: t.choiceSelections ?? null,
-  })),
-});
 
 const tabs = [
   {
@@ -264,91 +112,40 @@ const tabs = [
   { label: "Builder", slug: "builder", showToc: false, builder: true },
 ];
 
-const sourceTitle = (sourceBook: string) => bookMetaMap.get(sourceBook)?.title ?? sourceBook;
+const deferredAnchorTabs = {
+  standard: [
+    ...standardTraditionCards.map((card) => card.id),
+  ],
+  custom: [
+    ...customTraditionCards.map((card) => card.id),
+  ],
+  "general-drawbacks": [
+    ...generalDrawbackCards.map((card) => card.id),
+  ],
+  "sphere-drawbacks": [
+    ...sphereDrawbackSections.flatMap((section) =>
+      section.items.map((card) => card.id),
+    ),
+  ],
+  boons: boonCards.map((card) => card.id),
+};
 
-const traditionCardMeta = (t: typeof standardTraditions[number], includeMagicType = false) => ({
-  ...(includeMagicType && t.magicType ? { "Magic Type": t.magicType } : {}),
-  "Casting Ability Modifier":
-    t.cam.mode === "fixed"
-      ? t.cam.abilities.map((a) => a.toUpperCase()).join("/")
-      : `Choose: ${t.cam.abilities.map((a) => a.toUpperCase()).join("/")}`,
-});
-
-const standardTraditionCards = standardTraditions.map((t) => ({
-  id: t.id,
-  name: t.name,
-  sourceBookTitle: sourceTitle(t.sourceBook),
-  tagIds: t.tags ?? [],
-  Content: traditionContentMap.get(t.id),
-  metadata: traditionCardMeta(t, true),
-  entryLists: buildEntryLists(t),
-}));
-
-const customTraditionCards = customTraditions.map((t) => ({
-  id: t.id,
-  name: t.name,
-  sourceBookTitle: sourceTitle(t.sourceBook),
-  tagIds: t.tags ?? [],
-  Content: traditionContentMap.get(t.id),
-  metadata: traditionCardMeta(t),
-  entryLists: buildEntryLists(t),
-}));
-
-const drawbackCard = (
-  d: typeof allDrawbacksForRender[number],
-  kind: "drawback" | "sphere-drawback",
-  metadata: Record<string, string> = {},
-) => ({
-  id: d.id,
-  name: d.name,
-  sourceBookTitle: sourceTitle(d.sourceBook),
-  tagIds: d.tags ?? [],
-  Content: drawbackContentMap.get(d.id),
-  metadata,
-  entryLists: d.incompatible?.length
-    ? [{ label: "Incompatible", items: buildIncompatibles(d.incompatible) }]
-    : [],
-  builderActions: [{ entryId: d.id, kind }],
-});
-
-// fallow-ignore-next-line complexity
-const generalDrawbackCards = generalDrawbacks.map((d) => drawbackCard(d, "drawback", {
-  ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
-  ...(d.repeat?.max && d.repeat.max > 1 ? { "Max Repeat": String(d.repeat.max) } : {}),
-}));
-
-const sphereDrawbackSections = [
-  ...sphereDrawbackGroups.map(([sphereName, items]) => ({
-    heading: sphereName,
-    items: items.map((d) => drawbackCard(d, "sphere-drawback", {
-      ...(d.buyoff ? { Buyoff: d.buyoff } : {}),
-    })),
-  })),
-  ...(dualDrawbacks.length > 0
-    ? [{
-        heading: "Dual-Sphere Drawbacks",
-        items: dualDrawbacks.map((d) => drawbackCard(d, "sphere-drawback", {
-          Spheres: (d.spheres ?? []).map((sid) => sphereNameMap.get(sid) ?? sid).join(", "),
-        })),
-      }]
-    : []),
-];
-
-const boonCards = boons.map((b) => ({
-  id: b.id,
-  name: b.name,
-  sourceBookTitle: sourceTitle(b.sourceBook),
-  tagIds: b.tags ?? [],
-  Content: boonContentMap.get(b.id),
-  metadata: {
-    "Boon Cost": `${b.boonCost} slot${b.boonCost !== 1 ? "s" : ""}`,
-  },
-  builderActions: [{ entryId: b.id, kind: "boon" as const }],
-}));
 ---
 
 <ArticlePage article={article} book={book} description={description}>
-  <TabbedContent tabs={tabs}>
+  <TabbedContent
+    tabs={tabs}
+    deferInactive
+    deferredContentBase={url("/power/casting-traditions/tabs")}
+    deferredTabs={[
+      "standard",
+      "custom",
+      "general-drawbacks",
+      "sphere-drawbacks",
+      "boons",
+    ]}
+    deferredAnchorTabs={deferredAnchorTabs}
+  >
     <!-- Standard Traditions -->
     <div slot="standard">
       <EntryCardList
@@ -402,7 +199,11 @@ const boonCards = boons.map((b) => ({
     </div>
 
     <!-- Builder -->
-    <div slot="builder" class="tradition-builder">
+    <div
+      slot="builder"
+      class="tradition-builder"
+      data-builder-data-src={url("/power/casting-traditions/builder-data.json")}
+    >
       <h2 class="builder-heading">Casting Tradition Builder</h2>
       <p class="builder-intro">Build and export a custom casting tradition. Changes update in real time.</p>
 
@@ -531,8 +332,6 @@ const boonCards = boons.map((b) => ({
   </TabbedContent>
 </ArticlePage>
 
-<script is:inline id="tradition-builder-data" type="application/json" set:html={builderData}></script>
-
 <script>
   import {
     buildTraditionState,
@@ -562,16 +361,17 @@ const boonCards = boons.map((b) => ({
   const SAVED_KEY = "spheres-wiki:saved-casting-traditions";
   const SCHEMA_VERSION = 1;
   let cleanupTraditionBuilderPage = () => {};
+  let cleanupBuilderActivation = () => {};
 
   document.addEventListener("astro:before-swap", () => {
     cleanupTraditionBuilderPage();
     cleanupTraditionBuilderPage = () => {};
+    cleanupBuilderActivation();
+    cleanupBuilderActivation = () => {};
   });
 
-  document.addEventListener("astro:page-load", () => {
+  async function initTraditionBuilder(builder: HTMLElement) {
     cleanupTraditionBuilderPage();
-    const builder = document.querySelector<HTMLElement>(".tradition-builder");
-    if (!builder) return;
     const root = builder;
     const controller = new AbortController();
     const { signal } = controller;
@@ -591,9 +391,14 @@ const boonCards = boons.map((b) => ({
       pendingTimers.clear();
     };
 
-    const dataEl = document.getElementById("tradition-builder-data");
-    const store: BuilderStore = dataEl?.textContent
-      ? JSON.parse(dataEl.textContent)
+    const dataUrl = root.dataset.builderDataSrc;
+    const store: BuilderStore = dataUrl
+      ? await fetch(dataUrl).then(async (response) => {
+          if (!response.ok) {
+            throw new Error(`Builder data request failed: ${response.status}`);
+          }
+          return (await response.json()) as BuilderStore;
+        })
       : { drawbacks: [], boons: [], traditions: [] };
 
     // ── State ──────────────────────────────────────────────────
@@ -1282,7 +1087,39 @@ const boonCards = boons.map((b) => ({
     renderGeneralDrawbacks();
     renderSphereDrawbacks();
     onUpdate(true, false);
-  });
+  }
+
+  function initializeBuilderPage() {
+    cleanupTraditionBuilderPage();
+    cleanupBuilderActivation();
+    cleanupBuilderActivation = () => {};
+
+    const builderTab = document.querySelector<HTMLButtonElement>('.tab[data-tab="builder"]');
+    if (!builderTab) return;
+
+    const activationController = new AbortController();
+    cleanupBuilderActivation = () => activationController.abort();
+    let initialized = false;
+    const initializeWhenVisible = () => {
+      const builder = document.querySelector<HTMLElement>(".tradition-builder");
+      const builderPanel = builder?.closest<HTMLElement>(".tab-panel");
+      if (initialized || !builder || !builderPanel || builderPanel.hidden) return;
+      initialized = true;
+      void initTraditionBuilder(builder);
+    };
+
+    builderTab.addEventListener("click", () => {
+      setTimeout(initializeWhenVisible, 0);
+    }, { signal: activationController.signal });
+    document.addEventListener("tab-content:loaded", initializeWhenVisible, {
+      signal: activationController.signal,
+    });
+    initializeWhenVisible();
+  }
+
+  document.addEventListener("astro:page-load", initializeBuilderPage);
+  document.addEventListener("DOMContentLoaded", initializeBuilderPage, { once: true });
+  if (document.readyState !== "loading") initializeBuilderPage();
 </script>
 
 <style>

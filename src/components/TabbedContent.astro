@@ -3,6 +3,7 @@ import { getEntry, render } from 'astro:content';
 import ArticleTOC from '@/components/ArticleTOC.astro';
 import EntryCardList from '@/components/EntryCardList.astro';
 import { buildTocTree, type RenderedHeading } from '@/lib/articleToc';
+import type { TocNode } from '@/lib/articleToc';
 import type { BookMeta, TagEntry } from '@/lib/types';
 
 type SystemScope = 'power' | 'might' | 'guile' | 'champions';
@@ -38,12 +39,31 @@ interface Props {
   defaultTab?: string;
   id?: string;
   system?: string;
+  /** Defer named-slot/article content for inactive tabs until selected. */
+  deferInactive?: boolean;
+  /** Base path for static fragments used by deferred tabs. */
+  deferredContentBase?: string;
+  /** Slugs with a corresponding static fragment route. */
+  deferredTabs?: string[];
+  /** Entry ids emitted into deferred templates for hash-to-tab resolution. */
+  deferredAnchorTabs?: Record<string, string[]>;
   /** Required when any tab provides `items` (rendered via EntryCardList) */
   tagMap?: Map<string, TagEntry>;
   bookMetaMap?: Map<string, BookMeta>;
 }
 
-const { tabs, defaultTab, id = "tab-container", system = 'power', tagMap, bookMetaMap } = Astro.props;
+const {
+  tabs,
+  defaultTab,
+  id = "tab-container",
+  system = 'power',
+  deferInactive = false,
+  deferredContentBase,
+  deferredTabs,
+  deferredAnchorTabs,
+  tagMap,
+  bookMetaMap,
+} = Astro.props;
 const initialTab = defaultTab || tabs[0].slug;
 
 function decodeHtmlEntities(text: string): string {
@@ -69,6 +89,10 @@ function extractHeadingsFromHtml(html: string): RenderedHeading[] {
   }
 
   return headings;
+}
+
+function collectTocIds(items: TocNode[]): string[] {
+  return items.flatMap((item) => [item.id, ...collectTocIds(item.children)]);
 }
 
 // Pre-render all tabs: article entries plus optional same-named slots.
@@ -107,6 +131,9 @@ const renderedTabs = await Promise.all(
     return { slug: tab.slug, Content, tocItems, slotHtml };
   })
 );
+const initialTabTocIds = new Set(
+  collectTocIds(renderedTabs.find((rendered) => rendered.slug === initialTab)?.tocItems ?? []),
+);
 ---
 
 <!-- fallow-ignore-next-line complexity -->
@@ -135,6 +162,16 @@ const renderedTabs = await Promise.all(
       const Content = rendered?.Content;
       const tocItems = rendered?.tocItems || [];
       const slotHtml = rendered?.slotHtml ?? '';
+      const shouldDefer = deferInactive &&
+        (deferredTabs ? deferredTabs.includes(tab.slug) : true) &&
+        tab.slug !== initialTab;
+      const deferredContentUrl = deferredContentBase
+        ? `${deferredContentBase}/${tab.slug}/`
+        : undefined;
+      const deferredAnchorIds = Array.from(new Set([
+        ...collectTocIds(tocItems),
+        ...(deferredAnchorTabs?.[tab.slug] ?? []),
+      ])).filter((anchorId) => !initialTabTocIds.has(anchorId));
 
       return (
         <div
@@ -176,8 +213,30 @@ const renderedTabs = await Promise.all(
               bookMetaMap={bookMetaMap}
             />
           )}
-          {Content && <Content />}
-          {slotHtml && <Fragment set:html={slotHtml} />}
+          {/* fallow-ignore-next-line complexity */}
+          {shouldDefer && deferredContentUrl ? (
+            <>
+              {deferredAnchorIds.map((anchorId) => (
+                <span
+                  id={anchorId}
+                  data-deferred-anchor-id={anchorId}
+                  data-deferred-anchor-tab={tab.slug}
+                  hidden
+                ></span>
+              ))}
+              <template data-tab-content-src={deferredContentUrl}></template>
+            </>
+          ) : shouldDefer && (Content || slotHtml) ? (
+            <template data-tab-content={tab.slug}>
+              {Content && <Content />}
+              {slotHtml && <Fragment set:html={slotHtml} />}
+            </template>
+          ) : (
+            <>
+              {Content && <Content />}
+              {slotHtml && <Fragment set:html={slotHtml} />}
+            </>
+          )}
         </div>
       );
     })}
@@ -245,10 +304,32 @@ const renderedTabs = await Promise.all(
       var activeSlug = hash || container.getAttribute('data-initial-tab');
       if (!activeSlug) continue;
 
+      var targetTab = null;
+      var targetPanel = null;
       if (hash) {
-        var targetTab = container.querySelector('.tab[data-tab="' + hash + '"]');
-        var targetPanel = container.querySelector('.tab-panel[data-tab-panel="' + hash + '"]');
+        targetTab = container.querySelector('.tab[data-tab="' + hash + '"]');
+        targetPanel = container.querySelector('.tab-panel[data-tab-panel="' + hash + '"]');
+        if (!targetTab || !targetPanel) {
+          var deferredAnchors = container.querySelectorAll('[data-deferred-anchor-id]');
+          for (var anchorIndex = 0; anchorIndex < deferredAnchors.length; anchorIndex++) {
+            var deferredAnchor = deferredAnchors[anchorIndex];
+            if (deferredAnchor.getAttribute('data-deferred-anchor-id') !== hash) continue;
+            var deferredTabSlug = deferredAnchor.getAttribute('data-deferred-anchor-tab');
+            if (!deferredTabSlug) continue;
+            targetTab = container.querySelector('.tab[data-tab="' + deferredTabSlug + '"]');
+            targetPanel = container.querySelector('.tab-panel[data-tab-panel="' + deferredTabSlug + '"]');
+            activeSlug = deferredTabSlug;
+            break;
+          }
+        } else {
+          activeSlug = hash;
+        }
         if (targetTab && targetPanel) {
+          var contentTemplate = targetPanel.querySelector('template[data-tab-content]');
+          if (contentTemplate && !contentTemplate.dataset.tabContentSrc) {
+            targetPanel.appendChild(contentTemplate.content.cloneNode(true));
+            contentTemplate.remove();
+          }
           var activeTab = container.querySelector('.tab.active');
           var activePanel = container.querySelector('.tab-panel.active');
           if (activeTab) {
@@ -291,23 +372,79 @@ const renderedTabs = await Promise.all(
 
 <script>
     let cleanupTabsPage = () => {};
+    let initializedContainers: HTMLElement[] = [];
+    let activeTabsController: AbortController | null = null;
 
     document.addEventListener('astro:before-swap', () => {
       cleanupTabsPage();
       cleanupTabsPage = () => {};
+      initializedContainers = [];
+      activeTabsController = null;
     });
 
   function initTabs(
     container: HTMLElement,
     signal: AbortSignal,
     animationFrames: number[],
+    timers: ReturnType<typeof setTimeout>[],
   ) {
     const tabs = container.querySelectorAll<HTMLButtonElement>('.tab');
     const panels = container.querySelectorAll<HTMLElement>('.tab-panel');
 
     const sidebar = document.getElementById('article-sidebar');
+    let hash = window.location.hash.slice(1);
+    const contentLoads = new WeakMap<HTMLElement, Promise<void>>();
 
-    function switchTab(slug: string, updateHash = true) {
+    function hydrateTabContent(targetPanel: HTMLElement): Promise<void> {
+      const existingLoad = contentLoads.get(targetPanel);
+      if (existingLoad) return existingLoad;
+
+      const contentTemplate = targetPanel.querySelector<HTMLTemplateElement>('template[data-tab-content], template[data-tab-content-src]');
+      if (!contentTemplate) return Promise.resolve();
+
+      const source = contentTemplate.dataset.tabContentSrc;
+      if (!source) {
+        targetPanel.appendChild(contentTemplate.content.cloneNode(true));
+        contentTemplate.remove();
+        return Promise.resolve();
+      }
+
+      const load = fetch(source)
+        .then(async (response) => {
+          if (!response.ok) {
+            throw new Error(`Tab content request failed: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then((html) => {
+          if (signal.aborted) return;
+          const fragment = document.createRange().createContextualFragment(html);
+          targetPanel.appendChild(fragment);
+          targetPanel.querySelectorAll<HTMLElement>('[data-deferred-anchor-id]').forEach((anchor) => anchor.remove());
+          contentTemplate.remove();
+        })
+        .catch((error) => {
+          contentLoads.delete(targetPanel);
+          throw error;
+        });
+      contentLoads.set(targetPanel, load);
+      return load;
+    }
+
+    async function switchTab(slug: string, updateHash = true) {
+      const targetPanel = container.querySelector<HTMLElement>(`[data-tab-panel="${slug}"]`);
+      if (targetPanel) {
+        try {
+          await hydrateTabContent(targetPanel);
+        } catch (error) {
+          console.error(`Unable to load tab content for ${slug}`, error);
+          return;
+        }
+      }
+      if (signal.aborted) {
+        return;
+      }
+
       tabs.forEach(tab => {
         const isActive = tab.dataset.tab === slug;
         tab.classList.toggle('active', isActive);
@@ -349,6 +486,14 @@ const renderedTabs = await Promise.all(
         contentArea.classList.toggle('builder-active', isBuilder);
       }
 
+      if (targetPanel) {
+        document.dispatchEvent(new CustomEvent('tab-content:loaded', { detail: { slug } }));
+      }
+
+      if (!updateHash && hash && hash !== slug) {
+        document.getElementById(hash)?.scrollIntoView({ block: 'start' });
+      }
+
       if (updateHash) {
         const url = new URL(window.location.href);
         url.hash = slug;
@@ -359,7 +504,7 @@ const renderedTabs = await Promise.all(
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const slug = tab.dataset.tab;
-        if (slug) switchTab(slug);
+        if (slug) void switchTab(slug);
       }, { signal });
       tab.addEventListener('keydown', (event) => {
         const key = event.key;
@@ -376,7 +521,7 @@ const renderedTabs = await Promise.all(
         const nextTab = orderedTabs[nextIndex];
         const slug = nextTab?.dataset.tab;
         if (nextTab && slug) {
-          switchTab(slug);
+          void switchTab(slug);
           nextTab.focus();
         }
       }, { signal });
@@ -396,33 +541,66 @@ const renderedTabs = await Promise.all(
       applyFilter();
     });
 
-    const hash = window.location.hash.slice(1);
     const initial = container.dataset.initialTab;
 
     // Use requestAnimationFrame so articleTocClient's module-level code
     // (which registers reinitArticleToc) has executed before we call it
-    animationFrames.push(requestAnimationFrame(() => {
+    let initialTabActivated = false;
+    const activateInitialTab = () => {
+      if (initialTabActivated || signal.aborted) return;
+      initialTabActivated = true;
       if (signal.aborted) return;
-      if (hash && Array.from(tabs).some(t => t.dataset.tab === hash)) {
-        switchTab(hash, false);
+      // Astro can finish restoring a URL fragment after page-load listeners
+      // begin. Read it here so direct loads and View Transition navigations
+      // resolve the same deferred tab.
+      hash = window.location.hash.slice(1);
+      const hashTab = hash && Array.from(tabs).some((tab) => tab.dataset.tab === hash)
+        ? hash
+        : Array.from(container.querySelectorAll<HTMLElement>('[data-deferred-anchor-id]'))
+            .find((anchor) => anchor.dataset.deferredAnchorId === hash)
+            ?.dataset.deferredAnchorTab;
+      if (hashTab) {
+        void switchTab(hashTab, false);
       } else if (initial) {
-        switchTab(initial, false);
+        void switchTab(initial, false);
       }
-    }));
+    };
+    animationFrames.push(requestAnimationFrame(activateInitialTab));
+    // Background tabs may pause animation frames; keep initial hydration
+    // deterministic without making visibility a prerequisite.
+    timers.push(setTimeout(activateInitialTab, 0));
     }
 
-    document.addEventListener('astro:page-load', () => {
+    function initializeTabs() {
+      const containers = Array.from(document.querySelectorAll<HTMLElement>('.tabbed-content'));
+      const alreadyInitialized = activeTabsController && !activeTabsController.signal.aborted &&
+        containers.length === initializedContainers.length &&
+        containers.every((container, index) => container === initializedContainers[index]);
+      if (alreadyInitialized) return;
+
       cleanupTabsPage();
       const controller = new AbortController();
       const animationFrames: number[] = [];
-      document.querySelectorAll<HTMLElement>('.tabbed-content').forEach(container => {
-        initTabs(container, controller.signal, animationFrames);
+      const timers: ReturnType<typeof setTimeout>[] = [];
+      containers.forEach(container => {
+        initTabs(container, controller.signal, animationFrames, timers);
       });
+      initializedContainers = containers;
+      activeTabsController = controller;
       cleanupTabsPage = () => {
         controller.abort();
         animationFrames.forEach(cancelAnimationFrame);
+        timers.forEach(clearTimeout);
+        if (activeTabsController === controller) {
+          initializedContainers = [];
+          activeTabsController = null;
+        }
       };
-    });
+    }
+
+    document.addEventListener('astro:page-load', initializeTabs);
+    document.addEventListener('DOMContentLoaded', initializeTabs, { once: true });
+    if (document.readyState !== 'loading') initializeTabs();
 </script>
 
 <style>

@@ -64,7 +64,6 @@ jobs:
       - name: Set Fallow base ref
         run: echo "FALLOW_AUDIT_BASE=origin/${GITHUB_BASE_REF:-main}" >> "$GITHUB_ENV"
       - run: bun run build
-      - run: ln -sfn . dist/spheres-wiki
       - name: Start preview server
         run: |
           bun run preview -- --host 127.0.0.1 > /tmp/spheres-wiki-preview.log 2>&1 &
