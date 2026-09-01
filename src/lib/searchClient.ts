@@ -7,6 +7,12 @@ import { createTomSelect } from "@/lib/tomSelectInit";
 const PAGE_SIZE = 40;
 const MAX_RESULTS = 500;
 
+function requireSearchElement<T extends HTMLElement>(id: string): T {
+  const element = document.getElementById(id);
+  if (!element) throw new Error(`Missing search element: #${id}`);
+  return element as T;
+}
+
 // Keyed by the Pagefind filter label; derived from the SYSTEMS registry (V53).
 // Champions gets a shortened display label for result cards.
 const SYSTEM_MAP: Record<
@@ -160,9 +166,9 @@ function filtered() {
 // fallow-ignore-next-line complexity
 function renderResults() {
   const results = filtered();
-  const resultsEl = document.getElementById("sp-results")!;
-  const statusEl = document.getElementById("sp-status")!;
-  const loadMoreEl = document.getElementById("sp-load-more")!;
+  const resultsEl = requireSearchElement<HTMLElement>("sp-results");
+  const statusEl = requireSearchElement<HTMLElement>("sp-status");
+  const loadMoreEl = requireSearchElement<HTMLButtonElement>("sp-load-more");
 
   const total = allData.length;
   const filteredTotal = results.length;
@@ -349,8 +355,8 @@ let activeSearchSignal: AbortSignal | null = null;
 async function search(query: string | null, signal?: AbortSignal) {
   const requestSerial = ++searchSerial;
   if (signal?.aborted) return;
-  const statusEl = document.getElementById("sp-status")!;
-  const resultsEl = document.getElementById("sp-results")!;
+  const statusEl = requireSearchElement<HTMLElement>("sp-status");
+  const resultsEl = requireSearchElement<HTMLElement>("sp-results");
   browseAll = query === null;
 
   statusEl.hidden = false;
@@ -358,7 +364,7 @@ async function search(query: string | null, signal?: AbortSignal) {
   statusEl.textContent = browseAll ? "Loading" : "Searching";
   if (!browseAll) {
     resultsEl.innerHTML = "";
-    document.getElementById("sp-load-more")!.hidden = true;
+    requireSearchElement<HTMLElement>("sp-load-more").hidden = true;
   }
 
   if (browseAll) {
@@ -510,7 +516,7 @@ document.addEventListener("astro:page-load", () => {
     { signal },
   );
 
-  document.getElementById("sp-results")!.addEventListener(
+  requireSearchElement<HTMLElement>("sp-results").addEventListener(
     "keydown",
     // fallow-ignore-next-line complexity
     (e) => {

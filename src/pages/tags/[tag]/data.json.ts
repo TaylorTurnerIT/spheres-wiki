@@ -19,8 +19,14 @@ export const GET = async ({ props }: { props: { detail: any } }) => {
 
   // Flatten in the same group order the page renders its head rows; the
   // client skips the first SSR-capped rows and appends the rest.
-  const tail: { g: number; n: string; u: string; s: string; b: string[] }[] =
-    [];
+  const tail: {
+    g: number;
+    n: string;
+    u: string;
+    s: string;
+    sys: string;
+    b: string[];
+  }[] = [];
   detail.groups.forEach((group: any, g: number) => {
     for (const row of group.entries) {
       tail.push({
@@ -28,6 +34,7 @@ export const GET = async ({ props }: { props: { detail: any } }) => {
         n: row.name,
         u: row.href,
         s: row.sphereName,
+        sys: row.system,
         b: row.badges,
       });
     }

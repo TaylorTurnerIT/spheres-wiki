@@ -14,6 +14,7 @@
     "scripts/generate-bestial-traits.mjs",
     "scripts/parse-wiki.test.mjs",
     "scripts/check-idioms.mjs",
+    "scripts/check-assets.mjs",
     "scripts/check-links.mjs",
     "scripts/check-identity-collisions.mjs",
     "scripts/check-content-routes.mjs",
