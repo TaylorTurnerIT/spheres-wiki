@@ -1,5 +1,4 @@
 export const SITE_TITLE = "The Spheres Wiki";
-export const SITE_TAGLINE = "A Quick Reference Site";
 
 export const HEADER_NAV = [
   { label: "About", href: "/about/" },

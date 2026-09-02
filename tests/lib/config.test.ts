@@ -3,7 +3,6 @@ import type { SystemConfig } from "../../src/config/site";
 import {
   ANNOUNCEMENT,
   HEADER_NAV,
-  SITE_TAGLINE,
   SITE_TITLE,
   SYSTEM_DEFAULT,
   SYSTEMS,
@@ -118,11 +117,6 @@ describe("site.ts — core constants", () => {
   it("SITE_TITLE is defined and non-empty", () => {
     expect(SITE_TITLE).toBeTruthy();
     expect(SITE_TITLE.length).toBeGreaterThan(0);
-  });
-
-  it("SITE_TAGLINE is defined and non-empty", () => {
-    expect(SITE_TAGLINE).toBeTruthy();
-    expect(SITE_TAGLINE.length).toBeGreaterThan(0);
   });
 
   it("ANNOUNCEMENT is either a string or null", () => {
