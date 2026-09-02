@@ -1,6 +1,6 @@
 ---
 import { url } from "@/lib/url";
-import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
+import { SITE_TITLE, HEADER_NAV } from '@/config/site';
 ---
 <div class="site-header-wrap">
   <header class="site-header" style="position:relative;">
@@ -10,7 +10,7 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
       </svg>
     </button>
     <a href={url("/")} class="site-title" data-astro-prefetch="hover">
-      <svg class="site-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="49" height="49" aria-hidden="true" focusable="false">
+      <svg class="site-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="40" height="40" aria-hidden="true" focusable="false">
         <defs>
           <clipPath id="hdr-sphere"><circle cx="64" cy="64" r="52"/></clipPath>
           <radialGradient id="hdr-glow" cx="38%" cy="35%" r="62%">
@@ -53,10 +53,7 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
         <circle cx="62" cy="62" r="1.2" fill="#fff" opacity=".8"/>
         <circle cx="64" cy="64" r="52"  fill="url(#hdr-glow)"/>
       </svg>
-      <div class="site-title-text">
-        <span class="name">{SITE_TITLE}</span>
-        <span class="tagline">{SITE_TAGLINE}</span>
-      </div>
+      <span class="name">{SITE_TITLE}</span>
     </a>
     <div class="header-search-anchor">
       <div class="search-bar" id="search-combobox">

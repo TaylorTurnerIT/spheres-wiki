@@ -7,7 +7,7 @@ import RefCard from '@/components/RefCard.astro';
 import ResourceCard from '@/components/ResourceCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
-import { ANNOUNCEMENT, SYSTEMS } from '@/config/site';
+import { SITE_TITLE, SYSTEMS } from '@/config/site';
 import {
   isOfficialPublisher,
   isVisibleThirdParty,
@@ -34,19 +34,15 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
 ---
 <WikiPage title="Home — Spheres of Power Wiki" pagefindIgnore={true}>
 
-  <h1 class="page-title">Home Page</h1>
-  <hr class="page-title-rule" />
-
-  {ANNOUNCEMENT && (
-    <div class="update-banner">
-      <strong>Latest Update:</strong> <Fragment set:html={ANNOUNCEMENT} />
+  <section class="home-hero" aria-labelledby="home-title">
+    <h1 id="home-title" class="home-hero-title">{SITE_TITLE}</h1>
+    <div class="home-hero-about">
+      <SectionHeading label="About the Spheres" id="home-about-title" />
+      <p class="intro-description">
+        The Spheres are a collection of three optional rule systems for the Pathfinder Roleplaying Game, published mainly by Drop Dead Studios and supported by other third-party companies. In these systems, players may choose from a range of martial, magical, and skill spheres, spending Talents to create a uniquely customized character. The Spheres rules are very flexible and allow players to build to an idea, rather than a specific class.
+      </p>
     </div>
-  )}
-
-  <SectionHeading label="About the Spheres" />
-  <p class="intro-description">
-    The Spheres are a collection of three optional rule systems for the Pathfinder Roleplaying Game, published mainly by Drop Dead Studios and supported by other third-party companies. In these systems, players may choose from a range of martial, magical, and skill spheres, spending Talents to create a uniquely customized character. The Spheres rules are very flexible and allow players to build to an idea, rather than a specific class.
-  </p>
+  </section>
 
   <SectionHeading label="New to Spheres? Choose a system to start" />
   <div class="intro-cards">
@@ -54,11 +50,52 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
   </div>
 
   <style>
+    .home-hero {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--sp-8);
+      align-items: center;
+      margin-bottom: var(--sp-7);
+    }
+
+    .home-hero-title {
+      color: var(--clr-brand);
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.05;
+      max-width: 12ch;
+    }
+
+    .home-hero-about {
+      border-left: 1px solid var(--clr-border);
+      padding-left: var(--sp-7);
+    }
+
     .intro-description {
       font-size: var(--fs-md);
       line-height: 1.6;
       color: var(--clr-text);
       margin-bottom: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .home-hero {
+        grid-template-columns: 1fr;
+        gap: var(--sp-5);
+      }
+
+      .home-hero-title {
+        max-width: none;
+      }
+
+      .home-hero-about {
+        border-left: none;
+        border-top: 1px solid var(--clr-border);
+        padding-left: 0;
+        padding-top: var(--sp-5);
+      }
     }
   </style>
 

@@ -191,7 +191,7 @@ Base: background `--clr-bg`, border `0.5px solid --clr-border`, radius `--radius
 
 ### Inputs
 **Search bar (`.search-bar`)**
-- Background `--clr-surface`; border `0.5px solid rgba(0,0,0,.4)`; radius 4px; height 32px; padding 6px 12px
+- Background `--clr-surface`; border `0.5px solid rgba(0,0,0,.4)`; radius 4px; height `3rem` (48px); padding 6px 12px
 - `:focus-within`: `outline: 2px solid var(--clr-brand); outline-offset: 1px`
 - Inner `input`: borderless, Body `--fs-sm`, color `--clr-muted`
 
@@ -233,7 +233,7 @@ Base: background `--clr-bg`, border `0.5px solid --clr-border`, radius `--radius
 | `--sidebar-w` | 210px | Left sidebar |
 | `--rail-w` | 180px | Right rail / inner rail |
 
-Shell: `.site-header` (72px tall) → `.layout` (flex: sidebar + main) → `.content-area` (raised `--clr-surface` panel, tab-joined corner radius `0 4px 4px 4px`). Inner pages add a sticky right rail (TOC) collapsing at 1024px.
+Shell: `.site-header` (`3.5rem` / 56px tall) → `.layout` (flex: sidebar + main) → `.content-area` (raised `--clr-surface` panel, tab-joined corner radius `0 4px 4px 4px`). Inner pages add a sticky right rail (TOC) collapsing at 1024px.
 
 ### Border Radius
 | Token / value | Usage |
