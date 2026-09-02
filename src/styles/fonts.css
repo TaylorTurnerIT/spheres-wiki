@@ -1,20 +1,17 @@
 /* ── Font faces + display policy (sole declaration home) ── */
 /*
- * Replaces the @fontsource css imports. Fontsource ships @font-face rules
- * with font-display: block; when a webfont arrives after first paint the
- * text swaps in and reflows the header/tab layout — CI's Lighthouse perf
- * budget measured CLS ~0.27 on that swap (budget 0.1). Declaring the faces
- * here with font-display: optional removes the swap entirely: the webfont
- * is used only when it is ready at first paint; otherwise the fallback
- * serif renders for that page load (fast loads + repeat visits still get
- * the real fonts). size-adjust values are fontsource's own, so fallback
- * metrics stay matched.
+ * Keep the webfonts blocking until the intended face is available. This is
+ * the behavior used before the Lighthouse CLS experiment changed these
+ * declarations to font-display: optional. Base.astro preloads the Latin
+ * faces used by the site, while extended ranges load on demand. The
+ * size-adjust values are fontsource's own, so metrics stay matched during
+ * the block period.
  */
 /* ── Cinzel (display) ── */
 @font-face {
   font-family: "Cinzel";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 400;
   size-adjust: 92%;
   src: url("@fontsource/cinzel/files/cinzel-latin-400-normal.woff2")
@@ -25,7 +22,7 @@
 @font-face {
   font-family: "Cinzel";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 400;
   src: url("@fontsource/cinzel/files/cinzel-latin-ext-400-normal.woff2")
     format("woff2");
@@ -35,7 +32,7 @@
 @font-face {
   font-family: "Cinzel";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 600;
   src: url("@fontsource/cinzel/files/cinzel-latin-600-normal.woff2")
     format("woff2");
@@ -45,7 +42,7 @@
 @font-face {
   font-family: "Cinzel";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 600;
   src: url("@fontsource/cinzel/files/cinzel-latin-ext-600-normal.woff2")
     format("woff2");
@@ -55,7 +52,7 @@
 @font-face {
   font-family: "Cinzel";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 700;
   src: url("@fontsource/cinzel/files/cinzel-latin-700-normal.woff2")
     format("woff2");
@@ -65,7 +62,7 @@
 @font-face {
   font-family: "Cinzel";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 700;
   src: url("@fontsource/cinzel/files/cinzel-latin-ext-700-normal.woff2")
     format("woff2");
@@ -77,7 +74,7 @@
 @font-face {
   font-family: "Crimson Text";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 400;
   src: url("@fontsource/crimson-text/files/crimson-text-latin-400-normal.woff2")
     format("woff2");
@@ -87,7 +84,7 @@
 @font-face {
   font-family: "Crimson Text";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 400;
   src: url("@fontsource/crimson-text/files/crimson-text-latin-ext-400-normal.woff2")
     format("woff2");
@@ -97,7 +94,7 @@
 @font-face {
   font-family: "Crimson Text";
   font-style: italic;
-  font-display: optional;
+  font-display: block;
   font-weight: 400;
   src: url("@fontsource/crimson-text/files/crimson-text-latin-400-italic.woff2")
     format("woff2");
@@ -107,7 +104,7 @@
 @font-face {
   font-family: "Crimson Text";
   font-style: italic;
-  font-display: optional;
+  font-display: block;
   font-weight: 400;
   src: url("@fontsource/crimson-text/files/crimson-text-latin-ext-400-italic.woff2")
     format("woff2");
@@ -117,7 +114,7 @@
 @font-face {
   font-family: "Crimson Text";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 600;
   src: url("@fontsource/crimson-text/files/crimson-text-latin-600-normal.woff2")
     format("woff2");
@@ -127,7 +124,7 @@
 @font-face {
   font-family: "Crimson Text";
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   font-weight: 600;
   src: url("@fontsource/crimson-text/files/crimson-text-latin-ext-600-normal.woff2")
     format("woff2");
@@ -137,7 +134,7 @@
 @font-face {
   font-family: "Crimson Text";
   font-style: italic;
-  font-display: optional;
+  font-display: block;
   font-weight: 600;
   src: url("@fontsource/crimson-text/files/crimson-text-latin-600-italic.woff2")
     format("woff2");
@@ -147,7 +144,7 @@
 @font-face {
   font-family: "Crimson Text";
   font-style: italic;
-  font-display: optional;
+  font-display: block;
   font-weight: 600;
   src: url("@fontsource/crimson-text/files/crimson-text-latin-ext-600-italic.woff2")
     format("woff2");
