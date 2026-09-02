@@ -226,7 +226,7 @@ a:hover {
   display: flex;
   align-items: center;
   padding: 0 var(--sp-6);
-  height: 72px;
+  height: 3.5rem;
   max-width: var(--max-w);
   margin: 0 auto;
   position: relative;
@@ -349,23 +349,6 @@ a:hover {
   .inner-rail {
     width: 140px;
   }
-  .hamburger {
-    display: flex;
-    align-items: center;
-    margin-right: var(--sp-3);
-  }
-  .sidebar-close {
-    display: block;
-  }
-  .intro-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .ref-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .resources-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 768px) {
@@ -385,42 +368,6 @@ a:hover {
   .tab {
     font-size: var(--fs-2xs);
     padding: 4px 8px;
-  }
-  .intro-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .ref-grid {
-    grid-template-columns: 1fr;
-  }
-  .resources-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .home-store-body {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .home-store-item {
-    padding: 0;
-  }
-  .home-store-divider {
-    width: 100%;
-    height: 0;
-    border-left: none;
-    border-top: 0.5px solid var(--clr-border);
-    margin: 0;
-    align-self: auto;
-  }
-  .home-store-core-row {
-    flex-wrap: wrap;
-  }
-  .header-nav {
-    display: none;
-  }
-  .page-title-rule {
-    width: 100%;
-  }
-  .header-search-anchor {
-    display: none;
   }
 }
 
@@ -628,8 +575,8 @@ a:hover {
   text-decoration: none;
 }
 .site-logo-svg {
-  width: 49px;
-  height: 49px;
+  width: 2.5rem;
+  height: 2.5rem;
   flex-shrink: 0;
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -678,16 +625,6 @@ a:hover {
   display: block;
   white-space: nowrap;
 }
-.site-title .tagline {
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.45);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  display: block;
-  margin-top: 2px;
-}
 .header-search-anchor {
   position: absolute;
   left: 50%;
@@ -703,7 +640,7 @@ a:hover {
   border: 0.5px solid rgba(0, 0, 0, 0.4);
   border-radius: var(--radius);
   padding: 6px 12px;
-  height: 32px;
+  height: 3rem;
   width: 100%;
   pointer-events: all;
 }
@@ -812,7 +749,7 @@ a:hover {
 /* ── Search Results Dropdown ────────────────────────────── */
 .search-results-dropdown {
   position: absolute;
-  top: 40px;
+  top: calc(100% + 8px);
   left: 0;
   width: 100%;
   background: var(--clr-surface);
@@ -991,6 +928,26 @@ a.sidebar-heading:hover {
   float: right;
   padding: 4px;
   color: var(--clr-muted);
+}
+
+/* ── Mobile chrome visibility ───────────────────────────── */
+/* Must sit after the base rules it overrides: a same-specificity
+   rule later in the file beats one inside a media query. */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+    align-items: center;
+    margin-right: var(--sp-3);
+  }
+  .sidebar-close {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .header-nav,
+  .header-search-anchor {
+    display: none;
+  }
 }
 
 /* ── Page title ─────────────────────────────────────────── */
@@ -2724,4 +2681,46 @@ h6 {
 /* ── FOUC guard for TomSelect enhanced select elements ────── */
 select.ts-hidden-select {
   display: none;
+}
+
+/* ── Responsive grid overrides ──────────────────────────── */
+/* Must sit after every base rule they override: a same-specificity
+   rule later in the file beats one inside a media query, so these
+   were dead when defined near the layout section. */
+@media (max-width: 1024px) {
+  .intro-cards,
+  .ref-grid,
+  .resources-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .intro-cards,
+  .resources-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ref-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-group-label {
+    white-space: normal;
+  }
+  .home-store-body {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .home-store-item {
+    padding: 0;
+  }
+  .home-store-divider {
+    width: 100%;
+    height: 0;
+    border-left: none;
+    border-top: 0.5px solid var(--clr-border);
+    margin: 0;
+    align-self: auto;
+  }
+  .home-store-core-row {
+    flex-wrap: wrap;
+  }
 }
