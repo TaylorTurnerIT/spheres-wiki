@@ -218,7 +218,8 @@ a:hover {
 .site-header-wrap {
   background: var(--clr-bg);
   border-bottom: 1px solid var(--clr-border);
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 50; /* above page hover content (max 10); tooltip at 10000 sits above this */
 }
 
@@ -226,7 +227,7 @@ a:hover {
   display: flex;
   align-items: center;
   padding: 0 var(--sp-6);
-  height: 72px;
+  height: 3.5rem;
   max-width: var(--max-w);
   margin: 0 auto;
   position: relative;
@@ -620,7 +621,7 @@ a:hover {
 .site-title {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex: 0 0 auto;
   padding-right: 12px;
 }
@@ -628,8 +629,8 @@ a:hover {
   text-decoration: none;
 }
 .site-logo-svg {
-  width: 49px;
-  height: 49px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -671,22 +672,12 @@ a:hover {
 }
 .site-title .name {
   font-family: var(--font-display);
-  font-size: var(--fs-xl);
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--clr-brand);
   letter-spacing: 0.02em;
   display: block;
   white-space: nowrap;
-}
-.site-title .tagline {
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.45);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  display: block;
-  margin-top: 2px;
 }
 .header-search-anchor {
   position: absolute;
@@ -694,6 +685,18 @@ a:hover {
   transform: translateX(-50%);
   width: clamp(200px, 38%, 580px);
   pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+.header-search-anchor.header-search--fade {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.header-search-anchor.header-search--fade.is-scrolled-in {
+  opacity: 1;
+  visibility: visible;
 }
 .search-bar {
   display: flex;
@@ -761,10 +764,10 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 28px;
+  gap: 24px;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: var(--fs-md);
+  font-size: var(--fs-base);
 }
 .header-nav a {
   color: var(--clr-brand);
@@ -2015,8 +2018,8 @@ h6 {
   align-items: start;
   align-self: stretch;
   position: sticky;
-  top: 16px;
-  max-height: calc(100vh - 32px);
+  top: calc(3.5rem + 16px);
+  max-height: calc(100vh - 3.5rem - 32px);
   overflow-y: auto;
 }
 @media (max-width: 1024px) {
@@ -2543,7 +2546,7 @@ h6 {
   overflow: hidden;
   background: var(--clr-bg);
   position: sticky;
-  top: 16px;
+  top: calc(3.5rem + 16px);
 }
 .quick-links-group {
   padding: 12px 14px 10px;
@@ -2652,8 +2655,8 @@ h6 {
   width: var(--rail-w);
   flex-shrink: 0;
   position: sticky;
-  top: 1rem;
-  max-height: calc(100vh - 2rem);
+  top: calc(3.5rem + 1rem);
+  max-height: calc(100vh - 3.5rem - 2rem);
   overflow-y: auto;
 }
 
