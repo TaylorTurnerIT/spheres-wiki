@@ -1,14 +1,8 @@
 ---
 import { url } from "@/lib/url";
-import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
+import { SITE_TITLE, HEADER_NAV } from '@/config/site';
 
-const classImages = import.meta.glob<{ default: ImageMetadata }>('../assets/class-images/*.png', { eager: true });
-const classImageMap: Record<string, string> = Object.fromEntries(
-  Object.entries(classImages).map(([p, mod]) => [
-    p.split('/').pop()!.split('.')[0],
-    mod.default.src
-  ])
-);
+const isHome = Astro.url.pathname === url('/') || Astro.url.pathname === '/';
 ---
 <div class="site-header-wrap">
   <header class="site-header" style="position:relative;">
@@ -18,7 +12,7 @@ const classImageMap: Record<string, string> = Object.fromEntries(
       </svg>
     </button>
     <a href={url("/")} class="site-title" data-astro-prefetch="hover">
-      <svg class="site-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="49" height="49" aria-hidden="true" focusable="false">
+      <svg class="site-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="36" height="36" aria-hidden="true" focusable="false">
         <defs>
           <clipPath id="hdr-sphere"><circle cx="64" cy="64" r="52"/></clipPath>
           <radialGradient id="hdr-glow" cx="38%" cy="35%" r="62%">
@@ -63,11 +57,10 @@ const classImageMap: Record<string, string> = Object.fromEntries(
       </svg>
       <div class="site-title-text">
         <span class="name">{SITE_TITLE}</span>
-        <span class="tagline">{SITE_TAGLINE}</span>
       </div>
     </a>
-    <div class="header-search-anchor">
-      <div class="search-bar" id="search-combobox" data-class-images={JSON.stringify(classImageMap)}>
+    <div class:list={['header-search-anchor', { 'header-search--fade': isHome }]}>
+      <div class="search-bar" id="search-combobox">
         <button class="search-icon-btn" id="search-icon-btn" aria-label="Open full search" tabindex="-1">
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="7"/>
@@ -99,46 +92,9 @@ const classImageMap: Record<string, string> = Object.fromEntries(
 </div>
 
 <script>
-  import {
-    detectEntryType,
-    groupSearchResults,
-    renderResultsPanel,
-    type HeaderSearchItem,
-  } from "@/lib/headerSearchClient";
+  import { attachQuickSearch, attachGlobalSearchShortcut } from "@/lib/quickSearch";
 
-  let pagefind: any;
-  let browseManifest: any[] = [];
-  let browseManifestPromise: Promise<void> | null = null;
   let cleanupHeaderPage = () => {};
-  let searchSerial = 0;
-
-  async function loadBrowseManifest() {
-    if (browseManifest.length > 0) return;
-    if (!browseManifestPromise) {
-      browseManifestPromise = fetch(`${import.meta.env.BASE_URL}search/data.json`)
-        .then((r) => r.json())
-        .then((entries: any[]) => {
-          browseManifest = entries;
-        })
-        .catch(() => {});
-    }
-    await browseManifestPromise;
-  }
-
-  async function initPagefind() {
-    if (pagefind) return;
-    try {
-      const path = `${import.meta.env.BASE_URL}pagefind/pagefind.js`;
-      // @ts-ignore
-      pagefind = await import(/* @vite-ignore */ path);
-      await pagefind.options({
-        excerptLength: 20,
-      });
-      await pagefind.init();
-    } catch {
-      await loadBrowseManifest();
-    }
-  }
 
   document.addEventListener("astro:before-swap", () => {
     cleanupHeaderPage();
@@ -149,254 +105,19 @@ const classImageMap: Record<string, string> = Object.fromEntries(
     cleanupHeaderPage();
     const searchInput = document.getElementById("page-search") as HTMLInputElement | null;
     const resultsDiv = document.getElementById("search-results") as HTMLElement | null;
-    const combobox = document.getElementById("search-combobox") as HTMLElement | null;
     const searchIconBtn = document.getElementById("search-icon-btn") as HTMLButtonElement | null;
+
+    if (!searchInput || !resultsDiv) return;
+
     const controller = new AbortController();
-    const { signal } = controller;
+    cleanupHeaderPage = () => controller.abort();
 
-    if (!searchInput || !resultsDiv || !combobox) {
-      cleanupHeaderPage = () => controller.abort();
-      return;
-    }
-
-    let classImageMap: Record<string, string> = {};
-    try {
-      classImageMap = JSON.parse(combobox.dataset.classImages || "{}");
-    } catch {}
-
-    let selectedIndex = -1;
-    let totalItems = 0;
-
-    function setExpanded(expanded: boolean) {
-      searchInput?.setAttribute("aria-expanded", String(expanded));
-      if (resultsDiv) resultsDiv.hidden = !expanded;
-      if (!expanded) {
-        selectedIndex = -1;
-      }
-    }
-
-    function updateSelection(idx: number) {
-      const items = [...resultsDiv!.querySelectorAll<HTMLAnchorElement>(".search-panel-item")];
-      totalItems = items.length;
-      if (totalItems === 0) {
-        selectedIndex = -1;
-        return;
-      }
-      if (idx < 0) idx = 0;
-      if (idx >= totalItems) idx = totalItems - 1;
-      selectedIndex = idx;
-
-      items.forEach((item, i) => {
-        const isSelected = i === selectedIndex;
-        item.classList.toggle("is-selected", isSelected);
-        item.setAttribute("aria-selected", String(isSelected));
-        if (isSelected) {
-          item.scrollIntoView({ block: "nearest" });
-        }
-      });
-    }
-
-    // Global / shortcut to focus search
-    function handleGlobalSlash(e: KeyboardEvent) {
-      if (e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey) {
-        const activeEl = document.activeElement as HTMLElement | null;
-        if (
-          activeEl &&
-          (activeEl.tagName === "INPUT" ||
-            activeEl.tagName === "TEXTAREA" ||
-            activeEl.isContentEditable)
-        ) {
-          return;
-        }
-        e.preventDefault();
-        searchInput!.focus();
-        searchInput!.select();
-      }
-    }
-    window.addEventListener("keydown", handleGlobalSlash, { signal });
-
-    searchIconBtn?.addEventListener(
-      "click",
-      () => {
-        const q = searchInput.value.trim();
-        window.location.href =
-          q.length >= 2
-            ? `${import.meta.env.BASE_URL}search/?q=${encodeURIComponent(q)}`
-            : `${import.meta.env.BASE_URL}search/`;
-      },
-      { signal },
-    );
-
-    searchInput.addEventListener(
-      "focus",
-      () => {
-        void initPagefind();
-        void loadBrowseManifest();
-        if (searchInput.value.trim().length >= 2) {
-          setExpanded(true);
-        }
-      },
-      { signal },
-    );
-
-    searchInput.addEventListener(
-      "keydown",
-      (e) => {
-        if (e.key === "Escape") {
-          setExpanded(false);
-          return;
-        }
-        if (e.key === "ArrowDown") {
-          e.preventDefault();
-          if (resultsDiv.hidden) {
-            setExpanded(true);
-          } else {
-            updateSelection(selectedIndex + 1);
-          }
-          return;
-        }
-        if (e.key === "ArrowUp") {
-          e.preventDefault();
-          if (!resultsDiv.hidden) {
-            updateSelection(selectedIndex - 1);
-          }
-          return;
-        }
-        if (e.key === "Enter") {
-          e.preventDefault();
-          const items = [...resultsDiv.querySelectorAll<HTMLAnchorElement>(".search-panel-item")];
-          if (selectedIndex >= 0 && items[selectedIndex]) {
-            window.location.href = items[selectedIndex].href;
-            return;
-          }
-          const q = searchInput.value.trim();
-          if (q.length >= 2) {
-            window.location.href = `${import.meta.env.BASE_URL}search/?q=${encodeURIComponent(q)}`;
-          }
-        }
-      },
-      { signal },
-    );
-
-    searchInput.addEventListener(
-      "input",
-      async (e) => {
-        const query = (e.target as HTMLInputElement).value.trim();
-        const serial = ++searchSerial;
-        if (query.length < 2) {
-          setExpanded(false);
-          return;
-        }
-
-        await Promise.all([initPagefind(), loadBrowseManifest()]);
-        if (signal.aborted || serial !== searchSerial) return;
-
-        const searchItems: HeaderSearchItem[] = [];
-        const seenUrls = new Set<string>();
-
-        if (browseManifest.length > 0) {
-          const qLower = query.toLowerCase();
-          for (const entry of browseManifest) {
-            const t = (entry.title || "").toLowerCase();
-            const sp = (entry.sphere || "").toLowerCase();
-            const sub = (entry.subtitle || "").toLowerCase();
-            const tags = (entry.tags || "").toLowerCase();
-            if (
-              t.includes(qLower) ||
-              sp.includes(qLower) ||
-              sub.includes(qLower) ||
-              tags.includes(qLower)
-            ) {
-              searchItems.push({
-                url: entry.url,
-                title: entry.title,
-                type: entry.type,
-                sphere: entry.sphere,
-                system: entry.system,
-                icon: entry.icon,
-                talentCount: entry.talentCount,
-                subtitle: entry.subtitle,
-              });
-              seenUrls.add(entry.url);
-            }
-          }
-        }
-
-        if (pagefind) {
-          try {
-            const search = await pagefind.search(query);
-            if (!signal.aborted && serial === searchSerial) {
-              const top = search.results.slice(0, 20);
-              const rawData = await Promise.all(top.map((r: any) => r.data()));
-              if (!signal.aborted && serial === searchSerial) {
-                for (const r of rawData) {
-                  if (r.url.endsWith("#overview") || seenUrls.has(r.url)) continue;
-                  const type = detectEntryType(r.meta?.type, r.url);
-                  const tags = r.meta?.tags
-                    ? r.meta.tags.split(",").map((t: string) => t.trim()).filter(Boolean)
-                    : [];
-                  searchItems.push({
-                    url: r.url,
-                    title: r.meta?.title || "Untitled",
-                    type,
-                    sphere: r.meta?.sphere,
-                    system: r.meta?.system,
-                    tier: r.meta?.tier,
-                    tags,
-                    icon: r.meta?.icon,
-                    talentCount: r.meta?.talentCount ? parseInt(r.meta.talentCount, 10) : undefined,
-                    subtitle: r.meta?.subtitle,
-                  });
-                  seenUrls.add(r.url);
-                }
-              }
-            }
-          } catch {}
-        }
-
-        const groups = groupSearchResults(searchItems, query);
-        const { html, totalRendered } = renderResultsPanel(groups, classImageMap, query);
-
-        resultsDiv.innerHTML = html;
-        totalItems = totalRendered;
-        selectedIndex = totalRendered > 0 ? 0 : -1;
-        setExpanded(true);
-      },
-      { signal },
-    );
-
-    // Mouse selection tracking
-    resultsDiv.addEventListener(
-      "mousemove",
-      (e) => {
-        const item = (e.target as HTMLElement).closest(".search-panel-item") as HTMLAnchorElement | null;
-        if (!item) return;
-        const idx = parseInt(item.dataset.idx || "-1", 10);
-        if (idx >= 0 && idx !== selectedIndex) {
-          updateSelection(idx);
-        }
-      },
-      { signal },
-    );
-
-    // Close when clicking outside
-    document.addEventListener(
-      "click",
-      (e) => {
-        if (
-          !searchInput.contains(e.target as Node) &&
-          !resultsDiv.contains(e.target as Node)
-        ) {
-          setExpanded(false);
-        }
-      },
-      { signal },
-    );
-
-    cleanupHeaderPage = () => {
-      searchSerial += 1;
-      controller.abort();
-      setExpanded(false);
-    };
+    attachQuickSearch({
+      input: searchInput,
+      resultsDiv,
+      iconBtn: searchIconBtn,
+      signal: controller.signal,
+    });
+    attachGlobalSearchShortcut(controller.signal);
   });
 </script>
