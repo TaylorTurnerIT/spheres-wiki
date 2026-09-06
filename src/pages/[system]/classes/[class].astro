@@ -14,6 +14,7 @@ import ClassInfoBlock from '@/components/ClassInfoBlock.astro';
 import { resolveEntries, getCollEntriesMap } from '@/lib/resolveEntries';
 import { stripBodySource } from '@/lib/renderBody';
 import { getSystemPaths, resolveSystem, getSystemSearchFilter } from '@/lib/systems';
+import { CLASS_SUBTITLES } from '@/lib/searchData';
 import type { ClassEntry, ClassFeatureEntry, ClassTraitEntry, ArchetypeEntry, ArchetypeFeatureEntry, BookMeta, TagEntry } from '@/lib/types';
 import { compareByLevel, ordinal } from '@/lib/levelLabel';
 import {
@@ -305,7 +306,7 @@ const archetypeOptions = archetypes.map(buildArchetypeOption);
     <div class="content-main">
 
       <div class="class-header-row">
-        <PageHeading name={cls.name} system={system} type="type:class" searchFilter={searchFilter} />
+        <PageHeading name={cls.name} system={system} type="type:class" searchFilter={searchFilter} subtitle={CLASS_SUBTITLES[cls.id]} />
         <ArchetypeSwapper
           options={archetypeOptions}
           archetypeFeatures={archetypeFeatures}

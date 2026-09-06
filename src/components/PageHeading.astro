@@ -20,9 +20,13 @@ interface Props {
   weight?: string;
   /** View-transition name */
   transitionName?: string;
+  /** Sphere talent count for search metadata */
+  talentCount?: number;
+  /** Class or page subtitle for search metadata */
+  subtitle?: string;
 }
 
-const { name, system, type, searchFilter, icon, weight = "10", transitionName } = Astro.props;
+const { name, system, type, searchFilter, icon, weight = "10", transitionName, talentCount, subtitle } = Astro.props;
 const sysConfig = resolveSystem(system)!;
 ---
 <span data-pagefind-meta={`title:${name}`} hidden></span>
@@ -39,3 +43,6 @@ const sysConfig = resolveSystem(system)!;
 </h1>
 <span data-pagefind-meta={type} hidden></span>
 {searchFilter && <span data-pagefind-meta={searchFilter} hidden></span>}
+{icon && <span data-pagefind-meta={`icon:${icon}`} hidden></span>}
+{talentCount !== undefined && <span data-pagefind-meta={`talentCount:${talentCount}`} hidden></span>}
+{subtitle && <span data-pagefind-meta={`subtitle:${subtitle}`} hidden></span>}
