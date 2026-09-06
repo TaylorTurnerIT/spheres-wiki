@@ -6,6 +6,7 @@ import {
   getSphereSubtitle,
   getSphereTalentCount,
 } from "@/lib/searchData";
+import { url } from "@/lib/url";
 
 export interface HeaderSearchItem {
   url: string;
@@ -236,11 +237,46 @@ function renderItemIcon(
   return `<span class="search-panel-icon-wrap search-panel-icon-empty" aria-hidden="true"></span>`;
 }
 
+function resolveSystemId(rawSystem?: string): string {
+  if (!rawSystem) return "";
+  const s = rawSystem.toLowerCase();
+  if (s.includes("power")) return "power";
+  if (s.includes("might")) return "might";
+  if (s.includes("guile")) return "guile";
+  if (s.includes("champ")) return "champions";
+  return "";
+}
+
+function renderBadges(item: HeaderSearchItem): string {
+  let out = "";
+  if (item.tier) {
+    out += `<span class="search-badge">${escapeHtml(item.tier)}</span>`;
+  }
+  if (item.tags && item.tags.length > 0) {
+    const mainTag =
+      item.tags.find((t) => {
+        const lower = t.toLowerCase();
+        return (
+          lower === "base" ||
+          lower === "advanced" ||
+          lower === "utility" ||
+          lower === "legendary"
+        );
+      }) || item.tags[0];
+    if (mainTag && mainTag.toLowerCase() !== (item.tier || "").toLowerCase()) {
+      const label = mainTag.toLowerCase() === "base" ? "Base Ability" : mainTag;
+      out += `<span class="search-badge">${escapeHtml(label)}</span>`;
+    }
+  }
+  return out;
+}
+
 // fallow-ignore-next-line complexity
 export function renderResultsPanel(
   groups: Map<string, HeaderSearchItem[]>,
   classImageMap: Record<string, string>,
   query: string,
+  totalResultsCount = 0,
 ): { html: string; totalRendered: number } {
   let totalRendered = 0;
   let html = "";
@@ -258,13 +294,19 @@ export function renderResultsPanel(
       const isFirst = idx === 0;
       const subtitle = formatSubtitle(item);
       const iconHtml = renderItemIcon(item, classImageMap);
+      const sysId = resolveSystemId(item.system);
+      const dataSys = sysId ? ` data-system="${escapeHtml(sysId)}"` : "";
+      const badges = renderBadges(item);
 
       html += `
-        <a href="${escapeHtml(item.url)}" class="search-panel-item ${isFirst ? "is-selected" : ""}" role="option" data-idx="${idx}" aria-selected="${isFirst ? "true" : "false"}">
+        <a href="${escapeHtml(item.url)}" class="search-panel-item ${isFirst ? "is-selected" : ""}" role="option" data-idx="${idx}" aria-selected="${isFirst ? "true" : "false"}"${dataSys}>
           ${iconHtml}
           <div class="search-panel-item-text">
             <span class="search-panel-item-title">${escapeHtml(item.title)}</span>
-            <span class="search-panel-item-sub">${escapeHtml(subtitle)}</span>
+            <div class="search-panel-item-sub-row">
+              <span class="search-panel-item-sub">${escapeHtml(subtitle)}</span>
+              ${badges}
+            </div>
           </div>
         </a>
       `;
@@ -277,19 +319,30 @@ export function renderResultsPanel(
     html = `
       <div class="search-panel-empty">No results found for "${escapeHtml(query)}"</div>
       <div class="search-panel-footer">
-        <span class="search-panel-hint">esc close</span>
-        <span class="search-panel-hint">/ to focus</span>
+        <span class="search-panel-see-all-spacer"></span>
+        <div class="search-panel-hints">
+          <span class="search-panel-hint">esc close</span>
+          <span class="search-panel-hint">/ to focus</span>
+        </div>
       </div>
     `;
     return { html, totalRendered: 0 };
   }
 
+  const seeAllLink =
+    totalResultsCount > totalRendered
+      ? `<a href="${url(`search/?q=${encodeURIComponent(query)}`)}" class="search-panel-see-all">See all ${totalResultsCount} results →</a>`
+      : `<span class="search-panel-see-all-spacer"></span>`;
+
   html += `
     <div class="search-panel-footer">
-      <span class="search-panel-hint">↑ ↓ navigate</span>
-      <span class="search-panel-hint">↵ open</span>
-      <span class="search-panel-hint">esc close</span>
-      <span class="search-panel-hint">/ to focus</span>
+      ${seeAllLink}
+      <div class="search-panel-hints">
+        <span class="search-panel-hint">↑ ↓ navigate</span>
+        <span class="search-panel-hint">↵ open</span>
+        <span class="search-panel-hint">esc close</span>
+        <span class="search-panel-hint">/ to focus</span>
+      </div>
     </div>
   `;
 
