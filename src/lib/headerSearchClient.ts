@@ -21,12 +21,12 @@ export interface HeaderSearchItem {
 }
 
 const CATEGORY_CONFIG: Array<{ key: string; label: string; max: number }> = [
-  { key: "sphere", label: "SPHERES", max: 3 },
-  { key: "talent", label: "TALENTS", max: 4 },
-  { key: "feat", label: "FEATS", max: 3 },
-  { key: "class", label: "CLASSES", max: 3 },
-  { key: "archetype", label: "ARCHETYPES", max: 3 },
-  { key: "class-trait", label: "TRAITS", max: 3 },
+  { key: "sphere", label: "SPHERES", max: 2 },
+  { key: "talent", label: "TALENTS", max: 2 },
+  { key: "feat", label: "FEATS", max: 2 },
+  { key: "class", label: "CLASSES", max: 2 },
+  { key: "archetype", label: "ARCHETYPES", max: 2 },
+  { key: "class-trait", label: "TRAITS", max: 2 },
   { key: "article", label: "ARTICLES", max: 2 },
   { key: "other", label: "OTHER", max: 2 },
 ];
@@ -133,15 +133,76 @@ export function formatSubtitle(item: HeaderSearchItem): string {
   return system ? `${system} · ${type}` : type;
 }
 
+// fallow-ignore-next-line complexity
+export function scoreSearchItem(item: HeaderSearchItem, query: string): number {
+  const q = query.trim().toLowerCase();
+  if (!q) return 0;
+  const title = (item.title || "").toLowerCase();
+  const sphere = (item.sphere || "").toLowerCase();
+  const subtitle = (item.subtitle || "").toLowerCase();
+  const type = item.type;
+
+  let score = 0;
+
+  // Title matching
+  if (title === q) {
+    score += 1000;
+  } else if (title.startsWith(q)) {
+    score += 600;
+  } else if (
+    title.includes(` ${q}`) ||
+    title.includes(`(${q}`) ||
+    title.includes(`- ${q}`)
+  ) {
+    score += 400;
+  } else if (title.includes(q)) {
+    score += 200;
+  }
+
+  // Primary entity boosts when matching query prefix
+  if (type === "sphere" && (title === q || title.startsWith(q))) {
+    score += 800;
+  }
+
+  // Associated sphere items (talents/feats in matched sphere)
+  if (sphere && (sphere === q || sphere.startsWith(q))) {
+    score += 350;
+  }
+
+  // Class subtitle association (e.g. "Alteration specialist")
+  if (type === "class") {
+    if (title.startsWith(q)) score += 500;
+    else if (subtitle.toLowerCase().includes(q)) score += 450;
+  }
+
+  // Tag matches
+  if (
+    item.tags?.some(
+      (t) => t.toLowerCase() === q || t.toLowerCase().startsWith(q),
+    )
+  ) {
+    score += 100;
+  }
+
+  return score;
+}
+
 export function groupSearchResults(
   items: HeaderSearchItem[],
+  query = "",
 ): Map<string, HeaderSearchItem[]> {
   const groups = new Map<string, HeaderSearchItem[]>();
   for (const cfg of CATEGORY_CONFIG) {
     groups.set(cfg.key, []);
   }
 
-  for (const item of items) {
+  const sortedItems = query
+    ? [...items].sort(
+        (a, b) => scoreSearchItem(b, query) - scoreSearchItem(a, query),
+      )
+    : items;
+
+  for (const item of sortedItems) {
     const key = CATEGORY_CONFIG.some((c) => c.key === item.type)
       ? item.type
       : "other";

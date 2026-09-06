@@ -231,6 +231,7 @@ const classImageMap: Record<string, string> = Object.fromEntries(
       "focus",
       () => {
         void initPagefind();
+        void loadBrowseManifest();
         if (searchInput.value.trim().length >= 2) {
           setExpanded(true);
         }
@@ -287,60 +288,73 @@ const classImageMap: Record<string, string> = Object.fromEntries(
           return;
         }
 
-        await initPagefind();
+        await Promise.all([initPagefind(), loadBrowseManifest()]);
         if (signal.aborted || serial !== searchSerial) return;
 
-        let searchItems: HeaderSearchItem[] = [];
+        const searchItems: HeaderSearchItem[] = [];
+        const seenUrls = new Set<string>();
 
-        if (pagefind) {
-          const search = await pagefind.search(query);
-          if (signal.aborted || serial !== searchSerial) return;
-          const top = search.results.slice(0, 30);
-          const rawData = await Promise.all(top.map((r: any) => r.data()));
-          if (signal.aborted || serial !== searchSerial) return;
-
-          searchItems = rawData
-            .filter((r: any) => !r.url.endsWith("#overview"))
-            .map((r: any) => {
-              const type = detectEntryType(r.meta?.type, r.url);
-              const tags = r.meta?.tags
-                ? r.meta.tags.split(",").map((t: string) => t.trim()).filter(Boolean)
-                : [];
-              return {
-                url: r.url,
-                title: r.meta?.title || "Untitled",
-                type,
-                sphere: r.meta?.sphere,
-                system: r.meta?.system,
-                tier: r.meta?.tier,
-                tags,
-                icon: r.meta?.icon,
-                talentCount: r.meta?.talentCount ? parseInt(r.meta.talentCount, 10) : undefined,
-                subtitle: r.meta?.subtitle,
-              };
-            });
-        } else if (browseManifest.length > 0) {
+        if (browseManifest.length > 0) {
           const qLower = query.toLowerCase();
-          searchItems = browseManifest
-            .filter((entry) =>
-              (entry.title && entry.title.toLowerCase().includes(qLower)) ||
-              (entry.sphere && entry.sphere.toLowerCase().includes(qLower)) ||
-              (entry.tags && entry.tags.toLowerCase().includes(qLower))
-            )
-            .slice(0, 30)
-            .map((entry) => ({
-              url: entry.url,
-              title: entry.title,
-              type: entry.type,
-              sphere: entry.sphere,
-              system: entry.system,
-              icon: entry.icon,
-              talentCount: entry.talentCount,
-              subtitle: entry.subtitle,
-            }));
+          for (const entry of browseManifest) {
+            const t = (entry.title || "").toLowerCase();
+            const sp = (entry.sphere || "").toLowerCase();
+            const sub = (entry.subtitle || "").toLowerCase();
+            const tags = (entry.tags || "").toLowerCase();
+            if (
+              t.includes(qLower) ||
+              sp.includes(qLower) ||
+              sub.includes(qLower) ||
+              tags.includes(qLower)
+            ) {
+              searchItems.push({
+                url: entry.url,
+                title: entry.title,
+                type: entry.type,
+                sphere: entry.sphere,
+                system: entry.system,
+                icon: entry.icon,
+                talentCount: entry.talentCount,
+                subtitle: entry.subtitle,
+              });
+              seenUrls.add(entry.url);
+            }
+          }
         }
 
-        const groups = groupSearchResults(searchItems);
+        if (pagefind) {
+          try {
+            const search = await pagefind.search(query);
+            if (!signal.aborted && serial === searchSerial) {
+              const top = search.results.slice(0, 20);
+              const rawData = await Promise.all(top.map((r: any) => r.data()));
+              if (!signal.aborted && serial === searchSerial) {
+                for (const r of rawData) {
+                  if (r.url.endsWith("#overview") || seenUrls.has(r.url)) continue;
+                  const type = detectEntryType(r.meta?.type, r.url);
+                  const tags = r.meta?.tags
+                    ? r.meta.tags.split(",").map((t: string) => t.trim()).filter(Boolean)
+                    : [];
+                  searchItems.push({
+                    url: r.url,
+                    title: r.meta?.title || "Untitled",
+                    type,
+                    sphere: r.meta?.sphere,
+                    system: r.meta?.system,
+                    tier: r.meta?.tier,
+                    tags,
+                    icon: r.meta?.icon,
+                    talentCount: r.meta?.talentCount ? parseInt(r.meta.talentCount, 10) : undefined,
+                    subtitle: r.meta?.subtitle,
+                  });
+                  seenUrls.add(r.url);
+                }
+              }
+            }
+          } catch {}
+        }
+
+        const groups = groupSearchResults(searchItems, query);
         const { html, totalRendered } = renderResultsPanel(groups, classImageMap, query);
 
         resultsDiv.innerHTML = html;

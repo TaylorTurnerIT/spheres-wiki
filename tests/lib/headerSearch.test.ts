@@ -6,6 +6,7 @@ import {
   groupSearchResults,
   type HeaderSearchItem,
   renderResultsPanel,
+  scoreSearchItem,
 } from "@/lib/headerSearchClient";
 
 describe("Header Search Client", () => {
@@ -118,6 +119,49 @@ describe("Header Search Client", () => {
     expect(groups.get("talent")?.length).toBe(2);
     expect(groups.get("feat")?.length).toBe(1);
     expect(groups.get("class")?.length).toBe(1);
+  });
+
+  it("scores and ranks items with priority for spheres, title prefixes, and sphere associations", () => {
+    const alterationSphere: HeaderSearchItem = {
+      url: "/power/alteration/",
+      title: "Alteration",
+      type: "sphere",
+    };
+    const alterTalent: HeaderSearchItem = {
+      url: "/power/creation/alter/",
+      title: "Alter",
+      type: "talent",
+      sphere: "Creation",
+    };
+    const sustainingShapeshift: HeaderSearchItem = {
+      url: "/power/alteration/sustaining-shapeshift/",
+      title: "Sustaining Shapeshift",
+      type: "talent",
+      sphere: "Alteration",
+    };
+    const randomItem: HeaderSearchItem = {
+      url: "/power/destruction/fire/",
+      title: "Fire Blast",
+      type: "talent",
+    };
+
+    expect(scoreSearchItem(alterationSphere, "alter")).toBeGreaterThan(
+      scoreSearchItem(sustainingShapeshift, "alter"),
+    );
+    expect(scoreSearchItem(alterTalent, "alter")).toBeGreaterThan(
+      scoreSearchItem(randomItem, "alter"),
+    );
+    expect(scoreSearchItem(randomItem, "alter")).toBe(0);
+
+    const items: HeaderSearchItem[] = [
+      randomItem,
+      alterTalent,
+      alterationSphere,
+      sustainingShapeshift,
+    ];
+    const grouped = groupSearchResults(items, "alter");
+    expect(grouped.get("sphere")?.[0].title).toBe("Alteration");
+    expect(grouped.get("talent")?.[0].title).toBe("Alter");
   });
 
   it("renders the results panel HTML matching the design structure", () => {
