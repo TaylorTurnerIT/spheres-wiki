@@ -1,6 +1,8 @@
 ---
 import { url } from "@/lib/url";
-import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
+import { SITE_TITLE, HEADER_NAV } from '@/config/site';
+
+const isHome = Astro.url.pathname === url('/') || Astro.url.pathname === '/';
 ---
 <div class="site-header-wrap">
   <header class="site-header" style="position:relative;">
@@ -10,7 +12,7 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
       </svg>
     </button>
     <a href={url("/")} class="site-title" data-astro-prefetch="hover">
-      <svg class="site-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="49" height="49" aria-hidden="true" focusable="false">
+      <svg class="site-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="36" height="36" aria-hidden="true" focusable="false">
         <defs>
           <clipPath id="hdr-sphere"><circle cx="64" cy="64" r="52"/></clipPath>
           <radialGradient id="hdr-glow" cx="38%" cy="35%" r="62%">
@@ -55,10 +57,9 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
       </svg>
       <div class="site-title-text">
         <span class="name">{SITE_TITLE}</span>
-        <span class="tagline">{SITE_TAGLINE}</span>
       </div>
     </a>
-    <div class="header-search-anchor">
+    <div class:list={['header-search-anchor', { 'header-search--fade': isHome }]}>
       <div class="search-bar" id="search-combobox">
         <button class="search-icon-btn" id="search-icon-btn" aria-label="Open full search">
           <svg aria-hidden="true" width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l3.5 3.5"/></svg>
@@ -87,24 +88,9 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
 </div>
 
 <script>
-  let pagefind: any;
-  let cleanupHeaderPage = () => {};
-  let searchSerial = 0;
+  import { attachQuickSearch, attachGlobalSearchShortcut } from '@/lib/quickSearch';
 
-  async function initPagefind() {
-    if (pagefind) return;
-    try {
-      const path = "/spheres-wiki/pagefind/pagefind.js";
-      // @ts-ignore
-      pagefind = await import(/* @vite-ignore */ path);
-      await pagefind.options({
-        "excerptLength": 20
-      });
-      await pagefind.init();
-    } catch (e) {
-      console.error("Failed to load pagefind", e);
-    }
-  }
+  let cleanupHeaderPage = () => {};
 
   document.addEventListener('astro:before-swap', () => {
     cleanupHeaderPage();
@@ -113,136 +99,49 @@ import { SITE_TITLE, SITE_TAGLINE, HEADER_NAV } from '@/config/site';
 
   document.addEventListener('astro:page-load', () => {
     cleanupHeaderPage();
-    const searchInput  = document.getElementById('page-search') as HTMLInputElement;
-    const resultsDiv   = document.getElementById('search-results') as HTMLElement | null;
-    const combobox     = searchInput;
     const controller = new AbortController();
     const { signal } = controller;
 
-    if (!searchInput || !resultsDiv) {
-      cleanupHeaderPage = () => controller.abort();
-      return;
-    }
+    attachGlobalSearchShortcut(signal);
 
-    function setExpanded(expanded: boolean) {
-      combobox?.setAttribute('aria-expanded', String(expanded));
-      if (resultsDiv) resultsDiv.hidden = !expanded;
-    }
-
+    const searchInput = document.getElementById('page-search') as HTMLInputElement | null;
+    const resultsDiv = document.getElementById('search-results') as HTMLElement | null;
     const searchIconBtn = document.getElementById('search-icon-btn') as HTMLButtonElement | null;
 
-    searchIconBtn?.addEventListener('click', () => {
-      const q = searchInput?.value.trim() ?? '';
-      window.location.href = q.length >= 2
-        ? `${import.meta.env.BASE_URL}search/?q=${encodeURIComponent(q)}`
-        : `${import.meta.env.BASE_URL}search/`;
-    }, { signal });
+    if (searchInput && resultsDiv) {
+      attachQuickSearch({
+        input: searchInput,
+        resultsDiv,
+        iconBtn: searchIconBtn,
+        signal,
+      });
+    }
 
-    searchInput.addEventListener('focus', initPagefind, { signal });
+    const heroSearch = document.getElementById('hero-search');
+    const headerAnchor = document.querySelector('.header-search-anchor') as HTMLElement | null;
 
-    searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          setExpanded(false);
-          return;
-        }
-        if (e.key === 'Enter') {
-          const q = searchInput.value.trim();
-          if (q.length >= 2) {
-            window.location.href = `${import.meta.env.BASE_URL}search/?q=${encodeURIComponent(q)}`;
+    if (heroSearch && headerAnchor) {
+      headerAnchor.classList.add('header-search--fade');
+
+      const observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            headerAnchor.classList.remove('is-scrolled-in');
+          } else {
+            headerAnchor.classList.add('is-scrolled-in');
           }
-          return;
         }
-        if (e.key === 'ArrowDown') {
-          e.preventDefault();
-          (resultsDiv?.querySelector<HTMLAnchorElement>('.search-result-item'))?.focus();
-        }
-    }, { signal });
+      }, {
+        rootMargin: '-56px 0px 0px 0px',
+        threshold: 0,
+      });
 
-    searchInput.addEventListener('input', async (e) => {
-        const query = (e.target as HTMLInputElement).value;
-        const serial = ++searchSerial;
-        if (query.length < 2) {
-          setExpanded(false);
-          return;
-        }
-
-        await initPagefind();
-        if (signal.aborted || serial !== searchSerial || !pagefind) return;
-        const search = await pagefind.search(query);
-        if (signal.aborted || serial !== searchSerial) return;
-
-        if (search.results.length === 0) {
-          resultsDiv.innerHTML = '<div class="search-no-results">No results found</div>';
-          resultsDiv.hidden = false;
-          return;
-        }
-
-        // Show top 8 results
-        const totalCount = search.results.length;
-        const results = await Promise.all(search.results.slice(0, 8).map((r: any) => r.data()));
-        if (signal.aborted || serial !== searchSerial) return;
-        const q = searchInput.value.trim();
-
-        resultsDiv.innerHTML = results.map(r => {
-          const title = r.meta.title || "Untitled";
-          const sphere = r.meta.sphere;
-          const system = r.meta.system;
-          const type = r.meta.type;
-          const tier = r.meta.tier;
-          const tags = r.meta.tags ? r.meta.tags.split(',').map((t: string) => t.trim()) : [];
-
-          let displayTitle = title;
-          if (sphere && type !== 'sphere') displayTitle += ` — ${sphere}`;
-          if (system) displayTitle += ` — ${system}`;
-
-          return `
-            <a href="${r.url}" class="search-result-item" role="option" data-system="${system || ''}">
-              <div class="search-result-title">${displayTitle}</div>
-              <div class="search-result-meta">
-                ${tier ? `<span class="search-badge">${tier}</span>` : ''}
-                ${tags.map((t: string) => `<span class="search-badge">${t.toLowerCase() === 'base' ? 'Base Ability' : t}</span>`).join('')}
-              </div>
-              <div class="search-result-excerpt">${r.excerpt}</div>
-            </a>
-          `;
-        }).join('') + (totalCount > 8
-          ? `<a href="${import.meta.env.BASE_URL}search/?q=${encodeURIComponent(q)}" class="search-see-all">See all ${totalCount} results →</a>`
-          : '');
-
-        setExpanded(true);
-    }, { signal });
-
-    // Arrow nav within dropdown
-    resultsDiv.addEventListener('keydown', (e) => {
-        const items = [...resultsDiv.querySelectorAll<HTMLAnchorElement>('.search-result-item, .search-see-all')];
-        if (e.key === 'Escape') {
-          setExpanded(false);
-          searchInput.focus();
-          return;
-        }
-        if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
-        if (!items.length) return;
-        e.preventDefault();
-        const idx = items.indexOf(document.activeElement as HTMLAnchorElement);
-        if (e.key === 'ArrowDown') {
-          (items[idx + 1] ?? items[0]).focus();
-        } else {
-          if (idx <= 0) searchInput.focus();
-          else items[idx - 1].focus();
-        }
-    }, { signal });
-
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!searchInput.contains(e.target as Node) && !resultsDiv.contains(e.target as Node)) {
-          setExpanded(false);
-        }
-    }, { signal });
+      observer.observe(heroSearch);
+      signal.addEventListener('abort', () => observer.disconnect());
+    }
 
     cleanupHeaderPage = () => {
-      searchSerial += 1;
       controller.abort();
-      setExpanded(false);
     };
   });
 </script>

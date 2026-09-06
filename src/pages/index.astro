@@ -7,7 +7,7 @@ import RefCard from '@/components/RefCard.astro';
 import ResourceCard from '@/components/ResourceCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
-import { ANNOUNCEMENT, SYSTEMS } from '@/config/site';
+import { SYSTEMS } from '@/config/site';
 import {
   isOfficialPublisher,
   isVisibleThirdParty,
@@ -32,35 +32,40 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
   classes: [...classMap.values()].filter(c => c.system === id),
 }));
 ---
-<WikiPage title="Home — Spheres of Power Wiki" pagefindIgnore={true}>
+<WikiPage title="Home — Spheres Wiki" pagefindIgnore={true}>
 
-  <h1 class="page-title">Home Page</h1>
-  <hr class="page-title-rule" />
-
-  {ANNOUNCEMENT && (
-    <div class="update-banner">
-      <strong>Latest Update:</strong> <Fragment set:html={ANNOUNCEMENT} />
+  <div class="hero-section">
+    <h1 class="hero-title">Spheres Wiki</h1>
+    <div class="hero-search-wrap" id="hero-search">
+      <div class="hero-search-bar" id="hero-search-combobox">
+        <button class="hero-search-icon-btn" id="hero-search-icon-btn" aria-label="Open full search" type="button">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="8.5" cy="8.5" r="5.5"/>
+            <path d="M13 13l3.5 3.5"/>
+          </svg>
+        </button>
+        <input
+          type="search"
+          id="hero-search-input"
+          role="combobox"
+          placeholder="Search spheres, talents, feats, classes…"
+          aria-label="Search spheres, talents, feats, classes"
+          aria-autocomplete="list"
+          aria-controls="hero-search-results"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+        />
+        <kbd class="hero-search-kbd" title="Press / to focus">/</kbd>
+      </div>
+      <div id="hero-search-results" class="search-results-dropdown hero-results-dropdown" role="listbox" aria-label="Search results" aria-live="polite" hidden></div>
     </div>
-  )}
-
-  <SectionHeading label="About the Spheres" />
-  <p class="intro-description">
-    The Spheres are a collection of three optional rule systems for the Pathfinder Roleplaying Game, published mainly by Drop Dead Studios and supported by other third-party companies. In these systems, players may choose from a range of martial, magical, and skill spheres, spending Talents to create a uniquely customized character. The Spheres rules are very flexible and allow players to build to an idea, rather than a specific class.
-  </p>
+  </div>
 
   <SectionHeading label="New to Spheres? Choose a system to start" />
   <div class="intro-cards">
     {systemData.map(({ id }) => <IntroCard system={id} />)}
   </div>
-
-  <style>
-    .intro-description {
-      font-size: var(--fs-md);
-      line-height: 1.6;
-      color: var(--clr-text);
-      margin-bottom: 16px;
-    }
-  </style>
 
   <SectionHeading label="Quick Reference — All Spheres" />
 
@@ -97,3 +102,170 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
   <StoreBar latestFirstParty={latestFirstParty} latestThirdParty={latestThirdParty} coreBooks={coreBooks} />
 
 </WikiPage>
+
+<script>
+  import { attachQuickSearch } from '@/lib/quickSearch';
+
+  let cleanupHeroSearch = () => {};
+
+  document.addEventListener('astro:before-swap', () => {
+    cleanupHeroSearch();
+    cleanupHeroSearch = () => {};
+  });
+
+  document.addEventListener('astro:page-load', () => {
+    cleanupHeroSearch();
+    const heroInput = document.getElementById('hero-search-input') as HTMLInputElement | null;
+    const heroResults = document.getElementById('hero-search-results') as HTMLElement | null;
+    const heroIconBtn = document.getElementById('hero-search-icon-btn') as HTMLButtonElement | null;
+
+    if (!heroInput || !heroResults) return;
+
+    const controller = new AbortController();
+    attachQuickSearch({
+      input: heroInput,
+      resultsDiv: heroResults,
+      iconBtn: heroIconBtn,
+      signal: controller.signal,
+    });
+
+    cleanupHeroSearch = () => controller.abort();
+  });
+</script>
+
+<style>
+  .hero-section {
+    padding: 3.5rem 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 700;
+    color: var(--clr-brand);
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+    margin: 0 0 1.75rem;
+  }
+
+  .hero-search-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+  }
+
+  .hero-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--clr-surface);
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    border-radius: 9999px;
+    padding: 0 14px 0 18px;
+    height: 52px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .hero-search-bar:focus-within {
+    border-color: var(--clr-brand);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.08),
+      0 0 0 2px var(--clr-brand);
+  }
+
+  .hero-search-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--clr-muted);
+    transition:
+      color 0.15s ease,
+      transform 0.1s ease;
+  }
+
+  .hero-search-icon-btn:hover {
+    color: var(--clr-brand);
+  }
+
+  .hero-search-icon-btn:active {
+    transform: scale(0.9);
+  }
+
+  .hero-search-icon-btn:focus-visible {
+    outline: 2px solid var(--clr-brand);
+    outline-offset: 2px;
+    border-radius: 50%;
+  }
+
+  .hero-search-bar input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: none;
+    outline: none;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--clr-text);
+  }
+
+  .hero-search-bar input::placeholder {
+    color: var(--clr-muted);
+    opacity: 0.8;
+  }
+
+  .hero-search-kbd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--clr-muted);
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .hero-results-dropdown {
+    top: calc(100% + 8px);
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 2rem 0.5rem 1.5rem;
+    }
+
+    .hero-search-bar {
+      height: 46px;
+      padding: 0 12px 0 14px;
+    }
+
+    .hero-search-bar input {
+      font-size: 0.95rem;
+    }
+
+    .hero-search-kbd {
+      display: none;
+    }
+  }
+</style>
