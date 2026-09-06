@@ -174,7 +174,7 @@ const groups: TocGroup[] = sections.map(sec => ({
   <div class="content-columns">
     <div class="content-main">
 
-      <PageHeading name={sphere.name} system={system} type="type:sphere" searchFilter={searchFilter} icon={sphere.icon} />
+      <PageHeading name={sphere.name} system={system} type="type:sphere" searchFilter={searchFilter} icon={sphere.icon} talentCount={allTalents.length} />
       <hr class="page-title-rule" />
 
       {mainCollEntry?.data?.description && (

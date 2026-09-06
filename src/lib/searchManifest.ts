@@ -1,6 +1,7 @@
 import { SYSTEMS } from "@/config/site";
 import { getFeatUrl } from "@/lib/featCategories";
 import { resolveEntries } from "@/lib/resolveEntries";
+import { CLASS_SUBTITLES } from "@/lib/searchData";
 import { systemIdKey } from "@/lib/systems";
 import { buildOrderedTagIds } from "@/lib/tags";
 import { url } from "@/lib/url";
@@ -12,6 +13,10 @@ export type ManifestEntry = {
   type: string;
   sphere?: string;
   tags?: string;
+  icon?: string;
+  talentCount?: number;
+  subtitle?: string;
+  image?: string;
 };
 
 type ManifestMaps = Awaited<ReturnType<typeof resolveEntries>>;
@@ -43,14 +48,23 @@ export async function buildSearchManifest(): Promise<ManifestEntry[]> {
   add(
     manifest,
     sphereMap.values(),
-    (s) => {
+    (s, m) => {
       if (!SYSTEMS[s.system]) return null;
+      const count = [...m.talentMap.values()].filter(
+        (t) =>
+          (t.sphere === s.id ||
+            t.dualSphere === s.id ||
+            t.dualSphere === "any") &&
+          t.system === s.system,
+      ).length;
       return {
         url: url(`/${s.system}/${s.id}/`),
         title: s.name,
         system: SYSTEMS[s.system].label,
         type: "sphere",
         tags: tags(s),
+        icon: s.icon,
+        talentCount: count,
       };
     },
     maps,
@@ -104,6 +118,8 @@ export async function buildSearchManifest(): Promise<ManifestEntry[]> {
         system: SYSTEMS[c.system].label,
         type: "class",
         tags: tags(c),
+        subtitle: CLASS_SUBTITLES[c.id],
+        image: c.id,
       };
     },
     maps,

@@ -52,6 +52,11 @@ export default defineConfig({
   experimental: {
     incrementalBuild: true,
   },
+  server: {
+    host: true,
+    port: 4321,
+    allowedHosts: true,
+  },
   vite: {
     build: {
       chunkSizeWarningLimit: 200,
@@ -61,6 +66,7 @@ export default defineConfig({
     },
     plugins: [yamlPlugin],
     server: {
+      allowedHosts: true,
       watch: {
         ignored: ["**/.claude/**", "**/.cave/**", "**/node_modules/**"],
       },

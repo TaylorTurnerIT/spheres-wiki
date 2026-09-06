@@ -683,7 +683,7 @@ a:hover {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(200px, 38%, 580px);
+  width: clamp(280px, 42vw, 620px);
   pointer-events: none;
   transition:
     opacity 0.25s ease,
@@ -701,63 +701,58 @@ a:hover {
 .search-bar {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: var(--clr-surface);
-  border: 0.5px solid rgba(0, 0, 0, 0.4);
-  border-radius: var(--radius);
-  padding: 6px 12px;
-  height: 32px;
+  border: 1px solid var(--clr-border);
+  border-radius: 9999px;
+  padding: 0 16px 0 14px;
+  height: 38px;
   width: 100%;
   pointer-events: all;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+.search-bar:focus-within {
+  border-color: var(--clr-brand);
+  box-shadow:
+    0 0 0 2px var(--clr-brand),
+    0 2px 8px rgba(153, 0, 0, 0.12);
+  background: color-mix(in srgb, var(--clr-surface) 90%, #fff);
 }
 .search-icon-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  align-self: stretch;
-  aspect-ratio: 1;
-  margin-top: -6px;
-  margin-bottom: -6px;
-  margin-left: -12px;
-  margin-right: 4px;
   background: none;
   border: none;
-  border-radius: var(--radius) 0 0 var(--radius);
   padding: 0;
   cursor: pointer;
   color: var(--clr-muted);
+  flex-shrink: 0;
   transition:
     color 0.15s ease,
-    background 0.15s ease,
     transform 0.1s ease;
 }
 .search-icon-btn:hover {
   color: var(--clr-brand);
-  background: color-mix(in srgb, var(--clr-brand) 8%, transparent);
-}
-.search-icon-btn:active {
-  transform: scale(0.85);
-  color: var(--clr-brand);
-  background: color-mix(in srgb, var(--clr-brand) 14%, transparent);
-}
-.search-icon-btn:focus-visible {
-  outline: 2px solid var(--clr-brand);
-  outline-offset: -2px;
-  color: var(--clr-brand);
-}
-.search-bar:focus-within {
-  outline: 2px solid var(--clr-brand);
-  outline-offset: 1px;
 }
 .search-bar input {
   border: none;
   background: none;
   outline: none; /* focus handled by parent .search-bar:focus-within */
   font-family: var(--font-body);
-  font-size: var(--fs-sm);
-  color: var(--clr-muted);
+  font-size: var(--fs-base);
+  color: var(--clr-text);
   width: 100%;
+  padding: 0;
+}
+.search-bar input::placeholder {
+  color: var(--clr-muted);
+  opacity: 0.75;
+  font-style: italic;
 }
 .header-nav {
   flex: 1;
@@ -815,114 +810,220 @@ a:hover {
 /* ── Search Results Dropdown ────────────────────────────── */
 .search-results-dropdown {
   position: absolute;
-  top: 40px;
+  top: calc(100% + 6px);
   left: 0;
   width: 100%;
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-floating);
+  border-radius: 12px;
+  box-shadow:
+    0 10px 30px -4px rgba(0, 0, 0, 0.22),
+    0 4px 12px -2px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  max-height: 400px;
+  max-height: clamp(320px, 75vh, 540px);
   overflow-y: auto;
+  overflow-x: hidden;
   pointer-events: all;
+  padding: 6px 0 0 0;
 }
 
-.search-result-item {
-  display: block;
-  padding: 10px 14px;
-  border-bottom: 0.5px solid var(--clr-border);
-  text-decoration: none;
-  color: var(--clr-text);
-  transition: background 0.1s ease;
+.search-panel-group {
+  margin-bottom: 6px;
 }
 
-.search-result-item:last-child {
-  border-bottom: none;
-}
-
-.search-result-item:hover {
-  background: rgba(0, 0, 0, 0.05);
-  text-decoration: none;
-}
-
-.search-result-title {
-  font-family: var(--font-display);
-  font-size: var(--fs-sm);
-  font-weight: 700;
-  color: var(--clr-brand);
+.search-panel-group:last-of-type {
   margin-bottom: 2px;
 }
 
-.search-result-meta {
+.search-panel-group-header {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-brand);
+  padding: 6px 14px 4px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  user-select: none;
+}
+
+.search-panel-group-items {
   display: flex;
-  gap: 6px;
+  flex-direction: column;
+}
+
+.search-panel-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 10px;
+  margin: 2px 6px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border-left: 3px solid var(--clr-ns, transparent);
+  transition:
+    background-color 0.12s ease,
+    border-left-color 0.12s ease;
+}
+
+.search-panel-item:hover,
+.search-panel-item:focus-visible,
+.search-panel-item.is-selected {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-left-color: var(--clr-ns, var(--clr-brand));
+  outline: none;
+  text-decoration: none;
+}
+
+.search-panel-icon-wrap {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-panel-sphere-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
+.search-panel-class-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid var(--clr-border);
+  background: var(--clr-bg);
+  display: block;
+}
+
+.search-panel-class-fallback {
+  color: var(--clr-muted);
+}
+
+.search-panel-icon-empty {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.search-panel-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.search-panel-item-title {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--clr-ns, var(--clr-brand));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.1s ease;
+}
+
+.search-panel-item:hover .search-panel-item-title,
+.search-panel-item:focus-visible .search-panel-item-title,
+.search-panel-item.is-selected .search-panel-item-title {
+  color: var(--clr-text);
+}
+
+.search-panel-item-sub-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   flex-wrap: wrap;
-  margin-top: 4px;
+}
+
+.search-panel-item-sub {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  color: var(--clr-muted);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .search-badge {
   font-family: var(--font-display);
-  font-size: var(--fs-3xs);
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 1px 6px;
+  padding: 1px 5px;
   border-radius: 2px;
   background: rgba(0, 0, 0, 0.08);
   color: var(--clr-muted);
+  line-height: 1.3;
 }
 
-[data-system="Spheres of Power"] {
-  --clr-ns: var(--clr-power);
-}
-[data-system="Spheres of Might"] {
-  --clr-ns: var(--clr-might);
-}
-[data-system="Spheres of Guile"] {
-  --clr-ns: var(--clr-guile);
-}
-[data-system="Champions of the Spheres"] {
-  --clr-ns: var(--clr-champ);
-}
-
-.search-result-item {
-  border-left: 3px solid var(--clr-ns, transparent);
-}
-.search-result-item .search-result-title {
-  color: var(--clr-ns, inherit);
-}
-
-.search-result-excerpt {
-  font-size: var(--fs-xs);
-  color: var(--clr-muted);
-  line-height: 1.4;
-}
-
-.search-no-results {
-  padding: 12px;
-  font-size: var(--fs-sm);
-  color: var(--clr-muted);
-  font-style: italic;
-  text-align: center;
-}
-
-.search-see-all {
-  display: block;
-  padding: 10px 12px;
-  font-size: var(--fs-xs);
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  color: var(--clr-brand);
-  text-decoration: none;
-  text-align: center;
+.search-panel-footer {
+  position: sticky;
+  bottom: 0;
   border-top: 1px solid var(--clr-border);
+  padding: 8px 14px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--clr-muted);
+  user-select: none;
+  background: var(--clr-bg);
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
 }
-.search-see-all:hover,
-.search-see-all:focus {
-  background: color-mix(in srgb, var(--clr-brand) 6%, transparent);
-  outline: none;
+
+.search-panel-see-all {
+  color: var(--clr-brand);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.1s ease;
+}
+
+.search-panel-see-all:hover {
+  text-decoration: underline;
+  color: var(--clr-text);
+}
+
+.search-panel-see-all-spacer {
+  flex: 1;
+}
+
+.search-panel-hints {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+}
+
+.search-panel-hint {
+  white-space: nowrap;
+}
+
+.search-panel-empty {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--clr-muted);
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 14px;
 }
 
 /* ── Sidebar extras ─────────────────────────────────────── */
