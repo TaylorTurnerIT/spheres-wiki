@@ -8,6 +8,7 @@ import ResourceCard from '@/components/ResourceCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { SYSTEMS } from '@/config/site';
+import heroBg from '@/assets/hero-bg.webp';
 import {
   isOfficialPublisher,
   isVisibleThirdParty,
@@ -33,8 +34,19 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
 }));
 ---
 <WikiPage title="Home — Spheres Wiki" pagefindIgnore={true}>
+  <link
+    rel="preload"
+    as="image"
+    href={heroBg.src}
+    type="image/webp"
+    fetchpriority="high"
+    slot="head"
+  />
 
-  <div class="hero-section">
+  <div
+    class="hero-section"
+    style={`background-image: url('${heroBg.src}'), url('data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAQBQCdASo8ABYAPu1urVCppqQjrBqoATAdiWUAyF2L6yLajDaJqblDdjlNuQYOKASAAP7xzJf/+wb5T+h72E9biHiDKFi4Fu7VO4Q2GTNQGDDP0E6PEuhDlWZo7G0gkni2T44DOHESCi23diWXh7evF6IxVyovB6/FjBCYkE49sFI+GuZ3GzMLEkqQz9z8xUZ7huGvhxbRV5zdrWR4AZqnFOuE13uhlwwAAA==');`}
+  >
     <h1 class="hero-title">Spheres Wiki</h1>
     <div class="hero-search-wrap" id="hero-search">
       <div class="hero-search-bar" id="hero-search-combobox">
@@ -56,7 +68,6 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
           aria-haspopup="listbox"
           autocomplete="off"
         />
-        <kbd class="hero-search-kbd" title="Press / to focus">/</kbd>
       </div>
       <div id="hero-search-results" class="search-results-dropdown hero-results-dropdown" role="listbox" aria-label="Search results" aria-live="polite" hidden></div>
     </div>
@@ -129,18 +140,54 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
       signal: controller.signal,
     });
 
+    const headerAnchor = document.querySelector(
+      '.header-search-anchor.header-search--fade'
+    ) as HTMLElement | null;
+    const heroSearchWrap = document.getElementById('hero-search');
+
+    if (headerAnchor && heroSearchWrap) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              headerAnchor.classList.remove('is-scrolled-in');
+            } else {
+              headerAnchor.classList.add('is-scrolled-in');
+            }
+          }
+        },
+        {
+          rootMargin: '-56px 0px 0px 0px',
+          threshold: 0,
+        }
+      );
+      observer.observe(heroSearchWrap);
+      controller.signal.addEventListener('abort', () => {
+        observer.disconnect();
+        headerAnchor.classList.remove('is-scrolled-in');
+      });
+    }
+
     cleanupHeroSearch = () => controller.abort();
   });
 </script>
 
 <style>
   .hero-section {
-    padding: 3.5rem 1rem 2.5rem;
+    position: relative;
+    z-index: 30;
+    padding: 7.5rem 1rem 4.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #f5f1e4;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    border: 0.5px solid var(--clr-border);
+    border-radius: var(--radius);
   }
 
   .hero-title {
@@ -155,6 +202,7 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
 
   .hero-search-wrap {
     position: relative;
+    z-index: 40;
     width: 100%;
     max-width: 620px;
   }
@@ -163,22 +211,24 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
     display: flex;
     align-items: center;
     gap: 12px;
-    background: var(--clr-surface);
-    border: 1px solid rgba(0, 0, 0, 0.22);
-    border-radius: 9999px;
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
     padding: 0 14px 0 18px;
     height: 52px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     transition:
       border-color 0.15s ease,
-      box-shadow 0.15s ease;
+      box-shadow 0.15s ease,
+      background-color 0.15s ease;
   }
 
   .hero-search-bar:focus-within {
     border-color: var(--clr-brand);
     box-shadow:
-      0 4px 20px rgba(0, 0, 0, 0.08),
-      0 0 0 2px var(--clr-brand);
+      0 0 0 2px var(--clr-brand),
+      0 4px 20px rgba(153, 0, 0, 0.12);
+    background: color-mix(in srgb, var(--clr-bg) 90%, #fff);
   }
 
   .hero-search-icon-btn {
@@ -222,37 +272,19 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
 
   .hero-search-bar input::placeholder {
     color: var(--clr-muted);
-    opacity: 0.8;
-  }
-
-  .hero-search-kbd {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 24px;
-    height: 24px;
-    padding: 0 6px;
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--clr-muted);
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    pointer-events: none;
-    user-select: none;
+    opacity: 0.75;
+    font-style: italic;
   }
 
   .hero-results-dropdown {
     top: calc(100% + 8px);
     text-align: left;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
   }
 
   @media (max-width: 768px) {
     .hero-section {
-      padding: 2rem 0.5rem 1.5rem;
+      padding: 5rem 0.5rem 2.5rem;
     }
 
     .hero-search-bar {
@@ -262,10 +294,6 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
 
     .hero-search-bar input {
       font-size: 0.95rem;
-    }
-
-    .hero-search-kbd {
-      display: none;
     }
   }
 </style>

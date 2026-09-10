@@ -27,7 +27,7 @@ if (book.coverImage) {
   {comingSoon
     ? <div class="store-card-cover-placeholder"><span>Coming Soon</span></div>
     : coverImg
-      ? <Image src={coverImg} alt={book.title} class="store-card-cover" loading="lazy" />
+      ? <Image src={coverImg} alt={book.title} width={360} class="store-card-cover" loading="lazy" decoding="async" />
       : <div class="store-card-cover-placeholder" aria-hidden="true"></div>
   }
   <div class="store-title">{book.title}</div>

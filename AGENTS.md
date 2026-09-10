@@ -185,6 +185,7 @@ Adding content:
   1. Never loop book metadata slugs with sequential `await getCollection()`. Metadata-only `_book.yaml` folders not collections. Use `getCollEntriesMap()` from `resolveEntries.ts` — built in same parallel pass as `resolveEntries()`, shared across page files.
   2. Multiple independent async ops (e.g. `render()` calls for set of entries) → wrap in `Promise.all([...])`, not `await` in loop.
   3. Never look up an entry by `id`+`system` with `[...map.values()].find(...)` inside a loop — O(n²) at build. Build `buildSystemIdIndex(map.values())` once before the loop and use `index.get(systemIdKey(system, id))` (`src/lib/systems.ts`).
+- **Visual verification & response reporting**: When making visual UI or styling modifications, verify changes visually using headless browser screenshots (e.g. `chromium --headless ...` or equivalent) and embed the rendered screenshots (`![caption](/absolute/path.png)`) directly in the response to the user so visual changes are immediately inspectable.
 
 ## Shared idioms — reuse, never reimplement
 

@@ -218,33 +218,166 @@ export function groupSearchResults(
   return groups;
 }
 
+const SPHERE_SYMBOLS = new Set([
+  "alchemy",
+  "alteration",
+  "artifice",
+  "athletics",
+  "barrage",
+  "barroom",
+  "beastmastery",
+  "berserker",
+  "blood",
+  "bluster",
+  "body-control",
+  "boxing",
+  "brute",
+  "communication",
+  "conjuration",
+  "creation",
+  "dark",
+  "death",
+  "destruction",
+  "divination",
+  "dual-wielding",
+  "duelist",
+  "enhancement",
+  "equipment",
+  "faction",
+  "fallen-fey",
+  "fate",
+  "fencing",
+  "gladiator",
+  "guardian",
+  "herbalism",
+  "illusion",
+  "infiltration",
+  "investigation",
+  "lancer",
+  "leadership",
+  "life",
+  "light",
+  "mana",
+  "mind",
+  "nature",
+  "navigation",
+  "open-hand",
+  "performance",
+  "protection",
+  "scoundrel",
+  "scout",
+  "shield",
+  "sniper",
+  "spellhacking",
+  "study",
+  "subterfuge",
+  "survivalism",
+  "tech",
+  "telekinesis",
+  "time",
+  "tinker",
+  "trap",
+  "vocation",
+  "war",
+  "warleader",
+  "warp",
+  "weather",
+  "wrestling",
+  "bear",
+  "technomancy",
+  "veilweaving",
+]);
+
+function extractSphereSlug(itemUrl: string, itemSphere?: string): string {
+  if (itemSphere) {
+    return itemSphere
+      .toLowerCase()
+      .trim()
+      .replace(/[\s_]+/g, "-");
+  }
+  const parts = itemUrl.split("/").filter(Boolean);
+  const baseIdx = parts.indexOf("spheres-wiki");
+  const relParts = baseIdx !== -1 ? parts.slice(baseIdx + 1) : parts;
+  if (
+    relParts.length >= 3 &&
+    ["power", "might", "guile", "champions"].includes(relParts[0]) &&
+    !["classes", "feats", "articles", "tags"].includes(relParts[1])
+  ) {
+    return relParts[1]
+      .toLowerCase()
+      .trim()
+      .replace(/[\s_]+/g, "-");
+  }
+  return "";
+}
+
+function resolveSphereIcon(item: HeaderSearchItem): string | null {
+  if (item.type === "sphere") {
+    const icon = (item.icon || extractSlug(item.url))
+      .toLowerCase()
+      .trim()
+      .replace(/[\s_]+/g, "-");
+    if (SPHERE_SYMBOLS.has(icon)) return icon;
+  }
+  const sphereSlug = extractSphereSlug(item.url, item.sphere);
+  if (sphereSlug && SPHERE_SYMBOLS.has(sphereSlug)) {
+    return sphereSlug;
+  }
+  return null;
+}
+
+// fallow-ignore-next-line complexity
+function resolveSystemId(rawSystem?: string, itemUrl?: string): string {
+  if (rawSystem) {
+    const s = rawSystem.toLowerCase();
+    if (s.includes("power")) return "power";
+    if (s.includes("might")) return "might";
+    if (s.includes("guile")) return "guile";
+    if (s.includes("champ")) return "champions";
+  }
+  if (itemUrl) {
+    const parts = itemUrl.split("/").filter(Boolean);
+    const baseIdx = parts.indexOf("spheres-wiki");
+    const relParts = baseIdx !== -1 ? parts.slice(baseIdx + 1) : parts;
+    if (
+      relParts[0] &&
+      ["power", "might", "guile", "champions"].includes(relParts[0])
+    ) {
+      return relParts[0];
+    }
+  }
+  return "";
+}
+
+function resolveSystemLogo(item: HeaderSearchItem): string {
+  const sys = resolveSystemId(item.system, item.url);
+  if (sys === "power") return "system-power";
+  if (sys === "might") return "system-might";
+  if (sys === "guile") return "system-guile";
+  if (sys === "champions") return "system-champions";
+  return "system-wiki";
+}
+
+// fallow-ignore-next-line complexity
 function renderItemIcon(
   item: HeaderSearchItem,
   classImageMap: Record<string, string>,
 ): string {
-  const slug = extractSlug(item.url);
-  if (item.type === "sphere") {
-    const iconId = item.icon || slug;
-    return `<span class="search-panel-icon-wrap"><svg class="search-panel-sphere-icon" width="32" height="32" viewBox="-1 -1 18 18" aria-hidden="true"><use href="#si-${escapeHtml(iconId)}"/></svg></span>`;
+  const sphereIcon = resolveSphereIcon(item);
+  if (sphereIcon) {
+    return `<span class="search-panel-icon-wrap"><svg class="search-panel-sphere-icon" width="32" height="32" viewBox="-1 -1 18 18" aria-hidden="true"><use href="#si-${escapeHtml(sphereIcon)}"/></svg></span>`;
   }
+
+  const slug = extractSlug(item.url);
   if (item.type === "class") {
     const imgSrc = classImageMap[slug];
     if (imgSrc) {
       return `<span class="search-panel-icon-wrap"><img src="${escapeHtml(imgSrc)}" class="search-panel-class-img" alt="" width="32" height="32" loading="lazy" /></span>`;
     }
-    return `<span class="search-panel-icon-wrap"><svg class="search-panel-class-fallback" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>`;
   }
-  return `<span class="search-panel-icon-wrap search-panel-icon-empty" aria-hidden="true"></span>`;
-}
 
-function resolveSystemId(rawSystem?: string): string {
-  if (!rawSystem) return "";
-  const s = rawSystem.toLowerCase();
-  if (s.includes("power")) return "power";
-  if (s.includes("might")) return "might";
-  if (s.includes("guile")) return "guile";
-  if (s.includes("champ")) return "champions";
-  return "";
+  const systemLogo = resolveSystemLogo(item);
+  return `<span class="search-panel-icon-wrap"><svg class="search-panel-sphere-icon" width="32" height="32" viewBox="-1 -1 18 18" aria-hidden="true"><use href="#si-${escapeHtml(systemLogo)}"/></svg></span>`;
 }
 
 function renderBadges(item: HeaderSearchItem): string {
@@ -294,7 +427,7 @@ export function renderResultsPanel(
       const isFirst = idx === 0;
       const subtitle = formatSubtitle(item);
       const iconHtml = renderItemIcon(item, classImageMap);
-      const sysId = resolveSystemId(item.system);
+      const sysId = resolveSystemId(item.system, item.url);
       const dataSys = sysId ? ` data-system="${escapeHtml(sysId)}"` : "";
       const badges = renderBadges(item);
 
