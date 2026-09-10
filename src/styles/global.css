@@ -702,9 +702,9 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--clr-surface);
+  background: var(--clr-bg);
   border: 1px solid var(--clr-border);
-  border-radius: 9999px;
+  border-radius: var(--radius);
   padding: 0 16px 0 14px;
   height: 38px;
   width: 100%;
@@ -720,7 +720,7 @@ a:hover {
   box-shadow:
     0 0 0 2px var(--clr-brand),
     0 2px 8px rgba(153, 0, 0, 0.12);
-  background: color-mix(in srgb, var(--clr-surface) 90%, #fff);
+  background: color-mix(in srgb, var(--clr-bg) 90%, #fff);
 }
 .search-icon-btn {
   display: flex;
@@ -813,9 +813,9 @@ a:hover {
   top: calc(100% + 6px);
   left: 0;
   width: 100%;
-  background: var(--clr-surface);
+  background: var(--clr-bg);
   border: 1px solid var(--clr-border);
-  border-radius: 12px;
+  border-radius: var(--radius);
   box-shadow:
     0 10px 30px -4px rgba(0, 0, 0, 0.22),
     0 4px 12px -2px rgba(0, 0, 0, 0.1);
@@ -986,8 +986,8 @@ a:hover {
   color: var(--clr-muted);
   user-select: none;
   background: var(--clr-bg);
-  border-bottom-left-radius: 11px;
-  border-bottom-right-radius: 11px;
+  border-bottom-left-radius: calc(var(--radius) - 1px);
+  border-bottom-right-radius: calc(var(--radius) - 1px);
 }
 
 .search-panel-see-all {

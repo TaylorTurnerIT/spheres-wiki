@@ -21,6 +21,7 @@ const {
 } = Astro.props;
 ---
 <Base title={title} description={description}>
+  <slot name="head" slot="head" />
   <a href="#main-content" class="skip-link">Skip to content</a>
   <SiteHeader />
   <BetaToast />
