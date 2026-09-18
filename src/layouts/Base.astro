@@ -43,6 +43,12 @@ const {
       .scroll-restoring { opacity: 0; }
     </style>
     <script is:inline>
+      try {
+        var storedTheme = localStorage.getItem('spheres-wiki-theme');
+        if (storedTheme === 'dark-parchment' || storedTheme === 'dark-night' || storedTheme === 'light') {
+          document.documentElement.dataset.theme = storedTheme;
+        }
+      } catch {}
       if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
       if (sessionStorage.getItem('scroll-y')) {
         document.documentElement.classList.add('scroll-restoring');

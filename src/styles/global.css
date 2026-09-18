@@ -182,6 +182,60 @@ svg {
   --shadow-lifted: 0 12px 24px -8px rgba(0, 0, 0, 0.2); /* store-card hover    */
 }
 
+/* ── Color themes ─────────────────────────────────────────
+   Light (default) uses :root tokens above.
+   Dark Parchment: warm OSRS-Sepia browns. Dark Night: cool navy.
+   All text pairs target WCAG AA (≥4.5:1 body, ≥3:1 large/border UI). */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark-parchment"] {
+  color-scheme: dark;
+  --clr-bg: #211a12;
+  --clr-surface: #2c2318;
+  --clr-border: #55452f;
+  --clr-text: #f2e7cf;
+  --clr-muted: #cfbd97;
+  --clr-brand: #f0b34a;
+  --clr-power: #7fb0f0;
+  --clr-might: #f0934e;
+  --clr-guile: #c09bf5;
+  --clr-champ: #6fd27d;
+  --clr-active: #f0b34a;
+  --clr-cta: #6fd27d;
+  --clr-tag-prov: #b8a988;
+  --clr-tag-rules: #f08ba0;
+  --shadow-raised: 0 3px 12px rgba(0, 0, 0, 0.45);
+  --shadow-floating: 0 4px 12px rgba(0, 0, 0, 0.55);
+  --shadow-lifted: 0 12px 24px -8px rgba(0, 0, 0, 0.6);
+}
+:root[data-theme="dark-night"] {
+  color-scheme: dark;
+  --clr-bg: #131a2b;
+  --clr-surface: #1e2942;
+  --clr-border: #3a4a6e;
+  --clr-text: #e6ecf8;
+  --clr-muted: #aebbd8;
+  --clr-brand: #8fb0ff;
+  --clr-power: #7fb0f0;
+  --clr-might: #f0934e;
+  --clr-guile: #c09bf5;
+  --clr-champ: #6fd27d;
+  --clr-active: #8fb0ff;
+  --clr-cta: #6fd27d;
+  --clr-tag-prov: #9aa7c7;
+  --clr-tag-rules: #f08ba0;
+  --shadow-raised: 0 3px 12px rgba(0, 0, 0, 0.5);
+  --shadow-floating: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --shadow-lifted: 0 12px 24px -8px rgba(0, 0, 0, 0.65);
+}
+/* Keep content imagery legible on dark surfaces without restyling art. */
+:root[data-theme="dark-parchment"] img,
+:root[data-theme="dark-night"] img {
+  background: var(--clr-surface);
+}
+
 /* ── Namespace custom property ─────────────────────────── */
 .power {
   --clr-ns: var(--clr-power);
