@@ -47,20 +47,11 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
     fetchpriority="high"
     slot="head"
   />
-  <link
-    rel="preload"
-    as="image"
-    href={heroBgNight.src}
-    type="image/webp"
-    slot="head"
-  />
-  <link
-    rel="preload"
-    as="image"
-    href={heroBgParchment.src}
-    type="image/webp"
-    slot="head"
-  />
+  {/* Dark heroes load on demand: preloading all three busts the homepage
+      LCP budget (LHCI ≤3000ms). The LQIP underlay + theme-matched
+      background-color cover the fetch gap, then the cache makes
+      theme switches instant. */}
+
 
   <div
     class="hero-section"
