@@ -9,6 +9,11 @@ import SectionHeading from '@/components/SectionHeading.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { SYSTEMS } from '@/config/site';
 import heroBg from '@/assets/hero-bg.webp';
+import heroBgNight from '@/assets/hero-bg-dark-night.webp';
+import heroBgParchment from '@/assets/hero-bg-dark-parchment.webp';
+
+const HERO_LQIP_NIGHT = "data:image/webp;base64,UklGRmgAAABXRUJQVlA4WAoAAAAQAAAAFwAACAAAQUxQSA4AAAABD9D/iAgMRkT/AwIAAFZQOCA0AAAAEAMAnQEqGAAJAD8RcrBQLCakorAIAYAiCWMAnQAtB3+gAP7u/3snazOukuVw37RETqAAAA==";
+const HERO_LQIP_PARCHMENT = "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAAAQAwCdASoYAAkAPxFysFAsJqSisAgBgCIJZQAAetv1kgAA/uzF58qTi4qwmr9jV1lwFAAA";
 import {
   isOfficialPublisher,
   isVisibleThirdParty,
@@ -42,10 +47,24 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
     fetchpriority="high"
     slot="head"
   />
+  <link
+    rel="preload"
+    as="image"
+    href={heroBgNight.src}
+    type="image/webp"
+    slot="head"
+  />
+  <link
+    rel="preload"
+    as="image"
+    href={heroBgParchment.src}
+    type="image/webp"
+    slot="head"
+  />
 
   <div
     class="hero-section"
-    style={`background-image: url('${heroBg.src}'), url('data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAQBQCdASo8ABYAPu1urVCppqQjrBqoATAdiWUAyF2L6yLajDaJqblDdjlNuQYOKASAAP7xzJf/+wb5T+h72E9biHiDKFi4Fu7VO4Q2GTNQGDDP0E6PEuhDlWZo7G0gkni2T44DOHESCi23diWXh7evF6IxVyovB6/FjBCYkE49sFI+GuZ3GzMLEkqQz9z8xUZ7huGvhxbRV5zdrWR4AZqnFOuE13uhlwwAAA==');`}
+    style={`--hero-light: url('${heroBg.src}'); --hero-light-lqip: url('data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAQBQCdASo8ABYAPu1urVCppqQjrBqoATAdiWUAyF2L6yLajDaJqblDdjlNuQYOKASAAP7xzJf/+wb5T+h72E9biHiDKFi4Fu7VO4Q2GTNQGDDP0E6PEuhDlWZo7G0gkni2T44DOHESCi23diWXh7evF6IxVyovB6/FjBCYkE49sFI+GuZ3GzMLEkqQz9z8xUZ7huGvhxbRV5zdrWR4AZqnFOuE13uhlwwAAA=='); --hero-night: url('${heroBgNight.src}'); --hero-night-lqip: url('${HERO_LQIP_NIGHT}'); --hero-parchment: url('${heroBgParchment.src}'); --hero-parchment-lqip: url('${HERO_LQIP_PARCHMENT}');`}
   >
     <h1 class="hero-title">Spheres Wiki</h1>
     <div class="hero-search-wrap" id="hero-search">
@@ -188,6 +207,22 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
     background-repeat: no-repeat;
     border: 0.5px solid var(--clr-border);
     border-radius: var(--radius);
+  }
+
+  /* Per-theme hero art — same 1672×624 geometry + cover, so no layout
+     shift when the theme (or image load state) changes. URLs come from
+     inline --hero-* vars; background-image lives here (not inline) so the
+     theme overrides below can win. */
+  .hero-section {
+    background-image: var(--hero-light), var(--hero-light-lqip);
+  }
+  :global(:root[data-theme="dark-night"]) .hero-section {
+    background-color: #131a2b;
+    background-image: var(--hero-night), var(--hero-night-lqip);
+  }
+  :global(:root[data-theme="dark-parchment"]) .hero-section {
+    background-color: #211a12;
+    background-image: var(--hero-parchment), var(--hero-parchment-lqip);
   }
 
   .hero-title {
