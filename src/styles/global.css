@@ -236,6 +236,32 @@ svg {
   background: var(--clr-surface);
 }
 
+/* ── Print: always render the light theme ───────────────────
+   Dark surfaces waste ink and wash out; force light tokens. */
+@media print {
+  :root[data-theme="dark-parchment"],
+  :root[data-theme="dark-night"] {
+    color-scheme: light;
+    --clr-bg: #e3ddd6;
+    --clr-surface: #ede8df;
+    --clr-border: #c0b9b0;
+    --clr-text: #1c1c1c;
+    --clr-muted: #5c524d;
+    --clr-brand: #990000;
+    --clr-power: #174b93;
+    --clr-might: #8f2d00;
+    --clr-guile: #5a2d96;
+    --clr-champ: #165a1c;
+    --clr-active: #990000;
+    --clr-cta: #2c8738;
+    --clr-tag-prov: #474540;
+    --clr-tag-rules: #8c1d40;
+  }
+  .theme-cycle-btn {
+    display: none;
+  }
+}
+
 /* ── Namespace custom property ─────────────────────────── */
 .power {
   --clr-ns: var(--clr-power);

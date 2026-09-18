@@ -42,6 +42,12 @@ This site writes small values to your browser's local and session storage to rem
       <td>Until browser data is cleared</td>
     </tr>
     <tr>
+      <td><code>spheres-wiki-theme</code></td>
+      <td>localStorage</td>
+      <td>Remembers the selected color theme (Light, Dark Parchment, or Dark Night) so it persists across visits</td>
+      <td>Until a different theme is selected or browser data is cleared</td>
+    </tr>
+    <tr>
       <td><code>scroll-y</code></td>
       <td>sessionStorage</td>
       <td>Restores scroll position on page transitions</td>

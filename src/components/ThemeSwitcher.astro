@@ -55,11 +55,20 @@
     });
   }
 
-  document.addEventListener('astro:page-load', bindSwitcher);
-  // View Transitions replace the document on navigation, dropping
-  // documentElement.dataset.theme. Re-stamp synchronously on swap —
-  // same task, before paint — or the new page flashes light theme.
-  document.addEventListener('astro:after-swap', () => applyTheme(currentTheme()));
+  // This module script re-executes on every View Transition navigation,
+  // so document-level listeners must register exactly once per window.
+  const themeRuntimeKey = '__spheresWikiThemeRuntime';
+  const windowWithThemeRuntime = window as typeof window & {
+    [themeRuntimeKey]?: boolean;
+  };
+  if (!windowWithThemeRuntime[themeRuntimeKey]) {
+    windowWithThemeRuntime[themeRuntimeKey] = true;
+    document.addEventListener('astro:page-load', bindSwitcher);
+    // View Transitions replace the document on navigation, dropping
+    // documentElement.dataset.theme. Re-stamp synchronously on swap —
+    // same task, before paint — or the new page flashes light theme.
+    document.addEventListener('astro:after-swap', () => applyTheme(currentTheme()));
+  }
   bindSwitcher();
 </script>
 
