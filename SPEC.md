@@ -78,7 +78,7 @@ Verification rules:
 ```ts
 { label, color, darkColor, route, cssKey, subtitle, classLabel, description, introLinkText }
 ```
-Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `SITE_TAGLINE`, `HEADER_NAV`.
+Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `HEADER_NAV`.
 
 ### I.svg — icon contract
 `SVGSprite.astro` defines `<symbol id="si-{name}">` for each sphere icon name. Sphere entries reference by `icon: {name}` field. `si-fallback` symbol must exist as default.

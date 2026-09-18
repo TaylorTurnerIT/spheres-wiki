@@ -139,6 +139,7 @@ svg {
   --sidebar-w: 210px;
   --rail-w: 180px;
   --max-w: 1440px;
+  --header-h: 3.5rem; /* sticky offsets reference this, not a hardcoded value */
 
   /* Active system color — defaults to brand, overridden per-page by [data-system] */
   --clr-active: #990000;
@@ -227,7 +228,7 @@ a:hover {
   display: flex;
   align-items: center;
   padding: 0 var(--sp-6);
-  height: 3.5rem;
+  height: var(--header-h);
   max-width: var(--max-w);
   margin: 0 auto;
   position: relative;
@@ -350,23 +351,8 @@ a:hover {
   .inner-rail {
     width: 140px;
   }
-  .hamburger {
-    display: flex;
-    align-items: center;
-    margin-right: var(--sp-3);
-  }
-  .sidebar-close {
-    display: block;
-  }
-  .intro-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .ref-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .resources-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* NOTE: .hamburger/.sidebar-close/grid overrides live at the end of this
+     file — same-specificity base rules below would otherwise beat them. */
 }
 
 @media (max-width: 768px) {
@@ -387,15 +373,8 @@ a:hover {
     font-size: var(--fs-2xs);
     padding: 4px 8px;
   }
-  .intro-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .ref-grid {
-    grid-template-columns: 1fr;
-  }
-  .resources-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* NOTE: .header-nav/grid/.home-store-divider overrides live at the end of
+     this file — same-specificity base rules below would otherwise beat them. */
   .home-store-body {
     flex-direction: column;
     gap: 16px;
@@ -403,19 +382,8 @@ a:hover {
   .home-store-item {
     padding: 0;
   }
-  .home-store-divider {
-    width: 100%;
-    height: 0;
-    border-left: none;
-    border-top: 0.5px solid var(--clr-border);
-    margin: 0;
-    align-self: auto;
-  }
   .home-store-core-row {
     flex-wrap: wrap;
-  }
-  .header-nav {
-    display: none;
   }
   .page-title-rule {
     width: 100%;
@@ -2119,8 +2087,8 @@ h6 {
   align-items: start;
   align-self: stretch;
   position: sticky;
-  top: calc(3.5rem + 16px);
-  max-height: calc(100vh - 3.5rem - 32px);
+  top: calc(var(--header-h) + 16px);
+  max-height: calc(100vh - var(--header-h) - 32px);
   overflow-y: auto;
 }
 @media (max-width: 1024px) {
@@ -2647,7 +2615,7 @@ h6 {
   overflow: hidden;
   background: var(--clr-bg);
   position: sticky;
-  top: calc(3.5rem + 16px);
+  top: calc(var(--header-h) + 16px);
 }
 .quick-links-group {
   padding: 12px 14px 10px;
@@ -2756,8 +2724,8 @@ h6 {
   width: var(--rail-w);
   flex-shrink: 0;
   position: sticky;
-  top: calc(3.5rem + 1rem);
-  max-height: calc(100vh - 3.5rem - 2rem);
+  top: calc(var(--header-h) + 1rem);
+  max-height: calc(100vh - var(--header-h) - 2rem);
   overflow-y: auto;
 }
 
@@ -2828,4 +2796,47 @@ h6 {
 /* ── FOUC guard for TomSelect enhanced select elements ────── */
 select.ts-hidden-select {
   display: none;
+}
+
+/* ── Relocated responsive overrides ───────────────────────── */
+/* Must stay last: same-specificity base rules earlier in this file beat
+   media-query rules, so these overrides only apply when defined after
+   them. Do not move responsive overrides for these selectors above. */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+    align-items: center;
+    margin-right: var(--sp-3);
+  }
+  .sidebar-close {
+    display: block;
+  }
+  .intro-cards,
+  .ref-grid,
+  .resources-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+  .section-group-label {
+    white-space: normal;
+  }
+  .intro-cards,
+  .resources-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ref-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-store-divider {
+    width: 100%;
+    height: 0;
+    border-left: none;
+    border-top: 0.5px solid var(--clr-border);
+    margin: 0;
+    align-self: auto;
+  }
 }
