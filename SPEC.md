@@ -478,6 +478,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T122 | x | Make PR Lighthouse checkout fetch full refs and set explicit Fallow base; add workflow contract test | V82,I.build |
 | T123 | x | Make Lighthouse CI base-path setup self-validating: target the real Astro Preview URL, remove the dist symlink workaround, and guard asset/MIME + CLS assertions | V83,I.build |
 | T124 | x | Defer inactive casting-tradition tab bodies and Builder data behind base-path routes; retain initial anchors and hydrate tab content before scroll-spy/Builder activation | V84,V76 |
+| T125 | . | Cut home image payload until mobile LCP clears 3000ms: 39 eager sphere-icon webps at 150-210KB each (SVGSprite glob) + hero-bg = 83 requests; resize/compress/lazy-load below-fold art and add an image-payload budget to check-performance.mjs | V76,V78 |
 
 **Recommended build order:**
 Audit remediation batch: T113→T114→T115→T116→T117→T118→T119→T120→T121→T122→T123→T124. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
@@ -541,3 +542,4 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B33 | 2026-08-31 | Detached PR checkout hid base ref; Fallow auto-detection exited 2 during Lighthouse build | V82 — fetch-depth 0 and set FALLOW_AUDIT_BASE=origin/${GITHUB_BASE_REF:-main} |
 | B34 | 2026-08-31 | LHCI FallbackServer mounted `dist` at `/` while Astro emitted `/spheres-wiki/` assets, so CSS returned HTML and mobile CLS was falsely attributed to the static sidebar | V83 / T123 |
 | B35 | 2026-09-01 | Once Lighthouse reached the real Astro Preview, the casting-traditions page exceeded mobile FCP/LCP/TBT budgets because inactive tab bodies and Builder data were still embedded in the initial document | V84 / T124 |
+| B36 | 2026-09-18 | #32 hero redesign made home LCP element the hero-bg image; 39 eager 150-210KB sphere-icon webps push simulated-mobile LCP to ~3310ms vs 3000ms budget; main red since 2026-09-09 (#32 merged with failing Lighthouse) | Open — T125; #33 neither caused (3312 vs 3309ms) nor fixed it |
