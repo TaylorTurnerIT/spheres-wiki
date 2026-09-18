@@ -1,0 +1,96 @@
+---
+---
+<button type="button" id="theme-cycle-btn" class="theme-cycle-btn" aria-label="Color theme: Light. Activate to switch theme." title="Switch theme">
+  <svg class="theme-icon theme-icon-light" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  <svg class="theme-icon theme-icon-parchment" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><path d="M4 20h16M6 16h12M8 12h8M5 4h14v8H5z"/></svg>
+  <svg class="theme-icon theme-icon-night" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+</button>
+
+<script>
+  const STORAGE_KEY = 'spheres-wiki-theme';
+  const ORDER = ['light', 'dark-parchment', 'dark-night'];
+  const LABELS: Record<string, string> = {
+    'light': 'Light',
+    'dark-parchment': 'Dark Parchment',
+    'dark-night': 'Dark Night',
+  };
+
+  function applyTheme(value: string) {
+    const theme = (LABELS as Record<string, string>)[value] ? value : 'light';
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem(STORAGE_KEY, theme); } catch {}
+    syncButton(theme);
+  }
+
+  function syncButton(theme: string) {
+    const btn = document.getElementById('theme-cycle-btn');
+    if (!btn) return;
+    btn.setAttribute('aria-label', `Color theme: ${LABELS[theme] ?? theme}. Activate to switch theme.`);
+    btn.querySelectorAll('.theme-icon').forEach((icon) => {
+      const show =
+        (theme === 'light' && icon.classList.contains('theme-icon-light')) ||
+        (theme === 'dark-parchment' && icon.classList.contains('theme-icon-parchment')) ||
+        (theme === 'dark-night' && icon.classList.contains('theme-icon-night'));
+      (icon as HTMLElement).style.display = show ? '' : 'none';
+    });
+  }
+
+  function currentTheme() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && (LABELS as Record<string, string>)[stored]) return stored;
+    } catch {}
+    return document.documentElement.dataset.theme || 'light';
+  }
+
+  function bindSwitcher() {
+    const btn = document.getElementById('theme-cycle-btn') as HTMLButtonElement | null;
+    const theme = currentTheme();
+    applyTheme(theme);
+    if (!btn || btn.dataset.bound === 'true') return;
+    btn.dataset.bound = 'true';
+    btn.addEventListener('click', () => {
+      const next = ORDER[(ORDER.indexOf(currentTheme()) + 1) % ORDER.length];
+      applyTheme(next);
+    });
+  }
+
+  // This module script re-executes on every View Transition navigation,
+  // so document-level listeners must register exactly once per window.
+  const themeRuntimeKey = '__spheresWikiThemeRuntime';
+  const windowWithThemeRuntime = window as typeof window & {
+    [themeRuntimeKey]?: boolean;
+  };
+  if (!windowWithThemeRuntime[themeRuntimeKey]) {
+    windowWithThemeRuntime[themeRuntimeKey] = true;
+    document.addEventListener('astro:page-load', bindSwitcher);
+    // View Transitions replace the document on navigation, dropping
+    // documentElement.dataset.theme. Re-stamp synchronously on swap —
+    // same task, before paint — or the new page flashes light theme.
+    document.addEventListener('astro:after-swap', () => applyTheme(currentTheme()));
+  }
+  bindSwitcher();
+</script>
+
+<style>
+  .theme-cycle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-left: 12px;
+    flex-shrink: 0;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--clr-muted);
+    padding: 0;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .theme-cycle-btn:hover {
+    border-color: var(--clr-brand);
+    color: var(--clr-text);
+  }
+</style>

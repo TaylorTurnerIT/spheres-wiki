@@ -1,6 +1,7 @@
 ---
 import { url } from "@/lib/url";
 import { SITE_TITLE, HEADER_NAV } from '@/config/site';
+import ThemeSwitcher from '@/components/ThemeSwitcher.astro';
 
 const isHome = Astro.url.pathname === url('/') || Astro.url.pathname === '/';
 ---
@@ -88,6 +89,7 @@ const isHome = Astro.url.pathname === url('/') || Astro.url.pathname === '/';
         <a href={url(href)} data-astro-prefetch="hover">{label}</a>
       ))}
     </nav>
+    <ThemeSwitcher />
   </header>
 </div>
 
