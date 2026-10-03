@@ -281,6 +281,7 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V82. CI PR build ! fetch base refs and set `FALLOW_AUDIT_BASE` explicitly before `bun run build`; detached checkout ⊥ relies on auto-detection.
 - V83. Lighthouse CI ! target the Astro Preview deployment URL under the configured base path; required CSS/JS responses ! have successful status + expected MIME, and asset/console or CLS assertion failures ! stop the check.
 - V84. Large tabbed views ! keep inactive tab bodies and tab-specific datasets out of initial HTML; selecting a tab ! fetch and hydrate its base-path fragment/data before interaction or anchor scrolling.
+- V85. Same-name talents with different sphere rules ! retain distinct identities, source attribution, tags, bodies, routes, and search results. Sphere-qualified prerequisites ! resolve within named system/sphere, including parenthetical talent qualifiers; missing local match ⊥ falls back to another sphere. Repaired false `dualSphere` aliases ! retain valid URLs.
 - V91. Shared sphere artwork ! use `SphereIcon.astro`: build-optimized assets for 90px badges at 2x, explicit dimensions, native lazy loading except page heading; preserve framing/transparency in all themes. SVG sprite ⊥ raster `<image>`; search templates inert until mounted. Full template inventory ≤80 image URLs, ≤700,000 bytes total, ≤20,000 bytes per image. Build samples home, system indexes + one route per HTML-budget class; rejects missing/nonlocal sources, eager list images, missing dimensions.
 
 ---
@@ -480,6 +481,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T123 | x | Make Lighthouse CI base-path setup self-validating: target the real Astro Preview URL, remove the dist symlink workaround, and guard asset/MIME + CLS assertions | V83,I.build |
 | T124 | x | Defer inactive casting-tradition tab bodies and Builder data behind base-path routes; retain initial anchors and hydrate tab content before scroll-spy/Builder activation | V84,V76 |
 | T125 | ~ | SphereIcon native lazy images + inert search templates; inventory 64 URLs / 535620B. Full-resolution q75 hero: light 16440B, night 30500B, parchment 26050B; focused home LCP 2121/2261ms, CLS 0, unchanged assertions pass. Combined 10-route local gate passed at ec6daf03 before hero compression; latest GitHub release proof pending | V76,V78,V91 |
+| T126 | x | Restore distinct Death Curse and Mana Bulwark; retain Fate/Protection rules, source attribution, old URLs, sphere-qualified prerequisite links, and search visibility | V85,V74,V33,I.content,I.pages |
 
 **Recommended build order:**
 Audit remediation batch: T113→T114→T115→T116→T117→T118→T119→T120→T121→T122→T123→T124. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
@@ -544,3 +546,4 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B34 | 2026-08-31 | LHCI FallbackServer mounted `dist` at `/` while Astro emitted `/spheres-wiki/` assets, so CSS returned HTML and mobile CLS was falsely attributed to the static sidebar | V83 / T123 |
 | B35 | 2026-09-01 | Once Lighthouse reached the real Astro Preview, the casting-traditions page exceeded mobile FCP/LCP/TBT budgets because inactive tab bodies and Builder data were still embedded in the initial document | V84 / T124 |
 | B36 | 2026-09-18 | Eager oversized SVG raster inventory + 71650B hero blocked LCP. Native lazy alone passed locally but CI still 3317/3164ms. Full-resolution q75 hero → 16440B; measured home LCP 2121/2261ms; latest CI pending. V19 audit registered zero checks from runtime-assigned frontmatter; path-derived registration now runs 62 | V19,V76,V78,V91; T125 |
+| B37 | 2026-10-03 | Same-name Curse/Bulwark rules collapsed via false `dualSphere`; name-only prerequisite lookup ignored sphere and nested qualifier | V85 / T126 — distinct content IDs, scoped lookup, compatibility redirects, real-content regression checks |

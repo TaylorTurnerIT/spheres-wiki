@@ -28,9 +28,15 @@ const yamlPlugin = {
   },
 };
 
+const siteBase = "/spheres-wiki/";
+
 export default defineConfig({
   site: "https://taylorturnerit.github.io",
-  base: "/spheres-wiki/",
+  base: siteBase,
+  redirects: {
+    "/power/death/curse/": `${siteBase}power/death/curse-death/`,
+    "/power/mana/bulwark/": `${siteBase}power/mana/bulwark-mana/`,
+  },
   prefetch: {
     prefetchAll: false,
     defaultStrategy: "hover",
@@ -38,7 +44,7 @@ export default defineConfig({
   markdown: {
     processor: unified({
       remarkPlugins: [
-        [remarkEntryLinks, { base: "/spheres-wiki/" }],
+        [remarkEntryLinks, { base: siteBase }],
         remarkStripTocFlags,
       ],
     }),
