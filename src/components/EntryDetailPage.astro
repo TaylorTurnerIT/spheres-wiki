@@ -9,6 +9,7 @@ import WikiPage from "@/layouts/WikiPage.astro";
 import SourceBookCallout from "@/components/SourceBookCallout.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import PagefindMetadata from "@/components/PagefindMetadata.astro";
 import { resolveSystem } from "@/lib/systems";
 import type { BookMeta, TagEntry } from "@/lib/types";
 
@@ -59,10 +60,7 @@ const sysConfig = resolveSystem(system)!;
 
   <div class="content-columns">
     <div class="content-main">
-      {pagefindFilters.map(f => <span data-pagefind-filter={f} hidden></span>)}
-      {Object.entries(pagefindMeta).map(([k, v]) => (
-        <span data-pagefind-meta={`${k}:${v}`} hidden></span>
-      ))}
+      <PagefindMetadata meta={pagefindMeta} filters={pagefindFilters} />
       <h1
         class={`page-title ${sysConfig.cssKey}`}
         id="overview"

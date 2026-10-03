@@ -8,6 +8,7 @@ const lighthouseConfig = JSON.parse(
     collect: {
       staticDistDir?: string;
       url: string[];
+      settings: { chromeFlags: string };
     };
     assert: {
       assertions: Record<string, unknown>;
@@ -48,6 +49,9 @@ describe("Lighthouse CI deployment-path configuration", () => {
     }
 
     expect(new URL(collect.url[0]).pathname).toBe("/spheres-wiki/");
+    expect(collect.settings.chromeFlags).toBe(
+      "--no-sandbox --disable-dev-shm-usage",
+    );
   });
 
   it("keeps asset and layout regressions as blocking assertions", () => {
@@ -61,17 +65,16 @@ describe("Lighthouse CI deployment-path configuration", () => {
   });
 
   it("uses the real Preview server without rewriting the build tree", () => {
-    expect(testWorkflow).toContain("bun run preview -- --host 127.0.0.1");
-    expect(testWorkflow).not.toContain("ln -sfn . dist/spheres-wiki");
+    expect(deployWorkflow).toContain("bun run preview -- --host 127.0.0.1");
+    expect(deployWorkflow).not.toContain("ln -sfn . dist/spheres-wiki");
+    expect(testWorkflow).not.toContain("lhci autorun");
   });
 
   it("makes full CI builds independent of shallow PR checkouts", () => {
-    for (const workflow of [testWorkflow, deployWorkflow]) {
-      expect(workflow).toContain("fetch-depth: 0");
-      expect(workflow).toContain(
-        `FALLOW_AUDIT_BASE=origin/\${GITHUB_BASE_REF:-main}`,
-      );
-    }
+    expect(deployWorkflow).toContain("fetch-depth: 0");
+    expect(deployWorkflow).toContain(
+      `FALLOW_AUDIT_BASE=origin/\${GITHUB_BASE_REF:-main}`,
+    );
   });
 
   it("keeps large casting-tradition payloads behind base-path routes", () => {
