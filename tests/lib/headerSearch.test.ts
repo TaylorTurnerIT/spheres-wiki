@@ -199,6 +199,11 @@ describe("Header Search Client", () => {
       groups,
       { shifter: "/img/shifter.png" },
       "alter",
+      0,
+      {
+        alteration:
+          '<img data-sphere-image src="/spheres-wiki/_astro/alteration.webp" width="180" height="180" loading="lazy" alt="">',
+      },
     );
 
     expect(totalRendered).toBe(4);
@@ -215,7 +220,8 @@ describe("Header Search Client", () => {
     expect(html).toContain("Shifter");
     expect(html).toContain("Class · Alteration specialist");
     expect(html).toContain('src="/img/shifter.png"');
-    expect(html).toContain("#si-alteration");
+    expect(html).toContain('src="/spheres-wiki/_astro/alteration.webp"');
+    expect(html).not.toContain("#si-alteration");
     expect(html).toContain("↑ ↓ navigate");
     expect(html).toContain("↵ open");
     expect(html).toContain("esc close");

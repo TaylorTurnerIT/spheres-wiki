@@ -218,76 +218,6 @@ export function groupSearchResults(
   return groups;
 }
 
-const SPHERE_SYMBOLS = new Set([
-  "alchemy",
-  "alteration",
-  "artifice",
-  "athletics",
-  "barrage",
-  "barroom",
-  "beastmastery",
-  "berserker",
-  "blood",
-  "bluster",
-  "body-control",
-  "boxing",
-  "brute",
-  "communication",
-  "conjuration",
-  "creation",
-  "dark",
-  "death",
-  "destruction",
-  "divination",
-  "dual-wielding",
-  "duelist",
-  "enhancement",
-  "equipment",
-  "faction",
-  "fallen-fey",
-  "fate",
-  "fencing",
-  "gladiator",
-  "guardian",
-  "herbalism",
-  "illusion",
-  "infiltration",
-  "investigation",
-  "lancer",
-  "leadership",
-  "life",
-  "light",
-  "mana",
-  "mind",
-  "nature",
-  "navigation",
-  "open-hand",
-  "performance",
-  "protection",
-  "scoundrel",
-  "scout",
-  "shield",
-  "sniper",
-  "spellhacking",
-  "study",
-  "subterfuge",
-  "survivalism",
-  "tech",
-  "telekinesis",
-  "time",
-  "tinker",
-  "trap",
-  "vocation",
-  "war",
-  "warleader",
-  "warp",
-  "weather",
-  "wrestling",
-  "bear",
-  "technomancy",
-  "veilweaving",
-]);
-
 function extractSphereSlug(itemUrl: string, itemSphere?: string): string {
   if (itemSphere) {
     return itemSphere
@@ -311,16 +241,19 @@ function extractSphereSlug(itemUrl: string, itemSphere?: string): string {
   return "";
 }
 
-function resolveSphereIcon(item: HeaderSearchItem): string | null {
+function resolveSphereIcon(
+  item: HeaderSearchItem,
+  templates: Record<string, string>,
+): string | null {
   if (item.type === "sphere") {
     const icon = (item.icon || extractSlug(item.url))
       .toLowerCase()
       .trim()
       .replace(/[\s_]+/g, "-");
-    if (SPHERE_SYMBOLS.has(icon)) return icon;
+    if (Object.hasOwn(templates, icon)) return icon;
   }
   const sphereSlug = extractSphereSlug(item.url, item.sphere);
-  if (sphereSlug && SPHERE_SYMBOLS.has(sphereSlug)) {
+  if (sphereSlug && Object.hasOwn(templates, sphereSlug)) {
     return sphereSlug;
   }
   return null;
@@ -362,10 +295,11 @@ function resolveSystemLogo(item: HeaderSearchItem): string {
 function renderItemIcon(
   item: HeaderSearchItem,
   classImageMap: Record<string, string>,
+  sphereIconTemplates: Record<string, string>,
 ): string {
-  const sphereIcon = resolveSphereIcon(item);
+  const sphereIcon = resolveSphereIcon(item, sphereIconTemplates);
   if (sphereIcon) {
-    return `<span class="search-panel-icon-wrap"><svg class="search-panel-sphere-icon" width="32" height="32" viewBox="-1 -1 18 18" aria-hidden="true"><use href="#si-${escapeHtml(sphereIcon)}"/></svg></span>`;
+    return `<span class="search-panel-icon-wrap">${sphereIconTemplates[sphereIcon]}</span>`;
   }
 
   const slug = extractSlug(item.url);
@@ -410,6 +344,7 @@ export function renderResultsPanel(
   classImageMap: Record<string, string>,
   query: string,
   totalResultsCount = 0,
+  sphereIconTemplates: Record<string, string> = {},
 ): { html: string; totalRendered: number } {
   let totalRendered = 0;
   let html = "";
@@ -426,7 +361,7 @@ export function renderResultsPanel(
       const idx = totalRendered++;
       const isFirst = idx === 0;
       const subtitle = formatSubtitle(item);
-      const iconHtml = renderItemIcon(item, classImageMap);
+      const iconHtml = renderItemIcon(item, classImageMap, sphereIconTemplates);
       const sysId = resolveSystemId(item.system, item.url);
       const dataSys = sysId ? ` data-system="${escapeHtml(sysId)}"` : "";
       const badges = renderBadges(item);

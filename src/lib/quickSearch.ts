@@ -217,6 +217,16 @@ export function attachQuickSearch({
   iconBtn,
   signal,
 }: QuickSearchOptions): void {
+  const sphereIconTemplates = Object.fromEntries(
+    [
+      ...document.querySelectorAll<HTMLTemplateElement>(
+        "template[data-sphere-icon-template]",
+      ),
+    ].map((template) => [
+      template.dataset.sphereIconTemplate ?? "",
+      template.innerHTML,
+    ]),
+  );
   let selectedIndex = -1;
   let totalItems = 0;
 
@@ -321,6 +331,7 @@ export function attachQuickSearch({
         classImageMap,
         query,
         totalCount,
+        sphereIconTemplates,
       );
 
       resultsDiv.innerHTML = html;

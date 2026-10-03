@@ -8,6 +8,7 @@ import ResourceCard from '@/components/ResourceCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import { resolveEntries } from '@/lib/resolveEntries';
 import { SYSTEMS } from '@/config/site';
+import { getImage } from 'astro:assets';
 import heroBg from '@/assets/hero-bg.webp';
 import heroBgNight from '@/assets/hero-bg-dark-night.webp';
 import heroBgParchment from '@/assets/hero-bg-dark-parchment.webp';
@@ -21,6 +22,13 @@ import {
   coreBooksOf,
   CORE_BOOK_SLUGS,
 } from '@/lib/bookCuration';
+
+// Keep the original artwork and full-resolution framing; compress its transfer.
+const [heroLight, heroNight, heroParchment] = await Promise.all(
+  [heroBg, heroBgNight, heroBgParchment].map(src =>
+    getImage({ src, width: src.width, format: 'webp', quality: 75 })
+  )
+);
 
 const { sphereMap, classMap, bookMetaMap } = await resolveEntries();
 
@@ -42,7 +50,7 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
   <link
     rel="preload"
     as="image"
-    href={heroBg.src}
+    href={heroLight.src}
     type="image/webp"
     fetchpriority="high"
     slot="head"
@@ -55,7 +63,7 @@ const systemData = Object.keys(SYSTEMS).map(id => ({
 
   <div
     class="hero-section"
-    style={`--hero-light: url('${heroBg.src}'); --hero-light-lqip: url('data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAQBQCdASo8ABYAPu1urVCppqQjrBqoATAdiWUAyF2L6yLajDaJqblDdjlNuQYOKASAAP7xzJf/+wb5T+h72E9biHiDKFi4Fu7VO4Q2GTNQGDDP0E6PEuhDlWZo7G0gkni2T44DOHESCi23diWXh7evF6IxVyovB6/FjBCYkE49sFI+GuZ3GzMLEkqQz9z8xUZ7huGvhxbRV5zdrWR4AZqnFOuE13uhlwwAAA=='); --hero-night: url('${heroBgNight.src}'); --hero-night-lqip: url('${HERO_LQIP_NIGHT}'); --hero-parchment: url('${heroBgParchment.src}'); --hero-parchment-lqip: url('${HERO_LQIP_PARCHMENT}');`}
+    style={`--hero-light: url('${heroLight.src}'); --hero-light-lqip: url('data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAQBQCdASo8ABYAPu1urVCppqQjrBqoATAdiWUAyF2L6yLajDaJqblDdjlNuQYOKASAAP7xzJf/+wb5T+h72E9biHiDKFi4Fu7VO4Q2GTNQGDDP0E6PEuhDlWZo7G0gkni2T44DOHESCi23diWXh7evF6IxVyovB6/FjBCYkE49sFI+GuZ3GzMLEkqQz9z8xUZ7huGvhxbRV5zdrWR4AZqnFOuE13uhlwwAAA=='); --hero-night: url('${heroNight.src}'); --hero-night-lqip: url('${HERO_LQIP_NIGHT}'); --hero-parchment: url('${heroParchment.src}'); --hero-parchment-lqip: url('${HERO_LQIP_PARCHMENT}');`}
   >
     <h1 class="hero-title">Spheres Wiki</h1>
     <div class="hero-search-wrap" id="hero-search">

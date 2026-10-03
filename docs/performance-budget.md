@@ -2,8 +2,9 @@
 
 The build enforces HTML payload budgets with `bun run check-performance` after
 Astro, Pagefind, route-link, and TOC generation. The check covers route classes
-with the largest server-rendered payloads; JavaScript, fonts, and images remain
-separate Lighthouse concerns.
+with the largest server-rendered payloads. Shared sphere artwork also has
+static image budgets; JavaScript, fonts, and complete page loading remain
+Lighthouse concerns.
 
 | Route class | Budget |
 | --- | ---: |
@@ -59,3 +60,38 @@ terminal and run Lighthouse CI in another:
 bun run preview -- --host 127.0.0.1
 bunx lhci autorun
 ~~~
+
+## Shared sphere artwork
+
+`SphereIcon.astro` uses Astro-generated WebP images at up to 180 pixels wide
+for badges displayed at up to 90 CSS pixels. Transforms resolve once per
+build; original artwork is unchanged. Per-asset framing retains the original
+inset or full-bleed appearance.
+
+Raster icons use native `img` elements with explicit dimensions and
+`loading="lazy"`. The page-heading icon loads eagerly. SVGSprite contains
+only vectors. SphereIconTemplates supplies inert SSR templates; quick search
+mounts the needed template when results appear. Merely declaring an unused
+icon no longer fetches it.
+
+The post-build check samples home, all four system indexes, and one route
+from each HTML-budget class. On each sample, it validates native image
+loading and dimensions, then measures all unique optimized raster URLs from
+active images and the complete template inventory against files in `dist`:
+
+- At most 80 available image URLs.
+- At most 700,000 encoded image bytes in total.
+- At most 20,000 bytes for any individual sphere image.
+
+The inventory budget covers available artwork, not simultaneous requests.
+Missing, empty, external, or out-of-build paths fail the check, as do live
+SVG raster images, missing dimensions and eager images outside the page
+heading. Native lazy loading decides which nearby images to fetch; browser
+cold-load measurements verify that unmounted templates make no requests.
+Lighthouse governs complete page loads, including hero art, covers and fonts.
+
+The home hero uses build-time WebP encoding at quality 75 for all three
+themes. Each image retains its original 1672×624 dimensions, crop and source
+artwork. The light hero keeps its high-priority preload; dark variants still
+load on demand. This reduces transfer time for the LCP image without changing
+the page layout or font loading policy.

@@ -2,6 +2,7 @@
 import { url } from "@/lib/url";
 import { ClientRouter } from 'astro:transitions';
 import SVGSprite from '@/components/SVGSprite.astro';
+import SphereIconTemplates from '@/components/SphereIconTemplates.astro';
 import ScrollToTop from '@/components/ScrollToTop.astro';
 import "@/styles/global.css";
 import "@/styles/fonts.css";
@@ -58,6 +59,7 @@ const {
   </head>
   <body>
     <SVGSprite />
+    <SphereIconTemplates />
     <slot />
     <ScrollToTop />
     <div id="global-tag-tooltip" popover="manual" class="tag-tooltip" role="tooltip" aria-hidden="true">

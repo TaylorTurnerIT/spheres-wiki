@@ -73,6 +73,27 @@ const pageFiles = srcFiles.filter((f) =>
 
 const failures = [];
 
+const sphereImageBypasses = findMatches(
+  srcFiles,
+  /sphereIconAssets|spheres-icons\//,
+  new Set([
+    "src/lib/sphereIconAssets.ts",
+    "src/components/SphereIcon.astro",
+    "src/components/SphereIconTemplates.astro",
+  ]),
+);
+const svgRasterImages = findMatches(
+  srcFiles.filter((file) => file.endsWith("/SVGSprite.astro")),
+  /<image\b/,
+);
+if (sphereImageBypasses.length || svgRasterImages.length) {
+  failures.push(
+    "V91: render sphere artwork through SphereIcon.astro; keep raster images out of SVG sprites:",
+    ...sphereImageBypasses,
+    ...svgRasterImages,
+  );
+}
+
 const headerReimpl = findMatches(
   srcFiles,
   /talent-header-top/,

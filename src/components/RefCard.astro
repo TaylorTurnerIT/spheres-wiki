@@ -1,4 +1,5 @@
 ---
+import SphereIcon from "@/components/SphereIcon.astro";
 import { url } from "@/lib/url";
 import { SYSTEMS, SYSTEM_DEFAULT } from '@/config/site';
 import type { SphereEntry, ClassEntry } from '@/lib/types';
@@ -37,7 +38,7 @@ const isChampions = system === 'champions';
         <div class:list={['sphere-list', 'single', `${nsClass}-list`]}>
           {classes.map(cls => (
             <a href={url(`/${cfg.nsRoute}/classes/${cls.id}/`)} class={nsClass} data-astro-prefetch="hover">
-              <svg class="si" aria-hidden="true"><use href="#si-champ-star"/></svg>{cls.name}
+              <SphereIcon icon="champ-star" />{cls.name}
             </a>
           ))}
         </div>
@@ -47,14 +48,14 @@ const isChampions = system === 'champions';
             <div class:list={['sphere-col', `${nsClass}-list`]}>
               {col1.map(s => (
                 <a href={url(`/${cfg.nsRoute}/${s.id}/`)} class={nsClass} data-astro-prefetch="hover">
-                  <svg class="si" aria-hidden="true"><use href={`#si-${s.icon}`}/></svg>{s.name}
+                  <SphereIcon icon={s.icon} />{s.name}
                 </a>
               ))}
             </div>
             <div class:list={['sphere-col', `${nsClass}-list`]}>
               {col2.map(s => (
                 <a href={url(`/${cfg.nsRoute}/${s.id}/`)} class={nsClass} data-astro-prefetch="hover">
-                  <svg class="si" aria-hidden="true"><use href={`#si-${s.icon}`}/></svg>{s.name}
+                  <SphereIcon icon={s.icon} />{s.name}
                 </a>
               ))}
             </div>
