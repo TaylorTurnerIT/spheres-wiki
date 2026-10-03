@@ -7,6 +7,7 @@ import SphereIcon from "@/components/SphereIcon.astro";
  * sphere index) that hand-rolled the same cluster.
  */
 import { resolveSystem } from "@/lib/systems";
+import PagefindMetadata from "@/components/PagefindMetadata.astro";
 
 interface Props {
   name: string;
@@ -29,10 +30,16 @@ interface Props {
 
 const { name, system, type, searchFilter, icon, weight = "10", transitionName, talentCount, subtitle } = Astro.props;
 const sysConfig = resolveSystem(system)!;
+const meta = {
+  title: name,
+  type: type.replace(/^type:/, ''),
+  ...(searchFilter ? { system: searchFilter.replace(/^system:/, '') } : {}),
+  ...(icon ? { icon } : {}),
+  ...(talentCount !== undefined ? { talentCount: String(talentCount) } : {}),
+  ...(subtitle ? { subtitle } : {}),
+};
 ---
-<span data-pagefind-meta={`title:${name}`} hidden></span>
-<span data-pagefind-filter={type} hidden></span>
-{searchFilter && <span data-pagefind-filter={searchFilter} hidden></span>}
+<PagefindMetadata meta={meta} />
 <h1
   class={`page-title ${sysConfig.cssKey}`}
   id="overview"
@@ -42,8 +49,3 @@ const sysConfig = resolveSystem(system)!;
   {icon && <SphereIcon icon={icon} class="page-title-icon" loading="eager" />}
   {name}
 </h1>
-<span data-pagefind-meta={type} hidden></span>
-{searchFilter && <span data-pagefind-meta={searchFilter} hidden></span>}
-{icon && <span data-pagefind-meta={`icon:${icon}`} hidden></span>}
-{talentCount !== undefined && <span data-pagefind-meta={`talentCount:${talentCount}`} hidden></span>}
-{subtitle && <span data-pagefind-meta={`subtitle:${subtitle}`} hidden></span>}

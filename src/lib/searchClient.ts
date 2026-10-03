@@ -2,10 +2,14 @@
 // filters, and URL param sync. Loaded by pages/search/index.astro.
 
 import { SYSTEMS } from "@/config/site";
+import {
+  loadPagefind,
+  type PagefindResultHandle,
+  type SearchResult,
+} from "@/lib/pagefindClient";
 import { createTomSelect } from "@/lib/tomSelectInit";
 
 const PAGE_SIZE = 40;
-const MAX_RESULTS = 500;
 
 function requireSearchElement<T extends HTMLElement>(id: string): T {
   const element = document.getElementById(id);
@@ -55,9 +59,12 @@ const TYPE_ORDER = [
   "tradition",
 ];
 
-let pagefind: any;
-let browseManifest: any[] = [];
-let allData: any[] = [];
+let browseManifest: SearchResult[] = [];
+let allData: SearchResult[] = [];
+let resultHandles: PagefindResultHandle[] = [];
+let resultCursor = 0;
+let resultsSerial: number | null = null;
+let loadingPageSerial: number | null = null;
 let displayCount = PAGE_SIZE;
 let activeSystem: string | null = null;
 let activeType: string | null = null;
@@ -66,6 +73,8 @@ let activeTag: string | null = null;
 let tsInstances: Record<string, any> = {};
 let browseAll = false;
 let tagTemplates: Record<string, string> = {};
+let scheduleSearch: (query: string | null, debounce?: boolean) => void =
+  () => {};
 
 let browseManifestPromise: Promise<void> | null = null;
 
@@ -73,7 +82,11 @@ async function loadBrowseManifest() {
   if (browseManifest.length > 0) return;
   if (!browseManifestPromise) {
     browseManifestPromise = fetch(`${import.meta.env.BASE_URL}search/data.json`)
-      .then((r) => r.json())
+      .then((r) => {
+        if (!r.ok)
+          throw new Error(`Search manifest request failed: ${r.status}`);
+        return r.json();
+      })
       .then((entries: any[]) => {
         browseManifest = entries.map((e: any) => ({
           url: e.url,
@@ -86,18 +99,13 @@ async function loadBrowseManifest() {
           },
           excerpt: "",
         }));
+      })
+      .catch((error: unknown) => {
+        browseManifestPromise = null;
+        throw error;
       });
   }
   await browseManifestPromise;
-}
-
-async function loadPagefind() {
-  if (pagefind) return;
-  pagefind = await import(
-    /* @vite-ignore */ `${import.meta.env.BASE_URL}pagefind/pagefind.js`
-  );
-  await pagefind.options({ excerptLength: 30 });
-  await pagefind.init();
 }
 
 // fallow-ignore-next-line complexity
@@ -164,16 +172,18 @@ function filtered() {
 }
 
 // fallow-ignore-next-line complexity
-function renderResults() {
-  const results = filtered();
+function renderResults(appendFrom = 0) {
+  const results = browseAll ? filtered() : allData;
   const resultsEl = requireSearchElement<HTMLElement>("sp-results");
   const statusEl = requireSearchElement<HTMLElement>("sp-status");
   const loadMoreEl = requireSearchElement<HTMLButtonElement>("sp-load-more");
 
-  const total = allData.length;
-  const filteredTotal = results.length;
-  const showing = results.slice(0, displayCount);
-  const hasMore = results.length > displayCount;
+  const total = browseAll ? allData.length : resultHandles.length;
+  const filteredTotal = browseAll ? results.length : total;
+  const showing = browseAll ? results.slice(0, displayCount) : results;
+  const hasMore = browseAll
+    ? results.length > displayCount
+    : resultCursor < resultHandles.length;
 
   statusEl.className = "sp-status";
   statusEl.hidden = false;
@@ -193,7 +203,8 @@ function renderResults() {
     return;
   }
 
-  resultsEl.innerHTML = showing
+  const html = showing
+    .slice(appendFrom)
     // fallow-ignore-next-line complexity
     .map((r) => {
       const title = r.meta?.title ?? "Untitled";
@@ -261,6 +272,9 @@ function renderResults() {
     })
     .join("");
 
+  if (appendFrom > 0) resultsEl.insertAdjacentHTML("beforeend", html);
+  else resultsEl.innerHTML = html;
+
   loadMoreEl.hidden = !hasMore;
 }
 
@@ -283,13 +297,7 @@ function makeOnChange(key: string) {
       activeTag ?? "",
     );
 
-    if (query.length >= 2) {
-      // Re-filter existing search results — no need to re-fetch
-      renderResults();
-    } else {
-      // No query — browse-all with current filters (or all pages if none)
-      void search(null, activeSearchSignal ?? undefined);
-    }
+    scheduleSearch(query.length >= 2 ? query : null);
   };
 }
 
@@ -349,15 +357,69 @@ function initTomSelects(
 }
 
 let searchSerial = 0;
-let activeSearchSignal: AbortSignal | null = null;
+
+function isCurrentSearch(serial: number, signal: AbortSignal): boolean {
+  return !signal.aborted && serial === searchSerial;
+}
+
+function nativeFilters(): Record<string, string> {
+  const filters: Record<string, string> = {};
+  if (activeSystem) filters.system = systemKeyToMeta(activeSystem);
+  if (activeType) filters.type = activeType;
+  if (activeSphere) filters.sphere = activeSphere;
+  if (activeTag) filters.tags = activeTag;
+  return filters;
+}
+
+function showSearchError(): void {
+  const status = requireSearchElement<HTMLElement>("sp-status");
+  status.className = "sp-status";
+  status.textContent =
+    "Search could not be loaded. Change the query or filters to retry.";
+  requireSearchElement<HTMLElement>("sp-load-more").hidden = true;
+}
+
+async function appendQueryPage(
+  serial: number,
+  signal: AbortSignal,
+): Promise<void> {
+  if (!isCurrentSearch(serial, signal) || loadingPageSerial === serial) return;
+  loadingPageSerial = serial;
+  const page = resultHandles.slice(resultCursor, resultCursor + PAGE_SIZE);
+  try {
+    const data = await Promise.all(page.map((result) => result.data()));
+    if (!isCurrentSearch(serial, signal)) return;
+    const renderedCount = allData.length;
+    resultCursor += page.length;
+    allData.push(...data);
+    renderResults(renderedCount);
+  } catch {
+    if (isCurrentSearch(serial, signal)) showSearchError();
+  } finally {
+    if (loadingPageSerial === serial) loadingPageSerial = null;
+  }
+}
+
+async function loadMore(signal: AbortSignal): Promise<void> {
+  if (signal.aborted || resultsSerial !== searchSerial) return;
+  if (browseAll) {
+    const renderedCount = displayCount;
+    displayCount += PAGE_SIZE;
+    renderResults(renderedCount);
+  } else {
+    await appendQueryPage(searchSerial, signal);
+  }
+}
 
 // fallow-ignore-next-line complexity
-async function search(query: string | null, signal?: AbortSignal) {
+async function search(query: string | null, signal: AbortSignal) {
   const requestSerial = ++searchSerial;
-  if (signal?.aborted) return;
+  if (signal.aborted) return;
   const statusEl = requireSearchElement<HTMLElement>("sp-status");
   const resultsEl = requireSearchElement<HTMLElement>("sp-results");
   browseAll = query === null;
+  resultsSerial = null;
+  loadingPageSerial = null;
 
   statusEl.hidden = false;
   statusEl.className = "sp-status loading";
@@ -367,34 +429,38 @@ async function search(query: string | null, signal?: AbortSignal) {
     requireSearchElement<HTMLElement>("sp-load-more").hidden = true;
   }
 
-  if (browseAll) {
+  if (query === null) {
     // Keep the server-rendered first cards visible while the manifest
     // loads; clearing here would paint a collapsed page and shift the
     // footer when the full list renders (measured CLS 0.12).
     try {
       await loadBrowseManifest();
     } catch {
+      if (isCurrentSearch(requestSerial, signal)) showSearchError();
       return;
     }
-    if (signal?.aborted || requestSerial !== searchSerial) return;
+    if (!isCurrentSearch(requestSerial, signal)) return;
     allData = browseManifest;
     displayCount = PAGE_SIZE;
+    resultsSerial = requestSerial;
     renderResults();
     return;
   }
 
-  await loadPagefind();
-  if (signal?.aborted || requestSerial !== searchSerial) return;
-  const result = await pagefind.search(query);
-  if (signal?.aborted || requestSerial !== searchSerial) return;
-  const top = result.results.slice(0, MAX_RESULTS);
-  const data = await Promise.all(top.map((r: any) => r.data()));
-  if (signal?.aborted || requestSerial !== searchSerial) return;
-  // Filter out the `#overview` sub-results which duplicate the main page result
-  allData = data.filter((r: any) => !r.url.endsWith("#overview"));
-  displayCount = PAGE_SIZE;
-
-  renderResults();
+  const filters = nativeFilters();
+  try {
+    const pagefind = await loadPagefind();
+    if (!isCurrentSearch(requestSerial, signal)) return;
+    const result = await pagefind.search(query, { filters });
+    if (!isCurrentSearch(requestSerial, signal)) return;
+    resultHandles = result.results;
+    resultCursor = 0;
+    allData = [];
+    resultsSerial = requestSerial;
+    await appendQueryPage(requestSerial, signal);
+  } catch {
+    if (isCurrentSearch(requestSerial, signal)) showSearchError();
+  }
 }
 
 let cleanupSearchPage = () => {};
@@ -409,16 +475,29 @@ document.addEventListener("astro:page-load", () => {
   cleanupSearchPage();
   const input = document.getElementById("sp-input") as HTMLInputElement;
   if (!input) {
-    activeSearchSignal = null;
+    scheduleSearch = () => {};
     return;
   }
 
   const controller = new AbortController();
   const { signal } = controller;
-  activeSearchSignal = signal;
   let debounceTimer: ReturnType<typeof setTimeout> | null = null;
   let fastFollowTimer: ReturnType<typeof setTimeout> | null = null;
   let observer: IntersectionObserver | null = null;
+  let cancelInitialBrowse = () => {};
+
+  scheduleSearch = (query, debounce = false) => {
+    cancelInitialBrowse();
+    if (debounceTimer) clearTimeout(debounceTimer);
+    // Invalidate requests at input time, before the next debounce expires.
+    searchSerial += 1;
+    resultsSerial = null;
+    if (debounce) {
+      debounceTimer = setTimeout(() => void search(query, signal), 220);
+    } else {
+      void search(query, signal);
+    }
+  };
 
   // Reset state on each navigation
   activeSystem = null;
@@ -426,6 +505,8 @@ document.addEventListener("astro:page-load", () => {
   activeSphere = null;
   activeTag = null;
   allData = [];
+  resultHandles = [];
+  resultCursor = 0;
   browseAll = false;
 
   // Read static build-time data
@@ -471,20 +552,31 @@ document.addEventListener("astro:page-load", () => {
     // Defer the browse-all render past the load window: the six
     // server-rendered cards hold the page stable, and rendering the full
     // list during load dominated TBT (measured 549ms vs 300 budget).
-    const idle = (cb: () => void) =>
-      "requestIdleCallback" in window
-        ? (window as any).requestIdleCallback(cb, { timeout: 2000 })
-        : setTimeout(cb, 200);
-    idle(() => {
-      if (!signal.aborted) void search(null, signal);
-    });
+    const initialSerial = searchSerial;
+    const initialBrowse = () => {
+      if (
+        signal.aborted ||
+        searchSerial !== initialSerial ||
+        input.value.trim()
+      )
+        return;
+      void search(null, signal);
+    };
+    if ("requestIdleCallback" in window) {
+      const handle = window.requestIdleCallback(initialBrowse, {
+        timeout: 2000,
+      });
+      cancelInitialBrowse = () => window.cancelIdleCallback(handle);
+    } else {
+      const handle = setTimeout(initialBrowse, 200);
+      cancelInitialBrowse = () => clearTimeout(handle);
+    }
   }
 
   input.addEventListener(
     "input",
     // fallow-ignore-next-line complexity
     () => {
-      if (debounceTimer) clearTimeout(debounceTimer);
       const val = input.value.trim();
       pushParams(
         val,
@@ -493,12 +585,7 @@ document.addEventListener("astro:page-load", () => {
         activeSphere ?? "",
         activeTag ?? "",
       );
-      if (val.length < 2) {
-        if (debounceTimer) clearTimeout(debounceTimer);
-        void search(null, signal); // browse-all with current filters (or all pages)
-        return;
-      }
-      debounceTimer = setTimeout(() => void search(val, signal), 220);
+      scheduleSearch(val.length >= 2 ? val : null, val.length >= 2);
     },
     { signal },
   );
@@ -544,20 +631,22 @@ document.addEventListener("astro:page-load", () => {
       (entries) => {
         if (signal.aborted) return;
         if (entries[0].isIntersecting && !loadMoreEl.hidden) {
-          displayCount += PAGE_SIZE;
-          renderResults();
-
-          // Fast-follow check in case one chunk isn't enough to push sentinel off-screen
-          fastFollowTimer = setTimeout(() => {
-            if (signal.aborted) return;
-            if (
-              !loadMoreEl.hidden &&
-              loadMoreEl.getBoundingClientRect().top < window.innerHeight + 800
-            ) {
-              displayCount += PAGE_SIZE;
-              renderResults();
-            }
-          }, 50);
+          const serial = searchSerial;
+          void loadMore(signal).then(() => {
+            if (!isCurrentSearch(serial, signal)) return;
+            // Recheck after layout when a short page still leaves the sentinel visible.
+            if (fastFollowTimer) clearTimeout(fastFollowTimer);
+            fastFollowTimer = setTimeout(() => {
+              if (!isCurrentSearch(serial, signal)) return;
+              if (
+                !loadMoreEl.hidden &&
+                loadMoreEl.getBoundingClientRect().top <
+                  window.innerHeight + 800
+              ) {
+                void loadMore(signal);
+              }
+            }, 50);
+          });
         }
       },
       { rootMargin: "800px" },
@@ -568,6 +657,8 @@ document.addEventListener("astro:page-load", () => {
   cleanupSearchPage = () => {
     searchSerial += 1;
     controller.abort();
+    cancelInitialBrowse();
+    scheduleSearch = () => {};
     if (debounceTimer) clearTimeout(debounceTimer);
     if (fastFollowTimer) clearTimeout(fastFollowTimer);
     observer?.disconnect();
@@ -577,6 +668,5 @@ document.addEventListener("astro:page-load", () => {
       } catch {}
     });
     tsInstances = {};
-    if (activeSearchSignal === signal) activeSearchSignal = null;
   };
 });
