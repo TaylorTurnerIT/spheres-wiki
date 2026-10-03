@@ -96,6 +96,8 @@ test → lint → validate.mjs → check-assets.mjs → check-cross-sphere.mjs �
 ```
 The gate must exit 0 and emit no actionable diagnostics: no test failures, lint errors, Astro check errors/warnings/hints, Fallow dead-code/complexity/duplication findings, unresolved remark entry links, missing content routes, broken internal links/anchors, Vite warnings, Pagefind failures, idiom-guard violations (V72), TOC audit failures, or performance-budget violations. `vite.build.chunkSizeWarningLimit` is 200KB by design.
 
+Pages release gate (`deploy.yml`, push/PR/manual): `bun run build` → provision Chrome matching locked Puppeteer → Preview → browser smoke → Lighthouse → upload checked `dist` → deploy. Failed/cancelled/skipped/missing required gate ⊥ publish. PRs run same checks, ⊥ publish. `CHROME_PATH` shared by browser smoke + Lighthouse; startup diagnostics retained even before first assertion.
+
 ### I.layout — page shell
 `WikiPage.astro`: header + sidebar + tab nav + content slot; sets Pagefind indexing scope/weight per page. `Base.astro`: html shell, meta/OG tags, footer, self-hosted fonts + `global.css` load.
 
@@ -281,6 +283,8 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V82. CI PR build ! fetch base refs and set `FALLOW_AUDIT_BASE` explicitly before `bun run build`; detached checkout ⊥ relies on auto-detection.
 - V83. Lighthouse CI ! target the Astro Preview deployment URL under the configured base path; required CSS/JS responses ! have successful status + expected MIME, and asset/console or CLS assertion failures ! stop the check.
 - V84. Large tabbed views ! keep inactive tab bodies and tab-specific datasets out of initial HTML; selecting a tab ! fetch and hydrate its base-path fragment/data before interaction or anchor scrolling.
+- V86. CI browser ! explicitly provisioned at locked Puppeteer Chrome revision; smoke + Lighthouse share installed path. Browser startup failure ! preserve error report, selected path/version when available, and process stderr; explicit invalid path ⊥ silent fallback.
+- V87. ∀ Pages publish entrypoint → static build, browser smoke, Lighthouse success for same SHA + unchanged `dist` before artifact upload. Failed/cancelled/skipped/missing gate ⊥ upload/deploy; last successful deployment retained.
 - V88. Search input/filter intent immediately invalidates older async work; deferred initial browse, debounce, result pages, and View Transition teardown ! preserve latest query + URL.
 - V89. Catalog facets derive from full entry corpus; SSR row cap ! restrict initial markup only, never selectable systems/categories/tags.
 - V90. Full-text search applies native system/type/sphere/tag filters before paging; all matching handles remain reachable, totals cover full match set, detail fetch/render batches ≤40. Native facet values ! equal result metadata; ArticlePage uses canonical `article` type.
@@ -483,6 +487,8 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T123 | x | Make Lighthouse CI base-path setup self-validating: target the real Astro Preview URL, remove the dist symlink workaround, and guard asset/MIME + CLS assertions | V83,I.build |
 | T124 | x | Defer inactive casting-tradition tab bodies and Builder data behind base-path routes; retain initial anchors and hydrate tab content before scroll-spy/Builder activation | V84,V76 |
 | T125 | ~ | SphereIcon native lazy images + inert search templates; inventory 64 URLs / 535620B. Full-resolution q75 hero: light 16440B, night 30500B, parchment 26050B; focused home LCP 2121/2261ms, CLS 0, unchanged assertions pass. Combined 10-route local gate passed at ec6daf03 before hero compression; latest GitHub release proof pending | V76,V78,V91 |
+| T127 | x | Provision compatible CI Chrome; preserve browser launch diagnostics; add subprocess startup regression tests | V86,V79,I.build |
+| T128 | x | Gate Pages artifact upload + deployment on same-build browser/Lighthouse success; verify workflow contracts for push/PR/manual entrypoints | V87,V82,V83,I.build |
 | T129 | x | Cancel stale deferred browse/query/paging work at newest input or filter intent (#16) | V88,V25,V77 |
 | T130 | x | Build feat facets from all rows while retaining 300-row SSR cap (#17) | V89,V76 |
 | T131 | x | Apply native search facets before bounded result paging; expose complete counts and all matches (#38) | V90,V88,I.pagefind |
@@ -550,6 +556,8 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B34 | 2026-08-31 | LHCI FallbackServer mounted `dist` at `/` while Astro emitted `/spheres-wiki/` assets, so CSS returned HTML and mobile CLS was falsely attributed to the static sidebar | V83 / T123 |
 | B35 | 2026-09-01 | Once Lighthouse reached the real Astro Preview, the casting-traditions page exceeded mobile FCP/LCP/TBT budgets because inactive tab bodies and Builder data were still embedded in the initial document | V84 / T124 |
 | B36 | 2026-09-18 | Eager oversized SVG raster inventory + 71650B hero blocked LCP. Native lazy alone passed locally but CI still 3317/3164ms. Full-resolution q75 hero → 16440B; measured home LCP 2121/2261ms; latest CI pending. V19 audit registered zero checks from runtime-assigned frontmatter; path-derived registration now runs 62 | V19,V76,V78,V91; T125 |
+| B38 | 2026-10-03 | Implicit runner browser selection + launch outside report cleanup → startup timeout leaves no diagnostics; exact runner failure cause unproven | V86 / T127 — explicit compatible Chrome, report finalization covers startup |
+| B39 | 2026-10-03 | Pages build independent of browser/Lighthouse workflow → failed browser-check SHA published | V87 / T128 — checks before artifact upload in same build job |
 | B40 | 2026-10-03 | Deferred initial browse ran after user query; debounce delayed request invalidation (#16) | V88 / T129 — cancel and guard idle callbacks; invalidate at intent time |
 | B41 | 2026-10-03 | Feat facets derived from 300-row SSR slice, omitting tail-only values (#17) | V89 / T130 — derive facets from full corpus |
 | B42 | 2026-10-03 | Search capped global handles at 500 before filters; spell+Guile showed 28 of 118 indexed matches (#38) | V90 / T131 — native metadata facets before 40-result detail fetches |

@@ -33,15 +33,65 @@ jobs:
       - run: bun install --frozen-lockfile
       - name: Set Fallow base ref
         run: echo "FALLOW_AUDIT_BASE=origin/${GITHUB_BASE_REF:-main}" >> "$GITHUB_ENV"
-      - run: bun run build
+      - id: static-build
+        run: bun run build
+      - name: Resolve compatible Chrome version
+        id: chrome-version
+        run: node --input-type=module -e 'import { appendFileSync } from "node:fs"; import { PUPPETEER_REVISIONS } from "puppeteer-core"; appendFileSync(process.env.GITHUB_OUTPUT, `version=${PUPPETEER_REVISIONS.chrome}\n`);'
+      - name: Install Chrome
+        id: chrome
+        uses: browser-actions/setup-chrome@v2
+        with:
+          chrome-version: ${{ steps.chrome-version.outputs.version }}
+          install-dependencies: true
+      - name: Select Chrome for browser checks
+        env:
+          INSTALLED_CHROME: ${{ steps.chrome.outputs.chrome-path }}
+        run: |
+          echo "CHROME_PATH=$INSTALLED_CHROME" >> "$GITHUB_ENV"
+          echo "Chrome executable: $INSTALLED_CHROME"
+          "$INSTALLED_CHROME" --version
+      - name: Start preview server
+        run: |
+          mkdir -p test-results/view-transition
+          bun run preview -- --host 127.0.0.1 > test-results/view-transition/preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4321/spheres-wiki/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat test-results/view-transition/preview.log
+          exit 1
+      - name: View Transition smoke test
+        id: browser-smoke
+        shell: bash
+        run: bun run test:browser 2>&1 | tee test-results/view-transition/browser.log
+      - name: Lighthouse performance and accessibility checks
+        id: lighthouse
+        run: bunx lhci autorun
+      - name: Upload browser check reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-check-reports
+          path: |
+            test-results/view-transition/
+            .lighthouseci/
+          include-hidden-files: true
+          retention-days: 7
       - name: Upload Pages artifact
-        if: github.event_name != 'pull_request'
+        if: >-
+          success() && github.event_name != 'pull_request' &&
+          steps.static-build.outcome == 'success' &&
+          steps.browser-smoke.outcome == 'success' &&
+          steps.lighthouse.outcome == 'success'
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && needs.build.result == 'success'
     needs: build
     permissions:
       pages: write
