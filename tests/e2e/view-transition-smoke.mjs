@@ -6,6 +6,7 @@
  * Requires an already-built site served at VIEW_TRANSITION_BASE_URL. Set
  * VIEW_TRANSITION_CAPTURE=1 to retain screencast frames for visual inspection.
  */
+import { execFileSync } from "node:child_process";
 import { existsSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -37,13 +38,24 @@ function assert(condition, message) {
 }
 
 function chromePath() {
+  const explicit =
+    process.env.CHROME_PATH || process.env.PUPPETEER_EXECUTABLE_PATH;
+  if (explicit) {
+    if (!existsSync(explicit)) {
+      throw new Error(
+        `Configured Chrome executable does not exist: ${explicit}`,
+      );
+    }
+    return explicit;
+  }
+  if (process.env.CI) {
+    throw new Error("CI requires CHROME_PATH for the provisioned browser");
+  }
   const candidates = [
-    process.env.CHROME_PATH,
-    process.env.PUPPETEER_EXECUTABLE_PATH,
+    "/usr/bin/google-chrome",
     "/usr/bin/chromium",
     "/usr/bin/chromium-browser",
-    "/usr/bin/google-chrome",
-  ].filter(Boolean);
+  ];
   const executable = candidates.find((candidate) => existsSync(candidate));
   if (!executable) {
     throw new Error(
@@ -189,18 +201,33 @@ async function run() {
     to: TO_PATH,
     runs: [],
     capture: CAPTURE,
+    status: "starting",
+    browser: {
+      executablePath:
+        process.env.CHROME_PATH ||
+        process.env.PUPPETEER_EXECUTABLE_PATH ||
+        null,
+      version: null,
+    },
   };
-  const browser = await puppeteer.launch({
-    headless: true,
-    executablePath: chromePath(),
-    args: ["--no-sandbox", "--disable-dev-shm-usage"],
-  });
-  const page = await browser.newPage({
-    viewport: { width: 1280, height: 900 },
-    deviceScaleFactor: 1,
-  });
-
+  let browser;
   try {
+    report.browser.executablePath = chromePath();
+    report.browser.version = execFileSync(
+      report.browser.executablePath,
+      ["--version"],
+      { encoding: "utf8", timeout: 5_000 },
+    ).trim();
+    console.log(`Chrome executable: ${report.browser.executablePath}`);
+    console.log(`Chrome version: ${report.browser.version}`);
+    browser = await puppeteer.launch({
+      headless: true,
+      executablePath: report.browser.executablePath,
+      args: ["--no-sandbox", "--disable-dev-shm-usage"],
+      dumpio: true,
+    });
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1280, height: 900, deviceScaleFactor: 1 });
     await page.evaluateOnNewDocument(() => {
       const state = { events: [], frames: [], native: false, sampling: false };
       window.__spheresTransitionProbe = state;
@@ -351,12 +378,17 @@ async function run() {
         await stopCapture();
       }
     }
+    report.status = "passed";
+  } catch (error) {
+    report.status = "failed";
+    report.error = error instanceof Error ? error.stack : String(error);
+    throw error;
   } finally {
     await writeFile(
       path.join(ARTIFACT_DIR, "report.json"),
       `${JSON.stringify(report, null, 2)}\n`,
     );
-    await browser.close();
+    await browser?.close();
   }
 
   console.log(
