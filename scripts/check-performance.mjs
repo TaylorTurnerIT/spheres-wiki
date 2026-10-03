@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { SYSTEMS } from "../src/config/site.ts";
+import { measureSphereImages } from "./lib/image-payload.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(scriptDir, "../dist");
@@ -95,6 +96,32 @@ for (const budget of budgets) {
 }
 
 if (checked === 0) throw new Error("No budgeted HTML routes were found");
+const imageRoutes = new Set([
+  "index.html",
+  ...[...PLAYER_SYSTEMS].map((system) => `${system}/index.html`),
+  ...budgets.map((budget) => files.find(budget.matches)).filter(Boolean),
+]);
+for (const file of imageRoutes) {
+  const artwork = measureSphereImages(
+    fs.readFileSync(path.join(distDir, file), "utf8"),
+    distDir,
+  );
+  console.log(
+    `Sphere artwork: ${artwork.count} image URLs, ${artwork.bytes} bytes — ${file}`,
+  );
+  if (artwork.count > 80 || artwork.bytes > 700_000) {
+    failures.push(
+      `${file}: sphere artwork exceeds 80 image URLs or 700,000 bytes`,
+    );
+  }
+  for (const image of artwork.images) {
+    if (image.bytes > 20_000) {
+      failures.push(
+        `${file}: ${image.source} exceeds the 20,000-byte sphere image budget`,
+      );
+    }
+  }
+}
 if (failures.length > 0) {
   throw new Error(`Performance budgets exceeded:\n${failures.join("\n")}`);
 }

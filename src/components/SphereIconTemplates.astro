@@ -1,0 +1,9 @@
+---
+import SphereIcon from '@/components/SphereIcon.astro';
+import { sphereIcons, vectorSphereIcons } from '@/lib/sphereIconAssets';
+---
+{[...Object.keys(sphereIcons), ...vectorSphereIcons].map(icon => (
+  <template data-sphere-icon-template={icon}>
+    <SphereIcon icon={icon} class="search-panel-sphere-icon" />
+  </template>
+))}

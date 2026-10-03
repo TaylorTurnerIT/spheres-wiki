@@ -127,7 +127,7 @@ Special cases:
 
 Adding content:
 - **New book** → create folder + `_book.yaml` + one `.md`. Nothing else (SPEC V2).
-- **New sphere in existing system** → add content files; appears site-wide automatically. Only code touch allowed: one `<symbol id="si-{name}">` in `SVGSprite.astro` for icon (SPEC C6, V3, V19).
+- **New sphere in existing system** → add content files; appears site-wide automatically. Icon artwork is auto-discovered from `src/assets/spheres-icons/`; vector icons need one `<symbol id="si-{name}">` in `SVGSprite.astro` (SPEC C6, V3, V19).
 - **New game system** → cross-cutting; touch `site.ts`, CSS, nav, pages (SPEC C7).
 
 ## Key files
@@ -158,7 +158,8 @@ Adding content:
 | `src/components/EntryCard.astro` | canonical named-entry card (V70/V71) — every talent/feat/trait/drawback/boon/tradition card |
 | `src/components/EntryDetailPage.astro` | canonical detail-page shell (breadcrumb + title + tags + prerequisites + body + source rail) — talent/feat/trait detail routes are thin `getStaticPaths` wrappers around it |
 | `src/components/SectionHeading.astro` | group/eyebrow section headings — no inline `.section-group-header` markup |
-| `src/components/SVGSprite.astro` | every sphere icon `<symbol>` (+ `si-fallback`) |
+| `src/components/SphereIcon.astro` | canonical sphere artwork: dimensioned native lazy images, page-heading priority, vector fallback |
+| `src/components/SVGSprite.astro` | authoritative vector symbols (+ `si-fallback`); `SphereIconTemplates.astro` renders inert search templates |
 | `scripts/check-idioms.mjs` | build-blocking idiom guard (V72): EntryCard primitive, cssKey ternaries, per-system color vars |
 | `scripts/check-identity-collisions.mjs` | build-blocking scoped identity/collision policy check and report generator |
 | `scripts/check-content-routes.mjs` | post-build assertion that public content entries have generated detail routes |
@@ -203,6 +204,7 @@ One idiom = one home. Cohesion remediation (2026-07-06, SPEC B23/V70–V72) remo
 | Sidebar TOC scroll-spy | `tocEngine.ts` | a second IntersectionObserver/scroll implementation |
 | Collapse/expand sections | `collapseClient.ts` | ad-hoc grid-rows toggle handlers |
 | Level ordinals ("3rd, 5th") | `levelLabel.ts` | inline `ordinal()` copies |
+| Sphere artwork | `SphereIcon.astro` + `sphereIconAssets.ts` | eager raster `<image>` in SVG; direct raster imports in consumers; client-generated icon markup |
 | Tag badge + colors | `TagBadge` + tag entry `color` (SSR templates for client JS) | client-side tag-markup or color tables (V51) |
 | Source-line stripping | `stripBodySource()` in `renderBody.ts` | per-page regex copies |
 

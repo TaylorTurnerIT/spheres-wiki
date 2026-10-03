@@ -16,7 +16,7 @@ Fast static wiki for the Spheres tabletop RPG (Power/Might/Guile/Champions) by D
 - C3. Content auto-discovered — new book folder (`_book.yaml` + `.md`) requires zero code registration
 - C4. Search client-side only — Pagefind index built at deploy time
 - C5. OGL compliance — all content under Open Game License; legal page must exist
-- C6. New sphere in existing system must appear site-wide with only content files added (no component edits) — except icon SVG which requires one `<symbol>` addition to SVGSprite.astro
+- C6. New sphere in existing system must appear site-wide with only content files added (no component edits) — except icon artwork: add a raster file under `src/assets/spheres-icons/` or one vector `<symbol>` in `SVGSprite.astro`
 - C7. New game system requires coordinated changes across config, CSS, nav, pages — this is acceptable but must be documented in §I
 - C8. Toolchain pinned — Astro 7.x SSG + TypeScript, Bun ≥ 1.1.0; compiler and content-loader settings live in `astro.config.mjs` and `content.config.ts`
 - C9. Entry metadata path-encoded — `src/content/<book>/<system>/<type>/*.md`; `type`+`sphere` inferred from path by `inferFromPath` (I.content); `system` derived from directory, not frontmatter
@@ -81,7 +81,7 @@ Verification rules:
 Plus `ANNOUNCEMENT: string | null`, `SITE_TITLE`, `HEADER_NAV`.
 
 ### I.svg — icon contract
-`SVGSprite.astro` defines `<symbol id="si-{name}">` for each sphere icon name. Sphere entries reference by `icon: {name}` field. `si-fallback` symbol must exist as default.
+`SphereIcon.astro` renders sphere `icon: {name}` via auto-discovered optimized raster assets or vector symbols in `SVGSprite.astro`. Raster images reserve dimensions and use native lazy loading; page-heading artwork may load eagerly. `SVGSprite.astro` contains vectors; `SphereIconTemplates.astro` supplies inert SSR icons for dynamic search. `si-fallback` symbol ! exist; unknown names use fallback.
 
 ### I.categorize — section builder
 `src/lib/categorize.ts`: groups a sphere's talents/feats into display sections from the sphere's `categoryDefinitions`/`sectionDefinitions`. Unmatched entries fall into an "Other" catch-all. Each type-scoped entry is claimed by the first matching category (see V24).
@@ -189,7 +189,7 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V16. `id` in frontmatter must match filename (without extension)
 - V17. `sourceBook` must match the parent folder slug
 - V18. Search results must prioritize spheres and classes over talents/feats
-- V19. Every sphere icon referenced by an entry must exist in `SVGSprite.astro` (the `si-fallback` of V8 is a safety net, not a substitute)
+- V19. Every sphere icon referenced by an entry must have a raster asset in `src/assets/spheres-icons/` or a vector symbol in `SVGSprite.astro` (the `si-fallback` of V8 is a safety net, not a substitute)
 - V20. Duplicate tag IDs are prohibited across all books
 - V21. Errata patches (`modifies` field) applied in chronological order of books' `publishedDate` ascending
 - V22. Errata patches do not change original `sourceBook` attribution
@@ -281,6 +281,7 @@ Every archetype has a standalone detail page at `/{system}/classes/{class}/{arch
 - V82. CI PR build ! fetch base refs and set `FALLOW_AUDIT_BASE` explicitly before `bun run build`; detached checkout ⊥ relies on auto-detection.
 - V83. Lighthouse CI ! target the Astro Preview deployment URL under the configured base path; required CSS/JS responses ! have successful status + expected MIME, and asset/console or CLS assertion failures ! stop the check.
 - V84. Large tabbed views ! keep inactive tab bodies and tab-specific datasets out of initial HTML; selecting a tab ! fetch and hydrate its base-path fragment/data before interaction or anchor scrolling.
+- V91. Shared sphere artwork ! use `SphereIcon.astro`: build-optimized assets for 90px badges at 2x, explicit dimensions, native lazy loading except page heading; preserve framing/transparency in all themes. SVG sprite ⊥ raster `<image>`; search templates inert until mounted. Full template inventory ≤80 image URLs, ≤700,000 bytes total, ≤20,000 bytes per image. Build samples home, system indexes + one route per HTML-budget class; rejects missing/nonlocal sources, eager list images, missing dimensions.
 
 ---
 
@@ -478,7 +479,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T122 | x | Make PR Lighthouse checkout fetch full refs and set explicit Fallow base; add workflow contract test | V82,I.build |
 | T123 | x | Make Lighthouse CI base-path setup self-validating: target the real Astro Preview URL, remove the dist symlink workaround, and guard asset/MIME + CLS assertions | V83,I.build |
 | T124 | x | Defer inactive casting-tradition tab bodies and Builder data behind base-path routes; retain initial anchors and hydrate tab content before scroll-spy/Builder activation | V84,V76 |
-| T125 | . | Cut home image payload until mobile LCP clears 3000ms: 39 eager sphere-icon webps at 150-210KB each (SVGSprite glob) + hero-bg = 83 requests; resize/compress/lazy-load below-fold art and add an image-payload budget to check-performance.mjs | V76,V78 |
+| T125 | ~ | SphereIcon native lazy images + inert search templates; optimized inventory 64 URLs / 535620B; cold mobile home 39 artwork requests / 330506B, detail 1 / 7418B. Focused 2-run home LCP 2942/2938ms, Guile 1961/1807ms; unchanged LHCI assertions pass. Full combined 10-route gate pending | V76,V78,V91 |
 
 **Recommended build order:**
 Audit remediation batch: T113→T114→T115→T116→T117→T118→T119→T120→T121→T122→T123→T124. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
@@ -542,4 +543,4 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B33 | 2026-08-31 | Detached PR checkout hid base ref; Fallow auto-detection exited 2 during Lighthouse build | V82 — fetch-depth 0 and set FALLOW_AUDIT_BASE=origin/${GITHUB_BASE_REF:-main} |
 | B34 | 2026-08-31 | LHCI FallbackServer mounted `dist` at `/` while Astro emitted `/spheres-wiki/` assets, so CSS returned HTML and mobile CLS was falsely attributed to the static sidebar | V83 / T123 |
 | B35 | 2026-09-01 | Once Lighthouse reached the real Astro Preview, the casting-traditions page exceeded mobile FCP/LCP/TBT budgets because inactive tab bodies and Builder data were still embedded in the initial document | V84 / T124 |
-| B36 | 2026-09-18 | #32 hero redesign made home LCP element the hero-bg image; 39 eager 150-210KB sphere-icon webps push simulated-mobile LCP to ~3310ms vs 3000ms budget; main red since 2026-09-09 (#32 merged with failing Lighthouse) | Open — T125; #33 neither caused (3312 vs 3309ms) nor fixed it |
+| B36 | 2026-09-18 | #32 hero LCP blocked by eager oversized SVG raster inventory. Native lazy migration preserves framing + transparent backgrounds; V19 audit previously registered zero icon checks (frontmatter assigned after registration), now path-derived registration runs 62 checks. Focused home LCP 2942/2938ms; full release gate pending | V19,V91; T125 |

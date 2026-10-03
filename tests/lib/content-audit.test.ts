@@ -51,6 +51,22 @@ describe("Content Audit", () => {
     }
   }
 
+  it("complies with V8: the vector fallback exists", () => {
+    expect(symbolIds.has("si-fallback")).toBe(true);
+  });
+
+  const iconDirectory = path.resolve(
+    __dirname,
+    "../../src/assets/spheres-icons",
+  );
+  for (const filename of fs.readdirSync(iconDirectory)) {
+    if (/\.(webp|png)$/.test(filename)) {
+      symbolIds.add(
+        `si-${filename.replace(/\.[^.]+$/, "").replaceAll("_", "-")}`,
+      );
+    }
+  }
+
   if (!fs.existsSync(contentDir)) {
     it("skips if content dir does not exist", () => {});
     return;
@@ -121,12 +137,15 @@ describe("Content Audit", () => {
         }
       });
 
-      if (frontmatter && frontmatter.type === "sphere") {
-        it("complies with V5: sphere icon exists in SVGSprite.astro", () => {
-          const expectedSymbolId = `si-${frontmatter.icon}`;
+      const inferred = inferFromPath(pathParts.slice(1).join("/"));
+      if (inferred.type === "sphere") {
+        it("complies with V19: sphere icon has a raster asset or vector symbol", () => {
+          // Parse within this test so filtered runs do not depend on the YAML test.
+          const { icon } = parseYaml(yamlStr);
+          const expectedSymbolId = `si-${icon.replaceAll("_", "-")}`;
           if (!symbolIds.has(expectedSymbolId)) {
             expect.fail(
-              `Sphere icon "${frontmatter.icon}" resolved as "${expectedSymbolId}" is missing from SVGSprite.astro`,
+              `Sphere icon "${icon}" resolved as "${expectedSymbolId}" has no raster asset or vector symbol`,
             );
           }
         });

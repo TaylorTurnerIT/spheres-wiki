@@ -1,4 +1,5 @@
 ---
+import SphereIcon from "@/components/SphereIcon.astro";
 /**
  * PageHeading — canonical listing-page title cluster: hidden Pagefind
  * meta/filter spans, system-colored h1, and the title rule. EntryDetailPage
@@ -14,7 +15,7 @@ interface Props {
   type: string;
   /** System search filter, rendered as both filter and meta */
   searchFilter?: string;
-  /** Sphere icon id → renders #si-{icon} in the title */
+  /** Sphere icon id rendered through the shared SphereIcon */
   icon?: string;
   /** Pagefind heading weight (default "10") */
   weight?: string;
@@ -38,7 +39,7 @@ const sysConfig = resolveSystem(system)!;
   data-pagefind-weight={weight}
   transition:name={transitionName}
 >
-  {icon && <svg class="si page-title-icon" aria-hidden="true"><use href={`#si-${icon}`} /></svg>}
+  {icon && <SphereIcon icon={icon} class="page-title-icon" loading="eager" />}
   {name}
 </h1>
 <span data-pagefind-meta={type} hidden></span>

@@ -1,0 +1,35 @@
+---
+import { sphereIcons, vectorSphereIcons } from '@/lib/sphereIconAssets';
+
+interface Props {
+  icon: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+}
+const { icon, class: className, loading = 'lazy' } = Astro.props;
+const key = icon.replaceAll('_', '-');
+const image = sphereIcons[key];
+const vector = vectorSphereIcons.includes(key) ? key : 'fallback';
+---
+{image ? (
+  <span class:list={['si', 'sphere-icon', className]} aria-hidden="true" style={`--sphere-image-size: ${image.inset ? '88.8888889%' : '100%'}`}>
+    <img data-sphere-image src={image.src} width={image.width} height={image.height} alt="" loading={loading} decoding="async" />
+  </span>
+) : (
+  <svg class:list={['si', className]} aria-hidden="true"><use href={`#si-${vector}`} /></svg>
+)}
+<style>
+  .sphere-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+  }
+  .sphere-icon img {
+    display: block;
+    background: transparent;
+    object-fit: contain;
+    width: var(--sphere-image-size);
+    height: var(--sphere-image-size);
+  }
+</style>
