@@ -35,8 +35,11 @@ Lighthouse CI uses the production build served by Astro Preview at
 `http://127.0.0.1:4321/spheres-wiki/`. The `/spheres-wiki/` prefix is the
 deployment base configured in `astro.config.mjs`; Lighthouse must target that
 served URL so CSS and JavaScript are returned with their real status and MIME
-types. The CI job starts Preview before the browser smoke test and Lighthouse
-run. There is no `dist/spheres-wiki` symlink or alternate static file server.
+types. The deployment build job starts Preview before the browser smoke test
+and Lighthouse run. Both use the explicitly installed Chrome revision paired
+with locked Puppeteer. Pages uploads that same `dist` only after both checks
+pass, including on manual dispatch. There is no `dist/spheres-wiki` symlink or
+alternate static file server.
 
 The casting-traditions route keeps inactive tab bodies in base-path-aware
 static fragments and loads the Builder catalog as JSON. The initial document
