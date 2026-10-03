@@ -479,7 +479,7 @@ spheres-wiki/src/content/<book>/might/spheres/<sphere>/*.md  (output)
 | T122 | x | Make PR Lighthouse checkout fetch full refs and set explicit Fallow base; add workflow contract test | V82,I.build |
 | T123 | x | Make Lighthouse CI base-path setup self-validating: target the real Astro Preview URL, remove the dist symlink workaround, and guard asset/MIME + CLS assertions | V83,I.build |
 | T124 | x | Defer inactive casting-tradition tab bodies and Builder data behind base-path routes; retain initial anchors and hydrate tab content before scroll-spy/Builder activation | V84,V76 |
-| T125 | ~ | SphereIcon native lazy images + inert search templates; optimized inventory 64 URLs / 535620B; cold mobile home 39 artwork requests / 330506B, detail 1 / 7418B. Focused 2-run home LCP 2942/2938ms, Guile 1961/1807ms; unchanged LHCI assertions pass. Full combined 10-route gate pending | V76,V78,V91 |
+| T125 | ~ | SphereIcon native lazy images + inert search templates; inventory 64 URLs / 535620B. Full-resolution q75 hero: light 16440B, night 30500B, parchment 26050B; focused home LCP 2121/2261ms, CLS 0, unchanged assertions pass. Combined 10-route local gate passed at ec6daf03 before hero compression; latest GitHub release proof pending | V76,V78,V91 |
 
 **Recommended build order:**
 Audit remediation batch: T113→T114→T115→T116→T117→T118→T119→T120→T121→T122→T123→T124. The legacy content-parity backlog below remains independent and is not silently marked complete by this audit batch.
@@ -543,4 +543,4 @@ Tasks T44–T50 carried from the legacy AGENTS.md spec: all done (T44 FOUC resol
 | B33 | 2026-08-31 | Detached PR checkout hid base ref; Fallow auto-detection exited 2 during Lighthouse build | V82 — fetch-depth 0 and set FALLOW_AUDIT_BASE=origin/${GITHUB_BASE_REF:-main} |
 | B34 | 2026-08-31 | LHCI FallbackServer mounted `dist` at `/` while Astro emitted `/spheres-wiki/` assets, so CSS returned HTML and mobile CLS was falsely attributed to the static sidebar | V83 / T123 |
 | B35 | 2026-09-01 | Once Lighthouse reached the real Astro Preview, the casting-traditions page exceeded mobile FCP/LCP/TBT budgets because inactive tab bodies and Builder data were still embedded in the initial document | V84 / T124 |
-| B36 | 2026-09-18 | #32 hero LCP blocked by eager oversized SVG raster inventory. Native lazy migration preserves framing + transparent backgrounds; V19 audit previously registered zero icon checks (frontmatter assigned after registration), now path-derived registration runs 62 checks. Focused home LCP 2942/2938ms; full release gate pending | V19,V91; T125 |
+| B36 | 2026-09-18 | Eager oversized SVG raster inventory + 71650B hero blocked LCP. Native lazy alone passed locally but CI still 3317/3164ms. Full-resolution q75 hero → 16440B; measured home LCP 2121/2261ms; latest CI pending. V19 audit registered zero checks from runtime-assigned frontmatter; path-derived registration now runs 62 | V19,V76,V78,V91; T125 |

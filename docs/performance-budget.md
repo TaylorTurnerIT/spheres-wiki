@@ -89,3 +89,9 @@ SVG raster images, missing dimensions and eager images outside the page
 heading. Native lazy loading decides which nearby images to fetch; browser
 cold-load measurements verify that unmounted templates make no requests.
 Lighthouse governs complete page loads, including hero art, covers and fonts.
+
+The home hero uses build-time WebP encoding at quality 75 for all three
+themes. Each image retains its original 1672×624 dimensions, crop and source
+artwork. The light hero keeps its high-priority preload; dark variants still
+load on demand. This reduces transfer time for the LCP image without changing
+the page layout or font loading policy.
