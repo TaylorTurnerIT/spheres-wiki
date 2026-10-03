@@ -1,6 +1,8 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { contentEntryKey } from "../../src/lib/entryIdentity";
 import {
+  BROWSE_SSR_CAP,
   bodyToSearchText,
   buildFeatBrowseRows,
   extractPrerequisites,
@@ -178,6 +180,59 @@ describe("buildFeatBrowseRows", () => {
 });
 
 describe("option builders", () => {
+  it("V89 keeps tail-only facets while the page caps only rendered rows", () => {
+    const entries = Array.from({ length: BROWSE_SSR_CAP }, (_, i) =>
+      feat({
+        id: `head-${i}`,
+        name: `A ${i}`,
+        system: "power",
+        category: "counterspell",
+      }),
+    );
+    entries.push(
+      feat({
+        id: "tail",
+        name: "Z tail",
+        system: "guile",
+        category: "ritual",
+        tags: ["monster"],
+      }),
+    );
+    const allRows = buildFeatBrowseRows(
+      {
+        featMap: new Map(entries.map((entry) => [entry.id, entry])),
+        tagMap,
+        bookMetaMap,
+        sphereMap,
+      },
+      new Map(),
+    );
+    const head = allRows.slice(0, BROWSE_SSR_CAP);
+    expect(head).toHaveLength(300);
+    expect(featCategoryOptions(head, tagMap).map((o) => o.value)).not.toContain(
+      "ritual",
+    );
+    expect(featCategoryOptions(allRows, tagMap).map((o) => o.value)).toContain(
+      "ritual",
+    );
+    expect(featTagOptions(allRows, tagMap).map((o) => o.value)).toContain(
+      "monster",
+    );
+    expect(featSystemOptions(allRows).map((o) => o.value)).toContain("guile");
+    const page = readFileSync(
+      new URL("../../src/pages/feats/index.astro", import.meta.url),
+      "utf8",
+    );
+    expect(page).toContain("const rows = allRows.slice(0, BROWSE_SSR_CAP)");
+    for (const helper of [
+      "featSystemOptions",
+      "featCategoryOptions",
+      "featTagOptions",
+    ]) {
+      expect(page).toContain(`${helper}(allRows`);
+    }
+  });
+
   const rows = buildFeatBrowseRows(
     {
       featMap: new Map([

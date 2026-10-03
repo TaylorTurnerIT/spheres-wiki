@@ -25,9 +25,9 @@ const allRows = buildFeatBrowseRows(maps, collEntriesMap);
 // catalog HTML stays light. Rows arrive pre-sorted by name.
 const rows = allRows.slice(0, BROWSE_SSR_CAP);
 const tailCount = allRows.length - rows.length;
-const systemOptions = featSystemOptions(rows);
-const categoryOptions = featCategoryOptions(rows, maps.tagMap);
-const tagOptions = featTagOptions(rows, maps.tagMap);
+const systemOptions = featSystemOptions(allRows);
+const categoryOptions = featCategoryOptions(allRows, maps.tagMap);
+const tagOptions = featTagOptions(allRows, maps.tagMap);
 ---
 
 <WikiPage title="Feats Index — Spheres Wiki" description={description}>

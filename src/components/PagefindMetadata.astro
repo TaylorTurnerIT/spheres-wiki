@@ -1,0 +1,16 @@
+---
+import { buildPagefindFilters } from "@/lib/pagefindMetadata";
+
+interface Props {
+  meta: Record<string, string>;
+  filters?: string[];
+}
+
+const { meta, filters = [] } = Astro.props;
+---
+{Object.entries(meta).map(([key, value]) => (
+  <span data-pagefind-meta={`${key}:${value}`} hidden></span>
+))}
+{buildPagefindFilters(meta, filters).map(filter => (
+  <span data-pagefind-filter={filter} hidden></span>
+))}
