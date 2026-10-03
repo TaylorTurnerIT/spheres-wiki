@@ -37,6 +37,105 @@ function filterLinks(nodes: any[] | null): any[] {
   return (nodes ?? []).filter((n: any) => n.type === "link");
 }
 
+describe("V85 — distinct same-name talents", () => {
+  const pairs = [
+    ["Death", "Curse", "curse-death"],
+    ["Fate", "Curse", "curse"],
+    ["Mana", "Bulwark", "bulwark-mana"],
+    ["Protection", "Bulwark", "bulwark"],
+  ];
+
+  it.each(pairs)("resolves %s's %s within its sphere", (sphere, name, id) => {
+    const expected = `/spheres-wiki/power/${sphere.toLowerCase()}/${id}/`;
+    expect(
+      getEntryUrlByName(
+        "talent",
+        name,
+        "/spheres-wiki/",
+        "power",
+        sphere.toLowerCase(),
+      ),
+    ).toBe(expected);
+    const links = filterLinks(
+      parsePrerequisiteText(`${sphere} sphere (${name}).`, "/spheres-wiki/"),
+    );
+    expect(links.map((link) => link.url)).toContain(expected);
+  });
+
+  it("links Greater Curse's nested ghost-strike prerequisite without changing its text", () => {
+    const text = "Death sphere (Curse (ghost strike)), caster level 15th.";
+    const nodes = parsePrerequisiteText(text, "/spheres-wiki/");
+    expect(filterLinks(nodes).map((link) => link.url)).toContain(
+      "/spheres-wiki/power/death/curse-death/",
+    );
+    expect(
+      nodes
+        ?.map((node) =>
+          node.type === "text" ? node.value : node.children[0].value,
+        )
+        .join(""),
+    ).toBe(text);
+  });
+
+  it("does not borrow a same-name talent from a different qualified sphere", () => {
+    const links = filterLinks(
+      parsePrerequisiteText("Death sphere (Bulwark).", "/spheres-wiki/"),
+    );
+    expect(links.map((link) => link.url)).toEqual([
+      "/spheres-wiki/power/death/",
+    ]);
+  });
+
+  it("retains legitimate secondary-sphere references", () => {
+    const links = filterLinks(
+      parsePrerequisiteText(
+        "Nature sphere (Natural Enhancement).",
+        "/spheres-wiki/",
+      ),
+    );
+    expect(links.map((link) => link.url)).toContain(
+      "/spheres-wiki/power/enhancement/natural-enhancement/",
+    );
+    expect(
+      getEntryUrlByName(
+        "talent",
+        "Strategic Terrain",
+        "/spheres-wiki/",
+        "guile",
+        "warleader",
+      ),
+    ).toBe("/spheres-wiki/guile/survivalism/strategic-terrain/");
+  });
+
+  it("retains declared universal-sphere references", () => {
+    expect(
+      getEntryUrlByName(
+        "feat",
+        "Manabond Versatility",
+        "/spheres-wiki/",
+        "power",
+        "death",
+      ),
+    ).toBe(
+      getEntryUrl("feat", "manabond-versatility", "/spheres-wiki/", "power"),
+    );
+  });
+
+  it("prefers an exact registered name with parentheses to stripping its qualifier", () => {
+    const links = filterLinks(
+      parsePrerequisiteText(
+        "Boxing sphere (Elongated Step (stance)).",
+        "/spheres-wiki/",
+      ),
+    );
+    expect(links).toContainEqual({
+      type: "link",
+      url: "/spheres-wiki/might/boxing/elongated-step/",
+      children: [{ type: "text", value: "Elongated Step (stance)" }],
+    });
+  });
+});
+
 // ---------------------------------------------------------------------------
 // parsePrerequisiteText — unit tests (no I/O)
 // ---------------------------------------------------------------------------

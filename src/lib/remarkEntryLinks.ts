@@ -41,13 +41,21 @@ function replaceEntryAndInternalLinks(value: string, base: string): string {
 // Injectable resolvers — pass stubs for unit tests to avoid filesystem scan
 export interface EntryResolvers {
   resolveSphere: (name: string, base: string) => string | null;
-  resolveTalent: (name: string, base: string) => string | null;
+  resolveTalent: (
+    name: string,
+    base: string,
+    sphereUrl?: string,
+  ) => string | null;
   resolveFeat: (name: string, base: string) => string | null;
 }
 
 const defaultResolvers: EntryResolvers = {
   resolveSphere: (name, base) => getEntryUrlByName("sphere", name, base),
-  resolveTalent: (name, base) => getEntryUrlByName("talent", name, base),
+  resolveTalent: (name, base, sphereUrl) => {
+    const [system, sphere] =
+      sphereUrl?.split("/").filter(Boolean).slice(-2) ?? [];
+    return getEntryUrlByName("talent", name, base, system, sphere);
+  },
   resolveFeat: (name, base) => getEntryUrlByName("feat", name, base),
 };
 
@@ -173,22 +181,30 @@ export function parsePrerequisiteText(
 
     // Check for parenthetical talent refs immediately after the sphere
     const afterSphere = text.slice(end);
-    const parenMatch = afterSphere.match(/^\s*\(([^)]+)\)/);
+    const parenMatch = afterSphere.match(/^\s*\(((?:[^()]|\([^()]*\))*)\)/);
     if (parenMatch) {
       const innerText = parenMatch[1];
       // absolute offset of the first char inside the open paren
       const openParenOffset = end + parenMatch[0].indexOf("(") + 1;
 
-      for (const {
-        name,
-        start: relStart,
-        end: relEnd,
-      } of parseTalentListWithOffsets(innerText)) {
-        const talentUrl = resolvers.resolveTalent(name, base);
+      // Keep unresolved sphere-qualified refs out of the unscoped fallback.
+      for (let i = end; i < end + parenMatch[0].length; i++) claimed.add(i);
+
+      for (const { name, start: relStart } of parseTalentListWithOffsets(
+        innerText,
+      )) {
+        let talentName = name;
+        let talentUrl = resolvers.resolveTalent(talentName, base, sphereUrl);
+        if (!talentUrl) {
+          talentName = name.replace(/\s+\([^)]*\)$/, "");
+          if (talentName !== name) {
+            talentUrl = resolvers.resolveTalent(talentName, base, sphereUrl);
+          }
+        }
         if (!talentUrl) continue;
 
         const absStart = openParenOffset + relStart;
-        const absEnd = openParenOffset + relEnd;
+        const absEnd = absStart + talentName.length;
 
         for (let i = absStart; i < absEnd; i++) claimed.add(i);
         segments.push({
@@ -196,7 +212,7 @@ export function parsePrerequisiteText(
           end: absEnd,
           type: "talent",
           url: talentUrl,
-          text: name,
+          text: talentName,
         });
       }
     }

@@ -23,6 +23,7 @@ const ENTRY_FRONTMATTER_KEYS = new Set([
   "id",
   "name",
   "sphere",
+  "dualSphere",
   "system",
   "type",
   "modifies",
@@ -243,12 +244,18 @@ function addEntryToCache(cache: EntryCache, entry: any): void {
   unscopedIdIndex.set(unscopedKey, unscoped);
   if (!entry.name) return;
 
-  const systemNameKey = `${entry.type}:${entry.system ?? "_"}:${entry.name.toLowerCase()}`;
-  if (!cache.names.has(systemNameKey)) cache.names.set(systemNameKey, entry);
-  const nameKey = `${entry.type}:${entry.name.toLowerCase()}`;
+  const name = entry.name.toLowerCase();
+  const scope = `${entry.type}:${entry.system ?? "_"}`;
+  const nameKeys = [
+    `${scope}:${name}`,
+    `${entry.type}:${name}`,
+    ...[entry.sphere, entry.dualSphere]
+      .filter(Boolean)
+      .map((sphere) => `${scope}:${sphere}:${name}`),
+  ];
   // First entry wins (errata handled elsewhere)
-  if (!cache.names.has(nameKey)) {
-    cache.names.set(nameKey, entry);
+  for (const key of nameKeys) {
+    if (!cache.names.has(key)) cache.names.set(key, entry);
   }
 }
 
@@ -278,8 +285,18 @@ export function getEntryUrlByName(
   name: string,
   base: string = "/",
   system?: string,
+  sphere?: string,
 ): string | null {
   ensureCache();
+  // An explicit sphere is authoritative: a missing local match must not fall
+  // back to an unrelated same-name talent elsewhere in the system.
+  if (sphere) {
+    const entry =
+      nameIndex?.get(
+        `${type}:${system ?? "_"}:${sphere}:${name.toLowerCase()}`,
+      ) ?? nameIndex?.get(`${type}:${system ?? "_"}:any:${name.toLowerCase()}`);
+    return entry ? buildEntryUrl(entry, base) : null;
+  }
   const entry =
     nameIndex?.get(
       `${type}:${system ?? ""}${system ? ":" : ""}${name.toLowerCase()}`,

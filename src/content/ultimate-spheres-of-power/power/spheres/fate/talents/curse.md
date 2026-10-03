@@ -1,11 +1,9 @@
 ---
 id: "curse"
 name: Curse
-dualSphere: death
 tier: basic
 tags:
   - curse
-  - ghost-strike
   - word
 ---
 
