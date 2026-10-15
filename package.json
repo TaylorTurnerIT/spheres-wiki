@@ -29,7 +29,7 @@
     "audit": "bun scripts/validate.mjs && bun scripts/check-base-abilities.mjs && bun scripts/check-cross-sphere.mjs"
   },
   "dependencies": {
-    "@astrojs/compiler-rs": "^0.4.0",
+    "@astrojs/compiler-rs": "^0.5.0",
     "@fontsource/cinzel": "^5.3.0",
     "@fontsource/crimson-text": "^5.3.0",
     "astro": "^7.2.4",
