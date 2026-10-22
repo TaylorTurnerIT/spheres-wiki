@@ -29,7 +29,7 @@ jobs:
           fetch-depth: 0
       - uses: oven-sh/setup-bun@v2
         with:
-          bun-version: 1.4.3
+          bun-version: 1.4.4
       - run: bun install --frozen-lockfile
       - name: Set Fallow base ref
         run: echo "FALLOW_AUDIT_BASE=origin/${GITHUB_BASE_REF:-main}" >> "$GITHUB_ENV"
