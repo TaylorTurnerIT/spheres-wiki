@@ -49,7 +49,7 @@
     "@astrojs/markdown-remark": "^7.2.4",
     "@astrojs/sitemap": "^3.7.3",
     "@biomejs/biome": "^2.5.10",
-    "@lhci/cli": "^0.15.1",
+    "@lhci/cli": "^0.16.0",
     "fallow": "^3.17.0",
     "happy-dom": "^20.11.12",
     "lightningcss": "^1.33.0",
